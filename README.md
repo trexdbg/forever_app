@@ -27,6 +27,7 @@ Le dépôt privé [forever_agent](https://github.com/trexdbg/forever_agent) gèr
 | Population | `population.yml` | Tous les jours, si une source `POPULATION_SOURCE_URL` est renseignée |
 | Minage | `mining.yml` | Chaque dimanche |
 | Équipements | `gear.yml` | Chaque jeudi |
+| Quêtes Classic | `quests.yml` | Chaque mercredi ; publication uniquement si le dépôt Vanilla Questing a évolué |
 | Cartes | `maps.yml` | Actualisation manuelle ou lors de modifications de génération |
 
 La collecte de données et les secrets ne sont jamais exposés au navigateur. Le site publié reste entièrement statique.
