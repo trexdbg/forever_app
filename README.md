@@ -1,20 +1,35 @@
-# Forever Atlas
+# Forever Atlas — compagnon WoW Forever
 
-Application web communautaire non officielle pour **World of Warcraft: Forever**.
+Application web communautaire statique, responsive et compatible GitHub Pages : [ouvrir Forever Atlas](https://trexdbg.github.io/forever_app/).
 
-Site statique (HTML/CSS/JavaScript), prêt pour GitHub Pages sous `/forever_app/`. Les données initiales sont présentes dans `data/`. Le dépôt privé `forever_agent` assure les vérifications et les mises à jour lorsqu'il est autorisé à publier.
+## Modules disponibles
+- **Talents** : 9 classes, 27 arbres, 466 talents de bêta, gestion des points/niveaux/prérequis, sauvegarde locale et lien partageable.
+- **Équipements et pré-BiS** : 9 classes, 27 spécialisations, 17 emplacements, 41 références d'équipement Classic sélectionnées, tableau de progression et suivi sur le navigateur. Catalogue : 44 références d'objets, icônes locales. **Ces listes ne sont pas des classements BiS confirmés pour WoW Forever** : il faut encore examiner chaque source de drop, les statistiques modifiées et les phases de jeu.
+- **Minage HL** : 1 749 points de minerais référencés sur **10 cartes**, fond de carte Classic, filtres de minerais, zoom, déplacement et commande TomTom `/way #UiMapID X Y`. Points communautaires non garantis en jeu.
+- **Population Alliance/Horde** : vue prête pour les recensements, pas de chiffres affichés tant que la source d'observation quotidienne n'est pas connectée.
 
-## Modules
-- Constructeur de talents des neuf classes : **466 talents intégrés** depuis l'instantané du 7 octobre 2026 de [Talents Forever](https://talentsforever.com/data.json), sous CC BY 4.0. Gestion des prérequis, des points, du niveau, sauvegarde locale, liens partageables
-- Repères de minage haut niveau et secteurs à vérifier
-- Catalogue d'équipements avec filtres : quatre objets de référence Wowhead Forever, disponibilité réelle en jeu encore non confirmée
-- Tableau de population, vide tant qu'aucune mesure vérifiable n'est disponible
+## Sources et coordonnées
+- Talents : [Talents Forever](https://talentsforever.com/data.json), données **CC BY 4.0**.
+- Emplacements HL : [Wuild/GatherLite](https://github.com/Wuild/GatherLite), source de positions Forever/ Wowhead Forever, licence **MIT** (texte complet dans [data/GatherLite-LICENSE.txt](data/GatherLite-LICENSE.txt)). Les identifiants Forever de zone `UiMapID` et les coordonnées normalisées 0–1 sont conservés. Le frontend représente `x*100` et `y*100` en pourcentage de la **carte de zone**, **X vers la droite, Y vers le bas**. Aucune conversion vers latitude/longitude terrestre, carte continentale ou autre expansion WoW. Ex : (0,643, 0,598) = (64,30 %, 59,80 %) sur l'UiMapID spécifié.
+- Fonds de cartes Classic : jeu de cartes Blizzard, extrait et retraité à partir de [keyboardturner/WoWMapUprezClassic](https://github.com/keyboardturner/WoWMapUprezClassic). Les reliefs peuvent différer dans Forever. World of Warcraft et ses illustrations © Blizzard Entertainment.
+- Icônes : World of Warcraft © Blizzard, distribuées localement dans `assets/icons`. Identification des noms d'icônes de référence via [Napalmsteak/WoW-Classic-Item-Caches](https://github.com/Napalmsteak/WoW-Classic-Item-Caches), sources Forever et Classic Era.
+- Références Classic pré-BiS : guides publics communautaires [Wowhead Classic](https://www.wowhead.com/classic/guides). Les objets proposés doivent être revus pour la version Forever.
 
-## Mise en ligne
-Dans **Settings → Pages**, choisir **Deploy from a branch**, branche `main`, dossier `/ (root)`.
-L'adresse prévue est `https://trexdbg.github.io/forever_app/`.
+## Actualisation automatique
+Le dépôt privé [forever_agent](https://github.com/trexdbg/forever_agent) gère les données et la publication avec un token GitHub à droits minimaux, configuré uniquement comme secret `PUBLIC_REPO_TOKEN` **dans le dépôt privé**.
 
-Ne pas ajouter de token ou de secret à ce dépôt public. Le repo privé `forever_agent` pousse les données grâce à `PUBLIC_REPO_TOKEN`.
+| Données | Workflow | Fréquence |
+| --- | --- | --- |
+| Talents | `sync.yml` | Tous les deux jours (jours alternés du mois) |
+| Population | `population.yml` | Tous les jours, si une source `POPULATION_SOURCE_URL` est renseignée |
+| Minage | `mining.yml` | Chaque dimanche |
+| Équipements | `gear.yml` | Chaque jeudi |
+| Cartes | `maps.yml` | Actualisation manuelle ou lors de modifications de génération |
 
-## Sources et avertissement
-Les données de talents proviennent de [talentsforever.com](https://talentsforever.com/), sous licence [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), et demeurent des données de bêta. Noms, sorts, icônes et éléments Warcraft sont la propriété de Blizzard Entertainment. Projet indépendant, sans affiliation à Blizzard.
+La collecte de données et les secrets ne sont jamais exposés au navigateur. Le site publié reste entièrement statique.
+
+## Déploiement
+GitHub Pages est configuré sur `main`, dossier `/ (root)`. Sans compte ni cookies de suivi obligatoires ; la progression BiS et les builds de talents sont conservés localement.
+
+## Avertissement
+Projet de fans, **non affilié à Blizzard**. Sources communautaires en évolution ; le fait qu'une fiche d'objet ou un emplacement de gisement soit référencé ne prouve pas qu'il soit actuellement disponible dans le jeu.
