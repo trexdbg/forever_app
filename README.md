@@ -2,12 +2,12 @@
 
 Application web communautaire non officielle pour **World of Warcraft: Forever**.
 
-Site statique (HTML/CSS/JavaScript), prêt pour GitHub Pages sous `/forever_app/`. Les données sont publiées par le dépôt privé `forever_agent`.
+Site statique (HTML/CSS/JavaScript), prêt pour GitHub Pages sous `/forever_app/`. Les données initiales sont présentes dans `data/`. Le dépôt privé `forever_agent` assure les vérifications et les mises à jour lorsqu'il est autorisé à publier.
 
 ## Modules
-- Constructeur de talents des neuf classes (arbre beta importé de [Talents Forever](https://talentsforever.com/data.json), CC BY 4.0)
+- Constructeur de talents des neuf classes : **466 talents intégrés** depuis l'instantané du 7 octobre 2026 de [Talents Forever](https://talentsforever.com/data.json), sous CC BY 4.0. Gestion des prérequis, des points, du niveau, sauvegarde locale, liens partageables
 - Repères de minage haut niveau et secteurs à vérifier
-- Catalogue d'équipements avec filtres, données vérifiées uniquement
+- Catalogue d'équipements avec filtres : quatre objets de référence Wowhead Forever, disponibilité réelle en jeu encore non confirmée
 - Tableau de population, vide tant qu'aucune mesure vérifiable n'est disponible
 
 ## Mise en ligne
