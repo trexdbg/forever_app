@@ -1,7 +1,52 @@
 {
   "schema_version": 1,
-  "updated_at": null,
-  "status": "awaiting_verified_data",
-  "source": null,
-  "items": []
+  "updated_at": "2026-10-08",
+  "status": "wowhead_forever_reference_only",
+  "source": "Fiches Wowhead Forever — présence dans la base de données, disponibilité en jeu non vérifiée",
+  "items": [
+    {
+      "id": 19019,
+      "name": "Thunderfury, Blessed Blade of the Windseeker",
+      "slot": "Arme à une main",
+      "quality": "legendary",
+      "level": 60,
+      "origin": "Quête légendaire (référence Classic)",
+      "url": "https://www.wowhead.com/forever/item=19019",
+      "verified": true,
+      "verified_meaning": "listed_in_forever_database"
+    },
+    {
+      "id": 17182,
+      "name": "Sulfuras, Hand of Ragnaros",
+      "slot": "Arme à deux mains",
+      "quality": "legendary",
+      "level": 60,
+      "origin": "Objet légendaire (référence Classic)",
+      "url": "https://www.wowhead.com/forever/item=17182",
+      "verified": true,
+      "verified_meaning": "listed_in_forever_database"
+    },
+    {
+      "id": 12640,
+      "name": "Lionheart Helm",
+      "slot": "Tête",
+      "quality": "epic",
+      "level": 56,
+      "origin": "Forge (référence Classic)",
+      "url": "https://www.wowhead.com/forever/item=12640",
+      "verified": true,
+      "verified_meaning": "listed_in_forever_database"
+    },
+    {
+      "id": 12784,
+      "name": "Arcanite Reaper",
+      "slot": "Arme à deux mains",
+      "quality": "rare",
+      "level": 58,
+      "origin": "Forge (référence Classic)",
+      "url": "https://www.wowhead.com/forever/item=12784",
+      "verified": true,
+      "verified_meaning": "listed_in_forever_database"
+    }
+  ]
 }
