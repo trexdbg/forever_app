@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-08",
+  "status": "sector_references_only",
+  "sources": [
+    "https://www.wowhead.com/forever/object=175404/rich-thorium-vein",
+    "https://www.wowhead.com/forever/fr/object=175404/riche-filon-de-thorium",
+    "https://wowforever.gg/fr/metiers/mining/"
+  ],
+  "zones": [
+    {
+      "id": "winterspring",
+      "name": "Berceau-de-l'Hiver",
+      "sub": "Winterspring",
+      "minerals": [
+        "rich",
+        "small",
+        "truesilver"
+      ],
+      "sectors": [
+        "Ruines de Kel'Theril",
+        "Mazthoril et les grottes",
+        "Gorge de Givréclair",
+        "Gorge de Sombre-Murmure",
+        "Roc des Sabres-de-Givre"
+      ],
+      "notes": "Secteurs issus de parcours Classic : présence réelle à confirmer sur Forever."
+    },
+    {
+      "id": "azshara",
+      "name": "Azshara",
+      "sub": "Azshara",
+      "minerals": [
+        "rich",
+        "small",
+        "truesilver"
+      ],
+      "sectors": [
+        "Zones montagneuses et rebords rocheux"
+      ],
+      "notes": "Zone référencée pour les filons riches ; aucun point individuel vérifié."
+    },
+    {
+      "id": "epl",
+      "name": "Maleterres de l'Est",
+      "sub": "Eastern Plaguelands",
+      "minerals": [
+        "rich",
+        "truesilver"
+      ],
+      "sectors": [
+        "La Balafre pestilentielle",
+        "Clairière nocive",
+        "Nord de la zone"
+      ],
+      "notes": "Secteurs indicatifs hérités de Classic."
+    },
+    {
+      "id": "ungoro",
+      "name": "Cratère d'Un'Goro",
+      "sub": "Un'Goro Crater",
+      "minerals": [
+        "small",
+        "rich",
+        "truesilver"
+      ],
+      "sectors": [
+        "Nids silithides",
+        "Crête de la Fournaise"
+      ],
+      "notes": "Certains filons peuvent être couverts de limon."
+    },
+    {
+      "id": "burning-steppes",
+      "name": "Steppes ardentes",
+      "sub": "Burning Steppes",
+      "minerals": [
+        "rich",
+        "small",
+        "dark",
+        "truesilver"
+      ],
+      "sectors": [
+        "Escarpements et reliefs rocheux"
+      ],
+      "notes": "Secteurs à prospecter ; filons précis non relevés."
+    },
+    {
+      "id": "searing-gorge",
+      "name": "Gorge des Vents brûlants",
+      "sub": "Searing Gorge",
+      "minerals": [
+        "dark",
+        "truesilver"
+      ],
+      "sectors": [
+        "Reliefs volcaniques et abords des mines"
+      ],
+      "notes": "Zone Classic connue pour le sombrefer."
+    }
+  ],
+  "minerals": {
+    "rich": {
+      "label": "Riche filon de thorium",
+      "skill": 275
+    },
+    "small": {
+      "label": "Petit filon de thorium",
+      "skill": 245
+    },
+    "dark": {
+      "label": "Gisement de sombrefer",
+      "skill": 230
+    },
+    "truesilver": {
+      "label": "Gisement de vrai-argent",
+      "skill": 230
+    }
+  },
+  "verified_coordinates": false
+}
