@@ -143,7 +143,7 @@ function previewStep(index){
 function renderMilestones(){
  const wrap=$("quest-milestones");wrap.replaceChildren();
  if(!s.steps.length)return;
- const levels=[0,20,25,30,35,40,42,45,47,50,51,52,53,54,55,56,57,58,59,Infinity];
+ const levels=[0,20,25,30,32,35,40,42,45,47,50,51,53,55,56,57,58,59,Infinity];
  const maxIndex=Math.max(s.steps.length-1,1);
  for(const level of levels){
   // A level marker occupies the exact horizontal position of its first eligible guide step.
