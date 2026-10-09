@@ -10,8 +10,8 @@ const side=d=>d.zone[en?"en":"fr"];
 const faction={alliance:S("Alliance","Alliance"),horde:S("Horde","Horde"),neutral:S("Neutre","Neutral")};
 const profession={Alchimie:S("Alchimie","Alchemy"),Couture:S("Couture","Tailoring"),Ingénierie:S("Ingénierie","Engineering"),Enchantement:S("Enchantement","Enchanting"),Forge:S("Forge","Blacksmithing"),"Travail du cuir":S("Travail du cuir","Leatherworking"),Secourisme:S("Secourisme","First Aid"),Cuisine:S("Cuisine","Cooking")};
 const human=n=>n>=60?(Math.floor(n/60)+" "+S("h","h")+(n%60?" "+(n%60)+" min":"")):fmt(n)+" min";const time=(a,b)=>a===b?human(a):human(a)+" – "+human(b);
-const store={db:null,records:[],filtered:[],active:null,mode:"merchant",showReportsOnly:false};
-const q=$("npc-search"),zone=$("npc-zone"),trade=$("npc-profession"),aff=$("npc-faction");
+const store={db:null,records:[],filtered:[],active:null,mode:document.body.dataset.page==="trainers"?"trainer":"merchant",showReportsOnly:false};
+const q=$("npc-search"),zone=$("npc-zone"),trade=$("npc-profession"),aff=$("npc-faction"),rank=$("npc-rank"),reports=$("npc-evidence-only");
 const list=$("npc-results"),detail=$("npc-detail"),count=$("npc-count"),kind=$("npc-kind");
 const evidence=(vendor,item)=>store.db.evidence.find(e=>e.vendor_name===vendor.name&&e.item===item?.id?.toString());
 const append=(parent,tag,t,cls)=>{const el=mk(tag,t,cls);parent.append(el);return el};
@@ -21,12 +21,13 @@ const iconNode=(item)=>{const frame=mk("span",null,"npc-item-icon npc-image-icon
 const copperFmt=c=>{const g=Math.floor(c/10000),s=Math.floor(c%10000/100),b=c%100;return [g?g+" "+S("po","g"):"",s?s+" "+S("pa","s"):"",b?b+" "+S("pc","c"):""].filter(Boolean).join(" ")||"0 "+S("pc","c")};
 const stockWord=item=>item.supply==="unlimited"?S("Stock illimité (référence Classic)","Unlimited stock (Classic reference)"):item.supply==="reputation"?S("Vente liée à la réputation","Reputation-gated sale"):S("Stock limité (référence Classic)","Limited stock (Classic reference)");
 function filters(){
- for(const key of [...new Set(store.db.npcs.map(n=>n.profession))].sort((a,b)=>a.localeCompare(b))){const op=mk("option",profession[key]||key);op.value=key;trade.append(op)}
- const zones=new Map(store.db.npcs.map(n=>[n.zone.id,n.zone]));
+ for(const key of [...new Set(store.db.npcs.filter(n=>n.role===store.mode).map(n=>n.profession))].sort((a,b)=>a.localeCompare(b))){const op=mk("option",profession[key]||key);op.value=key;trade.append(op)}
+ const zones=new Map(store.db.npcs.filter(n=>n.role===store.mode).map(n=>[n.zone.id,n.zone]));
  for(const z of [...zones.values()].sort((a,b)=>a[en?"en":"fr"].localeCompare(b[en?"en":"fr"]))){const op=mk("option",z[en?"en":"fr"]);op.value=z.id;zone.append(op)}
+ if(rank)for(const key of ["Compagnon","Expert","Artisan"]){if(store.db.npcs.some(n=>n.role===store.mode&&n.rank===key)){const op=mk("option",en?({Compagnon:"Journeyman",Expert:"Expert",Artisan:"Artisan"}[key]):key);op.value=key;rank.append(op)}}
 }
 function makeRecords(){
- const rec=[];for(const n of store.db.npcs){if(n.role==="trainer"){rec.push({npc:n,item:null,key:"trainer:"+n.name});continue}
+ const rec=[];for(const n of store.db.npcs){if(n.role!==store.mode)continue;if(n.role==="trainer"){rec.push({npc:n,item:null,key:"trainer:"+n.name});continue}
  for(const itemId of n.offers){const item=store.db.items[itemId];if(item)rec.push({npc:n,item,key:n.name+":"+itemId})}
  }store.records=rec;
 }
@@ -39,7 +40,8 @@ function filteredRecords(){
  if(aff.value!=="all"&&n.faction!==aff.value&&n.faction!=="neutral")return false;
  if(trade.value!=="all"&&(item?.profession||n.profession)!==trade.value)return false;
  if(zone.value!=="all"&&n.zone.id!==zone.value)return false;
- if(kind.value!=="all"&&item?.kind!==kind.value&&n.role==="merchant")return false;
+ if(rank&&rank.value!=="all"&&n.rank!==rank.value)return false;
+ if(kind&&kind.value!=="all"&&item?.kind!==kind.value&&n.role==="merchant")return false;
  if(store.showReportsOnly&&!item)return false;
  if(store.showReportsOnly&&!evidence(n,item))return false;
  if(!needle)return true;
@@ -121,14 +123,12 @@ function renderDetail(){
  append(detail,"p",S("Coordonnées historiques Classic (0–100), non vérifiées sur Forever. Commande /way avec identifiant de carte pour un addon TomTom compatible.","Historical Classic coordinates (0–100), not confirmed on Forever. The /way command includes the zone map ID for compatible TomTom add-ons."),"npc-datacaveat");
  const s=append(detail,"p",null,"npc-source");s.append(document.createTextNode(S("Sources : ","Sources: ")));link(s,S("Guide de référence ↗","Reference guide ↗"),n.source);
  window.ForeverNpcMap?.show(n,store.db,npcName=>{
-  const matched=store.records.find(r=>r.npc.name===npcName&&r.item?.id===store.active?.item?.id)||
-   store.records.find(r=>r.npc.name===npcName&&r.npc.role==="merchant")||
-   store.records.find(r=>r.npc.name===npcName);
+  const matched=store.filtered.find(r=>r.npc.name===npcName)||store.records.find(r=>r.npc.name===npcName);
   if(!matched)return;
   if(!store.filtered.some(r=>r.key===matched.key)){
-   q.value="";zone.value="all";trade.value="all";kind.value="all";aff.value="all";store.showReportsOnly=false;$("npc-evidence-only").checked=false;
-   store.mode=matched.npc.role;document.querySelectorAll("[data-npc-mode]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.npcMode===store.mode)));
-   $("npc-evidence-only").disabled=store.mode==="trainer";
+   q.value="";zone.value="all";trade.value="all";aff.value="all";
+   if(kind)kind.value="all";if(rank)rank.value="all";
+   store.showReportsOnly=false;if(reports)reports.checked=false;
    store.filtered=filteredRecords();
   }
   selectRecord(matched);
@@ -136,14 +136,8 @@ function renderDetail(){
  append(detail,"p",S("Important : données historiques Classic. Les PNJ, objets, emplacements et stocks peuvent différer sur WoW Forever. Aucun suivi du stock en temps réel.","Important: historical Classic data. NPCs, items, positions and stock may differ on WoW Forever. No live inventory monitoring."),"npc-datacaveat");
 }
 function refresh(){store.filtered=filteredRecords();if(!store.filtered.some(r=>r.key===store.active?.key))store.active=store.filtered[0]||null;renderList();renderDetail()}
-for(const e of [q,zone,trade,aff,kind])e.addEventListener(e===q?"input":"change",refresh);
-document.querySelectorAll("[data-npc-mode]").forEach(btn=>btn.addEventListener("click",()=>{
- store.mode=btn.dataset.npcMode;
- document.querySelectorAll("[data-npc-mode]").forEach(b=>b.setAttribute("aria-pressed",String(b===btn)));
- if(store.mode==="trainer"&&store.showReportsOnly){store.showReportsOnly=false;$("npc-evidence-only").checked=false}$("npc-evidence-only").disabled=store.mode==="trainer"
- refresh()
-}));
-$("npc-evidence-only").addEventListener("change",e=>{store.showReportsOnly=e.target.checked;refresh()});
+for(const e of [q,zone,trade,aff,kind,rank].filter(Boolean))e.addEventListener(e===q?"input":"change",refresh);
+if(reports)reports.addEventListener("change",e=>{store.showReportsOnly=e.target.checked;refresh()});
 const params=new URLSearchParams(location.search);
 if(params.get("q"))q.value=params.get("q").slice(0,120);
 fetch(root+"data/npcs.json").then(r=>{if(!r.ok)throw Error(r.status);return r.json()}).then(db=>{
