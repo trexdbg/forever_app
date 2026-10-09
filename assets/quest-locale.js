@@ -111,7 +111,7 @@ function noteCategory(value){
 }
 function questName(name){
  if(isEnglish())return nameCase(name);
- const fallback={"guarded thunderbrew barrel":"Tonneau de Tonnebière gardé","find OOX-22/fe!":"Trouver OOX-22/FE !"};
+ const fallback={"guarded thunderbrew barrel":"Tonneau de Tonnebière gardé","find oox-22/fe!":"Trouver OOX-22/FE !"};
  return fallback[nice(name).toLowerCase()]||name;
 }
 function race(name){return isEnglish()?({"Humain":"Human","Nain":"Dwarf","Elfe de la nuit":"Night Elf","Mort-vivant":"Undead"}[name]||name):name}
