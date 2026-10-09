@@ -90,7 +90,7 @@ function renderWaypoints(){
   const b=element("button",undefined,"quest-waypoint"+(s.selected===i?" selected":""));
   b.type="button";b.setAttribute("aria-pressed",String(s.selected===i));
   const title=element("div",undefined,"quest-waypoint-heading");
-  title.append(element("b",String(i+1)),element("strong",waypointTitle(w)),element("small",format(w.coords.x)+" / "+format(w.coords.y)));
+  title.append(element("b",String(i+1)),element("strong",waypointTitle(w)));
   b.append(title);
   const actions=element("div",undefined,"quest-actions");
   const groups=[];
