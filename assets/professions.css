@@ -107,3 +107,13 @@
 @media(max-width:590px){.prof-trainer-list{grid-template-columns:1fr}}
 
 .prof-progression-note{font-size:11px;line-height:1.6;color:#d9c494;margin:12px 0;padding:9px 11px;border-left:2px solid #ae925e;background:#242d22}
+
+/* Quick trainer location links */
+button.prof-trainer-row{
+ width:100%;cursor:pointer;font-family:inherit;text-align:left;
+}
+button.prof-trainer-row:hover,button.prof-trainer-row:focus-visible{
+ border-color:#d5b47b;background:#293c29;
+ outline-offset:2px;
+}
+button.prof-trainer-row small{color:#e5c58d}
