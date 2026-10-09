@@ -57,7 +57,7 @@ function equipability(item,classId){
  if(classId==="voleur"){
   const header=lines.filter(x=>typeof x==="string").slice(0,8).join(" ").toLowerCase();
   const types=[item.type,item.type_name,item.subtype].filter(x=>typeof x==="string").join(" ").toLowerCase();
-  if(/\b(shield|bouclier|wand|baguette|idol|libram|totem|relic|relique)\b/.test(types+" "+header)
+  if((slot==="offhand"&&(/\bheld[ _-]?in[ _-]?off[ _-]?hand\b/i.test(types+" "+header)))||/\b(shield|bouclier|wand|baguette|idol|libram|totem|relic|relique)\b/.test(types+" "+header)
       ||/^(?:inv_shield_|inv_wand_)/.test(item.icon||""))
    return {allowed:false,reason:"weapon"};
  }
