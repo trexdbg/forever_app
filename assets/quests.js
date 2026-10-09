@@ -30,7 +30,7 @@ const detailsOf=ref=>{
  let id=target;
  if(Array.isArray(target)){const suffix=Array.isArray(ref)?String(ref[1]||""):"";const n=suffix.match(/(?:p|^)(\d+)/);id=target[n?clamp(Number(n[1])-1,0,target.length-1):0];}
  const french=(id!==undefined&&id!==null)?s.data.translations[String(id)]:null;
- return {name:document.documentElement.lang==="en"?Q.questName(name):(french||Q.questName(name)),original:name,id:Number.isInteger(Number(id))?Number(id):null};
+ return {name:document.documentElement.lang==="en"?Q.questName(name):(french||Q.questName(name)),original:name,french:french||"",id:Number.isInteger(Number(id))?Number(id):null};
 };
 const waypointTitle=w=>Q.header(w.header);
 const stepLabel=i=>{const st=s.steps[i];return stepName(st)+QT(" · niv. ≈ "," · lvl ≈ ")+Math.floor(Number(st.experience)||0)};
@@ -262,7 +262,20 @@ function search(){
  const text=normal($("quest-search").value),res=$("quest-search-results");res.replaceChildren();res.hidden=!text;
  if(!text||!s.data)return;let results=0,all=0;
  for(let i=0;i<s.steps.length;i++){const st=s.steps[i];
-  const matches=normal(stepName(st)).includes(text)||st.waypoints.some(w=>normal(waypointTitle(w)).includes(text)||["starts","ends","objectives","completed"].some(k=>(w[k]||[]).some(q=>{const a=detailsOf(q);return normal(a.name).includes(text)||normal(a.original).includes(text)||String(a.id||"")===text})));
+  const matches=(
+   normal(stepName(st)).includes(text)||
+   normal(s.meta?.zones?.[st.zone]).includes(text)||
+   normal(window.ForeverI18n?.zone(st.zone)).includes(text)||
+   st.waypoints.some(w=>
+    normal(Q.header(w.header,"fr")).includes(text)||
+    normal(Q.header(w.header,"en")).includes(text)||
+    ["starts","ends","objectives","completed"].some(k=>(w[k]||[]).some(q=>{
+     const a=detailsOf(q);
+     return normal(a.name).includes(text)||normal(a.original).includes(text)||
+      normal(a.french).includes(text)||String(a.id||"")===text;
+    }))
+   )
+  );
   if(!matches)continue;all++;if(results>=35)continue;results++;
   const b=element("button",undefined,"quest-search-result");b.type="button";b.append(element("strong",QT("Étape ","Step ")+(i+1)),element("span",stepName(st)),element("small",QT("niv. ≈ ","lvl ≈ ")+Math.floor(st.experience)));b.addEventListener("click",()=>{go(i);$("quest-search").value="";res.hidden=true;res.replaceChildren();$("quest-zone-title").scrollIntoView({behavior:"smooth",block:"nearest"})});res.append(b);}
  if(!all)res.append(element("p",QT("Aucune étape correspondante dans ce parcours.","No matching steps in this route.")));
