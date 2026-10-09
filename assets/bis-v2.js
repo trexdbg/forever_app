@@ -1,5 +1,5 @@
 (()=>{"use strict";
-const ROOT="/forever_app/", en=document.documentElement.lang==="en", $=id=>document.getElementById(id);
+const ROOT="/", en=document.documentElement.lang==="en", $=id=>document.getElementById(id);
 const host=$("bis-app");if(!host)return;
 const classNamesEN={guerrier:"Warrior",paladin:"Paladin",chasseur:"Hunter",voleur:"Rogue",pretre:"Priest",chaman:"Shaman",mage:"Mage",demoniste:"Warlock",druide:"Druid"};
 const specNamesEN={Armes:"Arms",Fureur:"Fury",Protection:"Protection",Sacré:"Holy",Vindicte:"Retribution","Maîtrise des bêtes":"Beast Mastery",Précision:"Marksmanship",Survie:"Survival",Assassinat:"Assassination",Combat:"Combat",Finesse:"Subtlety",Discipline:"Discipline",Ombre:"Shadow",Élémentaire:"Elemental",Amélioration:"Enhancement",Restauration:"Restoration",Arcanes:"Arcane",Feu:"Fire",Givre:"Frost",Affliction:"Affliction",Démonologie:"Demonology",Destruction:"Destruction",Équilibre:"Balance",Farouche:"Feral Combat"};
