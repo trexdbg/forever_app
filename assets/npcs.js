@@ -165,6 +165,33 @@ const iconSrc=item=>item?.icon_status==="wowhead_icon_verified"?"https://wow.zam
 const iconNode=(item)=>{const frame=mk("span",null,"npc-item-icon npc-image-icon");const img=mk("img");img.alt="";img.loading="lazy";img.width=40;img.height=40;img.src=iconSrc(item);img.onerror=()=>{img.onerror=null;img.src=root+"assets/icons/inv_scroll_07.jpg"};frame.append(img);return frame};
 const copperFmt=c=>{const g=Math.floor(c/10000),s=Math.floor(c%10000/100),b=c%100;return [g?g+" "+S("po","g"):"",s?s+" "+S("pa","s"):"",b?b+" "+S("pc","c"):""].filter(Boolean).join(" ")||"0 "+S("pc","c")};
 const stockWord=item=>item.supply==="unlimited"?S("Stock illimité (référence Classic)","Unlimited stock (Classic reference)"):item.supply==="reputation"?S("Vente liée à la réputation","Reputation-gated sale"):S("Stock limité (référence Classic)","Limited stock (Classic reference)");
+
+/* Share the actual Equipment tooltip with vendors; no fabricated Forever stats. */
+const merchantItemTooltip=(item,vendor=null,vendorCount=0)=>{
+ const offer=vendor?.offer_details?.[String(item.id)]||{};
+ const isVerifiedIcon=item.icon_status==="wowhead_icon_verified"&&/^[a-z0-9_-]{2,70}$/.test(item.icon||"");
+ return {
+  id:item.id,name:title(item),quality:"common",
+  icon:isVerifiedIcon?item.icon:"inv_scroll_07",
+  icon_url:isVerifiedIcon?"https://wow.zamimg.com/images/wow/icons/medium/"+item.icon+".jpg":null,
+  vendorDetails:{
+   profession:profession[item.profession]||item.profession,
+   type:item.kind==="recipe"?S("Recette / patron","Recipe / pattern"):S("Composant","Material"),
+   skill:item.kind==="recipe"&&Number.isFinite(item.skill)?item.skill:null,
+   stock:stockWord(item),
+   vendorCount,vendorName:vendor?.name||null,
+   priceCopper:Number.isInteger(item.vendor_price_copper)?item.vendor_price_copper:null,
+   maxStock:Number.isInteger(item.vendor_stock)?item.vendor_stock:null,
+   specialization:offer.specialization||item.specialization||null,
+   bindPickup:offer.bind==="pickup"||item.bind==="pickup",
+   sharedStock:Boolean(offer.shared_stock_group)
+  }
+ };
+};
+const showMerchantTooltip=(node,item,vendor=null,count=0)=>{
+ window.ForeverItemTooltip?.bind(node,merchantItemTooltip(item,vendor,count));
+};
+
 function filters(){
  if(weapon){for(const key of [...new Set(store.db.npcs.filter(n=>trainerType(n)==="weapon"&&n.role==="trainer").flatMap(n=>n.weapon_skills||[]))].sort((a,b)=>(weaponLabels[a]||a).localeCompare(weaponLabels[b]||b))){const op=mk("option",weaponLabels[key]||key);op.value=key;weapon.append(op)}}
  for(const key of [...new Set(store.db.npcs.filter(n=>n.role===store.mode&&(store.mode!=="trainer"||trainerType(n)==="profession")).map(n=>n.profession))].sort((a,b)=>a.localeCompare(b))){const op=mk("option",profession[key]||key);op.value=key;trade.append(op)}
@@ -252,6 +279,7 @@ function renderList(){
    const b=mk("button",null,"npc-result npc-result-group");b.type="button";b.setAttribute("role","option");
    b.setAttribute("aria-selected",String(store.active?.item?.id===g.item.id));
    b.append(iconNode(g.item));
+   showMerchantTooltip(b,g.item,null,g.records.length);
    const copy=append(b,"span",null,"npc-result-copy");
    append(copy,"strong",title(g.item));
    const sellers=g.records.length;
@@ -365,7 +393,10 @@ function renderDetail(){
  const n=r.npc,i=r.item;
  if(store.mode==="trainer"){renderTrainerDetail(n);return}
  append(detail,"span",i?S("Objet · Vendeur","Item · Vendor"):trainerType(n)==="weapon"?S("Armes · Maître d’armes","Weapons · Weapon master"):S("Métier · Maître","Profession · Trainer"),"npc-detail-kicker");
- if(i){const heading=append(detail,"div",null,"npc-item-heading");heading.append(iconNode(i));append(heading,"h3",title(i));}else append(detail,"h3",n.name);
+ if(i){const heading=append(detail,"div",null,"npc-item-heading");heading.append(iconNode(i));append(heading,"h3",title(i));heading.tabIndex=0;
+ const totalSellers=store.db.npcs.filter(v=>v.role==="merchant"&&v.offers.includes(String(i.id))).length;
+ showMerchantTooltip(heading,i,n,totalSellers);
+}else append(detail,"h3",n.name);
  append(detail,"p",i?n.name:trainerType(n)==="weapon"?S("Apprentissage des compétences d’armes","Weapon proficiency training"):S("Maître de métier","Profession trainer"),"npc-subtitle");
  const chips=append(detail,"div",null,"npc-chips");
  append(chips,"span",profession[i?.profession||n.profession]||i?.profession||n.profession,"npc-chip gold");
@@ -379,7 +410,11 @@ function renderDetail(){
  const actions=append(detail,"div",null,"npc-actions"),mapId=store.db.zone_maps?.[n.zone.id]?.uiMapID,command=hasCoords(n)?"/way "+(mapId?"#"+mapId+" ":"")+n.coordinates.x+" "+n.coordinates.y:"";
  if(command){const btn=append(actions,"button",S("Copier /way","Copy /way"),"npc-copy");btn.type="button";
  btn.addEventListener("click",async()=>{try{await navigator.clipboard.writeText(command);btn.textContent=S("Commande copiée ✓","Copied ✓")}catch(_){btn.textContent=command}});}
- if(i){link(actions,S("Fiche Classic ↗","Classic item ↗"),"https://www.wowhead.com/classic/item="+i.id);
+ if(i){
+ const info=append(actions,"button",S("ⓘ Détails de l'objet","ⓘ Item details"),"npc-item-info-button bis-v2-info-button");info.type="button";
+ info.setAttribute("aria-label",S("Afficher les détails de "+title(i),"Show details for "+title(i)));
+ info.addEventListener("click",()=>window.ForeverItemTooltip?.pin(merchantItemTooltip(i,n,store.db.npcs.filter(v=>v.role==="merchant"&&v.offers.includes(String(i.id))).length)));
+ link(actions,S("Fiche Classic ↗","Classic item ↗"),"https://www.wowhead.com/classic/item="+i.id);
  link(actions,S("Vérifier Forever ↗","Check Forever ↗"),"https://www.wowhead.com/forever/item="+i.id)}
  if(n.id)link(actions,S("Fiche PNJ ↗","NPC details ↗"),"https://www.wowhead.com/classic/npc="+n.id);
 
