@@ -42,7 +42,7 @@ function normalizedClassic(i,slot){
  }
  if(!appSlot||!SLOT_CODES[appSlot])return null;
  const url=(typeof i.url==="string"&&i.url.startsWith("https://wowdb.assemblee-defias.fr/"))?i.url:"https://wowdb.assemblee-defias.fr/?id=classic:item:"+i.id;
- return {id:i.id,name:i.name,slot:appSlot,slot_name:i.slot_name||null,icon:iconFromUrl(i.icon)||null,iconUrl:typeof i.icon==="string"?i.icon:null,origin:"WoWDB · Classic 1.12",quality:i.quality||"common",url,reference:"Classic 1.12",source_status:"classic_api",verified_forever:false,itemLevel:i.item_level??null,requiredLevel:i.required_level??null,tooltip:Array.isArray(i.tooltip)?i.tooltip.filter(s=>typeof s==="string").slice(0,44):[]};
+ return {id:i.id,name:i.name,slot:appSlot,slot_name:i.slot_name||null,icon:typeof i.icon==="string"&&i.icon.startsWith("https://wowdb.assemblee-defias.fr/database-icons/")?i.icon:iconFromUrl(i.icon)||null,iconUrl:typeof i.icon==="string"?i.icon:null,origin:"WoWDB · Classic 1.12",quality:i.quality||"common",url,reference:"Classic 1.12",source_status:"classic_api",verified_forever:false,itemLevel:i.item_level??null,requiredLevel:i.required_level??null,tooltip:Array.isArray(i.tooltip)?i.tooltip.filter(s=>typeof s==="string").slice(0,44):[]};
 }
 function loadForever(){
  if(!foreverPromise)foreverPromise=fetch(BASE+"data/items-forever.json",{credentials:"omit"}).then(r=>{if(!r.ok)throw Error("Forever HTTP "+r.status);return r.json()}).then(j=>{if(!j||!Array.isArray(j.items))throw Error("invalid Forever dataset");return j.items.filter(valid).map(i=>({...i,reference:i.reference||"Wowhead Forever (beta)",source_status:"forever_beta_wowhead",verified_forever:false}))}).catch(()=>[]);
