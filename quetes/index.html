@@ -25,7 +25,7 @@
 </div>
 <section class="quest-timeline" aria-label="Navigation entre les étapes">
 <div class="quest-timeline-heading"><div><span class="kicker">PROGRESSION</span><h2 id="quest-step-count">Étape —</h2><p id="quest-timeline-zone">Choisissez un itinéraire pour commencer.</p></div>
-<div class="quest-step-actions"><button type="button" class="btn secondary" id="quest-prev" aria-label="Étape précédente">← Précédent</button><button type="button" class="btn primary" id="quest-next" aria-label="Étape suivante">Suivant →</button></div></div>
+</div>
 <div class="quest-timeline-range-label"><label for="quest-range">Parcourir les étapes</label><output id="quest-range-output" for="quest-range">—</output></div>
 <div class="quest-timeline-track-scroll" aria-label="Frise des étapes et des niveaux">
 <div class="quest-timeline-track-inner">
@@ -45,11 +45,16 @@
 </aside>
 <div class="quest-content">
 <div class="quest-current-head"><div><span class="kicker">CARTE DE L'ÉTAPE</span><h2 id="quest-zone-title">Chargement…</h2><p id="quest-level">—</p></div></div>
-<div class="quest-map-top"><div><strong id="quest-map-title">Carte de zone</strong><small id="quest-map-source">Repères X / Y de la zone</small></div><div class="map-buttons"><button type="button" id="quest-zoom-out" aria-label="Dézoomer">−</button><button type="button" id="quest-zoom-reset">100 %</button><button type="button" id="quest-zoom-in" aria-label="Zoomer">+</button></div></div>
+<div class="quest-map-top"><div class="quest-map-heading"><strong id="quest-map-title">Carte de zone</strong><small id="quest-map-source">Molette : zoom · X / Y : 0 à 100</small></div>
+<div class="quest-map-controls" role="group" aria-label="Navigation des étapes et zoom de la carte">
+<button type="button" class="btn secondary" id="quest-prev" aria-label="Étape précédente">← Précédente</button>
+<button type="button" id="quest-zoom-reset" title="Réinitialiser le zoom et recentrer la carte" aria-label="Réinitialiser le zoom et recentrer la carte">100 %</button>
+<button type="button" class="btn primary" id="quest-next" aria-label="Étape suivante">Suivante →</button>
+</div></div>
 <div class="quest-map-frame"><canvas id="quest-canvas" width="960" height="640" tabindex="0" role="img" aria-label="Carte des étapes de quête : cliquez sur un marqueur numéroté ou sélectionnez une action dans le panneau de gauche"></canvas><span class="quest-map-overlay" id="quest-map-overlay">Chargement de la carte…</span></div>
 <div class="quest-map-caption"><span><b>X</b> → droite, 0 à 100</span><span><b>Y</b> ↓ bas, 0 à 100</span><span>● Prendre &nbsp; ● Objectif &nbsp; ● Rendre</span></div>
 <div class="quest-selected" id="quest-selected" aria-live="polite"><p>Sélectionnez un point de passage sur la carte ou dans la liste.</p></div>
-<div class="quest-bottom-nav"><button type="button" class="btn secondary" id="quest-prev-bottom">← Étape précédente</button><button type="button" class="btn primary" id="quest-next-bottom">Étape suivante →</button></div>
+
 </div></div>
 <details class="atlas-detail"><summary>Coordonnées et sauvegarde locale</summary><p>Chaque point est positionné sur sa carte de zone. Les coordonnées <strong>X / Y</strong> vont de 0 à 100 et ne représentent pas des coordonnées GPS. Les commandes <code>/way X Y</code> s’utilisent dans la zone concernée avec un addon compatible. Certaines quêtes peuvent varier sur WoW Forever. Votre progression reste enregistrée dans ce navigateur.</p></details>
 </section></main>
