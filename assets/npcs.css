@@ -243,3 +243,37 @@
 #prof-trainers .npc-trainer-detail-tags+.npc-actions{margin-top:13px}
 #prof-trainers .npc-weapon-teaching+.npc-actions{margin-top:14px}
 @media(max-width:750px){#prof-trainers .npc-trainer-result{min-height:88px}#prof-trainers .npc-trainer-person{text-align:left}}
+
+
+/* Compact finder controls, keep the zone map above the fold */
+.trainer-page .page-hero{padding-top:22px;padding-bottom:8px}
+.trainer-page .page-hero h1{margin-top:6px;margin-bottom:8px}
+.trainer-page .page-hero p{margin-bottom:5px}
+.trainer-page #prof-trainers.section{padding-top:0}
+#prof-trainers .npc-intro{margin:0 0 11px}
+#prof-trainers .npc-controls{grid-template-columns:minmax(118px,.9fr) minmax(142px,1.05fr) minmax(100px,.8fr) minmax(130px,1fr) minmax(200px,1.35fr);gap:8px;margin-bottom:7px}
+#prof-trainers .npc-search-field{grid-column:auto}
+#prof-trainers .npc-advanced-controls{border:0;background:transparent;margin:0 0 9px;padding:0}
+#prof-trainers .npc-advanced-controls[hidden]{display:none}
+#prof-trainers .npc-advanced-controls>summary{cursor:pointer;display:inline-flex;align-items:center;color:#b5bdad;font-size:11px;line-height:1.6;padding:2px 0;list-style:none}
+#prof-trainers .npc-advanced-controls>summary::-webkit-details-marker{display:none}
+#prof-trainers .npc-advanced-controls>summary:before{content:"▸";margin-right:6px;color:#d1b485}
+#prof-trainers .npc-advanced-controls[open]>summary:before{content:"▾"}
+#prof-trainers .npc-advanced-inner{max-width:230px;padding:7px 0 5px}
+#prof-trainers .npc-advanced-inner .npc-field{display:flex}
+#prof-trainers .npc-advanced-inner .npc-field[hidden]{display:none}
+#prof-trainers .npc-legend-alliance{background:#5aa7e8}
+#prof-trainers .npc-legend-horde{background:#d96d61}
+@media(max-width:1150px){
+ #prof-trainers .npc-controls{grid-template-columns:repeat(3,minmax(0,1fr))}
+ #prof-trainers .npc-search-field{grid-column:span 2}
+}
+@media(max-width:710px){
+ #prof-trainers .npc-controls{grid-template-columns:repeat(2,minmax(0,1fr))}
+ #prof-trainers .npc-search-field{grid-column:span 2}
+ #prof-trainers .npc-advanced-inner{max-width:none}
+}
+@media(max-width:440px){
+ #prof-trainers .npc-controls .npc-field{grid-column:auto}
+ #prof-trainers .npc-controls .npc-search-field{grid-column:span 2}
+}
