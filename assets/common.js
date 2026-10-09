@@ -11,7 +11,7 @@ const tr=en?{
 };
 const href=slug=>root+(slug?slug+"/":"");
 const active=slug=>slug?current===href(slug)||(slug==="talents"&&current.startsWith(href("talents"))):current===root;
-const link=(slug,label)=>{const a=document.createElement("a");a.href=href(slug);a.textContent=label;if(active(slug))a.setAttribute("aria-current","page");return a};
+const link=(slug,label)=>{const a=document.createElement("a");a.href=slug==="equipements"?href(slug)+"?v=20261009-catalogue":href(slug);a.textContent=label;if(active(slug))a.setAttribute("aria-current","page");return a};
 const group=(label,children)=>{const details=document.createElement("details");details.className="nav-group";
  const summary=document.createElement("summary");summary.textContent=label;details.append(summary);
  const menu=document.createElement("div");menu.className="nav-submenu";for(const [slug,title] of children)menu.append(link(slug,title));
