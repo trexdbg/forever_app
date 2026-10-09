@@ -22,7 +22,7 @@ function icon(iconName,label){const span=elem("span","bis-v2-icon");if(typeof ic
 function loadProfile(){choices=read(key("choices"));owned=read(key("owned"));const old=read(["forever-atlas","bis",db.version,chosenClass,chosenSpec].join(":"));for(const slot of db.slots){const item=target(slot.id);if(item&&old[item.id]&&owned[slot.id]===undefined)owned[slot.id]=item.id}}
 function target(id){const idNumber=Number(choices[id]);if(choices[id]===0)return null;if(Number.isInteger(idNumber)&&idNumber>0){const custom=db.items.find(i=>i.id===idNumber&&i.slot===id);if(custom)return custom}return recSlot(id)[0]||null}
 function acquired(id){const i=target(id);return Boolean(i&&Number(owned[id])===i.id)}
-function updateUrl(){const url=new URL(location.href);url.searchParams.set("classe",chosenClass);url.searchParams.set("spe",chosenSpec);const fragment=db.slots.map(s=>({id:s.id,item:target(s.id)})).filter(x=>x.item).map(x=>x.id+"-"+x.item.id).join(",");if(fragment)url.searchParams.set("equip",fragment);else url.searchParams.delete("equip");return url}
+function updateUrl(){const url=new URL(location.href);url.searchParams.set("classe",chosenClass);url.searchParams.set("spe",chosenSpec);const fragment=db.slots.map(s=>s.id+"-"+(target(s.id)?.id||0)).join(",");if(fragment)url.searchParams.set("equip",fragment);else url.searchParams.delete("equip");return url}
 function selectSlot(id){activeSlot=id;search="";selectedQualities.clear();mode=recSlot(id).length?"recommended":"all";renderSheet();renderPicker();if(window.matchMedia("(max-width: 980px)").matches)$("bis-picker").scrollIntoView({behavior:"smooth",block:"start"})}
 function chooseItem(id){const old=target(activeSlot);choices[activeSlot]=id;if(!old||old.id!==id)delete owned[activeSlot];persist();renderAll()}
 function toggleOwned(){const it=target(activeSlot);if(!it)return;if(acquired(activeSlot))delete owned[activeSlot];else owned[activeSlot]=it.id;persist();renderAll()}
@@ -64,7 +64,7 @@ for(const it of [...pool].sort((a,b)=>Number(ids.has(b.id))-Number(ids.has(a.id)
 }
 function renderAll(){renderClasses();renderSpecs();renderSheet();renderPicker()}
 function importShared(){const params=new URLSearchParams(location.search);const cls=params.get("classe"),s=params.get("spe");if(db.classes.some(c=>c.id===cls))chosenClass=cls;if(classInfo().specs.some(sp=>sp.id===s))chosenSpec=s;loadProfile();
-const shared=params.get("equip");if(shared&&shared.length<850){for(const pair of shared.split(",")){const match=/^([a-z0-9]+)-([0-9]+)$/.exec(pair);if(!match||!slotInfo(match[1]))continue;const id=Number(match[2]);if(db.items.some(i=>i.id===id&&i.slot===match[1]))choices[match[1]]=id}persist()}
+const shared=params.get("equip");if(shared&&shared.length<850){for(const pair of shared.split(",")){const match=/^([a-z0-9]+)-([0-9]+)$/.exec(pair);if(!match||!slotInfo(match[1]))continue;const id=Number(match[2]);if(id===0||db.items.some(i=>i.id===id&&i.slot===match[1]))choices[match[1]]=id}persist()}
 mode=recSlot(activeSlot).length?"recommended":"all"}
 function initControls(){$("bis-recommended").addEventListener("click",()=>{mode="recommended";renderPicker()});$("bis-all").addEventListener("click",()=>{mode="all";renderPicker()});
 $("bis-item-search").addEventListener("input",e=>{search=e.target.value.trim().toLocaleLowerCase();renderPicker();$("bis-item-search").focus();$("bis-item-search").setSelectionRange(e.target.selectionStart,e.target.selectionEnd)});
