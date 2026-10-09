@@ -1,4 +1,17 @@
 const ROOT="/forever_app/";
+const en=document.documentElement.lang==="en",T=(fr,english)=>en?english:fr;
+const TREE_NAMES_FR={
+ Warrior:{Arms:"Armes",Fury:"Fureur",Protection:"Protection"},
+ Paladin:{Holy:"Sacré",Protection:"Protection",Retribution:"Vindicte"},
+ Hunter:{"Beast Mastery":"Maîtrise des bêtes",Marksmanship:"Précision",Survival:"Survie"},
+ Rogue:{Assassination:"Assassinat",Combat:"Combat",Subtlety:"Finesse"},
+ Priest:{Discipline:"Discipline",Holy:"Sacré",Shadow:"Ombre"},
+ Shaman:{Elemental:"Élémentaire",Enhancement:"Amélioration",Restoration:"Restauration"},
+ Mage:{Arcane:"Arcanes",Fire:"Feu",Frost:"Givre"},
+ Warlock:{Affliction:"Affliction",Demonology:"Démonologie",Destruction:"Destruction"},
+ Druid:{Balance:"Équilibre","Feral Combat":"Combat farouche",Restoration:"Restauration"}
+};
+const localizedTree=(name)=>en?name:(TREE_NAMES_FR[cls]?.[name]||name);
 const cls=document.body.dataset.class, slug=document.body.dataset.slug;
 const wrap=document.getElementById("talent-trees"), level=document.getElementById("talent-level"), left=document.getElementById("points-left"), version=document.getElementById("talent-version"), source=document.getElementById("talent-source"), message=document.getElementById("talent-message");
 let trees=[],ranks=[],selected=[0,0,0],dataVersion="unknown";
@@ -14,7 +27,7 @@ function blank(){return trees.map(t=>t.talents.map(()=>0))}
 function say(s){message.textContent=s;clearTimeout(say.timer);if(s)say.timer=setTimeout(()=>{if(message.textContent===s)message.textContent=""},6000)}
 function save(){try{localStorage.setItem("forever-atlas:talents:"+cls,JSON.stringify({version:dataVersion,level:Number(level.value),ranks}))}catch{}}
 function restore(){try{const x=JSON.parse(localStorage.getItem("forever-atlas:talents:"+cls)||"null");if(x&&x.version===dataVersion&&Array.isArray(x.ranks)&&x.ranks.length===trees.length){level.value=String(x.level);if(!Number.isInteger(Number(level.value))||Number(level.value)<10||Number(level.value)>60)level.value="60";if(x.ranks.every((a,i)=>Array.isArray(a)&&a.length===trees[i].talents.length)){const b=x.ranks.map(a=>a.map(Number));if(legal(b))ranks=b}}}catch{}}
-function change(ti,i,delta){const current=ranks[ti][i],t=trees[ti].talents[i],next=current+delta;if(next<0||next>t.max)return;if(delta>0){if(points()>=value()){say("Plus de points disponibles à ce niveau.");return}if(!canLearn(ti,i)){say("Palier ou prérequis non rempli pour "+t.name+".");return}}const candidate=ranks.map(a=>a.slice());candidate[ti][i]=next;if(!legal(candidate)){say("Ce retrait invaliderait d'autres talents déjà choisis.");return}ranks=candidate;selected[ti]=i;save();render()}
+function change(ti,i,delta){const current=ranks[ti][i],t=trees[ti].talents[i],next=current+delta;if(next<0||next>t.max)return;if(delta>0){if(points()>=value()){say(T("Plus de points disponibles à ce niveau.","No talent points left at this level."));return}if(!canLearn(ti,i)){say(T("Palier ou prérequis non rempli pour ","Tier or prerequisite not met for ")+t.name+".");return}}const candidate=ranks.map(a=>a.slice());candidate[ti][i]=next;if(!legal(candidate)){say(T("Ce retrait invaliderait d'autres talents déjà choisis.","Removing this point would invalidate other selected talents."));return}ranks=candidate;selected[ti]=i;save();render()}
 // A compact Classic-like tree: each prerequisite is a real connection from the source data.
 const svgNS="http://www.w3.org/2000/svg";
 const classAccents={Warrior:"#c69b6d",Paladin:"#f48cba",Hunter:"#aad372",Rogue:"#fff468",Priest:"#f6f6f6",Shaman:"#63a5f5",Mage:"#3fc7eb",Warlock:"#a5a6ef",Druid:"#ff9d4a"};
@@ -52,28 +65,28 @@ function detail(ti,i){
   const panel=document.getElementById("tree-detail-"+ti);
   if(!panel||!trees[ti]?.talents[i])return;
   const t=trees[ti].talents[i],n=ranks[ti][i],preview=Math.min(t.max,n+1);
-  const description=Array.isArray(t.desc)?(t.desc[preview-1]||"Description de ce rang non documentée."):"Description non disponible.";
+  const description=Array.isArray(t.desc)?(t.desc[preview-1]||T("Description de ce rang non documentée.","No description documented for this rank.")):T("Description non disponible.","Description unavailable.");
   const known=!t.confirmed||t.confirmed.includes(preview);
   panel.replaceChildren();
-  panel.append(mk("strong",t.name),mk("small","Rang "+n+" / "+t.max+(n===t.max?" · Maîtrisé":n?" · En cours":" · Non appris")));
+  panel.append(mk("strong",t.name),mk("small",T("Rang ","Rank ")+n+" / "+t.max+(n===t.max?T(" · Maîtrisé"," · Maxed"):n?T(" · En cours"," · In progress"):T(" · Non appris"," · Not learned"))));
   panel.append(mk("p",description));
-  if(!known)panel.append(mk("small","Rang non confirmé dans l'export de référence."));
+  if(!known)panel.append(mk("small",T("Rang non confirmé dans l'export de référence.","Rank not confirmed in source data.")));
   if(t.req){
     const j=reqIndex(ti,i),done=j>=0&&ranks[ti][j]===trees[ti].talents[j].max;
-    panel.append(mk("small",(done?"✓ Prérequis validé : ":"Prérequis : ")+t.req));
+    panel.append(mk("small",(done?T("✓ Prérequis validé : ","✓ Prerequisite met: "):T("Prérequis : ","Prerequisite: "))+t.req));
   }
-  if(!canLearn(ti,i))panel.append(mk("small","Débloqué après les points nécessaires dans les paliers précédents et ses prérequis.","detail-warning"));
-  if(t.classic?.status&&t.classic.status!=="same")panel.append(mk("small","Différence Classic : "+t.classic.status));
+  if(!canLearn(ti,i))panel.append(mk("small",T("Débloqué après les points nécessaires dans les paliers précédents et ses prérequis.","Unlock by spending enough points in earlier tiers and meeting prerequisites."),"detail-warning"));
+  if(t.classic?.status&&t.classic.status!=="same")panel.append(mk("small",T("Différence Classic : ","Classic difference: ")+t.classic.status));
 }
 function render(){
   left.textContent=String(value()-points());
   wrap.replaceChildren();
   for(let ti=0;ti<trees.length;ti++){
     const tree=trees[ti],card=mk("section",undefined,"tree-card"),header=mk("div",undefined,"tree-head");
-    header.append(mk("h2",tree.name),mk("strong",treePoints(ti)+" pts"));
+    header.append(mk("h2",localizedTree(tree.name)),mk("strong",treePoints(ti)+" pts"));
     card.append(header);
     const grid=mk("div",undefined,"talent-grid");
-    grid.setAttribute("aria-label","Arbre "+tree.name+" : sélection des talents");
+    grid.setAttribute("aria-label",T("Arbre ","Talent tree ")+localizedTree(tree.name)+T(" : sélection des talents",": talent selection"));
     grid.append(treeLinks(ti));
     for(let i=0;i<tree.talents.length;i++){
       const t=tree.talents[i],rank=ranks[ti][i],locked=!canLearn(ti,i),noPoints=points()>=value();
@@ -84,8 +97,8 @@ function render(){
       button.type="button";
       // Keep locked nodes accessible by mouse, touch and keyboard for talent details.
       button.setAttribute("aria-disabled",String(rank===t.max||locked||noPoints));
-      button.setAttribute("aria-label",t.name+", rang "+rank+" sur "+t.max+(t.req?", prérequis "+t.req:"")+". Cliquer pour consulter ou ajouter un point.");
-      button.title=t.name+(t.req?" — nécessite "+t.req:"");
+      button.setAttribute("aria-label",t.name+T(", rang ",", rank ")+rank+T(" sur "," of ")+t.max+(t.req?T(", prérequis ",", requires ")+t.req:"")+T(". Cliquer pour consulter ou ajouter un point.",". Select to view details or add a point."));
+      button.title=t.name+(t.req?T(" — nécessite "," — requires ")+t.req:"");
       const icon=mk("span",undefined,"icon-wrap");
       const fallback=()=>{icon.replaceChildren(document.createTextNode(t.name.charAt(0)))};
       if(typeof t.icon==="string"&&/^[a-z0-9_-]{2,65}$/.test(t.icon)){
@@ -103,8 +116,8 @@ function render(){
       button.addEventListener("click",()=>{
         choose();
         if(rank>=t.max)return;
-        if(locked){say("Palier ou prérequis non rempli pour "+t.name+".");return}
-        if(noPoints){say("Plus de points disponibles à ce niveau.");return}
+        if(locked){say(T("Palier ou prérequis non rempli pour ","Tier or prerequisite not met for ")+t.name+".");return}
+        if(noPoints){say(T("Plus de points disponibles à ce niveau.","No talent points left at this level."));return}
         change(ti,i,1);
       });
       button.addEventListener("contextmenu",e=>{e.preventDefault();choose();change(ti,i,-1)});
@@ -113,8 +126,8 @@ function render(){
       if(rank>0){
         const minus=mk("button","−","talent-minus");
         minus.type="button";
-        minus.setAttribute("aria-label","Retirer un point de "+t.name);
-        minus.title="Retirer un point";
+        minus.setAttribute("aria-label",T("Retirer un point de ","Remove a point from ")+t.name);
+        minus.title=T("Retirer un point","Remove a point");
         minus.addEventListener("click",()=>change(ti,i,-1));
         cell.append(minus);
       }
@@ -129,7 +142,7 @@ function render(){
     detail(ti,Math.min(selected[ti]||0,tree.talents.length-1));
   }
 }
-function parseHash(){if(!location.hash.startsWith("#b="))return;try{const b=location.hash.slice(3).replace(/-/g,"+").replace(/_/g,"/");const data=JSON.parse(atob(b));if(data.c!==cls||data.v!==dataVersion||!Number.isInteger(data.l)||data.l<10||data.l>60||!Array.isArray(data.p))throw Error("Version ou classe non compatible");const clean=blank();for(const entry of data.p){if(!Array.isArray(entry)||entry.length!==3)throw Error("Allocations invalides");const [ti,i,n]=entry;if(!Number.isInteger(ti)||!Number.isInteger(i)||!Number.isInteger(n)||ti<0||ti>=trees.length||i<0||i>=trees[ti].talents.length||n<0||n>trees[ti].talents[i].max)throw Error("Allocations invalides");clean[ti][i]=n}const before=level.value;level.value=String(data.l);if(!legal(clean)){level.value=before;throw Error("Allocation non valide")}ranks=clean;save();say("Build partagé chargé.")}catch(e){say("Lien de build incompatible ou invalide : "+e.message)}}
-function share(){const picks=[];ranks.forEach((a,ti)=>a.forEach((n,i)=>{if(n)picks.push([ti,i,n])}));const payload={v:dataVersion,c:cls,l:Number(level.value),p:picks},hash=btoa(JSON.stringify(payload)).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,""),url=location.origin+location.pathname+"#b="+hash;history.replaceState(null,"",url);if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(url).then(()=>say("Lien copié !")).catch(()=>say("Lien créé dans la barre d'adresse : copiez-le."))}else say("Lien créé dans la barre d'adresse : copiez-le.")}
-async function load(){try{let data;try{const r=await fetch(ROOT+"data/talents.json",{cache:"no-cache"});if(!r.ok)throw Error("not synced");data=await r.json()}catch{const r=await fetch("https://talentsforever.com/data.json",{mode:"cors"});if(!r.ok)throw Error("remote unavailable");data=await r.json();say("Mode source directe : configurez l'import quotidien pour les accès hors ligne.")}const classes=data.classes||data.talents;if(!classes||!classes[cls]||!Array.isArray(classes[cls].trees)||classes[cls].trees.length!==3)throw Error("Classe absente du jeu de données");const total=Object.values(classes).reduce((s,c)=>s+(c.trees||[]).reduce((n,t)=>n+(t.talents||[]).length,0),0);if(total<400)throw Error("Jeu de données incomplet");trees=classes[cls].trees;for(const t of trees){if(!Array.isArray(t.talents)||!t.talents.length)throw Error("Arbre incomplet");for(const x of t.talents)if(!x.name||!Number.isInteger(x.max)||x.max<1||x.max>5||!Number.isInteger(x.row)||x.row<1||x.row>7||!Number.isInteger(x.col)||x.col<1||x.col>4)throw Error("Position ou rang invalide")}dataVersion=String(data.version||data.generated_at||data.generated||"snapshot-inconnu");version.textContent="Instantané : "+dataVersion+" · "+total+" talents dans les neuf classes.";source.textContent="Données bêta communautaires";ranks=blank();restore();parseHash();document.getElementById("talent-reset").addEventListener("click",()=>{ranks=blank();save();render();say("Build réinitialisé.")});document.getElementById("talent-share").addEventListener("click",share);level.addEventListener("change",()=>{if(points()>value()){level.value=String(points()+9);say("Niveau minimum pour cette répartition : "+(points()+9))}save();render()});render()}catch(e){source.textContent="Données indisponibles";wrap.replaceChildren();const p=mk("p","Le constructeur ne peut pas charger les talents vérifiés : "+e.message+". Lancez l'action de synchronisation dans le dépôt privé (secret PUBLIC_REPO_TOKEN).","empty-state");wrap.append(p);left.textContent="—"}}
+function parseHash(){if(!location.hash.startsWith("#b="))return;try{const b=location.hash.slice(3).replace(/-/g,"+").replace(/_/g,"/");const data=JSON.parse(atob(b));if(data.c!==cls||data.v!==dataVersion||!Number.isInteger(data.l)||data.l<10||data.l>60||!Array.isArray(data.p))throw Error("Version ou classe non compatible");const clean=blank();for(const entry of data.p){if(!Array.isArray(entry)||entry.length!==3)throw Error("Allocations invalides");const [ti,i,n]=entry;if(!Number.isInteger(ti)||!Number.isInteger(i)||!Number.isInteger(n)||ti<0||ti>=trees.length||i<0||i>=trees[ti].talents.length||n<0||n>trees[ti].talents[i].max)throw Error("Allocations invalides");clean[ti][i]=n}const before=level.value;level.value=String(data.l);if(!legal(clean)){level.value=before;throw Error("Allocation non valide")}ranks=clean;save();say(T("Build partagé chargé.","Shared build loaded."))}catch(e){say(T("Lien de build incompatible ou invalide : ","Invalid or incompatible build link: ")+e.message)}}
+function share(){const picks=[];ranks.forEach((a,ti)=>a.forEach((n,i)=>{if(n)picks.push([ti,i,n])}));const payload={v:dataVersion,c:cls,l:Number(level.value),p:picks},hash=btoa(JSON.stringify(payload)).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,""),url=location.origin+location.pathname+"#b="+hash;history.replaceState(null,"",url);if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(url).then(()=>say(T("Lien copié !","Link copied!"))).catch(()=>say(T("Lien créé dans la barre d'adresse : copiez-le.","Link created in the address bar. Copy it from there.")))}else say(T("Lien créé dans la barre d'adresse : copiez-le.","Link created in the address bar. Copy it from there."))}
+async function load(){try{let data;try{const r=await fetch(ROOT+"data/talents.json",{cache:"no-cache"});if(!r.ok)throw Error("not synced");data=await r.json()}catch{const r=await fetch("https://talentsforever.com/data.json",{mode:"cors"});if(!r.ok)throw Error("remote unavailable");data=await r.json();say(T("Mode source directe : configurez l'import quotidien pour les accès hors ligne.","Using remote talent data. Enable daily synchronization for offline access."))}const classes=data.classes||data.talents;if(!classes||!classes[cls]||!Array.isArray(classes[cls].trees)||classes[cls].trees.length!==3)throw Error("Classe absente du jeu de données");const total=Object.values(classes).reduce((s,c)=>s+(c.trees||[]).reduce((n,t)=>n+(t.talents||[]).length,0),0);if(total<400)throw Error("Jeu de données incomplet");trees=classes[cls].trees;for(const t of trees){if(!Array.isArray(t.talents)||!t.talents.length)throw Error("Arbre incomplet");for(const x of t.talents)if(!x.name||!Number.isInteger(x.max)||x.max<1||x.max>5||!Number.isInteger(x.row)||x.row<1||x.row>7||!Number.isInteger(x.col)||x.col<1||x.col>4)throw Error("Position ou rang invalide")}dataVersion=String(data.version||data.generated_at||data.generated||"snapshot-inconnu");version.textContent=T("Instantané : ","Snapshot: ")+dataVersion+" · "+total+T(" talents dans les neuf classes."," talents across all nine classes.");source.textContent=T("Données bêta communautaires","Community beta data");ranks=blank();restore();parseHash();document.getElementById("talent-reset").addEventListener("click",()=>{ranks=blank();save();render();say(T("Build réinitialisé.","Build reset."))});document.getElementById("talent-share").addEventListener("click",share);level.addEventListener("change",()=>{if(points()>value()){level.value=String(points()+9);say(T("Niveau minimum pour cette répartition : ","Minimum level for this build: ")+(points()+9))}save();render()});render()}catch(e){source.textContent=T("Données indisponibles","Data unavailable");wrap.replaceChildren();const p=mk("p",T("Le constructeur ne peut pas charger les talents vérifiés : ","Cannot load verified talent data: ")+e.message+T(". Lancez l'action de synchronisation dans le dépôt privé (secret PUBLIC_REPO_TOKEN).",". Run the sync workflow in the private repository (PUBLIC_REPO_TOKEN secret)."),"empty-state");wrap.append(p);left.textContent="—"}}
 load();
