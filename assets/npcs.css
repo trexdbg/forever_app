@@ -97,3 +97,18 @@
 .npc-map-legend span{display:inline-flex;align-items:center;gap:5px}
 .npc-legend-swatch{display:inline-block;width:10px;height:10px;border-radius:50%;box-shadow:0 0 0 2px #132219}
 .npc-legend-vendor{background:#b8d69e}.npc-legend-trainer{background:#7cb9c5}.npc-legend-current{background:#f5d59d}
+
+/* WoW item icons and multiple vendor options */
+.npc-result .npc-image-icon{width:40px;height:40px;display:block;flex:none;padding:0;overflow:hidden;box-shadow:0 1px 5px #0009}
+.npc-image-icon img{width:100%;height:100%;object-fit:cover;display:block;image-rendering:auto}
+.npc-item-heading{display:flex;align-items:center;gap:13px;margin:9px 0;min-width:0}
+.npc-item-heading .npc-image-icon{width:54px;height:54px;border:2px solid #a89468;flex:none}
+.npc-item-heading h3{margin:0;min-width:0}
+.npc-alternatives{margin:15px 0;border-top:1px solid #40543e;padding-top:8px}
+.npc-alternatives h4{font-size:17px;margin:8px 0}
+.npc-alternative-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;max-height:240px;overflow-y:auto}
+.npc-alternative-list button{border:1px solid #485c48;background:#18271b;color:#d9e5d3;padding:8px;text-align:left;cursor:pointer;font-size:11px;line-height:1.4}
+.npc-alternative-list button:hover{border-color:#c0a36e;background:#283a26}
+.npc-controls{grid-template-columns:minmax(185px,2fr) repeat(4,minmax(100px,1fr))}
+@media(max-width:1050px){.npc-controls{grid-template-columns:repeat(2,minmax(0,1fr))}.npc-field:first-child{grid-column:span 2}}
+@media(max-width:480px){.npc-alternative-list{grid-template-columns:1fr}.npc-field:first-child{grid-column:span 2}}
