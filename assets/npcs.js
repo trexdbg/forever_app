@@ -10,6 +10,8 @@ const side=d=>d.zone[en?"en":"fr"];
 const faction={alliance:S("Alliance","Alliance"),horde:S("Horde","Horde"),neutral:S("Neutre","Neutral")};
 const profession={Alchimie:S("Alchimie","Alchemy"),Couture:S("Couture","Tailoring"),Ingénierie:S("Ingénierie","Engineering"),Enchantement:S("Enchantement","Enchanting"),Forge:S("Forge","Blacksmithing"),"Travail du cuir":S("Travail du cuir","Leatherworking"),Secourisme:S("Secourisme","First Aid"),Cuisine:S("Cuisine","Cooking"),Herboristerie:S("Herboristerie","Herbalism"),Minage:S("Minage","Mining"),Dépeçage:S("Dépeçage","Skinning"),Pêche:S("Pêche","Fishing"),Armes:S("Armes","Weapons")};
 const weaponLabels={"Bows":S("Arcs","Bows"),"Daggers":S("Dagues","Daggers"),"Fist Weapons":S("Armes de pugilat","Fist weapons"),"Staves":S("Bâtons","Staves"),"Thrown":S("Armes de jet","Thrown"),"Crossbows":S("Arbalètes","Crossbows"),"Guns":S("Armes à feu","Guns"),"One-Handed Axes":S("Haches à une main","One-handed axes"),"One-Handed Maces":S("Masses à une main","One-handed maces"),"Two-Handed Axes":S("Haches à deux mains","Two-handed axes"),"Two-Handed Maces":S("Masses à deux mains","Two-handed maces"),"One-Handed Swords":S("Épées à une main","One-handed swords"),"Two-Handed Swords":S("Épées à deux mains","Two-handed swords"),"Polearms":S("Armes d’hast","Polearms")};
+const trainerIcons={"Alchimie":"trade_alchemy","Couture":"trade_tailoring","Ingénierie":"trade_engineering","Enchantement":"trade_engraving","Forge":"trade_blacksmithing","Travail du cuir":"trade_leatherworking","Secourisme":"spell_holy_sealofsacrifice","Cuisine":"inv_misc_food_15","Herboristerie":"trade_herbalism","Minage":"trade_mining","Dépeçage":"inv_misc_pelt_wolf_01","Pêche":"trade_fishing"};
+const trainerIcon=n=>{const frame=mk("span",null,"npc-item-icon npc-trainer-icon");const img=mk("img");img.src="https://wow.zamimg.com/images/wow/icons/medium/"+(trainerIcons[n.profession]||"inv_hammer_04")+".jpg";img.alt="";img.loading="lazy";img.width=38;img.height=38;img.onerror=()=>{img.onerror=null;img.src=root+"assets/icons/inv_hammer_04.jpg"};frame.append(img);return frame};
 const hasCoords=n=>Number.isFinite(n.coordinates?.x)&&Number.isFinite(n.coordinates?.y);
 const trainerType=n=>n.trainer_kind==="weapon"?"weapon":"profession";
 const human=n=>n>=60?(Math.floor(n/60)+" "+S("h","h")+(n%60?" "+(n%60)+" min":"")):fmt(n)+" min";const time=(a,b)=>a===b?human(a):human(a)+" – "+human(b);
@@ -60,7 +62,7 @@ function filteredRecords(){
  });
 }
 function renderList(){
- list.replaceChildren();for(const r of store.filtered){const b=mk("button",null,"npc-result");b.type="button";b.setAttribute("aria-selected",String(store.active?.key===r.key));b.setAttribute("role","option");const mark=r.item?iconNode(r.item):append(b,"span",trainerType(r.npc)==="weapon"?"⚔":"⚒","npc-item-icon");if(r.item)b.append(mark);mark.setAttribute("aria-hidden","true");
+ list.replaceChildren();for(const r of store.filtered){const b=mk("button",null,"npc-result");b.type="button";b.setAttribute("aria-selected",String(store.active?.key===r.key));b.setAttribute("role","option");const mark=r.item?iconNode(r.item):trainerType(r.npc)==="weapon"?mk("span","⚔","npc-item-icon"):trainerIcon(r.npc);b.append(mark);mark.setAttribute("aria-hidden","true");
  const copy=append(b,"span",null,"npc-result-copy");
  append(copy,"strong",r.item?title(r.item):r.npc.name);
  append(copy,"small",r.item?r.npc.name+" · "+side(r.npc):side(r.npc)+" · "+(trainerType(r.npc)==="weapon"?S("Maître d’armes","Weapon master"):profession[r.npc.profession]||r.npc.profession));
