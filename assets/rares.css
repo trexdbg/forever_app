@@ -26,3 +26,12 @@
 .rare-sources{font-size:11px;color:#9baf9e}.rare-sources a{color:#d4b17b}
 @media(max-width:900px){.rare-grid{grid-template-columns:240px minmax(0,1fr)}.rare-filters{grid-template-columns:repeat(2,minmax(0,1fr))}.rare-listpanel{height:530px}}
 @media(max-width:650px){.rare-app{padding:12px}.rare-grid{display:flex;flex-direction:column}.rare-right{order:0;width:100%}.rare-listpanel{order:1;width:100%;height:320px}.rare-map-title h2{font-size:15px}.rare-title h1{font-size:25px}.rare-detail-top h3{font-size:20px}}
+
+/* Rare identities: one stable color per creature, consistent across all its map markers. */
+.rare-color-dot{display:inline-block;flex:0 0 10px;width:10px;height:10px;border:1px solid #ffffffac;border-radius:50%;box-shadow:0 0 0 2px #08150c}
+.rare-row-name strong{flex:1;min-width:0}.rare-color-large{flex-basis:15px;width:15px;height:15px}
+.rare-map-legend{display:flex;align-items:center;gap:5px;padding:8px 10px;flex-wrap:wrap;max-height:91px;overflow:auto;border-top:1px solid #364638;background:#121d15}
+.rare-legend-entry{display:inline-flex;align-items:center;gap:7px;background:#18251c;border:1px solid #364838;padding:5px 7px;border-radius:2px;cursor:pointer;color:#bfcabe;font-size:10px;white-space:nowrap}
+.rare-legend-entry:hover{border-color:#c6a873;color:#f4dec0}.rare-legend-entry.active{border-color:#e3c58d;color:#f8e4c1;background:#313222}
+.rare-legend-entry .rare-color-dot{height:9px;width:9px;flex-basis:9px}
+@media(max-width:650px){.rare-map-legend{max-height:80px}.rare-legend-entry{font-size:10px;padding:4px 6px}}
