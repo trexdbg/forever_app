@@ -51,7 +51,7 @@ function loadForever(){
  ]).then(([manual,client])=>{const merged=new Map();for(const i of [...(Array.isArray(client.items)?client.items:[]),...(Array.isArray(manual.items)?manual.items:[])])if(valid(i))merged.set(i.id,{...i,reference:i.reference||"Forever beta client",source_status:i.source_status||"forever_beta_client",verified_forever:false});return [...merged.values()]});
  return foreverPromise;
 }
-async function loadClassic({slot="all",query="",qualities=[],cursor=null,signal=null,limit=100}={}){
+async function loadClassic({slot="all",query="",qualities=[],types=[],cursor=null,signal=null,limit=100}={}){
  const params=new URLSearchParams();
  params.set("slot",SLOT_CODES[slot]||ALL_SLOTS);
  params.set("limit",String(Math.max(1,Math.min(100,limit))));
@@ -60,6 +60,7 @@ async function loadClassic({slot="all",query="",qualities=[],cursor=null,signal=
  params.set("include_total","true");
  if(query&&query.trim())params.set("q",query.trim());
  if(Array.isArray(qualities)&&qualities.length)params.set("quality",qualities.join(","));
+ if(Array.isArray(types)&&types.length)params.set("type",types.join(","));
  if(cursor)params.set("cursor",cursor);
  const r=await fetch(API+"?"+params.toString(),{mode:"cors",credentials:"omit",signal:signal||undefined});
  if(!r.ok)throw Error("WoWDB HTTP "+r.status);
