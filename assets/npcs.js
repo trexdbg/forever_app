@@ -39,7 +39,7 @@ function filteredRecords(){
  if(store.showReportsOnly&&!item)return false;
  if(store.showReportsOnly&&!evidence(n,item))return false;
  if(!needle)return true;
- const terms=[n.name,n.zone.fr,n.zone.en,n.note,n.profession,profession[n.profession],n.rank,item?.name?.fr,item?.name?.en,item?.id];
+ const terms=[n.name,n.zone.fr,n.zone.en,n.note,n.note_en,n.profession,profession[n.profession],item?.profession,profession[item?.profession],n.rank,item?.name?.fr,item?.name?.en,item?.id];
  return terms.some(x=>val(x).includes(needle));
  }).sort((a,b)=>{
  const ea=!!a.item&&!!evidence(a.npc,a.item),eb=!!b.item&&!!evidence(b.npc,b.item);
@@ -73,17 +73,13 @@ function renderDetail(){
  const place=append(detail,"div",null,"npc-location"), p=append(place,"div");
  append(p,"strong",side(n));if(n.note&&(!en||n.note_en))append(p,"small",en?n.note_en:n.note);
  append(place,"span",fmt(n.coordinates.x)+" / "+fmt(n.coordinates.y),"npc-coords");
- const actions=append(detail,"div",null,"npc-actions"),command="/way "+n.coordinates.x+" "+n.coordinates.y;
+ const actions=append(detail,"div",null,"npc-actions"),mapId=store.db.zone_maps?.[n.zone.id]?.uiMapID,command="/way "+(mapId?"#"+mapId+" ":"")+n.coordinates.x+" "+n.coordinates.y;
  const btn=append(actions,"button",S("Copier /way","Copy /way"),"npc-copy");btn.type="button";
  btn.addEventListener("click",async()=>{try{await navigator.clipboard.writeText(command);btn.textContent=S("Commande copiée ✓","Copied ✓")}catch(_){btn.textContent=command}});
  if(i){link(actions,S("Fiche Classic ↗","Classic item ↗"),"https://www.wowhead.com/classic/item="+i.id);
  link(actions,S("Vérifier Forever ↗","Check Forever ↗"),"https://www.wowhead.com/forever/item="+i.id)}
  if(n.id)link(actions,S("Fiche PNJ ↗","NPC details ↗"),"https://www.wowhead.com/classic/npc="+n.id);
- if(store.db && ["azshara","blasted-lands","burning-steppes","epl","searing-gorge","silithus","swamp-of-sorrows","ungoro","winterspring","wpl"].includes(n.zone.id)){
- const map=append(detail,"div",null,"npc-map"),img=mk("img");img.src=root+"assets/maps/"+n.zone.id+".jpg";img.alt=S("Carte de référence : ","Reference map: ")+side(n);img.loading="lazy";map.append(img);
- const pin=append(map,"span",null,"npc-map-marker");pin.style.left=n.coordinates.x+"%";pin.style.top=n.coordinates.y+"%";
- append(detail,"div",S("Repère Classic non vérifié sur Forever.","Classic position not verified on Forever."),"npc-map-caption")
- }
+
  if(i){
  const panel=append(detail,"section",null,"npc-stock");
  append(panel,"span",S("Disponibilité estimée","Reference availability"),"npc-stock-label");
@@ -101,8 +97,21 @@ function renderDetail(){
  sectionText(detail,S("Formation","Training"),S("Rang référencé : ","Referenced tier: ")+(n.rank||S("non indiqué","unspecified")));
  append(detail,"p",S("Les maîtres de métiers apprennent des compétences ; ils ne vendent pas nécessairement les objets recherchés.","Trainers teach professions; they do not necessarily sell the items in this catalog."),"npc-subtitle")
  }
- append(detail,"p",S("Coordonnées de zone : X vers la droite, Y vers le bas (0–100). Utiliser /way une fois dans cette zone avec un addon compatible.","Zone coordinates: X grows right, Y grows down (0–100). Use /way when inside this zone with a compatible add-on."),"npc-datacaveat");
+ append(detail,"p",S("Coordonnées historiques Classic (0–100), non vérifiées sur Forever. Commande /way avec identifiant de carte pour un addon TomTom compatible.","Historical Classic coordinates (0–100), not confirmed on Forever. The /way command includes the zone map ID for compatible TomTom add-ons."),"npc-datacaveat");
  const s=append(detail,"p",null,"npc-source");s.append(document.createTextNode(S("Sources : ","Sources: ")));link(s,S("Guide de référence ↗","Reference guide ↗"),n.source);
+ window.ForeverNpcMap?.show(n,store.db,npcName=>{
+  const matched=store.records.find(r=>r.npc.name===npcName&&r.item?.id===store.active?.item?.id)||
+   store.records.find(r=>r.npc.name===npcName&&r.npc.role==="merchant")||
+   store.records.find(r=>r.npc.name===npcName);
+  if(!matched)return;
+  if(!store.filtered.some(r=>r.key===matched.key)){
+   q.value="";zone.value="all";trade.value="all";aff.value="all";store.showReportsOnly=false;$("npc-evidence-only").checked=false;
+   store.mode=matched.npc.role;document.querySelectorAll("[data-npc-mode]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.npcMode===store.mode)));
+   $("npc-evidence-only").disabled=store.mode==="trainer";
+   store.filtered=filteredRecords();
+  }
+  selectRecord(matched);
+ });
  append(detail,"p",S("Important : données historiques Classic. Les PNJ, objets, emplacements et stocks peuvent différer sur WoW Forever. Aucun suivi du stock en temps réel.","Important: historical Classic data. NPCs, items, positions and stock may differ on WoW Forever. No live inventory monitoring."),"npc-datacaveat");
 }
 function refresh(){store.filtered=filteredRecords();if(!store.filtered.some(r=>r.key===store.active?.key))store.active=store.filtered[0]||null;renderList();renderDetail()}
