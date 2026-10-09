@@ -122,3 +122,6 @@
 .item-v3-live-note{margin:0;font-size:11px;color:#a5b3a5}
 @media(max-width:1020px){.filter-line.three:has(#item-source){grid-template-columns:minmax(180px,1fr) minmax(140px,1fr)}.filter-line.three:has(#item-source) .item-v2-quality-controls{grid-column:1/-1}}
 @media(max-width:650px){.filter-line.three:has(#item-source){grid-template-columns:1fr}.filter-line.three:has(#item-source) .item-v2-quality-controls{grid-column:auto}.item-v3-provenance{margin-left:6px;font-size:9px}.bis-v2-tabs button{font-size:10px}}
+
+.bis-v2-profile-note{margin:5px 0 0;max-width:650px;color:#9bab9a;font-size:11px;line-height:1.45}
+.bis-v2-source-link{color:#d8b47b;text-decoration:underline;text-underline-offset:2px}
