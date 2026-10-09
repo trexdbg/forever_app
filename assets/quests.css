@@ -150,197 +150,194 @@
 }
 
 
-/* Quest actions — restrained WoW Classic parchment insets with distinct action colors. */
+/* Quest sidebar — compact, easy-to-scan action rows; one color per action type. */
 .quest-sidebar{
- background:linear-gradient(152deg,#1b2939 0%,#0e1c2d 55%,#0b1728 100%);
- border:1px solid #715d41;
- box-shadow:inset 0 1px 0 #d2b17e21,0 12px 28px #0002;
+ background:#101d2d;
+ border:1px solid #394a5d;
+ box-shadow:none;
+ padding:14px;
 }
 .quest-sidebar .quest-side-heading{
- border-bottom:1px solid #7b654448;
- padding-bottom:12px;
- margin-bottom:12px;
+ border-bottom:1px solid #344457;
+ padding-bottom:9px;
+ margin-bottom:9px;
 }
-.quest-sidebar .quest-side-heading h2{color:#f0d6a2;margin:4px 0 6px;letter-spacing:.01em}
-.quest-sidebar .quest-side-heading p{font-size:11px;color:#aeb9c4}
+.quest-sidebar .quest-side-heading h2{
+ font-size:17px;
+ margin:3px 0 4px;
+ color:#f0d5a6;
+}
+.quest-sidebar .quest-side-heading p{font-size:11px;color:#a8b7c9}
 .quest-sidebar .quest-waypoints{
- gap:10px;
- padding:2px 6px 3px 1px;
+ gap:6px;
+ padding:0 5px 0 0;
  scrollbar-width:thin;
- scrollbar-color:#b49360 #111c2a;
+ scrollbar-color:#61748a transparent;
 }
-.quest-sidebar .quest-waypoints::-webkit-scrollbar{width:8px}
-.quest-sidebar .quest-waypoints::-webkit-scrollbar-track{background:#101b2a;border-radius:8px}
-.quest-sidebar .quest-waypoints::-webkit-scrollbar-thumb{background:#8c7657;border:2px solid #101b2a;border-radius:8px}
+.quest-sidebar .quest-waypoints::-webkit-scrollbar{width:7px}
+.quest-sidebar .quest-waypoints::-webkit-scrollbar-track{background:transparent}
+.quest-sidebar .quest-waypoints::-webkit-scrollbar-thumb{background:#61748a;border-radius:8px}
 .quest-sidebar .quest-waypoint{
- position:relative;
  display:block;
  min-width:0;
- padding:11px;
- border:1px solid #5c503f;
- border-radius:10px;
- background:linear-gradient(155deg,#273326 0%,#192928 24%,#152337 100%);
- box-shadow:inset 0 1px 0 #ffdda51c,0 3px 9px #0002;
- transition:background .15s,border-color .15s,box-shadow .15s;
+ padding:9px 10px;
+ background:#152536;
+ border:1px solid #32465a;
+ border-radius:7px;
+ box-shadow:none;
+ transition:background .14s,border-color .14s;
 }
 .quest-sidebar .quest-waypoint:hover{
- border-color:#ddbb7e;
- background:linear-gradient(155deg,#313b2d 0%,#1b3033 24%,#172a3b 100%);
+ border-color:#8e815f;
+ background:#1c2c3d;
 }
 .quest-sidebar .quest-waypoint.selected{
- border-color:#e8c17c;
- background:linear-gradient(150deg,#343c2d,#1c3035 28%,#192c41);
- box-shadow:inset 0 0 0 1px #e8c17c45,0 0 0 1px #a88b5645,0 4px 14px #0003;
+ border-color:#d6b57e;
+ background:#1e3040;
+ box-shadow:inset 2px 0 0 #d6b57e;
 }
-.quest-sidebar .quest-waypoint:focus-visible{outline:2px solid #f9d794;outline-offset:2px}
+.quest-sidebar .quest-waypoint:focus-visible{outline:2px solid #f0cb87;outline-offset:2px}
 .quest-sidebar .quest-waypoint-heading{
- display:grid;
- grid-template-columns:28px minmax(0,1fr) auto;
- gap:8px;
+ display:flex;
+ gap:7px;
  align-items:center;
- margin-bottom:0;
+ min-width:0;
 }
 .quest-sidebar .quest-waypoint-heading b{
- min-width:28px;height:28px;
- display:grid;place-items:center;
- color:#192337;
- background:linear-gradient(#ffe3a5,#d7a95f);
- border:1px solid #f4d696;
- font-size:12px;
- box-shadow:0 1px 2px #0007;
+ flex:0 0 23px;
+ min-width:23px;
+ width:23px;
+ height:23px;
+ border-radius:50%;
+ background:#e9c282;
+ color:#162537;
+ border:0;
+ font-size:11px;
+ box-shadow:none;
 }
 .quest-sidebar .quest-waypoint-heading strong{
+ flex:1 1 auto;
  min-width:0;
- color:#f8e8c6;
- font-size:13px;
- line-height:1.35;
- font-weight:750;
+ font-size:12px;
+ font-weight:700;
+ line-height:1.3;
+ color:#f0f1ee;
  overflow-wrap:anywhere;
 }
 .quest-sidebar .quest-waypoint-heading small{
- grid-column:3;
- margin:0;
- padding:3px 6px;
- border-radius:5px;
- border:1px solid #e1c18932;
- background:#090f1770;
- color:#e7c88f;
+ flex:0 0 auto;
+ margin-left:auto;
+ border:0;
+ background:none;
+ padding:0;
+ color:#b9ac8a;
  font-size:10px;
- font-weight:650;
+ line-height:1.3;
  font-variant-numeric:tabular-nums;
  white-space:nowrap;
 }
 .quest-sidebar .quest-actions{
- margin:10px 0 0;
- padding-top:9px;
- border-top:1px solid #d5bc8540;
  display:grid;
- gap:8px;
+ gap:6px;
+ margin:7px 0 0;
+ padding:0;
+ border:0;
 }
 .quest-sidebar .quest-action-group{
- --quest-accent:#eec782;
- --quest-accent-rgb:238,199,130;
+ --quest-accent:#f0c783;
+ display:grid;
+ grid-template-columns:85px minmax(0,1fr);
+ gap:6px;
+ align-items:start;
  min-width:0;
- overflow:hidden;
- border-radius:6px;
- border:1px solid #9fb2ba1f;
- border-left:3px solid var(--quest-accent);
- background:linear-gradient(105deg,rgba(var(--quest-accent-rgb),.15),rgba(14,27,38,.76) 64%);
- box-shadow:inset 0 1px 0 #ffffff12;
+ padding:1px 0 1px 7px;
+ border:0;
+ border-left:2px solid var(--quest-accent);
+ border-radius:0;
+ background:none;
+ box-shadow:none;
+ overflow:visible;
 }
-.quest-sidebar .quest-action-group.starts{--quest-accent:#f2c779;--quest-accent-rgb:242,199,121}
-.quest-sidebar .quest-action-group.objectives{--quest-accent:#76d8db;--quest-accent-rgb:118,216,219}
-.quest-sidebar .quest-action-group.ends{--quest-accent:#9eb9ff;--quest-accent-rgb:158,185,255}
-.quest-sidebar .quest-action-group.completed{--quest-accent:#9de0a0;--quest-accent-rgb:157,224,160}
-.quest-sidebar .quest-action-group.special{--quest-accent:#d6b4f2;--quest-accent-rgb:214,180,242}
+.quest-sidebar .quest-action-group.starts{--quest-accent:#f0c783}
+.quest-sidebar .quest-action-group.objectives{--quest-accent:#7ed6d9}
+.quest-sidebar .quest-action-group.ends{--quest-accent:#a0b9ff}
+.quest-sidebar .quest-action-group.completed{--quest-accent:#95dba5}
+.quest-sidebar .quest-action-group.special{--quest-accent:#c8afe6}
 .quest-sidebar .quest-action-group-heading{
  display:flex;
- justify-content:space-between;
- align-items:center;
- gap:8px;
- padding:7px 9px 4px;
+ align-items:baseline;
+ justify-content:flex-start;
+ gap:0;
+ min-width:0;
+ padding:1px 0 0;
 }
 .quest-sidebar .quest-action-tag{
  display:inline-flex;
- align-items:center;
- gap:6px;
+ align-items:baseline;
+ gap:4px;
  color:var(--quest-accent);
- font-size:10px;
- font-weight:850;
- line-height:1.15;
- letter-spacing:.065em;
+ font-size:9px;
+ font-weight:800;
+ letter-spacing:.025em;
+ line-height:1.4;
  text-transform:uppercase;
+ white-space:nowrap;
 }
 .quest-sidebar .quest-action-symbol{
- display:grid;
- place-items:center;
- height:19px;
- width:19px;
- border:1px solid rgba(var(--quest-accent-rgb),.52);
- border-radius:5px;
- background:rgba(var(--quest-accent-rgb),.15);
- color:var(--quest-accent);
- font-size:13px;
- font-weight:900;
+ display:inline;
+ width:auto;
+ height:auto;
+ border:0;
+ background:none;
+ border-radius:0;
+ font-size:11px;
+ font-weight:850;
  line-height:1;
+ color:inherit;
 }
-.quest-sidebar .quest-action-count{
- min-width:19px;
- height:19px;
- display:grid;
- place-items:center;
- padding:0 5px;
- border:1px solid rgba(var(--quest-accent-rgb),.32);
- background:rgba(var(--quest-accent-rgb),.1);
- border-radius:12px;
- color:var(--quest-accent);
- font-size:10px;
- font-weight:750;
- font-variant-numeric:tabular-nums;
-}
+.quest-sidebar .quest-action-count{display:none}
 .quest-sidebar .quest-action-items{
  display:grid;
  gap:3px;
- padding:1px 9px 8px;
+ min-width:0;
+ padding:0;
 }
 .quest-sidebar .quest-action{
- display:flex;
- align-items:flex-start;
- gap:8px;
+ display:block;
  min-width:0;
+ padding:0;
+ border:0;
+ background:none;
+ color:#e6ebf0;
  font-size:12px;
- line-height:1.35;
- color:#f2eee6;
+ line-height:1.3;
 }
-.quest-sidebar .quest-action::before{
- content:"";
- width:4px;
- height:4px;
- margin-top:6px;
- border-radius:50%;
- background:var(--quest-accent);
- flex:0 0 auto;
- opacity:.9;
-}
+.quest-sidebar .quest-action::before{display:none}
 .quest-sidebar .quest-action-name{
+ display:block;
  min-width:0;
  overflow-wrap:anywhere;
+ color:#e6ebf0;
  font-size:12px;
- font-weight:600;
- color:#efece5;
+ font-weight:500;
+ line-height:1.3;
 }
 .quest-sidebar .quest-no-action{
  display:block;
- color:#c7c7b7;
- padding:4px 0;
- font-size:12px;
+ color:#b9c3cf;
+ padding:1px 0;
+ font-size:11px;
 }
-.quest-sidebar .quest-side-footer{border-top-color:#7b654448}
+.quest-sidebar .quest-side-footer{border-top-color:#344457;padding-top:10px;margin-top:11px}
+.quest-sidebar .quest-side-help{font-size:11px;line-height:1.4}
 @media(max-width:700px){
- .quest-sidebar .quest-actions{margin-left:0}
- .quest-sidebar .quest-action-group-heading{padding:7px 9px 4px}
+ .quest-sidebar .quest-waypoints{grid-template-columns:1fr}
 }
 @media(max-width:370px){
- .quest-sidebar .quest-waypoint-heading{grid-template-columns:28px minmax(0,1fr)}
- .quest-sidebar .quest-waypoint-heading small{grid-column:2;margin-top:-3px;justify-self:start}
+ .quest-sidebar{padding:10px}
+ .quest-sidebar .quest-waypoint{padding:8px}
+ .quest-sidebar .quest-actions{margin-left:0}
+ .quest-sidebar .quest-action-group{grid-template-columns:80px minmax(0,1fr);gap:5px}
+ .quest-sidebar .quest-waypoint-heading{flex-wrap:wrap}
+ .quest-sidebar .quest-waypoint-heading small{margin-left:30px}
 }
