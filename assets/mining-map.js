@@ -12,7 +12,7 @@ const copy=document.getElementById("mine-copy"),zoomText=document.getElementById
 let db,zone,sourceImg=null,zoom=1,center={x:50,y:50},shown=[],selected=null,command="",pointer=null;
 const enabledMinerals=new Set();
 const mineralIcons=Object.create(null);
-// Six local SVG files, cached by GitHub Pages and loaded only once.
+// Six local SVG files, cached by the browser and loaded only once.
 // Classic Cartographer_Mining used INV_Ore_Thorium_02 for both Small and
 // Rich Thorium. Hakkari Thorium shares the Rich Thorium world model.
 const thoriumTypes=new Set(["rich","small","hakkari"]);

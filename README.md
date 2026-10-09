@@ -1,6 +1,6 @@
 # Forever Atlas — compagnon WoW Forever
 
-Application web communautaire statique, responsive et compatible GitHub Pages : [ouvrir Forever Atlas](https://trexdbg.github.io/forever_app/).
+Application web communautaire statique, responsive et compatible GitHub Pages : [ouvrir ForEveroth](https://foreveroth.com/).
 
 ## Modules disponibles
 - **Guide de quêtes** : 6 profils de départ (Alliance/Horde), routes Classic niveaux ~5–60, sélection visuelle des factions et des huit races, curseur d'étapes avec repères de niveaux, liste latérale des quêtes et actions de l'étape liée à la carte, recherche français/anglais, coordonnées X/Y normalisées et navigation directe entre étapes, sans sauvegarde des étapes terminées (l'étape peut être partagée par URL). Source technique [trexdbg/vanilla-questing](https://github.com/trexdbg/vanilla-questing), projet d'origine [lexicongaming/vanilla-questing-old](https://github.com/lexicongaming/vanilla-questing-old), sous licence MIT. **Les quêtes ne sont pas garanties sur WoW Forever.**

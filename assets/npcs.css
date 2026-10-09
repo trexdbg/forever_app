@@ -1,4 +1,4 @@
-/* Forever Atlas — NPC directory; compact, keyboard-friendly, GitHub Pages compatible */
+/* Forever Atlas — NPC directory; compact, keyboard-friendly, compatible with static hosting */
 .npc-app{min-height:510px}
 .npc-intro{margin:0 0 14px;font-size:12px;color:var(--muted)}
 .npc-controls{display:grid;grid-template-columns:minmax(250px,2fr) repeat(3,minmax(125px,1fr));gap:10px;align-items:end;margin-bottom:14px}

@@ -140,7 +140,7 @@ function renderRaceChoices(){
   b.type="button";b.dataset.race=race.id;b.setAttribute("aria-pressed",String(active));
   b.setAttribute("aria-label",QT("Choisir ","Choose ")+Q.race(race.label));
   const picture=element("img");picture.alt="";picture.width=48;picture.height=48;picture.loading="lazy";
-  picture.src="https://raw.githubusercontent.com/trexdbg/vanilla-questing/"+s.meta.source_commit+"/src/interface/images/icons/"+race.id+".png";
+  picture.src="https://raw.githubusercontent.com/lexicongaming/vanilla-questing-old/d1d53fd8834bd76297f748570080056d896fda6c/src/interface/images/icons/"+race.id+".png";
   picture.addEventListener("error",()=>{picture.replaceWith(element("span",race.label.slice(0,2).toUpperCase(),"quest-race-fallback"))},{once:true});
   b.append(picture,element("span",Q.race(race.label),"quest-race-label"),element("span","✓","quest-race-check"));
   b.addEventListener("click",()=>selectRace(race.id));panel.append(b);

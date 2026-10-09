@@ -1,5 +1,5 @@
 (()=>{"use strict";
-const ROOT="/forever_app/";
+const ROOT="/";
 const el=id=>document.getElementById(id);
 const host=el("bis-app");
 if(!host)return;
