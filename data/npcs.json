@@ -21,7 +21,11 @@
     "cooking_vendor": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
     "engineering_parts": "https://wowseer.gg/items/Gyrochronatom_4389",
     "bronze_tube": "https://wowseer.gg/items/Bronze_Tube_4371",
-    "classic_engineering_guide": "https://www.wowhead.com/classic/fr/guide/engineering-vendor-recipes-wow-classic"
+    "classic_engineering_guide": "https://www.wowhead.com/classic/fr/guide/engineering-vendor-recipes-wow-classic",
+    "forever_trainers": "https://www.wow-professions.com/forever/",
+    "zephras_trainers": "https://www.wowhead.com/forever/guide/zephras-isle-zone-overview",
+    "classic_weapon_masters": "https://www.warcrafttavern.com/wow-classic/guides/weapon-skill-trainers-and-locations/",
+    "forever_profession_locations": "https://www.icy-veins.com/wow-forever/professions"
   },
   "items": {
     "4357": {
@@ -2228,7 +2232,9 @@
       "offers": [],
       "source": "https://www.wowhead.com/classic/guide/alchemy-leveling-1-300-wow-classic",
       "note": "",
-      "coordinate_status": "classic_reference_unverified"
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "trainer_kind": "profession",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
     },
     {
       "id": null,
@@ -2242,14 +2248,16 @@
         "en": "Stormwind"
       },
       "coordinates": {
-        "x": 46.4,
-        "y": 79.6
+        "x": 55.7,
+        "y": 86.1
       },
       "faction": "alliance",
       "offers": [],
       "source": "https://www.wowhead.com/classic/guide/alchemy-leveling-1-300-wow-classic",
       "note": "",
-      "coordinate_status": "classic_reference_unverified"
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "trainer_kind": "profession",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
     },
     {
       "id": null,
@@ -2270,7 +2278,9 @@
       "offers": [],
       "source": "https://www.wowhead.com/classic/guide/alchemy-leveling-1-300-wow-classic",
       "note": "",
-      "coordinate_status": "classic_reference_unverified"
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "trainer_kind": "profession",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
     },
     {
       "id": null,
@@ -2284,14 +2294,16 @@
         "en": "Orgrimmar"
       },
       "coordinates": {
-        "x": 56.6,
-        "y": 33.2
+        "x": 56.8,
+        "y": 33
       },
       "faction": "horde",
       "offers": [],
       "source": "https://www.wowhead.com/classic/guide/alchemy-leveling-1-300-wow-classic",
       "note": "",
-      "coordinate_status": "classic_reference_unverified"
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "trainer_kind": "profession",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
     },
     {
       "id": null,
@@ -2305,14 +2317,15 @@
         "en": "Undercity"
       },
       "coordinates": {
-        "x": 48.2,
-        "y": 72.2
+        "x": 47.8,
+        "y": 73.3
       },
       "faction": "horde",
       "offers": [],
       "source": "https://www.wowhead.com/classic/guide/alchemy-leveling-1-300-wow-classic",
       "note": "",
-      "coordinate_status": "classic_reference_unverified"
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
     },
     {
       "id": null,
@@ -2326,14 +2339,15 @@
         "en": "Swamp of Sorrows"
       },
       "coordinates": {
-        "x": 48.4,
-        "y": 55.6
+        "x": 48.5,
+        "y": 55.8
       },
       "faction": "horde",
       "offers": [],
       "source": "https://www.wowhead.com/classic/guide/alchemy-leveling-1-300-wow-classic",
       "note": "",
-      "coordinate_status": "classic_reference_unverified"
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
     },
     {
       "id": null,
@@ -2347,14 +2361,16 @@
         "en": "Elwynn Forest"
       },
       "coordinates": {
-        "x": 64.9,
-        "y": 70.1
+        "x": 64.8,
+        "y": 70.6
       },
       "faction": "alliance",
       "offers": [],
       "source": "https://www.warcrafttavern.com/wow-classic-sod/guides/profession-trainer-locations-requirements-for-phase-2/",
       "note": "",
-      "coordinate_status": "classic_reference_unverified"
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "trainer_kind": "profession",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
     },
     {
       "id": null,
@@ -2375,7 +2391,9 @@
       "offers": [],
       "source": "https://www.warcrafttavern.com/wow-classic-sod/guides/profession-trainer-locations-requirements-for-phase-2/",
       "note": "",
-      "coordinate_status": "classic_reference_unverified"
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "trainer_kind": "profession",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
     },
     {
       "id": null,
@@ -2389,14 +2407,16 @@
         "en": "Ironforge"
       },
       "coordinates": {
-        "x": 68.5,
-        "y": 43.5
+        "x": 68.4,
+        "y": 44
       },
       "faction": "alliance",
       "offers": [],
       "source": "https://www.warcrafttavern.com/wow-classic-sod/guides/profession-trainer-locations-requirements-for-phase-2/",
       "note": "",
-      "coordinate_status": "classic_reference_unverified"
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "trainer_kind": "profession",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
     },
     {
       "id": null,
@@ -2410,14 +2430,16 @@
         "en": "Orgrimmar"
       },
       "coordinates": {
-        "x": 76.2,
-        "y": 25.2
+        "x": 76,
+        "y": 25
       },
       "faction": "horde",
       "offers": [],
       "source": "https://www.warcrafttavern.com/wow-classic-sod/guides/profession-trainer-locations-requirements-for-phase-2/",
       "note": "",
-      "coordinate_status": "classic_reference_unverified"
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "trainer_kind": "profession",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
     },
     {
       "id": null,
@@ -2438,7 +2460,8 @@
       "offers": [],
       "source": "https://www.warcrafttavern.com/wow-classic-sod/guides/profession-trainer-locations-requirements-for-phase-2/",
       "note": "",
-      "coordinate_status": "classic_reference_unverified"
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
     },
     {
       "id": null,
@@ -2459,7 +2482,8 @@
       "offers": [],
       "source": "https://www.warcrafttavern.com/wow-classic-sod/guides/profession-trainer-locations-requirements-for-phase-2/",
       "note": "",
-      "coordinate_status": "classic_reference_unverified"
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
     },
     {
       "id": null,
@@ -2473,14 +2497,16 @@
         "en": "Ironforge"
       },
       "coordinates": {
-        "x": 52.6,
+        "x": 52.5,
         "y": 41.5
       },
       "faction": "alliance",
       "offers": [],
       "source": "https://www.warcrafttavern.com/wow-classic-sod/guides/profession-trainer-locations-requirements-for-phase-2/",
       "note": "",
-      "coordinate_status": "classic_reference_unverified"
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "trainer_kind": "profession",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
     },
     {
       "id": null,
@@ -2494,14 +2520,16 @@
         "en": "Orgrimmar"
       },
       "coordinates": {
-        "x": 82.4,
+        "x": 82.3,
         "y": 23
       },
       "faction": "horde",
       "offers": [],
       "source": "https://www.warcrafttavern.com/wow-classic-sod/guides/profession-trainer-locations-requirements-for-phase-2/",
       "note": "",
-      "coordinate_status": "classic_reference_unverified"
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "trainer_kind": "profession",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
     },
     {
       "id": null,
@@ -2564,7 +2592,8 @@
       "offers": [],
       "source": "https://wow-guides.com/classic-era/professions/first-aid",
       "note": "",
-      "coordinate_status": "classic_reference_unverified"
+      "coordinate_status": "classic_reference_unverified",
+      "trainer_kind": "profession"
     },
     {
       "id": null,
@@ -2585,7 +2614,8 @@
       "offers": [],
       "source": "https://wow-guides.com/classic-era/professions/first-aid",
       "note": "",
-      "coordinate_status": "classic_reference_unverified"
+      "coordinate_status": "classic_reference_unverified",
+      "trainer_kind": "profession"
     },
     {
       "id": 11278,
@@ -3939,6 +3969,3059 @@
       "note": "Côte sud",
       "note_en": "Southern coast",
       "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic"
+    },
+    {
+      "id": null,
+      "name": "Whuut",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Alchimie",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "orgrimmar",
+        "fr": "Orgrimmar",
+        "en": "Orgrimmar"
+      },
+      "coordinates": {
+        "x": 55.8,
+        "y": 32.9
+      },
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/alchemy-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Doctor Martin Felben",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Alchimie",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "undercity",
+        "fr": "Fossoyeuse",
+        "en": "Undercity"
+      },
+      "coordinates": {
+        "x": 46.6,
+        "y": 74.1
+      },
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/alchemy-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Doctor Marsh",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Alchimie",
+      "rank": "Compagnon",
+      "zone": {
+        "id": "undercity",
+        "fr": "Fossoyeuse",
+        "en": "Undercity"
+      },
+      "coordinates": {
+        "x": 50.9,
+        "y": 74.6
+      },
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/alchemy-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Kray",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Alchimie",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "thunder-bluff",
+        "fr": "Les Pitons-du-Tonnerre",
+        "en": "Thunder Bluff"
+      },
+      "coordinates": {
+        "x": 47,
+        "y": 34.6
+      },
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/alchemy-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Bena Winterhoof",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Alchimie",
+      "rank": "Compagnon",
+      "zone": {
+        "id": "thunder-bluff",
+        "fr": "Les Pitons-du-Tonnerre",
+        "en": "Thunder Bluff"
+      },
+      "coordinates": {
+        "x": 46.6,
+        "y": 33.2
+      },
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/alchemy-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Tel'Athir",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Alchimie",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "stormwind",
+        "fr": "Hurlevent",
+        "en": "Stormwind"
+      },
+      "coordinates": {
+        "x": 55.5,
+        "y": 85.6
+      },
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/alchemy-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Vosur Brakthel",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Alchimie",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "ironforge",
+        "fr": "Forgefer",
+        "en": "Ironforge"
+      },
+      "coordinates": {
+        "x": 66.3,
+        "y": 55.7
+      },
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/alchemy-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Milla Fairancora",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Alchimie",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "darnassus",
+        "fr": "Darnassus",
+        "en": "Darnassus"
+      },
+      "coordinates": {
+        "x": 55.4,
+        "y": 22.7
+      },
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/alchemy-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Sylvanna Forestmoon",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Alchimie",
+      "rank": "Compagnon",
+      "zone": {
+        "id": "darnassus",
+        "fr": "Darnassus",
+        "en": "Darnassus"
+      },
+      "coordinates": {
+        "x": 56.4,
+        "y": 24.2
+      },
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/alchemy-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Ug'thok",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Forge",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "orgrimmar",
+        "fr": "Orgrimmar",
+        "en": "Orgrimmar"
+      },
+      "coordinates": {
+        "x": 80.8,
+        "y": 23.7
+      },
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/blacksmithing-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Snarl",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Forge",
+      "rank": "Compagnon",
+      "zone": {
+        "id": "orgrimmar",
+        "fr": "Orgrimmar",
+        "en": "Orgrimmar"
+      },
+      "coordinates": {
+        "x": 79.6,
+        "y": 23.3
+      },
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/blacksmithing-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Basil Frye",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Forge",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "undercity",
+        "fr": "Fossoyeuse",
+        "en": "Undercity"
+      },
+      "coordinates": {
+        "x": 60.2,
+        "y": 29.1
+      },
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/blacksmithing-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "James Van Brunt",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Forge",
+      "rank": "Compagnon",
+      "zone": {
+        "id": "undercity",
+        "fr": "Fossoyeuse",
+        "en": "Undercity"
+      },
+      "coordinates": {
+        "x": 61.3,
+        "y": 30.6
+      },
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/blacksmithing-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Thrag Stonehoof",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Forge",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "thunder-bluff",
+        "fr": "Les Pitons-du-Tonnerre",
+        "en": "Thunder Bluff"
+      },
+      "coordinates": {
+        "x": 39.4,
+        "y": 56.7
+      },
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/blacksmithing-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Karn Stonehoof",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Forge",
+      "rank": "Compagnon",
+      "zone": {
+        "id": "thunder-bluff",
+        "fr": "Les Pitons-du-Tonnerre",
+        "en": "Thunder Bluff"
+      },
+      "coordinates": {
+        "x": 39.4,
+        "y": 55.1
+      },
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/blacksmithing-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Dane Lindgren",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Forge",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "stormwind",
+        "fr": "Hurlevent",
+        "en": "Stormwind"
+      },
+      "coordinates": {
+        "x": 64.1,
+        "y": 37
+      },
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/blacksmithing-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Therum Deepforge",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Forge",
+      "rank": "Compagnon",
+      "zone": {
+        "id": "stormwind",
+        "fr": "Hurlevent",
+        "en": "Stormwind"
+      },
+      "coordinates": {
+        "x": 63.7,
+        "y": 37
+      },
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/blacksmithing-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Groum Stonebeard",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Forge",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "ironforge",
+        "fr": "Forgefer",
+        "en": "Ironforge"
+      },
+      "coordinates": {
+        "x": 52.3,
+        "y": 41.9
+      },
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/blacksmithing-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Rotgath Stonebeard",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Forge",
+      "rank": "Compagnon",
+      "zone": {
+        "id": "ironforge",
+        "fr": "Forgefer",
+        "en": "Ironforge"
+      },
+      "coordinates": {
+        "x": 52.4,
+        "y": 42.6
+      },
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/blacksmithing-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Jhag",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Enchantement",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "orgrimmar",
+        "fr": "Orgrimmar",
+        "en": "Orgrimmar"
+      },
+      "coordinates": {
+        "x": 53.6,
+        "y": 38.2
+      },
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/enchanting-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Malcomb Wynn",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Enchantement",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "undercity",
+        "fr": "Fossoyeuse",
+        "en": "Undercity"
+      },
+      "coordinates": {
+        "x": 62.6,
+        "y": 60.4
+      },
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/enchanting-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Mot Dawnstrider",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Enchantement",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "thunder-bluff",
+        "fr": "Les Pitons-du-Tonnerre",
+        "en": "Thunder Bluff"
+      },
+      "coordinates": {
+        "x": 45,
+        "y": 38.4
+      },
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/enchanting-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Betty Quin",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Enchantement",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "stormwind",
+        "fr": "Hurlevent",
+        "en": "Stormwind"
+      },
+      "coordinates": {
+        "x": 43.2,
+        "y": 63.8
+      },
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/enchanting-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Thonys Pillarstone",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Enchantement",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "ironforge",
+        "fr": "Forgefer",
+        "en": "Ironforge"
+      },
+      "coordinates": {
+        "x": 60.6,
+        "y": 44.2
+      },
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/enchanting-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Lalina Summermoon",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Enchantement",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "darnassus",
+        "fr": "Darnassus",
+        "en": "Darnassus"
+      },
+      "coordinates": {
+        "x": 59.6,
+        "y": 12.6
+      },
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/enchanting-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Thund",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Ingénierie",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "orgrimmar",
+        "fr": "Orgrimmar",
+        "en": "Orgrimmar"
+      },
+      "coordinates": {
+        "x": 75.8,
+        "y": 24.6
+      },
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/engineering-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Nogg",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Ingénierie",
+      "rank": "Compagnon",
+      "zone": {
+        "id": "orgrimmar",
+        "fr": "Orgrimmar",
+        "en": "Orgrimmar"
+      },
+      "coordinates": {
+        "x": 75.8,
+        "y": 25.2
+      },
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/engineering-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Franklin Lloyd",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Ingénierie",
+      "rank": "Compagnon",
+      "zone": {
+        "id": "undercity",
+        "fr": "Fossoyeuse",
+        "en": "Undercity"
+      },
+      "coordinates": {
+        "x": 76,
+        "y": 73.4
+      },
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/engineering-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Trixie Quikswitch",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Ingénierie",
+      "rank": "Compagnon",
+      "zone": {
+        "id": "ironforge",
+        "fr": "Forgefer",
+        "en": "Ironforge"
+      },
+      "coordinates": {
+        "x": 67.8,
+        "y": 43.2
+      },
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/engineering-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Lilliam Sparkspindle",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Ingénierie",
+      "rank": "Compagnon",
+      "zone": {
+        "id": "stormwind",
+        "fr": "Hurlevent",
+        "en": "Stormwind"
+      },
+      "coordinates": {
+        "x": 62.2,
+        "y": 30.4
+      },
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/engineering-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Finbus Geargrind",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Ingénierie",
+      "rank": "Compagnon",
+      "zone": {
+        "id": "duskwood",
+        "fr": "Bois de la Pénombre",
+        "en": "Duskwood"
+      },
+      "coordinates": {
+        "x": 77.4,
+        "y": 48.4
+      },
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/engineering-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Jandi",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Herboristerie",
+      "rank": "Tous rangs",
+      "zone": {
+        "id": "orgrimmar",
+        "fr": "Orgrimmar",
+        "en": "Orgrimmar"
+      },
+      "coordinates": null,
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/herbalism-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Komin Winterhoof",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Herboristerie",
+      "rank": "Tous rangs",
+      "zone": {
+        "id": "thunder-bluff",
+        "fr": "Les Pitons-du-Tonnerre",
+        "en": "Thunder Bluff"
+      },
+      "coordinates": null,
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/herbalism-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Martha Alliestar",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Herboristerie",
+      "rank": "Tous rangs",
+      "zone": {
+        "id": "undercity",
+        "fr": "Fossoyeuse",
+        "en": "Undercity"
+      },
+      "coordinates": null,
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/herbalism-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Mishiki",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Herboristerie",
+      "rank": "Tous rangs",
+      "zone": {
+        "id": "durotar",
+        "fr": "Durotar",
+        "en": "Durotar"
+      },
+      "coordinates": null,
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/herbalism-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Ruw",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Herboristerie",
+      "rank": "Tous rangs",
+      "zone": {
+        "id": "feralas",
+        "fr": "Féralas",
+        "en": "Feralas"
+      },
+      "coordinates": null,
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/herbalism-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Zor'la",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Herboristerie",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "durotar",
+        "fr": "Durotar",
+        "en": "Durotar"
+      },
+      "coordinates": null,
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/herbalism-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Kamari",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Travail du cuir",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "orgrimmar",
+        "fr": "Orgrimmar",
+        "en": "Orgrimmar"
+      },
+      "coordinates": {
+        "x": 63,
+        "y": 45
+      },
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/leatherworking-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Karolek",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Travail du cuir",
+      "rank": "Compagnon",
+      "zone": {
+        "id": "orgrimmar",
+        "fr": "Orgrimmar",
+        "en": "Orgrimmar"
+      },
+      "coordinates": {
+        "x": 62.8,
+        "y": 44.4
+      },
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/leatherworking-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Mak",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Travail du cuir",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "thunder-bluff",
+        "fr": "Les Pitons-du-Tonnerre",
+        "en": "Thunder Bluff"
+      },
+      "coordinates": {
+        "x": 42.2,
+        "y": 43.2
+      },
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/leatherworking-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Tarn",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Travail du cuir",
+      "rank": "Compagnon",
+      "zone": {
+        "id": "thunder-bluff",
+        "fr": "Les Pitons-du-Tonnerre",
+        "en": "Thunder Bluff"
+      },
+      "coordinates": {
+        "x": 42.4,
+        "y": 43
+      },
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/leatherworking-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Dan Golthas",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Travail du cuir",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "undercity",
+        "fr": "Fossoyeuse",
+        "en": "Undercity"
+      },
+      "coordinates": {
+        "x": 70.4,
+        "y": 58.4
+      },
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/leatherworking-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Arthur Moore",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Travail du cuir",
+      "rank": "Compagnon",
+      "zone": {
+        "id": "undercity",
+        "fr": "Fossoyeuse",
+        "en": "Undercity"
+      },
+      "coordinates": {
+        "x": 70.6,
+        "y": 57.8
+      },
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/leatherworking-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Chaw Stronghide",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Travail du cuir",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "mulgore",
+        "fr": "Mulgore",
+        "en": "Mulgore"
+      },
+      "coordinates": {
+        "x": 45,
+        "y": 61.4
+      },
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/leatherworking-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Randal Worth",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Travail du cuir",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "stormwind",
+        "fr": "Hurlevent",
+        "en": "Stormwind"
+      },
+      "coordinates": {
+        "x": 67.4,
+        "y": 49.4
+      },
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/leatherworking-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Simon Tanner",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Travail du cuir",
+      "rank": "Compagnon",
+      "zone": {
+        "id": "stormwind",
+        "fr": "Hurlevent",
+        "en": "Stormwind"
+      },
+      "coordinates": {
+        "x": 67.2,
+        "y": 49.4
+      },
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/leatherworking-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Adele Fielder",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Travail du cuir",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "elwynn",
+        "fr": "Forêt d'Elwynn",
+        "en": "Elwynn Forest"
+      },
+      "coordinates": {
+        "x": 46.4,
+        "y": 62.2
+      },
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/leatherworking-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Nadyia Maneweaver",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Travail du cuir",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "teldrassil",
+        "fr": "Teldrassil",
+        "en": "Teldrassil"
+      },
+      "coordinates": {
+        "x": 41.8,
+        "y": 49.4
+      },
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/leatherworking-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Faldron",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Travail du cuir",
+      "rank": "Compagnon",
+      "zone": {
+        "id": "darnassus",
+        "fr": "Darnassus",
+        "en": "Darnassus"
+      },
+      "coordinates": {
+        "x": 64.4,
+        "y": 21.4
+      },
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/leatherworking-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Fimble Finespindle",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Travail du cuir",
+      "rank": "Compagnon",
+      "zone": {
+        "id": "ironforge",
+        "fr": "Forgefer",
+        "en": "Ironforge"
+      },
+      "coordinates": {
+        "x": 39.4,
+        "y": 33
+      },
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/leatherworking-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Drakk Stonehand",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Travail du cuir",
+      "rank": "Artisan",
+      "zone": {
+        "id": "hinterlands",
+        "fr": "Les Hinterlands",
+        "en": "The Hinterlands"
+      },
+      "coordinates": {
+        "x": 13.4,
+        "y": 43.4
+      },
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/leatherworking-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Hahrana Ironhide",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Travail du cuir",
+      "rank": "Artisan",
+      "zone": {
+        "id": "feralas",
+        "fr": "Féralas",
+        "en": "Feralas"
+      },
+      "coordinates": {
+        "x": 74.4,
+        "y": 43
+      },
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/leatherworking-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Makaru",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Minage",
+      "rank": "Tous rangs",
+      "zone": {
+        "id": "orgrimmar",
+        "fr": "Orgrimmar",
+        "en": "Orgrimmar"
+      },
+      "coordinates": null,
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/mining-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Brek Stonehoof",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Minage",
+      "rank": "Tous rangs",
+      "zone": {
+        "id": "thunder-bluff",
+        "fr": "Les Pitons-du-Tonnerre",
+        "en": "Thunder Bluff"
+      },
+      "coordinates": null,
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/mining-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Brom Killian",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Minage",
+      "rank": "Tous rangs",
+      "zone": {
+        "id": "undercity",
+        "fr": "Fossoyeuse",
+        "en": "Undercity"
+      },
+      "coordinates": null,
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/mining-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Krunn",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Minage",
+      "rank": "Tous rangs",
+      "zone": {
+        "id": "durotar",
+        "fr": "Durotar",
+        "en": "Durotar"
+      },
+      "coordinates": null,
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/mining-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Norzsh",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Minage",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "durotar",
+        "fr": "Durotar",
+        "en": "Durotar"
+      },
+      "coordinates": null,
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/mining-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Thuwd",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Dépeçage",
+      "rank": "Tous rangs",
+      "zone": {
+        "id": "orgrimmar",
+        "fr": "Orgrimmar",
+        "en": "Orgrimmar"
+      },
+      "coordinates": null,
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/skinning-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Mooranta",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Dépeçage",
+      "rank": "Tous rangs",
+      "zone": {
+        "id": "thunder-bluff",
+        "fr": "Les Pitons-du-Tonnerre",
+        "en": "Thunder Bluff"
+      },
+      "coordinates": null,
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/skinning-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Killian Hagey",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Dépeçage",
+      "rank": "Tous rangs",
+      "zone": {
+        "id": "undercity",
+        "fr": "Fossoyeuse",
+        "en": "Undercity"
+      },
+      "coordinates": null,
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/skinning-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Malux",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Dépeçage",
+      "rank": "Tous rangs",
+      "zone": {
+        "id": "desolace",
+        "fr": "Désolace",
+        "en": "Desolace"
+      },
+      "coordinates": null,
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/skinning-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Eladriel",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Dépeçage",
+      "rank": "Tous rangs",
+      "zone": {
+        "id": "darnassus",
+        "fr": "Darnassus",
+        "en": "Darnassus"
+      },
+      "coordinates": null,
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/skinning-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Balthus Stoneflayer",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Dépeçage",
+      "rank": "Tous rangs",
+      "zone": {
+        "id": "ironforge",
+        "fr": "Forgefer",
+        "en": "Ironforge"
+      },
+      "coordinates": null,
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/skinning-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Maris Granger",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Dépeçage",
+      "rank": "Tous rangs",
+      "zone": {
+        "id": "stormwind",
+        "fr": "Hurlevent",
+        "en": "Stormwind City"
+      },
+      "coordinates": null,
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/skinning-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Jayla",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Dépeçage",
+      "rank": "Tous rangs",
+      "zone": {
+        "id": "ashenvale",
+        "fr": "Orneval",
+        "en": "Ashenvale"
+      },
+      "coordinates": null,
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/skinning-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Snang",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Couture",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "orgrimmar",
+        "fr": "Orgrimmar",
+        "en": "Orgrimmar"
+      },
+      "coordinates": {
+        "x": 63,
+        "y": 49.6
+      },
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/tailoring-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Victor Ward",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Couture",
+      "rank": "Expert",
+      "zone": {
+        "id": "undercity",
+        "fr": "Fossoyeuse",
+        "en": "Undercity"
+      },
+      "coordinates": {
+        "x": 70.2,
+        "y": 29.6
+      },
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/tailoring-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Vhan",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Couture",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "thunder-bluff",
+        "fr": "Les Pitons-du-Tonnerre",
+        "en": "Thunder Bluff"
+      },
+      "coordinates": {
+        "x": 44,
+        "y": 44.6
+      },
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/tailoring-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Lawrence Schneider",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Couture",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "stormwind",
+        "fr": "Hurlevent",
+        "en": "Stormwind"
+      },
+      "coordinates": {
+        "x": 43.6,
+        "y": 73.8
+      },
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/tailoring-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Sellandus",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Couture",
+      "rank": "Expert",
+      "zone": {
+        "id": "stormwind",
+        "fr": "Hurlevent",
+        "en": "Stormwind"
+      },
+      "coordinates": {
+        "x": 42,
+        "y": 76.2
+      },
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/tailoring-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Uthrar Threx",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Couture",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "ironforge",
+        "fr": "Forgefer",
+        "en": "Ironforge"
+      },
+      "coordinates": {
+        "x": 43.6,
+        "y": 28.2
+      },
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/tailoring-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Jormund Stonebrow",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Couture",
+      "rank": "Expert",
+      "zone": {
+        "id": "ironforge",
+        "fr": "Forgefer",
+        "en": "Ironforge"
+      },
+      "coordinates": {
+        "x": 43.6,
+        "y": 28.2
+      },
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/tailoring-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Trianna",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Couture",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "darnassus",
+        "fr": "Darnassus",
+        "en": "Darnassus"
+      },
+      "coordinates": {
+        "x": 63.6,
+        "y": 21.6
+      },
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/tailoring-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Me'lynn",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Couture",
+      "rank": "Expert",
+      "zone": {
+        "id": "darnassus",
+        "fr": "Darnassus",
+        "en": "Darnassus"
+      },
+      "coordinates": {
+        "x": 62.6,
+        "y": 22.6
+      },
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/tailoring-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/professions"
+    },
+    {
+      "id": null,
+      "name": "Zamja",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Cuisine",
+      "rank": "Compagnon",
+      "zone": {
+        "id": "orgrimmar",
+        "fr": "Orgrimmar",
+        "en": "Orgrimmar"
+      },
+      "coordinates": null,
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/cooking-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Aska Mistrunner",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Cuisine",
+      "rank": "Compagnon",
+      "zone": {
+        "id": "thunder-bluff",
+        "fr": "Les Pitons-du-Tonnerre",
+        "en": "Thunder Bluff"
+      },
+      "coordinates": null,
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/cooking-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Eunice Burch",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Cuisine",
+      "rank": "Compagnon",
+      "zone": {
+        "id": "undercity",
+        "fr": "Fossoyeuse",
+        "en": "Undercity"
+      },
+      "coordinates": null,
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/cooking-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Stephen Ryback",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Cuisine",
+      "rank": "Compagnon",
+      "zone": {
+        "id": "stormwind",
+        "fr": "Hurlevent",
+        "en": "Stormwind City"
+      },
+      "coordinates": null,
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/cooking-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Daryl Riknussun",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Cuisine",
+      "rank": "Compagnon",
+      "zone": {
+        "id": "ironforge",
+        "fr": "Forgefer",
+        "en": "Ironforge"
+      },
+      "coordinates": null,
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/cooking-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Alegorn",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Cuisine",
+      "rank": "Compagnon",
+      "zone": {
+        "id": "darnassus",
+        "fr": "Darnassus",
+        "en": "Darnassus"
+      },
+      "coordinates": null,
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/cooking-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Cook Torka",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Cuisine",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "durotar",
+        "fr": "Durotar",
+        "en": "Durotar"
+      },
+      "coordinates": null,
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/cooking-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Pyall Silentstride",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Cuisine",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "mulgore",
+        "fr": "Mulgore",
+        "en": "Mulgore"
+      },
+      "coordinates": null,
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/cooking-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Tomas",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Cuisine",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "elwynn",
+        "fr": "Forêt d'Elwynn",
+        "en": "Elwynn Forest"
+      },
+      "coordinates": null,
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/cooking-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Nyalah Brightfire",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Cuisine",
+      "rank": "Compagnon",
+      "zone": {
+        "id": "zephras-isle",
+        "fr": "Île de Zephras",
+        "en": "Zephras Isle"
+      },
+      "coordinates": {
+        "x": 60.6,
+        "y": 72.6
+      },
+      "faction": "neutral",
+      "offers": [],
+      "source": "https://www.wowhead.com/forever/guide/zephras-isle-zone-overview",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guide_waypoint"
+    },
+    {
+      "id": null,
+      "name": "Lumak",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Pêche",
+      "rank": "Tous rangs",
+      "zone": {
+        "id": "orgrimmar",
+        "fr": "Orgrimmar",
+        "en": "Orgrimmar"
+      },
+      "coordinates": null,
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/fishing-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Kah Mistrunner",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Pêche",
+      "rank": "Tous rangs",
+      "zone": {
+        "id": "thunder-bluff",
+        "fr": "Les Pitons-du-Tonnerre",
+        "en": "Thunder Bluff"
+      },
+      "coordinates": null,
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/fishing-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Armand Cromwell",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Pêche",
+      "rank": "Tous rangs",
+      "zone": {
+        "id": "undercity",
+        "fr": "Fossoyeuse",
+        "en": "Undercity"
+      },
+      "coordinates": null,
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/fishing-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Arnold Leland",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Pêche",
+      "rank": "Tous rangs",
+      "zone": {
+        "id": "stormwind",
+        "fr": "Hurlevent",
+        "en": "Stormwind City"
+      },
+      "coordinates": null,
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/fishing-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Grimnur Stonebrand",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Pêche",
+      "rank": "Tous rangs",
+      "zone": {
+        "id": "ironforge",
+        "fr": "Forgefer",
+        "en": "Ironforge"
+      },
+      "coordinates": null,
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/fishing-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Astaia",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Pêche",
+      "rank": "Tous rangs",
+      "zone": {
+        "id": "darnassus",
+        "fr": "Darnassus",
+        "en": "Darnassus"
+      },
+      "coordinates": null,
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/fishing-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Baelann Swiftcurrent",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Pêche",
+      "rank": "Tous rangs",
+      "zone": {
+        "id": "zephras-isle",
+        "fr": "Île de Zephras",
+        "en": "Zephras Isle"
+      },
+      "coordinates": {
+        "x": 63.2,
+        "y": 75.6
+      },
+      "faction": "neutral",
+      "offers": [],
+      "source": "https://www.wowhead.com/forever/guide/zephras-isle-zone-overview",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guide_waypoint"
+    },
+    {
+      "id": null,
+      "name": "Fenn Fairweather",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Pêche",
+      "rank": "Tous rangs",
+      "zone": {
+        "id": "zephras-isle",
+        "fr": "Île de Zephras",
+        "en": "Zephras Isle"
+      },
+      "coordinates": {
+        "x": 45,
+        "y": 48.4
+      },
+      "faction": "neutral",
+      "offers": [],
+      "source": "https://www.wowhead.com/forever/guide/zephras-isle-zone-overview",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guide_waypoint"
+    },
+    {
+      "id": null,
+      "name": "Lau'Tiki",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Pêche",
+      "rank": "Tous rangs",
+      "zone": {
+        "id": "durotar",
+        "fr": "Durotar",
+        "en": "Durotar"
+      },
+      "coordinates": null,
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/fishing-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Uthan Stillwater",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Pêche",
+      "rank": "Tous rangs",
+      "zone": {
+        "id": "mulgore",
+        "fr": "Mulgore",
+        "en": "Mulgore"
+      },
+      "coordinates": null,
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/fishing-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Clyde Kellen",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Pêche",
+      "rank": "Tous rangs",
+      "zone": {
+        "id": "tirisfal",
+        "fr": "Clairières de Tirisfal",
+        "en": "Tirisfal Glades"
+      },
+      "coordinates": null,
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/fishing-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Lee Brown",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Pêche",
+      "rank": "Tous rangs",
+      "zone": {
+        "id": "elwynn",
+        "fr": "Forêt d'Elwynn",
+        "en": "Elwynn Forest"
+      },
+      "coordinates": null,
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/fishing-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Katoom the Angler",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Pêche",
+      "rank": "Tous rangs",
+      "zone": {
+        "id": "hinterlands",
+        "fr": "Les Hinterlands",
+        "en": "The Hinterlands"
+      },
+      "coordinates": null,
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/fishing-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Brannock",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Pêche",
+      "rank": "Tous rangs",
+      "zone": {
+        "id": "feralas",
+        "fr": "Féralas",
+        "en": "Feralas"
+      },
+      "coordinates": null,
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/fishing-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Mary Edras",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Secourisme",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "undercity",
+        "fr": "Fossoyeuse",
+        "en": "Undercity"
+      },
+      "coordinates": null,
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/first-aid-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Pand Stonebinder",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Secourisme",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "thunder-bluff",
+        "fr": "Les Pitons-du-Tonnerre",
+        "en": "Thunder Bluff"
+      },
+      "coordinates": null,
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/first-aid-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Nissa Firestone",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Secourisme",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "ironforge",
+        "fr": "Forgefer",
+        "en": "Ironforge"
+      },
+      "coordinates": null,
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/first-aid-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Dannelor",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Secourisme",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "darnassus",
+        "fr": "Darnassus",
+        "en": "Darnassus"
+      },
+      "coordinates": null,
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/first-aid-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Rawrk",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Secourisme",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "durotar",
+        "fr": "Durotar",
+        "en": "Durotar"
+      },
+      "coordinates": null,
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/first-aid-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Vira Younghoof",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Secourisme",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "mulgore",
+        "fr": "Mulgore",
+        "en": "Mulgore"
+      },
+      "coordinates": null,
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/first-aid-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Nurse Neela",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Secourisme",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "tirisfal",
+        "fr": "Clairières de Tirisfal",
+        "en": "Tirisfal Glades"
+      },
+      "coordinates": null,
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wow-professions.com/forever/first-aid-trainers",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_profession_guide_zone_only"
+    },
+    {
+      "id": null,
+      "name": "Melasa Fairmend",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Secourisme",
+      "rank": "Compagnon",
+      "zone": {
+        "id": "zephras-isle",
+        "fr": "Île de Zephras",
+        "en": "Zephras Isle"
+      },
+      "coordinates": {
+        "x": 63,
+        "y": 72.6
+      },
+      "faction": "neutral",
+      "offers": [],
+      "source": "https://www.wowhead.com/forever/guide/zephras-isle-zone-overview",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guide_waypoint"
+    },
+    {
+      "id": null,
+      "name": "Naleeia Tattermend",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Secourisme",
+      "rank": "Compagnon",
+      "zone": {
+        "id": "zephras-isle",
+        "fr": "Île de Zephras",
+        "en": "Zephras Isle"
+      },
+      "coordinates": {
+        "x": 43,
+        "y": 46.2
+      },
+      "faction": "neutral",
+      "offers": [],
+      "source": "https://www.wowhead.com/forever/guide/zephras-isle-zone-overview",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guide_waypoint"
+    },
+    {
+      "id": null,
+      "name": "Nyassa Swiftdraught",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Alchimie",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "zephras-isle",
+        "fr": "Île de Zephras",
+        "en": "Zephras Isle"
+      },
+      "coordinates": {
+        "x": 43.8,
+        "y": 43.6
+      },
+      "faction": "neutral",
+      "offers": [],
+      "source": "https://www.wowhead.com/forever/guide/zephras-isle-zone-overview",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guide_waypoint"
+    },
+    {
+      "id": null,
+      "name": "Iaadaria Bitterwind",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Alchimie",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "zephras-isle",
+        "fr": "Île de Zephras",
+        "en": "Zephras Isle"
+      },
+      "coordinates": {
+        "x": 66.2,
+        "y": 79.6
+      },
+      "faction": "neutral",
+      "offers": [],
+      "source": "https://www.wowhead.com/forever/guide/zephras-isle-zone-overview",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guide_waypoint"
+    },
+    {
+      "id": null,
+      "name": "Valiena Swiftgale",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Alchimie",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "zephras-isle",
+        "fr": "Île de Zephras",
+        "en": "Zephras Isle"
+      },
+      "coordinates": {
+        "x": 59.2,
+        "y": 76.2
+      },
+      "faction": "neutral",
+      "offers": [],
+      "source": "https://www.wowhead.com/forever/guide/zephras-isle-zone-overview",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guide_waypoint"
+    },
+    {
+      "id": null,
+      "name": "Aedi Thriceforged",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Forge",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "zephras-isle",
+        "fr": "Île de Zephras",
+        "en": "Zephras Isle"
+      },
+      "coordinates": {
+        "x": 44.8,
+        "y": 44.4
+      },
+      "faction": "neutral",
+      "offers": [],
+      "source": "https://www.wowhead.com/forever/guide/zephras-isle-zone-overview",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guide_waypoint"
+    },
+    {
+      "id": null,
+      "name": "Daeann Steelwind",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Forge",
+      "rank": "Compagnon",
+      "zone": {
+        "id": "zephras-isle",
+        "fr": "Île de Zephras",
+        "en": "Zephras Isle"
+      },
+      "coordinates": {
+        "x": 65.4,
+        "y": 80.2
+      },
+      "faction": "neutral",
+      "offers": [],
+      "source": "https://www.wowhead.com/forever/guide/zephras-isle-zone-overview",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guide_waypoint"
+    },
+    {
+      "id": null,
+      "name": "Nasalanna Windsinger",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Enchantement",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "zephras-isle",
+        "fr": "Île de Zephras",
+        "en": "Zephras Isle"
+      },
+      "coordinates": {
+        "x": 43.2,
+        "y": 43.2
+      },
+      "faction": "neutral",
+      "offers": [],
+      "source": "https://www.wowhead.com/forever/guide/zephras-isle-zone-overview",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guide_waypoint"
+    },
+    {
+      "id": null,
+      "name": "Eaysaa Brightgust",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Enchantement",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "zephras-isle",
+        "fr": "Île de Zephras",
+        "en": "Zephras Isle"
+      },
+      "coordinates": {
+        "x": 59.2,
+        "y": 76.2
+      },
+      "faction": "neutral",
+      "offers": [],
+      "source": "https://www.wowhead.com/forever/guide/zephras-isle-zone-overview",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guide_waypoint"
+    },
+    {
+      "id": null,
+      "name": "Strange Hermit",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Ingénierie",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "zephras-isle",
+        "fr": "Île de Zephras",
+        "en": "Zephras Isle"
+      },
+      "coordinates": {
+        "x": 54,
+        "y": 39
+      },
+      "faction": "neutral",
+      "offers": [],
+      "source": "https://www.wowhead.com/forever/guide/zephras-isle-zone-overview",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guide_waypoint"
+    },
+    {
+      "id": null,
+      "name": "Indari Sunseam",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Travail du cuir",
+      "rank": "Apprenti",
+      "zone": {
+        "id": "zephras-isle",
+        "fr": "Île de Zephras",
+        "en": "Zephras Isle"
+      },
+      "coordinates": {
+        "x": 44.6,
+        "y": 44.6
+      },
+      "faction": "neutral",
+      "offers": [],
+      "source": "https://www.wowhead.com/forever/guide/zephras-isle-zone-overview",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guide_waypoint"
+    },
+    {
+      "id": null,
+      "name": "Emerii Tallgust",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Travail du cuir",
+      "rank": "Compagnon",
+      "zone": {
+        "id": "zephras-isle",
+        "fr": "Île de Zephras",
+        "en": "Zephras Isle"
+      },
+      "coordinates": {
+        "x": 63.8,
+        "y": 80.6
+      },
+      "faction": "neutral",
+      "offers": [],
+      "source": "https://www.wowhead.com/forever/guide/zephras-isle-zone-overview",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guide_waypoint"
+    },
+    {
+      "id": null,
+      "name": "Taleen Shimmerthread",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Couture",
+      "rank": "Compagnon",
+      "zone": {
+        "id": "zephras-isle",
+        "fr": "Île de Zephras",
+        "en": "Zephras Isle"
+      },
+      "coordinates": {
+        "x": 44.8,
+        "y": 44.2
+      },
+      "faction": "neutral",
+      "offers": [],
+      "source": "https://www.wowhead.com/forever/guide/zephras-isle-zone-overview",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guide_waypoint"
+    },
+    {
+      "id": null,
+      "name": "Othesia Evengale",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Couture",
+      "rank": "Compagnon",
+      "zone": {
+        "id": "zephras-isle",
+        "fr": "Île de Zephras",
+        "en": "Zephras Isle"
+      },
+      "coordinates": {
+        "x": 64.4,
+        "y": 81
+      },
+      "faction": "neutral",
+      "offers": [],
+      "source": "https://www.wowhead.com/forever/guide/zephras-isle-zone-overview",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guide_waypoint"
+    },
+    {
+      "id": null,
+      "name": "Halassa Fernbreeze",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Herboristerie",
+      "rank": "Tous rangs",
+      "zone": {
+        "id": "zephras-isle",
+        "fr": "Île de Zephras",
+        "en": "Zephras Isle"
+      },
+      "coordinates": {
+        "x": 43,
+        "y": 43.6
+      },
+      "faction": "neutral",
+      "offers": [],
+      "source": "https://www.wowhead.com/forever/guide/zephras-isle-zone-overview",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guide_waypoint"
+    },
+    {
+      "id": null,
+      "name": "Syriel Nightrain",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Herboristerie",
+      "rank": "Tous rangs",
+      "zone": {
+        "id": "zephras-isle",
+        "fr": "Île de Zephras",
+        "en": "Zephras Isle"
+      },
+      "coordinates": {
+        "x": 57.8,
+        "y": 75.4
+      },
+      "faction": "neutral",
+      "offers": [],
+      "source": "https://www.wowhead.com/forever/guide/zephras-isle-zone-overview",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guide_waypoint"
+    },
+    {
+      "id": null,
+      "name": "Messana Crestwind",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Minage",
+      "rank": "Tous rangs",
+      "zone": {
+        "id": "zephras-isle",
+        "fr": "Île de Zephras",
+        "en": "Zephras Isle"
+      },
+      "coordinates": {
+        "x": 44.8,
+        "y": 44.4
+      },
+      "faction": "neutral",
+      "offers": [],
+      "source": "https://www.wowhead.com/forever/guide/zephras-isle-zone-overview",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guide_waypoint"
+    },
+    {
+      "id": null,
+      "name": "Halavuul Cragwind",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Minage",
+      "rank": "Tous rangs",
+      "zone": {
+        "id": "zephras-isle",
+        "fr": "Île de Zephras",
+        "en": "Zephras Isle"
+      },
+      "coordinates": {
+        "x": 65.4,
+        "y": 80.4
+      },
+      "faction": "neutral",
+      "offers": [],
+      "source": "https://www.wowhead.com/forever/guide/zephras-isle-zone-overview",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guide_waypoint"
+    },
+    {
+      "id": null,
+      "name": "Mendalass Tattermend",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Dépeçage",
+      "rank": "Tous rangs",
+      "zone": {
+        "id": "zephras-isle",
+        "fr": "Île de Zephras",
+        "en": "Zephras Isle"
+      },
+      "coordinates": {
+        "x": 43.2,
+        "y": 43.6
+      },
+      "faction": "neutral",
+      "offers": [],
+      "source": "https://www.wowhead.com/forever/guide/zephras-isle-zone-overview",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guide_waypoint"
+    },
+    {
+      "id": null,
+      "name": "Ishlee Breezewhisper",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Dépeçage",
+      "rank": "Tous rangs",
+      "zone": {
+        "id": "zephras-isle",
+        "fr": "Île de Zephras",
+        "en": "Zephras Isle"
+      },
+      "coordinates": {
+        "x": 59.6,
+        "y": 76
+      },
+      "faction": "neutral",
+      "offers": [],
+      "source": "https://www.wowhead.com/forever/guide/zephras-isle-zone-overview",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guide_waypoint"
+    },
+    {
+      "id": null,
+      "name": "Zerril Softbreeze",
+      "role": "trainer",
+      "trainer_kind": "profession",
+      "profession": "Cuisine",
+      "rank": "Compagnon",
+      "zone": {
+        "id": "zephras-isle",
+        "fr": "Île de Zephras",
+        "en": "Zephras Isle"
+      },
+      "coordinates": {
+        "x": 43.8,
+        "y": 43.8
+      },
+      "faction": "neutral",
+      "offers": [],
+      "source": "https://www.wowhead.com/forever/guide/zephras-isle-zone-overview",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "forever_guide_waypoint"
+    },
+    {
+      "id": null,
+      "name": "Ilyenia Moonfire",
+      "role": "trainer",
+      "trainer_kind": "weapon",
+      "profession": "Armes",
+      "rank": null,
+      "zone": {
+        "id": "darnassus",
+        "fr": "Darnassus",
+        "en": "Darnassus"
+      },
+      "coordinates": {
+        "x": 57.6,
+        "y": 46.7
+      },
+      "faction": "alliance",
+      "offers": [],
+      "weapon_skills": [
+        "Bows",
+        "Daggers",
+        "Fist Weapons",
+        "Staves",
+        "Thrown"
+      ],
+      "source": "https://www.warcrafttavern.com/wow-classic/guides/weapon-skill-trainers-and-locations/",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "id": null,
+      "name": "Bixi Wobblebonk",
+      "role": "trainer",
+      "trainer_kind": "weapon",
+      "profession": "Armes",
+      "rank": null,
+      "zone": {
+        "id": "ironforge",
+        "fr": "Forgefer",
+        "en": "Ironforge"
+      },
+      "coordinates": {
+        "x": 62.2,
+        "y": 89.6
+      },
+      "faction": "alliance",
+      "offers": [],
+      "weapon_skills": [
+        "Crossbows",
+        "Daggers",
+        "Thrown"
+      ],
+      "source": "https://www.warcrafttavern.com/wow-classic/guides/weapon-skill-trainers-and-locations/",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "id": null,
+      "name": "Buliwyf Stonehand",
+      "role": "trainer",
+      "trainer_kind": "weapon",
+      "profession": "Armes",
+      "rank": null,
+      "zone": {
+        "id": "ironforge",
+        "fr": "Forgefer",
+        "en": "Ironforge"
+      },
+      "coordinates": {
+        "x": 62.2,
+        "y": 89.6
+      },
+      "faction": "alliance",
+      "offers": [],
+      "weapon_skills": [
+        "Fist Weapons",
+        "Guns",
+        "One-Handed Axes",
+        "One-Handed Maces",
+        "Two-Handed Axes",
+        "Two-Handed Maces"
+      ],
+      "source": "https://www.warcrafttavern.com/wow-classic/guides/weapon-skill-trainers-and-locations/",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "id": null,
+      "name": "Woo Ping",
+      "role": "trainer",
+      "trainer_kind": "weapon",
+      "profession": "Armes",
+      "rank": null,
+      "zone": {
+        "id": "stormwind",
+        "fr": "Hurlevent",
+        "en": "Stormwind"
+      },
+      "coordinates": {
+        "x": 57.1,
+        "y": 57.7
+      },
+      "faction": "alliance",
+      "offers": [],
+      "weapon_skills": [
+        "Crossbows",
+        "Daggers",
+        "One-Handed Swords",
+        "Polearms",
+        "Staves",
+        "Two-Handed Swords"
+      ],
+      "source": "https://www.warcrafttavern.com/wow-classic/guides/weapon-skill-trainers-and-locations/",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "id": null,
+      "name": "Hanashi",
+      "role": "trainer",
+      "trainer_kind": "weapon",
+      "profession": "Armes",
+      "rank": null,
+      "zone": {
+        "id": "orgrimmar",
+        "fr": "Orgrimmar",
+        "en": "Orgrimmar"
+      },
+      "coordinates": {
+        "x": 81.5,
+        "y": 19.6
+      },
+      "faction": "horde",
+      "offers": [],
+      "weapon_skills": [
+        "Bows",
+        "One-Handed Axes",
+        "Staves",
+        "Thrown",
+        "Two-Handed Axes"
+      ],
+      "source": "https://www.warcrafttavern.com/wow-classic/guides/weapon-skill-trainers-and-locations/",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "id": null,
+      "name": "Sayoc",
+      "role": "trainer",
+      "trainer_kind": "weapon",
+      "profession": "Armes",
+      "rank": null,
+      "zone": {
+        "id": "orgrimmar",
+        "fr": "Orgrimmar",
+        "en": "Orgrimmar"
+      },
+      "coordinates": {
+        "x": 81.7,
+        "y": 19.5
+      },
+      "faction": "horde",
+      "offers": [],
+      "weapon_skills": [
+        "Bows",
+        "Daggers",
+        "Fist Weapons",
+        "One-Handed Axes",
+        "Staves",
+        "Thrown",
+        "Two-Handed Axes"
+      ],
+      "source": "https://www.warcrafttavern.com/wow-classic/guides/weapon-skill-trainers-and-locations/",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "id": null,
+      "name": "Ansekhwa",
+      "role": "trainer",
+      "trainer_kind": "weapon",
+      "profession": "Armes",
+      "rank": null,
+      "zone": {
+        "id": "thunder-bluff",
+        "fr": "Les Pitons-du-Tonnerre",
+        "en": "Thunder Bluff"
+      },
+      "coordinates": {
+        "x": 40.9,
+        "y": 62.7
+      },
+      "faction": "horde",
+      "offers": [],
+      "weapon_skills": [
+        "Guns",
+        "One-Handed Maces",
+        "Staves",
+        "Two-Handed Maces"
+      ],
+      "source": "https://www.warcrafttavern.com/wow-classic/guides/weapon-skill-trainers-and-locations/",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "id": null,
+      "name": "Archibald",
+      "role": "trainer",
+      "trainer_kind": "weapon",
+      "profession": "Armes",
+      "rank": null,
+      "zone": {
+        "id": "undercity",
+        "fr": "Fossoyeuse",
+        "en": "Undercity"
+      },
+      "coordinates": {
+        "x": 57.3,
+        "y": 32.8
+      },
+      "faction": "horde",
+      "offers": [],
+      "weapon_skills": [
+        "Crossbows",
+        "Daggers",
+        "One-Handed Swords",
+        "Polearms",
+        "Two-Handed Swords"
+      ],
+      "source": "https://www.warcrafttavern.com/wow-classic/guides/weapon-skill-trainers-and-locations/",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified"
     }
   ],
   "evidence": [
@@ -4469,6 +7552,12 @@
     },
     "azshara": {
       "uiMapID": 1447,
+      "build": "1.60.1.69893",
+      "source": "https://warcraftforever.games/maps",
+      "kind": "forever_beta_zone_map"
+    },
+    "zephras-isle": {
+      "uiMapID": 2521,
       "build": "1.60.1.69893",
       "source": "https://warcraftforever.games/maps",
       "kind": "forever_beta_zone_map"
