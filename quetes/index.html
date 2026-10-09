@@ -28,8 +28,12 @@
 <div class="quest-timeline-heading"><div><span class="kicker">ITINÉRAIRE DE PROGRESSION</span><h2 id="quest-step-count">Étape —</h2><p id="quest-timeline-zone">Choisissez un itinéraire pour commencer.</p></div>
 <div class="quest-step-actions"><button type="button" class="btn secondary" id="quest-prev" aria-label="Étape précédente">← Précédent</button><button type="button" class="btn primary" id="quest-next" aria-label="Étape suivante">Suivant →</button></div></div>
 <div class="quest-timeline-range-label"><label for="quest-range">Parcourir les étapes</label><output id="quest-range-output" for="quest-range">—</output></div>
+<div class="quest-timeline-track-scroll" aria-label="Frise des étapes et des niveaux">
+<div class="quest-timeline-track-inner">
 <input type="range" id="quest-range" class="quest-timeline-slider" min="1" max="1" value="1" step="1" aria-label="Aller à une étape du parcours">
-<div class="quest-timeline-milestones" id="quest-milestones" aria-label="Accès rapide aux niveaux importants"></div>
+<div class="quest-timeline-milestones" id="quest-milestones" aria-label="Repères de niveau alignés sur les étapes du curseur"></div>
+</div>
+</div>
 <div class="quest-timeline-preview" id="quest-timeline-preview" aria-live="polite">Glissez le curseur ou utilisez les repères de niveau.</div>
 <div class="quest-progress-summary"><div><strong id="quest-path-label">Chargement du parcours…</strong><span id="quest-progress-info">—</span></div><div class="quest-progress-track" role="progressbar" aria-label="Étapes terminées" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="quest-progress-track"><span id="quest-progress-fill"></span></div></div>
 </section>
