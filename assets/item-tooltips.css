@@ -83,3 +83,5 @@
 #npcs-app[data-mode="merchant"] .npc-item-heading[tabindex="0"]{cursor:help;outline-offset:3px}
 #npcs-app[data-mode="merchant"] .npc-item-heading[tabindex="0"]:focus-visible{outline:2px solid #c8ab77}
 #npcs-app[data-mode="merchant"] .npc-item-info-button{white-space:nowrap}
+
+.forever-item-tooltip__vendor-currency{font-size:12px;font-weight:700;color:#d7c181;padding-top:3px}
