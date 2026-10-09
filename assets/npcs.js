@@ -18,6 +18,13 @@ const human=n=>n>=60?(Math.floor(n/60)+" "+S("h","h")+(n%60?" "+(n%60)+" min":""
 const store={db:null,records:[],filtered:[],active:null,mode:document.body.dataset.page==="trainers"?"trainer":"merchant",showReportsOnly:false};
 const q=$("npc-search"),zone=$("npc-zone"),trade=$("npc-profession"),aff=$("npc-faction"),rank=$("npc-rank"),reports=$("npc-evidence-only"),type=$("npc-type"),weapon=$("npc-weapon");
 const list=$("npc-results"),detail=$("npc-detail"),count=$("npc-count"),kind=$("npc-kind");
+function updateFilterVisibility(){
+ if(!type)return;
+ const armed=type.value==="weapon";
+ if(trade)trade.closest(".npc-field").hidden=armed;
+ if(rank)rank.closest(".npc-field").hidden=armed;
+ if(weapon)weapon.closest(".npc-field").hidden=!armed;
+}
 const evidence=(vendor,item)=>store.db.evidence.find(e=>e.vendor_name===vendor.name&&e.item===item?.id?.toString());
 const append=(parent,tag,t,cls)=>{const el=mk(tag,t,cls);parent.append(el);return el};
 const link=(parent,text,url)=>{const a=mk("a",text);a.href=url;a.target="_blank";a.rel="noopener noreferrer";parent.append(a);return a};
@@ -104,10 +111,10 @@ function renderList(){
  const copy=append(b,"span",null,"npc-result-copy");
  append(copy,"strong",r.item?title(r.item):r.npc.name);
  append(copy,"small",r.item?r.npc.name+" · "+side(r.npc):side(r.npc)+" · "+(trainerType(r.npc)==="weapon"?S("Maître d’armes","Weapon master"):profession[r.npc.profession]||r.npc.profession));
- if(!r.item){append(copy,"small",trainerType(r.npc)==="weapon"?(r.npc.weapon_skills||[]).map(k=>weaponLabels[k]||k).join(" · "):(r.npc.rank||"")+" · "+(hasCoords(r.npc)?S("Repère sur carte","Mapped waypoint"):S("Zone uniquement","Zone only")),"npc-result-extras");}
+ if(!r.item){append(copy,"small",trainerType(r.npc)==="weapon"?(r.npc.weapon_skills||[]).map(k=>weaponLabels[k]||k).join(" · "):(r.npc.rank||"")+" · "+(hasCoords(r.npc)?fmt(r.npc.coordinates.x)+" / "+fmt(r.npc.coordinates.y):S("Zone uniquement","Zone only")),"npc-result-extras");}
  if(r.item&&evidence(r.npc,r.item))append(copy,"span",S("Témoignages sur le stock","Stock reports"),"npc-evidence-flag");
  append(b,"span","›","npc-arrow").setAttribute("aria-hidden","true");
- b.addEventListener("click",()=>selectRecord(r));list.append(b)}
+ b.addEventListener("click",()=>{selectRecord(r);if(window.matchMedia("(max-width: 700px)").matches)$("npc-map-canvas")?.scrollIntoView({behavior:"smooth",block:"center"})});list.append(b)}
  if(!store.filtered.length)append(list,"p",S("Aucun résultat. Essayez un autre objet, une autre zone ou désactivez le filtre des témoignages.","No matches. Try another item, zone, or disable the reports-only filter."),"npc-empty");
  count.textContent=store.filtered.length+" "+S("résultats","results");
 
@@ -299,7 +306,7 @@ function renderDetail(){
  append(detail,"p",store.mode==="merchant"?S("Important : données historiques Classic. Les PNJ, objets, emplacements et stocks peuvent différer sur WoW Forever. Aucun suivi du stock en temps réel.","Important: historical Classic data. NPCs, items, positions and stock may differ on WoW Forever. No live inventory monitoring."):S("Certaines fiches proviennent des guides Forever ; les autres restent des références Classic. Les PNJ et leurs positions peuvent différer en jeu.","Some entries come from Forever guides; others are Classic references. NPC presence and locations may differ in-game."),"npc-datacaveat");
 }
 function refresh(){store.filtered=filteredRecords();if(!store.filtered.some(r=>r.key===store.active?.key))store.active=store.filtered[0]||null;renderList();renderDetail()}
-for(const e of [q,zone,trade,aff,kind,rank,type,weapon].filter(Boolean))e.addEventListener(e===q?"input":"change",()=>{if(e===type&&type.value==="weapon"){trade.value="all";if(rank)rank.value="all"}if(e===trade&&trade.value!=="all"&&type)type.value="profession";if(e===weapon&&weapon.value!=="all"&&type){type.value="weapon";trade.value="all";if(rank)rank.value="all"}refresh()});
+for(const e of [q,zone,trade,aff,kind,rank,type,weapon].filter(Boolean))e.addEventListener(e===q?"input":"change",()=>{if(e===type&&type.value==="weapon"){trade.value="all";if(rank)rank.value="all"}if(e===trade&&trade.value!=="all"&&type)type.value="profession";if(e===weapon&&weapon.value!=="all"&&type){type.value="weapon";trade.value="all";if(rank)rank.value="all"}updateFilterVisibility();refresh()});
 if(reports)reports.addEventListener("change",e=>{store.showReportsOnly=e.target.checked;refresh()});
 const params=new URLSearchParams(location.search);
 if(params.get("q"))q.value=params.get("q").slice(0,120);
@@ -310,6 +317,7 @@ fetch(root+"data/npcs.json").then(r=>{if(!r.ok)throw Error(r.status);return r.js
  // Atlas deep links select the complete zone, not just a text search result.
  const requestedZone=params.get("zone");
  if(requestedZone&&Array.from(zone.options).some(option=>option.value===requestedZone))zone.value=requestedZone;
+ updateFilterVisibility();
  refresh();$("npc-load-status").textContent=store.mode==="trainer"?db.npcs.filter(n=>n.role==="trainer").length+" "+S("maîtres recensés","trainers listed"):Object.keys(db.items).length+" "+S("objets Classic","Classic items");
 }).catch(e=>{$("npc-load-status").textContent=S("Données indisponibles","Data unavailable");append(list,"p",S("Impossible de charger l'annuaire. Réessayez plus tard.","Unable to load the directory."),"npc-empty");console.warn("NPC dataset:",e.message)});
 })();
