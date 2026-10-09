@@ -76,7 +76,7 @@ function renderZones(){
   }
 }
 function showSelection(){const place=document.getElementById("mine-selection");place.replaceChildren();if(!selected){place.append(el("strong","Sélectionnez un point sur la carte"),el("p","Une commande /way apparaîtra ici."));copy.disabled=true;command="";draw();return}const p=selected,what=mineral(p[2]);command="/way #"+zone.uiMapID+" "+fmtTom(p[0])+" "+fmtTom(p[1])+" "+what.label;place.append(el("strong",what.label),el("p","X : "+fmt(p[0])+" % · Y : "+fmt(p[1])+" %"));const c=el("code",command,"mine-way");place.append(c,el("small","Position référencée, non garantie en jeu."));copy.disabled=false;draw()}
-function setZone(z){zone=z;zoom=1;center={x:50,y:50};selected=null;zoomText.textContent="100 %";sourceImg=null;document.getElementById("mine-map-backdrop").textContent="Grille de coordonnées WoW";filterPoints();const image=new Image();image.onload=()=>{if(zone!==z)return;sourceImg=image;document.getElementById("mine-map-backdrop").textContent="Carte Classic · coordonnées de zone";draw()};image.onerror=()=>{if(zone!==z)return;document.getElementById("mine-map-backdrop").textContent="Fond schématique · repères X/Y";draw()};image.src=ROOT+"assets/maps/"+zone.id+".jpg"}
+function setZone(z){zone=z;zoom=1;center={x:50,y:50};selected=null;zoomText.textContent="100 %";sourceImg=null;document.getElementById("mine-map-backdrop").textContent="Grille de coordonnées WoW";filterPoints();showSelection();const image=new Image();image.onload=()=>{if(zone!==z)return;sourceImg=image;document.getElementById("mine-map-backdrop").textContent="Carte Classic · coordonnées de zone";draw()};image.onerror=()=>{if(zone!==z)return;document.getElementById("mine-map-backdrop").textContent="Fond schématique · repères X/Y";draw()};image.src=ROOT+"assets/maps/"+zone.id+".jpg"}
 function setZoom(z){zoom=clamp(z,1,4);zoomText.textContent=Math.round(zoom*100)+" %";draw()}
 function fromClient(event){const r=canvas.getBoundingClientRect();return {x:(event.clientX-r.left)*W/r.width,y:(event.clientY-r.top)*H/r.height}}
 const coords=document.getElementById("mine-cursor-coords");
@@ -90,7 +90,7 @@ canvas.addEventListener("wheel",e=>{if(!e.ctrlKey)return;e.preventDefault();setZ
 document.getElementById("mine-zoom-out").addEventListener("click",()=>setZoom(zoom-.5));
 document.getElementById("mine-zoom-in").addEventListener("click",()=>setZoom(zoom+.5));
 zoomText.addEventListener("click",()=>{center={x:50,y:50};setZoom(1)});
-copy.addEventListener("click",()=>{if(!command)return;const alert=()=>{copy.textContent="Copié !";setTimeout(()=>copy.textContent="Copier la commande /way",1400)};navigator.clipboard?.writeText(command).then(alert,()=>{copy.textContent="Commande dans la fiche ci-dessus"})});
+copy.addEventListener("click",()=>{if(!command)return;const alert=()=>{copy.textContent="Copié !";setTimeout(()=>copy.textContent="Copier la commande /way",1400)};if(navigator.clipboard?.writeText)navigator.clipboard.writeText(command).then(alert,()=>{copy.textContent="Sélectionnez la commande ci-dessus"});else copy.textContent="Sélectionnez la commande ci-dessus"});
 document.getElementById("mine-select-all").addEventListener("click",()=>{
   for(const id of Object.keys(db.minerals))enabledMinerals.add(id);
   filterPoints();
