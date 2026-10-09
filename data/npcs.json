@@ -276,7 +276,7 @@
       },
       "profession": "Alchimie",
       "skill": 295,
-      "supply": "limited"
+      "supply": "unlimited"
     },
     "14468": {
       "id": 14468,
@@ -318,6 +318,16 @@
       "skill": 200,
       "supply": "limited"
     },
+    "18648": {
+      "id": 18648,
+      "name": {
+        "en": "Schematic: Green Firework",
+        "fr": "Schéma : Feu d'artifice vert"
+      },
+      "profession": "Ingénierie",
+      "skill": 150,
+      "supply": "limited"
+    },
     "18651": {
       "id": 18651,
       "name": {
@@ -336,7 +346,7 @@
       },
       "profession": "Couture",
       "skill": 275,
-      "supply": "limited"
+      "supply": "unlimited"
     },
     "22310": {
       "id": 22310,
@@ -421,7 +431,8 @@
         "13477"
       ],
       "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
-      "note": "Terrasse des artisans"
+      "note": "Terrasse des artisans",
+      "note_en": "Craftsmen's Terrace"
     },
     {
       "id": null,
@@ -443,7 +454,8 @@
         "13478"
       ],
       "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
-      "note": "Brikabrok"
+      "note": "Brikabrok",
+      "note_en": "Tinker Town"
     },
     {
       "id": null,
@@ -464,7 +476,8 @@
         "9301"
       ],
       "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
-      "note": "Quartier des mages"
+      "note": "Quartier des mages",
+      "note_en": "Mage Quarter"
     },
     {
       "id": null,
@@ -486,7 +499,8 @@
         "6053"
       ],
       "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
-      "note": "Gîte des pérégrins"
+      "note": "Gîte des pérégrins",
+      "note_en": "Farstrider Lodge"
     },
     {
       "id": null,
@@ -507,7 +521,8 @@
         "6054"
       ],
       "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
-      "note": "Refuge de Vent-argent"
+      "note": "Refuge de Vent-argent",
+      "note_en": "Silverwind Refuge"
     },
     {
       "id": null,
@@ -528,7 +543,8 @@
         "6068"
       ],
       "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
-      "note": "Colline-aux-Corbeaux"
+      "note": "Colline-aux-Corbeaux",
+      "note_en": "Raven Hill"
     },
     {
       "id": null,
@@ -549,7 +565,8 @@
         "6055"
       ],
       "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
-      "note": "Austrivage"
+      "note": "Austrivage",
+      "note_en": "Southshore"
     },
     {
       "id": null,
@@ -570,7 +587,8 @@
         "14634"
       ],
       "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
-      "note": "Ruines d'Alterac"
+      "note": "Ruines d'Alterac",
+      "note_en": "Alterac ruins"
     },
     {
       "id": null,
@@ -592,7 +610,8 @@
         "6057"
       ],
       "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
-      "note": "Baie-du-Butin"
+      "note": "Baie-du-Butin",
+      "note_en": "Booty Bay"
     },
     {
       "id": 5594,
@@ -617,7 +636,8 @@
         "12958"
       ],
       "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
-      "note": "Gadgetzan"
+      "note": "Gadgetzan",
+      "note_en": "Gadgetzan"
     },
     {
       "id": null,
@@ -639,7 +659,8 @@
         "9302"
       ],
       "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
-      "note": "Bastion de Pennelune"
+      "note": "Bastion de Pennelune",
+      "note_en": "Feathermoon Stronghold"
     },
     {
       "id": 11188,
@@ -660,7 +681,8 @@
         "13480"
       ],
       "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
-      "note": "Long-guet"
+      "note": "Long-guet",
+      "note_en": "Everlook"
     },
     {
       "id": null,
@@ -682,7 +704,8 @@
         "5643"
       ],
       "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
-      "note": "Faille de l'Ombre"
+      "note": "Faille de l'Ombre",
+      "note_en": "Cleft of Shadow"
     },
     {
       "id": null,
@@ -704,7 +727,8 @@
         "13478"
       ],
       "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
-      "note": "La Herse"
+      "note": "La Herse",
+      "note_en": "The Drag"
     },
     {
       "id": null,
@@ -726,7 +750,8 @@
         "13477"
       ],
       "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
-      "note": "L'Apothicarium"
+      "note": "L'Apothicarium",
+      "note_en": "The Apothecarium"
     },
     {
       "id": null,
@@ -747,7 +772,8 @@
         "6055"
       ],
       "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
-      "note": "Retraite de Roche-Soleil"
+      "note": "Retraite de Roche-Soleil",
+      "note_en": "Sun Rock Retreat"
     },
     {
       "id": null,
@@ -768,7 +794,8 @@
         "6068"
       ],
       "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
-      "note": "Poste de Librevent"
+      "note": "Poste de Librevent",
+      "note_en": "Freewind Post"
     },
     {
       "id": null,
@@ -790,7 +817,8 @@
         "9302"
       ],
       "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
-      "note": "Camp Mojache"
+      "note": "Camp Mojache",
+      "note_en": "Camp Mojache"
     },
     {
       "id": 11189,
@@ -813,7 +841,8 @@
         "14481"
       ],
       "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
-      "note": "Banque de Long-guet"
+      "note": "Banque de Long-guet",
+      "note_en": "Everlook bank"
     },
     {
       "id": 15419,
@@ -834,7 +863,8 @@
         "22308"
       ],
       "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
-      "note": "Fort cénarien"
+      "note": "Fort cénarien",
+      "note_en": "Cenarion Hold"
     },
     {
       "id": null,
@@ -860,7 +890,8 @@
         "22312"
       ],
       "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
-      "note": "Fort cénarien · Réputation Cercle cénarien"
+      "note": "Fort cénarien · Réputation Cercle cénarien",
+      "note_en": "Cenarion Hold · Cenarion Circle reputation"
     },
     {
       "id": 4168,
@@ -881,7 +912,8 @@
         "6272"
       ],
       "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
-      "note": "Terrasse des artisans"
+      "note": "Terrasse des artisans",
+      "note_en": "Craftsmen's Terrace"
     },
     {
       "id": null,
@@ -898,9 +930,12 @@
         "y": 36.2
       },
       "faction": "neutral",
-      "offers": [],
+      "offers": [
+        "18648"
+      ],
       "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic",
-      "note": "Cabestan"
+      "note": "Cabestan",
+      "note_en": "Ratchet"
     },
     {
       "id": null,
@@ -921,7 +956,8 @@
         "7561"
       ],
       "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic",
-      "note": "Combe des Cisailles"
+      "note": "Combe des Cisailles",
+      "note_en": "Windshear Crag"
     },
     {
       "id": 3537,
@@ -942,7 +978,8 @@
         "7561"
       ],
       "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic",
-      "note": "Marchand ambulant sur la route"
+      "note": "Marchand ambulant sur la route",
+      "note_en": "Travelling vendor along the road"
     },
     {
       "id": 6730,
@@ -964,7 +1001,8 @@
         "7560"
       ],
       "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic",
-      "note": "Piste des Mirages"
+      "note": "Piste des Mirages",
+      "note_en": "Mirage Raceway"
     },
     {
       "id": null,
@@ -985,7 +1023,8 @@
         "13308"
       ],
       "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic",
-      "note": "Cage au nord"
+      "note": "Cage au nord",
+      "note_en": "Northern enclosure"
     },
     {
       "id": 6777,
@@ -1006,7 +1045,8 @@
         "7742"
       ],
       "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic",
-      "note": "Sud-est d'Alterac"
+      "note": "Sud-est d'Alterac",
+      "note_en": "Southeastern Alterac"
     },
     {
       "id": null,
@@ -1029,7 +1069,8 @@
         "13310"
       ],
       "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic",
-      "note": "Caravane de Gizelton · Vendeur mobile"
+      "note": "Caravane de Gizelton · Vendeur mobile",
+      "note_en": "Gizelton's caravan · Mobile vendor"
     },
     {
       "id": 2685,
@@ -1051,7 +1092,8 @@
         "18651"
       ],
       "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic",
-      "note": "Baie-du-Butin"
+      "note": "Baie-du-Butin",
+      "note_en": "Booty Bay"
     },
     {
       "id": null,
@@ -1072,7 +1114,8 @@
         "7561"
       ],
       "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic",
-      "note": "Route vers les Carmines"
+      "note": "Route vers les Carmines",
+      "note_en": "Road to Redridge"
     },
     {
       "id": null,
@@ -1453,6 +1496,50 @@
       "offers": [],
       "source": "https://wow-guides.com/classic-era/professions/first-aid",
       "note": ""
+    },
+    {
+      "id": 11278,
+      "name": "Magnus Frostwake",
+      "role": "merchant",
+      "profession": "Alchimie",
+      "zone": {
+        "id": "wpl",
+        "fr": "Maleterres de l’Ouest",
+        "en": "Western Plaguelands"
+      },
+      "coordinates": {
+        "x": 68.1,
+        "y": 77.5
+      },
+      "faction": "neutral",
+      "offers": [
+        "13501"
+      ],
+      "source": "https://www.wowhead.com/classic/npc=11278/magnus-frostwake#comments",
+      "note": "Caer Darrow · Esprit visible avec l'Essence spectrale obtenue après la suite de quêtes d'Eva Sarkhoff",
+      "note_en": "Caer Darrow · Ghost visible using Spectral Essence, earned from Eva Sarkhoff's quest chain"
+    },
+    {
+      "id": 1669,
+      "name": "Defias Profiteer",
+      "role": "merchant",
+      "profession": "Alchimie",
+      "zone": {
+        "id": "westfall",
+        "fr": "Marche de l’Ouest",
+        "en": "Westfall"
+      },
+      "coordinates": {
+        "x": 43.5,
+        "y": 66.8
+      },
+      "faction": "neutral",
+      "offers": [
+        "5640"
+      ],
+      "source": "https://www.wowhead.com/classic/item=5640/recipe-rage-potion",
+      "note": "Ruisselune · Bâtiment du village · Marchand itinérant",
+      "note_en": "Moonbrook · Village building · Free-wheeling merchant"
     }
   ],
   "evidence": [
@@ -1519,6 +1606,46 @@
       "url": "https://www.wowhead.com/classic/npc=11189/qia#comments",
       "fr": "Des joueurs indiquent que le patron Étoffe lunaire reste disponible en quantité illimitée.",
       "en": "Players report Mooncloth pattern as permanently available with unlimited stock."
+    },
+    {
+      "vendor_name": "Gagsprocket",
+      "item": "18648",
+      "kind": "observed_wait",
+      "min_minutes": 480,
+      "max_minutes": 480,
+      "confidence": "low",
+      "url": "https://www.wowhead.com/classic/item=18648/schematic-green-firework#comments",
+      "fr": "Un ancien commentaire estime un réapprovisionnement à environ 8 h mais précise qu’un autre joueur a pu acheter l’objet entre deux contrôles. Estimation non confirmée.",
+      "en": "A historical commenter estimated roughly 8 h, while acknowledging someone else may have bought the item between checks. Unconfirmed estimate."
+    },
+    {
+      "vendor_name": "Defias Profiteer",
+      "item": "5640",
+      "kind": "observed_wait",
+      "min_minutes": 60,
+      "max_minutes": 60,
+      "confidence": "low",
+      "url": "https://www.wowhead.com/forever/spell=6617/rage-potion#comments",
+      "fr": "Un ancien commentaire Allakhazam conseille de revenir après environ 1 h pour la recette. Aucun délai serveur Forever confirmé.",
+      "en": "An old Allakhazam comment advises returning after about 1 h for the recipe. No verified Forever server timer."
+    },
+    {
+      "vendor_name": "Kania",
+      "item": "22308",
+      "kind": "unlimited_report",
+      "confidence": "medium",
+      "url": "https://www.wowhead.com/classic/item=22308/pattern-enchanted-runecloth-bag",
+      "fr": "La fiche de référence Classic liste ce patron en stock illimité chez Kania. Pas de minuteur de réapparition à prévoir dans ces données.",
+      "en": "The Classic listing records unlimited stock at Kania. No restock countdown in this reference."
+    },
+    {
+      "vendor_name": "Magnus Frostwake",
+      "item": "13501",
+      "kind": "unlimited_report",
+      "confidence": "medium",
+      "url": "https://classicdb.com/?npc=11278",
+      "fr": "La base Classic indique un stock illimité. L'accès au fantôme dépend de la suite de quêtes d'Eva Sarkhoff.",
+      "en": "Classic database lists unlimited stock. Access to the ghost depends on Eva Sarkhoff's quest chain."
     }
   ]
 }
