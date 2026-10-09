@@ -1,6 +1,8 @@
 (()=>{
 "use strict";
 const ROOT="/forever_app/";
+const QT=(fr,en)=>document.documentElement.lang==="en"?en:fr;
+const Q=window.ForeverQuestLocale||{header:s=>s||"",note:s=>String(Array.isArray(s)?s[0]:s||""),questName:s=>s,race:s=>s};
 const $=id=>document.getElementById(id),canvas=$("quest-canvas");
 if(!canvas)return;
 const ctx=canvas.getContext("2d"),W=canvas.width,H=canvas.height;
@@ -10,7 +12,7 @@ const RACES={
  horde:[{id:"orc",profile:"trorc",label:"Orc"},{id:"troll",profile:"trorc",label:"Troll"},{id:"undead",profile:"undead",label:"Mort-vivant"},{id:"tauren",profile:"tauren",label:"Tauren"}]
 };
 let pending=0,pointer=null,scrubTimer=null;
-const labels={starts:"À prendre",objectives:"À faire",ends:"À rendre",completed:"À terminer",special:"Conseil"};
+const labels={starts:QT("À prendre","Accept"),objectives:QT("À faire","Objective"),ends:QT("À rendre","Turn in"),completed:QT("À terminer","Complete"),special:QT("Conseil","Tip")};
 const classes={quest:"#e4bd7c",hub:"#efc772",objective:"#7bc9cb",flightpath:"#9daff0",travel:"#b2adcf"};
 const element=(tag,text,cls)=>{const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e};
 const clamp=(v,a,b)=>Math.min(b,Math.max(a,v));
@@ -23,10 +25,10 @@ const detailsOf=ref=>{
  let id=target;
  if(Array.isArray(target)){const suffix=Array.isArray(ref)?String(ref[1]||""):"";const n=suffix.match(/(?:p|^)(\d+)/);id=target[n?clamp(Number(n[1])-1,0,target.length-1):0];}
  const french=(id!==undefined&&id!==null)?s.data.translations[String(id)]:null;
- return {name:document.documentElement.lang==="en"?name:(french||name),original:name,id:Number.isInteger(Number(id))?Number(id):null};
+ return {name:document.documentElement.lang==="en"?Q.questName(name):(french||Q.questName(name)),original:name,id:Number.isInteger(Number(id))?Number(id):null};
 };
-const waypointTitle=w=>w.header==="placeholder"?"Zone d'objectif":cleanStr(w.header)||"Point de passage";
-const stepLabel=i=>{const st=s.steps[i];return stepName(st)+" · niv. ≈ "+Math.floor(Number(st.experience)||0)};
+const waypointTitle=w=>Q.header(w.header);
+const stepLabel=i=>{const st=s.steps[i];return stepName(st)+QT(" · niv. ≈ "," · lvl ≈ ")+Math.floor(Number(st.experience)||0)};
 const storageKey=()=> "forever.quests.done.v1."+s.faction+"."+s.profile;
 const loadDone=()=>{try{const raw=JSON.parse(localStorage.getItem(storageKey())||"[]");s.done=new Set(Array.isArray(raw)?raw.filter(v=>Number.isInteger(v)&&v>=0&&v<s.steps.length):[])}catch{s.done=new Set()}};
 const saveDone=()=>{try{localStorage.setItem(storageKey(),JSON.stringify([...s.done].sort((a,b)=>a-b)))}catch{}};
@@ -38,10 +40,10 @@ const tomtom=n=>Number(n).toFixed(2);
 function setImage(zone){
  const url=s.meta.map_base+encodeURIComponent(zone)+".jpg";
  if(s.mapUrl===url)return;
- s.mapUrl=url;s.image=null;s.mapLoaded=false;$("quest-map-overlay").textContent="Chargement de la carte…";
+ s.mapUrl=url;s.image=null;s.mapLoaded=false;$("quest-map-overlay").textContent=QT("Chargement de la carte…","Loading map…");
  const img=new Image();
- img.onload=()=>{if(s.mapUrl!==url)return;s.image=img;s.mapLoaded=true;$("quest-map-overlay").textContent="Carte de zone";draw()};
- img.onerror=()=>{if(s.mapUrl!==url)return;$("quest-map-overlay").textContent="Carte indisponible · repères X/Y";draw()};
+ img.onload=()=>{if(s.mapUrl!==url)return;s.image=img;s.mapLoaded=true;$("quest-map-overlay").textContent=QT("Carte de zone","Zone map");draw()};
+ img.onerror=()=>{if(s.mapUrl!==url)return;$("quest-map-overlay").textContent=QT("Carte indisponible · repères X/Y","Map unavailable · X/Y markers");draw()};
  img.src=url;
 }
 function draw(){
@@ -61,16 +63,16 @@ function draw(){
 }
 function renderSelection(){
  const box=$("quest-selected"),w=s.steps[s.index].waypoints[s.selected];box.replaceChildren();
- if(!w){box.append(element("p","Sélectionnez un point sur la carte."));return}
+ if(!w){box.append(element("p",QT("Sélectionnez un point sur la carte.","Select a waypoint on the map.")));return}
  box.append(element("strong",(s.selected+1)+". "+waypointTitle(w)),element("p","X : "+format(w.coords.x)+" % · Y : "+format(w.coords.y)+" %"));
  const cmd="/way "+tomtom(w.coords.x)+" "+tomtom(w.coords.y);
  box.append(element("code",cmd));
- const copy=element("button","Copier /way");copy.type="button";
- copy.addEventListener("click",()=>{if(navigator.clipboard?.writeText){navigator.clipboard.writeText(cmd).then(()=>{copy.textContent="Copié !"},()=>{copy.textContent="Sélectionnez la commande ci-dessus"})}else{copy.textContent="Sélectionnez la commande ci-dessus"}});
+ const copy=element("button",QT("Copier /way","Copy /way"));copy.type="button";
+ copy.addEventListener("click",()=>{if(navigator.clipboard?.writeText){navigator.clipboard.writeText(cmd).then(()=>{copy.textContent=QT("Copié !","Copied!")},()=>{copy.textContent=QT("Sélectionnez la commande ci-dessus","Select and copy the command above")})}else{copy.textContent=QT("Sélectionnez la commande ci-dessus","Select and copy the command above")}});
  box.append(copy);
  const links=[];for(const type of ["starts","objectives","ends","completed"])for(const q of w[type]||[]){const d=detailsOf(q);if(d.id&&d.id>0&&!links.includes(d.id))links.push(d.id)}
- if(links.length){const a=element("a","Détails de quête Classic ↗");a.href="https://www.wowhead.com/classic/quest="+links[0];a.target="_blank";a.rel="noopener noreferrer";a.style.cssText="display:inline-block;margin-left:13px;color:#f1c988;font-size:12px;text-decoration:underline";box.append(a)}
- const note=element("p","Commande utilisable dans la zone "+stepName(s.steps[s.index])+". Certaines quêtes peuvent varier sur Forever.");note.style.color="#a9b7c7";box.append(note);
+ if(links.length){const a=element("a",QT("Détails de quête Classic ↗","Classic quest details ↗"));a.href="https://www.wowhead.com/classic/quest="+links[0];a.target="_blank";a.rel="noopener noreferrer";a.style.cssText="display:inline-block;margin-left:13px;color:#f1c988;font-size:12px;text-decoration:underline";box.append(a)}
+ const note=element("p",QT("Commande utilisable dans la zone ","Command usable in ")+stepName(s.steps[s.index])+QT(". Certaines quêtes peuvent varier sur Forever.",". Some quests may differ in Forever."));note.style.color="#a9b7c7";box.append(note);
 }
 function selectWaypoint(i,focus=false){
  const step=s.steps[s.index];if(!step||i<0||i>=step.waypoints.length)return;
@@ -80,7 +82,7 @@ function selectWaypoint(i,focus=false){
 function renderWaypoints(){
  const list=$("quest-waypoints");list.replaceChildren();
  const pts=s.steps[s.index].waypoints;
- $("quest-waypoint-count").textContent=pts.length+" point"+(pts.length>1?"s":"")+" de passage · "+stepName(s.steps[s.index]);
+ $("quest-waypoint-count").textContent=pts.length+QT(" point"+(pts.length>1?"s":"")+" de passage · "," waypoint"+(pts.length>1?"s":"")+" · ")+stepName(s.steps[s.index]);
  const typeIcons={starts:"＋",objectives:"◆",ends:"↩",completed:"✓",special:"✦"};
  pts.forEach((w,i)=>{
   const b=element("button",undefined,"quest-waypoint"+(s.selected===i?" selected":""));
@@ -101,13 +103,18 @@ function renderWaypoints(){
    const items=element("div",undefined,"quest-action-items");
    for(const entry of entries){
     const action=element("span",undefined,"quest-action");
-    const name=type==="special"?cleanStr(entry):detailsOf(entry).name;
+    const name=type==="special"?Q.note(entry):detailsOf(entry).name;
     action.append(element("span",name,"quest-action-name"));
+    if(type==="special"&&Array.isArray(entry)&&typeof entry[1]==="string"){
+     try{const u=new URL(entry[1]);if(u.protocol==="https:"&&/^(?:www\.)?(?:imgur\.com|wowhead\.com|warcrafttavern\.com|vanilla-twinhead\.twinstar\.cz)$/.test(u.hostname)){
+      const ref=element("a",QT("Guide ↗","Reference ↗"),"quest-action-reference");ref.href=u.href;ref.target="_blank";ref.rel="noopener noreferrer";ref.setAttribute("aria-label",QT("Ouvrir la référence : ","Open reference: ")+name);action.append(ref);
+     }}catch{}
+    }
     items.append(action);
    }
    group.append(heading,items);actions.append(group);
   }
-  if(!found)actions.append(element("span","Rejoindre ce point de passage.","quest-no-action"));
+  if(!found)actions.append(element("span",QT("Rejoindre ce point de passage.","Go to this waypoint."),"quest-no-action"));
   b.append(actions);
   b.addEventListener("click",()=>selectWaypoint(i,true));
   list.append(b);
@@ -125,16 +132,16 @@ function renderRaceChoices(){
   const active=race.id===s.race;
   const b=element("button",undefined,"quest-race-choice"+(active?" selected":""));
   b.type="button";b.dataset.race=race.id;b.setAttribute("aria-pressed",String(active));
-  b.setAttribute("aria-label","Choisir "+race.label);
+  b.setAttribute("aria-label",QT("Choisir ","Choose ")+Q.race(race.label));
   const picture=element("img");picture.alt="";picture.width=48;picture.height=48;picture.loading="lazy";
   picture.src="https://raw.githubusercontent.com/trexdbg/vanilla-questing/"+s.meta.source_commit+"/src/interface/images/icons/"+race.id+".png";
   picture.addEventListener("error",()=>{picture.replaceWith(element("span",race.label.slice(0,2).toUpperCase(),"quest-race-fallback"))},{once:true});
-  b.append(picture,element("span",race.label,"quest-race-label"),element("span","✓","quest-race-check"));
+  b.append(picture,element("span",Q.race(race.label),"quest-race-label"),element("span","✓","quest-race-check"));
   b.addEventListener("click",()=>selectRace(race.id));panel.append(b);
  }
  $("quest-race-hint").textContent=s.faction==="alliance"?
- "Nains et Gnomes partagent le même guide de départ, mais gardent chacun leur portrait.":
- "Orcs et Trolls partagent le même guide de départ, mais gardent chacun leur portrait.";
+ QT("Nains et Gnomes partagent le même guide de départ, mais gardent chacun leur portrait.","Dwarves and Gnomes share the starting route, but each keeps its own portrait."):
+ QT("Orcs et Trolls partagent le même guide de départ, mais gardent chacun leur portrait.","Orcs and Trolls share the starting route, but each keeps its own portrait.");
 }
 const raceStorageKey=()=> "forever.quests.race.v1."+s.faction;
 function rememberedRace(faction){
@@ -157,8 +164,8 @@ function previewStep(index){
  const i=clamp(index,0,s.steps.length-1),st=s.steps[i],percent=s.steps.length<=1?0:100*i/(s.steps.length-1);
  $("quest-range").style.setProperty("--quest-range-fill",percent+"%");
  $("quest-range-output").textContent=(i+1)+" / "+s.steps.length;
- $("quest-timeline-preview").textContent=stepName(st)+" · niveau ≈ "+Number(st.experience).toFixed(1).replace(".",document.documentElement.lang==="en"?".":",")+" · "+st.waypoints.length+" points";
- $("quest-range").setAttribute("aria-valuetext","Étape "+(i+1)+" sur "+s.steps.length+", "+stepName(st));
+ $("quest-timeline-preview").textContent=stepName(st)+QT(" · niveau ≈ "," · level ≈ ")+Number(st.experience).toFixed(1).replace(".",document.documentElement.lang==="en"?".":",")+" · "+st.waypoints.length+QT(" points"," waypoints");
+ $("quest-range").setAttribute("aria-valuetext",QT("Étape ","Step ")+(i+1)+QT(" sur "," of ")+s.steps.length+", "+stepName(st));
 }
 function renderMilestones(){
  const wrap=$("quest-milestones");wrap.replaceChildren();
@@ -169,14 +176,14 @@ function renderMilestones(){
   // A level marker occupies the exact horizontal position of its first eligible guide step.
   const index=level===0?0:level===Infinity?s.steps.length-1:s.steps.findIndex(st=>Number(st.experience)>=level);
   if(index<0)continue;
-  const name=level===0?"Départ":level===Infinity?"Fin":"Niveau "+level;
-  const shortName=level===0?"Départ":level===Infinity?"Fin":String(level);
+  const name=level===0?QT("Départ","Start"):level===Infinity?QT("Fin","End"):QT("Niveau ","Level ")+level;
+  const shortName=level===0?QT("Départ","Start"):level===Infinity?QT("Fin","End"):String(level);
   const b=element("button",shortName,"quest-milestone");b.type="button";
   b.dataset.index=String(index);
   b.dataset.level=level===Infinity?"fin":String(level);
   b.style.left=(100*index/maxIndex)+"%";
-  b.title=name+" · "+stepName(s.steps[index])+" · étape "+(index+1);
-  b.setAttribute("aria-label","Accéder à "+name.toLowerCase()+", étape "+(index+1)+", "+stepName(s.steps[index]));
+  b.title=name+" · "+stepName(s.steps[index])+QT(" · étape "," · step ")+(index+1);
+  b.setAttribute("aria-label",QT("Accéder à ","Go to ")+name.toLowerCase()+QT(", étape ",", step ")+(index+1)+", "+stepName(s.steps[index]));
   b.addEventListener("click",()=>go(index));wrap.append(b);
  }
  updateMilestones();
@@ -193,23 +200,23 @@ function updateMilestones(){
 }
 function renderProgress(){
  const total=s.steps.length,done=s.done.size,percent=total?Math.round(100*done/total):0;
- $("quest-path-label").textContent=(s.faction==="alliance"?"Alliance":"Horde")+" · "+(RACES[s.faction].find(r=>r.id===s.race)?.label||s.profile);
- $("quest-progress-info").textContent=done+" / "+total+" étapes terminées ("+percent+" %)";
+ $("quest-path-label").textContent=(s.faction==="alliance"?"Alliance":"Horde")+" · "+Q.race(RACES[s.faction].find(r=>r.id===s.race)?.label||s.profile);
+ $("quest-progress-info").textContent=done+" / "+total+QT(" étapes terminées ("," steps completed (")+percent+QT(" %)","%)");
  $("quest-progress-fill").style.width=percent+"%";
  $("quest-progress-track").setAttribute("aria-valuenow",String(percent));
 }
 function render(){
  const st=s.steps[s.index];if(!st)return;
  $("quest-range").max=String(s.steps.length);$("quest-range").value=String(s.index+1);previewStep(s.index);
- $("quest-step-count").textContent="Étape "+(s.index+1)+" sur "+s.steps.length;
+ $("quest-step-count").textContent=QT("Étape ","Step ")+(s.index+1)+QT(" sur "," of ")+s.steps.length;
  $("quest-timeline-zone").textContent=stepLabel(s.index);
  $("quest-zone-title").textContent=stepName(st);
- $("quest-level").textContent="Niveau approximatif : "+Number(st.experience||0).toFixed(1).replace(".",document.documentElement.lang==="en"?".":",")+" · "+st.waypoints.length+" points à visiter";
- $("quest-map-title").textContent=stepName(st)+" · itinéraire dans la zone";
- $("quest-map-source").textContent="Molette : zoom · X/Y : 0 à 100";
+ $("quest-level").textContent=QT("Niveau approximatif : ","Approximate level: ")+Number(st.experience||0).toFixed(1).replace(".",document.documentElement.lang==="en"?".":",")+" · "+st.waypoints.length+QT(" points à visiter"," waypoints");
+ $("quest-map-title").textContent=stepName(st)+QT(" · itinéraire dans la zone"," · route through the zone");
+ $("quest-map-source").textContent=QT("Molette : zoom · X/Y : 0 à 100","Scroll to zoom · X/Y: 0–100");
  const first=s.index===0,last=s.index===s.steps.length-1;
  $("quest-prev").disabled=first;$("quest-next").disabled=last;
- const complete=$("quest-complete"),done=s.done.has(s.index);complete.textContent=done?"✓ Étape terminée · annuler":"Marquer l'étape terminée ✓";complete.setAttribute("aria-pressed",String(done));
+ const complete=$("quest-complete"),done=s.done.has(s.index);complete.textContent=done?QT("✓ Étape terminée · annuler","✓ Step complete · undo"):QT("Marquer l'étape terminée ✓","Mark step complete ✓");complete.setAttribute("aria-pressed",String(done));
  renderProgress();updateMilestones();renderWaypoints();renderSelection();setImage(st.zone);draw();syncUrl();
 }
 function go(n){if(scrubTimer!==null){clearTimeout(scrubTimer);scrubTimer=null}if(!s.steps.length)return;s.index=clamp(n,0,s.steps.length-1);s.selected=0;s.center={x:50,y:50};s.zoom=1;$("quest-zoom-reset").textContent="100 %";render();}
@@ -224,7 +231,7 @@ async function loadFaction(faction,fromUrl=false){
  }
  s.race=initial.id;s.profile=initial.profile;
  renderFactionChoices();renderRaceChoices();
- $("quest-data-status").textContent="Chargement…";
+ $("quest-data-status").textContent=QT("Chargement…","Loading…");
  try{
   if(!cache[faction]){
    const response=await fetch(ROOT+"data/quests/"+faction+".json");
@@ -238,13 +245,13 @@ async function loadFaction(faction,fromUrl=false){
   const number=fromUrl&&params.get("faction")===faction&&params.get("race")===s.profile?Number(params.get("step"))-1:NaN;
   s.index=Number.isInteger(number)?clamp(number,0,s.steps.length-1):0;
   s.selected=0;s.zoom=1;s.center={x:50,y:50};s.mapUrl="";
-  $("quest-data-status").textContent=s.steps.length+" étapes disponibles";
+  $("quest-data-status").textContent=s.steps.length+QT(" étapes disponibles"," steps available");
   $("quest-app").setAttribute("aria-busy","false");
   renderMilestones();render();search();
  }catch(err){
   if(token!==pending)return;
-  $("quest-data-status").textContent="Données indisponibles";
-  $("quest-zone-title").textContent="Erreur de chargement";
+  $("quest-data-status").textContent=QT("Données indisponibles","Data unavailable");
+  $("quest-zone-title").textContent=QT("Erreur de chargement","Loading error");
   $("quest-level").textContent=err.message;
   $("quest-app").setAttribute("aria-busy","false");
  }
@@ -255,9 +262,9 @@ function search(){
  for(let i=0;i<s.steps.length;i++){const st=s.steps[i];
   const matches=normal(stepName(st)).includes(text)||st.waypoints.some(w=>normal(waypointTitle(w)).includes(text)||["starts","ends","objectives","completed"].some(k=>(w[k]||[]).some(q=>{const a=detailsOf(q);return normal(a.name).includes(text)||normal(a.original).includes(text)||String(a.id||"")===text})));
   if(!matches)continue;all++;if(results>=35)continue;results++;
-  const b=element("button",undefined,"quest-search-result");b.type="button";b.append(element("strong","Étape "+(i+1)),element("span",stepName(st)),element("small","niv. ≈ "+Math.floor(st.experience)));b.addEventListener("click",()=>{go(i);$("quest-search").value="";res.hidden=true;res.replaceChildren();$("quest-zone-title").scrollIntoView({behavior:"smooth",block:"nearest"})});res.append(b);}
- if(!all)res.append(element("p","Aucune étape correspondante dans ce parcours."));
- if(all>35)res.append(element("p",all+" correspondances · 35 premiers résultats affichés."));
+  const b=element("button",undefined,"quest-search-result");b.type="button";b.append(element("strong",QT("Étape ","Step ")+(i+1)),element("span",stepName(st)),element("small",QT("niv. ≈ ","lvl ≈ ")+Math.floor(st.experience)));b.addEventListener("click",()=>{go(i);$("quest-search").value="";res.hidden=true;res.replaceChildren();$("quest-zone-title").scrollIntoView({behavior:"smooth",block:"nearest"})});res.append(b);}
+ if(!all)res.append(element("p",QT("Aucune étape correspondante dans ce parcours.","No matching steps in this route.")));
+ if(all>35)res.append(element("p",QT(all+" correspondances · 35 premiers résultats affichés.",all+" matches · showing the first 35 results.")));
 }
 function setZoom(z,anchor){
  const previous=s.zoom,next=clamp(z,1,4);
@@ -307,10 +314,10 @@ for(const button of $("quest-factions").querySelectorAll("button[data-faction]")
 $("quest-search").addEventListener("input",search);
 $("quest-zoom-reset").addEventListener("click",()=>{s.center={x:50,y:50};setZoom(1)});
 $("quest-complete").addEventListener("click",()=>{if(s.done.has(s.index))s.done.delete(s.index);else s.done.add(s.index);saveDone();render()});
-$("quest-reset").addEventListener("click",()=>{if(!confirm("Effacer la progression du parcours "+s.profile+" ?"))return;s.done.clear();saveDone();render()});
+$("quest-reset").addEventListener("click",()=>{if(!confirm(QT("Effacer la progression du parcours ","Clear progress for route ")+Q.race(RACES[s.faction].find(r=>r.id===s.race)?.label||s.profile)+" ?"))return;s.done.clear();saveDone();render()});
 (async()=>{
  try{const resp=await fetch(ROOT+"data/quests/manifest.json");if(!resp.ok)throw Error("HTTP "+resp.status);s.meta=await resp.json();if(s.meta.coordinate_system!=="zone_percent_0_100")throw Error("Coordonnées incompatibles");
  const params=new URLSearchParams(location.search);const faction=params.get("faction")==="horde"?"horde":"alliance";await loadFaction(faction,true);
- }catch(err){$("quest-zone-title").textContent="Impossible de charger les données";$("quest-level").textContent=err.message;$("quest-data-status").textContent="Indisponible";$("quest-app").setAttribute("aria-busy","false")}
+ }catch(err){$("quest-zone-title").textContent=QT("Impossible de charger les données","Unable to load quest data");$("quest-level").textContent=err.message;$("quest-data-status").textContent=QT("Indisponible","Unavailable");$("quest-app").setAttribute("aria-busy","false")}
 })();
 })();
