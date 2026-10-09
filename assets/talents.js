@@ -1,4 +1,4 @@
-const ROOT="/forever_app/";
+const ROOT="/";
 const en=document.documentElement.lang==="en",T=(fr,english)=>en?english:fr;
 const TREE_NAMES_FR={
  Warrior:{Arms:"Armes",Fury:"Fureur",Protection:"Protection"},
