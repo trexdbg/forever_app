@@ -9,7 +9,7 @@ const w=en?{
   itemLevel:"Niveau d’objet",classic:"Référence Classic — NON confirmée sur Forever",loading:"Chargement des caractéristiques Classic…",unavailable:"Caractéristiques Classic supplémentaires indisponibles.",origin:"Origine",view:"Voir la fiche Classic ↗",close:"Fermer les détails",open:"Détails de l’objet",bind:"Lien",slot:"Emplacement",subtype:"Type",damage:"Dégâts",speed:"Vitesse",dps:"dégâts par seconde",required:"Niveau requis",armor:"Armure",sell:"Prix de vente",effects:"Effets Classic",longPress:"Appui long pour voir les détails",source:"Données Classic : WoWDB des Défias",unknown:"Non documenté",set:"Ensemble d’objets"
 };
 const QUALITY=new Set(["poor","common","uncommon","rare","epic","legendary"]);
-const cache=new Map(),inflight=new Map();
+const cache=new Map(),inflight=new Map(),unavailableUntil=new Map();
 let active=null,token=0,loadTimer=0,visible=false,pinned=false,suspendUntil=0;
 const panel=document.createElement("aside");
 panel.id="forever-item-tooltip";panel.className="forever-item-tooltip";
@@ -114,7 +114,7 @@ function queueDetails(item,requestToken){
 if(!isId(item.id))return;
 const id=Number(item.id);
 if(cache.has(id)){if(active&&requestToken===token){render(item,cache.get(id),"complete");if(!pinned)place(active.x,active.y)}return}
-if(Date.now()<suspendUntil)return;
+if(Date.now()<suspendUntil||Date.now()<(unavailableUntil.get(id)||0)){if(active&&requestToken===token)render(item,null,"unavailable");return;}
 loadTimer=setTimeout(()=>{
 let promise=inflight.get(id);
 if(!promise){const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),7000);
@@ -123,7 +123,7 @@ promise=fetch("https://api.wowdb.assemblee-defias.fr/v1/classic/items/"+id,{cred
 .then(data=>{if(!data||data.object!=="item"||Number(data.id)!==id)throw Error("Invalid item");cache.set(id,data);return data})
 .finally(()=>{clearTimeout(timeout);inflight.delete(id)});
 inflight.set(id,promise)}
-promise.then(data=>{if(active&&token===requestToken&&Number(active.item.id)===id){render(active.item,data,"complete");if(!pinned)place(active.x,active.y)}}).catch(()=>{if(active&&token===requestToken&&Number(active.item.id)===id){render(active.item,null,"unavailable");if(!pinned)place(active.x,active.y)}})
+promise.then(data=>{if(active&&token===requestToken&&Number(active.item.id)===id){render(active.item,data,"complete");if(!pinned)place(active.x,active.y)}}).catch(()=>{unavailableUntil.set(id,Date.now()+5*60000);if(active&&token===requestToken&&Number(active.item.id)===id){render(active.item,null,"unavailable");if(!pinned)place(active.x,active.y)}})
 },200);
 }
 function show(item,evt,stick=false){
@@ -146,8 +146,8 @@ let longTimer=0,longPressed=false,startX=0,startY=0;
 node.addEventListener("mouseenter",e=>{if(e.sourceCapabilities?.firesTouchEvents||pinned)return;show(item,e)});
 node.addEventListener("mousemove",e=>{if(!pinned&&visible&&active&&Number(active.item.id)===Number(item.id)){active.x=e.clientX;active.y=e.clientY;place(e.clientX,e.clientY)}});
 node.addEventListener("mouseleave",()=>{if(!pinned)hide()});
-node.addEventListener("focus",e=>{if(!pinned&&window.matchMedia("(hover: hover)").matches)show(item,e)});
-node.addEventListener("blur",()=>{if(!pinned)hide()});
+node.addEventListener("focusin",e=>{if(!pinned&&window.matchMedia("(hover: hover)").matches)show(item,e)});
+node.addEventListener("focusout",()=>{if(!pinned)hide()});
 node.addEventListener("pointerdown",e=>{if(e.pointerType!=="touch"&&e.pointerType!=="pen")return;clearTimeout(longTimer);longPressed=false;startX=e.clientX;startY=e.clientY;longTimer=setTimeout(()=>{longPressed=true;show(item,{clientX:startX,clientY:startY},true)},550)});
 node.addEventListener("pointermove",e=>{if(Math.abs(e.clientX-startX)>12||Math.abs(e.clientY-startY)>12)clearTimeout(longTimer)});
 for(const event of ["pointerup","pointercancel","pointerleave"])node.addEventListener(event,()=>clearTimeout(longTimer));
