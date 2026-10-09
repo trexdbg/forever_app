@@ -44,6 +44,7 @@ function choose(p,updateHash=true){
  }
  const actions=put(chosen,"div",null,"prof-links");
  external(actions,T("Liste à jour ↗","Current list ↗"),p.source);
+ external(actions,T("Guide 1–300 ↗","1–300 guide ↗"),p.leveling_guide);
  const toTrainer=put(actions,"button",T("Localiser les maîtres ↓","Find trainers ↓"),"prof-trainer-jump");toTrainer.type="button";toTrainer.addEventListener("click",()=>{
   const term=$("npc-search");if(term){term.value=p.name.fr;term.dispatchEvent(new Event("input",{bubbles:true}));}
   $("prof-trainers")?.scrollIntoView({behavior:"smooth",block:"start"});
