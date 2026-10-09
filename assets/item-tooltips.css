@@ -68,3 +68,18 @@
 .item-v2-name .item-v2-info{display:inline-flex;vertical-align:middle;margin-left:7px;width:29px;height:29px;min-height:29px;font-size:13px;padding:0}
 .item-v2-name .item-v2-label{vertical-align:middle}
 @media(hover:hover){.item-v2-name .item-v2-info{opacity:.63}.item-v2-name .item-v2-info:hover,.item-v2-name .item-v2-info:focus-visible{opacity:1}}
+
+/* The merchant module uses the same equipment tooltip and its keyboard / touch behavior. */
+.forever-item-tooltip__vendor{
+ margin-top:11px;padding-top:9px;border-top:1px solid #40516e;
+ display:grid;gap:3px;font-size:11px;color:#e8eaf5
+}
+.forever-item-tooltip__vendor-heading{
+ font-size:10px;letter-spacing:.095em;font-weight:800;color:#dbbc79;margin-bottom:3px
+}
+.forever-item-tooltip__vendor .forever-item-tooltip__line{font-size:11px;color:#dce5f5}
+.forever-item-tooltip__vendor-warning{font-size:11px;color:#efca83}
+#npcs-app[data-mode="merchant"] .npc-result-group{cursor:help}
+#npcs-app[data-mode="merchant"] .npc-item-heading[tabindex="0"]{cursor:help;outline-offset:3px}
+#npcs-app[data-mode="merchant"] .npc-item-heading[tabindex="0"]:focus-visible{outline:2px solid #c8ab77}
+#npcs-app[data-mode="merchant"] .npc-item-info-button{white-space:nowrap}
