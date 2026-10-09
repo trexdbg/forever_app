@@ -1,0 +1,11 @@
+/* Lightweight, accessible opt-in; injected only when analytics is configured. */
+.fo-analytics-settings{font:inherit;color:inherit;background:none;border:0;padding:0;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.fo-analytics-settings:hover,.fo-analytics-settings:focus-visible{color:#dbc18e}
+.fo-analytics-consent{position:fixed;right:16px;bottom:16px;z-index:9999;max-width:min(420px,calc(100vw - 32px));padding:16px 18px;background:#101b17;color:#f5f1e6;border:1px solid #8a815c;box-shadow:0 8px 30px #0009;border-radius:8px;font:14px/1.45 system-ui,sans-serif}
+.fo-analytics-consent strong{font-size:15px;color:#ead7ab}
+.fo-analytics-consent p{margin:8px 0 12px;color:#d6d5ce}
+.fo-analytics-actions{display:flex;gap:8px}
+.fo-analytics-actions button{flex:1;font:inherit;font-weight:650;background:#18261f;color:#f5f1e6;border:1px solid #acaa98;border-radius:5px;padding:8px 10px;cursor:pointer}
+.fo-analytics-actions button:last-child{background:#dbc18e;color:#101b17;border-color:#dbc18e}
+.fo-analytics-actions button:focus-visible,.fo-analytics-settings:focus-visible{outline:2px solid #f5daa2;outline-offset:3px}
+@media(max-width:480px){.fo-analytics-consent{left:12px;right:12px;bottom:12px;max-width:none}}
