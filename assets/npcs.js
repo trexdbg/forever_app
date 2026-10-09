@@ -178,7 +178,7 @@ function makeRecords(){
  }store.records=rec;
 }
 function selectRecord(r){store.active=r;renderList();renderDetail()}
-function filteredRecords(){
+function filteredRecords(ignoreZone=false){
  const needle=val(q.value);
  return store.records.filter(r=>{
  const {npc:n,item}=r;
@@ -187,7 +187,7 @@ function filteredRecords(){
  if(weapon&&weapon.value!=="all"&&!(n.weapon_skills||[]).includes(weapon.value))return false;
  if(aff.value!=="all"&&n.faction!==aff.value&&n.faction!=="neutral")return false;
  if(trade.value!=="all"&&(item?.profession||n.profession)!==trade.value)return false;
- if(zone.value!=="all"&&n.zone.id!==zone.value)return false;
+ if(!ignoreZone&&zone.value!=="all"&&n.zone.id!==zone.value)return false;
  if(rank&&rank.value!=="all"&&(trainerType(n)==="weapon"||n.rank!==rank.value&&n.rank!=="Tous rangs"))return false;
  if(kind&&kind.value!=="all"&&item?.kind!==kind.value&&n.role==="merchant")return false;
  if(store.showReportsOnly&&!item)return false;
@@ -208,6 +208,26 @@ function filteredRecords(){
  }
  return (a.item?title(a.item):a.npc.name).localeCompare(b.item?title(b.item):b.npc.name);
  });
+}
+/* Keep only zones containing trainers matching the other active filters. */
+function updateTrainerZones(){
+ if(store.mode!=="trainer"||!store.db||!zone)return;
+ const counts=new Map();
+ for(const r of filteredRecords(true)){
+  const z=r.npc.zone;
+  if(!z?.id)continue;
+  const info=counts.get(z.id)||{zone:z,count:0};
+  info.count++;counts.set(z.id,info);
+ }
+ const selected=zone.value;
+ const allOption=zone.options[0];
+ if(!allOption)return;
+ zone.replaceChildren(allOption);
+ for(const {zone:z,count} of [...counts.values()].sort((a,b)=>(a.zone[en?"en":"fr"]||a.zone.en||a.zone.id).localeCompare(b.zone[en?"en":"fr"]||b.zone.en||b.zone.id,en?"en":"fr"))){
+  const option=mk("option",(z[en?"en":"fr"]||z.en||z.id)+" · "+count);
+  option.value=z.id;zone.append(option);
+ }
+ zone.value=counts.has(selected)?selected:"all";
 }
 function groupedItems(){
  const buckets=new Map();
@@ -334,6 +354,7 @@ function renderTrainerDetail(n){
    if(aff)aff.value="all";
    if(type)type.value=trainerType(matched.npc);
    updateFilterVisibility();
+   updateTrainerZones();syncTrainerFilters();
    store.filtered=filteredRecords();
   }
   selectRecord(matched);
@@ -435,7 +456,7 @@ function renderDetail(){
  },{type:type?.value||"all",profession:trade.value,weaponSkill:weapon?.value||"all"});
  append(detail,"p",store.mode==="merchant"?S("Important : données historiques Classic. Les PNJ, objets, emplacements et stocks peuvent différer sur WoW Forever. Aucun suivi du stock en temps réel.","Important: historical Classic data. NPCs, items, positions and stock may differ on WoW Forever. No live inventory monitoring."):S("Certaines fiches proviennent des guides Forever ; les autres restent des références Classic. Les PNJ et leurs positions peuvent différer en jeu.","Some entries come from Forever guides; others are Classic references. NPC presence and locations may differ in-game."),"npc-datacaveat");
 }
-function refresh(){syncTrainerFilters();store.filtered=filteredRecords();if(!store.filtered.some(r=>r.key===store.active?.key))store.active=store.filtered[0]||null;renderList();renderDetail()}
+function refresh(){updateTrainerZones();syncTrainerFilters();store.filtered=filteredRecords();if(!store.filtered.some(r=>r.key===store.active?.key))store.active=store.filtered[0]||null;renderList();renderDetail()}
 for(const e of [q,zone,trade,aff,kind,rank,type,weapon].filter(Boolean))e.addEventListener(e===q?"input":"change",()=>{if(e===type){if(type.value==="weapon"){trade.value="all";if(rank)rank.value="all"}if(weapon)weapon.value="all"}if(e===trade&&trade.value!=="all"&&type){type.value="profession";if(weapon)weapon.value="all"}if(e===weapon&&weapon.value!=="all"&&type){type.value="weapon";trade.value="all";if(rank)rank.value="all"}updateFilterVisibility();refresh()});
 if(reports)reports.addEventListener("change",e=>{store.showReportsOnly=e.target.checked;refresh()});
 const params=new URLSearchParams(location.search);
