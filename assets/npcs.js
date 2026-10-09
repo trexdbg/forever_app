@@ -43,7 +43,7 @@ const trainerType=n=>n.trainer_kind==="weapon"?"weapon":"profession";
 const human=n=>n>=60?(Math.floor(n/60)+" "+S("h","h")+(n%60?" "+(n%60)+" min":"")):fmt(n)+" min";const time=(a,b)=>a===b?human(a):human(a)+" – "+human(b);
 const store={db:null,records:[],filtered:[],active:null,mode:document.body.dataset.page==="trainers"?"trainer":"merchant",showReportsOnly:false};
 const q=$("npc-search"),zone=$("npc-zone"),trade=$("npc-profession"),aff=$("npc-faction"),rank=$("npc-rank"),reports=$("npc-evidence-only"),type=$("npc-type"),weapon=$("npc-weapon");
-const list=$("npc-results"),detail=$("npc-detail"),count=$("npc-count"),kind=$("npc-kind");
+const list=$("npc-results"),detail=$("npc-detail"),count=$("npc-count"),kind=$("npc-kind"),verification=$("npc-verification");
 
 /* Progressive-enhanced WoW icon filters. Native selects stay the source of truth. */
 const iconPickers=[],factionControls=[];
@@ -164,23 +164,27 @@ const link=(parent,text,url)=>{const a=mk("a",text);a.href=url;a.target="_blank"
 const iconSrc=item=>item?.icon_status==="wowhead_icon_verified"?"https://wow.zamimg.com/images/wow/icons/medium/"+encodeURIComponent(item.icon)+".jpg":root+"assets/icons/inv_scroll_07.jpg";
 const iconNode=(item)=>{const frame=mk("span",null,"npc-item-icon npc-image-icon");const img=mk("img");img.alt="";img.loading="lazy";img.width=40;img.height=40;img.src=iconSrc(item);img.onerror=()=>{img.onerror=null;img.src=root+"assets/icons/inv_scroll_07.jpg"};frame.append(img);return frame};
 const copperFmt=c=>{const g=Math.floor(c/10000),s=Math.floor(c%10000/100),b=c%100;return [g?g+" "+S("po","g"):"",s?s+" "+S("pa","s"):"",b?b+" "+S("pc","c"):""].filter(Boolean).join(" ")||"0 "+S("pc","c")};
-const stockWord=item=>item.supply==="unlimited"?S("Stock illimité (référence Classic)","Unlimited stock (Classic reference)"):item.supply==="reputation"?S("Vente liée à la réputation","Reputation-gated sale"):S("Stock limité (référence Classic)","Limited stock (Classic reference)");
+const foreverItem=item=>typeof item?.source_status==="string"&&item.source_status.startsWith("forever_beta_");
+const foreverOffer=(vendor,item)=>vendor?.offer_details?.[String(item?.id)]?.verification_status==="forever_documented";
+const statusWord=(vendor,item)=>foreverOffer(vendor,item)?S("Vente référencée Forever (bêta)","Forever beta vendor documented"):S("Vente Classic à vérifier","Classic vendor unverified");
+const stockWord=item=>foreverItem(item)?S("Objet Forever bêta · stock réel non vérifié","Forever beta item · real stock unverified"):item.supply==="unlimited"?S("Stock illimité (référence Classic)","Unlimited stock (Classic reference)"):item.supply==="reputation"?S("Vente liée à la réputation Classic","Classic reputation sale"):S("Stock limité (référence Classic)","Limited stock (Classic reference)");
 
 /* Share the actual Equipment tooltip with vendors; no fabricated Forever stats. */
 const merchantItemTooltip=(item,vendor=null,vendorCount=0)=>{
  const offer=vendor?.offer_details?.[String(item.id)]||{};
  const isVerifiedIcon=item.icon_status==="wowhead_icon_verified"&&/^[a-z0-9_-]{2,70}$/.test(item.icon||"");
  return {
-  id:item.id,name:title(item),quality:"common",
+  id:item.id,name:title(item),quality:"common",source_status:item.source_status||"classic_reference",source_url:item.source,
   icon:isVerifiedIcon?item.icon:"inv_scroll_07",
   icon_url:isVerifiedIcon?"https://wow.zamimg.com/images/wow/icons/medium/"+item.icon+".jpg":null,
   vendorDetails:{
    profession:profession[item.profession]||item.profession,
-   type:item.kind==="recipe"?S("Recette / patron","Recipe / pattern"):S("Composant","Material"),
+   type:item.kind==="certification"?S("Certification de métier","Profession certification"):item.kind==="recipe"?S("Recette / patron","Recipe / pattern"):S("Composant","Material"),
    skill:item.kind==="recipe"&&Number.isFinite(item.skill)?item.skill:null,
-   stock:stockWord(item),
+   stock:stockWord(item),verification:vendor?statusWord(vendor,item):(foreverItem(item)?S("Objet référencé Forever bêta","Forever beta item listed"):S("Objet de référence Classic","Classic reference item")),
    vendorCount,vendorName:vendor?.name||null,
-   priceCopper:Number.isInteger(item.vendor_price_copper)?item.vendor_price_copper:null,
+   priceCopper:foreverItem(item)?null:Number.isInteger(item.vendor_price_copper)?item.vendor_price_copper:null,
+   currencyPrice:offer.price?.currency==="merchants_favor"?offer.price.amount:null,
    maxStock:Number.isInteger(item.vendor_stock)?item.vendor_stock:null,
    specialization:offer.specialization||item.specialization||null,
    bindPickup:offer.bind==="pickup"||item.bind==="pickup",
@@ -221,6 +225,7 @@ function filteredRecords(ignoreZone=false){
  if(kind&&kind.value!=="all"&&item?.kind!==kind.value&&n.role==="merchant")return false;
  if(store.showReportsOnly&&!item)return false;
  if(store.showReportsOnly&&!evidence(n,item))return false;
+ if(verification&&verification.value!=="all"&&item&&((verification.value==="forever")!==foreverOffer(n,item)))return false;
  if(!needle)return true;
  const terms=[n.name,n.zone.fr,n.zone.en,n.note,n.note_en,n.profession,profession[n.profession],item?.profession,profession[item?.profession],n.rank,item?.name?.fr,item?.name?.en,item?.id,...(item?.search_aliases||[]),...(n.weapon_skills||[]),...(n.weapon_skills||[]).map(k=>weaponLabels[k]||k),trainerType(n)==="weapon"?S("maître d’armes","weapon master"):""];
  return terms.some(x=>val(x).includes(needle));
@@ -266,6 +271,7 @@ function groupedItems(){
   if(!buckets.has(id))buckets.set(id,{item:r.item,records:[],evidence:false});
   const b=buckets.get(id);b.records.push(r);
   if(evidence(r.npc,r.item))b.evidence=true;
+  if(foreverOffer(r.npc,r.item))b.forever=true;
  }
  return [...buckets.values()].sort((a,b)=>{
   if(a.evidence!==b.evidence)return a.evidence?-1:1;
@@ -280,16 +286,17 @@ function renderList(){
    const b=mk("button",null,"npc-result npc-result-group");b.type="button";b.setAttribute("role","option");
    b.setAttribute("aria-selected",String(store.active?.item?.id===g.item.id));
    b.append(iconNode(g.item));
-   showMerchantTooltip(b,g.item,null,g.records.length);
+   showMerchantTooltip(b,g.item,g.records.find(r=>foreverOffer(r.npc,r.item))?.npc||g.records[0]?.npc||null,g.records.length);
    const copy=append(b,"span",null,"npc-result-copy");
    append(copy,"strong",title(g.item));
    const sellers=g.records.length;
    append(copy,"small",sellers+" "+S(sellers>1?"vendeurs":"vendeur",sellers>1?"vendors":"vendor")+" · "+(profession[g.item.profession]||g.item.profession));
+   append(copy,"span",g.forever?S("Référencé Forever bêta","Forever beta referenced"):S("Référence Classic","Classic reference"),"npc-verify-tag "+(g.forever?"is-forever":"is-classic"));
    if(g.evidence)append(copy,"span",S("Témoignages disponibles","Reports available"),"npc-evidence-flag");
    append(b,"span","›","npc-arrow").setAttribute("aria-hidden","true");
    b.addEventListener("click",()=>{
     const keep=g.records.find(r=>r.npc.name===store.active?.npc.name);
-    selectRecord(keep||g.records[0]);
+    selectRecord(keep||g.records.find(r=>foreverOffer(r.npc,r.item))||g.records[0]);
    });
    list.append(b);
   }
@@ -402,6 +409,7 @@ function renderDetail(){
  const chips=append(detail,"div",null,"npc-chips");
  append(chips,"span",profession[i?.profession||n.profession]||i?.profession||n.profession,"npc-chip gold");
  append(chips,"span",faction[n.faction],"npc-chip");
+ if(i)append(chips,"span",statusWord(n,i),"npc-chip "+(foreverOffer(n,i)?"npc-chip-forever":"npc-chip-classic"));
  if(i&&i.skill>0&&i.kind==="recipe")append(chips,"span",S("Compétence "+i.skill,"Skill "+i.skill),"npc-chip");
  if(i)append(chips,"span",i.kind==="component"?S("Composant","Material"):S("Recette / patron","Recipe / pattern"),"npc-chip");
  if(n.rank)append(chips,"span",en?({"Apprenti":"Apprentice","Compagnon":"Journeyman","Expert":"Expert","Artisan":"Artisan","Tous rangs":"All tiers"}[n.rank]||n.rank):n.rank,"npc-chip");
@@ -415,13 +423,14 @@ function renderDetail(){
  const info=append(actions,"button",S("ⓘ Détails de l'objet","ⓘ Item details"),"npc-item-info-button bis-v2-info-button");info.type="button";
  info.setAttribute("aria-label",S("Afficher les détails de "+title(i),"Show details for "+title(i)));
  info.addEventListener("click",()=>window.ForeverItemTooltip?.pin(merchantItemTooltip(i,n,store.db.npcs.filter(v=>v.role==="merchant"&&v.offers.includes(String(i.id))).length)));
- link(actions,S("Fiche Classic ↗","Classic item ↗"),"https://www.wowhead.com/classic/item="+i.id);
- link(actions,S("Vérifier Forever ↗","Check Forever ↗"),"https://www.wowhead.com/forever/item="+i.id)}
+ if(foreverItem(i))link(actions,S("Fiche Forever bêta ↗","Forever beta item ↗"),i.source);
+ else{link(actions,S("Fiche Classic ↗","Classic item ↗"),"https://www.wowhead.com/classic/item="+i.id);
+ link(actions,S("Vérifier Forever ↗","Check Forever ↗"),"https://www.wowhead.com/forever/item="+i.id)}}
  if(n.id)link(actions,S("Fiche PNJ ↗","NPC details ↗"),"https://www.wowhead.com/classic/npc="+n.id);
 
  if(i){
  const panel=append(detail,"section",null,"npc-stock");
- append(panel,"span",S("Disponibilité estimée","Reference availability"),"npc-stock-label");
+ append(panel,"span",foreverOffer(n,i)?S("Source de vente Forever bêta","Forever beta vendor source"):S("Disponibilité estimée · Classic","Estimated availability · Classic"),"npc-stock-label");
  append(panel,"div",stockWord(i),"npc-stock-value");
  if(Number.isInteger(i.vendor_price_copper)){append(panel,"p",S("Prix de référence : ","Reference vendor price: ")+copperFmt(i.vendor_price_copper));}
  if(Number.isInteger(i.vendor_stock)&&i.vendor_stock>0){append(panel,"p",S("Stock maximal indicatif (Classic) : ","Indicative maximum stock (Classic): ")+i.vendor_stock+" "+S("unité(s)","unit(s)")+".");}
@@ -460,12 +469,13 @@ function renderDetail(){
   });
  }
  const purchase=n.offer_details?.[String(i.id)]||{};
+ if(purchase.price?.currency==="merchants_favor")append(panel,"p",S("Coût Forever : ","Forever cost: ")+purchase.price.amount+" "+S("Faveurs marchandes","Merchant’s Favor"),"npc-forever-cost");
  if(i.specialization||purchase.specialization){const s=purchase.specialization||i.specialization;
   append(panel,"p",S("Spécialisation requise (référence Classic) : ","Required specialization (Classic): ")+s,"npc-requirement");
  }
  const reputation=purchase.reputation||i.reputation;
  if(reputation){const rank={Friendly:S("Amical","Friendly"),Honored:S("Honoré","Honored"),Revered:S("Révéré","Revered"),Exalted:S("Exalté","Exalted")}[reputation.rank]||reputation.rank;
- append(panel,"p",S("Réputation Classic requise : ","Required Classic reputation: ")+reputation.faction+" · "+rank,"npc-requirement");
+ append(panel,"p",(foreverOffer(n,i)?S("Réputation Forever requise : ","Required Forever reputation: "):S("Réputation Classic requise : ","Required Classic reputation: "))+reputation.faction+" · "+rank,"npc-requirement");
  }
  if(i.seasonal||purchase.seasonal)append(panel,"p",S("Vente saisonnière Classic : Voile d'hiver (non vérifié sur Forever).","Classic seasonal sale: Winter Veil (not confirmed for Forever)."),"npc-requirement");
   if(i.bind==="pickup"||purchase.bind==="pickup")append(panel,"p",S("Lié quand ramassé (référence Classic).","Bind on Pickup (Classic reference)."),"npc-requirement");
@@ -495,10 +505,10 @@ function renderDetail(){
   if(weapon&&weapon.value!=="all"&&!(matched.npc.weapon_skills||[]).includes(weapon.value))weapon.value="all";
   selectRecord(matched);
  },{type:type?.value||"all",profession:trade.value,weaponSkill:weapon?.value||"all"});
- append(detail,"p",store.mode==="merchant"?S("Important : données historiques Classic. Les PNJ, objets, emplacements et stocks peuvent différer sur WoW Forever. Aucun suivi du stock en temps réel.","Important: historical Classic data. NPCs, items, positions and stock may differ on WoW Forever. No live inventory monitoring."):S("Certaines fiches proviennent des guides Forever ; les autres restent des références Classic. Les PNJ et leurs positions peuvent différer en jeu.","Some entries come from Forever guides; others are Classic references. NPC presence and locations may differ in-game."),"npc-datacaveat");
+ append(detail,"p",store.mode==="merchant"?(foreverOffer(n,i)?S("Cette vente est référencée dans une source Forever bêta ; stock actuel, présence réelle et version finale non garantis.","This sale is documented in a Forever beta source; live stock, actual presence and final version unconfirmed."):S("Vente de référence Classic non vérifiée sur Forever ; disponibilité, stock et coordonnées à confirmer.","Classic sale not verified for Forever; availability, stock and coordinates remain uncertain.")):S("Certaines fiches proviennent des guides Forever ; les autres restent des références Classic. Les PNJ et leurs positions peuvent différer en jeu.","Some entries come from Forever guides; others are Classic references. NPC presence and locations may differ in-game."),"npc-datacaveat");
 }
 function refresh(){updateTrainerZones();syncTrainerFilters();store.filtered=filteredRecords();if(!store.filtered.some(r=>r.key===store.active?.key))store.active=store.filtered[0]||null;renderList();renderDetail()}
-for(const e of [q,zone,trade,aff,kind,rank,type,weapon].filter(Boolean))e.addEventListener(e===q?"input":"change",()=>{if(e===type){if(type.value==="weapon"){trade.value="all";if(rank)rank.value="all"}if(weapon)weapon.value="all"}if(e===trade&&trade.value!=="all"&&type){type.value="profession";if(weapon)weapon.value="all"}if(e===weapon&&weapon.value!=="all"&&type){type.value="weapon";trade.value="all";if(rank)rank.value="all"}updateFilterVisibility();refresh()});
+for(const e of [q,zone,trade,aff,kind,verification,rank,type,weapon].filter(Boolean))e.addEventListener(e===q?"input":"change",()=>{if(e===type){if(type.value==="weapon"){trade.value="all";if(rank)rank.value="all"}if(weapon)weapon.value="all"}if(e===trade&&trade.value!=="all"&&type){type.value="profession";if(weapon)weapon.value="all"}if(e===weapon&&weapon.value!=="all"&&type){type.value="weapon";trade.value="all";if(rank)rank.value="all"}updateFilterVisibility();refresh()});
 if(reports)reports.addEventListener("change",e=>{store.showReportsOnly=e.target.checked;refresh()});
 const params=new URLSearchParams(location.search);
 if(params.get("q"))q.value=params.get("q").slice(0,120);
@@ -510,6 +520,6 @@ fetch(root+"data/npcs.json").then(r=>{if(!r.ok)throw Error(r.status);return r.js
  const requestedZone=params.get("zone");
  if(requestedZone&&Array.from(zone.options).some(option=>option.value===requestedZone))zone.value=requestedZone;
  updateFilterVisibility();
- refresh();$("npc-load-status").textContent=store.mode==="trainer"?db.npcs.filter(n=>n.role==="trainer").length+" "+S("maîtres recensés","trainers listed"):Object.keys(db.items).length+" "+S("objets Classic","Classic items");
+ refresh();$("npc-load-status").textContent=store.mode==="trainer"?db.npcs.filter(n=>n.role==="trainer").length+" "+S("maîtres recensés","trainers listed"):Object.keys(db.items).length+" "+S("objets · Forever + Classic","items · Forever + Classic");
 }).catch(e=>{$("npc-load-status").textContent=S("Données indisponibles","Data unavailable");append(list,"p",S("Impossible de charger l'annuaire. Réessayez plus tard.","Unable to load the directory."),"npc-empty");console.warn("NPC dataset:",e.message)});
 })();
