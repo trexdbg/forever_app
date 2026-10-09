@@ -253,3 +253,126 @@ body[data-page="home"] .atlas-directory{margin-top:18px}
  .atlas-live-map{flex-basis:150px}
  .atlas-live-actions{gap:8px}
 }
+
+
+/* Module spotlights reuse the map half of the fixed-size banner.
+   Cartographic slides keep their authentic map textures and data markers. */
+body[data-page="home"] .atlas-feature-visual[hidden]{display:none!important}
+.atlas-feature-visual{
+ position:absolute;
+ inset:0;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ flex-direction:column;
+ gap:12px;
+ padding:20px 35px 38px;
+ overflow:hidden;
+ background:
+  radial-gradient(circle at 50% 50%,#77613936 0%,transparent 51%),
+  linear-gradient(128deg,#253727 0%,#101f1a 48%,#1a2c25 100%);
+ color:#ddcfae;
+ isolation:isolate;
+}
+.atlas-feature-orbit{
+ position:absolute;
+ left:50%;top:44%;
+ width:min(49%,220px);
+ aspect-ratio:1;
+ border:1px solid #a98a5366;
+ border-radius:50%;
+ transform:translate(-50%,-50%) rotate(-26deg);
+ box-shadow:0 0 0 12px #bca0710c,0 0 0 34px #bb995f07,inset 0 0 28px #8f6d3938;
+}
+.atlas-feature-orbit::before,
+.atlas-feature-orbit::after{
+ content:"";
+ position:absolute;
+ inset:17px;
+ border:1px dashed #ccb48145;
+ border-radius:50%;
+}
+.atlas-feature-orbit::after{inset:-17px;border:1px solid #b99a5433}
+.atlas-feature-icon{
+ display:grid;
+ place-items:center;
+ width:92px;height:92px;
+ padding:12px;
+ border:1px solid #ceb1779c;
+ border-radius:14px;
+ background:linear-gradient(140deg,#293a2d,#15271f);
+ box-shadow:0 12px 26px #040a0880,0 0 34px #d4b47621;
+ z-index:1;
+}
+.atlas-feature-icon img{
+ display:block;
+ width:100%;height:100%;
+ object-fit:contain;
+ border-radius:4px;
+ image-rendering:auto;
+}
+.atlas-feature-visual[data-kind="quest"] .atlas-feature-icon,
+.atlas-feature-visual[data-kind="population"] .atlas-feature-icon{border-color:#91b5c19c}
+.atlas-feature-visual[data-kind="profession"] .atlas-feature-icon{border-color:#c9b288}
+.atlas-feature-meta{
+ position:relative;
+ z-index:1;
+ display:flex;
+ flex-direction:column;
+ align-items:center;
+ max-width:100%;
+ gap:4px;
+ text-align:center;
+ text-shadow:0 2px 5px #08110b;
+}
+.atlas-feature-meta strong{
+ font:500 clamp(18px,2.1vw,25px)/1.16 Georgia,"Times New Roman",serif;
+ color:#f0e3c5;
+ max-width:100%;
+ overflow:hidden;
+ text-overflow:ellipsis;
+ white-space:nowrap;
+}
+.atlas-feature-meta small{
+ font-size:11px;
+ color:#c0c7af;
+ max-width:100%;
+ overflow:hidden;
+ text-overflow:ellipsis;
+ white-space:nowrap;
+}
+.atlas-live-map:has(.atlas-feature-visual:not([hidden]))::after{opacity:.18}
+body[data-page="home"] .atlas-live-copy h1{
+ display:-webkit-box;
+ -webkit-box-orient:vertical;
+ -webkit-line-clamp:2;
+ line-clamp:2;
+ overflow:hidden;
+ max-height:2.18em;
+}
+.atlas-live-count{
+ max-width:100%;
+ overflow:hidden;
+ text-overflow:ellipsis;
+ white-space:nowrap;
+}
+.atlas-live-disclaimer{
+ display:-webkit-box;
+ -webkit-box-orient:vertical;
+ -webkit-line-clamp:2;
+ line-clamp:2;
+ overflow:hidden;
+}
+.atlas-live-markers[data-atlas-kind="trainer"] .atlas-live-marker,
+.atlas-live-markers[data-atlas-kind="merchant"] .atlas-live-marker{
+ width:14px;height:14px;
+}
+@media(max-width:620px){
+ .atlas-feature-visual{gap:7px;padding:9px 20px 25px}
+ .atlas-feature-orbit{width:100px;top:39%}
+ .atlas-feature-icon{width:59px;height:59px;padding:8px;border-radius:9px}
+ .atlas-feature-meta strong{font-size:17px}
+ .atlas-feature-meta small{font-size:10px}
+ body[data-page="home"] .atlas-live-copy h1{font-size:clamp(23px,5.6vw,29px)}
+}
+@media(prefers-reduced-motion:reduce){.atlas-feature-visual *{transition:none!important}}
