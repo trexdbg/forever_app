@@ -51,7 +51,8 @@
         "Minor Mender's Potion",
         "Flask of Natural Accuracy"
       ],
-      "source": "https://wowforevertalents.com/professions/alchemy/"
+      "source": "https://wowforevertalents.com/professions/alchemy/",
+      "leveling_guide": "https://www.wow-professions.com/forever/alchemy-leveling-guide"
     },
     {
       "id": 164,
@@ -86,7 +87,8 @@
         "Breastplate of Salvation",
         "Enriched Thorium Helm"
       ],
-      "source": "https://wowforevertalents.com/professions/blacksmithing/"
+      "source": "https://wowforevertalents.com/professions/blacksmithing/",
+      "leveling_guide": "https://www.wow-professions.com/forever/blacksmithing-leveling-guide"
     },
     {
       "id": 333,
@@ -121,7 +123,8 @@
         "Idol of Swiftness",
         "Dust to Motes"
       ],
-      "source": "https://wowforevertalents.com/professions/enchanting/"
+      "source": "https://wowforevertalents.com/professions/enchanting/",
+      "leveling_guide": "https://www.wow-professions.com/forever/enchanting-leveling-guide"
     },
     {
       "id": 202,
@@ -156,7 +159,8 @@
         "SAF-T Tabs",
         "Hyper Deluxe Sniper Rifle Mk XVII"
       ],
-      "source": "https://wowforevertalents.com/professions/engineering/"
+      "source": "https://wowforevertalents.com/professions/engineering/",
+      "leveling_guide": "https://www.wow-professions.com/forever/engineering-leveling-guide"
     },
     {
       "id": 182,
@@ -191,7 +195,8 @@
         "Greenhouse",
         "Seed Hybridizer"
       ],
-      "source": "https://wowforevertalents.com/professions/herbalism/"
+      "source": "https://wowforevertalents.com/professions/herbalism/",
+      "leveling_guide": "https://www.wow-professions.com/forever"
     },
     {
       "id": 165,
@@ -226,7 +231,8 @@
         "Dawn Armor",
         "Light Leather Reagent Bag"
       ],
-      "source": "https://wowforevertalents.com/professions/leatherworking/"
+      "source": "https://wowforevertalents.com/professions/leatherworking/",
+      "leveling_guide": "https://www.wow-professions.com/forever/leatherworking-leveling-guide"
     },
     {
       "id": 186,
@@ -261,7 +267,8 @@
         "Azerothium Bar",
         "Heavy Thorium Bar"
       ],
-      "source": "https://wowforevertalents.com/professions/mining/"
+      "source": "https://wowforevertalents.com/professions/mining/",
+      "leveling_guide": "https://www.wow-professions.com/forever"
     },
     {
       "id": 393,
@@ -296,7 +303,8 @@
         "Trapper's Workbench",
         "Field Guide"
       ],
-      "source": "https://wowforevertalents.com/professions/skinning/"
+      "source": "https://wowforevertalents.com/professions/skinning/",
+      "leveling_guide": "https://www.wow-professions.com/forever"
     },
     {
       "id": 197,
@@ -331,7 +339,8 @@
         "Linen Reagent Bag",
         "Demonheart Gloves"
       ],
-      "source": "https://wowforevertalents.com/professions/tailoring/"
+      "source": "https://wowforevertalents.com/professions/tailoring/",
+      "leveling_guide": "https://www.wow-professions.com/forever/tailoring-leveling-guide"
     },
     {
       "id": 185,
@@ -366,7 +375,8 @@
         "Skywall Souffle",
         "Iron Oven"
       ],
-      "source": "https://wowforevertalents.com/professions/cooking/"
+      "source": "https://wowforevertalents.com/professions/cooking/",
+      "leveling_guide": "https://www.wow-professions.com/forever/cooking-leveling-guide"
     },
     {
       "id": 356,
@@ -401,7 +411,8 @@
         "Fishing Hut",
         "Fishing Rack"
       ],
-      "source": "https://wowforevertalents.com/professions/fishing/"
+      "source": "https://wowforevertalents.com/professions/fishing/",
+      "leveling_guide": "https://www.wow-professions.com/forever/fishing-and-cooking-leveling-guide"
     },
     {
       "id": 129,
@@ -436,7 +447,8 @@
         "Powerful Poultice",
         "Surgical Tourniquet"
       ],
-      "source": "https://wowforevertalents.com/professions/first-aid/"
+      "source": "https://wowforevertalents.com/professions/first-aid/",
+      "leveling_guide": "https://www.wow-professions.com/forever"
     }
   ],
   "trainer_ranks": {
