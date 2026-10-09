@@ -52,7 +52,7 @@ function filteredRecords(){
  });
 }
 function renderList(){
- list.replaceChildren();for(const r of store.filtered){const b=mk("button",null,"npc-result");b.type="button";b.setAttribute("aria-selected",String(store.active?.key===r.key));b.setAttribute("role","option");const mark=r.item?iconNode(r.item):append(b,"span","⚒","npc-item-icon");mark.setAttribute("aria-hidden","true");
+ list.replaceChildren();for(const r of store.filtered){const b=mk("button",null,"npc-result");b.type="button";b.setAttribute("aria-selected",String(store.active?.key===r.key));b.setAttribute("role","option");const mark=r.item?iconNode(r.item):append(b,"span","⚒","npc-item-icon");if(r.item)b.append(mark);mark.setAttribute("aria-hidden","true");
  const copy=append(b,"span",null,"npc-result-copy");
  append(copy,"strong",r.item?title(r.item):r.npc.name);
  append(copy,"small",r.item?r.npc.name+" · "+side(r.npc):side(r.npc)+" · "+(profession[r.npc.profession]||r.npc.profession));
