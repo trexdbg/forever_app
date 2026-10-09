@@ -1899,7 +1899,7 @@
       }
     },
     {
-      "id": "westfall-foe-reaper-4000",
+      "id": "573",
       "name": {
         "fr": "Foe Reaper 4000",
         "en": "Foe Reaper 4000"
@@ -1914,15 +1914,101 @@
         [
           44.8,
           35.4
+        ],
+        [
+          51.4,
+          68.4
+        ],
+        [
+          50.5,
+          69.3
+        ],
+        [
+          50.1,
+          67.1
+        ],
+        [
+          47.7,
+          68.9
+        ],
+        [
+          47.3,
+          67
+        ],
+        [
+          46.4,
+          66
+        ],
+        [
+          46.2,
+          63.2
+        ],
+        [
+          53.9,
+          63.1
+        ],
+        [
+          50.8,
+          65.2
+        ],
+        [
+          40.6,
+          49.6
+        ],
+        [
+          40.1,
+          51.9
+        ],
+        [
+          38.4,
+          54.3
+        ],
+        [
+          37.9,
+          52
+        ],
+        [
+          36,
+          51.3
+        ],
+        [
+          38,
+          49.4
+        ],
+        [
+          33.2,
+          52.9
+        ],
+        [
+          34.3,
+          51.3
+        ],
+        [
+          44.5,
+          45.5
+        ],
+        [
+          44.7,
+          38.9
         ]
       ],
-      "loot": [],
-      "source": "https://foreverdb.net/rares",
+      "loot": [
+        {
+          "name": {
+            "fr": "Scarecrow Trousers",
+            "en": "Scarecrow Trousers"
+          },
+          "item_id": 4434,
+          "chance_classic_percent": 25,
+          "icon": "inv_pants_06"
+        }
+      ],
+      "source": "https://foreverdb.net/rare/573",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
       "notes": {
-        "fr": "",
-        "en": ""
+        "fr": "20 des 40 positions Classic listées par la source ; un seul Faucheur peut apparaître à la fois. Sur Forever : à confirmer.",
+        "en": "20 of 40 Classic reference positions listed; only one Reaper spawns at a time. Not verified in Forever."
       }
     },
     {
@@ -3147,6 +3233,87 @@
       "notes": {
         "fr": "",
         "en": ""
+      }
+    },
+    {
+      "id": "519",
+      "name": {
+        "fr": "Slark",
+        "en": "Slark"
+      },
+      "zone": "westfall",
+      "level": 15,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 1.5,
+      "respawn_max_hours": 2.5,
+      "points": [
+        [
+          47,
+          10.9
+        ]
+      ],
+      "loot": [
+        {
+          "name": {
+            "fr": "Slarkskin",
+            "en": "Slarkskin"
+          },
+          "item_id": 6180,
+          "chance_classic_percent": 60,
+          "icon": "inv_chest_chain_14"
+        },
+        {
+          "name": {
+            "fr": "Coral Claymore",
+            "en": "Coral Claymore"
+          },
+          "item_id": 3188,
+          "chance_classic_percent": 40,
+          "icon": "inv_sword_09"
+        }
+      ],
+      "source": "https://foreverdb.net/rare/519",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "Objets et taux de butin Classic, non confirmés sur Forever.",
+        "en": "Classic item drops and chances, not yet confirmed on Forever."
+      }
+    },
+    {
+      "id": "5808",
+      "name": {
+        "fr": "Seigneur de guerre Kolkanis",
+        "en": "Warlord Kolkanis"
+      },
+      "zone": "durotar",
+      "level": 9,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 1,
+      "respawn_max_hours": 2,
+      "points": [
+        [
+          47.9,
+          77.4
+        ],
+        [
+          49.9,
+          80.6
+        ],
+        [
+          46.4,
+          79
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rare/5808",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": true,
+      "notes": {
+        "fr": "Présence signalée sur Forever par 1 joueur (ForeverDB). Les coordonnées et le délai restent issus de Classic.",
+        "en": "Seen on Forever by 1 player (ForeverDB); coordinates and respawn timer remain Classic references."
       }
     }
   ],
