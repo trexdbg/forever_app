@@ -17,7 +17,8 @@
     "aid": "https://wow-guides.com/classic-era/professions/first-aid",
     "blacksmithing_vendor": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
     "leatherworking_vendor": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
-    "tailoring_vendor": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic"
+    "tailoring_vendor": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+    "cooking_vendor": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic"
   },
   "items": {
     "4371": {
@@ -196,6 +197,50 @@
       "skill": 115,
       "supply": "limited",
       "source": "https://www.wowhead.com/classic/item=6275"
+    },
+    "6325": {
+      "id": 6325,
+      "name": {
+        "en": "Recipe: Brilliant Smallfish",
+        "fr": "Recette : Goujon brillant"
+      },
+      "profession": "Cuisine",
+      "skill": 1,
+      "supply": "unlimited",
+      "source": "https://www.wowhead.com/classic/item=6325"
+    },
+    "6328": {
+      "id": 6328,
+      "name": {
+        "en": "Recipe: Longjaw Mud Snapper",
+        "fr": "Recette : Lutjan à longue mâchoire"
+      },
+      "profession": "Cuisine",
+      "skill": 50,
+      "supply": "unlimited",
+      "source": "https://www.wowhead.com/classic/item=6328"
+    },
+    "6330": {
+      "id": 6330,
+      "name": {
+        "en": "Recipe: Bristle Whisker Catfish",
+        "fr": "Recette : Poisson-chat moustachu"
+      },
+      "profession": "Cuisine",
+      "skill": 100,
+      "supply": "unlimited",
+      "source": "https://www.wowhead.com/classic/item=6330"
+    },
+    "6368": {
+      "id": 6368,
+      "name": {
+        "en": "Recipe: Rainbow Fin Albacore",
+        "fr": "Recette : Thon arc-en-ciel"
+      },
+      "profession": "Cuisine",
+      "skill": 50,
+      "supply": "unlimited",
+      "source": "https://www.wowhead.com/classic/item=6368"
     },
     "6474": {
       "id": 6474,
@@ -456,6 +501,50 @@
       "skill": 295,
       "supply": "unlimited"
     },
+    "13939": {
+      "id": 13939,
+      "name": {
+        "en": "Recipe: Spotted Yellowtail",
+        "fr": "Recette : Jaune-queue tacheté"
+      },
+      "profession": "Cuisine",
+      "skill": 225,
+      "supply": "unlimited",
+      "source": "https://www.wowhead.com/classic/item=13939"
+    },
+    "13942": {
+      "id": 13942,
+      "name": {
+        "en": "Recipe: Grilled Squid",
+        "fr": "Recette : Calmar grillé"
+      },
+      "profession": "Cuisine",
+      "skill": 240,
+      "supply": "unlimited",
+      "source": "https://www.wowhead.com/classic/item=13942"
+    },
+    "13945": {
+      "id": 13945,
+      "name": {
+        "en": "Recipe: Nightfin Soup",
+        "fr": "Recette : Soupe de lutjan nagenuit"
+      },
+      "profession": "Cuisine",
+      "skill": 250,
+      "supply": "unlimited",
+      "source": "https://www.wowhead.com/classic/item=13945"
+    },
+    "13946": {
+      "id": 13946,
+      "name": {
+        "en": "Recipe: Poached Sunscale Salmon",
+        "fr": "Recette : Saumon solécaille poché"
+      },
+      "profession": "Cuisine",
+      "skill": 250,
+      "supply": "unlimited",
+      "source": "https://www.wowhead.com/classic/item=13946"
+    },
     "14468": {
       "id": 14468,
       "name": {
@@ -496,6 +585,17 @@
       "skill": 200,
       "supply": "limited"
     },
+    "16072": {
+      "id": 16072,
+      "name": {
+        "en": "Expert Cookbook",
+        "fr": "Livre de cuisine pour expert"
+      },
+      "profession": "Cuisine",
+      "skill": 125,
+      "supply": "unlimited",
+      "source": "https://www.wowhead.com/classic/item=16072"
+    },
     "16221": {
       "id": 16221,
       "name": {
@@ -505,6 +605,17 @@
       "profession": "Enchantement",
       "skill": 275,
       "supply": "limited"
+    },
+    "16767": {
+      "id": 16767,
+      "name": {
+        "en": "Recipe: Undermine Clam Chowder",
+        "fr": "Recette : Soupe de palourdes d'Undermine"
+      },
+      "profession": "Cuisine",
+      "skill": 225,
+      "supply": "limited",
+      "source": "https://www.wowhead.com/classic/item=16767"
     },
     "18648": {
       "id": 18648,
@@ -547,6 +658,28 @@
       "skill": 155,
       "supply": "limited",
       "source": "https://www.wowhead.com/classic/item=18949"
+    },
+    "21099": {
+      "id": 21099,
+      "name": {
+        "en": "Recipe: Smoked Sagefish",
+        "fr": "Recette : Sagerelle fumée"
+      },
+      "profession": "Cuisine",
+      "skill": 80,
+      "supply": "unlimited",
+      "source": "https://www.wowhead.com/classic/item=21099"
+    },
+    "21219": {
+      "id": 21219,
+      "name": {
+        "en": "Recipe: Sagefish Delight",
+        "fr": "Recette : Délice de sagerelle"
+      },
+      "profession": "Cuisine",
+      "skill": 175,
+      "supply": "unlimited",
+      "source": "https://www.wowhead.com/classic/item=21219"
     },
     "22308": {
       "id": 22308,
@@ -2298,6 +2431,199 @@
       "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
       "note": "Quartier de la magie",
       "note_en": "Magic Quarter",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Tharynn Bouden",
+      "id": null,
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "elwynn",
+        "fr": "Forêt d'Elwynn",
+        "en": "Elwynn Forest"
+      },
+      "coordinates": {
+        "x": 41.8,
+        "y": 67
+      },
+      "faction": "alliance",
+      "offers": [
+        "6325",
+        "6328"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "Comté-de-l'Or",
+      "note_en": "Goldshire",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Kilxx",
+      "id": null,
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "barrens",
+        "fr": "Les Tarides",
+        "en": "The Barrens"
+      },
+      "coordinates": {
+        "x": 62.8,
+        "y": 38.2
+      },
+      "faction": "neutral",
+      "offers": [
+        "6368",
+        "6330"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "Cabestan",
+      "note_en": "Ratchet",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Gikkix",
+      "id": null,
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "tanaris",
+        "fr": "Tanaris",
+        "en": "Tanaris"
+      },
+      "coordinates": {
+        "x": 66.6,
+        "y": 22
+      },
+      "faction": "neutral",
+      "offers": [
+        "13939",
+        "13942",
+        "13945",
+        "13946"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "Port Gentepression",
+      "note_en": "Steamwheedle Port",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Jabbey",
+      "id": null,
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "tanaris",
+        "fr": "Tanaris",
+        "en": "Tanaris"
+      },
+      "coordinates": {
+        "x": 67,
+        "y": 22
+      },
+      "faction": "neutral",
+      "offers": [
+        "16767"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "Port Gentepression",
+      "note_en": "Steamwheedle Port",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Wulan",
+      "id": null,
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "desolace",
+        "fr": "Désolace",
+        "en": "Desolace"
+      },
+      "coordinates": {
+        "x": 26.2,
+        "y": 69.6
+      },
+      "faction": "horde",
+      "offers": [
+        "21099",
+        "21219",
+        "16072"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "Proie-de-l'Ombre",
+      "note_en": "Shadowprey Village",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Shandrina",
+      "id": null,
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "ashenvale",
+        "fr": "Orneval",
+        "en": "Ashenvale"
+      },
+      "coordinates": {
+        "x": 49.6,
+        "y": 67
+      },
+      "faction": "alliance",
+      "offers": [
+        "16072"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "Refuge de Vent-argent",
+      "note_en": "Silverwind Refuge",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Fyldan",
+      "id": null,
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "darnassus",
+        "fr": "Darnassus",
+        "en": "Darnassus"
+      },
+      "coordinates": {
+        "x": 48.6,
+        "y": 21.2
+      },
+      "faction": "alliance",
+      "offers": [
+        "21099",
+        "21219"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "Terrasse des artisans",
+      "note_en": "Craftsmen's Terrace",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Gloria Femmel",
+      "id": null,
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "redridge",
+        "fr": "Les Carmines",
+        "en": "Redridge Mountains"
+      },
+      "coordinates": {
+        "x": 26.6,
+        "y": 43.4
+      },
+      "faction": "alliance",
+      "offers": [
+        "21099",
+        "21219"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "Comté-du-Lac",
+      "note_en": "Lakeshire",
       "coordinate_status": "classic_reference_unverified"
     }
   ],
