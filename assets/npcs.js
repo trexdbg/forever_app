@@ -167,21 +167,21 @@ const copperFmt=c=>{const g=Math.floor(c/10000),s=Math.floor(c%10000/100),b=c%10
 const foreverItem=item=>typeof item?.source_status==="string"&&item.source_status.startsWith("forever_beta_");
 const foreverOffer=(vendor,item)=>vendor?.offer_details?.[String(item?.id)]?.verification_status==="forever_documented";
 const statusWord=(vendor,item)=>foreverOffer(vendor,item)?S("Vente référencée Forever (bêta)","Forever beta vendor documented"):S("Vente Classic à vérifier","Classic vendor unverified");
-const stockWord=item=>foreverItem(item)?S("Objet Forever bêta · stock réel non vérifié","Forever beta item · real stock unverified"):item.supply==="unlimited"?S("Stock illimité (référence Classic)","Unlimited stock (Classic reference)"):item.supply==="reputation"?S("Vente liée à la réputation Classic","Classic reputation sale"):S("Stock limité (référence Classic)","Limited stock (Classic reference)");
+const stockWord=(item,vendor)=>foreverOffer(vendor,item)||foreverItem(item)?S("Vente Forever bêta référencée · stock réel non vérifié","Forever beta sale documented · live stock unverified"):item.supply==="unlimited"?S("Stock illimité (référence Classic)","Unlimited stock (Classic reference)"):item.supply==="reputation"?S("Vente liée à la réputation Classic","Classic reputation sale"):S("Stock limité (référence Classic)","Limited stock (Classic reference)");
 
 /* Share the actual Equipment tooltip with vendors; no fabricated Forever stats. */
 const merchantItemTooltip=(item,vendor=null,vendorCount=0)=>{
  const offer=vendor?.offer_details?.[String(item.id)]||{};
  const isVerifiedIcon=item.icon_status==="wowhead_icon_verified"&&/^[a-z0-9_-]{2,70}$/.test(item.icon||"");
  return {
-  id:item.id,name:title(item),quality:"common",source_status:item.source_status||"classic_reference",source_url:item.source,
+  id:item.id,name:title(item),quality:"common",source_status:foreverOffer(vendor,item)?"forever_beta_named_vendor":item.source_status||"classic_reference",source_url:foreverOffer(vendor,item)&&!foreverItem(item)?("https://www.wowhead.com/forever/item="+item.id):item.source,
   icon:isVerifiedIcon?item.icon:"inv_scroll_07",
   icon_url:isVerifiedIcon?"https://wow.zamimg.com/images/wow/icons/medium/"+item.icon+".jpg":null,
   vendorDetails:{
    profession:profession[item.profession]||item.profession,
    type:item.kind==="certification"?S("Certification de métier","Profession certification"):item.kind==="recipe"?S("Recette / patron","Recipe / pattern"):S("Composant","Material"),
    skill:item.kind==="recipe"&&Number.isFinite(item.skill)?item.skill:null,
-   stock:stockWord(item),verification:vendor?statusWord(vendor,item):(foreverItem(item)?S("Objet référencé Forever bêta","Forever beta item listed"):S("Objet de référence Classic","Classic reference item")),
+   stock:stockWord(item,vendor),verification:vendor?statusWord(vendor,item):(foreverItem(item)?S("Objet référencé Forever bêta","Forever beta item listed"):S("Objet de référence Classic","Classic reference item")),
    vendorCount,vendorName:vendor?.name||null,
    priceCopper:foreverItem(item)?null:Number.isInteger(item.vendor_price_copper)?item.vendor_price_copper:null,
    currencyPrice:offer.price?.currency==="merchants_favor"?offer.price.amount:null,
@@ -431,7 +431,7 @@ function renderDetail(){
  if(i){
  const panel=append(detail,"section",null,"npc-stock");
  append(panel,"span",foreverOffer(n,i)?S("Source de vente Forever bêta","Forever beta vendor source"):S("Disponibilité estimée · Classic","Estimated availability · Classic"),"npc-stock-label");
- append(panel,"div",stockWord(i),"npc-stock-value");
+ append(panel,"div",stockWord(i,n),"npc-stock-value");
  if(Number.isInteger(i.vendor_price_copper)){append(panel,"p",S("Prix de référence : ","Reference vendor price: ")+copperFmt(i.vendor_price_copper));}
  if(Number.isInteger(i.vendor_stock)&&i.vendor_stock>0){append(panel,"p",S("Stock maximal indicatif (Classic) : ","Indicative maximum stock (Classic): ")+i.vendor_stock+" "+S("unité(s)","unit(s)")+".");}
  const report=evidence(n,i);
@@ -459,6 +459,7 @@ function renderDetail(){
   b.setAttribute("aria-pressed",String(seller.name===n.name));
   const main=append(b,"span",null,"npc-seller-main");
   append(main,"strong",seller.name);append(main,"small",side(seller)+" · "+faction[seller.faction]);
+  append(b,"span",foreverOffer(seller,i)?S("Forever bêta","Forever beta"):S("Classic","Classic"),"npc-seller-verification "+(foreverOffer(seller,i)?"is-forever":"is-classic"));
   if(evidence(seller,i))append(b,"span",S("Avis stock","Stock report"),"npc-seller-report");
   b.addEventListener("click",()=>{
    q.value="";zone.value="all";trade.value="all";aff.value="all";
@@ -520,6 +521,6 @@ fetch(root+"data/npcs.json").then(r=>{if(!r.ok)throw Error(r.status);return r.js
  const requestedZone=params.get("zone");
  if(requestedZone&&Array.from(zone.options).some(option=>option.value===requestedZone))zone.value=requestedZone;
  updateFilterVisibility();
- refresh();$("npc-load-status").textContent=store.mode==="trainer"?db.npcs.filter(n=>n.role==="trainer").length+" "+S("maîtres recensés","trainers listed"):Object.keys(db.items).length+" "+S("objets · Forever + Classic","items · Forever + Classic");
+ refresh();$("npc-load-status").textContent=store.mode==="trainer"?db.npcs.filter(n=>n.role==="trainer").length+" "+S("maîtres recensés","trainers listed"):Object.keys(db.items).length+" "+S("objets · "+new Set(store.records.filter(r=>foreverOffer(r.npc,r.item)).map(r=>r.item.id)).size+" sourcés Forever","items · "+new Set(store.records.filter(r=>foreverOffer(r.npc,r.item)).map(r=>r.item.id)).size+" Forever sourced");
 }).catch(e=>{$("npc-load-status").textContent=S("Données indisponibles","Data unavailable");append(list,"p",S("Impossible de charger l'annuaire. Réessayez plus tard.","Unable to load the directory."),"npc-empty");console.warn("NPC dataset:",e.message)});
 })();
