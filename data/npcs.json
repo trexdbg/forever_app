@@ -28,7 +28,9 @@
     "forever_profession_locations": "https://www.icy-veins.com/wow-forever/professions",
     "enchanting_vendor": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
     "cooking_vendor_expansion": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
-    "blacksmithing_vendor_expansion": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic"
+    "blacksmithing_vendor_expansion": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+    "forever_merchant_guide": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+    "forever_cooking_guide": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling"
   },
   "items": {
     "728": {
@@ -45,7 +47,8 @@
       "icon_status": "category_fallback",
       "source": "https://www.wowhead.com/classic/item=728",
       "source_guide": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
-      "reference_status": "classic_vendor_guide"
+      "reference_status": "classic_vendor_guide",
+      "forever_item_page": "https://www.wowhead.com/forever/item=728"
     },
     "2697": {
       "id": 2697,
@@ -617,14 +620,18 @@
         "en": "Pattern: Red Linen Bag"
       },
       "profession": "Couture",
-      "skill": 70,
+      "skill": 50,
       "kind": "recipe",
       "supply": "limited",
       "icon": "inv_scroll_07",
       "icon_status": "category_fallback",
       "source": "https://www.wowhead.com/classic/item=5771",
       "source_guide": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
-      "reference_status": "classic_vendor_guide"
+      "reference_status": "classic_vendor_guide",
+      "skill_reference": {
+        "status": "forever_beta_database",
+        "source": "https://www.wowhead.com/forever/items/recipes/tailoring"
+      }
     },
     "5772": {
       "id": 5772,
@@ -893,7 +900,8 @@
       "source": "https://www.wowhead.com/classic/item=6325",
       "kind": "recipe",
       "icon": "inv_scroll_07",
-      "icon_status": "category_fallback"
+      "icon_status": "category_fallback",
+      "forever_item_page": "https://www.wowhead.com/forever/item=6325"
     },
     "6326": {
       "id": 6326,
@@ -923,7 +931,8 @@
       "source": "https://www.wowhead.com/classic/item=6328",
       "kind": "recipe",
       "icon": "inv_scroll_07",
-      "icon_status": "category_fallback"
+      "icon_status": "category_fallback",
+      "forever_item_page": "https://www.wowhead.com/forever/item=6328"
     },
     "6329": {
       "id": 6329,
@@ -953,7 +962,8 @@
       "source": "https://www.wowhead.com/classic/item=6330",
       "kind": "recipe",
       "icon": "inv_scroll_07",
-      "icon_status": "category_fallback"
+      "icon_status": "category_fallback",
+      "forever_item_page": "https://www.wowhead.com/forever/item=6330"
     },
     "6342": {
       "id": 6342,
@@ -2508,7 +2518,8 @@
       "source": "https://www.wowhead.com/classic/item=16072",
       "kind": "recipe",
       "icon": "inv_scroll_07",
-      "icon_status": "category_fallback"
+      "icon_status": "category_fallback",
+      "forever_item_page": "https://www.wowhead.com/forever/item=16072"
     },
     "16110": {
       "id": 16110,
@@ -2627,7 +2638,8 @@
       "source": "https://www.wowhead.com/classic/item=17062",
       "kind": "recipe",
       "icon": "inv_scroll_07",
-      "icon_status": "category_fallback"
+      "icon_status": "category_fallback",
+      "forever_item_page": "https://www.wowhead.com/forever/item=17062"
     },
     "17200": {
       "id": 17200,
@@ -3382,6 +3394,480 @@
       "kind": "recipe",
       "icon": "inv_scroll_07",
       "icon_status": "category_fallback"
+    },
+    "249476": {
+      "id": 249476,
+      "name": {
+        "en": "Formula: Mystic Mushroom",
+        "fr": "Formule : Champignon mystique"
+      },
+      "profession": "Enchantement",
+      "skill": 130,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/forever/item=249476",
+      "source_status": "forever_beta_wowhead_vendor",
+      "reference_status": "forever_vendor_documented",
+      "source_guide": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+      "bind": "pickup",
+      "currency": "merchants_favor",
+      "price_amount": 45
+    },
+    "249477": {
+      "id": 249477,
+      "name": {
+        "en": "Formula: Tenets of the Silver Hand",
+        "fr": "Formule : Doctrines de la Main d'argent"
+      },
+      "profession": "Enchantement",
+      "skill": 130,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/forever/item=249477",
+      "source_status": "forever_beta_wowhead_vendor",
+      "reference_status": "forever_vendor_documented",
+      "source_guide": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+      "bind": "pickup",
+      "currency": "merchants_favor",
+      "price_amount": 45
+    },
+    "249885": {
+      "id": 249885,
+      "name": {
+        "en": "Recipe: Venomous Smoothie",
+        "fr": "Recette : Smoothie venimeux"
+      },
+      "profession": "Cuisine",
+      "skill": 25,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/forever/item=249885",
+      "source_status": "forever_beta_wowhead_vendor",
+      "reference_status": "forever_vendor_documented",
+      "source_guide": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+      "bind": "pickup",
+      "currency": "merchants_favor",
+      "price_amount": 30
+    },
+    "249886": {
+      "id": 249886,
+      "name": {
+        "en": "Recipe: Slimy Smoothie",
+        "fr": "Recette : Smoothie gluant"
+      },
+      "profession": "Cuisine",
+      "skill": 100,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/forever/item=249886",
+      "source_status": "forever_beta_wowhead_vendor",
+      "reference_status": "forever_vendor_documented",
+      "source_guide": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+      "bind": "pickup",
+      "currency": "merchants_favor",
+      "price_amount": 30
+    },
+    "249887": {
+      "id": 249887,
+      "name": {
+        "en": "Recipe: Mrrggl Smrrthle",
+        "fr": "Recette : Mrrggl Smrrthle"
+      },
+      "profession": "Cuisine",
+      "skill": 125,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/forever/item=249887",
+      "source_status": "forever_beta_wowhead_vendor",
+      "reference_status": "forever_vendor_documented",
+      "source_guide": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+      "bind": "pickup",
+      "currency": "merchants_favor",
+      "price_amount": 30
+    },
+    "249888": {
+      "id": 249888,
+      "name": {
+        "en": "Recipe: Calcified Smoothie",
+        "fr": "Recette : Smoothie calcifié"
+      },
+      "profession": "Cuisine",
+      "skill": 180,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/forever/item=249888",
+      "source_status": "forever_beta_wowhead_vendor",
+      "reference_status": "forever_vendor_documented",
+      "source_guide": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+      "bind": "pickup",
+      "reputation": {
+        "faction": "Azeroth Commerce Authority / Durotar Supply and Logistics",
+        "rank": "Friendly"
+      },
+      "currency": "merchants_favor",
+      "price_amount": 60
+    },
+    "249889": {
+      "id": 249889,
+      "name": {
+        "en": "Recipe: Spicy Smoothie",
+        "fr": "Recette : Smoothie épicé"
+      },
+      "profession": "Cuisine",
+      "skill": 200,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/forever/item=249889",
+      "source_status": "forever_beta_wowhead_vendor",
+      "reference_status": "forever_vendor_documented",
+      "source_guide": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+      "bind": "pickup",
+      "reputation": {
+        "faction": "Azeroth Commerce Authority / Durotar Supply and Logistics",
+        "rank": "Friendly"
+      },
+      "currency": "merchants_favor",
+      "price_amount": 60
+    },
+    "249890": {
+      "id": 249890,
+      "name": {
+        "en": "Recipe: Wicked Smoothie",
+        "fr": "Recette : Smoothie redoutable"
+      },
+      "profession": "Cuisine",
+      "skill": 250,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/forever/item=249890",
+      "source_status": "forever_beta_wowhead_vendor",
+      "reference_status": "forever_vendor_documented",
+      "source_guide": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+      "bind": "pickup",
+      "reputation": {
+        "faction": "Azeroth Commerce Authority / Durotar Supply and Logistics",
+        "rank": "Honored"
+      },
+      "currency": "merchants_favor",
+      "price_amount": 90
+    },
+    "250376": {
+      "id": 250376,
+      "name": {
+        "en": "Recipe: Lesser Mageblood Elixir",
+        "fr": "Recette : Élixir de sang-de-mage inférieur"
+      },
+      "profession": "Alchimie",
+      "skill": 75,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/forever/item=250376",
+      "source_status": "forever_beta_wowhead_vendor",
+      "reference_status": "forever_vendor_documented",
+      "source_guide": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+      "bind": "pickup",
+      "currency": "merchants_favor",
+      "price_amount": 45
+    },
+    "250381": {
+      "id": 250381,
+      "name": {
+        "en": "Recipe: Elixir of Lesser Spirit",
+        "fr": "Recette : Élixir d'esprit inférieur"
+      },
+      "profession": "Alchimie",
+      "skill": 65,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/forever/item=250381",
+      "source_status": "forever_beta_wowhead_vendor",
+      "reference_status": "forever_vendor_documented",
+      "source_guide": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+      "bind": "pickup",
+      "currency": "merchants_favor",
+      "price_amount": 45
+    },
+    "250998": {
+      "id": 250998,
+      "name": {
+        "en": "Recipe: Potion of Elemental Purging",
+        "fr": "Recette : Potion de purge élémentaire"
+      },
+      "profession": "Alchimie",
+      "skill": 280,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/forever/item=250998",
+      "source_status": "forever_beta_wowhead_vendor",
+      "reference_status": "forever_vendor_documented",
+      "source_guide": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+      "bind": "pickup",
+      "reputation": {
+        "faction": "Azeroth Commerce Authority / Durotar Supply and Logistics",
+        "rank": "Honored"
+      },
+      "currency": "merchants_favor",
+      "price_amount": 180
+    },
+    "251368": {
+      "id": 251368,
+      "name": {
+        "en": "Plans: Acolyte's Chain Belt",
+        "fr": "Plans : Ceinture en mailles de l'acolyte"
+      },
+      "profession": "Forge",
+      "skill": 45,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/forever/item=251368",
+      "source_status": "forever_beta_wowhead_vendor",
+      "reference_status": "forever_vendor_documented",
+      "source_guide": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+      "bind": "pickup",
+      "currency": "merchants_favor",
+      "price_amount": 30
+    },
+    "264201": {
+      "id": 264201,
+      "name": {
+        "en": "Schematic: SAF-T Tabs",
+        "fr": "Schéma : Languettes SUR-T"
+      },
+      "profession": "Ingénierie",
+      "skill": 25,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/forever/item=264201",
+      "source_status": "forever_beta_wowhead_vendor",
+      "reference_status": "forever_vendor_documented",
+      "source_guide": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+      "currency": "merchants_favor",
+      "price_amount": 45
+    },
+    "264202": {
+      "id": 264202,
+      "name": {
+        "en": "Schematic: SAF-T Dynamite",
+        "fr": "Schéma : Dynamite SUR-T"
+      },
+      "profession": "Ingénierie",
+      "skill": 25,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/forever/item=264202",
+      "source_status": "forever_beta_wowhead_vendor",
+      "reference_status": "forever_vendor_documented",
+      "source_guide": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+      "currency": "merchants_favor",
+      "price_amount": 45
+    },
+    "264203": {
+      "id": 264203,
+      "name": {
+        "en": "Schematic: SAF-T Copper Bomb",
+        "fr": "Schéma : Bombe en cuivre SUR-T"
+      },
+      "profession": "Ingénierie",
+      "skill": 55,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/forever/item=264203",
+      "source_status": "forever_beta_wowhead_vendor",
+      "reference_status": "forever_vendor_documented",
+      "source_guide": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+      "currency": "merchants_favor",
+      "price_amount": 45
+    },
+    "271621": {
+      "id": 271621,
+      "name": {
+        "en": "Alchemy Certification",
+        "fr": "Certification d'alchimie"
+      },
+      "profession": "Alchimie",
+      "skill": 300,
+      "kind": "certification",
+      "supply": "unlimited",
+      "icon": "inv_scroll_15",
+      "icon_status": "wowhead_icon_verified",
+      "source": "https://www.wowhead.com/forever/item=271621",
+      "source_status": "forever_beta_wowhead_vendor",
+      "reference_status": "forever_vendor_documented",
+      "source_guide": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+      "bind": "pickup",
+      "currency": "merchants_favor",
+      "price_amount": 1000
+    },
+    "271622": {
+      "id": 271622,
+      "name": {
+        "en": "Blacksmithing Certification",
+        "fr": "Certification de forge"
+      },
+      "profession": "Forge",
+      "skill": 300,
+      "kind": "certification",
+      "supply": "unlimited",
+      "icon": "inv_scroll_15",
+      "icon_status": "wowhead_icon_verified",
+      "source": "https://www.wowhead.com/forever/item=271622",
+      "source_status": "forever_beta_wowhead_vendor",
+      "reference_status": "forever_vendor_documented",
+      "source_guide": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+      "bind": "pickup",
+      "currency": "merchants_favor",
+      "price_amount": 1000
+    },
+    "271624": {
+      "id": 271624,
+      "name": {
+        "en": "Enchanting Certification",
+        "fr": "Certification d'enchantement"
+      },
+      "profession": "Enchantement",
+      "skill": 300,
+      "kind": "certification",
+      "supply": "unlimited",
+      "icon": "inv_scroll_15",
+      "icon_status": "wowhead_icon_verified",
+      "source": "https://www.wowhead.com/forever/item=271624",
+      "source_status": "forever_beta_wowhead_vendor",
+      "reference_status": "forever_vendor_documented",
+      "source_guide": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+      "bind": "pickup",
+      "currency": "merchants_favor",
+      "price_amount": 1000
+    },
+    "271625": {
+      "id": 271625,
+      "name": {
+        "en": "Engineering Certification",
+        "fr": "Certification d'ingénierie"
+      },
+      "profession": "Ingénierie",
+      "skill": 300,
+      "kind": "certification",
+      "supply": "unlimited",
+      "icon": "inv_scroll_15",
+      "icon_status": "wowhead_icon_verified",
+      "source": "https://www.wowhead.com/forever/item=271625",
+      "source_status": "forever_beta_wowhead_vendor",
+      "reference_status": "forever_vendor_documented",
+      "source_guide": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+      "bind": "pickup",
+      "currency": "merchants_favor",
+      "price_amount": 1000
+    },
+    "271626": {
+      "id": 271626,
+      "name": {
+        "en": "Leatherworking Certification",
+        "fr": "Certification de travail du cuir"
+      },
+      "profession": "Travail du cuir",
+      "skill": 300,
+      "kind": "certification",
+      "supply": "unlimited",
+      "icon": "inv_scroll_15",
+      "icon_status": "wowhead_icon_verified",
+      "source": "https://www.wowhead.com/forever/item=271626",
+      "source_status": "forever_beta_wowhead_vendor",
+      "reference_status": "forever_vendor_documented",
+      "source_guide": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+      "bind": "pickup",
+      "currency": "merchants_favor",
+      "price_amount": 1000
+    },
+    "271627": {
+      "id": 271627,
+      "name": {
+        "en": "Tailoring Certification",
+        "fr": "Certification de couture"
+      },
+      "profession": "Couture",
+      "skill": 300,
+      "kind": "certification",
+      "supply": "unlimited",
+      "icon": "inv_scroll_15",
+      "icon_status": "wowhead_icon_verified",
+      "source": "https://www.wowhead.com/forever/item=271627",
+      "source_status": "forever_beta_wowhead_vendor",
+      "reference_status": "forever_vendor_documented",
+      "source_guide": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+      "bind": "pickup",
+      "currency": "merchants_favor",
+      "price_amount": 1000
+    },
+    "274977": {
+      "id": 274977,
+      "name": {
+        "en": "Recipe: Plain Ol' Paletusk",
+        "fr": "Recette : Paletusk tout simple"
+      },
+      "profession": "Cuisine",
+      "skill": 185,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_03",
+      "icon_status": "wowhead_icon_verified",
+      "source": "https://www.wowhead.com/forever/item=274977",
+      "source_status": "forever_beta_wowhead_vendor",
+      "reference_status": "forever_vendor_documented",
+      "source_guide": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
+      "bind": "pickup"
+    },
+    "280323": {
+      "id": 280323,
+      "name": {
+        "en": "Schematic: Clanking Cord",
+        "fr": "Schéma : Corde cliquetante"
+      },
+      "profession": "Ingénierie",
+      "skill": 175,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/forever/item=280323",
+      "source_status": "forever_beta_wowhead_vendor",
+      "reference_status": "forever_vendor_documented",
+      "source_guide": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+      "reputation": {
+        "faction": "Azeroth Commerce Authority / Durotar Supply and Logistics",
+        "rank": "Friendly"
+      },
+      "currency": "merchants_favor",
+      "price_amount": 180
     }
   },
   "npcs": [
@@ -4898,7 +5384,7 @@
       "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
       "note": "Comté-de-l'Or",
       "note_en": "Goldshire",
-      "coordinate_status": "classic_reference_unverified",
+      "coordinate_status": "forever_guide_waypoint",
       "offer_details": {
         "6270": {
           "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
@@ -4909,10 +5395,13 @@
           "source_kind": "classic_vendor_guide"
         },
         "6328": {
-          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
-          "source_kind": "classic_vendor_guide"
+          "source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-09"
         }
-      }
+      },
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling"
     },
     {
       "name": "Kilxx",
@@ -5017,7 +5506,7 @@
       },
       "coordinates": {
         "x": 26.2,
-        "y": 69.6
+        "y": 69.8
       },
       "faction": "horde",
       "offers": [
@@ -5030,15 +5519,17 @@
       "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
       "note": "Proie-de-l'Ombre",
       "note_en": "Shadowprey Village",
-      "coordinate_status": "classic_reference_unverified",
+      "coordinate_status": "forever_guide_waypoint",
       "offer_details": {
         "6369": {
           "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
           "source_kind": "classic_vendor_guide"
         },
         "16072": {
-          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
-          "source_kind": "classic_vendor_guide"
+          "source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-09"
         },
         "17062": {
           "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
@@ -5052,7 +5543,8 @@
           "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
           "source_kind": "classic_vendor_guide"
         }
-      }
+      },
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling"
     },
     {
       "name": "Shandrina",
@@ -5075,13 +5567,16 @@
       "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
       "note": "Refuge de Vent-argent",
       "note_en": "Silverwind Refuge",
-      "coordinate_status": "classic_reference_unverified",
+      "coordinate_status": "forever_guide_waypoint",
       "offer_details": {
         "16072": {
-          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
-          "source_kind": "classic_vendor_guide"
+          "source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-09"
         }
-      }
+      },
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling"
     },
     {
       "name": "Fyldan",
@@ -5427,7 +5922,7 @@
       "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
       "note": "Caverne lugubre",
       "note_en": "Forlorn Cavern",
-      "coordinate_status": "classic_reference_unverified",
+      "coordinate_status": "forever_guide_waypoint",
       "offer_details": {
         "6326": {
           "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
@@ -5442,10 +5937,13 @@
           "source_kind": "classic_vendor_guide"
         },
         "17062": {
-          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
-          "source_kind": "classic_vendor_guide"
+          "source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-09"
         }
-      }
+      },
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling"
     },
     {
       "name": "Helenia Olden",
@@ -11129,8 +11627,10 @@
       "coordinate_status": "classic_reference_unverified",
       "offer_details": {
         "728": {
-          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
-          "source_kind": "classic_vendor_guide"
+          "source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-09"
         },
         "2697": {
           "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
@@ -11227,8 +11727,8 @@
         "en": "Stormwind"
       },
       "coordinates": {
-        "x": 45.8,
-        "y": 58.2
+        "x": 55,
+        "y": 69.6
       },
       "faction": "alliance",
       "offers": [
@@ -11239,21 +11739,26 @@
       "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
       "note": "",
       "note_en": "",
-      "coordinate_status": "classic_reference_unverified",
+      "coordinate_status": "forever_guide_waypoint",
       "offer_details": {
         "6325": {
-          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
-          "source_kind": "classic_vendor_guide"
+          "source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-09"
         },
         "6330": {
-          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
-          "source_kind": "classic_vendor_guide"
+          "source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-09"
         },
         "6368": {
           "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
           "source_kind": "classic_vendor_guide"
         }
-      }
+      },
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling"
     },
     {
       "id": null,
@@ -12548,8 +13053,8 @@
         "en": "Thunder Bluff"
       },
       "coordinates": {
-        "x": 51.8,
-        "y": 52.4
+        "x": 51,
+        "y": 52.8
       },
       "faction": "horde",
       "offers": [
@@ -12561,15 +13066,19 @@
       "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
       "note": "",
       "note_en": "",
-      "coordinate_status": "classic_reference_unverified",
+      "coordinate_status": "forever_guide_waypoint",
       "offer_details": {
         "6328": {
-          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
-          "source_kind": "classic_vendor_guide"
+          "source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-09"
         },
         "6330": {
-          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
-          "source_kind": "classic_vendor_guide"
+          "source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-09"
         },
         "21099": {
           "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
@@ -12579,7 +13088,8 @@
           "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
           "source_kind": "classic_vendor_guide"
         }
-      }
+      },
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling"
     },
     {
       "id": null,
@@ -12603,17 +13113,20 @@
       "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
       "note": "",
       "note_en": "",
-      "coordinate_status": "classic_reference_unverified",
+      "coordinate_status": "forever_guide_waypoint",
       "offer_details": {
         "6325": {
-          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
-          "source_kind": "classic_vendor_guide"
+          "source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-09"
         },
         "6330": {
           "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
           "source_kind": "classic_vendor_guide"
         }
-      }
+      },
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling"
     },
     {
       "id": null,
@@ -12626,7 +13139,7 @@
         "en": "Orgrimmar"
       },
       "coordinates": {
-        "x": 70.2,
+        "x": 70,
         "y": 30.6
       },
       "faction": "horde",
@@ -12638,7 +13151,7 @@
       "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
       "note": "",
       "note_en": "",
-      "coordinate_status": "classic_reference_unverified",
+      "coordinate_status": "forever_guide_waypoint",
       "offer_details": {
         "6368": {
           "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
@@ -12649,10 +13162,13 @@
           "source_kind": "classic_vendor_guide"
         },
         "17062": {
-          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
-          "source_kind": "classic_vendor_guide"
+          "source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-09"
         }
-      }
+      },
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling"
     },
     {
       "id": null,
@@ -13244,6 +13760,777 @@
           "bind": "pickup"
         }
       }
+    },
+    {
+      "name": "Kalsey Sanden",
+      "id": 256731,
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "redridge",
+        "fr": "Les Carmines",
+        "en": "Redridge Mountains"
+      },
+      "coordinates": {
+        "x": 10.8,
+        "y": 72.7
+      },
+      "coordinate_status": "forever_guide_waypoint",
+      "faction": "alliance",
+      "offers": [
+        "249885",
+        "249886",
+        "249887",
+        "249888",
+        "249889",
+        "249890"
+      ],
+      "offer_details": {
+        "249885": {
+          "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-09",
+          "price": {
+            "amount": 30,
+            "currency": "merchants_favor"
+          },
+          "bind": "pickup"
+        },
+        "249886": {
+          "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-09",
+          "price": {
+            "amount": 30,
+            "currency": "merchants_favor"
+          },
+          "bind": "pickup"
+        },
+        "249887": {
+          "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-09",
+          "price": {
+            "amount": 30,
+            "currency": "merchants_favor"
+          },
+          "bind": "pickup"
+        },
+        "249888": {
+          "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-09",
+          "price": {
+            "amount": 60,
+            "currency": "merchants_favor"
+          },
+          "reputation": {
+            "faction": "Azeroth Commerce Authority",
+            "rank": "Friendly"
+          },
+          "bind": "pickup"
+        },
+        "249889": {
+          "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-09",
+          "price": {
+            "amount": 60,
+            "currency": "merchants_favor"
+          },
+          "reputation": {
+            "faction": "Azeroth Commerce Authority",
+            "rank": "Friendly"
+          },
+          "bind": "pickup"
+        },
+        "249890": {
+          "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-09",
+          "price": {
+            "amount": 90,
+            "currency": "merchants_favor"
+          },
+          "reputation": {
+            "faction": "Azeroth Commerce Authority",
+            "rank": "Honored"
+          },
+          "bind": "pickup"
+        }
+      },
+      "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+      "note": "Camp de l'Autorité commerciale d'Azeroth",
+      "note_en": "Azeroth Commerce Authority camp"
+    },
+    {
+      "name": "Aza'bek",
+      "id": 248198,
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "barrens",
+        "fr": "Les Tarides",
+        "en": "The Barrens"
+      },
+      "coordinates": null,
+      "coordinate_status": "forever_zone_only",
+      "faction": "horde",
+      "offers": [
+        "249885",
+        "249886",
+        "249887",
+        "249888",
+        "249889",
+        "249890"
+      ],
+      "offer_details": {
+        "249885": {
+          "source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-09",
+          "price": {
+            "amount": 30,
+            "currency": "merchants_favor"
+          },
+          "bind": "pickup"
+        },
+        "249886": {
+          "source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-09",
+          "price": {
+            "amount": 30,
+            "currency": "merchants_favor"
+          },
+          "bind": "pickup"
+        },
+        "249887": {
+          "source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-09",
+          "price": {
+            "amount": 30,
+            "currency": "merchants_favor"
+          },
+          "bind": "pickup"
+        },
+        "249888": {
+          "source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-09",
+          "price": {
+            "amount": 60,
+            "currency": "merchants_favor"
+          },
+          "reputation": {
+            "faction": "Durotar Supply and Logistics",
+            "rank": "Friendly"
+          },
+          "bind": "pickup"
+        },
+        "249889": {
+          "source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-09",
+          "price": {
+            "amount": 60,
+            "currency": "merchants_favor"
+          },
+          "reputation": {
+            "faction": "Durotar Supply and Logistics",
+            "rank": "Friendly"
+          },
+          "bind": "pickup"
+        },
+        "249890": {
+          "source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-09",
+          "price": {
+            "amount": 90,
+            "currency": "merchants_favor"
+          },
+          "reputation": {
+            "faction": "Durotar Supply and Logistics",
+            "rank": "Honored"
+          },
+          "bind": "pickup"
+        }
+      },
+      "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+      "note": "Camp de Ravitaillement et logistique de Durotar",
+      "note_en": "Durotar Supply and Logistics camp"
+    },
+    {
+      "name": "Nina Surefire",
+      "id": null,
+      "role": "merchant",
+      "profession": "Alchimie",
+      "zone": {
+        "id": "redridge",
+        "fr": "Les Carmines",
+        "en": "Redridge Mountains"
+      },
+      "coordinates": {
+        "x": 11,
+        "y": 72.3
+      },
+      "coordinate_status": "forever_guide_waypoint",
+      "faction": "alliance",
+      "offers": [
+        "250381",
+        "250376",
+        "250998",
+        "271621"
+      ],
+      "offer_details": {
+        "250376": {
+          "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-09",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "bind": "pickup"
+        },
+        "250381": {
+          "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-09",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "bind": "pickup"
+        },
+        "250998": {
+          "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-09",
+          "price": {
+            "amount": 180,
+            "currency": "merchants_favor"
+          },
+          "reputation": {
+            "faction": "Azeroth Commerce Authority",
+            "rank": "Honored"
+          },
+          "bind": "pickup"
+        },
+        "271621": {
+          "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-09",
+          "price": {
+            "amount": 1000,
+            "currency": "merchants_favor"
+          },
+          "bind": "pickup"
+        }
+      },
+      "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+      "note": "Camp de l'Autorité commerciale d'Azeroth",
+      "note_en": "Azeroth Commerce Authority camp"
+    },
+    {
+      "name": "Apothecary Durelle",
+      "id": null,
+      "role": "merchant",
+      "profession": "Alchimie",
+      "zone": {
+        "id": "barrens",
+        "fr": "Les Tarides",
+        "en": "The Barrens"
+      },
+      "coordinates": null,
+      "coordinate_status": "forever_zone_only",
+      "faction": "horde",
+      "offers": [
+        "250998",
+        "271621"
+      ],
+      "offer_details": {
+        "250998": {
+          "source": "https://www.wowhead.com/forever/item=250998",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-09",
+          "price": {
+            "amount": 180,
+            "currency": "merchants_favor"
+          },
+          "reputation": {
+            "faction": "Durotar Supply and Logistics",
+            "rank": "Honored"
+          },
+          "bind": "pickup"
+        },
+        "271621": {
+          "source": "https://www.wowhead.com/forever/item=250998",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-09",
+          "price": {
+            "amount": 1000,
+            "currency": "merchants_favor"
+          },
+          "bind": "pickup"
+        }
+      },
+      "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+      "note": "Camp de Ravitaillement et logistique de Durotar",
+      "note_en": "Durotar Supply and Logistics camp"
+    },
+    {
+      "name": "Fritz Fizzle",
+      "id": 256733,
+      "role": "merchant",
+      "profession": "Ingénierie",
+      "zone": {
+        "id": "redridge",
+        "fr": "Les Carmines",
+        "en": "Redridge Mountains"
+      },
+      "coordinates": {
+        "x": 10.5,
+        "y": 74.3
+      },
+      "coordinate_status": "forever_guide_waypoint",
+      "faction": "alliance",
+      "offers": [
+        "264201",
+        "264202",
+        "264203",
+        "280323",
+        "271625"
+      ],
+      "offer_details": {
+        "264201": {
+          "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-09",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "bind": "pickup"
+        },
+        "264202": {
+          "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-09",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "bind": "pickup"
+        },
+        "264203": {
+          "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-09",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "bind": "pickup"
+        },
+        "271625": {
+          "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-09",
+          "price": {
+            "amount": 1000,
+            "currency": "merchants_favor"
+          },
+          "bind": "pickup"
+        },
+        "280323": {
+          "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-09",
+          "price": {
+            "amount": 180,
+            "currency": "merchants_favor"
+          },
+          "reputation": {
+            "faction": "Azeroth Commerce Authority",
+            "rank": "Friendly"
+          },
+          "bind": "pickup"
+        }
+      },
+      "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+      "note": "Camp de l'Autorité commerciale d'Azeroth",
+      "note_en": "Azeroth Commerce Authority camp"
+    },
+    {
+      "name": "Fizzlefuse",
+      "id": null,
+      "role": "merchant",
+      "profession": "Ingénierie",
+      "zone": {
+        "id": "barrens",
+        "fr": "Les Tarides",
+        "en": "The Barrens"
+      },
+      "coordinates": null,
+      "coordinate_status": "forever_zone_only",
+      "faction": "horde",
+      "offers": [
+        "280323"
+      ],
+      "offer_details": {
+        "280323": {
+          "source": "https://www.wowhead.com/forever/item=280323",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-09",
+          "price": {
+            "amount": 180,
+            "currency": "merchants_favor"
+          },
+          "reputation": {
+            "faction": "Durotar Supply and Logistics",
+            "rank": "Friendly"
+          },
+          "bind": "pickup"
+        }
+      },
+      "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+      "note": "Camp de Ravitaillement et logistique de Durotar",
+      "note_en": "Durotar Supply and Logistics camp"
+    },
+    {
+      "name": "Alynsia",
+      "id": null,
+      "role": "merchant",
+      "profession": "Enchantement",
+      "zone": {
+        "id": "redridge",
+        "fr": "Les Carmines",
+        "en": "Redridge Mountains"
+      },
+      "coordinates": {
+        "x": 11.2,
+        "y": 71.6
+      },
+      "coordinate_status": "forever_guide_waypoint",
+      "faction": "alliance",
+      "offers": [
+        "249476",
+        "249477",
+        "271624"
+      ],
+      "offer_details": {
+        "249476": {
+          "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-09",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "bind": "pickup"
+        },
+        "249477": {
+          "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-09",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "bind": "pickup"
+        },
+        "271624": {
+          "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-09",
+          "price": {
+            "amount": 1000,
+            "currency": "merchants_favor"
+          },
+          "bind": "pickup"
+        }
+      },
+      "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+      "note": "Camp de l'Autorité commerciale d'Azeroth",
+      "note_en": "Azeroth Commerce Authority camp"
+    },
+    {
+      "name": "Beneris",
+      "id": null,
+      "role": "merchant",
+      "profession": "Enchantement",
+      "zone": {
+        "id": "barrens",
+        "fr": "Les Tarides",
+        "en": "The Barrens"
+      },
+      "coordinates": null,
+      "coordinate_status": "forever_zone_only",
+      "faction": "horde",
+      "offers": [
+        "271624"
+      ],
+      "offer_details": {
+        "271624": {
+          "source": "https://www.wowhead.com/forever/item=271624",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-09",
+          "price": {
+            "amount": 1000,
+            "currency": "merchants_favor"
+          },
+          "bind": "pickup"
+        }
+      },
+      "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+      "note": "Camp de Ravitaillement et logistique de Durotar",
+      "note_en": "Durotar Supply and Logistics camp"
+    },
+    {
+      "name": "Stondry Darkhammer",
+      "id": null,
+      "role": "merchant",
+      "profession": "Forge",
+      "zone": {
+        "id": "redridge",
+        "fr": "Les Carmines",
+        "en": "Redridge Mountains"
+      },
+      "coordinates": {
+        "x": 10.4,
+        "y": 74.7
+      },
+      "coordinate_status": "forever_guide_waypoint",
+      "faction": "alliance",
+      "offers": [
+        "251368",
+        "271622"
+      ],
+      "offer_details": {
+        "251368": {
+          "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-09",
+          "price": {
+            "amount": 30,
+            "currency": "merchants_favor"
+          },
+          "bind": "pickup"
+        },
+        "271622": {
+          "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-09",
+          "price": {
+            "amount": 1000,
+            "currency": "merchants_favor"
+          },
+          "bind": "pickup"
+        }
+      },
+      "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+      "note": "Camp de l'Autorité commerciale d'Azeroth",
+      "note_en": "Azeroth Commerce Authority camp"
+    },
+    {
+      "name": "Gor'mak",
+      "id": null,
+      "role": "merchant",
+      "profession": "Forge",
+      "zone": {
+        "id": "barrens",
+        "fr": "Les Tarides",
+        "en": "The Barrens"
+      },
+      "coordinates": null,
+      "coordinate_status": "forever_zone_only",
+      "faction": "horde",
+      "offers": [
+        "271622"
+      ],
+      "offer_details": {
+        "271622": {
+          "source": "https://www.wowhead.com/forever/item=271622",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-09",
+          "price": {
+            "amount": 1000,
+            "currency": "merchants_favor"
+          },
+          "bind": "pickup"
+        }
+      },
+      "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+      "note": "Camp de Ravitaillement et logistique de Durotar",
+      "note_en": "Durotar Supply and Logistics camp"
+    },
+    {
+      "name": "Mivin Shadowweave",
+      "id": null,
+      "role": "merchant",
+      "profession": "Couture",
+      "zone": {
+        "id": "redridge",
+        "fr": "Les Carmines",
+        "en": "Redridge Mountains"
+      },
+      "coordinates": {
+        "x": 10,
+        "y": 73
+      },
+      "coordinate_status": "forever_guide_waypoint",
+      "faction": "alliance",
+      "offers": [
+        "271627"
+      ],
+      "offer_details": {
+        "271627": {
+          "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-09",
+          "price": {
+            "amount": 1000,
+            "currency": "merchants_favor"
+          },
+          "bind": "pickup"
+        }
+      },
+      "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+      "note": "Camp de l'Autorité commerciale d'Azeroth",
+      "note_en": "Azeroth Commerce Authority camp"
+    },
+    {
+      "name": "Daniel Stitchsong",
+      "id": null,
+      "role": "merchant",
+      "profession": "Travail du cuir",
+      "zone": {
+        "id": "redridge",
+        "fr": "Les Carmines",
+        "en": "Redridge Mountains"
+      },
+      "coordinates": {
+        "x": 10,
+        "y": 72.9
+      },
+      "coordinate_status": "forever_guide_waypoint",
+      "faction": "alliance",
+      "offers": [
+        "271626"
+      ],
+      "offer_details": {
+        "271626": {
+          "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-09",
+          "price": {
+            "amount": 1000,
+            "currency": "merchants_favor"
+          },
+          "bind": "pickup"
+        }
+      },
+      "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+      "note": "Camp de l'Autorité commerciale d'Azeroth",
+      "note_en": "Azeroth Commerce Authority camp"
+    },
+    {
+      "name": "Pawani",
+      "id": null,
+      "role": "merchant",
+      "profession": "Travail du cuir",
+      "zone": {
+        "id": "barrens",
+        "fr": "Les Tarides",
+        "en": "The Barrens"
+      },
+      "coordinates": null,
+      "coordinate_status": "forever_zone_only",
+      "faction": "horde",
+      "offers": [
+        "271626"
+      ],
+      "offer_details": {
+        "271626": {
+          "source": "https://www.wowhead.com/forever/item=271626",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-09",
+          "price": {
+            "amount": 1000,
+            "currency": "merchants_favor"
+          },
+          "bind": "pickup"
+        }
+      },
+      "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+      "note": "Camp de Ravitaillement et logistique de Durotar",
+      "note_en": "Durotar Supply and Logistics camp"
+    },
+    {
+      "name": "Martha Wellsworth",
+      "id": 259860,
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "riverglades",
+        "fr": "Clairières de Rivière",
+        "en": "Riverglades"
+      },
+      "coordinates": null,
+      "coordinate_status": "forever_zone_only",
+      "faction": "neutral",
+      "offers": [
+        "274977"
+      ],
+      "offer_details": {
+        "274977": {
+          "source": "https://www.wowhead.com/forever/item=274977",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-09",
+          "bind": "pickup"
+        }
+      },
+      "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+      "note": "Riverglades",
+      "note_en": "Riverglades"
     }
   ],
   "evidence": [
@@ -13863,6 +15150,11 @@
       "uiMapID": 1411,
       "kind": "classic_zone_reference",
       "source": "https://www.wowinterface.com/forums/showpost.php?p=338185&postcount=3"
+    },
+    "riverglades": {
+      "uiMapID": null,
+      "kind": "forever_guide_zone_only",
+      "source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling"
     }
   },
   "zone_map_base": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/",
@@ -13891,5 +15183,84 @@
       ],
       "verification": "Item IDs confirmed via linked Wowhead Classic item pages; vendor/zone via guide; no Forever live stock verification."
     }
-  ]
+  ],
+  "verification_audit": {
+    "updated_at": "2026-10-09",
+    "method": "Manually cross-checked exact named item and named vendor in Wowhead Forever guide or Wowhead Forever Sold by tables; Classic-only associations never automatically promoted.",
+    "status_legend": {
+      "forever_documented": "Named vendor-item relation published by a Forever beta source; availability at the live NPC and final game may vary",
+      "classic_reference": "Based on Classic guide; not checked on Forever server"
+    },
+    "legacy_default": "classic_reference",
+    "forever_sale_count": 46,
+    "verified_existing_sales": [
+      "Shandrina:16072",
+      "Wulan:16072",
+      "Catherine Leland:6325",
+      "Catherine Leland:6330",
+      "Sewa Mistrunner:6325",
+      "Tharynn Bouden:6328",
+      "Naal Mistrunner:6328",
+      "Naal Mistrunner:6330",
+      "Tansy Puddlefizz:17062",
+      "Shankys:17062",
+      "Kendor Kabonka:728"
+    ],
+    "added_forever_items": [
+      249885,
+      249886,
+      249887,
+      249888,
+      249889,
+      249890,
+      250381,
+      250376,
+      250998,
+      264201,
+      264202,
+      264203,
+      280323,
+      249476,
+      249477,
+      251368,
+      271621,
+      271622,
+      271624,
+      271625,
+      271626,
+      271627,
+      274977
+    ],
+    "added_forever_vendors": [
+      "Kalsey Sanden",
+      "Aza'bek",
+      "Nina Surefire",
+      "Apothecary Durelle",
+      "Fritz Fizzle",
+      "Fizzlefuse",
+      "Alynsia",
+      "Beneris",
+      "Stondry Darkhammer",
+      "Gor'mak",
+      "Mivin Shadowweave",
+      "Daniel Stitchsong",
+      "Pawani",
+      "Martha Wellsworth"
+    ],
+    "reference_urls": [
+      "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+      "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
+      "https://www.wowhead.com/forever/items/recipes/tailoring"
+    ],
+    "waypoint_verified_vendors": [
+      "Catherine Leland",
+      "Naal Mistrunner",
+      "Shankys",
+      "Wulan",
+      "Shandrina",
+      "Tharynn Bouden",
+      "Sewa Mistrunner",
+      "Tansy Puddlefizz"
+    ]
+  }
 }
