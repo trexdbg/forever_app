@@ -38,7 +38,7 @@
 .forever-item-tooltip__foot{margin-top:7px;border-top:1px solid #29344c;padding-top:7px}
 .forever-item-tooltip__source{font-size:10px;color:#a4b7d5;text-decoration:none}
 .forever-item-tooltip__source:hover{text-decoration:underline;color:#f5d28f}
-.forever-item-tooltip.is-pinned{pointer-events:auto}
+.forever-item-tooltip.is-pinned{pointer-events:auto;left:50%!important;top:50%!important;transform:translate(-50%,-50%);max-height:80vh;box-shadow:0 0 0 1px #111d38 inset,0 0 0 200vmax #02060388,0 14px 45px #000c}
 .forever-item-tooltip.is-pinned .forever-item-tooltip__close{display:inline-flex;align-items:center;justify-content:center}
 .bis-v2-info-button{
   background:#182820;border:1px solid #5d6d59;color:#dbd0b0;border-radius:3px;
@@ -50,7 +50,7 @@
 @media(hover:none), (pointer:coarse){
   .forever-item-tooltip.is-pinned{
     left:12px!important;right:12px!important;bottom:max(12px,env(safe-area-inset-bottom))!important;top:auto!important;
-    width:auto;max-height:min(76vh,690px);
+    width:auto;max-height:min(76vh,690px);transform:none;
     box-shadow:0 0 0 1px #111d38 inset,0 0 0 200vmax #02060388,0 14px 45px #000c;
   }
 }
