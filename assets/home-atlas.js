@@ -150,7 +150,7 @@
     if(reduced?.matches)return;
     timer=window.setInterval(()=>{
       if(!document.hidden&&visible)show(index+1);
-    },6500);
+    },5500);
   }
   root.querySelector("[data-atlas-prev]").addEventListener("click",()=>show(index-1,true));
   root.querySelector("[data-atlas-next]").addEventListener("click",()=>show(index+1,true));
