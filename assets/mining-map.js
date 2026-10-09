@@ -81,7 +81,7 @@ function preloadMineralIcons(){
   }
 }
 const el=(tag,text,cls)=>{const x=document.createElement(tag);x.textContent=text;if(cls)x.className=cls;return x};
-const fmt=n=>Number(n).toFixed(2).replace(".",",");
+const fmt=n=>Number(n).toFixed(2).replace(".",document.documentElement.lang==="en"?".":",");
 const fmtTom=n=>Number(n).toFixed(2);
 const clamp=(a,lo,hi)=>Math.max(lo,Math.min(hi,a));
 const mineral=id=>db.minerals[id]||{label:id,skill:0,color:"#ffcf7a"};
