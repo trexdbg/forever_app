@@ -125,3 +125,18 @@
 
 .bis-v2-profile-note{margin:5px 0 0;max-width:650px;color:#9bab9a;font-size:11px;line-height:1.45}
 .bis-v2-source-link{color:#d8b47b;text-decoration:underline;text-underline-offset:2px}
+
+/* Item catalogue: compact armor filter, preserve usable quality controls. */
+.filter-line.three:has(#item-armor){grid-template-columns:minmax(170px,1.2fr) minmax(130px,.7fr) minmax(125px,.7fr) minmax(130px,.7fr) minmax(280px,1.65fr);gap:11px}
+.filter-line.three:has(#item-armor) .item-v2-quality-controls{grid-column:auto}
+@media(max-width:1120px){
+ .filter-line.three:has(#item-armor){grid-template-columns:minmax(170px,1.2fr) repeat(3,minmax(120px,.8fr))}
+ .filter-line.three:has(#item-armor) .item-v2-quality-controls{grid-column:1/-1}
+}
+@media(max-width:820px){
+ .filter-line.three:has(#item-armor){grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:650px){
+ .filter-line.three:has(#item-armor){grid-template-columns:1fr}
+ .filter-line.three:has(#item-armor) .item-v2-quality-controls{grid-column:auto}
+}
