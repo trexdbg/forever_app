@@ -12,7 +12,12 @@ const RACES={
  horde:[{id:"orc",profile:"trorc",label:"Orc"},{id:"troll",profile:"trorc",label:"Troll"},{id:"undead",profile:"undead",label:"Mort-vivant"},{id:"tauren",profile:"tauren",label:"Tauren"}]
 };
 let pending=0,pointer=null,scrubTimer=null;
-const labels={starts:QT("À prendre","Accept"),objectives:QT("À faire","Objective"),ends:QT("À rendre","Turn in"),completed:QT("À terminer","Complete"),special:QT("Conseil","Tip")};
+const labels={
+ starts:QT("Prendre","Accept"),objectives:QT("Objectif","Objective"),
+ ends:QT("Rendre","Turn in"),completed:QT("Prendre et finir","Accept & complete"),
+ travel:QT("Trajet","Travel"),prepare:QT("Préparation","Preparation"),
+ combat:QT("Combat","Combat"),interact:QT("Action","Action"),tip:QT("Conseil","Tip")
+};
 const classes={quest:"#e4bd7c",hub:"#efc772",objective:"#7bc9cb",flightpath:"#9daff0",travel:"#b2adcf"};
 const element=(tag,text,cls)=>{const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e};
 const clamp=(v,a,b)=>Math.min(b,Math.max(a,v));
@@ -80,33 +85,42 @@ function renderWaypoints(){
  const list=$("quest-waypoints");list.replaceChildren();
  const pts=s.steps[s.index].waypoints;
  $("quest-waypoint-count").textContent=pts.length+QT(" point"+(pts.length>1?"s":"")+" de passage · "," waypoint"+(pts.length>1?"s":"")+" · ")+stepName(s.steps[s.index]);
- const typeIcons={starts:"＋",objectives:"◆",ends:"↩",completed:"✓",special:"✦"};
+ const typeIcons={starts:"＋",objectives:"◆",ends:"↩",completed:"✓",travel:"➜",prepare:"◈",combat:"⚔",interact:"●",tip:"✦"};
  pts.forEach((w,i)=>{
   const b=element("button",undefined,"quest-waypoint"+(s.selected===i?" selected":""));
   b.type="button";b.setAttribute("aria-pressed",String(s.selected===i));
   const title=element("div",undefined,"quest-waypoint-heading");
   title.append(element("b",String(i+1)),element("strong",waypointTitle(w)),element("small",format(w.coords.x)+" / "+format(w.coords.y)));
   b.append(title);
-  const actions=element("div",undefined,"quest-actions");let found=false;
-  for(const type of ["starts","objectives","ends","completed","special"]){
-   const entries=w[type]||[];
-   if(!entries.length)continue;
-   found=true;
+  const actions=element("div",undefined,"quest-actions");
+  const groups=[];
+  // Never conflate a quest's state with a guide author's instructions.
+  for(const type of ["starts","objectives","ends","completed"]){
+   if((w[type]||[]).length)groups.push({type,entries:w[type],isNote:false});
+  }
+  // Preserve the author's sequence, even when it alternates between travel and advice.
+  for(const entry of w.special||[]){
+   const type=Q.noteCategory?Q.noteCategory(entry):"tip";
+   const last=groups[groups.length-1];
+   if(last&&last.isNote&&last.type===type)last.entries.push(entry);
+   else groups.push({type,entries:[entry],isNote:true});
+  }
+  for(const {type,entries,isNote} of groups){
    const group=element("div",undefined,"quest-action-group "+type);
    const heading=element("div",undefined,"quest-action-group-heading");
    const badge=element("span",undefined,"quest-action-tag "+type);
-   badge.append(element("span",typeIcons[type],"quest-action-symbol"),element("span",labels[type]));
+   badge.append(element("span",typeIcons[type]||"✦","quest-action-symbol"),element("span",labels[type]||labels.tip));
    heading.append(badge,element("span",String(entries.length),"quest-action-count"));
    const items=element("div",undefined,"quest-action-items");
    for(const entry of entries){
     const action=element("span",undefined,"quest-action");
-    const name=type==="special"?Q.note(entry):detailsOf(entry).name;
+    const name=isNote?Q.note(entry):detailsOf(entry).name;
     action.append(element("span",name,"quest-action-name"));
     items.append(action);
    }
    group.append(heading,items);actions.append(group);
   }
-  if(!found)actions.append(element("span",QT("Rejoindre ce point de passage.","Go to this waypoint."),"quest-no-action"));
+  if(!groups.length)actions.append(element("span",QT("Rejoindre ce point de passage.","Go to this waypoint."),"quest-no-action"));
   b.append(actions);
   b.addEventListener("click",()=>selectWaypoint(i,true));
   list.append(b);
