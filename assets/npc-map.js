@@ -9,6 +9,10 @@ const fmt=n=>Number(n).toFixed(1).replace(".",en?".":",");
 const clamp=(n,a,b)=>Math.min(b,Math.max(a,n));
 const LOCAL_MAPS=new Set(["azshara","blasted-lands","burning-steppes","epl","searing-gorge","silithus","swamp-of-sorrows","ungoro","winterspring","wpl"]);
 const state={data:null,zone:null,selected:null,onSelect:null,visible:[],mode:"merchant",zoom:1,center:{x:50,y:50},image:null,loaded:false,source:"none",token:0,hover:null,drag:null,filters:{type:"all",profession:"all",weaponSkill:"all"}};
+const coordLabel=$("npc-map-selected-coords"),copyPin=$("npc-map-copy-way");
+function waypoint(){const n=state.selected,id=state.data?.zone_maps?.[n?.zone?.id]?.uiMapID;return n?.coordinates&&id?"/mappin "+id+" "+n.coordinates.x+" "+n.coordinates.y:null}
+if(copyPin)copyPin.addEventListener("click",async()=>{const pin=waypoint();if(!pin)return;try{await navigator.clipboard.writeText(pin);copyPin.textContent=T("Copié ✓","Copied ✓")}catch(e){copyPin.textContent=pin}});
+function updateSelectedCoords(){const n=state.selected,p=n?.coordinates,ok=Number.isFinite(p?.x)&&Number.isFinite(p?.y);if(coordLabel)coordLabel.textContent=ok?fmt(p.x)+" / "+fmt(p.y):T("Position indisponible","No waypoint");if(copyPin){copyPin.disabled=!waypoint();copyPin.textContent=T("Copier /mappin","Copy /mappin")}}
 function points(){return (state.data?.npcs||[]).filter(n=>n.role===state.mode&&n.zone.id===state.zone&&Number.isFinite(n.coordinates?.x)&&Number.isFinite(n.coordinates?.y)&&(state.mode!=="trainer"||(state.filters.type==="all"||((n.trainer_kind||"profession")===state.filters.type))&&(state.filters.profession==="all"||n.profession===state.filters.profession)&&(state.filters.weaponSkill==="all"||(n.weapon_skills||[]).includes(state.filters.weaponSkill))))}
 function keepInBounds(){const half=50/state.zoom;state.center.x=clamp(state.center.x,half,100-half);state.center.y=clamp(state.center.y,half,100-half)}
 function toScreen(p){return {x:W/2+(p.x-state.center.x)*W*state.zoom/100,y:H/2+(p.y-state.center.y)*H*state.zoom/100}}
@@ -120,6 +124,6 @@ window.ForeverNpcMap={show(n,data,onSelect,filters={}){
  $("npc-map-title").textContent=n.zone[en?"en":"fr"];
  if(isNewZone){state.zoom=1;state.center={x:50,y:50};loadImage()}
  else {if(n.coordinates){const p=toScreen(n.coordinates);if(p.x<45||p.x>W-45||p.y<45||p.y>H-45){state.center={x:n.coordinates.x,y:n.coordinates.y};keepInBounds()}}draw()}
- nearby();sourceLabel();
+ nearby();sourceLabel();updateSelectedCoords();
 }};
 })();
