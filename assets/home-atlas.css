@@ -207,3 +207,45 @@ body[data-page="home"] .atlas-directory{margin-top:18px}
 @media(prefers-reduced-motion:reduce){
  .atlas-live-image,.atlas-live-marker,.atlas-live-open{transition:none!important}
 }
+
+
+/* The same atlas now previews Classic NPC coordinates on Forever beta zone art. */
+.atlas-live-image[hidden],
+.atlas-live-markers[hidden],
+.atlas-live-map-error[hidden]{display:none}
+.atlas-live-map-error{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  display:grid;
+  place-items:center;
+  padding:25px;
+  background:radial-gradient(ellipse at 70% 35%,#293f34,#111b16 72%);
+  color:#d8c29a;
+  font:15px Georgia,"Times New Roman",serif;
+  text-align:center;
+}
+.atlas-live-markers[data-atlas-kind="merchant"] .atlas-live-marker{
+  border-color:#c5e3a4;
+  background:#86ae74aa;
+  box-shadow:0 0 0 4px #101c142d,0 0 12px #acd99355;
+}
+.atlas-live-markers[data-atlas-kind="merchant"] .atlas-live-marker::before{background:#d5efb3}
+.atlas-live-markers[data-atlas-kind="trainer"] .atlas-live-marker{
+  border-color:#a0dfed;
+  background:#6aa6bba0;
+  box-shadow:0 0 0 4px #101c142d,0 0 12px #91dbec55;
+}
+.atlas-live-markers[data-atlas-kind="trainer"] .atlas-live-marker::before{background:#c8edf3}
+.atlas-live-tab[data-atlas-kind="merchant"]::before,
+.atlas-live-tab[data-atlas-kind="trainer"]::before{
+  content:"";
+  display:inline-block;
+  width:5px;
+  height:5px;
+  border-radius:50%;
+  margin:0 7px 1px 0;
+  background:#a7cb8f;
+}
+.atlas-live-tab[data-atlas-kind="trainer"]::before{background:#82bbcd}
+.atlas-live-tabs{overscroll-behavior-x:contain}
