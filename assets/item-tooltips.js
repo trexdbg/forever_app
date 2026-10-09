@@ -55,7 +55,7 @@ if(/^(\+\d+|Augmente |Increases )/i.test(text))return "forever-item-tooltip__sta
 if(/^(Ensemble|Set:|Armes de|Armure de|Tenue de)/i.test(text))return "forever-item-tooltip__set";
 return "forever-item-tooltip__line"}
 function validIcon(icon){return typeof icon==="string"&&/^[a-z0-9_-]{2,70}$/.test(icon)}
-function render(item,data,status){const forever=item.source_status==="forever_beta_wowhead";if(!data&&Array.isArray(item.tooltip)&&item.tooltip.length)data={name:item.name,item_level:item.itemLevel,tooltip:item.tooltip};
+function render(item,data,status){const forever=typeof item.source_status==="string"&&item.source_status.startsWith("forever_beta_");if(!data&&Array.isArray(item.tooltip)&&item.tooltip.length)data={name:item.name,item_level:item.itemLevel,tooltip:item.tooltip};
 inner.replaceChildren();panel.dataset.quality=QUALITY.has(item.quality)?item.quality:"common";
 const controls=elt("div","forever-item-tooltip__top");
 write(controls,"forever-item-tooltip__eyebrow",en?"CLASSIC / ITEM DETAILS":"CLASSIC / FICHE D’OBJET");
@@ -117,7 +117,7 @@ function hide(){
 clearTimeout(loadTimer);token++;visible=false;pinned=false;active=null;panel.hidden=true;panel.classList.remove("is-pinned");panel.style.left="";panel.style.top="";
 }
 function queueDetails(item,requestToken){
-if(!isId(item.id)||item.source_status==="forever_beta_wowhead"||(Array.isArray(item.tooltip)&&item.tooltip.length))return;
+if(!isId(item.id)||typeof item.source_status==="string"&&item.source_status.startsWith("forever_beta_")||(Array.isArray(item.tooltip)&&item.tooltip.length))return;
 const id=Number(item.id);
 if(cache.has(id)){if(active&&requestToken===token){render(item,cache.get(id),"complete");if(!pinned)place(active.x,active.y)}return}
 if(Date.now()<suspendUntil||Date.now()<(unavailableUntil.get(id)||0)){if(active&&requestToken===token)render(item,null,"unavailable");return;}
@@ -141,7 +141,7 @@ const rect=anchor?anchor.getBoundingClientRect():null;
 const x=evt&&Number.isFinite(evt.clientX)?evt.clientX:rect?rect.right:window.innerWidth/2;
 const y=evt&&Number.isFinite(evt.clientY)?evt.clientY:rect?rect.top:window.innerHeight/2;
 active={item,x,y};panel.classList.toggle("is-pinned",pinned);panel.hidden=false;
-render(item,cache.get(Number(item.id))||null,isId(item.id)&&!cache.has(Number(item.id))&&!(Array.isArray(item.tooltip)&&item.tooltip.length)&&item.source_status!=="forever_beta_wowhead"?"loading":"complete");
+render(item,cache.get(Number(item.id))||null,isId(item.id)&&!cache.has(Number(item.id))&&!(Array.isArray(item.tooltip)&&item.tooltip.length)&&!(typeof item.source_status==="string"&&item.source_status.startsWith("forever_beta_"))?"loading":"complete");
 if(!pinned)place(x,y);
 else {panel.style.left="";panel.style.top="";}
 queueDetails(item,currentToken);
