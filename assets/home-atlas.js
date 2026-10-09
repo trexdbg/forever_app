@@ -17,6 +17,7 @@
     {id:"stormwind",kind:"trainer",fr:"Hurlevent",en:"Stormwind"},
     {id:"azshara",kind:"mining",fr:"Azshara",en:"Azshara"}
   ];
+  const copy=root.querySelector(".atlas-live-copy");
   const title=root.querySelector("[data-atlas-name]");
   const count=root.querySelector("[data-atlas-count]");
   const eyebrow=root.querySelector(".atlas-live-eyebrow");
@@ -34,7 +35,7 @@
   mapUnavailable.textContent=T("Carte momentanément indisponible","Map temporarily unavailable");
   mapUnavailable.hidden=true;
   map.append(mapUnavailable);
-  let index=0,miningData=null,npcData=null,timer=null,visible=true;
+  let index=0,previousIndex=-1,miningData=null,npcData=null,timer=null,visible=true;
   function setLinkLabel(link,label){
     // Retain the existing arrow span and its styling.
     const arrow=link.querySelector("span");
@@ -83,18 +84,27 @@
     image.style.height=legacy?(100*768/668)+"%":"100%";
   }
   image.addEventListener("load",()=>{
+    image.classList.remove("is-loading");
     image.hidden=false;
     mapUnavailable.hidden=true;
     markers.hidden=false;
     adjustImage();
   });
   image.addEventListener("error",()=>{
+    image.classList.remove("is-loading");
     image.hidden=true;
     markers.hidden=true;
     mapUnavailable.hidden=false;
   });
   function show(next,manual=false){
     index=(next+slides.length)%slides.length;
+    if(index!==previousIndex&&!reduced?.matches){
+      copy.classList.remove("atlas-reveal");
+      // Restart a small caption entrance only when the visible slide changes.
+      void copy.offsetWidth;
+      copy.classList.add("atlas-reveal");
+    }
+    previousIndex=index;
     const s=slides[index];
     const name=s[en?"en":"fr"];
     const mining=s.kind==="mining",merchant=s.kind==="merchant";
@@ -124,10 +134,11 @@
     if(src){
       image.hidden=false;
       mapUnavailable.hidden=true;
-      if(image.getAttribute("src")!==src)image.src=src;
+      if(image.getAttribute("src")!==src){image.classList.add("is-loading");image.src=src;}
       else if(image.complete&&image.naturalWidth){markers.hidden=false;adjustImage();}
       else if(image.complete){image.hidden=true;mapUnavailable.hidden=false;}
     }else{
+      image.classList.remove("is-loading");
       image.hidden=true;
       mapUnavailable.hidden=false;
     }
