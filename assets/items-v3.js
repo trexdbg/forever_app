@@ -12,7 +12,7 @@ const slotLabels=en?{head:"Head",neck:"Neck",shoulders:"Shoulders",back:"Back",c
 let classic=[],local=[],forever=[],selection=new Set(),status="all",key="",cursor=null,more=false,loading=false,error="",total=null,debounce=0;
 const rowText=(row,value)=>{const cell=document.createElement("td");cell.textContent=String(value??"—");row.append(cell);return cell};
 function normalizeLocal(i){return {...i,slot:service.LABELS[i.slot]||i.slot,source_status:i.source_status||"classic_reference"}}
-function sourceType(item){return item.source_status==="forever_beta_wowhead"?"forever":"classic"}
+function sourceType(item){return typeof item.source_status==="string"&&item.source_status.startsWith("forever_beta_")?"forever":"classic"}
 const validImage=i=>typeof i==="string"&&(/^[a-z0-9_-]{2,70}$/.test(i)||i.startsWith("https://wowdb.assemblee-defias.fr/database-icons/"));
 function imageUrl(i){if(i&&typeof i.icon==="string"&&i.icon.startsWith("https://wowdb.assemblee-defias.fr/database-icons/"))return i.icon;
 return i&&validImage(i.icon)?"/forever_app/assets/icons/"+i.icon+".jpg":null}
