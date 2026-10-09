@@ -1,5 +1,10 @@
 (()=>{"use strict";
 const ROOT="/forever_app/",canvas=document.getElementById("mine-canvas");
+const en=document.documentElement.lang==="en",T=(fr,english)=>en?english:fr;
+const mineralLabelsEN={rich:"Rich Thorium",small:"Small Thorium",truesilver:"Truesilver",dark:"Dark Iron",starsilver:"Star Silver",hakkari:"Hakkari Thorium"};
+const zoneNamesEN={winterspring:"Winterspring",azshara:"Azshara",epl:"Eastern Plaguelands",ungoro:"Un'Goro Crater","burning-steppes":"Burning Steppes","searing-gorge":"Searing Gorge",silithus:"Silithus",wpl:"Western Plaguelands","blasted-lands":"Blasted Lands","swamp-of-sorrows":"Swamp of Sorrows"};
+const zoneLabel=z=>en?(zoneNamesEN[z.id]||z.label):z.label;
+const oreLabel=id=>en?(mineralLabelsEN[id]||id):(db.minerals[id]?.label||id);
 if(!canvas)return;
 const ctx=canvas.getContext("2d"),W=canvas.width,H=canvas.height;
 const copy=document.getElementById("mine-copy"),zoomText=document.getElementById("mine-zoom-reset");
@@ -27,7 +32,7 @@ const el=(tag,text,cls)=>{const x=document.createElement(tag);x.textContent=text
 const fmt=n=>Number(n).toFixed(2).replace(".",document.documentElement.lang==="en"?".":",");
 const fmtTom=n=>Number(n).toFixed(2);
 const clamp=(a,lo,hi)=>Math.max(lo,Math.min(hi,a));
-const mineral=id=>db.minerals[id]||{label:id,skill:0,color:"#ffcf7a"};
+const mineral=id=>({...db.minerals[id],label:oreLabel(id)});
 const project=(x,y)=>({x:(50+(x-center.x)*zoom)*W/100,y:(50+(y-center.y)*zoom)*H/100});
 const unproject=(px,py)=>({x:clamp(center.x+(px/W*100-50)/zoom,0,100),y:clamp(center.y+(py/H*100-50)/zoom,0,100)});
 function baseMap(){const grad=ctx.createLinearGradient(0,0,W,H);grad.addColorStop(0,"#1a3c42");grad.addColorStop(.55,"#1a3040");grad.addColorStop(1,"#292d3f");ctx.fillStyle=grad;ctx.fillRect(0,0,W,H);ctx.strokeStyle="#7b9ca018";for(let i=-1;i<19;i++){ctx.beginPath();ctx.ellipse(W*(i/11),H*(.12+((i*7)%11)/12),W*.26,H*.17,.18,0,Math.PI*2);ctx.stroke()} }
@@ -73,10 +78,10 @@ for(const p of shown){
 ctx.restore()}
 function filterPoints(){
   shown=zone.points.filter(p=>enabledMinerals.has(p[2]));
-  document.getElementById("mine-current-zone").textContent=zone.label;
-  document.getElementById("mine-current-count").textContent=shown.length+" filon"+(shown.length>1?"s":"")+" affiché"+(shown.length>1?"s":"");
+  document.getElementById("mine-current-zone").textContent=zoneLabel(zone);
+  document.getElementById("mine-current-count").textContent=en?shown.length+" ore nodes shown":shown.length+" filon"+(shown.length>1?"s":"")+" affiché"+(shown.length>1?"s":"");
   document.getElementById("mine-map-id").textContent="UiMapID "+zone.uiMapID;
-  document.getElementById("mine-source-status").textContent=document.documentElement.lang==="en"?shown.length+" ore nodes shown":shown.length+" filon"+(shown.length>1?"s":"")+" affiché"+(shown.length>1?"s":"");
+  document.getElementById("mine-source-status").textContent=en?shown.length+" ore nodes shown":shown.length+" filon"+(shown.length>1?"s":"")+" affiché"+(shown.length>1?"s":"");
   if(selected&&!shown.includes(selected)){selected=null;showSelection()}
   updateMineralControls();
   renderZones();
@@ -90,7 +95,7 @@ function updateMineralControls(){
     input.checked=enabled;
     label.classList.toggle("active",enabled);
     const count=zone.points.filter(p=>p[2]===input.value).length;
-    label.querySelector(".mine-ore-qty").textContent=count+" sur cette carte";
+    label.querySelector(".mine-ore-qty").textContent=count+T(" sur cette carte"," on this map");
   }
   document.getElementById("mine-select-all").disabled=enabledMinerals.size===Object.keys(db.minerals).length;
   document.getElementById("mine-select-none").disabled=enabledMinerals.size===0;
@@ -104,7 +109,7 @@ function renderMineralControls(){
     const icon=document.createElement("img");
     icon.className="mine-ore-icon";icon.src=iconPath(id);icon.alt="";
     icon.width=26;icon.height=26;icon.loading="lazy";icon.decoding="async";
-    label.append(input,icon,el("span",info.label,"mine-ore-name"),el("small","","mine-ore-qty"));
+    label.append(input,icon,el("span",oreLabel(id),"mine-ore-name"),el("small","","mine-ore-qty"));
     input.addEventListener("change",()=>{if(input.checked)enabledMinerals.add(id);else enabledMinerals.delete(id);filterPoints()});
     controls.append(label);
   }
@@ -120,18 +125,18 @@ function renderZones(){
     if(active)b.setAttribute("aria-current","true");
     const mapIcon=el("span","▧","mine-zone-icon");mapIcon.setAttribute("aria-hidden","true");
     const name=el("span","","mine-zone-text");
-    name.append(el("strong",candidate.label),el("small",n+" filon"+(n>1?"s":"")+" sélectionné"+(n>1?"s":"")));
+    name.append(el("strong",zoneLabel(candidate)),el("small",en?n+" ore nodes selected":n+" filon"+(n>1?"s":"")+" sélectionné"+(n>1?"s":"")));
     const arrow=el("span","›","mine-zone-arrow");arrow.setAttribute("aria-hidden","true");
     b.append(mapIcon,name,arrow);
     b.addEventListener("click",()=>{if(candidate!==zone)setZone(candidate)});
     panel.append(b);
   }
 }
-function showSelection(){const place=document.getElementById("mine-selection");place.replaceChildren();if(!selected){place.append(el("strong","Sélectionnez un point sur la carte"),el("p","Une commande /way apparaîtra ici."));copy.disabled=true;command="";draw();return}const p=selected,what=mineral(p[2]);command="/way #"+zone.uiMapID+" "+fmtTom(p[0])+" "+fmtTom(p[1])+" "+what.label;const heading=el("div","","mine-selected-heading");
+function showSelection(){const place=document.getElementById("mine-selection");place.replaceChildren();if(!selected){place.append(el("strong",T("Sélectionnez un point sur la carte","Select a point on the map")),el("p",T("Une commande /way apparaîtra ici.","A /way command will appear here.")));copy.disabled=true;command="";draw();return}const p=selected,what=mineral(p[2]);command="/way #"+zone.uiMapID+" "+fmtTom(p[0])+" "+fmtTom(p[1])+" "+what.label;const heading=el("div","","mine-selected-heading");
 const icon=document.createElement("img");icon.src=iconPath(p[2]);icon.alt="";icon.width=32;icon.height=32;icon.className="mine-selected-icon";
 heading.append(icon,el("strong",what.label));
-place.append(heading,el("p","X : "+fmt(p[0])+" % · Y : "+fmt(p[1])+" %"));const c=el("code",command,"mine-way");place.append(c,el("small","Position référencée, non garantie en jeu."));copy.disabled=false;draw()}
-function setZone(z){zone=z;zoom=1;center={x:50,y:50};selected=null;zoomText.textContent="100 %";sourceImg=null;document.getElementById("mine-map-backdrop").textContent="Grille de coordonnées WoW";filterPoints();showSelection();const image=new Image();image.onload=()=>{if(zone!==z)return;sourceImg=image;document.getElementById("mine-map-backdrop").textContent="Carte Forever · coordonnées de zone";draw()};image.onerror=()=>{if(zone!==z)return;document.getElementById("mine-map-backdrop").textContent="Fond schématique · repères X/Y";draw()};image.src=ROOT+"assets/maps/"+zone.id+".jpg?v=forever-69893"}
+place.append(heading,el("p","X : "+fmt(p[0])+" % · Y : "+fmt(p[1])+" %"));const c=el("code",command,"mine-way");place.append(c,el("small",T("Position référencée, non garantie en jeu.","Reference location; in-game spawn not guaranteed.")));copy.disabled=false;draw()}
+function setZone(z){zone=z;zoom=1;center={x:50,y:50};selected=null;zoomText.textContent="100 %";sourceImg=null;document.getElementById("mine-map-backdrop").textContent=T("Grille de coordonnées WoW","WoW coordinate grid");filterPoints();showSelection();const image=new Image();image.onload=()=>{if(zone!==z)return;sourceImg=image;document.getElementById("mine-map-backdrop").textContent=T("Carte Forever · coordonnées de zone","Forever map · zone coordinates");draw()};image.onerror=()=>{if(zone!==z)return;document.getElementById("mine-map-backdrop").textContent=T("Fond schématique · repères X/Y","Schematic map · X/Y markers");draw()};image.src=ROOT+"assets/maps/"+zone.id+".jpg?v=forever-69893"}
 function setZoom(value,anchor){
   const next=clamp(value,1,4);
   if(anchor&&next!==zoom){
@@ -149,8 +154,8 @@ function setZoom(value,anchor){
 }
 function fromClient(event){const r=canvas.getBoundingClientRect();return {x:(event.clientX-r.left)*W/r.width,y:(event.clientY-r.top)*H/r.height}}
 const coords=document.getElementById("mine-cursor-coords");
-canvas.addEventListener("pointermove",e=>{const p=fromClient(e),pos=unproject(p.x,p.y);coords.textContent="Curseur X : "+fmt(pos.x)+" · Y : "+fmt(pos.y)});
-canvas.addEventListener("pointerleave",()=>{coords.textContent="Curseur : —"});
+canvas.addEventListener("pointermove",e=>{const p=fromClient(e),pos=unproject(p.x,p.y);coords.textContent=T("Curseur X : ","Cursor X: ")+fmt(pos.x)+" · Y : "+fmt(pos.y)});
+canvas.addEventListener("pointerleave",()=>{coords.textContent=T("Curseur : —","Cursor: —")});
 canvas.addEventListener("pointerdown",e=>{const p=fromClient(e);pointer={id:e.pointerId,x:p.x,y:p.y,prev:p,dragged:false};canvas.setPointerCapture(e.pointerId)});
 canvas.addEventListener("pointermove",e=>{if(!pointer||pointer.id!==e.pointerId)return;const p=fromClient(e),dx=p.x-pointer.prev.x,dy=p.y-pointer.prev.y;if(Math.hypot(p.x-pointer.x,p.y-pointer.y)>6)pointer.dragged=true;if(pointer.dragged){center.x=clamp(center.x-dx/W*100/zoom,50/zoom,100-50/zoom);center.y=clamp(center.y-dy/H*100/zoom,50/zoom,100-50/zoom);pointer.prev=p;draw()}});
 canvas.addEventListener("pointerup",e=>{if(!pointer||pointer.id!==e.pointerId)return;const moved=pointer.dragged;pointer=null;if(moved)return;const p=fromClient(e);
@@ -165,7 +170,7 @@ canvas.addEventListener("wheel",e=>{
 document.getElementById("mine-zoom-out").addEventListener("click",()=>setZoom(zoom-.5));
 document.getElementById("mine-zoom-in").addEventListener("click",()=>setZoom(zoom+.5));
 zoomText.addEventListener("click",()=>{center={x:50,y:50};setZoom(1)});
-copy.addEventListener("click",()=>{if(!command)return;const alert=()=>{copy.textContent="Copié !";setTimeout(()=>copy.textContent="Copier la commande /way",1400)};if(navigator.clipboard?.writeText)navigator.clipboard.writeText(command).then(alert,()=>{copy.textContent="Sélectionnez la commande ci-dessus"});else copy.textContent="Sélectionnez la commande ci-dessus"});
+copy.addEventListener("click",()=>{if(!command)return;const alert=()=>{copy.textContent=T("Copié !","Copied!");setTimeout(()=>copy.textContent=T("Copier la commande /way","Copy /way command"),1400)};if(navigator.clipboard?.writeText)navigator.clipboard.writeText(command).then(alert,()=>{copy.textContent=T("Sélectionnez la commande ci-dessus","Select and copy the command above")});else copy.textContent=T("Sélectionnez la commande ci-dessus","Select and copy the command above")});
 document.getElementById("mine-select-all").addEventListener("click",()=>{
   for(const id of Object.keys(db.minerals))enabledMinerals.add(id);
   filterPoints();
@@ -190,7 +195,7 @@ fetch(ROOT+"data/mining-points.json")
     setZone(chosen);
   })
   .catch(e=>{
-    document.getElementById("mine-current-zone").textContent="Erreur de chargement : "+e.message;
-    document.getElementById("mine-source-status").textContent="Indisponible";
+    document.getElementById("mine-current-zone").textContent=T("Erreur de chargement : ","Loading error: ")+e.message;
+    document.getElementById("mine-source-status").textContent=T("Indisponible","Unavailable");
   });
 })();
