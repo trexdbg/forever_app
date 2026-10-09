@@ -27,6 +27,12 @@ function translateLine(line){
 if(!en)return line;
 const direct={"Lié quand ramassé":"Binds when picked up","Lié quand équipé":"Binds when equipped","Unique":"Unique","Unique (1)":"Unique (1)","Équipé":"Equip","Ensemble":"Set"};
 if(direct[line])return direct[line];
+const translated={ "Main droite":"Main hand","Main gauche":"Off hand","À une main":"One-hand","Deux mains":"Two-hand","Épée":"Sword","Hache":"Axe","Masse":"Mace","Dague":"Dagger","Bâton":"Staff","Arc":"Bow","Arbalète":"Crossbow","Arme à feu":"Gun","Bouclier":"Shield","Tissu":"Cloth","Cuir":"Leather","Mailles":"Mail","Plaques":"Plate","Baguette":"Wand","Bijou":"Trinket","Anneau":"Ring","Tenue":"Set","Tête":"Head","Épaules":"Shoulders","Torse":"Chest","Dos":"Back","Mains":"Hands","Poignets":"Wrists","Taille":"Waist","Jambes":"Legs","Pieds":"Feet" };
+if(translated[line])return translated[line];
+const effectCrit=/^Équipé : Augmente vos chances d['’]infliger un coup critique de ([\d,.]+)%\.?$/i.exec(line);
+if(effectCrit)return "Equip: Increases your chance to score a critical strike by "+effectCrit[1]+"%.";
+const effectAp=/^Équipé : Augmente de (\d+) la puissance d['’]attaque\.?$/i.exec(line);
+if(effectAp)return "Equip: Increases attack power by "+effectAp[1]+".";
 return line.replace(/^Niveau d'objet (\d+)/,"Item level $1")
 .replace(/^Dégâts : ([\d,.\s]+) - ([\d,.\s]+)/,"Damage: $1 - $2")
 .replace(/^Vitesse ([\d,.]+)/,"Speed $1")
