@@ -133,7 +133,7 @@ function assemble(results){
    if(!item?.name)continue;
    pools.item.push({key:"item:"+item.id,kind:"item",title:item.name,
     count:item.origin||T("Catalogue d’objets","Gear catalog"),
-    href:prefix+"equipements/",icon:item.icon||"inv_helmet_22",
+    href:prefix+"equipements/?v=20261009-catalogue",icon:item.icon||"inv_helmet_22",
     overline:T("ÉQUIPEMENT / OBJETS","GEAR / ITEMS"),
     disclaimer:T("Objet Classic · Disponibilité Forever à vérifier","Classic item · Forever availability unverified")});
   }
