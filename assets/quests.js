@@ -78,19 +78,39 @@ function selectWaypoint(i,focus=false){
  if(focus&&typeof window!=="undefined"&&window.innerWidth<=900)$("quest-map-title").scrollIntoView({behavior:"smooth",block:"start"});
 }
 function renderWaypoints(){
- const list=$("quest-waypoints");list.replaceChildren();const pts=s.steps[s.index].waypoints;
+ const list=$("quest-waypoints");list.replaceChildren();
+ const pts=s.steps[s.index].waypoints;
  $("quest-waypoint-count").textContent=pts.length+" point"+(pts.length>1?"s":"")+" de passage · "+stepName(s.steps[s.index]);
+ const typeIcons={starts:"＋",objectives:"◆",ends:"↩",completed:"✓",special:"✦"};
  pts.forEach((w,i)=>{
-  const b=element("button",undefined,"quest-waypoint"+(s.selected===i?" selected":""));b.type="button";b.setAttribute("aria-pressed",String(s.selected===i));
-  const title=element("div",undefined,"quest-waypoint-heading");title.append(element("b",String(i+1)),element("strong",waypointTitle(w)),element("small",format(w.coords.x)+" / "+format(w.coords.y)));b.append(title);
+  const b=element("button",undefined,"quest-waypoint"+(s.selected===i?" selected":""));
+  b.type="button";b.setAttribute("aria-pressed",String(s.selected===i));
+  const title=element("div",undefined,"quest-waypoint-heading");
+  title.append(element("b",String(i+1)),element("strong",waypointTitle(w)),element("small",format(w.coords.x)+" / "+format(w.coords.y)));
+  b.append(title);
   const actions=element("div",undefined,"quest-actions");let found=false;
   for(const type of ["starts","objectives","ends","completed","special"]){
-   for(const entry of w[type]||[]){found=true;const action=element("span",undefined,"quest-action");
-    action.append(element("span",labels[type],"quest-action-tag "+type));
-    const txt=type==="special"?cleanStr(entry):detailsOf(entry).name;action.append(element("span",txt));actions.append(action)}
+   const entries=w[type]||[];
+   if(!entries.length)continue;
+   found=true;
+   const group=element("div",undefined,"quest-action-group "+type);
+   const heading=element("div",undefined,"quest-action-group-heading");
+   const badge=element("span",undefined,"quest-action-tag "+type);
+   badge.append(element("span",typeIcons[type],"quest-action-symbol"),element("span",labels[type]));
+   heading.append(badge,element("span",String(entries.length),"quest-action-count"));
+   const items=element("div",undefined,"quest-action-items");
+   for(const entry of entries){
+    const action=element("span",undefined,"quest-action");
+    const name=type==="special"?cleanStr(entry):detailsOf(entry).name;
+    action.append(element("span",name,"quest-action-name"));
+    items.append(action);
+   }
+   group.append(heading,items);actions.append(group);
   }
-  if(!found)actions.append(element("span","Rejoindre ce point de passage.","quest-action"));
-  b.append(actions);b.addEventListener("click",()=>selectWaypoint(i,true));list.append(b);
+  if(!found)actions.append(element("span","Rejoindre ce point de passage.","quest-no-action"));
+  b.append(actions);
+  b.addEventListener("click",()=>selectWaypoint(i,true));
+  list.append(b);
  });
 }
 function renderFactionChoices(){
