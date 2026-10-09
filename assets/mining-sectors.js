@@ -91,7 +91,7 @@ function densityAreas(points){
   const sites=uniqueSites(points);
   if(sites.length<MIN_SITES)return [];
   const signal=new Float32Array(SIZE*SIZE);
-  const radius=8,rsq=radius*radius,sigma2=2*3.5*3.5;
+  const radius=6,rsq=radius*radius,sigma2=2*3*3;
   for(const p of sites){
     const minX=Math.max(0,Math.floor(p[0]-radius)),maxX=Math.min(SIZE-1,Math.ceil(p[0]+radius));
     const minY=Math.max(0,Math.floor(p[1]-radius)),maxY=Math.min(SIZE-1,Math.ceil(p[1]+radius));
@@ -101,7 +101,7 @@ function densityAreas(points){
     }
   }
   const mask=new Uint8Array(SIZE*SIZE);
-  for(let i=0;i<signal.length;i++)mask[i]=signal[i]>=1.2?1:0;
+  for(let i=0;i<signal.length;i++)mask[i]=signal[i]>=1.9?1:0;
   const seen=new Uint8Array(SIZE*SIZE),zones=[];
   for(let i=0;i<mask.length;i++){
     if(!mask[i]||seen[i])continue;
@@ -140,7 +140,8 @@ function center(area){
   const pts=area.points;
   const x=pts.reduce((s,p)=>s+p[0],0)/pts.length,y=pts.reduce((s,p)=>s+p[1],0)/pts.length;
   if(contains(area.polygon,x,y))return {x,y};
-  return {x:area.polygon[0][0],y:area.polygon[0][1]};
+  const candidate=pts.find(p=>contains(area.polygon,p[0],p[1]));
+  return candidate?{x:candidate[0],y:candidate[1]}:{x:area.polygon[0][0],y:area.polygon[0][1]};
 }
 root.MiningSectors={densityAreas,fromCurated,contains,center,uniqueSites};
 })(typeof window!=="undefined"?window:globalThis);
