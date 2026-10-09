@@ -23,11 +23,12 @@ const nameCase=s=>nice(s).split(/\b/).map(w=>/^[a-z]/.test(w)?w[0].toUpperCase()
  .replace(/^the /,"The ").replace(/\bMc([a-z])/g,(_,c)=>"Mc"+c.toUpperCase()).replace(/\bNpc\b/g,"NPC").replace(/\bHp\b/g,"HP")
  .replace(/\x27S\b/g,"\x27s").replace(/\x27T\b/g,"\x27t").replace(/\bOox-(\d+)\/([a-z]+)\b/gi,(_,id,code)=>"OOX-"+id+"/"+code.toUpperCase());
 const place=s=>places[nice(s).toLowerCase()]||nameCase(s);
-function header(raw){
+function header(raw, language){
+ const en=language?language==="en":isEnglish();
  const s=nice(raw),l=s.toLowerCase();
- if(l==="placeholder")return isEnglish()?"Objective area":"Zone d'objectif";
- if(!s)return isEnglish()?"Waypoint":"Point de passage";
- if(isEnglish())return nameCase(s).replace("Enterance","Entrance").replace("Booy Bay","Booty Bay");
+ if(l==="placeholder")return en?"Objective area":"Zone d'objectif";
+ if(!s)return en?"Waypoint":"Point de passage";
+ if(en)return nameCase(s).replace("Enterance","Entrance").replace("Booy Bay","Booty Bay");
  if(places[l])return places[l];
  const flight=l.match(/^(.+?) (?:flightpath|flight path)$/);
  if(flight)return "Maître de vol — "+place(flight[1]);
