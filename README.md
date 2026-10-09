@@ -48,6 +48,14 @@ Projet de fans, **non affilié à Blizzard**. Sources communautaires en évoluti
 
 - **Infobulles d'objets des Marchands** : réutilisation de la fiche interactive WoW du module Équipement (survol, focus clavier, appui long, bouton Détails tactile). Caractéristiques Classic chargées à la demande, complétées par métier, stock et prix indicatifs, vendeur sélectionné, spécialisation et lien; jamais présentées comme statistiques Forever certifiées.
 
+## Extension Cuisine + Forge — 9 octobre 2026
+
+- **59 nouveaux objets** vendus dans les références Classic (41 recettes de Cuisine, 18 plans de Forge), plus **56 nouveaux marchands** et **150 relations marchands–objets**. Catalogue actuel : **217 objets, 190 marchands, 588 associations objet–vendeur**.
+- Sources individuellement vérifiables : les guides Wowhead [Cuisine](https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic) et [Forge](https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic) décrivent les couples vendeur–objet et les coordonnées Classic ; les objets ont chacun un lien `/classic/item=ID`. Ces associations ne prouvent **pas** la disponibilité sur les serveurs Forever.
+- Les données `item.reputation` / `offer_details[ID].reputation` enregistrent la faction et le palier de réputation pour des plans Argent Dawn, Cenarion Circle, Timbermaw Hold et Zandalar Tribe. Les recettes de Voile d'hiver sont signalées comme saisonnières.
+- Les infobulles partagées avec Équipements et les fiches marchands montrent les contraintes de réputation, de liaison et de saison ainsi que les attributs Classic disponibles, sans simuler de stock en temps réel.
+- Durotar (`uiMapID=1411`) et Mulgore (`uiMapID=1412`) sont pris en charge comme zones cartographiques ; leurs coordonnées et images restent à vérifier pour la bêta Forever.
+
 ## Catalogue Marchands regroupé — 2026-10-09
 - Ajout de **59 objets** de couture, cuir et enchantement, et 51 nouveaux marchands, tous associés à des listes précises de guides de vendeurs WoW Classic (Wowhead, décembre 2024 et antérieur). Le registre distingue désormais les ventes par couple **PNJ + ID d'objet** (champ `offer_details` avec lien source, conditions, stock partagé ou lié quand ramassé). 
 - La liste Marchands affiche désormais **une seule entrée par objet**, avec le nombre de vendeurs correspondants aux filtres ; sa fiche regroupe **tous les vendeurs connus** (faction, zone, témoignage), avec sélection sur la carte, même quand un seul vendeur correspond au filtre initial. Filtre témoignages conservé.
