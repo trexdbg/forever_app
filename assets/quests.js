@@ -105,11 +105,6 @@ function renderWaypoints(){
     const action=element("span",undefined,"quest-action");
     const name=type==="special"?Q.note(entry):detailsOf(entry).name;
     action.append(element("span",name,"quest-action-name"));
-    if(type==="special"&&Array.isArray(entry)&&typeof entry[1]==="string"){
-     try{const u=new URL(entry[1]);if(u.protocol==="https:"&&/^(?:www\.)?(?:imgur\.com|wowhead\.com|warcrafttavern\.com|vanilla-twinhead\.twinstar\.cz)$/.test(u.hostname)){
-      const ref=element("a",QT("Guide ↗","Reference ↗"),"quest-action-reference");ref.href=u.href;ref.target="_blank";ref.rel="noopener noreferrer";ref.setAttribute("aria-label",QT("Ouvrir la référence : ","Open reference: ")+name);action.append(ref);
-     }}catch{}
-    }
     items.append(action);
    }
    group.append(heading,items);actions.append(group);
