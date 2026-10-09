@@ -3667,7 +3667,6 @@
       "source_status": "forever_beta_wowhead_vendor",
       "reference_status": "forever_vendor_documented",
       "source_guide": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
-      "bind": "pickup",
       "currency": "merchants_favor",
       "price_amount": 45
     },
@@ -3687,7 +3686,6 @@
       "source_status": "forever_beta_wowhead_vendor",
       "reference_status": "forever_vendor_documented",
       "source_guide": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
-      "bind": "pickup",
       "currency": "merchants_favor",
       "price_amount": 45
     },
@@ -3707,7 +3705,6 @@
       "source_status": "forever_beta_wowhead_vendor",
       "reference_status": "forever_vendor_documented",
       "source_guide": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
-      "bind": "pickup",
       "currency": "merchants_favor",
       "price_amount": 45
     },
@@ -3865,7 +3862,6 @@
       "source_status": "forever_beta_wowhead_vendor",
       "reference_status": "forever_vendor_documented",
       "source_guide": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
-      "bind": "pickup",
       "reputation": {
         "faction": "Azeroth Commerce Authority / Durotar Supply and Logistics",
         "rank": "Friendly"
