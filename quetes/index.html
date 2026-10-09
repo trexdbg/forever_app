@@ -5,7 +5,7 @@
 <meta property="og:type" content="website"><meta property="og:site_name" content="ForEveroth"><meta property="og:title" content="Guide de quêtes Alliance & Horde | ForEveroth"><meta property="og:description" content="Parcours Vanilla niveau 5–60, cartes avec points de quête et progression locale."><meta property="og:url" content="https://foreveroth.com/quetes/">
 <title>Guide de quêtes WoW Forever | ForEveroth</title>
 <link rel="stylesheet" href="/assets/site.css"><link rel="stylesheet" href="/assets/quests.css?v=20261009-6">
-<script defer src="/assets/i18n.js?v=1"></script><script defer src="/assets/common.js?v=5"></script><script defer src="/assets/quest-locale.js?v=20261009-7"></script><script defer src="/assets/quests.js?v=20261009-6"></script><link rel="stylesheet" href="/assets/refined.css?v=20261009-1"><link rel="alternate" hreflang="fr" href="https://foreveroth.com/quetes/"><link rel="alternate" hreflang="en" href="https://foreveroth.com/en/quetes/"><link rel="alternate" hreflang="x-default" href="https://foreveroth.com/quetes/"><meta property="og:locale" content="fr_FR"><link rel="stylesheet" href="/assets/language.css?v=1"><link rel="stylesheet" href="/assets/quests-compact.css?v=20261009-1"><link rel="stylesheet" href="/assets/foreveroth-brand.css?v=1"><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://foreveroth.com/quetes/#webpage","url":"https://foreveroth.com/quetes/","name":"Guide de quêtes WoW Forever | ForEveroth","description":"Guide de quêtes WoW Forever : itinéraires Classic Alliance et Horde, cartes interactives, objectifs, coordonnées X/Y et suivi de progression.","inLanguage":"fr","isPartOf":{"@id":"https://foreveroth.com/#website"},"breadcrumb":{"@id":"https://foreveroth.com/quetes/#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://foreveroth.com/quetes/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"ForEveroth","item":"https://foreveroth.com/"},{"@type":"ListItem","position":2,"name":"Quêtes","item":"https://foreveroth.com/quetes/"}]},{"@type":"WebApplication","@id":"https://foreveroth.com/quetes/#application","name":"Quêtes — ForEveroth","url":"https://foreveroth.com/quetes/","description":"Guide de quêtes WoW Forever : itinéraires Classic Alliance et Horde, cartes interactives, objectifs, coordonnées X/Y et suivi de progression.","applicationCategory":"GameApplication","operatingSystem":"Web","isAccessibleForFree":true,"inLanguage":"fr"}]}</script></head>
+<script defer src="/assets/i18n.js?v=1"></script><script defer src="/assets/common.js?v=5"></script><script defer src="/assets/quest-locale.js?v=20261009-7"></script><script defer src="/assets/quests.js?v=20261009-levels1"></script><link rel="stylesheet" href="/assets/refined.css?v=20261009-1"><link rel="alternate" hreflang="fr" href="https://foreveroth.com/quetes/"><link rel="alternate" hreflang="en" href="https://foreveroth.com/en/quetes/"><link rel="alternate" hreflang="x-default" href="https://foreveroth.com/quetes/"><meta property="og:locale" content="fr_FR"><link rel="stylesheet" href="/assets/language.css?v=1"><link rel="stylesheet" href="/assets/quests-compact.css?v=20261009-levels1"><link rel="stylesheet" href="/assets/foreveroth-brand.css?v=1"><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://foreveroth.com/quetes/#webpage","url":"https://foreveroth.com/quetes/","name":"Guide de quêtes WoW Forever | ForEveroth","description":"Guide de quêtes WoW Forever : itinéraires Classic Alliance et Horde, cartes interactives, objectifs, coordonnées X/Y et suivi de progression.","inLanguage":"fr","isPartOf":{"@id":"https://foreveroth.com/#website"},"breadcrumb":{"@id":"https://foreveroth.com/quetes/#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://foreveroth.com/quetes/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"ForEveroth","item":"https://foreveroth.com/"},{"@type":"ListItem","position":2,"name":"Quêtes","item":"https://foreveroth.com/quetes/"}]},{"@type":"WebApplication","@id":"https://foreveroth.com/quetes/#application","name":"Quêtes — ForEveroth","url":"https://foreveroth.com/quetes/","description":"Guide de quêtes WoW Forever : itinéraires Classic Alliance et Horde, cartes interactives, objectifs, coordonnées X/Y et suivi de progression.","applicationCategory":"GameApplication","operatingSystem":"Web","isAccessibleForFree":true,"inLanguage":"fr"}]}</script></head>
 <body data-page="quests"><a class="skip" href="#contenu">Aller au contenu</a>
 <header class="site-header"><div class="wrap header-inner"><a class="brand" href="/" aria-label="ForEveroth, accueil"><img class="brand-lockup" src="/assets/foreveroth-logo.png" width="400" height="74" alt="" decoding="async"></a><button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false">☰</button><nav class="nav" aria-label="Navigation principale"><a href="/">Accueil</a><a aria-current="page" href="/quetes/">Quêtes</a><a href="/talents/">Talents</a><a href="/minage/">Minage</a><a href="/equipements/">Équipement</a><a href="/marchands/">Marchands</a><a href="/metiers/">Métiers</a><a href="/population/">Population</a></nav><div class="lang-switch" role="group" aria-label="Choisir la langue"><a href="/quetes/" lang="fr" aria-current="true" title="Français">FR</a><a href="/en/quetes/" lang="en"  title="English">EN</a></div></div></header>
 <main id="contenu">
@@ -25,8 +25,10 @@
 <div id="quest-search-results" class="quest-search-results" aria-live="polite" hidden></div>
 </div>
 <section class="quest-timeline" aria-label="Navigation entre les étapes">
-<div class="quest-timeline-heading"><div><span class="kicker">PROGRESSION</span><h2 id="quest-step-count">Étape —</h2><p id="quest-timeline-zone">Choisissez un itinéraire pour commencer.</p></div>
-</div>
+<div class="quest-timeline-heading"><div class="quest-current-stage">
+<span class="quest-current-level" title="Niveau estimé du parcours, pas le niveau réel de votre personnage"><small>Niveau conseillé</small><strong id="quest-current-level">—</strong></span>
+<h2 id="quest-step-count">Étape —</h2>
+</div></div>
 <div class="quest-timeline-range-label"><label for="quest-range">Parcourir les étapes</label><output id="quest-range-output" for="quest-range">—</output></div>
 <div class="quest-timeline-track-scroll" aria-label="Frise des étapes et des niveaux">
 <div class="quest-timeline-track-inner">
@@ -35,16 +37,14 @@
 </div>
 </div>
 <div class="quest-timeline-preview" id="quest-timeline-preview" aria-live="polite">Glissez le curseur ou utilisez les repères de niveau.</div>
-<div class="quest-progress-summary"><div><strong id="quest-path-label">Chargement du parcours…</strong><span id="quest-progress-info">—</span></div><div class="quest-progress-track" role="progressbar" aria-label="Position dans le parcours" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="quest-progress-track"><span id="quest-progress-fill"></span></div></div>
 </section>
 <div class="quest-main">
 <aside class="quest-sidebar" aria-label="Quêtes et objectifs de l'étape">
-<div class="quest-side-heading"><div><span class="kicker">DANS CETTE ZONE</span><h2>Quêtes de la zone</h2><p id="quest-waypoint-count">Chargement…</p></div></div>
+<div class="quest-side-heading"><h2>Actions de l’étape</h2></div>
 <div class="quest-waypoints" id="quest-waypoints" aria-label="Liste des quêtes et actions de cette étape"></div>
 
 </aside>
 <div class="quest-content">
-<div class="quest-current-head"><div><span class="kicker">CARTE DE L'ÉTAPE</span><h2 id="quest-zone-title">Chargement…</h2><p id="quest-level">—</p></div></div>
 <div class="quest-map-top"><div class="quest-map-heading"><strong id="quest-map-title">Carte de zone</strong><small id="quest-map-source">Molette : zoom · X / Y : 0 à 100</small></div>
 <div class="quest-map-controls" role="group" aria-label="Navigation des étapes et zoom de la carte">
 <button type="button" class="btn secondary" id="quest-prev" aria-label="Étape précédente">← Précédente</button>
@@ -52,7 +52,7 @@
 <button type="button" class="btn primary" id="quest-next" aria-label="Étape suivante">Suivante →</button>
 </div></div>
 <div class="quest-map-frame"><canvas id="quest-canvas" width="960" height="640" tabindex="0" role="img" aria-label="Carte des étapes de quête : cliquez sur un marqueur numéroté ou sélectionnez une action dans le panneau de gauche"></canvas><span class="quest-map-overlay" id="quest-map-overlay">Chargement de la carte…</span></div>
-<div class="quest-map-caption"><span><b>X</b> → droite, 0 à 100</span><span><b>Y</b> ↓ bas, 0 à 100</span><span>● Prendre &nbsp; ● Objectif &nbsp; ● Rendre</span></div>
+
 <div class="quest-selected" id="quest-selected" aria-live="polite"><p>Sélectionnez un point de passage sur la carte ou dans la liste.</p></div>
 
 </div></div>

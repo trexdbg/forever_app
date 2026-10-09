@@ -6,7 +6,7 @@ const Q=window.ForeverQuestLocale||{header:s=>s||"",note:s=>String(Array.isArray
 const $=id=>document.getElementById(id),canvas=$("quest-canvas");
 if(!canvas)return;
 const ctx=canvas.getContext("2d"),W=canvas.width,H=canvas.height;
-const cache={},s={meta:null,data:null,faction:"alliance",profile:"human",race:"human",steps:[],index:0,selected:0,zoom:1,center:{x:50,y:50},image:null,mapUrl:"",mapLoaded:false};
+const cache={},s={meta:null,data:null,questLevels:null,faction:"alliance",profile:"human",race:"human",steps:[],index:0,selected:0,zoom:1,center:{x:50,y:50},image:null,mapUrl:"",mapLoaded:false};
 const RACES={
  alliance:[{id:"human",profile:"human",label:"Humain"},{id:"dwarf",profile:"gnorf",label:"Nain"},{id:"gnome",profile:"gnorf",label:"Gnome"},{id:"nelf",profile:"nelf",label:"Elfe de la nuit"}],
  horde:[{id:"orc",profile:"trorc",label:"Orc"},{id:"troll",profile:"trorc",label:"Troll"},{id:"undead",profile:"undead",label:"Mort-vivant"},{id:"tauren",profile:"tauren",label:"Tauren"}]
@@ -30,10 +30,11 @@ const detailsOf=ref=>{
  let id=target;
  if(Array.isArray(target)){const suffix=Array.isArray(ref)?String(ref[1]||""):"";const n=suffix.match(/(?:p|^)(\d+)/);id=target[n?clamp(Number(n[1])-1,0,target.length-1):0];}
  const french=(id!==undefined&&id!==null)?s.data.translations[String(id)]:null;
- return {name:document.documentElement.lang==="en"?Q.questName(name):(french||Q.questName(name)),original:name,french:french||"",id:Number.isInteger(Number(id))?Number(id):null};
+ const questId=Number.isInteger(Number(id))&&Number(id)>0?Number(id):null;
+ const level=questId===null?null:s.questLevels?.[String(questId)];
+ return {name:document.documentElement.lang==="en"?Q.questName(name):(french||Q.questName(name)),original:name,french:french||"",id:questId,level:Number.isInteger(level)&&level>=1&&level<=65?level:null};
 };
 const waypointTitle=w=>Q.header(w.header);
-const stepLabel=i=>{const st=s.steps[i];return stepName(st)+QT(" · niv. ≈ "," · lvl ≈ ")+Math.floor(Number(st.experience)||0)};
 const syncUrl=()=>{const u=new URL(location.href);u.searchParams.set("faction",s.faction);u.searchParams.set("race",s.profile);u.searchParams.set("peuple",s.race);u.searchParams.set("step",String(s.index+1));history.replaceState(null,"",u.pathname+u.search+u.hash)};
 const project=(x,y)=>({x:(50+(x-s.center.x)*s.zoom)*W/100,y:(50+(y-s.center.y)*s.zoom)*H/100});
 const clientPoint=e=>{const r=canvas.getBoundingClientRect();return{x:(e.clientX-r.left)*W/r.width,y:(e.clientY-r.top)*H/r.height}};
@@ -84,13 +85,12 @@ function selectWaypoint(i,focus=false){
 function renderWaypoints(){
  const list=$("quest-waypoints");list.replaceChildren();
  const pts=s.steps[s.index].waypoints;
- $("quest-waypoint-count").textContent=pts.length+QT(" point"+(pts.length>1?"s":"")+" de passage · "," waypoint"+(pts.length>1?"s":"")+" · ")+stepName(s.steps[s.index]);
  const typeIcons={starts:"＋",objectives:"◆",ends:"↩",completed:"✓",travel:"➜",prepare:"◈",combat:"⚔",interact:"●",tip:"✦"};
  pts.forEach((w,i)=>{
   const b=element("button",undefined,"quest-waypoint"+(s.selected===i?" selected":""));
   b.type="button";b.setAttribute("aria-pressed",String(s.selected===i));
   const title=element("div",undefined,"quest-waypoint-heading");
-  title.append(element("b",String(i+1)),element("strong",waypointTitle(w)),element("small",format(w.coords.x)+" / "+format(w.coords.y)));
+  title.append(element("b",String(i+1)),element("strong",waypointTitle(w)));
   b.append(title);
   const actions=element("div",undefined,"quest-actions");
   const groups=[];
@@ -114,8 +114,14 @@ function renderWaypoints(){
    const items=element("div",undefined,"quest-action-items");
    for(const entry of entries){
     const action=element("span",undefined,"quest-action");
-    const name=isNote?Q.note(entry):detailsOf(entry).name;
+    const quest=isNote?null:detailsOf(entry);
+    const name=isNote?Q.note(entry):quest.name;
     action.append(element("span",name,"quest-action-name"));
+    if(quest&&quest.level!==null){
+     const level=element("small",QT("niv. ","lvl ")+quest.level,"quest-quest-level");
+     level.title=QT("Niveau de la quête Classic","Classic quest level");
+     action.append(level);
+    }
     items.append(action);
    }
    group.append(heading,items);actions.append(group);
@@ -199,27 +205,18 @@ function updateMilestones(){
   b.setAttribute("aria-current",selected?"step":"false");
  }
 }
-function renderProgress(){
- // Navigation progress follows the current step; nothing is marked or saved.
- const last=Math.max(1,s.steps.length-1);
- const percent=Math.round(100*s.index/last);
- $("quest-path-label").textContent=(s.faction==="alliance"?"Alliance":"Horde")+" · "+Q.race(RACES[s.faction].find(r=>r.id===s.race)?.label||s.profile);
- $("quest-progress-info").textContent=percent+QT(" % du parcours","% of the route");
- $("quest-progress-fill").style.width=percent+"%";
- $("quest-progress-track").setAttribute("aria-valuenow",String(percent));
-}
 function render(){
  const st=s.steps[s.index];if(!st)return;
- $("quest-range").max=String(s.steps.length);$("quest-range").value=String(s.index+1);previewStep(s.index);
- $("quest-step-count").textContent=QT("Étape ","Step ")+(s.index+1)+QT(" sur "," of ")+s.steps.length;
- $("quest-timeline-zone").textContent=stepLabel(s.index);
- $("quest-zone-title").textContent=stepName(st);
- $("quest-level").textContent=QT("Niveau approximatif : ","Approximate level: ")+Number(st.experience||0).toFixed(1).replace(".",document.documentElement.lang==="en"?".":",")+" · "+st.waypoints.length+QT(" points à visiter"," waypoints");
- $("quest-map-title").textContent=stepName(st)+QT(" · itinéraire dans la zone"," · route through the zone");
+ $("quest-range").max=String(s.steps.length);
+ $("quest-range").value=String(s.index+1);
+ previewStep(s.index);
+ $("quest-current-level").textContent=String(Math.floor(Number(st.experience)||0));
+ $("quest-step-count").textContent=QT("Étape ","Step ")+(s.index+1)+" / "+s.steps.length;
+ $("quest-map-title").textContent=stepName(st);
  $("quest-map-source").textContent=QT("Molette : zoom · X/Y : 0 à 100","Scroll to zoom · X/Y: 0–100");
  const first=s.index===0,last=s.index===s.steps.length-1;
  $("quest-prev").disabled=first;$("quest-next").disabled=last;
- renderProgress();updateMilestones();renderWaypoints();renderSelection();setImage(st.zone);draw();syncUrl();
+ updateMilestones();renderWaypoints();renderSelection();setImage(st.zone);draw();syncUrl();
 }
 function go(n){if(scrubTimer!==null){clearTimeout(scrubTimer);scrubTimer=null}if(!s.steps.length)return;s.index=clamp(n,0,s.steps.length-1);s.selected=0;s.center={x:50,y:50};s.zoom=1;$("quest-zoom-reset").textContent="100 %";render();}
 async function loadFaction(faction,fromUrl=false){
@@ -233,6 +230,7 @@ async function loadFaction(faction,fromUrl=false){
  }
  s.race=initial.id;s.profile=initial.profile;
  renderFactionChoices();renderRaceChoices();
+ $("quest-data-status").classList.remove("is-ready");
  $("quest-data-status").textContent=QT("Chargement…","Loading…");
  try{
   if(!cache[faction]){
@@ -248,13 +246,14 @@ async function loadFaction(faction,fromUrl=false){
   s.index=Number.isInteger(number)?clamp(number,0,s.steps.length-1):0;
   s.selected=0;s.zoom=1;s.center={x:50,y:50};s.mapUrl="";
   $("quest-data-status").textContent=s.steps.length+QT(" étapes disponibles"," steps available");
+  $("quest-data-status").classList.add("is-ready");
   $("quest-app").setAttribute("aria-busy","false");
   renderMilestones();render();search();
  }catch(err){
   if(token!==pending)return;
   $("quest-data-status").textContent=QT("Données indisponibles","Data unavailable");
-  $("quest-zone-title").textContent=QT("Erreur de chargement","Loading error");
-  $("quest-level").textContent=err.message;
+  $("quest-map-title").textContent=QT("Erreur de chargement","Loading error");
+  $("quest-map-source").textContent=err.message;
   $("quest-app").setAttribute("aria-busy","false");
  }
 }
@@ -277,7 +276,7 @@ function search(){
    )
   );
   if(!matches)continue;all++;if(results>=35)continue;results++;
-  const b=element("button",undefined,"quest-search-result");b.type="button";b.append(element("strong",QT("Étape ","Step ")+(i+1)),element("span",stepName(st)),element("small",QT("niv. ≈ ","lvl ≈ ")+Math.floor(st.experience)));b.addEventListener("click",()=>{go(i);$("quest-search").value="";res.hidden=true;res.replaceChildren();$("quest-zone-title").scrollIntoView({behavior:"smooth",block:"nearest"})});res.append(b);}
+  const b=element("button",undefined,"quest-search-result");b.type="button";b.append(element("strong",QT("Étape ","Step ")+(i+1)),element("span",stepName(st)),element("small",QT("niv. ≈ ","lvl ≈ ")+Math.floor(st.experience)));b.addEventListener("click",()=>{go(i);$("quest-search").value="";res.hidden=true;res.replaceChildren();$("quest-map-title").scrollIntoView({behavior:"smooth",block:"nearest"})});res.append(b);}
  if(!all)res.append(element("p",QT("Aucune étape correspondante dans ce parcours.","No matching steps in this route.")));
  if(all>35)res.append(element("p",QT(all+" correspondances · 35 premiers résultats affichés.",all+" matches · showing the first 35 results.")));
 }
@@ -329,8 +328,21 @@ for(const button of $("quest-factions").querySelectorAll("button[data-faction]")
 $("quest-search").addEventListener("input",search);
 $("quest-zoom-reset").addEventListener("click",()=>{s.center={x:50,y:50};setZoom(1)});
 (async()=>{
- try{const resp=await fetch(ROOT+"data/quests/manifest.json");if(!resp.ok)throw Error("HTTP "+resp.status);s.meta=await resp.json();if(s.meta.coordinate_system!=="zone_percent_0_100")throw Error("Coordonnées incompatibles");
+ try{
+ const resp=await fetch(ROOT+"data/quests/manifest.json");
+ if(!resp.ok)throw Error("HTTP "+resp.status);
+ s.meta=await resp.json();
+ if(s.meta.coordinate_system!=="zone_percent_0_100")throw Error("Coordonnées incompatibles");
+ // Supplementary Classic quest levels: the guide still works if this file is unavailable.
+ try{
+  const levelResponse=await fetch(ROOT+"data/quests/levels.json");
+  if(levelResponse.ok){
+   const levels=await levelResponse.json();
+   if(levels.schema_version===1&&levels.levels&&typeof levels.levels==="object")s.questLevels=levels.levels;
+  }
+ }catch(_err){s.questLevels=null}
+
  const params=new URLSearchParams(location.search);const faction=params.get("faction")==="horde"?"horde":"alliance";await loadFaction(faction,true);
- }catch(err){$("quest-zone-title").textContent=QT("Impossible de charger les données","Unable to load quest data");$("quest-level").textContent=err.message;$("quest-data-status").textContent=QT("Indisponible","Unavailable");$("quest-app").setAttribute("aria-busy","false")}
+ }catch(err){$("quest-map-title").textContent=QT("Impossible de charger les données","Unable to load quest data");$("quest-map-source").textContent=err.message;$("quest-data-status").textContent=QT("Indisponible","Unavailable");$("quest-app").setAttribute("aria-busy","false")}
 })();
 })();
