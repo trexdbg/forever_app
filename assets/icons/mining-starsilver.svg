@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+<title>Argent stellaire</title>
+<defs><linearGradient id="rock" x1="0" y1="0" x2=".65" y2="1"><stop stop-color="#77719a"/><stop offset=".6" stop-color="#4d466f"/><stop offset="1" stop-color="#242140"/></linearGradient><linearGradient id="ore" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f7e6ff"/><stop offset=".52" stop-color="#ad8fff"/><stop offset="1" stop-color="#7551c7"/></linearGradient></defs>
+<path d="M7 49 11 29 20 21 26 13 42 12 51 20 58 38 54 51 42 56 19 55Z" fill="#242140" stroke="#101820" stroke-width="3" stroke-linejoin="round"/>
+<path d="M11 47 15 30 26 18 43 17 51 26 55 39 50 48 40 53 20 51Z" fill="url(#rock)" stroke="#77719a" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M14 35 24 21 28 37 19 49 11 47Z" fill="#242140" opacity=".45"/><path d="m40 19 12 8 3 12-10 12-5-18Z" fill="#242140" opacity=".48"/>
+<path d="M27 44 22 20 34 9 43 24 39 43Z" fill="url(#ore)" stroke="#393057" stroke-width="1.5"/><path d="M41 45 43 21 51 16 56 35 50 44Z" fill="#926ad5" stroke="#393057" stroke-width="1.5"/><path d="m34 9 1 29m16-22-2 25" stroke="#f6d8ff" stroke-width="2" opacity=".8"/><path d="m18 11 2.4 5.6L26 19l-5.6 2.4L18 27l-2.4-5.6L10 19l5.6-2.4Z" fill="#fff7d6"/>
+<path d="M10 49 19 52 38 54 51 49" fill="none" stroke="#131821" stroke-width="2.7" stroke-linecap="round"/>
+<path d="M15 29 25 19 41 17" fill="none" stroke="#ffffff" stroke-opacity=".32" stroke-width="1.7" stroke-linecap="round"/>
+</svg>
