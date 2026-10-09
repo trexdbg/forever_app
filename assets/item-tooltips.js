@@ -99,8 +99,9 @@ if(status==="unavailable"&&haveRich)write(inner,"forever-item-tooltip__muted",w.
 write(inner,"forever-item-tooltip__disclaimer",forever?(en?"Recorded on Wowhead Forever (beta) · availability and final stats unconfirmed.":"Référence Wowhead Forever (bêta) · disponibilité et statistiques finales non garanties."):w.classic);
 const foot=elt("div","forever-item-tooltip__foot");
 if(isId(item.id)){
-const a=elt("a","forever-item-tooltip__source",forever?(en?"Wowhead Forever beta ↗":"Fiche bêta Wowhead Forever ↗"):w.source+" ↗");
-a.href=forever?"https://www.wowhead.com/forever/item="+Number(item.id):"https://wowdb.assemblee-defias.fr/?id=classic:item:"+Number(item.id);a.target="_blank";a.rel="noopener noreferrer";foot.append(a);
+const sourceUrl=(()=>{const url=item.source_url||item.url;if(!forever||typeof url!=="string")return null;try{const u=new URL(url);return u.protocol==="https:"&&(u.hostname==="www.60.tools"&&u.pathname.startsWith("/items/")||u.hostname==="www.wowhead.com"&&u.pathname.startsWith("/forever/"))?u.href:null}catch{return null}})();
+const a=elt("a","forever-item-tooltip__source",forever?(en?"Forever beta source ↗":"Source Forever bêta ↗"):w.source+" ↗");
+a.href=forever?(sourceUrl||"https://www.wowhead.com/forever/item="+Number(item.id)):"https://wowdb.assemblee-defias.fr/?id=classic:item:"+Number(item.id);a.target="_blank";a.rel="noopener noreferrer";foot.append(a);
 }else write(foot,"forever-item-tooltip__source",w.source);
 inner.append(foot);
 }
