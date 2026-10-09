@@ -43,13 +43,20 @@
 #quest-range.quest-timeline-slider{display:block;appearance:none;-webkit-appearance:none;width:100%;height:12px;border-radius:99px;border:1px solid #556478;outline-offset:6px;background:linear-gradient(to right,#e9bf7b 0%,#e9bf7b var(--quest-range-fill,0%),#31455f var(--quest-range-fill,0%),#31455f 100%);margin:12px 0;cursor:ew-resize}
 #quest-range.quest-timeline-slider::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:25px;height:25px;border-radius:50%;background:#f8daa1;border:4px solid #4e362b;box-shadow:0 0 0 2px #e3be7f,0 2px 7px #0008}
 #quest-range.quest-timeline-slider::-moz-range-thumb{width:17px;height:17px;border-radius:50%;background:#f8daa1;border:4px solid #4e362b;box-shadow:0 0 0 2px #e3be7f,0 2px 7px #0008}
-/* All level shortcuts remain in one row, immediately below the existing slider. */
-.quest-timeline-milestones{display:flex;flex-wrap:nowrap;align-items:flex-start;justify-content:space-between;gap:5px;height:47px;min-width:0;position:relative;margin:0 10px 3px;overflow-x:auto;overflow-y:hidden;scrollbar-width:thin;scrollbar-color:#647c98 transparent;background:linear-gradient(#4b6078,#4b6078) center 23px/100% 2px no-repeat}
-.quest-milestone{position:relative;top:auto;left:auto;transform:none;flex:0 0 auto;min-width:0;white-space:nowrap;text-align:center;margin-top:9px;padding:6px 6px;border-radius:8px;border:1px solid #475a71;background:#192b41;color:#bfcfe1;font-size:10px;font-weight:650;cursor:pointer}
-.quest-milestone::before{content:"";position:absolute;left:50%;top:-8px;width:1px;height:7px;background:#d3b985}
-.quest-milestone:hover,.quest-milestone:focus-visible{color:#f4d59a;border-color:#e3bb7d;background:#30405a}
+/* Exact positions: marker % == first matching step index / (total steps - 1).
+   Slider and level labels share the same horizontally scrollable coordinate system. */
+.quest-timeline-track-scroll{width:100%;max-width:100%;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:#647c98 transparent}
+.quest-timeline-track-inner{width:100%;min-width:1050px}
+.quest-timeline-milestones{height:54px;min-width:0;position:relative;margin:0 12.5px 3px;overflow:visible;background:linear-gradient(#4b6078,#4b6078) center 6px/100% 1px no-repeat}
+.quest-milestone{position:absolute;top:14px;transform:translateX(-50%);min-width:15px;margin:0;padding:5px 1px;white-space:nowrap;text-align:center;border:1px solid #475a71;border-radius:5px;background:#192b41;color:#bfcfe1;font-size:10px;line-height:1.1;font-weight:700;font-variant-numeric:tabular-nums;cursor:pointer;z-index:1}
+.quest-milestone::before{content:"";position:absolute;left:50%;top:-14px;height:12px;width:1px;background:#d3b985;transform:translateX(-50%)}
+.quest-milestone:first-child{transform:translateX(0)}
+.quest-milestone:first-child::before{left:0}
+.quest-milestone:last-child{transform:translateX(-100%)}
+.quest-milestone:last-child::before{left:100%}
+.quest-milestone:hover,.quest-milestone:focus-visible{color:#ffe0a0;border-color:#e3bb7d;background:#30405a;z-index:3}
 .quest-milestone:focus-visible{outline:2px solid #f3d698;outline-offset:2px}
-.quest-milestone.active{border-color:#e7c384;background:linear-gradient(150deg,#6a512e,#3c3440);color:#ffe7b6;box-shadow:inset 0 0 0 1px #bb955d66}
+.quest-milestone.active{border-color:#e7c384;background:linear-gradient(150deg,#6a512e,#3c3440);color:#ffe7b6;box-shadow:inset 0 0 0 1px #bb955d66;z-index:2}
 .quest-timeline-preview{background:#152940;border:1px solid #304763;border-radius:8px;padding:9px 12px;min-height:40px;color:#ddcfad;font-size:12px}
 .quest-timeline .quest-progress-summary{margin:13px 0 0;padding:12px 0 0;border:0;border-top:1px solid #40516a;border-radius:0;background:transparent}
 .quest-timeline .quest-progress-track{border:1px solid #45536b}
@@ -119,11 +126,12 @@
  .quest-race-options{grid-template-columns:repeat(2,minmax(0,1fr))}
  .quest-race-choice{min-height:78px}
  .quest-race-choice img,.quest-race-fallback{width:43px;height:43px}
- .quest-timeline-milestones{margin-left:8px;margin-right:8px}
+ .quest-timeline-track-scroll{margin-top:2px}
 }
 
-/* Narrow screens keep the same single frieze; swipe sideways for more levels. */
+/* Swipe both the slider and its level markers together on small screens:
+   unlike separate scrolling labels, the ticks never drift from their step. */
 @media(max-width:720px){
- .quest-timeline-milestones{justify-content:flex-start;gap:7px}
- .quest-milestone{font-size:11px;padding:7px 9px}
+ .quest-timeline-track-scroll{padding-bottom:5px}
+ .quest-milestone{font-size:10px;padding:5px 1px}
 }
