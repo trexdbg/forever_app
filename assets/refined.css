@@ -504,3 +504,16 @@ body[data-page="talents"] .talent-class-meta .source-note{
   body[data-page="talents"] .talent-class-switch a,
   body[data-page="talents"] .talent-class-switch img{transition:none}
 }
+
+/* Seven-module home: balanced rows (2 / 3 / 2) and compact eight-link header */
+@media(min-width:751px){
+ .atlas-grid>.atlas-tile:nth-child(6),.atlas-grid>.atlas-tile:nth-child(7){grid-column:span 6}
+}
+@media(min-width:751px) and (max-width:980px){
+ .header-inner{gap:8px}
+ .nav a{padding-left:6px;padding-right:6px;font-size:10px}
+ .brand{font-size:16px}
+}
+@media(min-width:501px) and (max-width:750px){
+ .atlas-grid>.atlas-tile:nth-child(7){grid-column:span 12}
+}
