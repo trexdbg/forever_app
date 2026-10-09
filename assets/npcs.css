@@ -164,3 +164,33 @@
 .npc-stock .npc-requirement{color:#f1d09f;padding-left:9px;border-left:2px solid #ad9168}
 .npc-stock .npc-offer-source a{color:#e7c68c;text-decoration:underline;font-size:11px}
 @media(max-width:580px){.npc-alternative-list{grid-template-columns:1fr}.npc-result-group{padding:10px}}
+
+/* Map-first trainer finder */
+.npc-field[hidden]{display:none!important}
+.npc-app[data-mode="trainer"] .npc-controls{
+  grid-template-columns:minmax(165px,1.15fr) minmax(175px,1.6fr) repeat(3,minmax(108px,1fr));
+  gap:8px;
+}
+#prof-trainers{scroll-margin-top:90px}
+#prof-trainers .npc-columns{grid-template-columns:minmax(240px,.85fr) minmax(0,1.6fr)}
+#prof-trainers .npc-map-panel{position:relative}
+.npc-map-head .npc-map-coordinate-actions{
+  display:flex;gap:7px;align-items:center;flex-wrap:wrap;
+}
+.npc-map-coordinate-actions strong{color:#ead6ae;font-size:15px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.npc-map-coordinate-actions button{background:#d6b678;border:1px solid #e0bf82;border-radius:2px;color:#19241a;font-size:11px;font-weight:750;padding:8px 10px;cursor:pointer}
+.npc-map-coordinate-actions button[disabled]{opacity:.44;cursor:default}
+.npc-result-extras{font-variant-numeric:tabular-nums}
+@media(max-width:1150px){
+ .npc-app[data-mode="trainer"] .npc-controls{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .npc-app[data-mode="trainer"] .npc-search-field{grid-column:span 2}
+ .npc-map-head{flex-wrap:wrap}
+}
+@media(max-width:750px){
+ .npc-app[data-mode="trainer"] .npc-controls{grid-template-columns:repeat(2,minmax(0,1fr))}
+ #prof-trainers .npc-columns{grid-template-columns:1fr}
+}
+@media(max-width:470px){
+ .npc-app[data-mode="trainer"] .npc-search-field{grid-column:span 2}
+ .npc-map-head .npc-map-coordinate-actions{order:3;width:100%;justify-content:space-between}
+}
