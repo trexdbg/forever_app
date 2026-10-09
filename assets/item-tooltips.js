@@ -61,7 +61,7 @@ const controls=elt("div","forever-item-tooltip__top");
 write(controls,"forever-item-tooltip__eyebrow",en?"CLASSIC / ITEM DETAILS":"CLASSIC / FICHE D’OBJET");
 const close=elt("button","forever-item-tooltip__close","×");close.type="button";close.setAttribute("aria-label",w.close);close.addEventListener("click",hide);controls.append(close);inner.append(controls);
 const title=elt("div","forever-item-tooltip__title");
-if(validIcon(item.icon)){const pic=elt("img","forever-item-tooltip__icon");pic.alt="";pic.src="/forever_app/assets/icons/"+item.icon+".jpg";pic.loading="lazy";pic.onerror=()=>pic.remove();title.append(pic)}
+if(validIcon(item.icon)||typeof item.icon==="string"&&item.icon.startsWith("https://wowdb.assemblee-defias.fr/database-icons/")){const pic=elt("img","forever-item-tooltip__icon");pic.alt="";pic.src=item.icon.startsWith("https://wowdb.assemblee-defias.fr/database-icons/")?item.icon:"/forever_app/assets/icons/"+item.icon+".jpg";pic.loading="lazy";pic.onerror=()=>{if(!pic.dataset.fallback&&validIcon(item.icon)){pic.dataset.fallback="1";pic.src="https://wow.zamimg.com/images/wow/icons/large/"+item.icon+".jpg"}else pic.remove()};title.append(pic)}
 const heading=elt("div","forever-item-tooltip__heading");
 write(heading,"forever-item-tooltip__name",en?item.name:(data&&typeof data.name==="string"&&data.name?data.name:item.name));
 if(data&&Number.isFinite(data.item_level)&&data.item_level>0)write(heading,"forever-item-tooltip__itemlevel",w.itemLevel+" "+data.item_level);
