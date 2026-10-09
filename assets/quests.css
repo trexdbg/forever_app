@@ -239,7 +239,7 @@
 .quest-sidebar .quest-actions{
  display:grid;
  gap:6px;
- margin:7px 0 0 30px;
+ margin:7px 0 0;
  padding:0;
  border:0;
 }
@@ -331,7 +331,6 @@
 .quest-sidebar .quest-side-footer{border-top-color:#344457;padding-top:10px;margin-top:11px}
 .quest-sidebar .quest-side-help{font-size:11px;line-height:1.4}
 @media(max-width:700px){
- .quest-sidebar .quest-actions{margin-left:30px}
  .quest-sidebar .quest-waypoints{grid-template-columns:1fr}
 }
 @media(max-width:370px){
