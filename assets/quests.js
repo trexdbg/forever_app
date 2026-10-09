@@ -143,16 +143,20 @@ function previewStep(index){
 function renderMilestones(){
  const wrap=$("quest-milestones");wrap.replaceChildren();
  if(!s.steps.length)return;
- // Keep every level shortcut in the original single-row timeline.
  const levels=[0,20,25,30,35,40,42,45,47,50,51,52,53,54,55,56,57,58,59,Infinity];
+ const maxIndex=Math.max(s.steps.length-1,1);
  for(const level of levels){
+  // A level marker occupies the exact horizontal position of its first eligible guide step.
   const index=level===0?0:level===Infinity?s.steps.length-1:s.steps.findIndex(st=>Number(st.experience)>=level);
   if(index<0)continue;
-  const name=level===0?"Départ":level===Infinity?"Fin":"Niv. "+level;
-  const b=element("button",name,"quest-milestone");b.type="button";
+  const name=level===0?"Départ":level===Infinity?"Fin":"Niveau "+level;
+  const shortName=level===0?"Départ":level===Infinity?"Fin":String(level);
+  const b=element("button",shortName,"quest-milestone");b.type="button";
   b.dataset.index=String(index);
+  b.dataset.level=level===Infinity?"fin":String(level);
+  b.style.left=(100*index/maxIndex)+"%";
   b.title=name+" · "+stepName(s.steps[index])+" · étape "+(index+1);
-  b.setAttribute("aria-label","Accéder au "+name.toLowerCase()+", étape "+(index+1)+", "+stepName(s.steps[index]));
+  b.setAttribute("aria-label","Accéder à "+name.toLowerCase()+", étape "+(index+1)+", "+stepName(s.steps[index]));
   b.addEventListener("click",()=>go(index));wrap.append(b);
  }
  updateMilestones();
