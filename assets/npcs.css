@@ -121,3 +121,31 @@
 @media(max-width:1050px){.npc-app[data-mode="trainer"] .npc-controls{grid-template-columns:repeat(3,minmax(0,1fr))}.npc-app[data-mode="trainer"] .npc-field:first-child{grid-column:span 3}}
 @media(max-width:700px){.npc-app[data-mode="trainer"] .npc-controls{grid-template-columns:repeat(2,minmax(0,1fr))}.npc-app[data-mode="trainer"] .npc-field:first-child{grid-column:span 2}}
 @media(max-width:430px){.npc-app[data-mode="trainer"] .npc-field{grid-column:span 2}}
+
+/* Extended trainer directory: profession masters + Classic weapon masters */
+.npc-app[data-mode="trainer"] .npc-controls{
+  grid-template-columns:minmax(125px,1.12fr) minmax(175px,1.65fr) repeat(5,minmax(96px,1fr));
+  gap:8px;
+}
+.npc-result-extras{color:#a7bbac;font-size:10px;line-height:1.45}
+.npc-result .npc-result-extras{color:#b8bfa9}
+.npc-legend-weapon{background:#df9f94}
+.npc-weapon-skills{display:flex;gap:6px;flex-wrap:wrap;margin:4px 0 16px}
+.npc-weapon-skills .npc-chip{border-color:#a47e73;background:#271f1b;color:#f1d4b4}
+.npc-coords{max-width:100%;overflow-wrap:anywhere}
+.npc-app[data-mode="trainer"] .npc-field select{padding-left:9px;padding-right:7px}
+@media(max-width:1200px){
+ .npc-app[data-mode="trainer"] .npc-controls{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .npc-app[data-mode="trainer"] .npc-field:first-child{grid-column:auto}
+ .npc-app[data-mode="trainer"] .npc-search-field{grid-column:span 2}
+}
+@media(max-width:710px){
+ .npc-app[data-mode="trainer"] .npc-controls{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .npc-app[data-mode="trainer"] .npc-field:first-child{grid-column:auto}
+ .npc-app[data-mode="trainer"] .npc-search-field{grid-column:span 2}
+}
+@media(max-width:440px){
+ .npc-app[data-mode="trainer"] .npc-field{grid-column:auto}
+ .npc-app[data-mode="trainer"] .npc-search-field{grid-column:span 2}
+ .npc-app[data-mode="trainer"] .npc-controls .npc-field:last-child{grid-column:span 2}
+}
