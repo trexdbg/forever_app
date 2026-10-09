@@ -1,6 +1,6 @@
 /* Interactive Forever beta zone maps for the NPC directory. No external JS or map library. */
 (()=>{"use strict";
-const ROOT="/forever_app/",en=document.documentElement.lang==="en",T=(fr,eng)=>en?eng:fr;
+const ROOT="/",en=document.documentElement.lang==="en",T=(fr,eng)=>en?eng:fr;
 const canvas=document.getElementById("npc-map-canvas");if(!canvas)return;
 const ctx=canvas.getContext("2d"),W=canvas.width,H=canvas.height;
 const $=id=>document.getElementById(id);
