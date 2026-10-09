@@ -4,6 +4,8 @@ const service=window.ForeverGearData;
 const table=document.getElementById("item-results"),search=document.getElementById("item-search"),slot=document.getElementById("item-slot"),chips=document.getElementById("item-quality-filters"),count=document.getElementById("item-count"),source=document.getElementById("items-source");
 if(!service||!table||!search||!slot||!chips)return;
 const en=document.documentElement.lang==="en";
+const originLabelsEN={"Forge":"Blacksmithing","Pic Blackrock":"Blackrock Spire","Profondeurs de Blackrock":"Blackrock Depths","Travail du cuir":"Leatherworking","Quête · Maleterres":"Quest · Plaguelands","Hache-tripes":"Dire Maul","Quête · Pic Blackrock":"Quest · Blackrock Spire","Couture · Mage":"Tailoring · Mage","Quête · Un'Goro":"Quest · Un'Goro","Butin mondial":"World drop","Couture · Prêtre":"Tailoring · Priest","Quête · Hache-tripes":"Quest · Dire Maul","Quête légendaire (référence Classic)":"Legendary quest (Classic reference)","Objet légendaire (référence Classic)":"Legendary item (Classic reference)","Forge (référence Classic)":"Blacksmithing (Classic reference)"};
+const displayOrigin=s=>en?(originLabelsEN[s]||s):s;
 const tr=en?{all:"All",forever:"Forever beta",classic:"Classic 1.12",loading:"Loading Classic items…",load:"Load 100 more Classic items",busy:"Loading…",unavailable:"Classic API unavailable. Local entries remain available.",items:"items displayed",item:"item displayed",noresult:"No items match these filters.",badgeForever:"Forever beta",badgeClassic:"Classic",origin:"Source",quality:"Quality",loaded:"Loaded",tooltip:"Details",beta:"Beta data · in-game availability not guaranteed",classicNote:"Classic references are not confirmed Forever items",name:"Item / ID",level:"Item level",required:"Required",filter:"Database",link:"Other Forever references ↗"}:{all:"Tout",forever:"Forever bêta",classic:"Classic 1.12",loading:"Chargement des objets Classic…",load:"Charger 100 autres objets Classic",busy:"Chargement…",unavailable:"API Classic indisponible. Les références locales restent accessibles.",items:"objets affichés",item:"objet affiché",noresult:"Aucun résultat avec ces filtres.",badgeForever:"Forever bêta",badgeClassic:"Classic",origin:"Origine",quality:"Qualité",loaded:"Chargés",tooltip:"Détails",beta:"Données bêta · disponibilité en jeu non garantie",classicNote:"Les références Classic ne sont pas confirmées sur Forever",name:"Objet / ID",level:"Niveau d’objet",required:"Requis",filter:"Base",link:"Autres objets Forever ↗"};
 const levels=["poor","common","uncommon","rare","epic","legendary"];
 const labels=en?["Poor","Common","Uncommon","Rare","Epic","Legendary"]:["Médiocre","Commun","Inhabituel","Rare","Épique","Légendaire"];
@@ -21,7 +23,7 @@ function matches(item){
  const id=slot.value;if(id!=="all"&&!service.compatible(item.slot,id))return false;
  if(selection.size&&!selection.has(item.quality))return false;
  const q=search.value.trim().toLocaleLowerCase();
- return !q||String(item.id)===q||(item.name+" "+(item.origin||"")).toLocaleLowerCase().includes(q);
+ return !q||String(item.id)===q||(item.name+" "+(item.origin||"")+" "+displayOrigin(item.origin||"")).toLocaleLowerCase().includes(q);
 }
 function drawQuality(){
  const root=chips;root.replaceChildren();const group=[...local,...forever,...classic];
@@ -48,7 +50,7 @@ function render(){
  const detail=document.createElement("button");detail.type="button";detail.className="bis-v2-info-button item-v2-info";detail.textContent="ⓘ";detail.setAttribute("aria-label",tr.tooltip+" "+i.name);detail.addEventListener("click",()=>window.ForeverItemTooltip?.pin(i));name.append(detail);
  rowText(row,slotLabels[i.slot]||i.slot);
  rowText(row,Number.isFinite(i.itemLevel)?i.itemLevel:(Number.isFinite(i.level)?i.level:"—"));
- rowText(row,i.origin|| (sourceType(i)==="forever"?tr.badgeForever:tr.badgeClassic));
+ rowText(row,displayOrigin(i.origin)|| (sourceType(i)==="forever"?tr.badgeForever:tr.badgeClassic));
  table.append(row);
  window.ForeverItemTooltip?.bind(row,i);
  }
