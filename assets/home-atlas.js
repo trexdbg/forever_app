@@ -4,7 +4,7 @@
  const root=document.querySelector("[data-atlas-home]");
  if(!root)return;
  const en=document.documentElement.lang==="en";
- const prefix=en?"/forever_app/en/":"/forever_app/";
+ const prefix=en?"/en/":"/";
  const zones=[
    {id:"winterspring",name:en?"Winterspring":"Berceau-de-l’Hiver"},
    {id:"silithus",name:"Silithus"},
@@ -51,7 +51,7 @@
    const z=zones[index];
    const href=prefix+"minage/?zone="+encodeURIComponent(z.id);
    title.textContent=z.name;
-   image.src="/forever_app/assets/maps/"+z.id+".jpg";
+   image.src="/assets/maps/"+z.id+".jpg";
    cta.href=href;
    map.href=href;
    map.setAttribute("aria-label",(en?"Open the mining map of ":"Ouvrir la carte de minage de ")+z.name);
@@ -78,7 +78,7 @@
    observer.observe(root);
  }
  if(reduced?.addEventListener)reduced.addEventListener("change",resetTimer);
- fetch("/forever_app/data/mining-points.json",{cache:"default"})
+ fetch("/data/mining-points.json",{cache:"default"})
   .then(r=>{if(!r.ok)throw new Error("Map references unavailable");return r.json()})
   .then(j=>{if(j.coordinate_system!=="wow_ui_map_normalized_percent"||!Array.isArray(j.zones))return;data=j;show(index)})
   .catch(()=>{/* Static map and zone navigation remain fully usable offline. */});
