@@ -44,7 +44,7 @@ function render(){
  table.replaceChildren();
  count.textContent=rows.length+" "+(rows.length===1?tr.item:tr.items)+(total!==null&&status!=="forever"?" · "+total.toLocaleString(en?"en":"fr")+" Classic ("+tr.loaded+" : "+classic.length+")":"");
  if(!rows.length){const line=document.createElement("tr");rowText(line,loading?tr.loading:tr.noresult).colSpan=4;table.append(line)}
- for(const i of rows.slice(0,350)){const row=document.createElement("tr"),name=rowText(row,"");name.className="item-v2-name";const imgSrc=imageUrl(i);
+ for(const i of rows.slice(0,700)){const row=document.createElement("tr"),name=rowText(row,"");name.className="item-v2-name";const imgSrc=imageUrl(i);
  if(imgSrc){const pic=document.createElement("img");pic.className="result-icon item-v2-icon";pic.src=imgSrc;pic.alt="";pic.loading="lazy";if(!i.icon)pic.title=en?"Illustrative slot icon":"Icône illustrative d’emplacement";pic.onerror=()=>pic.remove();name.append(pic)}
  const display=document.createElement("span");display.className="item-v2-label";display.style.setProperty("--rarity",colors[i.quality]||"#d7d7d7");
  const href=(typeof i.url==="string"&&(i.url.startsWith("https://www.wowhead.com/forever/")||i.url.startsWith("https://wowdb.assemblee-defias.fr/")||i.url.startsWith("https://www.60.tools/items/")))?i.url:null;
@@ -68,7 +68,21 @@ async function queryClassic(expected,append=false){
  const q=search.value.trim(),numeric=/^\d{1,8}$/.test(q)?Number(q):null;
  let result;
  if(numeric){const direct=await service.itemById(numeric);result={items:direct?[direct]:[],hasMore:false,cursor:null,count:null}}
- else result=await service.loadClassic({slot:slot.value,query:q,qualities:[...selection],types:armor.value==="all"?[]:[armor.value],cursor:append?cursor:null});
+ else{
+  // Show more Classic equipment immediately without an excessive initial request.
+  // Additional pages stay available through the existing "Load 100 more" button.
+  const batch=[],pages=append||q?1:3;
+  let next=append?cursor:null,hasMore=false,countValue=null;
+  for(let page=0;page<pages;page++){
+   const response=await service.loadClassic({slot:slot.value,query:q,qualities:[...selection],types:armor.value==="all"?[]:[armor.value],cursor:next});
+   if(expected!==key)return;
+   batch.push(...response.items);
+   if(countValue===null)countValue=response.count;
+   hasMore=response.hasMore;next=response.cursor;
+   if(!hasMore||!next)break;
+  }
+  result={items:batch,hasMore,cursor:next,count:countValue};
+ }
  if(expected!==key)return;
  classic=append?[...classic,...result.items.filter(i=>!classic.some(old=>old.id===i.id))]:result.items;more=result.hasMore;cursor=result.cursor;total=result.count;error="";
  }catch(e){if(expected!==key)return;error=tr.unavailable;more=false}
