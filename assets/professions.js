@@ -42,6 +42,7 @@ function choose(p,updateHash=true){
   put(block,"strong",row.name[en?"en":"fr"]+" "+row.from+"–"+row.to);
   put(block,"small",row.min_skill?T("Métier "+row.min_skill,"Skill "+row.min_skill)+(row.min_level?" · "+T("Niv. ","Lv. ")+row.min_level:""):T("Accessible dès le début","Available from the start"));
  }
+ if(p.progression_note)put(chosen,"p",p.progression_note[en?"en":"fr"],"prof-progression-note");
  put(chosen,"h4",T("Maîtres recensés sur Forever ("+p.trainers.length+")","Forever guide trainers ("+p.trainers.length+")"));
  const trainerNote=put(chosen,"p",state.meta.trainer_directory_status[en?"en":"fr"],"prof-trainer-note");
  const trainerFilter=put(chosen,"div",null,"prof-trainer-controls");
