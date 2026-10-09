@@ -8,7 +8,7 @@ const fmt=x=>Number(x).toLocaleString(en?"en-US":"fr-FR",{maximumFractionDigits:
 const canvas=$("rare-canvas"),ctx=canvas.getContext("2d"),W=1002,H=668;
 const local=new Set(["azshara","blasted-lands","burning-steppes","epl","searing-gorge","silithus","swamp-of-sorrows","ungoro","winterspring","wpl"]);
 let db,rows=[],filtered=[],selected=null,zoneId="",img=null,token=0,zoom=1,center=[50,50],pins=[],hover=null,drag=null;
-const search=$("rare-search"),zone=$("rare-zone"),type=$("rare-rank"),level=$("rare-level"),loot=$("rare-loot"),tame=$("rare-tame");
+const search=$("rare-search"),zone=$("rare-zone"),type=$("rare-rank"),level=$("rare-level"),loot=$("rare-loot"),tame=$("rare-tame"),mapped=$("rare-mapped");
 const zname=id=>db?.zones?.[id]?.[en?"en":"fr"]||id;
 const colors=new Map();
 function buildColors(){colors.clear();const zones=[...new Set(rows.map(r=>r.zone))];for(const z of zones){const list=rows.filter(r=>r.zone===z).sort((a,b)=>a.name.en.localeCompare(b.name.en));list.forEach((r,i)=>{const hue=Math.round((198+i*137.508)%360);colors.set(r.id,`hsl(${hue} 76% 67%)`)})}}
@@ -22,7 +22,7 @@ const button=(label,cls)=>{const n=m("button",label,cls);n.type="button";return 
 function results(){
 const q=norm(search.value.trim());
 return rows.filter(r=>(zone.value==="all"||r.zone===zone.value)&&(type.value==="all"||r.classification===type.value)&&
-(level.value==="all"||(level.value==="low"?r.level<=30:r.level>30))&&(!loot.checked||r.loot.length)&&(!tame.checked||r.tameable)&&
+(level.value==="all"||(level.value==="low"?r.level<=30:r.level>30))&&(!loot.checked||r.loot.length)&&(!tame.checked||r.tameable)&&(!mapped.checked||r.points.length)&&
 (!q||norm([r.name.fr,r.name.en,zname(r.zone),...r.loot.map(i=>i.name.fr),...r.loot.map(i=>i.name.en)].join(" ")).includes(q)))
 .sort((a,b)=>Number(!!b.loot.length)-Number(!!a.loot.length)||a.level-b.level||a.name.en.localeCompare(b.name.en));
 }
@@ -35,7 +35,7 @@ for(const r of filtered){
  b.append(m("span",zname(r.zone),"rare-zone-name"));
  const meta=m("span",null,"rare-row-meta");meta.append(m("span",respawn(r)));
  if(r.loot.length)meta.append(chip(r.loot.length+" "+T("butin(s)","loot"),"purple"));
- if(r.tameable)meta.append(chip(T("Apprivoisable","Tameable"),"green"));b.append(meta);
+ if(r.tameable)meta.append(chip(T("Apprivoisable","Tameable"),"green"));if(!r.points.length&&!db.zones[r.zone]?.instance)meta.append(chip(T("Position à documenter","No position yet"),"rare-pending"));b.append(meta);
  b.addEventListener("click",()=>choose(r));box.append(b);
 }
 paintLegend();
@@ -113,7 +113,7 @@ if(hit?.r.id!==hover?.r.id||hit?.p!==hover?.p){hover=hit||null;canvas.style.curs
 canvas.addEventListener("pointerup",e=>{const moved=drag?.moved;drag=null;if(moved)return;const p=mouse(e),hit=pins.map(x=>({...x,d:Math.hypot(x.x-p[0],x.y-p[1])})).filter(x=>x.d<25).sort((a,b)=>a.d-b.d)[0];if(hit)choose(hit.r)});
 canvas.addEventListener("pointercancel",()=>drag=null);canvas.addEventListener("pointerleave",()=>{hover=null;draw()});
 canvas.addEventListener("keydown",e=>{if(e.key==="+"||e.key==="="){e.preventDefault();zoomTo(zoom*1.25)}else if(e.key==="-"){e.preventDefault();zoomTo(zoom/1.25)}else if(["ArrowLeft","ArrowRight","ArrowUp","ArrowDown"].includes(e.key)){e.preventDefault();center[0]+=(e.key==="ArrowLeft"?-8:e.key==="ArrowRight"?8:0)/zoom;center[1]+=(e.key==="ArrowUp"?-8:e.key==="ArrowDown"?8:0)/zoom;clampCenter();draw()}});
-for(const e of [search,zone,type,level,loot,tame])e.addEventListener(e===search?"input":"change",update);
+for(const e of [search,zone,type,level,loot,tame,mapped])e.addEventListener(e===search?"input":"change",update);
 fetch("/data/rares.json?v=20261009",{cache:"no-cache"}).then(r=>{if(!r.ok)throw Error("HTTP "+r.status);return r.json()}).then(data=>{
 if(!Array.isArray(data.rares)||!data.zones)throw Error("Invalid JSON");db=data;rows=data.rares.filter(r=>r.zone&&db.zones[r.zone]&&Array.isArray(r.points)&&Array.isArray(r.loot));
 for(const key of [...new Set(rows.map(r=>r.zone))].sort((a,b)=>zname(a).localeCompare(zname(b),en?"en":"fr"))){const opt=m("option",zname(key));opt.value=key;zone.append(opt)}
