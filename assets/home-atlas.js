@@ -13,6 +13,13 @@
  const title=root.querySelector("[data-atlas-name]");
  const count=root.querySelector("[data-atlas-count]");
  const image=root.querySelector("[data-atlas-image]");
+ // Match the same crop used by the full mining map for older 1024×768 textures.
+ // Those files include unused right/bottom padding beyond the 1002×668 map frame.
+ image.addEventListener("load",()=>{
+   const legacy=image.naturalWidth>0&&image.naturalHeight>0&&image.naturalWidth/image.naturalHeight<1.42;
+   image.style.width=legacy?(100*1024/1002)+"%":"100%";
+   image.style.height=legacy?(100*768/668)+"%":"100%";
+ });
  const markers=root.querySelector("[data-atlas-markers]");
  const map=root.querySelector("[data-atlas-map]");
  const cta=root.querySelector("[data-atlas-open]");
