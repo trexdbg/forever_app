@@ -4,8 +4,12 @@ const ROOT="/forever_app/";
 const $=id=>document.getElementById(id),canvas=$("quest-canvas");
 if(!canvas)return;
 const ctx=canvas.getContext("2d"),W=canvas.width,H=canvas.height;
-const cache={},s={meta:null,data:null,faction:"alliance",profile:"human",steps:[],index:0,done:new Set(),selected:0,zoom:1,center:{x:50,y:50},image:null,mapUrl:"",mapLoaded:false};
-let pending=0,pointer=null;
+const cache={},s={meta:null,data:null,faction:"alliance",profile:"human",race:"human",steps:[],index:0,done:new Set(),selected:0,zoom:1,center:{x:50,y:50},image:null,mapUrl:"",mapLoaded:false};
+const RACES={
+ alliance:[{id:"human",profile:"human",label:"Humain"},{id:"dwarf",profile:"gnorf",label:"Nain"},{id:"gnome",profile:"gnorf",label:"Gnome"},{id:"nelf",profile:"nelf",label:"Elfe de la nuit"}],
+ horde:[{id:"orc",profile:"trorc",label:"Orc"},{id:"troll",profile:"trorc",label:"Troll"},{id:"undead",profile:"undead",label:"Mort-vivant"},{id:"tauren",profile:"tauren",label:"Tauren"}]
+};
+let pending=0,pointer=null,scrubTimer=null;
 const labels={starts:"À prendre",objectives:"À faire",ends:"À rendre",completed:"À terminer",special:"Conseil"};
 const classes={quest:"#e4bd7c",hub:"#efc772",objective:"#7bc9cb",flightpath:"#9daff0",travel:"#b2adcf"};
 const element=(tag,text,cls)=>{const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e};
@@ -26,7 +30,7 @@ const stepLabel=i=>{const st=s.steps[i];return stepName(st)+" · niv. ≈ "+Math
 const storageKey=()=> "forever.quests.done.v1."+s.faction+"."+s.profile;
 const loadDone=()=>{try{const raw=JSON.parse(localStorage.getItem(storageKey())||"[]");s.done=new Set(Array.isArray(raw)?raw.filter(v=>Number.isInteger(v)&&v>=0&&v<s.steps.length):[])}catch{s.done=new Set()}};
 const saveDone=()=>{try{localStorage.setItem(storageKey(),JSON.stringify([...s.done].sort((a,b)=>a-b)))}catch{}};
-const syncUrl=()=>{const u=new URL(location.href);u.searchParams.set("faction",s.faction);u.searchParams.set("race",s.profile);u.searchParams.set("step",String(s.index+1));history.replaceState(null,"",u.pathname+u.search+u.hash)};
+const syncUrl=()=>{const u=new URL(location.href);u.searchParams.set("faction",s.faction);u.searchParams.set("race",s.profile);u.searchParams.set("peuple",s.race);u.searchParams.set("step",String(s.index+1));history.replaceState(null,"",u.pathname+u.search+u.hash)};
 const project=(x,y)=>({x:(50+(x-s.center.x)*s.zoom)*W/100,y:(50+(y-s.center.y)*s.zoom)*H/100});
 const clientPoint=e=>{const r=canvas.getBoundingClientRect();return{x:(e.clientX-r.left)*W/r.width,y:(e.clientY-r.top)*H/r.height}};
 const format=n=>Number(n).toFixed(1).replace(".",",");
@@ -75,6 +79,7 @@ function selectWaypoint(i,focus=false){
 }
 function renderWaypoints(){
  const list=$("quest-waypoints");list.replaceChildren();const pts=s.steps[s.index].waypoints;
+ $("quest-waypoint-count").textContent=pts.length+" point"+(pts.length>1?"s":"")+" de passage · "+stepName(s.steps[s.index]);
  pts.forEach((w,i)=>{
   const b=element("button",undefined,"quest-waypoint"+(s.selected===i?" selected":""));b.type="button";b.setAttribute("aria-pressed",String(s.selected===i));
   const title=element("div",undefined,"quest-waypoint-heading");title.append(element("b",String(i+1)),element("strong",waypointTitle(w)),element("small",format(w.coords.x)+" / "+format(w.coords.y)));b.append(title);
@@ -88,26 +93,76 @@ function renderWaypoints(){
   b.append(actions);b.addEventListener("click",()=>selectWaypoint(i,true));list.append(b);
  });
 }
-function renderStepper(){
- const list=$("quest-steps");list.replaceChildren();const n=s.steps.length;
- const indices=[];for(let i=0;i<n;i++)if(i===0||i===n-1||Math.abs(i-s.index)<=6)indices.push(i);
- let previous=-1;for(const i of indices){if(i-previous>1)list.append(element("span","· · ·","quest-step-ellipsis"));previous=i;const step=s.steps[i];
- const b=element("button",undefined,"quest-step-button"+(i===s.index?" active":"")+(s.done.has(i)?" done":""));b.type="button";b.setAttribute("aria-current",String(i===s.index?"step":"false"));
- b.append(element("span",s.done.has(i)?"✓":String(i+1),"step-n"));
- const d=element("span",undefined,"step-description");d.append(element("strong",stepName(step)),element("small","≈ niv. "+Math.floor(Number(step.experience)||0)+" · "+step.waypoints.length+" points"));b.append(d);
- b.addEventListener("click",()=>go(i));list.append(b);}
+function renderFactionChoices(){
+ for(const button of $("quest-factions").querySelectorAll("button[data-faction]")){
+  const active=button.dataset.faction===s.faction;
+  button.classList.toggle("selected",active);button.setAttribute("aria-pressed",String(active));
+ }
+}
+function renderRaceChoices(){
+ const panel=$("quest-races");panel.replaceChildren();
+ for(const race of RACES[s.faction]){
+  const active=race.id===s.race;
+  const b=element("button",undefined,"quest-race-choice"+(active?" selected":""));
+  b.type="button";b.dataset.race=race.id;b.setAttribute("aria-pressed",String(active));
+  b.setAttribute("aria-label","Choisir "+race.label);
+  const picture=element("img");picture.alt="";picture.width=48;picture.height=48;picture.loading="lazy";
+  picture.src="https://raw.githubusercontent.com/trexdbg/vanilla-questing/"+s.meta.source_commit+"/src/interface/images/icons/"+race.id+".png";
+  picture.addEventListener("error",()=>{picture.replaceWith(element("span",race.label.slice(0,2).toUpperCase(),"quest-race-fallback"))},{once:true});
+  b.append(picture,element("span",race.label,"quest-race-label"),element("span","✓","quest-race-check"));
+  b.addEventListener("click",()=>selectRace(race.id));panel.append(b);
+ }
+ $("quest-race-hint").textContent=s.faction==="alliance"?
+ "Nains et Gnomes partagent le même guide de départ, mais gardent chacun leur portrait.":
+ "Orcs et Trolls partagent le même guide de départ, mais gardent chacun leur portrait.";
+}
+const raceStorageKey=()=> "forever.quests.race.v1."+s.faction;
+function rememberedRace(faction){
+ try{const v=localStorage.getItem("forever.quests.race.v1."+faction);return RACES[faction].find(r=>r.id===v)}catch{return null}
+}
+function saveRace(){try{localStorage.setItem(raceStorageKey(),s.race)}catch{}}
+function selectRace(id){
+ const race=RACES[s.faction].find(r=>r.id===id);
+ if(!race||!s.data||s.race===id)return;
+ const changedRoute=s.profile!==race.profile;
+ s.race=id;s.profile=race.profile;saveRace();renderRaceChoices();
+ if(changedRoute){
+  s.steps=[...s.data.routes[s.profile],...s.data.routes.shared];loadDone();s.index=0;s.selected=0;
+  s.zoom=1;s.center={x:50,y:50};s.mapUrl="";renderMilestones();
+ }
+ render();search();
+}
+function previewStep(index){
+ if(!s.steps.length)return;
+ const i=clamp(index,0,s.steps.length-1),st=s.steps[i],percent=s.steps.length<=1?0:100*i/(s.steps.length-1);
+ $("quest-range").style.setProperty("--quest-range-fill",percent+"%");
+ $("quest-range-output").textContent=(i+1)+" / "+s.steps.length;
+ $("quest-timeline-preview").textContent=stepName(st)+" · niveau ≈ "+Number(st.experience).toFixed(1).replace(".",",")+" · "+st.waypoints.length+" points";
+ $("quest-range").setAttribute("aria-valuetext","Étape "+(i+1)+" sur "+s.steps.length+", "+stepName(st));
+}
+function renderMilestones(){
+ const wrap=$("quest-milestones");wrap.replaceChildren();
+ const milestones=[{level:0,text:"Départ"},{level:20,text:"Niv. 20"},{level:40,text:"Niv. 40"},{level:60,text:"Niv. 60"}];
+ for(const milestone of milestones){
+  const idx=milestone.level===0?0:s.steps.findIndex(st=>Number(st.experience)>=milestone.level);
+  if(idx<0)continue;
+  const b=element("button",milestone.text,"quest-milestone");b.type="button";b.style.left=(100*idx/Math.max(s.steps.length-1,1))+"%";
+  b.title="Rejoindre "+stepName(s.steps[idx])+" · étape "+(idx+1);
+  b.addEventListener("click",()=>go(idx));wrap.append(b);
+ }
 }
 function renderProgress(){
  const total=s.steps.length,done=s.done.size,percent=total?Math.round(100*done/total):0;
- $("quest-path-label").textContent=(s.faction==="alliance"?"Alliance":"Horde")+" · "+$("quest-profile").selectedOptions[0]?.textContent;
+ $("quest-path-label").textContent=(s.faction==="alliance"?"Alliance":"Horde")+" · "+(RACES[s.faction].find(r=>r.id===s.race)?.label||s.profile);
  $("quest-progress-info").textContent=done+" / "+total+" étapes terminées ("+percent+" %)";
  $("quest-progress-fill").style.width=percent+"%";
  $("quest-progress-track").setAttribute("aria-valuenow",String(percent));
 }
 function render(){
  const st=s.steps[s.index];if(!st)return;
- $("quest-range").max=String(s.steps.length);$("quest-range").value=String(s.index+1);$("quest-range-output").textContent=(s.index+1)+" / "+s.steps.length;
- $("quest-step-count").textContent="ÉTAPE "+(s.index+1)+" / "+s.steps.length;
+ $("quest-range").max=String(s.steps.length);$("quest-range").value=String(s.index+1);previewStep(s.index);
+ $("quest-step-count").textContent="Étape "+(s.index+1)+" sur "+s.steps.length;
+ $("quest-timeline-zone").textContent=stepLabel(s.index);
  $("quest-zone-title").textContent=stepName(st);
  $("quest-level").textContent="Niveau approximatif : "+Number(st.experience||0).toFixed(1).replace(".",",")+" · "+st.waypoints.length+" points à visiter";
  $("quest-map-title").textContent=stepName(st)+" · itinéraire dans la zone";
@@ -115,34 +170,44 @@ function render(){
  const first=s.index===0,last=s.index===s.steps.length-1;
  $("quest-prev").disabled=$("quest-prev-bottom").disabled=first;$("quest-next").disabled=$("quest-next-bottom").disabled=last;
  const complete=$("quest-complete"),done=s.done.has(s.index);complete.textContent=done?"✓ Étape terminée · annuler":"Marquer l'étape terminée ✓";complete.setAttribute("aria-pressed",String(done));
- renderProgress();renderStepper();renderWaypoints();renderSelection();setImage(st.zone);draw();syncUrl();
+ renderProgress();renderWaypoints();renderSelection();setImage(st.zone);draw();syncUrl();
 }
-function go(n){if(!s.steps.length)return;s.index=clamp(n,0,s.steps.length-1);s.selected=0;s.center={x:50,y:50};s.zoom=1;$("quest-zoom-reset").textContent="100 %";render();}
-async function loadProfile(){
- const token=++pending,savedParams=new URLSearchParams(location.search);
- const faction=$("quest-faction").value;s.faction=faction;
- const profileOptions=s.meta.profiles[faction];const profileSelect=$("quest-profile"),requested=profileSelect.value;
- profileSelect.replaceChildren();for(const p of profileOptions){const option=element("option",p.label+" · "+p.subtitle);option.value=p.id;profileSelect.append(option)}
- s.profile=profileOptions.some(x=>x.id===requested)?requested:profileOptions[0].id;
- if(savedParams.get("faction")===faction&&profileOptions.some(x=>x.id===savedParams.get("race"))&&!("loaded" in profileSelect.dataset)){s.profile=savedParams.get("race")}
- profileSelect.value=s.profile;profileSelect.dataset.loaded="yes";
+function go(n){if(scrubTimer!==null){clearTimeout(scrubTimer);scrubTimer=null}if(!s.steps.length)return;s.index=clamp(n,0,s.steps.length-1);s.selected=0;s.center={x:50,y:50};s.zoom=1;$("quest-zoom-reset").textContent="100 %";render();}
+async function loadFaction(faction,fromUrl=false){
+ const token=++pending,params=new URLSearchParams(location.search);
+ if(!RACES[faction])return;
+ s.faction=faction;
+ let initial=rememberedRace(faction)||RACES[faction][0];
+ if(fromUrl&&params.get("faction")===faction){
+  initial=RACES[faction].find(r=>r.id===params.get("peuple"))||
+   RACES[faction].find(r=>r.profile===params.get("race"))||initial;
+ }
+ s.race=initial.id;s.profile=initial.profile;
+ renderFactionChoices();renderRaceChoices();
  $("quest-data-status").textContent="Chargement…";
  try{
-  if(!cache[faction]){const res=await fetch(ROOT+"data/quests/"+faction+".json");if(!res.ok)throw Error("HTTP "+res.status);cache[faction]=await res.json()}
+  if(!cache[faction]){
+   const response=await fetch(ROOT+"data/quests/"+faction+".json");
+   if(!response.ok)throw Error("HTTP "+response.status);
+   cache[faction]=await response.json();
+  }
   if(token!==pending)return;
-  s.data=cache[faction];if(s.data.source_commit!==s.meta.source_commit||s.data.schema_version!==1)throw Error("Versions de données incompatibles");
+  s.data=cache[faction];
+  if(s.data.source_commit!==s.meta.source_commit||s.data.schema_version!==1)throw Error("Versions de données incompatibles");
   s.steps=[...s.data.routes[s.profile],...s.data.routes.shared];loadDone();
-  const restored=savedParams.get("faction")===faction&&savedParams.get("race")===s.profile?Number(savedParams.get("step"))-1:NaN;
-  s.index=Number.isInteger(restored)?clamp(restored,0,s.steps.length-1):0;
-  s.selected=0;s.zoom=1;s.center={x:50,y:50};s.mapUrl="";$("quest-data-status").textContent=s.steps.length+" étapes · Classic";
-  $("quest-app").setAttribute("aria-busy","false");render();search();
- }catch(err){$("quest-data-status").textContent="Données indisponibles";$("quest-zone-title").textContent="Erreur de chargement";$("quest-level").textContent=err.message;$("quest-app").setAttribute("aria-busy","false")}
-}
-function setProfile(){
- const profile=$("quest-profile").value;
- if(!s.data?.routes?.[profile])return;
- s.profile=profile;s.steps=[...s.data.routes[profile],...s.data.routes.shared];loadDone();s.index=0;s.selected=0;s.zoom=1;s.center={x:50,y:50};s.mapUrl="";
- $("quest-data-status").textContent=s.steps.length+" étapes · Classic";render();search();
+  const number=fromUrl&&params.get("faction")===faction&&params.get("race")===s.profile?Number(params.get("step"))-1:NaN;
+  s.index=Number.isInteger(number)?clamp(number,0,s.steps.length-1):0;
+  s.selected=0;s.zoom=1;s.center={x:50,y:50};s.mapUrl="";
+  $("quest-data-status").textContent=s.steps.length+" étapes · Classic";
+  $("quest-app").setAttribute("aria-busy","false");
+  renderMilestones();render();search();
+ }catch(err){
+  if(token!==pending)return;
+  $("quest-data-status").textContent="Données indisponibles";
+  $("quest-zone-title").textContent="Erreur de chargement";
+  $("quest-level").textContent=err.message;
+  $("quest-app").setAttribute("aria-busy","false");
+ }
 }
 function search(){
  const text=normal($("quest-search").value),res=$("quest-search-results");res.replaceChildren();res.hidden=!text;
@@ -165,9 +230,15 @@ canvas.addEventListener("wheel",e=>{if(!e.ctrlKey)return;e.preventDefault();setZ
 canvas.addEventListener("keydown",e=>{if(e.key==="ArrowRight"){e.preventDefault();selectWaypoint((s.selected+1)%s.steps[s.index].waypoints.length)}if(e.key==="ArrowLeft"){e.preventDefault();selectWaypoint((s.selected+s.steps[s.index].waypoints.length-1)%s.steps[s.index].waypoints.length)}});
 $("quest-prev").addEventListener("click",()=>go(s.index-1));$("quest-next").addEventListener("click",()=>go(s.index+1));
 $("quest-prev-bottom").addEventListener("click",()=>go(s.index-1));$("quest-next-bottom").addEventListener("click",()=>go(s.index+1));
-$("quest-range").addEventListener("input",e=>go(Number(e.target.value)-1));
-$("quest-faction").addEventListener("change",loadProfile);
-$("quest-profile").addEventListener("change",setProfile);
+$("quest-range").addEventListener("input",e=>{
+ const target=Number(e.target.value)-1;previewStep(target);
+ if(scrubTimer!==null)clearTimeout(scrubTimer);
+ scrubTimer=setTimeout(()=>go(target),160);
+});
+$("quest-range").addEventListener("change",e=>go(Number(e.target.value)-1));
+for(const button of $("quest-factions").querySelectorAll("button[data-faction]")){
+ button.addEventListener("click",()=>{if(button.dataset.faction!==s.faction)loadFaction(button.dataset.faction)});
+}
 $("quest-search").addEventListener("input",search);
 $("quest-zoom-out").addEventListener("click",()=>setZoom(s.zoom-.5));
 $("quest-zoom-in").addEventListener("click",()=>setZoom(s.zoom+.5));
@@ -176,7 +247,7 @@ $("quest-complete").addEventListener("click",()=>{if(s.done.has(s.index))s.done.
 $("quest-reset").addEventListener("click",()=>{if(!confirm("Effacer la progression du parcours "+s.profile+" ?"))return;s.done.clear();saveDone();render()});
 (async()=>{
  try{const resp=await fetch(ROOT+"data/quests/manifest.json");if(!resp.ok)throw Error("HTTP "+resp.status);s.meta=await resp.json();if(s.meta.coordinate_system!=="zone_percent_0_100")throw Error("Coordonnées incompatibles");
- const params=new URLSearchParams(location.search);const faction=params.get("faction")==="horde"?"horde":"alliance";$("quest-faction").value=faction;await loadProfile();
+ const params=new URLSearchParams(location.search);const faction=params.get("faction")==="horde"?"horde":"alliance";await loadFaction(faction,true);
  }catch(err){$("quest-zone-title").textContent="Impossible de charger les données";$("quest-level").textContent=err.message;$("quest-data-status").textContent="Indisponible";$("quest-app").setAttribute("aria-busy","false")}
 })();
 })();
