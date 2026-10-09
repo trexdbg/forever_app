@@ -15,6 +15,17 @@ const imgFor=(p)=>"https://wow.zamimg.com/images/wow/icons/medium/"+(imageNames[
 function pic(p){const img=mk("img");img.src=imgFor(p);img.alt="";img.width=42;img.height=42;img.loading="lazy";img.onerror=()=>{img.onerror=null;img.src=ROOT+"assets/icons/inv_scroll_07.jpg"};return img}
 function external(p,text,url){const a=put(p,"a",text);a.href=url;a.target="_blank";a.rel="noopener noreferrer";return a}
 const loading=$("prof-load"),cards=$("prof-grid"),chosen=$("prof-selected"),facts=$("prof-facts"),counter=$("prof-recipes-count");
+function openTrainerMap(p,name=""){
+ const type=$("npc-type"),trade=$("npc-profession"),weapon=$("npc-weapon"),rank=$("npc-rank"),zone=$("npc-zone"),faction=$("npc-faction"),search=$("npc-search");
+ if(type)type.value="profession";
+ if(trade)trade.value=p.name.fr;
+ if(weapon)weapon.value="all";
+ if(rank)rank.value="all";
+ if(zone)zone.value="all";
+ if(faction)faction.value="all";
+ if(search){search.value=name;search.dispatchEvent(new Event("input",{bubbles:true}))}
+ $("prof-trainers")?.scrollIntoView({behavior:"smooth",block:"start"});
+}
 function item(id){return state.archive?.items?.[String(id)]||{name:T("Objet ","Item ")+id,id}}
 function itemText(id){const i=item(id);return (i.available===false?i.classicName||i.name:i.name)||T("Objet ","Item ")+id}
 function statusWord(status){return ({new:T("Nouveau Forever","New in Forever"),changed:T("Modifié","Changed"),unchanged:T("Identique à Classic","Same as Classic"),inherited:T("Identifiant hérité","Inherited ID"),removed:T("Absent de Forever","Not in Forever")})[status]||status}
@@ -56,10 +67,11 @@ function choose(p,updateHash=true){
   const found=p.trainers.filter(x=>(factionSelect.value==="all"||x.faction===factionSelect.value)&&[x.name,x.zone.fr,x.zone.en].some(t=>t.normalize("NFD").replace(/[\\u0300-\\u036f]/g,"").toLowerCase().includes(q)));
   trainerList.replaceChildren();
   for(const trainer of found.slice(0,22)){
-   const row=put(trainerList,"div",null,"prof-trainer-row");
+   const row=put(trainerList,"button",null,"prof-trainer-row");row.type="button";row.title=T("Afficher sur la carte","Show on map");
    put(row,"strong",trainer.name);
    put(row,"span",trainer.zone[en?"en":"fr"]);
-   put(row,"small",tierLabel[trainer.tier]||trainer.tier);
+   put(row,"small",(tierLabel[trainer.tier]||trainer.tier)+" · "+T("Voir sur la carte ↗","View on map ↗"));
+   row.addEventListener("click",()=>openTrainerMap(p,trainer.name));
   }
   if(!found.length)put(trainerList,"p",T("Aucun maître dans ce filtre.","No matching trainers."),"prof-empty");
   if(found.length>22)put(trainerList,"p",T("Affinez pour voir les autres maîtres.","Refine to see other trainers."),"prof-empty");
@@ -71,10 +83,7 @@ function choose(p,updateHash=true){
  const actions=put(chosen,"div",null,"prof-links");
  external(actions,T("Liste à jour ↗","Current list ↗"),p.source);
  external(actions,T("Guide 1–300 ↗","1–300 guide ↗"),p.leveling_guide);
- const toTrainer=put(actions,"button",T("Localiser les maîtres ↓","Find trainers ↓"),"prof-trainer-jump");toTrainer.type="button";toTrainer.addEventListener("click",()=>{
-  const term=$("npc-search");if(term){term.value=p.name.fr;term.dispatchEvent(new Event("input",{bubbles:true}));}
-  $("prof-trainers")?.scrollIntoView({behavior:"smooth",block:"start"});
- });
+ const toTrainer=put(actions,"button",T("Localiser les maîtres ↑","Find trainers ↑"),"prof-trainer-jump");toTrainer.type="button";toTrainer.addEventListener("click",()=>openTrainerMap(p));
  if(p.id===186){const m=put(actions,"a",T("Carte des minerais ↗","Ore maps ↗"));m.href=ROOT+(en?"en/":"")+"minage/"}
  const archives=$("prof-archive");if(archives){archives.hidden=!state.archive;render();}
  if(updateHash)history.replaceState(null,"","#"+p.slug);
