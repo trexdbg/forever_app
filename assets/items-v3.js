@@ -1,8 +1,8 @@
 /* Equipment catalogue: Forever beta entries + paginated WoWDB Classic equipment. */
 (()=>{"use strict";
 const service=window.ForeverGearData;
-const table=document.getElementById("item-results"),search=document.getElementById("item-search"),slot=document.getElementById("item-slot"),chips=document.getElementById("item-quality-filters"),count=document.getElementById("item-count"),source=document.getElementById("items-source");
-if(!service||!table||!search||!slot||!chips)return;
+const table=document.getElementById("item-results"),search=document.getElementById("item-search"),slot=document.getElementById("item-slot"),armor=document.getElementById("item-armor"),chips=document.getElementById("item-quality-filters"),count=document.getElementById("item-count"),source=document.getElementById("items-source");
+if(!service||!table||!search||!slot||!armor||!chips)return;
 const en=document.documentElement.lang==="en";
 const originLabelsEN={"Forge":"Blacksmithing","Pic Blackrock":"Blackrock Spire","Profondeurs de Blackrock":"Blackrock Depths","Travail du cuir":"Leatherworking","Quête · Maleterres":"Quest · Plaguelands","Hache-tripes":"Dire Maul","Quête · Pic Blackrock":"Quest · Blackrock Spire","Couture · Mage":"Tailoring · Mage","Quête · Un'Goro":"Quest · Un'Goro","Butin mondial":"World drop","Couture · Prêtre":"Tailoring · Priest","Quête · Hache-tripes":"Quest · Dire Maul","Quête légendaire (référence Classic)":"Legendary quest (Classic reference)","Objet légendaire (référence Classic)":"Legendary item (Classic reference)","Forge (référence Classic)":"Blacksmithing (Classic reference)"};
 const displayOrigin=s=>en?(originLabelsEN[s]||s):s;
@@ -23,6 +23,7 @@ return icon?"/assets/icons/"+icon+".jpg":null}
 function matches(item){
  if(status==="forever"&&sourceType(item)!=="forever"||status==="classic"&&sourceType(item)!=="classic")return false;
  const id=slot.value;if(id!=="all"&&!service.compatible(item.slot,id))return false;
+ if(armor.value!=="all"&&window.ForeverEquipmentRules?.armorType(item)!==armor.value)return false;
  if(selection.size&&!selection.has(item.quality))return false;
  const q=search.value.trim().toLocaleLowerCase();
  return !q||String(item.id)===q||(item.name+" "+(item.origin||"")+" "+displayOrigin(item.origin||"")).toLocaleLowerCase().includes(q);
@@ -59,7 +60,7 @@ function render(){
  if(loading)notice.textContent=tr.loading;else if(error)notice.textContent=error;else notice.textContent=status==="forever"?tr.beta:tr.classicNote;
  moreButton.hidden=!more||status==="forever"||loading;moreButton.disabled=loading;
 }
-function signature(){return JSON.stringify([status,slot.value,search.value.trim().toLowerCase(),[...selection].sort()])}
+function signature(){return JSON.stringify([status,slot.value,armor.value,search.value.trim().toLowerCase(),[...selection].sort()])}
 async function queryClassic(expected,append=false){
  if(status==="forever")return;
  loading=true;render();
@@ -67,7 +68,7 @@ async function queryClassic(expected,append=false){
  const q=search.value.trim(),numeric=/^\d{1,8}$/.test(q)?Number(q):null;
  let result;
  if(numeric){const direct=await service.itemById(numeric);result={items:direct?[direct]:[],hasMore:false,cursor:null,count:null}}
- else result=await service.loadClassic({slot:slot.value,query:q,qualities:[...selection],cursor:append?cursor:null});
+ else result=await service.loadClassic({slot:slot.value,query:q,qualities:[...selection],types:armor.value==="all"?[]:[armor.value],cursor:append?cursor:null});
  if(expected!==key)return;
  classic=append?[...classic,...result.items.filter(i=>!classic.some(old=>old.id===i.id))]:result.items;more=result.hasMore;cursor=result.cursor;total=result.count;error="";
  }catch(e){if(expected!==key)return;error=tr.unavailable;more=false}
@@ -87,7 +88,7 @@ const actions=document.createElement("div");actions.className="item-v3-paging";a
 table.closest(".result-table-wrap")?.after(actions);
 moreButton.addEventListener("click",()=>{moreButton.disabled=true;queryClassic(key,true)});
 select.addEventListener("change",()=>{status=select.value;queue();render()});
-search.addEventListener("input",()=>{queue();render()});slot.addEventListener("change",()=>{queue();render()});
+search.addEventListener("input",()=>{queue();render()});slot.addEventListener("change",()=>{queue();render()});armor.addEventListener("change",()=>{queue();render()});
 const options=[...slot.options];slot.replaceChildren(options[0]);
 for(const [id,label] of Object.entries(slotLabels)){const o=document.createElement("option");o.value=id;o.textContent=label;slot.append(o)}
 (async()=>{
