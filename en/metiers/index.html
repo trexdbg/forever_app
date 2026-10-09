@@ -1,17 +1,44 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#0b1210"><meta name="description" content="Locate profession trainers by trade, tier, faction and zone on interactive maps. Classic references.">
-<link rel="canonical" href="https://trexdbg.github.io/forever_app/en/metiers/"><link rel="icon" href="/forever_app/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0b1210"><meta name="description" content="Explore 12 WoW Forever professions, client beta recipes and reagents, campsites, and Classic-reference trainers on interactive maps.">
+<link rel="canonical" href="https://trexdbg.github.io/forever_app/en/metiers/"><link rel="icon" href="/forever_app/assets/foreveroth-favicon.png" type="image/png">
 <meta property="og:type" content="website"><meta property="og:title" content="Profession trainers and tiers — WoW Forever Atlas"><meta property="og:description" content="Locate profession trainers by trade, tier, faction and zone on interactive maps. Classic references."><meta property="og:url" content="https://trexdbg.github.io/forever_app/en/metiers/">
-<title>Profession trainers and tiers — WoW Forever Atlas</title>
+<title>WoW Forever professions, recipes, materials and trainers — ForEveroth</title>
 <link rel="alternate" hreflang="fr" href="https://trexdbg.github.io/forever_app/metiers/"><link rel="alternate" hreflang="en" href="https://trexdbg.github.io/forever_app/en/metiers/"><link rel="alternate" hreflang="x-default" href="https://trexdbg.github.io/forever_app/metiers/">
-<link rel="stylesheet" href="/forever_app/assets/site.css"><link rel="stylesheet" href="/forever_app/assets/refined.css?v=20261009-2"><link rel="stylesheet" href="/forever_app/assets/language.css?v=1"><link rel="stylesheet" href="/forever_app/assets/npcs.css?v=4">
-<script defer src="/forever_app/assets/i18n.js?v=1"></script><script defer src="/forever_app/assets/common.js?v=3"></script><script defer src="/forever_app/assets/npc-map.js?v=3"></script><script defer src="/forever_app/assets/npcs.js?v=4"></script></head>
+<link rel="stylesheet" href="/forever_app/assets/site.css"><link rel="stylesheet" href="/forever_app/assets/refined.css?v=20261009-2"><link rel="stylesheet" href="/forever_app/assets/language.css?v=1"><link rel="stylesheet" href="/forever_app/assets/npcs.css?v=4"><link rel="stylesheet" href="/forever_app/assets/professions.css?v=1">
+<script defer src="/forever_app/assets/i18n.js?v=1"></script><script defer src="/forever_app/assets/common.js?v=3"></script><script defer src="/forever_app/assets/npc-map.js?v=3"></script><script defer src="/forever_app/assets/npcs.js?v=4"></script><script defer src="/forever_app/assets/professions.js?v=1"></script><link rel="stylesheet" href="/forever_app/assets/foreveroth-brand.css?v=1"></head>
 <body data-page="trainers"><a class="skip" href="#contenu">Skip to content</a>
-<header class="site-header"><div class="wrap header-inner"><a class="brand" href="/forever_app/en/" aria-label="ForEveroth"><span class="brand-icon" aria-hidden="true">✦</span><span>For<strong>Everoth</strong></span></a><button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button><nav class="nav" aria-label="Main navigation"><a href="/forever_app/en/">Home</a><a href="/forever_app/en/quetes/">Quests</a><a href="/forever_app/en/talents/">Talents</a><a href="/forever_app/en/minage/">Mining</a><a href="/forever_app/en/equipements/">Gear</a><a href="/forever_app/en/marchands/">Vendors</a><a aria-current="page" href="/forever_app/en/metiers/">Professions</a><a href="/forever_app/en/population/">Population</a></nav><div class="lang-switch" role="group" aria-label="Language"><a href="/forever_app/metiers/" lang="fr" title="Français">FR</a><a href="/forever_app/en/metiers/" lang="en" aria-current="true" title="English">EN</a></div></div></header>
+<header class="site-header"><div class="wrap header-inner"><a class="brand" href="/forever_app/en/" aria-label="ForEveroth, home"><img class="brand-lockup" src="/forever_app/assets/foreveroth-logo.png" width="400" height="74" alt="" decoding="async"></a><button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button><nav class="nav" aria-label="Main navigation"><a href="/forever_app/en/">Home</a><a href="/forever_app/en/quetes/">Quests</a><a href="/forever_app/en/talents/">Talents</a><a href="/forever_app/en/minage/">Mining</a><a href="/forever_app/en/equipements/">Gear</a><a href="/forever_app/en/marchands/">Vendors</a><a aria-current="page" href="/forever_app/en/metiers/">Professions</a><a href="/forever_app/en/population/">Population</a></nav><div class="lang-switch" role="group" aria-label="Language"><a href="/forever_app/metiers/" lang="fr" title="Français">FR</a><a href="/forever_app/en/metiers/" lang="en" aria-current="true" title="English">EN</a></div></div></header>
 <main id="contenu">
-<section class="page-hero wrap"><span class="kicker">ATLAS / PROFESSIONS</span><h1>Find your <em>trainer.</em></h1><p>Search by profession, tier, faction and location.</p><nav class="npc-crosslinks" aria-label="Related directory"><a href="/forever_app/en/marchands/">Browse item vendors ↗</a></nav></section>
-<section class="section wrap slim-top"><div class="tool-panel npc-app" data-mode="trainer" id="npcs-app">
+<section class="page-hero wrap"><span class="kicker">ATLAS / PROFESSIONS</span><h1>Master your <em>profession.</em></h1><p>Forever recipes, materials, new crafts and trainer locations.</p><div class="prof-page-index"><a href="#prof-overview">Browse professions ↓</a><a href="#prof-trainers">Find trainers ↓</a></div><nav class="npc-crosslinks" aria-label="Related directory"><a href="/forever_app/en/marchands/">Browse item vendors ↗</a></nav></section>
+<section class="section wrap slim-top" id="prof-overview"><div class="prof-app" id="prof-app">
+ <div class="prof-topbar"><div><h2>Forever professions</h2><p>Beta client data · Recipes, materials and campsites</p></div><span class="prof-build">Build <strong id="prof-build">—</strong></span></div>
+ <p id="prof-load" class="npc-intro" role="status">Loading professions…</p>
+ <div id="prof-facts" class="prof-facts" aria-live="polite"></div>
+ <div class="prof-catalog-layout">
+  <div id="prof-grid" class="prof-grid" aria-label="Choose a profession"></div>
+  <div id="prof-selected" class="prof-selected" aria-live="polite"></div>
+ </div>
+ <div class="prof-archive-intro"><h3>Explore recipes and reagents</h3>
+  <p>The 12-profession overview uses Forever client 1.60.1.70291 (October 8). For materials, results, recipe books and skill-up thresholds, load the detailed Forever 1.60.1.69876 archive (September 17). These are different builds. Color thresholds are not learning requirements.</p>
+  <button type="button" id="prof-load-archive">Load detailed recipes</button>
+  <p id="prof-archive-status" class="prof-archive-status" role="status">Research archive hosted by MAF2414, several MB, downloaded only on request.</p>
+ </div>
+ <section class="prof-archive" id="prof-archive" hidden aria-label="Recipe catalog">
+  <div class="prof-archive-head"><h3>Recipe workshop</h3><span id="prof-recipes-count">—</span></div>
+  <div class="prof-archive-controls">
+   <label>Search output or material<input id="prof-recipe-search" type="search" autocomplete="off" placeholder="Name, material or spell ID…"></label>
+   <label>Forever status<select id="prof-recipe-status"><option value="all">All</option><option value="new">New</option><option value="changed">Changed</option><option value="unchanged">Unchanged</option><option value="inherited">Inherited</option></select></label>
+   <label>Category<select id="prof-recipe-type"><option value="all">All</option><option value="camp">Camping</option><option value="recipes">Recipes and enchants</option><option value="materials">Materials</option></select></label>
+   <label>Sort by<select id="prof-recipe-sort"><option value="skill">Skill</option><option value="name">Name</option><option value="status">Changes</option></select></label>
+  </div>
+  <div class="prof-skill-bar"><span>Simulated skill</span><input type="range" id="prof-skill" min="1" max="300" step="1" value="150" aria-label="Skill level for recipe colors"><strong id="prof-skill-label">150</strong></div>
+  <div id="prof-recipe-list" class="prof-recipe-list"></div>
+  <div class="prof-pagebar"><button type="button" id="prof-prev" disabled>←</button><span id="prof-page">1 / 1</span><button type="button" id="prof-next">→</button></div>
+  <p class="prof-recipe-meta">Detailed recipe names remain in English unless the archive supplies a localization. Vendors and learning requirements are not verified by this export.</p>
+ </section>
+ </div></section>
+<section class="section wrap slim-top" id="prof-trainers"><div class="tool-panel npc-app" data-mode="trainer" id="npcs-app">
 <div class="tool-head"><div><h2>Profession trainers</h2></div><span class="status-pill" id="npc-load-status">Loading…</span></div>
 <p class="npc-intro">Classic-reference trainers · Forever locations unverified</p>
 <div class="npc-controls">
