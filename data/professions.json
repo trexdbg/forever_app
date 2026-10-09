@@ -52,7 +52,127 @@
         "Flask of Natural Accuracy"
       ],
       "source": "https://wowforevertalents.com/professions/alchemy/",
-      "leveling_guide": "https://www.wow-professions.com/forever/alchemy-leveling-guide"
+      "leveling_guide": "https://www.wow-professions.com/forever/alchemy-leveling-guide",
+      "trainers_source": "https://www.wow-professions.com/forever/alchemy-trainers",
+      "trainers": [
+        {
+          "name": "Whuut",
+          "zone": {
+            "fr": "Orgrimmar",
+            "en": "Orgrimmar"
+          },
+          "faction": "horde",
+          "tier": "apprentice"
+        },
+        {
+          "name": "Yelmak",
+          "zone": {
+            "fr": "Orgrimmar",
+            "en": "Orgrimmar"
+          },
+          "faction": "horde",
+          "tier": "journeyman"
+        },
+        {
+          "name": "Doctor Martin Felben",
+          "zone": {
+            "fr": "Fossoyeuse",
+            "en": "Undercity"
+          },
+          "faction": "horde",
+          "tier": "apprentice"
+        },
+        {
+          "name": "Doctor Marsh",
+          "zone": {
+            "fr": "Fossoyeuse",
+            "en": "Undercity"
+          },
+          "faction": "horde",
+          "tier": "journeyman"
+        },
+        {
+          "name": "Kray",
+          "zone": {
+            "fr": "Les Pitons-du-Tonnerre",
+            "en": "Thunder Bluff"
+          },
+          "faction": "horde",
+          "tier": "apprentice"
+        },
+        {
+          "name": "Bena Winterhoof",
+          "zone": {
+            "fr": "Les Pitons-du-Tonnerre",
+            "en": "Thunder Bluff"
+          },
+          "faction": "horde",
+          "tier": "journeyman"
+        },
+        {
+          "name": "Tel'Athir",
+          "zone": {
+            "fr": "Hurlevent",
+            "en": "Stormwind City"
+          },
+          "faction": "alliance",
+          "tier": "apprentice"
+        },
+        {
+          "name": "Lilyssia Nightbreeze",
+          "zone": {
+            "fr": "Hurlevent",
+            "en": "Stormwind City"
+          },
+          "faction": "alliance",
+          "tier": "journeyman"
+        },
+        {
+          "name": "Vosur Brakthel",
+          "zone": {
+            "fr": "Forgefer",
+            "en": "Ironforge"
+          },
+          "faction": "alliance",
+          "tier": "apprentice"
+        },
+        {
+          "name": "Tally Berryfizz",
+          "zone": {
+            "fr": "Forgefer",
+            "en": "Ironforge"
+          },
+          "faction": "alliance",
+          "tier": "journeyman"
+        },
+        {
+          "name": "Milla Fairancora",
+          "zone": {
+            "fr": "Darnassus",
+            "en": "Darnassus"
+          },
+          "faction": "alliance",
+          "tier": "apprentice"
+        },
+        {
+          "name": "Sylvanna Forestmoon",
+          "zone": {
+            "fr": "Darnassus",
+            "en": "Darnassus"
+          },
+          "faction": "alliance",
+          "tier": "journeyman"
+        },
+        {
+          "name": "Kylanna Windwhisper",
+          "zone": {
+            "fr": "Féralas",
+            "en": "Feralas"
+          },
+          "faction": "alliance",
+          "tier": "artisan"
+        }
+      ]
     },
     {
       "id": 164,
@@ -88,7 +208,118 @@
         "Enriched Thorium Helm"
       ],
       "source": "https://wowforevertalents.com/professions/blacksmithing/",
-      "leveling_guide": "https://www.wow-professions.com/forever/blacksmithing-leveling-guide"
+      "leveling_guide": "https://www.wow-professions.com/forever/blacksmithing-leveling-guide",
+      "trainers_source": "https://www.wow-professions.com/forever/blacksmithing-trainers",
+      "trainers": [
+        {
+          "name": "Ug'thok",
+          "zone": {
+            "fr": "Orgrimmar",
+            "en": "Orgrimmar"
+          },
+          "faction": "horde",
+          "tier": "apprentice"
+        },
+        {
+          "name": "Snarl",
+          "zone": {
+            "fr": "Orgrimmar",
+            "en": "Orgrimmar"
+          },
+          "faction": "horde",
+          "tier": "journeyman"
+        },
+        {
+          "name": "Basil Frye",
+          "zone": {
+            "fr": "Fossoyeuse",
+            "en": "Undercity"
+          },
+          "faction": "horde",
+          "tier": "apprentice"
+        },
+        {
+          "name": "James Van Brunt",
+          "zone": {
+            "fr": "Fossoyeuse",
+            "en": "Undercity"
+          },
+          "faction": "horde",
+          "tier": "journeyman"
+        },
+        {
+          "name": "Thrag Stonehoof",
+          "zone": {
+            "fr": "Les Pitons-du-Tonnerre",
+            "en": "Thunder Bluff"
+          },
+          "faction": "horde",
+          "tier": "apprentice"
+        },
+        {
+          "name": "Karn Stonehoof",
+          "zone": {
+            "fr": "Les Pitons-du-Tonnerre",
+            "en": "Thunder Bluff"
+          },
+          "faction": "horde",
+          "tier": "journeyman"
+        },
+        {
+          "name": "Dane Lindgren",
+          "zone": {
+            "fr": "Hurlevent",
+            "en": "Stormwind City"
+          },
+          "faction": "alliance",
+          "tier": "apprentice"
+        },
+        {
+          "name": "Therum Deepforge",
+          "zone": {
+            "fr": "Hurlevent",
+            "en": "Stormwind City"
+          },
+          "faction": "alliance",
+          "tier": "journeyman"
+        },
+        {
+          "name": "Groum Stonebeard",
+          "zone": {
+            "fr": "Forgefer",
+            "en": "Ironforge"
+          },
+          "faction": "alliance",
+          "tier": "apprentice"
+        },
+        {
+          "name": "Rotgath Stonebeard",
+          "zone": {
+            "fr": "Forgefer",
+            "en": "Ironforge"
+          },
+          "faction": "alliance",
+          "tier": "journeyman"
+        },
+        {
+          "name": "Bengus Deepforge",
+          "zone": {
+            "fr": "Forgefer",
+            "en": "Ironforge"
+          },
+          "faction": "alliance",
+          "tier": "expert"
+        },
+        {
+          "name": "Saru Steelfury",
+          "zone": {
+            "fr": "Orgrimmar",
+            "en": "Orgrimmar"
+          },
+          "faction": "horde",
+          "tier": "expert"
+        }
+      ]
     },
     {
       "id": 333,
@@ -124,7 +355,82 @@
         "Dust to Motes"
       ],
       "source": "https://wowforevertalents.com/professions/enchanting/",
-      "leveling_guide": "https://www.wow-professions.com/forever/enchanting-leveling-guide"
+      "leveling_guide": "https://www.wow-professions.com/forever/enchanting-leveling-guide",
+      "trainers_source": "https://www.wow-professions.com/forever/enchanting-trainers",
+      "trainers": [
+        {
+          "name": "Jhag",
+          "zone": {
+            "fr": "Orgrimmar",
+            "en": "Orgrimmar"
+          },
+          "faction": "horde",
+          "tier": "apprentice"
+        },
+        {
+          "name": "Malcomb Wynn",
+          "zone": {
+            "fr": "Fossoyeuse",
+            "en": "Undercity"
+          },
+          "faction": "horde",
+          "tier": "apprentice"
+        },
+        {
+          "name": "Mot Dawnstrider",
+          "zone": {
+            "fr": "Les Pitons-du-Tonnerre",
+            "en": "Thunder Bluff"
+          },
+          "faction": "horde",
+          "tier": "apprentice"
+        },
+        {
+          "name": "Betty Quin",
+          "zone": {
+            "fr": "Hurlevent",
+            "en": "Stormwind City"
+          },
+          "faction": "alliance",
+          "tier": "apprentice"
+        },
+        {
+          "name": "Thonys Pillarstone",
+          "zone": {
+            "fr": "Forgefer",
+            "en": "Ironforge"
+          },
+          "faction": "alliance",
+          "tier": "apprentice"
+        },
+        {
+          "name": "Lalina Summermoon",
+          "zone": {
+            "fr": "Darnassus",
+            "en": "Darnassus"
+          },
+          "faction": "alliance",
+          "tier": "apprentice"
+        },
+        {
+          "name": "Kitta Firewind",
+          "zone": {
+            "fr": "Forêt d'Elwynn",
+            "en": "Elwynn Forest"
+          },
+          "faction": "alliance",
+          "tier": "expert"
+        },
+        {
+          "name": "Hgarth",
+          "zone": {
+            "fr": "Orneval",
+            "en": "Ashenvale"
+          },
+          "faction": "horde",
+          "tier": "expert"
+        }
+      ]
     },
     {
       "id": 202,
@@ -160,7 +466,82 @@
         "Hyper Deluxe Sniper Rifle Mk XVII"
       ],
       "source": "https://wowforevertalents.com/professions/engineering/",
-      "leveling_guide": "https://www.wow-professions.com/forever/engineering-leveling-guide"
+      "leveling_guide": "https://www.wow-professions.com/forever/engineering-leveling-guide",
+      "trainers_source": "https://www.wow-professions.com/forever/engineering-trainers",
+      "trainers": [
+        {
+          "name": "Thund",
+          "zone": {
+            "fr": "Orgrimmar",
+            "en": "Orgrimmar"
+          },
+          "faction": "horde",
+          "tier": "apprentice"
+        },
+        {
+          "name": "Nogg",
+          "zone": {
+            "fr": "Orgrimmar",
+            "en": "Orgrimmar"
+          },
+          "faction": "horde",
+          "tier": "journeyman"
+        },
+        {
+          "name": "Franklin Lloyd",
+          "zone": {
+            "fr": "Fossoyeuse",
+            "en": "Undercity"
+          },
+          "faction": "horde",
+          "tier": "journeyman"
+        },
+        {
+          "name": "Trixie Quikswitch",
+          "zone": {
+            "fr": "Forgefer",
+            "en": "Ironforge"
+          },
+          "faction": "alliance",
+          "tier": "journeyman"
+        },
+        {
+          "name": "Lilliam Sparkspindle",
+          "zone": {
+            "fr": "Hurlevent",
+            "en": "Stormwind City"
+          },
+          "faction": "alliance",
+          "tier": "journeyman"
+        },
+        {
+          "name": "Finbus Geargrind",
+          "zone": {
+            "fr": "Forêt d'Elwynn",
+            "en": "Elwynn Forest"
+          },
+          "faction": "alliance",
+          "tier": "journeyman"
+        },
+        {
+          "name": "Springspindle Fizzlegear",
+          "zone": {
+            "fr": "Forgefer",
+            "en": "Ironforge"
+          },
+          "faction": "alliance",
+          "tier": "expert"
+        },
+        {
+          "name": "Roxxik",
+          "zone": {
+            "fr": "Orgrimmar",
+            "en": "Orgrimmar"
+          },
+          "faction": "horde",
+          "tier": "expert"
+        }
+      ]
     },
     {
       "id": 182,
@@ -196,7 +577,64 @@
         "Seed Hybridizer"
       ],
       "source": "https://wowforevertalents.com/professions/herbalism/",
-      "leveling_guide": "https://www.wow-professions.com/forever"
+      "leveling_guide": "https://www.wow-professions.com/forever",
+      "trainers_source": "https://www.wow-professions.com/forever/herbalism-trainers",
+      "trainers": [
+        {
+          "name": "Jandi",
+          "zone": {
+            "fr": "Orgrimmar",
+            "en": "Orgrimmar"
+          },
+          "faction": "horde",
+          "tier": "all"
+        },
+        {
+          "name": "Komin Winterhoof",
+          "zone": {
+            "fr": "Les Pitons-du-Tonnerre",
+            "en": "Thunder Bluff"
+          },
+          "faction": "horde",
+          "tier": "all"
+        },
+        {
+          "name": "Martha Alliestar",
+          "zone": {
+            "fr": "Fossoyeuse",
+            "en": "Undercity"
+          },
+          "faction": "horde",
+          "tier": "all"
+        },
+        {
+          "name": "Mishiki",
+          "zone": {
+            "fr": "Durotar",
+            "en": "Durotar"
+          },
+          "faction": "horde",
+          "tier": "all"
+        },
+        {
+          "name": "Ruw",
+          "zone": {
+            "fr": "Féralas",
+            "en": "Feralas"
+          },
+          "faction": "horde",
+          "tier": "all"
+        },
+        {
+          "name": "Zor'la",
+          "zone": {
+            "fr": "Durotar",
+            "en": "Durotar"
+          },
+          "faction": "horde",
+          "tier": "apprentice"
+        }
+      ]
     },
     {
       "id": 165,
@@ -232,7 +670,145 @@
         "Light Leather Reagent Bag"
       ],
       "source": "https://wowforevertalents.com/professions/leatherworking/",
-      "leveling_guide": "https://www.wow-professions.com/forever/leatherworking-leveling-guide"
+      "leveling_guide": "https://www.wow-professions.com/forever/leatherworking-leveling-guide",
+      "trainers_source": "https://www.wow-professions.com/forever/leatherworking-trainers",
+      "trainers": [
+        {
+          "name": "Kamari",
+          "zone": {
+            "fr": "Orgrimmar",
+            "en": "Orgrimmar"
+          },
+          "faction": "horde",
+          "tier": "apprentice"
+        },
+        {
+          "name": "Karolek",
+          "zone": {
+            "fr": "Orgrimmar",
+            "en": "Orgrimmar"
+          },
+          "faction": "horde",
+          "tier": "journeyman"
+        },
+        {
+          "name": "Mak",
+          "zone": {
+            "fr": "Les Pitons-du-Tonnerre",
+            "en": "Thunder Bluff"
+          },
+          "faction": "horde",
+          "tier": "apprentice"
+        },
+        {
+          "name": "Tarn",
+          "zone": {
+            "fr": "Les Pitons-du-Tonnerre",
+            "en": "Thunder Bluff"
+          },
+          "faction": "horde",
+          "tier": "journeyman"
+        },
+        {
+          "name": "Dan Golthas",
+          "zone": {
+            "fr": "Fossoyeuse",
+            "en": "Undercity"
+          },
+          "faction": "horde",
+          "tier": "apprentice"
+        },
+        {
+          "name": "Arthur Moore",
+          "zone": {
+            "fr": "Fossoyeuse",
+            "en": "Undercity"
+          },
+          "faction": "horde",
+          "tier": "journeyman"
+        },
+        {
+          "name": "Chaw Stronghide",
+          "zone": {
+            "fr": "Mulgore",
+            "en": "Mulgore"
+          },
+          "faction": "horde",
+          "tier": "apprentice"
+        },
+        {
+          "name": "Randal Worth",
+          "zone": {
+            "fr": "Hurlevent",
+            "en": "Stormwind City"
+          },
+          "faction": "alliance",
+          "tier": "apprentice"
+        },
+        {
+          "name": "Simon Tanner",
+          "zone": {
+            "fr": "Hurlevent",
+            "en": "Stormwind City"
+          },
+          "faction": "alliance",
+          "tier": "journeyman"
+        },
+        {
+          "name": "Adele Fielder",
+          "zone": {
+            "fr": "Forêt d'Elwynn",
+            "en": "Elwynn Forest"
+          },
+          "faction": "alliance",
+          "tier": "apprentice"
+        },
+        {
+          "name": "Nadyia Maneweaver",
+          "zone": {
+            "fr": "Teldrassil",
+            "en": "Teldrassil"
+          },
+          "faction": "alliance",
+          "tier": "apprentice"
+        },
+        {
+          "name": "Faldron",
+          "zone": {
+            "fr": "Darnassus",
+            "en": "Darnassus"
+          },
+          "faction": "alliance",
+          "tier": "journeyman"
+        },
+        {
+          "name": "Fimble Finespindle",
+          "zone": {
+            "fr": "Forgefer",
+            "en": "Ironforge"
+          },
+          "faction": "alliance",
+          "tier": "journeyman"
+        },
+        {
+          "name": "Drakk Stonehand",
+          "zone": {
+            "fr": "Les Hinterlands",
+            "en": "The Hinterlands"
+          },
+          "faction": "alliance",
+          "tier": "artisan"
+        },
+        {
+          "name": "Hahrana Ironhide",
+          "zone": {
+            "fr": "Féralas",
+            "en": "Feralas"
+          },
+          "faction": "horde",
+          "tier": "artisan"
+        }
+      ]
     },
     {
       "id": 186,
@@ -268,7 +844,55 @@
         "Heavy Thorium Bar"
       ],
       "source": "https://wowforevertalents.com/professions/mining/",
-      "leveling_guide": "https://www.wow-professions.com/forever"
+      "leveling_guide": "https://www.wow-professions.com/forever",
+      "trainers_source": "https://www.wow-professions.com/forever/mining-trainers",
+      "trainers": [
+        {
+          "name": "Makaru",
+          "zone": {
+            "fr": "Orgrimmar",
+            "en": "Orgrimmar"
+          },
+          "faction": "horde",
+          "tier": "all"
+        },
+        {
+          "name": "Brek Stonehoof",
+          "zone": {
+            "fr": "Les Pitons-du-Tonnerre",
+            "en": "Thunder Bluff"
+          },
+          "faction": "horde",
+          "tier": "all"
+        },
+        {
+          "name": "Brom Killian",
+          "zone": {
+            "fr": "Fossoyeuse",
+            "en": "Undercity"
+          },
+          "faction": "horde",
+          "tier": "all"
+        },
+        {
+          "name": "Krunn",
+          "zone": {
+            "fr": "Durotar",
+            "en": "Durotar"
+          },
+          "faction": "horde",
+          "tier": "all"
+        },
+        {
+          "name": "Norzsh",
+          "zone": {
+            "fr": "Durotar",
+            "en": "Durotar"
+          },
+          "faction": "horde",
+          "tier": "apprentice"
+        }
+      ]
     },
     {
       "id": 393,
@@ -304,7 +928,82 @@
         "Field Guide"
       ],
       "source": "https://wowforevertalents.com/professions/skinning/",
-      "leveling_guide": "https://www.wow-professions.com/forever"
+      "leveling_guide": "https://www.wow-professions.com/forever",
+      "trainers_source": "https://www.wow-professions.com/forever/skinning-trainers",
+      "trainers": [
+        {
+          "name": "Thuwd",
+          "zone": {
+            "fr": "Orgrimmar",
+            "en": "Orgrimmar"
+          },
+          "faction": "horde",
+          "tier": "all"
+        },
+        {
+          "name": "Mooranta",
+          "zone": {
+            "fr": "Les Pitons-du-Tonnerre",
+            "en": "Thunder Bluff"
+          },
+          "faction": "horde",
+          "tier": "all"
+        },
+        {
+          "name": "Killian Hagey",
+          "zone": {
+            "fr": "Fossoyeuse",
+            "en": "Undercity"
+          },
+          "faction": "horde",
+          "tier": "all"
+        },
+        {
+          "name": "Malux",
+          "zone": {
+            "fr": "Désolace",
+            "en": "Desolace"
+          },
+          "faction": "horde",
+          "tier": "all"
+        },
+        {
+          "name": "Eladriel",
+          "zone": {
+            "fr": "Darnassus",
+            "en": "Darnassus"
+          },
+          "faction": "alliance",
+          "tier": "all"
+        },
+        {
+          "name": "Balthus Stoneflayer",
+          "zone": {
+            "fr": "Forgefer",
+            "en": "Ironforge"
+          },
+          "faction": "alliance",
+          "tier": "all"
+        },
+        {
+          "name": "Maris Granger",
+          "zone": {
+            "fr": "Hurlevent",
+            "en": "Stormwind City"
+          },
+          "faction": "alliance",
+          "tier": "all"
+        },
+        {
+          "name": "Jayla",
+          "zone": {
+            "fr": "Orneval",
+            "en": "Ashenvale"
+          },
+          "faction": "alliance",
+          "tier": "all"
+        }
+      ]
     },
     {
       "id": 197,
@@ -340,7 +1039,91 @@
         "Demonheart Gloves"
       ],
       "source": "https://wowforevertalents.com/professions/tailoring/",
-      "leveling_guide": "https://www.wow-professions.com/forever/tailoring-leveling-guide"
+      "leveling_guide": "https://www.wow-professions.com/forever/tailoring-leveling-guide",
+      "trainers_source": "https://www.wow-professions.com/forever/tailoring-trainers",
+      "trainers": [
+        {
+          "name": "Snang",
+          "zone": {
+            "fr": "Orgrimmar",
+            "en": "Orgrimmar"
+          },
+          "faction": "horde",
+          "tier": "apprentice"
+        },
+        {
+          "name": "Victor Ward",
+          "zone": {
+            "fr": "Fossoyeuse",
+            "en": "Undercity"
+          },
+          "faction": "horde",
+          "tier": "expert"
+        },
+        {
+          "name": "Vhan",
+          "zone": {
+            "fr": "Les Pitons-du-Tonnerre",
+            "en": "Thunder Bluff"
+          },
+          "faction": "horde",
+          "tier": "apprentice"
+        },
+        {
+          "name": "Lawrence Schneider",
+          "zone": {
+            "fr": "Hurlevent",
+            "en": "Stormwind City"
+          },
+          "faction": "alliance",
+          "tier": "apprentice"
+        },
+        {
+          "name": "Sellandus",
+          "zone": {
+            "fr": "Hurlevent",
+            "en": "Stormwind City"
+          },
+          "faction": "alliance",
+          "tier": "expert"
+        },
+        {
+          "name": "Uthrar Threx",
+          "zone": {
+            "fr": "Forgefer",
+            "en": "Ironforge"
+          },
+          "faction": "alliance",
+          "tier": "apprentice"
+        },
+        {
+          "name": "Jormund Stonebrow",
+          "zone": {
+            "fr": "Forgefer",
+            "en": "Ironforge"
+          },
+          "faction": "alliance",
+          "tier": "expert"
+        },
+        {
+          "name": "Trianna",
+          "zone": {
+            "fr": "Darnassus",
+            "en": "Darnassus"
+          },
+          "faction": "alliance",
+          "tier": "apprentice"
+        },
+        {
+          "name": "Me'lynn",
+          "zone": {
+            "fr": "Darnassus",
+            "en": "Darnassus"
+          },
+          "faction": "alliance",
+          "tier": "expert"
+        }
+      ]
     },
     {
       "id": 185,
@@ -376,7 +1159,100 @@
         "Iron Oven"
       ],
       "source": "https://wowforevertalents.com/professions/cooking/",
-      "leveling_guide": "https://www.wow-professions.com/forever/cooking-leveling-guide"
+      "leveling_guide": "https://www.wow-professions.com/forever/cooking-leveling-guide",
+      "trainers_source": "https://www.wow-professions.com/forever/cooking-trainers",
+      "trainers": [
+        {
+          "name": "Zamja",
+          "zone": {
+            "fr": "Orgrimmar",
+            "en": "Orgrimmar"
+          },
+          "faction": "horde",
+          "tier": "journeyman"
+        },
+        {
+          "name": "Aska Mistrunner",
+          "zone": {
+            "fr": "Les Pitons-du-Tonnerre",
+            "en": "Thunder Bluff"
+          },
+          "faction": "horde",
+          "tier": "journeyman"
+        },
+        {
+          "name": "Eunice Burch",
+          "zone": {
+            "fr": "Fossoyeuse",
+            "en": "Undercity"
+          },
+          "faction": "horde",
+          "tier": "journeyman"
+        },
+        {
+          "name": "Stephen Ryback",
+          "zone": {
+            "fr": "Hurlevent",
+            "en": "Stormwind City"
+          },
+          "faction": "alliance",
+          "tier": "journeyman"
+        },
+        {
+          "name": "Daryl Riknussun",
+          "zone": {
+            "fr": "Forgefer",
+            "en": "Ironforge"
+          },
+          "faction": "alliance",
+          "tier": "journeyman"
+        },
+        {
+          "name": "Alegorn",
+          "zone": {
+            "fr": "Darnassus",
+            "en": "Darnassus"
+          },
+          "faction": "alliance",
+          "tier": "journeyman"
+        },
+        {
+          "name": "Cook Torka",
+          "zone": {
+            "fr": "Durotar",
+            "en": "Durotar"
+          },
+          "faction": "horde",
+          "tier": "apprentice"
+        },
+        {
+          "name": "Pyall Silentstride",
+          "zone": {
+            "fr": "Mulgore",
+            "en": "Mulgore"
+          },
+          "faction": "horde",
+          "tier": "apprentice"
+        },
+        {
+          "name": "Tomas",
+          "zone": {
+            "fr": "Forêt d'Elwynn",
+            "en": "Elwynn Forest"
+          },
+          "faction": "alliance",
+          "tier": "apprentice"
+        },
+        {
+          "name": "Nyalah Brightfire",
+          "zone": {
+            "fr": "Île de Zephras",
+            "en": "Zephras Isle"
+          },
+          "faction": "neutral",
+          "tier": "apprentice"
+        }
+      ]
     },
     {
       "id": 356,
@@ -412,7 +1288,136 @@
         "Fishing Rack"
       ],
       "source": "https://wowforevertalents.com/professions/fishing/",
-      "leveling_guide": "https://www.wow-professions.com/forever/fishing-and-cooking-leveling-guide"
+      "leveling_guide": "https://www.wow-professions.com/forever/fishing-and-cooking-leveling-guide",
+      "trainers_source": "https://www.wow-professions.com/forever/fishing-trainers",
+      "trainers": [
+        {
+          "name": "Lumak",
+          "zone": {
+            "fr": "Orgrimmar",
+            "en": "Orgrimmar"
+          },
+          "faction": "horde",
+          "tier": "all"
+        },
+        {
+          "name": "Kah Mistrunner",
+          "zone": {
+            "fr": "Les Pitons-du-Tonnerre",
+            "en": "Thunder Bluff"
+          },
+          "faction": "horde",
+          "tier": "all"
+        },
+        {
+          "name": "Armand Cromwell",
+          "zone": {
+            "fr": "Fossoyeuse",
+            "en": "Undercity"
+          },
+          "faction": "horde",
+          "tier": "all"
+        },
+        {
+          "name": "Arnold Leland",
+          "zone": {
+            "fr": "Hurlevent",
+            "en": "Stormwind City"
+          },
+          "faction": "alliance",
+          "tier": "all"
+        },
+        {
+          "name": "Grimnur Stonebrand",
+          "zone": {
+            "fr": "Forgefer",
+            "en": "Ironforge"
+          },
+          "faction": "alliance",
+          "tier": "all"
+        },
+        {
+          "name": "Astaia",
+          "zone": {
+            "fr": "Darnassus",
+            "en": "Darnassus"
+          },
+          "faction": "alliance",
+          "tier": "all"
+        },
+        {
+          "name": "Baelann Swiftcurrent",
+          "zone": {
+            "fr": "Île de Zephras",
+            "en": "Zephras Isle"
+          },
+          "faction": "neutral",
+          "tier": "all"
+        },
+        {
+          "name": "Fenn Fairweather",
+          "zone": {
+            "fr": "Île de Zephras",
+            "en": "Zephras Isle"
+          },
+          "faction": "neutral",
+          "tier": "all"
+        },
+        {
+          "name": "Lau'Tiki",
+          "zone": {
+            "fr": "Durotar",
+            "en": "Durotar"
+          },
+          "faction": "horde",
+          "tier": "all"
+        },
+        {
+          "name": "Uthan Stillwater",
+          "zone": {
+            "fr": "Mulgore",
+            "en": "Mulgore"
+          },
+          "faction": "horde",
+          "tier": "all"
+        },
+        {
+          "name": "Clyde Kellen",
+          "zone": {
+            "fr": "Clairières de Tirisfal",
+            "en": "Tirisfal Glades"
+          },
+          "faction": "horde",
+          "tier": "all"
+        },
+        {
+          "name": "Lee Brown",
+          "zone": {
+            "fr": "Forêt d'Elwynn",
+            "en": "Elwynn Forest"
+          },
+          "faction": "alliance",
+          "tier": "all"
+        },
+        {
+          "name": "Katoom the Angler",
+          "zone": {
+            "fr": "Les Hinterlands",
+            "en": "The Hinterlands"
+          },
+          "faction": "horde",
+          "tier": "all"
+        },
+        {
+          "name": "Brannock",
+          "zone": {
+            "fr": "Féralas",
+            "en": "Feralas"
+          },
+          "faction": "alliance",
+          "tier": "all"
+        }
+      ]
     },
     {
       "id": 129,
@@ -448,7 +1453,91 @@
         "Surgical Tourniquet"
       ],
       "source": "https://wowforevertalents.com/professions/first-aid/",
-      "leveling_guide": "https://www.wow-professions.com/forever"
+      "leveling_guide": "https://www.wow-professions.com/forever",
+      "trainers_source": "https://www.wow-professions.com/forever/first-aid-trainers",
+      "trainers": [
+        {
+          "name": "Arnok",
+          "zone": {
+            "fr": "Orgrimmar",
+            "en": "Orgrimmar"
+          },
+          "faction": "horde",
+          "tier": "apprentice"
+        },
+        {
+          "name": "Mary Edras",
+          "zone": {
+            "fr": "Fossoyeuse",
+            "en": "Undercity"
+          },
+          "faction": "horde",
+          "tier": "apprentice"
+        },
+        {
+          "name": "Pand Stonebinder",
+          "zone": {
+            "fr": "Les Pitons-du-Tonnerre",
+            "en": "Thunder Bluff"
+          },
+          "faction": "horde",
+          "tier": "apprentice"
+        },
+        {
+          "name": "Shaina Fuller",
+          "zone": {
+            "fr": "Hurlevent",
+            "en": "Stormwind City"
+          },
+          "faction": "alliance",
+          "tier": "apprentice"
+        },
+        {
+          "name": "Nissa Firestone",
+          "zone": {
+            "fr": "Forgefer",
+            "en": "Ironforge"
+          },
+          "faction": "alliance",
+          "tier": "apprentice"
+        },
+        {
+          "name": "Dannelor",
+          "zone": {
+            "fr": "Darnassus",
+            "en": "Darnassus"
+          },
+          "faction": "alliance",
+          "tier": "apprentice"
+        },
+        {
+          "name": "Rawrk",
+          "zone": {
+            "fr": "Durotar",
+            "en": "Durotar"
+          },
+          "faction": "horde",
+          "tier": "apprentice"
+        },
+        {
+          "name": "Vira Younghoof",
+          "zone": {
+            "fr": "Mulgore",
+            "en": "Mulgore"
+          },
+          "faction": "horde",
+          "tier": "apprentice"
+        },
+        {
+          "name": "Nurse Neela",
+          "zone": {
+            "fr": "Clairières de Tirisfal",
+            "en": "Tirisfal Glades"
+          },
+          "faction": "horde",
+          "tier": "apprentice"
+        }
+      ]
     }
   ],
   "trainer_ranks": {
@@ -499,6 +1588,200 @@
         "min_skill": 200,
         "min_level": 35
       }
-    ]
+    ],
+    "variants": {
+      "gather": [
+        {
+          "id": "apprentice",
+          "name": {
+            "fr": "Apprenti",
+            "en": "Apprentice"
+          },
+          "from": 1,
+          "to": 75,
+          "min_skill": 0,
+          "min_level": 0
+        },
+        {
+          "id": "journeyman",
+          "name": {
+            "fr": "Compagnon",
+            "en": "Journeyman"
+          },
+          "from": 75,
+          "to": 150,
+          "min_skill": 50,
+          "min_level": 0
+        },
+        {
+          "id": "expert",
+          "name": {
+            "fr": "Expert",
+            "en": "Expert"
+          },
+          "from": 150,
+          "to": 225,
+          "min_skill": 125,
+          "min_level": 0
+        },
+        {
+          "id": "artisan",
+          "name": {
+            "fr": "Artisan",
+            "en": "Artisan"
+          },
+          "from": 225,
+          "to": 300,
+          "min_skill": 200,
+          "min_level": 0
+        }
+      ],
+      "fishing": [
+        {
+          "id": "apprentice",
+          "name": {
+            "fr": "Apprenti",
+            "en": "Apprentice"
+          },
+          "from": 1,
+          "to": 75,
+          "min_skill": 0,
+          "min_level": 0
+        },
+        {
+          "id": "journeyman",
+          "name": {
+            "fr": "Compagnon",
+            "en": "Journeyman"
+          },
+          "from": 75,
+          "to": 150,
+          "min_skill": 50,
+          "min_level": 0
+        },
+        {
+          "id": "expert",
+          "name": {
+            "fr": "Expert",
+            "en": "Expert"
+          },
+          "from": 150,
+          "to": 225,
+          "min_skill": 125,
+          "min_level": 0
+        },
+        {
+          "id": "artisan",
+          "name": {
+            "fr": "Artisan",
+            "en": "Artisan"
+          },
+          "from": 225,
+          "to": 300,
+          "min_skill": 200,
+          "min_level": 0
+        }
+      ],
+      "cooking": [
+        {
+          "id": "apprentice",
+          "name": {
+            "fr": "Apprenti",
+            "en": "Apprentice"
+          },
+          "from": 1,
+          "to": 75,
+          "min_skill": 0,
+          "min_level": 0
+        },
+        {
+          "id": "journeyman",
+          "name": {
+            "fr": "Compagnon",
+            "en": "Journeyman"
+          },
+          "from": 75,
+          "to": 150,
+          "min_skill": 50,
+          "min_level": 0
+        },
+        {
+          "id": "expert",
+          "name": {
+            "fr": "Expert",
+            "en": "Expert"
+          },
+          "from": 150,
+          "to": 225,
+          "min_skill": 125,
+          "min_level": 0
+        },
+        {
+          "id": "artisan",
+          "name": {
+            "fr": "Artisan",
+            "en": "Artisan"
+          },
+          "from": 225,
+          "to": 300,
+          "min_skill": 225,
+          "min_level": 35
+        }
+      ],
+      "first-aid": [
+        {
+          "id": "apprentice",
+          "name": {
+            "fr": "Apprenti",
+            "en": "Apprentice"
+          },
+          "from": 1,
+          "to": 75,
+          "min_skill": 0,
+          "min_level": 1,
+          "note": ""
+        },
+        {
+          "id": "journeyman",
+          "name": {
+            "fr": "Compagnon",
+            "en": "Journeyman"
+          },
+          "from": 75,
+          "to": 150,
+          "min_skill": 50,
+          "min_level": 10,
+          "note": ""
+        },
+        {
+          "id": "expert",
+          "name": {
+            "fr": "Expert",
+            "en": "Expert"
+          },
+          "from": 150,
+          "to": 225,
+          "min_skill": 125,
+          "min_level": 20,
+          "note": ""
+        },
+        {
+          "id": "artisan",
+          "name": {
+            "fr": "Artisan",
+            "en": "Artisan"
+          },
+          "from": 225,
+          "to": 300,
+          "min_skill": 225,
+          "min_level": 35,
+          "note": "Special quest or manual may be required."
+        }
+      ]
+    }
+  },
+  "trainer_directory_status": {
+    "fr": "PNJ cités dans des guides dédiés à Forever. Tous ne sont pas encore contrôlés en jeu. Seule la zone est renseignée ici, pas de point cartographique inventé.",
+    "en": "NPCs mentioned in Forever-oriented guides. Not all are verified in-game. Only the zone is provided; no invented map pins."
   }
 }
