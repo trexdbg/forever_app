@@ -33,7 +33,7 @@ const saveDone=()=>{try{localStorage.setItem(storageKey(),JSON.stringify([...s.d
 const syncUrl=()=>{const u=new URL(location.href);u.searchParams.set("faction",s.faction);u.searchParams.set("race",s.profile);u.searchParams.set("peuple",s.race);u.searchParams.set("step",String(s.index+1));history.replaceState(null,"",u.pathname+u.search+u.hash)};
 const project=(x,y)=>({x:(50+(x-s.center.x)*s.zoom)*W/100,y:(50+(y-s.center.y)*s.zoom)*H/100});
 const clientPoint=e=>{const r=canvas.getBoundingClientRect();return{x:(e.clientX-r.left)*W/r.width,y:(e.clientY-r.top)*H/r.height}};
-const format=n=>Number(n).toFixed(1).replace(".",",");
+const format=n=>Number(n).toFixed(1).replace(".",document.documentElement.lang==="en"?".":",");
 const tomtom=n=>Number(n).toFixed(2);
 function setImage(zone){
  const url=s.meta.map_base+encodeURIComponent(zone)+".jpg";
@@ -137,7 +137,7 @@ function previewStep(index){
  const i=clamp(index,0,s.steps.length-1),st=s.steps[i],percent=s.steps.length<=1?0:100*i/(s.steps.length-1);
  $("quest-range").style.setProperty("--quest-range-fill",percent+"%");
  $("quest-range-output").textContent=(i+1)+" / "+s.steps.length;
- $("quest-timeline-preview").textContent=stepName(st)+" · niveau ≈ "+Number(st.experience).toFixed(1).replace(".",",")+" · "+st.waypoints.length+" points";
+ $("quest-timeline-preview").textContent=stepName(st)+" · niveau ≈ "+Number(st.experience).toFixed(1).replace(".",document.documentElement.lang==="en"?".":",")+" · "+st.waypoints.length+" points";
  $("quest-range").setAttribute("aria-valuetext","Étape "+(i+1)+" sur "+s.steps.length+", "+stepName(st));
 }
 function renderMilestones(){
@@ -184,7 +184,7 @@ function render(){
  $("quest-step-count").textContent="Étape "+(s.index+1)+" sur "+s.steps.length;
  $("quest-timeline-zone").textContent=stepLabel(s.index);
  $("quest-zone-title").textContent=stepName(st);
- $("quest-level").textContent="Niveau approximatif : "+Number(st.experience||0).toFixed(1).replace(".",",")+" · "+st.waypoints.length+" points à visiter";
+ $("quest-level").textContent="Niveau approximatif : "+Number(st.experience||0).toFixed(1).replace(".",document.documentElement.lang==="en"?".":",")+" · "+st.waypoints.length+" points à visiter";
  $("quest-map-title").textContent=stepName(st)+" · itinéraire dans la zone";
  $("quest-map-source").textContent="Molette : zoom · X/Y : 0 à 100";
  const first=s.index===0,last=s.index===s.steps.length-1;
