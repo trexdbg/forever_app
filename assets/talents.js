@@ -1,5 +1,5 @@
-import "./talents-fr.js?v=20261009-fr1";
-import "./talents-desc-fr.js?v=20261009-fr2";
+import "./talents-fr.js?v=20261009-fr-final";
+import "./talents-desc-fr.js?v=20261009-fr-final";
 const ROOT="/";
 const en=document.documentElement.lang==="en",T=(fr,english)=>en?english:fr;
 const TREE_NAMES_FR={
