@@ -12,6 +12,8 @@ const TREE_NAMES_FR={
  Druid:{Balance:"Équilibre","Feral Combat":"Combat farouche",Restoration:"Restauration"}
 };
 const localizedTree=(name)=>en?name:(TREE_NAMES_FR[cls]?.[name]||name);
+const displayName=name=>en?name:(window.ForeverTalentNamesFR?.[cls]?.[name]||name);
+const displayRankDescription=raw=>en?{text:raw,translated:true}:(window.ForeverTalentDescFR?.translate(raw)||{text:raw,translated:false});
 const cls=document.body.dataset.class, slug=document.body.dataset.slug;
 const wrap=document.getElementById("talent-trees"), level=document.getElementById("talent-level"), left=document.getElementById("points-left"), version=document.getElementById("talent-version"), source=document.getElementById("talent-source"), message=document.getElementById("talent-message");
 let trees=[],ranks=[],selected=[0,0,0],dataVersion="unknown";
@@ -27,7 +29,7 @@ function blank(){return trees.map(t=>t.talents.map(()=>0))}
 function say(s){message.textContent=s;clearTimeout(say.timer);if(s)say.timer=setTimeout(()=>{if(message.textContent===s)message.textContent=""},6000)}
 function save(){try{localStorage.setItem("forever-atlas:talents:"+cls,JSON.stringify({version:dataVersion,level:Number(level.value),ranks}))}catch{}}
 function restore(){try{const x=JSON.parse(localStorage.getItem("forever-atlas:talents:"+cls)||"null");if(x&&x.version===dataVersion&&Array.isArray(x.ranks)&&x.ranks.length===trees.length){level.value=String(x.level);if(!Number.isInteger(Number(level.value))||Number(level.value)<10||Number(level.value)>60)level.value="60";if(x.ranks.every((a,i)=>Array.isArray(a)&&a.length===trees[i].talents.length)){const b=x.ranks.map(a=>a.map(Number));if(legal(b))ranks=b}}}catch{}}
-function change(ti,i,delta){const current=ranks[ti][i],t=trees[ti].talents[i],next=current+delta;if(next<0||next>t.max)return;if(delta>0){if(points()>=value()){say(T("Plus de points disponibles à ce niveau.","No talent points left at this level."));return}if(!canLearn(ti,i)){say(T("Palier ou prérequis non rempli pour ","Tier or prerequisite not met for ")+t.name+".");return}}const candidate=ranks.map(a=>a.slice());candidate[ti][i]=next;if(!legal(candidate)){say(T("Ce retrait invaliderait d'autres talents déjà choisis.","Removing this point would invalidate other selected talents."));return}ranks=candidate;selected[ti]=i;save();render()}
+function change(ti,i,delta){const current=ranks[ti][i],t=trees[ti].talents[i],next=current+delta;if(next<0||next>t.max)return;if(delta>0){if(points()>=value()){say(T("Plus de points disponibles à ce niveau.","No talent points left at this level."));return}if(!canLearn(ti,i)){say(T("Palier ou prérequis non rempli pour ","Tier or prerequisite not met for ")+displayName(t.name)+".");return}}const candidate=ranks.map(a=>a.slice());candidate[ti][i]=next;if(!legal(candidate)){say(T("Ce retrait invaliderait d'autres talents déjà choisis.","Removing this point would invalidate other selected talents."));return}ranks=candidate;selected[ti]=i;save();render()}
 // A compact Classic-like tree: each prerequisite is a real connection from the source data.
 const svgNS="http://www.w3.org/2000/svg";
 const classAccents={Warrior:"#c69b6d",Paladin:"#f48cba",Hunter:"#aad372",Rogue:"#fff468",Priest:"#f6f6f6",Shaman:"#63a5f5",Mage:"#3fc7eb",Warlock:"#a5a6ef",Druid:"#ff9d4a"};
@@ -66,14 +68,20 @@ function detail(ti,i){
   if(!panel||!trees[ti]?.talents[i])return;
   const t=trees[ti].talents[i],n=ranks[ti][i],preview=Math.min(t.max,n+1);
   const description=Array.isArray(t.desc)?(t.desc[preview-1]||T("Description de ce rang non documentée.","No description documented for this rank.")):T("Description non disponible.","Description unavailable.");
+  const localizedDescription=displayRankDescription(description);
   const known=!t.confirmed||t.confirmed.includes(preview);
   panel.replaceChildren();
-  panel.append(mk("strong",t.name),mk("small",T("Rang ","Rank ")+n+" / "+t.max+(n===t.max?T(" · Maîtrisé"," · Maxed"):n?T(" · En cours"," · In progress"):T(" · Non appris"," · Not learned"))));
-  panel.append(mk("p",description));
+  panel.append(mk("strong",displayName(t.name)),mk("small",T("Rang ","Rank ")+n+" / "+t.max+(n===t.max?T(" · Maîtrisé"," · Maxed"):n?T(" · En cours"," · In progress"):T(" · Non appris"," · Not learned"))));
+  panel.append(mk("p",localizedDescription.text));
+  if(!en&&!localizedDescription.translated){
+    const note=mk("small","Description d'origine en anglais · traduction en cours","talent-locale-status");
+    note.lang="fr";panel.append(note);
+    panel.lastElementChild?.setAttribute("lang","en");
+  }
   if(!known)panel.append(mk("small",T("Rang non confirmé dans l'export de référence.","Rank not confirmed in source data.")));
   if(t.req){
     const j=reqIndex(ti,i),done=j>=0&&ranks[ti][j]===trees[ti].talents[j].max;
-    panel.append(mk("small",(done?T("✓ Prérequis validé : ","✓ Prerequisite met: "):T("Prérequis : ","Prerequisite: "))+t.req));
+    panel.append(mk("small",(done?T("✓ Prérequis validé : ","✓ Prerequisite met: "):T("Prérequis : ","Prerequisite: "))+displayName(t.req)));
   }
   if(!canLearn(ti,i))panel.append(mk("small",T("Débloqué après les points nécessaires dans les paliers précédents et ses prérequis.","Unlock by spending enough points in earlier tiers and meeting prerequisites."),"detail-warning"));
   if(t.classic?.status&&t.classic.status!=="same")panel.append(mk("small",T("Différence Classic : ","Classic difference: ")+t.classic.status));
@@ -97,10 +105,10 @@ function render(){
       button.type="button";
       // Keep locked nodes accessible by mouse, touch and keyboard for talent details.
       button.setAttribute("aria-disabled",String(rank===t.max||locked||noPoints));
-      button.setAttribute("aria-label",t.name+T(", rang ",", rank ")+rank+T(" sur "," of ")+t.max+(t.req?T(", prérequis ",", requires ")+t.req:"")+T(". Cliquer pour consulter ou ajouter un point.",". Select to view details or add a point."));
-      button.title=t.name+(t.req?T(" — nécessite "," — requires ")+t.req:"");
+      button.setAttribute("aria-label",displayName(t.name)+T(", rang ",", rank ")+rank+T(" sur "," of ")+t.max+(t.req?T(", prérequis ",", requires ")+displayName(t.req):"")+T(". Cliquer pour consulter ou ajouter un point.",". Select to view details or add a point."));
+      button.title=displayName(t.name)+(t.req?T(" — nécessite "," — requires ")+displayName(t.req):"");
       const icon=mk("span",undefined,"icon-wrap");
-      const fallback=()=>{icon.replaceChildren(document.createTextNode(t.name.charAt(0)))};
+      const fallback=()=>{icon.replaceChildren(document.createTextNode(displayName(t.name).charAt(0)))};
       if(typeof t.icon==="string"&&/^[a-z0-9_-]{2,65}$/.test(t.icon)){
         const img=document.createElement("img");
         img.alt="";img.loading="lazy";img.decoding="async";img.width=56;img.height=56;
@@ -109,14 +117,14 @@ function render(){
         img.src=ROOT+"assets/icons/"+t.icon+".jpg";
         icon.append(img);
       }else fallback();
-      button.append(icon,mk("span",t.name,"node-name"),mk("span",rank+"/"+t.max,"rank"+(rank?" points":"")));
+      button.append(icon,mk("span",displayName(t.name),"node-name"),mk("span",rank+"/"+t.max,"rank"+(rank?" points":"")));
       const choose=()=>{selected[ti]=i;grid.querySelectorAll(".talent-node.selected").forEach(node=>node.classList.remove("selected"));button.classList.add("selected");detail(ti,i)};
       button.addEventListener("mouseenter",choose);
       button.addEventListener("focus",choose);
       button.addEventListener("click",()=>{
         choose();
         if(rank>=t.max)return;
-        if(locked){say(T("Palier ou prérequis non rempli pour ","Tier or prerequisite not met for ")+t.name+".");return}
+        if(locked){say(T("Palier ou prérequis non rempli pour ","Tier or prerequisite not met for ")+displayName(t.name)+".");return}
         if(noPoints){say(T("Plus de points disponibles à ce niveau.","No talent points left at this level."));return}
         change(ti,i,1);
       });
@@ -126,7 +134,7 @@ function render(){
       if(rank>0){
         const minus=mk("button","−","talent-minus");
         minus.type="button";
-        minus.setAttribute("aria-label",T("Retirer un point de ","Remove a point from ")+t.name);
+        minus.setAttribute("aria-label",T("Retirer un point de ","Remove a point from ")+displayName(t.name));
         minus.title=T("Retirer un point","Remove a point");
         minus.addEventListener("click",()=>change(ti,i,-1));
         cell.append(minus);
