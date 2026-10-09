@@ -14,7 +14,10 @@
     "engineer": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic",
     "alchtrainer": "https://www.wowhead.com/classic/guide/alchemy-leveling-1-300-wow-classic",
     "protrainer": "https://www.warcrafttavern.com/wow-classic-sod/guides/profession-trainer-locations-requirements-for-phase-2/",
-    "aid": "https://wow-guides.com/classic-era/professions/first-aid"
+    "aid": "https://wow-guides.com/classic-era/professions/first-aid",
+    "blacksmithing_vendor": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+    "leatherworking_vendor": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+    "tailoring_vendor": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic"
   },
   "items": {
     "4371": {
@@ -57,6 +60,39 @@
       "profession": "Alchimie",
       "skill": 175,
       "supply": "limited"
+    },
+    "5772": {
+      "id": 5772,
+      "name": {
+        "en": "Pattern: Red Woolen Bag",
+        "fr": "Patron : Sac rouge en laine"
+      },
+      "profession": "Couture",
+      "skill": 115,
+      "supply": "limited",
+      "source": "https://www.wowhead.com/classic/item=5772"
+    },
+    "5786": {
+      "id": 5786,
+      "name": {
+        "en": "Pattern: Murloc Scale Belt",
+        "fr": "Patron : Ceinture en écailles de murloc"
+      },
+      "profession": "Travail du cuir",
+      "skill": 90,
+      "supply": "limited",
+      "source": "https://www.wowhead.com/classic/item=5786"
+    },
+    "5787": {
+      "id": 5787,
+      "name": {
+        "en": "Pattern: Murloc Scale Breastplate",
+        "fr": "Patron : Cuirasse en écailles de murloc"
+      },
+      "profession": "Travail du cuir",
+      "skill": 95,
+      "supply": "limited",
+      "source": "https://www.wowhead.com/classic/item=5787"
     },
     "6053": {
       "id": 6053,
@@ -118,6 +154,17 @@
       "skill": 165,
       "supply": "limited"
     },
+    "6270": {
+      "id": 6270,
+      "name": {
+        "en": "Pattern: Blue Linen Vest",
+        "fr": "Patron : Gilet bleu en lin"
+      },
+      "profession": "Couture",
+      "skill": 55,
+      "supply": "limited",
+      "source": "https://www.wowhead.com/classic/item=6270"
+    },
     "6272": {
       "id": 6272,
       "name": {
@@ -127,6 +174,61 @@
       "profession": "Couture",
       "skill": 70,
       "supply": "limited"
+    },
+    "6274": {
+      "id": 6274,
+      "name": {
+        "en": "Pattern: Blue Overalls",
+        "fr": "Patron : Salopette bleue"
+      },
+      "profession": "Couture",
+      "skill": 100,
+      "supply": "limited",
+      "source": "https://www.wowhead.com/classic/item=6274"
+    },
+    "6275": {
+      "id": 6275,
+      "name": {
+        "en": "Pattern: Greater Adept's Robe",
+        "fr": "Patron : Robe d'adepte supérieure"
+      },
+      "profession": "Couture",
+      "skill": 115,
+      "supply": "limited",
+      "source": "https://www.wowhead.com/classic/item=6275"
+    },
+    "6474": {
+      "id": 6474,
+      "name": {
+        "en": "Pattern: Deviate Scale Cloak",
+        "fr": "Patron : Cape en écailles de déviant"
+      },
+      "profession": "Travail du cuir",
+      "skill": 90,
+      "supply": "limited",
+      "source": "https://www.wowhead.com/classic/item=6474"
+    },
+    "6475": {
+      "id": 6475,
+      "name": {
+        "en": "Pattern: Deviate Scale Gloves",
+        "fr": "Patron : Gants en écailles de déviant"
+      },
+      "profession": "Travail du cuir",
+      "skill": 105,
+      "supply": "limited",
+      "source": "https://www.wowhead.com/classic/item=6475"
+    },
+    "7451": {
+      "id": 7451,
+      "name": {
+        "en": "Pattern: Green Whelp Bracers",
+        "fr": "Patron : Brassards de dragonnet vert"
+      },
+      "profession": "Travail du cuir",
+      "skill": 190,
+      "supply": "limited",
+      "source": "https://www.wowhead.com/classic/item=7451"
     },
     "7560": {
       "id": 7560,
@@ -207,6 +309,72 @@
       "profession": "Alchimie",
       "skill": 225,
       "supply": "limited"
+    },
+    "10311": {
+      "id": 10311,
+      "name": {
+        "en": "Pattern: Orange Martial Shirt",
+        "fr": "Patron : Chemise orange martiale"
+      },
+      "profession": "Couture",
+      "skill": 220,
+      "supply": "limited",
+      "source": "https://www.wowhead.com/classic/item=10311"
+    },
+    "10314": {
+      "id": 10314,
+      "name": {
+        "en": "Pattern: Lavender Mageweave Shirt",
+        "fr": "Patron : Chemise lavande en tisse-mage"
+      },
+      "profession": "Couture",
+      "skill": 230,
+      "supply": "limited",
+      "source": "https://www.wowhead.com/classic/item=10314"
+    },
+    "10317": {
+      "id": 10317,
+      "name": {
+        "en": "Pattern: Pink Mageweave Shirt",
+        "fr": "Patron : Chemise rose en tisse-mage"
+      },
+      "profession": "Couture",
+      "skill": 235,
+      "supply": "limited",
+      "source": "https://www.wowhead.com/classic/item=10317"
+    },
+    "10858": {
+      "id": 10858,
+      "name": {
+        "en": "Plans: Solid Iron Maul",
+        "fr": "Plans : Masse en fer massif"
+      },
+      "profession": "Forge",
+      "skill": 155,
+      "supply": "limited",
+      "source": "https://www.wowhead.com/classic/item=10858"
+    },
+    "12162": {
+      "id": 12162,
+      "name": {
+        "en": "Plans: Hardened Iron Shortsword",
+        "fr": "Plans : Épée courte en fer trempé"
+      },
+      "profession": "Forge",
+      "skill": 160,
+      "supply": "limited",
+      "source": "https://www.wowhead.com/classic/item=12162"
+    },
+    "12164": {
+      "id": 12164,
+      "name": {
+        "en": "Plans: Massive Iron Axe",
+        "fr": "Plans : Hache massive en fer"
+      },
+      "profession": "Forge",
+      "skill": 185,
+      "supply": "limited",
+      "source": "https://www.wowhead.com/classic/item=12164"
     },
     "12958": {
       "id": 12958,
@@ -358,6 +526,28 @@
       "skill": 260,
       "supply": "limited"
     },
+    "18731": {
+      "id": 18731,
+      "name": {
+        "en": "Pattern: Heavy Leather Ball",
+        "fr": "Patron : Balle en cuir lourd"
+      },
+      "profession": "Travail du cuir",
+      "skill": 150,
+      "supply": "limited",
+      "source": "https://www.wowhead.com/classic/item=18731"
+    },
+    "18949": {
+      "id": 18949,
+      "name": {
+        "en": "Pattern: Barbaric Bracers",
+        "fr": "Patron : Brassards barbares"
+      },
+      "profession": "Travail du cuir",
+      "skill": 155,
+      "supply": "limited",
+      "source": "https://www.wowhead.com/classic/item=18949"
+    },
     "22308": {
       "id": 22308,
       "name": {
@@ -452,7 +642,8 @@
       ],
       "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
       "note": "Terrasse des artisans",
-      "note_en": "Craftsmen's Terrace"
+      "note_en": "Craftsmen's Terrace",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": null,
@@ -475,7 +666,8 @@
       ],
       "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
       "note": "Brikabrok",
-      "note_en": "Tinker Town"
+      "note_en": "Tinker Town",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": null,
@@ -497,7 +689,8 @@
       ],
       "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
       "note": "Quartier des mages",
-      "note_en": "Mage Quarter"
+      "note_en": "Mage Quarter",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": null,
@@ -520,7 +713,8 @@
       ],
       "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
       "note": "Gîte des pérégrins",
-      "note_en": "Farstrider Lodge"
+      "note_en": "Farstrider Lodge",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": null,
@@ -542,7 +736,8 @@
       ],
       "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
       "note": "Refuge de Vent-argent",
-      "note_en": "Silverwind Refuge"
+      "note_en": "Silverwind Refuge",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": null,
@@ -564,7 +759,8 @@
       ],
       "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
       "note": "Colline-aux-Corbeaux",
-      "note_en": "Raven Hill"
+      "note_en": "Raven Hill",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": null,
@@ -586,7 +782,8 @@
       ],
       "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
       "note": "Austrivage",
-      "note_en": "Southshore"
+      "note_en": "Southshore",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": null,
@@ -608,7 +805,8 @@
       ],
       "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
       "note": "Ruines d'Alterac",
-      "note_en": "Alterac ruins"
+      "note_en": "Alterac ruins",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": null,
@@ -631,7 +829,8 @@
       ],
       "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
       "note": "Baie-du-Butin",
-      "note_en": "Booty Bay"
+      "note_en": "Booty Bay",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": 5594,
@@ -657,7 +856,8 @@
       ],
       "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
       "note": "Gadgetzan",
-      "note_en": "Gadgetzan"
+      "note_en": "Gadgetzan",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": null,
@@ -680,7 +880,8 @@
       ],
       "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
       "note": "Bastion de Pennelune",
-      "note_en": "Feathermoon Stronghold"
+      "note_en": "Feathermoon Stronghold",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": 11188,
@@ -702,7 +903,8 @@
       ],
       "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
       "note": "Long-guet",
-      "note_en": "Everlook"
+      "note_en": "Everlook",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": null,
@@ -725,7 +927,8 @@
       ],
       "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
       "note": "Faille de l'Ombre",
-      "note_en": "Cleft of Shadow"
+      "note_en": "Cleft of Shadow",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": null,
@@ -748,7 +951,8 @@
       ],
       "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
       "note": "La Herse",
-      "note_en": "The Drag"
+      "note_en": "The Drag",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": null,
@@ -771,7 +975,8 @@
       ],
       "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
       "note": "L'Apothicarium",
-      "note_en": "The Apothecarium"
+      "note_en": "The Apothecarium",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": null,
@@ -793,7 +998,8 @@
       ],
       "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
       "note": "Retraite de Roche-Soleil",
-      "note_en": "Sun Rock Retreat"
+      "note_en": "Sun Rock Retreat",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": null,
@@ -815,7 +1021,8 @@
       ],
       "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
       "note": "Poste de Librevent",
-      "note_en": "Freewind Post"
+      "note_en": "Freewind Post",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": null,
@@ -838,7 +1045,8 @@
       ],
       "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
       "note": "Camp Mojache",
-      "note_en": "Camp Mojache"
+      "note_en": "Camp Mojache",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": 11189,
@@ -863,7 +1071,8 @@
       ],
       "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
       "note": "Banque de Long-guet",
-      "note_en": "Everlook bank"
+      "note_en": "Everlook bank",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": 15419,
@@ -885,7 +1094,8 @@
       ],
       "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
       "note": "Fort cénarien",
-      "note_en": "Cenarion Hold"
+      "note_en": "Cenarion Hold",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": null,
@@ -912,7 +1122,8 @@
       ],
       "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
       "note": "Fort cénarien · Réputation Cercle cénarien",
-      "note_en": "Cenarion Hold · Cenarion Circle reputation"
+      "note_en": "Cenarion Hold · Cenarion Circle reputation",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": 4168,
@@ -930,11 +1141,14 @@
       },
       "faction": "alliance",
       "offers": [
-        "6272"
+        "6272",
+        "6275",
+        "10311"
       ],
       "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
       "note": "Terrasse des artisans",
-      "note_en": "Craftsmen's Terrace"
+      "note_en": "Craftsmen's Terrace",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": null,
@@ -956,7 +1170,8 @@
       ],
       "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic",
       "note": "Cabestan",
-      "note_en": "Ratchet"
+      "note_en": "Ratchet",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": null,
@@ -978,7 +1193,8 @@
       ],
       "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic",
       "note": "Combe des Cisailles",
-      "note_en": "Windshear Crag"
+      "note_en": "Windshear Crag",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": 3537,
@@ -1000,7 +1216,8 @@
       ],
       "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic",
       "note": "Marchand ambulant sur la route",
-      "note_en": "Travelling vendor along the road"
+      "note_en": "Travelling vendor along the road",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": 6730,
@@ -1023,7 +1240,8 @@
       ],
       "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic",
       "note": "Piste des Mirages",
-      "note_en": "Mirage Raceway"
+      "note_en": "Mirage Raceway",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": null,
@@ -1045,7 +1263,8 @@
       ],
       "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic",
       "note": "Cage au nord",
-      "note_en": "Northern enclosure"
+      "note_en": "Northern enclosure",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": 6777,
@@ -1067,7 +1286,8 @@
       ],
       "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic",
       "note": "Sud-est d'Alterac",
-      "note_en": "Southeastern Alterac"
+      "note_en": "Southeastern Alterac",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": null,
@@ -1091,7 +1311,8 @@
       ],
       "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic",
       "note": "Caravane de Gizelton · Vendeur mobile",
-      "note_en": "Gizelton's caravan · Mobile vendor"
+      "note_en": "Gizelton's caravan · Mobile vendor",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": 2685,
@@ -1114,7 +1335,8 @@
       ],
       "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic",
       "note": "Baie-du-Butin",
-      "note_en": "Booty Bay"
+      "note_en": "Booty Bay",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": null,
@@ -1136,7 +1358,8 @@
       ],
       "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic",
       "note": "Route vers les Carmines",
-      "note_en": "Road to Redridge"
+      "note_en": "Road to Redridge",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": null,
@@ -1156,7 +1379,8 @@
       "faction": "alliance",
       "offers": [],
       "source": "https://www.wowhead.com/classic/guide/alchemy-leveling-1-300-wow-classic",
-      "note": ""
+      "note": "",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": null,
@@ -1176,7 +1400,8 @@
       "faction": "alliance",
       "offers": [],
       "source": "https://www.wowhead.com/classic/guide/alchemy-leveling-1-300-wow-classic",
-      "note": ""
+      "note": "",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": null,
@@ -1196,7 +1421,8 @@
       "faction": "alliance",
       "offers": [],
       "source": "https://www.wowhead.com/classic/guide/alchemy-leveling-1-300-wow-classic",
-      "note": ""
+      "note": "",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": null,
@@ -1216,7 +1442,8 @@
       "faction": "alliance",
       "offers": [],
       "source": "https://www.wowhead.com/classic/guide/alchemy-leveling-1-300-wow-classic",
-      "note": ""
+      "note": "",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": null,
@@ -1236,7 +1463,8 @@
       "faction": "horde",
       "offers": [],
       "source": "https://www.wowhead.com/classic/guide/alchemy-leveling-1-300-wow-classic",
-      "note": ""
+      "note": "",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": null,
@@ -1256,7 +1484,8 @@
       "faction": "horde",
       "offers": [],
       "source": "https://www.wowhead.com/classic/guide/alchemy-leveling-1-300-wow-classic",
-      "note": ""
+      "note": "",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": null,
@@ -1276,7 +1505,8 @@
       "faction": "horde",
       "offers": [],
       "source": "https://www.wowhead.com/classic/guide/alchemy-leveling-1-300-wow-classic",
-      "note": ""
+      "note": "",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": null,
@@ -1296,7 +1526,8 @@
       "faction": "alliance",
       "offers": [],
       "source": "https://www.warcrafttavern.com/wow-classic-sod/guides/profession-trainer-locations-requirements-for-phase-2/",
-      "note": ""
+      "note": "",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": null,
@@ -1316,7 +1547,8 @@
       "faction": "horde",
       "offers": [],
       "source": "https://www.warcrafttavern.com/wow-classic-sod/guides/profession-trainer-locations-requirements-for-phase-2/",
-      "note": ""
+      "note": "",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": null,
@@ -1336,7 +1568,8 @@
       "faction": "alliance",
       "offers": [],
       "source": "https://www.warcrafttavern.com/wow-classic-sod/guides/profession-trainer-locations-requirements-for-phase-2/",
-      "note": ""
+      "note": "",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": null,
@@ -1356,7 +1589,8 @@
       "faction": "horde",
       "offers": [],
       "source": "https://www.warcrafttavern.com/wow-classic-sod/guides/profession-trainer-locations-requirements-for-phase-2/",
-      "note": ""
+      "note": "",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": null,
@@ -1376,7 +1610,8 @@
       "faction": "alliance",
       "offers": [],
       "source": "https://www.warcrafttavern.com/wow-classic-sod/guides/profession-trainer-locations-requirements-for-phase-2/",
-      "note": ""
+      "note": "",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": null,
@@ -1396,7 +1631,8 @@
       "faction": "horde",
       "offers": [],
       "source": "https://www.warcrafttavern.com/wow-classic-sod/guides/profession-trainer-locations-requirements-for-phase-2/",
-      "note": ""
+      "note": "",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": null,
@@ -1416,7 +1652,8 @@
       "faction": "alliance",
       "offers": [],
       "source": "https://www.warcrafttavern.com/wow-classic-sod/guides/profession-trainer-locations-requirements-for-phase-2/",
-      "note": ""
+      "note": "",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": null,
@@ -1436,7 +1673,8 @@
       "faction": "horde",
       "offers": [],
       "source": "https://www.warcrafttavern.com/wow-classic-sod/guides/profession-trainer-locations-requirements-for-phase-2/",
-      "note": ""
+      "note": "",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": null,
@@ -1456,7 +1694,8 @@
       "faction": "alliance",
       "offers": [],
       "source": "https://www.warcrafttavern.com/wow-classic-sod/guides/profession-trainer-locations-requirements-for-phase-2/",
-      "note": ""
+      "note": "",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": null,
@@ -1476,7 +1715,8 @@
       "faction": "horde",
       "offers": [],
       "source": "https://www.warcrafttavern.com/wow-classic-sod/guides/profession-trainer-locations-requirements-for-phase-2/",
-      "note": ""
+      "note": "",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": null,
@@ -1496,7 +1736,8 @@
       "faction": "alliance",
       "offers": [],
       "source": "https://wow-guides.com/classic-era/professions/first-aid",
-      "note": ""
+      "note": "",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": null,
@@ -1516,7 +1757,8 @@
       "faction": "horde",
       "offers": [],
       "source": "https://wow-guides.com/classic-era/professions/first-aid",
-      "note": ""
+      "note": "",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": 11278,
@@ -1538,7 +1780,8 @@
       ],
       "source": "https://www.wowhead.com/classic/npc=11278/magnus-frostwake#comments",
       "note": "Caer Darrow · Esprit visible avec l'Essence spectrale obtenue après la suite de quêtes d'Eva Sarkhoff",
-      "note_en": "Caer Darrow · Ghost visible using Spectral Essence, earned from Eva Sarkhoff's quest chain"
+      "note_en": "Caer Darrow · Ghost visible using Spectral Essence, earned from Eva Sarkhoff's quest chain",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": 1669,
@@ -1560,7 +1803,8 @@
       ],
       "source": "https://www.wowhead.com/classic/item=5640/recipe-rage-potion",
       "note": "Ruisselune · Bâtiment du village · Marchand itinérant",
-      "note_en": "Moonbrook · Village building · Free-wheeling merchant"
+      "note_en": "Moonbrook · Village building · Free-wheeling merchant",
+      "coordinate_status": "classic_reference_unverified"
     },
     {
       "id": 3133,
@@ -1582,7 +1826,479 @@
       ],
       "source": "https://www.wowhead.com/forever/npc=3133/herble-baubbletump#comments",
       "note": "Sombre-Comté · Près du maître ingénieur",
-      "note_en": "Darkshire · Outside the engineering trainer"
+      "note_en": "Darkshire · Outside the engineering trainer",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Kaita Deepforge",
+      "id": null,
+      "role": "merchant",
+      "profession": "Forge",
+      "zone": {
+        "id": "stormwind",
+        "fr": "Hurlevent",
+        "en": "Stormwind"
+      },
+      "coordinates": {
+        "x": 56.6,
+        "y": 17
+      },
+      "faction": "alliance",
+      "offers": [
+        "12162"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+      "note": "Quartier des nains",
+      "note_en": "Dwarven District",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Sumi",
+      "id": null,
+      "role": "merchant",
+      "profession": "Forge",
+      "zone": {
+        "id": "orgrimmar",
+        "fr": "Orgrimmar",
+        "en": "Orgrimmar"
+      },
+      "coordinates": {
+        "x": 82.6,
+        "y": 23.4
+      },
+      "faction": "horde",
+      "offers": [
+        "12162"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+      "note": "Vallée de l'Honneur",
+      "note_en": "Valley of Honor",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Jutak",
+      "id": null,
+      "role": "merchant",
+      "profession": "Forge",
+      "zone": {
+        "id": "stranglethorn",
+        "fr": "Vallée de Strangleronce",
+        "en": "Stranglethorn Vale"
+      },
+      "coordinates": {
+        "x": 27.4,
+        "y": 77.4
+      },
+      "faction": "neutral",
+      "offers": [
+        "12162"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+      "note": "Baie-du-Butin",
+      "note_en": "Booty Bay",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Jannos Ironwill",
+      "id": null,
+      "role": "merchant",
+      "profession": "Forge",
+      "zone": {
+        "id": "arathi",
+        "fr": "Hautes-terres d'Arathi",
+        "en": "Arathi Highlands"
+      },
+      "coordinates": {
+        "x": 46,
+        "y": 47.6
+      },
+      "faction": "alliance",
+      "offers": [
+        "10858"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+      "note": "Refuge de l'Ornière",
+      "note_en": "Refuge Pointe",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Muuran",
+      "id": null,
+      "role": "merchant",
+      "profession": "Forge",
+      "zone": {
+        "id": "desolace",
+        "fr": "Désolace",
+        "en": "Desolace"
+      },
+      "coordinates": {
+        "x": 55.6,
+        "y": 56.6
+      },
+      "faction": "horde",
+      "offers": [
+        "10858"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+      "note": "Poste des marche-fantômes",
+      "note_en": "Ghost Walker Post",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Vharr",
+      "id": null,
+      "role": "merchant",
+      "profession": "Forge",
+      "zone": {
+        "id": "stranglethorn",
+        "fr": "Vallée de Strangleronce",
+        "en": "Stranglethorn Vale"
+      },
+      "coordinates": {
+        "x": 32.2,
+        "y": 28
+      },
+      "faction": "horde",
+      "offers": [
+        "12164"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+      "note": "Campement Grom'gol",
+      "note_en": "Grom'gol Base Camp",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Bombus Finespindle",
+      "id": null,
+      "role": "merchant",
+      "profession": "Travail du cuir",
+      "zone": {
+        "id": "ironforge",
+        "fr": "Forgefer",
+        "en": "Ironforge"
+      },
+      "coordinates": {
+        "x": 39.6,
+        "y": 34
+      },
+      "faction": "alliance",
+      "offers": [
+        "18731"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "note": "Grande Forge",
+      "note_en": "The Great Forge",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Tamar",
+      "id": null,
+      "role": "merchant",
+      "profession": "Travail du cuir",
+      "zone": {
+        "id": "orgrimmar",
+        "fr": "Orgrimmar",
+        "en": "Orgrimmar"
+      },
+      "coordinates": {
+        "x": 63,
+        "y": 45.2
+      },
+      "faction": "horde",
+      "offers": [
+        "18731"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "note": "La Herse",
+      "note_en": "The Drag",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Saenorion",
+      "id": null,
+      "role": "merchant",
+      "profession": "Travail du cuir",
+      "zone": {
+        "id": "darnassus",
+        "fr": "Darnassus",
+        "en": "Darnassus"
+      },
+      "coordinates": {
+        "x": 63.8,
+        "y": 22
+      },
+      "faction": "alliance",
+      "offers": [
+        "18949",
+        "7451"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "note": "Terrasse des artisans",
+      "note_en": "Craftsmen's Terrace",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Joseph Moore",
+      "id": null,
+      "role": "merchant",
+      "profession": "Travail du cuir",
+      "zone": {
+        "id": "undercity",
+        "fr": "Fossoyeuse",
+        "en": "Undercity"
+      },
+      "coordinates": {
+        "x": 70.6,
+        "y": 58.8
+      },
+      "faction": "horde",
+      "offers": [
+        "18949",
+        "7451"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "note": "Quartier des voleurs",
+      "note_en": "Rogue's Quarter",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Mavralyn",
+      "id": null,
+      "role": "merchant",
+      "profession": "Travail du cuir",
+      "zone": {
+        "id": "darkshore",
+        "fr": "Sombrivage",
+        "en": "Darkshore"
+      },
+      "coordinates": {
+        "x": 37,
+        "y": 41.2
+      },
+      "faction": "alliance",
+      "offers": [
+        "5786",
+        "5787"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "note": "Auberdine",
+      "note_en": "Auberdine",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Gina MacGregor",
+      "id": null,
+      "role": "merchant",
+      "profession": "Travail du cuir",
+      "zone": {
+        "id": "westfall",
+        "fr": "Marche de l'Ouest",
+        "en": "Westfall"
+      },
+      "coordinates": {
+        "x": 57.6,
+        "y": 53.8
+      },
+      "faction": "alliance",
+      "offers": [
+        "5786",
+        "5787"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "note": "Colline des Sentinelles",
+      "note_en": "Sentinel Hill",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Andrew Hilbert",
+      "id": null,
+      "role": "merchant",
+      "profession": "Travail du cuir",
+      "zone": {
+        "id": "silverpine",
+        "fr": "Forêt des Pins argentés",
+        "en": "Silverpine Forest"
+      },
+      "coordinates": {
+        "x": 43.2,
+        "y": 40.6
+      },
+      "faction": "horde",
+      "offers": [
+        "5786",
+        "5787"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "note": "Le Sépulcre, sous-sol de la crypte",
+      "note_en": "The Sepulcher, below the crypt",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Kalldan Felmoon",
+      "id": null,
+      "role": "merchant",
+      "profession": "Travail du cuir",
+      "zone": {
+        "id": "barrens",
+        "fr": "Les Tarides",
+        "en": "The Barrens"
+      },
+      "coordinates": {
+        "x": 45.9,
+        "y": 35.7
+      },
+      "faction": "neutral",
+      "offers": [
+        "6474",
+        "6475"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "note": "Caverne au-dessus de l'entrée des Cavernes des Lamentations",
+      "note_en": "Cave above Wailing Caverns entrance",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Jangdor Swiftstrider",
+      "id": null,
+      "role": "merchant",
+      "profession": "Travail du cuir",
+      "zone": {
+        "id": "feralas",
+        "fr": "Féralas",
+        "en": "Feralas"
+      },
+      "coordinates": {
+        "x": 74.5,
+        "y": 42.9
+      },
+      "faction": "horde",
+      "offers": [
+        "7451"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "note": "Camp Mojache",
+      "note_en": "Camp Mojache",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Mahu",
+      "id": null,
+      "role": "merchant",
+      "profession": "Couture",
+      "zone": {
+        "id": "thunder-bluff",
+        "fr": "Les Pitons-du-Tonnerre",
+        "en": "Thunder Bluff"
+      },
+      "coordinates": {
+        "x": 43.8,
+        "y": 44.6
+      },
+      "faction": "horde",
+      "offers": [
+        "10311"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "note": "Cime centrale",
+      "note_en": "Middle Rise",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Borya",
+      "id": null,
+      "role": "merchant",
+      "profession": "Couture",
+      "zone": {
+        "id": "orgrimmar",
+        "fr": "Orgrimmar",
+        "en": "Orgrimmar"
+      },
+      "coordinates": {
+        "x": 63,
+        "y": 51.2
+      },
+      "faction": "horde",
+      "offers": [
+        "6270",
+        "6274",
+        "5772",
+        "10314",
+        "10317"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "note": "La Herse",
+      "note_en": "The Drag",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Outfitter Eric",
+      "id": null,
+      "role": "merchant",
+      "profession": "Couture",
+      "zone": {
+        "id": "ironforge",
+        "fr": "Forgefer",
+        "en": "Ironforge"
+      },
+      "coordinates": {
+        "x": 44.4,
+        "y": 30
+      },
+      "faction": "alliance",
+      "offers": [
+        "10314",
+        "10317"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "note": "Grande Forge, boutique de couture",
+      "note_en": "The Great Forge, outfitter",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Alexandra Bolero",
+      "id": null,
+      "role": "merchant",
+      "profession": "Couture",
+      "zone": {
+        "id": "stormwind",
+        "fr": "Hurlevent",
+        "en": "Stormwind"
+      },
+      "coordinates": {
+        "x": 43.6,
+        "y": 74
+      },
+      "faction": "alliance",
+      "offers": [
+        "6274"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "note": "Quartier des mages",
+      "note_en": "Mage Quarter",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Millie Gregorian",
+      "id": null,
+      "role": "merchant",
+      "profession": "Couture",
+      "zone": {
+        "id": "undercity",
+        "fr": "Fossoyeuse",
+        "en": "Undercity"
+      },
+      "coordinates": {
+        "x": 70.6,
+        "y": 30.6
+      },
+      "faction": "horde",
+      "offers": [
+        "6275"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "note": "Quartier de la magie",
+      "note_en": "Magic Quarter",
+      "coordinate_status": "classic_reference_unverified"
     }
   ],
   "evidence": [
@@ -1744,6 +2460,246 @@
       "url": "https://www.wowhead.com/forever/fr/item=13477/recette-potion-de-mana-excellente#comments",
       "fr": "Certains indiquent un réapprovisionnement normalement proche de 30–60 min, un autre l'a vue 3 min après l'achat d'une recette différente ; stocks partagés ou imprévisibles.",
       "en": "Some reports suggest 30–60 min, while one saw it 3 min after buying a different recipe; possibly linked inventory slots and uncertain timing."
+    },
+    {
+      "vendor_name": "Muuran",
+      "item": "10858",
+      "kind": "observed_wait",
+      "min_minutes": 5,
+      "max_minutes": 60,
+      "confidence": "contradictory",
+      "url": "https://www.wowhead.com/classic/item=10858/plans-solid-iron-maul#comments",
+      "fr": "Des joueurs mentionnent un retour en 5 ou 30 minutes ; d'autres évoquent une heure en général. Observations non garanties.",
+      "en": "Players report finding it after 5 or 30 minutes; another cites about an hour in general. Not a verified restock timer."
+    },
+    {
+      "vendor_name": "Jangdor Swiftstrider",
+      "item": "7451",
+      "kind": "observed_wait",
+      "min_minutes": 5,
+      "max_minutes": 30,
+      "confidence": "low",
+      "url": "https://www.wowhead.com/classic/item=7451/pattern-green-whelp-bracers#comments",
+      "fr": "Un joueur décrit un assortiment partagé, parfois renouvelé entre quelques minutes et 30 minutes ; le patron voulu n'est pas assuré à chaque cycle.",
+      "en": "A player describes a shared rotating inventory from a few minutes to 30 minutes; the sought pattern might not appear every cycle."
+    },
+    {
+      "vendor_name": "Vharr",
+      "item": "12164",
+      "kind": "observed_wait",
+      "min_minutes": 25,
+      "max_minutes": 45,
+      "confidence": "low",
+      "url": "https://www.wowhead.com/classic/item=12164/plans-massive-iron-axe#comments",
+      "fr": "Des commentaires évoquent environ 30 à 45 min, mais certains sont liés à Season of Discovery. Ne pas extrapoler à Forever.",
+      "en": "Comments suggest about 30–45 minutes, some from Season of Discovery. Cannot be extrapolated to Forever."
+    },
+    {
+      "vendor_name": "Borya",
+      "item": "6270",
+      "kind": "observed_wait",
+      "min_minutes": 10,
+      "max_minutes": 120,
+      "confidence": "contradictory",
+      "url": "https://www.wowhead.com/classic/item=6270/pattern-blue-linen-vest#comments",
+      "fr": "Des témoignages de versions différentes évoquent des apparitions rapides (10 min) ou des attentes de plus de 2 h. Pas de minuterie fixe connue.",
+      "en": "Mixed-version comments report short intervals (10 min) or waits exceeding 2 hours. No reliable fixed timer."
     }
-  ]
+  ],
+  "zone_maps": {
+    "alterac": {
+      "uiMapID": 1416,
+      "build": "1.60.1.69893",
+      "source": "https://warcraftforever.games/maps",
+      "kind": "forever_beta_zone_map"
+    },
+    "arathi": {
+      "uiMapID": 1417,
+      "build": "1.60.1.69893",
+      "source": "https://warcraftforever.games/maps",
+      "kind": "forever_beta_zone_map"
+    },
+    "barrens": {
+      "uiMapID": 1413,
+      "build": "1.60.1.69893",
+      "source": "https://warcraftforever.games/maps",
+      "kind": "forever_beta_zone_map"
+    },
+    "ashenvale": {
+      "uiMapID": 1440,
+      "build": "1.60.1.69893",
+      "source": "https://warcraftforever.games/maps",
+      "kind": "forever_beta_zone_map"
+    },
+    "blasted-lands": {
+      "uiMapID": 1419,
+      "build": "1.60.1.69893",
+      "source": "https://warcraftforever.games/maps",
+      "kind": "forever_beta_zone_map"
+    },
+    "darkshore": {
+      "uiMapID": 1439,
+      "build": "1.60.1.69893",
+      "source": "https://warcraftforever.games/maps",
+      "kind": "forever_beta_zone_map"
+    },
+    "darnassus": {
+      "uiMapID": 1457,
+      "build": "1.60.1.69893",
+      "source": "https://warcraftforever.games/maps",
+      "kind": "forever_beta_zone_map"
+    },
+    "desolace": {
+      "uiMapID": 1443,
+      "build": "1.60.1.69893",
+      "source": "https://warcraftforever.games/maps",
+      "kind": "forever_beta_zone_map"
+    },
+    "duskwood": {
+      "uiMapID": 1431,
+      "build": "1.60.1.69893",
+      "source": "https://warcraftforever.games/maps",
+      "kind": "forever_beta_zone_map"
+    },
+    "elwynn": {
+      "uiMapID": 1429,
+      "build": "1.60.1.69893",
+      "source": "https://warcraftforever.games/maps",
+      "kind": "forever_beta_zone_map"
+    },
+    "epl": {
+      "uiMapID": 1423,
+      "build": "1.60.1.69893",
+      "source": "https://warcraftforever.games/maps",
+      "kind": "forever_beta_zone_map"
+    },
+    "feralas": {
+      "uiMapID": 1444,
+      "build": "1.60.1.69893",
+      "source": "https://warcraftforever.games/maps",
+      "kind": "forever_beta_zone_map"
+    },
+    "hillsbrad": {
+      "uiMapID": 1424,
+      "build": "1.60.1.69893",
+      "source": "https://warcraftforever.games/maps",
+      "kind": "forever_beta_zone_map"
+    },
+    "ironforge": {
+      "uiMapID": 1455,
+      "build": "1.60.1.69893",
+      "source": "https://warcraftforever.games/maps",
+      "kind": "forever_beta_zone_map"
+    },
+    "loch-modan": {
+      "uiMapID": 1432,
+      "build": "1.60.1.69893",
+      "source": "https://warcraftforever.games/maps",
+      "kind": "forever_beta_zone_map"
+    },
+    "moonglade": {
+      "uiMapID": 1450,
+      "build": "1.60.1.69893",
+      "source": "https://warcraftforever.games/maps",
+      "kind": "forever_beta_zone_map"
+    },
+    "orgrimmar": {
+      "uiMapID": 1454,
+      "build": "1.60.1.69893",
+      "source": "https://warcraftforever.games/maps",
+      "kind": "forever_beta_zone_map"
+    },
+    "redridge": {
+      "uiMapID": 1433,
+      "build": "1.60.1.69893",
+      "source": "https://warcraftforever.games/maps",
+      "kind": "forever_beta_zone_map"
+    },
+    "silithus": {
+      "uiMapID": 1451,
+      "build": "1.60.1.69893",
+      "source": "https://warcraftforever.games/maps",
+      "kind": "forever_beta_zone_map"
+    },
+    "silverpine": {
+      "uiMapID": 1421,
+      "build": "1.60.1.69893",
+      "source": "https://warcraftforever.games/maps",
+      "kind": "forever_beta_zone_map"
+    },
+    "stonetalon": {
+      "uiMapID": 1442,
+      "build": "1.60.1.69893",
+      "source": "https://warcraftforever.games/maps",
+      "kind": "forever_beta_zone_map"
+    },
+    "stormwind": {
+      "uiMapID": 1453,
+      "build": "1.60.1.69893",
+      "source": "https://warcraftforever.games/maps",
+      "kind": "forever_beta_zone_map"
+    },
+    "stranglethorn": {
+      "uiMapID": 1434,
+      "build": "1.60.1.69893",
+      "source": "https://warcraftforever.games/maps",
+      "kind": "forever_beta_zone_map"
+    },
+    "swamp-of-sorrows": {
+      "uiMapID": 1435,
+      "build": "1.60.1.69893",
+      "source": "https://warcraftforever.games/maps",
+      "kind": "forever_beta_zone_map"
+    },
+    "tanaris": {
+      "uiMapID": 1446,
+      "build": "1.60.1.69893",
+      "source": "https://warcraftforever.games/maps",
+      "kind": "forever_beta_zone_map"
+    },
+    "thousand-needles": {
+      "uiMapID": 1441,
+      "build": "1.60.1.69893",
+      "source": "https://warcraftforever.games/maps",
+      "kind": "forever_beta_zone_map"
+    },
+    "thunder-bluff": {
+      "uiMapID": 1456,
+      "build": "1.60.1.69893",
+      "source": "https://warcraftforever.games/maps",
+      "kind": "forever_beta_zone_map"
+    },
+    "tirisfal": {
+      "uiMapID": 1420,
+      "build": "1.60.1.69893",
+      "source": "https://warcraftforever.games/maps",
+      "kind": "forever_beta_zone_map"
+    },
+    "undercity": {
+      "uiMapID": 1458,
+      "build": "1.60.1.69893",
+      "source": "https://warcraftforever.games/maps",
+      "kind": "forever_beta_zone_map"
+    },
+    "westfall": {
+      "uiMapID": 1436,
+      "build": "1.60.1.69893",
+      "source": "https://warcraftforever.games/maps",
+      "kind": "forever_beta_zone_map"
+    },
+    "winterspring": {
+      "uiMapID": 1452,
+      "build": "1.60.1.69893",
+      "source": "https://warcraftforever.games/maps",
+      "kind": "forever_beta_zone_map"
+    },
+    "wpl": {
+      "uiMapID": 1422,
+      "build": "1.60.1.69893",
+      "source": "https://warcraftforever.games/maps",
+      "kind": "forever_beta_zone_map"
+    }
+  },
+  "zone_map_base": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/",
+  "map_status": "forever_beta_map_art_positions_classic_unverified"
 }
