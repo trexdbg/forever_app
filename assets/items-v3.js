@@ -16,8 +16,10 @@ const rowText=(row,value)=>{const cell=document.createElement("td");cell.textCon
 function normalizeLocal(i){return {...i,slot:service.LABELS[i.slot]||i.slot,source_status:i.source_status||"classic_reference"}}
 function sourceType(item){return typeof item.source_status==="string"&&item.source_status.startsWith("forever_beta_")?"forever":"classic"}
 const validImage=i=>typeof i==="string"&&(/^[a-z0-9_-]{2,70}$/.test(i)||i.startsWith("https://wowdb.assemblee-defias.fr/database-icons/"));
+const genericSlotIcons={head:"inv_helmet_06",neck:"inv_jewelry_necklace_07",shoulders:"inv_shoulder_07",back:"inv_misc_cape_10",chest:"inv_chest_cloth_07",wrist:"inv_bracer_07",hands:"inv_gauntlets_04",waist:"inv_belt_10",legs:"inv_pants_07",feet:"inv_boots_07",finger1:"inv_jewelry_ring_03",finger2:"inv_jewelry_ring_15",trinket1:"inv_jewelry_talisman_05",trinket2:"inv_jewelry_talisman_06",mainhand:"inv_sword_04",offhand:"inv_shield_05",ranged:"inv_weapon_bow_07"};
 function imageUrl(i){if(i&&typeof i.icon==="string"&&i.icon.startsWith("https://wowdb.assemblee-defias.fr/database-icons/"))return i.icon;
-return i&&validImage(i.icon)?"/assets/icons/"+i.icon+".jpg":null}
+const icon=i&&validImage(i.icon)?i.icon:genericSlotIcons[i?.slot];
+return icon?"/assets/icons/"+icon+".jpg":null}
 function matches(item){
  if(status==="forever"&&sourceType(item)!=="forever"||status==="classic"&&sourceType(item)!=="classic")return false;
  const id=slot.value;if(id!=="all"&&!service.compatible(item.slot,id))return false;
@@ -42,7 +44,7 @@ function render(){
  count.textContent=rows.length+" "+(rows.length===1?tr.item:tr.items)+(total!==null&&status!=="forever"?" · "+total.toLocaleString(en?"en":"fr")+" Classic ("+tr.loaded+" : "+classic.length+")":"");
  if(!rows.length){const line=document.createElement("tr");rowText(line,loading?tr.loading:tr.noresult).colSpan=4;table.append(line)}
  for(const i of rows.slice(0,350)){const row=document.createElement("tr"),name=rowText(row,"");name.className="item-v2-name";const imgSrc=imageUrl(i);
- if(imgSrc){const pic=document.createElement("img");pic.className="result-icon item-v2-icon";pic.src=imgSrc;pic.alt="";pic.loading="lazy";pic.onerror=()=>pic.remove();name.append(pic)}
+ if(imgSrc){const pic=document.createElement("img");pic.className="result-icon item-v2-icon";pic.src=imgSrc;pic.alt="";pic.loading="lazy";if(!i.icon)pic.title=en?"Illustrative slot icon":"Icône illustrative d’emplacement";pic.onerror=()=>pic.remove();name.append(pic)}
  const display=document.createElement("span");display.className="item-v2-label";display.style.setProperty("--rarity",colors[i.quality]||"#d7d7d7");
  const href=(typeof i.url==="string"&&(i.url.startsWith("https://www.wowhead.com/forever/")||i.url.startsWith("https://wowdb.assemblee-defias.fr/")||i.url.startsWith("https://www.60.tools/items/")))?i.url:null;
  const anchor=document.createElement(href?"a":"span");if(href){anchor.href=href;anchor.target="_blank";anchor.rel="noopener noreferrer"}anchor.textContent=i.name;display.append(anchor);name.append(display);
