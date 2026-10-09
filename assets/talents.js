@@ -97,7 +97,7 @@ function render(){
         icon.append(img);
       }else fallback();
       button.append(icon,mk("span",t.name,"node-name"),mk("span",rank+"/"+t.max,"rank"+(rank?" points":"")));
-      const choose=()=>{selected[ti]=i;detail(ti,i)};
+      const choose=()=>{selected[ti]=i;grid.querySelectorAll(".talent-node.selected").forEach(node=>node.classList.remove("selected"));button.classList.add("selected");detail(ti,i)};
       button.addEventListener("mouseenter",choose);
       button.addEventListener("focus",choose);
       button.addEventListener("click",()=>{
