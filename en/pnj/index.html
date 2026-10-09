@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#0b1210"><meta name="description" content="Find Classic-reference NPC vendors by item, profession, faction or zone. Historical restock comments, map coordinates and profession trainers.">
+<meta name="theme-color" content="#0b1210"><meta name="description" content="Find item vendors and profession trainers, with interactive WoW Forever beta maps, NPC coordinates and historical restock comments.">
 <link rel="canonical" href="https://trexdbg.github.io/forever_app/en/pnj/"><link rel="icon" href="/forever_app/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website"><meta property="og:title" content="NPC vendors and profession trainers — WoW Forever Atlas"><meta property="og:description" content="Find Classic-reference NPC vendors by item, profession, faction or zone. Historical restock comments, map coordinates and profession trainers."><meta property="og:url" content="https://trexdbg.github.io/forever_app/en/pnj/">
 <title>NPC vendors and profession trainers — WoW Forever Atlas</title>
@@ -27,14 +27,14 @@
  <div class="npc-map-head"><div><h3 id="npc-map-title">Select a zone</h3><span id="npc-map-count">Zone NPCs</span></div>
  <div class="npc-map-zoom"><button type="button" id="npc-map-zoom-out" aria-label="Zoom out">−</button><button type="button" id="npc-map-zoom-reset" aria-label="Reset zoom">100 %</button><button type="button" id="npc-map-zoom-in" aria-label="Zoom in">+</button></div></div>
  <div class="npc-map-stage"><canvas id="npc-map-canvas" width="1002" height="668" tabindex="0" role="img" aria-label="NPC map. Scroll to zoom, drag to pan, click markers to select an NPC."></canvas><div class="npc-map-overlay" id="npc-map-hover" aria-live="polite"></div></div>
- <div class="npc-map-footer"><span>Scroll wheel: zoom · Drag: pan · Click: select</span><span id="npc-map-source">Loading map…</span></div>
+ <div class="npc-map-legend"><span><i class="npc-legend-swatch npc-legend-vendor"></i>Merchant</span><span><i class="npc-legend-swatch npc-legend-trainer"></i>Trainer</span><span><i class="npc-legend-swatch npc-legend-current"></i>Selected</span></div><div class="npc-map-footer"><span>Scroll wheel: zoom · Drag: pan · Click: select</span><span id="npc-map-source">Loading map…</span></div>
  <div class="npc-map-nearby" aria-label="Other NPCs in this zone"><span class="npc-map-nearby-title">Other NPCs nearby</span><div id="npc-map-nearby" class="npc-map-nearby-buttons"></div></div>
  </section>
  <aside id="npc-detail" class="npc-detail" aria-label="Selected NPC and item information"><p class="npc-empty">Choose an entry to get started.</p></aside>
 </div>
 </div>
 <details class="atlas-detail"><summary>About the data and respawn times</summary>
-<p>Vendor and profession trainer locations are historical World of Warcraft Classic references. WoW Forever may differ. Item and NPC links open Wowhead Classic or Forever. Comment reports describe observed waiting times rather than measured server restock intervals: reports may come from different versions of the game and may conflict. Missing evidence means unknown, not immediate respawn. X/Y are zone percentages (0–100), not world GPS coordinates.</p>
+<p>Vendor and profession trainer locations are historical World of Warcraft Classic references. WoW Forever may differ. Map backgrounds are from the Forever beta client; plotted NPC locations remain Classic references. Item and NPC links open Wowhead Classic or Forever. Comment reports describe observed waiting times rather than measured server restock intervals: reports may come from different versions of the game and may conflict. Missing evidence means unknown, not immediate respawn. X/Y are zone percentages (0–100), not world GPS coordinates.</p>
 </details>
 </div></section></main>
 <footer class="footer"><div class="wrap footer-simple"><span>FOREVER ATLAS · Independent community project</span><nav aria-label="Useful links"><a href="https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic" target="_blank" rel="noopener noreferrer">Classic vendor reference ↗</a></nav></div><div class="wrap legal">World of Warcraft © Blizzard Entertainment · Unofficial and unaffiliated. Beta data may change.</div></footer>
