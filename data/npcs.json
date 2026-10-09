@@ -174,7 +174,7 @@
       "supply": "unlimited",
       "kind": "component",
       "icon": "inv_mace_11",
-      "icon_status": "wowhead_icon_verified",
+      "icon_status": "category_fallback",
       "vendor_stock": null,
       "vendor_price_copper": 2000,
       "source": "https://www.wowhead.com/classic/item=4400"
@@ -3674,7 +3674,7 @@
       "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic"
     },
     {
-      "id": 954,
+      "id": 5175,
       "name": "Gearcutter Cogspinner",
       "role": "merchant",
       "profession": "Ingénierie",
@@ -3702,11 +3702,12 @@
         "4400",
         "18649",
         "16041",
-        "16042"
+        "16042",
+        "7560"
       ],
       "note": "Brikabrok",
       "note_en": "Tinker Town",
-      "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic"
+      "source": "https://www.wowhead.com/classic/npc=5175/gearcutter-cogspinner"
     },
     {
       "id": 5519,
