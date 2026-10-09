@@ -17,6 +17,17 @@
     "aid": "https://wow-guides.com/classic-era/professions/first-aid"
   },
   "items": {
+    "5640": {
+      "id": 5640,
+      "name": {
+        "en": "Recipe: Rage Potion",
+        "fr": "Recette : Potion de rage"
+      },
+      "profession": "Alchimie",
+      "skill": 60,
+      "supply": "limited",
+      "source": "https://www.wowhead.com/classic/item=5640/recipe-rage-potion"
+    },
     "5642": {
       "id": 5642,
       "name": {
@@ -105,16 +116,6 @@
       },
       "profession": "Couture",
       "skill": 70,
-      "supply": "limited"
-    },
-    "6617": {
-      "id": 6617,
-      "name": {
-        "en": "Recipe: Rage Potion",
-        "fr": "Recette : Potion de rage"
-      },
-      "profession": "Alchimie",
-      "skill": 60,
       "supply": "limited"
     },
     "7560": {
@@ -481,7 +482,7 @@
       },
       "faction": "alliance",
       "offers": [
-        "6617",
+        "5640",
         "6053"
       ],
       "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
@@ -677,7 +678,7 @@
       },
       "faction": "horde",
       "offers": [
-        "6617",
+        "5640",
         "5643"
       ],
       "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
