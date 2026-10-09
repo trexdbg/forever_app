@@ -5,57 +5,57 @@
 <meta property="og:type" content="website"><meta property="og:title" content="WoW Forever Quest Guide: Alliance & Horde"><meta property="og:description" content="Interactive Classic quest routes, maps, coordinates and saved progress."><meta property="og:url" content="https://trexdbg.github.io/forever_app/en/quetes/">
 <title>WoW Forever Quest Guide: Alliance & Horde | Forever Atlas</title>
 <link rel="stylesheet" href="/forever_app/assets/site.css"><link rel="stylesheet" href="/forever_app/assets/quests.css">
-<script defer src="/forever_app/assets/i18n.js?v=1"></script><script defer src="/forever_app/assets/common.js"></script><script defer src="/forever_app/assets/quests.js"></script><link rel="stylesheet" href="/forever_app/assets/refined.css?v=20261009-1"><link rel="alternate" hreflang="fr" href="https://trexdbg.github.io/forever_app/quetes/"><link rel="alternate" hreflang="en" href="https://trexdbg.github.io/forever_app/en/quetes/"><link rel="alternate" hreflang="x-default" href="https://trexdbg.github.io/forever_app/quetes/"><meta property="og:locale" content="en_US"><link rel="stylesheet" href="/forever_app/assets/language.css?v=1"></head>
+<script defer src="/forever_app/assets/i18n.js?v=1"></script><script defer src="/forever_app/assets/common.js"></script><script defer src="/forever_app/assets/quest-locale.js?v=2"></script><script defer src="/forever_app/assets/quests.js?v=2"></script><link rel="stylesheet" href="/forever_app/assets/refined.css?v=20261009-1"><link rel="alternate" hreflang="fr" href="https://trexdbg.github.io/forever_app/quetes/"><link rel="alternate" hreflang="en" href="https://trexdbg.github.io/forever_app/en/quetes/"><link rel="alternate" hreflang="x-default" href="https://trexdbg.github.io/forever_app/quetes/"><meta property="og:locale" content="en_US"><link rel="stylesheet" href="/forever_app/assets/language.css?v=1"></head>
 <body data-page="quests"><a class="skip" href="#contenu">Skip to content</a>
-<header class="site-header"><div class="wrap header-inner"><a class="brand" href="/forever_app/en/" aria-label="Forever Atlas, accueil"><span class="brand-icon" aria-hidden="true">✦</span><span>FOREVER <strong>ATLAS</strong></span></a><button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false">☰</button><nav class="nav" aria-label="Navigation principale"><a href="/forever_app/en/">Home</a><a aria-current="page" href="/forever_app/en/quetes/">Quests</a><a href="/forever_app/en/talents/">Talents</a><a href="/forever_app/en/minage/">Mining</a><a href="/forever_app/en/equipements/">Gear</a><a href="/forever_app/en/population/">Population</a></nav><div class="lang-switch" role="group" aria-label="Language"><a href="/forever_app/quetes/" lang="fr"  title="Français">FR</a><a href="/forever_app/en/quetes/" lang="en" aria-current="true" title="English">EN</a></div></div></header>
+<header class="site-header"><div class="wrap header-inner"><a class="brand" href="/forever_app/en/" aria-label="Forever Atlas, home"><span class="brand-icon" aria-hidden="true">✦</span><span>FOREVER <strong>ATLAS</strong></span></a><button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button><nav class="nav" aria-label="Main navigation"><a href="/forever_app/en/">Home</a><a aria-current="page" href="/forever_app/en/quetes/">Quests</a><a href="/forever_app/en/talents/">Talents</a><a href="/forever_app/en/minage/">Mining</a><a href="/forever_app/en/equipements/">Gear</a><a href="/forever_app/en/population/">Population</a></nav><div class="lang-switch" role="group" aria-label="Language"><a href="/forever_app/quetes/" lang="fr"  title="Français">FR</a><a href="/forever_app/en/quetes/" lang="en" aria-current="true" title="English">EN</a></div></div></header>
 <main id="contenu">
 <section class="page-hero wrap"><span class="kicker">GUIDE / 01</span><h1>Quest <em>routes.</em></h1><p>Routes, maps and objectives.</p></section>
 <section class="section wrap slim-top" id="quest-app" aria-busy="true">
 <div class="quest-toolbar tool-panel"><div class="tool-head"><div><h2>Your route</h2></div><span class="status-pill" id="quest-data-status" role="status">Loading…</span></div>
 <div class="quest-filters">
 <fieldset class="quest-picker quest-faction-picker"><legend>Faction</legend>
-<div id="quest-factions" class="quest-faction-options" role="group" aria-label="Choisir une faction">
+<div id="quest-factions" class="quest-faction-options" role="group" aria-label="Choose a faction">
 <button type="button" class="quest-faction-choice selected" data-faction="alliance" aria-pressed="true"><img src="/forever_app/assets/quest-factions/alliance.svg" alt="" width="54" height="54"><span><strong>Alliance</strong></span><span class="quest-selection-check" aria-hidden="true">✓</span></button>
 <button type="button" class="quest-faction-choice" data-faction="horde" aria-pressed="false"><img src="/forever_app/assets/quest-factions/horde.svg" alt="" width="54" height="54"><span><strong>Horde</strong></span><span class="quest-selection-check" aria-hidden="true">✓</span></button>
 </div></fieldset>
-<fieldset class="quest-picker quest-race-picker"><legend>Race</legend><div id="quest-races" class="quest-race-options" role="group" aria-label="Choisir une race"></div><p class="quest-race-hint" id="quest-race-hint" hidden>Some starting routes are shared by multiple races.</p></fieldset>
-<div class="quest-search-field"><label for="quest-search">Search for a quest, NPC or zone</label><div class="quest-search-input"><span aria-hidden="true">⌕</span><input type="search" id="quest-search" placeholder="Nom de quête, ville, objectif…" autocomplete="off"></div></div>
+<fieldset class="quest-picker quest-race-picker"><legend>Race</legend><div id="quest-races" class="quest-race-options" role="group" aria-label="Choose a race"></div><p class="quest-race-hint" id="quest-race-hint" hidden>Some starting routes are shared by multiple races.</p></fieldset>
+<div class="quest-search-field"><label for="quest-search">Search for a quest, NPC or zone</label><div class="quest-search-input"><span aria-hidden="true">⌕</span><input type="search" id="quest-search" placeholder="Quest, town or objective…" autocomplete="off"></div></div>
 </div>
 <div id="quest-search-results" class="quest-search-results" aria-live="polite" hidden></div>
 </div>
-<section class="quest-timeline" aria-label="Navigation entre les étapes">
+<section class="quest-timeline" aria-label="Step navigation">
 <div class="quest-timeline-heading"><div><span class="kicker">PROGRESS</span><h2 id="quest-step-count">Step —</h2><p id="quest-timeline-zone">Choose a route to get started.</p></div>
 </div>
 <div class="quest-timeline-range-label"><label for="quest-range">Browse steps</label><output id="quest-range-output" for="quest-range">—</output></div>
-<div class="quest-timeline-track-scroll" aria-label="Frise des étapes et des niveaux">
+<div class="quest-timeline-track-scroll" aria-label="Step and level timeline">
 <div class="quest-timeline-track-inner">
-<input type="range" id="quest-range" class="quest-timeline-slider" min="1" max="1" value="1" step="1" aria-label="Aller à une étape du parcours">
-<div class="quest-timeline-milestones" id="quest-milestones" aria-label="Repères de niveau alignés sur les étapes du curseur"></div>
+<input type="range" id="quest-range" class="quest-timeline-slider" min="1" max="1" value="1" step="1" aria-label="Go to a step on this route">
+<div class="quest-timeline-milestones" id="quest-milestones" aria-label="Level markers aligned to route steps"></div>
 </div>
 </div>
 <div class="quest-timeline-preview" id="quest-timeline-preview" aria-live="polite">Drag the slider or select a level marker.</div>
-<div class="quest-progress-summary"><div><strong id="quest-path-label">Loading route…</strong><span id="quest-progress-info">—</span></div><div class="quest-progress-track" role="progressbar" aria-label="Étapes terminées" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="quest-progress-track"><span id="quest-progress-fill"></span></div></div>
+<div class="quest-progress-summary"><div><strong id="quest-path-label">Loading route…</strong><span id="quest-progress-info">—</span></div><div class="quest-progress-track" role="progressbar" aria-label="Completed steps" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="quest-progress-track"><span id="quest-progress-fill"></span></div></div>
 </section>
 <div class="quest-main">
-<aside class="quest-sidebar" aria-label="Quêtes et objectifs de l'étape">
+<aside class="quest-sidebar" aria-label="Step quests and objectives">
 <div class="quest-side-heading"><div><span class="kicker">IN THIS ZONE</span><h2>Zone quests</h2><p id="quest-waypoint-count">Loading…</p></div></div>
-<div class="quest-waypoints" id="quest-waypoints" aria-label="Liste des quêtes et actions de cette étape"></div>
-<div class="quest-side-footer"><button type="button" class="btn primary" id="quest-complete" aria-pressed="false">Mark step complete ✓</button><button type="button" id="quest-reset" class="quest-quiet" title="Effacer la progression de ce parcours">Reset route</button></div>
+<div class="quest-waypoints" id="quest-waypoints" aria-label="Quests and objectives for this step"></div>
+<div class="quest-side-footer"><button type="button" class="btn primary" id="quest-complete" aria-pressed="false">Mark step complete ✓</button><button type="button" id="quest-reset" class="quest-quiet" title="Clear progress for this route">Reset route</button></div>
 
 </aside>
 <div class="quest-content">
 <div class="quest-current-head"><div><span class="kicker">STEP MAP</span><h2 id="quest-zone-title">Loading…</h2><p id="quest-level">—</p></div></div>
 <div class="quest-map-top"><div class="quest-map-heading"><strong id="quest-map-title">Zone map</strong><small id="quest-map-source">Scroll to zoom · X / Y: 0–100</small></div>
-<div class="quest-map-controls" role="group" aria-label="Navigation des étapes et zoom de la carte">
-<button type="button" class="btn secondary" id="quest-prev" aria-label="Étape précédente">← Previous</button>
-<button type="button" id="quest-zoom-reset" title="Réinitialiser le zoom et recentrer la carte" aria-label="Réinitialiser le zoom et recentrer la carte">100 %</button>
-<button type="button" class="btn primary" id="quest-next" aria-label="Étape suivante">Next →</button>
+<div class="quest-map-controls" role="group" aria-label="Step navigation and map zoom">
+<button type="button" class="btn secondary" id="quest-prev" aria-label="Previous step">← Previous</button>
+<button type="button" id="quest-zoom-reset" title="Reset zoom and recenter the map" aria-label="Reset zoom and recenter the map">100 %</button>
+<button type="button" class="btn primary" id="quest-next" aria-label="Next step">Next →</button>
 </div></div>
-<div class="quest-map-frame"><canvas id="quest-canvas" width="960" height="640" tabindex="0" role="img" aria-label="Carte des étapes de quête : cliquez sur un marqueur numéroté ou sélectionnez une action dans le panneau de gauche"></canvas><span class="quest-map-overlay" id="quest-map-overlay">Loading map…</span></div>
-<div class="quest-map-caption"><span><b>X</b> → right, 0–100</span><span><b>Y</b> ↓ down, 0–100</span><span>● Prendre &nbsp; ● Objectif &nbsp; ● Rendre</span></div>
+<div class="quest-map-frame"><canvas id="quest-canvas" width="960" height="640" tabindex="0" role="img" aria-label="Quest map: select a numbered marker or an action in the left sidebar"></canvas><span class="quest-map-overlay" id="quest-map-overlay">Loading map…</span></div>
+<div class="quest-map-caption"><span><b>X</b> → right, 0–100</span><span><b>Y</b> ↓ down, 0–100</span><span>● Accept &nbsp; ● Objective &nbsp; ● Turn in</span></div>
 <div class="quest-selected" id="quest-selected" aria-live="polite"><p>Select a waypoint on the map or in the list.</p></div>
 
 </div></div>
 <details class="atlas-detail"><summary>Coordinates and local progress</summary><p>Each waypoint is positioned on its zone map. Coordinates <strong>X / Y</strong> range from 0 to 100, not real-world GPS coordinates. Commands <code>/way X Y</code> work in the relevant zone using a compatible addon. Some quests may differ in WoW Forever. Your progress is stored in this browser.</p></details>
 </section></main>
-<footer class="footer"><div class="wrap footer-simple"><span>FOREVER ATLAS · Independent community project</span><nav aria-label="Liens utiles"><a href="https://talentsforever.com/" target="_blank" rel="noopener noreferrer">Talent data · CC BY 4.0 ↗</a></nav></div><div class="wrap legal">World of Warcraft © Blizzard Entertainment · Unofficial and unaffiliated. Beta data may change.</div></footer></body></html>
+<footer class="footer"><div class="wrap footer-simple"><span>FOREVER ATLAS · Independent community project</span><nav aria-label="Useful links"><a href="https://talentsforever.com/" target="_blank" rel="noopener noreferrer">Talent data · CC BY 4.0 ↗</a></nav></div><div class="wrap legal">World of Warcraft © Blizzard Entertainment · Unofficial and unaffiliated. Beta data may change.</div></footer></body></html>
