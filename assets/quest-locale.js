@@ -91,11 +91,22 @@ function note(value){
  // Preserve the source rather than invent an unreliable game instruction.
  return capitalize(s);
 }
+/* Source "special" entries are notes, not quest-state actions. Subtype them
+   conservatively from the original English instruction without rewriting routes. */
+function noteCategory(value){
+ const raw=Array.isArray(value)?value[0]:value;
+ const s=nice(raw).toLowerCase();
+ if(/^(?:fly to|sail to|hearthstone to|heathstone to|hs after|run to|run back to|run all the way to|ride to|swim towards?|go to|continue from|teleport up|use the teleporter|learn (?:the )?flightpath|set hearthstone)\b/.test(s))return "travel";
+ if(/^(?:buy\b|mine or buy\b|save\b|have\b|bank\b|pick up all your banked\b|pick up any stv pages\b|learn (?:the )?(?:skinning|herbalism)|equip\b|be level\b|abandon\b|buy a portal\b)/.test(s))return "prepare";
+ if(/^(?:kill\b|grind mobs\b|grind 'em\b|rush the miniboss\b|have someone distract\b)/.test(s))return "combat";
+ if(/^(?:loot\b|click\b|use\b|fill\b|gather\b|pick up\b|collect\b|combine\b|turn the \d|forge\b|blow the\b|interact with\b|plant\b|drink\b|break\b|place your\b|request a\b|resurrect & loot\b|find\b|inspect\b|purify\b|mount \d|wash\b|dump\b)/.test(s))return "interact";
+ return "tip";
+}
 function questName(name){
  if(isEnglish())return capitalize(nice(name));
  const fallback={"guarded thunderbrew barrel":"Tonneau de Tonnebière gardé","find OOX-22/fe!":"Trouver OOX-22/FE !"};
  return fallback[nice(name).toLowerCase()]||name;
 }
 function race(name){return isEnglish()?({"Humain":"Human","Nain":"Dwarf","Elfe de la nuit":"Night Elf","Mort-vivant":"Undead"}[name]||name):name}
-window.ForeverQuestLocale={header,note,questName,race,place};
+window.ForeverQuestLocale={header,note,noteCategory,questName,race,place};
 })();
