@@ -103,3 +103,22 @@
 .bis-v2-share{margin-top:16px;padding-top:14px;border-top:1px solid #4b5746}
 @media(max-width:1000px){.filter-line.three:has(#item-quality-filters){grid-template-columns:minmax(140px,1fr) minmax(150px,.8fr)}.item-v2-quality-controls{grid-column:1/-1}}
 @media(max-width:650px){.filter-line.three:has(#item-quality-filters){grid-template-columns:1fr}.item-v2-quality-controls{grid-column:auto}}
+
+/* Expanded equipment index */
+.bis-v2-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}
+.bis-v2-tabs button{min-width:0;line-height:1.3;min-height:40px;padding:8px 5px;font-size:10px}
+.bis-v2-more{padding:11px 14px;width:100%;border:1px solid #b79b61;background:#42392544;color:#e8cb92;font-size:12px;font-weight:800;cursor:pointer;border-radius:3px}
+.bis-v2-more:hover{background:#6b522c55}
+.bis-v2-more:disabled{opacity:.55;cursor:wait}
+.item-v3-source-filter{font-size:12px;min-width:0;align-self:end}
+.item-v3-source-filter select{display:block;width:100%}
+.filter-line.three:has(#item-source){grid-template-columns:minmax(160px,1.4fr) minmax(145px,.8fr) minmax(135px,.75fr) minmax(285px,1.6fr);gap:11px}
+.filter-line.three:has(#item-source) .item-v2-quality-controls{grid-column:auto}
+.item-v3-provenance{display:inline-block;font-size:9px;line-height:1;padding:5px 6px;margin-left:8px;color:#b0b9a8;background:#31403455;border:1px solid #576352;border-radius:2px;vertical-align:middle;white-space:nowrap}
+.item-v3-provenance.forever{color:#e3c37f;background:#ac864b21;border-color:#997d4a}
+.item-v3-provenance.classic{color:#aabccf;background:#56769916;border-color:#48647e}
+.item-v3-paging{margin:14px 0 0;display:flex;flex-direction:column;align-items:center;gap:7px}
+.item-v3-load{max-width:350px}
+.item-v3-live-note{margin:0;font-size:11px;color:#a5b3a5}
+@media(max-width:1020px){.filter-line.three:has(#item-source){grid-template-columns:minmax(180px,1fr) minmax(140px,1fr)}.filter-line.three:has(#item-source) .item-v2-quality-controls{grid-column:1/-1}}
+@media(max-width:650px){.filter-line.three:has(#item-source){grid-template-columns:1fr}.filter-line.three:has(#item-source) .item-v2-quality-controls{grid-column:auto}.item-v3-provenance{margin-left:6px;font-size:9px}.bis-v2-tabs button{font-size:10px}}
