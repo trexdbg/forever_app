@@ -20,7 +20,8 @@ const nice=s=>String(s||"").replace(/_/g," ").replace(/\s+/g," ").trim();
 const capitalize=s=>s ? s.charAt(0).toLocaleUpperCase(isEnglish()?"en":"fr")+s.slice(1):s;
 const nameCase=s=>nice(s).split(/\b/).map(w=>/^[a-z]/.test(w)?w[0].toUpperCase()+w.slice(1):w).join("")
  .replace(/\bOf\b/g,"of").replace(/\bThe\b/g,"the").replace(/\bAnd\b/g,"and").replace(/\bTo\b/g,"to")
- .replace(/^the /,"The ").replace(/\bMc([a-z])/g,(_,c)=>"Mc"+c.toUpperCase()).replace(/\bNpc\b/g,"NPC").replace(/\bHp\b/g,"HP");
+ .replace(/^the /,"The ").replace(/\bMc([a-z])/g,(_,c)=>"Mc"+c.toUpperCase()).replace(/\bNpc\b/g,"NPC").replace(/\bHp\b/g,"HP")
+ .replace(/\x27S\b/g,"\x27s").replace(/\x27T\b/g,"\x27t").replace(/\bOox-(\d+)\/([a-z]+)\b/gi,(_,id,code)=>"OOX-"+id+"/"+code.toUpperCase());
 const place=s=>places[nice(s).toLowerCase()]||nameCase(s);
 function header(raw){
  const s=nice(raw),l=s.toLowerCase();
@@ -59,7 +60,11 @@ function note(value){
  const raw=Array.isArray(value)?value[0]:value;
  const s=nice(raw),l=s.toLowerCase();
  if(!s)return "";
- if(isEnglish())return capitalize(s);
+ if(isEnglish()){
+  const travel=s.match(/^(fly to|hearthstone to|heathstone to|sail to|run back to|run to|ride to|swim towards?|go to|continue from) (.+)$/i);
+  if(travel)return capitalize(travel[1])+" "+nameCase(travel[2]);
+  return capitalize(s);
+ }
  if(notes[l])return notes[l];
  let m;
  const travel=[
@@ -104,7 +109,7 @@ function noteCategory(value){
  return "tip";
 }
 function questName(name){
- if(isEnglish())return capitalize(nice(name));
+ if(isEnglish())return nameCase(name);
  const fallback={"guarded thunderbrew barrel":"Tonneau de Tonnebière gardé","find OOX-22/fe!":"Trouver OOX-22/FE !"};
  return fallback[nice(name).toLowerCase()]||name;
 }
