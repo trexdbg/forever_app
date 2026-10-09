@@ -44,6 +44,110 @@ const human=n=>n>=60?(Math.floor(n/60)+" "+S("h","h")+(n%60?" "+(n%60)+" min":""
 const store={db:null,records:[],filtered:[],active:null,mode:document.body.dataset.page==="trainers"?"trainer":"merchant",showReportsOnly:false};
 const q=$("npc-search"),zone=$("npc-zone"),trade=$("npc-profession"),aff=$("npc-faction"),rank=$("npc-rank"),reports=$("npc-evidence-only"),type=$("npc-type"),weapon=$("npc-weapon");
 const list=$("npc-results"),detail=$("npc-detail"),count=$("npc-count"),kind=$("npc-kind");
+
+/* Progressive-enhanced WoW icon filters. Native selects stay the source of truth. */
+const iconPickers=[],factionControls=[];
+function iconForFilter(select,value){
+ if(select===type)return ({all:"inv_misc_book_09",profession:"trade_blacksmithing",weapon:"inv_sword_04"})[value]||"inv_misc_book_09";
+ if(select===trade)return trainerIcons[value]||"inv_misc_book_09";
+ return weaponIcons[value]||"inv_sword_04";
+}
+function closeIconPickers(except){
+ for(const picker of iconPickers)if(picker!==except)picker.close();
+}
+function makeIconPicker(select){
+ if(!select||store.mode!=="trainer"||select.dataset.iconPicker)return;
+ const field=select.closest(".npc-field"),filterLabel=field.querySelector("label");
+ if(!field)return;
+ const trigger=mk("button",null,"npc-filter-trigger");
+ trigger.type="button";trigger.id=select.id+"-trigger";
+ trigger.setAttribute("aria-haspopup","listbox");trigger.setAttribute("aria-expanded","false");
+ const pop=mk("div",null,"npc-filter-options");
+ pop.id=select.id+"-options";pop.setAttribute("role","listbox");pop.hidden=true;
+ trigger.setAttribute("aria-controls",pop.id);
+ const entryButtons=[];
+ const picker={close(){pop.hidden=true;trigger.setAttribute("aria-expanded","false")},open(){
+   closeIconPickers(picker);pop.hidden=false;trigger.setAttribute("aria-expanded","true");
+ },sync(){
+   const selected=[...select.options].find(o=>o.value===select.value)||select.options[0];
+   if(!selected)return;
+   trigger.replaceChildren();
+   trigger.append(wowIcon(iconForFilter(select,selected.value),"npc-filter-wow-icon"));
+   append(trigger,"span",selected.textContent,"npc-filter-value");
+   append(trigger,"span","⌄","npc-filter-chevron").setAttribute("aria-hidden","true");
+   trigger.setAttribute("aria-label",(filterLabel?.textContent||"")+" : "+selected.textContent);
+   for(const option of entryButtons)option.setAttribute("aria-selected",String(option.dataset.value===select.value));
+ }};
+ for(const item of [...select.options]){
+  const button=mk("button",null,"npc-filter-option");
+  button.type="button";button.dataset.value=item.value;
+  button.setAttribute("role","option");
+  button.append(wowIcon(iconForFilter(select,item.value),"npc-filter-wow-icon"));
+  append(button,"span",item.textContent);
+  button.addEventListener("click",()=>{
+   select.value=item.value;select.dispatchEvent(new Event("change",{bubbles:true}));
+   picker.close();trigger.focus();
+  });
+  pop.append(button);entryButtons.push(button);
+ }
+ trigger.addEventListener("click",()=>pop.hidden?picker.open():picker.close());
+ trigger.addEventListener("keydown",e=>{
+  if(e.key==="ArrowDown"||e.key==="ArrowUp"){
+   e.preventDefault();picker.open();const current=entryButtons.findIndex(b=>b.dataset.value===select.value);
+   entryButtons[e.key==="ArrowUp"?Math.max(0,current):Math.max(0,current)]?.focus();
+  }else if(e.key==="Escape")picker.close();
+ });
+ pop.addEventListener("keydown",e=>{
+  const index=entryButtons.indexOf(document.activeElement);
+  if(e.key==="Escape"){e.preventDefault();picker.close();trigger.focus()}
+  else if(e.key==="ArrowDown"||e.key==="ArrowUp"){
+   e.preventDefault();entryButtons[(index+(e.key==="ArrowDown"?1:-1)+entryButtons.length)%entryButtons.length]?.focus();
+  }else if(e.key==="Home"){e.preventDefault();entryButtons[0]?.focus()}
+  else if(e.key==="End"){e.preventDefault();entryButtons[entryButtons.length-1]?.focus()}
+ });
+ document.addEventListener("pointerdown",e=>{if(!field.contains(e.target))picker.close()});
+ field.append(trigger,pop);
+ if(filterLabel)filterLabel.htmlFor=trigger.id;
+ select.hidden=true;select.dataset.iconPicker="true";
+ select.addEventListener("change",()=>picker.sync());
+ iconPickers.push(picker);picker.sync();
+}
+function factionEmblem(value){
+ const img=mk("img");img.src=root+"assets/quest-factions/"+value+".svg";
+ img.alt="";img.width=20;img.height=20;img.loading="lazy";return img;
+}
+function enhanceFactionFilter(){
+ if(!aff||store.mode!=="trainer"||aff.dataset.iconPicker)return;
+ const field=aff.closest(".npc-field"),filterLabel=field.querySelector("label");
+ if(!field)return;
+ const group=mk("div",null,"npc-faction-toggle");
+ group.setAttribute("role","group");
+ group.setAttribute("aria-label",filterLabel?.textContent||S("Faction","Faction"));
+ for(const value of ["all","alliance","horde"]){
+  const button=mk("button",null,"npc-faction-filter npc-faction-filter-"+value);
+  button.type="button";button.dataset.value=value;
+  button.setAttribute("aria-pressed","false");
+  if(value==="all"){const emblems=mk("span",null,"npc-faction-pair");emblems.append(factionEmblem("alliance"),factionEmblem("horde"));button.append(emblems)}
+  else button.append(factionEmblem(value));
+  const label=[...aff.options].find(o=>o.value===value)?.textContent||value;
+  append(button,"span",label,"npc-faction-filter-label");
+  button.addEventListener("click",()=>{aff.value=value;aff.dispatchEvent(new Event("change",{bubbles:true}))});
+  factionControls.push(button);group.append(button);
+ }
+ field.append(group);aff.hidden=true;aff.dataset.iconPicker="true";
+ if(filterLabel)filterLabel.removeAttribute("for");
+}
+function syncTrainerFilters(){
+ if(store.mode!=="trainer")return;
+ for(const picker of iconPickers)picker.sync();
+ for(const button of factionControls)button.setAttribute("aria-pressed",String(button.dataset.value===aff?.value));
+}
+function setupTrainerIconFilters(){
+ if(store.mode!=="trainer")return;
+ makeIconPicker(type);makeIconPicker(trade);makeIconPicker(weapon);
+ enhanceFactionFilter();syncTrainerFilters();
+}
+
 function updateFilterVisibility(){
  if(!type||store.mode!=="trainer")return;
  const armed=type.value==="weapon";
@@ -329,7 +433,7 @@ function renderDetail(){
  },{type:type?.value||"all",profession:trade.value,weaponSkill:weapon?.value||"all"});
  append(detail,"p",store.mode==="merchant"?S("Important : données historiques Classic. Les PNJ, objets, emplacements et stocks peuvent différer sur WoW Forever. Aucun suivi du stock en temps réel.","Important: historical Classic data. NPCs, items, positions and stock may differ on WoW Forever. No live inventory monitoring."):S("Certaines fiches proviennent des guides Forever ; les autres restent des références Classic. Les PNJ et leurs positions peuvent différer en jeu.","Some entries come from Forever guides; others are Classic references. NPC presence and locations may differ in-game."),"npc-datacaveat");
 }
-function refresh(){store.filtered=filteredRecords();if(!store.filtered.some(r=>r.key===store.active?.key))store.active=store.filtered[0]||null;renderList();renderDetail()}
+function refresh(){syncTrainerFilters();store.filtered=filteredRecords();if(!store.filtered.some(r=>r.key===store.active?.key))store.active=store.filtered[0]||null;renderList();renderDetail()}
 for(const e of [q,zone,trade,aff,kind,rank,type,weapon].filter(Boolean))e.addEventListener(e===q?"input":"change",()=>{if(e===type){if(type.value==="weapon"){trade.value="all";if(rank)rank.value="all"}if(weapon)weapon.value="all"}if(e===trade&&trade.value!=="all"&&type){type.value="profession";if(weapon)weapon.value="all"}if(e===weapon&&weapon.value!=="all"&&type){type.value="weapon";trade.value="all";if(rank)rank.value="all"}updateFilterVisibility();refresh()});
 if(reports)reports.addEventListener("change",e=>{store.showReportsOnly=e.target.checked;refresh()});
 const params=new URLSearchParams(location.search);
@@ -337,7 +441,7 @@ if(params.get("q"))q.value=params.get("q").slice(0,120);
 if(type&&["all","profession","weapon"].includes(params.get("type")))type.value=params.get("type");
 fetch(root+"data/npcs.json").then(r=>{if(!r.ok)throw Error(r.status);return r.json()}).then(db=>{
  if(db.schema_version!==1||!Array.isArray(db.npcs)||!db.items||!Array.isArray(db.evidence))throw Error("Invalid NPC data");
- store.db=db;makeRecords();filters();
+ store.db=db;makeRecords();filters();setupTrainerIconFilters();
  // Atlas deep links select the complete zone, not just a text search result.
  const requestedZone=params.get("zone");
  if(requestedZone&&Array.from(zone.options).some(option=>option.value===requestedZone))zone.value=requestedZone;
