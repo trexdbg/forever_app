@@ -25,10 +25,10 @@ const copperFmt=c=>{const g=Math.floor(c/10000),s=Math.floor(c%10000/100),b=c%10
 const stockWord=item=>item.supply==="unlimited"?S("Stock illimité (référence Classic)","Unlimited stock (Classic reference)"):item.supply==="reputation"?S("Vente liée à la réputation","Reputation-gated sale"):S("Stock limité (référence Classic)","Limited stock (Classic reference)");
 function filters(){
  if(weapon){for(const key of [...new Set(store.db.npcs.filter(n=>trainerType(n)==="weapon"&&n.role==="trainer").flatMap(n=>n.weapon_skills||[]))].sort((a,b)=>(weaponLabels[a]||a).localeCompare(weaponLabels[b]||b))){const op=mk("option",weaponLabels[key]||key);op.value=key;weapon.append(op)}}
- for(const key of [...new Set(store.db.npcs.filter(n=>n.role===store.mode).map(n=>n.profession))].sort((a,b)=>a.localeCompare(b))){const op=mk("option",profession[key]||key);op.value=key;trade.append(op)}
+ for(const key of [...new Set(store.db.npcs.filter(n=>n.role===store.mode&&(store.mode!=="trainer"||trainerType(n)==="profession")).map(n=>n.profession))].sort((a,b)=>a.localeCompare(b))){const op=mk("option",profession[key]||key);op.value=key;trade.append(op)}
  const zones=new Map(store.db.npcs.filter(n=>n.role===store.mode).map(n=>[n.zone.id,n.zone]));
  for(const z of [...zones.values()].sort((a,b)=>a[en?"en":"fr"].localeCompare(b[en?"en":"fr"]))){const op=mk("option",z[en?"en":"fr"]);op.value=z.id;zone.append(op)}
- if(rank)for(const key of ["Apprenti","Compagnon","Expert","Artisan","Tous rangs"]){if(store.db.npcs.some(n=>n.role===store.mode&&n.rank===key)){const op=mk("option",en?({Compagnon:"Journeyman",Expert:"Expert",Artisan:"Artisan"}[key]):key);op.value=key;rank.append(op)}}
+ if(rank)for(const key of ["Apprenti","Compagnon","Expert","Artisan","Tous rangs"]){if(store.db.npcs.some(n=>n.role===store.mode&&n.rank===key)){const op=mk("option",en?({Apprenti:"Apprentice",Compagnon:"Journeyman",Expert:"Expert",Artisan:"Artisan","Tous rangs":"All tiers"}[key]||key):key);op.value=key;rank.append(op)}}
 }
 function makeRecords(){
  const rec=[];for(const n of store.db.npcs){if(n.role!==store.mode)continue;if(n.role==="trainer"){rec.push({npc:n,item:null,key:"trainer:"+n.profession+":"+n.name});continue}
@@ -59,7 +59,44 @@ function filteredRecords(){
  return (a.item?title(a.item):a.npc.name).localeCompare(b.item?title(b.item):b.npc.name);
  });
 }
+function groupedItems(){
+ const buckets=new Map();
+ for(const r of store.filtered){
+  if(!r.item)continue;
+  const id=String(r.item.id);
+  if(!buckets.has(id))buckets.set(id,{item:r.item,records:[],evidence:false});
+  const b=buckets.get(id);b.records.push(r);
+  if(evidence(r.npc,r.item))b.evidence=true;
+ }
+ return [...buckets.values()].sort((a,b)=>{
+  if(a.evidence!==b.evidence)return a.evidence?-1:1;
+  return title(a.item).localeCompare(title(b.item),en?"en":"fr");
+ });
+}
 function renderList(){
+ if(store.mode==="merchant"){
+  list.replaceChildren();
+  const groups=groupedItems();
+  for(const g of groups){
+   const b=mk("button",null,"npc-result npc-result-group");b.type="button";b.setAttribute("role","option");
+   b.setAttribute("aria-selected",String(store.active?.item?.id===g.item.id));
+   b.append(iconNode(g.item));
+   const copy=append(b,"span",null,"npc-result-copy");
+   append(copy,"strong",title(g.item));
+   const sellers=g.records.length;
+   append(copy,"small",sellers+" "+S(sellers>1?"vendeurs":"vendeur",sellers>1?"vendors":"vendor")+" · "+(profession[g.item.profession]||g.item.profession));
+   if(g.evidence)append(copy,"span",S("Témoignages disponibles","Reports available"),"npc-evidence-flag");
+   append(b,"span","›","npc-arrow").setAttribute("aria-hidden","true");
+   b.addEventListener("click",()=>{
+    const keep=g.records.find(r=>r.npc.name===store.active?.npc.name);
+    selectRecord(keep||g.records[0]);
+   });
+   list.append(b);
+  }
+  count.textContent=groups.length+" "+S("objets","items")+" · "+store.filtered.length+" "+S("ventes référencées","referenced offers");
+  if(!store.filtered.length)append(list,"p",S("Aucun résultat. Modifiez les filtres ou la recherche.","No matches. Change the filters or search."),"npc-empty");
+  return;
+ }
  list.replaceChildren();for(const r of store.filtered){const b=mk("button",null,"npc-result");b.type="button";b.setAttribute("aria-selected",String(store.active?.key===r.key));b.setAttribute("role","option");const mark=r.item?iconNode(r.item):append(b,"span",trainerType(r.npc)==="weapon"?"⚔":"⚒","npc-item-icon");if(r.item)b.append(mark);mark.setAttribute("aria-hidden","true");
  const copy=append(b,"span",null,"npc-result-copy");
  append(copy,"strong",r.item?title(r.item):r.npc.name);
@@ -70,6 +107,7 @@ function renderList(){
  b.addEventListener("click",()=>selectRecord(r));list.append(b)}
  if(!store.filtered.length)append(list,"p",S("Aucun résultat. Essayez un autre objet, une autre zone ou désactivez le filtre des témoignages.","No matches. Try another item, zone, or disable the reports-only filter."),"npc-empty");
  count.textContent=store.filtered.length+" "+S("résultats","results");
+
 }
 function sectionText(parent,head,body){append(parent,"h4",head);append(parent,"p",body,"npc-subtitle")}
 function renderDetail(){
@@ -83,7 +121,7 @@ function renderDetail(){
  append(chips,"span",faction[n.faction],"npc-chip");
  if(i&&i.skill>0&&i.kind==="recipe")append(chips,"span",S("Compétence "+i.skill,"Skill "+i.skill),"npc-chip");
  if(i)append(chips,"span",i.kind==="component"?S("Composant","Material"):S("Recette / patron","Recipe / pattern"),"npc-chip");
- if(n.rank)append(chips,"span",en?({"Compagnon":"Journeyman","Expert":"Expert","Artisan":"Artisan"}[n.rank]||n.rank):n.rank,"npc-chip");
+ if(n.rank)append(chips,"span",en?({"Apprenti":"Apprentice","Compagnon":"Journeyman","Expert":"Expert","Artisan":"Artisan","Tous rangs":"All tiers"}[n.rank]||n.rank):n.rank,"npc-chip");
  const place=append(detail,"div",null,"npc-location"), p=append(place,"div");
  append(p,"strong",side(n));if(n.note&&(!en||n.note_en))append(p,"small",en?n.note_en:n.note);
  append(place,"span",hasCoords(n)?fmt(n.coordinates.x)+" / "+fmt(n.coordinates.y):S("Position à confirmer","Location unconfirmed"),"npc-coords");
@@ -109,20 +147,38 @@ function renderDetail(){
  link(obs,S("Consulter la source ↗","View source ↗"),report.url);
  }else append(panel,"p",i.supply==="limited"?S("Délai de réapparition non documenté pour ce couple objet-vendeur.","No documented restock time for this item at this vendor."):S("Aucun délai fiable identifié dans les commentaires.","No reliable delay documented in comments."));
  append(panel,"p",S("Les durées indiquent des attentes rapportées, pas un minuteur exact ni le prochain réapprovisionnement.","These are reported waits, not exact timers or predictions of the next restock."));
- const alternatives=store.db.npcs.filter(v=>v.name!==n.name&&v.offers.includes(String(i.id))&&(aff.value==="all"||v.faction==="neutral"||v.faction===aff.value));
- if(alternatives.length){
-  const group=append(detail,"section",null,"npc-alternatives");
-  append(group,"h4",S("Autres vendeurs ("+alternatives.length+")","Other vendors ("+alternatives.length+")"));
-  const links=append(group,"div",null,"npc-alternative-list");
-  for(const seller of alternatives.sort((a,b)=>a.zone[en?"en":"fr"].localeCompare(b.zone[en?"en":"fr"]))){
-   const b=append(links,"button",seller.name+" · "+seller.zone[en?"en":"fr"]);b.type="button";
-   b.addEventListener("click",()=>{
-     q.value="";zone.value="all";trade.value="all";kind.value="all";store.showReportsOnly=false;$("npc-evidence-only").checked=false;
-     const choice=store.records.find(rec=>rec.npc.name===seller.name&&rec.item?.id===i.id);
-     if(choice){store.filtered=filteredRecords();selectRecord(choice)}
-   });
-  }
+ const others=store.db.npcs.filter(v=>v.role==="merchant"&&v.offers.includes(String(i.id)))
+ .sort((a,b)=>{
+  const av=a.faction===aff.value||a.faction==="neutral"||aff.value==="all",bv=b.faction===aff.value||b.faction==="neutral"||aff.value==="all";
+  if(av!==bv)return av?-1:1;
+  if(a.name===n.name)return -1;if(b.name===n.name)return 1;
+  return side(a).localeCompare(side(b),en?"en":"fr")||a.name.localeCompare(b.name);
+ });
+ const group=append(detail,"section",null,"npc-alternatives");
+ append(group,"h4",S("Où acheter cet objet ? ("+others.length+")","Where to buy this item ("+others.length+")"));
+ append(group,"p",S("Vendeurs regroupés par objet · référence Classic, pas de stock en direct.","Vendors grouped by item · Classic references, no live inventory."),"npc-group-intro");
+ const choices=append(group,"div",null,"npc-alternative-list");
+ for(const seller of others){
+  const b=append(choices,"button",null,"npc-seller-button");b.type="button";
+  b.setAttribute("aria-pressed",String(seller.name===n.name));
+  const main=append(b,"span",null,"npc-seller-main");
+  append(main,"strong",seller.name);append(main,"small",side(seller)+" · "+faction[seller.faction]);
+  if(evidence(seller,i))append(b,"span",S("Avis stock","Stock report"),"npc-seller-report");
+  b.addEventListener("click",()=>{
+   q.value="";zone.value="all";trade.value="all";aff.value="all";
+   if(kind)kind.value="all";if(rank)rank.value="all";
+   store.showReportsOnly=false;if(reports)reports.checked=false;
+   const choice=store.records.find(rec=>rec.npc.name===seller.name&&rec.item?.id===i.id);
+   if(choice){store.filtered=filteredRecords();selectRecord(choice)}
+  });
  }
+ const purchase=n.offer_details?.[String(i.id)]||{};
+ if(i.specialization||purchase.specialization){const s=purchase.specialization||i.specialization;
+  append(panel,"p",S("Spécialisation requise (référence Classic) : ","Required specialization (Classic): ")+s,"npc-requirement");
+ }
+ if(i.bind==="pickup"||purchase.bind==="pickup")append(panel,"p",S("Lié quand ramassé (référence Classic).","Bind on Pickup (Classic reference)."),"npc-requirement");
+ if(purchase.shared_stock_group)append(panel,"p",S("Emplacement de stock partagé : une autre recette peut apparaître à la place.","Shared inventory slot: a different recipe may appear instead."),"npc-requirement");
+ if(purchase.source){const cite=append(panel,"p",null,"npc-offer-source");link(cite,S("Source de cette vente ↗","Source for this sale ↗"),purchase.source)}
  }else if(trainerType(n)==="weapon"){
  append(detail,"h4",S("Armes enseignées","Weapons taught"));
  const types=append(detail,"div",null,"npc-weapon-skills");for(const k of n.weapon_skills||[])append(types,"span",weaponLabels[k]||k,"npc-chip");
@@ -135,7 +191,7 @@ function renderDetail(){
  append(detail,"p",!hasCoords(n)?S("Zone identifiée dans un guide Forever ; aucune coordonnée fiable à afficher. Aucun marqueur ni /way inventé.","Zone listed in a Forever guide; no reliable coordinates to show. No invented pin or /way."):n.coordinate_status==="forever_guide_waypoint"?S("Coordonnées publiées dans un guide de la bêta Forever. Présence effective à confirmer en jeu.","Waypoint from a Forever beta guide. Actual in-game presence is not confirmed."):S("Coordonnées de référence issues de guides Classic ou orientés Forever, à vérifier en jeu. Carte de zone en pourcentage (0–100).","Waypoints from Classic or Forever-oriented guides; not verified in-game. Zone coordinates are percentages (0–100)."),"npc-datacaveat");
  const s=append(detail,"p",null,"npc-source");s.append(document.createTextNode(S("Sources : ","Sources: ")));link(s,S("Guide de référence ↗","Reference guide ↗"),n.source);
  window.ForeverNpcMap?.show(n,store.db,npcName=>{
-  const matched=store.filtered.find(r=>r.npc.name===npcName)||store.records.find(r=>r.npc.name===npcName);
+  const matched=store.filtered.find(r=>r.npc.name===npcName&&r.item?.id===store.active?.item?.id)||store.records.find(r=>r.npc.name===npcName&&r.item?.id===store.active?.item?.id)||store.filtered.find(r=>r.npc.name===npcName)||store.records.find(r=>r.npc.name===npcName);
   if(!matched)return;
   if(!store.filtered.some(r=>r.key===matched.key)){
    q.value="";zone.value="all";trade.value="all";aff.value="all";
@@ -161,6 +217,6 @@ fetch(root+"data/npcs.json").then(r=>{if(!r.ok)throw Error(r.status);return r.js
  // Atlas deep links select the complete zone, not just a text search result.
  const requestedZone=params.get("zone");
  if(requestedZone&&Array.from(zone.options).some(option=>option.value===requestedZone))zone.value=requestedZone;
- refresh();$("npc-load-status").textContent=store.mode==="trainer"?db.npcs.filter(n=>n.role==="trainer").length+" "+S("maîtres recensés","trainers listed"):Object.keys(db.items).length+" "+S("objets · Classic","items · Classic");
+ refresh();$("npc-load-status").textContent=store.mode==="trainer"?db.npcs.filter(n=>n.role==="trainer").length+" "+S("maîtres recensés","trainers listed"):Object.keys(db.items).length+" "+S("objets Classic","Classic items");
 }).catch(e=>{$("npc-load-status").textContent=S("Données indisponibles","Data unavailable");append(list,"p",S("Impossible de charger l'annuaire. Réessayez plus tard.","Unable to load the directory."),"npc-empty");console.warn("NPC dataset:",e.message)});
 })();

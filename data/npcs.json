@@ -25,9 +25,26 @@
     "forever_trainers": "https://www.wow-professions.com/forever/",
     "zephras_trainers": "https://www.wowhead.com/forever/guide/zephras-isle-zone-overview",
     "classic_weapon_masters": "https://www.warcrafttavern.com/wow-classic/guides/weapon-skill-trainers-and-locations/",
-    "forever_profession_locations": "https://www.icy-veins.com/wow-forever/professions"
+    "forever_profession_locations": "https://www.icy-veins.com/wow-forever/professions",
+    "enchanting_vendor": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic"
   },
   "items": {
+    "4355": {
+      "id": 4355,
+      "name": {
+        "fr": "Patron : Cape glaciale",
+        "en": "Pattern: Icy Cloak"
+      },
+      "profession": "Couture",
+      "skill": 200,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=4355",
+      "source_guide": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
     "4357": {
       "id": 4357,
       "name": {
@@ -239,6 +256,22 @@
       "icon": "inv_scroll_07",
       "icon_status": "category_fallback"
     },
+    "5771": {
+      "id": 5771,
+      "name": {
+        "fr": "Patron : Sac rouge en lin",
+        "en": "Pattern: Red Linen Bag"
+      },
+      "profession": "Couture",
+      "skill": 70,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=5771",
+      "source_guide": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
     "5772": {
       "id": 5772,
       "name": {
@@ -280,6 +313,54 @@
       "kind": "recipe",
       "icon": "inv_scroll_07",
       "icon_status": "category_fallback"
+    },
+    "5788": {
+      "id": 5788,
+      "name": {
+        "fr": "Patron : Armure épaisse en murloc",
+        "en": "Pattern: Thick Murloc Armor"
+      },
+      "profession": "Travail du cuir",
+      "skill": 170,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=5788",
+      "source_guide": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "5789": {
+      "id": 5789,
+      "name": {
+        "fr": "Patron : Brassards en écailles de murloc",
+        "en": "Pattern: Murloc Scale Bracers"
+      },
+      "profession": "Travail du cuir",
+      "skill": 190,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=5789",
+      "source_guide": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "5973": {
+      "id": 5973,
+      "name": {
+        "fr": "Patron : Jambières barbares",
+        "en": "Pattern: Barbaric Leggings"
+      },
+      "profession": "Travail du cuir",
+      "skill": 170,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=5973",
+      "source_guide": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
     },
     "6053": {
       "id": 6053,
@@ -456,6 +537,54 @@
       "icon": "inv_scroll_07",
       "icon_status": "category_fallback"
     },
+    "6342": {
+      "id": 6342,
+      "name": {
+        "fr": "Formule : Enchantement de plastron (Mana mineur)",
+        "en": "Formula: Enchant Chest - Minor Mana"
+      },
+      "profession": "Enchantement",
+      "skill": 20,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=6342",
+      "source_guide": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "6346": {
+      "id": 6346,
+      "name": {
+        "fr": "Formule : Enchantement de plastron (Mana inférieur)",
+        "en": "Formula: Enchant Chest - Lesser Mana"
+      },
+      "profession": "Enchantement",
+      "skill": 80,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=6346",
+      "source_guide": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "6349": {
+      "id": 6349,
+      "name": {
+        "fr": "Formule : Enchantement d'arme 2M (Intelligence inférieure)",
+        "en": "Formula: Enchant 2H Weapon - Lesser Intellect"
+      },
+      "profession": "Enchantement",
+      "skill": 100,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=6349",
+      "source_guide": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
     "6368": {
       "id": 6368,
       "name": {
@@ -484,6 +613,22 @@
       "icon": "inv_scroll_07",
       "icon_status": "category_fallback"
     },
+    "6377": {
+      "id": 6377,
+      "name": {
+        "fr": "Formule : Enchantement de bottes (Agilité mineure)",
+        "en": "Formula: Enchant Boots - Minor Agility"
+      },
+      "profession": "Enchantement",
+      "skill": 125,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=6377",
+      "source_guide": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
     "6474": {
       "id": 6474,
       "name": {
@@ -511,6 +656,86 @@
       "kind": "recipe",
       "icon": "inv_scroll_07",
       "icon_status": "category_fallback"
+    },
+    "7087": {
+      "id": 7087,
+      "name": {
+        "fr": "Patron : Cape cramoisie en soie",
+        "en": "Pattern: Crimson Silk Cloak"
+      },
+      "profession": "Couture",
+      "skill": 180,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=7087",
+      "source_guide": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "7089": {
+      "id": 7089,
+      "name": {
+        "fr": "Patron : Cape azur en soie",
+        "en": "Pattern: Azure Silk Cloak"
+      },
+      "profession": "Couture",
+      "skill": 175,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=7089",
+      "source_guide": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "7289": {
+      "id": 7289,
+      "name": {
+        "fr": "Patron : Cape de dragonnet noir",
+        "en": "Pattern: Black Whelp Cloak"
+      },
+      "profession": "Travail du cuir",
+      "skill": 100,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=7289",
+      "source_guide": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "7290": {
+      "id": 7290,
+      "name": {
+        "fr": "Patron : Gants de dragonnet rouge",
+        "en": "Pattern: Red Whelp Gloves"
+      },
+      "profession": "Travail du cuir",
+      "skill": 120,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=7290",
+      "source_guide": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "7361": {
+      "id": 7361,
+      "name": {
+        "fr": "Patron : Gants d'herboriste",
+        "en": "Pattern: Herbalist's Gloves"
+      },
+      "profession": "Travail du cuir",
+      "skill": 135,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=7361",
+      "source_guide": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
     },
     "7451": {
       "id": 7451,
@@ -552,6 +777,22 @@
       "icon": "inv_scroll_07",
       "icon_status": "category_fallback"
     },
+    "7613": {
+      "id": 7613,
+      "name": {
+        "fr": "Patron : Armure verte en cuir",
+        "en": "Pattern: Green Leather Armor"
+      },
+      "profession": "Travail du cuir",
+      "skill": 155,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=7613",
+      "source_guide": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
     "7742": {
       "id": 7742,
       "name": {
@@ -564,6 +805,38 @@
       "kind": "recipe",
       "icon": "inv_scroll_07",
       "icon_status": "category_fallback"
+    },
+    "8385": {
+      "id": 8385,
+      "name": {
+        "fr": "Patron : Gants en écailles de tortue",
+        "en": "Pattern: Turtle Scale Gloves"
+      },
+      "profession": "Travail du cuir",
+      "skill": 205,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=8385",
+      "source_guide": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "8409": {
+      "id": 8409,
+      "name": {
+        "fr": "Patron : Épaulières de la nuit",
+        "en": "Pattern: Nightscape Shoulders"
+      },
+      "profession": "Travail du cuir",
+      "skill": 210,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=8409",
+      "source_guide": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
     },
     "9301": {
       "id": 9301,
@@ -672,6 +945,70 @@
       "icon": "inv_scroll_07",
       "icon_status": "category_fallback"
     },
+    "10321": {
+      "id": 10321,
+      "name": {
+        "fr": "Patron : Chemise de smoking",
+        "en": "Pattern: Tuxedo Shirt"
+      },
+      "profession": "Couture",
+      "skill": 240,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=10321",
+      "source_guide": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "10323": {
+      "id": 10323,
+      "name": {
+        "fr": "Patron : Pantalon de smoking",
+        "en": "Pattern: Tuxedo Pants"
+      },
+      "profession": "Couture",
+      "skill": 245,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=10323",
+      "source_guide": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "10325": {
+      "id": 10325,
+      "name": {
+        "fr": "Patron : Robe de mariée blanche",
+        "en": "Pattern: White Wedding Dress"
+      },
+      "profession": "Couture",
+      "skill": 250,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=10325",
+      "source_guide": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "10326": {
+      "id": 10326,
+      "name": {
+        "fr": "Patron : Veste de smoking",
+        "en": "Pattern: Tuxedo Jacket"
+      },
+      "profession": "Couture",
+      "skill": 250,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=10326",
+      "source_guide": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
     "10607": {
       "id": 10607,
       "name": {
@@ -700,6 +1037,22 @@
       "icon_status": "category_fallback",
       "source": "https://www.wowhead.com/classic/item=10609"
     },
+    "10728": {
+      "id": 10728,
+      "name": {
+        "fr": "Patron : Chemise noire de bretteur",
+        "en": "Pattern: Black Swashbuckler's Shirt"
+      },
+      "profession": "Couture",
+      "skill": 200,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=10728",
+      "source_guide": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
     "10858": {
       "id": 10858,
       "name": {
@@ -713,6 +1066,70 @@
       "kind": "recipe",
       "icon": "inv_scroll_07",
       "icon_status": "category_fallback"
+    },
+    "11039": {
+      "id": 11039,
+      "name": {
+        "fr": "Formule : Enchantement de cape (Agilité mineure)",
+        "en": "Formula: Enchant Cloak - Minor Agility"
+      },
+      "profession": "Enchantement",
+      "skill": 110,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=11039",
+      "source_guide": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "11101": {
+      "id": 11101,
+      "name": {
+        "fr": "Formule : Enchantement de bracelets (Force inférieure)",
+        "en": "Formula: Enchant Bracer - Lesser Strength"
+      },
+      "profession": "Enchantement",
+      "skill": 140,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=11101",
+      "source_guide": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "11163": {
+      "id": 11163,
+      "name": {
+        "fr": "Formule : Enchantement de bracelets (Déviation inférieure)",
+        "en": "Formula: Enchant Bracer - Lesser Deflection"
+      },
+      "profession": "Enchantement",
+      "skill": 170,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=11163",
+      "source_guide": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "11223": {
+      "id": 11223,
+      "name": {
+        "fr": "Formule : Enchantement de bracelets (Déviation)",
+        "en": "Formula: Enchant Bracer - Deflection"
+      },
+      "profession": "Enchantement",
+      "skill": 235,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=11223",
+      "source_guide": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
     },
     "12162": {
       "id": 12162,
@@ -782,6 +1199,38 @@
       "kind": "recipe",
       "icon": "inv_scroll_07",
       "icon_status": "category_fallback"
+    },
+    "13287": {
+      "id": 13287,
+      "name": {
+        "en": "Pattern: Raptor Hide Harness",
+        "fr": "Patron : Harnais en peau de raptor"
+      },
+      "profession": "Travail du cuir",
+      "skill": 165,
+      "supply": "limited",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=13287",
+      "source_guide": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "13288": {
+      "id": 13288,
+      "name": {
+        "fr": "Patron : Ceinture en peau de raptor",
+        "en": "Pattern: Raptor Hide Belt"
+      },
+      "profession": "Travail du cuir",
+      "skill": 165,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=13288",
+      "source_guide": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
     },
     "13308": {
       "id": 13308,
@@ -985,6 +1434,39 @@
       "icon": "inv_scroll_07",
       "icon_status": "category_fallback"
     },
+    "14469": {
+      "id": 14469,
+      "name": {
+        "fr": "Patron : Robe en étoffe runique",
+        "en": "Pattern: Runecloth Robe"
+      },
+      "profession": "Couture",
+      "skill": 260,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=14469",
+      "source_guide": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "14472": {
+      "id": 14472,
+      "name": {
+        "fr": "Patron : Cape en étoffe runique",
+        "en": "Pattern: Runecloth Cloak"
+      },
+      "profession": "Couture",
+      "skill": 265,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=14472",
+      "source_guide": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide",
+      "bind": "pickup"
+    },
     "14481": {
       "id": 14481,
       "name": {
@@ -997,6 +1479,38 @@
       "kind": "recipe",
       "icon": "inv_scroll_07",
       "icon_status": "category_fallback"
+    },
+    "14483": {
+      "id": 14483,
+      "name": {
+        "fr": "Patron : Pantalon en gangrétoffe",
+        "en": "Pattern: Felcloth Pants"
+      },
+      "profession": "Couture",
+      "skill": 275,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=14483",
+      "source_guide": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "14488": {
+      "id": 14488,
+      "name": {
+        "fr": "Patron : Bottes en étoffe runique",
+        "en": "Pattern: Runecloth Boots"
+      },
+      "profession": "Couture",
+      "skill": 280,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=14488",
+      "source_guide": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
     },
     "14526": {
       "id": 14526,
@@ -1011,6 +1525,38 @@
       "icon": "inv_scroll_07",
       "icon_status": "category_fallback"
     },
+    "14627": {
+      "id": 14627,
+      "name": {
+        "fr": "Patron : Chemise jaune vif",
+        "en": "Pattern: Bright Yellow Shirt"
+      },
+      "profession": "Couture",
+      "skill": 135,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=14627",
+      "source_guide": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "14630": {
+      "id": 14630,
+      "name": {
+        "fr": "Patron : Capuche d'enchanteur",
+        "en": "Pattern: Enchanter's Cowl"
+      },
+      "profession": "Couture",
+      "skill": 165,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=14630",
+      "source_guide": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
     "14634": {
       "id": 14634,
       "name": {
@@ -1023,6 +1569,22 @@
       "kind": "recipe",
       "icon": "inv_scroll_07",
       "icon_status": "category_fallback"
+    },
+    "14635": {
+      "id": 14635,
+      "name": {
+        "fr": "Patron : Ceinture en cuir cloutée de gemmes",
+        "en": "Pattern: Gem-studded Leather Belt"
+      },
+      "profession": "Travail du cuir",
+      "skill": 185,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=14635",
+      "source_guide": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
     },
     "14639": {
       "id": 14639,
@@ -1037,6 +1599,206 @@
       "icon": "inv_scroll_07",
       "icon_status": "category_fallback",
       "source": "https://www.wowhead.com/classic/item=14639"
+    },
+    "15724": {
+      "id": 15724,
+      "name": {
+        "fr": "Patron : Brassards en écailles de scorpide épaisses",
+        "en": "Pattern: Heavy Scorpid Bracers"
+      },
+      "profession": "Travail du cuir",
+      "skill": 255,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=15724",
+      "source_guide": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "15725": {
+      "id": 15725,
+      "name": {
+        "fr": "Patron : Gantelets corrompus en cuir",
+        "en": "Pattern: Wicked Leather Gauntlets"
+      },
+      "profession": "Travail du cuir",
+      "skill": 260,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=15725",
+      "source_guide": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "15726": {
+      "id": 15726,
+      "name": {
+        "fr": "Patron : Cuirasse en écailles de dragon vertes",
+        "en": "Pattern: Green Dragonscale Breastplate"
+      },
+      "profession": "Travail du cuir",
+      "skill": 260,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=15726",
+      "source_guide": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide",
+      "specialization": "Dragonscale"
+    },
+    "15729": {
+      "id": 15729,
+      "name": {
+        "fr": "Patron : Gants chimériques",
+        "en": "Pattern: Chimeric Gloves"
+      },
+      "profession": "Travail du cuir",
+      "skill": 265,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=15729",
+      "source_guide": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide",
+      "specialization": "Tribal"
+    },
+    "15734": {
+      "id": 15734,
+      "name": {
+        "fr": "Patron : Épaulières vivantes",
+        "en": "Pattern: Living Shoulders"
+      },
+      "profession": "Travail du cuir",
+      "skill": 270,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=15734",
+      "source_guide": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide",
+      "specialization": "Elemental"
+    },
+    "15735": {
+      "id": 15735,
+      "name": {
+        "en": "Pattern: Ironfeather Shoulders",
+        "fr": "Patron : Épaulières en plumacier"
+      },
+      "profession": "Travail du cuir",
+      "skill": 270,
+      "supply": "limited",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=15735",
+      "source_guide": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide",
+      "specialization": "Tribal"
+    },
+    "15740": {
+      "id": 15740,
+      "name": {
+        "fr": "Patron : Bottes de sabre-de-givre",
+        "en": "Pattern: Frostsaber Boots"
+      },
+      "profession": "Travail du cuir",
+      "skill": 275,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=15740",
+      "source_guide": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide",
+      "specialization": "Tribal"
+    },
+    "15741": {
+      "id": 15741,
+      "name": {
+        "en": "Pattern: Stormshroud Pants",
+        "fr": "Patron : Pantalon tempétueux"
+      },
+      "profession": "Travail du cuir",
+      "skill": 270,
+      "supply": "limited",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=15741",
+      "source_guide": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide",
+      "specialization": "Elemental"
+    },
+    "15751": {
+      "id": 15751,
+      "name": {
+        "fr": "Patron : Cuirasse en écailles de dragon bleues",
+        "en": "Pattern: Blue Dragonscale Breastplate"
+      },
+      "profession": "Travail du cuir",
+      "skill": 285,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=15751",
+      "source_guide": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide",
+      "specialization": "Dragonscale"
+    },
+    "15756": {
+      "id": 15756,
+      "name": {
+        "fr": "Patron : Bandeau runique en cuir",
+        "en": "Pattern: Runic Leather Headband"
+      },
+      "profession": "Travail du cuir",
+      "skill": 290,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=15756",
+      "source_guide": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "15758": {
+      "id": 15758,
+      "name": {
+        "fr": "Patron : Gantelets diablosaures",
+        "en": "Pattern: Devilsaur Gauntlets"
+      },
+      "profession": "Travail du cuir",
+      "skill": 290,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=15758",
+      "source_guide": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide",
+      "specialization": "Tribal"
+    },
+    "15762": {
+      "id": 15762,
+      "name": {
+        "fr": "Patron : Heaume en écailles de scorpide épaisses",
+        "en": "Pattern: Heavy Scorpid Helm"
+      },
+      "profession": "Travail du cuir",
+      "skill": 295,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=15762",
+      "source_guide": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
     },
     "16041": {
       "id": 16041,
@@ -1136,6 +1898,22 @@
       "icon": "inv_scroll_07",
       "icon_status": "category_fallback"
     },
+    "16217": {
+      "id": 16217,
+      "name": {
+        "fr": "Formule : Enchantement de bouclier (Endurance supérieure)",
+        "en": "Formula: Enchant Shield - Greater Stamina"
+      },
+      "profession": "Enchantement",
+      "skill": 265,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=16217",
+      "source_guide": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
     "16221": {
       "id": 16221,
       "name": {
@@ -1148,6 +1926,38 @@
       "kind": "recipe",
       "icon": "inv_scroll_07",
       "icon_status": "category_fallback"
+    },
+    "16224": {
+      "id": 16224,
+      "name": {
+        "fr": "Formule : Enchantement de cape (Défense excellente)",
+        "en": "Formula: Enchant Cloak - Superior Defense"
+      },
+      "profession": "Enchantement",
+      "skill": 285,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=16224",
+      "source_guide": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "16243": {
+      "id": 16243,
+      "name": {
+        "fr": "Formule : Bâtonnet runique en arcanite",
+        "en": "Formula: Runed Arcanite Rod"
+      },
+      "profession": "Enchantement",
+      "skill": 290,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=16243",
+      "source_guide": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
     },
     "16767": {
       "id": 16767,
@@ -1176,6 +1986,22 @@
       "kind": "recipe",
       "icon": "inv_scroll_07",
       "icon_status": "category_fallback"
+    },
+    "18239": {
+      "id": 18239,
+      "name": {
+        "fr": "Patron : Gants en peau d'ombre",
+        "en": "Pattern: Shadowskin Gloves"
+      },
+      "profession": "Travail du cuir",
+      "skill": 200,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=18239",
+      "source_guide": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
     },
     "18647": {
       "id": 18647,
@@ -1287,6 +2113,102 @@
       "icon": "inv_scroll_07",
       "icon_status": "category_fallback"
     },
+    "20576": {
+      "id": 20576,
+      "name": {
+        "fr": "Patron : Tunique de dragonnet noir",
+        "en": "Pattern: Black Whelp Tunic"
+      },
+      "profession": "Travail du cuir",
+      "skill": 100,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=20576",
+      "source_guide": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "20752": {
+      "id": 20752,
+      "name": {
+        "fr": "Formule : Huile de mana mineure",
+        "en": "Formula: Minor Mana Oil"
+      },
+      "profession": "Enchantement",
+      "skill": 150,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=20752",
+      "source_guide": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "20753": {
+      "id": 20753,
+      "name": {
+        "fr": "Formule : Huile de sorcier inférieure",
+        "en": "Formula: Lesser Wizard Oil"
+      },
+      "profession": "Enchantement",
+      "skill": 200,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=20753",
+      "source_guide": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "20754": {
+      "id": 20754,
+      "name": {
+        "fr": "Formule : Huile de mana inférieure",
+        "en": "Formula: Lesser Mana Oil"
+      },
+      "profession": "Enchantement",
+      "skill": 250,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=20754",
+      "source_guide": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "20755": {
+      "id": 20755,
+      "name": {
+        "fr": "Formule : Huile de sorcier",
+        "en": "Formula: Wizard Oil"
+      },
+      "profession": "Enchantement",
+      "skill": 275,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=20755",
+      "source_guide": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "20758": {
+      "id": 20758,
+      "name": {
+        "fr": "Formule : Huile de sorcier mineure",
+        "en": "Formula: Minor Wizard Oil"
+      },
+      "profession": "Enchantement",
+      "skill": 45,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=20758",
+      "source_guide": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
     "21099": {
       "id": 21099,
       "name": {
@@ -1314,6 +2236,38 @@
       "kind": "recipe",
       "icon": "inv_scroll_07",
       "icon_status": "category_fallback"
+    },
+    "21358": {
+      "id": 21358,
+      "name": {
+        "fr": "Patron : Bourse d'âme",
+        "en": "Pattern: Soul Pouch"
+      },
+      "profession": "Couture",
+      "skill": 260,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=21358",
+      "source_guide": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "22307": {
+      "id": 22307,
+      "name": {
+        "fr": "Patron : Bourse enchantée en tisse-mage",
+        "en": "Pattern: Enchanted Mageweave Pouch"
+      },
+      "profession": "Couture",
+      "skill": 225,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=22307",
+      "source_guide": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
     },
     "22308": {
       "id": 22308,
@@ -1855,12 +2809,20 @@
         "14526",
         "14468",
         "14481",
-        "16221"
+        "16221",
+        "15740"
       ],
       "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
       "note": "Banque de Long-guet",
       "note_en": "Everlook bank",
-      "coordinate_status": "classic_reference_unverified"
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "15740": {
+          "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide",
+          "specialization": "Tribal"
+        }
+      }
     },
     {
       "id": 15419,
@@ -1878,12 +2840,49 @@
       },
       "faction": "neutral",
       "offers": [
-        "22308"
+        "22308",
+        "22307",
+        "6342",
+        "20758",
+        "20752",
+        "20753",
+        "20754",
+        "20755"
       ],
       "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
       "note": "Fort cénarien",
       "note_en": "Cenarion Hold",
-      "coordinate_status": "classic_reference_unverified"
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "6342": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "20752": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "20753": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "20754": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "20755": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "20758": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "22307": {
+          "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
     },
     {
       "id": null,
@@ -2011,12 +3010,24 @@
       },
       "faction": "neutral",
       "offers": [
-        "7561"
+        "7561",
+        "5772",
+        "6377"
       ],
       "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic",
       "note": "Marchand ambulant sur la route",
       "note_en": "Travelling vendor along the road",
-      "coordinate_status": "classic_reference_unverified"
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "5772": {
+          "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "6377": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
     },
     {
       "id": 6730,
@@ -2128,12 +3139,24 @@
         "7561",
         "13310",
         "12239",
-        "12229"
+        "12229",
+        "14630",
+        "7087"
       ],
       "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic",
       "note": "Caravane de Gizelton · Vendeur mobile",
       "note_en": "Gizelton's caravan · Mobile vendor",
-      "coordinate_status": "classic_reference_unverified"
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "7087": {
+          "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "14630": {
+          "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
     },
     {
       "id": 2685,
@@ -2191,6 +3214,3178 @@
       "note": "Route vers les Carmines",
       "note_en": "Road to Redridge",
       "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "id": 11278,
+      "name": "Magnus Frostwake",
+      "role": "merchant",
+      "profession": "Alchimie",
+      "zone": {
+        "id": "wpl",
+        "fr": "Maleterres de l’Ouest",
+        "en": "Western Plaguelands"
+      },
+      "coordinates": {
+        "x": 68.1,
+        "y": 77.5
+      },
+      "faction": "neutral",
+      "offers": [
+        "13501"
+      ],
+      "source": "https://www.wowhead.com/classic/npc=11278/magnus-frostwake#comments",
+      "note": "Caer Darrow · Esprit visible avec l'Essence spectrale obtenue après la suite de quêtes d'Eva Sarkhoff",
+      "note_en": "Caer Darrow · Ghost visible using Spectral Essence, earned from Eva Sarkhoff's quest chain",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "id": 1669,
+      "name": "Defias Profiteer",
+      "role": "merchant",
+      "profession": "Alchimie",
+      "zone": {
+        "id": "westfall",
+        "fr": "Marche de l’Ouest",
+        "en": "Westfall"
+      },
+      "coordinates": {
+        "x": 43.5,
+        "y": 66.8
+      },
+      "faction": "neutral",
+      "offers": [
+        "5640"
+      ],
+      "source": "https://www.wowhead.com/classic/item=5640/recipe-rage-potion",
+      "note": "Ruisselune · Bâtiment du village · Marchand itinérant",
+      "note_en": "Moonbrook · Village building · Free-wheeling merchant",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "id": 3133,
+      "name": "Herble Baubbletump",
+      "role": "merchant",
+      "profession": "Ingénierie",
+      "zone": {
+        "id": "duskwood",
+        "fr": "Bois de la Pénombre",
+        "en": "Duskwood"
+      },
+      "coordinates": {
+        "x": 77,
+        "y": 48
+      },
+      "faction": "alliance",
+      "offers": [
+        "4371",
+        "4389",
+        "4382",
+        "4361",
+        "4363",
+        "4357",
+        "4364",
+        "4404",
+        "4399",
+        "4400"
+      ],
+      "source": "https://www.wowhead.com/forever/npc=3133/herble-baubbletump#comments",
+      "note": "Sombre-Comté · Près du maître ingénieur",
+      "note_en": "Darkshire · Outside the engineering trainer",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Kaita Deepforge",
+      "id": null,
+      "role": "merchant",
+      "profession": "Forge",
+      "zone": {
+        "id": "stormwind",
+        "fr": "Hurlevent",
+        "en": "Stormwind"
+      },
+      "coordinates": {
+        "x": 56.6,
+        "y": 17
+      },
+      "faction": "alliance",
+      "offers": [
+        "12162"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+      "note": "Quartier des nains",
+      "note_en": "Dwarven District",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Sumi",
+      "id": null,
+      "role": "merchant",
+      "profession": "Forge",
+      "zone": {
+        "id": "orgrimmar",
+        "fr": "Orgrimmar",
+        "en": "Orgrimmar"
+      },
+      "coordinates": {
+        "x": 82.6,
+        "y": 23.4
+      },
+      "faction": "horde",
+      "offers": [
+        "12162"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+      "note": "Vallée de l'Honneur",
+      "note_en": "Valley of Honor",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Jutak",
+      "id": null,
+      "role": "merchant",
+      "profession": "Forge",
+      "zone": {
+        "id": "stranglethorn",
+        "fr": "Vallée de Strangleronce",
+        "en": "Stranglethorn Vale"
+      },
+      "coordinates": {
+        "x": 27.4,
+        "y": 77.4
+      },
+      "faction": "neutral",
+      "offers": [
+        "12162"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+      "note": "Baie-du-Butin",
+      "note_en": "Booty Bay",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Jannos Ironwill",
+      "id": null,
+      "role": "merchant",
+      "profession": "Forge",
+      "zone": {
+        "id": "arathi",
+        "fr": "Hautes-terres d'Arathi",
+        "en": "Arathi Highlands"
+      },
+      "coordinates": {
+        "x": 46,
+        "y": 47.6
+      },
+      "faction": "alliance",
+      "offers": [
+        "10858"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+      "note": "Refuge de l'Ornière",
+      "note_en": "Refuge Pointe",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Muuran",
+      "id": null,
+      "role": "merchant",
+      "profession": "Forge",
+      "zone": {
+        "id": "desolace",
+        "fr": "Désolace",
+        "en": "Desolace"
+      },
+      "coordinates": {
+        "x": 55.6,
+        "y": 56.6
+      },
+      "faction": "horde",
+      "offers": [
+        "10858"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+      "note": "Poste des marche-fantômes",
+      "note_en": "Ghost Walker Post",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Vharr",
+      "id": null,
+      "role": "merchant",
+      "profession": "Forge",
+      "zone": {
+        "id": "stranglethorn",
+        "fr": "Vallée de Strangleronce",
+        "en": "Stranglethorn Vale"
+      },
+      "coordinates": {
+        "x": 32.2,
+        "y": 28
+      },
+      "faction": "horde",
+      "offers": [
+        "12164"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+      "note": "Campement Grom'gol",
+      "note_en": "Grom'gol Base Camp",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Bombus Finespindle",
+      "id": null,
+      "role": "merchant",
+      "profession": "Travail du cuir",
+      "zone": {
+        "id": "ironforge",
+        "fr": "Forgefer",
+        "en": "Ironforge"
+      },
+      "coordinates": {
+        "x": 39.6,
+        "y": 34
+      },
+      "faction": "alliance",
+      "offers": [
+        "18731"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "note": "Grande Forge",
+      "note_en": "The Great Forge",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Tamar",
+      "id": null,
+      "role": "merchant",
+      "profession": "Travail du cuir",
+      "zone": {
+        "id": "orgrimmar",
+        "fr": "Orgrimmar",
+        "en": "Orgrimmar"
+      },
+      "coordinates": {
+        "x": 63,
+        "y": 45.2
+      },
+      "faction": "horde",
+      "offers": [
+        "18731"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "note": "La Herse",
+      "note_en": "The Drag",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Saenorion",
+      "id": null,
+      "role": "merchant",
+      "profession": "Travail du cuir",
+      "zone": {
+        "id": "darnassus",
+        "fr": "Darnassus",
+        "en": "Darnassus"
+      },
+      "coordinates": {
+        "x": 63.8,
+        "y": 22
+      },
+      "faction": "alliance",
+      "offers": [
+        "18949",
+        "7451"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "note": "Terrasse des artisans",
+      "note_en": "Craftsmen's Terrace",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Joseph Moore",
+      "id": null,
+      "role": "merchant",
+      "profession": "Travail du cuir",
+      "zone": {
+        "id": "undercity",
+        "fr": "Fossoyeuse",
+        "en": "Undercity"
+      },
+      "coordinates": {
+        "x": 70.6,
+        "y": 58.8
+      },
+      "faction": "horde",
+      "offers": [
+        "18949",
+        "7451"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "note": "Quartier des voleurs",
+      "note_en": "Rogue's Quarter",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Mavralyn",
+      "id": null,
+      "role": "merchant",
+      "profession": "Travail du cuir",
+      "zone": {
+        "id": "darkshore",
+        "fr": "Sombrivage",
+        "en": "Darkshore"
+      },
+      "coordinates": {
+        "x": 37,
+        "y": 41.2
+      },
+      "faction": "alliance",
+      "offers": [
+        "5786",
+        "5787"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "note": "Auberdine",
+      "note_en": "Auberdine",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Gina MacGregor",
+      "id": null,
+      "role": "merchant",
+      "profession": "Travail du cuir",
+      "zone": {
+        "id": "westfall",
+        "fr": "Marche de l'Ouest",
+        "en": "Westfall"
+      },
+      "coordinates": {
+        "x": 57.6,
+        "y": 53.8
+      },
+      "faction": "alliance",
+      "offers": [
+        "5786",
+        "5787",
+        "5771",
+        "6274"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "note": "Colline des Sentinelles",
+      "note_en": "Sentinel Hill",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "5771": {
+          "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "6274": {
+          "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Andrew Hilbert",
+      "id": null,
+      "role": "merchant",
+      "profession": "Travail du cuir",
+      "zone": {
+        "id": "silverpine",
+        "fr": "Forêt des Pins argentés",
+        "en": "Silverpine Forest"
+      },
+      "coordinates": {
+        "x": 43.2,
+        "y": 40.6
+      },
+      "faction": "horde",
+      "offers": [
+        "5786",
+        "5787"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "note": "Le Sépulcre, sous-sol de la crypte",
+      "note_en": "The Sepulcher, below the crypt",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Kalldan Felmoon",
+      "id": null,
+      "role": "merchant",
+      "profession": "Travail du cuir",
+      "zone": {
+        "id": "barrens",
+        "fr": "Les Tarides",
+        "en": "The Barrens"
+      },
+      "coordinates": {
+        "x": 45.9,
+        "y": 35.7
+      },
+      "faction": "neutral",
+      "offers": [
+        "6474",
+        "6475"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "note": "Caverne au-dessus de l'entrée des Cavernes des Lamentations",
+      "note_en": "Cave above Wailing Caverns entrance",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Jangdor Swiftstrider",
+      "id": null,
+      "role": "merchant",
+      "profession": "Travail du cuir",
+      "zone": {
+        "id": "feralas",
+        "fr": "Féralas",
+        "en": "Feralas"
+      },
+      "coordinates": {
+        "x": 74.5,
+        "y": 42.9
+      },
+      "faction": "horde",
+      "offers": [
+        "7451",
+        "8385",
+        "8409",
+        "15734"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "note": "Camp Mojache",
+      "note_en": "Camp Mojache",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "8385": {
+          "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "8409": {
+          "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "15734": {
+          "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Mahu",
+      "id": null,
+      "role": "merchant",
+      "profession": "Couture",
+      "zone": {
+        "id": "thunder-bluff",
+        "fr": "Les Pitons-du-Tonnerre",
+        "en": "Thunder Bluff"
+      },
+      "coordinates": {
+        "x": 43.8,
+        "y": 44.6
+      },
+      "faction": "horde",
+      "offers": [
+        "10311"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "note": "Cime centrale",
+      "note_en": "Middle Rise",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Borya",
+      "id": null,
+      "role": "merchant",
+      "profession": "Couture",
+      "zone": {
+        "id": "orgrimmar",
+        "fr": "Orgrimmar",
+        "en": "Orgrimmar"
+      },
+      "coordinates": {
+        "x": 63,
+        "y": 51.2
+      },
+      "faction": "horde",
+      "offers": [
+        "6270",
+        "6274",
+        "5772",
+        "10314",
+        "10317"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "note": "La Herse",
+      "note_en": "The Drag",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Outfitter Eric",
+      "id": null,
+      "role": "merchant",
+      "profession": "Couture",
+      "zone": {
+        "id": "ironforge",
+        "fr": "Forgefer",
+        "en": "Ironforge"
+      },
+      "coordinates": {
+        "x": 44.4,
+        "y": 30
+      },
+      "faction": "alliance",
+      "offers": [
+        "10314",
+        "10317",
+        "10321",
+        "10323",
+        "10326"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "note": "Grande Forge, boutique de couture",
+      "note_en": "The Great Forge, outfitter",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "10321": {
+          "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "10323": {
+          "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "10326": {
+          "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Alexandra Bolero",
+      "id": null,
+      "role": "merchant",
+      "profession": "Couture",
+      "zone": {
+        "id": "stormwind",
+        "fr": "Hurlevent",
+        "en": "Stormwind"
+      },
+      "coordinates": {
+        "x": 43.6,
+        "y": 74
+      },
+      "faction": "alliance",
+      "offers": [
+        "6274",
+        "10325"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "note": "Quartier des mages",
+      "note_en": "Mage Quarter",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "10325": {
+          "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Millie Gregorian",
+      "id": null,
+      "role": "merchant",
+      "profession": "Couture",
+      "zone": {
+        "id": "undercity",
+        "fr": "Fossoyeuse",
+        "en": "Undercity"
+      },
+      "coordinates": {
+        "x": 70.6,
+        "y": 30.6
+      },
+      "faction": "horde",
+      "offers": [
+        "6275"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "note": "Quartier de la magie",
+      "note_en": "Magic Quarter",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Tharynn Bouden",
+      "id": null,
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "elwynn",
+        "fr": "Forêt d'Elwynn",
+        "en": "Elwynn Forest"
+      },
+      "coordinates": {
+        "x": 41.8,
+        "y": 67
+      },
+      "faction": "alliance",
+      "offers": [
+        "6325",
+        "6328",
+        "6270"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "Comté-de-l'Or",
+      "note_en": "Goldshire",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "6270": {
+          "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Kilxx",
+      "id": null,
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "barrens",
+        "fr": "Les Tarides",
+        "en": "The Barrens"
+      },
+      "coordinates": {
+        "x": 62.8,
+        "y": 38.2
+      },
+      "faction": "neutral",
+      "offers": [
+        "6368",
+        "6330"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "Cabestan",
+      "note_en": "Ratchet",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Gikkix",
+      "id": null,
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "tanaris",
+        "fr": "Tanaris",
+        "en": "Tanaris"
+      },
+      "coordinates": {
+        "x": 66.6,
+        "y": 22
+      },
+      "faction": "neutral",
+      "offers": [
+        "13939",
+        "13942",
+        "13945",
+        "13946"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "Port Gentepression",
+      "note_en": "Steamwheedle Port",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Jabbey",
+      "id": null,
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "tanaris",
+        "fr": "Tanaris",
+        "en": "Tanaris"
+      },
+      "coordinates": {
+        "x": 67,
+        "y": 22
+      },
+      "faction": "neutral",
+      "offers": [
+        "16767"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "Port Gentepression",
+      "note_en": "Steamwheedle Port",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Wulan",
+      "id": null,
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "desolace",
+        "fr": "Désolace",
+        "en": "Desolace"
+      },
+      "coordinates": {
+        "x": 26.2,
+        "y": 69.6
+      },
+      "faction": "horde",
+      "offers": [
+        "21099",
+        "21219",
+        "16072",
+        "17062",
+        "6369"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "Proie-de-l'Ombre",
+      "note_en": "Shadowprey Village",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Shandrina",
+      "id": null,
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "ashenvale",
+        "fr": "Orneval",
+        "en": "Ashenvale"
+      },
+      "coordinates": {
+        "x": 49.6,
+        "y": 67
+      },
+      "faction": "alliance",
+      "offers": [
+        "16072"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "Refuge de Vent-argent",
+      "note_en": "Silverwind Refuge",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Fyldan",
+      "id": null,
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "darnassus",
+        "fr": "Darnassus",
+        "en": "Darnassus"
+      },
+      "coordinates": {
+        "x": 48.6,
+        "y": 21.2
+      },
+      "faction": "alliance",
+      "offers": [
+        "21099",
+        "21219"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "Terrasse des artisans",
+      "note_en": "Craftsmen's Terrace",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Gloria Femmel",
+      "id": null,
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "redridge",
+        "fr": "Les Carmines",
+        "en": "Redridge Mountains"
+      },
+      "coordinates": {
+        "x": 26.6,
+        "y": 43.4
+      },
+      "faction": "alliance",
+      "offers": [
+        "21099",
+        "21219"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "Comté-du-Lac",
+      "note_en": "Lakeshire",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Vivianna",
+      "id": null,
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "feralas",
+        "fr": "Féralas",
+        "en": "Feralas"
+      },
+      "coordinates": {
+        "x": 31.2,
+        "y": 43.2
+      },
+      "faction": "alliance",
+      "offers": [
+        "13949",
+        "13947",
+        "13948",
+        "12229"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "Bastion de Pennelune",
+      "note_en": "Feathermoon Stronghold",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Sheendra Tallgrass",
+      "id": null,
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "feralas",
+        "fr": "Féralas",
+        "en": "Feralas"
+      },
+      "coordinates": {
+        "x": 74.4,
+        "y": 42.8
+      },
+      "faction": "horde",
+      "offers": [
+        "13949",
+        "13947",
+        "13948",
+        "12229"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "Camp Mojache",
+      "note_en": "Camp Mojache",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Himmik",
+      "id": null,
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "winterspring",
+        "fr": "Berceau-de-l'Hiver",
+        "en": "Winterspring"
+      },
+      "coordinates": {
+        "x": 61.4,
+        "y": 39
+      },
+      "faction": "neutral",
+      "offers": [
+        "16110"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "Long-guet",
+      "note_en": "Everlook",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Malygen",
+      "id": null,
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "felwood",
+        "fr": "Gangrebois",
+        "en": "Felwood"
+      },
+      "coordinates": {
+        "x": 62.2,
+        "y": 25.6
+      },
+      "faction": "alliance",
+      "offers": [
+        "16110"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "Clairière de Griffebranche",
+      "note_en": "Talonbranch Glade",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Bale",
+      "id": null,
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "felwood",
+        "fr": "Gangrebois",
+        "en": "Felwood"
+      },
+      "coordinates": {
+        "x": 34.6,
+        "y": 53
+      },
+      "faction": "horde",
+      "offers": [
+        "16110"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "Poste de la Vénéneuse",
+      "note_en": "Bloodvenom Post",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Emrul Riknussun",
+      "id": null,
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "ironforge",
+        "fr": "Forgefer",
+        "en": "Ironforge"
+      },
+      "coordinates": {
+        "x": 60.8,
+        "y": 37.8
+      },
+      "faction": "alliance",
+      "offers": [
+        "21099",
+        "21219"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "Grande Forge",
+      "note_en": "The Great Forge",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Nyoma",
+      "id": null,
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "teldrassil",
+        "fr": "Teldrassil",
+        "en": "Teldrassil"
+      },
+      "coordinates": {
+        "x": 57.2,
+        "y": 61.2
+      },
+      "faction": "alliance",
+      "offers": [
+        "6325",
+        "6328",
+        "21099",
+        "21219"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "Dolanaar",
+      "note_en": "Dolanaar",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Gretta Ganter",
+      "id": null,
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "dun-morogh",
+        "fr": "Dun Morogh",
+        "en": "Dun Morogh"
+      },
+      "coordinates": {
+        "x": 31.6,
+        "y": 44.6
+      },
+      "faction": "alliance",
+      "offers": [
+        "6325"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "Brassetout",
+      "note_en": "Brewnall Village",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Tansy Puddlefizz",
+      "id": null,
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "ironforge",
+        "fr": "Forgefer",
+        "en": "Ironforge"
+      },
+      "coordinates": {
+        "x": 47.8,
+        "y": 6.6
+      },
+      "faction": "alliance",
+      "offers": [
+        "6328",
+        "17062",
+        "6369"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "Caverne lugubre",
+      "note_en": "Forlorn Cavern",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Helenia Olden",
+      "id": null,
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "dustwallow",
+        "fr": "Marécage d'Âprefange",
+        "en": "Dustwallow Marsh"
+      },
+      "coordinates": {
+        "x": 66.4,
+        "y": 51.4
+      },
+      "faction": "alliance",
+      "offers": [
+        "12239",
+        "5789"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "Theramore",
+      "note_en": "Theramore",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "5789": {
+          "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": 1448,
+      "name": "Neal Allen",
+      "role": "merchant",
+      "profession": "Ingénierie",
+      "zone": {
+        "id": "wetlands",
+        "fr": "Les Paluns",
+        "en": "Wetlands"
+      },
+      "coordinates": {
+        "x": 10,
+        "y": 56
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "alliance",
+      "offers": [
+        "4389",
+        "4371",
+        "4382",
+        "4361",
+        "4363",
+        "4357",
+        "4364",
+        "4404",
+        "4399",
+        "4400"
+      ],
+      "note": "Port de Menethil, fort (pré-Cataclysme)",
+      "note_en": "Menethil keep (pre-Cataclysm)",
+      "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic"
+    },
+    {
+      "id": 2682,
+      "name": "Fradd Swiftgear",
+      "role": "merchant",
+      "profession": "Ingénierie",
+      "zone": {
+        "id": "wetlands",
+        "fr": "Les Paluns",
+        "en": "Wetlands"
+      },
+      "coordinates": {
+        "x": 26.4,
+        "y": 25.8
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "alliance",
+      "offers": [
+        "4389",
+        "4371",
+        "4382",
+        "4361",
+        "4363",
+        "4357",
+        "4364",
+        "4404",
+        "4399",
+        "4400",
+        "14639"
+      ],
+      "note": "Poste de Swiftgear",
+      "note_en": "Swiftgear Station",
+      "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic"
+    },
+    {
+      "id": 3413,
+      "name": "Sovik",
+      "role": "merchant",
+      "profession": "Ingénierie",
+      "zone": {
+        "id": "orgrimmar",
+        "fr": "Orgrimmar",
+        "en": "Orgrimmar"
+      },
+      "coordinates": {
+        "x": 75.6,
+        "y": 25.2
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "horde",
+      "offers": [
+        "4389",
+        "4371",
+        "4382",
+        "4361",
+        "4363",
+        "4357",
+        "4364",
+        "4404",
+        "4399",
+        "4400",
+        "18647",
+        "16041",
+        "16042"
+      ],
+      "note": "Vallée de l'Honneur",
+      "note_en": "Valley of Honor",
+      "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic"
+    },
+    {
+      "id": 5175,
+      "name": "Gearcutter Cogspinner",
+      "role": "merchant",
+      "profession": "Ingénierie",
+      "zone": {
+        "id": "ironforge",
+        "fr": "Forgefer",
+        "en": "Ironforge"
+      },
+      "coordinates": {
+        "x": 68.2,
+        "y": 44.2
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "alliance",
+      "offers": [
+        "4389",
+        "4371",
+        "4382",
+        "4361",
+        "4363",
+        "4357",
+        "4364",
+        "4404",
+        "4399",
+        "4400",
+        "18649",
+        "16041",
+        "16042",
+        "7560"
+      ],
+      "note": "Brikabrok",
+      "note_en": "Tinker Town",
+      "source": "https://www.wowhead.com/classic/npc=5175/gearcutter-cogspinner"
+    },
+    {
+      "id": 5519,
+      "name": "Billibub Cogspinner",
+      "role": "merchant",
+      "profession": "Ingénierie",
+      "zone": {
+        "id": "stormwind",
+        "fr": "Hurlevent",
+        "en": "Stormwind"
+      },
+      "coordinates": {
+        "x": 62.5,
+        "y": 30.5
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "alliance",
+      "offers": [
+        "4389",
+        "4371",
+        "4382",
+        "4361",
+        "4363",
+        "4357",
+        "4364",
+        "4404",
+        "4399",
+        "4400"
+      ],
+      "note": "Quartier des Nains (approximatif)",
+      "note_en": "Dwarven District (approximate)",
+      "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic"
+    },
+    {
+      "id": 1694,
+      "name": "Loslor Rudge",
+      "role": "merchant",
+      "profession": "Ingénierie",
+      "zone": {
+        "id": "dun-morogh",
+        "fr": "Dun Morogh",
+        "en": "Dun Morogh"
+      },
+      "coordinates": {
+        "x": 50.1,
+        "y": 49.4
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "alliance",
+      "offers": [
+        "4389",
+        "4371",
+        "4382",
+        "4361",
+        "4363",
+        "4357",
+        "4364",
+        "4404",
+        "4399",
+        "4400"
+      ],
+      "note": "Dépôt de Grillacier à l'est de Kharanos",
+      "note_en": "Steelgrill's Depot east of Kharanos",
+      "source": "https://warcraft.wiki.gg/wiki/Loslor_Rudge"
+    },
+    {
+      "id": 2687,
+      "name": "Gnaz Blunderflame",
+      "role": "merchant",
+      "profession": "Ingénierie",
+      "zone": {
+        "id": "stranglethorn",
+        "fr": "Vallée de Strangleronce",
+        "en": "Stranglethorn Vale"
+      },
+      "coordinates": {
+        "x": 51,
+        "y": 35.2
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "neutral",
+      "offers": [
+        "4389",
+        "4371",
+        "4382",
+        "4361",
+        "4363",
+        "4357",
+        "4364",
+        "4404",
+        "4399",
+        "4400"
+      ],
+      "note": "Camp caché sur les hauteurs",
+      "note_en": "Hidden camp on the ridge",
+      "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic"
+    },
+    {
+      "id": 2689,
+      "name": "Knaz Blunderflame",
+      "role": "merchant",
+      "profession": "Ingénierie",
+      "zone": {
+        "id": "stranglethorn",
+        "fr": "Vallée de Strangleronce",
+        "en": "Stranglethorn Vale"
+      },
+      "coordinates": {
+        "x": 51,
+        "y": 35.2
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "neutral",
+      "offers": [
+        "4389",
+        "4371",
+        "4382",
+        "4361",
+        "4363",
+        "4357",
+        "4364",
+        "4404",
+        "4399",
+        "4400"
+      ],
+      "note": "Avec Gnaz sur les hauteurs",
+      "note_en": "With Gnaz on the ridge",
+      "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic"
+    },
+    {
+      "id": 2688,
+      "name": "Ruppo Zipcoil",
+      "role": "merchant",
+      "profession": "Ingénierie",
+      "zone": {
+        "id": "hinterlands",
+        "fr": "Les Hinterlands",
+        "en": "The Hinterlands"
+      },
+      "coordinates": {
+        "x": 34.3,
+        "y": 37.8
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "neutral",
+      "offers": [
+        "4389",
+        "4371",
+        "4382",
+        "4361",
+        "4363",
+        "4357",
+        "4364",
+        "4404",
+        "4399",
+        "4400",
+        "10609"
+      ],
+      "note": "Atelier dans les collines",
+      "note_en": "Workshop in the hills",
+      "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic"
+    },
+    {
+      "id": 11185,
+      "name": "Xizzer Fizzbolt",
+      "role": "merchant",
+      "profession": "Ingénierie",
+      "zone": {
+        "id": "winterspring",
+        "fr": "Berceau-de-l'Hiver",
+        "en": "Winterspring"
+      },
+      "coordinates": {
+        "x": 60.8,
+        "y": 38.6
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "neutral",
+      "offers": [
+        "4389",
+        "4371",
+        "4382",
+        "4361",
+        "4363",
+        "4357",
+        "4364",
+        "4404",
+        "4399",
+        "4400",
+        "16047",
+        "16046",
+        "16050",
+        "18652",
+        "18656"
+      ],
+      "note": "Long-guet",
+      "note_en": "Everlook",
+      "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic"
+    },
+    {
+      "id": 8678,
+      "name": "Jubie Gadgetspring",
+      "role": "merchant",
+      "profession": "Ingénierie",
+      "zone": {
+        "id": "azshara",
+        "fr": "Azshara",
+        "en": "Azshara"
+      },
+      "coordinates": {
+        "x": 45.3,
+        "y": 91
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "neutral",
+      "offers": [
+        "4389",
+        "4371",
+        "4382",
+        "4361",
+        "4363",
+        "4357",
+        "4364",
+        "4404",
+        "4399",
+        "4400",
+        "10607"
+      ],
+      "note": "Côte sud",
+      "note_en": "Southern coast",
+      "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic"
+    },
+    {
+      "name": "Tilli Thistlefuzz",
+      "id": null,
+      "role": "merchant",
+      "profession": "Couture",
+      "zone": {
+        "id": "ironforge",
+        "fr": "Forgefer",
+        "en": "Ironforge"
+      },
+      "coordinates": {
+        "x": 60.8,
+        "y": 44.2
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "alliance",
+      "offers": [
+        "22307",
+        "6342",
+        "20758",
+        "6349",
+        "20752",
+        "20753"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "note": "La Grande Forge",
+      "note_en": "La Grande Forge",
+      "offer_details": {
+        "6342": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "6349": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "20752": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "20753": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "20758": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "22307": {
+          "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Jessara Cordell",
+      "id": null,
+      "role": "merchant",
+      "profession": "Couture",
+      "zone": {
+        "id": "stormwind",
+        "fr": "Hurlevent",
+        "en": "Stormwind"
+      },
+      "coordinates": {
+        "x": 43,
+        "y": 64.2
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "alliance",
+      "offers": [
+        "22307",
+        "6342",
+        "20758",
+        "20752",
+        "20753"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "note": "Canaux",
+      "note_en": "Canaux",
+      "offer_details": {
+        "6342": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "20752": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "20753": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "20758": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "22307": {
+          "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Valdaron",
+      "id": null,
+      "role": "merchant",
+      "profession": "Couture",
+      "zone": {
+        "id": "darkshore",
+        "fr": "Sombrivage",
+        "en": "Darkshore"
+      },
+      "coordinates": {
+        "x": 38.2,
+        "y": 40.4
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "alliance",
+      "offers": [
+        "5771",
+        "5772"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "note": "Auberdine",
+      "note_en": "Auberdine",
+      "offer_details": {
+        "5771": {
+          "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "5772": {
+          "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Rann Flamespinner",
+      "id": null,
+      "role": "merchant",
+      "profession": "Couture",
+      "zone": {
+        "id": "loch-modan",
+        "fr": "Loch Modan",
+        "en": "Loch Modan"
+      },
+      "coordinates": {
+        "x": 36,
+        "y": 45.8
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "alliance",
+      "offers": [
+        "6275",
+        "5772"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "note": "Thelsamar",
+      "note_en": "Thelsamar",
+      "offer_details": {
+        "5772": {
+          "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "6275": {
+          "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Danielle Zipstitch",
+      "id": null,
+      "role": "merchant",
+      "profession": "Couture",
+      "zone": {
+        "id": "duskwood",
+        "fr": "Bois de la Pénombre",
+        "en": "Duskwood"
+      },
+      "coordinates": {
+        "x": 75.8,
+        "y": 45.4
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "alliance",
+      "offers": [
+        "14627"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "note": "Sombre-comté",
+      "note_en": "Sombre-comté",
+      "offer_details": {
+        "14627": {
+          "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Sheri Zipstitch",
+      "id": null,
+      "role": "merchant",
+      "profession": "Couture",
+      "zone": {
+        "id": "duskwood",
+        "fr": "Bois de la Pénombre",
+        "en": "Duskwood"
+      },
+      "coordinates": {
+        "x": 75.6,
+        "y": 45.6
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "alliance",
+      "offers": [
+        "6275"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "note": "Sombre-comté",
+      "note_en": "Sombre-comté",
+      "offer_details": {
+        "6275": {
+          "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Micha Yance",
+      "id": null,
+      "role": "merchant",
+      "profession": "Couture",
+      "zone": {
+        "id": "hillsbrad",
+        "fr": "Contreforts de Hautebrande",
+        "en": "Hillsbrad Foothills"
+      },
+      "coordinates": {
+        "x": 49,
+        "y": 55.2
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "alliance",
+      "offers": [
+        "4355",
+        "5788",
+        "11163"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "note": "Austrivage",
+      "note_en": "Austrivage",
+      "offer_details": {
+        "4355": {
+          "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "5788": {
+          "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "11163": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Jennabink Powerseam",
+      "id": null,
+      "role": "merchant",
+      "profession": "Couture",
+      "zone": {
+        "id": "wetlands",
+        "fr": "Les Paluns",
+        "en": "Wetlands"
+      },
+      "coordinates": {
+        "x": 8.2,
+        "y": 55.8
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "alliance",
+      "offers": [
+        "5772",
+        "6275"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "note": "Port de Menethil",
+      "note_en": "Port de Menethil",
+      "offer_details": {
+        "5772": {
+          "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "6275": {
+          "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Narkk",
+      "id": null,
+      "role": "merchant",
+      "profession": "Couture",
+      "zone": {
+        "id": "stranglethorn",
+        "fr": "Vallée de Strangleronce",
+        "en": "Stranglethorn Vale"
+      },
+      "coordinates": {
+        "x": 28.2,
+        "y": 74.4
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "neutral",
+      "offers": [
+        "10728"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "note": "Baie-du-Butin",
+      "note_en": "Baie-du-Butin",
+      "offer_details": {
+        "10728": {
+          "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Xizk Goodstitch",
+      "id": null,
+      "role": "merchant",
+      "profession": "Couture",
+      "zone": {
+        "id": "stranglethorn",
+        "fr": "Vallée de Strangleronce",
+        "en": "Stranglethorn Vale"
+      },
+      "coordinates": {
+        "x": 28.6,
+        "y": 76.8
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "neutral",
+      "offers": [
+        "14630",
+        "7087"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "note": "Baie-du-Butin",
+      "note_en": "Baie-du-Butin",
+      "offer_details": {
+        "7087": {
+          "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "14630": {
+          "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Vizzklick",
+      "id": null,
+      "role": "merchant",
+      "profession": "Couture",
+      "zone": {
+        "id": "tanaris",
+        "fr": "Tanaris",
+        "en": "Tanaris"
+      },
+      "coordinates": {
+        "x": 51,
+        "y": 27.2
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "neutral",
+      "offers": [
+        "21358"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "note": "Gadgetzan",
+      "note_en": "Gadgetzan",
+      "offer_details": {
+        "21358": {
+          "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Brienna Starglow",
+      "id": null,
+      "role": "merchant",
+      "profession": "Couture",
+      "zone": {
+        "id": "feralas",
+        "fr": "Féralas",
+        "en": "Feralas"
+      },
+      "coordinates": {
+        "x": 89,
+        "y": 45.8
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "alliance",
+      "offers": [
+        "7089"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "note": "Vers la frontière des Mille pointes",
+      "note_en": "Vers la frontière des Mille pointes",
+      "offer_details": {
+        "7089": {
+          "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Darnall",
+      "id": null,
+      "role": "merchant",
+      "profession": "Couture",
+      "zone": {
+        "id": "moonglade",
+        "fr": "Reflet-de-Lune",
+        "en": "Moonglade"
+      },
+      "coordinates": {
+        "x": 51.5,
+        "y": 33.3
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "neutral",
+      "offers": [
+        "14469",
+        "14472",
+        "14488"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "note": "Havrenuit",
+      "note_en": "Havrenuit",
+      "offer_details": {
+        "14469": {
+          "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "14472": {
+          "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide",
+          "bind": "pickup"
+        },
+        "14488": {
+          "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Lorelae Wintersong",
+      "id": null,
+      "role": "merchant",
+      "profession": "Couture",
+      "zone": {
+        "id": "moonglade",
+        "fr": "Reflet-de-Lune",
+        "en": "Moonglade"
+      },
+      "coordinates": {
+        "x": 48.6,
+        "y": 40
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "neutral",
+      "offers": [
+        "14483",
+        "16224",
+        "16243"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "note": "Havrenuit",
+      "note_en": "Havrenuit",
+      "offer_details": {
+        "14483": {
+          "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "16224": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "16243": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Kithas",
+      "id": null,
+      "role": "merchant",
+      "profession": "Couture",
+      "zone": {
+        "id": "orgrimmar",
+        "fr": "Orgrimmar",
+        "en": "Orgrimmar"
+      },
+      "coordinates": {
+        "x": 53.6,
+        "y": 38
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "horde",
+      "offers": [
+        "22307",
+        "6342",
+        "20758",
+        "6346",
+        "6349",
+        "20752",
+        "20753"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "note": "La Herse",
+      "note_en": "La Herse",
+      "offer_details": {
+        "6342": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "6346": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "6349": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "20752": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "20753": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "20758": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "22307": {
+          "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Ghok'kah",
+      "id": null,
+      "role": "merchant",
+      "profession": "Couture",
+      "zone": {
+        "id": "dustwallow",
+        "fr": "Marécage d'Âprefange",
+        "en": "Dustwallow Marsh"
+      },
+      "coordinates": {
+        "x": 35.2,
+        "y": 30.8
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "horde",
+      "offers": [
+        "4355"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "note": "Mur-de-Fougères",
+      "note_en": "Mur-de-Fougères",
+      "offer_details": {
+        "4355": {
+          "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Drake Lindgren",
+      "id": null,
+      "role": "merchant",
+      "profession": "Couture",
+      "zone": {
+        "id": "elwynn",
+        "fr": "Forêt d'Elwynn",
+        "en": "Elwynn Forest"
+      },
+      "coordinates": {
+        "x": 83.2,
+        "y": 66.6
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "alliance",
+      "offers": [
+        "6272"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "note": "Camp de bûcherons du Val d'Est",
+      "note_en": "Camp de bûcherons du Val d'Est",
+      "offer_details": {
+        "6272": {
+          "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Kiknikle",
+      "id": null,
+      "role": "merchant",
+      "profession": "Couture",
+      "zone": {
+        "id": "barrens",
+        "fr": "Les Tarides",
+        "en": "The Barrens"
+      },
+      "coordinates": {
+        "x": 41.8,
+        "y": 38.6
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "neutral",
+      "offers": [
+        "5772"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "note": "Collines vers l'Oasis de la stagnation",
+      "note_en": "Collines vers l'Oasis de la stagnation",
+      "offer_details": {
+        "5772": {
+          "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Ranik",
+      "id": null,
+      "role": "merchant",
+      "profession": "Couture",
+      "zone": {
+        "id": "barrens",
+        "fr": "Les Tarides",
+        "en": "The Barrens"
+      },
+      "coordinates": {
+        "x": 62,
+        "y": 38.6
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "neutral",
+      "offers": [
+        "6275"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "note": "Cabestan",
+      "note_en": "Cabestan",
+      "offer_details": {
+        "6275": {
+          "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Amy Davenport",
+      "id": null,
+      "role": "merchant",
+      "profession": "Couture",
+      "zone": {
+        "id": "redridge",
+        "fr": "Les Carmines",
+        "en": "Redridge Mountains"
+      },
+      "coordinates": {
+        "x": 29,
+        "y": 47.6
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "alliance",
+      "offers": [
+        "5772",
+        "20576"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "note": "Comté-du-Lac",
+      "note_en": "Comté-du-Lac",
+      "offer_details": {
+        "5772": {
+          "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "20576": {
+          "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Clyde Ranthal",
+      "id": null,
+      "role": "merchant",
+      "profession": "Travail du cuir",
+      "zone": {
+        "id": "redridge",
+        "fr": "Les Carmines",
+        "en": "Redridge Mountains"
+      },
+      "coordinates": {
+        "x": 88.8,
+        "y": 70.8
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "alliance",
+      "offers": [
+        "7289"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "note": "Camp du sud-est",
+      "note_en": "Camp du sud-est",
+      "offer_details": {
+        "7289": {
+          "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Harlown Darkweave",
+      "id": null,
+      "role": "merchant",
+      "profession": "Travail du cuir",
+      "zone": {
+        "id": "ashenvale",
+        "fr": "Orneval",
+        "en": "Ashenvale"
+      },
+      "coordinates": {
+        "x": 18.2,
+        "y": 59.3
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "alliance",
+      "offers": [
+        "7361"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "note": "Sentier du sanctuaire d'Aessina",
+      "note_en": "Sentier du sanctuaire d'Aessina",
+      "offer_details": {
+        "7361": {
+          "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Lardan",
+      "id": null,
+      "role": "merchant",
+      "profession": "Travail du cuir",
+      "zone": {
+        "id": "ashenvale",
+        "fr": "Orneval",
+        "en": "Ashenvale"
+      },
+      "coordinates": {
+        "x": 34.8,
+        "y": 49.8
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "alliance",
+      "offers": [
+        "5973"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "note": "Astranaar",
+      "note_en": "Astranaar",
+      "offer_details": {
+        "5973": {
+          "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Wenna Silkbeard",
+      "id": null,
+      "role": "merchant",
+      "profession": "Travail du cuir",
+      "zone": {
+        "id": "wetlands",
+        "fr": "Les Paluns",
+        "en": "Wetlands"
+      },
+      "coordinates": {
+        "x": 25.6,
+        "y": 25.8
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "alliance",
+      "offers": [
+        "7290",
+        "7613"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "note": "Marais des murlocs",
+      "note_en": "Marais des murlocs",
+      "offer_details": {
+        "7290": {
+          "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "7613": {
+          "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Androd Fadran",
+      "id": null,
+      "role": "merchant",
+      "profession": "Travail du cuir",
+      "zone": {
+        "id": "arathi",
+        "fr": "Hautes-terres d'Arathi",
+        "en": "Arathi Highlands"
+      },
+      "coordinates": {
+        "x": 45,
+        "y": 47
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "alliance",
+      "offers": [
+        "13288"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "note": "Refuge de l'Ornière",
+      "note_en": "Refuge de l'Ornière",
+      "offer_details": {
+        "13288": {
+          "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Hammon Karwn",
+      "id": null,
+      "role": "merchant",
+      "profession": "Travail du cuir",
+      "zone": {
+        "id": "arathi",
+        "fr": "Hautes-terres d'Arathi",
+        "en": "Arathi Highlands"
+      },
+      "coordinates": {
+        "x": 46.4,
+        "y": 47.4
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "alliance",
+      "offers": [
+        "5973"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "note": "Refuge de l'Ornière",
+      "note_en": "Refuge de l'Ornière",
+      "offer_details": {
+        "5973": {
+          "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Blixrez Goodstitch",
+      "id": null,
+      "role": "merchant",
+      "profession": "Travail du cuir",
+      "zone": {
+        "id": "stranglethorn",
+        "fr": "Vallée de Strangleronce",
+        "en": "Stranglethorn Vale"
+      },
+      "coordinates": {
+        "x": 28.2,
+        "y": 77.4
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "neutral",
+      "offers": [
+        "5788",
+        "5789"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "note": "Baie-du-Butin",
+      "note_en": "Baie-du-Butin",
+      "offer_details": {
+        "5788": {
+          "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "5789": {
+          "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Rikqiz",
+      "id": null,
+      "role": "merchant",
+      "profession": "Travail du cuir",
+      "zone": {
+        "id": "stranglethorn",
+        "fr": "Vallée de Strangleronce",
+        "en": "Stranglethorn Vale"
+      },
+      "coordinates": {
+        "x": 28.4,
+        "y": 76
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "neutral",
+      "offers": [
+        "14635",
+        "18239"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "note": "Baie-du-Butin",
+      "note_en": "Baie-du-Butin",
+      "offer_details": {
+        "14635": {
+          "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "18239": {
+          "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Masat T'andr",
+      "id": null,
+      "role": "merchant",
+      "profession": "Travail du cuir",
+      "zone": {
+        "id": "swamp-of-sorrows",
+        "fr": "Marais des Chagrins",
+        "en": "Swamp of Sorrows"
+      },
+      "coordinates": {
+        "x": 26.4,
+        "y": 31.6
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "neutral",
+      "offers": [
+        "15726"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "note": "Le Havre",
+      "note_en": "Le Havre",
+      "offer_details": {
+        "15726": {
+          "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide",
+          "specialization": "Dragonscale"
+        }
+      }
+    },
+    {
+      "name": "Gigget Zipcoil",
+      "id": null,
+      "role": "merchant",
+      "profession": "Travail du cuir",
+      "zone": {
+        "id": "hinterlands",
+        "fr": "Les Hinterlands",
+        "en": "The Hinterlands"
+      },
+      "coordinates": {
+        "x": 34.5,
+        "y": 38.6
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "neutral",
+      "offers": [
+        "15735"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "note": "Atelier gnome",
+      "note_en": "Atelier gnome",
+      "offer_details": {
+        "15735": {
+          "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide",
+          "specialization": "Tribal"
+        }
+      }
+    },
+    {
+      "name": "Nioma",
+      "id": null,
+      "role": "merchant",
+      "profession": "Travail du cuir",
+      "zone": {
+        "id": "hinterlands",
+        "fr": "Les Hinterlands",
+        "en": "The Hinterlands"
+      },
+      "coordinates": {
+        "x": 13.2,
+        "y": 43.2
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "alliance",
+      "offers": [
+        "8409"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "note": "Nid-de-l'Aigle",
+      "note_en": "Nid-de-l'Aigle",
+      "offer_details": {
+        "8409": {
+          "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Pratt McGrubben",
+      "id": null,
+      "role": "merchant",
+      "profession": "Travail du cuir",
+      "zone": {
+        "id": "feralas",
+        "fr": "Féralas",
+        "en": "Feralas"
+      },
+      "coordinates": {
+        "x": 30.6,
+        "y": 42.6
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "alliance",
+      "offers": [
+        "7451",
+        "8385",
+        "15734"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "note": "Bastion de Pennelune",
+      "note_en": "Bastion de Pennelune",
+      "offer_details": {
+        "7451": {
+          "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "8385": {
+          "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "15734": {
+          "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide",
+          "specialization": "Elemental"
+        }
+      }
+    },
+    {
+      "name": "Blimo Gadgetspring",
+      "id": null,
+      "role": "merchant",
+      "profession": "Travail du cuir",
+      "zone": {
+        "id": "azshara",
+        "fr": "Azshara",
+        "en": "Azshara"
+      },
+      "coordinates": {
+        "x": 45.2,
+        "y": 90.8
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "neutral",
+      "offers": [
+        "15729",
+        "15751"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "note": "Sur la côte sud",
+      "note_en": "Sur la côte sud",
+      "offer_details": {
+        "15729": {
+          "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide",
+          "shared_stock_group": "blimo-leather"
+        },
+        "15751": {
+          "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide",
+          "shared_stock_group": "blimo-leather"
+        }
+      }
+    },
+    {
+      "name": "Nergal",
+      "id": null,
+      "role": "merchant",
+      "profession": "Travail du cuir",
+      "zone": {
+        "id": "ungoro",
+        "fr": "Cratère d'Un'Goro",
+        "en": "Un'Goro Crater"
+      },
+      "coordinates": {
+        "x": 43.3,
+        "y": 7.7
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "neutral",
+      "offers": [
+        "15758"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "note": "Refuge des Marshal",
+      "note_en": "Refuge des Marshal",
+      "offer_details": {
+        "15758": {
+          "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide",
+          "specialization": "Tribal"
+        }
+      }
+    },
+    {
+      "name": "Leonard Porter",
+      "id": null,
+      "role": "merchant",
+      "profession": "Travail du cuir",
+      "zone": {
+        "id": "wpl",
+        "fr": "Maleterres de l'Ouest",
+        "en": "Western Plaguelands"
+      },
+      "coordinates": {
+        "x": 43,
+        "y": 84.4
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "alliance",
+      "offers": [
+        "15725",
+        "15741"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "note": "Camp du Noroît",
+      "note_en": "Camp du Noroît",
+      "offer_details": {
+        "15725": {
+          "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "15741": {
+          "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide",
+          "specialization": "Elemental"
+        }
+      }
+    },
+    {
+      "name": "Jase Farlane",
+      "id": null,
+      "role": "merchant",
+      "profession": "Travail du cuir",
+      "zone": {
+        "id": "epl",
+        "fr": "Maleterres de l'Est",
+        "en": "Eastern Plaguelands"
+      },
+      "coordinates": {
+        "x": 80.4,
+        "y": 57.6
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "neutral",
+      "offers": [
+        "15756"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "note": "Chapelle de l'Espoir de Lumière",
+      "note_en": "Chapelle de l'Espoir de Lumière",
+      "offer_details": {
+        "15756": {
+          "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Zannok Hidepiercer",
+      "id": null,
+      "role": "merchant",
+      "profession": "Travail du cuir",
+      "zone": {
+        "id": "silithus",
+        "fr": "Silithus",
+        "en": "Silithus"
+      },
+      "coordinates": {
+        "x": 81.8,
+        "y": 17.1
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "neutral",
+      "offers": [
+        "15724",
+        "15762"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "note": "Route vers Un'Goro",
+      "note_en": "Route vers Un'Goro",
+      "offer_details": {
+        "15724": {
+          "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "15762": {
+          "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Christoph Jeffcoat",
+      "id": null,
+      "role": "merchant",
+      "profession": "Travail du cuir",
+      "zone": {
+        "id": "hillsbrad",
+        "fr": "Contreforts de Hautebrande",
+        "en": "Hillsbrad Foothills"
+      },
+      "coordinates": {
+        "x": 62.2,
+        "y": 19
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "horde",
+      "offers": [
+        "5788"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "note": "Moulin-de-Tarren",
+      "note_en": "Moulin-de-Tarren",
+      "offer_details": {
+        "5788": {
+          "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "George Candarte",
+      "id": null,
+      "role": "merchant",
+      "profession": "Travail du cuir",
+      "zone": {
+        "id": "hillsbrad",
+        "fr": "Contreforts de Hautebrande",
+        "en": "Hillsbrad Foothills"
+      },
+      "coordinates": {
+        "x": 90.2,
+        "y": 38.2
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "horde",
+      "offers": [
+        "7613"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "note": "Mur de Thoradin",
+      "note_en": "Mur de Thoradin",
+      "offer_details": {
+        "7613": {
+          "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Jandia",
+      "id": null,
+      "role": "merchant",
+      "profession": "Travail du cuir",
+      "zone": {
+        "id": "thousand-needles",
+        "fr": "Mille pointes",
+        "en": "Thousand Needles"
+      },
+      "coordinates": {
+        "x": 46,
+        "y": 51.6
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "horde",
+      "offers": [
+        "5973"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "note": "Poste de Librevent",
+      "note_en": "Poste de Librevent",
+      "offer_details": {
+        "5973": {
+          "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Tunkk",
+      "id": null,
+      "role": "merchant",
+      "profession": "Travail du cuir",
+      "zone": {
+        "id": "arathi",
+        "fr": "Hautes-terres d'Arathi",
+        "en": "Arathi Highlands"
+      },
+      "coordinates": {
+        "x": 74.8,
+        "y": 34.6
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "horde",
+      "offers": [
+        "13287"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "note": "Trépas-d'Orgrim",
+      "note_en": "Trépas-d'Orgrim",
+      "offer_details": {
+        "13287": {
+          "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Mythrin'dir",
+      "id": null,
+      "role": "merchant",
+      "profession": "Enchantement",
+      "zone": {
+        "id": "darnassus",
+        "fr": "Darnassus",
+        "en": "Darnassus"
+      },
+      "coordinates": {
+        "x": 61,
+        "y": 18
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "alliance",
+      "offers": [
+        "11223",
+        "16217"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+      "note": "Terrasse des artisans",
+      "note_en": "Terrasse des artisans",
+      "offer_details": {
+        "11223": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "16217": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Vaean",
+      "id": null,
+      "role": "merchant",
+      "profession": "Enchantement",
+      "zone": {
+        "id": "darnassus",
+        "fr": "Darnassus",
+        "en": "Darnassus"
+      },
+      "coordinates": {
+        "x": 58.6,
+        "y": 14.4
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "alliance",
+      "offers": [
+        "6342",
+        "20758",
+        "20752",
+        "20753"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+      "note": "Terrasse des artisans",
+      "note_en": "Terrasse des artisans",
+      "offer_details": {
+        "6342": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "20752": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "20753": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "20758": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Dalria",
+      "id": null,
+      "role": "merchant",
+      "profession": "Enchantement",
+      "zone": {
+        "id": "ashenvale",
+        "fr": "Orneval",
+        "en": "Ashenvale"
+      },
+      "coordinates": {
+        "x": 35,
+        "y": 52
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "alliance",
+      "offers": [
+        "11039",
+        "11101"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+      "note": "Astranaar",
+      "note_en": "Astranaar",
+      "offer_details": {
+        "11039": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "11101": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Nata Dawnstrider",
+      "id": null,
+      "role": "merchant",
+      "profession": "Enchantement",
+      "zone": {
+        "id": "thunder-bluff",
+        "fr": "Les Pitons-du-Tonnerre",
+        "en": "Thunder Bluff"
+      },
+      "coordinates": {
+        "x": 45,
+        "y": 38.8
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "horde",
+      "offers": [
+        "6342",
+        "20758",
+        "6349",
+        "6377",
+        "20752",
+        "20753"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+      "note": "Cime centrale",
+      "note_en": "Cime centrale",
+      "offer_details": {
+        "6342": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "6349": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "6377": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "20752": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "20753": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "20758": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Thaddeus Webb",
+      "id": null,
+      "role": "merchant",
+      "profession": "Enchantement",
+      "zone": {
+        "id": "undercity",
+        "fr": "Fossoyeuse",
+        "en": "Undercity"
+      },
+      "coordinates": {
+        "x": 62.4,
+        "y": 60.8
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "horde",
+      "offers": [
+        "6342",
+        "20758",
+        "20752",
+        "20753"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+      "note": "Apothicairerie",
+      "note_en": "Apothicairerie",
+      "offer_details": {
+        "6342": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "20752": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "20753": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "20758": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Lilly",
+      "id": null,
+      "role": "merchant",
+      "profession": "Enchantement",
+      "zone": {
+        "id": "silverpine",
+        "fr": "Forêt des Pins-Argentés",
+        "en": "Silverpine Forest"
+      },
+      "coordinates": {
+        "x": 43,
+        "y": 50.8
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "horde",
+      "offers": [
+        "6342",
+        "20758",
+        "6346",
+        "20752",
+        "20753"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+      "note": "Au sud du Sépulcre",
+      "note_en": "Au sud du Sépulcre",
+      "offer_details": {
+        "6342": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "6346": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "20752": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "20753": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "20758": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Leo Sarn",
+      "id": null,
+      "role": "merchant",
+      "profession": "Enchantement",
+      "zone": {
+        "id": "silverpine",
+        "fr": "Forêt des Pins-Argentés",
+        "en": "Silverpine Forest"
+      },
+      "coordinates": {
+        "x": 54,
+        "y": 82.2
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "horde",
+      "offers": [
+        "6342",
+        "6349"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+      "note": "Collines au sud",
+      "note_en": "Collines au sud",
+      "offer_details": {
+        "6342": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "6349": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Kulwia",
+      "id": null,
+      "role": "merchant",
+      "profession": "Enchantement",
+      "zone": {
+        "id": "stonetalon",
+        "fr": "Serres-Rocheuses",
+        "en": "Stonetalon Mountains"
+      },
+      "coordinates": {
+        "x": 45.4,
+        "y": 59.4
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "horde",
+      "offers": [
+        "11039",
+        "11101"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+      "note": "Retraite de Roche-Soleil",
+      "note_en": "Retraite de Roche-Soleil",
+      "offer_details": {
+        "11039": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "11101": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Keena",
+      "id": null,
+      "role": "merchant",
+      "profession": "Enchantement",
+      "zone": {
+        "id": "arathi",
+        "fr": "Hautes-terres d'Arathi",
+        "en": "Arathi Highlands"
+      },
+      "coordinates": {
+        "x": 74,
+        "y": 32.6
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "horde",
+      "offers": [
+        "11163"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+      "note": "Trépas-d'Orgrim",
+      "note_en": "Trépas-d'Orgrim",
+      "offer_details": {
+        "11163": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "name": "Banalash",
+      "id": null,
+      "role": "merchant",
+      "profession": "Enchantement",
+      "zone": {
+        "id": "swamp-of-sorrows",
+        "fr": "Marais des Chagrins",
+        "en": "Swamp of Sorrows"
+      },
+      "coordinates": {
+        "x": 44.6,
+        "y": 57
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "horde",
+      "offers": [
+        "11223"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+      "note": "Pierrêche",
+      "note_en": "Pierrêche",
+      "offer_details": {
+        "11223": {
+          "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
     },
     {
       "id": null,
@@ -2616,1359 +6811,6 @@
       "note": "",
       "coordinate_status": "classic_reference_unverified",
       "trainer_kind": "profession"
-    },
-    {
-      "id": 11278,
-      "name": "Magnus Frostwake",
-      "role": "merchant",
-      "profession": "Alchimie",
-      "zone": {
-        "id": "wpl",
-        "fr": "Maleterres de l’Ouest",
-        "en": "Western Plaguelands"
-      },
-      "coordinates": {
-        "x": 68.1,
-        "y": 77.5
-      },
-      "faction": "neutral",
-      "offers": [
-        "13501"
-      ],
-      "source": "https://www.wowhead.com/classic/npc=11278/magnus-frostwake#comments",
-      "note": "Caer Darrow · Esprit visible avec l'Essence spectrale obtenue après la suite de quêtes d'Eva Sarkhoff",
-      "note_en": "Caer Darrow · Ghost visible using Spectral Essence, earned from Eva Sarkhoff's quest chain",
-      "coordinate_status": "classic_reference_unverified"
-    },
-    {
-      "id": 1669,
-      "name": "Defias Profiteer",
-      "role": "merchant",
-      "profession": "Alchimie",
-      "zone": {
-        "id": "westfall",
-        "fr": "Marche de l’Ouest",
-        "en": "Westfall"
-      },
-      "coordinates": {
-        "x": 43.5,
-        "y": 66.8
-      },
-      "faction": "neutral",
-      "offers": [
-        "5640"
-      ],
-      "source": "https://www.wowhead.com/classic/item=5640/recipe-rage-potion",
-      "note": "Ruisselune · Bâtiment du village · Marchand itinérant",
-      "note_en": "Moonbrook · Village building · Free-wheeling merchant",
-      "coordinate_status": "classic_reference_unverified"
-    },
-    {
-      "id": 3133,
-      "name": "Herble Baubbletump",
-      "role": "merchant",
-      "profession": "Ingénierie",
-      "zone": {
-        "id": "duskwood",
-        "fr": "Bois de la Pénombre",
-        "en": "Duskwood"
-      },
-      "coordinates": {
-        "x": 77,
-        "y": 48
-      },
-      "faction": "alliance",
-      "offers": [
-        "4371",
-        "4389",
-        "4382",
-        "4361",
-        "4363",
-        "4357",
-        "4364",
-        "4404",
-        "4399",
-        "4400"
-      ],
-      "source": "https://www.wowhead.com/forever/npc=3133/herble-baubbletump#comments",
-      "note": "Sombre-Comté · Près du maître ingénieur",
-      "note_en": "Darkshire · Outside the engineering trainer",
-      "coordinate_status": "classic_reference_unverified"
-    },
-    {
-      "name": "Kaita Deepforge",
-      "id": null,
-      "role": "merchant",
-      "profession": "Forge",
-      "zone": {
-        "id": "stormwind",
-        "fr": "Hurlevent",
-        "en": "Stormwind"
-      },
-      "coordinates": {
-        "x": 56.6,
-        "y": 17
-      },
-      "faction": "alliance",
-      "offers": [
-        "12162"
-      ],
-      "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
-      "note": "Quartier des nains",
-      "note_en": "Dwarven District",
-      "coordinate_status": "classic_reference_unverified"
-    },
-    {
-      "name": "Sumi",
-      "id": null,
-      "role": "merchant",
-      "profession": "Forge",
-      "zone": {
-        "id": "orgrimmar",
-        "fr": "Orgrimmar",
-        "en": "Orgrimmar"
-      },
-      "coordinates": {
-        "x": 82.6,
-        "y": 23.4
-      },
-      "faction": "horde",
-      "offers": [
-        "12162"
-      ],
-      "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
-      "note": "Vallée de l'Honneur",
-      "note_en": "Valley of Honor",
-      "coordinate_status": "classic_reference_unverified"
-    },
-    {
-      "name": "Jutak",
-      "id": null,
-      "role": "merchant",
-      "profession": "Forge",
-      "zone": {
-        "id": "stranglethorn",
-        "fr": "Vallée de Strangleronce",
-        "en": "Stranglethorn Vale"
-      },
-      "coordinates": {
-        "x": 27.4,
-        "y": 77.4
-      },
-      "faction": "neutral",
-      "offers": [
-        "12162"
-      ],
-      "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
-      "note": "Baie-du-Butin",
-      "note_en": "Booty Bay",
-      "coordinate_status": "classic_reference_unverified"
-    },
-    {
-      "name": "Jannos Ironwill",
-      "id": null,
-      "role": "merchant",
-      "profession": "Forge",
-      "zone": {
-        "id": "arathi",
-        "fr": "Hautes-terres d'Arathi",
-        "en": "Arathi Highlands"
-      },
-      "coordinates": {
-        "x": 46,
-        "y": 47.6
-      },
-      "faction": "alliance",
-      "offers": [
-        "10858"
-      ],
-      "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
-      "note": "Refuge de l'Ornière",
-      "note_en": "Refuge Pointe",
-      "coordinate_status": "classic_reference_unverified"
-    },
-    {
-      "name": "Muuran",
-      "id": null,
-      "role": "merchant",
-      "profession": "Forge",
-      "zone": {
-        "id": "desolace",
-        "fr": "Désolace",
-        "en": "Desolace"
-      },
-      "coordinates": {
-        "x": 55.6,
-        "y": 56.6
-      },
-      "faction": "horde",
-      "offers": [
-        "10858"
-      ],
-      "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
-      "note": "Poste des marche-fantômes",
-      "note_en": "Ghost Walker Post",
-      "coordinate_status": "classic_reference_unverified"
-    },
-    {
-      "name": "Vharr",
-      "id": null,
-      "role": "merchant",
-      "profession": "Forge",
-      "zone": {
-        "id": "stranglethorn",
-        "fr": "Vallée de Strangleronce",
-        "en": "Stranglethorn Vale"
-      },
-      "coordinates": {
-        "x": 32.2,
-        "y": 28
-      },
-      "faction": "horde",
-      "offers": [
-        "12164"
-      ],
-      "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
-      "note": "Campement Grom'gol",
-      "note_en": "Grom'gol Base Camp",
-      "coordinate_status": "classic_reference_unverified"
-    },
-    {
-      "name": "Bombus Finespindle",
-      "id": null,
-      "role": "merchant",
-      "profession": "Travail du cuir",
-      "zone": {
-        "id": "ironforge",
-        "fr": "Forgefer",
-        "en": "Ironforge"
-      },
-      "coordinates": {
-        "x": 39.6,
-        "y": 34
-      },
-      "faction": "alliance",
-      "offers": [
-        "18731"
-      ],
-      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
-      "note": "Grande Forge",
-      "note_en": "The Great Forge",
-      "coordinate_status": "classic_reference_unverified"
-    },
-    {
-      "name": "Tamar",
-      "id": null,
-      "role": "merchant",
-      "profession": "Travail du cuir",
-      "zone": {
-        "id": "orgrimmar",
-        "fr": "Orgrimmar",
-        "en": "Orgrimmar"
-      },
-      "coordinates": {
-        "x": 63,
-        "y": 45.2
-      },
-      "faction": "horde",
-      "offers": [
-        "18731"
-      ],
-      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
-      "note": "La Herse",
-      "note_en": "The Drag",
-      "coordinate_status": "classic_reference_unverified"
-    },
-    {
-      "name": "Saenorion",
-      "id": null,
-      "role": "merchant",
-      "profession": "Travail du cuir",
-      "zone": {
-        "id": "darnassus",
-        "fr": "Darnassus",
-        "en": "Darnassus"
-      },
-      "coordinates": {
-        "x": 63.8,
-        "y": 22
-      },
-      "faction": "alliance",
-      "offers": [
-        "18949",
-        "7451"
-      ],
-      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
-      "note": "Terrasse des artisans",
-      "note_en": "Craftsmen's Terrace",
-      "coordinate_status": "classic_reference_unverified"
-    },
-    {
-      "name": "Joseph Moore",
-      "id": null,
-      "role": "merchant",
-      "profession": "Travail du cuir",
-      "zone": {
-        "id": "undercity",
-        "fr": "Fossoyeuse",
-        "en": "Undercity"
-      },
-      "coordinates": {
-        "x": 70.6,
-        "y": 58.8
-      },
-      "faction": "horde",
-      "offers": [
-        "18949",
-        "7451"
-      ],
-      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
-      "note": "Quartier des voleurs",
-      "note_en": "Rogue's Quarter",
-      "coordinate_status": "classic_reference_unverified"
-    },
-    {
-      "name": "Mavralyn",
-      "id": null,
-      "role": "merchant",
-      "profession": "Travail du cuir",
-      "zone": {
-        "id": "darkshore",
-        "fr": "Sombrivage",
-        "en": "Darkshore"
-      },
-      "coordinates": {
-        "x": 37,
-        "y": 41.2
-      },
-      "faction": "alliance",
-      "offers": [
-        "5786",
-        "5787"
-      ],
-      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
-      "note": "Auberdine",
-      "note_en": "Auberdine",
-      "coordinate_status": "classic_reference_unverified"
-    },
-    {
-      "name": "Gina MacGregor",
-      "id": null,
-      "role": "merchant",
-      "profession": "Travail du cuir",
-      "zone": {
-        "id": "westfall",
-        "fr": "Marche de l'Ouest",
-        "en": "Westfall"
-      },
-      "coordinates": {
-        "x": 57.6,
-        "y": 53.8
-      },
-      "faction": "alliance",
-      "offers": [
-        "5786",
-        "5787"
-      ],
-      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
-      "note": "Colline des Sentinelles",
-      "note_en": "Sentinel Hill",
-      "coordinate_status": "classic_reference_unverified"
-    },
-    {
-      "name": "Andrew Hilbert",
-      "id": null,
-      "role": "merchant",
-      "profession": "Travail du cuir",
-      "zone": {
-        "id": "silverpine",
-        "fr": "Forêt des Pins argentés",
-        "en": "Silverpine Forest"
-      },
-      "coordinates": {
-        "x": 43.2,
-        "y": 40.6
-      },
-      "faction": "horde",
-      "offers": [
-        "5786",
-        "5787"
-      ],
-      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
-      "note": "Le Sépulcre, sous-sol de la crypte",
-      "note_en": "The Sepulcher, below the crypt",
-      "coordinate_status": "classic_reference_unverified"
-    },
-    {
-      "name": "Kalldan Felmoon",
-      "id": null,
-      "role": "merchant",
-      "profession": "Travail du cuir",
-      "zone": {
-        "id": "barrens",
-        "fr": "Les Tarides",
-        "en": "The Barrens"
-      },
-      "coordinates": {
-        "x": 45.9,
-        "y": 35.7
-      },
-      "faction": "neutral",
-      "offers": [
-        "6474",
-        "6475"
-      ],
-      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
-      "note": "Caverne au-dessus de l'entrée des Cavernes des Lamentations",
-      "note_en": "Cave above Wailing Caverns entrance",
-      "coordinate_status": "classic_reference_unverified"
-    },
-    {
-      "name": "Jangdor Swiftstrider",
-      "id": null,
-      "role": "merchant",
-      "profession": "Travail du cuir",
-      "zone": {
-        "id": "feralas",
-        "fr": "Féralas",
-        "en": "Feralas"
-      },
-      "coordinates": {
-        "x": 74.5,
-        "y": 42.9
-      },
-      "faction": "horde",
-      "offers": [
-        "7451"
-      ],
-      "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
-      "note": "Camp Mojache",
-      "note_en": "Camp Mojache",
-      "coordinate_status": "classic_reference_unverified"
-    },
-    {
-      "name": "Mahu",
-      "id": null,
-      "role": "merchant",
-      "profession": "Couture",
-      "zone": {
-        "id": "thunder-bluff",
-        "fr": "Les Pitons-du-Tonnerre",
-        "en": "Thunder Bluff"
-      },
-      "coordinates": {
-        "x": 43.8,
-        "y": 44.6
-      },
-      "faction": "horde",
-      "offers": [
-        "10311"
-      ],
-      "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
-      "note": "Cime centrale",
-      "note_en": "Middle Rise",
-      "coordinate_status": "classic_reference_unverified"
-    },
-    {
-      "name": "Borya",
-      "id": null,
-      "role": "merchant",
-      "profession": "Couture",
-      "zone": {
-        "id": "orgrimmar",
-        "fr": "Orgrimmar",
-        "en": "Orgrimmar"
-      },
-      "coordinates": {
-        "x": 63,
-        "y": 51.2
-      },
-      "faction": "horde",
-      "offers": [
-        "6270",
-        "6274",
-        "5772",
-        "10314",
-        "10317"
-      ],
-      "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
-      "note": "La Herse",
-      "note_en": "The Drag",
-      "coordinate_status": "classic_reference_unverified"
-    },
-    {
-      "name": "Outfitter Eric",
-      "id": null,
-      "role": "merchant",
-      "profession": "Couture",
-      "zone": {
-        "id": "ironforge",
-        "fr": "Forgefer",
-        "en": "Ironforge"
-      },
-      "coordinates": {
-        "x": 44.4,
-        "y": 30
-      },
-      "faction": "alliance",
-      "offers": [
-        "10314",
-        "10317"
-      ],
-      "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
-      "note": "Grande Forge, boutique de couture",
-      "note_en": "The Great Forge, outfitter",
-      "coordinate_status": "classic_reference_unverified"
-    },
-    {
-      "name": "Alexandra Bolero",
-      "id": null,
-      "role": "merchant",
-      "profession": "Couture",
-      "zone": {
-        "id": "stormwind",
-        "fr": "Hurlevent",
-        "en": "Stormwind"
-      },
-      "coordinates": {
-        "x": 43.6,
-        "y": 74
-      },
-      "faction": "alliance",
-      "offers": [
-        "6274"
-      ],
-      "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
-      "note": "Quartier des mages",
-      "note_en": "Mage Quarter",
-      "coordinate_status": "classic_reference_unverified"
-    },
-    {
-      "name": "Millie Gregorian",
-      "id": null,
-      "role": "merchant",
-      "profession": "Couture",
-      "zone": {
-        "id": "undercity",
-        "fr": "Fossoyeuse",
-        "en": "Undercity"
-      },
-      "coordinates": {
-        "x": 70.6,
-        "y": 30.6
-      },
-      "faction": "horde",
-      "offers": [
-        "6275"
-      ],
-      "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
-      "note": "Quartier de la magie",
-      "note_en": "Magic Quarter",
-      "coordinate_status": "classic_reference_unverified"
-    },
-    {
-      "name": "Tharynn Bouden",
-      "id": null,
-      "role": "merchant",
-      "profession": "Cuisine",
-      "zone": {
-        "id": "elwynn",
-        "fr": "Forêt d'Elwynn",
-        "en": "Elwynn Forest"
-      },
-      "coordinates": {
-        "x": 41.8,
-        "y": 67
-      },
-      "faction": "alliance",
-      "offers": [
-        "6325",
-        "6328"
-      ],
-      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
-      "note": "Comté-de-l'Or",
-      "note_en": "Goldshire",
-      "coordinate_status": "classic_reference_unverified"
-    },
-    {
-      "name": "Kilxx",
-      "id": null,
-      "role": "merchant",
-      "profession": "Cuisine",
-      "zone": {
-        "id": "barrens",
-        "fr": "Les Tarides",
-        "en": "The Barrens"
-      },
-      "coordinates": {
-        "x": 62.8,
-        "y": 38.2
-      },
-      "faction": "neutral",
-      "offers": [
-        "6368",
-        "6330"
-      ],
-      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
-      "note": "Cabestan",
-      "note_en": "Ratchet",
-      "coordinate_status": "classic_reference_unverified"
-    },
-    {
-      "name": "Gikkix",
-      "id": null,
-      "role": "merchant",
-      "profession": "Cuisine",
-      "zone": {
-        "id": "tanaris",
-        "fr": "Tanaris",
-        "en": "Tanaris"
-      },
-      "coordinates": {
-        "x": 66.6,
-        "y": 22
-      },
-      "faction": "neutral",
-      "offers": [
-        "13939",
-        "13942",
-        "13945",
-        "13946"
-      ],
-      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
-      "note": "Port Gentepression",
-      "note_en": "Steamwheedle Port",
-      "coordinate_status": "classic_reference_unverified"
-    },
-    {
-      "name": "Jabbey",
-      "id": null,
-      "role": "merchant",
-      "profession": "Cuisine",
-      "zone": {
-        "id": "tanaris",
-        "fr": "Tanaris",
-        "en": "Tanaris"
-      },
-      "coordinates": {
-        "x": 67,
-        "y": 22
-      },
-      "faction": "neutral",
-      "offers": [
-        "16767"
-      ],
-      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
-      "note": "Port Gentepression",
-      "note_en": "Steamwheedle Port",
-      "coordinate_status": "classic_reference_unverified"
-    },
-    {
-      "name": "Wulan",
-      "id": null,
-      "role": "merchant",
-      "profession": "Cuisine",
-      "zone": {
-        "id": "desolace",
-        "fr": "Désolace",
-        "en": "Desolace"
-      },
-      "coordinates": {
-        "x": 26.2,
-        "y": 69.6
-      },
-      "faction": "horde",
-      "offers": [
-        "21099",
-        "21219",
-        "16072",
-        "17062",
-        "6369"
-      ],
-      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
-      "note": "Proie-de-l'Ombre",
-      "note_en": "Shadowprey Village",
-      "coordinate_status": "classic_reference_unverified"
-    },
-    {
-      "name": "Shandrina",
-      "id": null,
-      "role": "merchant",
-      "profession": "Cuisine",
-      "zone": {
-        "id": "ashenvale",
-        "fr": "Orneval",
-        "en": "Ashenvale"
-      },
-      "coordinates": {
-        "x": 49.6,
-        "y": 67
-      },
-      "faction": "alliance",
-      "offers": [
-        "16072"
-      ],
-      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
-      "note": "Refuge de Vent-argent",
-      "note_en": "Silverwind Refuge",
-      "coordinate_status": "classic_reference_unverified"
-    },
-    {
-      "name": "Fyldan",
-      "id": null,
-      "role": "merchant",
-      "profession": "Cuisine",
-      "zone": {
-        "id": "darnassus",
-        "fr": "Darnassus",
-        "en": "Darnassus"
-      },
-      "coordinates": {
-        "x": 48.6,
-        "y": 21.2
-      },
-      "faction": "alliance",
-      "offers": [
-        "21099",
-        "21219"
-      ],
-      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
-      "note": "Terrasse des artisans",
-      "note_en": "Craftsmen's Terrace",
-      "coordinate_status": "classic_reference_unverified"
-    },
-    {
-      "name": "Gloria Femmel",
-      "id": null,
-      "role": "merchant",
-      "profession": "Cuisine",
-      "zone": {
-        "id": "redridge",
-        "fr": "Les Carmines",
-        "en": "Redridge Mountains"
-      },
-      "coordinates": {
-        "x": 26.6,
-        "y": 43.4
-      },
-      "faction": "alliance",
-      "offers": [
-        "21099",
-        "21219"
-      ],
-      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
-      "note": "Comté-du-Lac",
-      "note_en": "Lakeshire",
-      "coordinate_status": "classic_reference_unverified"
-    },
-    {
-      "name": "Vivianna",
-      "id": null,
-      "role": "merchant",
-      "profession": "Cuisine",
-      "zone": {
-        "id": "feralas",
-        "fr": "Féralas",
-        "en": "Feralas"
-      },
-      "coordinates": {
-        "x": 31.2,
-        "y": 43.2
-      },
-      "faction": "alliance",
-      "offers": [
-        "13949",
-        "13947",
-        "13948",
-        "12229"
-      ],
-      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
-      "note": "Bastion de Pennelune",
-      "note_en": "Feathermoon Stronghold",
-      "coordinate_status": "classic_reference_unverified"
-    },
-    {
-      "name": "Sheendra Tallgrass",
-      "id": null,
-      "role": "merchant",
-      "profession": "Cuisine",
-      "zone": {
-        "id": "feralas",
-        "fr": "Féralas",
-        "en": "Feralas"
-      },
-      "coordinates": {
-        "x": 74.4,
-        "y": 42.8
-      },
-      "faction": "horde",
-      "offers": [
-        "13949",
-        "13947",
-        "13948",
-        "12229"
-      ],
-      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
-      "note": "Camp Mojache",
-      "note_en": "Camp Mojache",
-      "coordinate_status": "classic_reference_unverified"
-    },
-    {
-      "name": "Himmik",
-      "id": null,
-      "role": "merchant",
-      "profession": "Cuisine",
-      "zone": {
-        "id": "winterspring",
-        "fr": "Berceau-de-l'Hiver",
-        "en": "Winterspring"
-      },
-      "coordinates": {
-        "x": 61.4,
-        "y": 39
-      },
-      "faction": "neutral",
-      "offers": [
-        "16110"
-      ],
-      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
-      "note": "Long-guet",
-      "note_en": "Everlook",
-      "coordinate_status": "classic_reference_unverified"
-    },
-    {
-      "name": "Malygen",
-      "id": null,
-      "role": "merchant",
-      "profession": "Cuisine",
-      "zone": {
-        "id": "felwood",
-        "fr": "Gangrebois",
-        "en": "Felwood"
-      },
-      "coordinates": {
-        "x": 62.2,
-        "y": 25.6
-      },
-      "faction": "alliance",
-      "offers": [
-        "16110"
-      ],
-      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
-      "note": "Clairière de Griffebranche",
-      "note_en": "Talonbranch Glade",
-      "coordinate_status": "classic_reference_unverified"
-    },
-    {
-      "name": "Bale",
-      "id": null,
-      "role": "merchant",
-      "profession": "Cuisine",
-      "zone": {
-        "id": "felwood",
-        "fr": "Gangrebois",
-        "en": "Felwood"
-      },
-      "coordinates": {
-        "x": 34.6,
-        "y": 53
-      },
-      "faction": "horde",
-      "offers": [
-        "16110"
-      ],
-      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
-      "note": "Poste de la Vénéneuse",
-      "note_en": "Bloodvenom Post",
-      "coordinate_status": "classic_reference_unverified"
-    },
-    {
-      "name": "Emrul Riknussun",
-      "id": null,
-      "role": "merchant",
-      "profession": "Cuisine",
-      "zone": {
-        "id": "ironforge",
-        "fr": "Forgefer",
-        "en": "Ironforge"
-      },
-      "coordinates": {
-        "x": 60.8,
-        "y": 37.8
-      },
-      "faction": "alliance",
-      "offers": [
-        "21099",
-        "21219"
-      ],
-      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
-      "note": "Grande Forge",
-      "note_en": "The Great Forge",
-      "coordinate_status": "classic_reference_unverified"
-    },
-    {
-      "name": "Nyoma",
-      "id": null,
-      "role": "merchant",
-      "profession": "Cuisine",
-      "zone": {
-        "id": "teldrassil",
-        "fr": "Teldrassil",
-        "en": "Teldrassil"
-      },
-      "coordinates": {
-        "x": 57.2,
-        "y": 61.2
-      },
-      "faction": "alliance",
-      "offers": [
-        "6325",
-        "6328",
-        "21099",
-        "21219"
-      ],
-      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
-      "note": "Dolanaar",
-      "note_en": "Dolanaar",
-      "coordinate_status": "classic_reference_unverified"
-    },
-    {
-      "name": "Gretta Ganter",
-      "id": null,
-      "role": "merchant",
-      "profession": "Cuisine",
-      "zone": {
-        "id": "dun-morogh",
-        "fr": "Dun Morogh",
-        "en": "Dun Morogh"
-      },
-      "coordinates": {
-        "x": 31.6,
-        "y": 44.6
-      },
-      "faction": "alliance",
-      "offers": [
-        "6325"
-      ],
-      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
-      "note": "Brassetout",
-      "note_en": "Brewnall Village",
-      "coordinate_status": "classic_reference_unverified"
-    },
-    {
-      "name": "Tansy Puddlefizz",
-      "id": null,
-      "role": "merchant",
-      "profession": "Cuisine",
-      "zone": {
-        "id": "ironforge",
-        "fr": "Forgefer",
-        "en": "Ironforge"
-      },
-      "coordinates": {
-        "x": 47.8,
-        "y": 6.6
-      },
-      "faction": "alliance",
-      "offers": [
-        "6328",
-        "17062",
-        "6369"
-      ],
-      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
-      "note": "Caverne lugubre",
-      "note_en": "Forlorn Cavern",
-      "coordinate_status": "classic_reference_unverified"
-    },
-    {
-      "name": "Helenia Olden",
-      "id": null,
-      "role": "merchant",
-      "profession": "Cuisine",
-      "zone": {
-        "id": "dustwallow",
-        "fr": "Marécage d'Âprefange",
-        "en": "Dustwallow Marsh"
-      },
-      "coordinates": {
-        "x": 66.4,
-        "y": 51.4
-      },
-      "faction": "alliance",
-      "offers": [
-        "12239"
-      ],
-      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
-      "note": "Theramore",
-      "note_en": "Theramore",
-      "coordinate_status": "classic_reference_unverified"
-    },
-    {
-      "id": 1448,
-      "name": "Neal Allen",
-      "role": "merchant",
-      "profession": "Ingénierie",
-      "zone": {
-        "id": "wetlands",
-        "fr": "Les Paluns",
-        "en": "Wetlands"
-      },
-      "coordinates": {
-        "x": 10,
-        "y": 56
-      },
-      "coordinate_status": "classic_reference_unverified",
-      "faction": "alliance",
-      "offers": [
-        "4389",
-        "4371",
-        "4382",
-        "4361",
-        "4363",
-        "4357",
-        "4364",
-        "4404",
-        "4399",
-        "4400"
-      ],
-      "note": "Port de Menethil, fort (pré-Cataclysme)",
-      "note_en": "Menethil keep (pre-Cataclysm)",
-      "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic"
-    },
-    {
-      "id": 2682,
-      "name": "Fradd Swiftgear",
-      "role": "merchant",
-      "profession": "Ingénierie",
-      "zone": {
-        "id": "wetlands",
-        "fr": "Les Paluns",
-        "en": "Wetlands"
-      },
-      "coordinates": {
-        "x": 26.4,
-        "y": 25.8
-      },
-      "coordinate_status": "classic_reference_unverified",
-      "faction": "alliance",
-      "offers": [
-        "4389",
-        "4371",
-        "4382",
-        "4361",
-        "4363",
-        "4357",
-        "4364",
-        "4404",
-        "4399",
-        "4400",
-        "14639"
-      ],
-      "note": "Poste de Swiftgear",
-      "note_en": "Swiftgear Station",
-      "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic"
-    },
-    {
-      "id": 3413,
-      "name": "Sovik",
-      "role": "merchant",
-      "profession": "Ingénierie",
-      "zone": {
-        "id": "orgrimmar",
-        "fr": "Orgrimmar",
-        "en": "Orgrimmar"
-      },
-      "coordinates": {
-        "x": 75.6,
-        "y": 25.2
-      },
-      "coordinate_status": "classic_reference_unverified",
-      "faction": "horde",
-      "offers": [
-        "4389",
-        "4371",
-        "4382",
-        "4361",
-        "4363",
-        "4357",
-        "4364",
-        "4404",
-        "4399",
-        "4400",
-        "18647",
-        "16041",
-        "16042"
-      ],
-      "note": "Vallée de l'Honneur",
-      "note_en": "Valley of Honor",
-      "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic"
-    },
-    {
-      "id": 5175,
-      "name": "Gearcutter Cogspinner",
-      "role": "merchant",
-      "profession": "Ingénierie",
-      "zone": {
-        "id": "ironforge",
-        "fr": "Forgefer",
-        "en": "Ironforge"
-      },
-      "coordinates": {
-        "x": 68.2,
-        "y": 44.2
-      },
-      "coordinate_status": "classic_reference_unverified",
-      "faction": "alliance",
-      "offers": [
-        "4389",
-        "4371",
-        "4382",
-        "4361",
-        "4363",
-        "4357",
-        "4364",
-        "4404",
-        "4399",
-        "4400",
-        "18649",
-        "16041",
-        "16042",
-        "7560"
-      ],
-      "note": "Brikabrok",
-      "note_en": "Tinker Town",
-      "source": "https://www.wowhead.com/classic/npc=5175/gearcutter-cogspinner"
-    },
-    {
-      "id": 5519,
-      "name": "Billibub Cogspinner",
-      "role": "merchant",
-      "profession": "Ingénierie",
-      "zone": {
-        "id": "stormwind",
-        "fr": "Hurlevent",
-        "en": "Stormwind"
-      },
-      "coordinates": {
-        "x": 62.5,
-        "y": 30.5
-      },
-      "coordinate_status": "classic_reference_unverified",
-      "faction": "alliance",
-      "offers": [
-        "4389",
-        "4371",
-        "4382",
-        "4361",
-        "4363",
-        "4357",
-        "4364",
-        "4404",
-        "4399",
-        "4400"
-      ],
-      "note": "Quartier des Nains (approximatif)",
-      "note_en": "Dwarven District (approximate)",
-      "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic"
-    },
-    {
-      "id": 1694,
-      "name": "Loslor Rudge",
-      "role": "merchant",
-      "profession": "Ingénierie",
-      "zone": {
-        "id": "dun-morogh",
-        "fr": "Dun Morogh",
-        "en": "Dun Morogh"
-      },
-      "coordinates": {
-        "x": 50.1,
-        "y": 49.4
-      },
-      "coordinate_status": "classic_reference_unverified",
-      "faction": "alliance",
-      "offers": [
-        "4389",
-        "4371",
-        "4382",
-        "4361",
-        "4363",
-        "4357",
-        "4364",
-        "4404",
-        "4399",
-        "4400"
-      ],
-      "note": "Dépôt de Grillacier à l'est de Kharanos",
-      "note_en": "Steelgrill's Depot east of Kharanos",
-      "source": "https://warcraft.wiki.gg/wiki/Loslor_Rudge"
-    },
-    {
-      "id": 2687,
-      "name": "Gnaz Blunderflame",
-      "role": "merchant",
-      "profession": "Ingénierie",
-      "zone": {
-        "id": "stranglethorn",
-        "fr": "Vallée de Strangleronce",
-        "en": "Stranglethorn Vale"
-      },
-      "coordinates": {
-        "x": 51,
-        "y": 35.2
-      },
-      "coordinate_status": "classic_reference_unverified",
-      "faction": "neutral",
-      "offers": [
-        "4389",
-        "4371",
-        "4382",
-        "4361",
-        "4363",
-        "4357",
-        "4364",
-        "4404",
-        "4399",
-        "4400"
-      ],
-      "note": "Camp caché sur les hauteurs",
-      "note_en": "Hidden camp on the ridge",
-      "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic"
-    },
-    {
-      "id": 2689,
-      "name": "Knaz Blunderflame",
-      "role": "merchant",
-      "profession": "Ingénierie",
-      "zone": {
-        "id": "stranglethorn",
-        "fr": "Vallée de Strangleronce",
-        "en": "Stranglethorn Vale"
-      },
-      "coordinates": {
-        "x": 51,
-        "y": 35.2
-      },
-      "coordinate_status": "classic_reference_unverified",
-      "faction": "neutral",
-      "offers": [
-        "4389",
-        "4371",
-        "4382",
-        "4361",
-        "4363",
-        "4357",
-        "4364",
-        "4404",
-        "4399",
-        "4400"
-      ],
-      "note": "Avec Gnaz sur les hauteurs",
-      "note_en": "With Gnaz on the ridge",
-      "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic"
-    },
-    {
-      "id": 2688,
-      "name": "Ruppo Zipcoil",
-      "role": "merchant",
-      "profession": "Ingénierie",
-      "zone": {
-        "id": "hinterlands",
-        "fr": "Les Hinterlands",
-        "en": "The Hinterlands"
-      },
-      "coordinates": {
-        "x": 34.3,
-        "y": 37.8
-      },
-      "coordinate_status": "classic_reference_unverified",
-      "faction": "neutral",
-      "offers": [
-        "4389",
-        "4371",
-        "4382",
-        "4361",
-        "4363",
-        "4357",
-        "4364",
-        "4404",
-        "4399",
-        "4400",
-        "10609"
-      ],
-      "note": "Atelier dans les collines",
-      "note_en": "Workshop in the hills",
-      "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic"
-    },
-    {
-      "id": 11185,
-      "name": "Xizzer Fizzbolt",
-      "role": "merchant",
-      "profession": "Ingénierie",
-      "zone": {
-        "id": "winterspring",
-        "fr": "Berceau-de-l'Hiver",
-        "en": "Winterspring"
-      },
-      "coordinates": {
-        "x": 60.8,
-        "y": 38.6
-      },
-      "coordinate_status": "classic_reference_unverified",
-      "faction": "neutral",
-      "offers": [
-        "4389",
-        "4371",
-        "4382",
-        "4361",
-        "4363",
-        "4357",
-        "4364",
-        "4404",
-        "4399",
-        "4400",
-        "16047",
-        "16046",
-        "16050",
-        "18652",
-        "18656"
-      ],
-      "note": "Long-guet",
-      "note_en": "Everlook",
-      "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic"
-    },
-    {
-      "id": 8678,
-      "name": "Jubie Gadgetspring",
-      "role": "merchant",
-      "profession": "Ingénierie",
-      "zone": {
-        "id": "azshara",
-        "fr": "Azshara",
-        "en": "Azshara"
-      },
-      "coordinates": {
-        "x": 45.3,
-        "y": 91
-      },
-      "coordinate_status": "classic_reference_unverified",
-      "faction": "neutral",
-      "offers": [
-        "4389",
-        "4371",
-        "4382",
-        "4361",
-        "4363",
-        "4357",
-        "4364",
-        "4404",
-        "4399",
-        "4400",
-        "10607"
-      ],
-      "note": "Côte sud",
-      "note_en": "Southern coast",
-      "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic"
     },
     {
       "id": null,
@@ -7307,6 +10149,75 @@
       "url": "https://www.wowhead.com/classic/fr/item=16047/sch%C3%A9ma-tube-en-thorium#comments",
       "fr": "Les commentaires mentionnent un stock limité et un temps de retour jugé raisonnable, sans minuteur vérifiable.",
       "en": "Comments mention limited stock and what felt like a reasonable wait, without a verifiable timer."
+    },
+    {
+      "vendor_name": "Pratt McGrubben",
+      "item": "8385",
+      "kind": "observed_wait",
+      "confidence": "contradictory",
+      "url": "https://www.wowhead.com/classic/item=8385/pattern-turtle-scale-gloves#comments",
+      "fr": "Un joueur a obtenu le patron après ~20 min ; d'autres signalent des rotations de 10–30 min mais parfois plusieurs heures sans ce patron. Stock limité, pas de minuteur fixe.",
+      "en": "One player bought it after ~20 min; others report 10–30 min rotations or hours without the desired pattern. Limited stock, no fixed timer.",
+      "min_minutes": 10,
+      "max_minutes": 240
+    },
+    {
+      "vendor_name": "Jangdor Swiftstrider",
+      "item": "8385",
+      "kind": "observed_wait",
+      "confidence": "contradictory",
+      "url": "https://www.wowhead.com/classic/item=8385/pattern-turtle-scale-gloves#comments",
+      "fr": "Les commentaires signalent des rotations de recettes, notamment 15–30 min, avec des attentes de plusieurs heures pour ce patron précis.",
+      "en": "Comments mention rotations of about 15–30 min, with multi-hour waits for this particular pattern.",
+      "min_minutes": 10,
+      "max_minutes": 240
+    },
+    {
+      "vendor_name": "Blimo Gadgetspring",
+      "item": "15729",
+      "kind": "vendor_observation",
+      "confidence": "medium",
+      "url": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "fr": "Le guide marchand précise que deux patrons partagent un même emplacement et ne sont pas vendus simultanément.",
+      "en": "The vendor guide notes that two patterns share a rotating stock slot and cannot be purchased simultaneously."
+    },
+    {
+      "vendor_name": "Blimo Gadgetspring",
+      "item": "15751",
+      "kind": "vendor_observation",
+      "confidence": "medium",
+      "url": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "fr": "Partage son emplacement de stock avec le patron de gants chimériques ; retour de ce patron précis inconnu.",
+      "en": "Shares a stock slot with Chimeric Gloves; restock time for this exact pattern unknown."
+    },
+    {
+      "vendor_name": "Qia",
+      "item": "15740",
+      "kind": "vendor_observation",
+      "confidence": "medium",
+      "url": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "fr": "Ce patron est listé en stock limité, avec spécialisation Tribale obligatoire.",
+      "en": "Limited-stock pattern requiring Tribal Leatherworking specialization."
+    },
+    {
+      "vendor_name": "Darnall",
+      "item": "14472",
+      "kind": "vendor_observation",
+      "confidence": "medium",
+      "url": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "fr": "Le patron est signalé lié quand ramassé : achat pour un autre personnage potentiellement impossible.",
+      "en": "The pattern is listed as Bind on Pickup; buying it for another character may not work."
+    },
+    {
+      "vendor_name": "Tunkk",
+      "item": "13287",
+      "kind": "observed_wait",
+      "min_minutes": 60,
+      "max_minutes": 60,
+      "confidence": "low",
+      "fr": "Un ancien commentaire indique que le patron est revenu au bout d'environ une heure, mais rien ne garantit ce délai sur Forever.",
+      "en": "An old commenter found the pattern after roughly one hour; this is not a verified Forever restock timer.",
+      "url": "https://www.wowhead.com/classic/item=13287/pattern-raptor-hide-harness#comments"
     }
   ],
   "zone_maps": {
@@ -7561,8 +10472,25 @@
       "build": "1.60.1.69893",
       "source": "https://warcraftforever.games/maps",
       "kind": "forever_beta_zone_map"
+    },
+    "ungoro": {
+      "uiMapID": 1449,
+      "build": "1.60.1.69893",
+      "source": "https://warcraftforever.games/maps",
+      "kind": "forever_beta_zone_map"
     }
   },
   "zone_map_base": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/",
-  "map_status": "forever_beta_map_art_positions_classic_unverified"
+  "map_status": "forever_beta_map_art_positions_classic_unverified",
+  "reference_notes": {
+    "vendor_aggregation": {
+      "fr": "Une vente = PNJ + ID objet + référence au guide Classic. Les stocks partagés et conditions de spécialisation sont enregistrés séparément. Rien n'atteste la disponibilité serveur Forever.",
+      "en": "Each sale binds a vendor and item ID to a Classic guide. Shared stock and specialization requirements are separate, without claiming in-game Forever availability."
+    }
+  },
+  "data_quality": {
+    "source_scope": "classic_vendor_guides_and_historical_player_reports",
+    "live_inventory": false,
+    "forever_verified_offers": 0
+  }
 }
