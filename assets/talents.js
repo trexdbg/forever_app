@@ -1,5 +1,5 @@
 import "./talents-fr.js?v=20261009-fr1";
-import "./talents-desc-fr.js?v=20261009-fr1";
+import "./talents-desc-fr.js?v=20261009-fr2";
 const ROOT="/";
 const en=document.documentElement.lang==="en",T=(fr,english)=>en?english:fr;
 const TREE_NAMES_FR={
@@ -15,7 +15,7 @@ const TREE_NAMES_FR={
 };
 const localizedTree=(name)=>en?name:(TREE_NAMES_FR[cls]?.[name]||name);
 const displayName=name=>en?name:(window.ForeverTalentNamesFR?.[cls]?.[name]||name);
-const displayRankDescription=raw=>en?{text:raw,translated:true}:(window.ForeverTalentDescFR?.translate(raw)||{text:raw,translated:false});
+const displayRankDescription=(talent,raw)=>en?{text:raw,translated:true}:(window.ForeverTalentDescFR?.translate(raw,cls,talent.name)||{text:raw,translated:false});
 const cls=document.body.dataset.class, slug=document.body.dataset.slug;
 const wrap=document.getElementById("talent-trees"), level=document.getElementById("talent-level"), left=document.getElementById("points-left"), version=document.getElementById("talent-version"), source=document.getElementById("talent-source"), message=document.getElementById("talent-message");
 let trees=[],ranks=[],selected=[0,0,0],dataVersion="unknown";
@@ -70,7 +70,7 @@ function detail(ti,i){
   if(!panel||!trees[ti]?.talents[i])return;
   const t=trees[ti].talents[i],n=ranks[ti][i],preview=Math.min(t.max,n+1);
   const description=Array.isArray(t.desc)?(t.desc[preview-1]||T("Description de ce rang non documentée.","No description documented for this rank.")):T("Description non disponible.","Description unavailable.");
-  const localizedDescription=displayRankDescription(description);
+  const localizedDescription=displayRankDescription(t,description);
   const known=!t.confirmed||t.confirmed.includes(preview);
   panel.replaceChildren();
   panel.append(mk("strong",displayName(t.name)),mk("small",T("Rang ","Rank ")+n+" / "+t.max+(n===t.max?T(" · Maîtrisé"," · Maxed"):n?T(" · En cours"," · In progress"):T(" · Non appris"," · Not learned"))));
