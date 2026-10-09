@@ -5384,7 +5384,7 @@
       "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
       "note": "Comté-de-l'Or",
       "note_en": "Goldshire",
-      "coordinate_status": "classic_reference_unverified",
+      "coordinate_status": "forever_guide_waypoint",
       "offer_details": {
         "6270": {
           "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
@@ -5400,7 +5400,8 @@
           "verification_status": "forever_documented",
           "verified_date": "2026-10-09"
         }
-      }
+      },
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling"
     },
     {
       "name": "Kilxx",
@@ -5505,7 +5506,7 @@
       },
       "coordinates": {
         "x": 26.2,
-        "y": 69.6
+        "y": 69.8
       },
       "faction": "horde",
       "offers": [
@@ -5518,7 +5519,7 @@
       "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
       "note": "Proie-de-l'Ombre",
       "note_en": "Shadowprey Village",
-      "coordinate_status": "classic_reference_unverified",
+      "coordinate_status": "forever_guide_waypoint",
       "offer_details": {
         "6369": {
           "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
@@ -5542,7 +5543,8 @@
           "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
           "source_kind": "classic_vendor_guide"
         }
-      }
+      },
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling"
     },
     {
       "name": "Shandrina",
@@ -5565,7 +5567,7 @@
       "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
       "note": "Refuge de Vent-argent",
       "note_en": "Silverwind Refuge",
-      "coordinate_status": "classic_reference_unverified",
+      "coordinate_status": "forever_guide_waypoint",
       "offer_details": {
         "16072": {
           "source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
@@ -5573,7 +5575,8 @@
           "verification_status": "forever_documented",
           "verified_date": "2026-10-09"
         }
-      }
+      },
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling"
     },
     {
       "name": "Fyldan",
@@ -5919,7 +5922,7 @@
       "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
       "note": "Caverne lugubre",
       "note_en": "Forlorn Cavern",
-      "coordinate_status": "classic_reference_unverified",
+      "coordinate_status": "forever_guide_waypoint",
       "offer_details": {
         "6326": {
           "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
@@ -5939,7 +5942,8 @@
           "verification_status": "forever_documented",
           "verified_date": "2026-10-09"
         }
-      }
+      },
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling"
     },
     {
       "name": "Helenia Olden",
@@ -11723,8 +11727,8 @@
         "en": "Stormwind"
       },
       "coordinates": {
-        "x": 45.8,
-        "y": 58.2
+        "x": 55,
+        "y": 69.6
       },
       "faction": "alliance",
       "offers": [
@@ -11735,7 +11739,7 @@
       "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
       "note": "",
       "note_en": "",
-      "coordinate_status": "classic_reference_unverified",
+      "coordinate_status": "forever_guide_waypoint",
       "offer_details": {
         "6325": {
           "source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
@@ -11753,7 +11757,8 @@
           "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
           "source_kind": "classic_vendor_guide"
         }
-      }
+      },
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling"
     },
     {
       "id": null,
@@ -13048,8 +13053,8 @@
         "en": "Thunder Bluff"
       },
       "coordinates": {
-        "x": 51.8,
-        "y": 52.4
+        "x": 51,
+        "y": 52.8
       },
       "faction": "horde",
       "offers": [
@@ -13061,7 +13066,7 @@
       "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
       "note": "",
       "note_en": "",
-      "coordinate_status": "classic_reference_unverified",
+      "coordinate_status": "forever_guide_waypoint",
       "offer_details": {
         "6328": {
           "source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
@@ -13083,7 +13088,8 @@
           "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
           "source_kind": "classic_vendor_guide"
         }
-      }
+      },
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling"
     },
     {
       "id": null,
@@ -13107,7 +13113,7 @@
       "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
       "note": "",
       "note_en": "",
-      "coordinate_status": "classic_reference_unverified",
+      "coordinate_status": "forever_guide_waypoint",
       "offer_details": {
         "6325": {
           "source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
@@ -13119,7 +13125,8 @@
           "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
           "source_kind": "classic_vendor_guide"
         }
-      }
+      },
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling"
     },
     {
       "id": null,
@@ -13132,7 +13139,7 @@
         "en": "Orgrimmar"
       },
       "coordinates": {
-        "x": 70.2,
+        "x": 70,
         "y": 30.6
       },
       "faction": "horde",
@@ -13144,7 +13151,7 @@
       "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
       "note": "",
       "note_en": "",
-      "coordinate_status": "classic_reference_unverified",
+      "coordinate_status": "forever_guide_waypoint",
       "offer_details": {
         "6368": {
           "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
@@ -13160,7 +13167,8 @@
           "verification_status": "forever_documented",
           "verified_date": "2026-10-09"
         }
-      }
+      },
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling"
     },
     {
       "id": null,
@@ -15243,6 +15251,16 @@
       "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
       "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
       "https://www.wowhead.com/forever/items/recipes/tailoring"
+    ],
+    "waypoint_verified_vendors": [
+      "Catherine Leland",
+      "Naal Mistrunner",
+      "Shankys",
+      "Wulan",
+      "Shandrina",
+      "Tharynn Bouden",
+      "Sewa Mistrunner",
+      "Tansy Puddlefizz"
     ]
   }
 }
