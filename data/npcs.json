@@ -17,6 +17,16 @@
     "aid": "https://wow-guides.com/classic-era/professions/first-aid"
   },
   "items": {
+    "4371": {
+      "id": 4371,
+      "name": {
+        "en": "Bronze Tube",
+        "fr": "Tube en bronze"
+      },
+      "profession": "Ingénierie",
+      "skill": 0,
+      "supply": "limited"
+    },
     "5640": {
       "id": 5640,
       "name": {
@@ -316,6 +326,16 @@
       },
       "profession": "Alchimie",
       "skill": 200,
+      "supply": "limited"
+    },
+    "16221": {
+      "id": 16221,
+      "name": {
+        "en": "Formula: Enchant Chest - Major Health",
+        "fr": "Formule : Enchantement de plastron (Santé majeure)"
+      },
+      "profession": "Enchantement",
+      "skill": 275,
       "supply": "limited"
     },
     "18648": {
@@ -838,7 +858,8 @@
       "offers": [
         "14526",
         "14468",
-        "14481"
+        "14481",
+        "16221"
       ],
       "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
       "note": "Banque de Long-guet",
@@ -1540,6 +1561,28 @@
       "source": "https://www.wowhead.com/classic/item=5640/recipe-rage-potion",
       "note": "Ruisselune · Bâtiment du village · Marchand itinérant",
       "note_en": "Moonbrook · Village building · Free-wheeling merchant"
+    },
+    {
+      "id": 3133,
+      "name": "Herble Baubbletump",
+      "role": "merchant",
+      "profession": "Ingénierie",
+      "zone": {
+        "id": "duskwood",
+        "fr": "Bois de la Pénombre",
+        "en": "Duskwood"
+      },
+      "coordinates": {
+        "x": 77,
+        "y": 48
+      },
+      "faction": "alliance",
+      "offers": [
+        "4371"
+      ],
+      "source": "https://www.wowhead.com/forever/npc=3133/herble-baubbletump#comments",
+      "note": "Sombre-Comté · Près du maître ingénieur",
+      "note_en": "Darkshire · Outside the engineering trainer"
     }
   ],
   "evidence": [
@@ -1646,6 +1689,61 @@
       "url": "https://classicdb.com/?npc=11278",
       "fr": "La base Classic indique un stock illimité. L'accès au fantôme dépend de la suite de quêtes d'Eva Sarkhoff.",
       "en": "Classic database lists unlimited stock. Access to the ghost depends on Eva Sarkhoff's quest chain."
+    },
+    {
+      "vendor_name": "Herble Baubbletump",
+      "item": "4371",
+      "kind": "observed_wait",
+      "min_minutes": 5,
+      "max_minutes": 60,
+      "confidence": "contradictory",
+      "url": "https://www.wowhead.com/npc=3133/herble-baubbletump#comments",
+      "fr": "Un joueur signale 10 min ; un autre rapporte 57 min sans voir de réapparition avant. Un commentaire du Tube en bronze parle de 5–15 min. Anciennes versions contradictoires.",
+      "en": "One player reports 10 min; another measured about 57 min without a prior restock. An item comment says 5–15 min. Conflicting historical versions."
+    },
+    {
+      "vendor_name": "Qia",
+      "item": "16221",
+      "kind": "observed_wait",
+      "min_minutes": 10,
+      "max_minutes": 60,
+      "confidence": "contradictory",
+      "url": "https://www.wowhead.com/forever/item=16221/formula-enchant-chest-major-health#comments",
+      "fr": "Un commentaire signale 10 min ; un autre affirme 1 h après achat. La vendeuse partage des emplacements de stocks et la disponibilité varie.",
+      "en": "One report says 10 min; another claims 1 h after a purchase. The vendor shares limited-stock slots, making appearances variable."
+    },
+    {
+      "vendor_name": "Harklan Moongrove",
+      "item": "6054",
+      "kind": "observed_wait",
+      "min_minutes": 23,
+      "max_minutes": 35,
+      "confidence": "medium",
+      "url": "https://www.wowhead.com/forever/npc=3956/harklan-moongrove#comments",
+      "fr": "Un joueur a noté quatre apparitions à 19:31, 20:05, 20:34 et 20:57 ; d'autres ont attendu 31–35 min. Indications historiques, non confirmées sur Forever.",
+      "en": "A player logged appearances at 19:31, 20:05, 20:34 and 20:57; others reported 31–35 min. Historical reports, not verified on Forever."
+    },
+    {
+      "vendor_name": "Nandar Branson",
+      "item": "6055",
+      "kind": "observed_wait",
+      "min_minutes": 10,
+      "max_minutes": 15,
+      "confidence": "low",
+      "url": "https://www.wowhead.com/forever/item=6055/recipe-fire-protection-potion#comments",
+      "fr": "Un témoignage indique une réapparition après 10 min ; un autre l'a trouvée revenue au bout d'environ 15 min. Non garanti.",
+      "en": "One report observed a return after 10 min; another found it back within approximately 15 min. Not guaranteed."
+    },
+    {
+      "vendor_name": "Algernon",
+      "item": "13477",
+      "kind": "observed_wait",
+      "min_minutes": 3,
+      "max_minutes": 60,
+      "confidence": "contradictory",
+      "url": "https://www.wowhead.com/forever/fr/item=13477/recette-potion-de-mana-excellente#comments",
+      "fr": "Certains indiquent un réapprovisionnement normalement proche de 30–60 min, un autre l'a vue 3 min après l'achat d'une recette différente ; stocks partagés ou imprévisibles.",
+      "en": "Some reports suggest 30–60 min, while one saw it 3 min after buying a different recipe; possibly linked inventory slots and uncertain timing."
     }
   ]
 }
