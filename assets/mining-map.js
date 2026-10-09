@@ -14,6 +14,7 @@ function setViewMode(mode){
   viewMode=mode;
   viewPoints.classList.toggle("active",mode==="points");
   viewZones.classList.toggle("active",mode==="zones");
+  canvas.style.cursor=mode==="zones"?"zoom-in":"crosshair";
   viewPoints.setAttribute("aria-pressed",String(mode==="points"));
   viewZones.setAttribute("aria-pressed",String(mode==="zones"));
   document.getElementById("mine-mode-help").textContent=mode==="zones"
@@ -54,6 +55,16 @@ function drawProspectingAreas(){
     ctx.fillStyle="#d6a15d";ctx.globalAlpha=.12;ctx.fill();
     ctx.strokeStyle="#f0c47c";ctx.globalAlpha=.82;ctx.lineWidth=Math.min(3.4,1.7+zoom*.3);ctx.stroke();
     ctx.globalAlpha=1;
+    const label=area.points.length+" positions";
+    const labelPosition=project(area.x,area.y);
+    const width=Math.min(112,Math.max(68,label.length*7+14));
+    if(labelPosition.x>=-width&&labelPosition.x<=W+width&&labelPosition.y>=-15&&labelPosition.y<=H+15){
+      const lx=labelPosition.x-width/2,ly=labelPosition.y-10;
+      ctx.fillStyle="#121a19dc";ctx.fillRect(lx,ly,width,21);
+      ctx.font="bold 12px system-ui";ctx.fillStyle="#f8e1b8";
+      ctx.textAlign="center";ctx.fillText(label,labelPosition.x,labelPosition.y+4);
+      ctx.textAlign="start";
+    }
   }
 }
 const mineralIcons=Object.create(null);
