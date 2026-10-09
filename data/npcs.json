@@ -3,7 +3,7 @@
   "updated_at": "2026-10-09",
   "status": "classic_reference_not_forever_verified",
   "coordinate_system": "zone_percent_0_100_classic_reference",
-  "stock_status": "not_live",
+  "stock_status": "classic_reference_not_live",
   "disclaimer": {
     "fr": "Références Classic, non vérifiées sur WoW Forever. Stocks et délais estimés à partir d'anciens témoignages ; aucun inventaire en temps réel.",
     "en": "Classic references not verified for WoW Forever. Stock and waits are historical reports, not live inventory."
@@ -18,9 +18,75 @@
     "blacksmithing_vendor": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
     "leatherworking_vendor": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
     "tailoring_vendor": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
-    "cooking_vendor": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic"
+    "cooking_vendor": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+    "engineering_parts": "https://wowseer.gg/items/Gyrochronatom_4389",
+    "bronze_tube": "https://wowseer.gg/items/Bronze_Tube_4371"
   },
   "items": {
+    "4357": {
+      "id": 4357,
+      "name": {
+        "en": "Rough Blasting Powder",
+        "fr": "Poudre d'explosion basique"
+      },
+      "profession": "Ingénierie",
+      "skill": 0,
+      "supply": "limited",
+      "kind": "component",
+      "icon": "inv_misc_dust_01",
+      "icon_status": "wowhead_icon_verified",
+      "vendor_stock": 4,
+      "vendor_price_copper": 16,
+      "source": "https://www.wowhead.com/classic/item=4357"
+    },
+    "4361": {
+      "id": 4361,
+      "name": {
+        "en": "Copper Tube",
+        "fr": "Tube en cuivre"
+      },
+      "profession": "Ingénierie",
+      "skill": 0,
+      "supply": "limited",
+      "kind": "component",
+      "icon": "inv_gizmo_pipe_02",
+      "icon_status": "wowhead_icon_verified",
+      "vendor_stock": 2,
+      "vendor_price_copper": 480,
+      "source": "https://www.wowhead.com/classic/item=4361"
+    },
+    "4363": {
+      "id": 4363,
+      "name": {
+        "en": "Copper Modulator",
+        "fr": "Modulateur en cuivre"
+      },
+      "profession": "Ingénierie",
+      "skill": 0,
+      "supply": "limited",
+      "kind": "component",
+      "icon": "inv_gizmo_03",
+      "icon_status": "wowhead_icon_verified",
+      "vendor_stock": 2,
+      "vendor_price_copper": 200,
+      "source": "https://www.wowhead.com/classic/item=4363"
+    },
+    "4364": {
+      "id": 4364,
+      "name": {
+        "en": "Coarse Blasting Powder",
+        "fr": "Poudre d'explosion grossière"
+      },
+      "profession": "Ingénierie",
+      "skill": 0,
+      "supply": "limited",
+      "kind": "component",
+      "icon": "inv_misc_dust_02",
+      "icon_status": "wowhead_icon_verified",
+      "vendor_stock": 4,
+      "vendor_price_copper": 48,
+      "source": "https://www.wowhead.com/classic/item=4364"
+    },
     "4371": {
       "id": 4371,
       "name": {
@@ -29,7 +95,104 @@
       },
       "profession": "Ingénierie",
       "skill": 0,
-      "supply": "limited"
+      "supply": "limited",
+      "kind": "component",
+      "icon": "inv_gizmo_pipe_01",
+      "icon_status": "wowhead_icon_verified",
+      "vendor_stock": 2,
+      "vendor_price_copper": 800,
+      "search_aliases": [
+        "bronze tube",
+        "tube bronze",
+        "tuyau bronze"
+      ],
+      "source": "https://www.wowhead.com/classic/item=4371"
+    },
+    "4382": {
+      "id": 4382,
+      "name": {
+        "en": "Bronze Framework",
+        "fr": "Structure en bronze"
+      },
+      "profession": "Ingénierie",
+      "skill": 0,
+      "supply": "limited",
+      "kind": "component",
+      "icon": "inv_gizmo_bronzeframework_01",
+      "icon_status": "wowhead_icon_verified",
+      "vendor_stock": 1,
+      "vendor_price_copper": 2400,
+      "source": "https://www.wowhead.com/classic/item=4382"
+    },
+    "4389": {
+      "id": 4389,
+      "name": {
+        "en": "Gyrochronatom",
+        "fr": "Gyrochronatome"
+      },
+      "profession": "Ingénierie",
+      "skill": 0,
+      "supply": "limited",
+      "kind": "component",
+      "icon": "inv_misc_pocketwatch_02",
+      "icon_status": "wowhead_icon_verified",
+      "vendor_stock": 1,
+      "vendor_price_copper": 3000,
+      "source": "https://www.wowhead.com/classic/item=4389",
+      "search_aliases": [
+        "gyrochonatome",
+        "gyrochonatom",
+        "gyrochronatom",
+        "gyro"
+      ]
+    },
+    "4399": {
+      "id": 4399,
+      "name": {
+        "en": "Wooden Stock",
+        "fr": "Crosse en bois"
+      },
+      "profession": "Ingénierie",
+      "skill": 0,
+      "supply": "unlimited",
+      "kind": "component",
+      "icon": "inv_mace_11",
+      "icon_status": "wowhead_icon_verified",
+      "vendor_stock": null,
+      "vendor_price_copper": 200,
+      "source": "https://www.wowhead.com/classic/item=4399"
+    },
+    "4400": {
+      "id": 4400,
+      "name": {
+        "en": "Heavy Stock",
+        "fr": "Crosse lourde"
+      },
+      "profession": "Ingénierie",
+      "skill": 0,
+      "supply": "unlimited",
+      "kind": "component",
+      "icon": "inv_mace_11",
+      "icon_status": "wowhead_icon_verified",
+      "vendor_stock": null,
+      "vendor_price_copper": 2000,
+      "source": "https://www.wowhead.com/classic/item=4400"
+    },
+    "4404": {
+      "id": 4404,
+      "name": {
+        "en": "Silver Contact",
+        "fr": "Contact en argent"
+      },
+      "profession": "Ingénierie",
+      "skill": 0,
+      "supply": "limited",
+      "kind": "component",
+      "icon": "inv_ingot_04",
+      "icon_status": "wowhead_icon_verified",
+      "vendor_stock": 3,
+      "vendor_price_copper": 100,
+      "source": "https://www.wowhead.com/classic/item=4404"
     },
     "5640": {
       "id": 5640,
@@ -40,7 +203,10 @@
       "profession": "Alchimie",
       "skill": 60,
       "supply": "limited",
-      "source": "https://www.wowhead.com/classic/item=5640/recipe-rage-potion"
+      "source": "https://www.wowhead.com/classic/item=5640/recipe-rage-potion",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "5642": {
       "id": 5642,
@@ -50,7 +216,10 @@
       },
       "profession": "Alchimie",
       "skill": 150,
-      "supply": "limited"
+      "supply": "limited",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "5643": {
       "id": 5643,
@@ -60,7 +229,10 @@
       },
       "profession": "Alchimie",
       "skill": 175,
-      "supply": "limited"
+      "supply": "limited",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "5772": {
       "id": 5772,
@@ -71,7 +243,10 @@
       "profession": "Couture",
       "skill": 115,
       "supply": "limited",
-      "source": "https://www.wowhead.com/classic/item=5772"
+      "source": "https://www.wowhead.com/classic/item=5772",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "5786": {
       "id": 5786,
@@ -82,7 +257,10 @@
       "profession": "Travail du cuir",
       "skill": 90,
       "supply": "limited",
-      "source": "https://www.wowhead.com/classic/item=5786"
+      "source": "https://www.wowhead.com/classic/item=5786",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "5787": {
       "id": 5787,
@@ -93,7 +271,10 @@
       "profession": "Travail du cuir",
       "skill": 95,
       "supply": "limited",
-      "source": "https://www.wowhead.com/classic/item=5787"
+      "source": "https://www.wowhead.com/classic/item=5787",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "6053": {
       "id": 6053,
@@ -103,7 +284,10 @@
       },
       "profession": "Alchimie",
       "skill": 100,
-      "supply": "limited"
+      "supply": "limited",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "6054": {
       "id": 6054,
@@ -113,7 +297,10 @@
       },
       "profession": "Alchimie",
       "skill": 135,
-      "supply": "limited"
+      "supply": "limited",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "6055": {
       "id": 6055,
@@ -123,7 +310,10 @@
       },
       "profession": "Alchimie",
       "skill": 165,
-      "supply": "limited"
+      "supply": "limited",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "6056": {
       "id": 6056,
@@ -133,7 +323,10 @@
       },
       "profession": "Alchimie",
       "skill": 190,
-      "supply": "limited"
+      "supply": "limited",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "6057": {
       "id": 6057,
@@ -143,7 +336,10 @@
       },
       "profession": "Alchimie",
       "skill": 190,
-      "supply": "limited"
+      "supply": "limited",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "6068": {
       "id": 6068,
@@ -153,7 +349,10 @@
       },
       "profession": "Alchimie",
       "skill": 165,
-      "supply": "limited"
+      "supply": "limited",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "6270": {
       "id": 6270,
@@ -164,7 +363,10 @@
       "profession": "Couture",
       "skill": 55,
       "supply": "limited",
-      "source": "https://www.wowhead.com/classic/item=6270"
+      "source": "https://www.wowhead.com/classic/item=6270",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "6272": {
       "id": 6272,
@@ -174,7 +376,10 @@
       },
       "profession": "Couture",
       "skill": 70,
-      "supply": "limited"
+      "supply": "limited",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "6274": {
       "id": 6274,
@@ -185,7 +390,10 @@
       "profession": "Couture",
       "skill": 100,
       "supply": "limited",
-      "source": "https://www.wowhead.com/classic/item=6274"
+      "source": "https://www.wowhead.com/classic/item=6274",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "6275": {
       "id": 6275,
@@ -196,7 +404,10 @@
       "profession": "Couture",
       "skill": 115,
       "supply": "limited",
-      "source": "https://www.wowhead.com/classic/item=6275"
+      "source": "https://www.wowhead.com/classic/item=6275",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "6325": {
       "id": 6325,
@@ -207,7 +418,10 @@
       "profession": "Cuisine",
       "skill": 1,
       "supply": "unlimited",
-      "source": "https://www.wowhead.com/classic/item=6325"
+      "source": "https://www.wowhead.com/classic/item=6325",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "6328": {
       "id": 6328,
@@ -218,7 +432,10 @@
       "profession": "Cuisine",
       "skill": 50,
       "supply": "unlimited",
-      "source": "https://www.wowhead.com/classic/item=6328"
+      "source": "https://www.wowhead.com/classic/item=6328",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "6330": {
       "id": 6330,
@@ -229,7 +446,10 @@
       "profession": "Cuisine",
       "skill": 100,
       "supply": "unlimited",
-      "source": "https://www.wowhead.com/classic/item=6330"
+      "source": "https://www.wowhead.com/classic/item=6330",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "6368": {
       "id": 6368,
@@ -240,7 +460,10 @@
       "profession": "Cuisine",
       "skill": 50,
       "supply": "unlimited",
-      "source": "https://www.wowhead.com/classic/item=6368"
+      "source": "https://www.wowhead.com/classic/item=6368",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "6369": {
       "id": 6369,
@@ -251,7 +474,10 @@
       "profession": "Cuisine",
       "skill": 175,
       "supply": "unlimited",
-      "source": "https://www.wowhead.com/classic/item=6369"
+      "source": "https://www.wowhead.com/classic/item=6369",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "6474": {
       "id": 6474,
@@ -262,7 +488,10 @@
       "profession": "Travail du cuir",
       "skill": 90,
       "supply": "limited",
-      "source": "https://www.wowhead.com/classic/item=6474"
+      "source": "https://www.wowhead.com/classic/item=6474",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "6475": {
       "id": 6475,
@@ -273,7 +502,10 @@
       "profession": "Travail du cuir",
       "skill": 105,
       "supply": "limited",
-      "source": "https://www.wowhead.com/classic/item=6475"
+      "source": "https://www.wowhead.com/classic/item=6475",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "7451": {
       "id": 7451,
@@ -284,7 +516,10 @@
       "profession": "Travail du cuir",
       "skill": 190,
       "supply": "limited",
-      "source": "https://www.wowhead.com/classic/item=7451"
+      "source": "https://www.wowhead.com/classic/item=7451",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "7560": {
       "id": 7560,
@@ -294,7 +529,10 @@
       },
       "profession": "Ingénierie",
       "skill": 125,
-      "supply": "limited"
+      "supply": "limited",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "7561": {
       "id": 7561,
@@ -304,7 +542,10 @@
       },
       "profession": "Ingénierie",
       "skill": 165,
-      "supply": "limited"
+      "supply": "limited",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "7742": {
       "id": 7742,
@@ -314,7 +555,10 @@
       },
       "profession": "Ingénierie",
       "skill": 200,
-      "supply": "limited"
+      "supply": "limited",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "9301": {
       "id": 9301,
@@ -324,7 +568,10 @@
       },
       "profession": "Alchimie",
       "skill": 250,
-      "supply": "limited"
+      "supply": "limited",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "9302": {
       "id": 9302,
@@ -334,7 +581,10 @@
       },
       "profession": "Alchimie",
       "skill": 245,
-      "supply": "limited"
+      "supply": "limited",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "9303": {
       "id": 9303,
@@ -344,7 +594,10 @@
       },
       "profession": "Alchimie",
       "skill": 225,
-      "supply": "unlimited"
+      "supply": "unlimited",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "9304": {
       "id": 9304,
@@ -354,7 +607,10 @@
       },
       "profession": "Alchimie",
       "skill": 225,
-      "supply": "unlimited"
+      "supply": "unlimited",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "9305": {
       "id": 9305,
@@ -364,7 +620,10 @@
       },
       "profession": "Alchimie",
       "skill": 225,
-      "supply": "limited"
+      "supply": "limited",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "10311": {
       "id": 10311,
@@ -375,7 +634,10 @@
       "profession": "Couture",
       "skill": 220,
       "supply": "limited",
-      "source": "https://www.wowhead.com/classic/item=10311"
+      "source": "https://www.wowhead.com/classic/item=10311",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "10314": {
       "id": 10314,
@@ -386,7 +648,10 @@
       "profession": "Couture",
       "skill": 230,
       "supply": "limited",
-      "source": "https://www.wowhead.com/classic/item=10314"
+      "source": "https://www.wowhead.com/classic/item=10314",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "10317": {
       "id": 10317,
@@ -397,7 +662,24 @@
       "profession": "Couture",
       "skill": 235,
       "supply": "limited",
-      "source": "https://www.wowhead.com/classic/item=10317"
+      "source": "https://www.wowhead.com/classic/item=10317",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
+    },
+    "10609": {
+      "id": 10609,
+      "name": {
+        "en": "Schematic: Mithril Mechanical Dragonling",
+        "fr": "Schéma : Petit dragon mécanique en mithril"
+      },
+      "profession": "Ingénierie",
+      "skill": 250,
+      "supply": "limited",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=10609"
     },
     "10858": {
       "id": 10858,
@@ -408,7 +690,10 @@
       "profession": "Forge",
       "skill": 155,
       "supply": "limited",
-      "source": "https://www.wowhead.com/classic/item=10858"
+      "source": "https://www.wowhead.com/classic/item=10858",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "12162": {
       "id": 12162,
@@ -419,7 +704,10 @@
       "profession": "Forge",
       "skill": 160,
       "supply": "limited",
-      "source": "https://www.wowhead.com/classic/item=12162"
+      "source": "https://www.wowhead.com/classic/item=12162",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "12164": {
       "id": 12164,
@@ -430,7 +718,10 @@
       "profession": "Forge",
       "skill": 185,
       "supply": "limited",
-      "source": "https://www.wowhead.com/classic/item=12164"
+      "source": "https://www.wowhead.com/classic/item=12164",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "12229": {
       "id": 12229,
@@ -441,7 +732,10 @@
       "profession": "Cuisine",
       "skill": 175,
       "supply": "unlimited",
-      "source": "https://www.wowhead.com/classic/item=12229"
+      "source": "https://www.wowhead.com/classic/item=12229",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "12239": {
       "id": 12239,
@@ -452,7 +746,10 @@
       "profession": "Cuisine",
       "skill": 200,
       "supply": "unlimited",
-      "source": "https://www.wowhead.com/classic/item=12239"
+      "source": "https://www.wowhead.com/classic/item=12239",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "12958": {
       "id": 12958,
@@ -462,7 +759,10 @@
       },
       "profession": "Alchimie",
       "skill": 275,
-      "supply": "unlimited"
+      "supply": "unlimited",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "13308": {
       "id": 13308,
@@ -472,7 +772,10 @@
       },
       "profession": "Ingénierie",
       "skill": 155,
-      "supply": "limited"
+      "supply": "limited",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "13309": {
       "id": 13309,
@@ -482,7 +785,10 @@
       },
       "profession": "Ingénierie",
       "skill": 120,
-      "supply": "limited"
+      "supply": "limited",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "13310": {
       "id": 13310,
@@ -492,7 +798,10 @@
       },
       "profession": "Ingénierie",
       "skill": 180,
-      "supply": "limited"
+      "supply": "limited",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "13477": {
       "id": 13477,
@@ -502,7 +811,10 @@
       },
       "profession": "Alchimie",
       "skill": 260,
-      "supply": "limited"
+      "supply": "limited",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "13478": {
       "id": 13478,
@@ -512,7 +824,10 @@
       },
       "profession": "Alchimie",
       "skill": 265,
-      "supply": "limited"
+      "supply": "limited",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "13480": {
       "id": 13480,
@@ -522,7 +837,10 @@
       },
       "profession": "Alchimie",
       "skill": 275,
-      "supply": "limited"
+      "supply": "limited",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "13501": {
       "id": 13501,
@@ -532,7 +850,10 @@
       },
       "profession": "Alchimie",
       "skill": 295,
-      "supply": "unlimited"
+      "supply": "unlimited",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "13939": {
       "id": 13939,
@@ -543,7 +864,10 @@
       "profession": "Cuisine",
       "skill": 225,
       "supply": "unlimited",
-      "source": "https://www.wowhead.com/classic/item=13939"
+      "source": "https://www.wowhead.com/classic/item=13939",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "13942": {
       "id": 13942,
@@ -554,7 +878,10 @@
       "profession": "Cuisine",
       "skill": 240,
       "supply": "unlimited",
-      "source": "https://www.wowhead.com/classic/item=13942"
+      "source": "https://www.wowhead.com/classic/item=13942",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "13945": {
       "id": 13945,
@@ -565,7 +892,10 @@
       "profession": "Cuisine",
       "skill": 250,
       "supply": "unlimited",
-      "source": "https://www.wowhead.com/classic/item=13945"
+      "source": "https://www.wowhead.com/classic/item=13945",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "13946": {
       "id": 13946,
@@ -576,7 +906,10 @@
       "profession": "Cuisine",
       "skill": 250,
       "supply": "unlimited",
-      "source": "https://www.wowhead.com/classic/item=13946"
+      "source": "https://www.wowhead.com/classic/item=13946",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "13947": {
       "id": 13947,
@@ -587,7 +920,10 @@
       "profession": "Cuisine",
       "skill": 275,
       "supply": "unlimited",
-      "source": "https://www.wowhead.com/classic/item=13947"
+      "source": "https://www.wowhead.com/classic/item=13947",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "13948": {
       "id": 13948,
@@ -598,7 +934,10 @@
       "profession": "Cuisine",
       "skill": 275,
       "supply": "unlimited",
-      "source": "https://www.wowhead.com/classic/item=13948"
+      "source": "https://www.wowhead.com/classic/item=13948",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "13949": {
       "id": 13949,
@@ -609,7 +948,10 @@
       "profession": "Cuisine",
       "skill": 275,
       "supply": "unlimited",
-      "source": "https://www.wowhead.com/classic/item=13949"
+      "source": "https://www.wowhead.com/classic/item=13949",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "14468": {
       "id": 14468,
@@ -619,7 +961,10 @@
       },
       "profession": "Couture",
       "skill": 260,
-      "supply": "limited"
+      "supply": "limited",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "14481": {
       "id": 14481,
@@ -629,7 +974,10 @@
       },
       "profession": "Couture",
       "skill": 275,
-      "supply": "limited"
+      "supply": "limited",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "14526": {
       "id": 14526,
@@ -639,7 +987,10 @@
       },
       "profession": "Couture",
       "skill": 250,
-      "supply": "unlimited"
+      "supply": "unlimited",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "14634": {
       "id": 14634,
@@ -649,7 +1000,24 @@
       },
       "profession": "Alchimie",
       "skill": 200,
-      "supply": "limited"
+      "supply": "limited",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
+    },
+    "14639": {
+      "id": 14639,
+      "name": {
+        "en": "Schematic: Minor Recombobulator",
+        "fr": "Schéma : Recombobulateur mineur"
+      },
+      "profession": "Ingénierie",
+      "skill": 140,
+      "supply": "limited",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=14639"
     },
     "16072": {
       "id": 16072,
@@ -660,7 +1028,10 @@
       "profession": "Cuisine",
       "skill": 125,
       "supply": "unlimited",
-      "source": "https://www.wowhead.com/classic/item=16072"
+      "source": "https://www.wowhead.com/classic/item=16072",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "16110": {
       "id": 16110,
@@ -671,7 +1042,10 @@
       "profession": "Cuisine",
       "skill": 225,
       "supply": "unlimited",
-      "source": "https://www.wowhead.com/classic/item=16110"
+      "source": "https://www.wowhead.com/classic/item=16110",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "16221": {
       "id": 16221,
@@ -681,7 +1055,10 @@
       },
       "profession": "Enchantement",
       "skill": 275,
-      "supply": "limited"
+      "supply": "limited",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "16767": {
       "id": 16767,
@@ -692,7 +1069,10 @@
       "profession": "Cuisine",
       "skill": 225,
       "supply": "limited",
-      "source": "https://www.wowhead.com/classic/item=16767"
+      "source": "https://www.wowhead.com/classic/item=16767",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "17062": {
       "id": 17062,
@@ -703,7 +1083,24 @@
       "profession": "Cuisine",
       "skill": 175,
       "supply": "unlimited",
-      "source": "https://www.wowhead.com/classic/item=17062"
+      "source": "https://www.wowhead.com/classic/item=17062",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
+    },
+    "18647": {
+      "id": 18647,
+      "name": {
+        "en": "Schematic: Red Firework",
+        "fr": "Schéma : Fusée rouge"
+      },
+      "profession": "Ingénierie",
+      "skill": 150,
+      "supply": "limited",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=18647"
     },
     "18648": {
       "id": 18648,
@@ -713,7 +1110,24 @@
       },
       "profession": "Ingénierie",
       "skill": 150,
-      "supply": "limited"
+      "supply": "limited",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
+    },
+    "18649": {
+      "id": 18649,
+      "name": {
+        "en": "Schematic: Blue Firework",
+        "fr": "Schéma : Fusée bleue"
+      },
+      "profession": "Ingénierie",
+      "skill": 150,
+      "supply": "limited",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=18649"
     },
     "18651": {
       "id": 18651,
@@ -723,7 +1137,10 @@
       },
       "profession": "Ingénierie",
       "skill": 260,
-      "supply": "limited"
+      "supply": "limited",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "18731": {
       "id": 18731,
@@ -734,7 +1151,10 @@
       "profession": "Travail du cuir",
       "skill": 150,
       "supply": "limited",
-      "source": "https://www.wowhead.com/classic/item=18731"
+      "source": "https://www.wowhead.com/classic/item=18731",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "18949": {
       "id": 18949,
@@ -745,7 +1165,10 @@
       "profession": "Travail du cuir",
       "skill": 155,
       "supply": "limited",
-      "source": "https://www.wowhead.com/classic/item=18949"
+      "source": "https://www.wowhead.com/classic/item=18949",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "21099": {
       "id": 21099,
@@ -756,7 +1179,10 @@
       "profession": "Cuisine",
       "skill": 80,
       "supply": "unlimited",
-      "source": "https://www.wowhead.com/classic/item=21099"
+      "source": "https://www.wowhead.com/classic/item=21099",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "21219": {
       "id": 21219,
@@ -767,7 +1193,10 @@
       "profession": "Cuisine",
       "skill": 175,
       "supply": "unlimited",
-      "source": "https://www.wowhead.com/classic/item=21219"
+      "source": "https://www.wowhead.com/classic/item=21219",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "22308": {
       "id": 22308,
@@ -777,7 +1206,10 @@
       },
       "profession": "Couture",
       "skill": 275,
-      "supply": "unlimited"
+      "supply": "unlimited",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "22310": {
       "id": 22310,
@@ -787,7 +1219,10 @@
       },
       "profession": "Couture",
       "skill": 275,
-      "supply": "reputation"
+      "supply": "reputation",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "22312": {
       "id": 22312,
@@ -797,7 +1232,10 @@
       },
       "profession": "Couture",
       "skill": 300,
-      "supply": "reputation"
+      "supply": "reputation",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "22683": {
       "id": 22683,
@@ -807,7 +1245,10 @@
       },
       "profession": "Couture",
       "skill": 300,
-      "supply": "reputation"
+      "supply": "reputation",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "22772": {
       "id": 22772,
@@ -817,7 +1258,10 @@
       },
       "profession": "Couture",
       "skill": 300,
-      "supply": "reputation"
+      "supply": "reputation",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "22773": {
       "id": 22773,
@@ -827,7 +1271,10 @@
       },
       "profession": "Couture",
       "skill": 300,
-      "supply": "reputation"
+      "supply": "reputation",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     },
     "22774": {
       "id": 22774,
@@ -837,7 +1284,10 @@
       },
       "profession": "Couture",
       "skill": 300,
-      "supply": "reputation"
+      "supply": "reputation",
+      "kind": "recipe",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback"
     }
   },
   "npcs": [
@@ -1387,7 +1837,18 @@
       },
       "faction": "neutral",
       "offers": [
-        "18648"
+        "18648",
+        "4389",
+        "4371",
+        "4382",
+        "4361",
+        "4363",
+        "4357",
+        "4364",
+        "4404",
+        "4399",
+        "4400",
+        "14639"
       ],
       "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic",
       "note": "Cabestan",
@@ -1457,7 +1918,17 @@
       "faction": "neutral",
       "offers": [
         "13309",
-        "7560"
+        "7560",
+        "4389",
+        "4371",
+        "4382",
+        "4361",
+        "4363",
+        "4357",
+        "4364",
+        "4404",
+        "4399",
+        "4400"
       ],
       "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic",
       "note": "Piste des Mirages",
@@ -1480,7 +1951,17 @@
       },
       "faction": "neutral",
       "offers": [
-        "13308"
+        "13308",
+        "4389",
+        "4371",
+        "4382",
+        "4361",
+        "4363",
+        "4357",
+        "4364",
+        "4404",
+        "4399",
+        "4400"
       ],
       "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic",
       "note": "Cage au nord",
@@ -1554,7 +2035,17 @@
       "faction": "neutral",
       "offers": [
         "13310",
-        "18651"
+        "18651",
+        "4389",
+        "4371",
+        "4382",
+        "4361",
+        "4363",
+        "4357",
+        "4364",
+        "4404",
+        "4399",
+        "4400"
       ],
       "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic",
       "note": "Baie-du-Butin",
@@ -2045,7 +2536,16 @@
       },
       "faction": "alliance",
       "offers": [
-        "4371"
+        "4371",
+        "4389",
+        "4382",
+        "4361",
+        "4363",
+        "4357",
+        "4364",
+        "4404",
+        "4399",
+        "4400"
       ],
       "source": "https://www.wowhead.com/forever/npc=3133/herble-baubbletump#comments",
       "note": "Sombre-Comté · Près du maître ingénieur",
@@ -2959,6 +3459,362 @@
       "note": "Theramore",
       "note_en": "Theramore",
       "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "id": 1448,
+      "name": "Neal Allen",
+      "role": "merchant",
+      "profession": "Ingénierie",
+      "zone": {
+        "id": "wetlands",
+        "fr": "Les Paluns",
+        "en": "Wetlands"
+      },
+      "coordinates": {
+        "x": 10,
+        "y": 56
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "alliance",
+      "offers": [
+        "4389",
+        "4371",
+        "4382",
+        "4361",
+        "4363",
+        "4357",
+        "4364",
+        "4404",
+        "4399",
+        "4400"
+      ],
+      "note": "Port de Menethil, fort (pré-Cataclysme)",
+      "note_en": "Menethil keep (pre-Cataclysm)",
+      "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic"
+    },
+    {
+      "id": 2682,
+      "name": "Fradd Swiftgear",
+      "role": "merchant",
+      "profession": "Ingénierie",
+      "zone": {
+        "id": "wetlands",
+        "fr": "Les Paluns",
+        "en": "Wetlands"
+      },
+      "coordinates": {
+        "x": 26.4,
+        "y": 25.8
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "alliance",
+      "offers": [
+        "4389",
+        "4371",
+        "4382",
+        "4361",
+        "4363",
+        "4357",
+        "4364",
+        "4404",
+        "4399",
+        "4400",
+        "14639"
+      ],
+      "note": "Poste de Swiftgear",
+      "note_en": "Swiftgear Station",
+      "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic"
+    },
+    {
+      "id": 3413,
+      "name": "Sovik",
+      "role": "merchant",
+      "profession": "Ingénierie",
+      "zone": {
+        "id": "orgrimmar",
+        "fr": "Orgrimmar",
+        "en": "Orgrimmar"
+      },
+      "coordinates": {
+        "x": 75.6,
+        "y": 25.2
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "horde",
+      "offers": [
+        "4389",
+        "4371",
+        "4382",
+        "4361",
+        "4363",
+        "4357",
+        "4364",
+        "4404",
+        "4399",
+        "4400",
+        "18647"
+      ],
+      "note": "Vallée de l'Honneur",
+      "note_en": "Valley of Honor",
+      "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic"
+    },
+    {
+      "id": 954,
+      "name": "Gearcutter Cogspinner",
+      "role": "merchant",
+      "profession": "Ingénierie",
+      "zone": {
+        "id": "ironforge",
+        "fr": "Forgefer",
+        "en": "Ironforge"
+      },
+      "coordinates": {
+        "x": 68.2,
+        "y": 44.2
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "alliance",
+      "offers": [
+        "4389",
+        "4371",
+        "4382",
+        "4361",
+        "4363",
+        "4357",
+        "4364",
+        "4404",
+        "4399",
+        "4400",
+        "18649"
+      ],
+      "note": "Brikabrok",
+      "note_en": "Tinker Town",
+      "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic"
+    },
+    {
+      "id": 5519,
+      "name": "Billibub Cogspinner",
+      "role": "merchant",
+      "profession": "Ingénierie",
+      "zone": {
+        "id": "stormwind",
+        "fr": "Hurlevent",
+        "en": "Stormwind"
+      },
+      "coordinates": {
+        "x": 62.5,
+        "y": 30.5
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "alliance",
+      "offers": [
+        "4389",
+        "4371",
+        "4382",
+        "4361",
+        "4363",
+        "4357",
+        "4364",
+        "4404",
+        "4399",
+        "4400"
+      ],
+      "note": "Quartier des Nains (approximatif)",
+      "note_en": "Dwarven District (approximate)",
+      "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic"
+    },
+    {
+      "id": 1694,
+      "name": "Loslor Rudge",
+      "role": "merchant",
+      "profession": "Ingénierie",
+      "zone": {
+        "id": "dun-morogh",
+        "fr": "Dun Morogh",
+        "en": "Dun Morogh"
+      },
+      "coordinates": {
+        "x": 46.8,
+        "y": 52.2
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "alliance",
+      "offers": [
+        "4389",
+        "4371",
+        "4382",
+        "4361",
+        "4363",
+        "4357",
+        "4364",
+        "4404",
+        "4399",
+        "4400"
+      ],
+      "note": "Kharanos (approximatif)",
+      "note_en": "Kharanos (approximate)",
+      "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic"
+    },
+    {
+      "id": 2687,
+      "name": "Gnaz Blunderflame",
+      "role": "merchant",
+      "profession": "Ingénierie",
+      "zone": {
+        "id": "stranglethorn",
+        "fr": "Vallée de Strangleronce",
+        "en": "Stranglethorn Vale"
+      },
+      "coordinates": {
+        "x": 51,
+        "y": 35.2
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "neutral",
+      "offers": [
+        "4389",
+        "4371",
+        "4382",
+        "4361",
+        "4363",
+        "4357",
+        "4364",
+        "4404",
+        "4399",
+        "4400"
+      ],
+      "note": "Camp caché sur les hauteurs",
+      "note_en": "Hidden camp on the ridge",
+      "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic"
+    },
+    {
+      "id": 2689,
+      "name": "Knaz Blunderflame",
+      "role": "merchant",
+      "profession": "Ingénierie",
+      "zone": {
+        "id": "stranglethorn",
+        "fr": "Vallée de Strangleronce",
+        "en": "Stranglethorn Vale"
+      },
+      "coordinates": {
+        "x": 51,
+        "y": 35.2
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "neutral",
+      "offers": [
+        "4389",
+        "4371",
+        "4382",
+        "4361",
+        "4363",
+        "4357",
+        "4364",
+        "4404",
+        "4399",
+        "4400"
+      ],
+      "note": "Avec Gnaz sur les hauteurs",
+      "note_en": "With Gnaz on the ridge",
+      "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic"
+    },
+    {
+      "id": 2688,
+      "name": "Ruppo Zipcoil",
+      "role": "merchant",
+      "profession": "Ingénierie",
+      "zone": {
+        "id": "hinterlands",
+        "fr": "Les Hinterlands",
+        "en": "The Hinterlands"
+      },
+      "coordinates": {
+        "x": 34.3,
+        "y": 37.8
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "neutral",
+      "offers": [
+        "4389",
+        "4371",
+        "4382",
+        "4361",
+        "4363",
+        "4357",
+        "4364",
+        "4404",
+        "4399",
+        "4400",
+        "10609"
+      ],
+      "note": "Atelier dans les collines",
+      "note_en": "Workshop in the hills",
+      "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic"
+    },
+    {
+      "id": 11185,
+      "name": "Xizzer Fizzbolt",
+      "role": "merchant",
+      "profession": "Ingénierie",
+      "zone": {
+        "id": "winterspring",
+        "fr": "Berceau-de-l'Hiver",
+        "en": "Winterspring"
+      },
+      "coordinates": {
+        "x": 60.8,
+        "y": 38.6
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "neutral",
+      "offers": [
+        "4389",
+        "4371",
+        "4382",
+        "4361",
+        "4363",
+        "4357",
+        "4364",
+        "4404",
+        "4399",
+        "4400"
+      ],
+      "note": "Long-guet",
+      "note_en": "Everlook",
+      "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic"
+    },
+    {
+      "id": 8678,
+      "name": "Jubie Gadgetspring",
+      "role": "merchant",
+      "profession": "Ingénierie",
+      "zone": {
+        "id": "azshara",
+        "fr": "Azshara",
+        "en": "Azshara"
+      },
+      "coordinates": {
+        "x": 45.3,
+        "y": 91
+      },
+      "coordinate_status": "classic_reference_unverified",
+      "faction": "neutral",
+      "offers": [
+        "4389",
+        "4371",
+        "4382",
+        "4361",
+        "4363",
+        "4357",
+        "4364",
+        "4404",
+        "4399",
+        "4400"
+      ],
+      "note": "Côte sud",
+      "note_en": "Southern coast",
+      "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic"
     }
   ],
   "evidence": [
@@ -3164,6 +4020,68 @@
       "url": "https://www.wowhead.com/classic/item=6270/pattern-blue-linen-vest#comments",
       "fr": "Des témoignages de versions différentes évoquent des apparitions rapides (10 min) ou des attentes de plus de 2 h. Pas de minuterie fixe connue.",
       "en": "Mixed-version comments report short intervals (10 min) or waits exceeding 2 hours. No reliable fixed timer."
+    },
+    {
+      "vendor_name": "Billibub Cogspinner",
+      "item": "4389",
+      "kind": "observed_wait",
+      "confidence": "low",
+      "url": "https://www.wowhead.com/classic/fr/item=4389/gyrochronatome#comments",
+      "fr": "Plusieurs commentaires signalent une apparition après environ 20–30 min ; pas de cycle fixe démontré.",
+      "en": "Several commenters report sightings after around 20–30 minutes; no guaranteed cycle.",
+      "min_minutes": 20,
+      "max_minutes": 30
+    },
+    {
+      "vendor_name": "Sovik",
+      "item": "4389",
+      "kind": "observed_wait",
+      "confidence": "contradictory",
+      "url": "https://www.wowhead.com/tbc/fr/item=4389/gyrochronatome#comments",
+      "fr": "Stock changeant environ chaque heure chez un joueur, mais un autre a attendu 5 h. Cycle ≠ apparition garantie.",
+      "en": "One player saw hourly stock changes; another waited 5 hours. Rotation is not guaranteed availability.",
+      "min_minutes": 60,
+      "max_minutes": 300
+    },
+    {
+      "vendor_name": "Ruppo Zipcoil",
+      "item": "10609",
+      "kind": "observed_wait",
+      "confidence": "contradictory",
+      "url": "https://www.wowhead.com/classic/npc=2688/ruppo-zipcoil#comments",
+      "fr": "Un joueur dit 3–5 min ; un autre rapporte 16 min pour le schéma. Variations possibles selon la version.",
+      "en": "One player says 3–5 minutes; another 16 minutes for the schematic. Different versions may vary.",
+      "min_minutes": 5,
+      "max_minutes": 16
+    },
+    {
+      "vendor_name": "Gagsprocket",
+      "item": "4389",
+      "kind": "observed_wait",
+      "confidence": "contradictory",
+      "url": "https://www.wowhead.com/tbc/npc=3495/gagsprocket#comments",
+      "fr": "Vente limitée attestée dans les commentaires ; délai exact inconnu, la fourchette reflète une incertitude et non un minuteur.",
+      "en": "Limited-stock sale reported in comments; exact timer unknown and the interval is only a rough observation.",
+      "min_minutes": 10,
+      "max_minutes": 180
+    },
+    {
+      "vendor_name": "Neal Allen",
+      "item": "4371",
+      "kind": "vendor_observation",
+      "confidence": "medium",
+      "url": "https://www.wowhead.com/mop-classic/de/npc=1448/neal-allen#comments",
+      "fr": "La liste de stocks limités mentionne le Tube en bronze et le Gyrochronatome.",
+      "en": "Limited-stock list specifically mentions the Bronze Tube and Gyrochronatom."
+    },
+    {
+      "vendor_name": "Fradd Swiftgear",
+      "item": "4371",
+      "kind": "vendor_observation",
+      "confidence": "medium",
+      "url": "https://www.wowhead.com/npc=2682/fradd-swiftgear#comments",
+      "fr": "Les joueurs confirment la vente, avec rupture de stock possible.",
+      "en": "Players confirm the sale; it may be out of stock."
     }
   ],
   "zone_maps": {
@@ -3403,6 +4321,12 @@
     },
     "badlands": {
       "uiMapID": 1418,
+      "build": "1.60.1.69893",
+      "source": "https://warcraftforever.games/maps",
+      "kind": "forever_beta_zone_map"
+    },
+    "azshara": {
+      "uiMapID": 1447,
       "build": "1.60.1.69893",
       "source": "https://warcraftforever.games/maps",
       "kind": "forever_beta_zone_map"
