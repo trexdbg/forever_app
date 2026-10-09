@@ -46,7 +46,7 @@ function normalizedClassic(i,slot){
 }
 function loadForever(){
  if(!foreverPromise)foreverPromise=Promise.all([
- fetch(BASE+"data/items-forever.json",{credentials:"omit"}).then(r=>{if(!r.ok)throw Error("Forever HTTP "+r.status);return r.json()}).catch(()=>({items:[]})),
+ fetch(BASE+"data/items-forever.json?v=20261009-140",{credentials:"omit"}).then(r=>{if(!r.ok)throw Error("Forever HTTP "+r.status);return r.json()}).catch(()=>({items:[]})),
  fetch(BASE+"data/items-forever-client.json",{credentials:"omit"}).then(r=>{if(!r.ok)throw Error("Forever client HTTP "+r.status);return r.json()}).catch(()=>({items:[]}))
  ]).then(([manual,client])=>{const merged=new Map();for(const i of [...(Array.isArray(client.items)?client.items:[]),...(Array.isArray(manual.items)?manual.items:[])])if(valid(i))merged.set(i.id,{...i,reference:i.reference||"Forever beta client",source_status:i.source_status||"forever_beta_client",verified_forever:false});return [...merged.values()]});
  return foreverPromise;
