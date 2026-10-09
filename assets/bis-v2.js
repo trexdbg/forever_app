@@ -9,7 +9,7 @@ const qcolors={poor:"#9d9d9d",common:"#efeee9",uncommon:"#43bf66",rare:"#4c9df1"
 const left=["head","neck","shoulders","back","chest","wrist","hands"],right=["waist","legs","feet","finger1","finger2","trinket1","trinket2"],weapons=["mainhand","offhand","ranged"];
 let db,chosenClass="guerrier",chosenSpec="0",activeSlot="head",mode="recommended",search="",selectedQualities=new Set(),choices={},owned={};
 let apiState={signature:"",rows:[],cursor:null,hasMore:false,loading:false,error:null,count:null},apiTimer;
-const isForever=i=>i&&i.source_status==="forever_beta_wowhead";
+const isForever=i=>i&&typeof i.source_status==="string"&&i.source_status.startsWith("forever_beta_");
 function loadClassicPage(signature,more=false){
  const source=window.ForeverGearData;if(!source)return;
  apiState.loading=true;
