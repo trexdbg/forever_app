@@ -35,6 +35,13 @@ function choose(p,updateHash=true){
  if(p.highlights?.length){put(chosen,"h4",T("Exemples de nouveautés","Featured examples"));
   const examples=put(chosen,"div",null,"prof-highlights");for(const x of p.highlights)put(examples,"span",x);
  }
+ put(chosen,"h4",T("Paliers de formation","Training tiers"));
+ const levels=put(chosen,"div",null,"prof-training-tiers");
+ for(const row of state.meta.trainer_ranks.rows){
+  const block=put(levels,"div",null,"prof-training-tier");
+  put(block,"strong",row.name[en?"en":"fr"]+" "+row.from+"–"+row.to);
+  put(block,"small",row.min_skill?T("Métier "+row.min_skill+" · Niv. "+row.min_level,"Skill "+row.min_skill+" · Lv. "+row.min_level):T("Accessible dès le début","Available from the start"));
+ }
  const actions=put(chosen,"div",null,"prof-links");
  external(actions,T("Liste à jour ↗","Current list ↗"),p.source);
  const toTrainer=put(actions,"button",T("Localiser les maîtres ↓","Find trainers ↓"),"prof-trainer-jump");toTrainer.type="button";toTrainer.addEventListener("click",()=>{
