@@ -7,7 +7,7 @@
   const en=document.documentElement.lang==="en";
   const T=(fr,english)=>en?english:fr;
   const prefix=en?"/en/":"/";
-  // Interleave mining and NPC maps to make all three atlases visible in the spotlight.
+  // Automatically cycle all three atlases; only previous/next arrows navigate manually.
   const slides=[
     {id:"winterspring",kind:"mining",fr:"Berceau-de-l’Hiver",en:"Winterspring"},
     {id:"orgrimmar",kind:"merchant",fr:"Orgrimmar",en:"Orgrimmar"},
@@ -28,27 +28,12 @@
   const disclaimer=root.querySelector(".atlas-live-disclaimer");
   const mapLabel=root.querySelector(".atlas-live-map-label");
   const number=root.querySelector("[data-atlas-index]");
-  const tabBar=root.querySelector(".atlas-live-tabs");
   const reduced=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)");
   const mapUnavailable=document.createElement("span");
   mapUnavailable.className="atlas-live-map-error";
   mapUnavailable.textContent=T("Carte momentanément indisponible","Map temporarily unavailable");
   mapUnavailable.hidden=true;
   map.append(mapUnavailable);
-  // The static HTML remains a functional mining link without JavaScript.
-  tabBar.replaceChildren();
-  const tabs=slides.map((slide,i)=>{
-    const button=document.createElement("button");
-    button.type="button";
-    button.className="atlas-live-tab";
-    button.dataset.atlasTab=slide.kind+"-"+slide.id;
-    button.dataset.atlasKind=slide.kind;
-    button.textContent=(slide.kind==="merchant"?T("Marchands · ","Vendors · "):slide.kind==="trainer"?T("Maîtres · ","Trainers · "):"")+slide[en?"en":"fr"];
-    button.setAttribute("aria-pressed","false");
-    button.addEventListener("click",()=>show(i,true));
-    tabBar.append(button);
-    return button;
-  });
   let index=0,miningData=null,npcData=null,timer=null,visible=true;
   function setLinkLabel(link,label){
     // Retain the existing arrow span and its styling.
@@ -146,23 +131,15 @@
       image.hidden=true;
       mapUnavailable.hidden=false;
     }
-    tabs.forEach((b,i)=>b.setAttribute("aria-pressed",String(i===index)));
-    if(manual){
-      // Keep the active tab discoverable on narrower screens, without moving the page.
-      const active=tabs[index];
-      if(tabBar.scrollWidth>tabBar.clientWidth){
-        tabBar.scrollTo({left:active.offsetLeft-tabBar.offsetLeft-(tabBar.clientWidth-active.offsetWidth)/2,behavior:reduced?.matches?"instant":"smooth"});
-      }
-      resetTimer();
-    }
+    if(manual)resetTimer();
   }
   function resetTimer(){
     if(timer!==null)window.clearInterval(timer);
     timer=null;
     if(reduced?.matches)return;
     timer=window.setInterval(()=>{
-      if(!document.hidden&&visible&&!root.matches(":hover")&&!root.contains(document.activeElement))show(index+1);
-    },9500);
+      if(!document.hidden&&visible)show(index+1);
+    },6500);
   }
   root.querySelector("[data-atlas-prev]").addEventListener("click",()=>show(index-1,true));
   root.querySelector("[data-atlas-next]").addEventListener("click",()=>show(index+1,true));
