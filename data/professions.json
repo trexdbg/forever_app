@@ -438,5 +438,55 @@
       ],
       "source": "https://wowforevertalents.com/professions/first-aid/"
     }
-  ]
+  ],
+  "trainer_ranks": {
+    "source": "https://www.wow-professions.com/forever/tailoring-trainers",
+    "confidence": "Forever guide reference, not server trainer API",
+    "rows": [
+      {
+        "id": "apprentice",
+        "name": {
+          "fr": "Apprenti",
+          "en": "Apprentice"
+        },
+        "from": 1,
+        "to": 75,
+        "min_skill": 0,
+        "min_level": 1
+      },
+      {
+        "id": "journeyman",
+        "name": {
+          "fr": "Compagnon",
+          "en": "Journeyman"
+        },
+        "from": 75,
+        "to": 150,
+        "min_skill": 50,
+        "min_level": 10
+      },
+      {
+        "id": "expert",
+        "name": {
+          "fr": "Expert",
+          "en": "Expert"
+        },
+        "from": 150,
+        "to": 225,
+        "min_skill": 125,
+        "min_level": 20
+      },
+      {
+        "id": "artisan",
+        "name": {
+          "fr": "Artisan",
+          "en": "Artisan"
+        },
+        "from": 225,
+        "to": 300,
+        "min_skill": 200,
+        "min_level": 35
+      }
+    ]
+  }
 }
