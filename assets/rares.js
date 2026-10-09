@@ -10,6 +10,11 @@ const local=new Set(["azshara","blasted-lands","burning-steppes","epl","searing-
 let db,rows=[],filtered=[],selected=null,zoneId="",img=null,token=0,zoom=1,center=[50,50],pins=[],hover=null,drag=null;
 const search=$("rare-search"),zone=$("rare-zone"),type=$("rare-rank"),level=$("rare-level"),loot=$("rare-loot"),tame=$("rare-tame");
 const zname=id=>db?.zones?.[id]?.[en?"en":"fr"]||id;
+const colors=new Map();
+function buildColors(){colors.clear();const zones=[...new Set(rows.map(r=>r.zone))];for(const z of zones){const list=rows.filter(r=>r.zone===z).sort((a,b)=>a.name.en.localeCompare(b.name.en));list.forEach((r,i)=>{const hue=Math.round((198+i*137.508)%360);colors.set(r.id,`hsl(${hue} 76% 67%)`)})}}
+const markerColor=r=>colors.get(r.id)||"#e0be7e";
+function paintLegend(){const box=$("rare-map-legend");if(!box)return;box.replaceChildren();const groups=filtered.filter(r=>r.zone===zoneId&&r.points.length);for(const r of groups){const b=button(r.name[en?"en":"fr"],"rare-legend-entry"+(r.id===selected?.id?" active":""));const dot=m("i",null,"rare-color-dot");dot.style.backgroundColor=markerColor(r);b.prepend(dot);b.addEventListener("click",()=>choose(r));box.append(b)}if(!groups.length)box.append(m("span",T("Aucun repère pour les filtres choisis","No pins for these filters"),"rare-muted"));}
+
 const time=n=>n==null?"?":n<1?fmt(n*60)+" min":fmt(n)+" h";
 const respawn=r=>r.respawn_min_hours==null?T("Inconnu","Unknown"):time(r.respawn_min_hours)+(r.respawn_min_hours===r.respawn_max_hours?"":" – "+time(r.respawn_max_hours));
 const chip=(label,kind="")=>m("span",label,"rare-chip "+kind);
@@ -26,24 +31,25 @@ const box=$("rare-results");box.replaceChildren();$("rare-count").textContent=fi
 if(!filtered.length)box.append(m("p",T("Aucun résultat.","No results."),"rare-empty"));
 for(const r of filtered){
  const b=button(null,"rare-row"+(selected?.id===r.id?" active":""));b.setAttribute("role","option");b.setAttribute("aria-selected",String(r.id===selected?.id));
- const a=m("div",null,"rare-row-name");a.append(m("strong",r.name[en?"en":"fr"]));a.append(m("b",r.level,"rare-lvl"));b.append(a);
+ const a=m("div",null,"rare-row-name");const dot=m("i",null,"rare-color-dot");dot.style.backgroundColor=markerColor(r);dot.title=T("Couleur de ce monstre sur la carte","Creature color on the map");a.append(dot);a.append(m("strong",r.name[en?"en":"fr"]));a.append(m("b",r.level,"rare-lvl"));b.append(a);
  b.append(m("span",zname(r.zone),"rare-zone-name"));
  const meta=m("span",null,"rare-row-meta");meta.append(m("span",respawn(r)));
  if(r.loot.length)meta.append(chip(r.loot.length+" "+T("butin(s)","loot"),"purple"));
  if(r.tameable)meta.append(chip(T("Apprivoisable","Tameable"),"green"));b.append(meta);
  b.addEventListener("click",()=>choose(r));box.append(b);
 }
+paintLegend();
 }
 function detail(){
 const out=$("rare-detail");out.replaceChildren();if(!selected){out.append(m("p",T("Aucun rare sélectionné","No rare selected")));return}
-const r=selected,top=m("div",null,"rare-detail-top");top.append(m("h3",r.name[en?"en":"fr"]));
+const r=selected,top=m("div",null,"rare-detail-top");const dot=m("i",null,"rare-color-dot rare-color-large");dot.style.backgroundColor=markerColor(r);top.append(dot);top.append(m("h3",r.name[en?"en":"fr"]));
 top.append(chip(r.classification==="rare_elite"?T("Rare élite","Rare elite"):T("Rare","Rare"),"purple"));out.append(top);
 const tags=m("div",null,"rare-tags");tags.append(chip(zname(r.zone)));tags.append(chip(T("Niveau ","Level ")+r.level));
 tags.append(chip(T("Repop : ","Respawn: ")+respawn(r),"gold"));if(r.tameable)tags.append(chip(T("Apprivoisable","Tameable"),"green"));
 tags.append(chip(r.seen_forever?T("Signalé sur Forever","Seen on Forever"):T("Classic · non confirmé Forever","Classic · unverified on Forever"),r.seen_forever?"green":"gold"));out.append(tags);
 const spot=m("div",null,"rare-spots");spot.append(m("strong",T("Points d’apparition possibles","Possible spawn points"),"rare-caption"));
 const coords=m("div",null,"rare-coords");
-if(!r.points.length)coords.append(m("span",T("Rare d’instance · pas de coordonnées de zone","Instance rare · no outdoor coordinates"),"rare-muted"));
+if(!r.points.length)coords.append(m("span",db.zones[r.zone]?.instance?T("Rare d’instance · pas de coordonnées de zone","Instance rare · no outdoor coordinates"):T("Coordonnées non encore documentées · aucun repère inventé","Coordinates not yet documented · no fabricated marker"),"rare-muted"));
 for(const p of r.points){const b=button(fmt(p[0])+" / "+fmt(p[1]),"rare-coord");b.title=T("Centrer la carte","Center map");b.addEventListener("click",()=>{zoom=Math.max(zoom,1.8);center=[p[0],p[1]];clampCenter();draw()});coords.append(b)}spot.append(coords);out.append(spot);
 out.append(m("h4",T("Butins notables · Classic","Notable loot · Classic"),"rare-loot-title"));
 const loots=m("div",null,"rare-loots");
@@ -88,7 +94,7 @@ function draw(){
 if(!db)return;background();pins=[];
 for(const r of filtered.filter(r=>r.zone===zoneId))for(const p of r.points){const [x,y]=pos(p);if(x<-20||x>W+20||y<-20||y>H+20)continue;
 const active=r.id===selected?.id;ctx.beginPath();ctx.arc(x,y,active?13:10,0,2*Math.PI);
-ctx.fillStyle=active?"#f1d39c":r.classification==="rare_elite"?"#b9a3d7":"#c2d0ad";ctx.fill();ctx.strokeStyle=active?"#fff2d1":"#435044";ctx.lineWidth=active?4:2.5;ctx.stroke();
+ctx.fillStyle=markerColor(r);ctx.fill();ctx.strokeStyle=active?"#fff4d6":"#0b1a14";ctx.lineWidth=active?5:2.5;ctx.stroke();
 ctx.beginPath();ctx.arc(x,y,3,0,2*Math.PI);ctx.fillStyle="#1a291d";ctx.fill();pins.push({r,p,x,y})}
 const focus=hover||(selected?.points?.length&&selected.zone===zoneId?{r:selected,p:selected.points[0],x:pos(selected.points[0])[0],y:pos(selected.points[0])[1]}:null);
 if(focus){const title=focus.r.name[en?"en":"fr"];ctx.font="bold 19px sans-serif";const w=ctx.measureText(title).width+22,x=clamp(focus.x-w/2,5,W-w-5),y=focus.y<45?focus.y+30:focus.y-28;
@@ -112,7 +118,7 @@ fetch("/data/rares.json?v=20261009",{cache:"no-cache"}).then(r=>{if(!r.ok)throw 
 if(!Array.isArray(data.rares)||!data.zones)throw Error("Invalid JSON");db=data;rows=data.rares.filter(r=>r.zone&&db.zones[r.zone]&&Array.isArray(r.points)&&Array.isArray(r.loot));
 for(const key of [...new Set(rows.map(r=>r.zone))].sort((a,b)=>zname(a).localeCompare(zname(b),en?"en":"fr"))){const opt=m("option",zname(key));opt.value=key;zone.append(opt)}
 const qs=new URLSearchParams(location.search);if(db.zones[qs.get("zone")])zone.value=qs.get("zone");if(qs.get("q"))search.value=qs.get("q");
-filtered=results();selected=filtered.find(r=>r.id==="2779")||filtered[0]||null;zoneId=selected?.zone||"";
+filtered=results();buildColors();selected=filtered.find(r=>r.id==="2779")||filtered[0]||null;zoneId=selected?.zone||"";
 $("rare-status").textContent=rows.length+" "+T("rares référencés","referenced rares");
 $("rare-map-title").textContent=zname(zoneId);$("rare-disclaimer").textContent=db.disclaimer[en?"en":"fr"];
 showList();detail();image()
