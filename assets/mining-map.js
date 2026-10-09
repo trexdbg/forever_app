@@ -5,7 +5,9 @@ const ctx=canvas.getContext("2d"),W=canvas.width,H=canvas.height;
 const copy=document.getElementById("mine-copy"),zoomText=document.getElementById("mine-zoom-reset");
 let db,zone,sourceImg=null,zoom=1,center={x:50,y:50},shown=[],selected=null,command="",pointer=null;
 const enabledMinerals=new Set();
-let viewMode="points",prospectingAreas=[],areaPoints=new Set();
+let viewMode="points",prospectingAreas=[],sectorDefinitions={zones:{}};
+const sectors=window.MiningSectors;
+if(!sectors)throw Error("Module de secteurs manquant");
 const viewPoints=document.getElementById("mine-view-points");
 const viewZones=document.getElementById("mine-view-zones");
 function setViewMode(mode){
@@ -15,70 +17,43 @@ function setViewMode(mode){
   viewPoints.setAttribute("aria-pressed",String(mode==="points"));
   viewZones.setAttribute("aria-pressed",String(mode==="zones"));
   document.getElementById("mine-mode-help").textContent=mode==="zones"
-    ?"Regroupement par proximité, non vérifié comme pool de spawn. Cliquez une zone pour zoomer."
+    ?(sectorDefinitions.zones?.[zone?.id]?.length?"Contours indicatifs basés sur le croquis d’Azshara. Cliquez pour explorer.":"Secteurs estimés à partir des densités de filons, non des pools confirmés. Cliquez pour zoomer.")
     :"Les icônes montrent les emplacements référencés.";
   if(zone)draw();
 }
 viewPoints.addEventListener("click",()=>setViewMode("points"));
 viewZones.addEventListener("click",()=>setViewMode("zones"));
 /**
- * Approximate browsing clusters ONLY, never confirmed spawn pools.
- * Same ore + Euclidean proximity with a bounded 10% map-coordinate
- * diameter to avoid chaining distant sites (e.g., across Azshara).
- * Group 3-9 close observations into a prospecting area; separate
- * ungrouped sites remain individually selectable.
+ * Two documented layers: hand-traced Azshara prospecting sectors (contributor
+ * sketch), and other maps' organic density contours based on GatherLite data.
+ * Neither represents a verified server-side spawn pool.
  */
 function makeProspectingAreas(){
-  prospectingAreas=[];areaPoints=new Set();
-  const kinds=Object.keys(db.minerals).filter(id=>enabledMinerals.has(id));
-  for(const id of kinds){
-    const candidates=shown.filter(p=>p[2]===id).slice().sort((a,b)=>a[0]-b[0]||a[1]-b[1]);
-    const clusters=[];
-    for(const p of candidates){
-      let closest=null,best=Infinity;
-      for(const c of clusters){
-        if(c.points.length>=9)continue;
-        if(Math.max(c.maxX,p[0])-Math.min(c.minX,p[0])>10)continue;
-        if(Math.max(c.maxY,p[1])-Math.min(c.minY,p[1])>10)continue;
-        const distance=Math.hypot(p[0]-c.x,p[1]-c.y);
-        if(distance<=7&&distance<best){best=distance;closest=c}
-      }
-      if(!closest){
-        clusters.push({id,points:[p],x:p[0],y:p[1],minX:p[0],maxX:p[0],minY:p[1],maxY:p[1]});
-      }else{
-        closest.points.push(p);
-        closest.minX=Math.min(closest.minX,p[0]);closest.maxX=Math.max(closest.maxX,p[0]);
-        closest.minY=Math.min(closest.minY,p[1]);closest.maxY=Math.max(closest.maxY,p[1]);
-        const n=closest.points.length;
-        closest.x+=(p[0]-closest.x)/n;closest.y+=(p[1]-closest.y)/n;
-      }
-    }
-    for(const c of clusters){
-      if(c.points.length<3)continue;
-      c.rx=Math.max(2.8,...c.points.map(p=>Math.abs(p[0]-c.x)+1.8));
-      c.ry=Math.max(3.4,...c.points.map(p=>Math.abs(p[1]-c.y)+2.1));
-      prospectingAreas.push(c);
-      for(const p of c.points)areaPoints.add(p);
-    }
+  const curated=sectorDefinitions.zones?.[zone.id];
+  prospectingAreas=curated?.length
+    ?sectors.fromCurated(curated,shown)
+    :sectors.densityAreas(shown);
+  for(const area of prospectingAreas){
+    const location=sectors.center(area);
+    area.x=location.x;area.y=location.y;
   }
+  if(viewMode==="zones")setViewMode("zones");
 }
 function drawProspectingAreas(){
   for(const area of prospectingAreas){
-    const xy=project(area.x,area.y);
-    const rx=area.rx*W/100*zoom,ry=area.ry*H/100*zoom;
-    if(xy.x+rx<0||xy.y+ry<0||xy.x-rx>W||xy.y-ry>H)continue;
-    ctx.beginPath();ctx.ellipse(xy.x,xy.y,rx,ry,0,0,Math.PI*2);
-    ctx.globalAlpha=.25;ctx.fillStyle=mineral(area.id).color;ctx.fill();
-    ctx.globalAlpha=.9;ctx.lineWidth=2;ctx.strokeStyle=mineral(area.id).color;ctx.stroke();
-    ctx.globalAlpha=1;
-    const icon=mineralIcons[area.id];
-    if(icon&&icon.complete&&icon.naturalWidth){
-      ctx.drawImage(icon,xy.x-15,xy.y-21,30,30);
+    const polygon=area.polygon;
+    if(polygon.length<3||!area.points.length)continue;
+    ctx.beginPath();
+    for(let i=0;i<polygon.length;i++){
+      const xy=project(polygon[i][0],polygon[i][1]);
+      if(i===0)ctx.moveTo(xy.x,xy.y);
+      else ctx.lineTo(xy.x,xy.y);
     }
-    ctx.fillStyle="#061320de";ctx.fillRect(xy.x-21,xy.y+4,42,22);
-    ctx.font="bold 13px system-ui";ctx.textAlign="center";
-    ctx.fillStyle="#fff0c5";ctx.fillText(area.points.length+" sites",xy.x,xy.y+19);
-    ctx.textAlign="start";
+    ctx.closePath();
+    // Gentle cartographic inking; deliberately different from "active spawn" status.
+    ctx.fillStyle="#d6a15d";ctx.globalAlpha=.12;ctx.fill();
+    ctx.strokeStyle="#f0c47c";ctx.globalAlpha=.82;ctx.lineWidth=Math.min(3.4,1.7+zoom*.3);ctx.stroke();
+    ctx.globalAlpha=1;
   }
 }
 const mineralIcons=Object.create(null);
@@ -111,10 +86,9 @@ ctx.font="14px system-ui";ctx.lineWidth=1;for(let i=0;i<=100;i+=10){const a=proj
 // Local mining vein illustrations replace the old coloured circles.
 if(viewMode==="zones")drawProspectingAreas();
 for(const p of shown){
-  if(viewMode==="zones"&&areaPoints.has(p))continue;
   const pos=project(p[0],p[1]);
   const active=selected===p;
-  const size=active?Math.min(36,26+2*zoom):Math.min(26,16+2.5*zoom);
+  const size=active?Math.min(36,26+2*zoom):viewMode==="zones"?Math.min(20,12+2*zoom):Math.min(26,16+2.5*zoom);
   if(pos.x < -size||pos.y < -size||pos.x>W+size||pos.y>H+size)continue;
   const icon=mineralIcons[p[2]];
   if(active){
@@ -124,7 +98,7 @@ for(const p of shown){
     ctx.lineWidth=3.3;ctx.strokeStyle="#ffe4a6";ctx.stroke();
   }
   if(icon&&icon.complete&&icon.naturalWidth>0){
-    ctx.globalAlpha=active?1:.96;
+    ctx.globalAlpha=active?1:viewMode==="zones"?.72:.96;
     ctx.drawImage(icon,pos.x-size/2,pos.y-size/2,size,size);
     ctx.globalAlpha=1;
   }else{
@@ -229,11 +203,12 @@ canvas.addEventListener("pointerdown",e=>{const p=fromClient(e);pointer={id:e.po
 canvas.addEventListener("pointermove",e=>{if(!pointer||pointer.id!==e.pointerId)return;const p=fromClient(e),dx=p.x-pointer.prev.x,dy=p.y-pointer.prev.y;if(Math.hypot(p.x-pointer.x,p.y-pointer.y)>6)pointer.dragged=true;if(pointer.dragged){center.x=clamp(center.x-dx/W*100/zoom,50/zoom,100-50/zoom);center.y=clamp(center.y-dy/H*100/zoom,50/zoom,100-50/zoom);pointer.prev=p;draw()}});
 canvas.addEventListener("pointerup",e=>{if(!pointer||pointer.id!==e.pointerId)return;const moved=pointer.dragged;pointer=null;if(moved)return;const p=fromClient(e);
 if(viewMode==="zones"){
-  let chosen=null,scale=Infinity;
+  const where=unproject(p.x,p.y);
+  let chosen=null,bestDistance=Infinity;
   for(const area of prospectingAreas){
-    const xy=project(area.x,area.y);
-    const normalized=Math.hypot((p.x-xy.x)/(area.rx*W*zoom/100),(p.y-xy.y)/(area.ry*H*zoom/100));
-    if(normalized<1.18&&normalized<scale){chosen=area;scale=normalized}
+    if(!sectors.contains(area.polygon,where.x,where.y))continue;
+    const distance=Math.hypot(area.x-where.x,area.y-where.y);
+    if(distance<bestDistance){chosen=area;bestDistance=distance}
   }
   if(chosen){
     center={x:clamp(chosen.x,0,100),y:clamp(chosen.y,0,100)};
@@ -263,9 +238,12 @@ document.getElementById("mine-select-none").addEventListener("click",()=>{
   enabledMinerals.clear();
   filterPoints();
 });
-fetch(ROOT+"data/mining-points.json")
-  .then(r=>{if(!r.ok)throw Error("HTTP "+r.status);return r.json()})
-  .then(j=>{
+const getJson=path=>fetch(ROOT+path).then(r=>{if(!r.ok)throw Error("HTTP "+r.status);return r.json()});
+Promise.all([
+  getJson("data/mining-points.json"),
+  getJson("data/mining-sectors.json").catch(()=>({zones:{}}))
+]).then(([j,definitions])=>{
+    sectorDefinitions=definitions;
     if(j.coordinate_system!=="wow_ui_map_normalized_percent"||!Array.isArray(j.zones)||!j.zones.length)throw Error("Format de coordonnées non compatible");
     db=j;
     preloadMineralIcons();
