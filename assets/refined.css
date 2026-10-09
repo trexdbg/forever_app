@@ -63,7 +63,7 @@ label{color:#bbc1b5}
 /* An explorer's field guide, not a marketing landing page */
 .home-main{padding-top:29px}
 .home-cover{min-height:296px;position:relative;overflow:hidden;border:1px solid #a28a5a68;display:flex;align-items:center;justify-content:space-between;gap:36px;padding:46px 68px;background:#17271d;isolation:isolate}
-.home-cover::before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,#0d1b14 0%,#102017ee 43%,#101b18ab 80%,#101a16da),url("/forever_app/assets/maps/azshara.jpg") center 45%/cover;filter:saturate(.55)}
+.home-cover::before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,#0d1b14 0%,#102017ee 43%,#101b18ab 80%,#101a16da),url("/assets/maps/azshara.jpg") center 45%/cover;filter:saturate(.55)}
 .home-cover::after{content:"";position:absolute;inset:11px;border:1px solid #bd98533b;pointer-events:none;z-index:-1}
 .cover-copy{position:relative;z-index:1;max-width:720px}
 .cover-eyebrow{font-size:10px;font-weight:800;letter-spacing:.2em;color:#d2b784;display:inline-flex;align-items:center;gap:12px}
@@ -82,7 +82,7 @@ label{color:#bbc1b5}
 .atlas-tile::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(circle at 97% 10%,#65774825,transparent 45%);pointer-events:none}
 .atlas-tile:hover{background:#213024;border-color:#bca06c;transform:translateY(-2px)}
 .atlas-tile:nth-child(1),.atlas-tile:nth-child(2){grid-column:span 6;min-height:205px}
-.atlas-tile:nth-child(1)::before{background:linear-gradient(90deg,#152318 25%,#17271ae0),url("/forever_app/assets/maps/winterspring.jpg") center/cover;opacity:.5}
+.atlas-tile:nth-child(1)::before{background:linear-gradient(90deg,#152318 25%,#17271ae0),url("/assets/maps/winterspring.jpg") center/cover;opacity:.5}
 .tile-top{display:flex;align-items:start;justify-content:space-between;font-size:10px;letter-spacing:.13em;color:#98a88e;font-weight:700}
 .tile-arrow{color:#d5b67b;font-size:23px;line-height:1;transition:transform .18s}
 .atlas-tile:hover .tile-arrow{transform:translate(3px,-3px)}
