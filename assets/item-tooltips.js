@@ -115,6 +115,11 @@ const price=[g?(g+" "+(en?"g":"po")):"",s?(s+" "+(en?"s":"pa")):"",c?(c+" "+(en?
 write(group,"forever-item-tooltip__line",(en?"Classic vendor price (indicative): ":"Prix marchand Classic (indicatif) : ")+price);
 }
 if(Number.isInteger(v.maxStock)&&v.maxStock>0)write(group,"forever-item-tooltip__line",(en?"Classic reference maximum stock: ":"Stock maximal de référence Classic : ")+v.maxStock);
+if(v.reputation&&typeof v.reputation==="object"){
+ const rr={Friendly:en?"Friendly":"Amical",Honored:en?"Honored":"Honoré",Revered:en?"Revered":"Révéré",Exalted:en?"Exalted":"Exalté"};
+ write(group,"forever-item-tooltip__vendor-warning",(en?"Required Classic reputation: ":"Réputation Classic requise : ")+v.reputation.faction+" · "+(rr[v.reputation.rank]||v.reputation.rank));
+}
+if(v.seasonal)write(group,"forever-item-tooltip__vendor-warning",en?"Classic seasonal sale · Winter Veil; unverified on Forever":"Vente saisonnière Classic · Voile d'hiver ; non vérifiée sur Forever");
 if(v.specialization)write(group,"forever-item-tooltip__vendor-warning",(en?"Classic specialization: ":"Spécialisation Classic : ")+v.specialization);
 if(v.bindPickup)write(group,"forever-item-tooltip__vendor-warning",en?"Bind on Pickup (Classic reference)":"Lié quand ramassé (référence Classic)");
 if(v.sharedStock)write(group,"forever-item-tooltip__vendor-warning",en?"Shared vendor stock slot":"Emplacement de stock partagé");
