@@ -43,12 +43,15 @@
 #quest-range.quest-timeline-slider{display:block;appearance:none;-webkit-appearance:none;width:100%;height:12px;border-radius:99px;border:1px solid #556478;outline-offset:6px;background:linear-gradient(to right,#e9bf7b 0%,#e9bf7b var(--quest-range-fill,0%),#31455f var(--quest-range-fill,0%),#31455f 100%);margin:12px 0;cursor:ew-resize}
 #quest-range.quest-timeline-slider::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:25px;height:25px;border-radius:50%;background:#f8daa1;border:4px solid #4e362b;box-shadow:0 0 0 2px #e3be7f,0 2px 7px #0008}
 #quest-range.quest-timeline-slider::-moz-range-thumb{width:17px;height:17px;border-radius:50%;background:#f8daa1;border:4px solid #4e362b;box-shadow:0 0 0 2px #e3be7f,0 2px 7px #0008}
-.quest-timeline-milestones{height:39px;position:relative;margin:0 12px 3px}
-.quest-milestone{position:absolute;top:7px;transform:translateX(-50%);padding:5px 7px;border-radius:8px;border:1px solid #475a71;background:#192b41;color:#bfcfe1;font-size:10px;white-space:nowrap}
-.quest-milestone::before{content:"";position:absolute;left:50%;top:-8px;height:7px;width:1px;background:#d3b985}
-.quest-milestone:hover,.quest-milestone:focus-visible{color:#f4d59a;border-color:#e3bb7d;background:#30405a}
-.quest-milestone:first-child{transform:translateX(-9px)}
-.quest-milestone:last-child{transform:translateX(calc(-100% + 9px))}
+.quest-timeline-milestones{display:grid;gap:8px;height:auto;min-width:0;margin:15px 0 12px}
+.quest-milestone-band{display:grid;grid-template-columns:95px minmax(0,1fr);align-items:center;gap:10px;min-width:0}
+.quest-milestone-band-title{color:#e4c68e;font-size:11px;font-weight:750;letter-spacing:.025em}
+.quest-milestone-buttons{display:flex;align-items:center;gap:7px;overflow-x:auto;min-width:0;padding:7px 3px 11px;background:linear-gradient(#3b516c,#3b516c) center/100% 2px no-repeat;scrollbar-width:thin;scrollbar-color:#647c98 #17283e;scroll-snap-type:x proximity}
+.quest-milestone{position:relative;top:auto;left:auto;transform:none;flex:0 0 auto;min-width:56px;text-align:center;padding:7px 9px;border-radius:8px;border:1px solid #4b5e79;background:#1a2d43;color:#c4d4e8;font-size:11px;font-weight:650;white-space:nowrap;cursor:pointer;scroll-snap-align:start;transition:background .16s,border-color .16s,color .16s}
+.quest-milestone::before{display:none}
+.quest-milestone:hover,.quest-milestone:focus-visible{transform:none;color:#ffe0a0;border-color:#e3bb7d;background:#30405a}
+.quest-milestone:focus-visible{outline:2px solid #f3d698;outline-offset:2px}
+.quest-milestone.active{border-color:#e7c384;background:linear-gradient(150deg,#6a512e,#3c3440);color:#ffe7b6;box-shadow:0 0 0 1px #bb955d66,0 0 15px #d4a6642e}
 .quest-timeline-preview{background:#152940;border:1px solid #304763;border-radius:8px;padding:9px 12px;min-height:40px;color:#ddcfad;font-size:12px}
 .quest-timeline .quest-progress-summary{margin:13px 0 0;padding:12px 0 0;border:0;border-top:1px solid #40516a;border-radius:0;background:transparent}
 .quest-timeline .quest-progress-track{border:1px solid #45536b}
@@ -119,4 +122,12 @@
  .quest-race-choice{min-height:78px}
  .quest-race-choice img,.quest-race-fallback{width:43px;height:43px}
  .quest-timeline-milestones{margin-left:8px;margin-right:8px}
+}
+
+/* Compact, touch-friendly level shortcuts on phones. Each band scrolls independently. */
+@media(max-width:720px){
+ .quest-milestone-band{grid-template-columns:minmax(0,1fr);gap:2px}
+ .quest-milestone-band-title::after{content:" · faire défiler →";font-weight:400;font-size:10px;color:#91a6bc}
+ .quest-milestone-buttons{padding-bottom:11px}
+ .quest-milestone{min-width:60px;padding:9px 11px}
 }
