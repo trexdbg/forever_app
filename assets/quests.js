@@ -6,7 +6,7 @@ const Q=window.ForeverQuestLocale||{header:s=>s||"",note:s=>String(Array.isArray
 const $=id=>document.getElementById(id),canvas=$("quest-canvas");
 if(!canvas)return;
 const ctx=canvas.getContext("2d"),W=canvas.width,H=canvas.height;
-const cache={},s={meta:null,data:null,faction:"alliance",profile:"human",race:"human",steps:[],index:0,done:new Set(),selected:0,zoom:1,center:{x:50,y:50},image:null,mapUrl:"",mapLoaded:false};
+const cache={},s={meta:null,data:null,faction:"alliance",profile:"human",race:"human",steps:[],index:0,selected:0,zoom:1,center:{x:50,y:50},image:null,mapUrl:"",mapLoaded:false};
 const RACES={
  alliance:[{id:"human",profile:"human",label:"Humain"},{id:"dwarf",profile:"gnorf",label:"Nain"},{id:"gnome",profile:"gnorf",label:"Gnome"},{id:"nelf",profile:"nelf",label:"Elfe de la nuit"}],
  horde:[{id:"orc",profile:"trorc",label:"Orc"},{id:"troll",profile:"trorc",label:"Troll"},{id:"undead",profile:"undead",label:"Mort-vivant"},{id:"tauren",profile:"tauren",label:"Tauren"}]
@@ -29,9 +29,6 @@ const detailsOf=ref=>{
 };
 const waypointTitle=w=>Q.header(w.header);
 const stepLabel=i=>{const st=s.steps[i];return stepName(st)+QT(" · niv. ≈ "," · lvl ≈ ")+Math.floor(Number(st.experience)||0)};
-const storageKey=()=> "forever.quests.done.v1."+s.faction+"."+s.profile;
-const loadDone=()=>{try{const raw=JSON.parse(localStorage.getItem(storageKey())||"[]");s.done=new Set(Array.isArray(raw)?raw.filter(v=>Number.isInteger(v)&&v>=0&&v<s.steps.length):[])}catch{s.done=new Set()}};
-const saveDone=()=>{try{localStorage.setItem(storageKey(),JSON.stringify([...s.done].sort((a,b)=>a-b)))}catch{}};
 const syncUrl=()=>{const u=new URL(location.href);u.searchParams.set("faction",s.faction);u.searchParams.set("race",s.profile);u.searchParams.set("peuple",s.race);u.searchParams.set("step",String(s.index+1));history.replaceState(null,"",u.pathname+u.search+u.hash)};
 const project=(x,y)=>({x:(50+(x-s.center.x)*s.zoom)*W/100,y:(50+(y-s.center.y)*s.zoom)*H/100});
 const clientPoint=e=>{const r=canvas.getBoundingClientRect();return{x:(e.clientX-r.left)*W/r.width,y:(e.clientY-r.top)*H/r.height}};
@@ -138,18 +135,13 @@ function renderRaceChoices(){
  QT("Nains et Gnomes partagent le même guide de départ, mais gardent chacun leur portrait.","Dwarves and Gnomes share the starting route, but each keeps its own portrait."):
  QT("Orcs et Trolls partagent le même guide de départ, mais gardent chacun leur portrait.","Orcs and Trolls share the starting route, but each keeps its own portrait.");
 }
-const raceStorageKey=()=> "forever.quests.race.v1."+s.faction;
-function rememberedRace(faction){
- try{const v=localStorage.getItem("forever.quests.race.v1."+faction);return RACES[faction].find(r=>r.id===v)}catch{return null}
-}
-function saveRace(){try{localStorage.setItem(raceStorageKey(),s.race)}catch{}}
 function selectRace(id){
  const race=RACES[s.faction].find(r=>r.id===id);
  if(!race||!s.data||s.race===id)return;
  const changedRoute=s.profile!==race.profile;
- s.race=id;s.profile=race.profile;saveRace();renderRaceChoices();
+ s.race=id;s.profile=race.profile;renderRaceChoices();
  if(changedRoute){
-  s.steps=[...s.data.routes[s.profile],...s.data.routes.shared];loadDone();s.index=0;s.selected=0;
+  s.steps=[...s.data.routes[s.profile],...s.data.routes.shared];s.index=0;s.selected=0;
   s.zoom=1;s.center={x:50,y:50};s.mapUrl="";renderMilestones();
  }
  render();search();
@@ -194,9 +186,11 @@ function updateMilestones(){
  }
 }
 function renderProgress(){
- const total=s.steps.length,done=s.done.size,percent=total?Math.round(100*done/total):0;
+ // Navigation progress follows the current step; nothing is marked or saved.
+ const last=Math.max(1,s.steps.length-1);
+ const percent=Math.round(100*s.index/last);
  $("quest-path-label").textContent=(s.faction==="alliance"?"Alliance":"Horde")+" · "+Q.race(RACES[s.faction].find(r=>r.id===s.race)?.label||s.profile);
- $("quest-progress-info").textContent=done+" / "+total+QT(" étapes terminées ("," steps completed (")+percent+QT(" %)","%)");
+ $("quest-progress-info").textContent=percent+QT(" % du parcours","% of the route");
  $("quest-progress-fill").style.width=percent+"%";
  $("quest-progress-track").setAttribute("aria-valuenow",String(percent));
 }
@@ -211,7 +205,6 @@ function render(){
  $("quest-map-source").textContent=QT("Molette : zoom · X/Y : 0 à 100","Scroll to zoom · X/Y: 0–100");
  const first=s.index===0,last=s.index===s.steps.length-1;
  $("quest-prev").disabled=first;$("quest-next").disabled=last;
- const complete=$("quest-complete"),done=s.done.has(s.index);complete.textContent=done?QT("✓ Étape terminée · annuler","✓ Step complete · undo"):QT("Marquer l'étape terminée ✓","Mark step complete ✓");complete.setAttribute("aria-pressed",String(done));
  renderProgress();updateMilestones();renderWaypoints();renderSelection();setImage(st.zone);draw();syncUrl();
 }
 function go(n){if(scrubTimer!==null){clearTimeout(scrubTimer);scrubTimer=null}if(!s.steps.length)return;s.index=clamp(n,0,s.steps.length-1);s.selected=0;s.center={x:50,y:50};s.zoom=1;$("quest-zoom-reset").textContent="100 %";render();}
@@ -219,7 +212,7 @@ async function loadFaction(faction,fromUrl=false){
  const token=++pending,params=new URLSearchParams(location.search);
  if(!RACES[faction])return;
  s.faction=faction;
- let initial=rememberedRace(faction)||RACES[faction][0];
+ let initial=RACES[faction][0];
  if(fromUrl&&params.get("faction")===faction){
   initial=RACES[faction].find(r=>r.id===params.get("peuple"))||
    RACES[faction].find(r=>r.profile===params.get("race"))||initial;
@@ -236,7 +229,7 @@ async function loadFaction(faction,fromUrl=false){
   if(token!==pending)return;
   s.data=cache[faction];
   if(s.data.source_commit!==s.meta.source_commit||s.data.schema_version!==1)throw Error("Versions de données incompatibles");
-  s.steps=[...s.data.routes[s.profile],...s.data.routes.shared];loadDone();
+  s.steps=[...s.data.routes[s.profile],...s.data.routes.shared];
   const number=fromUrl&&params.get("faction")===faction&&params.get("race")===s.profile?Number(params.get("step"))-1:NaN;
   s.index=Number.isInteger(number)?clamp(number,0,s.steps.length-1):0;
   s.selected=0;s.zoom=1;s.center={x:50,y:50};s.mapUrl="";
@@ -308,8 +301,6 @@ for(const button of $("quest-factions").querySelectorAll("button[data-faction]")
 }
 $("quest-search").addEventListener("input",search);
 $("quest-zoom-reset").addEventListener("click",()=>{s.center={x:50,y:50};setZoom(1)});
-$("quest-complete").addEventListener("click",()=>{if(s.done.has(s.index))s.done.delete(s.index);else s.done.add(s.index);saveDone();render()});
-$("quest-reset").addEventListener("click",()=>{if(!confirm(QT("Effacer la progression du parcours ","Clear progress for route ")+Q.race(RACES[s.faction].find(r=>r.id===s.race)?.label||s.profile)+" ?"))return;s.done.clear();saveDone();render()});
 (async()=>{
  try{const resp=await fetch(ROOT+"data/quests/manifest.json");if(!resp.ok)throw Error("HTTP "+resp.status);s.meta=await resp.json();if(s.meta.coordinate_system!=="zone_percent_0_100")throw Error("Coordonnées incompatibles");
  const params=new URLSearchParams(location.search);const faction=params.get("faction")==="horde"?"horde":"alliance";await loadFaction(faction,true);
