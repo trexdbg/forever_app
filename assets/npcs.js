@@ -34,7 +34,7 @@ function filteredRecords(){
  const {npc:n,item}=r;
  if(n.role!==store.mode)return false;
  if(aff.value!=="all"&&n.faction!==aff.value&&n.faction!=="neutral")return false;
- if(trade.value!=="all"&&n.profession!==trade.value)return false;
+ if(trade.value!=="all"&&(item?.profession||n.profession)!==trade.value)return false;
  if(zone.value!=="all"&&n.zone.id!==zone.value)return false;
  if(store.showReportsOnly&&!item)return false;
  if(store.showReportsOnly&&!evidence(n,item))return false;
@@ -66,7 +66,7 @@ function renderDetail(){
  append(detail,"h3",i?title(i):n.name);
  append(detail,"p",i?n.name:S("Maître de métier","Profession trainer"),"npc-subtitle");
  const chips=append(detail,"div",null,"npc-chips");
- append(chips,"span",profession[n.profession]||n.profession,"npc-chip gold");
+ append(chips,"span",profession[i?.profession||n.profession]||i?.profession||n.profession,"npc-chip gold");
  append(chips,"span",faction[n.faction],"npc-chip");
  if(i)append(chips,"span",S("Compétence "+i.skill,"Skill "+i.skill),"npc-chip");
  if(n.rank)append(chips,"span",en?({"Compagnon":"Journeyman","Expert":"Expert","Artisan":"Artisan"}[n.rank]||n.rank):n.rank,"npc-chip");
