@@ -1,0 +1,410 @@
+/* Quest guide compact layout. Loaded after refined.css on both language pages.
+   Preserve the slider/thumb and level-tick horizontal coordinate system. */
+body[data-page="quests"] .page-hero{
+ display:flex;
+ flex-wrap:wrap;
+ align-items:baseline;
+ gap:6px 14px;
+ padding:13px 0 9px;
+ margin-bottom:7px;
+ min-height:0;
+}
+body[data-page="quests"] .page-hero .kicker{
+ display:inline;
+ font-size:9px;
+ letter-spacing:.13em;
+ margin:0;
+}
+body[data-page="quests"] .page-hero h1{
+ font-size:clamp(27px,2.9vw,37px);
+ line-height:1;
+ margin:0;
+ letter-spacing:-.03em;
+}
+body[data-page="quests"] .page-hero p{
+ margin:0;
+ font-size:12px;
+ line-height:1.3;
+ color:var(--muted);
+}
+body[data-page="quests"] #quest-app.section.slim-top{
+ padding-top:5px;
+}
+body[data-page="quests"] .quest-toolbar.tool-panel{
+ padding:10px 13px 9px;
+ margin-bottom:9px;
+ border-radius:6px;
+}
+body[data-page="quests"] .quest-toolbar .tool-head{
+ display:grid;
+ grid-template-columns:auto minmax(190px,1fr) auto;
+ gap:10px;
+ align-items:center;
+ margin-bottom:9px;
+}
+body[data-page="quests"] .quest-toolbar .tool-head h2{
+ font-size:17px;
+ line-height:1.15;
+ margin:0;
+ white-space:nowrap;
+}
+body[data-page="quests"] .quest-toolbar .tool-head .status-pill{
+ padding:5px 8px;
+ font-size:10px;
+ white-space:nowrap;
+}
+body[data-page="quests"] .quest-toolbar .tool-head .quest-search-field{
+ grid-column:auto;
+ min-width:0;
+}
+body[data-page="quests"] .quest-toolbar .tool-head .quest-search-field label{
+ position:absolute;
+ width:1px;
+ height:1px;
+ padding:0;
+ margin:-1px;
+ overflow:hidden;
+ clip:rect(0,0,0,0);
+ white-space:nowrap;
+ border:0;
+}
+body[data-page="quests"] .quest-toolbar .quest-search-input{
+ display:flex;
+ align-items:center;
+ min-height:34px;
+ height:34px;
+ border-radius:4px;
+ padding:0 9px;
+ gap:7px;
+}
+body[data-page="quests"] .quest-toolbar .quest-search-input>span{
+ font-size:19px;
+}
+body[data-page="quests"] .quest-toolbar .quest-search-input input{
+ background:transparent;
+ border:0;
+ box-shadow:none;
+ outline:none;
+ padding:5px 0;
+ width:100%;
+ font-size:12px;
+ min-width:0;
+}
+body[data-page="quests"] .quest-filters{
+ display:grid;
+ grid-template-columns:minmax(218px,.72fr) minmax(0,1.75fr);
+ gap:9px;
+ margin-top:0;
+ align-items:stretch;
+}
+body[data-page="quests"] .quest-picker{
+ padding:5px 7px 6px;
+ border-radius:4px;
+ min-width:0;
+}
+body[data-page="quests"] .quest-picker legend{
+ padding:0 5px;
+ font-size:10px;
+ font-weight:750;
+ line-height:1.1;
+}
+body[data-page="quests"] .quest-faction-options{
+ display:grid;
+ grid-template-columns:repeat(2,minmax(0,1fr));
+ gap:6px;
+ height:auto;
+}
+body[data-page="quests"] .quest-faction-choice{
+ display:flex;
+ flex-direction:row;
+ align-items:center;
+ justify-content:center;
+ min-height:43px;
+ height:43px;
+ padding:4px 8px;
+ gap:6px;
+ text-align:left;
+ border-radius:4px;
+}
+body[data-page="quests"] .quest-faction-choice img{
+ width:30px;
+ height:30px;
+ flex:0 0 30px;
+}
+body[data-page="quests"] .quest-faction-choice strong{
+ font-size:12px;
+}
+body[data-page="quests"] .quest-faction-choice .quest-selection-check{
+ width:13px;
+ height:13px;
+ font-size:9px;
+ top:3px;
+ right:3px;
+}
+body[data-page="quests"] .quest-race-options{
+ display:grid;
+ grid-template-columns:repeat(4,minmax(0,1fr));
+ gap:6px;
+}
+body[data-page="quests"] .quest-race-choice{
+ display:flex;
+ flex-direction:row;
+ align-items:center;
+ justify-content:center;
+ gap:6px;
+ min-height:43px;
+ height:43px;
+ padding:4px 6px;
+ border-radius:4px;
+ min-width:0;
+}
+body[data-page="quests"] .quest-race-choice img,
+body[data-page="quests"] .quest-race-fallback{
+ width:30px;
+ height:30px;
+ flex:0 0 30px;
+}
+body[data-page="quests"] .quest-race-label{
+ font-size:10px;
+ line-height:1.13;
+ text-align:left;
+}
+body[data-page="quests"] .quest-race-check{
+ width:13px;
+ height:13px;
+ font-size:9px;
+ top:3px;
+ right:3px;
+}
+body[data-page="quests"] .quest-race-hint[hidden]{
+ display:none;
+}
+body[data-page="quests"] .quest-search-results{
+ max-height:220px;
+ margin-top:7px;
+}
+body[data-page="quests"] .quest-timeline{
+ display:grid;
+ grid-template-columns:minmax(0,1fr) auto;
+ grid-template-rows:auto auto auto;
+ gap:0 12px;
+ align-items:center;
+ padding:9px 14px 8px;
+ margin:0 0 10px;
+ border-radius:6px;
+}
+body[data-page="quests"] .quest-timeline-heading{
+ grid-column:1;
+ grid-row:1;
+ display:block;
+ margin:0;
+ min-width:0;
+}
+body[data-page="quests"] .quest-timeline-heading>div{
+ display:flex;
+ align-items:baseline;
+ flex-wrap:wrap;
+ gap:3px 10px;
+}
+body[data-page="quests"] .quest-timeline-heading .kicker{
+ display:none;
+}
+body[data-page="quests"] .quest-timeline-heading h2{
+ font-size:15px;
+ line-height:1.15;
+ margin:0;
+ white-space:nowrap;
+}
+body[data-page="quests"] .quest-timeline-heading p{
+ font-size:10px;
+ margin:0;
+ color:var(--muted);
+}
+body[data-page="quests"] .quest-timeline-range-label{
+ display:none;
+}
+body[data-page="quests"] .quest-timeline-track-scroll{
+ grid-column:1/-1;
+ grid-row:2;
+ min-width:0;
+}
+body[data-page="quests"] #quest-range.quest-timeline-slider{
+ margin-top:6px;
+ margin-bottom:0;
+}
+body[data-page="quests"] .quest-timeline-milestones{
+ height:39px;
+ margin-bottom:0;
+ background-position:center 4px;
+}
+body[data-page="quests"] .quest-milestone{
+ top:10px;
+ padding:4px 1px;
+ font-size:9px;
+}
+body[data-page="quests"] .quest-milestone::before{
+ top:-10px;
+ height:8px;
+}
+body[data-page="quests"] .quest-timeline-preview{
+ grid-column:1/-1;
+ grid-row:3;
+ border:0;
+ border-radius:0;
+ padding:2px 0 0;
+ min-height:0;
+ background:none;
+ font-size:10px;
+ line-height:1.3;
+ color:#baa984;
+ white-space:nowrap;
+ overflow:hidden;
+ text-overflow:ellipsis;
+}
+body[data-page="quests"] .quest-timeline .quest-progress-summary{
+ grid-column:2;
+ grid-row:1;
+ display:flex;
+ flex-direction:row;
+ align-items:center;
+ justify-content:flex-end;
+ gap:9px;
+ width:auto;
+ margin:0;
+ padding:0;
+ border:0;
+ border-radius:0;
+ background:none;
+}
+body[data-page="quests"] .quest-timeline .quest-progress-summary #quest-path-label{
+ display:none;
+}
+body[data-page="quests"] .quest-timeline .quest-progress-summary>div:first-child{
+ display:block;
+}
+body[data-page="quests"] .quest-timeline #quest-progress-info{
+ display:inline;
+ font-size:10px;
+ white-space:nowrap;
+ color:var(--muted);
+}
+body[data-page="quests"] .quest-timeline .quest-progress-track{
+ display:block;
+ width:76px;
+ flex:0 0 76px;
+ height:5px;
+ max-width:76px;
+}
+body[data-page="quests"] .quest-main{
+ gap:12px;
+}
+body[data-page="quests"] .quest-current-head{
+ margin-bottom:7px;
+}
+body[data-page="quests"] .quest-current-head .kicker{
+ font-size:9px;
+}
+body[data-page="quests"] .quest-current-head h2{
+ font-size:19px;
+ margin:2px 0;
+}
+body[data-page="quests"] .quest-current-head p{
+ font-size:10px;
+}
+body[data-page="quests"] .quest-map-top{
+ padding:7px 10px;
+}
+@media(max-width:1000px){
+ body[data-page="quests"] .quest-filters{
+  grid-template-columns:minmax(204px,.7fr) minmax(0,1.35fr);
+ }
+ body[data-page="quests"] .quest-race-choice{
+  gap:4px;
+  padding:4px;
+ }
+ body[data-page="quests"] .quest-race-label{
+  font-size:9.5px;
+ }
+}
+@media(max-width:760px){
+ body[data-page="quests"] .page-hero{
+  padding:10px 0 7px;
+  gap:4px 9px;
+ }
+ body[data-page="quests"] .page-hero .kicker{
+  display:none;
+ }
+ body[data-page="quests"] .page-hero h1{
+  font-size:28px;
+ }
+ body[data-page="quests"] .page-hero p{
+  font-size:11px;
+ }
+ body[data-page="quests"] .quest-toolbar .tool-head{
+  grid-template-columns:minmax(0,1fr) auto;
+  gap:7px;
+  margin-bottom:8px;
+ }
+ body[data-page="quests"] .quest-toolbar .tool-head .quest-search-field{
+  grid-column:1/-1;
+  grid-row:2;
+ }
+ body[data-page="quests"] .quest-toolbar .tool-head .status-pill{
+  grid-column:2;
+  grid-row:1;
+ }
+ body[data-page="quests"] .quest-filters{
+  grid-template-columns:1fr;
+  gap:6px;
+ }
+ body[data-page="quests"] .quest-faction-choice{
+  justify-content:center;
+ }
+ body[data-page="quests"] .quest-timeline{
+  padding:9px 10px 7px;
+  grid-template-columns:minmax(0,1fr) auto;
+  gap:0 6px;
+ }
+ body[data-page="quests"] .quest-timeline .quest-progress-track{
+  display:none;
+ }
+ body[data-page="quests"] .quest-timeline #quest-progress-info{
+  font-size:9px;
+ }
+}
+@media(max-width:440px){
+ body[data-page="quests"] .page-hero p{
+  display:none;
+ }
+ body[data-page="quests"] .quest-toolbar.tool-panel{
+  padding:9px;
+ }
+ body[data-page="quests"] .quest-race-choice{
+  flex-direction:column;
+  gap:1px;
+  height:48px;
+  min-height:48px;
+  padding:3px 2px;
+ }
+ body[data-page="quests"] .quest-race-choice img,
+ body[data-page="quests"] .quest-race-fallback{
+  width:26px;
+  height:26px;
+  flex:0 0 26px;
+ }
+ body[data-page="quests"] .quest-race-label{
+  font-size:9px;
+  text-align:center;
+ }
+ body[data-page="quests"] .quest-timeline-heading>div{
+  display:block;
+ }
+ body[data-page="quests"] .quest-timeline-heading h2{
+  font-size:13px;
+ }
+ body[data-page="quests"] .quest-timeline-heading p{
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+ }
+}
