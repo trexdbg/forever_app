@@ -38,10 +38,10 @@ const tomtom=n=>Number(n).toFixed(2);
 function setImage(zone){
  const url=s.meta.map_base+encodeURIComponent(zone)+".jpg";
  if(s.mapUrl===url)return;
- s.mapUrl=url;s.image=null;s.mapLoaded=false;$("quest-map-overlay").textContent="Carte Classic · source communautaire";
+ s.mapUrl=url;s.image=null;s.mapLoaded=false;$("quest-map-overlay").textContent="Chargement de la carte…";
  const img=new Image();
- img.onload=()=>{if(s.mapUrl!==url)return;s.image=img;s.mapLoaded=true;$("quest-map-overlay").textContent="Carte Classic © Blizzard · Vanilla Questing";draw()};
- img.onerror=()=>{if(s.mapUrl!==url)return;$("quest-map-overlay").textContent="Grille X/Y · fond indisponible";draw()};
+ img.onload=()=>{if(s.mapUrl!==url)return;s.image=img;s.mapLoaded=true;$("quest-map-overlay").textContent="Carte de zone";draw()};
+ img.onerror=()=>{if(s.mapUrl!==url)return;$("quest-map-overlay").textContent="Carte indisponible · repères X/Y";draw()};
  img.src=url;
 }
 function draw(){
@@ -70,7 +70,7 @@ function renderSelection(){
  box.append(copy);
  const links=[];for(const type of ["starts","objectives","ends","completed"])for(const q of w[type]||[]){const d=detailsOf(q);if(d.id&&d.id>0&&!links.includes(d.id))links.push(d.id)}
  if(links.length){const a=element("a","Détails de quête Classic ↗");a.href="https://www.wowhead.com/classic/quest="+links[0];a.target="_blank";a.rel="noopener noreferrer";a.style.cssText="display:inline-block;margin-left:13px;color:#f1c988;font-size:12px;text-decoration:underline";box.append(a)}
- const note=element("p","Commande à utiliser dans la zone "+stepName(s.steps[s.index])+". Référence Classic non garantie sur Forever.");note.style.color="#a9b7c7";box.append(note);
+ const note=element("p","Commande utilisable dans la zone "+stepName(s.steps[s.index])+". Certaines quêtes peuvent varier sur Forever.");note.style.color="#a9b7c7";box.append(note);
 }
 function selectWaypoint(i,focus=false){
  const step=s.steps[s.index];if(!step||i<0||i>=step.waypoints.length)return;
@@ -166,7 +166,7 @@ function render(){
  $("quest-zone-title").textContent=stepName(st);
  $("quest-level").textContent="Niveau approximatif : "+Number(st.experience||0).toFixed(1).replace(".",",")+" · "+st.waypoints.length+" points à visiter";
  $("quest-map-title").textContent=stepName(st)+" · itinéraire dans la zone";
- $("quest-map-source").textContent="Coordonnées de zone X/Y · 0 à 100";
+ $("quest-map-source").textContent="Coordonnées X/Y · 0 à 100";
  const first=s.index===0,last=s.index===s.steps.length-1;
  $("quest-prev").disabled=$("quest-prev-bottom").disabled=first;$("quest-next").disabled=$("quest-next-bottom").disabled=last;
  const complete=$("quest-complete"),done=s.done.has(s.index);complete.textContent=done?"✓ Étape terminée · annuler":"Marquer l'étape terminée ✓";complete.setAttribute("aria-pressed",String(done));
@@ -198,7 +198,7 @@ async function loadFaction(faction,fromUrl=false){
   const number=fromUrl&&params.get("faction")===faction&&params.get("race")===s.profile?Number(params.get("step"))-1:NaN;
   s.index=Number.isInteger(number)?clamp(number,0,s.steps.length-1):0;
   s.selected=0;s.zoom=1;s.center={x:50,y:50};s.mapUrl="";
-  $("quest-data-status").textContent=s.steps.length+" étapes · Classic";
+  $("quest-data-status").textContent=s.steps.length+" étapes disponibles";
   $("quest-app").setAttribute("aria-busy","false");
   renderMilestones();render();search();
  }catch(err){
