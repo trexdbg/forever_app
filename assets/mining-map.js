@@ -1,5 +1,5 @@
 (()=>{"use strict";
-const ROOT="/forever_app/",canvas=document.getElementById("mine-canvas");
+const ROOT="/",canvas=document.getElementById("mine-canvas");
 const en=document.documentElement.lang==="en",T=(fr,english)=>en?english:fr;
 const mineralLabelsEN={rich:"Rich Thorium",small:"Small Thorium",truesilver:"Truesilver",dark:"Dark Iron",starsilver:"Star Silver",hakkari:"Hakkari Thorium"};
 const zoneNamesEN={winterspring:"Winterspring",azshara:"Azshara",epl:"Eastern Plaguelands",ungoro:"Un'Goro Crater","burning-steppes":"Burning Steppes","searing-gorge":"Searing Gorge",silithus:"Silithus",wpl:"Western Plaguelands","blasted-lands":"Blasted Lands","swamp-of-sorrows":"Swamp of Sorrows"};
