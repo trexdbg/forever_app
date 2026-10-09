@@ -44,7 +44,8 @@ function filteredRecords(){
  }).sort((a,b)=>{
  const ea=!!a.item&&!!evidence(a.npc,a.item),eb=!!b.item&&!!evidence(b.npc,b.item);
  if(ea!==eb)return ea?-1:1;
- return (a.item?title(a.item):a.npc.name).localeCompare(b.item?title(b.item):b.npc.name));
+ return (a.item?title(a.item):a.npc.name).localeCompare(b.item?title(b.item):b.npc.name);
+ });
 }
 function renderList(){
  list.replaceChildren();for(const r of store.filtered){const b=mk("button",null,"npc-result");b.type="button";b.setAttribute("aria-selected",String(store.active?.key===r.key));b.setAttribute("role","option");const mark=append(b,"span",r.item?"✧":"⚒","npc-item-icon");mark.setAttribute("aria-hidden","true");
