@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+<title>Thorium riche</title>
+<defs><linearGradient id="rock" x1="0" y1="0" x2=".65" y2="1"><stop stop-color="#a77c57"/><stop offset=".6" stop-color="#73533c"/><stop offset="1" stop-color="#2b2424"/></linearGradient><linearGradient id="ore" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffec8f"/><stop offset=".52" stop-color="#ffbf38"/><stop offset="1" stop-color="#d88a22"/></linearGradient></defs>
+<path d="M7 49 11 29 20 21 26 13 42 12 51 20 58 38 54 51 42 56 19 55Z" fill="#2b2424" stroke="#101820" stroke-width="3" stroke-linejoin="round"/>
+<path d="M11 47 15 30 26 18 43 17 51 26 55 39 50 48 40 53 20 51Z" fill="url(#rock)" stroke="#a77c57" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M14 35 24 21 28 37 19 49 11 47Z" fill="#2b2424" opacity=".45"/><path d="m40 19 12 8 3 12-10 12-5-18Z" fill="#2b2424" opacity=".48"/>
+<path d="M20 15 33 9 42 20 36 31 24 32 16 23Z" fill="url(#ore)" stroke="#533e25" stroke-width="1.5"/><path d="m33 9 3 22-12 1 2-15Z" fill="#fff5a0" opacity=".38"/><path d="M40 28 51 22 56 35 48 44 38 40Z" fill="url(#ore)" stroke="#533e25" stroke-width="1.5"/><path d="m51 22-3 22" stroke="#fff4b6" stroke-width="2" opacity=".75"/>
+<path d="M10 49 19 52 38 54 51 49" fill="none" stroke="#131821" stroke-width="2.7" stroke-linecap="round"/>
+<path d="M15 29 25 19 41 17" fill="none" stroke="#fff9ce" stroke-opacity=".32" stroke-width="1.7" stroke-linecap="round"/>
+</svg>
