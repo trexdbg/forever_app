@@ -1,0 +1,1749 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-09",
+  "status": "classic_reference_not_forever_verified",
+  "coordinate_system": "zone_percent_0_100_classic_reference",
+  "stock_status": "not_live",
+  "disclaimer": {
+    "fr": "Références Classic, non vérifiées sur WoW Forever. Stocks et délais estimés à partir d'anciens témoignages ; aucun inventaire en temps réel.",
+    "en": "Classic references not verified for WoW Forever. Stock and waits are historical reports, not live inventory."
+  },
+  "sources": {
+    "alch": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
+    "tailor": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+    "engineer": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic",
+    "alchtrainer": "https://www.wowhead.com/classic/guide/alchemy-leveling-1-300-wow-classic",
+    "protrainer": "https://www.warcrafttavern.com/wow-classic-sod/guides/profession-trainer-locations-requirements-for-phase-2/",
+    "aid": "https://wow-guides.com/classic-era/professions/first-aid"
+  },
+  "items": {
+    "4371": {
+      "id": 4371,
+      "name": {
+        "en": "Bronze Tube",
+        "fr": "Tube en bronze"
+      },
+      "profession": "Ingénierie",
+      "skill": 0,
+      "supply": "limited"
+    },
+    "5640": {
+      "id": 5640,
+      "name": {
+        "en": "Recipe: Rage Potion",
+        "fr": "Recette : Potion de rage"
+      },
+      "profession": "Alchimie",
+      "skill": 60,
+      "supply": "limited",
+      "source": "https://www.wowhead.com/classic/item=5640/recipe-rage-potion"
+    },
+    "5642": {
+      "id": 5642,
+      "name": {
+        "en": "Recipe: Free Action Potion",
+        "fr": "Recette : Potion de libre action"
+      },
+      "profession": "Alchimie",
+      "skill": 150,
+      "supply": "limited"
+    },
+    "5643": {
+      "id": 5643,
+      "name": {
+        "en": "Recipe: Great Rage Potion",
+        "fr": "Recette : Potion de Grande rage"
+      },
+      "profession": "Alchimie",
+      "skill": 175,
+      "supply": "limited"
+    },
+    "6053": {
+      "id": 6053,
+      "name": {
+        "en": "Recipe: Holy Protection Potion",
+        "fr": "Recette : Potion de protection contre le Sacré"
+      },
+      "profession": "Alchimie",
+      "skill": 100,
+      "supply": "limited"
+    },
+    "6054": {
+      "id": 6054,
+      "name": {
+        "en": "Recipe: Shadow Protection Potion",
+        "fr": "Recette : Potion de protection contre l'Ombre"
+      },
+      "profession": "Alchimie",
+      "skill": 135,
+      "supply": "limited"
+    },
+    "6055": {
+      "id": 6055,
+      "name": {
+        "en": "Recipe: Fire Protection Potion",
+        "fr": "Recette : Potion de protection contre le Feu"
+      },
+      "profession": "Alchimie",
+      "skill": 165,
+      "supply": "limited"
+    },
+    "6056": {
+      "id": 6056,
+      "name": {
+        "en": "Recipe: Frost Protection Potion",
+        "fr": "Recette : Potion de protection contre le Givre"
+      },
+      "profession": "Alchimie",
+      "skill": 190,
+      "supply": "limited"
+    },
+    "6057": {
+      "id": 6057,
+      "name": {
+        "en": "Recipe: Nature Protection Potion",
+        "fr": "Recette : Potion de protection contre la Nature"
+      },
+      "profession": "Alchimie",
+      "skill": 190,
+      "supply": "limited"
+    },
+    "6068": {
+      "id": 6068,
+      "name": {
+        "en": "Recipe: Shadow Oil",
+        "fr": "Recette : Huile des ténèbres"
+      },
+      "profession": "Alchimie",
+      "skill": 165,
+      "supply": "limited"
+    },
+    "6272": {
+      "id": 6272,
+      "name": {
+        "en": "Pattern: Blue Linen Robe",
+        "fr": "Patron : Robe en lin bleue"
+      },
+      "profession": "Couture",
+      "skill": 70,
+      "supply": "limited"
+    },
+    "7560": {
+      "id": 7560,
+      "name": {
+        "en": "Schematic: Gnomish Universal Remote",
+        "fr": "Schéma : Télécommande universelle gnome"
+      },
+      "profession": "Ingénierie",
+      "skill": 125,
+      "supply": "limited"
+    },
+    "7561": {
+      "id": 7561,
+      "name": {
+        "en": "Schematic: Goblin Jumper Cables",
+        "fr": "Schéma : Câbles avec fusibles"
+      },
+      "profession": "Ingénierie",
+      "skill": 165,
+      "supply": "limited"
+    },
+    "7742": {
+      "id": 7742,
+      "name": {
+        "en": "Schematic: Gnomish Cloaking Device",
+        "fr": "Schéma : Dispositif d'invisibilité gnome"
+      },
+      "profession": "Ingénierie",
+      "skill": 200,
+      "supply": "limited"
+    },
+    "9301": {
+      "id": 9301,
+      "name": {
+        "en": "Recipe: Elixir of Shadow Power",
+        "fr": "Recette : Élixir de puissance de l'ombre"
+      },
+      "profession": "Alchimie",
+      "skill": 250,
+      "supply": "limited"
+    },
+    "9302": {
+      "id": 9302,
+      "name": {
+        "en": "Recipe: Ghost Dye",
+        "fr": "Recette : Teinture fantôme"
+      },
+      "profession": "Alchimie",
+      "skill": 245,
+      "supply": "limited"
+    },
+    "9303": {
+      "id": 9303,
+      "name": {
+        "en": "Recipe: Philosopher's Stone",
+        "fr": "Recette : Pierre philosophale"
+      },
+      "profession": "Alchimie",
+      "skill": 225,
+      "supply": "unlimited"
+    },
+    "9304": {
+      "id": 9304,
+      "name": {
+        "en": "Recipe: Transmute Iron to Gold",
+        "fr": "Recette : Transmutation du fer en or"
+      },
+      "profession": "Alchimie",
+      "skill": 225,
+      "supply": "unlimited"
+    },
+    "9305": {
+      "id": 9305,
+      "name": {
+        "en": "Recipe: Transmute Mithril to Truesilver",
+        "fr": "Recette : Transmutation du mithril en vrai-argent"
+      },
+      "profession": "Alchimie",
+      "skill": 225,
+      "supply": "limited"
+    },
+    "12958": {
+      "id": 12958,
+      "name": {
+        "en": "Recipe: Transmute Arcanite",
+        "fr": "Recette : Transmutation d'arcanite"
+      },
+      "profession": "Alchimie",
+      "skill": 275,
+      "supply": "unlimited"
+    },
+    "13308": {
+      "id": 13308,
+      "name": {
+        "en": "Schematic: Ice Deflector",
+        "fr": "Schéma : Déflecteur de glace"
+      },
+      "profession": "Ingénierie",
+      "skill": 155,
+      "supply": "limited"
+    },
+    "13309": {
+      "id": 13309,
+      "name": {
+        "en": "Schematic: Lovingly Crafted Boomstick",
+        "fr": "Schéma : Espingole amoureusement fabriquée"
+      },
+      "profession": "Ingénierie",
+      "skill": 120,
+      "supply": "limited"
+    },
+    "13310": {
+      "id": 13310,
+      "name": {
+        "en": "Schematic: Accurate Scope",
+        "fr": "Schéma : Lunette de précision"
+      },
+      "profession": "Ingénierie",
+      "skill": 180,
+      "supply": "limited"
+    },
+    "13477": {
+      "id": 13477,
+      "name": {
+        "en": "Recipe: Superior Mana Potion",
+        "fr": "Recette : Potion de mana excellente"
+      },
+      "profession": "Alchimie",
+      "skill": 260,
+      "supply": "limited"
+    },
+    "13478": {
+      "id": 13478,
+      "name": {
+        "en": "Recipe: Elixir of Superior Defense",
+        "fr": "Recette : Élixir de défense excellente"
+      },
+      "profession": "Alchimie",
+      "skill": 265,
+      "supply": "limited"
+    },
+    "13480": {
+      "id": 13480,
+      "name": {
+        "en": "Recipe: Major Healing Potion",
+        "fr": "Recette : Potion de soins majeure"
+      },
+      "profession": "Alchimie",
+      "skill": 275,
+      "supply": "limited"
+    },
+    "13501": {
+      "id": 13501,
+      "name": {
+        "en": "Recipe: Major Mana Potion",
+        "fr": "Recette : Potion de mana majeure"
+      },
+      "profession": "Alchimie",
+      "skill": 295,
+      "supply": "unlimited"
+    },
+    "14468": {
+      "id": 14468,
+      "name": {
+        "en": "Pattern: Runecloth Bag",
+        "fr": "Patron : Sac en étoffe runique"
+      },
+      "profession": "Couture",
+      "skill": 260,
+      "supply": "limited"
+    },
+    "14481": {
+      "id": 14481,
+      "name": {
+        "en": "Pattern: Runecloth Gloves",
+        "fr": "Patron : Gants en étoffe runique"
+      },
+      "profession": "Couture",
+      "skill": 275,
+      "supply": "limited"
+    },
+    "14526": {
+      "id": 14526,
+      "name": {
+        "en": "Pattern: Mooncloth",
+        "fr": "Patron : Étoffe lunaire"
+      },
+      "profession": "Couture",
+      "skill": 250,
+      "supply": "unlimited"
+    },
+    "14634": {
+      "id": 14634,
+      "name": {
+        "en": "Recipe: Frost Oil",
+        "fr": "Recette : Huile glaciale"
+      },
+      "profession": "Alchimie",
+      "skill": 200,
+      "supply": "limited"
+    },
+    "16221": {
+      "id": 16221,
+      "name": {
+        "en": "Formula: Enchant Chest - Major Health",
+        "fr": "Formule : Enchantement de plastron (Santé majeure)"
+      },
+      "profession": "Enchantement",
+      "skill": 275,
+      "supply": "limited"
+    },
+    "18648": {
+      "id": 18648,
+      "name": {
+        "en": "Schematic: Green Firework",
+        "fr": "Schéma : Feu d'artifice vert"
+      },
+      "profession": "Ingénierie",
+      "skill": 150,
+      "supply": "limited"
+    },
+    "18651": {
+      "id": 18651,
+      "name": {
+        "en": "Schematic: Truesilver Transformer",
+        "fr": "Schéma : Transformateur de vrai-argent"
+      },
+      "profession": "Ingénierie",
+      "skill": 260,
+      "supply": "limited"
+    },
+    "22308": {
+      "id": 22308,
+      "name": {
+        "en": "Pattern: Enchanted Runecloth Bag",
+        "fr": "Patron : Sac enchanté en étoffe runique"
+      },
+      "profession": "Couture",
+      "skill": 275,
+      "supply": "unlimited"
+    },
+    "22310": {
+      "id": 22310,
+      "name": {
+        "en": "Pattern: Cenarion Herb Bag",
+        "fr": "Patron : Sac d'herbes cénarien"
+      },
+      "profession": "Couture",
+      "skill": 275,
+      "supply": "reputation"
+    },
+    "22312": {
+      "id": 22312,
+      "name": {
+        "en": "Pattern: Satchel of Cenarius",
+        "fr": "Patron : Sacoche de Cénarius"
+      },
+      "profession": "Couture",
+      "skill": 300,
+      "supply": "reputation"
+    },
+    "22683": {
+      "id": 22683,
+      "name": {
+        "en": "Pattern: Gaea's Embrace",
+        "fr": "Patron : Étreinte de Gaïa"
+      },
+      "profession": "Couture",
+      "skill": 300,
+      "supply": "reputation"
+    },
+    "22772": {
+      "id": 22772,
+      "name": {
+        "en": "Pattern: Sylvan Shoulders",
+        "fr": "Patron : Épaulières sylvestres"
+      },
+      "profession": "Couture",
+      "skill": 300,
+      "supply": "reputation"
+    },
+    "22773": {
+      "id": 22773,
+      "name": {
+        "en": "Pattern: Sylvan Crown",
+        "fr": "Patron : Couronne sylvestre"
+      },
+      "profession": "Couture",
+      "skill": 300,
+      "supply": "reputation"
+    },
+    "22774": {
+      "id": 22774,
+      "name": {
+        "en": "Pattern: Sylvan Vest",
+        "fr": "Patron : Gilet sylvestre"
+      },
+      "profession": "Couture",
+      "skill": 300,
+      "supply": "reputation"
+    }
+  },
+  "npcs": [
+    {
+      "id": 4226,
+      "name": "Ulthir",
+      "role": "merchant",
+      "profession": "Alchimie",
+      "zone": {
+        "id": "darnassus",
+        "fr": "Darnassus",
+        "en": "Darnassus"
+      },
+      "coordinates": {
+        "x": 55.8,
+        "y": 24.6
+      },
+      "faction": "alliance",
+      "offers": [
+        "5642",
+        "5643",
+        "13477"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
+      "note": "Terrasse des artisans",
+      "note_en": "Craftsmen's Terrace"
+    },
+    {
+      "id": null,
+      "name": "Soolie Berryfizz",
+      "role": "merchant",
+      "profession": "Alchimie",
+      "zone": {
+        "id": "ironforge",
+        "fr": "Forgefer",
+        "en": "Ironforge"
+      },
+      "coordinates": {
+        "x": 66.6,
+        "y": 54.8
+      },
+      "faction": "alliance",
+      "offers": [
+        "5642",
+        "13478"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
+      "note": "Brikabrok",
+      "note_en": "Tinker Town"
+    },
+    {
+      "id": null,
+      "name": "Maria Lumere",
+      "role": "merchant",
+      "profession": "Alchimie",
+      "zone": {
+        "id": "stormwind",
+        "fr": "Hurlevent",
+        "en": "Stormwind"
+      },
+      "coordinates": {
+        "x": 46.6,
+        "y": 78.8
+      },
+      "faction": "alliance",
+      "offers": [
+        "9301"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
+      "note": "Quartier des mages",
+      "note_en": "Mage Quarter"
+    },
+    {
+      "id": null,
+      "name": "Xandar Goodbeard",
+      "role": "merchant",
+      "profession": "Alchimie",
+      "zone": {
+        "id": "loch-modan",
+        "fr": "Loch Modan",
+        "en": "Loch Modan"
+      },
+      "coordinates": {
+        "x": 82.6,
+        "y": 63.4
+      },
+      "faction": "alliance",
+      "offers": [
+        "5640",
+        "6053"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
+      "note": "Gîte des pérégrins",
+      "note_en": "Farstrider Lodge"
+    },
+    {
+      "id": null,
+      "name": "Harklan Moongrove",
+      "role": "merchant",
+      "profession": "Alchimie",
+      "zone": {
+        "id": "ashenvale",
+        "fr": "Orneval",
+        "en": "Ashenvale"
+      },
+      "coordinates": {
+        "x": 50.6,
+        "y": 67
+      },
+      "faction": "alliance",
+      "offers": [
+        "6054"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
+      "note": "Refuge de Vent-argent",
+      "note_en": "Silverwind Refuge"
+    },
+    {
+      "id": null,
+      "name": "Bliztik",
+      "role": "merchant",
+      "profession": "Alchimie",
+      "zone": {
+        "id": "duskwood",
+        "fr": "Bois de la Pénombre",
+        "en": "Duskwood"
+      },
+      "coordinates": {
+        "x": 18,
+        "y": 54.4
+      },
+      "faction": "alliance",
+      "offers": [
+        "6068"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
+      "note": "Colline-aux-Corbeaux",
+      "note_en": "Raven Hill"
+    },
+    {
+      "id": null,
+      "name": "Nandar Branson",
+      "role": "merchant",
+      "profession": "Alchimie",
+      "zone": {
+        "id": "hillsbrad",
+        "fr": "Contreforts de Hautebrande",
+        "en": "Hillsbrad Foothills"
+      },
+      "coordinates": {
+        "x": 50.8,
+        "y": 57
+      },
+      "faction": "alliance",
+      "offers": [
+        "6055"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
+      "note": "Austrivage",
+      "note_en": "Southshore"
+    },
+    {
+      "id": null,
+      "name": "Bro'kin",
+      "role": "merchant",
+      "profession": "Alchimie",
+      "zone": {
+        "id": "alterac",
+        "fr": "Montagnes d'Alterac",
+        "en": "Alterac Mountains"
+      },
+      "coordinates": {
+        "x": 38.2,
+        "y": 38.8
+      },
+      "faction": "neutral",
+      "offers": [
+        "14634"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
+      "note": "Ruines d'Alterac",
+      "note_en": "Alterac ruins"
+    },
+    {
+      "id": null,
+      "name": "Glyx Brewright",
+      "role": "merchant",
+      "profession": "Alchimie",
+      "zone": {
+        "id": "stranglethorn",
+        "fr": "Vallée de Strangleronce",
+        "en": "Stranglethorn Vale"
+      },
+      "coordinates": {
+        "x": 28,
+        "y": 78
+      },
+      "faction": "neutral",
+      "offers": [
+        "6056",
+        "6057"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
+      "note": "Baie-du-Butin",
+      "note_en": "Booty Bay"
+    },
+    {
+      "id": 5594,
+      "name": "Alchemist Pestlezugg",
+      "role": "merchant",
+      "profession": "Alchimie",
+      "zone": {
+        "id": "tanaris",
+        "fr": "Tanaris",
+        "en": "Tanaris"
+      },
+      "coordinates": {
+        "x": 50.9,
+        "y": 27
+      },
+      "faction": "neutral",
+      "offers": [
+        "6057",
+        "9303",
+        "9304",
+        "9305",
+        "12958"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
+      "note": "Gadgetzan",
+      "note_en": "Gadgetzan"
+    },
+    {
+      "id": null,
+      "name": "Logannas",
+      "role": "merchant",
+      "profession": "Alchimie",
+      "zone": {
+        "id": "feralas",
+        "fr": "Féralas",
+        "en": "Feralas"
+      },
+      "coordinates": {
+        "x": 32.6,
+        "y": 42.8
+      },
+      "faction": "alliance",
+      "offers": [
+        "6057",
+        "9302"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
+      "note": "Bastion de Pennelune",
+      "note_en": "Feathermoon Stronghold"
+    },
+    {
+      "id": 11188,
+      "name": "Evie Whirlbrew",
+      "role": "merchant",
+      "profession": "Alchimie",
+      "zone": {
+        "id": "winterspring",
+        "fr": "Berceau-de-l'Hiver",
+        "en": "Winterspring"
+      },
+      "coordinates": {
+        "x": 60.8,
+        "y": 37.8
+      },
+      "faction": "neutral",
+      "offers": [
+        "13480"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
+      "note": "Long-guet",
+      "note_en": "Everlook"
+    },
+    {
+      "id": null,
+      "name": "Hagrus",
+      "role": "merchant",
+      "profession": "Alchimie",
+      "zone": {
+        "id": "orgrimmar",
+        "fr": "Orgrimmar",
+        "en": "Orgrimmar"
+      },
+      "coordinates": {
+        "x": 46,
+        "y": 45.7
+      },
+      "faction": "horde",
+      "offers": [
+        "5640",
+        "5643"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
+      "note": "Faille de l'Ombre",
+      "note_en": "Cleft of Shadow"
+    },
+    {
+      "id": null,
+      "name": "Kor'geld",
+      "role": "merchant",
+      "profession": "Alchimie",
+      "zone": {
+        "id": "orgrimmar",
+        "fr": "Orgrimmar",
+        "en": "Orgrimmar"
+      },
+      "coordinates": {
+        "x": 56.2,
+        "y": 34.2
+      },
+      "faction": "horde",
+      "offers": [
+        "5642",
+        "13478"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
+      "note": "La Herse",
+      "note_en": "The Drag"
+    },
+    {
+      "id": null,
+      "name": "Algernon",
+      "role": "merchant",
+      "profession": "Alchimie",
+      "zone": {
+        "id": "undercity",
+        "fr": "Fossoyeuse",
+        "en": "Undercity"
+      },
+      "coordinates": {
+        "x": 51.8,
+        "y": 74.2
+      },
+      "faction": "horde",
+      "offers": [
+        "9301",
+        "13477"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
+      "note": "L'Apothicarium",
+      "note_en": "The Apothecarium"
+    },
+    {
+      "id": null,
+      "name": "Jeeda",
+      "role": "merchant",
+      "profession": "Alchimie",
+      "zone": {
+        "id": "stonetalon",
+        "fr": "Serres-Rocheuses",
+        "en": "Stonetalon Mountains"
+      },
+      "coordinates": {
+        "x": 47.6,
+        "y": 61.6
+      },
+      "faction": "horde",
+      "offers": [
+        "6055"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
+      "note": "Retraite de Roche-Soleil",
+      "note_en": "Sun Rock Retreat"
+    },
+    {
+      "id": null,
+      "name": "Montarr",
+      "role": "merchant",
+      "profession": "Alchimie",
+      "zone": {
+        "id": "thousand-needles",
+        "fr": "Mille pointes",
+        "en": "Thousand Needles"
+      },
+      "coordinates": {
+        "x": 45.2,
+        "y": 50.8
+      },
+      "faction": "horde",
+      "offers": [
+        "6068"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
+      "note": "Poste de Librevent",
+      "note_en": "Freewind Post"
+    },
+    {
+      "id": null,
+      "name": "Bronk",
+      "role": "merchant",
+      "profession": "Alchimie",
+      "zone": {
+        "id": "feralas",
+        "fr": "Féralas",
+        "en": "Feralas"
+      },
+      "coordinates": {
+        "x": 76,
+        "y": 43.2
+      },
+      "faction": "horde",
+      "offers": [
+        "6057",
+        "9302"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic",
+      "note": "Camp Mojache",
+      "note_en": "Camp Mojache"
+    },
+    {
+      "id": 11189,
+      "name": "Qia",
+      "role": "merchant",
+      "profession": "Couture",
+      "zone": {
+        "id": "winterspring",
+        "fr": "Berceau-de-l'Hiver",
+        "en": "Winterspring"
+      },
+      "coordinates": {
+        "x": 61.2,
+        "y": 37.2
+      },
+      "faction": "neutral",
+      "offers": [
+        "14526",
+        "14468",
+        "14481",
+        "16221"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "note": "Banque de Long-guet",
+      "note_en": "Everlook bank"
+    },
+    {
+      "id": 15419,
+      "name": "Kania",
+      "role": "merchant",
+      "profession": "Couture",
+      "zone": {
+        "id": "silithus",
+        "fr": "Silithus",
+        "en": "Silithus"
+      },
+      "coordinates": {
+        "x": 52,
+        "y": 39.7
+      },
+      "faction": "neutral",
+      "offers": [
+        "22308"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "note": "Fort cénarien",
+      "note_en": "Cenarion Hold"
+    },
+    {
+      "id": null,
+      "name": "Mishta",
+      "role": "merchant",
+      "profession": "Couture",
+      "zone": {
+        "id": "silithus",
+        "fr": "Silithus",
+        "en": "Silithus"
+      },
+      "coordinates": {
+        "x": 49.9,
+        "y": 36.3
+      },
+      "faction": "neutral",
+      "offers": [
+        "22310",
+        "22772",
+        "22773",
+        "22774",
+        "22683",
+        "22312"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "note": "Fort cénarien · Réputation Cercle cénarien",
+      "note_en": "Cenarion Hold · Cenarion Circle reputation"
+    },
+    {
+      "id": 4168,
+      "name": "Elynna",
+      "role": "merchant",
+      "profession": "Couture",
+      "zone": {
+        "id": "darnassus",
+        "fr": "Darnassus",
+        "en": "Darnassus"
+      },
+      "coordinates": {
+        "x": 64.6,
+        "y": 21.6
+      },
+      "faction": "alliance",
+      "offers": [
+        "6272"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+      "note": "Terrasse des artisans",
+      "note_en": "Craftsmen's Terrace"
+    },
+    {
+      "id": null,
+      "name": "Gagsprocket",
+      "role": "merchant",
+      "profession": "Ingénierie",
+      "zone": {
+        "id": "barrens",
+        "fr": "Les Tarides",
+        "en": "The Barrens"
+      },
+      "coordinates": {
+        "x": 62.6,
+        "y": 36.2
+      },
+      "faction": "neutral",
+      "offers": [
+        "18648"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic",
+      "note": "Cabestan",
+      "note_en": "Ratchet"
+    },
+    {
+      "id": null,
+      "name": "Veenix",
+      "role": "merchant",
+      "profession": "Ingénierie",
+      "zone": {
+        "id": "stonetalon",
+        "fr": "Serres-Rocheuses",
+        "en": "Stonetalon Mountains"
+      },
+      "coordinates": {
+        "x": 58.2,
+        "y": 51.6
+      },
+      "faction": "neutral",
+      "offers": [
+        "7561"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic",
+      "note": "Combe des Cisailles",
+      "note_en": "Windshear Crag"
+    },
+    {
+      "id": 3537,
+      "name": "Zixil",
+      "role": "merchant",
+      "profession": "Ingénierie",
+      "zone": {
+        "id": "hillsbrad",
+        "fr": "Contreforts de Hautebrande",
+        "en": "Hillsbrad Foothills"
+      },
+      "coordinates": {
+        "x": 51,
+        "y": 48
+      },
+      "faction": "neutral",
+      "offers": [
+        "7561"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic",
+      "note": "Marchand ambulant sur la route",
+      "note_en": "Travelling vendor along the road"
+    },
+    {
+      "id": 6730,
+      "name": "Jinky Twizzlefixxit",
+      "role": "merchant",
+      "profession": "Ingénierie",
+      "zone": {
+        "id": "thousand-needles",
+        "fr": "Mille pointes",
+        "en": "Thousand Needles"
+      },
+      "coordinates": {
+        "x": 77.6,
+        "y": 77.8
+      },
+      "faction": "neutral",
+      "offers": [
+        "13309",
+        "7560"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic",
+      "note": "Piste des Mirages",
+      "note_en": "Mirage Raceway"
+    },
+    {
+      "id": null,
+      "name": "Rizz Loosebolt",
+      "role": "merchant",
+      "profession": "Ingénierie",
+      "zone": {
+        "id": "alterac",
+        "fr": "Montagnes d'Alterac",
+        "en": "Alterac Mountains"
+      },
+      "coordinates": {
+        "x": 47.2,
+        "y": 35.2
+      },
+      "faction": "neutral",
+      "offers": [
+        "13308"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic",
+      "note": "Cage au nord",
+      "note_en": "Northern enclosure"
+    },
+    {
+      "id": 6777,
+      "name": "Zan Shivsproket",
+      "role": "merchant",
+      "profession": "Ingénierie",
+      "zone": {
+        "id": "alterac",
+        "fr": "Montagnes d'Alterac",
+        "en": "Alterac Mountains"
+      },
+      "coordinates": {
+        "x": 86,
+        "y": 80
+      },
+      "faction": "neutral",
+      "offers": [
+        "7742"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic",
+      "note": "Sud-est d'Alterac",
+      "note_en": "Southeastern Alterac"
+    },
+    {
+      "id": null,
+      "name": "Super-Seller 680",
+      "role": "merchant",
+      "profession": "Ingénierie",
+      "zone": {
+        "id": "desolace",
+        "fr": "Désolace",
+        "en": "Desolace"
+      },
+      "coordinates": {
+        "x": 40.5,
+        "y": 79.3
+      },
+      "faction": "neutral",
+      "offers": [
+        "13308",
+        "7561",
+        "13310"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic",
+      "note": "Caravane de Gizelton · Vendeur mobile",
+      "note_en": "Gizelton's caravan · Mobile vendor"
+    },
+    {
+      "id": 2685,
+      "name": "Mazk Snipeshot",
+      "role": "merchant",
+      "profession": "Ingénierie",
+      "zone": {
+        "id": "stranglethorn",
+        "fr": "Vallée de Strangleronce",
+        "en": "Stranglethorn Vale"
+      },
+      "coordinates": {
+        "x": 28.4,
+        "y": 75
+      },
+      "faction": "neutral",
+      "offers": [
+        "13310",
+        "18651"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic",
+      "note": "Baie-du-Butin",
+      "note_en": "Booty Bay"
+    },
+    {
+      "id": null,
+      "name": "Kzixx",
+      "role": "merchant",
+      "profession": "Ingénierie",
+      "zone": {
+        "id": "duskwood",
+        "fr": "Bois de la Pénombre",
+        "en": "Duskwood"
+      },
+      "coordinates": {
+        "x": 81.8,
+        "y": 19.8
+      },
+      "faction": "neutral",
+      "offers": [
+        "7561"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic",
+      "note": "Route vers les Carmines",
+      "note_en": "Road to Redridge"
+    },
+    {
+      "id": null,
+      "name": "Ainethil",
+      "role": "trainer",
+      "profession": "Alchimie",
+      "rank": "Expert",
+      "zone": {
+        "id": "darnassus",
+        "fr": "Darnassus",
+        "en": "Darnassus"
+      },
+      "coordinates": {
+        "x": 55,
+        "y": 24
+      },
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.wowhead.com/classic/guide/alchemy-leveling-1-300-wow-classic",
+      "note": ""
+    },
+    {
+      "id": null,
+      "name": "Kylanna Windwhisper",
+      "role": "trainer",
+      "profession": "Alchimie",
+      "rank": "Artisan",
+      "zone": {
+        "id": "feralas",
+        "fr": "Féralas",
+        "en": "Feralas"
+      },
+      "coordinates": {
+        "x": 32.6,
+        "y": 43.8
+      },
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.wowhead.com/classic/guide/alchemy-leveling-1-300-wow-classic",
+      "note": ""
+    },
+    {
+      "id": null,
+      "name": "Lilyssia Nightbreeze",
+      "role": "trainer",
+      "profession": "Alchimie",
+      "rank": "Compagnon",
+      "zone": {
+        "id": "stormwind",
+        "fr": "Hurlevent",
+        "en": "Stormwind"
+      },
+      "coordinates": {
+        "x": 46.4,
+        "y": 79.6
+      },
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.wowhead.com/classic/guide/alchemy-leveling-1-300-wow-classic",
+      "note": ""
+    },
+    {
+      "id": null,
+      "name": "Tally Berryfizz",
+      "role": "trainer",
+      "profession": "Alchimie",
+      "rank": "Compagnon",
+      "zone": {
+        "id": "ironforge",
+        "fr": "Forgefer",
+        "en": "Ironforge"
+      },
+      "coordinates": {
+        "x": 67.2,
+        "y": 54.2
+      },
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.wowhead.com/classic/guide/alchemy-leveling-1-300-wow-classic",
+      "note": ""
+    },
+    {
+      "id": null,
+      "name": "Yelmak",
+      "role": "trainer",
+      "profession": "Alchimie",
+      "rank": "Compagnon",
+      "zone": {
+        "id": "orgrimmar",
+        "fr": "Orgrimmar",
+        "en": "Orgrimmar"
+      },
+      "coordinates": {
+        "x": 56.6,
+        "y": 33.2
+      },
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wowhead.com/classic/guide/alchemy-leveling-1-300-wow-classic",
+      "note": ""
+    },
+    {
+      "id": null,
+      "name": "Doctor Herbert Halsey",
+      "role": "trainer",
+      "profession": "Alchimie",
+      "rank": "Expert",
+      "zone": {
+        "id": "undercity",
+        "fr": "Fossoyeuse",
+        "en": "Undercity"
+      },
+      "coordinates": {
+        "x": 48.2,
+        "y": 72.2
+      },
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wowhead.com/classic/guide/alchemy-leveling-1-300-wow-classic",
+      "note": ""
+    },
+    {
+      "id": null,
+      "name": "Rogvar",
+      "role": "trainer",
+      "profession": "Alchimie",
+      "rank": "Artisan",
+      "zone": {
+        "id": "swamp-of-sorrows",
+        "fr": "Marais des Chagrins",
+        "en": "Swamp of Sorrows"
+      },
+      "coordinates": {
+        "x": 48.4,
+        "y": 55.6
+      },
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.wowhead.com/classic/guide/alchemy-leveling-1-300-wow-classic",
+      "note": ""
+    },
+    {
+      "id": null,
+      "name": "Kitta Firewind",
+      "role": "trainer",
+      "profession": "Enchantement",
+      "rank": "Expert",
+      "zone": {
+        "id": "elwynn",
+        "fr": "Forêt d'Elwynn",
+        "en": "Elwynn Forest"
+      },
+      "coordinates": {
+        "x": 64.9,
+        "y": 70.1
+      },
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.warcrafttavern.com/wow-classic-sod/guides/profession-trainer-locations-requirements-for-phase-2/",
+      "note": ""
+    },
+    {
+      "id": null,
+      "name": "Hgarth",
+      "role": "trainer",
+      "profession": "Enchantement",
+      "rank": "Expert",
+      "zone": {
+        "id": "stonetalon",
+        "fr": "Serres-Rocheuses",
+        "en": "Stonetalon Mountains"
+      },
+      "coordinates": {
+        "x": 49.2,
+        "y": 57.2
+      },
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.warcrafttavern.com/wow-classic-sod/guides/profession-trainer-locations-requirements-for-phase-2/",
+      "note": ""
+    },
+    {
+      "id": null,
+      "name": "Springspindle Fizzlegear",
+      "role": "trainer",
+      "profession": "Ingénierie",
+      "rank": "Expert",
+      "zone": {
+        "id": "ironforge",
+        "fr": "Forgefer",
+        "en": "Ironforge"
+      },
+      "coordinates": {
+        "x": 68.5,
+        "y": 43.5
+      },
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.warcrafttavern.com/wow-classic-sod/guides/profession-trainer-locations-requirements-for-phase-2/",
+      "note": ""
+    },
+    {
+      "id": null,
+      "name": "Roxxik",
+      "role": "trainer",
+      "profession": "Ingénierie",
+      "rank": "Expert",
+      "zone": {
+        "id": "orgrimmar",
+        "fr": "Orgrimmar",
+        "en": "Orgrimmar"
+      },
+      "coordinates": {
+        "x": 76.2,
+        "y": 25.2
+      },
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.warcrafttavern.com/wow-classic-sod/guides/profession-trainer-locations-requirements-for-phase-2/",
+      "note": ""
+    },
+    {
+      "id": null,
+      "name": "Georgio Bolero",
+      "role": "trainer",
+      "profession": "Couture",
+      "rank": "Expert",
+      "zone": {
+        "id": "stormwind",
+        "fr": "Hurlevent",
+        "en": "Stormwind"
+      },
+      "coordinates": {
+        "x": 43.2,
+        "y": 73.6
+      },
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.warcrafttavern.com/wow-classic-sod/guides/profession-trainer-locations-requirements-for-phase-2/",
+      "note": ""
+    },
+    {
+      "id": null,
+      "name": "Josef Gregorian",
+      "role": "trainer",
+      "profession": "Couture",
+      "rank": "Expert",
+      "zone": {
+        "id": "undercity",
+        "fr": "Fossoyeuse",
+        "en": "Undercity"
+      },
+      "coordinates": {
+        "x": 70.6,
+        "y": 30.6
+      },
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.warcrafttavern.com/wow-classic-sod/guides/profession-trainer-locations-requirements-for-phase-2/",
+      "note": ""
+    },
+    {
+      "id": null,
+      "name": "Bengus Deepforge",
+      "role": "trainer",
+      "profession": "Forge",
+      "rank": "Expert",
+      "zone": {
+        "id": "ironforge",
+        "fr": "Forgefer",
+        "en": "Ironforge"
+      },
+      "coordinates": {
+        "x": 52.6,
+        "y": 41.5
+      },
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.warcrafttavern.com/wow-classic-sod/guides/profession-trainer-locations-requirements-for-phase-2/",
+      "note": ""
+    },
+    {
+      "id": null,
+      "name": "Saru Steelfury",
+      "role": "trainer",
+      "profession": "Forge",
+      "rank": "Expert",
+      "zone": {
+        "id": "orgrimmar",
+        "fr": "Orgrimmar",
+        "en": "Orgrimmar"
+      },
+      "coordinates": {
+        "x": 82.4,
+        "y": 23
+      },
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.warcrafttavern.com/wow-classic-sod/guides/profession-trainer-locations-requirements-for-phase-2/",
+      "note": ""
+    },
+    {
+      "id": null,
+      "name": "Telonis",
+      "role": "trainer",
+      "profession": "Travail du cuir",
+      "rank": "Expert",
+      "zone": {
+        "id": "darnassus",
+        "fr": "Darnassus",
+        "en": "Darnassus"
+      },
+      "coordinates": {
+        "x": 64.4,
+        "y": 21.6
+      },
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://www.warcrafttavern.com/wow-classic-sod/guides/profession-trainer-locations-requirements-for-phase-2/",
+      "note": ""
+    },
+    {
+      "id": null,
+      "name": "Una",
+      "role": "trainer",
+      "profession": "Travail du cuir",
+      "rank": "Expert",
+      "zone": {
+        "id": "thunder-bluff",
+        "fr": "Les Pitons-du-Tonnerre",
+        "en": "Thunder Bluff"
+      },
+      "coordinates": {
+        "x": 41.5,
+        "y": 42.6
+      },
+      "faction": "horde",
+      "offers": [],
+      "source": "https://www.warcrafttavern.com/wow-classic-sod/guides/profession-trainer-locations-requirements-for-phase-2/",
+      "note": ""
+    },
+    {
+      "id": null,
+      "name": "Shaina Fuller",
+      "role": "trainer",
+      "profession": "Secourisme",
+      "rank": "Compagnon",
+      "zone": {
+        "id": "stormwind",
+        "fr": "Hurlevent",
+        "en": "Stormwind"
+      },
+      "coordinates": {
+        "x": 43.1,
+        "y": 26.2
+      },
+      "faction": "alliance",
+      "offers": [],
+      "source": "https://wow-guides.com/classic-era/professions/first-aid",
+      "note": ""
+    },
+    {
+      "id": null,
+      "name": "Arnok",
+      "role": "trainer",
+      "profession": "Secourisme",
+      "rank": "Compagnon",
+      "zone": {
+        "id": "orgrimmar",
+        "fr": "Orgrimmar",
+        "en": "Orgrimmar"
+      },
+      "coordinates": {
+        "x": 34.2,
+        "y": 84.6
+      },
+      "faction": "horde",
+      "offers": [],
+      "source": "https://wow-guides.com/classic-era/professions/first-aid",
+      "note": ""
+    },
+    {
+      "id": 11278,
+      "name": "Magnus Frostwake",
+      "role": "merchant",
+      "profession": "Alchimie",
+      "zone": {
+        "id": "wpl",
+        "fr": "Maleterres de l’Ouest",
+        "en": "Western Plaguelands"
+      },
+      "coordinates": {
+        "x": 68.1,
+        "y": 77.5
+      },
+      "faction": "neutral",
+      "offers": [
+        "13501"
+      ],
+      "source": "https://www.wowhead.com/classic/npc=11278/magnus-frostwake#comments",
+      "note": "Caer Darrow · Esprit visible avec l'Essence spectrale obtenue après la suite de quêtes d'Eva Sarkhoff",
+      "note_en": "Caer Darrow · Ghost visible using Spectral Essence, earned from Eva Sarkhoff's quest chain"
+    },
+    {
+      "id": 1669,
+      "name": "Defias Profiteer",
+      "role": "merchant",
+      "profession": "Alchimie",
+      "zone": {
+        "id": "westfall",
+        "fr": "Marche de l’Ouest",
+        "en": "Westfall"
+      },
+      "coordinates": {
+        "x": 43.5,
+        "y": 66.8
+      },
+      "faction": "neutral",
+      "offers": [
+        "5640"
+      ],
+      "source": "https://www.wowhead.com/classic/item=5640/recipe-rage-potion",
+      "note": "Ruisselune · Bâtiment du village · Marchand itinérant",
+      "note_en": "Moonbrook · Village building · Free-wheeling merchant"
+    },
+    {
+      "id": 3133,
+      "name": "Herble Baubbletump",
+      "role": "merchant",
+      "profession": "Ingénierie",
+      "zone": {
+        "id": "duskwood",
+        "fr": "Bois de la Pénombre",
+        "en": "Duskwood"
+      },
+      "coordinates": {
+        "x": 77,
+        "y": 48
+      },
+      "faction": "alliance",
+      "offers": [
+        "4371"
+      ],
+      "source": "https://www.wowhead.com/forever/npc=3133/herble-baubbletump#comments",
+      "note": "Sombre-Comté · Près du maître ingénieur",
+      "note_en": "Darkshire · Outside the engineering trainer"
+    }
+  ],
+  "evidence": [
+    {
+      "vendor_name": "Qia",
+      "item": "14468",
+      "kind": "observed_wait",
+      "min_minutes": 10,
+      "max_minutes": 90,
+      "confidence": "contradictory",
+      "url": "https://www.wowhead.com/classic/npc=11189/qia#comments",
+      "fr": "Les retours évoquent des apparitions de recettes toutes les 10–15 min, mais des joueurs ont attendu plus de 90 min pour le sac. Ce n'est pas une minuterie garantie.",
+      "en": "Some recipes appeared 10–15 min apart; others waited over 90 min for this bag. Not a reliable restock timer."
+    },
+    {
+      "vendor_name": "Qia",
+      "item": "14481",
+      "kind": "observed_wait",
+      "min_minutes": 10,
+      "max_minutes": 60,
+      "confidence": "low",
+      "url": "https://www.wowhead.com/classic/npc=11189/qia#comments",
+      "fr": "Apparitions espacées de 10–15 min signalées, mais attente de plus d'une heure pour les gants dans un témoignage.",
+      "en": "Reports of 10–15 min intervals, but over an hour waiting for gloves in another account."
+    },
+    {
+      "vendor_name": "Veenix",
+      "item": "7561",
+      "kind": "observed_wait",
+      "min_minutes": 60,
+      "max_minutes": 240,
+      "confidence": "contradictory",
+      "url": "https://www.wowhead.com/classic/item=7561/schematic-goblin-jumper-cables#comments",
+      "fr": "Un commentaire annonce 1 h chez Veenix, un autre 3–4 h pour ce schéma. Données contradictoires.",
+      "en": "One account reports 1 h at Veenix, another 3–4 h for this schematic. Conflicting reports."
+    },
+    {
+      "vendor_name": "Kor'geld",
+      "item": "13478",
+      "kind": "observed_wait",
+      "min_minutes": 40,
+      "max_minutes": 120,
+      "confidence": "low",
+      "url": "https://www.wowhead.com/classic/item=13478/recipe-elixir-of-superior-defense#comments",
+      "fr": "Attente de 40 min mentionnée à Orgrimmar ; des attentes plus longues sont aussi rapportées. Estimation fragile.",
+      "en": "40 min wait reported in Orgrimmar; longer waits also occur. Weak estimate."
+    },
+    {
+      "vendor_name": "Ulthir",
+      "item": "5642",
+      "kind": "observed_wait",
+      "min_minutes": 15,
+      "max_minutes": 90,
+      "confidence": "contradictory",
+      "url": "https://www.wowhead.com/classic/npc=4226/ulthir#comments",
+      "fr": "Commentaires de différentes versions : attente 15–60 min ou plus de 90 min sur Anniversary/TBC. Pas de délai Classic certain.",
+      "en": "Mixed game versions: 15–60 min waits and over 90 min on Anniversary/TBC. No confirmed Classic timer."
+    },
+    {
+      "vendor_name": "Qia",
+      "item": "14526",
+      "kind": "unlimited_report",
+      "confidence": "medium",
+      "url": "https://www.wowhead.com/classic/npc=11189/qia#comments",
+      "fr": "Des joueurs indiquent que le patron Étoffe lunaire reste disponible en quantité illimitée.",
+      "en": "Players report Mooncloth pattern as permanently available with unlimited stock."
+    },
+    {
+      "vendor_name": "Gagsprocket",
+      "item": "18648",
+      "kind": "observed_wait",
+      "min_minutes": 480,
+      "max_minutes": 480,
+      "confidence": "low",
+      "url": "https://www.wowhead.com/classic/item=18648/schematic-green-firework#comments",
+      "fr": "Un ancien commentaire estime un réapprovisionnement à environ 8 h mais précise qu’un autre joueur a pu acheter l’objet entre deux contrôles. Estimation non confirmée.",
+      "en": "A historical commenter estimated roughly 8 h, while acknowledging someone else may have bought the item between checks. Unconfirmed estimate."
+    },
+    {
+      "vendor_name": "Defias Profiteer",
+      "item": "5640",
+      "kind": "observed_wait",
+      "min_minutes": 60,
+      "max_minutes": 60,
+      "confidence": "low",
+      "url": "https://www.wowhead.com/forever/spell=6617/rage-potion#comments",
+      "fr": "Un ancien commentaire Allakhazam conseille de revenir après environ 1 h pour la recette. Aucun délai serveur Forever confirmé.",
+      "en": "An old Allakhazam comment advises returning after about 1 h for the recipe. No verified Forever server timer."
+    },
+    {
+      "vendor_name": "Kania",
+      "item": "22308",
+      "kind": "unlimited_report",
+      "confidence": "medium",
+      "url": "https://www.wowhead.com/classic/item=22308/pattern-enchanted-runecloth-bag",
+      "fr": "La fiche de référence Classic liste ce patron en stock illimité chez Kania. Pas de minuteur de réapparition à prévoir dans ces données.",
+      "en": "The Classic listing records unlimited stock at Kania. No restock countdown in this reference."
+    },
+    {
+      "vendor_name": "Magnus Frostwake",
+      "item": "13501",
+      "kind": "unlimited_report",
+      "confidence": "medium",
+      "url": "https://classicdb.com/?npc=11278",
+      "fr": "La base Classic indique un stock illimité. L'accès au fantôme dépend de la suite de quêtes d'Eva Sarkhoff.",
+      "en": "Classic database lists unlimited stock. Access to the ghost depends on Eva Sarkhoff's quest chain."
+    },
+    {
+      "vendor_name": "Herble Baubbletump",
+      "item": "4371",
+      "kind": "observed_wait",
+      "min_minutes": 5,
+      "max_minutes": 60,
+      "confidence": "contradictory",
+      "url": "https://www.wowhead.com/npc=3133/herble-baubbletump#comments",
+      "fr": "Un joueur signale 10 min ; un autre rapporte 57 min sans voir de réapparition avant. Un commentaire du Tube en bronze parle de 5–15 min. Anciennes versions contradictoires.",
+      "en": "One player reports 10 min; another measured about 57 min without a prior restock. An item comment says 5–15 min. Conflicting historical versions."
+    },
+    {
+      "vendor_name": "Qia",
+      "item": "16221",
+      "kind": "observed_wait",
+      "min_minutes": 10,
+      "max_minutes": 60,
+      "confidence": "contradictory",
+      "url": "https://www.wowhead.com/forever/item=16221/formula-enchant-chest-major-health#comments",
+      "fr": "Un commentaire signale 10 min ; un autre affirme 1 h après achat. La vendeuse partage des emplacements de stocks et la disponibilité varie.",
+      "en": "One report says 10 min; another claims 1 h after a purchase. The vendor shares limited-stock slots, making appearances variable."
+    },
+    {
+      "vendor_name": "Harklan Moongrove",
+      "item": "6054",
+      "kind": "observed_wait",
+      "min_minutes": 23,
+      "max_minutes": 35,
+      "confidence": "medium",
+      "url": "https://www.wowhead.com/forever/npc=3956/harklan-moongrove#comments",
+      "fr": "Un joueur a noté quatre apparitions à 19:31, 20:05, 20:34 et 20:57 ; d'autres ont attendu 31–35 min. Indications historiques, non confirmées sur Forever.",
+      "en": "A player logged appearances at 19:31, 20:05, 20:34 and 20:57; others reported 31–35 min. Historical reports, not verified on Forever."
+    },
+    {
+      "vendor_name": "Nandar Branson",
+      "item": "6055",
+      "kind": "observed_wait",
+      "min_minutes": 10,
+      "max_minutes": 15,
+      "confidence": "low",
+      "url": "https://www.wowhead.com/forever/item=6055/recipe-fire-protection-potion#comments",
+      "fr": "Un témoignage indique une réapparition après 10 min ; un autre l'a trouvée revenue au bout d'environ 15 min. Non garanti.",
+      "en": "One report observed a return after 10 min; another found it back within approximately 15 min. Not guaranteed."
+    },
+    {
+      "vendor_name": "Algernon",
+      "item": "13477",
+      "kind": "observed_wait",
+      "min_minutes": 3,
+      "max_minutes": 60,
+      "confidence": "contradictory",
+      "url": "https://www.wowhead.com/forever/fr/item=13477/recette-potion-de-mana-excellente#comments",
+      "fr": "Certains indiquent un réapprovisionnement normalement proche de 30–60 min, un autre l'a vue 3 min après l'achat d'une recette différente ; stocks partagés ou imprévisibles.",
+      "en": "Some reports suggest 30–60 min, while one saw it 3 min after buying a different recipe; possibly linked inventory slots and uncertain timing."
+    }
+  ]
+}

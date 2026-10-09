@@ -1,0 +1,66 @@
+/* Forever Atlas — NPC directory; compact, keyboard-friendly, GitHub Pages compatible */
+.npc-app{min-height:510px}
+.npc-intro{margin:0 0 14px;font-size:12px;color:var(--muted)}
+.npc-controls{display:grid;grid-template-columns:minmax(250px,2fr) repeat(3,minmax(125px,1fr));gap:10px;align-items:end;margin-bottom:14px}
+.npc-field{display:flex;flex-direction:column;gap:5px;min-width:0}
+.npc-field>label{font-size:10px;font-weight:800;color:#c9b483;text-transform:uppercase;letter-spacing:.1em}
+.npc-field input,.npc-field select{width:100%;background:#0b1510;border:1px solid #475847;border-radius:3px;min-width:0;height:42px;padding:0 12px;color:#eee9df;font-size:13px}
+.npc-field input:focus-visible,.npc-field select:focus-visible{outline:2px solid #deba80;outline-offset:2px}
+.npc-faction-bar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:14px}
+.npc-tabs{display:inline-flex;gap:4px;background:#0b160f;border:1px solid #354438;padding:4px}
+.npc-tabs button{font-size:12px;padding:8px 12px;border-radius:2px;color:#bcc8b8;background:transparent;border:0;cursor:pointer}
+.npc-tabs button[aria-pressed=true]{background:#d6b678;color:#112019;font-weight:800}
+.npc-toggle{display:flex;gap:7px;align-items:center;color:#b8c6b5;font-size:12px;cursor:pointer}
+.npc-toggle input{width:15px;height:15px;accent-color:#d6b678}
+.npc-columns{display:grid;grid-template-columns:minmax(265px,.89fr) minmax(0,1.6fr);gap:12px}
+.npc-catalog{border:1px solid #3b4c3f;background:#0c1610;min-width:0}
+.npc-catalog-head{display:flex;justify-content:space-between;gap:10px;align-items:baseline;padding:12px 15px;border-bottom:1px solid #374738}
+.npc-catalog-head h3{font:500 18px Georgia,serif;margin:0;color:#eee9dd}
+.npc-catalog-head span{color:#93a58e;font-size:11px;white-space:nowrap}
+.npc-results{max-height:625px;overflow:auto;scrollbar-color:#647056 #111b15}
+.npc-result{display:flex;align-items:center;gap:10px;text-align:left;width:100%;padding:11px 13px;background:transparent;border:0;border-bottom:1px solid #29392c;cursor:pointer;color:inherit}
+.npc-result:hover,.npc-result:focus-visible{background:#1b2b20}
+.npc-result[aria-selected=true]{background:#263629;box-shadow:inset 3px 0 #d6b678}
+.npc-result .npc-item-icon{width:37px;height:37px;border:1px solid #5b614a;flex:none;border-radius:3px;background:#131d16;display:grid;place-items:center;color:#d7be87;font-size:16px}
+.npc-result-copy{display:flex;min-width:0;flex-direction:column;gap:2px;flex:1}
+.npc-result-copy strong{color:#edeadd;font-size:12px;font-weight:700;overflow-wrap:anywhere;line-height:1.3}
+.npc-result-copy small{font-size:11px;color:#adbda8;line-height:1.35}
+.npc-result .npc-arrow{color:#c6ab70;font-size:19px}
+.npc-result .npc-evidence-flag{display:inline-block;font-size:10px;color:#e7c48b;border:1px solid #82704d;padding:2px 5px;margin-top:4px;align-self:start}
+.npc-empty{padding:30px 17px;font-size:13px;color:#c5d0c0}
+.npc-detail{border:1px solid #3b4c3f;background:linear-gradient(150deg,#18261c,#101912 70%);padding:22px 23px;min-width:0;align-self:start;min-height:450px}
+.npc-detail-kicker{font-size:10px;letter-spacing:.17em;color:#c2a36f;font-weight:750;text-transform:uppercase}
+.npc-detail h3{font:500 clamp(24px,3vw,32px)/1.14 Georgia,serif;color:#f2e9d5;margin:9px 0}
+.npc-detail h4{font:500 18px Georgia,serif;margin:17px 0 8px;color:#ead8b4}
+.npc-subtitle{font-size:13px;color:#a8b5a3;margin:0 0 14px}
+.npc-chips{display:flex;flex-wrap:wrap;gap:6px;margin:13px 0}
+.npc-chip{border:1px solid #4f604d;padding:5px 9px;color:#d6dfd0;font-size:10px;letter-spacing:.02em}
+.npc-chip.gold{border-color:#a98b59;color:#e3c28b}
+.npc-location{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;padding:12px 0;border-top:1px solid #35483a;border-bottom:1px solid #35483a;margin:12px 0}
+.npc-location strong{display:block;font-size:14px;color:#eeeadd}
+.npc-location small{display:block;color:#b8c5b3;font-size:11px;margin-top:4px}
+.npc-coords{font-size:18px;font-weight:700;color:#ead1a0;font-variant-numeric:tabular-nums}
+.npc-actions{display:flex;gap:9px;flex-wrap:wrap;margin:13px 0}
+.npc-actions button,.npc-actions a{display:inline-flex;align-items:center;gap:7px;border:1px solid #967951;background:#272f22;color:#f1d8a4;padding:9px 12px;font-size:12px;text-decoration:none;cursor:pointer;border-radius:2px}
+.npc-actions button:hover,.npc-actions a:hover{background:#37412a}
+.npc-actions .npc-copy{background:#d6b678;color:#19251b;border-color:#d6b678;font-weight:800}
+.npc-actions .npc-copy:hover{background:#eccd93}
+.npc-stock{padding:13px 15px;border:1px solid #3c4d3d;background:#121e16;margin:16px 0}
+.npc-stock .npc-stock-label{font-size:10px;color:#d7bc8b;text-transform:uppercase;letter-spacing:.11em}
+.npc-stock .npc-stock-value{font:500 21px Georgia,serif;color:#ede5d6;margin:5px 0 3px}
+.npc-stock p{font-size:12px;margin:7px 0;color:#b6c2b3}
+.npc-evidence{border-top:1px solid #3b4d3b;padding-top:10px;margin-top:10px}
+.npc-evidence strong{font-size:12px;color:#d5decf}
+.npc-evidence a{font-size:11px;color:#e4bf85;text-decoration:underline}
+.npc-evidence p{margin:5px 0}
+.npc-source{font-size:11px;color:#a3b5a0;margin-top:15px}
+.npc-source a{color:#dfbd82}
+.npc-map{position:relative;max-width:520px;margin:12px 0;border:1px solid #58664f;overflow:hidden;background:#0a1610}
+.npc-map img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:fill}
+.npc-map-marker{position:absolute;width:15px;height:15px;background:#ebd29c;border:3px solid #1b301e;box-shadow:0 0 0 2px #f1dfbc,0 3px 14px #000;transform:translate(-50%,-50%);border-radius:50%;pointer-events:none}
+.npc-map-caption{font-size:10px;color:#9cae99}
+.npc-datacaveat{font-size:11px;color:#9ead9c;line-height:1.6;margin:15px 0 0}
+.npc-datacaveat strong{color:#e3c78c}
+@media(max-width:1020px){.npc-controls{grid-template-columns:minmax(0,2fr) repeat(2,minmax(125px,1fr))}.npc-field:first-child{grid-column:span 3}.npc-columns{grid-template-columns:minmax(250px,.9fr) minmax(0,1.1fr)}}
+@media(max-width:700px){.npc-controls{grid-template-columns:repeat(2,minmax(0,1fr))}.npc-field:first-child{grid-column:span 2}.npc-columns{grid-template-columns:1fr}.npc-detail{padding:18px}.npc-results{max-height:360px}.npc-faction-bar{align-items:start}}
+@media(max-width:430px){.npc-field{grid-column:span 2}.npc-faction-bar{display:block}.npc-tabs{width:100%}.npc-tabs button{flex:1}.npc-toggle{margin-top:12px}}
