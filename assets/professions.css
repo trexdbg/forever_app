@@ -105,3 +105,5 @@
 .prof-trainer-source{font-size:11px;margin:7px 0}
 .prof-trainer-source a{color:#e6c68b}
 @media(max-width:590px){.prof-trainer-list{grid-template-columns:1fr}}
+
+.prof-progression-note{font-size:11px;line-height:1.6;color:#d9c494;margin:12px 0;padding:9px 11px;border-left:2px solid #ae925e;background:#242d22}
