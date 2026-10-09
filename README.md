@@ -9,6 +9,8 @@ Application web communautaire statique, responsive et compatible GitHub Pages : 
 - **Minage HL** : 1 749 points de minerais référencés sur **10 cartes**, fond de carte Classic, filtres de minerais, zoom, déplacement et commande TomTom `/way #UiMapID X Y`. Points communautaires non garantis en jeu.
 - **Population Alliance/Horde** : vue prête pour les recensements, pas de chiffres affichés tant que la source d'observation quotidienne n'est pas connectée.
 
+- **PNJ, marchands et maîtres de métiers** : annuaire bilingue avec recherche par objet/PNJ/zone, filtres métier/faction, fiche vendeur et copie de /way. Premier lot : 50 PNJ (31 marchands, 19 formateurs), 38 objets, 55 associations objet–vendeur. 6 témoignages documentés liés aux stocks ; les autres délais restent explicitement « inconnus ». **Données de référence WoW Classic, non garanties sur Forever.**
+
 ## Sources et coordonnées
 - Quêtes : projet d'origine [lexicongaming/vanilla-questing-old](https://github.com/lexicongaming/vanilla-questing-old), routes et traductions importées depuis [trexdbg/vanilla-questing](https://github.com/trexdbg/vanilla-questing), licence MIT ([copie](data/quests/VanillaQuesting-LICENSE.txt)). Les cartes et waypoints utilisent des coordonnées **X vers la droite, Y vers le bas, de 0 à 100 sur chaque carte de zone**, et ne doivent pas être fusionnés avec les coordonnées minage d'un autre UiMapID. Les cartes de quêtes sont affichées depuis une révision GitHub figée, une zone à la fois. Une commande `/way X Y` n'est valide que lorsque le personnage est dans la zone correspondante avec un addon adapté.
 
@@ -17,6 +19,8 @@ Application web communautaire statique, responsive et compatible GitHub Pages : 
 - Fonds de cartes Classic : jeu de cartes Blizzard, extrait et retraité à partir de [keyboardturner/WoWMapUprezClassic](https://github.com/keyboardturner/WoWMapUprezClassic). Les reliefs peuvent différer dans Forever. World of Warcraft et ses illustrations © Blizzard Entertainment.
 - Icônes : World of Warcraft © Blizzard, distribuées localement dans `assets/icons`. Identification des noms d'icônes de référence via [Napalmsteak/WoW-Classic-Item-Caches](https://github.com/Napalmsteak/WoW-Classic-Item-Caches), sources Forever et Classic Era.
 - Références Classic pré-BiS : guides publics communautaires [Wowhead Classic](https://www.wowhead.com/classic/guides). Les objets proposés doivent être revus pour la version Forever.
+
+- Vendeurs et maîtres de métiers : guides et fiches [Wowhead Classic](https://www.wowhead.com/classic/guide/alchemy-vendor-recipes-wow-classic), [Wowhead Couture](https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic) et [Wowhead Ingénierie](https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic). Commentaires liés dans `data/npcs.json` : les fourchettes sont des **attentes observées**, jamais des minuteries exactes, et plusieurs versions du jeu peuvent être mélangées. Les coordonnées sont des **pourcentages de carte de zone Classic**, à vérifier sur Forever. Pas d'inventaire des vendeurs en direct.
 
 ## Actualisation automatique
 Le dépôt privé [forever_agent](https://github.com/trexdbg/forever_agent) gère les données et la publication avec un token GitHub à droits minimaux, configuré uniquement comme secret `PUBLIC_REPO_TOKEN` **dans le dépôt privé**.
