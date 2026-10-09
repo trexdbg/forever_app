@@ -49,6 +49,7 @@ function updateFilterVisibility(){
  const armed=type.value==="weapon";
  if(trade)trade.closest(".npc-field").hidden=armed;
  if(rank)rank.closest(".npc-field").hidden=armed;
+ const advanced=rank?.closest(".npc-advanced-controls");if(advanced)advanced.hidden=armed;
  if(weapon)weapon.closest(".npc-field").hidden=!armed;
 }
 const evidence=(vendor,item)=>store.db.evidence.find(e=>e.vendor_name===vendor.name&&e.item===item?.id?.toString());
