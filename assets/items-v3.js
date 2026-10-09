@@ -90,7 +90,10 @@ for(const [id,label] of Object.entries(slotLabels)){const o=document.createEleme
  try{
  const [catalog,seed]=await Promise.all([fetch("/forever_app/data/items.json",{credentials:"omit"}).then(r=>r.json()),service.loadForever()]);
  local=Array.isArray(catalog.items)?catalog.items.filter(i=>i.verified===true&&Number.isInteger(i.id)).map(normalizeLocal):[];
- forever=seed;source.textContent=(en?"Sources:":"Sources :")+" Wowhead Forever (beta), WoWDB Classic API. "+tr.beta;
+ forever=seed;source.replaceChildren();source.append(document.createTextNode(en?"Sources: ":"Sources : "));
+const aForever=document.createElement("a");aForever.href="https://www.wowhead.com/forever/items";aForever.target="_blank";aForever.rel="noopener noreferrer";aForever.textContent="Wowhead Forever";
+const aClassic=document.createElement("a");aClassic.href="https://wowdb.assemblee-defias.fr/";aClassic.target="_blank";aClassic.rel="noopener noreferrer";aClassic.textContent="WoWDB des Défias";
+source.append(aForever,document.createTextNode(" · "),aClassic,document.createTextNode(" · "+tr.beta));
  }catch(e){error=tr.unavailable}
  queue();render();
 })();
