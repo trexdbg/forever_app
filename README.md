@@ -46,6 +46,8 @@ GitHub Pages est configuré sur `main`, dossier `/ (root)`. Sans compte ni cooki
 ## Avertissement
 Projet de fans, **non affilié à Blizzard**. Sources communautaires en évolution ; le fait qu'une fiche d'objet ou un emplacement de gisement soit référencé ne prouve pas qu'il soit actuellement disponible dans le jeu.
 
+- **Infobulles d'objets des Marchands** : réutilisation de la fiche interactive WoW du module Équipement (survol, focus clavier, appui long, bouton Détails tactile). Caractéristiques Classic chargées à la demande, complétées par métier, stock et prix indicatifs, vendeur sélectionné, spécialisation et lien; jamais présentées comme statistiques Forever certifiées.
+
 ## Catalogue Marchands regroupé — 2026-10-09
 - Ajout de **59 objets** de couture, cuir et enchantement, et 51 nouveaux marchands, tous associés à des listes précises de guides de vendeurs WoW Classic (Wowhead, décembre 2024 et antérieur). Le registre distingue désormais les ventes par couple **PNJ + ID d'objet** (champ `offer_details` avec lien source, conditions, stock partagé ou lié quand ramassé). 
 - La liste Marchands affiche désormais **une seule entrée par objet**, avec le nombre de vendeurs correspondants aux filtres ; sa fiche regroupe **tous les vendeurs connus** (faction, zone, témoignage), avec sélection sur la carte, même quand un seul vendeur correspond au filtre initial. Filtre témoignages conservé.
