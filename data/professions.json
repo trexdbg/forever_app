@@ -577,7 +577,7 @@
         "Seed Hybridizer"
       ],
       "source": "https://wowforevertalents.com/professions/herbalism/",
-      "leveling_guide": "https://www.wow-professions.com/forever",
+      "leveling_guide": "https://www.wow-professions.com/forever/herbalism-trainers",
       "trainers_source": "https://www.wow-professions.com/forever/herbalism-trainers",
       "trainers": [
         {
@@ -844,7 +844,7 @@
         "Heavy Thorium Bar"
       ],
       "source": "https://wowforevertalents.com/professions/mining/",
-      "leveling_guide": "https://www.wow-professions.com/forever",
+      "leveling_guide": "https://www.wow-professions.com/forever/mining-trainers",
       "trainers_source": "https://www.wow-professions.com/forever/mining-trainers",
       "trainers": [
         {
@@ -892,7 +892,11 @@
           "faction": "horde",
           "tier": "apprentice"
         }
-      ]
+      ],
+      "progression_note": {
+        "fr": "Le minage ne nécessite pas de niveau de personnage pour apprendre ses rangs d'après le guide Forever. La fonte de Thorium lourd nécessite une Fonderie en fusion.",
+        "en": "The Forever guide lists no character-level requirement for mining ranks. Heavy Thorium smelting requires a Molten Foundry."
+      }
     },
     {
       "id": 393,
@@ -928,7 +932,7 @@
         "Field Guide"
       ],
       "source": "https://wowforevertalents.com/professions/skinning/",
-      "leveling_guide": "https://www.wow-professions.com/forever",
+      "leveling_guide": "https://www.wow-professions.com/forever/skinning-trainers",
       "trainers_source": "https://www.wow-professions.com/forever/skinning-trainers",
       "trainers": [
         {
@@ -1252,7 +1256,11 @@
           "faction": "neutral",
           "tier": "apprentice"
         }
-      ]
+      ],
+      "progression_note": {
+        "fr": "Pour certains paliers avancés, un manuel peut être requis. Les créations de campement utilisent un objet de feu de camp fabriqué et placé depuis l'inventaire.",
+        "en": "Some higher tiers may require a manual. Campfire crafting uses an item made and placed from your inventory."
+      }
     },
     {
       "id": 356,
@@ -1288,7 +1296,7 @@
         "Fishing Rack"
       ],
       "source": "https://wowforevertalents.com/professions/fishing/",
-      "leveling_guide": "https://www.wow-professions.com/forever/fishing-and-cooking-leveling-guide",
+      "leveling_guide": "https://www.wow-professions.com/forever/fishing-leveling-guide",
       "trainers_source": "https://www.wow-professions.com/forever/fishing-trainers",
       "trainers": [
         {
@@ -1417,7 +1425,11 @@
           "faction": "alliance",
           "tier": "all"
         }
-      ]
+      ],
+      "progression_note": {
+        "fr": "150–225 : manuel « Expert Fishing – The Bass and You » (niveau 20 / compétence 125). 225–300 : quête de Nat Pagle (niveau 35, pêche 225), non entièrement testée.",
+        "en": "150–225: Expert Fishing – The Bass and You book (level 20 / 125 skill). 225–300: Nat Pagle quest (level 35, 225 skill), not fully beta-tested."
+      }
     },
     {
       "id": 129,
@@ -1453,7 +1465,7 @@
         "Surgical Tourniquet"
       ],
       "source": "https://wowforevertalents.com/professions/first-aid/",
-      "leveling_guide": "https://www.wow-professions.com/forever",
+      "leveling_guide": "https://www.wow-professions.com/forever/first-aid-leveling-guide",
       "trainers_source": "https://www.wow-professions.com/forever/first-aid-trainers",
       "trainers": [
         {
@@ -1536,8 +1548,30 @@
           },
           "faction": "horde",
           "tier": "apprentice"
+        },
+        {
+          "name": "Melasa Fairmend",
+          "zone": {
+            "fr": "Île de Zephras",
+            "en": "Zephras Isle"
+          },
+          "faction": "neutral",
+          "tier": "apprentice"
+        },
+        {
+          "name": "Naleeia Tattermend",
+          "zone": {
+            "fr": "Île de Zephras",
+            "en": "Zephras Isle"
+          },
+          "faction": "neutral",
+          "tier": "apprentice"
         }
-      ]
+      ],
+      "progression_note": {
+        "fr": "150–225 : manuel « Expert First Aid – Under Wraps » (125 points). 225–300 : quête de triage, niveau 35 et compétence 225 ; palier non entièrement testé en bêta.",
+        "en": "150–225: Expert First Aid – Under Wraps book (125 skill). 225–300: Triage quest, level 35 and skill 225; not fully beta-tested."
+      }
     }
   ],
   "trainer_ranks": {
@@ -1657,7 +1691,7 @@
           "from": 75,
           "to": 150,
           "min_skill": 50,
-          "min_level": 0
+          "min_level": 10
         },
         {
           "id": "expert",
@@ -1668,7 +1702,7 @@
           "from": 150,
           "to": 225,
           "min_skill": 125,
-          "min_level": 0
+          "min_level": 20
         },
         {
           "id": "artisan",
@@ -1678,8 +1712,8 @@
           },
           "from": 225,
           "to": 300,
-          "min_skill": 200,
-          "min_level": 0
+          "min_skill": 225,
+          "min_level": 35
         }
       ],
       "cooking": [
@@ -1738,8 +1772,7 @@
           "from": 1,
           "to": 75,
           "min_skill": 0,
-          "min_level": 1,
-          "note": ""
+          "min_level": 0
         },
         {
           "id": "journeyman",
@@ -1750,8 +1783,7 @@
           "from": 75,
           "to": 150,
           "min_skill": 50,
-          "min_level": 10,
-          "note": ""
+          "min_level": 0
         },
         {
           "id": "expert",
@@ -1762,8 +1794,7 @@
           "from": 150,
           "to": 225,
           "min_skill": 125,
-          "min_level": 20,
-          "note": ""
+          "min_level": 0
         },
         {
           "id": "artisan",
@@ -1774,8 +1805,7 @@
           "from": 225,
           "to": 300,
           "min_skill": 225,
-          "min_level": 35,
-          "note": "Special quest or manual may be required."
+          "min_level": 35
         }
       ]
     }
