@@ -186,7 +186,7 @@ function featureVisual(s){
  const icon=feature.querySelector(".atlas-feature-icon");
  icon.replaceChildren();
  const img=document.createElement("img");
- img.src=iconSource(s.icon||"inv_scroll_07");
+ img.src=iconSource(s.icon||(s.kind==="mining"?"mining-rich":s.kind==="trainer"?"inv_hammer_04":"inv_scroll_07"));
  img.alt="";img.decoding="async";
  img.onerror=()=>{img.onerror=null;img.src="/assets/icons/inv_scroll_07.jpg";};
  icon.append(img);
@@ -209,19 +209,23 @@ function renderPoints(s){
  }
 }
 function setImage(s,token){
- feature.hidden=true;markers.hidden=true;image.hidden=true;
- placeholder.hidden=false;placeholder.textContent=T("Chargement de la carte…","Loading map…");
+ // Never expose a blank loading panel during the fast 2-second rotation.
+ featureVisual(s);feature.hidden=false;
+ markers.hidden=true;image.hidden=true;placeholder.hidden=true;
  const urls=[s.image];
  if(s.zone&&localMaps.has(s.zone)&&s.kind!=="mining")urls.push("/assets/maps/"+s.zone+".jpg");
  let attempt=0;
  const tryLoad=()=>{
   if(token!==nonce)return;
-  if(attempt>=urls.length){placeholder.textContent=T("Carte indisponible","Map unavailable");return;}
+  if(attempt>=urls.length){
+   feature.querySelector("small").textContent=T("Carte indisponible · Explorer la fiche","Map unavailable · Open details");
+   return;
+  }
   const src=urls[attempt++];
   const img=new Image();
   img.onload=()=>{
    if(token!==nonce)return;
-   image.src=src;image.hidden=false;markers.hidden=false;placeholder.hidden=true;
+   image.src=src;image.hidden=false;markers.hidden=false;placeholder.hidden=true;feature.hidden=true;
    const legacy=src.endsWith(".jpg")&&img.naturalWidth/img.naturalHeight<1.42;
    image.style.width=legacy?(100*1024/1002)+"%":"100%";
    image.style.height=legacy?(100*768/668)+"%":"100%";
