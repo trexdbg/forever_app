@@ -53,7 +53,7 @@ h1,h2,h3{line-height:1.13;letter-spacing:-.05em;margin-top:0}h1{font-size:clamp(
 .mine-ore-option:hover{border-color:#b29463}
 .mine-ore-option.active{background:#263444;border-color:#bd995d;color:#f1f4f8}
 .mine-ore-option input{width:16px;height:16px;margin:0;flex:none;accent-color:#d4ac6b;cursor:pointer}
-.mine-ore-dot{font-size:18px;line-height:1;flex:none;text-shadow:0 0 4px #070d15}
+.mine-ore-icon{width:27px;height:27px;flex:none;object-fit:contain;filter:drop-shadow(0 1px 2px #050c16a6)}
 .mine-ore-name{font-size:12px;font-weight:650;min-width:0}
 .mine-ore-qty{font-size:10px;color:#94a6b9;margin-left:auto;text-align:right;white-space:nowrap}
 .mining-main{display:grid;grid-template-columns:minmax(0,1.9fr) minmax(260px,.82fr);gap:17px}
@@ -85,6 +85,7 @@ h1,h2,h3{line-height:1.13;letter-spacing:-.05em;margin-top:0}h1{font-size:clamp(
 .mine-zone-arrow{font-size:21px;color:#a9b7c7;line-height:1;flex:none}
 .mine-detail-divider{height:1px;background:var(--line);margin:19px 0}
 .mine-selected{padding:15px;border:1px solid #c49b6a77;border-radius:10px;background:#ba905d0d;margin:12px 0 14px}
+.mine-selected-heading{display:flex;align-items:center;gap:10px}.mine-selected-icon{height:32px;width:32px;object-fit:contain;flex:none;filter:drop-shadow(0 1px 3px #0008)}
 .mine-selected strong{font-size:14px;color:#edd19e}
 .mine-selected p{font-size:12px;margin:7px 0}
 .mine-selected small{font-size:11px;color:var(--muted);display:block;margin-top:8px}
