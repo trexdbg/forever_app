@@ -246,7 +246,7 @@
 .quest-sidebar .quest-action-group{
  --quest-accent:#f0c783;
  display:grid;
- grid-template-columns:85px minmax(0,1fr);
+ grid-template-columns:96px minmax(0,1fr);
  gap:6px;
  align-items:start;
  min-width:0;
@@ -262,6 +262,11 @@
 .quest-sidebar .quest-action-group.objectives{--quest-accent:#7ed6d9}
 .quest-sidebar .quest-action-group.ends{--quest-accent:#a0b9ff}
 .quest-sidebar .quest-action-group.completed{--quest-accent:#95dba5}
+.quest-sidebar .quest-action-group.travel{--quest-accent:#9ebaff}
+.quest-sidebar .quest-action-group.prepare{--quest-accent:#e4c18c}
+.quest-sidebar .quest-action-group.combat{--quest-accent:#e69c92}
+.quest-sidebar .quest-action-group.interact{--quest-accent:#90d3b9}
+.quest-sidebar .quest-action-group.tip{--quest-accent:#c8afe6}
 .quest-sidebar .quest-action-group.special{--quest-accent:#c8afe6}
 .quest-sidebar .quest-action-group-heading{
  display:flex;
@@ -295,6 +300,8 @@
  line-height:1;
  color:inherit;
 }
+.quest-sidebar .quest-action-tag.completed{white-space:normal}
+.quest-sidebar .quest-action-tag.completed .quest-action-symbol{flex:0 0 auto}
 .quest-sidebar .quest-action-count{display:none}
 .quest-sidebar .quest-action-items{
  display:grid;
