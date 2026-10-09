@@ -1,0 +1,3162 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-09",
+  "scope": "Classic/Vanilla references for WoW Forever. No alternative private-server datasets.",
+  "coordinate_system": "zone_percent_0_100_not_gps",
+  "data_status": "classic_reference_not_forever_verified",
+  "map_image_base": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/",
+  "zones": {
+    "tirisfal": {
+      "fr": "Clairières de Tirisfal",
+      "en": "Tirisfal Glades",
+      "uiMapID": 1420,
+      "instance": false
+    },
+    "teldrassil": {
+      "fr": "Teldrassil",
+      "en": "Teldrassil",
+      "uiMapID": 1438,
+      "instance": false
+    },
+    "dun-morogh": {
+      "fr": "Dun Morogh",
+      "en": "Dun Morogh",
+      "uiMapID": 1426,
+      "instance": false
+    },
+    "durotar": {
+      "fr": "Durotar",
+      "en": "Durotar",
+      "uiMapID": 1411,
+      "instance": false
+    },
+    "mulgore": {
+      "fr": "Mulgore",
+      "en": "Mulgore",
+      "uiMapID": 1412,
+      "instance": false
+    },
+    "elwynn": {
+      "fr": "Forêt d’Elwynn",
+      "en": "Elwynn Forest",
+      "uiMapID": 1429,
+      "instance": false
+    },
+    "silverpine": {
+      "fr": "Forêt des Pins argentés",
+      "en": "Silverpine Forest",
+      "uiMapID": 1421,
+      "instance": false
+    },
+    "darkshore": {
+      "fr": "Sombrivage",
+      "en": "Darkshore",
+      "uiMapID": 1439,
+      "instance": false
+    },
+    "barrens": {
+      "fr": "Les Tarides",
+      "en": "The Barrens",
+      "uiMapID": 1413,
+      "instance": false
+    },
+    "westfall": {
+      "fr": "Marche de l’Ouest",
+      "en": "Westfall",
+      "uiMapID": 1436,
+      "instance": false
+    },
+    "ashenvale": {
+      "fr": "Orneval",
+      "en": "Ashenvale",
+      "uiMapID": 1440,
+      "instance": false
+    },
+    "redridge": {
+      "fr": "Les Carmines",
+      "en": "Redridge Mountains",
+      "uiMapID": 1433,
+      "instance": false
+    },
+    "duskwood": {
+      "fr": "Bois de la Pénombre",
+      "en": "Duskwood",
+      "uiMapID": 1431,
+      "instance": false
+    },
+    "arathi": {
+      "fr": "Hautes-terres d’Arathi",
+      "en": "Arathi Highlands",
+      "uiMapID": 1417,
+      "instance": false
+    },
+    "alterac": {
+      "fr": "Montagnes d’Alterac",
+      "en": "Alterac Mountains",
+      "uiMapID": 1416,
+      "instance": false
+    },
+    "badlands": {
+      "fr": "Terres ingrates",
+      "en": "Badlands",
+      "uiMapID": 1418,
+      "instance": false
+    },
+    "desolace": {
+      "fr": "Désolace",
+      "en": "Desolace",
+      "uiMapID": 1443,
+      "instance": false
+    },
+    "hillsbrad": {
+      "fr": "Contreforts de Hautebrande",
+      "en": "Hillsbrad Foothills",
+      "uiMapID": 1424,
+      "instance": false
+    },
+    "wetlands": {
+      "fr": "Les Paluns",
+      "en": "Wetlands",
+      "uiMapID": 1437,
+      "instance": false
+    },
+    "felwood": {
+      "fr": "Gangrebois",
+      "en": "Felwood",
+      "uiMapID": 1448,
+      "instance": false
+    },
+    "feralas": {
+      "fr": "Féralas",
+      "en": "Feralas",
+      "uiMapID": 1444,
+      "instance": false
+    },
+    "stranglethorn": {
+      "fr": "Vallée de Strangleronce",
+      "en": "Stranglethorn Vale",
+      "uiMapID": 1434,
+      "instance": false
+    },
+    "tanaris": {
+      "fr": "Tanaris",
+      "en": "Tanaris",
+      "uiMapID": 1446,
+      "instance": false
+    },
+    "silithus": {
+      "fr": "Silithus",
+      "en": "Silithus",
+      "uiMapID": 1451,
+      "instance": false
+    },
+    "winterspring": {
+      "fr": "Berceau-de-l’Hiver",
+      "en": "Winterspring",
+      "uiMapID": 1452,
+      "instance": false
+    },
+    "azshara": {
+      "fr": "Azshara",
+      "en": "Azshara",
+      "uiMapID": 1447,
+      "instance": false
+    },
+    "blasted-lands": {
+      "fr": "Terres foudroyées",
+      "en": "Blasted Lands",
+      "uiMapID": 1419,
+      "instance": false
+    },
+    "searing-gorge": {
+      "fr": "Gorge des Vents brûlants",
+      "en": "Searing Gorge",
+      "uiMapID": null,
+      "instance": false
+    },
+    "epl": {
+      "fr": "Maleterres de l’Est",
+      "en": "Eastern Plaguelands",
+      "uiMapID": 1423,
+      "instance": false
+    },
+    "wpl": {
+      "fr": "Maleterres de l’Ouest",
+      "en": "Western Plaguelands",
+      "uiMapID": 1422,
+      "instance": false
+    },
+    "hinterlands": {
+      "fr": "Les Hinterlands",
+      "en": "The Hinterlands",
+      "uiMapID": 1425,
+      "instance": false
+    },
+    "thousand-needles": {
+      "fr": "Mille pointes",
+      "en": "Thousand Needles",
+      "uiMapID": 1441,
+      "instance": false
+    },
+    "stonetalon": {
+      "fr": "Serres-Rocheuses",
+      "en": "Stonetalon Mountains",
+      "uiMapID": 1442,
+      "instance": false
+    },
+    "burning-steppes": {
+      "fr": "Steppes ardentes",
+      "en": "Burning Steppes",
+      "uiMapID": null,
+      "instance": false
+    },
+    "dustwallow": {
+      "fr": "Marécage d’Âprefange",
+      "en": "Dustwallow Marsh",
+      "uiMapID": 1445,
+      "instance": false
+    },
+    "loch-modan": {
+      "fr": "Loch Modan",
+      "en": "Loch Modan",
+      "uiMapID": 1432,
+      "instance": false
+    },
+    "ungoro": {
+      "fr": "Cratère d’Un’Goro",
+      "en": "Un’Goro Crater",
+      "uiMapID": 1449,
+      "instance": false
+    },
+    "stockade": {
+      "fr": "La Prison",
+      "en": "Stormwind Stockade",
+      "uiMapID": null,
+      "instance": true
+    },
+    "scarlet-monastery": {
+      "fr": "Monastère écarlate",
+      "en": "Scarlet Monastery",
+      "uiMapID": null,
+      "instance": true
+    },
+    "razorfen-kraul": {
+      "fr": "Kraal de Tranchebauge",
+      "en": "Razorfen Kraul",
+      "uiMapID": null,
+      "instance": true
+    }
+  },
+  "rares": [
+    {
+      "id": "2779",
+      "name": {
+        "fr": "Prince Nazjak",
+        "en": "Prince Nazjak"
+      },
+      "zone": "arathi",
+      "level": 41,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 32,
+      "respawn_max_hours": 48,
+      "points": [
+        [
+          19.9,
+          91
+        ]
+      ],
+      "loot": [
+        {
+          "name": {
+            "fr": "Charme des flots",
+            "en": "Tidal Charm"
+          },
+          "item_id": 1404,
+          "chance_classic_percent": 50,
+          "icon": "inv_jewelry_talisman_08"
+        }
+      ],
+      "source": "https://foreverdb.net/rare/2779",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "Secteur immergé du Récif englouti. La source ForeverDB donne une coordonnée de zone adjacente (Paluns) : placement retenu en Arathi, conformément à la carte Classic.",
+        "en": "Underwater Drowned Reef. ForeverDB lists an adjacent Wetlands-zone coordinate; map uses Classic Arathi coordinates."
+      }
+    },
+    {
+      "id": "462",
+      "name": {
+        "fr": "Vultros",
+        "en": "Vultros"
+      },
+      "zone": "westfall",
+      "level": 26,
+      "classification": "rare",
+      "tameable": true,
+      "respawn_min_hours": 21,
+      "respawn_max_hours": 32,
+      "points": [
+        [
+          50.6,
+          43.5
+        ],
+        [
+          40.6,
+          60.5
+        ],
+        [
+          36.8,
+          62.5
+        ],
+        [
+          46.1,
+          57.7
+        ],
+        [
+          45.7,
+          60.1
+        ],
+        [
+          44.1,
+          46.2
+        ],
+        [
+          45.4,
+          43.9
+        ],
+        [
+          46.8,
+          44.2
+        ],
+        [
+          51.1,
+          23.8
+        ],
+        [
+          54.8,
+          23.2
+        ],
+        [
+          63.3,
+          57
+        ],
+        [
+          63.9,
+          58.2
+        ],
+        [
+          65.5,
+          58.7
+        ],
+        [
+          62,
+          75.5
+        ],
+        [
+          61.5,
+          73.9
+        ],
+        [
+          62.6,
+          74.2
+        ]
+      ],
+      "loot": [
+        {
+          "name": {
+            "fr": "Serre de Vultros",
+            "en": "Talon of Vultros"
+          },
+          "item_id": 4454,
+          "chance_classic_percent": 25,
+          "icon": "inv_weapon_shortblade_16"
+        }
+      ],
+      "source": "https://foreverdb.net/rare/462",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "599",
+      "name": {
+        "fr": "Marisa du'Paige",
+        "en": "Marisa du'Paige"
+      },
+      "zone": "westfall",
+      "level": 18,
+      "classification": "rare_elite",
+      "tameable": false,
+      "respawn_min_hours": 32,
+      "respawn_max_hours": 48,
+      "points": [
+        [
+          42.2,
+          79.9
+        ],
+        [
+          43.9,
+          79.1
+        ],
+        [
+          44.2,
+          76.8
+        ]
+      ],
+      "loot": [
+        {
+          "name": {
+            "fr": "Bottes de marche",
+            "en": "Walking Boots"
+          },
+          "item_id": null,
+          "chance_classic_percent": 70,
+          "icon": "inv_boots_01"
+        },
+        {
+          "name": {
+            "fr": "Robe noble",
+            "en": "Noble's Robe"
+          },
+          "item_id": null,
+          "chance_classic_percent": 30,
+          "icon": "inv_chest_cloth_07"
+        }
+      ],
+      "source": "https://foreverdb.net/rare/599",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "574",
+      "name": {
+        "fr": "Naraxis",
+        "en": "Naraxis"
+      },
+      "zone": "duskwood",
+      "level": 27,
+      "classification": "rare",
+      "tameable": true,
+      "respawn_min_hours": 5,
+      "respawn_max_hours": 8,
+      "points": [
+        [
+          86.4,
+          47.6
+        ]
+      ],
+      "loot": [
+        {
+          "name": {
+            "fr": "Croc de Naraxis",
+            "en": "Naraxis' Fang"
+          },
+          "item_id": null,
+          "chance_classic_percent": 50,
+          "icon": "inv_weapon_shortblade_16"
+        },
+        {
+          "name": {
+            "fr": "Carapace de Naraxis",
+            "en": "Husk of Naraxis"
+          },
+          "item_id": null,
+          "chance_classic_percent": 50,
+          "icon": "inv_chest_chain_14"
+        }
+      ],
+      "source": "https://foreverdb.net/rare/574",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "2850",
+      "name": {
+        "fr": "Broken Tooth",
+        "en": "Broken Tooth"
+      },
+      "zone": "badlands",
+      "level": 37,
+      "classification": "rare",
+      "tameable": true,
+      "respawn_min_hours": 1,
+      "respawn_max_hours": 24,
+      "points": [
+        [
+          59.7,
+          29.4
+        ],
+        [
+          59.7,
+          27.2
+        ],
+        [
+          53.6,
+          15.5
+        ],
+        [
+          45.8,
+          36.5
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rare/2850",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "5828",
+      "name": {
+        "fr": "Humar the Pridelord",
+        "en": "Humar the Pridelord"
+      },
+      "zone": "barrens",
+      "level": 23,
+      "classification": "rare_elite",
+      "tameable": true,
+      "respawn_min_hours": 8,
+      "respawn_max_hours": 12,
+      "points": [
+        [
+          62,
+          33.3
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rare/5828",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "5842",
+      "name": {
+        "fr": "Takk the Leaper",
+        "en": "Takk the Leaper"
+      },
+      "zone": "barrens",
+      "level": 19,
+      "classification": "rare_elite",
+      "tameable": true,
+      "respawn_min_hours": 4,
+      "respawn_max_hours": 6,
+      "points": [
+        [
+          59.6,
+          8.3
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rare/5842",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "5831",
+      "name": {
+        "fr": "Swiftmane",
+        "en": "Swiftmane"
+      },
+      "zone": "barrens",
+      "level": 21,
+      "classification": "rare_elite",
+      "tameable": false,
+      "respawn_min_hours": 24,
+      "respawn_max_hours": 32,
+      "points": [
+        [
+          61.2,
+          34.5
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rare/5831",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "barrens-snort-the-heckler",
+      "name": {
+        "fr": "Snort the Heckler",
+        "en": "Snort the Heckler"
+      },
+      "zone": "barrens",
+      "level": 17,
+      "classification": "rare",
+      "tameable": true,
+      "respawn_min_hours": 2,
+      "respawn_max_hours": 3,
+      "points": [
+        [
+          41.2,
+          22.2
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": true,
+      "notes": {
+        "fr": "Créature observée sur Forever selon les relevés communautaires ; repop et coordonnées restent des références Classic.",
+        "en": "Creature seen on Forever in community reports; coordinates and respawn remain Classic references."
+      }
+    },
+    {
+      "id": "barrens-stonearm",
+      "name": {
+        "fr": "Stonearm",
+        "en": "Stonearm"
+      },
+      "zone": "barrens",
+      "level": 15,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 1.5,
+      "respawn_max_hours": 2.5,
+      "points": [
+        [
+          42,
+          24.7
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "barrens-brokespear",
+      "name": {
+        "fr": "Brokespear",
+        "en": "Brokespear"
+      },
+      "zone": "barrens",
+      "level": 17,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 2,
+      "respawn_max_hours": 3,
+      "points": [
+        [
+          57.1,
+          41.2
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "mulgore-the-rake",
+      "name": {
+        "fr": "The Rake",
+        "en": "The Rake"
+      },
+      "zone": "mulgore",
+      "level": 10,
+      "classification": "rare",
+      "tameable": true,
+      "respawn_min_hours": 0.5,
+      "respawn_max_hours": 1.5,
+      "points": [
+        [
+          32.7,
+          36.5
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "mulgore-mazzranache",
+      "name": {
+        "fr": "Mazzranache",
+        "en": "Mazzranache"
+      },
+      "zone": "mulgore",
+      "level": 9,
+      "classification": "rare",
+      "tameable": true,
+      "respawn_min_hours": 24,
+      "respawn_max_hours": 48,
+      "points": [
+        [
+          55,
+          39
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "Position indicative Classic à recontrôler.",
+        "en": "Approximate Classic position; requires rechecking."
+      }
+    },
+    {
+      "id": "14430",
+      "name": {
+        "fr": "Duskstalker",
+        "en": "Duskstalker"
+      },
+      "zone": "teldrassil",
+      "level": 9,
+      "classification": "rare",
+      "tameable": true,
+      "respawn_min_hours": 1,
+      "respawn_max_hours": 2,
+      "points": [
+        [
+          58.1,
+          76.6
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rare/14430",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "teldrassil-threggil",
+      "name": {
+        "fr": "Threggil",
+        "en": "Threggil"
+      },
+      "zone": "teldrassil",
+      "level": 6,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 1,
+      "respawn_max_hours": 2,
+      "points": [
+        [
+          52,
+          50.5
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "teldrassil-uruson",
+      "name": {
+        "fr": "Uruson",
+        "en": "Uruson"
+      },
+      "zone": "teldrassil",
+      "level": 7,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 1,
+      "respawn_max_hours": 2,
+      "points": [
+        [
+          67.9,
+          59.4
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "teldrassil-fury-shelda",
+      "name": {
+        "fr": "Fury Shelda",
+        "en": "Fury Shelda"
+      },
+      "zone": "teldrassil",
+      "level": 8,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 1,
+      "respawn_max_hours": 2,
+      "points": [
+        [
+          35,
+          35.4
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "teldrassil-blackmoss-the-fetid",
+      "name": {
+        "fr": "Blackmoss the Fetid",
+        "en": "Blackmoss the Fetid"
+      },
+      "zone": "teldrassil",
+      "level": 13,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 1.5,
+      "respawn_max_hours": 2.5,
+      "points": [
+        [
+          44,
+          30.2
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "tirisfal-lost-soul",
+      "name": {
+        "fr": "Lost Soul",
+        "en": "Lost Soul"
+      },
+      "zone": "tirisfal",
+      "level": 6,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 1,
+      "respawn_max_hours": 2,
+      "points": [
+        [
+          44.6,
+          40.5
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "tirisfal-farmer-solliden",
+      "name": {
+        "fr": "Farmer Solliden",
+        "en": "Farmer Solliden"
+      },
+      "zone": "tirisfal",
+      "level": 8,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 1,
+      "respawn_max_hours": 2,
+      "points": [
+        [
+          38,
+          49.6
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "tirisfal-tormented-spirit",
+      "name": {
+        "fr": "Tormented Spirit",
+        "en": "Tormented Spirit"
+      },
+      "zone": "tirisfal",
+      "level": 8,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 1,
+      "respawn_max_hours": 2,
+      "points": [
+        [
+          44.7,
+          31.3
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "tirisfal-ressan-the-needler",
+      "name": {
+        "fr": "Ressan the Needler",
+        "en": "Ressan the Needler"
+      },
+      "zone": "tirisfal",
+      "level": 11,
+      "classification": "rare",
+      "tameable": true,
+      "respawn_min_hours": 1,
+      "respawn_max_hours": 3,
+      "points": [
+        [
+          43.1,
+          68.4
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "10359",
+      "name": {
+        "fr": "Sri'skulk",
+        "en": "Sri'skulk"
+      },
+      "zone": "tirisfal",
+      "level": 13,
+      "classification": "rare",
+      "tameable": true,
+      "respawn_min_hours": 1,
+      "respawn_max_hours": 3,
+      "points": [
+        [
+          88.2,
+          51.4
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rare/10359",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "dun-morogh-edan-the-howler",
+      "name": {
+        "fr": "Edan the Howler",
+        "en": "Edan the Howler"
+      },
+      "zone": "dun-morogh",
+      "level": 9,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 1,
+      "respawn_max_hours": 2,
+      "points": [
+        [
+          39,
+          47.5
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "dun-morogh-timber",
+      "name": {
+        "fr": "Timber",
+        "en": "Timber"
+      },
+      "zone": "dun-morogh",
+      "level": 10,
+      "classification": "rare",
+      "tameable": true,
+      "respawn_min_hours": 4,
+      "respawn_max_hours": 6,
+      "points": [
+        [
+          34.2,
+          41.8
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "dun-morogh-bjarn",
+      "name": {
+        "fr": "Bjarn",
+        "en": "Bjarn"
+      },
+      "zone": "dun-morogh",
+      "level": 12,
+      "classification": "rare",
+      "tameable": true,
+      "respawn_min_hours": 4,
+      "respawn_max_hours": 6,
+      "points": [
+        [
+          55.6,
+          58.5
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "dun-morogh-gibblewilt",
+      "name": {
+        "fr": "Gibblewilt",
+        "en": "Gibblewilt"
+      },
+      "zone": "dun-morogh",
+      "level": 11,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 1.5,
+      "respawn_max_hours": 2.5,
+      "points": [
+        [
+          27.4,
+          36.2
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "elwynn-morgaine-the-sly",
+      "name": {
+        "fr": "Morgaine the Sly",
+        "en": "Morgaine the Sly"
+      },
+      "zone": "elwynn",
+      "level": 10,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 1,
+      "respawn_max_hours": 2.5,
+      "points": [
+        [
+          30.8,
+          64.7
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "elwynn-mother-fang",
+      "name": {
+        "fr": "Mother Fang",
+        "en": "Mother Fang"
+      },
+      "zone": "elwynn",
+      "level": 10,
+      "classification": "rare",
+      "tameable": true,
+      "respawn_min_hours": 1,
+      "respawn_max_hours": 2.5,
+      "points": [
+        [
+          62.1,
+          48.1
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "elwynn-narg-the-taskmaster",
+      "name": {
+        "fr": "Narg the Taskmaster",
+        "en": "Narg the Taskmaster"
+      },
+      "zone": "elwynn",
+      "level": 10,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 1,
+      "respawn_max_hours": 2.5,
+      "points": [
+        [
+          40.9,
+          77.5
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "elwynn-thuros-lightfingers",
+      "name": {
+        "fr": "Thuros Lightfingers",
+        "en": "Thuros Lightfingers"
+      },
+      "zone": "elwynn",
+      "level": 11,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 1.5,
+      "respawn_max_hours": 2.5,
+      "points": [
+        [
+          52.5,
+          58.8
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "elwynn-fedfennel",
+      "name": {
+        "fr": "Fedfennel",
+        "en": "Fedfennel"
+      },
+      "zone": "elwynn",
+      "level": 12,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 1.5,
+      "respawn_max_hours": 2.5,
+      "points": [
+        [
+          68.1,
+          44.9
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "darkshore-shadowclaw",
+      "name": {
+        "fr": "Shadowclaw",
+        "en": "Shadowclaw"
+      },
+      "zone": "darkshore",
+      "level": 13,
+      "classification": "rare",
+      "tameable": true,
+      "respawn_min_hours": 1,
+      "respawn_max_hours": 24,
+      "points": [
+        [
+          40.3,
+          40.5
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "darkshore-licillin",
+      "name": {
+        "fr": "Licillin",
+        "en": "Licillin"
+      },
+      "zone": "darkshore",
+      "level": 14,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 2,
+      "respawn_max_hours": 3,
+      "points": [
+        [
+          45.7,
+          36.4
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "darkshore-carnivous-the-breaker",
+      "name": {
+        "fr": "Carnivous the Breaker",
+        "en": "Carnivous the Breaker"
+      },
+      "zone": "darkshore",
+      "level": 16,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 2,
+      "respawn_max_hours": 3,
+      "points": [
+        [
+          40.4,
+          56.5
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "darkshore-lady-moongazer",
+      "name": {
+        "fr": "Lady Moongazer",
+        "en": "Lady Moongazer"
+      },
+      "zone": "darkshore",
+      "level": 17,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 5,
+      "respawn_max_hours": 8,
+      "points": [
+        [
+          42.9,
+          61.1
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "ashenvale-apothecary-falthis",
+      "name": {
+        "fr": "Apothecary Falthis",
+        "en": "Apothecary Falthis"
+      },
+      "zone": "ashenvale",
+      "level": 22,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 4,
+      "respawn_max_hours": 6,
+      "points": [
+        [
+          33.2,
+          21.1
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "ashenvale-lady-vespia",
+      "name": {
+        "fr": "Lady Vespia",
+        "en": "Lady Vespia"
+      },
+      "zone": "ashenvale",
+      "level": 22,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 4,
+      "respawn_max_hours": 6,
+      "points": [
+        [
+          13.6,
+          24.7
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "ashenvale-mist-howler",
+      "name": {
+        "fr": "Mist Howler",
+        "en": "Mist Howler"
+      },
+      "zone": "ashenvale",
+      "level": 22,
+      "classification": "rare",
+      "tameable": true,
+      "respawn_min_hours": 8.5,
+      "respawn_max_hours": 12.5,
+      "points": [
+        [
+          20.9,
+          36.9
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "ashenvale-branch-snapper",
+      "name": {
+        "fr": "Branch Snapper",
+        "en": "Branch Snapper"
+      },
+      "zone": "ashenvale",
+      "level": 25,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 12,
+      "respawn_max_hours": 24,
+      "points": [
+        [
+          45.5,
+          47.3
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "ashenvale-ursol-lok",
+      "name": {
+        "fr": "Ursol'lok",
+        "en": "Ursol'lok"
+      },
+      "zone": "ashenvale",
+      "level": 31,
+      "classification": "rare",
+      "tameable": true,
+      "respawn_min_hours": 12,
+      "respawn_max_hours": 24,
+      "points": [
+        [
+          83.4,
+          48.5
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "arathi-kovork",
+      "name": {
+        "fr": "Kovork",
+        "en": "Kovork"
+      },
+      "zone": "arathi",
+      "level": 36,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 5,
+      "respawn_max_hours": 8,
+      "points": [
+        [
+          33.7,
+          44.1
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "arathi-nimar-the-slayer",
+      "name": {
+        "fr": "Nimar the Slayer",
+        "en": "Nimar the Slayer"
+      },
+      "zone": "arathi",
+      "level": 37,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 5,
+      "respawn_max_hours": 8,
+      "points": [
+        [
+          64.6,
+          73.7
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "arathi-molok-the-crusher",
+      "name": {
+        "fr": "Molok the Crusher",
+        "en": "Molok the Crusher"
+      },
+      "zone": "arathi",
+      "level": 39,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 10.5,
+      "respawn_max_hours": 16,
+      "points": [
+        [
+          53.8,
+          79.6
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "arathi-geomancer-flintdagger",
+      "name": {
+        "fr": "Geomancer Flintdagger",
+        "en": "Geomancer Flintdagger"
+      },
+      "zone": "arathi",
+      "level": 40,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 24,
+      "respawn_max_hours": 48,
+      "points": [
+        [
+          82.8,
+          32.2
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "arathi-zalas-witherbark",
+      "name": {
+        "fr": "Zalas Witherbark",
+        "en": "Zalas Witherbark"
+      },
+      "zone": "arathi",
+      "level": 40,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 48,
+      "respawn_max_hours": 72,
+      "points": [
+        [
+          69.2,
+          79.7
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "alterac-araga",
+      "name": {
+        "fr": "Araga",
+        "en": "Araga"
+      },
+      "zone": "alterac",
+      "level": 35,
+      "classification": "rare",
+      "tameable": true,
+      "respawn_min_hours": 24,
+      "respawn_max_hours": 36,
+      "points": [
+        [
+          43,
+          28.3
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "alterac-skhowl",
+      "name": {
+        "fr": "Skhowl",
+        "en": "Skhowl"
+      },
+      "zone": "alterac",
+      "level": 36,
+      "classification": "rare",
+      "tameable": true,
+      "respawn_min_hours": 10.5,
+      "respawn_max_hours": 16,
+      "points": [
+        [
+          31.4,
+          51.5
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "alterac-lo-grosh",
+      "name": {
+        "fr": "Lo'Grosh",
+        "en": "Lo'Grosh"
+      },
+      "zone": "alterac",
+      "level": 39,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 10.5,
+      "respawn_max_hours": 16,
+      "points": [
+        [
+          52.1,
+          46.9
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "desolace-giggler",
+      "name": {
+        "fr": "Giggler",
+        "en": "Giggler"
+      },
+      "zone": "desolace",
+      "level": 34,
+      "classification": "rare",
+      "tameable": true,
+      "respawn_min_hours": 12,
+      "respawn_max_hours": 24,
+      "points": [
+        [
+          61.3,
+          28.9
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "desolace-hissperak",
+      "name": {
+        "fr": "Hissperak",
+        "en": "Hissperak"
+      },
+      "zone": "desolace",
+      "level": 37,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 12,
+      "respawn_max_hours": 24,
+      "points": [
+        [
+          52.9,
+          50.1
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "desolace-kaskk",
+      "name": {
+        "fr": "Kaskk",
+        "en": "Kaskk"
+      },
+      "zone": "desolace",
+      "level": 40,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 12,
+      "respawn_max_hours": 24,
+      "points": [
+        [
+          51.2,
+          86.1
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "hillsbrad-scargil",
+      "name": {
+        "fr": "Scargil",
+        "en": "Scargil"
+      },
+      "zone": "hillsbrad",
+      "level": 30,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 5,
+      "respawn_max_hours": 8,
+      "points": [
+        [
+          29.1,
+          73.6
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "hillsbrad-creepthess",
+      "name": {
+        "fr": "Creepthess",
+        "en": "Creepthess"
+      },
+      "zone": "hillsbrad",
+      "level": 24,
+      "classification": "rare",
+      "tameable": true,
+      "respawn_min_hours": 8.5,
+      "respawn_max_hours": 12.5,
+      "points": [
+        [
+          38.6,
+          58.4
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "stonetalon-pridewing-patriarch",
+      "name": {
+        "fr": "Pridewing Patriarch",
+        "en": "Pridewing Patriarch"
+      },
+      "zone": "stonetalon",
+      "level": 25,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 10.5,
+      "respawn_max_hours": 16,
+      "points": [
+        [
+          53.8,
+          36.3
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "stonetalon-vengeful-ancient",
+      "name": {
+        "fr": "Vengeful Ancient",
+        "en": "Vengeful Ancient"
+      },
+      "zone": "stonetalon",
+      "level": 30,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 5,
+      "respawn_max_hours": 8,
+      "points": [
+        [
+          30.4,
+          68.1
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "westfall-foe-reaper-4000",
+      "name": {
+        "fr": "Foe Reaper 4000",
+        "en": "Foe Reaper 4000"
+      },
+      "zone": "westfall",
+      "level": 20,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 4,
+      "respawn_max_hours": 6,
+      "points": [
+        [
+          44.8,
+          35.4
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "loch-modan-grizlak",
+      "name": {
+        "fr": "Grizlak",
+        "en": "Grizlak"
+      },
+      "zone": "loch-modan",
+      "level": 15,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": null,
+      "respawn_max_hours": null,
+      "points": [
+        [
+          34.6,
+          27.1
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "loch-modan-lord-condar",
+      "name": {
+        "fr": "Lord Condar",
+        "en": "Lord Condar"
+      },
+      "zone": "loch-modan",
+      "level": 16,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": null,
+      "respawn_max_hours": null,
+      "points": [
+        [
+          77.7,
+          74.9
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "hinterlands-old-cliff-jumper",
+      "name": {
+        "fr": "Old Cliff Jumper",
+        "en": "Old Cliff Jumper"
+      },
+      "zone": "hinterlands",
+      "level": 42,
+      "classification": "rare",
+      "tameable": true,
+      "respawn_min_hours": 12,
+      "respawn_max_hours": 24,
+      "points": [
+        [
+          11.9,
+          53.7
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "hinterlands-zul-arek-hatefowler",
+      "name": {
+        "fr": "Zul'arek Hatefowler",
+        "en": "Zul'arek Hatefowler"
+      },
+      "zone": "hinterlands",
+      "level": 43,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 5,
+      "respawn_max_hours": 8,
+      "points": [
+        [
+          32.4,
+          56.9
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "hinterlands-ironback",
+      "name": {
+        "fr": "Ironback",
+        "en": "Ironback"
+      },
+      "zone": "hinterlands",
+      "level": 51,
+      "classification": "rare",
+      "tameable": true,
+      "respawn_min_hours": 12,
+      "respawn_max_hours": 24,
+      "points": [
+        [
+          81.5,
+          49.2
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "feralas-snarler",
+      "name": {
+        "fr": "Snarler",
+        "en": "Snarler"
+      },
+      "zone": "feralas",
+      "level": 42,
+      "classification": "rare",
+      "tameable": true,
+      "respawn_min_hours": 5,
+      "respawn_max_hours": 8,
+      "points": [
+        [
+          84.4,
+          38.3
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "feralas-arash-ethis",
+      "name": {
+        "fr": "Arash-ethis",
+        "en": "Arash-ethis"
+      },
+      "zone": "feralas",
+      "level": 49,
+      "classification": "rare",
+      "tameable": true,
+      "respawn_min_hours": 24,
+      "respawn_max_hours": 36,
+      "points": [
+        [
+          44.8,
+          25
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "stranglethorn-lord-sakrasis",
+      "name": {
+        "fr": "Lord Sakrasis",
+        "en": "Lord Sakrasis"
+      },
+      "zone": "stranglethorn",
+      "level": 45,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": null,
+      "respawn_max_hours": null,
+      "points": [
+        [
+          28.9,
+          62
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "stranglethorn-kurmokk",
+      "name": {
+        "fr": "Kurmokk",
+        "en": "Kurmokk"
+      },
+      "zone": "stranglethorn",
+      "level": 42,
+      "classification": "rare",
+      "tameable": true,
+      "respawn_min_hours": null,
+      "respawn_max_hours": null,
+      "points": [
+        [
+          37.8,
+          61.2
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "tanaris-kregg-keelhaul",
+      "name": {
+        "fr": "Kregg Keelhaul",
+        "en": "Kregg Keelhaul"
+      },
+      "zone": "tanaris",
+      "level": 47,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 12,
+      "respawn_max_hours": 24,
+      "points": [
+        [
+          73.2,
+          48.7
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "tanaris-haarka-the-ravenous",
+      "name": {
+        "fr": "Haarka the Ravenous",
+        "en": "Haarka the Ravenous"
+      },
+      "zone": "tanaris",
+      "level": 50,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 12,
+      "respawn_max_hours": 24,
+      "points": [
+        [
+          56.2,
+          73.9
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "tanaris-murderous-blisterpaw",
+      "name": {
+        "fr": "Murderous Blisterpaw",
+        "en": "Murderous Blisterpaw"
+      },
+      "zone": "tanaris",
+      "level": 43,
+      "classification": "rare",
+      "tameable": true,
+      "respawn_min_hours": 48,
+      "respawn_max_hours": 72,
+      "points": [
+        [
+          47.4,
+          25
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "blasted-lands-deatheye",
+      "name": {
+        "fr": "Deatheye",
+        "en": "Deatheye"
+      },
+      "zone": "blasted-lands",
+      "level": 49,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 21,
+      "respawn_max_hours": 32,
+      "points": [
+        [
+          44.1,
+          25
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "blasted-lands-grunter",
+      "name": {
+        "fr": "Grunter",
+        "en": "Grunter"
+      },
+      "zone": "blasted-lands",
+      "level": 50,
+      "classification": "rare",
+      "tameable": true,
+      "respawn_min_hours": 12,
+      "respawn_max_hours": 24,
+      "points": [
+        [
+          56.1,
+          31.1
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "blasted-lands-akubar-the-seer",
+      "name": {
+        "fr": "Akubar the Seer",
+        "en": "Akubar the Seer"
+      },
+      "zone": "blasted-lands",
+      "level": 54,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 5,
+      "respawn_max_hours": 8,
+      "points": [
+        [
+          51.3,
+          53.1
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "azshara-the-evalcharr",
+      "name": {
+        "fr": "The Evalcharr",
+        "en": "The Evalcharr"
+      },
+      "zone": "azshara",
+      "level": 48,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 24,
+      "respawn_max_hours": 48,
+      "points": [
+        [
+          17.9,
+          65.6
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "azshara-antilos",
+      "name": {
+        "fr": "Antilos",
+        "en": "Antilos"
+      },
+      "zone": "azshara",
+      "level": 50,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 12,
+      "respawn_max_hours": 24,
+      "points": [
+        [
+          16.6,
+          54.1
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "azshara-lady-sesspira",
+      "name": {
+        "fr": "Lady Sesspira",
+        "en": "Lady Sesspira"
+      },
+      "zone": "azshara",
+      "level": 51,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 5,
+      "respawn_max_hours": 8,
+      "points": [
+        [
+          35.4,
+          55.7
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "azshara-magister-hawkhelm",
+      "name": {
+        "fr": "Magister Hawkhelm",
+        "en": "Magister Hawkhelm"
+      },
+      "zone": "azshara",
+      "level": 51,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 21,
+      "respawn_max_hours": 32,
+      "points": [
+        [
+          58.5,
+          30.9
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "felwood-death-howl",
+      "name": {
+        "fr": "Death Howl",
+        "en": "Death Howl"
+      },
+      "zone": "felwood",
+      "level": 49,
+      "classification": "rare",
+      "tameable": true,
+      "respawn_min_hours": 12,
+      "respawn_max_hours": 24,
+      "points": [
+        [
+          50,
+          77.1
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "felwood-mongress",
+      "name": {
+        "fr": "Mongress",
+        "en": "Mongress"
+      },
+      "zone": "felwood",
+      "level": 50,
+      "classification": "rare",
+      "tameable": true,
+      "respawn_min_hours": 32,
+      "respawn_max_hours": 48,
+      "points": [
+        [
+          42.1,
+          75.2
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "felwood-alshirr-banebreath",
+      "name": {
+        "fr": "Alshirr Banebreath",
+        "en": "Alshirr Banebreath"
+      },
+      "zone": "felwood",
+      "level": 54,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 5,
+      "respawn_max_hours": 8,
+      "points": [
+        [
+          38.2,
+          81
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "searing-gorge-faulty-war-golem",
+      "name": {
+        "fr": "Faulty War Golem",
+        "en": "Faulty War Golem"
+      },
+      "zone": "searing-gorge",
+      "level": 46,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 10.5,
+      "respawn_max_hours": 16,
+      "points": [
+        [
+          45.9,
+          67.8
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "searing-gorge-rekk-tilac",
+      "name": {
+        "fr": "Rekk'tilac",
+        "en": "Rekk'tilac"
+      },
+      "zone": "searing-gorge",
+      "level": 48,
+      "classification": "rare",
+      "tameable": true,
+      "respawn_min_hours": 5,
+      "respawn_max_hours": 8,
+      "points": [
+        [
+          61.9,
+          73.2
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "searing-gorge-smoldar",
+      "name": {
+        "fr": "Smoldar",
+        "en": "Smoldar"
+      },
+      "zone": "searing-gorge",
+      "level": 50,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 12,
+      "respawn_max_hours": 24,
+      "points": [
+        [
+          29.5,
+          62.4
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "ungoro-ravasaur-matriarch",
+      "name": {
+        "fr": "Ravasaur Matriarch",
+        "en": "Ravasaur Matriarch"
+      },
+      "zone": "ungoro",
+      "level": 50,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 32,
+      "respawn_max_hours": 48,
+      "points": [
+        [
+          62.3,
+          65.9
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "silithus-krellack",
+      "name": {
+        "fr": "Krellack",
+        "en": "Krellack"
+      },
+      "zone": "silithus",
+      "level": 56,
+      "classification": "rare",
+      "tameable": true,
+      "respawn_min_hours": 12,
+      "respawn_max_hours": 24,
+      "points": [
+        [
+          63.2,
+          16.7
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "silithus-gretheer",
+      "name": {
+        "fr": "Gretheer",
+        "en": "Gretheer"
+      },
+      "zone": "silithus",
+      "level": 57,
+      "classification": "rare",
+      "tameable": true,
+      "respawn_min_hours": 12,
+      "respawn_max_hours": 24,
+      "points": [
+        [
+          39.3,
+          55.4
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "silithus-grubthor",
+      "name": {
+        "fr": "Grubthor",
+        "en": "Grubthor"
+      },
+      "zone": "silithus",
+      "level": 58,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 8,
+      "respawn_max_hours": 10,
+      "points": [
+        [
+          44.4,
+          80.8
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "silithus-twilight-lord-everun",
+      "name": {
+        "fr": "Twilight Lord Everun",
+        "en": "Twilight Lord Everun"
+      },
+      "zone": "silithus",
+      "level": 60,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 0.25,
+      "respawn_max_hours": 0.75,
+      "points": [
+        [
+          18.2,
+          85.8
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "winterspring-mezzir-the-howler",
+      "name": {
+        "fr": "Mezzir the Howler",
+        "en": "Mezzir the Howler"
+      },
+      "zone": "winterspring",
+      "level": 55,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 12,
+      "respawn_max_hours": 24,
+      "points": [
+        [
+          44.2,
+          42.6
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "Emplacement indicatif à recontrôler sur le fond Forever.",
+        "en": "Approximate point; needs verification on Forever map."
+      }
+    },
+    {
+      "id": "winterspring-rak-shiri",
+      "name": {
+        "fr": "Rak'shiri",
+        "en": "Rak'shiri"
+      },
+      "zone": "winterspring",
+      "level": 57,
+      "classification": "rare",
+      "tameable": true,
+      "respawn_min_hours": 24,
+      "respawn_max_hours": 48,
+      "points": [
+        [
+          52.8,
+          17.3
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "Repère Classic indicatif, à vérifier sur Forever.",
+        "en": "Approximate Classic marker; verify on Forever."
+      }
+    },
+    {
+      "id": "10199",
+      "name": {
+        "fr": "Grizzle Snowpaw",
+        "en": "Grizzle Snowpaw"
+      },
+      "zone": "winterspring",
+      "level": 59,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 12,
+      "respawn_max_hours": 24,
+      "points": [
+        [
+          66.9,
+          35.6
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rare/10199",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "epl-duggan-wildhammer",
+      "name": {
+        "fr": "Duggan Wildhammer",
+        "en": "Duggan Wildhammer"
+      },
+      "zone": "epl",
+      "level": 55,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 12,
+      "respawn_max_hours": 24,
+      "points": [
+        [
+          39.3,
+          70.5
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "epl-deathspeaker-selendre",
+      "name": {
+        "fr": "Deathspeaker Selendre",
+        "en": "Deathspeaker Selendre"
+      },
+      "zone": "epl",
+      "level": 56,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 5,
+      "respawn_max_hours": 8,
+      "points": [
+        [
+          85.7,
+          45.3
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "epl-gish-the-unmoving",
+      "name": {
+        "fr": "Gish the Unmoving",
+        "en": "Gish the Unmoving"
+      },
+      "zone": "epl",
+      "level": 56,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 12,
+      "respawn_max_hours": 24,
+      "points": [
+        [
+          48.6,
+          41.4
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "epl-zul-brin-warpbranch",
+      "name": {
+        "fr": "Zul'Brin Warpbranch",
+        "en": "Zul'Brin Warpbranch"
+      },
+      "zone": "epl",
+      "level": 59,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 10.5,
+      "respawn_max_hours": 16,
+      "points": [
+        [
+          72.2,
+          16.9
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "wpl-foulmane",
+      "name": {
+        "fr": "Foulmane",
+        "en": "Foulmane"
+      },
+      "zone": "wpl",
+      "level": 52,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 5,
+      "respawn_max_hours": 8,
+      "points": [
+        [
+          46.5,
+          52.3
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "wpl-lord-maldazzar",
+      "name": {
+        "fr": "Lord Maldazzar",
+        "en": "Lord Maldazzar"
+      },
+      "zone": "wpl",
+      "level": 56,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 10.5,
+      "respawn_max_hours": 16,
+      "points": [
+        [
+          54.2,
+          80.4
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "wpl-foreman-marcrid",
+      "name": {
+        "fr": "Foreman Marcrid",
+        "en": "Foreman Marcrid"
+      },
+      "zone": "wpl",
+      "level": 58,
+      "classification": "rare",
+      "tameable": false,
+      "respawn_min_hours": 1,
+      "respawn_max_hours": 24,
+      "points": [
+        [
+          49,
+          32.7
+        ]
+      ],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "6489",
+      "name": {
+        "fr": "Ironspine",
+        "en": "Ironspine"
+      },
+      "zone": "scarlet-monastery",
+      "level": 33,
+      "classification": "rare_elite",
+      "tameable": false,
+      "respawn_min_hours": 24,
+      "respawn_max_hours": 24,
+      "points": [],
+      "loot": [
+        {
+          "name": {
+            "fr": "Œil d’Ironspine",
+            "en": "Ironspine's Eye"
+          },
+          "item_id": null,
+          "chance_classic_percent": 33.3,
+          "icon": "inv_jewelry_ring_03"
+        },
+        {
+          "name": {
+            "fr": "Poing d’Ironspine",
+            "en": "Ironspine's Fist"
+          },
+          "item_id": null,
+          "chance_classic_percent": 33.3,
+          "icon": "inv_gauntlets_04"
+        },
+        {
+          "name": {
+            "fr": "Cage thoracique d’Ironspine",
+            "en": "Ironspine's Ribcage"
+          },
+          "item_id": null,
+          "chance_classic_percent": 33.3,
+          "icon": "inv_chest_chain_14"
+        }
+      ],
+      "source": "https://foreverdb.net/rare/6489",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "1720",
+      "name": {
+        "fr": "Bruegal Ironknuckle",
+        "en": "Bruegal Ironknuckle"
+      },
+      "zone": "stockade",
+      "level": 26,
+      "classification": "rare_elite",
+      "tameable": false,
+      "respawn_min_hours": 24,
+      "respawn_max_hours": 24,
+      "points": [],
+      "loot": [
+        {
+          "name": {
+            "fr": "Dague de prisonnier",
+            "en": "Prison Shank"
+          },
+          "item_id": null,
+          "chance_classic_percent": 33.3,
+          "icon": "inv_weapon_shortblade_16"
+        },
+        {
+          "name": {
+            "fr": "Poings de fer",
+            "en": "Iron Knuckles"
+          },
+          "item_id": null,
+          "chance_classic_percent": 33.3,
+          "icon": "inv_gauntlets_04"
+        },
+        {
+          "name": {
+            "fr": "Menottes forcées",
+            "en": "Jimmied Handcuffs"
+          },
+          "item_id": null,
+          "chance_classic_percent": 33.3,
+          "icon": "inv_bracer_07"
+        }
+      ],
+      "source": "https://foreverdb.net/rare/1720",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "scarlet-monastery-azshir-the-sleepless",
+      "name": {
+        "fr": "Azshir the Sleepless",
+        "en": "Azshir the Sleepless"
+      },
+      "zone": "scarlet-monastery",
+      "level": 33,
+      "classification": "rare_elite",
+      "tameable": false,
+      "respawn_min_hours": 24,
+      "respawn_max_hours": 24,
+      "points": [],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "razorfen-kraul-blind-hunter",
+      "name": {
+        "fr": "Blind Hunter",
+        "en": "Blind Hunter"
+      },
+      "zone": "razorfen-kraul",
+      "level": 32,
+      "classification": "rare_elite",
+      "tameable": true,
+      "respawn_min_hours": 1,
+      "respawn_max_hours": 24,
+      "points": [],
+      "loot": [],
+      "source": "https://foreverdb.net/rares",
+      "reference": "classic_cmangos_not_forever_verified",
+      "seen_forever": false,
+      "notes": {
+        "fr": "",
+        "en": ""
+      }
+    }
+  ],
+  "sources": {
+    "timers_and_loot": "https://foreverdb.net/rares",
+    "coordinates": "https://wow-guides.com/knowledge/creature-ranks",
+    "classic_items": "https://www.wowhead.com/classic/"
+  },
+  "disclaimer": {
+    "fr": "Noms, positions, butins et délais : références WoW Classic. Ils peuvent différer sur WoW Forever. Les repops sont des fourchettes historiques, pas une horloge ni une présence en direct. Les rares observés sur Forever sont indiqués explicitement.",
+    "en": "Names, locations, loot and respawns are WoW Classic references and may differ in WoW Forever. Respawns are historical ranges, not live server timers. Reported Forever sightings are explicitly marked."
+  }
+}
