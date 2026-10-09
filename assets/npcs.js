@@ -142,6 +142,10 @@ const params=new URLSearchParams(location.search);
 if(params.get("q"))q.value=params.get("q").slice(0,120);
 fetch(root+"data/npcs.json").then(r=>{if(!r.ok)throw Error(r.status);return r.json()}).then(db=>{
  if(db.schema_version!==1||!Array.isArray(db.npcs)||!db.items||!Array.isArray(db.evidence))throw Error("Invalid NPC data");
- store.db=db;makeRecords();filters();refresh();$("npc-load-status").textContent=Object.keys(db.items).length+" "+S("objets · Classic","items · Classic");
+ store.db=db;makeRecords();filters();
+ // Atlas deep links select the complete zone, not just a text search result.
+ const requestedZone=params.get("zone");
+ if(requestedZone&&Array.from(zone.options).some(option=>option.value===requestedZone))zone.value=requestedZone;
+ refresh();$("npc-load-status").textContent=Object.keys(db.items).length+" "+S("objets · Classic","items · Classic");
 }).catch(e=>{$("npc-load-status").textContent=S("Données indisponibles","Data unavailable");append(list,"p",S("Impossible de charger l'annuaire. Réessayez plus tard.","Unable to load the directory."),"npc-empty");console.warn("NPC dataset:",e.message)});
 })();
