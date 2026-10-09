@@ -75,7 +75,7 @@ function renderSelection(){
 function selectWaypoint(i,focus=false){
  const step=s.steps[s.index];if(!step||i<0||i>=step.waypoints.length)return;
  s.selected=i;renderSelection();renderWaypoints();draw();
- if(focus)$("quest-selected").scrollIntoView({behavior:"smooth",block:"nearest"});
+ if(focus&&typeof window!=="undefined"&&window.innerWidth<=900)$("quest-map-title").scrollIntoView({behavior:"smooth",block:"start"});
 }
 function renderWaypoints(){
  const list=$("quest-waypoints");list.replaceChildren();const pts=s.steps[s.index].waypoints;
