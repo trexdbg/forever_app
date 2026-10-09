@@ -61,7 +61,13 @@ const controls=elt("div","forever-item-tooltip__top");
 write(controls,"forever-item-tooltip__eyebrow",en?"CLASSIC / ITEM DETAILS":"CLASSIC / FICHE D’OBJET");
 const close=elt("button","forever-item-tooltip__close","×");close.type="button";close.setAttribute("aria-label",w.close);close.addEventListener("click",hide);controls.append(close);inner.append(controls);
 const title=elt("div","forever-item-tooltip__title");
-if(validIcon(item.icon)||typeof item.icon==="string"&&item.icon.startsWith("https://wowdb.assemblee-defias.fr/database-icons/")){const pic=elt("img","forever-item-tooltip__icon");pic.alt="";pic.src=item.icon.startsWith("https://wowdb.assemblee-defias.fr/database-icons/")?item.icon:"/assets/icons/"+item.icon+".jpg";pic.loading="lazy";pic.onerror=()=>{if(!pic.dataset.fallback&&validIcon(item.icon)){pic.dataset.fallback="1";pic.src="https://wow.zamimg.com/images/wow/icons/large/"+item.icon+".jpg"}else pic.remove()};title.append(pic)}
+const officialIcon=typeof item.icon_url==="string"&&/^https:\/\/wow\.zamimg\.com\/images\/wow\/icons\/(?:medium|large)\/[a-z0-9_-]{2,70}\.jpg$/.test(item.icon_url)?item.icon_url:null;
+if(officialIcon||validIcon(item.icon)||typeof item.icon==="string"&&item.icon.startsWith("https://wowdb.assemblee-defias.fr/database-icons/")){
+const pic=elt("img","forever-item-tooltip__icon");pic.alt="";
+pic.src=officialIcon||(item.icon.startsWith("https://wowdb.assemblee-defias.fr/database-icons/")?item.icon:"/assets/icons/"+item.icon+".jpg");
+pic.loading="lazy";
+pic.onerror=()=>{if(!pic.dataset.fallback&&validIcon(item.icon)&&!officialIcon){pic.dataset.fallback="1";pic.src="https://wow.zamimg.com/images/wow/icons/large/"+item.icon+".jpg"}else pic.remove()};
+title.append(pic)}
 const heading=elt("div","forever-item-tooltip__heading");
 write(heading,"forever-item-tooltip__name",en?item.name:(data&&typeof data.name==="string"&&data.name?data.name:item.name));
 if(data&&Number.isFinite(data.item_level)&&data.item_level>0)write(heading,"forever-item-tooltip__itemlevel",w.itemLevel+" "+data.item_level);
@@ -93,6 +99,26 @@ write(body,"forever-item-tooltip__line",localizedSlot(item.slotLabel||item.slot)
 if(typeof item.typeName==="string")write(body,"forever-item-tooltip__line",item.typeName);
 if(status==="loading")write(body,"forever-item-tooltip__muted",w.loading);
 else if(status==="unavailable")write(body,"forever-item-tooltip__muted",w.unavailable);
+}
+if(item.vendorDetails&&typeof item.vendorDetails==="object"){
+const v=item.vendorDetails,group=elt("section","forever-item-tooltip__vendor");
+write(group,"forever-item-tooltip__vendor-heading",en?"MERCHANT REFERENCE · CLASSIC":"RÉFÉRENCE MARCHAND · CLASSIC");
+if(v.type)write(group,"forever-item-tooltip__line",v.type+(v.profession?" · "+v.profession:""));
+else if(v.profession)write(group,"forever-item-tooltip__line",v.profession);
+if(Number.isFinite(v.skill)&&v.skill>0)write(group,"forever-item-tooltip__line",(en?"Profession skill (reference): ":"Compétence du métier (référence) : ")+v.skill);
+if(v.stock)write(group,"forever-item-tooltip__line",v.stock);
+if(Number.isFinite(v.vendorCount)&&v.vendorCount>0)write(group,"forever-item-tooltip__line",v.vendorCount+" "+(en?(v.vendorCount===1?"listed vendor":"listed vendors"):(v.vendorCount===1?"vendeur référencé":"vendeurs référencés")));
+if(v.vendorName)write(group,"forever-item-tooltip__line",(en?"Selected vendor: ":"Vendeur sélectionné : ")+v.vendorName);
+if(Number.isFinite(v.priceCopper)&&v.priceCopper>=0){
+const g=Math.floor(v.priceCopper/10000),s=Math.floor((v.priceCopper%10000)/100),c=v.priceCopper%100;
+const price=[g?(g+" "+(en?"g":"po")):"",s?(s+" "+(en?"s":"pa")):"",c?(c+" "+(en?"c":"pc")):""].filter(Boolean).join(" ")||"0 "+(en?"c":"pc");
+write(group,"forever-item-tooltip__line",(en?"Classic vendor price (indicative): ":"Prix marchand Classic (indicatif) : ")+price);
+}
+if(Number.isInteger(v.maxStock)&&v.maxStock>0)write(group,"forever-item-tooltip__line",(en?"Classic reference maximum stock: ":"Stock maximal de référence Classic : ")+v.maxStock);
+if(v.specialization)write(group,"forever-item-tooltip__vendor-warning",(en?"Classic specialization: ":"Spécialisation Classic : ")+v.specialization);
+if(v.bindPickup)write(group,"forever-item-tooltip__vendor-warning",en?"Bind on Pickup (Classic reference)":"Lié quand ramassé (référence Classic)");
+if(v.sharedStock)write(group,"forever-item-tooltip__vendor-warning",en?"Shared vendor stock slot":"Emplacement de stock partagé");
+inner.append(group);
 }
 if(item.origin)write(inner,"forever-item-tooltip__origin",w.origin+" : "+item.origin);
 if(status==="unavailable"&&haveRich)write(inner,"forever-item-tooltip__muted",w.unavailable);
