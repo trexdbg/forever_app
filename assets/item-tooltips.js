@@ -1,0 +1,162 @@
+/* Shared WoW-style tooltips for BiS paperdoll and gear catalogue.
+   Rich details are loaded on demand from WoWDB Classic (Vanilla 1.12), not Forever.
+   All external data is rendered through textContent, never injected as HTML. */
+(()=>{"use strict";
+const en=document.documentElement.lang==="en";
+const w=en?{
+  itemLevel:"Item level",classic:"Classic Era reference — NOT confirmed for Forever",loading:"Loading Classic item details…",unavailable:"Additional Classic stats unavailable.",origin:"Source",view:"Open Classic item sheet ↗",close:"Close item details",open:"Item details",bind:"Binding",slot:"Slot",subtype:"Type",damage:"Damage",speed:"Speed",dps:"damage per second",required:"Requires level",armor:"Armor",sell:"Sell price",effects:"Classic effects (original text)",longPress:"Long-press an item for details",source:"Classic data: WoWDB des Défias",unknown:"Undocumented",set:"Item set"
+}:{
+  itemLevel:"Niveau d’objet",classic:"Référence Classic — NON confirmée sur Forever",loading:"Chargement des caractéristiques Classic…",unavailable:"Caractéristiques Classic supplémentaires indisponibles.",origin:"Origine",view:"Voir la fiche Classic ↗",close:"Fermer les détails",open:"Détails de l’objet",bind:"Lien",slot:"Emplacement",subtype:"Type",damage:"Dégâts",speed:"Vitesse",dps:"dégâts par seconde",required:"Niveau requis",armor:"Armure",sell:"Prix de vente",effects:"Effets Classic",longPress:"Appui long pour voir les détails",source:"Données Classic : WoWDB des Défias",unknown:"Non documenté",set:"Ensemble d’objets"
+};
+const QUALITY=new Set(["poor","common","uncommon","rare","epic","legendary"]);
+const cache=new Map(),inflight=new Map();
+let active=null,token=0,loadTimer=0,visible=false,pinned=false,suspendUntil=0;
+const panel=document.createElement("aside");
+panel.id="forever-item-tooltip";panel.className="forever-item-tooltip";
+panel.setAttribute("role","dialog");panel.setAttribute("aria-label",w.open);panel.setAttribute("aria-modal","false");panel.hidden=true;
+const inner=document.createElement("div");inner.className="forever-item-tooltip__inner";panel.append(inner);
+document.body.append(panel);
+function elt(type,css,text){const node=document.createElement(type);if(css)node.className=css;if(text!==undefined)node.textContent=String(text);return node}
+function write(parent,css,value){if(value===null||value===undefined||value==="")return null;const x=elt("div",css,value);parent.append(x);return x}
+function isId(value){return Number.isSafeInteger(Number(value))&&Number(value)>0&&Number(value)<100000000}
+function localizedSlot(slot){
+if(!en)return slot||"";
+const map={head:"Head",neck:"Neck",shoulders:"Shoulders",back:"Back",chest:"Chest",wrist:"Wrists",hands:"Hands",waist:"Waist",legs:"Legs",feet:"Feet",finger1:"Finger 1",finger2:"Finger 2",trinket1:"Trinket 1",trinket2:"Trinket 2",mainhand:"Main hand",offhand:"Off hand",ranged:"Ranged / relic",Tête:"Head",Cou:"Neck",Épaules:"Shoulders",Dos:"Back",Torse:"Chest",Poignets:"Wrists",Mains:"Hands",Taille:"Waist",Jambes:"Legs",Pieds:"Feet","Anneau 1":"Ring 1","Anneau 2":"Ring 2","Bijou 1":"Trinket 1","Bijou 2":"Trinket 2","Main droite":"Main hand","Main gauche":"Off hand","Distance / relique":"Ranged / relic"};
+return map[slot]||slot||""}
+function translateLine(line){
+if(!en)return line;
+const direct={"Lié quand ramassé":"Binds when picked up","Lié quand équipé":"Binds when equipped","Unique":"Unique","Unique (1)":"Unique (1)","Équipé":"Equip","Ensemble":"Set"};
+if(direct[line])return direct[line];
+return line.replace(/^Niveau d'objet (\d+)/,"Item level $1")
+.replace(/^Dégâts : ([\d,.\s]+) - ([\d,.\s]+)/,"Damage: $1 - $2")
+.replace(/^Vitesse ([\d,.]+)/,"Speed $1")
+.replace(/dégâts par seconde/g,"damage per second")
+.replace(/^Durabilité (\d+) \/ (\d+)/,"Durability $1 / $2")
+.replace(/^Niveau (\d+) requis/,"Requires level $1")
+.replace(/^\+([\d,.]+) Force$/,"+$1 Strength")
+.replace(/^\+([\d,.]+) Agilité$/,"+$1 Agility")
+.replace(/^\+([\d,.]+) Endurance$/,"+$1 Stamina")
+.replace(/^\+([\d,.]+) Intelligence$/,"+$1 Intellect")
+.replace(/^\+([\d,.]+) Esprit$/,"+$1 Spirit")
+.replace(/^Équipé : /,"Equip: ")
+.replace(/^Utiliser : /,"Use: ")
+.replace(/^Armure : (\d+)/,"Armor: $1")}
+function rawLineStyle(text){
+if(/^(Équipé|Equip:|Utiliser|Use:|Chance quand vous|Chance on hit|Bonus d'ensemble|Set:|Ensemble \(\d+\)|\(\d+\) Ensemble|\(\d+\) Set)/i.test(text))return "forever-item-tooltip__effect";
+if(/^(Niveau d'objet|Item level)/i.test(text))return "forever-item-tooltip__itemlevel";
+if(/^(Armure|Damage|Dégâts|Vitesse|Speed|Durabilité|Durability|Niveau \d+ requis|Requires level)/i.test(text))return "forever-item-tooltip__line";
+if(/^(\+\d+|Augmente |Increases )/i.test(text))return "forever-item-tooltip__stat";
+if(/^(Ensemble|Set:|Armes de|Armure de|Tenue de)/i.test(text))return "forever-item-tooltip__set";
+return "forever-item-tooltip__line"}
+function validIcon(icon){return typeof icon==="string"&&/^[a-z0-9_-]{2,70}$/.test(icon)}
+function render(item,data,status){
+inner.replaceChildren();panel.dataset.quality=QUALITY.has(item.quality)?item.quality:"common";
+const controls=elt("div","forever-item-tooltip__top");
+write(controls,"forever-item-tooltip__eyebrow",en?"CLASSIC / ITEM DETAILS":"CLASSIC / FICHE D’OBJET");
+const close=elt("button","forever-item-tooltip__close","×");close.type="button";close.setAttribute("aria-label",w.close);close.addEventListener("click",hide);controls.append(close);inner.append(controls);
+const title=elt("div","forever-item-tooltip__title");
+if(validIcon(item.icon)){const pic=elt("img","forever-item-tooltip__icon");pic.alt="";pic.src="/forever_app/assets/icons/"+item.icon+".jpg";pic.loading="lazy";pic.onerror=()=>pic.remove();title.append(pic)}
+const heading=elt("div","forever-item-tooltip__heading");
+write(heading,"forever-item-tooltip__name",en?item.name:(data&&typeof data.name==="string"&&data.name?data.name:item.name));
+if(data&&Number.isFinite(data.item_level)&&data.item_level>0)write(heading,"forever-item-tooltip__itemlevel",w.itemLevel+" "+data.item_level);
+else if(Number.isFinite(item.itemLevel)&&item.itemLevel>0)write(heading,"forever-item-tooltip__itemlevel",w.itemLevel+" "+item.itemLevel);
+title.append(heading);inner.append(title);
+const body=elt("div","forever-item-tooltip__body");inner.append(body);
+const lines=data&&Array.isArray(data.tooltip)?data.tooltip.filter(x=>typeof x==="string").slice(0,38):[];
+let haveRich=false;
+if(lines.length){haveRich=true;let index=0;
+for(const original of lines){const text=original.trim();if(!text)continue;
+if(index++===0&&(text===data.name||text===item.name))continue;
+if(/^Niveau d'objet \d+/.test(text))continue;
+const out=translateLine(text);
+write(body,rawLineStyle(out),out);
+}
+}else if(data&&typeof data==="object"){haveRich=true;
+if(data.slot_name)write(body,"forever-item-tooltip__line",en?(localizedSlot(item.slotLabel||item.slot)||data.slot_name):data.slot_name);
+if(data.type_name)write(body,"forever-item-tooltip__line",data.type_name);
+if(data.weapon&&typeof data.weapon==="object"){
+const v=data.weapon;
+if(Number.isFinite(v.damage_min)&&Number.isFinite(v.damage_max))write(body,"forever-item-tooltip__line",w.damage+": "+v.damage_min+" - "+v.damage_max);
+if(Number.isFinite(v.speed))write(body,"forever-item-tooltip__line",w.speed+" "+v.speed.toFixed(2));
+if(Number.isFinite(v.dps))write(body,"forever-item-tooltip__muted","("+v.dps.toFixed(1)+" "+w.dps+")");
+}
+if(Number.isFinite(data.required_level)&&data.required_level>0)write(body,"forever-item-tooltip__line",w.required+" "+data.required_level);
+}
+if(!haveRich){
+write(body,"forever-item-tooltip__line",localizedSlot(item.slotLabel||item.slot));
+if(typeof item.typeName==="string")write(body,"forever-item-tooltip__line",item.typeName);
+if(status==="loading")write(body,"forever-item-tooltip__muted",w.loading);
+else if(status==="unavailable")write(body,"forever-item-tooltip__muted",w.unavailable);
+}
+if(item.origin)write(inner,"forever-item-tooltip__origin",w.origin+" : "+item.origin);
+if(status==="unavailable"&&haveRich)write(inner,"forever-item-tooltip__muted",w.unavailable);
+write(inner,"forever-item-tooltip__disclaimer",w.classic);
+const foot=elt("div","forever-item-tooltip__foot");
+if(isId(item.id)){
+const a=elt("a","forever-item-tooltip__source",w.source+" ↗");
+a.href="https://wowdb.assemblee-defias.fr/?id=classic:item:"+Number(item.id);a.target="_blank";a.rel="noopener noreferrer";foot.append(a);
+}else write(foot,"forever-item-tooltip__source",w.source);
+inner.append(foot);
+}
+function place(x,y,anchor){
+if(!visible||pinned)return;
+const rect=panel.getBoundingClientRect(),padding=12,gap=20;
+let left=x+gap,top=y+gap;
+if(left+rect.width+padding>window.innerWidth)left=x-rect.width-gap;
+if(left<padding)left=padding;
+if(top+rect.height+padding>window.innerHeight)top=window.innerHeight-rect.height-padding;
+if(top<padding)top=padding;
+panel.style.left=left+"px";panel.style.top=top+"px"}
+function hide(){
+clearTimeout(loadTimer);token++;visible=false;pinned=false;active=null;panel.hidden=true;panel.classList.remove("is-pinned");panel.style.left="";panel.style.top="";
+}
+function queueDetails(item,requestToken){
+if(!isId(item.id))return;
+const id=Number(item.id);
+if(cache.has(id)){if(active&&requestToken===token){render(item,cache.get(id),"complete");if(!pinned)place(active.x,active.y)}return}
+if(Date.now()<suspendUntil)return;
+loadTimer=setTimeout(()=>{
+let promise=inflight.get(id);
+if(!promise){const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),7000);
+promise=fetch("https://api.wowdb.assemblee-defias.fr/v1/classic/items/"+id,{credentials:"omit",mode:"cors",signal:controller.signal})
+.then(r=>{if(r.status===429||r.status===503)suspendUntil=Date.now()+60000;if(!r.ok)throw Error("HTTP "+r.status);return r.json()})
+.then(data=>{if(!data||data.object!=="item"||Number(data.id)!==id)throw Error("Invalid item");cache.set(id,data);return data})
+.finally(()=>{clearTimeout(timeout);inflight.delete(id)});
+inflight.set(id,promise)}
+promise.then(data=>{if(active&&token===requestToken&&Number(active.item.id)===id){render(active.item,data,"complete");if(!pinned)place(active.x,active.y)}}).catch(()=>{if(active&&token===requestToken&&Number(active.item.id)===id){render(active.item,null,"unavailable");if(!pinned)place(active.x,active.y)}})
+},200);
+}
+function show(item,evt,stick=false){
+if(!item||typeof item.name!=="string")return;
+clearTimeout(loadTimer);token++;const currentToken=token;
+visible=true;pinned=Boolean(stick);
+const anchor=evt&&evt.currentTarget&&evt.currentTarget.getBoundingClientRect?evt.currentTarget:null;
+const rect=anchor?anchor.getBoundingClientRect():null;
+const x=evt&&Number.isFinite(evt.clientX)?evt.clientX:rect?rect.right:window.innerWidth/2;
+const y=evt&&Number.isFinite(evt.clientY)?evt.clientY:rect?rect.top:window.innerHeight/2;
+active={item,x,y};panel.classList.toggle("is-pinned",pinned);panel.hidden=false;
+render(item,cache.get(Number(item.id))||null,isId(item.id)&&!cache.has(Number(item.id))?"loading":"complete");
+if(!pinned)place(x,y);
+else {panel.style.left="";panel.style.top="";}
+queueDetails(item,currentToken);
+}
+function bind(node,item){
+if(!node||!item)return;
+let longTimer=0,longPressed=false,startX=0,startY=0;
+node.addEventListener("mouseenter",e=>{if(e.sourceCapabilities?.firesTouchEvents||pinned)return;show(item,e)});
+node.addEventListener("mousemove",e=>{if(!pinned&&visible&&active&&Number(active.item.id)===Number(item.id)){active.x=e.clientX;active.y=e.clientY;place(e.clientX,e.clientY)}});
+node.addEventListener("mouseleave",()=>{if(!pinned)hide()});
+node.addEventListener("focus",e=>{if(!pinned&&window.matchMedia("(hover: hover)").matches)show(item,e)});
+node.addEventListener("blur",()=>{if(!pinned)hide()});
+node.addEventListener("pointerdown",e=>{if(e.pointerType!=="touch"&&e.pointerType!=="pen")return;clearTimeout(longTimer);longPressed=false;startX=e.clientX;startY=e.clientY;longTimer=setTimeout(()=>{longPressed=true;show(item,{clientX:startX,clientY:startY},true)},550)});
+node.addEventListener("pointermove",e=>{if(Math.abs(e.clientX-startX)>12||Math.abs(e.clientY-startY)>12)clearTimeout(longTimer)});
+for(const event of ["pointerup","pointercancel","pointerleave"])node.addEventListener(event,()=>clearTimeout(longTimer));
+node.addEventListener("click",e=>{if(!longPressed)return;longPressed=false;e.preventDefault();e.stopImmediatePropagation()},true)
+}
+function pin(item){show(item,null,true)}
+document.addEventListener("keydown",e=>{if(e.key==="Escape")hide()});
+document.addEventListener("pointerdown",e=>{if(pinned&&!panel.contains(e.target)&&!e.target.closest(".bis-v2-info-button"))hide()},true);
+window.addEventListener("resize",hide);
+window.addEventListener("scroll",()=>{if(!pinned)hide()},{passive:true,capture:true});
+window.ForeverItemTooltip={bind,hide,pin};
+})();
