@@ -1,16 +1,16 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#0b1210"><meta name="description" content="Explore 12 WoW Forever professions, client beta recipes and reagents, campsites, and Classic-reference trainers on interactive maps.">
+<meta name="theme-color" content="#0b1210"><meta name="description" content="Find WoW Forever profession trainers and weapon masters quickly on interactive zone maps, with filters by profession, faction and zone.">
 <link rel="canonical" href="https://foreveroth.com/en/metiers/"><link rel="icon" href="/assets/foreveroth-favicon.png" type="image/png">
 <meta property="og:type" content="website"><meta property="og:title" content="Profession trainers and tiers — WoW Forever"><meta property="og:description" content="Locate profession trainers by trade, tier, faction and zone on interactive maps. Classic references."><meta property="og:url" content="https://foreveroth.com/en/metiers/">
-<title>WoW Forever professions, recipes, materials and trainers — ForEveroth</title>
+<title>WoW Forever profession trainers and weapon master maps — ForEveroth</title>
 <link rel="alternate" hreflang="fr" href="https://foreveroth.com/metiers/"><link rel="alternate" hreflang="en" href="https://foreveroth.com/en/metiers/"><link rel="alternate" hreflang="x-default" href="https://foreveroth.com/metiers/">
-<link rel="stylesheet" href="/assets/site.css"><link rel="stylesheet" href="/assets/refined.css?v=20261009-2"><link rel="stylesheet" href="/assets/language.css?v=1"><link rel="stylesheet" href="/assets/npcs.css?v=6"><link rel="stylesheet" href="/assets/professions.css?v=2">
-<script defer src="/assets/i18n.js?v=1"></script><script defer src="/assets/common.js?v=3"></script><script defer src="/assets/npc-map.js?v=5"></script><script defer src="/assets/npcs.js?v=7"></script><script defer src="/assets/professions.js?v=2"></script><link rel="stylesheet" href="/assets/foreveroth-brand.css?v=1"></head>
+<link rel="stylesheet" href="/assets/site.css"><link rel="stylesheet" href="/assets/refined.css?v=20261009-2"><link rel="stylesheet" href="/assets/language.css?v=1"><link rel="stylesheet" href="/assets/npcs.css?v=6">
+<script defer src="/assets/i18n.js?v=1"></script><script defer src="/assets/common.js?v=3"></script><script defer src="/assets/npc-map.js?v=5"></script><script defer src="/assets/npcs.js?v=7"></script><link rel="stylesheet" href="/assets/foreveroth-brand.css?v=1"></head>
 <body data-page="trainers"><a class="skip" href="#contenu">Skip to content</a>
 <header class="site-header"><div class="wrap header-inner"><a class="brand" href="/en/" aria-label="ForEveroth, home"><img class="brand-lockup" src="/assets/foreveroth-logo.png" width="400" height="74" alt="" decoding="async"></a><button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button><nav class="nav" aria-label="Main navigation"><a href="/en/">Home</a><a href="/en/quetes/">Quests</a><a href="/en/talents/">Talents</a><a href="/en/minage/">Mining</a><a href="/en/equipements/">Gear</a><a href="/en/marchands/">Vendors</a><a aria-current="page" href="/en/metiers/">Professions</a><a href="/en/population/">Population</a></nav><div class="lang-switch" role="group" aria-label="Language"><a href="/metiers/" lang="fr" title="Français">FR</a><a href="/en/metiers/" lang="en" aria-current="true" title="English">EN</a></div></div></header>
 <main id="contenu">
-<section class="page-hero wrap"><span class="kicker">ATLAS / PROFESSIONS</span><h1>Find your <em>trainer</em></h1><p>Pick a profession, select a trainer, locate them on the map.</p><div class="prof-page-index"><a href="#prof-trainers">Trainer map ↓</a><a href="#prof-overview">Browse professions ↓</a><a href="/en/metiers/?type=weapon#prof-trainers">Weapon masters ↓</a></div><nav class="npc-crosslinks" aria-label="Related directory"><a href="/en/marchands/">Browse item vendors ↗</a></nav></section>
+<section class="page-hero wrap"><span class="kicker">ATLAS / PROFESSIONS</span><h1>Find your <em>trainer</em></h1><p>Pick a profession, select a trainer, locate them on the map.</p><div class="prof-page-index"><a href="#prof-trainers">Trainer map ↓</a><a href="/en/metiers/?type=weapon#prof-trainers">Weapon masters ↓</a></div><nav class="npc-crosslinks" aria-label="Related directory"><a href="/en/marchands/">Browse item vendors ↗</a></nav></section>
 <section class="section wrap slim-top" id="prof-trainers"><div class="tool-panel npc-app" data-mode="trainer" id="npcs-app">
 <div class="tool-head"><div><h2>Profession trainers & weapon masters</h2></div><span class="status-pill" id="npc-load-status">Loading…</span></div>
 <p class="npc-intro">Choose a profession to find its trainers on the map. Forever and Classic guide waypoints are labeled.</p>
@@ -40,33 +40,7 @@
 </div>
 <details class="atlas-detail"><summary>Trainer sources and map accuracy</summary><p>Profession trainers include names from Forever-oriented guides and Zephras Isle waypoints, while weapon masters and many positions come from Classic guides. Markers and training availability are not confirmed in-game. Trainers without reliable coordinates appear in the directory without an invented marker or /way command. Map backgrounds come from the Forever beta client; X/Y are zone percentages (0–100), not real-world GPS.</p></details>
 </div></section>
-<section class="section wrap slim-top" id="prof-overview"><div class="prof-app" id="prof-app">
- <div class="prof-topbar"><div><h2>Forever professions</h2><p>Beta client data · Recipes, materials and campsites</p></div><span class="prof-build">Build <strong id="prof-build">—</strong></span></div>
- <p id="prof-load" class="npc-intro" role="status">Loading professions…</p>
- <div id="prof-facts" class="prof-facts" aria-live="polite"></div>
- <div class="prof-catalog-layout">
-  <div id="prof-grid" class="prof-grid" aria-label="Choose a profession"></div>
-  <div id="prof-selected" class="prof-selected" aria-live="polite"></div>
- </div>
- <div class="prof-archive-intro"><h3>Explore recipes and reagents</h3>
-  <p>The 12-profession overview uses Forever client 1.60.1.70291 (October 8). For materials, results, recipe books and skill-up thresholds, load the detailed Forever 1.60.1.69876 archive (September 17). These are different builds. Color thresholds are not learning requirements.</p>
-  <button type="button" id="prof-load-archive">Load detailed recipes</button>
-  <p id="prof-archive-status" class="prof-archive-status" role="status">Research archive hosted by MAF2414, several MB, downloaded only on request.</p>
- </div>
- <section class="prof-archive" id="prof-archive" hidden aria-label="Recipe catalog">
-  <div class="prof-archive-head"><h3>Recipe workshop</h3><span id="prof-recipes-count">—</span></div>
-  <div class="prof-archive-controls">
-   <label>Search output or material<input id="prof-recipe-search" type="search" autocomplete="off" placeholder="Name, material or spell ID…"></label>
-   <label>Forever status<select id="prof-recipe-status"><option value="all">All</option><option value="new">New</option><option value="changed">Changed</option><option value="unchanged">Unchanged</option><option value="inherited">Inherited</option></select></label>
-   <label>Category<select id="prof-recipe-type"><option value="all">All</option><option value="camp">Camping</option><option value="recipes">Recipes and enchants</option><option value="materials">Materials</option></select></label>
-   <label>Sort by<select id="prof-recipe-sort"><option value="skill">Skill</option><option value="name">Name</option><option value="status">Changes</option></select></label>
-  </div>
-  <div class="prof-skill-bar"><span>Simulated skill</span><input type="range" id="prof-skill" min="1" max="300" step="1" value="150" aria-label="Skill level for recipe colors"><strong id="prof-skill-label">150</strong></div>
-  <div id="prof-recipe-list" class="prof-recipe-list"></div>
-  <div class="prof-pagebar"><button type="button" id="prof-prev" disabled>←</button><span id="prof-page">1 / 1</span><button type="button" id="prof-next">→</button></div>
-  <p class="prof-recipe-meta">Detailed recipe names remain in English unless the archive supplies a localization. Vendors and learning requirements are not verified by this export.</p>
- </section>
- </div></section>
+
 </main>
 <footer class="footer"><div class="wrap footer-simple"><span>ForEveroth · Independent community project</span><nav aria-label="Useful links"><a href="https://www.wowhead.com/classic/guide/alchemy-leveling-1-300-wow-classic" target="_blank" rel="noopener noreferrer">Classic profession guide ↗</a></nav></div><div class="wrap legal">World of Warcraft © Blizzard Entertainment · Unofficial and unaffiliated. Beta data may change.</div></footer>
 </body></html>
