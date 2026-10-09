@@ -7,7 +7,12 @@ let db,zone,sourceImg=null,zoom=1,center={x:50,y:50},shown=[],selected=null,comm
 const enabledMinerals=new Set();
 const mineralIcons=Object.create(null);
 // Six local SVG files, cached by GitHub Pages and loaded only once.
-const iconPath=id=>ROOT+"assets/icons/mining-"+encodeURIComponent(id)+".svg";
+// Classic Cartographer_Mining used INV_Ore_Thorium_02 for both Small and
+// Rich Thorium. Hakkari Thorium shares the Rich Thorium world model.
+const thoriumTypes=new Set(["rich","small","hakkari"]);
+const iconPath=id=>thoriumTypes.has(id)
+  ?ROOT+"assets/icons/mining-thorium-wow.png"
+  :ROOT+"assets/icons/mining-"+encodeURIComponent(id)+".svg";
 function preloadMineralIcons(){
   for(const id of Object.keys(db.minerals)){
     if(mineralIcons[id])continue;
