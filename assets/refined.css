@@ -1,0 +1,173 @@
+/* Forever Atlas / Codex — compact visual language */
+:root{color-scheme:dark;--bg:#0b1210;--panel:#121b17;--panel2:#19241e;--line:#364337;--text:#eee9df;--muted:#a2afa2;--gold:#d6b678;font-family:"Trebuchet MS","Segoe UI",Arial,sans-serif}
+html{scroll-padding-top:75px}
+body{color:var(--text);line-height:1.5;background:radial-gradient(ellipse 800px 450px at 90% -140px,#38433166,transparent 85%),radial-gradient(ellipse 800px 750px at 0 75%,#23382e32,transparent 85%),repeating-linear-gradient(90deg,transparent 0,transparent 79px,#ffffff04 80px),var(--bg)}
+::selection{background:#d0ae75;color:#08110d}
+.wrap{width:min(1280px,calc(100% - 56px))}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid #e9c990;outline-offset:3px}
+.site-header{position:sticky;top:0;z-index:60;background:#0a120fed;border-bottom:1px solid #c7a26a44;backdrop-filter:blur(15px)}
+.header-inner{min-height:69px;gap:18px}
+.brand{gap:12px;font:700 20px Georgia,"Times New Roman",serif;letter-spacing:.035em;white-space:nowrap}
+.brand strong{color:var(--gold);font-weight:600}.brand small{display:none}
+.brand-icon{width:36px;height:36px;background:linear-gradient(145deg,#29382b,#101c15);border:1px solid #a98a55;border-radius:50%;box-shadow:inset 0 0 0 3px #0d1811;color:var(--gold);font-size:20px}
+.nav{gap:2px;align-items:center}
+.nav a{font-size:11px;letter-spacing:.03em;font-weight:700;color:#aeb9aa;padding:23px 13px 21px;border-radius:0;border-bottom:2px solid transparent;background:transparent;white-space:nowrap}
+.nav a:hover,.nav a[aria-current=page]{color:#f1d7a6;background:#c3a06a0b;border-bottom-color:var(--gold)}
+.nav-toggle{background:#18251e;color:var(--gold);border-radius:3px}
+h1,h2,h3{letter-spacing:-.025em}
+h1,h2,.tool-head h2,.tree-head h2,.quest-current-head h2{font-family:Georgia,"Times New Roman",serif;font-weight:500}
+h1 em,h2 em{color:var(--gold)}
+p{color:var(--muted)}
+.kicker,.eyebrow,.tag{font-size:10px;letter-spacing:.18em;font-weight:750;color:var(--gold)}
+.page-hero{padding-top:35px;padding-bottom:17px;border-bottom:1px solid #bda06c2d;margin-bottom:15px}
+.page-hero .kicker{display:block}
+.page-hero h1{font-size:clamp(36px,4vw,51px);font-weight:500;line-height:1.09;margin:9px 0 8px;letter-spacing:-.035em}
+.page-hero p{font-size:13px;line-height:1.4;max-width:650px;margin:0 0 4px}
+.back-link{display:inline-block;color:#b5bcae;font-size:12px;margin:0 0 13px}
+.section{padding-block:21px 42px}.slim-top{padding-top:6px}
+.tool-panel{border-radius:4px;padding:21px;background:#111a16;border-color:#364339;box-shadow:0 8px 28px #02090530}
+.tool-head{align-items:center;gap:15px;margin-bottom:17px}
+.tool-head h2{font-size:23px;margin:0;letter-spacing:-.02em}
+.tool-head p{margin:5px 0 0;font-size:12px}
+.status-pill{border-radius:2px;border-color:#b59b6b5a;background:#90734815;color:#e6c998;padding:6px 9px;font-size:10px}
+.btn{border-radius:3px;padding:10px 15px;gap:10px;font-size:12px;transition:background .18s,border-color .18s,transform .18s}
+.btn:hover:not(:disabled){filter:none;transform:translateY(-1px)}
+.btn.primary{background:var(--gold);color:#152017;border-color:#e6c98e}
+.btn.primary:hover:not(:disabled){background:#efd39b}
+.btn.secondary{background:#1a271f;border-color:#5b6355;color:#e5e2d6}
+.btn.secondary:hover:not(:disabled){background:#283429;border-color:#c2a56e}
+input,select{background:#0b140f;border-color:#415044;color:var(--text);border-radius:3px;height:40px}
+input[type=checkbox]{accent-color:#cba767}
+label{color:#bbc1b5}
+.source-note{color:#929f91;font-size:11px}.source-note a,.result-table a{color:#e1bf7b}
+.notice{margin-top:14px;background:#9c854016;border-left:2px solid #b8965f;padding:12px 15px}
+.notice strong{color:#e5c68f}.notice p{font-size:12px}
+.atlas-detail{border-top:1px solid var(--line);margin-top:16px;padding-top:10px;color:#a3b0a3}
+.atlas-detail summary{font-size:11px;cursor:pointer;color:#cdb484}
+.atlas-detail p{font-size:11px;line-height:1.65;margin:9px 0 3px;max-width:940px}
+.atlas-detail a{color:var(--gold);text-decoration:underline}
+.class-list{gap:10px;grid-template-columns:repeat(3,minmax(0,1fr))}
+.class-link{background:#141e19;border-radius:4px;border-color:#37443a;padding:13px 15px;gap:13px;transition:border-color .15s,background .15s}
+.class-link:hover{transform:none;background:#1d2c22;border-color:#ae915c}
+.class-symbol{border-radius:3px;width:52px;height:52px;background:#101912}
+.class-link strong{font:500 18px Georgia,serif}.class-link b{font-size:18px}
+.filter-line{gap:12px;margin-bottom:16px}
+.result-table th{font-size:10px;letter-spacing:.1em;color:#d3b37e}
+.result-table td,.result-table th{padding:11px 10px;border-color:#2c3930}
+.result-table td{color:#d4d6cb}
+.empty-state{background:#101b14;border-radius:3px;border-color:#526050;padding:21px}
+.footer{background:#0a120f;border-top:1px solid #c7a46a27;margin-top:23px;padding:21px 0 15px}
+.footer-simple{display:flex;justify-content:space-between;align-items:center;gap:16px;color:#a4aca2;font-size:11px}
+.footer-simple a{color:#c6b38e;margin-left:18px}.footer-simple a:hover{color:var(--gold)}
+.legal{border:0;padding-top:8px;margin-top:4px;color:#78887b;font-size:10px}
+/* An explorer's field guide, not a marketing landing page */
+.home-main{padding-top:29px}
+.home-cover{min-height:296px;position:relative;overflow:hidden;border:1px solid #a28a5a68;display:flex;align-items:center;justify-content:space-between;gap:36px;padding:46px 68px;background:#17271d;isolation:isolate}
+.home-cover::before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,#0d1b14 0%,#102017ee 43%,#101b18ab 80%,#101a16da),url("/forever_app/assets/maps/azshara.jpg") center 45%/cover;filter:saturate(.55)}
+.home-cover::after{content:"";position:absolute;inset:11px;border:1px solid #bd98533b;pointer-events:none;z-index:-1}
+.cover-copy{position:relative;z-index:1;max-width:720px}
+.cover-eyebrow{font-size:10px;font-weight:800;letter-spacing:.2em;color:#d2b784;display:inline-flex;align-items:center;gap:12px}
+.cover-eyebrow::before{content:"";width:26px;height:1px;background:#d2b784}
+.cover-copy h1{font-size:clamp(40px,5vw,65px);line-height:1.06;letter-spacing:-.045em;margin:23px 0 13px;font-weight:500;text-wrap:balance}
+.cover-copy h1 em{font-style:italic;font-weight:400}.cover-copy p{font-size:14px;color:#cad0bd;margin:0}
+.cover-seal{width:174px;height:174px;border:1px solid #c7a66d66;border-radius:50%;flex:none;position:relative;display:flex;align-items:center;justify-content:center;flex-direction:column;color:#e3c388;text-shadow:0 3px 12px #000;box-shadow:inset 0 0 0 9px #e1bd7311,0 0 0 13px #b99c5b20}
+.cover-seal::before{content:"";position:absolute;inset:19px;border:1px dashed #d6b47688;border-radius:50%;transform:rotate(22deg)}
+.cover-seal::after{content:"✧";position:absolute;top:-17px;font-size:25px;color:#e1c286}
+.cover-seal strong{font:italic 75px Georgia,serif;line-height:.9}.cover-seal small{font:10px Georgia,serif;letter-spacing:.37em;margin-top:11px}
+.atlas-directory{margin-top:22px;padding-bottom:42px}
+.directory-bar{display:flex;justify-content:space-between;align-items:center;padding:0 0 12px;font-size:10px;color:var(--gold);font-weight:800;letter-spacing:.2em}
+.directory-bar span:last-child{color:#7f9384;letter-spacing:.12em}
+.atlas-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:11px}
+.atlas-tile{grid-column:span 4;min-height:189px;background:#131f18;border:1px solid #36483a;padding:20px 22px;display:flex;flex-direction:column;position:relative;overflow:hidden;isolation:isolate;transition:background .18s,border-color .18s,transform .18s}
+.atlas-tile::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(circle at 97% 10%,#65774825,transparent 45%);pointer-events:none}
+.atlas-tile:hover{background:#213024;border-color:#bca06c;transform:translateY(-2px)}
+.atlas-tile:nth-child(1),.atlas-tile:nth-child(2){grid-column:span 6;min-height:205px}
+.atlas-tile:nth-child(1)::before{background:linear-gradient(90deg,#152318 25%,#17271ae0),url("/forever_app/assets/maps/winterspring.jpg") center/cover;opacity:.5}
+.tile-top{display:flex;align-items:start;justify-content:space-between;font-size:10px;letter-spacing:.13em;color:#98a88e;font-weight:700}
+.tile-arrow{color:#d5b67b;font-size:23px;line-height:1;transition:transform .18s}
+.atlas-tile:hover .tile-arrow{transform:translate(3px,-3px)}
+.tile-content{margin-top:auto;display:flex;align-items:center;gap:14px;min-width:0}
+.tile-icon{width:45px;height:45px;flex:none;display:grid;place-items:center;border:1px solid #9c8a5c65;background:#09120fc9;border-radius:3px;overflow:hidden}
+.tile-icon img{display:block;width:100%;height:100%;object-fit:cover}
+.tile-icon.ore img{object-fit:contain;padding:5px}
+.tile-icon.double{display:flex;align-items:center;justify-content:center;gap:1px}
+.tile-icon.double img{width:49%;height:100%;object-fit:contain}
+.tile-copy{display:flex;flex-direction:column;gap:3px;min-width:0}
+.tile-title{font-family:Georgia,serif;font-size:clamp(22px,2.5vw,30px);line-height:1.1}
+.tile-caption{font-size:11px;color:#aeb9a8;letter-spacing:.025em}
+.atlas-tile:hover .tile-title{color:#f7dfb2}
+/* Working surfaces */
+.mine-filters{margin:14px 0;background:#152119;border-radius:3px;border-color:#3e4d3d;padding:13px 15px}
+.mine-filter-head{margin-bottom:10px;align-items:center}.mine-filter-head h3{font:500 18px Georgia,serif;margin:0}
+.mine-filter-actions button{border-radius:3px;background:#1b2a1f;border-color:#4c5b48;color:#d1d6c7;padding:7px 9px}
+.mine-ore-options{gap:7px}.mine-ore-option{background:#0d1912;border-radius:3px;border-color:#3c4a39;padding:8px 10px;gap:8px}
+.mine-ore-option.active{background:#2a3524;border-color:#bc9d66;color:#f2eadc}.mine-ore-name{font-size:11px}
+.mining-main{gap:12px;grid-template-columns:minmax(0,2.15fr) minmax(250px,.8fr)}
+.mine-map-header,.mine-map-caption,.quest-map-top,.quest-map-caption{background:#19261e;border-color:#364739}
+.mine-map-header,.quest-map-top{border-radius:3px 3px 0 0}
+.mine-map-caption,.quest-map-caption{border-radius:0 0 3px 3px}
+.mine-map-frame,.quest-map-frame{border-color:#425043;background:#1b2f24}
+.map-buttons button,.quest-map-top .map-buttons button{background:#0f1b13;color:#ddc08a;border:1px solid #53614e;border-radius:3px}
+.mining-detail-column{background:#101a14;border-radius:3px;padding:13px;border-color:#3a473b}
+.mining-detail-column h3{font:500 17px Georgia,serif}
+.mine-zone-row{background:#19271d;border-radius:3px;padding:9px}
+.mine-zone-row:hover{background:#263629}.mine-zone-row.active{background:#2e3a2b;border-color:#bca16b}
+.mine-selected{border-radius:3px;background:#211f17}.mine-way{background:#080f0b;border-radius:2px}
+#mine-map-id{display:none}
+.bis-warning{margin:0 0 16px;padding:9px 12px}
+.bis-class-grid{gap:6px;margin-bottom:15px}.bis-class{background:#15211a;border-radius:3px;border-color:#3d4c3e}
+.bis-class.active,.bis-class:hover{background:#40392455}.bis-thumb{border-radius:3px}
+.bis-spec-row{padding-bottom:13px}.bis-spec{background:#1d291f;border-color:#435144;border-radius:3px}
+.bis-overview{margin:14px 0}.bis-slot-card{background:#101b15;border-radius:3px;padding:13px}
+.bis-recommendation{background:#1d2a20;border-radius:3px;padding:8px}
+.talent-toolbar{padding:14px 18px}.talent-trees{gap:10px;padding:13px}
+.tree-card{background:#101b15;border-color:#405041;border-radius:4px;padding:11px}.tree-head h2{font-size:20px}
+.talent-node{background:#1d2c21;border-color:#4a5847;border-radius:3px}.talent-node.maxed{border-color:#d5ae6d}
+.talent-node .icon-wrap{border-radius:2px;background:#172018}.talent-node .rank{border-radius:2px}
+.talent-details{border-color:#374539}
+.quest-toolbar.tool-panel{background:#111b16;border-color:#3c4a3c;margin-bottom:12px}
+.quest-picker{border-radius:3px;border-color:#3e4d3d;background:#152119;padding:10px 11px}
+.quest-picker legend{color:#dfc591;font-size:12px}
+.quest-filters{margin-top:13px;gap:10px}
+.quest-faction-choice,.quest-race-choice{background:#19271c;border-color:#465246;border-radius:3px;min-height:76px}
+.quest-faction-choice[data-faction=alliance].selected{background:#1b3346;border-color:#81aaca}
+.quest-faction-choice[data-faction=horde].selected{background:#3f2527;border-color:#cb897d}
+.quest-race-choice.selected{background:#32372a;border-color:#d2b073}
+.quest-race-choice{gap:5px;min-height:78px}
+.quest-search-input{border-radius:3px;background:#101b14;border-color:#415344}
+.quest-search-input:focus-within{border-color:#d1b078}
+.quest-timeline{background:#121e17;border-radius:4px;border-color:#3a4c3c;padding:16px 20px 13px;margin-bottom:12px}
+.quest-timeline-heading h2{font-size:25px}
+.quest-timeline-preview{background:#1a291e;border-color:#3e4b3f;border-radius:3px;color:#d3c5a7}
+.quest-sidebar{border-radius:4px;background:#111c16}
+.quest-sidebar .quest-waypoint{background:#1a291e;border-radius:3px}
+.quest-sidebar .quest-waypoint:hover,.quest-sidebar .quest-waypoint.selected{background:#2b3728}
+.quest-selected{background:#18251b;border-radius:3px}.quest-map-frame{box-shadow:none}
+.pop-display{background:#101b15;border-radius:4px}.pop-track{border-radius:2px}
+@media(max-width:1050px){.nav a{padding-inline:9px;font-size:10px}.brand{font-size:18px}}
+@media(max-width:900px){.mining-main{grid-template-columns:1fr}}
+@media(max-width:750px){
+ .wrap{width:calc(100% - 30px)}.header-inner{min-height:61px}
+ .brand{font-size:18px}.nav{top:61px;background:#0c1710;padding:8px 15px 15px;border-bottom:1px solid #b393634d}
+ .nav a{font-size:13px;letter-spacing:0;padding:11px 12px;border-bottom:0;border-left:2px solid transparent}
+ .nav a[aria-current=page]{border-left-color:var(--gold);border-bottom-color:transparent}
+ .page-hero{padding-top:24px;margin-bottom:10px}.page-hero h1{font-size:36px}
+ .section{padding-bottom:27px}.tool-panel{padding:13px}.tool-head h2{font-size:21px}
+ .class-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .home-main{padding-top:15px}.home-cover{min-height:222px;padding:26px 25px}
+ .cover-copy h1{font-size:clamp(35px,8vw,52px);margin:15px 0 10px}
+ .cover-seal{display:none}.atlas-grid{gap:8px}
+ .atlas-tile,.atlas-tile:nth-child(1),.atlas-tile:nth-child(2){grid-column:span 6;min-height:167px;padding:14px}
+ .tile-content{align-items:flex-start;gap:9px}.tile-icon{width:35px;height:35px}.tile-title{font-size:23px}
+ .footer-simple{flex-direction:column;align-items:flex-start;gap:7px}.footer-simple a{margin:0 18px 0 0}
+ .quest-timeline{padding:13px}
+}
+@media(max-width:500px){
+ .atlas-tile,.atlas-tile:nth-child(1),.atlas-tile:nth-child(2){grid-column:span 12;min-height:116px}
+ .tile-content{align-items:center}.tile-icon{width:42px;height:42px}.tile-title{font-size:24px}
+ .home-cover{min-height:188px}.cover-copy p{font-size:12px}
+ .page-hero h1{font-size:34px}.class-list{grid-template-columns:1fr}
+ .quest-timeline-heading h2{font-size:22px}
+ .quest-faction-choice,.quest-race-choice{border-radius:3px}
+}
+@media(prefers-reduced-motion:reduce){.atlas-tile,.tile-arrow,.btn{transition:none!important;transform:none!important}}
