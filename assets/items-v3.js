@@ -44,7 +44,7 @@ function render(){
  for(const i of rows.slice(0,350)){const row=document.createElement("tr"),name=rowText(row,"");name.className="item-v2-name";const imgSrc=imageUrl(i);
  if(imgSrc){const pic=document.createElement("img");pic.className="result-icon item-v2-icon";pic.src=imgSrc;pic.alt="";pic.loading="lazy";pic.onerror=()=>pic.remove();name.append(pic)}
  const display=document.createElement("span");display.className="item-v2-label";display.style.setProperty("--rarity",colors[i.quality]||"#d7d7d7");
- const href=(typeof i.url==="string"&&(i.url.startsWith("https://www.wowhead.com/forever/")||i.url.startsWith("https://wowdb.assemblee-defias.fr/")))?i.url:null;
+ const href=(typeof i.url==="string"&&(i.url.startsWith("https://www.wowhead.com/forever/")||i.url.startsWith("https://wowdb.assemblee-defias.fr/")||i.url.startsWith("https://www.60.tools/items/")))?i.url:null;
  const anchor=document.createElement(href?"a":"span");if(href){anchor.href=href;anchor.target="_blank";anchor.rel="noopener noreferrer"}anchor.textContent=i.name;display.append(anchor);name.append(display);
  const tag=document.createElement("span");tag.className="item-v3-provenance "+(sourceType(i)==="forever"?"forever":"classic");tag.textContent=sourceType(i)==="forever"?tr.badgeForever:tr.badgeClassic;name.append(tag);
  const detail=document.createElement("button");detail.type="button";detail.className="bis-v2-info-button item-v2-info";detail.textContent="ⓘ";detail.setAttribute("aria-label",tr.tooltip+" "+i.name);detail.addEventListener("click",()=>window.ForeverItemTooltip?.pin(i));name.append(detail);
