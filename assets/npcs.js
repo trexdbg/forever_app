@@ -61,8 +61,46 @@ function filteredRecords(){
  return (a.item?title(a.item):a.npc.name).localeCompare(b.item?title(b.item):b.npc.name);
  });
 }
+function groupedItems(){
+ const buckets=new Map();
+ for(const r of store.filtered){
+  if(!r.item)continue;
+  const id=String(r.item.id);
+  if(!buckets.has(id))buckets.set(id,{item:r.item,records:[],evidence:false});
+  const b=buckets.get(id);b.records.push(r);
+  if(evidence(r.npc,r.item))b.evidence=true;
+ }
+ return [...buckets.values()].sort((a,b)=>{
+  if(a.evidence!==b.evidence)return a.evidence?-1:1;
+  return title(a.item).localeCompare(title(b.item),en?"en":"fr");
+ });
+}
 function renderList(){
- list.replaceChildren();for(const r of store.filtered){const b=mk("button",null,"npc-result");b.type="button";b.setAttribute("aria-selected",String(store.active?.key===r.key));b.setAttribute("role","option");const mark=r.item?iconNode(r.item):trainerType(r.npc)==="weapon"?mk("span","⚔","npc-item-icon"):trainerIcon(r.npc);b.append(mark);mark.setAttribute("aria-hidden","true");
+ if(store.mode==="merchant"){
+  list.replaceChildren();
+  list.replaceChildren();
+  const groups=groupedItems();
+  for(const g of groups){
+   const b=mk("button",null,"npc-result npc-result-group");b.type="button";b.setAttribute("role","option");
+   b.setAttribute("aria-selected",String(store.active?.item?.id===g.item.id));
+   b.append(iconNode(g.item));
+   const copy=append(b,"span",null,"npc-result-copy");
+   append(copy,"strong",title(g.item));
+   const sellers=g.records.length;
+   append(copy,"small",sellers+" "+S(sellers>1?"vendeurs":"vendeur",sellers>1?"vendors":"vendor")+" · "+(profession[g.item.profession]||g.item.profession));
+   if(g.evidence)append(copy,"span",S("Témoignages disponibles","Reports available"),"npc-evidence-flag");
+   append(b,"span","›","npc-arrow").setAttribute("aria-hidden","true");
+   b.addEventListener("click",()=>{
+    const keep=g.records.find(r=>r.npc.name===store.active?.npc.name);
+    selectRecord(keep||g.records[0]);
+   });
+   list.append(b);
+  }
+  count.textContent=groups.length+" "+S("objets","items")+" · "+store.filtered.length+" "+S("ventes référencées","referenced offers");
+  if(!store.filtered.length)append(list,"p",S("Aucun résultat. Modifiez les filtres ou la recherche.","No matches. Change the filters or search."),"npc-empty");
+  return;
+ }
+ list.replaceChildren();for(const r of store.filtered){const b=mk("button",null,"npc-result");b.type="button";b.setAttribute("aria-selected",String(store.active?.key===r.key));b.setAttribute("role","option");const mark=r.item?iconNode(r.item):append(b,"span",trainerType(r.npc)==="weapon"?"⚔":"⚒","npc-item-icon");if(r.item)b.append(mark);mark.setAttribute("aria-hidden","true");
  const copy=append(b,"span",null,"npc-result-copy");
  append(copy,"strong",r.item?title(r.item):r.npc.name);
  append(copy,"small",r.item?r.npc.name+" · "+side(r.npc):side(r.npc)+" · "+(trainerType(r.npc)==="weapon"?S("Maître d’armes","Weapon master"):profession[r.npc.profession]||r.npc.profession));
@@ -72,6 +110,7 @@ function renderList(){
  b.addEventListener("click",()=>selectRecord(r));list.append(b)}
  if(!store.filtered.length)append(list,"p",S("Aucun résultat. Essayez un autre objet, une autre zone ou désactivez le filtre des témoignages.","No matches. Try another item, zone, or disable the reports-only filter."),"npc-empty");
  count.textContent=store.filtered.length+" "+S("résultats","results");
+
 }
 function sectionText(parent,head,body){append(parent,"h4",head);append(parent,"p",body,"npc-subtitle")}
 function renderDetail(){
@@ -111,20 +150,128 @@ function renderDetail(){
  link(obs,S("Consulter la source ↗","View source ↗"),report.url);
  }else append(panel,"p",i.supply==="limited"?S("Délai de réapparition non documenté pour ce couple objet-vendeur.","No documented restock time for this item at this vendor."):S("Aucun délai fiable identifié dans les commentaires.","No reliable delay documented in comments."));
  append(panel,"p",S("Les durées indiquent des attentes rapportées, pas un minuteur exact ni le prochain réapprovisionnement.","These are reported waits, not exact timers or predictions of the next restock."));
- const alternatives=store.db.npcs.filter(v=>v.name!==n.name&&v.offers.includes(String(i.id))&&(aff.value==="all"||v.faction==="neutral"||v.faction===aff.value));
- if(alternatives.length){
-  const group=append(detail,"section",null,"npc-alternatives");
-  append(group,"h4",S("Autres vendeurs ("+alternatives.length+")","Other vendors ("+alternatives.length+")"));
-  const links=append(group,"div",null,"npc-alternative-list");
-  for(const seller of alternatives.sort((a,b)=>a.zone[en?"en":"fr"].localeCompare(b.zone[en?"en":"fr"]))){
-   const b=append(links,"button",seller.name+" · "+seller.zone[en?"en":"fr"]);b.type="button";
-   b.addEventListener("click",()=>{
-     q.value="";zone.value="all";trade.value="all";kind.value="all";store.showReportsOnly=false;$("npc-evidence-only").checked=false;
-     const choice=store.records.find(rec=>rec.npc.name===seller.name&&rec.item?.id===i.id);
-     if(choice){store.filtered=filteredRecords();selectRecord(choice)}
-   });
-  }
+ const others=store.db.npcs.filter(v=>v.role==="merchant"&&v.offers.includes(String(i.id)))
+ .sort((a,b)=>{
+  const av=a.faction===aff.value||a.faction==="neutral"||aff.value==="all",bv=b.faction===aff.value||b.faction==="neutral"||aff.value==="all";
+  if(av!==bv)return av?-1:1;
+  if(a.name===n.name)return -1;if(b.name===n.name)return 1;
+  return side(a).localeCompare(side(b),en?"en":"fr")||a.name.localeCompare(b.name);
+ });
+ const group=append(detail,"section",null,"npc-alternatives");
+ append(group,"h4",S("Où acheter cet objet ? ("+others.length+")","Where to buy this item ("+others.length+")"));
+ append(group,"p",S("Vendeurs regroupés par objet · référence Classic, pas de stock en direct.","Vendors grouped by item · Classic references, no live inventory."),"npc-group-intro");
+ const choices=append(group,"div",null,"npc-alternative-list");
+ for(const seller of others){
+  const b=append(choices,"button",null,"npc-seller-button");b.type="button";
+  b.setAttribute("aria-pressed",String(seller.name===n.name));
+  const main=append(b,"span",null,"npc-seller-main");
+  append(main,"strong",seller.name);append(main,"small",side(seller)+" · "+faction[seller.faction]);
+  if(evidence(seller,i))append(b,"span",S("Avis stock","Stock report"),"npc-seller-report");
+  b.addEventListener("click",()=>{
+   q.value="";zone.value="all";trade.value="all";aff.value="all";
+   if(kind)kind.value="all";if(rank)rank.value="all";
+   store.showReportsOnly=false;if(reports)reports.checked=false;
+   const choice=store.records.find(rec=>rec.npc.name===seller.name&&rec.item?.id===i.id);
+   if(choice){store.filtered=filteredRecords();selectRecord(choice)}
+  });
  }
+ const purchase=n.offer_details?.[String(i.id)]||{};
+ if(i.specialization||purchase.specialization){const s=purchase.specialization||i.specialization;
+  append(panel,"p",S("Spécialisation requise (référence Classic) : ","Required specialization (Classic): ")+s,"npc-requirement");
+ }
+ if(i.bind==="pickup"||purchase.bind==="pickup")append(panel,"p",S("Lié quand ramassé (référence Classic).","Bind on Pickup (Classic reference)."),"npc-requirement");
+ if(purchase.shared_stock_group)append(panel,"p",S("Emplacement de stock partagé : une autre recette peut apparaître à la place.","Shared inventory slot: a different recipe may appear instead."),"npc-requirement");
+ if(purchase.source){const cite=append(panel,"p",null,"npc-offer-source");link(cite,S("Source de cette vente ↗","Source for this sale ↗"),purchase.source)}
+ }else if(trainerType(n)==="weapon"){
+ append(detail,"h4",S("Armes enseignées","Weapons taught"));
+ const types=append(detail,"div",null,"npc-weapon-skills");for(const k of n.weapon_skills||[])append(types,"span",weaponLabels[k]||k,"npc-chip");
+ if((n.weapon_skills||[]).includes("Polearms"))append(detail,"p",S("Les armes d’hast nécessitent le niveau 20 dans Classic. Chaque classe ne peut apprendre que ses types d’armes autorisés.","Polearms require level 20 in Classic. Each class can only train weapon types it is allowed to wield."),"npc-subtitle");
+ else append(detail,"p",S("Une classe ne peut apprendre que les armes qu’elle est autorisée à utiliser.","Classes can train only weapon types they are eligible to wield."),"npc-subtitle");
+  if(!store.filtered.length)append(list,"p",S("Aucun résultat. Modifiez les filtres ou la recherche.","No matches. Change the filters or search."),"npc-empty");
+  return;
+ }
+ list.replaceChildren();for(const r of store.filtered){const b=mk("button",null,"npc-result");b.type="button";b.setAttribute("aria-selected",String(store.active?.key===r.key));b.setAttribute("role","option");const mark=r.item?iconNode(r.item):trainerType(r.npc)==="weapon"?mk("span","⚔","npc-item-icon"):trainerIcon(r.npc);b.append(mark);mark.setAttribute("aria-hidden","true");
+ const copy=append(b,"span",null,"npc-result-copy");
+ append(copy,"strong",r.item?title(r.item):r.npc.name);
+ append(copy,"small",r.item?r.npc.name+" · "+side(r.npc):side(r.npc)+" · "+(trainerType(r.npc)==="weapon"?S("Maître d’armes","Weapon master"):profession[r.npc.profession]||r.npc.profession));
+ if(!r.item){append(copy,"small",trainerType(r.npc)==="weapon"?(r.npc.weapon_skills||[]).map(k=>weaponLabels[k]||k).join(" · "):(r.npc.rank||"")+" · "+(hasCoords(r.npc)?S("Repère sur carte","Mapped waypoint"):S("Zone uniquement","Zone only")),"npc-result-extras");}
+ if(r.item&&evidence(r.npc,r.item))append(copy,"span",S("Témoignages sur le stock","Stock reports"),"npc-evidence-flag");
+ append(b,"span","›","npc-arrow").setAttribute("aria-hidden","true");
+ b.addEventListener("click",()=>selectRecord(r));list.append(b)}
+ if(!store.filtered.length)append(list,"p",S("Aucun résultat. Essayez un autre objet, une autre zone ou désactivez le filtre des témoignages.","No matches. Try another item, zone, or disable the reports-only filter."),"npc-empty");
+ count.textContent=store.filtered.length+" "+S("résultats","results");
+
+}
+function sectionText(parent,head,body){append(parent,"h4",head);append(parent,"p",body,"npc-subtitle")}
+function renderDetail(){
+ detail.replaceChildren();const r=store.active;if(!r){append(detail,"p",S("Sélectionnez un résultat.","Select a result."),"npc-empty");return}
+ const n=r.npc,i=r.item;
+ append(detail,"span",i?S("Objet · Vendeur","Item · Vendor"):trainerType(n)==="weapon"?S("Armes · Maître d’armes","Weapons · Weapon master"):S("Métier · Maître","Profession · Trainer"),"npc-detail-kicker");
+ if(i){const heading=append(detail,"div",null,"npc-item-heading");heading.append(iconNode(i));append(heading,"h3",title(i));}else append(detail,"h3",n.name);
+ append(detail,"p",i?n.name:trainerType(n)==="weapon"?S("Apprentissage des compétences d’armes","Weapon proficiency training"):S("Maître de métier","Profession trainer"),"npc-subtitle");
+ const chips=append(detail,"div",null,"npc-chips");
+ append(chips,"span",profession[i?.profession||n.profession]||i?.profession||n.profession,"npc-chip gold");
+ append(chips,"span",faction[n.faction],"npc-chip");
+ if(i&&i.skill>0&&i.kind==="recipe")append(chips,"span",S("Compétence "+i.skill,"Skill "+i.skill),"npc-chip");
+ if(i)append(chips,"span",i.kind==="component"?S("Composant","Material"):S("Recette / patron","Recipe / pattern"),"npc-chip");
+ if(n.rank)append(chips,"span",en?({"Apprenti":"Apprentice","Compagnon":"Journeyman","Expert":"Expert","Artisan":"Artisan","Tous rangs":"All tiers"}[n.rank]||n.rank):n.rank,"npc-chip");
+ const place=append(detail,"div",null,"npc-location"), p=append(place,"div");
+ append(p,"strong",side(n));if(n.note&&(!en||n.note_en))append(p,"small",en?n.note_en:n.note);
+ append(place,"span",hasCoords(n)?fmt(n.coordinates.x)+" / "+fmt(n.coordinates.y):S("Position à confirmer","Location unconfirmed"),"npc-coords");
+ const actions=append(detail,"div",null,"npc-actions"),mapId=store.db.zone_maps?.[n.zone.id]?.uiMapID,command=hasCoords(n)?"/way "+(mapId?"#"+mapId+" ":"")+n.coordinates.x+" "+n.coordinates.y:"";
+ if(command){const btn=append(actions,"button",S("Copier /way","Copy /way"),"npc-copy");btn.type="button";
+ btn.addEventListener("click",async()=>{try{await navigator.clipboard.writeText(command);btn.textContent=S("Commande copiée ✓","Copied ✓")}catch(_){btn.textContent=command}});}
+ if(i){link(actions,S("Fiche Classic ↗","Classic item ↗"),"https://www.wowhead.com/classic/item="+i.id);
+ link(actions,S("Vérifier Forever ↗","Check Forever ↗"),"https://www.wowhead.com/forever/item="+i.id)}
+ if(n.id)link(actions,S("Fiche PNJ ↗","NPC details ↗"),"https://www.wowhead.com/classic/npc="+n.id);
+
+ if(i){
+ const panel=append(detail,"section",null,"npc-stock");
+ append(panel,"span",S("Disponibilité estimée","Reference availability"),"npc-stock-label");
+ append(panel,"div",stockWord(i),"npc-stock-value");
+ if(Number.isInteger(i.vendor_price_copper)){append(panel,"p",S("Prix de référence : ","Reference vendor price: ")+copperFmt(i.vendor_price_copper));}
+ if(Number.isInteger(i.vendor_stock)&&i.vendor_stock>0){append(panel,"p",S("Stock maximal indicatif (Classic) : ","Indicative maximum stock (Classic): ")+i.vendor_stock+" "+S("unité(s)","unit(s)")+".");}
+ const report=evidence(n,i);
+ if(report){
+ const obs=append(panel,"div",null,"npc-evidence");
+ append(obs,"strong",report.kind==="unlimited_report"?S("Source Classic : stock illimité","Classic source: unlimited stock"):report.kind==="observed_wait"&&Number.isFinite(report.min_minutes)&&Number.isFinite(report.max_minutes)?S("Attente observée : ","Observed wait: ")+time(report.min_minutes,report.max_minutes):S("Témoignage de stock","Stock report"));
+ append(obs,"p",report[en?"en":"fr"]);
+ append(obs,"p",report.confidence==="contradictory"?S("Confiance faible · Témoignages contradictoires","Low confidence · Conflicting reports"):report.confidence==="low"?S("Confiance faible · Peu de témoignages","Low confidence · Limited reports"):S("Témoignages communautaires","Community reports"));
+ link(obs,S("Consulter la source ↗","View source ↗"),report.url);
+ }else append(panel,"p",i.supply==="limited"?S("Délai de réapparition non documenté pour ce couple objet-vendeur.","No documented restock time for this item at this vendor."):S("Aucun délai fiable identifié dans les commentaires.","No reliable delay documented in comments."));
+ append(panel,"p",S("Les durées indiquent des attentes rapportées, pas un minuteur exact ni le prochain réapprovisionnement.","These are reported waits, not exact timers or predictions of the next restock."));
+ const others=store.db.npcs.filter(v=>v.role==="merchant"&&v.offers.includes(String(i.id)))
+ .sort((a,b)=>{
+  const av=a.faction===aff.value||a.faction==="neutral"||aff.value==="all",bv=b.faction===aff.value||b.faction==="neutral"||aff.value==="all";
+  if(av!==bv)return av?-1:1;
+  if(a.name===n.name)return -1;if(b.name===n.name)return 1;
+  return side(a).localeCompare(side(b),en?"en":"fr")||a.name.localeCompare(b.name);
+ });
+ const group=append(detail,"section",null,"npc-alternatives");
+ append(group,"h4",S("Où acheter cet objet ? ("+others.length+")","Where to buy this item ("+others.length+")"));
+ append(group,"p",S("Vendeurs regroupés par objet · référence Classic, pas de stock en direct.","Vendors grouped by item · Classic references, no live inventory."),"npc-group-intro");
+ const choices=append(group,"div",null,"npc-alternative-list");
+ for(const seller of others){
+  const b=append(choices,"button",null,"npc-seller-button");b.type="button";
+  b.setAttribute("aria-pressed",String(seller.name===n.name));
+  const main=append(b,"span",null,"npc-seller-main");
+  append(main,"strong",seller.name);append(main,"small",side(seller)+" · "+faction[seller.faction]);
+  if(evidence(seller,i))append(b,"span",S("Avis stock","Stock report"),"npc-seller-report");
+  b.addEventListener("click",()=>{
+   q.value="";zone.value="all";trade.value="all";aff.value="all";
+   if(kind)kind.value="all";if(rank)rank.value="all";
+   store.showReportsOnly=false;if(reports)reports.checked=false;
+   const choice=store.records.find(rec=>rec.npc.name===seller.name&&rec.item?.id===i.id);
+   if(choice){store.filtered=filteredRecords();selectRecord(choice)}
+  });
+ }
+ const purchase=n.offer_details?.[String(i.id)]||{};
+ if(i.specialization||purchase.specialization){const s=purchase.specialization||i.specialization;
+  append(panel,"p",S("Spécialisation requise (référence Classic) : ","Required specialization (Classic): ")+s,"npc-requirement");
+ }
+ if(i.bind==="pickup"||purchase.bind==="pickup")append(panel,"p",S("Lié quand ramassé (référence Classic).","Bind on Pickup (Classic reference)."),"npc-requirement");
+ if(purchase.shared_stock_group)append(panel,"p",S("Emplacement de stock partagé : une autre recette peut apparaître à la place.","Shared inventory slot: a different recipe may appear instead."),"npc-requirement");
+ if(purchase.source){const cite=append(panel,"p",null,"npc-offer-source");link(cite,S("Source de cette vente ↗","Source for this sale ↗"),purchase.source)}
  }else if(trainerType(n)==="weapon"){
  append(detail,"h4",S("Armes enseignées","Weapons taught"));
  const types=append(detail,"div",null,"npc-weapon-skills");for(const k of n.weapon_skills||[])append(types,"span",weaponLabels[k]||k,"npc-chip");
@@ -137,7 +284,7 @@ function renderDetail(){
  append(detail,"p",!hasCoords(n)?S("Zone identifiée dans un guide Forever ; aucune coordonnée fiable à afficher. Aucun marqueur ni /way inventé.","Zone listed in a Forever guide; no reliable coordinates to show. No invented pin or /way."):n.coordinate_status==="forever_guide_waypoint"?S("Coordonnées publiées dans un guide de la bêta Forever. Présence effective à confirmer en jeu.","Waypoint from a Forever beta guide. Actual in-game presence is not confirmed."):S("Coordonnées de référence issues de guides Classic ou orientés Forever, à vérifier en jeu. Carte de zone en pourcentage (0–100).","Waypoints from Classic or Forever-oriented guides; not verified in-game. Zone coordinates are percentages (0–100)."),"npc-datacaveat");
  const s=append(detail,"p",null,"npc-source");s.append(document.createTextNode(S("Sources : ","Sources: ")));link(s,S("Guide de référence ↗","Reference guide ↗"),n.source);
  window.ForeverNpcMap?.show(n,store.db,npcName=>{
-  const matched=store.filtered.find(r=>r.npc.name===npcName)||store.records.find(r=>r.npc.name===npcName);
+  const matched=store.filtered.find(r=>r.npc.name===npcName&&r.item?.id===store.active?.item?.id)||store.records.find(r=>r.npc.name===npcName&&r.item?.id===store.active?.item?.id)||store.filtered.find(r=>r.npc.name===npcName)||store.records.find(r=>r.npc.name===npcName);
   if(!matched)return;
   if(!store.filtered.some(r=>r.key===matched.key)){
    q.value="";zone.value="all";trade.value="all";aff.value="all";
@@ -163,6 +310,6 @@ fetch(root+"data/npcs.json").then(r=>{if(!r.ok)throw Error(r.status);return r.js
  // Atlas deep links select the complete zone, not just a text search result.
  const requestedZone=params.get("zone");
  if(requestedZone&&Array.from(zone.options).some(option=>option.value===requestedZone))zone.value=requestedZone;
- refresh();$("npc-load-status").textContent=store.mode==="trainer"?db.npcs.filter(n=>n.role==="trainer").length+" "+S("maîtres recensés","trainers listed"):Object.keys(db.items).length+" "+S("objets · Classic","items · Classic");
+ refresh();$("npc-load-status").textContent=store.mode==="trainer"?db.npcs.filter(n=>n.role==="trainer").length+" "+S("maîtres recensés","trainers listed"):Object.keys(db.items).length+" "+S("objets Classic","Classic items");
 }).catch(e=>{$("npc-load-status").textContent=S("Données indisponibles","Data unavailable");append(list,"p",S("Impossible de charger l'annuaire. Réessayez plus tard.","Unable to load the directory."),"npc-empty");console.warn("NPC dataset:",e.message)});
 })();
