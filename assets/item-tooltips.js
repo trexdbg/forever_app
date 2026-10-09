@@ -58,7 +58,7 @@ function validIcon(icon){return typeof icon==="string"&&/^[a-z0-9_-]{2,70}$/.tes
 function render(item,data,status){const forever=typeof item.source_status==="string"&&item.source_status.startsWith("forever_beta_");if(!data&&Array.isArray(item.tooltip)&&item.tooltip.length)data={name:item.name,item_level:item.itemLevel,tooltip:item.tooltip};
 inner.replaceChildren();panel.dataset.quality=QUALITY.has(item.quality)?item.quality:"common";
 const controls=elt("div","forever-item-tooltip__top");
-write(controls,"forever-item-tooltip__eyebrow",en?"CLASSIC / ITEM DETAILS":"CLASSIC / FICHE D’OBJET");
+write(controls,"forever-item-tooltip__eyebrow",forever?(en?"FOREVER BETA / ITEM DETAILS":"FOREVER BÊTA / FICHE D’OBJET"):(en?"CLASSIC / ITEM DETAILS":"CLASSIC / FICHE D’OBJET"));
 const close=elt("button","forever-item-tooltip__close","×");close.type="button";close.setAttribute("aria-label",w.close);close.addEventListener("click",hide);controls.append(close);inner.append(controls);
 const title=elt("div","forever-item-tooltip__title");
 const officialIcon=typeof item.icon_url==="string"&&/^https:\/\/wow\.zamimg\.com\/images\/wow\/icons\/(?:medium|large)\/[a-z0-9_-]{2,70}\.jpg$/.test(item.icon_url)?item.icon_url:null;
@@ -102,7 +102,8 @@ else if(status==="unavailable")write(body,"forever-item-tooltip__muted",w.unavai
 }
 if(item.vendorDetails&&typeof item.vendorDetails==="object"){
 const v=item.vendorDetails,group=elt("section","forever-item-tooltip__vendor");
-write(group,"forever-item-tooltip__vendor-heading",en?"MERCHANT REFERENCE · CLASSIC":"RÉFÉRENCE MARCHAND · CLASSIC");
+write(group,"forever-item-tooltip__vendor-heading",v.verification?.includes("Forever")?(en?"MERCHANT REFERENCE · FOREVER BETA":"VENTE SOURCÉE · FOREVER BÊTA"):(en?"MERCHANT REFERENCE · CLASSIC":"RÉFÉRENCE MARCHAND · CLASSIC"));
+if(v.verification)write(group,"forever-item-tooltip__line",v.verification);
 if(v.type)write(group,"forever-item-tooltip__line",v.type+(v.profession?" · "+v.profession:""));
 else if(v.profession)write(group,"forever-item-tooltip__line",v.profession);
 if(Number.isFinite(v.skill)&&v.skill>0)write(group,"forever-item-tooltip__line",(en?"Profession skill (reference): ":"Compétence du métier (référence) : ")+v.skill);
@@ -114,10 +115,11 @@ const g=Math.floor(v.priceCopper/10000),s=Math.floor((v.priceCopper%10000)/100),
 const price=[g?(g+" "+(en?"g":"po")):"",s?(s+" "+(en?"s":"pa")):"",c?(c+" "+(en?"c":"pc")):""].filter(Boolean).join(" ")||"0 "+(en?"c":"pc");
 write(group,"forever-item-tooltip__line",(en?"Classic vendor price (indicative): ":"Prix marchand Classic (indicatif) : ")+price);
 }
+if(Number.isInteger(v.currencyPrice)&&v.currencyPrice>=0)write(group,"forever-item-tooltip__vendor-currency",v.currencyPrice+" "+(en?"Merchant’s Favor":"Faveurs marchandes"));
 if(Number.isInteger(v.maxStock)&&v.maxStock>0)write(group,"forever-item-tooltip__line",(en?"Classic reference maximum stock: ":"Stock maximal de référence Classic : ")+v.maxStock);
 if(v.reputation&&typeof v.reputation==="object"){
  const rr={Friendly:en?"Friendly":"Amical",Honored:en?"Honored":"Honoré",Revered:en?"Revered":"Révéré",Exalted:en?"Exalted":"Exalté"};
- write(group,"forever-item-tooltip__vendor-warning",(en?"Required Classic reputation: ":"Réputation Classic requise : ")+v.reputation.faction+" · "+(rr[v.reputation.rank]||v.reputation.rank));
+ write(group,"forever-item-tooltip__vendor-warning",(forever?(en?"Required Forever beta reputation: ":"Réputation Forever bêta requise : "):(en?"Required Classic reputation: ":"Réputation Classic requise : "))+v.reputation.faction+" · "+(rr[v.reputation.rank]||v.reputation.rank));
 }
 if(v.seasonal)write(group,"forever-item-tooltip__vendor-warning",en?"Classic seasonal sale · Winter Veil; unverified on Forever":"Vente saisonnière Classic · Voile d'hiver ; non vérifiée sur Forever");
 if(v.specialization)write(group,"forever-item-tooltip__vendor-warning",(en?"Classic specialization: ":"Spécialisation Classic : ")+v.specialization);
