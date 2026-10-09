@@ -3,7 +3,7 @@
    Classic browsing: explicit WoWDB Classic 1.12 API, NOT Wow Forever stats. */
 (()=>{"use strict";
 const API="https://api.wowdb.assemblee-defias.fr/v1/classic/items";
-const BASE="/forever_app/";
+const BASE="/";
 const SLOT_CODES={
  head:"head",neck:"neck",shoulders:"shoulder",back:"back",chest:"chest",wrist:"wrist",
  hands:"hands",waist:"waist",legs:"legs",feet:"feet",finger1:"finger",finger2:"finger",
