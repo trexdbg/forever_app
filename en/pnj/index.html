@@ -5,8 +5,8 @@
 <meta property="og:type" content="website"><meta property="og:title" content="NPC vendors and profession trainers — WoW Forever Atlas"><meta property="og:description" content="Find Classic-reference NPC vendors by item, profession, faction or zone. Historical restock comments, map coordinates and profession trainers."><meta property="og:url" content="https://trexdbg.github.io/forever_app/en/pnj/">
 <title>NPC vendors and profession trainers — WoW Forever Atlas</title>
 <link rel="alternate" hreflang="fr" href="https://trexdbg.github.io/forever_app/pnj/"><link rel="alternate" hreflang="en" href="https://trexdbg.github.io/forever_app/en/pnj/"><link rel="alternate" hreflang="x-default" href="https://trexdbg.github.io/forever_app/pnj/">
-<link rel="stylesheet" href="/forever_app/assets/site.css"><link rel="stylesheet" href="/forever_app/assets/refined.css?v=20261009-1"><link rel="stylesheet" href="/forever_app/assets/language.css?v=1"><link rel="stylesheet" href="/forever_app/assets/npcs.css?v=1">
-<script defer src="/forever_app/assets/i18n.js?v=1"></script><script defer src="/forever_app/assets/common.js"></script><script defer src="/forever_app/assets/npcs.js?v=1"></script></head>
+<link rel="stylesheet" href="/forever_app/assets/site.css"><link rel="stylesheet" href="/forever_app/assets/refined.css?v=20261009-1"><link rel="stylesheet" href="/forever_app/assets/language.css?v=1"><link rel="stylesheet" href="/forever_app/assets/npcs.css?v=2">
+<script defer src="/forever_app/assets/i18n.js?v=1"></script><script defer src="/forever_app/assets/common.js"></script><script defer src="/forever_app/assets/npc-map.js?v=1"></script><script defer src="/forever_app/assets/npcs.js?v=2"></script></head>
 <body data-page="npcs"><a class="skip" href="#contenu">Skip to content</a>
 <header class="site-header"><div class="wrap header-inner"><a class="brand" href="/forever_app/en/" aria-label="Forever Atlas"><span class="brand-icon" aria-hidden="true">✦</span><span>FOREVER <strong>ATLAS</strong></span></a><button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button><nav class="nav" aria-label="Main navigation"><a href="/forever_app/en/">Home</a><a href="/forever_app/en/quetes/">Quests</a><a href="/forever_app/en/talents/">Talents</a><a href="/forever_app/en/minage/">Mining</a><a href="/forever_app/en/equipements/">Gear</a><a aria-current="page" href="/forever_app/en/pnj/">NPCs</a><a href="/forever_app/en/population/">Population</a></nav><div class="lang-switch" role="group" aria-label="Language"><a href="/forever_app/pnj/" lang="fr" title="Français">FR</a><a href="/forever_app/en/pnj/" lang="en" aria-current="true" title="English">EN</a></div></div></header>
 <main id="contenu">
@@ -23,7 +23,15 @@
 <div class="npc-faction-bar"><div class="npc-tabs" role="group" aria-label="NPC type"><button type="button" data-npc-mode="merchant" aria-pressed="true">Vendors</button><button type="button" data-npc-mode="trainer" aria-pressed="false">Profession trainers</button></div><label class="npc-toggle"><input type="checkbox" id="npc-evidence-only">With restock reports only</label></div>
 <div class="npc-columns">
  <section class="npc-catalog" aria-labelledby="npc-list-title"><div class="npc-catalog-head"><h3 id="npc-list-title">Available references</h3><span id="npc-count" aria-live="polite">—</span></div><div id="npc-results" class="npc-results" role="listbox" aria-label="NPC and item results"></div></section>
+ <div class="npc-content-column"><section class="npc-map-panel" aria-labelledby="npc-map-title">
+ <div class="npc-map-head"><div><h3 id="npc-map-title">Select a zone</h3><span id="npc-map-count">Zone NPCs</span></div>
+ <div class="npc-map-zoom"><button type="button" id="npc-map-zoom-out" aria-label="Zoom out">−</button><button type="button" id="npc-map-zoom-reset" aria-label="Reset zoom">100 %</button><button type="button" id="npc-map-zoom-in" aria-label="Zoom in">+</button></div></div>
+ <div class="npc-map-stage"><canvas id="npc-map-canvas" width="1002" height="668" tabindex="0" role="img" aria-label="NPC map. Scroll to zoom, drag to pan, click markers to select an NPC."></canvas><div class="npc-map-overlay" id="npc-map-hover" aria-live="polite"></div></div>
+ <div class="npc-map-footer"><span>Scroll wheel: zoom · Drag: pan · Click: select</span><span id="npc-map-source">Loading map…</span></div>
+ <div class="npc-map-nearby" aria-label="Other NPCs in this zone"><span class="npc-map-nearby-title">Other NPCs nearby</span><div id="npc-map-nearby" class="npc-map-nearby-buttons"></div></div>
+ </section>
  <aside id="npc-detail" class="npc-detail" aria-label="Selected NPC and item information"><p class="npc-empty">Choose an entry to get started.</p></aside>
+</div>
 </div>
 <details class="atlas-detail"><summary>About the data and respawn times</summary>
 <p>Vendor and profession trainer locations are historical World of Warcraft Classic references. WoW Forever may differ. Item and NPC links open Wowhead Classic or Forever. Comment reports describe observed waiting times rather than measured server restock intervals: reports may come from different versions of the game and may conflict. Missing evidence means unknown, not immediate respawn. X/Y are zone percentages (0–100), not world GPS coordinates.</p>
