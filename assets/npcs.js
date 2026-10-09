@@ -79,7 +79,7 @@ function renderDetail(){
  if(i){link(actions,S("Fiche Classic ↗","Classic item ↗"),"https://www.wowhead.com/classic/item="+i.id);
  link(actions,S("Vérifier Forever ↗","Check Forever ↗"),"https://www.wowhead.com/forever/item="+i.id)}
  if(n.id)link(actions,S("Fiche PNJ ↗","NPC details ↗"),"https://www.wowhead.com/classic/npc="+n.id);
- if(store.db && ["winterspring","silithus","blasted-lands","swamp-of-sorrows"].includes(n.zone.id)){
+ if(store.db && ["azshara","blasted-lands","burning-steppes","epl","searing-gorge","silithus","swamp-of-sorrows","ungoro","winterspring","wpl"].includes(n.zone.id)){
  const map=append(detail,"div",null,"npc-map"),img=mk("img");img.src=root+"assets/maps/"+n.zone.id+".jpg";img.alt=S("Carte de référence : ","Reference map: ")+side(n);img.loading="lazy";map.append(img);
  const pin=append(map,"span",null,"npc-map-marker");pin.style.left=n.coordinates.x+"%";pin.style.top=n.coordinates.y+"%";
  append(detail,"div",S("Repère Classic non vérifié sur Forever.","Classic position not verified on Forever."),"npc-map-caption")
@@ -91,10 +91,10 @@ function renderDetail(){
  const report=evidence(n,i);
  if(report){
  const obs=append(panel,"div",null,"npc-evidence");
- append(obs,"strong",report.kind==="unlimited_report"?S("Selon les commentaires Classic","From Classic comments"):S("Attente observée : ","Observed wait: ")+time(report.min_minutes,report.max_minutes));
+ append(obs,"strong",report.kind==="unlimited_report"?S("Source Classic : stock illimité","Classic source: unlimited stock"):S("Attente observée : ","Observed wait: ")+time(report.min_minutes,report.max_minutes));
  append(obs,"p",report[en?"en":"fr"]);
  append(obs,"p",report.confidence==="contradictory"?S("Confiance faible · Témoignages contradictoires","Low confidence · Conflicting reports"):report.confidence==="low"?S("Confiance faible · Peu de témoignages","Low confidence · Limited reports"):S("Témoignages communautaires","Community reports"));
- link(obs,S("Lire les commentaires ↗","Read comments ↗"),report.url);
+ link(obs,S("Consulter la source ↗","View source ↗"),report.url);
  }else append(panel,"p",i.supply==="limited"?S("Délai de réapparition non documenté pour ce couple objet-vendeur.","No documented restock time for this item at this vendor."):S("Aucun délai fiable identifié dans les commentaires.","No reliable delay documented in comments."));
  append(panel,"p",S("Les durées indiquent des attentes rapportées, pas un minuteur exact ni le prochain réapprovisionnement.","These are reported waits, not exact timers or predictions of the next restock."));
  }else{
@@ -110,7 +110,7 @@ for(const e of [q,zone,trade,aff])e.addEventListener(e===q?"input":"change",refr
 document.querySelectorAll("[data-npc-mode]").forEach(btn=>btn.addEventListener("click",()=>{
  store.mode=btn.dataset.npcMode;
  document.querySelectorAll("[data-npc-mode]").forEach(b=>b.setAttribute("aria-pressed",String(b===btn)));
- if(store.mode==="trainer"&&store.showReportsOnly){store.showReportsOnly=false;$("npc-evidence-only").checked=false}
+ if(store.mode==="trainer"&&store.showReportsOnly){store.showReportsOnly=false;$("npc-evidence-only").checked=false}$("npc-evidence-only").disabled=store.mode==="trainer"
  refresh()
 }));
 $("npc-evidence-only").addEventListener("change",e=>{store.showReportsOnly=e.target.checked;refresh()});
