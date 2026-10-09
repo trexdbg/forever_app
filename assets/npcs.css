@@ -149,3 +149,6 @@
  .npc-app[data-mode="trainer"] .npc-search-field{grid-column:span 2}
  .npc-app[data-mode="trainer"] .npc-controls .npc-field:last-child{grid-column:span 2}
 }
+
+.npc-result .npc-trainer-icon{overflow:hidden;padding:0}
+.npc-result .npc-trainer-icon img{width:100%;height:100%;display:block;object-fit:cover}
