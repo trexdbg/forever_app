@@ -13,24 +13,39 @@
 <section class="page-hero wrap"><span class="kicker">GUIDE INTERACTIF · WOW VANILLA</span><h1>Votre prochaine quête.<br><em>Le bon chemin.</em></h1><p>Parcourez des itinéraires Alliance et Horde, repérez chaque étape sur une carte de zone et retrouvez vos objectifs sans perdre le fil. <strong>Les coordonnées X/Y sont des pourcentages de la zone WoW (0–100)</strong>, pas des coordonnées GPS.</p></section>
 <section class="section wrap slim-top" id="quest-app" aria-busy="true">
 <div class="quest-toolbar tool-panel"><div class="tool-head"><div><h2>Itinéraires de progression</h2><p>Guide communautaire Classic, utile comme référence sur WoW Forever. Certaines quêtes ou suites peuvent différer sur ce serveur.</p></div><span class="status-pill" id="quest-data-status" role="status">Chargement…</span></div>
-<div class="quest-filters"><label>Faction<select id="quest-faction"><option value="alliance">Alliance</option><option value="horde">Horde</option></select></label><label>Départ / Race<select id="quest-profile" aria-label="Choisir un parcours de race"></select></label><label>Rechercher une quête, un PNJ ou une zone<input type="search" id="quest-search" placeholder="Ex. Goldtooth, Carmines, quêtes…" autocomplete="off"></label></div>
+<div class="quest-filters">
+<fieldset class="quest-picker quest-faction-picker"><legend>Choisir une faction</legend>
+<div id="quest-factions" class="quest-faction-options" role="group" aria-label="Choisir une faction">
+<button type="button" class="quest-faction-choice selected" data-faction="alliance" aria-pressed="true"><img src="/forever_app/assets/quest-factions/alliance.svg" alt="" width="54" height="54"><span><strong>Alliance</strong><small>Pour Azeroth</small></span><span class="quest-selection-check" aria-hidden="true">✓</span></button>
+<button type="button" class="quest-faction-choice" data-faction="horde" aria-pressed="false"><img src="/forever_app/assets/quest-factions/horde.svg" alt="" width="54" height="54"><span><strong>Horde</strong><small>Pour la Horde</small></span><span class="quest-selection-check" aria-hidden="true">✓</span></button>
+</div></fieldset>
+<fieldset class="quest-picker quest-race-picker"><legend>Choisir une race <small>· 8 races de Vanilla</small></legend><div id="quest-races" class="quest-race-options" role="group" aria-label="Choisir une race"></div><p class="quest-race-hint" id="quest-race-hint">Les profils de départ des Nains et Gnomes, comme ceux des Orcs et Trolls, partagent le même itinéraire.</p></fieldset>
+<div class="quest-search-field"><label for="quest-search">Rechercher une quête, un PNJ ou une zone</label><div class="quest-search-input"><span aria-hidden="true">⌕</span><input type="search" id="quest-search" placeholder="Nom de quête, ville, objectif…" autocomplete="off"></div></div>
+</div>
 <div id="quest-search-results" class="quest-search-results" aria-live="polite" hidden></div>
 </div>
+<section class="quest-timeline" aria-label="Navigation entre les étapes">
+<div class="quest-timeline-heading"><div><span class="kicker">ITINÉRAIRE DE PROGRESSION</span><h2 id="quest-step-count">Étape —</h2><p id="quest-timeline-zone">Choisissez un itinéraire pour commencer.</p></div>
+<div class="quest-step-actions"><button type="button" class="btn secondary" id="quest-prev" aria-label="Étape précédente">← Précédent</button><button type="button" class="btn primary" id="quest-next" aria-label="Étape suivante">Suivant →</button></div></div>
+<div class="quest-timeline-range-label"><label for="quest-range">Parcourir les étapes</label><output id="quest-range-output" for="quest-range">—</output></div>
+<input type="range" id="quest-range" class="quest-timeline-slider" min="1" max="1" value="1" step="1" aria-label="Aller à une étape du parcours">
+<div class="quest-timeline-milestones" id="quest-milestones" aria-label="Accès rapide aux niveaux importants"></div>
+<div class="quest-timeline-preview" id="quest-timeline-preview" aria-live="polite">Glissez le curseur ou utilisez les repères de niveau.</div>
 <div class="quest-progress-summary"><div><strong id="quest-path-label">Chargement du parcours…</strong><span id="quest-progress-info">—</span></div><div class="quest-progress-track" role="progressbar" aria-label="Étapes terminées" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="quest-progress-track"><span id="quest-progress-fill"></span></div></div>
+</section>
 <div class="quest-main">
-<aside class="quest-sidebar" aria-label="Navigation du parcours"><div class="quest-side-heading"><div><span class="kicker">VOTRE PARCOURS</span><h2>Étapes du guide</h2></div><button type="button" id="quest-reset" class="quest-quiet" title="Effacer la progression de ce parcours">Réinitialiser</button></div>
-<label class="quest-range-label" for="quest-range">Aller à l'étape <output id="quest-range-output">—</output></label><input type="range" id="quest-range" min="1" max="1" value="1" step="1">
-<div class="quest-step-list" id="quest-steps" aria-label="Étapes voisines"></div>
-<p class="quest-side-help">La barre permet de rejoindre directement les étapes de niveau supérieur. La progression est conservée sur cet appareil.</p>
+<aside class="quest-sidebar" aria-label="Quêtes et objectifs de l'étape">
+<div class="quest-side-heading"><div><span class="kicker">DANS CETTE ZONE</span><h2>Actions de l'étape</h2><p id="quest-waypoint-count">Chargement…</p></div></div>
+<div class="quest-waypoints" id="quest-waypoints" aria-label="Liste des quêtes et actions de cette étape"></div>
+<div class="quest-side-footer"><button type="button" class="btn primary" id="quest-complete" aria-pressed="false">Marquer l'étape terminée ✓</button><button type="button" id="quest-reset" class="quest-quiet" title="Effacer la progression de ce parcours">Réinitialiser le parcours</button></div>
+<p class="quest-side-help">Cliquez sur une action pour afficher son point sur la carte. Votre progression est enregistrée sur cet appareil.</p>
 </aside>
 <div class="quest-content">
-<div class="quest-current-head"><div><span class="kicker" id="quest-step-count">ÉTAPE —</span><h2 id="quest-zone-title">Chargement…</h2><p id="quest-level">—</p></div><div class="quest-step-actions"><button type="button" class="btn secondary" id="quest-prev">← Précédent</button><button type="button" class="btn primary" id="quest-next">Suivant →</button></div></div>
+<div class="quest-current-head"><div><span class="kicker">CARTE DE L'ÉTAPE</span><h2 id="quest-zone-title">Chargement…</h2><p id="quest-level">—</p></div></div>
 <div class="quest-map-top"><div><strong id="quest-map-title">Carte de zone</strong><small id="quest-map-source">Fond de carte Classic · référence</small></div><div class="map-buttons"><button type="button" id="quest-zoom-out" aria-label="Dézoomer">−</button><button type="button" id="quest-zoom-reset">100 %</button><button type="button" id="quest-zoom-in" aria-label="Zoomer">+</button></div></div>
-<div class="quest-map-frame"><canvas id="quest-canvas" width="960" height="640" tabindex="0" role="img" aria-label="Carte des étapes de quête : cliquez sur un marqueur numéroté ou sélectionnez une action ci-dessous"></canvas><span class="quest-map-overlay" id="quest-map-overlay">Chargement de la carte…</span></div>
+<div class="quest-map-frame"><canvas id="quest-canvas" width="960" height="640" tabindex="0" role="img" aria-label="Carte des étapes de quête : cliquez sur un marqueur numéroté ou sélectionnez une action dans le panneau de gauche"></canvas><span class="quest-map-overlay" id="quest-map-overlay">Chargement de la carte…</span></div>
 <div class="quest-map-caption"><span><b>X</b> → droite, 0 à 100</span><span><b>Y</b> ↓ bas, 0 à 100</span><span>● Prendre &nbsp; ● Objectif &nbsp; ● Rendre</span></div>
 <div class="quest-selected" id="quest-selected" aria-live="polite"><p>Sélectionnez un point de passage sur la carte ou dans la liste.</p></div>
-<div class="quest-waypoints-head"><h3>Actions de cette étape</h3><button type="button" class="btn secondary" id="quest-complete" aria-pressed="false">Marquer l'étape terminée ✓</button></div>
-<div class="quest-waypoints" id="quest-waypoints"></div>
 <div class="quest-bottom-nav"><button type="button" class="btn secondary" id="quest-prev-bottom">← Étape précédente</button><button type="button" class="btn primary" id="quest-next-bottom">Étape suivante →</button></div>
 </div></div>
 <div class="notice quest-notice"><strong>Informations sur les sources et les coordonnées</strong><p>Itinéraires, points et fonds cartographiques issus du projet libre <a href="https://github.com/trexdbg/vanilla-questing" target="_blank" rel="noopener noreferrer">Vanilla Questing (licence MIT)</a>. Parcours communautaires conçus pour WoW Classic : ils ne constituent pas une confirmation du contenu disponible sur WoW Forever. Traductions françaises reprises de la même source lorsqu'elles existent. Les positions sont exprimées par rapport à chaque carte de zone ; les commandes <code>/way X Y</code> sont à utiliser dans la zone concernée, avec un addon compatible. Votre progression reste dans le stockage local de votre navigateur.</p></div>
