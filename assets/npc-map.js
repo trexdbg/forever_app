@@ -8,8 +8,8 @@ const el=(tag,label,klass)=>{const o=document.createElement(tag);if(label!=null)
 const fmt=n=>Number(n).toFixed(1).replace(".",en?".":",");
 const clamp=(n,a,b)=>Math.min(b,Math.max(a,n));
 const LOCAL_MAPS=new Set(["azshara","blasted-lands","burning-steppes","epl","searing-gorge","silithus","swamp-of-sorrows","ungoro","winterspring","wpl"]);
-const state={data:null,zone:null,selected:null,onSelect:null,visible:[],zoom:1,center:{x:50,y:50},image:null,loaded:false,source:"none",token:0,hover:null,drag:null};
-function points(){return (state.data?.npcs||[]).filter(n=>n.zone.id===state.zone&&Number.isFinite(n.coordinates?.x)&&Number.isFinite(n.coordinates?.y))}
+const state={data:null,zone:null,selected:null,onSelect:null,visible:[],mode:"merchant",zoom:1,center:{x:50,y:50},image:null,loaded:false,source:"none",token:0,hover:null,drag:null};
+function points(){return (state.data?.npcs||[]).filter(n=>n.role===state.mode&&n.zone.id===state.zone&&Number.isFinite(n.coordinates?.x)&&Number.isFinite(n.coordinates?.y))}
 function keepInBounds(){const half=50/state.zoom;state.center.x=clamp(state.center.x,half,100-half);state.center.y=clamp(state.center.y,half,100-half)}
 function toScreen(p){return {x:W/2+(p.x-state.center.x)*W*state.zoom/100,y:H/2+(p.y-state.center.y)*H*state.zoom/100}}
 function toMap(px,py){return {x:state.center.x+(px/W-.5)*100/state.zoom,y:state.center.y+(py/H-.5)*100/state.zoom}}
@@ -77,7 +77,7 @@ function sourceLabel(){
 }
 function nearby(){
  const out=$("npc-map-nearby");out.replaceChildren();const ns=points().sort((a,b)=>{const sa=a.name===state.selected?.name?-1000:Math.hypot(a.coordinates.x-state.selected.coordinates.x,a.coordinates.y-state.selected.coordinates.y),sb=b.name===state.selected?.name?-1000:Math.hypot(b.coordinates.x-state.selected.coordinates.x,b.coordinates.y-state.selected.coordinates.y);return sa-sb});
- $("npc-map-count").textContent=ns.length+" "+T("PNJ dans cette zone","NPCs in this zone");
+ $("npc-map-count").textContent=ns.length+" "+(state.mode==="trainer"?T("maîtres dans cette zone","trainers in this zone"):T("marchands dans cette zone","vendors in this zone"));
  for(const n of ns.slice(0,12)){const btn=el("button",n.name+" · "+fmt(n.coordinates.x)+"/"+fmt(n.coordinates.y),"npc-map-neighbor");
  btn.type="button";btn.setAttribute("aria-pressed",String(n.name===state.selected?.name));
  btn.title=n.role==="trainer"?T("Maître de métier","Trainer"):T("Marchand","Vendor");
@@ -116,7 +116,7 @@ canvas.addEventListener("keydown",e=>{if(e.key==="+"||e.key==="="){e.preventDefa
 window.ForeverNpcMap={show(n,data,onSelect){
  if(!n||!data)return;
  const isNewZone=n.zone.id!==state.zone;
- state.data=data;state.zone=n.zone.id;state.selected=n;state.onSelect=onSelect;state.hover=null;
+ state.data=data;state.zone=n.zone.id;state.mode=n.role;state.selected=n;state.onSelect=onSelect;state.hover=null;
  $("npc-map-title").textContent=n.zone[en?"en":"fr"];
  if(isNewZone){state.zoom=1;state.center={x:50,y:50};loadImage()}
  else {const p=toScreen(n.coordinates);if(p.x<45||p.x>W-45||p.y<45||p.y>H-45){state.center={x:n.coordinates.x,y:n.coordinates.y};keepInBounds()}draw()}
