@@ -14,7 +14,7 @@ const labels={starts:"À prendre",objectives:"À faire",ends:"À rendre",complet
 const classes={quest:"#e4bd7c",hub:"#efc772",objective:"#7bc9cb",flightpath:"#9daff0",travel:"#b2adcf"};
 const element=(tag,text,cls)=>{const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e};
 const clamp=(v,a,b)=>Math.min(b,Math.max(a,v));
-const stepName=st=>s.meta?.zones?.[st.zone]||st.zone;
+const stepName=st=>document.documentElement.lang==="en"?(window.ForeverI18n?.zone(st.zone)||st.zone):(s.meta?.zones?.[st.zone]||st.zone);
 const cleanStr=v=>String(v||"").trim();
 const normal=v=>cleanStr(v).normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
 const detailsOf=ref=>{
@@ -23,7 +23,7 @@ const detailsOf=ref=>{
  let id=target;
  if(Array.isArray(target)){const suffix=Array.isArray(ref)?String(ref[1]||""):"";const n=suffix.match(/(?:p|^)(\d+)/);id=target[n?clamp(Number(n[1])-1,0,target.length-1):0];}
  const french=(id!==undefined&&id!==null)?s.data.translations[String(id)]:null;
- return {name:french||name,original:name,id:Number.isInteger(Number(id))?Number(id):null};
+ return {name:document.documentElement.lang==="en"?name:(french||name),original:name,id:Number.isInteger(Number(id))?Number(id):null};
 };
 const waypointTitle=w=>w.header==="placeholder"?"Zone d'objectif":cleanStr(w.header)||"Point de passage";
 const stepLabel=i=>{const st=s.steps[i];return stepName(st)+" · niv. ≈ "+Math.floor(Number(st.experience)||0)};
