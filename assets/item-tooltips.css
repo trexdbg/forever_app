@@ -1,0 +1,62 @@
+/* Tooltips: faithful WoW readability with Forever Atlas visual language. */
+.forever-item-tooltip{
+  --item-rarity:#e9e4d8;
+  position:fixed;z-index:9999;left:0;top:0;
+  width:min(354px,calc(100vw - 24px));max-height:calc(100vh - 24px);
+  overflow-y:auto;overscroll-behavior:contain;
+  background:linear-gradient(160deg,rgba(11,19,38,.98),rgba(4,9,24,.99) 62%,rgba(5,10,19,.99));
+  border:1px solid #66769e;border-radius:3px;
+  box-shadow:0 0 0 1px #111d38 inset,0 0 0 3px #060a12aa,0 18px 56px #000b;
+  pointer-events:none;color:#eeeefa;
+  font:13px/1.4 "Trebuchet MS","Segoe UI",Arial,sans-serif;
+  text-align:left;white-space:normal;overflow-wrap:anywhere;
+}
+.forever-item-tooltip[hidden]{display:none!important}
+.forever-item-tooltip[data-quality="poor"]{--item-rarity:#9d9d9d}
+.forever-item-tooltip[data-quality="common"]{--item-rarity:#f7f7f7}
+.forever-item-tooltip[data-quality="uncommon"]{--item-rarity:#1eff00}
+.forever-item-tooltip[data-quality="rare"]{--item-rarity:#2d91ff}
+.forever-item-tooltip[data-quality="epic"]{--item-rarity:#be60f4}
+.forever-item-tooltip[data-quality="legendary"]{--item-rarity:#ff9800}
+.forever-item-tooltip__inner{padding:11px 13px 12px}
+.forever-item-tooltip__top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px}
+.forever-item-tooltip__eyebrow{font:800 9px/1.2 "Trebuchet MS",sans-serif;letter-spacing:.13em;color:#a4b4d4}
+.forever-item-tooltip__close{display:none;border:1px solid #7d819c;border-radius:2px;background:#1c273e;color:#eee;font-size:22px;line-height:1;min-width:32px;min-height:32px;cursor:pointer}
+.forever-item-tooltip__title{display:flex;align-items:start;gap:10px;margin-bottom:9px}
+.forever-item-tooltip__icon{height:42px;width:42px;flex:none;border:1px solid var(--item-rarity);border-radius:3px;object-fit:cover}
+.forever-item-tooltip__heading{min-width:0}
+.forever-item-tooltip__name{font-size:15px;line-height:1.23;color:var(--item-rarity);font-weight:800}
+.forever-item-tooltip__itemlevel{font-size:12px;font-weight:700;color:#f6cb58;margin-top:3px}
+.forever-item-tooltip__body{font-size:12px;line-height:1.35;color:#f6f5ff;display:grid;gap:2px}
+.forever-item-tooltip__line{color:#f1f1f7}
+.forever-item-tooltip__muted{color:#a9b3cb;font-size:11px;font-style:italic}
+.forever-item-tooltip__stat{color:#f1f1f7}
+.forever-item-tooltip__effect{color:#2dfa5e}
+.forever-item-tooltip__set{color:#f5bf49;font-weight:750;margin-top:5px}
+.forever-item-tooltip__origin{margin-top:11px;padding-top:8px;border-top:1px solid #394663;font-size:11px;color:#f0cf83}
+.forever-item-tooltip__disclaimer{margin-top:7px;font-size:10px;line-height:1.35;color:#b8b0a1}
+.forever-item-tooltip__foot{margin-top:7px;border-top:1px solid #29344c;padding-top:7px}
+.forever-item-tooltip__source{font-size:10px;color:#a4b7d5;text-decoration:none}
+.forever-item-tooltip__source:hover{text-decoration:underline;color:#f5d28f}
+.forever-item-tooltip.is-pinned{pointer-events:auto}
+.forever-item-tooltip.is-pinned .forever-item-tooltip__close{display:inline-flex;align-items:center;justify-content:center}
+.bis-v2-info-button{
+  background:#182820;border:1px solid #5d6d59;color:#dbd0b0;border-radius:3px;
+  padding:6px 10px;min-height:34px;display:inline-flex;align-items:center;justify-content:center;gap:5px;
+  font-size:11px;font-weight:800;cursor:pointer;
+}
+.bis-v2-info-button:hover,.bis-v2-info-button:focus-visible{background:#2c4230;border-color:#dbb97a;color:#fff1cc}
+.bis-v2-actions .bis-v2-info-button{color:#e7d29f}
+@media(hover:none), (pointer:coarse){
+  .forever-item-tooltip.is-pinned{
+    left:12px!important;right:12px!important;bottom:max(12px,env(safe-area-inset-bottom))!important;top:auto!important;
+    width:auto;max-height:min(76vh,690px);
+    box-shadow:0 0 0 1px #111d38 inset,0 0 0 200vmax #02060388,0 14px 45px #000c;
+  }
+}
+@media(max-width:600px){
+  .forever-item-tooltip{font-size:12px}
+  .forever-item-tooltip__body{font-size:12px}
+  .forever-item-tooltip__inner{padding:12px 13px}
+}
+@media(prefers-reduced-motion:reduce){.forever-item-tooltip{scroll-behavior:auto}}
