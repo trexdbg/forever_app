@@ -39,5 +39,57 @@ h1,h2,h3{line-height:1.13;letter-spacing:-.05em;margin-top:0}h1{font-size:clamp(
 
 
 /* High-level mining explorer: map coordinates are always UiMap-specific % */
-.mining-topbar{display:grid;grid-template-columns:1.2fr 1fr .7fr;gap:14px;margin:23px 0}.mining-main{display:grid;grid-template-columns:minmax(0,1.9fr) minmax(255px,.82fr);gap:17px}.mining-map-column{min-width:0}.mine-map-header{display:flex;align-items:center;justify-content:space-between;gap:12px;background:#172537;padding:11px 13px;border:1px solid var(--line);border-radius:12px 12px 0 0}.mine-map-header strong,.mine-map-header small{display:block}.mine-map-header strong{font-size:16px}.mine-map-header small{color:var(--muted);font-size:11px}.map-buttons{display:flex;gap:6px}.map-buttons button{color:#e8d7a7;background:#0d1928;border:1px solid #536076;border-radius:7px;min-width:37px;padding:6px}.map-buttons button:hover{border-color:var(--gold)}.mine-map-frame{position:relative;overflow:hidden;background:radial-gradient(circle at 48% 32%,#375d4c,#172c3b 80%);border:1px solid var(--line);border-top:0}.mine-map-frame canvas{width:100%;height:auto;display:block;aspect-ratio:1002/668;cursor:crosshair;touch-action:none}.mine-map-corner{position:absolute;right:10px;bottom:11px;pointer-events:none;color:#edf2ff;font-size:10px;line-height:1.3;background:#0a1221bd;padding:6px 9px;border-radius:5px}.mine-map-caption{display:flex;gap:14px;flex-wrap:wrap;justify-content:space-between;padding:9px 12px;background:#142338;border:1px solid var(--line);border-radius:0 0 11px 11px;font-size:11px;color:#b8c6d6}.mine-map-caption b{color:var(--gold)}.mining-detail-column{border:1px solid var(--line);background:#0b1524;border-radius:12px;padding:15px;min-width:0}.mining-detail-column h3{font-size:16px;letter-spacing:-.02em;margin:5px 0 12px}.mining-detail-column .source-note{margin:0 0 15px;font-size:11px}.mine-selected{padding:15px;border:1px solid #c49b6a77;border-radius:10px;background:#ba905d0d;margin:15px 0}.mine-selected strong{font-size:14px;color:#edd19e}.mine-selected p{font-size:12px;margin:7px 0}.mine-selected small{font-size:11px;color:var(--muted);display:block;margin-top:8px}.mine-way{display:block;background:#050e1d;padding:9px;overflow-wrap:anywhere;user-select:all;color:#fbdb9b;border-radius:6px;font-size:12px}.mine-copy{width:100%;margin-bottom:23px}.mine-point-list{overflow:auto;max-height:385px;padding-right:4px;scrollbar-color:#4e5e73 transparent}.mine-point-row{display:flex;align-items:center;gap:8px;background:#16243a;border:1px solid transparent;width:100%;padding:9px 8px;color:#cbd4df;border-radius:6px;font-size:11px;text-align:left;margin-bottom:5px}.mine-point-row strong{margin-left:auto;font-size:11px;color:#e3c38a;font-variant-numeric:tabular-nums}.mine-point-row.active,.mine-point-row:hover{border-color:#d7b16f;background:#2b3546}.mine-point-dot{font-size:16px}.mine-legend{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.mine-legend-chip{padding:6px 10px;border-radius:9px;border:1px solid #3e5064;background:#0e1a2b;font-size:11px}.mine-legend-chip b{font-size:17px}.mining-main+.mine-legend+.notice{margin-top:5px}.mining-main+.mine-legend+.notice a{color:var(--gold);text-decoration:underline}
-@media(max-width:900px){.mining-main{grid-template-columns:1fr}.mine-point-list{max-height:250px}}@media(max-width:750px){.mining-topbar{grid-template-columns:1fr}.mine-map-caption{gap:4px}.map-buttons button{padding:5px;min-width:34px}.mine-map-header strong{font-size:13px}.mine-map-corner{font-size:9px}}
+/* Mining atlas: multiple ore toggles and a side navigation of all zone maps */
+.mine-filters{margin:23px 0 19px;border:1px solid var(--line);border-radius:13px;background:#0e1a2b;padding:16px 17px}
+.mine-filter-head{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;margin-bottom:14px}
+.mine-filter-head h3{font-size:16px;letter-spacing:-.02em;margin:0 0 4px}
+.mine-filter-head p{font-size:12px;color:var(--muted);margin:0}
+.mine-filter-actions{display:flex;gap:7px;flex-shrink:0}
+.mine-filter-actions button{font:inherit;font-size:11px;background:#16273e;color:#d8e4f2;border:1px solid #42556b;border-radius:7px;padding:8px 10px;cursor:pointer}
+.mine-filter-actions button:hover:not(:disabled){border-color:var(--gold);color:#fff0cf}
+.mine-filter-actions button:disabled{opacity:.4;cursor:default}
+.mine-ore-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+.mine-ore-option{display:flex;align-items:center;gap:9px;min-width:0;padding:11px 12px;background:#111f32;border:1px solid #364960;border-radius:9px;color:#aebacc;cursor:pointer;transition:background .15s,border-color .15s}
+.mine-ore-option:hover{border-color:#b29463}
+.mine-ore-option.active{background:#263444;border-color:#bd995d;color:#f1f4f8}
+.mine-ore-option input{width:16px;height:16px;margin:0;flex:none;accent-color:#d4ac6b;cursor:pointer}
+.mine-ore-dot{font-size:18px;line-height:1;flex:none;text-shadow:0 0 4px #070d15}
+.mine-ore-name{font-size:12px;font-weight:650;min-width:0}
+.mine-ore-qty{font-size:10px;color:#94a6b9;margin-left:auto;text-align:right;white-space:nowrap}
+.mining-main{display:grid;grid-template-columns:minmax(0,1.9fr) minmax(260px,.82fr);gap:17px}
+.mining-map-column{min-width:0}
+.mine-map-header{display:flex;align-items:center;justify-content:space-between;gap:12px;background:#172537;padding:11px 13px;border:1px solid var(--line);border-radius:12px 12px 0 0}
+.mine-map-header strong,.mine-map-header small{display:block}
+.mine-map-header strong{font-size:16px}
+.mine-map-header small{color:var(--muted);font-size:11px}
+.map-buttons{display:flex;gap:6px}
+.map-buttons button{color:#e8d7a7;background:#0d1928;border:1px solid #536076;border-radius:7px;min-width:37px;padding:6px}
+.map-buttons button:hover{border-color:var(--gold)}
+.mine-map-frame{position:relative;overflow:hidden;background:radial-gradient(circle at 48% 32%,#375d4c,#172c3b 80%);border:1px solid var(--line);border-top:0}
+.mine-map-frame canvas{width:100%;height:auto;display:block;aspect-ratio:1002/668;cursor:crosshair;touch-action:none}
+.mine-map-corner{position:absolute;right:10px;bottom:11px;pointer-events:none;color:#edf2ff;font-size:10px;line-height:1.3;background:#0a1221bd;padding:6px 9px;border-radius:5px}
+.mine-map-caption{display:flex;gap:14px;flex-wrap:wrap;justify-content:space-between;padding:9px 12px;background:#142338;border:1px solid var(--line);border-radius:0 0 11px 11px;font-size:11px;color:#b8c6d6}
+.mine-map-caption b{color:var(--gold)}
+.mining-detail-column{border:1px solid var(--line);background:#0b1524;border-radius:12px;padding:15px;min-width:0}
+.mining-detail-column h3{font-size:16px;letter-spacing:-.02em;margin:5px 0 10px}
+.mining-detail-column .source-note{margin:0 0 13px;font-size:11px}
+.mine-zone-list{display:flex;flex-direction:column;gap:5px;max-height:475px;overflow:auto;padding-right:3px;scrollbar-color:#4e5e73 transparent}
+.mine-zone-row{display:flex;align-items:center;gap:9px;background:#16243a;border:1px solid transparent;width:100%;padding:10px;color:#cbd4df;border-radius:7px;text-align:left;cursor:pointer;font:inherit}
+.mine-zone-row:hover{background:#24334a;border-color:#a78c62}
+.mine-zone-row.active{border-color:#d7b16f;background:#2b3546}
+.mine-zone-icon{font-size:22px;line-height:1;color:#c6aa7d;flex:none}
+.mine-zone-text{display:flex;flex-direction:column;gap:2px;min-width:0;flex:1}
+.mine-zone-text strong{font-size:12px;line-height:1.35;font-weight:650}
+.mine-zone-text small{font-size:10px;color:#9aabbd}
+.mine-zone-row.active .mine-zone-text strong{color:#f5d99e}
+.mine-zone-arrow{font-size:21px;color:#a9b7c7;line-height:1;flex:none}
+.mine-detail-divider{height:1px;background:var(--line);margin:19px 0}
+.mine-selected{padding:15px;border:1px solid #c49b6a77;border-radius:10px;background:#ba905d0d;margin:12px 0 14px}
+.mine-selected strong{font-size:14px;color:#edd19e}
+.mine-selected p{font-size:12px;margin:7px 0}
+.mine-selected small{font-size:11px;color:var(--muted);display:block;margin-top:8px}
+.mine-way{display:block;background:#050e1d;padding:9px;overflow-wrap:anywhere;user-select:all;color:#fbdb9b;border-radius:6px;font-size:12px}
+.mine-copy{width:100%;margin-bottom:1px}
+.mining-main+.notice{margin-top:20px}
+.mining-main+.notice a{color:var(--gold);text-decoration:underline}
+@media(max-width:1000px){.mine-ore-options{grid-template-columns:repeat(2,minmax(0,1fr))}.mine-ore-qty{white-space:normal}}@media(max-width:900px){.mining-main{grid-template-columns:1fr}.mine-zone-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));max-height:none;overflow:visible}}@media(max-width:750px){.mine-filter-head{flex-direction:column;align-items:stretch}.mine-filter-actions{flex-wrap:wrap}.mine-ore-options{grid-template-columns:repeat(2,minmax(0,1fr))}.mine-ore-option{flex-wrap:wrap;gap:7px}.mine-ore-qty{width:100%;margin-left:24px;text-align:left}.mine-map-caption{gap:4px}.map-buttons button{padding:5px;min-width:34px}.mine-map-header strong{font-size:13px}.mine-map-corner{font-size:9px}}@media(max-width:480px){.mine-filters{padding:13px}.mine-ore-options{grid-template-columns:1fr}.mine-ore-option{flex-wrap:nowrap}.mine-ore-qty{width:auto;margin-left:auto;text-align:right}.mine-zone-list{grid-template-columns:1fr}}
