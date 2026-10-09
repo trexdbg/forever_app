@@ -142,13 +142,38 @@ function previewStep(index){
 }
 function renderMilestones(){
  const wrap=$("quest-milestones");wrap.replaceChildren();
- const milestones=[{level:0,text:"Départ"},{level:20,text:"Niv. 20"},{level:40,text:"Niv. 40"},{level:Infinity,text:"Fin"}];
- for(const milestone of milestones){
-  const idx=milestone.level===0?0:milestone.level===Infinity?s.steps.length-1:s.steps.findIndex(st=>Number(st.experience)>=milestone.level);
-  if(idx<0)continue;
-  const b=element("button",milestone.text,"quest-milestone");b.type="button";b.style.left=(100*idx/Math.max(s.steps.length-1,1))+"%";
-  b.title="Rejoindre "+stepName(s.steps[idx])+" · étape "+(idx+1);
-  b.addEventListener("click",()=>go(idx));wrap.append(b);
+ if(!s.steps.length)return;
+ const levels=[
+  {title:"Progression",items:[0,20,25,30,35,40,42,45,47]},
+  {title:"Haut niveau",items:[50,51,52,53,54,55,56,57,58,59,Infinity]}
+ ];
+ for(const band of levels){
+  const section=element("div",undefined,"quest-milestone-band");
+  section.setAttribute("role","group");section.setAttribute("aria-label",band.title);
+  section.append(element("span",band.title,"quest-milestone-band-title"));
+  const buttons=element("div",undefined,"quest-milestone-buttons");
+  for(const level of band.items){
+   const index=level===0?0:level===Infinity?s.steps.length-1:s.steps.findIndex(st=>Number(st.experience)>=level);
+   if(index<0)continue;
+   const name=level===0?"Départ":level===Infinity?"Fin":"Niv. "+level;
+   const b=element("button",name,"quest-milestone");b.type="button";
+   b.dataset.index=String(index);
+   b.title=name+" · "+stepName(s.steps[index])+" · étape "+(index+1);
+   b.setAttribute("aria-label","Accéder au "+name.toLowerCase()+", étape "+(index+1)+", "+stepName(s.steps[index]));
+   b.addEventListener("click",()=>go(index));buttons.append(b);
+  }
+  section.append(buttons);wrap.append(section);
+ }
+ updateMilestones();
+}
+function updateMilestones(){
+ const buttons=$("quest-milestones").querySelectorAll("button.quest-milestone");
+ let active=null;
+ for(const b of buttons)if(Number(b.dataset.index)<=s.index)active=b;
+ for(const b of buttons){
+  const selected=b===active;
+  b.classList.toggle("active",selected);
+  b.setAttribute("aria-current",selected?"step":"false");
  }
 }
 function renderProgress(){
@@ -170,7 +195,7 @@ function render(){
  const first=s.index===0,last=s.index===s.steps.length-1;
  $("quest-prev").disabled=$("quest-prev-bottom").disabled=first;$("quest-next").disabled=$("quest-next-bottom").disabled=last;
  const complete=$("quest-complete"),done=s.done.has(s.index);complete.textContent=done?"✓ Étape terminée · annuler":"Marquer l'étape terminée ✓";complete.setAttribute("aria-pressed",String(done));
- renderProgress();renderWaypoints();renderSelection();setImage(st.zone);draw();syncUrl();
+ renderProgress();updateMilestones();renderWaypoints();renderSelection();setImage(st.zone);draw();syncUrl();
 }
 function go(n){if(scrubTimer!==null){clearTimeout(scrubTimer);scrubTimer=null}if(!s.steps.length)return;s.index=clamp(n,0,s.steps.length-1);s.selected=0;s.center={x:50,y:50};s.zoom=1;$("quest-zoom-reset").textContent="100 %";render();}
 async function loadFaction(faction,fromUrl=false){
