@@ -1,0 +1,28 @@
+/* Guide content only: no changes to the site's interactive modules. */
+.geo-page{padding:22px 0 45px}
+.geo-article{max-width:880px}
+.geo-back{font-size:.9rem;margin:0 0 20px}
+.geo-article-head{padding:4px 0 16px;border-bottom:1px solid #596653}
+.geo-eyebrow{color:#d0ba89;font-size:.76rem;letter-spacing:.14em;font-weight:700}
+.geo-article h1{font-size:clamp(1.85rem,3.8vw,3rem);line-height:1.12;margin:12px 0}
+.geo-lede{max-width:70ch;color:#deddd2;font-size:1.06rem;line-height:1.65;margin:0 0 12px}
+.geo-date{color:#afa99b;font-size:.78rem;margin:0}
+.geo-content{font-size:.96rem;line-height:1.72}
+.geo-content section{padding:22px 0 8px}
+.geo-content h2{font-size:1.36rem;line-height:1.26;margin:0 0 10px;color:#e4d1a6}
+.geo-content p{margin:0 0 13px;max-width:77ch}
+.geo-content a,.geo-back a{color:#e1c68e;text-underline-offset:3px}
+.geo-content a:hover,.geo-back a:hover{color:#fff0b5}
+.geo-table-scroll{overflow-x:auto;border:1px solid #56634f;border-radius:7px;margin:12px 0 15px}
+.geo-table{border-collapse:collapse;width:100%;min-width:420px}
+.geo-table th,.geo-table td{padding:10px 13px;text-align:left;border-bottom:1px solid #39473c;vertical-align:top}
+.geo-table thead{background:#1b2a22}
+.geo-table thead th{color:#d4bf95;font-size:.86rem}
+.geo-table tbody tr:last-child th,.geo-table tbody tr:last-child td{border-bottom:0}
+.geo-definitions{margin:8px 0}
+.geo-definitions dt{font-weight:750;color:#e7d2ac;margin:15px 0 3px}
+.geo-definitions dd{margin:0 0 8px}
+.geo-related{display:flex;flex-wrap:wrap;gap:12px;margin:16px 0 8px;padding-top:16px;border-top:1px solid #56634f}
+.geo-related a{display:inline-block;border:1px solid #6b715b;padding:8px 12px;border-radius:5px;text-decoration:none}
+.geo-content code{background:#18261f;padding:2px 4px;border-radius:3px}
+@media(max-width:600px){.geo-page{padding:13px 0 27px}.geo-content section{padding:17px 0 5px}.geo-table th,.geo-table td{padding:9px 10px}.geo-article h1{font-size:1.9rem}}
