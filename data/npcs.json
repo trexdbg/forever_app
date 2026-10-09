@@ -20,7 +20,8 @@
     "tailoring_vendor": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
     "cooking_vendor": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
     "engineering_parts": "https://wowseer.gg/items/Gyrochronatom_4389",
-    "bronze_tube": "https://wowseer.gg/items/Bronze_Tube_4371"
+    "bronze_tube": "https://wowseer.gg/items/Bronze_Tube_4371",
+    "classic_engineering_guide": "https://www.wowhead.com/classic/fr/guide/engineering-vendor-recipes-wow-classic"
   },
   "items": {
     "4357": {
@@ -667,6 +668,20 @@
       "icon": "inv_scroll_07",
       "icon_status": "category_fallback"
     },
+    "10607": {
+      "id": 10607,
+      "name": {
+        "en": "Schematic: Deepdive Helmet",
+        "fr": "Schéma : Casque de scaphandrier"
+      },
+      "profession": "Ingénierie",
+      "skill": 230,
+      "supply": "limited",
+      "kind": "recipe",
+      "icon": "inv_scroll_03",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=10607"
+    },
     "10609": {
       "id": 10609,
       "name": {
@@ -1019,6 +1034,76 @@
       "icon_status": "category_fallback",
       "source": "https://www.wowhead.com/classic/item=14639"
     },
+    "16041": {
+      "id": 16041,
+      "name": {
+        "en": "Schematic: Thorium Grenade",
+        "fr": "Schéma : Grenade en thorium"
+      },
+      "profession": "Ingénierie",
+      "skill": 260,
+      "supply": "limited",
+      "kind": "recipe",
+      "icon": "inv_scroll_03",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=16041"
+    },
+    "16042": {
+      "id": 16042,
+      "name": {
+        "en": "Schematic: Thorium Widget",
+        "fr": "Schéma : Rouages en thorium"
+      },
+      "profession": "Ingénierie",
+      "skill": 260,
+      "supply": "limited",
+      "kind": "recipe",
+      "icon": "inv_scroll_03",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=16042"
+    },
+    "16046": {
+      "id": 16046,
+      "name": {
+        "en": "Schematic: Masterwork Target Dummy",
+        "fr": "Schéma : Leurre ouvragé"
+      },
+      "profession": "Ingénierie",
+      "skill": 275,
+      "supply": "limited",
+      "kind": "recipe",
+      "icon": "inv_scroll_03",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=16046"
+    },
+    "16047": {
+      "id": 16047,
+      "name": {
+        "en": "Schematic: Thorium Tube",
+        "fr": "Schéma : Tube en thorium"
+      },
+      "profession": "Ingénierie",
+      "skill": 275,
+      "supply": "limited",
+      "kind": "recipe",
+      "icon": "inv_scroll_03",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=16047"
+    },
+    "16050": {
+      "id": 16050,
+      "name": {
+        "en": "Schematic: Delicate Arcanite Converter",
+        "fr": "Schéma : Convertisseur d'arcanite délicat"
+      },
+      "profession": "Ingénierie",
+      "skill": 285,
+      "supply": "limited",
+      "kind": "recipe",
+      "icon": "inv_scroll_03",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=16050"
+    },
     "16072": {
       "id": 16072,
       "name": {
@@ -1141,6 +1226,34 @@
       "kind": "recipe",
       "icon": "inv_scroll_07",
       "icon_status": "category_fallback"
+    },
+    "18652": {
+      "id": 18652,
+      "name": {
+        "en": "Schematic: Gyrofreeze Ice Reflector",
+        "fr": "Schéma : Réflectoglace gyrogivre"
+      },
+      "profession": "Ingénierie",
+      "skill": 260,
+      "supply": "limited",
+      "kind": "recipe",
+      "icon": "inv_scroll_03",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=18652"
+    },
+    "18656": {
+      "id": 18656,
+      "name": {
+        "en": "Schematic: Powerful Seaforium Charge",
+        "fr": "Schéma : Charge de seaforium puissante"
+      },
+      "profession": "Ingénierie",
+      "skill": 275,
+      "supply": "limited",
+      "kind": "recipe",
+      "icon": "inv_scroll_03",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=18656"
     },
     "18731": {
       "id": 18731,
@@ -3552,7 +3665,9 @@
         "4404",
         "4399",
         "4400",
-        "18647"
+        "18647",
+        "16041",
+        "16042"
       ],
       "note": "Vallée de l'Honneur",
       "note_en": "Valley of Honor",
@@ -3585,7 +3700,9 @@
         "4404",
         "4399",
         "4400",
-        "18649"
+        "18649",
+        "16041",
+        "16042"
       ],
       "note": "Brikabrok",
       "note_en": "Tinker Town",
@@ -3634,8 +3751,8 @@
         "en": "Dun Morogh"
       },
       "coordinates": {
-        "x": 46.8,
-        "y": 52.2
+        "x": 50.1,
+        "y": 49.4
       },
       "coordinate_status": "classic_reference_unverified",
       "faction": "alliance",
@@ -3651,9 +3768,9 @@
         "4399",
         "4400"
       ],
-      "note": "Kharanos (approximatif)",
-      "note_en": "Kharanos (approximate)",
-      "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic"
+      "note": "Dépôt de Grillacier à l'est de Kharanos",
+      "note_en": "Steelgrill's Depot east of Kharanos",
+      "source": "https://warcraft.wiki.gg/wiki/Loslor_Rudge"
     },
     {
       "id": 2687,
@@ -3778,7 +3895,12 @@
         "4364",
         "4404",
         "4399",
-        "4400"
+        "4400",
+        "16047",
+        "16046",
+        "16050",
+        "18652",
+        "18656"
       ],
       "note": "Long-guet",
       "note_en": "Everlook",
@@ -3810,7 +3932,8 @@
         "4364",
         "4404",
         "4399",
-        "4400"
+        "4400",
+        "10607"
       ],
       "note": "Côte sud",
       "note_en": "Southern coast",
@@ -4057,13 +4180,11 @@
     {
       "vendor_name": "Gagsprocket",
       "item": "4389",
-      "kind": "observed_wait",
+      "kind": "vendor_observation",
       "confidence": "contradictory",
       "url": "https://www.wowhead.com/tbc/npc=3495/gagsprocket#comments",
-      "fr": "Vente limitée attestée dans les commentaires ; délai exact inconnu, la fourchette reflète une incertitude et non un minuteur.",
-      "en": "Limited-stock sale reported in comments; exact timer unknown and the interval is only a rough observation.",
-      "min_minutes": 10,
-      "max_minutes": 180
+      "fr": "Un commentaire confirme la présence ponctuelle du Gyrochronatome en stock limité ; aucune durée précise de réapparition n'est démontrée.",
+      "en": "A comment confirms occasional Gyrochronatom limited-stock sales, but does not establish an exact restock delay."
     },
     {
       "vendor_name": "Neal Allen",
@@ -4082,6 +4203,26 @@
       "url": "https://www.wowhead.com/npc=2682/fradd-swiftgear#comments",
       "fr": "Les joueurs confirment la vente, avec rupture de stock possible.",
       "en": "Players confirm the sale; it may be out of stock."
+    },
+    {
+      "vendor_name": "Jubie Gadgetspring",
+      "item": "10607",
+      "kind": "observed_wait",
+      "min_minutes": 10,
+      "max_minutes": 20,
+      "confidence": "low",
+      "url": "https://www.wowhead.com/classic/fr/item=10607/sch%C3%A9ma-casque-de-scaphandrier#comments",
+      "fr": "Un témoin a observé des apparitions à 10 et 20 minutes d'intervalle. Témoignage historique, non confirmé dans Forever.",
+      "en": "One commenter observed the item returning at 10- and 20-minute intervals. Historical report, not verified on Forever."
+    },
+    {
+      "vendor_name": "Xizzer Fizzbolt",
+      "item": "16047",
+      "kind": "vendor_observation",
+      "confidence": "low",
+      "url": "https://www.wowhead.com/classic/fr/item=16047/sch%C3%A9ma-tube-en-thorium#comments",
+      "fr": "Les commentaires mentionnent un stock limité et un temps de retour jugé raisonnable, sans minuteur vérifiable.",
+      "en": "Comments mention limited stock and what felt like a reasonable wait, without a verifiable timer."
     }
   ],
   "zone_maps": {
