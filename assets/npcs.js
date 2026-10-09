@@ -1,5 +1,5 @@
 (()=>{"use strict";
-const root="/forever_app/",en=document.documentElement.lang==="en";
+const root="/",en=document.documentElement.lang==="en";
 const S=(fr,eng)=>en?eng:fr;
 const $=id=>document.getElementById(id);
 const mk=(tag,text,cls)=>{const e=document.createElement(tag);if(text!=null)e.textContent=text;if(cls)e.className=cls;return e};
