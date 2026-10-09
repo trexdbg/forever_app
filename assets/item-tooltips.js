@@ -55,7 +55,7 @@ if(/^(\+\d+|Augmente |Increases )/i.test(text))return "forever-item-tooltip__sta
 if(/^(Ensemble|Set:|Armes de|Armure de|Tenue de)/i.test(text))return "forever-item-tooltip__set";
 return "forever-item-tooltip__line"}
 function validIcon(icon){return typeof icon==="string"&&/^[a-z0-9_-]{2,70}$/.test(icon)}
-function render(item,data,status){
+function render(item,data,status){const forever=item.source_status==="forever_beta_wowhead";if(!data&&Array.isArray(item.tooltip)&&item.tooltip.length)data={name:item.name,item_level:item.itemLevel,tooltip:item.tooltip};
 inner.replaceChildren();panel.dataset.quality=QUALITY.has(item.quality)?item.quality:"common";
 const controls=elt("div","forever-item-tooltip__top");
 write(controls,"forever-item-tooltip__eyebrow",en?"CLASSIC / ITEM DETAILS":"CLASSIC / FICHE D’OBJET");
@@ -96,11 +96,11 @@ else if(status==="unavailable")write(body,"forever-item-tooltip__muted",w.unavai
 }
 if(item.origin)write(inner,"forever-item-tooltip__origin",w.origin+" : "+item.origin);
 if(status==="unavailable"&&haveRich)write(inner,"forever-item-tooltip__muted",w.unavailable);
-write(inner,"forever-item-tooltip__disclaimer",w.classic);
+write(inner,"forever-item-tooltip__disclaimer",forever?(en?"Recorded on Wowhead Forever (beta) · availability and final stats unconfirmed.":"Référence Wowhead Forever (bêta) · disponibilité et statistiques finales non garanties."):w.classic);
 const foot=elt("div","forever-item-tooltip__foot");
 if(isId(item.id)){
-const a=elt("a","forever-item-tooltip__source",w.source+" ↗");
-a.href="https://wowdb.assemblee-defias.fr/?id=classic:item:"+Number(item.id);a.target="_blank";a.rel="noopener noreferrer";foot.append(a);
+const a=elt("a","forever-item-tooltip__source",forever?(en?"Wowhead Forever beta ↗":"Fiche bêta Wowhead Forever ↗"):w.source+" ↗");
+a.href=forever?"https://www.wowhead.com/forever/item="+Number(item.id):"https://wowdb.assemblee-defias.fr/?id=classic:item:"+Number(item.id);a.target="_blank";a.rel="noopener noreferrer";foot.append(a);
 }else write(foot,"forever-item-tooltip__source",w.source);
 inner.append(foot);
 }
@@ -117,7 +117,7 @@ function hide(){
 clearTimeout(loadTimer);token++;visible=false;pinned=false;active=null;panel.hidden=true;panel.classList.remove("is-pinned");panel.style.left="";panel.style.top="";
 }
 function queueDetails(item,requestToken){
-if(!isId(item.id))return;
+if(!isId(item.id)||item.source_status==="forever_beta_wowhead"||(Array.isArray(item.tooltip)&&item.tooltip.length))return;
 const id=Number(item.id);
 if(cache.has(id)){if(active&&requestToken===token){render(item,cache.get(id),"complete");if(!pinned)place(active.x,active.y)}return}
 if(Date.now()<suspendUntil||Date.now()<(unavailableUntil.get(id)||0)){if(active&&requestToken===token)render(item,null,"unavailable");return;}
@@ -141,7 +141,7 @@ const rect=anchor?anchor.getBoundingClientRect():null;
 const x=evt&&Number.isFinite(evt.clientX)?evt.clientX:rect?rect.right:window.innerWidth/2;
 const y=evt&&Number.isFinite(evt.clientY)?evt.clientY:rect?rect.top:window.innerHeight/2;
 active={item,x,y};panel.classList.toggle("is-pinned",pinned);panel.hidden=false;
-render(item,cache.get(Number(item.id))||null,isId(item.id)&&!cache.has(Number(item.id))?"loading":"complete");
+render(item,cache.get(Number(item.id))||null,isId(item.id)&&!cache.has(Number(item.id))&&!(Array.isArray(item.tooltip)&&item.tooltip.length)&&item.source_status!=="forever_beta_wowhead"?"loading":"complete");
 if(!pinned)place(x,y);
 else {panel.style.left="";panel.style.top="";}
 queueDetails(item,currentToken);
