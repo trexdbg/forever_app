@@ -91,7 +91,11 @@ function note(value){
  // Preserve the source rather than invent an unreliable game instruction.
  return capitalize(s);
 }
-function questName(name){return isEnglish()?capitalize(nice(name)):name}
+function questName(name){
+ if(isEnglish())return capitalize(nice(name));
+ const fallback={"guarded thunderbrew barrel":"Tonneau de Tonnebière gardé","find OOX-22/fe!":"Trouver OOX-22/FE !"};
+ return fallback[nice(name).toLowerCase()]||name;
+}
 function race(name){return isEnglish()?({"Humain":"Human","Nain":"Dwarf","Elfe de la nuit":"Night Elf","Mort-vivant":"Undead"}[name]||name):name}
 window.ForeverQuestLocale={header,note,questName,race,place};
 })();
