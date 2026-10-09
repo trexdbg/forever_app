@@ -57,8 +57,9 @@ function closeIconPickers(except){
 }
 function makeIconPicker(select){
  if(!select||store.mode!=="trainer"||select.dataset.iconPicker)return;
- const field=select.closest(".npc-field"),filterLabel=field.querySelector("label");
+ const field=select.closest(".npc-field");
  if(!field)return;
+ const filterLabel=field.querySelector("label");
  const trigger=mk("button",null,"npc-filter-trigger");
  trigger.type="button";trigger.id=select.id+"-trigger";
  trigger.setAttribute("aria-haspopup","listbox");trigger.setAttribute("aria-expanded","false");
@@ -94,7 +95,7 @@ function makeIconPicker(select){
  trigger.addEventListener("keydown",e=>{
   if(e.key==="ArrowDown"||e.key==="ArrowUp"){
    e.preventDefault();picker.open();const current=entryButtons.findIndex(b=>b.dataset.value===select.value);
-   entryButtons[e.key==="ArrowUp"?Math.max(0,current):Math.max(0,current)]?.focus();
+   entryButtons[(current+(e.key==="ArrowDown"?1:-1)+entryButtons.length)%entryButtons.length]?.focus();
   }else if(e.key==="Escape")picker.close();
  });
  pop.addEventListener("keydown",e=>{
@@ -118,8 +119,9 @@ function factionEmblem(value){
 }
 function enhanceFactionFilter(){
  if(!aff||store.mode!=="trainer"||aff.dataset.iconPicker)return;
- const field=aff.closest(".npc-field"),filterLabel=field.querySelector("label");
+ const field=aff.closest(".npc-field");
  if(!field)return;
+ const filterLabel=field.querySelector("label");
  const group=mk("div",null,"npc-faction-toggle");
  group.setAttribute("role","group");
  group.setAttribute("aria-label",filterLabel?.textContent||S("Faction","Faction"));
