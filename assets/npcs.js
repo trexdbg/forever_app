@@ -8,7 +8,7 @@ const fmt=n=>new Intl.NumberFormat(en?"en-US":"fr-FR",{maximumFractionDigits:1})
 const title=d=>d.name[en?"en":"fr"];
 const side=d=>d.zone[en?"en":"fr"];
 const faction={alliance:S("Alliance","Alliance"),horde:S("Horde","Horde"),neutral:S("Neutre","Neutral")};
-const profession={Alchimie:S("Alchimie","Alchemy"),Couture:S("Couture","Tailoring"),Ingénierie:S("Ingénierie","Engineering"),Enchantement:S("Enchantement","Enchanting"),Forge:S("Forge","Blacksmithing"),"Travail du cuir":S("Travail du cuir","Leatherworking"),Secourisme:S("Secourisme","First Aid")};
+const profession={Alchimie:S("Alchimie","Alchemy"),Couture:S("Couture","Tailoring"),Ingénierie:S("Ingénierie","Engineering"),Enchantement:S("Enchantement","Enchanting"),Forge:S("Forge","Blacksmithing"),"Travail du cuir":S("Travail du cuir","Leatherworking"),Secourisme:S("Secourisme","First Aid"),Cuisine:S("Cuisine","Cooking")};
 const human=n=>n>=60?(Math.floor(n/60)+" "+S("h","h")+(n%60?" "+(n%60)+" min":"")):fmt(n)+" min";const time=(a,b)=>a===b?human(a):human(a)+" – "+human(b);
 const store={db:null,records:[],filtered:[],active:null,mode:"merchant",showReportsOnly:false};
 const q=$("npc-search"),zone=$("npc-zone"),trade=$("npc-profession"),aff=$("npc-faction");
