@@ -143,26 +143,17 @@ function previewStep(index){
 function renderMilestones(){
  const wrap=$("quest-milestones");wrap.replaceChildren();
  if(!s.steps.length)return;
- const levels=[
-  {title:"Progression",items:[0,20,25,30,35,40,42,45,47]},
-  {title:"Haut niveau",items:[50,51,52,53,54,55,56,57,58,59,Infinity]}
- ];
- for(const band of levels){
-  const section=element("div",undefined,"quest-milestone-band");
-  section.setAttribute("role","group");section.setAttribute("aria-label",band.title);
-  section.append(element("span",band.title,"quest-milestone-band-title"));
-  const buttons=element("div",undefined,"quest-milestone-buttons");
-  for(const level of band.items){
-   const index=level===0?0:level===Infinity?s.steps.length-1:s.steps.findIndex(st=>Number(st.experience)>=level);
-   if(index<0)continue;
-   const name=level===0?"Départ":level===Infinity?"Fin":"Niv. "+level;
-   const b=element("button",name,"quest-milestone");b.type="button";
-   b.dataset.index=String(index);
-   b.title=name+" · "+stepName(s.steps[index])+" · étape "+(index+1);
-   b.setAttribute("aria-label","Accéder au "+name.toLowerCase()+", étape "+(index+1)+", "+stepName(s.steps[index]));
-   b.addEventListener("click",()=>go(index));buttons.append(b);
-  }
-  section.append(buttons);wrap.append(section);
+ // Keep every level shortcut in the original single-row timeline.
+ const levels=[0,20,25,30,35,40,42,45,47,50,51,52,53,54,55,56,57,58,59,Infinity];
+ for(const level of levels){
+  const index=level===0?0:level===Infinity?s.steps.length-1:s.steps.findIndex(st=>Number(st.experience)>=level);
+  if(index<0)continue;
+  const name=level===0?"Départ":level===Infinity?"Fin":"Niv. "+level;
+  const b=element("button",name,"quest-milestone");b.type="button";
+  b.dataset.index=String(index);
+  b.title=name+" · "+stepName(s.steps[index])+" · étape "+(index+1);
+  b.setAttribute("aria-label","Accéder au "+name.toLowerCase()+", étape "+(index+1)+", "+stepName(s.steps[index]));
+  b.addEventListener("click",()=>go(index));wrap.append(b);
  }
  updateMilestones();
 }
