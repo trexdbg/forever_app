@@ -72,11 +72,11 @@ function detail(ti,i){
   const known=!t.confirmed||t.confirmed.includes(preview);
   panel.replaceChildren();
   panel.append(mk("strong",displayName(t.name)),mk("small",T("Rang ","Rank ")+n+" / "+t.max+(n===t.max?T(" · Maîtrisé"," · Maxed"):n?T(" · En cours"," · In progress"):T(" · Non appris"," · Not learned"))));
-  panel.append(mk("p",localizedDescription.text));
+  const rankText=mk("p",localizedDescription.text);
+  if(!en&&!localizedDescription.translated)rankText.lang="en";
+  panel.append(rankText);
   if(!en&&!localizedDescription.translated){
-    const note=mk("small","Description d'origine en anglais · traduction en cours","talent-locale-status");
-    note.lang="fr";panel.append(note);
-    panel.lastElementChild?.setAttribute("lang","en");
+    panel.append(mk("small","Description originale (anglais) · traduction non disponible","talent-locale-status"));
   }
   if(!known)panel.append(mk("small",T("Rang non confirmé dans l'export de référence.","Rank not confirmed in source data.")));
   if(t.req){
@@ -84,7 +84,7 @@ function detail(ti,i){
     panel.append(mk("small",(done?T("✓ Prérequis validé : ","✓ Prerequisite met: "):T("Prérequis : ","Prerequisite: "))+displayName(t.req)));
   }
   if(!canLearn(ti,i))panel.append(mk("small",T("Débloqué après les points nécessaires dans les paliers précédents et ses prérequis.","Unlock by spending enough points in earlier tiers and meeting prerequisites."),"detail-warning"));
-  if(t.classic?.status&&t.classic.status!=="same")panel.append(mk("small",T("Différence Classic : ","Classic difference: ")+t.classic.status));
+  if(t.classic?.status&&t.classic.status!=="same")panel.append(mk("small",T("Différence Classic : ","Classic difference: ")+(en?t.classic.status:({new:"nouveau",changed:"modifié",moved:"déplacé"}[t.classic.status]||t.classic.status))));
 }
 function render(){
   left.textContent=String(value()-points());
