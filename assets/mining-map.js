@@ -10,6 +10,7 @@ const fmtTom=n=>Number(n).toFixed(2);
 const clamp=(a,lo,hi)=>Math.max(lo,Math.min(hi,a));
 const mineral=id=>db.minerals[id]||{label:id,skill:0,color:"#ffcf7a"};
 const project=(x,y)=>({x:(50+(x-center.x)*zoom)*W/100,y:(50+(y-center.y)*zoom)*H/100});
+const unproject=(px,py)=>({x:clamp(center.x+(px/W*100-50)/zoom,0,100),y:clamp(center.y+(py/H*100-50)/zoom,0,100)});
 function baseMap(){const grad=ctx.createLinearGradient(0,0,W,H);grad.addColorStop(0,"#1a3c42");grad.addColorStop(.55,"#1a3040");grad.addColorStop(1,"#292d3f");ctx.fillStyle=grad;ctx.fillRect(0,0,W,H);ctx.strokeStyle="#7b9ca018";for(let i=-1;i<19;i++){ctx.beginPath();ctx.ellipse(W*(i/11),H*(.12+((i*7)%11)/12),W*.26,H*.17,.18,0,Math.PI*2);ctx.stroke()} }
 function draw(){ctx.clearRect(0,0,W,H);baseMap();ctx.save();ctx.beginPath();ctx.rect(0,0,W,H);ctx.clip();if(sourceImg&&sourceImg.complete&&sourceImg.naturalWidth){const tl=project(0,0),br=project(100,100);// Legacy 4:3 textures include unused 22px/100px padding; crop to the
 // 1002x668 in-game coordinate frame. New 3:2 maps are already cropped.
@@ -25,6 +26,9 @@ function renderList(){const panel=document.getElementById("mine-point-list");pan
 function setZone(z){zone=z;zoom=1;center={x:50,y:50};selected=null;zoomText.textContent="100 %";sourceImg=null;document.getElementById("mine-map-backdrop").textContent="Grille de coordonnées WoW";filterPoints();const image=new Image();image.onload=()=>{if(zone!==z)return;sourceImg=image;document.getElementById("mine-map-backdrop").textContent="Carte Classic · coordonnées de zone";draw()};image.onerror=()=>{if(zone!==z)return;document.getElementById("mine-map-backdrop").textContent="Fond schématique · repères X/Y";draw()};image.src=ROOT+"assets/maps/"+zone.id+".jpg"}
 function setZoom(z){zoom=clamp(z,1,4);zoomText.textContent=Math.round(zoom*100)+" %";draw()}
 function fromClient(event){const r=canvas.getBoundingClientRect();return {x:(event.clientX-r.left)*W/r.width,y:(event.clientY-r.top)*H/r.height}}
+const coords=document.getElementById("mine-cursor-coords");
+canvas.addEventListener("pointermove",e=>{const p=fromClient(e),pos=unproject(p.x,p.y);coords.textContent="Curseur X : "+fmt(pos.x)+" · Y : "+fmt(pos.y)});
+canvas.addEventListener("pointerleave",()=>{coords.textContent="Curseur : —"});
 canvas.addEventListener("pointerdown",e=>{const p=fromClient(e);pointer={id:e.pointerId,x:p.x,y:p.y,prev:p,dragged:false};canvas.setPointerCapture(e.pointerId)});
 canvas.addEventListener("pointermove",e=>{if(!pointer||pointer.id!==e.pointerId)return;const p=fromClient(e),dx=p.x-pointer.prev.x,dy=p.y-pointer.prev.y;if(Math.hypot(p.x-pointer.x,p.y-pointer.y)>6)pointer.dragged=true;if(pointer.dragged){center.x=clamp(center.x-dx/W*100/zoom,50/zoom,100-50/zoom);center.y=clamp(center.y-dy/H*100/zoom,50/zoom,100-50/zoom);pointer.prev=p;draw()}});
 canvas.addEventListener("pointerup",e=>{if(!pointer||pointer.id!==e.pointerId)return;const moved=pointer.dragged;pointer=null;if(moved)return;const p=fromClient(e);let best=null,dist=Infinity;for(const row of shown){const pt=project(row[0],row[1]),d=Math.hypot(p.x-pt.x,p.y-pt.y);if(d<dist){dist=d;best=row}}if(best&&dist<22){selected=best;showSelection();renderList()}});
