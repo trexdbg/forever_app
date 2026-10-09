@@ -242,6 +242,17 @@
       "supply": "unlimited",
       "source": "https://www.wowhead.com/classic/item=6368"
     },
+    "6369": {
+      "id": 6369,
+      "name": {
+        "en": "Recipe: Rockscale Cod",
+        "fr": "Recette : Morue rochécaille"
+      },
+      "profession": "Cuisine",
+      "skill": 175,
+      "supply": "unlimited",
+      "source": "https://www.wowhead.com/classic/item=6369"
+    },
     "6474": {
       "id": 6474,
       "name": {
@@ -421,6 +432,28 @@
       "supply": "limited",
       "source": "https://www.wowhead.com/classic/item=12164"
     },
+    "12229": {
+      "id": 12229,
+      "name": {
+        "en": "Recipe: Hot Wolf Ribs",
+        "fr": "Recette : Côtes de loup épicées"
+      },
+      "profession": "Cuisine",
+      "skill": 175,
+      "supply": "unlimited",
+      "source": "https://www.wowhead.com/classic/item=12229"
+    },
+    "12239": {
+      "id": 12239,
+      "name": {
+        "en": "Recipe: Dragonbreath Chili",
+        "fr": "Recette : Chili de souffle de dragon"
+      },
+      "profession": "Cuisine",
+      "skill": 200,
+      "supply": "unlimited",
+      "source": "https://www.wowhead.com/classic/item=12239"
+    },
     "12958": {
       "id": 12958,
       "name": {
@@ -545,6 +578,39 @@
       "supply": "unlimited",
       "source": "https://www.wowhead.com/classic/item=13946"
     },
+    "13947": {
+      "id": 13947,
+      "name": {
+        "en": "Recipe: Lobster Stew",
+        "fr": "Recette : Ragoût de homard"
+      },
+      "profession": "Cuisine",
+      "skill": 275,
+      "supply": "unlimited",
+      "source": "https://www.wowhead.com/classic/item=13947"
+    },
+    "13948": {
+      "id": 13948,
+      "name": {
+        "en": "Recipe: Mightfish Steak",
+        "fr": "Recette : Steak de barracuda"
+      },
+      "profession": "Cuisine",
+      "skill": 275,
+      "supply": "unlimited",
+      "source": "https://www.wowhead.com/classic/item=13948"
+    },
+    "13949": {
+      "id": 13949,
+      "name": {
+        "en": "Recipe: Baked Salmon",
+        "fr": "Recette : Saumon cuit"
+      },
+      "profession": "Cuisine",
+      "skill": 275,
+      "supply": "unlimited",
+      "source": "https://www.wowhead.com/classic/item=13949"
+    },
     "14468": {
       "id": 14468,
       "name": {
@@ -596,6 +662,17 @@
       "supply": "unlimited",
       "source": "https://www.wowhead.com/classic/item=16072"
     },
+    "16110": {
+      "id": 16110,
+      "name": {
+        "en": "Recipe: Monster Omelet",
+        "fr": "Recette : Omelette monstrueuse"
+      },
+      "profession": "Cuisine",
+      "skill": 225,
+      "supply": "unlimited",
+      "source": "https://www.wowhead.com/classic/item=16110"
+    },
     "16221": {
       "id": 16221,
       "name": {
@@ -616,6 +693,17 @@
       "skill": 225,
       "supply": "limited",
       "source": "https://www.wowhead.com/classic/item=16767"
+    },
+    "17062": {
+      "id": 17062,
+      "name": {
+        "en": "Recipe: Mithril Head Trout",
+        "fr": "Recette : Truite tête-mithril"
+      },
+      "profession": "Cuisine",
+      "skill": 175,
+      "supply": "unlimited",
+      "source": "https://www.wowhead.com/classic/item=17062"
     },
     "18648": {
       "id": 18648,
@@ -1440,7 +1528,9 @@
       "offers": [
         "13308",
         "7561",
-        "13310"
+        "13310",
+        "12239",
+        "12229"
       ],
       "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic",
       "note": "Caravane de Gizelton · Vendeur mobile",
@@ -2548,7 +2638,9 @@
       "offers": [
         "21099",
         "21219",
-        "16072"
+        "16072",
+        "17062",
+        "6369"
       ],
       "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
       "note": "Proie-de-l'Ombre",
@@ -2624,6 +2716,248 @@
       "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
       "note": "Comté-du-Lac",
       "note_en": "Lakeshire",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Vivianna",
+      "id": null,
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "feralas",
+        "fr": "Féralas",
+        "en": "Feralas"
+      },
+      "coordinates": {
+        "x": 31.2,
+        "y": 43.2
+      },
+      "faction": "alliance",
+      "offers": [
+        "13949",
+        "13947",
+        "13948",
+        "12229"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "Bastion de Pennelune",
+      "note_en": "Feathermoon Stronghold",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Sheendra Tallgrass",
+      "id": null,
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "feralas",
+        "fr": "Féralas",
+        "en": "Feralas"
+      },
+      "coordinates": {
+        "x": 74.4,
+        "y": 42.8
+      },
+      "faction": "horde",
+      "offers": [
+        "13949",
+        "13947",
+        "13948",
+        "12229"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "Camp Mojache",
+      "note_en": "Camp Mojache",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Himmik",
+      "id": null,
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "winterspring",
+        "fr": "Berceau-de-l'Hiver",
+        "en": "Winterspring"
+      },
+      "coordinates": {
+        "x": 61.4,
+        "y": 39
+      },
+      "faction": "neutral",
+      "offers": [
+        "16110"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "Long-guet",
+      "note_en": "Everlook",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Malygen",
+      "id": null,
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "felwood",
+        "fr": "Gangrebois",
+        "en": "Felwood"
+      },
+      "coordinates": {
+        "x": 62.2,
+        "y": 25.6
+      },
+      "faction": "alliance",
+      "offers": [
+        "16110"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "Clairière de Griffebranche",
+      "note_en": "Talonbranch Glade",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Bale",
+      "id": null,
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "felwood",
+        "fr": "Gangrebois",
+        "en": "Felwood"
+      },
+      "coordinates": {
+        "x": 34.6,
+        "y": 53
+      },
+      "faction": "horde",
+      "offers": [
+        "16110"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "Poste de la Vénéneuse",
+      "note_en": "Bloodvenom Post",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Emrul Riknussun",
+      "id": null,
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "ironforge",
+        "fr": "Forgefer",
+        "en": "Ironforge"
+      },
+      "coordinates": {
+        "x": 60.8,
+        "y": 37.8
+      },
+      "faction": "alliance",
+      "offers": [
+        "21099",
+        "21219"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "Grande Forge",
+      "note_en": "The Great Forge",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Nyoma",
+      "id": null,
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "teldrassil",
+        "fr": "Teldrassil",
+        "en": "Teldrassil"
+      },
+      "coordinates": {
+        "x": 57.2,
+        "y": 61.2
+      },
+      "faction": "alliance",
+      "offers": [
+        "6325",
+        "6328",
+        "21099",
+        "21219"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "Dolanaar",
+      "note_en": "Dolanaar",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Gretta Ganter",
+      "id": null,
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "dun-morogh",
+        "fr": "Dun Morogh",
+        "en": "Dun Morogh"
+      },
+      "coordinates": {
+        "x": 31.6,
+        "y": 44.6
+      },
+      "faction": "alliance",
+      "offers": [
+        "6325"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "Brassetout",
+      "note_en": "Brewnall Village",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Tansy Puddlefizz",
+      "id": null,
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "ironforge",
+        "fr": "Forgefer",
+        "en": "Ironforge"
+      },
+      "coordinates": {
+        "x": 47.8,
+        "y": 6.6
+      },
+      "faction": "alliance",
+      "offers": [
+        "6328",
+        "17062",
+        "6369"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "Caverne lugubre",
+      "note_en": "Forlorn Cavern",
+      "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "name": "Helenia Olden",
+      "id": null,
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "dustwallow",
+        "fr": "Marécage d'Âprefange",
+        "en": "Dustwallow Marsh"
+      },
+      "coordinates": {
+        "x": 66.4,
+        "y": 51.4
+      },
+      "faction": "alliance",
+      "offers": [
+        "12239"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "Theramore",
+      "note_en": "Theramore",
       "coordinate_status": "classic_reference_unverified"
     }
   ],
@@ -3021,6 +3355,54 @@
     },
     "wpl": {
       "uiMapID": 1422,
+      "build": "1.60.1.69893",
+      "source": "https://warcraftforever.games/maps",
+      "kind": "forever_beta_zone_map"
+    },
+    "felwood": {
+      "uiMapID": 1448,
+      "build": "1.60.1.69893",
+      "source": "https://warcraftforever.games/maps",
+      "kind": "forever_beta_zone_map"
+    },
+    "hinterlands": {
+      "uiMapID": 1425,
+      "build": "1.60.1.69893",
+      "source": "https://warcraftforever.games/maps",
+      "kind": "forever_beta_zone_map"
+    },
+    "dustwallow": {
+      "uiMapID": 1445,
+      "build": "1.60.1.69893",
+      "source": "https://warcraftforever.games/maps",
+      "kind": "forever_beta_zone_map"
+    },
+    "teldrassil": {
+      "uiMapID": 1438,
+      "build": "1.60.1.69893",
+      "source": "https://warcraftforever.games/maps",
+      "kind": "forever_beta_zone_map"
+    },
+    "dun-morogh": {
+      "uiMapID": 1426,
+      "build": "1.60.1.69893",
+      "source": "https://warcraftforever.games/maps",
+      "kind": "forever_beta_zone_map"
+    },
+    "mulgore": {
+      "uiMapID": 1412,
+      "build": "1.60.1.69893",
+      "source": "https://warcraftforever.games/maps",
+      "kind": "forever_beta_zone_map"
+    },
+    "wetlands": {
+      "uiMapID": 1437,
+      "build": "1.60.1.69893",
+      "source": "https://warcraftforever.games/maps",
+      "kind": "forever_beta_zone_map"
+    },
+    "badlands": {
+      "uiMapID": 1418,
       "build": "1.60.1.69893",
       "source": "https://warcraftforever.games/maps",
       "kind": "forever_beta_zone_map"
