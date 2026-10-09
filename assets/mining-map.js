@@ -182,11 +182,11 @@ document.getElementById("mine-select-none").addEventListener("click",()=>{
 fetch(ROOT+"data/mining-points.json")
   .then(r=>{if(!r.ok)throw Error("HTTP "+r.status);return r.json()})
   .then(j=>{
-    if(j.coordinate_system!=="wow_ui_map_normalized_percent"||!Array.isArray(j.zones)||!j.zones.length)throw Error("Format de coordonnées non compatible");
+    if(j.coordinate_system!=="wow_ui_map_normalized_percent"||!Array.isArray(j.zones)||!j.zones.length)throw Error(T("Format de coordonnées non compatible","Incompatible coordinate format"));
     db=j;
     preloadMineralIcons();
     for(const z of db.zones){
-      if(!Number.isInteger(z.uiMapID)||!Array.isArray(z.points)||z.points.some(p=>p.length<4||p[0]<0||p[0]>100||p[1]<0||p[1]>100))throw Error("Coordonnées invalides pour "+z.label);
+      if(!Number.isInteger(z.uiMapID)||!Array.isArray(z.points)||z.points.some(p=>p.length<4||p[0]<0||p[0]>100||p[1]<0||p[1]>100))throw Error(T("Coordonnées invalides pour ","Invalid coordinates for ")+zoneLabel(z));
     }
     for(const id of Object.keys(db.minerals))enabledMinerals.add(id);
     renderMineralControls();
