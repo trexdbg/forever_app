@@ -16,7 +16,7 @@ const list=$("npc-results"),detail=$("npc-detail"),count=$("npc-count"),kind=$("
 const evidence=(vendor,item)=>store.db.evidence.find(e=>e.vendor_name===vendor.name&&e.item===item?.id?.toString());
 const append=(parent,tag,t,cls)=>{const el=mk(tag,t,cls);parent.append(el);return el};
 const link=(parent,text,url)=>{const a=mk("a",text);a.href=url;a.target="_blank";a.rel="noopener noreferrer";parent.append(a);return a};
-const iconSrc=item=>item?.icon_status==="wowhead_icon_verified"?"https://wow.zamimg.com/images/wow/icons/medium/"+encodeURIComponent(item.icon)+".jpg":root+"assets/icons/"+(item?.icon||"inv_scroll_07")+".jpg";
+const iconSrc=item=>item?.icon_status==="wowhead_icon_verified"?"https://wow.zamimg.com/images/wow/icons/medium/"+encodeURIComponent(item.icon)+".jpg":root+"assets/icons/inv_scroll_07.jpg";
 const iconNode=(item)=>{const frame=mk("span",null,"npc-item-icon npc-image-icon");const img=mk("img");img.alt="";img.loading="lazy";img.width=40;img.height=40;img.src=iconSrc(item);img.onerror=()=>{img.onerror=null;img.src=root+"assets/icons/inv_scroll_07.jpg"};frame.append(img);return frame};
 const copperFmt=c=>{const g=Math.floor(c/10000),s=Math.floor(c%10000/100),b=c%100;return [g?g+" "+S("po","g"):"",s?s+" "+S("pa","s"):"",b?b+" "+S("pc","c"):""].filter(Boolean).join(" ")||"0 "+S("pc","c")};
 const stockWord=item=>item.supply==="unlimited"?S("Stock illimité (référence Classic)","Unlimited stock (Classic reference)"):item.supply==="reputation"?S("Vente liée à la réputation","Reputation-gated sale"):S("Stock limité (référence Classic)","Limited stock (Classic reference)");
@@ -90,7 +90,7 @@ function renderDetail(){
  append(panel,"span",S("Disponibilité estimée","Reference availability"),"npc-stock-label");
  append(panel,"div",stockWord(i),"npc-stock-value");
  if(Number.isInteger(i.vendor_price_copper)){append(panel,"p",S("Prix de référence : ","Reference vendor price: ")+copperFmt(i.vendor_price_copper));}
- if(Number.isInteger(i.vendor_stock)&&i.vendor_stock>0){append(panel,"p",S("Quantité théorique en stock Classic : ","Classic reference stock: ")+i.vendor_stock+" "+S("unité(s)","unit(s)")+".");}
+ if(Number.isInteger(i.vendor_stock)&&i.vendor_stock>0){append(panel,"p",S("Stock maximal indicatif (Classic) : ","Indicative maximum stock (Classic): ")+i.vendor_stock+" "+S("unité(s)","unit(s)")+".");}
  const report=evidence(n,i);
  if(report){
  const obs=append(panel,"div",null,"npc-evidence");
