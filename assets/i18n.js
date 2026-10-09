@@ -8,7 +8,11 @@ const english=document.documentElement.lang==="en";
 const langStore="forever-atlas:language";
 try{if(!english&&localStorage.getItem(langStore)==="en"&&location.pathname.startsWith("/forever_app/")){
 location.replace("/forever_app/en/"+location.pathname.slice("/forever_app/".length)+location.search+location.hash);return;}}catch{}
-for(const link of document.querySelectorAll(".lang-switch a")){link.addEventListener("click",()=>{try{localStorage.setItem(langStore,link.lang)}catch{}})}
+for(const link of document.querySelectorAll(".lang-switch a")){
+const sync=()=>{const url=new URL(link.getAttribute("href"),location.origin);url.search=location.search;url.hash=location.hash;link.href=url.pathname+url.search+url.hash;};
+sync();
+link.addEventListener("click",()=>{sync();try{localStorage.setItem(langStore,link.lang)}catch{}});
+}
 
 window.ForeverI18n={
 locale:english?"en":"fr",
