@@ -2,7 +2,7 @@
 const ROOT="/", en=document.documentElement.lang==="en", $=id=>document.getElementById(id);
 const host=$("bis-app");if(!host)return;
 const classNamesEN={guerrier:"Warrior",paladin:"Paladin",chasseur:"Hunter",voleur:"Rogue",pretre:"Priest",chaman:"Shaman",mage:"Mage",demoniste:"Warlock",druide:"Druid"};
-const specNamesEN={Armes:"Arms",Fureur:"Fury",Protection:"Protection",Sacré:"Holy",Vindicte:"Retribution","Maîtrise des bêtes":"Beast Mastery",Précision:"Marksmanship",Survie:"Survival",Assassinat:"Assassination",Combat:"Combat",Finesse:"Subtlety",Discipline:"Discipline",Ombre:"Shadow",Élémentaire:"Elemental",Amélioration:"Enhancement",Restauration:"Restoration",Arcanes:"Arcane",Feu:"Fire",Givre:"Frost",Affliction:"Affliction",Démonologie:"Demonology",Destruction:"Destruction",Équilibre:"Balance",Farouche:"Feral Combat"};
+const specNamesEN={"Fury":"Fury","Tank":"Tank","Soins":"Healer","DPS distance":"Ranged DPS","DPS magique":"Spell DPS","Combat épées":"Combat swords","Combat dagues":"Combat daggers","Ombre":"Shadow","Amélioration":"Enhancement","Farouche":"Feral"};
 const slotNamesEN={head:"Head",neck:"Neck",shoulders:"Shoulders",back:"Back",chest:"Chest",wrist:"Wrists",hands:"Hands",waist:"Waist",legs:"Legs",feet:"Feet",finger1:"Ring 1",finger2:"Ring 2",trinket1:"Trinket 1",trinket2:"Trinket 2",mainhand:"Main hand",offhand:"Off hand",ranged:"Ranged / Relic"};
 const labelClass=c=>en?(classNamesEN[c.id]||c.label):c.label;
 const labelSpec=s=>en?(specNamesEN[s.label]||s.label):s.label;
@@ -17,7 +17,7 @@ const words=en?{
 const qualities=["poor","common","uncommon","rare","epic","legendary"];
 const qcolors={poor:"#9d9d9d",common:"#efeee9",uncommon:"#43bf66",rare:"#4c9df1",epic:"#b67cff",legendary:"#ffac46"};
 const left=["head","neck","shoulders","back","chest","wrist","hands"],right=["waist","legs","feet","finger1","finger2","trinket1","trinket2"],weapons=["mainhand","offhand","ranged"];
-let db,chosenClass="guerrier",chosenSpec="0",activeSlot="head",mode="recommended",search="",selectedQualities=new Set(),choices={},owned={};
+let db,chosenClass="guerrier",chosenSpec="fury",activeSlot="head",mode="recommended",search="",selectedQualities=new Set(),choices={},owned={};
 let apiState={signature:"",rows:[],cursor:null,hasMore:false,loading:false,error:null,count:null},apiTimer;
 const isForever=i=>i&&typeof i.source_status==="string"&&i.source_status.startsWith("forever_beta_");
 function loadClassicPage(signature,more=false){
@@ -44,12 +44,12 @@ const compatible=(itemSlot,slot)=>itemSlot===slot||(["finger1","finger2"].includ
 const allItems=id=>db.items.filter(item=>compatible(item.slot,id));
 const slotPool=id=>{const rows=mode==="recommended"?recSlot(id):mode==="forever"?allItems(id).filter(isForever):[...allItems(id),...(mode==="all"?apiState.rows:[])];const seen=new Set();return rows.filter(i=>{if(seen.has(i.id))return false;seen.add(i.id);return true})};
 const recommended=()=>{const key=chosenClass+":"+specInfo().label;const ids=[...(db.overrides[key]||[]),...(db.kits[specInfo().role]||[])];return [...new Set(ids)].map(id=>db.items.find(i=>i.id===id)).filter(Boolean)};
-const recSlot=id=>recommended().filter(i=>i.slot===id);
+const recSlot=id=>{const list=recommended().filter(i=>compatible(i.slot,id));return [...list.filter(i=>i.slot===id),...list.filter(i=>i.slot!==id)]};
 const key=(type)=>"forever-atlas:bis2:"+type+":"+chosenClass+":"+chosenSpec;
 function read(k){try{const v=JSON.parse(localStorage.getItem(k)||"{}");return v&&typeof v==="object"&&!Array.isArray(v)?v:{}}catch{return {}}}
 function persist(){try{localStorage.setItem(key("choices"),JSON.stringify(choices));localStorage.setItem(key("owned"),JSON.stringify(owned))}catch{}}
 function icon(iconName,label){const span=elem("span","bis-v2-icon");if(typeof iconName==="string"&&(/^[a-z0-9_-]{2,70}$/.test(iconName)||iconName.startsWith("https://wowdb.assemblee-defias.fr/database-icons/"))){const image=document.createElement("img");image.loading="lazy";image.alt=label||"";image.src=iconName.startsWith("https://wowdb.assemblee-defias.fr/database-icons/")?iconName:ROOT+"assets/icons/"+iconName+".jpg";image.addEventListener("error",()=>{if(!image.dataset.fallback&&typeof iconName==="string"&&/^[a-z0-9_-]{2,70}$/.test(iconName)){image.dataset.fallback="true";image.src="https://wow.zamimg.com/images/wow/icons/large/"+iconName+".jpg"}else{image.remove();span.textContent="✦"}});span.append(image)}else span.textContent="✦";return span}
-function loadProfile(){choices=read(key("choices"));owned=read(key("owned"));const savedExtras=read(key("extras"));for(const item of Object.values(savedExtras)){if(item&&Number.isInteger(item.id)&&typeof item.name==="string"&&!db.items.some(i=>i.id===item.id))db.items.push(item)}const old=read(["forever-atlas","bis",db.version,chosenClass,chosenSpec].join(":"));for(const slot of db.slots){const item=target(slot.id);if(item&&old[item.id]&&owned[slot.id]===undefined)owned[slot.id]=item.id}}
+function loadProfile(){choices=read(key("choices"));owned=read(key("owned"));const oldSpec={guerrier:{fury:"1",tank:"2"},paladin:{heal:"0",tank:"1"},chasseur:{dps:"1"},voleur:{swords:"1",daggers:"1"},pretre:{heal:"1",shadow:"2"},chaman:{heal:"2",enhance:"1"},mage:{dps:"2"},demoniste:{dps:"2"},druide:{heal:"2",feral:"1"}}[chosenClass]?.[chosenSpec];if(oldSpec!==undefined){const oldPrefix=["forever-atlas","bis2"];const prevChoices=read([...oldPrefix,"choices",chosenClass,oldSpec].join(":")),prevOwned=read([...oldPrefix,"owned",chosenClass,oldSpec].join(":"));if(!Object.keys(choices).length)choices=prevChoices;if(!Object.keys(owned).length)owned=prevOwned}const savedExtras=read(key("extras"));for(const item of Object.values(savedExtras)){if(item&&Number.isInteger(item.id)&&typeof item.name==="string"&&!db.items.some(i=>i.id===item.id))db.items.push(item)}const old=read(["forever-atlas","bis",db.version,chosenClass,chosenSpec].join(":"));for(const slot of db.slots){const item=target(slot.id);if(item&&old[item.id]&&owned[slot.id]===undefined)owned[slot.id]=item.id}}
 function target(id){const idNumber=Number(choices[id]);if(choices[id]===0)return null;if(Number.isInteger(idNumber)&&idNumber>0){const custom=db.items.find(i=>i.id===idNumber&&compatible(i.slot,id));if(custom)return custom}return recSlot(id)[0]||null}
 function acquired(id){const i=target(id);return Boolean(i&&Number(owned[id])===i.id)}
 function updateUrl(){const url=new URL(location.href);url.searchParams.set("classe",chosenClass);url.searchParams.set("spe",chosenSpec);const fragment=db.slots.map(s=>s.id+"-"+(target(s.id)?.id||0)).join(",");if(fragment)url.searchParams.set("equip",fragment);else url.searchParams.delete("equip");return url}
@@ -71,7 +71,7 @@ const targets=db.slots.filter(s=>target(s.id)).length,done=db.slots.filter(s=>ac
 $("bis-progress-value").textContent=done+" / "+targets+" "+words.progress;
 $("bis-progress-bar").style.width=targets?(100*done/targets)+"%":"0%";
 $("bis-selected").textContent=labelClass(classInfo())+" · "+labelSpec(specInfo());
-$("bis-total").textContent=targets+" / "+db.slots.length+" "+words.equipped;
+$("bis-total").textContent=targets+" / "+db.slots.length+" "+words.equipped;const profileNote=$("bis-profile-note");if(profileNote){profileNote.replaceChildren();const config=db.profile_notes?.[chosenClass+":"+chosenSpec];profileNote.append(document.createTextNode(config?(en?config.en:config.fr):(en?"Classic pre-raid level 60 reference · not yet confirmed for Forever.":"Référence Classic pré-raid niveau 60 · non confirmée pour Forever.")));const source=db.profile_sources?.[specInfo().role];if(source){const a=elem("a","bis-v2-source-link",en?" · Classic guide ↗":" · Guide Classic ↗");a.href=source;a.target="_blank";a.rel="noopener noreferrer";profileNote.append(a)}}
 const count=$("bis-count");if(count)count.textContent=done+" / "+targets+" "+words.progress}
 function safeItemLink(item){if(!item||!item.url)return null;try{const u=new URL(item.url);return u.protocol==="https:"&&["www.wowhead.com","wowdb.assemblee-defias.fr","www.60.tools"].includes(u.hostname)?u.href:null}catch{return null}}
 function showSelection(){const box=$("bis-picked");box.replaceChildren();const it=target(activeSlot);box.append(elem("div","bis-v2-eyebrow",words.status));if(!it){box.append(elem("p","bis-v2-blank",words.none));return}
@@ -98,7 +98,7 @@ if(mode==="all"){
 }
 }
 function renderAll(){window.ForeverItemTooltip?.hide();renderClasses();renderSpecs();renderSheet();renderPicker()}
-function importShared(){const params=new URLSearchParams(location.search);const cls=params.get("classe"),s=params.get("spe");if(db.classes.some(c=>c.id===cls))chosenClass=cls;if(classInfo().specs.some(sp=>sp.id===s))chosenSpec=s;loadProfile();
+function importShared(){const params=new URLSearchParams(location.search);const cls=params.get("classe"),s=params.get("spe");if(db.classes.some(c=>c.id===cls))chosenClass=cls;const aliases={guerrier:{"0":"fury","1":"fury","2":"tank"},paladin:{"0":"heal","1":"tank","2":"heal"},chasseur:{"0":"dps","1":"dps","2":"dps"},voleur:{"0":"swords","1":"swords","2":"daggers"},pretre:{"0":"heal","1":"heal","2":"shadow"},chaman:{"0":"heal","1":"enhance","2":"heal"},mage:{"0":"dps","1":"dps","2":"dps"},demoniste:{"0":"dps","1":"dps","2":"dps"},druide:{"0":"heal","1":"feral","2":"heal"}};const legacy=aliases[chosenClass]?.[s],candidate=classInfo().specs.find(sp=>sp.id===s||sp.id===legacy);chosenSpec=candidate?candidate.id:classInfo().specs[0].id;loadProfile();
 const shared=params.get("equip");if(shared&&shared.length<850){for(const pair of shared.split(",")){const match=/^([a-z0-9]+)-([0-9]+)$/.exec(pair);if(!match||!slotInfo(match[1]))continue;const id=Number(match[2]);if(id===0||db.items.some(i=>i.id===id&&compatible(i.slot,match[1])))choices[match[1]]=id}persist()}
 mode=recSlot(activeSlot).length?"recommended":"all"}
 function initControls(){$("bis-recommended").addEventListener("click",()=>{mode="recommended";renderPicker()});$("bis-all").addEventListener("click",()=>{mode="all";renderPicker()});$("bis-forever").addEventListener("click",()=>{mode="forever";renderPicker()});
