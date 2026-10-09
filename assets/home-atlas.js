@@ -46,7 +46,7 @@ const seed=[
  {key:"talent:voleur",kind:"talent",title:T("Talents du Voleur","Rogue talents"),href:prefix+"talents/voleur/",icon:"class_rogue",count:T("Arbres de talents","Talent trees")},
  {key:"profession:engineering",kind:"profession",title:T("Ingénierie","Engineering"),href:prefix+"metiers/",icon:"inv_hammer_04",count:T("Métiers de WoW Forever","WoW Forever professions")},
  {key:"npc:merchants",kind:"merchant",title:T("Marchands","Vendors"),href:prefix+"marchands/",icon:"inv_scroll_07",count:T("Objets et emplacements","Items and locations")},
- {key:"bis:guerrier",kind:"bis",title:T("Équipement du Guerrier","Warrior gear"),href:prefix+"equipements/?classe=guerrier",icon:"class_warrior",count:T("Profils d'équipement","Gear profiles")}
+ {key:"bis:guerrier",kind:"bis",title:T("Équipement du Guerrier","Warrior gear"),href:prefix+"bis/?classe=guerrier",icon:"class_warrior",count:T("Profils d'équipement","Gear profiles")}
 ];
 let slides=seed,index=0,previousKey="",timer=null,visible=true,nonce=0;
 function txt(link,label){
@@ -124,7 +124,7 @@ function assemble(results){
    for(const spec of c.specs||[]){
     pools.bis.push({key:"bis:"+c.id+":"+spec.id,kind:"bis",title:className+" · "+spec.label,
      count:T("Sélection d’équipement pré-raid","Pre-raid gear selection"),
-     href:dataHref("equipements/",{classe:c.id,spe:spec.id}),icon,
+     href:dataHref("bis/",{classe:c.id,spe:spec.id}),icon,
      overline:T("ÉQUIPEMENT / PROFILS","GEAR / PROFILES"),
      disclaimer:T("Référence Classic · BiS Forever non confirmé","Classic reference · Not confirmed Forever BiS")});
    }
@@ -264,7 +264,7 @@ function show(next,manual=false){
    s.kind==="trainer"?T("Voir les maîtres","Find trainers"):
    T("Découvrir","Explore"));
  related.href=s.kind==="mining"?prefix+"marchands/":s.kind==="quest"?prefix+"talents/":
-   s.kind==="profession"?prefix+"metiers/#prof-trainers":s.kind==="talent"?prefix+"equipements/":
+   s.kind==="profession"?prefix+"metiers/#prof-trainers":s.kind==="talent"?prefix+"bis/":
    s.kind==="bis"||s.kind==="item"?prefix+"talents/":prefix+"quetes/";
  txt(related,s.kind==="profession"?T("Trouver un maître","Find trainers"):
    s.kind==="talent"?T("Équipement","Gear"):s.kind==="bis"||s.kind==="item"?T("Talents","Talents"):
