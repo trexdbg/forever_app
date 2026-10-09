@@ -23,7 +23,7 @@ if(nav){
   group(tr.professions,[["metiers",tr.trainers],["minage",tr.mining]]),
   link("marchands",tr.vendors),link("population",tr.population));
  const groups=[...nav.querySelectorAll(".nav-group")];
- for(const g of groups){g.addEventListener("toggle",()=>{if(g.open)for(const other of groups)if(other!==g)other.open=false})}
+ for(const g of groups){g.addEventListener("toggle",()=>{if(g.open)for(const other of groups)if(other!==g)other.open=false});g.addEventListener("mouseenter",()=>{if(matchMedia("(hover: hover) and (min-width: 981px)").matches)g.open=true});g.addEventListener("mouseleave",()=>{if(matchMedia("(hover: hover) and (min-width: 981px)").matches&&!g.contains(document.activeElement))g.open=false})}
  const close=()=>{for(const g of groups)g.open=false;nav.classList.remove("open");if(toggle){toggle.setAttribute("aria-expanded","false");toggle.textContent="☰"}};
  document.addEventListener("pointerdown",e=>{if(!nav.contains(e.target)&&e.target!==toggle&&!toggle?.contains(e.target))for(const g of groups)g.open=false});
  document.addEventListener("keydown",e=>{if(e.key==="Escape"){close();toggle?.focus()}});
