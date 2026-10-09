@@ -1,8 +1,8 @@
-/* ForEveroth — GA4 is completely disabled until a valid ID is configured. */
+/* ForEveroth — GA4 is loaded only on the production HTTPS domain after opt-in. */
 (() => {
   "use strict";
-  // Set only after a GA4 Web data stream has been created.
-  const GA4_ID = "";
+  // Google Analytics 4 web measurement ID. This is a public (non-secret) identifier.
+  const GA4_ID = "G-YZC5D04G2F";
   const CONSENT_KEY = "foreveroth.analytics.consent.v1";
   const enabled = /^G-[A-Z0-9]{6,20}$/i.test(GA4_ID)
     && location.protocol === "https:"
@@ -12,11 +12,11 @@
   const en = document.documentElement.lang === "en";
   const strings = en ? {
     title: "Audience measurement",
-    info: "Help improve ForEveroth with Google Analytics. No Google Analytics tracking is loaded unless you agree.",
+    info: "With your agreement, Google Analytics measures page views and how our tools are used. No Google Analytics code loads before acceptance. You can withdraw consent using Audience preferences in the footer.",
     accept: "Accept", reject: "Reject", settings: "Audience preferences"
   } : {
     title: "Mesure d’audience",
-    info: "Aidez à améliorer ForEveroth grâce à Google Analytics. Aucun suivi Google Analytics n’est chargé sans votre accord.",
+    info: "Avec votre accord, Google Analytics mesure les pages vues et l’utilisation des outils. Aucun script Google Analytics n’est chargé avant acceptation. Vous pouvez retirer votre accord via Préférences d’audience dans le pied de page.",
     accept: "Accepter", reject: "Refuser", settings: "Préférences d’audience"
   };
 
