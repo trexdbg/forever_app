@@ -186,9 +186,9 @@ function render(){
  $("quest-zone-title").textContent=stepName(st);
  $("quest-level").textContent="Niveau approximatif : "+Number(st.experience||0).toFixed(1).replace(".",",")+" · "+st.waypoints.length+" points à visiter";
  $("quest-map-title").textContent=stepName(st)+" · itinéraire dans la zone";
- $("quest-map-source").textContent="Coordonnées X/Y · 0 à 100";
+ $("quest-map-source").textContent="Molette : zoom · X/Y : 0 à 100";
  const first=s.index===0,last=s.index===s.steps.length-1;
- $("quest-prev").disabled=$("quest-prev-bottom").disabled=first;$("quest-next").disabled=$("quest-next-bottom").disabled=last;
+ $("quest-prev").disabled=first;$("quest-next").disabled=last;
  const complete=$("quest-complete"),done=s.done.has(s.index);complete.textContent=done?"✓ Étape terminée · annuler":"Marquer l'étape terminée ✓";complete.setAttribute("aria-pressed",String(done));
  renderProgress();updateMilestones();renderWaypoints();renderSelection();setImage(st.zone);draw();syncUrl();
 }
@@ -239,17 +239,42 @@ function search(){
  if(!all)res.append(element("p","Aucune étape correspondante dans ce parcours."));
  if(all>35)res.append(element("p",all+" correspondances · 35 premiers résultats affichés."));
 }
-function setZoom(z){s.zoom=clamp(z,1,4);s.center.x=clamp(s.center.x,50/s.zoom,100-50/s.zoom);s.center.y=clamp(s.center.y,50/s.zoom,100-50/s.zoom);$("quest-zoom-reset").textContent=Math.round(s.zoom*100)+" %";draw()}
+function setZoom(z,anchor){
+ const previous=s.zoom,next=clamp(z,1,4);
+ if(anchor&&previous!==next){
+  // Preserve the map location beneath the cursor while zooming.
+  const dx=100*anchor.x/W-50,dy=100*anchor.y/H-50;
+  s.center.x+=dx/previous-dx/next;
+  s.center.y+=dy/previous-dy/next;
+ }
+ s.zoom=next;
+ s.center.x=clamp(s.center.x,50/next,100-50/next);
+ s.center.y=clamp(s.center.y,50/next,100-50/next);
+ $("quest-zoom-reset").textContent=Math.round(next*100)+" %";
+ draw();
+}
 canvas.addEventListener("pointerdown",e=>{const p=clientPoint(e);pointer={id:e.pointerId,start:p,prev:p,drag:false};canvas.setPointerCapture(e.pointerId)});
 canvas.addEventListener("pointermove",e=>{if(!pointer||e.pointerId!==pointer.id)return;const p=clientPoint(e);if(Math.hypot(p.x-pointer.start.x,p.y-pointer.start.y)>6)pointer.drag=true;
  if(pointer.drag){s.center.x=clamp(s.center.x-(p.x-pointer.prev.x)/W*100/s.zoom,50/s.zoom,100-50/s.zoom);s.center.y=clamp(s.center.y-(p.y-pointer.prev.y)/H*100/s.zoom,50/s.zoom,100-50/s.zoom);draw()}pointer.prev=p});
 canvas.addEventListener("pointerup",e=>{if(!pointer||e.pointerId!==pointer.id)return;const dragged=pointer.drag;pointer=null;if(dragged)return;const p=clientPoint(e),wps=s.steps[s.index]?.waypoints||[];let best=-1,min=24;
  wps.forEach((w,i)=>{const v=project(w.coords.x,w.coords.y),d=Math.hypot(v.x-p.x,v.y-p.y);if(d<min){min=d;best=i}});if(best>=0)selectWaypoint(best)});
 canvas.addEventListener("pointercancel",()=>pointer=null);
-canvas.addEventListener("wheel",e=>{if(!e.ctrlKey)return;e.preventDefault();setZoom(s.zoom+(e.deltaY<0?.25:-.25))},{passive:false});
-canvas.addEventListener("keydown",e=>{if(e.key==="ArrowRight"){e.preventDefault();selectWaypoint((s.selected+1)%s.steps[s.index].waypoints.length)}if(e.key==="ArrowLeft"){e.preventDefault();selectWaypoint((s.selected+s.steps[s.index].waypoints.length-1)%s.steps[s.index].waypoints.length)}});
+canvas.addEventListener("wheel",e=>{
+ e.preventDefault();
+ if(!e.deltaY)return;
+ // Normalize pixel/line/page wheel events (mouse wheels and trackpads).
+ const delta=e.deltaY*(e.deltaMode===1?16:e.deltaMode===2?120:1);
+ const factor=Math.exp(-clamp(delta,-180,180)*.0018);
+ setZoom(s.zoom*factor,clientPoint(e));
+},{passive:false});
+canvas.addEventListener("keydown",e=>{
+ if(e.key==="+"||e.key==="="){e.preventDefault();setZoom(s.zoom*1.2);return}
+ if(e.key==="-"){e.preventDefault();setZoom(s.zoom/1.2);return}
+ const count=s.steps[s.index]?.waypoints.length||0;if(!count)return;
+ if(e.key==="ArrowRight"){e.preventDefault();selectWaypoint((s.selected+1)%count)}
+ if(e.key==="ArrowLeft"){e.preventDefault();selectWaypoint((s.selected+count-1)%count)}
+});
 $("quest-prev").addEventListener("click",()=>go(s.index-1));$("quest-next").addEventListener("click",()=>go(s.index+1));
-$("quest-prev-bottom").addEventListener("click",()=>go(s.index-1));$("quest-next-bottom").addEventListener("click",()=>go(s.index+1));
 $("quest-range").addEventListener("input",e=>{
  const target=Number(e.target.value)-1;previewStep(target);
  if(scrubTimer!==null)clearTimeout(scrubTimer);
@@ -260,8 +285,6 @@ for(const button of $("quest-factions").querySelectorAll("button[data-faction]")
  button.addEventListener("click",()=>{if(button.dataset.faction!==s.faction)loadFaction(button.dataset.faction)});
 }
 $("quest-search").addEventListener("input",search);
-$("quest-zoom-out").addEventListener("click",()=>setZoom(s.zoom-.5));
-$("quest-zoom-in").addEventListener("click",()=>setZoom(s.zoom+.5));
 $("quest-zoom-reset").addEventListener("click",()=>{s.center={x:50,y:50};setZoom(1)});
 $("quest-complete").addEventListener("click",()=>{if(s.done.has(s.index))s.done.delete(s.index);else s.done.add(s.index);saveDone();render()});
 $("quest-reset").addEventListener("click",()=>{if(!confirm("Effacer la progression du parcours "+s.profile+" ?"))return;s.done.clear();saveDone();render()});
