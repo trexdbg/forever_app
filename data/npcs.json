@@ -26,9 +26,251 @@
     "zephras_trainers": "https://www.wowhead.com/forever/guide/zephras-isle-zone-overview",
     "classic_weapon_masters": "https://www.warcrafttavern.com/wow-classic/guides/weapon-skill-trainers-and-locations/",
     "forever_profession_locations": "https://www.icy-veins.com/wow-forever/professions",
-    "enchanting_vendor": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic"
+    "enchanting_vendor": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+    "cooking_vendor_expansion": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+    "blacksmithing_vendor_expansion": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic"
   },
   "items": {
+    "728": {
+      "id": 728,
+      "name": {
+        "en": "Recipe: Westfall Stew",
+        "fr": "Recette : Ragoût de la marche de l'Ouest"
+      },
+      "profession": "Cuisine",
+      "skill": 75,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=728",
+      "source_guide": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "2697": {
+      "id": 2697,
+      "name": {
+        "en": "Recipe: Goretusk Liver Pie",
+        "fr": "Recette : Tourte au foie de broche-tripes"
+      },
+      "profession": "Cuisine",
+      "skill": 50,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=2697",
+      "source_guide": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "2698": {
+      "id": 2698,
+      "name": {
+        "en": "Recipe: Cooked Crab Claw",
+        "fr": "Recette : Pince de crabe cuite"
+      },
+      "profession": "Cuisine",
+      "skill": 85,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=2698",
+      "source_guide": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "2699": {
+      "id": 2699,
+      "name": {
+        "en": "Recipe: Redridge Goulash",
+        "fr": "Recette : Goulash des Carmines"
+      },
+      "profession": "Cuisine",
+      "skill": 100,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=2699",
+      "source_guide": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "2700": {
+      "id": 2700,
+      "name": {
+        "en": "Recipe: Succulent Pork Ribs",
+        "fr": "Recette : Côtes de porc succulentes"
+      },
+      "profession": "Cuisine",
+      "skill": 110,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=2700",
+      "source_guide": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "2701": {
+      "id": 2701,
+      "name": {
+        "en": "Recipe: Seasoned Wolf Kabob",
+        "fr": "Recette : Kébab de loup assaisonné"
+      },
+      "profession": "Cuisine",
+      "skill": 100,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=2701",
+      "source_guide": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "2889": {
+      "id": 2889,
+      "name": {
+        "en": "Recipe: Beer Basted Boar Ribs",
+        "fr": "Recette : Côtes de sanglier à la bière"
+      },
+      "profession": "Cuisine",
+      "skill": 25,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=2889",
+      "source_guide": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "3678": {
+      "id": 3678,
+      "name": {
+        "en": "Recipe: Crocolisk Steak",
+        "fr": "Recette : Steak de crocilisque"
+      },
+      "profession": "Cuisine",
+      "skill": 80,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=3678",
+      "source_guide": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "3679": {
+      "id": 3679,
+      "name": {
+        "en": "Recipe: Blood Sausage",
+        "fr": "Recette : Boudin"
+      },
+      "profession": "Cuisine",
+      "skill": 60,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=3679",
+      "source_guide": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "3680": {
+      "id": 3680,
+      "name": {
+        "en": "Recipe: Murloc Fin Soup",
+        "fr": "Recette : Soupe aux ailerons de murloc"
+      },
+      "profession": "Cuisine",
+      "skill": 90,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=3680",
+      "source_guide": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "3681": {
+      "id": 3681,
+      "name": {
+        "en": "Recipe: Crocolisk Gumbo",
+        "fr": "Recette : Gombo de crocilisque"
+      },
+      "profession": "Cuisine",
+      "skill": 120,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=3681",
+      "source_guide": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "3682": {
+      "id": 3682,
+      "name": {
+        "en": "Recipe: Curiously Tasty Omelet",
+        "fr": "Recette : Omelette au goût étrange"
+      },
+      "profession": "Cuisine",
+      "skill": 130,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=3682",
+      "source_guide": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "3683": {
+      "id": 3683,
+      "name": {
+        "en": "Recipe: Gooey Spider Cake",
+        "fr": "Recette : Gâteau d'araignée fondant"
+      },
+      "profession": "Cuisine",
+      "skill": 110,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=3683",
+      "source_guide": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "3734": {
+      "id": 3734,
+      "name": {
+        "en": "Recipe: Big Bear Steak",
+        "fr": "Recette : Steak de grand ours"
+      },
+      "profession": "Cuisine",
+      "skill": 110,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=3734",
+      "source_guide": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "3735": {
+      "id": 3735,
+      "name": {
+        "en": "Recipe: Hot Lion Chops",
+        "fr": "Recette : Côtelettes de lion épicées"
+      },
+      "profession": "Cuisine",
+      "skill": 125,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=3735",
+      "source_guide": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
     "4355": {
       "id": 4355,
       "name": {
@@ -216,6 +458,118 @@
       "vendor_price_copper": 100,
       "source": "https://www.wowhead.com/classic/item=4404"
     },
+    "4609": {
+      "id": 4609,
+      "name": {
+        "en": "Recipe: Barbecued Buzzard Wing",
+        "fr": "Recette : Aile de busard grillée"
+      },
+      "profession": "Cuisine",
+      "skill": 175,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=4609",
+      "source_guide": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "5483": {
+      "id": 5483,
+      "name": {
+        "en": "Recipe: Scorpid Surprise",
+        "fr": "Recette : Surprise du scorpide"
+      },
+      "profession": "Cuisine",
+      "skill": 20,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=5483",
+      "source_guide": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "5484": {
+      "id": 5484,
+      "name": {
+        "en": "Recipe: Roasted Kodo Meat",
+        "fr": "Recette : Viande de kodo rôtie"
+      },
+      "profession": "Cuisine",
+      "skill": 35,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=5484",
+      "source_guide": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "5485": {
+      "id": 5485,
+      "name": {
+        "en": "Recipe: Fillet of Frenzy",
+        "fr": "Recette : Filet de furie"
+      },
+      "profession": "Cuisine",
+      "skill": 50,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=5485",
+      "source_guide": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "5488": {
+      "id": 5488,
+      "name": {
+        "en": "Recipe: Crispy Lizard Tail",
+        "fr": "Recette : Queue de lézard croustillante"
+      },
+      "profession": "Cuisine",
+      "skill": 100,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=5488",
+      "source_guide": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "5489": {
+      "id": 5489,
+      "name": {
+        "en": "Recipe: Lean Venison",
+        "fr": "Recette : Venaison maigre"
+      },
+      "profession": "Cuisine",
+      "skill": 110,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=5489",
+      "source_guide": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "5528": {
+      "id": 5528,
+      "name": {
+        "en": "Recipe: Clam Chowder",
+        "fr": "Recette : Soupe de palourdes"
+      },
+      "profession": "Cuisine",
+      "skill": 90,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=5528",
+      "source_guide": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
     "5640": {
       "id": 5640,
       "name": {
@@ -360,6 +714,38 @@
       "icon_status": "category_fallback",
       "source": "https://www.wowhead.com/classic/item=5973",
       "source_guide": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "6039": {
+      "id": 6039,
+      "name": {
+        "en": "Recipe: Giant Clam Scorcho",
+        "fr": "Recette : Palourde géante brûlante"
+      },
+      "profession": "Cuisine",
+      "skill": 175,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=6039",
+      "source_guide": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "6047": {
+      "id": 6047,
+      "name": {
+        "en": "Plans: Golden Scale Coif",
+        "fr": "Plans : Camail en écailles dorées"
+      },
+      "profession": "Forge",
+      "skill": 190,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=6047",
+      "source_guide": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
       "reference_status": "classic_vendor_guide"
     },
     "6053": {
@@ -509,6 +895,22 @@
       "icon": "inv_scroll_07",
       "icon_status": "category_fallback"
     },
+    "6326": {
+      "id": 6326,
+      "name": {
+        "en": "Recipe: Slitherskin Mackerel",
+        "fr": "Recette : Maquereau ombré"
+      },
+      "profession": "Cuisine",
+      "skill": 1,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=6326",
+      "source_guide": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
     "6328": {
       "id": 6328,
       "name": {
@@ -522,6 +924,22 @@
       "kind": "recipe",
       "icon": "inv_scroll_07",
       "icon_status": "category_fallback"
+    },
+    "6329": {
+      "id": 6329,
+      "name": {
+        "en": "Recipe: Loch Frenzy Delight",
+        "fr": "Recette : Délice de furie du loch"
+      },
+      "profession": "Cuisine",
+      "skill": 50,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=6329",
+      "source_guide": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
     },
     "6330": {
       "id": 6330,
@@ -656,6 +1074,22 @@
       "kind": "recipe",
       "icon": "inv_scroll_07",
       "icon_status": "category_fallback"
+    },
+    "6892": {
+      "id": 6892,
+      "name": {
+        "en": "Recipe: Smoked Bear Meat",
+        "fr": "Recette : Viande d'ours fumée"
+      },
+      "profession": "Cuisine",
+      "skill": 40,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=6892",
+      "source_guide": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
     },
     "7087": {
       "id": 7087,
@@ -805,6 +1239,22 @@
       "kind": "recipe",
       "icon": "inv_scroll_07",
       "icon_status": "category_fallback"
+    },
+    "7995": {
+      "id": 7995,
+      "name": {
+        "en": "Plans: Mithril Scale Bracers",
+        "fr": "Plans : Brassards en écailles de mithril"
+      },
+      "profession": "Forge",
+      "skill": 215,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=7995",
+      "source_guide": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
     },
     "8385": {
       "id": 8385,
@@ -1145,6 +1595,22 @@
       "icon": "inv_scroll_07",
       "icon_status": "category_fallback"
     },
+    "12163": {
+      "id": 12163,
+      "name": {
+        "en": "Plans: Moonsteel Broadsword",
+        "fr": "Plans : Épée large en acier lunaire"
+      },
+      "profession": "Forge",
+      "skill": 180,
+      "kind": "recipe",
+      "supply": "limited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=12163",
+      "source_guide": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
     "12164": {
       "id": 12164,
       "name": {
@@ -1158,6 +1624,54 @@
       "kind": "recipe",
       "icon": "inv_scroll_07",
       "icon_status": "category_fallback"
+    },
+    "12226": {
+      "id": 12226,
+      "name": {
+        "en": "Recipe: Crispy Bat Wing",
+        "fr": "Recette : Aile de chauve-souris croustillante"
+      },
+      "profession": "Cuisine",
+      "skill": 1,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=12226",
+      "source_guide": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "12227": {
+      "id": 12227,
+      "name": {
+        "en": "Recipe: Lean Wolf Steak",
+        "fr": "Recette : Steak de loup maigre"
+      },
+      "profession": "Cuisine",
+      "skill": 125,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=12227",
+      "source_guide": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "12228": {
+      "id": 12228,
+      "name": {
+        "en": "Recipe: Roast Raptor",
+        "fr": "Recette : Rôti de raptor"
+      },
+      "profession": "Cuisine",
+      "skill": 175,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=12228",
+      "source_guide": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
     },
     "12229": {
       "id": 12229,
@@ -1173,6 +1687,54 @@
       "icon": "inv_scroll_07",
       "icon_status": "category_fallback"
     },
+    "12231": {
+      "id": 12231,
+      "name": {
+        "en": "Recipe: Jungle Stew",
+        "fr": "Recette : Ragoût de la jungle"
+      },
+      "profession": "Cuisine",
+      "skill": 175,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=12231",
+      "source_guide": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "12232": {
+      "id": 12232,
+      "name": {
+        "en": "Recipe: Carrion Surprise",
+        "fr": "Recette : Surprise de charognard"
+      },
+      "profession": "Cuisine",
+      "skill": 175,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=12232",
+      "source_guide": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "12233": {
+      "id": 12233,
+      "name": {
+        "en": "Recipe: Mystery Stew",
+        "fr": "Recette : Ragoût mystère"
+      },
+      "profession": "Cuisine",
+      "skill": 175,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=12233",
+      "source_guide": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
     "12239": {
       "id": 12239,
       "name": {
@@ -1186,6 +1748,22 @@
       "kind": "recipe",
       "icon": "inv_scroll_07",
       "icon_status": "category_fallback"
+    },
+    "12240": {
+      "id": 12240,
+      "name": {
+        "en": "Recipe: Heavy Kodo Stew",
+        "fr": "Recette : Ragoût de kodo épais"
+      },
+      "profession": "Cuisine",
+      "skill": 200,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=12240",
+      "source_guide": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
     },
     "12958": {
       "id": 12958,
@@ -1337,6 +1915,38 @@
       "icon": "inv_scroll_07",
       "icon_status": "category_fallback"
     },
+    "13940": {
+      "id": 13940,
+      "name": {
+        "en": "Recipe: Cooked Glossy Mightfish",
+        "fr": "Recette : Barracuda brillant cuit"
+      },
+      "profession": "Cuisine",
+      "skill": 225,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=13940",
+      "source_guide": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
+    "13941": {
+      "id": 13941,
+      "name": {
+        "en": "Recipe: Filet of Redgill",
+        "fr": "Recette : Filet de rouget"
+      },
+      "profession": "Cuisine",
+      "skill": 225,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=13941",
+      "source_guide": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
     "13942": {
       "id": 13942,
       "name": {
@@ -1350,6 +1960,22 @@
       "kind": "recipe",
       "icon": "inv_scroll_07",
       "icon_status": "category_fallback"
+    },
+    "13943": {
+      "id": 13943,
+      "name": {
+        "en": "Recipe: Hot Smoked Bass",
+        "fr": "Recette : Bar fumé épicé"
+      },
+      "profession": "Cuisine",
+      "skill": 240,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=13943",
+      "source_guide": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
     },
     "13945": {
       "id": 13945,
@@ -1898,6 +2524,22 @@
       "icon": "inv_scroll_07",
       "icon_status": "category_fallback"
     },
+    "16111": {
+      "id": 16111,
+      "name": {
+        "en": "Recipe: Spiced Chili Crab",
+        "fr": "Recette : Crabe au piment épicé"
+      },
+      "profession": "Cuisine",
+      "skill": 225,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=16111",
+      "source_guide": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
+    },
     "16217": {
       "id": 16217,
       "name": {
@@ -1986,6 +2628,56 @@
       "kind": "recipe",
       "icon": "inv_scroll_07",
       "icon_status": "category_fallback"
+    },
+    "17200": {
+      "id": 17200,
+      "name": {
+        "en": "Recipe: Gingerbread Cookie",
+        "fr": "Recette : Biscuit au pain d'épice"
+      },
+      "profession": "Cuisine",
+      "skill": 1,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=17200",
+      "source_guide": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide",
+      "seasonal": "winter_veil"
+    },
+    "17201": {
+      "id": 17201,
+      "name": {
+        "en": "Recipe: Egg Nog",
+        "fr": "Recette : Lait de poule"
+      },
+      "profession": "Cuisine",
+      "skill": 35,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=17201",
+      "source_guide": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide",
+      "seasonal": "winter_veil"
+    },
+    "18046": {
+      "id": 18046,
+      "name": {
+        "en": "Recipe: Tender Wolf Steak",
+        "fr": "Recette : Steak de loup tendre"
+      },
+      "profession": "Cuisine",
+      "skill": 225,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=18046",
+      "source_guide": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
     },
     "18239": {
       "id": 18239,
@@ -2112,6 +2804,232 @@
       "kind": "recipe",
       "icon": "inv_scroll_07",
       "icon_status": "category_fallback"
+    },
+    "19202": {
+      "id": 19202,
+      "name": {
+        "en": "Plans: Heavy Timbermaw Belt",
+        "fr": "Plans : Ceinture épaisse grumegueule"
+      },
+      "profession": "Forge",
+      "skill": 290,
+      "kind": "recipe",
+      "supply": "reputation",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=19202",
+      "source_guide": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide",
+      "bind": "pickup",
+      "reputation": {
+        "faction": "Timbermaw Hold",
+        "rank": "Honored"
+      }
+    },
+    "19203": {
+      "id": 19203,
+      "name": {
+        "en": "Plans: Girdle of the Dawn",
+        "fr": "Plans : Ceinturon de l'Aube"
+      },
+      "profession": "Forge",
+      "skill": 290,
+      "kind": "recipe",
+      "supply": "reputation",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=19203",
+      "source_guide": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide",
+      "bind": "pickup",
+      "reputation": {
+        "faction": "Argent Dawn",
+        "rank": "Honored"
+      }
+    },
+    "19204": {
+      "id": 19204,
+      "name": {
+        "en": "Plans: Heavy Timbermaw Boots",
+        "fr": "Plans : Bottes épaisses grumegueules"
+      },
+      "profession": "Forge",
+      "skill": 300,
+      "kind": "recipe",
+      "supply": "reputation",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=19204",
+      "source_guide": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide",
+      "bind": "pickup",
+      "reputation": {
+        "faction": "Timbermaw Hold",
+        "rank": "Revered"
+      }
+    },
+    "19205": {
+      "id": 19205,
+      "name": {
+        "en": "Plans: Gloves of the Dawn",
+        "fr": "Plans : Gants de l'Aube"
+      },
+      "profession": "Forge",
+      "skill": 300,
+      "kind": "recipe",
+      "supply": "reputation",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=19205",
+      "source_guide": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide",
+      "bind": "pickup",
+      "reputation": {
+        "faction": "Argent Dawn",
+        "rank": "Revered"
+      }
+    },
+    "19776": {
+      "id": 19776,
+      "name": {
+        "en": "Plans: Bloodsoul Breastplate",
+        "fr": "Plans : Cuirasse d'âmesang"
+      },
+      "profession": "Forge",
+      "skill": 300,
+      "kind": "recipe",
+      "supply": "reputation",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=19776",
+      "source_guide": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide",
+      "bind": "pickup",
+      "reputation": {
+        "faction": "Zandalar Tribe",
+        "rank": "Revered"
+      }
+    },
+    "19777": {
+      "id": 19777,
+      "name": {
+        "en": "Plans: Bloodsoul Shoulders",
+        "fr": "Plans : Épaulières d'âmesang"
+      },
+      "profession": "Forge",
+      "skill": 300,
+      "kind": "recipe",
+      "supply": "reputation",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=19777",
+      "source_guide": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide",
+      "bind": "pickup",
+      "reputation": {
+        "faction": "Zandalar Tribe",
+        "rank": "Honored"
+      }
+    },
+    "19778": {
+      "id": 19778,
+      "name": {
+        "en": "Plans: Bloodsoul Gauntlets",
+        "fr": "Plans : Gantelets d'âmesang"
+      },
+      "profession": "Forge",
+      "skill": 300,
+      "kind": "recipe",
+      "supply": "reputation",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=19778",
+      "source_guide": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide",
+      "bind": "pickup",
+      "reputation": {
+        "faction": "Zandalar Tribe",
+        "rank": "Friendly"
+      }
+    },
+    "19779": {
+      "id": 19779,
+      "name": {
+        "en": "Plans: Darksoul Breastplate",
+        "fr": "Plans : Cuirasse d'âmenoire"
+      },
+      "profession": "Forge",
+      "skill": 300,
+      "kind": "recipe",
+      "supply": "reputation",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=19779",
+      "source_guide": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide",
+      "bind": "pickup",
+      "reputation": {
+        "faction": "Zandalar Tribe",
+        "rank": "Revered"
+      }
+    },
+    "19780": {
+      "id": 19780,
+      "name": {
+        "en": "Plans: Darksoul Leggings",
+        "fr": "Plans : Jambières d'âmenoire"
+      },
+      "profession": "Forge",
+      "skill": 300,
+      "kind": "recipe",
+      "supply": "reputation",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=19780",
+      "source_guide": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide",
+      "bind": "pickup",
+      "reputation": {
+        "faction": "Zandalar Tribe",
+        "rank": "Honored"
+      }
+    },
+    "19781": {
+      "id": 19781,
+      "name": {
+        "en": "Plans: Darksoul Shoulders",
+        "fr": "Plans : Épaulières d'âmenoire"
+      },
+      "profession": "Forge",
+      "skill": 300,
+      "kind": "recipe",
+      "supply": "reputation",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=19781",
+      "source_guide": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide",
+      "bind": "pickup",
+      "reputation": {
+        "faction": "Zandalar Tribe",
+        "rank": "Friendly"
+      }
+    },
+    "20075": {
+      "id": 20075,
+      "name": {
+        "en": "Recipe: Heavy Crocolisk Stew",
+        "fr": "Recette : Ragoût épais de crocilisque"
+      },
+      "profession": "Cuisine",
+      "skill": 150,
+      "kind": "recipe",
+      "supply": "unlimited",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=20075",
+      "source_guide": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide"
     },
     "20576": {
       "id": 20576,
@@ -2253,6 +3171,48 @@
       "source_guide": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
       "reference_status": "classic_vendor_guide"
     },
+    "22209": {
+      "id": 22209,
+      "name": {
+        "en": "Plans: Heavy Obsidian Belt",
+        "fr": "Plans : Ceinture d'obsidienne lourde"
+      },
+      "profession": "Forge",
+      "skill": 300,
+      "kind": "recipe",
+      "supply": "reputation",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=22209",
+      "source_guide": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide",
+      "bind": "pickup",
+      "reputation": {
+        "faction": "Cenarion Circle",
+        "rank": "Friendly"
+      }
+    },
+    "22214": {
+      "id": 22214,
+      "name": {
+        "en": "Plans: Light Obsidian Belt",
+        "fr": "Plans : Ceinture d'obsidienne légère"
+      },
+      "profession": "Forge",
+      "skill": 300,
+      "kind": "recipe",
+      "supply": "reputation",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=22214",
+      "source_guide": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide",
+      "bind": "pickup",
+      "reputation": {
+        "faction": "Cenarion Circle",
+        "rank": "Honored"
+      }
+    },
     "22307": {
       "id": 22307,
       "name": {
@@ -2320,6 +3280,69 @@
       "kind": "recipe",
       "icon": "inv_scroll_07",
       "icon_status": "category_fallback"
+    },
+    "22766": {
+      "id": 22766,
+      "name": {
+        "en": "Plans: Ironvine Breastplate",
+        "fr": "Plans : Cuirasse de vignefer"
+      },
+      "profession": "Forge",
+      "skill": 300,
+      "kind": "recipe",
+      "supply": "reputation",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=22766",
+      "source_guide": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide",
+      "bind": "pickup",
+      "reputation": {
+        "faction": "Cenarion Circle",
+        "rank": "Revered"
+      }
+    },
+    "22767": {
+      "id": 22767,
+      "name": {
+        "en": "Plans: Ironvine Gloves",
+        "fr": "Plans : Gants de vignefer"
+      },
+      "profession": "Forge",
+      "skill": 300,
+      "kind": "recipe",
+      "supply": "reputation",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=22767",
+      "source_guide": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide",
+      "bind": "pickup",
+      "reputation": {
+        "faction": "Cenarion Circle",
+        "rank": "Honored"
+      }
+    },
+    "22768": {
+      "id": 22768,
+      "name": {
+        "en": "Plans: Ironvine Belt",
+        "fr": "Plans : Ceinture de vignefer"
+      },
+      "profession": "Forge",
+      "skill": 300,
+      "kind": "recipe",
+      "supply": "reputation",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/classic/item=22768",
+      "source_guide": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+      "reference_status": "classic_vendor_guide",
+      "bind": "pickup",
+      "reputation": {
+        "faction": "Cenarion Circle",
+        "rank": "Friendly"
+      }
     },
     "22772": {
       "id": 22772,
@@ -3141,15 +4164,43 @@
         "12239",
         "12229",
         "14630",
-        "7087"
+        "7087",
+        "3734",
+        "12227",
+        "12233",
+        "4609"
       ],
       "source": "https://www.wowhead.com/classic/guide/engineering-vendor-recipes-wow-classic",
       "note": "Caravane de Gizelton · Vendeur mobile",
       "note_en": "Gizelton's caravan · Mobile vendor",
       "coordinate_status": "classic_reference_unverified",
       "offer_details": {
+        "3734": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "4609": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
         "7087": {
           "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "12227": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "12229": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "12233": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "12239": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
           "source_kind": "classic_vendor_guide"
         },
         "14630": {
@@ -3602,12 +4653,19 @@
       "faction": "horde",
       "offers": [
         "5786",
-        "5787"
+        "5787",
+        "6892"
       ],
       "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
       "note": "Le Sépulcre, sous-sol de la crypte",
       "note_en": "The Sepulcher, below the crypt",
-      "coordinate_status": "classic_reference_unverified"
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "6892": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
     },
     {
       "name": "Kalldan Felmoon",
@@ -3845,6 +4903,14 @@
         "6270": {
           "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
           "source_kind": "classic_vendor_guide"
+        },
+        "6325": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "6328": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
         }
       }
     },
@@ -3896,7 +4962,25 @@
       "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
       "note": "Port Gentepression",
       "note_en": "Steamwheedle Port",
-      "coordinate_status": "classic_reference_unverified"
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "13939": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "13942": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "13945": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "13946": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
     },
     {
       "name": "Jabbey",
@@ -3946,7 +5030,29 @@
       "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
       "note": "Proie-de-l'Ombre",
       "note_en": "Shadowprey Village",
-      "coordinate_status": "classic_reference_unverified"
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "6369": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "16072": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "17062": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "21099": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "21219": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
     },
     {
       "name": "Shandrina",
@@ -3969,7 +5075,13 @@
       "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
       "note": "Refuge de Vent-argent",
       "note_en": "Silverwind Refuge",
-      "coordinate_status": "classic_reference_unverified"
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "16072": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
     },
     {
       "name": "Fyldan",
@@ -3993,7 +5105,17 @@
       "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
       "note": "Terrasse des artisans",
       "note_en": "Craftsmen's Terrace",
-      "coordinate_status": "classic_reference_unverified"
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "21099": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "21219": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
     },
     {
       "name": "Gloria Femmel",
@@ -4017,7 +5139,17 @@
       "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
       "note": "Comté-du-Lac",
       "note_en": "Lakeshire",
-      "coordinate_status": "classic_reference_unverified"
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "21099": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "21219": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
     },
     {
       "name": "Vivianna",
@@ -4043,7 +5175,25 @@
       "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
       "note": "Bastion de Pennelune",
       "note_en": "Feathermoon Stronghold",
-      "coordinate_status": "classic_reference_unverified"
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "12229": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "13947": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "13948": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "13949": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
     },
     {
       "name": "Sheendra Tallgrass",
@@ -4092,7 +5242,13 @@
       "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
       "note": "Long-guet",
       "note_en": "Everlook",
-      "coordinate_status": "classic_reference_unverified"
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "16110": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
     },
     {
       "name": "Malygen",
@@ -4162,7 +5318,17 @@
       "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
       "note": "Grande Forge",
       "note_en": "The Great Forge",
-      "coordinate_status": "classic_reference_unverified"
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "21099": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "21219": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
     },
     {
       "name": "Nyoma",
@@ -4188,7 +5354,25 @@
       "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
       "note": "Dolanaar",
       "note_en": "Dolanaar",
-      "coordinate_status": "classic_reference_unverified"
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "6325": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "6328": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "21099": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "21219": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
     },
     {
       "name": "Gretta Ganter",
@@ -4211,7 +5395,13 @@
       "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
       "note": "Brassetout",
       "note_en": "Brewnall Village",
-      "coordinate_status": "classic_reference_unverified"
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "6325": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
     },
     {
       "name": "Tansy Puddlefizz",
@@ -4231,12 +5421,31 @@
       "offers": [
         "6328",
         "17062",
-        "6369"
+        "6369",
+        "6326"
       ],
       "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
       "note": "Caverne lugubre",
       "note_en": "Forlorn Cavern",
-      "coordinate_status": "classic_reference_unverified"
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "6326": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "6328": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "6369": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "17062": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
     },
     {
       "name": "Helenia Olden",
@@ -4264,6 +5473,10 @@
       "offer_details": {
         "5789": {
           "source": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "12239": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
           "source_kind": "classic_vendor_guide"
         }
       }
@@ -4883,7 +6096,9 @@
       "offers": [
         "4355",
         "5788",
-        "11163"
+        "11163",
+        "21099",
+        "21219"
       ],
       "source": "https://www.wowhead.com/classic/guide/tailoring-vendor-recipes-wow-classic",
       "note": "Austrivage",
@@ -4899,6 +6114,14 @@
         },
         "11163": {
           "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "21099": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "21219": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
           "source_kind": "classic_vendor_guide"
         }
       }
@@ -6346,7 +7569,8 @@
       "coordinate_status": "classic_reference_unverified",
       "faction": "horde",
       "offers": [
-        "11163"
+        "11163",
+        "12228"
       ],
       "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
       "note": "Trépas-d'Orgrim",
@@ -6354,6 +7578,10 @@
       "offer_details": {
         "11163": {
           "source": "https://www.wowhead.com/classic/guide/enchanting-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "12228": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
           "source_kind": "classic_vendor_guide"
         }
       }
@@ -9864,6 +11092,2158 @@
       "note": "",
       "note_en": "",
       "coordinate_status": "classic_reference_unverified"
+    },
+    {
+      "id": null,
+      "name": "Kendor Kabonka",
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "stormwind",
+        "fr": "Hurlevent",
+        "en": "Stormwind"
+      },
+      "coordinates": {
+        "x": 74.6,
+        "y": 36.8
+      },
+      "faction": "alliance",
+      "offers": [
+        "2889",
+        "2697",
+        "3679",
+        "728",
+        "3678",
+        "2698",
+        "3680",
+        "2699",
+        "2701",
+        "3683",
+        "2700",
+        "3681",
+        "3682"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "728": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "2697": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "2698": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "2699": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "2700": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "2701": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "2889": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "3678": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "3679": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "3680": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "3681": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "3682": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "3683": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Nessa Shadowsong",
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "teldrassil",
+        "fr": "Teldrassil",
+        "en": "Teldrassil"
+      },
+      "coordinates": {
+        "x": 56.2,
+        "y": 92.4
+      },
+      "faction": "alliance",
+      "offers": [
+        "6326",
+        "6368"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "6326": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "6368": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Catherine Leland",
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "stormwind",
+        "fr": "Hurlevent",
+        "en": "Stormwind"
+      },
+      "coordinates": {
+        "x": 45.8,
+        "y": 58.2
+      },
+      "faction": "alliance",
+      "offers": [
+        "6325",
+        "6368",
+        "6330"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "6325": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "6330": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "6368": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Erika Tate",
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "stormwind",
+        "fr": "Hurlevent",
+        "en": "Stormwind"
+      },
+      "coordinates": {
+        "x": 76,
+        "y": 36.8
+      },
+      "faction": "alliance",
+      "offers": [
+        "21099",
+        "21219"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "21099": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "21219": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Ulthaan",
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "ashenvale",
+        "fr": "Orneval",
+        "en": "Ashenvale"
+      },
+      "coordinates": {
+        "x": 50,
+        "y": 66.6
+      },
+      "faction": "alliance",
+      "offers": [
+        "5489",
+        "3734"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "3734": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "5489": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Heldan Galesong",
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "darkshore",
+        "fr": "Sombrivage",
+        "en": "Darkshore"
+      },
+      "coordinates": {
+        "x": 37,
+        "y": 56.2
+      },
+      "faction": "alliance",
+      "offers": [
+        "6368",
+        "5528",
+        "17062",
+        "6369"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "5528": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "6368": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "6369": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "17062": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Laird",
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "darkshore",
+        "fr": "Sombrivage",
+        "en": "Darkshore"
+      },
+      "coordinates": {
+        "x": 46.8,
+        "y": 44.2
+      },
+      "faction": "alliance",
+      "offers": [
+        "5485"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "5485": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Drac Roughcut",
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "loch-modan",
+        "fr": "Loch Modan",
+        "en": "Loch Modan"
+      },
+      "coordinates": {
+        "x": 35.6,
+        "y": 49
+      },
+      "faction": "alliance",
+      "offers": [
+        "6892"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "6892": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Khara Deepwater",
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "loch-modan",
+        "fr": "Loch Modan",
+        "en": "Loch Modan"
+      },
+      "coordinates": {
+        "x": 39.6,
+        "y": 39.2
+      },
+      "faction": "alliance",
+      "offers": [
+        "6325",
+        "6328",
+        "6329"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "6325": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "6328": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "6329": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Kriggon Talsone",
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "westfall",
+        "fr": "Marche de l'Ouest",
+        "en": "Westfall"
+      },
+      "coordinates": {
+        "x": 36.2,
+        "y": 90
+      },
+      "faction": "alliance",
+      "offers": [
+        "6326",
+        "6368",
+        "5528",
+        "16111"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "5528": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "6326": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "6368": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "16111": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Lindea Rabonne",
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "hillsbrad",
+        "fr": "Contreforts de Hautebrande",
+        "en": "Hillsbrad Foothills"
+      },
+      "coordinates": {
+        "x": 50.6,
+        "y": 61
+      },
+      "faction": "alliance",
+      "offers": [
+        "6330",
+        "17062",
+        "6369"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "6330": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "6369": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "17062": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Stuart Fleming",
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "wetlands",
+        "fr": "Les Paluns",
+        "en": "Wetlands"
+      },
+      "coordinates": {
+        "x": 8,
+        "y": 58.2
+      },
+      "faction": "alliance",
+      "offers": [
+        "6368",
+        "17062",
+        "6369"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "6368": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "6369": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "17062": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Narj Deepslice",
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "arathi",
+        "fr": "Hautes-terres d'Arathi",
+        "en": "Arathi Highlands"
+      },
+      "coordinates": {
+        "x": 45.6,
+        "y": 47.6
+      },
+      "faction": "alliance",
+      "offers": [
+        "4609"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "4609": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Janet Hommers",
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "desolace",
+        "fr": "Désolace",
+        "en": "Desolace"
+      },
+      "coordinates": {
+        "x": 66.2,
+        "y": 6.6
+      },
+      "faction": "alliance",
+      "offers": [
+        "12233",
+        "12240"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "12233": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "12240": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Vendor-Tron 1000",
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "desolace",
+        "fr": "Désolace",
+        "en": "Desolace"
+      },
+      "coordinates": {
+        "x": 60.4,
+        "y": 38.2
+      },
+      "faction": "neutral",
+      "offers": [
+        "5489",
+        "3735",
+        "12232",
+        "12231",
+        "12228",
+        "12240"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "Caravane de Gizelton — position au nord",
+      "note_en": "Caravane de Gizelton — position au nord",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "3735": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "5489": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "12228": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "12231": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "12232": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "12240": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Corporal Bluth",
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "stranglethorn",
+        "fr": "Vallée de Strangleronce",
+        "en": "Stranglethorn Vale"
+      },
+      "coordinates": {
+        "x": 38,
+        "y": 3
+      },
+      "faction": "alliance",
+      "offers": [
+        "12231",
+        "12228"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "12228": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "12231": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Kelsey Yance",
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "stranglethorn",
+        "fr": "Vallée de Strangleronce",
+        "en": "Stranglethorn Vale"
+      },
+      "coordinates": {
+        "x": 28.2,
+        "y": 74.4
+      },
+      "faction": "neutral",
+      "offers": [
+        "21099",
+        "21219",
+        "17062",
+        "6369",
+        "6039",
+        "13940",
+        "13941",
+        "13943"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "6039": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "6369": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "13940": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "13941": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "13943": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "17062": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "21099": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "21219": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Truk Wildbeard",
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "hinterlands",
+        "fr": "Les Hinterlands",
+        "en": "The Hinterlands"
+      },
+      "coordinates": {
+        "x": 14.4,
+        "y": 42.4
+      },
+      "faction": "alliance",
+      "offers": [
+        "18046"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "18046": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Dirge Quikcleave",
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "tanaris",
+        "fr": "Tanaris",
+        "en": "Tanaris"
+      },
+      "coordinates": {
+        "x": 52.6,
+        "y": 28
+      },
+      "faction": "neutral",
+      "offers": [
+        "18046"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "18046": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Innkeeper Fizzgrimble",
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "tanaris",
+        "fr": "Tanaris",
+        "en": "Tanaris"
+      },
+      "coordinates": {
+        "x": 52.4,
+        "y": 27.8
+      },
+      "faction": "neutral",
+      "offers": [
+        "18046"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "18046": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Wulmort Jinglepocket",
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "ironforge",
+        "fr": "Forgefer",
+        "en": "Ironforge"
+      },
+      "coordinates": {
+        "x": 33.7,
+        "y": 67.2
+      },
+      "faction": "alliance",
+      "offers": [
+        "17200",
+        "17201"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "Voile d'hiver",
+      "note_en": "Voile d'hiver",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "17200": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide",
+          "seasonal": "winter_veil"
+        },
+        "17201": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide",
+          "seasonal": "winter_veil"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Khole Jinglepocket",
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "stormwind",
+        "fr": "Hurlevent",
+        "en": "Stormwind"
+      },
+      "coordinates": {
+        "x": 55,
+        "y": 59.3
+      },
+      "faction": "alliance",
+      "offers": [
+        "17200",
+        "17201"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "Voile d'hiver",
+      "note_en": "Voile d'hiver",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "17200": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide",
+          "seasonal": "winter_veil"
+        },
+        "17201": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide",
+          "seasonal": "winter_veil"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Penney Copperpinch",
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "orgrimmar",
+        "fr": "Orgrimmar",
+        "en": "Orgrimmar"
+      },
+      "coordinates": {
+        "x": 53.2,
+        "y": 65.9
+      },
+      "faction": "horde",
+      "offers": [
+        "17200",
+        "17201"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "Voile d'hiver",
+      "note_en": "Voile d'hiver",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "17200": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide",
+          "seasonal": "winter_veil"
+        },
+        "17201": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide",
+          "seasonal": "winter_veil"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Nardstrum Copperpinch",
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "undercity",
+        "fr": "Fossoyeuse",
+        "en": "Undercity"
+      },
+      "coordinates": {
+        "x": 68.2,
+        "y": 38.9
+      },
+      "faction": "horde",
+      "offers": [
+        "17200",
+        "17201"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "Voile d'hiver",
+      "note_en": "Voile d'hiver",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "17200": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide",
+          "seasonal": "winter_veil"
+        },
+        "17201": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide",
+          "seasonal": "winter_veil"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Grimtak",
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "durotar",
+        "fr": "Durotar",
+        "en": "Durotar"
+      },
+      "coordinates": {
+        "x": 51.2,
+        "y": 42.6
+      },
+      "faction": "horde",
+      "offers": [
+        "5483"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "5483": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Zansoa",
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "durotar",
+        "fr": "Durotar",
+        "en": "Durotar"
+      },
+      "coordinates": {
+        "x": 56,
+        "y": 73.4
+      },
+      "faction": "horde",
+      "offers": [
+        "6326",
+        "6368"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "6326": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "6368": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Harn Longcast",
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "mulgore",
+        "fr": "Mulgore",
+        "en": "Mulgore"
+      },
+      "coordinates": {
+        "x": 47.6,
+        "y": 55
+      },
+      "faction": "horde",
+      "offers": [
+        "6325",
+        "6328"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "6325": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "6328": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Wunna Darkmane",
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "mulgore",
+        "fr": "Mulgore",
+        "en": "Mulgore"
+      },
+      "coordinates": {
+        "x": 46.2,
+        "y": 58.2
+      },
+      "faction": "horde",
+      "offers": [
+        "5484"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "5484": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Abigail Shiel",
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "tirisfal",
+        "fr": "Clairières de Tirisfal",
+        "en": "Tirisfal Glades"
+      },
+      "coordinates": {
+        "x": 61,
+        "y": 52.4
+      },
+      "faction": "horde",
+      "offers": [
+        "12226"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "12226": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Martine Tramblay",
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "tirisfal",
+        "fr": "Clairières de Tirisfal",
+        "en": "Tirisfal Glades"
+      },
+      "coordinates": {
+        "x": 65.8,
+        "y": 59.6
+      },
+      "faction": "horde",
+      "offers": [
+        "6325",
+        "6326"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "6325": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "6326": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Wik'Tar",
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "ashenvale",
+        "fr": "Orneval",
+        "en": "Ashenvale"
+      },
+      "coordinates": {
+        "x": 11.8,
+        "y": 34
+      },
+      "faction": "horde",
+      "offers": [
+        "17062",
+        "6369"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "6369": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "17062": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Tarban Hearthgrain",
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "barrens",
+        "fr": "Les Tarides",
+        "en": "The Barrens"
+      },
+      "coordinates": {
+        "x": 55,
+        "y": 32.2
+      },
+      "faction": "horde",
+      "offers": [
+        "21099",
+        "21219"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "21099": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "21219": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Tari'qa",
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "barrens",
+        "fr": "Les Tarides",
+        "en": "The Barrens"
+      },
+      "coordinates": {
+        "x": 51.6,
+        "y": 30
+      },
+      "faction": "horde",
+      "offers": [
+        "5488"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "5488": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Zargh",
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "barrens",
+        "fr": "Les Tarides",
+        "en": "The Barrens"
+      },
+      "coordinates": {
+        "x": 52.6,
+        "y": 29.8
+      },
+      "faction": "horde",
+      "offers": [
+        "3735"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "3735": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Kireena",
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "desolace",
+        "fr": "Désolace",
+        "en": "Desolace"
+      },
+      "coordinates": {
+        "x": 51,
+        "y": 53.4
+      },
+      "faction": "horde",
+      "offers": [
+        "12232",
+        "12240"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "12232": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "12240": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Nerrist",
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "stranglethorn",
+        "fr": "Vallée de Strangleronce",
+        "en": "Stranglethorn Vale"
+      },
+      "coordinates": {
+        "x": 32.6,
+        "y": 29.2
+      },
+      "faction": "horde",
+      "offers": [
+        "3682",
+        "12231",
+        "12228"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "3682": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "12228": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "12231": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Uthok",
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "stranglethorn",
+        "fr": "Vallée de Strangleronce",
+        "en": "Stranglethorn Vale"
+      },
+      "coordinates": {
+        "x": 31.6,
+        "y": 28
+      },
+      "faction": "horde",
+      "offers": [
+        "16111"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "16111": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Ogg'marr",
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "dustwallow",
+        "fr": "Marécage d'Âprefange",
+        "en": "Dustwallow Marsh"
+      },
+      "coordinates": {
+        "x": 36.6,
+        "y": 31
+      },
+      "faction": "horde",
+      "offers": [
+        "20075",
+        "12232",
+        "12228",
+        "12239"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "12228": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "12232": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "12239": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "20075": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Ronald Burch",
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "undercity",
+        "fr": "Fossoyeuse",
+        "en": "Undercity"
+      },
+      "coordinates": {
+        "x": 62.6,
+        "y": 43.6
+      },
+      "faction": "horde",
+      "offers": [
+        "6368",
+        "21099",
+        "6330",
+        "21219"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "6330": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "6368": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "21099": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "21219": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Naal Mistrunner",
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "thunder-bluff",
+        "fr": "Les Pitons-du-Tonnerre",
+        "en": "Thunder Bluff"
+      },
+      "coordinates": {
+        "x": 51.8,
+        "y": 52.4
+      },
+      "faction": "horde",
+      "offers": [
+        "6328",
+        "21099",
+        "6330",
+        "21219"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "6328": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "6330": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "21099": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "21219": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Sewa Mistrunner",
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "thunder-bluff",
+        "fr": "Les Pitons-du-Tonnerre",
+        "en": "Thunder Bluff"
+      },
+      "coordinates": {
+        "x": 55.8,
+        "y": 47.6
+      },
+      "faction": "horde",
+      "offers": [
+        "6325",
+        "6330"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "6325": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "6330": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Shankys",
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "orgrimmar",
+        "fr": "Orgrimmar",
+        "en": "Orgrimmar"
+      },
+      "coordinates": {
+        "x": 70.2,
+        "y": 30.6
+      },
+      "faction": "horde",
+      "offers": [
+        "6368",
+        "17062",
+        "6369"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "6368": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "6369": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "17062": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Xen'to",
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "orgrimmar",
+        "fr": "Orgrimmar",
+        "en": "Orgrimmar"
+      },
+      "coordinates": {
+        "x": 57.2,
+        "y": 53.6
+      },
+      "faction": "horde",
+      "offers": [
+        "21099",
+        "21219"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "21099": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "21219": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Lizbeth Cromwell",
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "undercity",
+        "fr": "Fossoyeuse",
+        "en": "Undercity"
+      },
+      "coordinates": {
+        "x": 81.2,
+        "y": 30.8
+      },
+      "faction": "horde",
+      "offers": [
+        "6325",
+        "6328",
+        "17062",
+        "6369"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "6325": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "6328": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "6369": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "17062": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Killian Sanatha",
+      "role": "merchant",
+      "profession": "Cuisine",
+      "zone": {
+        "id": "silverpine",
+        "fr": "Forêt des Pins-Argentés",
+        "en": "Silverpine Forest"
+      },
+      "coordinates": {
+        "x": 33,
+        "y": 17.6
+      },
+      "faction": "horde",
+      "offers": [
+        "6368",
+        "6328"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "6328": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        },
+        "6368": {
+          "source": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Zarena Cromwind",
+      "role": "merchant",
+      "profession": "Forge",
+      "zone": {
+        "id": "stranglethorn",
+        "fr": "Vallée de Strangleronce",
+        "en": "Stranglethorn Vale"
+      },
+      "coordinates": {
+        "x": 28.4,
+        "y": 75.4
+      },
+      "faction": "neutral",
+      "offers": [
+        "12163"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "12163": {
+          "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Jazzrik",
+      "role": "merchant",
+      "profession": "Forge",
+      "zone": {
+        "id": "badlands",
+        "fr": "Terres ingrates",
+        "en": "Badlands"
+      },
+      "coordinates": {
+        "x": 42.4,
+        "y": 52.6
+      },
+      "faction": "neutral",
+      "offers": [
+        "10858"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "10858": {
+          "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Harggan",
+      "role": "merchant",
+      "profession": "Forge",
+      "zone": {
+        "id": "hinterlands",
+        "fr": "Les Hinterlands",
+        "en": "The Hinterlands"
+      },
+      "coordinates": {
+        "x": 13.4,
+        "y": 43.8
+      },
+      "faction": "alliance",
+      "offers": [
+        "7995"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "7995": {
+          "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Gharash",
+      "role": "merchant",
+      "profession": "Forge",
+      "zone": {
+        "id": "swamp-of-sorrows",
+        "fr": "Marais des Chagrins",
+        "en": "Swamp of Sorrows"
+      },
+      "coordinates": {
+        "x": 45.4,
+        "y": 51.6
+      },
+      "faction": "horde",
+      "offers": [
+        "7995"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "7995": {
+          "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Krinkle Goodsteel",
+      "role": "merchant",
+      "profession": "Forge",
+      "zone": {
+        "id": "tanaris",
+        "fr": "Tanaris",
+        "en": "Tanaris"
+      },
+      "coordinates": {
+        "x": 51.6,
+        "y": 28.8
+      },
+      "faction": "neutral",
+      "offers": [
+        "6047"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "6047": {
+          "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Vargus",
+      "role": "merchant",
+      "profession": "Forge",
+      "zone": {
+        "id": "silithus",
+        "fr": "Silithus",
+        "en": "Silithus"
+      },
+      "coordinates": {
+        "x": 51.2,
+        "y": 38.9
+      },
+      "faction": "neutral",
+      "offers": [
+        "22209",
+        "22768",
+        "22214",
+        "22767",
+        "22766"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "22209": {
+          "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide",
+          "reputation": {
+            "faction": "Cenarion Circle",
+            "rank": "Friendly"
+          },
+          "bind": "pickup"
+        },
+        "22214": {
+          "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide",
+          "reputation": {
+            "faction": "Cenarion Circle",
+            "rank": "Honored"
+          },
+          "bind": "pickup"
+        },
+        "22766": {
+          "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide",
+          "reputation": {
+            "faction": "Cenarion Circle",
+            "rank": "Revered"
+          },
+          "bind": "pickup"
+        },
+        "22767": {
+          "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide",
+          "reputation": {
+            "faction": "Cenarion Circle",
+            "rank": "Honored"
+          },
+          "bind": "pickup"
+        },
+        "22768": {
+          "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide",
+          "reputation": {
+            "faction": "Cenarion Circle",
+            "rank": "Friendly"
+          },
+          "bind": "pickup"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Meilosh",
+      "role": "merchant",
+      "profession": "Forge",
+      "zone": {
+        "id": "felwood",
+        "fr": "Gangrebois",
+        "en": "Felwood"
+      },
+      "coordinates": {
+        "x": 65.7,
+        "y": 2.8
+      },
+      "faction": "neutral",
+      "offers": [
+        "19202",
+        "19204"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "19202": {
+          "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide",
+          "reputation": {
+            "faction": "Timbermaw Hold",
+            "rank": "Honored"
+          },
+          "bind": "pickup"
+        },
+        "19204": {
+          "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide",
+          "reputation": {
+            "faction": "Timbermaw Hold",
+            "rank": "Revered"
+          },
+          "bind": "pickup"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Rin'wosho the Trader",
+      "role": "merchant",
+      "profession": "Forge",
+      "zone": {
+        "id": "stranglethorn",
+        "fr": "Vallée de Strangleronce",
+        "en": "Stranglethorn Vale"
+      },
+      "coordinates": {
+        "x": 15,
+        "y": 16
+      },
+      "faction": "neutral",
+      "offers": [
+        "19778",
+        "19781",
+        "19777",
+        "19780",
+        "19776",
+        "19779"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "19776": {
+          "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide",
+          "reputation": {
+            "faction": "Zandalar Tribe",
+            "rank": "Revered"
+          },
+          "bind": "pickup"
+        },
+        "19777": {
+          "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide",
+          "reputation": {
+            "faction": "Zandalar Tribe",
+            "rank": "Honored"
+          },
+          "bind": "pickup"
+        },
+        "19778": {
+          "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide",
+          "reputation": {
+            "faction": "Zandalar Tribe",
+            "rank": "Friendly"
+          },
+          "bind": "pickup"
+        },
+        "19779": {
+          "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide",
+          "reputation": {
+            "faction": "Zandalar Tribe",
+            "rank": "Revered"
+          },
+          "bind": "pickup"
+        },
+        "19780": {
+          "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide",
+          "reputation": {
+            "faction": "Zandalar Tribe",
+            "rank": "Honored"
+          },
+          "bind": "pickup"
+        },
+        "19781": {
+          "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide",
+          "reputation": {
+            "faction": "Zandalar Tribe",
+            "rank": "Friendly"
+          },
+          "bind": "pickup"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Argent Quartermaster Hasana",
+      "role": "merchant",
+      "profession": "Forge",
+      "zone": {
+        "id": "tirisfal",
+        "fr": "Clairières de Tirisfal",
+        "en": "Tirisfal Glades"
+      },
+      "coordinates": {
+        "x": 83.2,
+        "y": 68.2
+      },
+      "faction": "neutral",
+      "offers": [
+        "19203",
+        "19205"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "19203": {
+          "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide",
+          "reputation": {
+            "faction": "Argent Dawn",
+            "rank": "Honored"
+          },
+          "bind": "pickup"
+        },
+        "19205": {
+          "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide",
+          "reputation": {
+            "faction": "Argent Dawn",
+            "rank": "Revered"
+          },
+          "bind": "pickup"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Argent Quartermaster Lightspark",
+      "role": "merchant",
+      "profession": "Forge",
+      "zone": {
+        "id": "wpl",
+        "fr": "Maleterres de l'Ouest",
+        "en": "Western Plaguelands"
+      },
+      "coordinates": {
+        "x": 42.8,
+        "y": 83.8
+      },
+      "faction": "neutral",
+      "offers": [
+        "19203",
+        "19205"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "19203": {
+          "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide",
+          "reputation": {
+            "faction": "Argent Dawn",
+            "rank": "Honored"
+          },
+          "bind": "pickup"
+        },
+        "19205": {
+          "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide",
+          "reputation": {
+            "faction": "Argent Dawn",
+            "rank": "Revered"
+          },
+          "bind": "pickup"
+        }
+      }
+    },
+    {
+      "id": null,
+      "name": "Quartermaster Miranda Breechlock",
+      "role": "merchant",
+      "profession": "Forge",
+      "zone": {
+        "id": "epl",
+        "fr": "Maleterres de l'Est",
+        "en": "Eastern Plaguelands"
+      },
+      "coordinates": {
+        "x": 81.6,
+        "y": 60
+      },
+      "faction": "neutral",
+      "offers": [
+        "19203",
+        "19205"
+      ],
+      "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+      "note": "",
+      "note_en": "",
+      "coordinate_status": "classic_reference_unverified",
+      "offer_details": {
+        "19203": {
+          "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide",
+          "reputation": {
+            "faction": "Argent Dawn",
+            "rank": "Honored"
+          },
+          "bind": "pickup"
+        },
+        "19205": {
+          "source": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
+          "source_kind": "classic_vendor_guide",
+          "reputation": {
+            "faction": "Argent Dawn",
+            "rank": "Revered"
+          },
+          "bind": "pickup"
+        }
+      }
     }
   ],
   "evidence": [
@@ -10478,6 +13858,11 @@
       "build": "1.60.1.69893",
       "source": "https://warcraftforever.games/maps",
       "kind": "forever_beta_zone_map"
+    },
+    "durotar": {
+      "uiMapID": 1411,
+      "kind": "classic_zone_reference",
+      "source": "https://www.wowinterface.com/forums/showpost.php?p=338185&postcount=3"
     }
   },
   "zone_map_base": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/",
@@ -10492,5 +13877,19 @@
     "source_scope": "classic_vendor_guides_and_historical_player_reports",
     "live_inventory": false,
     "forever_verified_offers": 0
-  }
+  },
+  "catalog_expansions": [
+    {
+      "date": "2026-10-09",
+      "scope": "Cooking + Blacksmithing Classic vendor guides",
+      "new_items": 59,
+      "new_merchants": 56,
+      "new_offer_links": 150,
+      "sources": [
+        "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
+        "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic"
+      ],
+      "verification": "Item IDs confirmed via linked Wowhead Classic item pages; vendor/zone via guide; no Forever live stock verification."
+    }
+  ]
 }

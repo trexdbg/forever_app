@@ -184,7 +184,9 @@ const merchantItemTooltip=(item,vendor=null,vendorCount=0)=>{
    maxStock:Number.isInteger(item.vendor_stock)?item.vendor_stock:null,
    specialization:offer.specialization||item.specialization||null,
    bindPickup:offer.bind==="pickup"||item.bind==="pickup",
-   sharedStock:Boolean(offer.shared_stock_group)
+   sharedStock:Boolean(offer.shared_stock_group),
+   reputation:offer.reputation||item.reputation||null,
+   seasonal:item.seasonal||offer.seasonal||null
   }
  };
 };
@@ -272,7 +274,6 @@ function groupedItems(){
 }
 function renderList(){
  if(store.mode==="merchant"){
-  list.replaceChildren();
   list.replaceChildren();
   const groups=groupedItems();
   for(const g of groups){
@@ -462,7 +463,12 @@ function renderDetail(){
  if(i.specialization||purchase.specialization){const s=purchase.specialization||i.specialization;
   append(panel,"p",S("Spécialisation requise (référence Classic) : ","Required specialization (Classic): ")+s,"npc-requirement");
  }
- if(i.bind==="pickup"||purchase.bind==="pickup")append(panel,"p",S("Lié quand ramassé (référence Classic).","Bind on Pickup (Classic reference)."),"npc-requirement");
+ const reputation=purchase.reputation||i.reputation;
+ if(reputation){const rank={Friendly:S("Amical","Friendly"),Honored:S("Honoré","Honored"),Revered:S("Révéré","Revered"),Exalted:S("Exalté","Exalted")}[reputation.rank]||reputation.rank;
+ append(panel,"p",S("Réputation Classic requise : ","Required Classic reputation: ")+reputation.faction+" · "+rank,"npc-requirement");
+ }
+ if(i.seasonal||purchase.seasonal)append(panel,"p",S("Vente saisonnière Classic : Voile d'hiver (non vérifié sur Forever).","Classic seasonal sale: Winter Veil (not confirmed for Forever)."),"npc-requirement");
+  if(i.bind==="pickup"||purchase.bind==="pickup")append(panel,"p",S("Lié quand ramassé (référence Classic).","Bind on Pickup (Classic reference)."),"npc-requirement");
  if(purchase.shared_stock_group)append(panel,"p",S("Emplacement de stock partagé : une autre recette peut apparaître à la place.","Shared inventory slot: a different recipe may appear instead."),"npc-requirement");
  if(purchase.source){const cite=append(panel,"p",null,"npc-offer-source");link(cite,S("Source de cette vente ↗","Source for this sale ↗"),purchase.source)}
  }else if(trainerType(n)==="weapon"){
