@@ -142,9 +142,9 @@ function previewStep(index){
 }
 function renderMilestones(){
  const wrap=$("quest-milestones");wrap.replaceChildren();
- const milestones=[{level:0,text:"Départ"},{level:20,text:"Niv. 20"},{level:40,text:"Niv. 40"},{level:60,text:"Niv. 60"}];
+ const milestones=[{level:0,text:"Départ"},{level:20,text:"Niv. 20"},{level:40,text:"Niv. 40"},{level:Infinity,text:"Fin"}];
  for(const milestone of milestones){
-  const idx=milestone.level===0?0:s.steps.findIndex(st=>Number(st.experience)>=milestone.level);
+  const idx=milestone.level===0?0:milestone.level===Infinity?s.steps.length-1:s.steps.findIndex(st=>Number(st.experience)>=milestone.level);
   if(idx<0)continue;
   const b=element("button",milestone.text,"quest-milestone");b.type="button";b.style.left=(100*idx/Math.max(s.steps.length-1,1))+"%";
   b.title="Rejoindre "+stepName(s.steps[idx])+" · étape "+(idx+1);
