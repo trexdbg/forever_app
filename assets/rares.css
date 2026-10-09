@@ -35,3 +35,5 @@
 .rare-legend-entry:hover{border-color:#c6a873;color:#f4dec0}.rare-legend-entry.active{border-color:#e3c58d;color:#f8e4c1;background:#313222}
 .rare-legend-entry .rare-color-dot{height:9px;width:9px;flex-basis:9px}
 @media(max-width:650px){.rare-map-legend{max-height:80px}.rare-legend-entry{font-size:10px;padding:4px 6px}}
+
+.rare-chip.rare-pending{border-color:#536056;background:#172018;color:#9fae9f;font-weight:400}
