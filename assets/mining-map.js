@@ -135,7 +135,7 @@ function filterPoints(){
   document.getElementById("mine-current-zone").textContent=zone.label;
   document.getElementById("mine-current-count").textContent=shown.length+" filon"+(shown.length>1?"s":"")+" affiché"+(shown.length>1?"s":"");
   document.getElementById("mine-map-id").textContent="UiMapID "+zone.uiMapID;
-  document.getElementById("mine-source-status").textContent=shown.length+" filons affichés";
+  document.getElementById("mine-source-status").textContent=document.documentElement.lang==="en"?shown.length+" ore nodes shown":shown.length+" filon"+(shown.length>1?"s":"")+" affiché"+(shown.length>1?"s":"");
   if(selected&&!shown.includes(selected)){selected=null;showSelection()}
   updateMineralControls();
   renderZones();
