@@ -46,5 +46,19 @@ function translate(raw,klass,name){
  for(const [re,fn] of simple){m=text.match(re);if(m)return {text:fn(...m.slice(1)),translated:true}}
  return {text,translated:false};
 }
-window.ForeverTalentDescFR={translate};
+const rawTranslate=translate;
+function localizedTranslate(raw,klass,name){
+ const out=rawTranslate(raw,klass,name);
+ if(!out.translated)return out;
+ return {...out,text:out.text
+  .replace(/\b1 points de rage\b/g,"1 point de rage")
+  .replace(/\b1 points d'énergie\b/g,"1 point d'énergie")
+  .replace(/\b1 points de combo\b/g,"1 point de combo")
+  .replace(/\b1 points de vie\b/g,"1 point de vie")
+  .replace(/\b1 points de mana\b/g,"1 point de mana")
+  .replace(/\b1 points de dégâts\b/g,"1 point de dégât")
+  .replace(/\b1 mètres\b/g,"1 mètre")
+  .replace(/\b1 s\b/g,"1 s")};
+}
+window.ForeverTalentDescFR={translate:localizedTranslate};
 })();
