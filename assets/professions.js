@@ -1,6 +1,6 @@
 /* ForEveroth professions: Forever beta metadata plus opt-in audited recipe archive. */
 (()=>{"use strict";
-const ROOT="/forever_app/",en=document.documentElement.lang==="en";
+const ROOT="/",en=document.documentElement.lang==="en";
 const T=(fr,eng)=>en?eng:fr,$=id=>document.getElementById(id);
 const mk=(tag,text,cls)=>{const e=document.createElement(tag);if(text!=null)e.textContent=text;if(cls)e.className=cls;return e};
 const put=(p,tag,text,cls)=>{const v=mk(tag,text,cls);p.append(v);return v};
