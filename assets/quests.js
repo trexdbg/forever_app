@@ -1,6 +1,6 @@
 (()=>{
 "use strict";
-const ROOT="/forever_app/";
+const ROOT="/";
 const QT=(fr,en)=>document.documentElement.lang==="en"?en:fr;
 const Q=window.ForeverQuestLocale||{header:s=>s||"",note:s=>String(Array.isArray(s)?s[0]:s||""),questName:s=>s,race:s=>s};
 const $=id=>document.getElementById(id),canvas=$("quest-canvas");
