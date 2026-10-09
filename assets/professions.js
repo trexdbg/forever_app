@@ -27,7 +27,7 @@ function choose(p,updateHash=true){
  const line=put(chosen,"div",null,"prof-selected-stats");
  put(line,"span",fmt(p.added)+" "+T("nouvelles","new"),"prof-stat-new");
  put(line,"span",fmt(p.changed)+" "+T("modifiées","changed"),"prof-stat-change");
- const title=put(chosen,"h4",T("Équipements de campement","Campsite crafts"));
+ const title=put(chosen,"h4",T("Exemples de campements","Camp crafting highlights"));
  const tiers=put(chosen,"div",null,"prof-camp-list");
  for(const c of p.camp){const a=put(tiers,"div",null,"prof-camp");
   put(a,"span",c.skill?String(c.skill):"·","prof-camp-level");put(a,"strong",c.name);
@@ -37,11 +37,36 @@ function choose(p,updateHash=true){
  }
  put(chosen,"h4",T("Paliers de formation","Training tiers"));
  const levels=put(chosen,"div",null,"prof-training-tiers");
- for(const row of state.meta.trainer_ranks.rows){
+ for(const row of (state.meta.trainer_ranks.variants[p.slug]||(p.group==="gather"?state.meta.trainer_ranks.variants.gather:state.meta.trainer_ranks.rows))){
   const block=put(levels,"div",null,"prof-training-tier");
   put(block,"strong",row.name[en?"en":"fr"]+" "+row.from+"–"+row.to);
-  put(block,"small",row.min_skill?T("Métier "+row.min_skill+" · Niv. "+row.min_level,"Skill "+row.min_skill+" · Lv. "+row.min_level):T("Accessible dès le début","Available from the start"));
+  put(block,"small",row.min_skill?T("Métier "+row.min_skill,"Skill "+row.min_skill)+(row.min_level?" · "+T("Niv. ","Lv. ")+row.min_level:""):T("Accessible dès le début","Available from the start"));
  }
+ put(chosen,"h4",T("Maîtres recensés sur Forever ("+p.trainers.length+")","Forever guide trainers ("+p.trainers.length+")"));
+ const trainerNote=put(chosen,"p",state.meta.trainer_directory_status[en?"en":"fr"],"prof-trainer-note");
+ const trainerFilter=put(chosen,"div",null,"prof-trainer-controls");
+ const factionSelect=put(trainerFilter,"select");factionSelect.setAttribute("aria-label",T("Filtrer la faction","Filter trainer faction"));
+ for(const [id,fr,eng] of [["all","Toutes les factions","All factions"],["alliance","Alliance","Alliance"],["horde","Horde","Horde"],["neutral","Neutre","Neutral"]]){const option=put(factionSelect,"option",T(fr,eng));option.value=id;}
+ const tSearch=put(trainerFilter,"input");tSearch.type="search";tSearch.placeholder=T("Maître ou zone…","Trainer or zone…");tSearch.setAttribute("aria-label",T("Rechercher un maître","Search trainers"));
+ const trainerList=put(chosen,"div",null,"prof-trainer-list");
+ const tierLabel={apprentice:T("Apprenti","Apprentice"),journeyman:T("Compagnon","Journeyman"),expert:T("Expert","Expert"),artisan:T("Artisan","Artisan"),all:T("1–300 référencé","1–300 listed")};
+ function updateTrainers(){
+  const q=(tSearch.value||"").normalize("NFD").replace(/[\\u0300-\\u036f]/g,"").toLowerCase().trim();
+  const found=p.trainers.filter(x=>(factionSelect.value==="all"||x.faction===factionSelect.value)&&[x.name,x.zone.fr,x.zone.en].some(t=>t.normalize("NFD").replace(/[\\u0300-\\u036f]/g,"").toLowerCase().includes(q)));
+  trainerList.replaceChildren();
+  for(const trainer of found.slice(0,22)){
+   const row=put(trainerList,"div",null,"prof-trainer-row");
+   put(row,"strong",trainer.name);
+   put(row,"span",trainer.zone[en?"en":"fr"]);
+   put(row,"small",tierLabel[trainer.tier]||trainer.tier);
+  }
+  if(!found.length)put(trainerList,"p",T("Aucun maître dans ce filtre.","No matching trainers."),"prof-empty");
+  if(found.length>22)put(trainerList,"p",T("Affinez pour voir les autres maîtres.","Refine to see other trainers."),"prof-empty");
+ }
+ factionSelect.addEventListener("change",updateTrainers);
+ tSearch.addEventListener("input",updateTrainers);
+ updateTrainers();
+ const trainerSource=put(chosen,"p",null,"prof-trainer-source");external(trainerSource,T("Source des maîtres ↗","Trainer guide ↗"),p.trainers_source);
  const actions=put(chosen,"div",null,"prof-links");
  external(actions,T("Liste à jour ↗","Current list ↗"),p.source);
  external(actions,T("Guide 1–300 ↗","1–300 guide ↗"),p.leveling_guide);
