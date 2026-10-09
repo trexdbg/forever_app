@@ -40,14 +40,15 @@
 .quest-timeline-heading p{margin:0;color:#c2d0db;font-size:12px}
 .quest-timeline-range-label{display:flex;justify-content:space-between;gap:10px;color:#adbed2;font-weight:700;font-size:11px;margin:12px 0 5px}
 .quest-timeline-range-label output{color:#f1cd93;font-size:12px;font-variant-numeric:tabular-nums}
-#quest-range.quest-timeline-slider{display:block;appearance:none;-webkit-appearance:none;width:100%;height:12px;border-radius:99px;border:1px solid #556478;outline-offset:6px;background:linear-gradient(to right,#e9bf7b 0%,#e9bf7b var(--quest-range-fill,0%),#31455f var(--quest-range-fill,0%),#31455f 100%);margin:12px 0;cursor:ew-resize}
-#quest-range.quest-timeline-slider::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:25px;height:25px;border-radius:50%;background:#f8daa1;border:4px solid #4e362b;box-shadow:0 0 0 2px #e3be7f,0 2px 7px #0008}
-#quest-range.quest-timeline-slider::-moz-range-thumb{width:17px;height:17px;border-radius:50%;background:#f8daa1;border:4px solid #4e362b;box-shadow:0 0 0 2px #e3be7f,0 2px 7px #0008}
+#quest-range.quest-timeline-slider{display:block;appearance:none;-webkit-appearance:none;box-sizing:border-box;width:calc(100% + var(--quest-thumb-diameter));height:12px;border-radius:99px;border:1px solid #556478;outline-offset:6px;background:linear-gradient(to right,#e9bf7b 0%,#e9bf7b var(--quest-range-fill,0%),#31455f var(--quest-range-fill,0%),#31455f 100%);margin:12px -12.5px 0;cursor:ew-resize}
+#quest-range.quest-timeline-slider::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;box-sizing:border-box;width:25px;height:25px;border-radius:50%;background:#f8daa1;border:4px solid #4e362b;box-shadow:0 0 0 2px #e3be7f,0 2px 7px #0008}
+#quest-range.quest-timeline-slider::-moz-range-thumb{box-sizing:border-box;width:25px;height:25px;border-radius:50%;background:#f8daa1;border:4px solid #4e362b;box-shadow:0 0 0 2px #e3be7f,0 2px 7px #0008}
 /* Exact positions: marker % == first matching step index / (total steps - 1).
    Slider and level labels share the same horizontally scrollable coordinate system. */
 .quest-timeline-track-scroll{width:100%;max-width:100%;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:#647c98 transparent}
-.quest-timeline-track-inner{width:100%;min-width:1050px}
-.quest-timeline-milestones{height:54px;min-width:0;position:relative;margin:0 12.5px 3px;overflow:visible;background:linear-gradient(#4b6078,#4b6078) center 6px/100% 1px no-repeat}
+/* One coordinate axis for slider thumb centers and level ticks (25px thumb). */
+.quest-timeline-track-inner{--quest-thumb-diameter:25px;--quest-thumb-radius:12.5px;width:100%;min-width:1050px;box-sizing:border-box;padding-inline:var(--quest-thumb-radius)}
+.quest-timeline-milestones{height:54px;min-width:0;position:relative;margin:0 0 3px;overflow:visible;background:linear-gradient(#4b6078,#4b6078) center 6px/100% 1px no-repeat}
 .quest-milestone{position:absolute;top:14px;transform:translateX(-50%);min-width:15px;margin:0;padding:5px 1px;white-space:nowrap;text-align:center;border:1px solid #475a71;border-radius:5px;background:#192b41;color:#bfcfe1;font-size:10px;line-height:1.1;font-weight:700;font-variant-numeric:tabular-nums;cursor:pointer;z-index:1}
 .quest-milestone::before{content:"";position:absolute;left:50%;top:-14px;height:12px;width:1px;background:#d3b985;transform:translateX(-50%)}
 .quest-milestone:first-child{transform:translateX(0)}
