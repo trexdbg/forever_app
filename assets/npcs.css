@@ -194,3 +194,52 @@
  .npc-app[data-mode="trainer"] .npc-search-field{grid-column:span 2}
  .npc-map-head .npc-map-coordinate-actions{order:3;width:100%;justify-content:space-between}
 }
+
+
+/* ForEveroth trainers: teach-first visual hierarchy. Merchant presentation stays untouched. */
+#prof-trainers .npc-controls{margin-bottom:10px}
+#prof-trainers .npc-catalog-head h3{font-size:16px}
+#prof-trainers .npc-results{max-height:710px}
+#prof-trainers .npc-trainer-result{align-items:flex-start;gap:12px;padding:12px 13px;min-height:92px}
+#prof-trainers .npc-trainer-result:hover{background:#213427}
+#prof-trainers .npc-trainer-result[aria-selected="true"]{background:#263a2a;box-shadow:inset 3px 0 #d8b881}
+#prof-trainers .npc-trainer-result>.npc-trainer-icon{width:43px;height:43px;border:1px solid #857354;border-radius:3px;overflow:hidden;flex:none;display:block;background:#152418}
+#prof-trainers .npc-trainer-result>.npc-trainer-icon img{display:block;width:100%;height:100%;object-fit:cover}
+#prof-trainers .npc-trainer-result>.npc-arrow{margin:auto 0;color:#d1b586;flex:none}
+#prof-trainers .npc-trainer-primary{font-size:14px;line-height:1.33;font-weight:760;color:#f2e2c3}
+#prof-trainers .npc-trainer-metadata{display:flex;gap:5px 11px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-top:3px;color:#d7e1d3;line-height:1.4}
+#prof-trainers .npc-trainer-area{display:inline-flex;align-items:center;gap:4px;font-size:11px;color:#d5ddd0}
+#prof-trainers .npc-trainer-location-icon{font-size:15px;color:#e4bd7b;line-height:1}
+#prof-trainers .npc-trainer-xy{font-size:12px;font-weight:800;font-variant-numeric:tabular-nums;color:#eed49b;white-space:nowrap}
+#prof-trainers .npc-trainer-bottom{display:flex;align-items:center;gap:5px;flex-wrap:wrap;margin-top:6px}
+#prof-trainers .npc-faction{display:inline-flex;align-items:center;gap:4px;width:max-content;font-size:10px;font-weight:780;border:1px solid;padding:3px 6px;line-height:1.2}
+#prof-trainers .npc-faction img{width:14px;height:14px;object-fit:contain}
+#prof-trainers .npc-faction-alliance{color:#9bcaff;background:#15273b;border-color:#456b9c}
+#prof-trainers .npc-faction-horde{color:#f3b1a4;background:#351f1c;border-color:#98544a}
+#prof-trainers .npc-faction-neutral{color:#d9ceb0;background:#2b2921;border-color:#726a4b}
+#prof-trainers .npc-rank-label{font-size:10px;border:1px solid #615d3f;color:#d6c49f;padding:3px 6px;line-height:1.2}
+#prof-trainers .npc-trainer-person{font-size:10px;color:#9eae9b;overflow-wrap:anywhere;flex:1 1 auto;text-align:right}
+#prof-trainers .npc-trainer-skills{display:flex;gap:4px;flex-wrap:wrap;margin:5px 0 1px}
+#prof-trainers .npc-weapon-mini{display:inline-flex;align-items:center;gap:4px;padding:3px 5px;background:#242921;border:1px solid #555d43;color:#d8d3c5;font-size:10px;line-height:1.2}
+#prof-trainers .npc-mini-wow-icon{display:inline-flex;width:17px;height:17px;flex:none;border:1px solid #78694d;overflow:hidden;border-radius:2px}
+#prof-trainers .npc-mini-wow-icon img{display:block;width:100%;height:100%;object-fit:cover}
+#prof-trainers .npc-more-skills{color:#e5c896;font-size:10px;align-self:center}
+#prof-trainers .npc-detail{padding:16px 19px}
+#prof-trainers .npc-trainer-detail-heading{display:flex;align-items:center;gap:13px;margin:0 0 15px}
+#prof-trainers .npc-trainer-detail-heading>.npc-trainer-icon{display:block;width:59px;height:59px;flex:none;border:2px solid #b39662;border-radius:3px;overflow:hidden}
+#prof-trainers .npc-trainer-detail-heading>.npc-trainer-icon img{width:100%;height:100%;object-fit:cover}
+#prof-trainers .npc-trainer-detail-title{min-width:0}
+#prof-trainers .npc-trainer-detail-title h3{font:500 clamp(22px,2.6vw,29px)/1.18 Georgia,serif;color:#f2e4c8;margin:5px 0 0;overflow-wrap:anywhere}
+#prof-trainers .npc-trainer-detail-location{display:grid;grid-template-columns:1fr auto;align-items:center;gap:12px;border-block:1px solid #42543e;padding:12px 0}
+#prof-trainers .npc-trainer-detail-location>div{display:flex;flex-direction:column;gap:4px}
+#prof-trainers .npc-trainer-detail-location strong{font-size:17px;color:#ebead8}
+#prof-trainers .npc-trainer-detail-xy{color:#ebcf95!important;font-variant-numeric:tabular-nums}
+#prof-trainers .npc-mini-label{font-size:10px;letter-spacing:.07em;color:#a3b59f;font-weight:700}
+#prof-trainers .npc-trainer-detail-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:13px;align-items:center}
+#prof-trainers .npc-weapon-teaching{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 14px}
+#prof-trainers .npc-weapon-teaching-skill{display:inline-flex;align-items:center;gap:8px;padding:6px 9px;border:1px solid #68644b;background:#252b21;font-size:11px;color:#ead8b7}
+#prof-trainers .npc-weapon-teaching-skill .npc-mini-wow-icon{width:25px;height:25px}
+#prof-trainers .npc-trainer-person-detail{font-size:11px;color:#a4b5a0;margin:8px 0}
+#prof-trainers .npc-trainer-detail-tags+.npc-actions{margin-top:13px}
+#prof-trainers .npc-weapon-teaching+.npc-actions{margin-top:14px}
+@media(max-width:750px){#prof-trainers .npc-trainer-result{min-height:88px}#prof-trainers .npc-trainer-person{text-align:left}}
