@@ -280,6 +280,7 @@
 
 
 /* Trainer filter controls: native select fallbacks upgraded after NPC data loads. */
+#prof-trainers .npc-controls{position:relative;z-index:10}
 #prof-trainers .npc-controls{
  grid-template-columns:minmax(143px,.9fr) minmax(170px,1.04fr) minmax(236px,1.4fr) minmax(145px,.85fr) minmax(160px,1fr);
  align-items:end;gap:9px;
@@ -360,7 +361,7 @@
 @media(max-width:710px){
  #prof-trainers .npc-controls{grid-template-columns:repeat(2,minmax(0,1fr))}
  #prof-trainers .npc-faction-field{grid-column:span 2}
- #prof-trainers .npc-search-field{grid-column:span 2}
+ #prof-trainers .npc-search-field{grid-column:auto}
 }
 @media(max-width:430px){
  #prof-trainers .npc-controls .npc-faction-field{grid-column:span 2}
