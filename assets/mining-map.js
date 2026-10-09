@@ -206,7 +206,21 @@ const icon=document.createElement("img");icon.src=iconPath(p[2]);icon.alt="";ico
 heading.append(icon,el("strong",what.label));
 place.append(heading,el("p","X : "+fmt(p[0])+" % · Y : "+fmt(p[1])+" %"));const c=el("code",command,"mine-way");place.append(c,el("small","Position référencée, non garantie en jeu."));copy.disabled=false;draw()}
 function setZone(z){zone=z;zoom=1;center={x:50,y:50};selected=null;zoomText.textContent="100 %";sourceImg=null;document.getElementById("mine-map-backdrop").textContent="Grille de coordonnées WoW";filterPoints();showSelection();const image=new Image();image.onload=()=>{if(zone!==z)return;sourceImg=image;document.getElementById("mine-map-backdrop").textContent="Carte Forever · coordonnées de zone";draw()};image.onerror=()=>{if(zone!==z)return;document.getElementById("mine-map-backdrop").textContent="Fond schématique · repères X/Y";draw()};image.src=ROOT+"assets/maps/"+zone.id+".jpg?v=forever-69893"}
-function setZoom(z){zoom=clamp(z,1,4);zoomText.textContent=Math.round(zoom*100)+" %";draw()}
+function setZoom(value,anchor){
+  const next=clamp(value,1,4);
+  if(anchor&&next!==zoom){
+    // Keep the in-game map coordinate under the mouse fixed while zooming.
+    const point=unproject(anchor.x,anchor.y);
+    center.x=clamp(point.x-(anchor.x/W*100-50)/next,50/next,100-50/next);
+    center.y=clamp(point.y-(anchor.y/H*100-50)/next,50/next,100-50/next);
+  }else if(next!==zoom){
+    center.x=clamp(center.x,50/next,100-50/next);
+    center.y=clamp(center.y,50/next,100-50/next);
+  }
+  zoom=next;
+  zoomText.textContent=Math.round(zoom*100)+" %";
+  draw();
+}
 function fromClient(event){const r=canvas.getBoundingClientRect();return {x:(event.clientX-r.left)*W/r.width,y:(event.clientY-r.top)*H/r.height}}
 const coords=document.getElementById("mine-cursor-coords");
 canvas.addEventListener("pointermove",e=>{const p=fromClient(e),pos=unproject(p.x,p.y);coords.textContent="Curseur X : "+fmt(pos.x)+" · Y : "+fmt(pos.y)});
@@ -231,7 +245,12 @@ if(viewMode==="zones"){
 }
 let best=null,dist=Infinity;for(const row of shown){const pt=project(row[0],row[1]),d=Math.hypot(p.x-pt.x,p.y-pt.y);if(d<dist){dist=d;best=row}}if(best&&dist<22){selected=best;showSelection()}});
 canvas.addEventListener("pointercancel",()=>pointer=null);
-canvas.addEventListener("wheel",e=>{if(!e.ctrlKey)return;e.preventDefault();setZoom(zoom+(e.deltaY<0?.25:-.25))},{passive:false});
+canvas.addEventListener("wheel",e=>{
+  e.preventDefault(); // Wheel zoom works immediately; Ctrl is NOT required.
+  const unit=e.deltaMode===1?16:e.deltaMode===2?H:1;
+  const factor=Math.exp(-e.deltaY*unit*.0016);
+  setZoom(zoom*factor,fromClient(e));
+},{passive:false});
 document.getElementById("mine-zoom-out").addEventListener("click",()=>setZoom(zoom-.5));
 document.getElementById("mine-zoom-in").addEventListener("click",()=>setZoom(zoom+.5));
 zoomText.addEventListener("click",()=>{center={x:50,y:50};setZoom(1)});
