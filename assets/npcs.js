@@ -28,7 +28,7 @@ function filters(){
  for(const key of [...new Set(store.db.npcs.filter(n=>n.role===store.mode).map(n=>n.profession))].sort((a,b)=>a.localeCompare(b))){const op=mk("option",profession[key]||key);op.value=key;trade.append(op)}
  const zones=new Map(store.db.npcs.filter(n=>n.role===store.mode).map(n=>[n.zone.id,n.zone]));
  for(const z of [...zones.values()].sort((a,b)=>a[en?"en":"fr"].localeCompare(b[en?"en":"fr"]))){const op=mk("option",z[en?"en":"fr"]);op.value=z.id;zone.append(op)}
- if(rank)for(const key of ["Apprenti","Compagnon","Expert","Artisan","Tous rangs"]){if(store.db.npcs.some(n=>n.role===store.mode&&n.rank===key)){const op=mk("option",en?({Compagnon:"Journeyman",Expert:"Expert",Artisan:"Artisan"}[key]):key);op.value=key;rank.append(op)}}
+ if(rank)for(const key of ["Apprenti","Compagnon","Expert","Artisan","Tous rangs"]){if(store.db.npcs.some(n=>n.role===store.mode&&n.rank===key)){const op=mk("option",en?({Apprenti:"Apprentice",Compagnon:"Journeyman",Expert:"Expert",Artisan:"Artisan","Tous rangs":"All tiers"}[key]||key):key);op.value=key;rank.append(op)}}
 }
 function makeRecords(){
  const rec=[];for(const n of store.db.npcs){if(n.role!==store.mode)continue;if(n.role==="trainer"){rec.push({npc:n,item:null,key:"trainer:"+n.profession+":"+n.name});continue}
