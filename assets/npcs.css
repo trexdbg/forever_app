@@ -112,3 +112,12 @@
 .npc-controls{grid-template-columns:minmax(185px,2fr) repeat(4,minmax(100px,1fr))}
 @media(max-width:1050px){.npc-controls{grid-template-columns:repeat(2,minmax(0,1fr))}.npc-field:first-child{grid-column:span 2}}
 @media(max-width:480px){.npc-alternative-list{grid-template-columns:1fr}.npc-field:first-child{grid-column:span 2}}
+
+/* Independent vendor and profession directories */
+.npc-crosslinks{display:flex;flex-wrap:wrap;gap:9px;margin-top:13px}
+.npc-crosslinks a{color:#e9c997;font-size:12px;font-weight:700;text-decoration:none;border-bottom:1px solid #a98959;padding:4px 0}
+.npc-crosslinks a:hover{color:#fff0d1;border-bottom-color:#fff0d1}
+.npc-app[data-mode="trainer"] .npc-controls{grid-template-columns:minmax(160px,2fr) repeat(4,minmax(102px,1fr))}
+@media(max-width:1050px){.npc-app[data-mode="trainer"] .npc-controls{grid-template-columns:repeat(3,minmax(0,1fr))}.npc-app[data-mode="trainer"] .npc-field:first-child{grid-column:span 3}}
+@media(max-width:700px){.npc-app[data-mode="trainer"] .npc-controls{grid-template-columns:repeat(2,minmax(0,1fr))}.npc-app[data-mode="trainer"] .npc-field:first-child{grid-column:span 2}}
+@media(max-width:430px){.npc-app[data-mode="trainer"] .npc-field{grid-column:span 2}}
