@@ -92,3 +92,8 @@
 @media(max-width:980px){.npc-columns{grid-template-columns:minmax(215px,.7fr) minmax(0,1.3fr)}.npc-map-panel{padding:9px}.npc-map-head{align-items:flex-start}.npc-map-zoom{gap:2px}}
 @media(max-width:700px){.npc-columns{grid-template-columns:1fr}.npc-content-column{gap:10px}.npc-map-panel{order:0}.npc-detail{order:1}}
 @media(max-width:430px){.npc-map-head h3{font-size:17px}.npc-map-zoom button{min-width:30px;height:31px}.npc-map-zoom button:nth-child(2){min-width:55px}}
+
+.npc-map-legend{display:flex;flex-wrap:wrap;gap:13px;align-items:center;padding:8px 1px 0;color:#bcc8b6;font-size:10px}
+.npc-map-legend span{display:inline-flex;align-items:center;gap:5px}
+.npc-legend-swatch{display:inline-block;width:10px;height:10px;border-radius:50%;box-shadow:0 0 0 2px #132219}
+.npc-legend-vendor{background:#b8d69e}.npc-legend-trainer{background:#7cb9c5}.npc-legend-current{background:#f5d59d}
