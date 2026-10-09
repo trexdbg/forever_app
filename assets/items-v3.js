@@ -17,7 +17,7 @@ function normalizeLocal(i){return {...i,slot:service.LABELS[i.slot]||i.slot,sour
 function sourceType(item){return typeof item.source_status==="string"&&item.source_status.startsWith("forever_beta_")?"forever":"classic"}
 const validImage=i=>typeof i==="string"&&(/^[a-z0-9_-]{2,70}$/.test(i)||i.startsWith("https://wowdb.assemblee-defias.fr/database-icons/"));
 function imageUrl(i){if(i&&typeof i.icon==="string"&&i.icon.startsWith("https://wowdb.assemblee-defias.fr/database-icons/"))return i.icon;
-return i&&validImage(i.icon)?"/forever_app/assets/icons/"+i.icon+".jpg":null}
+return i&&validImage(i.icon)?"/assets/icons/"+i.icon+".jpg":null}
 function matches(item){
  if(status==="forever"&&sourceType(item)!=="forever"||status==="classic"&&sourceType(item)!=="classic")return false;
  const id=slot.value;if(id!=="all"&&!service.compatible(item.slot,id))return false;
@@ -90,7 +90,7 @@ const options=[...slot.options];slot.replaceChildren(options[0]);
 for(const [id,label] of Object.entries(slotLabels)){const o=document.createElement("option");o.value=id;o.textContent=label;slot.append(o)}
 (async()=>{
  try{
- const [catalog,seed]=await Promise.all([fetch("/forever_app/data/items.json",{credentials:"omit"}).then(r=>r.json()),service.loadForever()]);
+ const [catalog,seed]=await Promise.all([fetch("/data/items.json",{credentials:"omit"}).then(r=>r.json()),service.loadForever()]);
  local=Array.isArray(catalog.items)?catalog.items.filter(i=>i.verified===true&&Number.isInteger(i.id)).map(normalizeLocal):[];
  forever=seed;source.replaceChildren();source.append(document.createTextNode(en?"Sources: ":"Sources : "));
 const aForever=document.createElement("a");aForever.href="https://www.wowhead.com/forever/items";aForever.target="_blank";aForever.rel="noopener noreferrer";aForever.textContent="Wowhead Forever";
