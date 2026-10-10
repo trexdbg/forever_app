@@ -13,7 +13,7 @@ const colors={poor:"#9d9d9d",common:"#efeee9",uncommon:"#43bf66",rare:"#4c9df1",
 const slotLabels=en?{head:"Head",neck:"Neck",shoulders:"Shoulders",back:"Back",chest:"Chest",wrist:"Wrists",hands:"Hands",waist:"Waist",legs:"Legs",feet:"Feet",finger1:"Rings",trinket1:"Trinkets",mainhand:"Weapons",offhand:"Off hand",ranged:"Ranged / relic"}:{head:"Tête",neck:"Cou",shoulders:"Épaules",back:"Dos",chest:"Torse",wrist:"Poignets",hands:"Mains",waist:"Taille",legs:"Jambes",feet:"Pieds",finger1:"Anneaux",trinket1:"Bijoux",mainhand:"Armes",offhand:"Main gauche",ranged:"Distance / relique"};
 let classic=[],local=[],forever=[],selection=new Set(),status="all",key="",cursor=null,more=false,loading=false,error="",total=null,visibleLimit=200,sortKey="itemLevel",sortDirection="desc";
 const rowText=(row,value)=>{const cell=document.createElement("td");cell.textContent=String(value??"—");row.append(cell);return cell};
-function normalizeLocal(i){return {...i,slot:service.LABELS[i.slot]||i.slot,source_status:i.source_status||"classic_reference"}}
+function normalizeLocal(i){const x={...i,slot:service.LABELS[i.slot]||i.slot,source_status:i.source_status||"classic_reference"};return window.ForeverItemLocale?.record(x)||x}
 function sourceType(item){return typeof item.source_status==="string"&&item.source_status.startsWith("forever_beta_")?"forever":"classic"}
 const validImage=i=>typeof i==="string"&&(/^[a-z0-9_-]{2,70}$/.test(i)||i.startsWith("https://wowdb.assemblee-defias.fr/database-icons/"));
 const genericSlotIcons={head:"inv_helmet_06",neck:"inv_jewelry_necklace_07",shoulders:"inv_shoulder_07",back:"inv_misc_cape_10",chest:"inv_chest_cloth_07",wrist:"inv_bracer_07",hands:"inv_gauntlets_04",waist:"inv_belt_10",legs:"inv_pants_07",feet:"inv_boots_07",finger1:"inv_jewelry_ring_03",finger2:"inv_jewelry_ring_15",trinket1:"inv_jewelry_talisman_05",trinket2:"inv_jewelry_talisman_06",mainhand:"inv_sword_04",offhand:"inv_shield_05",ranged:"inv_weapon_bow_07"};
@@ -35,7 +35,7 @@ function matchesBase(item){
  if(slot.value!=="all"&&!service.compatible(item.slot,slot.value))return false;
  if(armor.value!=="all"&&window.ForeverEquipmentRules?.armorType(item)!==armor.value)return false;
  const q=search.value.trim().toLocaleLowerCase();
- return !q||String(item.id)===q||(item.name+" "+(item.origin||"")+" "+displayOrigin(item.origin||"")).toLocaleLowerCase().includes(q);
+ return !q||String(item.id)===q||((window.ForeverItemLocale?.aliases(item)||item.name)+" "+(item.origin||"")+" "+displayOrigin(item.origin||"")).toLocaleLowerCase().includes(q);
 }
 function matches(item){return matchesBase(item)&&(!selection.size||selection.has(item.quality))}
 function drawQuality(items){
