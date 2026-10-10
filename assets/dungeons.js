@@ -1,4 +1,4 @@
-/* ForEveroth dungeon atlas · WoW Forever new instances only */
+/* ForEveroth / Atlas des donjons Classic et Forever · interface en harmonie avec Rare */
 (()=>{"use strict";
 const root=document.getElementById("dungeon-app");if(!root)return;
 const en=document.documentElement.lang==="en",t=(fr,eng)=>en?eng:fr,$=s=>document.getElementById(s);
@@ -18,7 +18,7 @@ function elbtn(text,cls,fn){const b=m("button",text,cls);b.type="button";b.addEv
 function smallchip(s,cls=""){return m("span",s,"dg-chip "+cls)}
 function updateUrl(){const u=new URL(location.href);u.searchParams.set("donjon",selected.id);if(selected.bosses.length)u.searchParams.set("boss",String(selectedBoss+1));else u.searchParams.delete("boss");history.replaceState(null,"",u.pathname+u.search+u.hash)}
 function visibleList(){if(!db)return[];const txt=esc(search.value.trim()),mode=status.value,levelN=Number(level.value);
- return db.dungeons.filter(d=>(!txt||esc([name(d.name),d.name.en,d.name.fr,d.zone.en,d.zone.fr,...d.bosses.flatMap(b=>[b.name.en,b.name.fr])].join(" ")).includes(txt))&&(mode==="all"||d.beta===mode||(mode==="classic"&&d.type==="classic")||(mode==="forever"&&d.type==="forever")||(mode==="mapped"&&!!d.floorMap)||(mode==="accessible"&&d.level[0]<=30))&&(!levelN||(d.level[0]<=levelN&&d.level[1]>=levelN)));
+ return db.dungeons.filter(d=>(!txt||esc([name(d.name),d.name.en,d.name.fr,d.zone.en,d.zone.fr,...d.bosses.flatMap(b=>[b.name.en,b.name.fr,...(b.loot||[]).flatMap(i=>[i.en,i.fr])])].join(" ")).includes(txt))&&(mode==="all"||d.beta===mode||(mode==="classic"&&d.type==="classic")||(mode==="forever"&&d.type==="forever")||(mode==="mapped"&&!!d.floorMap)||(mode==="accessible"&&d.level[0]<=30))&&(!levelN||(d.level[0]<=levelN&&d.level[1]>=levelN)));
 }
 function renderDirectory(){if(!db)return;const rows=visibleList(),scroll=result.scrollTop;result.replaceChildren();$("dg-count").textContent=rows.length+" / "+db.dungeons.length;
  for(const d of rows){const b=elbtn(null,"dg-entry"+(selected?.id===d.id?" active":""),()=>select(d));
@@ -31,7 +31,7 @@ function renderDirectory(){if(!db)return;const rows=visibleList(),scroll=result.
  }if(!rows.length)result.append(m("p",t("Aucun donjon avec ces filtres.","No dungeons match these filters."),"dg-empty"));result.scrollTop=scroll;
 }
 function select(d,focus=false){if(!d)return;selected=d;selectedBoss=0;view=d.floorMap?"route":"world";resetCamera();worldToken++;worldImage=null;floorToken++;floorImage=null;floorFailed=false;updateUrl();renderDirectory();renderDetail();loadWorld();loadFloor();paint();if(focus)document.getElementById("dg-map-title").scrollIntoView({block:"nearest",behavior:"smooth"})}
-function chooseBoss(i,focus=false){if(!selected?.bosses[i])return;selectedBoss=i;updateUrl();renderDetail();paint();if(focus)document.getElementById("dg-info-title").scrollIntoView({block:"nearest",behavior:"smooth"})}
+function chooseBoss(i,focus=false){if(!selected?.bosses[i])return;selectedBoss=i;updateUrl();renderBosses();paint();if(focus)document.getElementById("dg-boss-selected").scrollIntoView({block:"nearest",behavior:"smooth"})}
 function makeLootCard(item,boss){const card=m("div",null,"dg-drop");card.tabIndex=0;card.setAttribute("role","group");card.setAttribute("aria-label",name(item)+" · "+item.slot);
  const icon=m("img");icon.width=34;icon.height=34;icon.loading="lazy";icon.alt="";
  const slot=(item.slot||"").toLowerCase();
@@ -40,47 +40,70 @@ function makeLootCard(item,boss){const card=m("div",null,"dg-drop");card.tabInde
  const text=m("span");text.append(m("strong",name(item)),m("small",t("Emplacement : ","Slot: ")+item.slot));
  if(Number.isFinite(item.chanceReported))text.append(m("small",t("Taux signalé en bêta : ","Beta-reported chance: ")+String(item.chanceReported).replace(".",",")+" %"));
  if(item.isNew)text.append(m("small",t("Nouveau Forever / à vérifier","New in Forever / verify")));if(item.itemLevel)text.append(m("small",t("Niveau d’objet ","Item level ")+item.itemLevel+(item.requiredLevel?" · "+t("Niveau requis ","Required level ")+item.requiredLevel:"")));
- card.append(text);
+ if(item.source_status==="classic_loot_reference")text.append(m("small",t("Provenance Classic à vérifier","Classic origin · unverified"),"dg-loot-provenance"));card.append(text);
  if(item.itemUrl){const link=m("a","↗","dg-item-page");link.href=item.itemUrl;link.target="_blank";link.rel="noopener noreferrer";link.title=t("Ouvrir la fiche de l’objet","Open item details");link.setAttribute("aria-label",t("Fiche d’objet : ","Item page: ")+name(item));card.append(link)}
 
- const show=e=>{tooltip.replaceChildren();tooltip.append(m("strong",name(item)),m("span",t("Butin possible : ","Possible drop: ")+name(boss.name)),m("span",item.slot));
+ const show=e=>{tooltip.replaceChildren();tooltip.append(m("strong",name(item)),m("span",(item.source_status==="classic_loot_reference"?t("Butin Classic de référence : ","Classic reference drop: "):t("Butin signalé : ","Reported drop: "))+name(boss.name)),m("span",item.slot));
  if(item.tooltip?.length)item.tooltip.forEach(line=>tooltip.append(m("span",line)));
  if(Number.isFinite(item.chanceReported))tooltip.append(m("span",t("Taux relevé en bêta : ","Reported beta rate: ")+item.chanceReported+" %"));
- tooltip.append(m("small",t("Butin signalé en bêta · taux non garanti. Les noms anglais non officiels sont indicatifs.","Beta-reported drop · chance not guaranteed. Unofficial English names are indicative.")));tooltip.hidden=false;const x=Math.max(8,Math.min(window.innerWidth-355,Math.max(8,(e.clientX||card.getBoundingClientRect().left)+12)));const y=Math.max(8,Math.min(window.innerHeight-185,Math.max(8,(e.clientY||card.getBoundingClientRect().top)+12)));tooltip.style.left=x+"px";tooltip.style.top=y+"px"};
- if(item.id&&window.ForeverItemTooltip){
+ tooltip.append(m("small",item.source_status==="classic_loot_reference"?t("Provenance du butin : Classic · NON confirmée pour Forever. Statistiques du client bêta possibles.","Loot source: Classic · NOT confirmed on Forever. Client beta item stats may be available."):t("Relevé de bêta communautaire · taux non garanti.","Community beta report · drop chance not guaranteed.")));tooltip.hidden=false;const x=Math.max(8,Math.min(window.innerWidth-355,Math.max(8,(e.clientX||card.getBoundingClientRect().left)+12)));const y=Math.max(8,Math.min(window.innerHeight-185,Math.max(8,(e.clientY||card.getBoundingClientRect().top)+12)));tooltip.style.left=x+"px";tooltip.style.top=y+"px"};
+ if(item.id&&Array.isArray(item.tooltip)&&item.tooltip.length&&window.ForeverItemTooltip){
  window.ForeverItemTooltip.bind(card,{id:item.id,name:name(item),name_en:item.en,name_fr:item.fr,quality:item.quality||"rare",source_status:"forever_beta_community",itemLevel:item.itemLevel,requiredLevel:item.requiredLevel,tooltip:item.tooltip||[],icon:item.icon,origin:t("Butin signalé · Donjon Forever","Reported drop · Forever dungeon"),url:item.itemUrl||selected?.source});
  }else{card.addEventListener("mouseenter",show);card.addEventListener("mousemove",e=>{if(!tooltip.hidden)show(e)});card.addEventListener("mouseleave",()=>tooltip.hidden=true);card.addEventListener("focus",show);card.addEventListener("blur",()=>tooltip.hidden=true)}
 
  return card;
 }
-function renderDetail(){const d=selected;if(!d)return;const boss=d.bosses[selectedBoss];
+function renderDetail(){const d=selected;if(!d)return;
  $("dg-map-title").textContent=name(d.name);$("dg-map-subtitle").textContent=name(d.zone)+" · "+d.level.join("–")+" · "+d.bosses.length+" "+t("rencontres","encounters");
  $("dg-info-title").textContent=name(d.name);$("dg-boss-count").textContent=d.bosses.length+" "+t("rencontres","encounters");
- const chips=$("dg-tags");chips.replaceChildren();chips.append(smallchip(t("Niveaux ","Levels ")+d.level.join("–")));chips.append(smallchip(statusText(d),d.beta==="observed"?"live":"pending"));if(d.quests)chips.append(smallchip(d.quests+" "+t("quêtes relevées","reported quests")));if(d.floorMap)chips.append(smallchip(d.floorMap.kind==="client_minimap_mosaic"?t("Carte client Forever","Forever client map"):t("Carte Classic annotée","Annotated Classic map"),"live"));if(count(d))chips.append(smallchip(count(d)+" "+t("butins relevés","reported drops")));
+ const chips=$("dg-tags");chips.replaceChildren();chips.append(smallchip(t("Niveaux ","Levels ")+d.level.join("–")));
+ chips.append(smallchip(statusText(d),d.type==="classic"?"":"live"));
+ if(d.quests)chips.append(smallchip(d.quests+" "+t("quêtes","quests")));
+ const positions=d.bosses.filter(b=>Array.isArray(b.mapPoint)).length;
+ if(d.floorMap)chips.append(smallchip(d.floorMap.kind==="client_minimap_mosaic"?t("Carte du client Forever","Forever client map"):t("Plan Classic annoté","Annotated Classic map"),"live"));
+ if(positions)chips.append(smallchip(positions+"/"+d.bosses.length+" "+t("repères de boss","boss markers")));
  $("dg-access").textContent=name(d.access);
- $("dg-description").textContent=name(d.note)|| (d.bosses.length?t("Boss documentés par des guides indépendants de la bêta.","Boss encounters documented by independent beta guides."):t("Leurs boss, plans intérieurs et objets ne sont pas encore documentés de façon suffisamment fiable.","Bosses, floor maps and drops are not yet reliably documented."));
+ $("dg-description").textContent=name(d.note)||t("Seules les données vérifiables sont affichées.","Only documented data is shown.");
  $("dg-main-source").href=d.source||db.listSource;
- $("dg-main-source").textContent=t("Guide, boss et butin ↗","Guide, bosses & loot ↗");
+ $("dg-main-source").textContent=t("Guide du donjon ↗","Dungeon guide ↗");
  const a=$("dg-map-source");a.href=d.floorMap?.source||d.mapSource||d.source||db.listSource;
- a.textContent=d.floorMap?t("Source du plan réel ↗","Original map source ↗"):t("Chercher un plan vérifié ↗","Find a verified floor map ↗");
- routeButton.disabled=!d.floorMap;routeButton.title=d.floorMap?"":t("Plan intérieur non disponible dans nos sources","Interior map not available in our sources");
+ a.textContent=d.floorMap?t("Source de la carte ↗","Map source ↗"):t("Guide source ↗","Source guide ↗");
+ routeButton.disabled=!d.floorMap;routeButton.title=d.floorMap?"":t("Aucun plan intérieur publié","No interior map documented");
  routeButton.classList.toggle("active",view==="route");worldButton.classList.toggle("active",view==="world");
  routeButton.setAttribute("aria-pressed",String(view==="route"));worldButton.setAttribute("aria-pressed",String(view==="world"));
- $("dg-map-caption").textContent=view==="route"?(d.floorMap?.kind==="client_minimap_mosaic"?t("PLAN INTÉRIEUR RÉEL · mosaïque du minimap du client Forever","REAL INTERIOR MAP · Forever client minimap mosaic"):t("PLAN DE DONJON CLASSIC ANNOTÉ · source externe","ANNOTATED CLASSIC DUNGEON MAP · external source")):(d.entry?t("Carte du client Forever · accès reporté","Forever client zone map · reported entrance"):t("Carte de région · entrée exacte non confirmée","Zone map · exact entrance unconfirmed"));
- const noteBox=$("dg-changes");if(noteBox){noteBox.replaceChildren();if(d.mapMarkerPrecision==="annotated_map_approx")noteBox.append(m("p",t("Repères de boss approximatifs reportés depuis une carte annotée, à ajuster en jeu.","Approximate boss markers transcribed from an annotated map; in-game precision unverified."),"dg-source-note"));for(const ch of d.changes||[]){const p=m("p",null,"dg-change");p.append(smallchip(ch.status==="observed_beta"?t("Relevé bêta","Beta observed"):ch.status==="new_forever"?t("Forever inédit","New in Forever"):t("Forever / à contrôler","Forever / verify"),ch.status==="observed_beta"?"live":"pending"),m("span",name(ch)));noteBox.append(p)}}
-
- bossRoot.replaceChildren();
- if(!d.bosses.length){bossRoot.append(m("p",d.type==="classic"?t("Ce donjon Classic est référencé. La liste détaillée des boss et butins Forever reste à compléter : ouvrir le guide source.","This returning Classic dungeon is indexed. Detailed Forever bosses and drops remain to be added: open the source guide."):t("Boss et butins encore insuffisamment documentés pour cette nouvelle instance.","Boss and loot tables are not reliably documented for this new instance yet."),"dg-empty"));return}
- d.bosses.forEach((b,i)=>{const row=m("section",null,"dg-boss-row");row.id="dg-boss-"+(i+1);
- const sum=m("div",null,"dg-boss-summary");sum.append(elbtn(null,"dg-boss-button"+(selectedBoss===i?" active":""),()=>chooseBoss(i)));
- const button=sum.firstElementChild;button.append(m("span",i+1,"dg-index"),m("span",name(b.name)));
- if(b.rare)sum.append(smallchip(t("Rare","Rare"),"pending"));if(b.level)sum.append(smallchip(t("Niveau ","Level ")+b.level));if(d.id==="city-of-dalaran")sum.append(smallchip(b.floor==="city"?t("Ville","City"):t("Égouts","Sewers")));sum.append(smallchip((b.loot||[]).length+" "+t("butins","drops")));row.append(sum);
- if(b.note?.[en?"en":"fr"])row.append(m("p",name(b.note),"dg-boss-note"));
- const drops=m("div",null,"dg-drops");if(!b.loot.length)drops.append(m("span",t("Table d’équipement inconnue · pas de butin inventé.","Gear loot table unknown · no fabricated drops."),"dg-empty"));else b.loot.forEach(it=>drops.append(makeLootCard(it,b)));row.append(drops);
- bossRoot.append(row);
- });
- if(d.trashLoot?.length){const box=m("section",null,"dg-boss-row");box.append(m("h3",t("Butins des ennemis ordinaires","Regular enemy drops"),"dg-other-title"));const cards=m("div",null,"dg-drops");d.trashLoot.forEach(it=>cards.append(makeLootCard(it,{name:{fr:"Ennemis du donjon",en:"Dungeon enemies"}})));box.append(cards);bossRoot.append(box)}
- if(d.questLoot?.length){const box=m("section",null,"dg-boss-row");box.append(m("h3",t("Objets de quête (hors équipement)","Quest items (not gear)"),"dg-other-title"));const cards=m("div",null,"dg-drops");d.questLoot.forEach(it=>cards.append(makeLootCard(it,{name:{fr:it.boss,en:it.boss}})));box.append(cards);bossRoot.append(box)}
+ $("dg-map-caption").textContent=view==="route"?(d.floorMap?.kind==="client_minimap_mosaic"?t("CARTE RÉELLE DU CLIENT FOREVER","REAL FOREVER CLIENT MAP"):t("PLAN CLASSIC ANNOTÉ · NON VÉRIFIÉ SUR FOREVER","ANNOTATED CLASSIC MAP · NOT VERIFIED ON FOREVER")):(d.entry?t("Carte de région · point d'accès signalé","Zone map · reported access point"):t("Carte de région · entrée précise à documenter","Zone map · exact portal undocumented"));
+ const changes=$("dg-changes");if(changes){changes.replaceChildren();
+ if(positions&&d.type==="classic")changes.append(m("p",t("Les repères sont repositionnés d'après les plans Classic annotés ; leur précision dans Forever reste à confirmer.","Markers are transcribed from Classic annotated plans; their Forever positions remain unverified."),"dg-source-note"));
+ for(const ch of d.changes||[]){const p=m("p",null,"dg-change");p.append(smallchip(ch.status==="observed_beta"?t("Bêta","Beta"):ch.status==="new_forever"?t("Nouveau","New"):t("À vérifier","Check"),ch.status==="observed_beta"?"live":"pending"),m("span",name(ch)));changes.append(p)}
+ }
+ renderBosses();
+}
+function renderBosses(){
+ const d=selected;if(!d)return;bossRoot.replaceChildren();
+ if(!d.bosses.length){
+  const empty=m("div",null,"dg-zero");
+  empty.append(m("strong",t("Rencontres à documenter","Encounters need documentation")),m("p",d.type==="classic"?t("Le plan Classic est disponible ; la table des boss Forever est encore en cours de vérification.","Classic floor map available; the Forever boss list has not been validated yet."):t("Pas encore de position de boss ni de butin confirmé.","No boss position or verified loot yet.")));
+  const source=m("a",t("Consulter la source ↗","Check source ↗"));source.href=d.source||db.listSource;source.target="_blank";source.rel="noopener noreferrer";empty.append(source);bossRoot.append(empty);return;
+ }
+ const nav=m("nav",null,"dg-boss-nav");nav.setAttribute("aria-label",t("Sélection d’un boss","Choose boss"));
+ d.bosses.forEach((b,i)=>{const button=elbtn(null,"dg-boss-navitem"+(i===selectedBoss?" active":""),()=>chooseBoss(i,true));
+ button.setAttribute("aria-pressed",String(i===selectedBoss));const n=m("span",String(i+1).padStart(2,"0"),"dg-boss-n");button.append(n,m("span",name(b.name),"dg-boss-navname"));if(b.rare)button.append(m("span",t("Rare","Rare"),"dg-nav-rare"));nav.append(button)});
+ bossRoot.append(nav);
+ const b=d.bosses[selectedBoss]||d.bosses[0];
+ const panel=m("article",null,"dg-selected-boss");panel.id="dg-boss-selected";
+ const heading=m("div",null,"dg-selected-heading");heading.append(m("span",String(selectedBoss+1).padStart(2,"0"),"dg-selected-index"));const title=m("div");title.append(m("small",t("BOSS SÉLECTIONNÉ","SELECTED BOSS")),m("h3",name(b.name)));heading.append(title);panel.append(heading);
+ const badges=m("div",null,"dg-chips");if(b.level)badges.append(smallchip(t("Niveau ","Level ")+b.level));if(b.rare)badges.append(smallchip(t("Apparition rare","Rare spawn"),"pending"));
+ if(d.id==="city-of-dalaran")badges.append(smallchip(b.floor==="city"?t("Ville","City"):t("Égouts","Sewers")));if(b.mapPoint)badges.append(smallchip(t("Localisé sur le plan","Marked on map"),"live"));panel.append(badges);
+ if(b.note&&name(b.note))panel.append(m("p",name(b.note),"dg-selected-note"));
+ const cap=m("div",null,"dg-loot-heading");cap.append(m("strong",t("Butin du boss","Boss loot")),m("span",String(b.loot?.length||0)));panel.append(cap);
+ const drops=m("div",null,"dg-drops");if(!b.loot?.length)drops.append(m("p",t("Pas de table de butin fiable dans les sources consultées.","No sufficiently reliable loot list available."),"dg-empty"));else b.loot.forEach(it=>drops.append(makeLootCard(it,b)));panel.append(drops);
+ panel.append(m("p",d.type==="classic"?t("Provenance Classic : disponibilité et taux sur Forever à confirmer.","Classic reference: Forever drop origin and rates are not confirmed."):t("Relevés de bêta : disponibilité et taux susceptibles de changer.","Beta reports: loot availability and rates may change."),"dg-panel-disclaimer"));
+ const actions=m("div",null,"dg-boss-actions");
+ const prev=elbtn(t("← Précédent","← Previous"),"dg-pager",()=>chooseBoss((selectedBoss+d.bosses.length-1)%d.bosses.length));const next=elbtn(t("Suivant →","Next →"),"dg-pager",()=>chooseBoss((selectedBoss+1)%d.bosses.length));
+ actions.append(prev,next);panel.append(actions);bossRoot.append(panel);
+ if(d.trashLoot?.length||d.questLoot?.length){const extra=m("details",null,"dg-extra-loot");extra.append(m("summary",t("Autres butins : ennemis et quêtes","Other drops: trash and quests")));
+ for(const [k,title,bossName] of [["trashLoot",t("Butin des ennemis","Trash mob drops"),{name:{fr:"Ennemis du donjon",en:"Dungeon enemies"}}],["questLoot",t("Objets de quête","Quest items"),{name:{fr:"Quête",en:"Quest"}}]])if(d[k]?.length){extra.append(m("h4",title));const cards=m("div",null,"dg-drops");d[k].forEach(it=>cards.append(makeLootCard(it,bossName)));extra.append(cards)}
+ bossRoot.append(extra);}
 }
 function resetCamera(){scale=1;offsetX=0;offsetY=0;$("dg-zoom-label").textContent="100 %"}
 function setZoom(next,mx=W/2,my=H/2){const n=Math.min(4.2,Math.max(1,next));offsetX=mx-(mx-offsetX)*(n/scale);offsetY=my-(my-offsetY)*(n/scale);scale=n;if(scale===1){offsetX=0;offsetY=0}clamp();$("dg-zoom-label").textContent=Math.round(scale*100)+" %";paint()}
