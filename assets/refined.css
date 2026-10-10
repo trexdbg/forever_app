@@ -788,6 +788,30 @@ html body[data-page] .dg-tooltip {
   border-radius:var(--fo-ui-radius);
 }
 
+/* Talent calculator: larger detail text without resizing the 3-column
+   icon grid or the tiny points badges inside talent nodes. */
+html body[data-page="talents"] .talent-toolbar>label {
+  font-size:12px;
+  font-weight:700;
+  color:var(--fo-ui-label);
+}
+html body[data-page="talents"] .talent-toolbar select {
+  height:40px;
+  min-height:40px;
+  font-size:13px;
+  border-radius:var(--fo-ui-radius);
+  border-color:var(--fo-ui-edge);
+  background-color:var(--fo-ui-field);
+}
+html body[data-page="talents"] .talent-details p {
+  font-size:13px;
+  line-height:1.5;
+}
+html body[data-page="talents"] .talent-details small {
+  font-size:11.5px;
+  line-height:1.4;
+}
+
 /* 6. Phone readability: prevent iOS focus zoom and keep control targets.
    Filter grids continue to follow their individual responsive layouts. */
 @media(max-width:600px) {
