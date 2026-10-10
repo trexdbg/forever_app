@@ -106,29 +106,42 @@ function eligible(i){
  return true;
 }
 function roleBonus(i){
- const text=(Array.isArray(i.tooltip)?i.tooltip:[]).join(" ").toLowerCase();
- const flags={
-  strength:/\bstrength\b|\battack power\b|\bmelee\b/,agility:/\bagility\b|\battack power\b|\branged attack\b/,
-  stamina:/\bstamina\b|\barmor\b|\bdefense\b|\bdodge\b|\bparry\b/,
-  intellect:/\bintellect\b|\bspell damage\b|\bspell power\b|\bspell hit\b|\bspell critical\b/,
-  heal:/\bhealing\b|\bspirit\b|\bintellect\b|\bmana per 5\b/,feral:/\bagility\b|\battack power\b|\bstrength\b/
+ const source=(Array.isArray(i.tooltip)?i.tooltip:[]).join(" ").toLocaleLowerCase();
+ const tokens={
+  str:/\bstrength\b|\bforce\b|\battack power\b|puissance d.attaque/,
+  agi:/\bagility\b|agilit[eé]|ranged attack|attaque [aà] distance/,
+  stam:/\bstamina\b|endurance|defen[sc]e|d[eé]fense|dodge|esquive|parry|parade/,
+  mana:/\bintellect\b|intelligence|mana|\bspirit\b|esprit/,
+  spell:/spell (damage|power|hit)|d[eé]g[aâ]ts des sorts|puissance des sorts|sorts et effets magiques/,
+  heal:/healing|soins|soigne|gu[eé]rison/,
+  crit:/critical strike|coup critique|coups critiques|touch[eé]/
  };
- const role=spec().role,focus=role==="heal"?"heal":role==="caster"?"intellect":role==="hunter"?"agility":role==="feral"?"feral":role.includes("tank")?"stamina":role.includes("rogue")?"agility":"strength";
- let value=flags[focus].test(text)?6:0;
- if(role==="heal"&&/healing/.test(text))value+=4;
- if(role==="caster"&&/spell damage|spell power/.test(text))value+=4;
- if(role.includes("tank")&&/defense|block/.test(text))value+=4;
- if(role==="hunter"&&/ranged attack/.test(text))value+=3;
- const arm=window.ForeverEquipmentRules?.armorType(i);
+ const test=key=>tokens[key].test(source);
+ const role=spec().role;
+ const caster=role==="caster",heal=role==="heal",tank=role.includes("tank"),
+       agility=role.includes("rogue")||role==="hunter"||role==="feral",
+       hybrid=role==="enhance";
+ let bonus=0;
+ if(caster||heal){bonus+=test("mana")?10:0;bonus+=test(heal?"heal":"spell")?12:0;bonus+=test("agi")&&!test("mana")?-5:0}
+ else if(tank){bonus+=test("stam")?11:0;bonus+=test("str")?5:0;bonus+=test("mana")&&!test("stam")?-4:0}
+ else if(agility){bonus+=test("agi")?12:0;bonus+=test("str")?5:0;bonus+=test("mana")&&!test("agi")?-5:0}
+ else {bonus+=test("str")?12:0;bonus+=test("agi")?5:0;bonus+=test("mana")&&!test("str")?-4:0}
+ if(test("crit"))bonus+=3;
+ const arm=window.ForeverEquipmentRules?.armorType(i),level=levels[band][1];
  if(arm){
-  if(["mage","pretre","demoniste"].includes(classId))value+=arm==="cloth"?2:0;
-  if(["voleur","druide"].includes(classId))value+=arm==="leather"?2:0;
-  if(classId==="chasseur"||classId==="chaman")value+=arm===(levels[band][1]>=40?"mail":"leather")?2:0;
-  if(["guerrier","paladin"].includes(classId))value+=arm===(levels[band][1]>=40?"plate":"mail")?2:0;
+  if(["mage","pretre","demoniste"].includes(classId)&&arm==="cloth")bonus+=3;
+  if(["voleur","druide"].includes(classId)&&arm==="leather")bonus+=3;
+  if(["chasseur","chaman"].includes(classId)&&arm===(level>=40?"mail":"leather"))bonus+=3;
+  if(["guerrier","paladin"].includes(classId)&&arm===(level>=40?"plate":"mail"))bonus+=3;
  }
- return value;
+ if(heal&&typeCode(i)==="shield")bonus+=3;
+ if(tank&&typeCode(i)==="shield")bonus+=9;
+ if(role==="hunter"&&normSlot(i)==="ranged"&&["bow","gun","crossbow"].includes(typeCode(i)))bonus+=10;
+ if((role.includes("rogue")||role==="warrior_fury")&&normSlot(i)==="mainhand"&&oneHand(i))bonus+=4;
+ if((caster||heal)&&twoHand(i)&&test("mana"))bonus+=3;
+ return bonus;
 }
-const score=i=>(i.itemLevel||required(i)||0)*3+Math.min(required(i)||0,levels[band][1])*0.8+roleBonus(i)+({poor:-5,common:0,uncommon:3,rare:5,epic:7,legendary:8}[i.quality]||0)+(isForever(i)?1:0);
+const score=i=>(i.itemLevel||required(i)||0)*2+Math.min(required(i)||0,levels[band][1])*.7+roleBonus(i)+({poor:-6,common:0,uncommon:2,rare:4,epic:6,legendary:8}[i.quality]||0)+(isForever(i)?1:0);
 function icon(i,fallback){
  const shell=mk("span","level-bis-icon"),value=i?.icon||fallback;
  if(typeof value==="string"&&(/^([a-z0-9_-]{2,70})$/.test(value)||value.startsWith("https://wowdb.assemblee-defias.fr/database-icons/"))){
