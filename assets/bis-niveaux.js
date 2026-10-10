@@ -263,39 +263,138 @@ function itemRow(i,secondary=false){
  window.ForeverItemTooltip?.bind(row,i);
  return row;
 }
+
+const leftSlots=["head","neck","shoulders","back","chest","wrist","hands"],rightSlots=["waist","legs","feet","finger1","finger2","trinket1","trinket2"],weaponSlots=["mainhand","offhand","ranged"];
+const qualities={poor:["#9d9d9d","Médiocre","Poor"],common:["#efeee9","Commun","Common"],uncommon:["#43bf66","Inhabituel","Uncommon"],rare:["#4c9df1","Rare","Rare"],epic:["#b67cff","Épique","Epic"],legendary:["#ffac46","Légendaire","Legendary"]};
+const u=en?{missing:"No target",twohand:"Two-handed weapon equipped",chosen:"Your selection",suggestion:"Suggested item",reset:"Use suggestion",details:"Details",more:"Show more",none:"No items match these filters",all:"All qualities",select:"Set as target",candidates:"references"}:{missing:"Aucun objectif",twohand:"Arme à deux mains équipée",chosen:"Votre sélection",suggestion:"Objet suggéré",reset:"Revenir à la suggestion",details:"Détails",more:"Afficher plus",none:"Aucun objet avec ces filtres",all:"Toutes qualités",select:"Définir comme objectif",candidates:"références"};
+let activeSlot="head",pickerQuery="",selectedQualities=new Set(),visibleLimit=45,currentPlan=null;
+const savedProfiles=new Map();
+const savedKey=()=>["foreveroth","level-bis",classId,specId,band].join(":");
+function choices(){
+ const k=savedKey();if(savedProfiles.has(k))return savedProfiles.get(k);
+ let value={};try{const v=JSON.parse(localStorage.getItem(k)||"{}");if(v&&typeof v==="object"&&!Array.isArray(v))value=v}catch{}
+ savedProfiles.set(k,value);return value;
+}
+function saveChoice(slot,itemId){
+ const c={...choices()};
+ if(itemId){for(const id of Object.keys(c))if(id!==slot&&c[id]===itemId)delete c[id];c[slot]=itemId}
+ else delete c[slot];
+ savedProfiles.set(savedKey(),c);
+ try{localStorage.setItem(savedKey(),JSON.stringify(c))}catch{}
+ renderSlots();
+}
+const sheetIcon=(item,fallback)=>{const root=mk("span","bis-v2-icon");root.append(icon(item,fallback));return root};
+function slotOptions(id,pool){
+ return pool.filter(i=>window.ForeverGearData.compatible(normSlot(i),id)||
+  id==="offhand"&&normSlot(i)==="mainhand"&&dualWield()&&oneHand(i)&&weaponAllowed(i,"offhand"))
+ .filter(i=>id!=="offhand"||weaponAllowed(i,"offhand"))
+ .sort((a,b)=>score(b)-score(a)||a.id-b.id);
+}
+function plan(){
+ const pool=all.filter(eligible),available=new Map(),claims=new Map(),reserved=new Set(),selected=new Map(),manual=new Set(),blocked=new Set();
+ for(const s of db.slots)available.set(s.id,slotOptions(s.id,pool));
+ const custom=choices();
+ for(const s of db.slots){
+  const id=Number(custom[s.id]),i=available.get(s.id).find(it=>it.id===id);
+  if(i&&!reserved.has(id)){claims.set(s.id,i);reserved.add(id)}
+ }
+ const used=new Set();
+ for(const s of db.slots){
+  if(s.id==="offhand"&&selected.get("mainhand")&&twoHand(selected.get("mainhand"))){selected.set(s.id,null);blocked.add(s.id);continue}
+  const target=claims.get(s.id),choice=target&&!used.has(target.id)?target:available.get(s.id).find(i=>!used.has(i.id)&&!reserved.has(i.id));
+  selected.set(s.id,choice||null);
+  if(choice){used.add(choice.id);if(choice===target)manual.add(s.id)}
+ }
+ return {pool,available,selected,manual,blocked};
+}
+function sheetButton(id){
+ const slot=db.slots.find(s=>s.id===id),i=currentPlan.selected.get(id),manual=currentPlan.manual.has(id),blocked=currentPlan.blocked.has(id);
+ const btn=mk("button","bis-v2-slot"+(activeSlot===id?" active":"")+(i?" has-item":" no-item")+(manual?" acquired":""));
+ btn.type="button";btn.dataset.quality=i?.quality||"none";
+ btn.setAttribute("aria-pressed",String(activeSlot===id));btn.setAttribute("aria-label",labelSlot(slot)+" : "+(i?.name||(blocked?u.twohand:u.missing)));
+ btn.append(sheetIcon(i,slot.icon));
+ const info=mk("span","bis-v2-slot-copy");
+ info.append(mk("strong","",labelSlot(slot)),mk("small","",i?.name||(blocked?u.twohand:u.missing)));
+ btn.append(info,mk("span","bis-v2-slot-indicator",manual?"✓":""));
+ btn.addEventListener("click",()=>{
+  window.ForeverItemTooltip?.hide?.();activeSlot=id;pickerQuery="";selectedQualities.clear();visibleLimit=45;
+  renderSlots();
+  if(window.matchMedia?.("(max-width: 980px)")?.matches)$("level-picker")?.scrollIntoView?.({behavior:"smooth",block:"start"});
+ });
+ if(i)window.ForeverItemTooltip?.bind(btn,{...i,slotLabel:labelSlot(slot)});
+ return btn;
+}
+function renderSheet(){
+ const paper=$("level-paperdoll");paper.replaceChildren();
+ const stage=mk("div","bis-v2-stage"),left=mk("div","bis-v2-rail left"),right=mk("div","bis-v2-rail right");
+ for(const id of leftSlots)left.append(sheetButton(id));
+ for(const id of rightSlots)right.append(sheetButton(id));
+ const middle=mk("div","bis-v2-avatar"),medal=mk("div","bis-v2-avatar-medallion");
+ medal.append(sheetIcon(cls(),cls().icon));
+ middle.append(mk("span","bis-v2-avatar-top","FOREVEROTH"),medal,mk("strong","",labelC(cls())),mk("span","",labelS(spec())));
+ stage.append(left,middle,right);
+ const weapons=mk("div","bis-v2-weapons");for(const id of weaponSlots)weapons.append(sheetButton(id));
+ paper.append(stage,weapons);
+}
+function renderPicker(){
+ const slot=db.slots.find(s=>s.id===activeSlot),id=slot.id,i=currentPlan.selected.get(id);
+ const blocked=currentPlan.blocked.has(id),manual=currentPlan.manual.has(id);
+ $("level-picker-slot").textContent=labelSlot(slot);
+ $("level-picker-hint").textContent=blocked?u.twohand:T.required+" ≤ "+levels[band][1]+" · "+(en?"Unconfirmed gear references":"Références provisoires");
+ const selected=$("level-picked");selected.replaceChildren(mk("span","bis-v2-eyebrow",manual?u.chosen:u.suggestion));
+ if(!i)selected.append(mk("p","bis-v2-blank",blocked?u.twohand:u.missing));
+ else{
+  const item=mk("div","bis-v2-selected");item.dataset.quality=i.quality||"common";
+  const detail=mk("div","bis-v2-selected-info");
+  detail.append(mk("strong","",i.name),mk("small","",T.required+" "+required(i)+" · "+(isForever(i)?T.forever:T.classic)));
+  item.append(sheetIcon(i,slot.icon),detail);selected.append(item);
+  window.ForeverItemTooltip?.bind(item,{...i,slotLabel:labelSlot(slot)});
+  const actions=mk("div","bis-v2-actions"),button=mk("button","", "ⓘ "+u.details);
+  button.type="button";button.addEventListener("click",()=>window.ForeverItemTooltip?.pin({...i,slotLabel:labelSlot(slot)}));actions.append(button);
+  if(manual){const reset=mk("button","bis-v2-clear",u.reset);reset.type="button";reset.addEventListener("click",()=>saveChoice(id,0));actions.append(reset)}
+  selected.append(actions);
+ }
+ const list=currentPlan.available.get(id)||[],root=$("level-quality");root.replaceChildren();
+ function quality(q,label,n){
+  const isAll=q==="all",on=isAll?!selectedQualities.size:selectedQualities.has(q);
+  const button=mk("button","bis-v2-quality"+(on?" active":""),label+(isAll?"":" "+n));
+  button.type="button";button.setAttribute("aria-pressed",String(on));
+  if(!isAll){button.style.setProperty("--rarity",qualities[q][0]);button.disabled=!n&&!on}
+  button.addEventListener("click",()=>{if(isAll)selectedQualities.clear();else if(on)selectedQualities.delete(q);else selectedQualities.add(q);visibleLimit=45;renderPicker()});
+  root.append(button);
+ }
+ quality("all",u.all,list.length);
+ for(const [q,meta] of Object.entries(qualities)){const n=list.filter(i=>i.quality===q).length;if(n||selectedQualities.has(q))quality(q,meta[en?2:1],n)}
+ const term=pickerQuery.toLocaleLowerCase();
+ const matches=(blocked?[]:list).filter(it=>(!selectedQualities.size||selectedQualities.has(it.quality))&&(!term||(it.name+" "+(it.origin||"")+" "+it.id).toLocaleLowerCase().includes(term)));
+ $("level-picker-count").textContent=matches.length+" "+u.candidates;
+ const results=$("level-candidates");results.replaceChildren();
+ if(!matches.length){results.append(mk("p","bis-v2-empty",blocked?u.twohand:u.none));return}
+ for(const candidate of matches.slice(0,visibleLimit)){
+  const wrap=mk("div","bis-v2-candidate-wrap"),b=mk("button","bis-v2-candidate"+(i?.id===candidate.id?" selected":""));
+  b.type="button";b.dataset.quality=candidate.quality||"common";
+  b.setAttribute("aria-pressed",String(i?.id===candidate.id));b.setAttribute("aria-label",u.select+" : "+candidate.name);
+  const info=mk("span","bis-v2-candidate-info");
+  info.append(mk("strong","",candidate.name),mk("small","",T.required+" "+required(candidate)+(Number.isFinite(candidate.itemLevel)?" · "+T.itemLevel+" "+candidate.itemLevel:"")),
+   mk("small","",(isForever(candidate)?T.forever:T.classic)+" · "+(candidate.origin||T.from)));
+  b.append(sheetIcon(candidate,slot.icon),info);b.addEventListener("click",()=>saveChoice(id,candidate.id));
+  window.ForeverItemTooltip?.bind(b,{...candidate,slotLabel:labelSlot(slot)});
+  const detail=mk("button","bis-v2-info-button","ⓘ");detail.type="button";
+  detail.setAttribute("aria-label",u.details+" : "+candidate.name);
+  detail.addEventListener("click",()=>window.ForeverItemTooltip?.pin({...candidate,slotLabel:labelSlot(slot)}));
+  wrap.append(b,detail);results.append(wrap);
+ }
+ if(matches.length>visibleLimit){const more=mk("button","bis-v2-more",u.more+" ("+(matches.length-visibleLimit)+")");more.type="button";more.addEventListener("click",()=>{visibleLimit+=45;renderPicker()});results.append(more)}
+}
 function renderSlots(){
- const target=$("level-slots");target.replaceChildren();
- const covered=[];const pool=all.filter(eligible),used=new Set();let mainHandItem=null;
- const status=$("level-count");
- const grouped=new Map();
- for(const slot of db.slots){
-  const list=pool.filter(i=>window.ForeverGearData.compatible(normSlot(i),slot.id)||
-   slot.id==="offhand"&&normSlot(i)==="mainhand"&&dualWield()&&oneHand(i)&&weaponAllowed(i,"offhand"))
-   .filter(i=>slot.id!=="offhand"||weaponAllowed(i,"offhand"))
-   .sort((a,b)=>score(b)-score(a)||a.id-b.id);
-  grouped.set(slot.id,list);
- }
- for(const slot of db.slots){
-  const items=grouped.get(slot.id);
-  const blocked=slot.id==="offhand"&&mainHandItem&&twoHand(mainHandItem);
-  const best=blocked?null:(items.find(i=>!used.has(i.id))||null);
-  const card=mk("section","level-bis-slot"+(blocked?" is-blocked":""));
-  const header=mk("div","level-bis-slot-head");header.append(icon({icon:slot.icon}),mk("h3","",labelSlot(slot)));
-  if(items.length&&!blocked)header.append(mk("span","level-bis-num",items.length+" options"));
-  card.append(header);
-  if(!best){card.append(mk("p","level-bis-empty",blocked?(en?"Unavailable with a two-handed weapon":"Indisponible avec une arme à deux mains"):T.missing));target.append(card);continue}
-  covered.push(slot.id);
-  used.add(best.id);
-  if(slot.id==="mainhand")mainHandItem=best;
-  card.append(itemRow(best));
-  const options=items.filter(i=>i.id!==best.id).slice(0,4);
-  if(options.length){const details=mk("details","level-bis-alternatives");const summary=mk("summary","",T.more+" ("+options.length+(items.length>5?"+":"")+")");details.append(summary);for(const it of options)details.append(itemRow(it,true));card.append(details)}
-  target.append(card);
- }
- status.textContent=covered.length+" / "+db.slots.length+" "+T.slots+" · "+pool.length+" "+T.total;
+ if(!db)return;
+ currentPlan=plan();
+ const filled=[...currentPlan.selected.values()].filter(Boolean).length;
+ $("level-count").textContent=filled+" / "+db.slots.length+" "+T.slots+" · "+currentPlan.pool.length+" "+T.total;
  $("level-current").textContent=labelC(cls())+" · "+labelS(spec())+" · "+(levels[band][0]===levels[band][1]?String(levels[band][1]):levels[band].join("–"));
- $("level-empty").hidden=pool.length>0;
+ $("level-empty").hidden=currentPlan.pool.length>0;
  $("level-cap").textContent=T.levelCap;$("level-cap").hidden=levels[band][1]<=30;
+ renderSheet();renderPicker();
 }
 function renderAll(){renderFilters();renderSlots();renderRemoteStatus();selectionLink();ensureRemote()}
 (async()=>{
@@ -322,6 +421,7 @@ function renderAll(){renderFilters();renderSlots();renderRemoteStatus();selectio
   const p=Number(params.get("niveau"));if(params.has("niveau")&&Number.isInteger(p)&&p>=0&&p<levels.length)band=p;
   if(["forever","classic","all"].includes(params.get("origine")))origin=params.get("origine");
   $("level-more")?.addEventListener("click",()=>loadRemote(getRemote(),1));
+  $("level-search")?.addEventListener("input",e=>{pickerQuery=e.target.value.trim().toLocaleLowerCase();visibleLimit=45;renderPicker()});
   renderAll();
  }catch(err){$("level-current").textContent=T.error;$("level-count").textContent="";$("level-slots").replaceChildren(mk("p","level-bis-empty",T.error))}
 })();
