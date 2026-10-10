@@ -626,7 +626,14 @@
           "source_version": "forever_beta",
           "source_url": "https://www.wowhead.com/forever/fr/item=285331",
           "drop_evidence": "forever_wowhead_loot_and_player_report",
-          "chance_forever_observed_percent": 1.23
+          "chance_forever_observed_percent": 1.23,
+          "item_level": 25,
+          "required_level": 20,
+          "stats": {
+            "fr": "+5 Force · +5 Intelligence",
+            "en": "+5 Strength · +5 Intellect"
+          },
+          "collection_status": "forever_database_observed"
         }
       ],
       "source": "https://foreverdb.net/rare/5828",
@@ -671,7 +678,14 @@
           "source_version": "forever_beta",
           "source_url": "https://www.wowhead.com/forever/item=285329",
           "drop_evidence": "forever_wowhead_loot_and_player_report",
-          "chance_forever_observed_percent": 3.86
+          "chance_forever_observed_percent": 3.86,
+          "item_level": 21,
+          "required_level": 16,
+          "stats": {
+            "fr": "19 Armure · +4 Endurance · +3 Esprit",
+            "en": "19 Armor · +4 Stamina · +3 Spirit"
+          },
+          "collection_status": "forever_database_observed"
         }
       ],
       "source": "https://foreverdb.net/rare/5842",
@@ -716,7 +730,14 @@
           "source_version": "forever_beta",
           "source_url": "https://www.wowhead.com/forever/item=285330",
           "drop_evidence": "forever_wowhead_loot_and_player_report",
-          "chance_forever_observed_percent": 0.82
+          "chance_forever_observed_percent": 0.82,
+          "item_level": 23,
+          "required_level": 18,
+          "stats": {
+            "fr": "+6 Agilité · +2 Esprit",
+            "en": "+6 Agility · +2 Spirit"
+          },
+          "collection_status": "forever_database_observed"
         }
       ],
       "source": "https://foreverdb.net/rare/5831",
@@ -910,10 +931,17 @@
           "source_version": "forever_beta",
           "source_url": "https://www.wowhead.com/forever/npc=14430",
           "drop_evidence": "forever_wowhead_npc_drops_5_of_591",
-          "chance_forever_observed_percent": 0.85
+          "chance_forever_observed_percent": 0.85,
+          "item_level": 11,
+          "required_level": 6,
+          "stats": {
+            "fr": "58 Armure · +2 Agilité",
+            "en": "58 Armor · +2 Agility"
+          },
+          "collection_status": "forever_database_observed"
         }
       ],
-      "source": "https://foreverdb.net/rare/14430",
+      "source": "https://www.wowhead.com/forever/npc=14430",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
       "notes": {
