@@ -48,3 +48,23 @@
 .level-bis-source{line-height:1.3}
 .level-bis-slot.is-blocked{opacity:.8}
 .level-bis-slot.is-blocked .level-bis-empty{color:#bdaf8c}
+
+/* Keep the same equipment-paperdoll proportions and treatment as the pre-BiS module. */
+.level-bis-workspace{margin-top:12px}
+.level-bis-workspace .bis-v2-icon>.level-bis-icon{width:100%;height:100%;border:0;border-radius:0;background:transparent;overflow:hidden}
+.level-bis-workspace .bis-v2-icon>.level-bis-icon img{width:100%;height:100%;object-fit:cover}
+.level-bis-workspace .bis-v2-slot.acquired:after{background:#73c898}
+.level-bis-workspace .bis-v2-candidate-wrap{display:flex;gap:5px;align-items:stretch;min-width:0}
+.level-bis-workspace .bis-v2-candidate-wrap>.bis-v2-candidate{flex:1}
+.level-bis-workspace .bis-v2-candidate-wrap>.bis-v2-info-button{flex:none;align-self:center}
+.level-bis-workspace .bis-v2-picker{min-width:0}
+.level-bis-workspace .bis-v2-selected .bis-v2-icon{border-color:var(--rarity,#596852)}
+.level-bis-workspace .bis-v2-selected[data-quality="rare"],.level-bis-workspace .bis-v2-candidate[data-quality="rare"]{--rarity:#4c9df1}
+.level-bis-workspace .bis-v2-selected[data-quality="epic"],.level-bis-workspace .bis-v2-candidate[data-quality="epic"]{--rarity:#b67cff}
+.level-bis-workspace .bis-v2-selected[data-quality="uncommon"],.level-bis-workspace .bis-v2-candidate[data-quality="uncommon"]{--rarity:#43bf66}
+.level-bis-workspace .bis-v2-selected[data-quality="common"],.level-bis-workspace .bis-v2-candidate[data-quality="common"]{--rarity:#efeee9}
+.level-bis-workspace .bis-v2-selected[data-quality="poor"],.level-bis-workspace .bis-v2-candidate[data-quality="poor"]{--rarity:#9d9d9d}
+.level-bis-workspace .bis-v2-selected[data-quality="legendary"],.level-bis-workspace .bis-v2-candidate[data-quality="legendary"]{--rarity:#ffac46}
+.level-bis-workspace .bis-v2-candidates{scrollbar-width:thin}
+.level-bis-workspace .bis-v2-slot-copy small{color:var(--rarity,#9dab9a)}
+@media(max-width:980px){.level-bis-workspace .bis-v2-picker{position:static}}
