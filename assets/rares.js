@@ -23,7 +23,7 @@ function results(){
 const q=norm(search.value.trim());
 return rows.filter(r=>(zone.value==="all"||r.zone===zone.value)&&(type.value==="all"||r.classification===type.value)&&
 (level.value==="all"||(level.value==="low"?r.level<=30:r.level>30))&&(!loot.checked||r.loot.length)&&(!tame.checked||r.tameable)&&(!mapped.checked||r.points.length)&&
-(!q||norm([r.name.fr,r.name.en,zname(r.zone),...r.loot.map(i=>i.name.fr),...r.loot.map(i=>i.name.en)].join(" ")).includes(q)))
+(!q||norm([r.name.fr,r.name.en,zname(r.zone),...r.loot.map(i=>i.name.fr),...r.loot.map(i=>i.name.en),r.notes?.fr||"",r.notes?.en||""].join(" ")).includes(q)))
 .sort((a,b)=>Number(!!b.loot.length)-Number(!!a.loot.length)||a.level-b.level||a.name.en.localeCompare(b.name.en));
 }
 function showList(){
@@ -64,6 +64,7 @@ for(const item of r.loot){
 }out.append(loots);
 if(r.notes?.[en?"en":"fr"])out.append(m("p",r.notes[en?"en":"fr"],"rare-note"));
 const foot=m("div",null,"rare-detail-foot"),a=m("a",T("Voir la source ↗","View source ↗"));a.href=r.source||db.sources.timers_and_loot;a.target="_blank";a.rel="noopener noreferrer";foot.append(a);
+if(r.coordinate_source&&r.coordinate_source!==r.source){const p=m("a",T("Source des positions ↗","Spawn position source ↗"));p.href=r.coordinate_source;p.target="_blank";p.rel="noopener noreferrer";foot.append(p)}
 if(r.points.length){const b=button(T("Copier /way","Copy /way"),"rare-copy");b.addEventListener("click",async()=>{const p=r.points[0],str="/way "+p[0]+" "+p[1];try{await navigator.clipboard.writeText(str);b.textContent=T("Copié ✓","Copied ✓")}catch{b.textContent=str}});foot.append(b)}
 out.append(foot);
 }
@@ -114,7 +115,7 @@ canvas.addEventListener("pointerup",e=>{const moved=drag?.moved;drag=null;if(mov
 canvas.addEventListener("pointercancel",()=>drag=null);canvas.addEventListener("pointerleave",()=>{hover=null;draw()});
 canvas.addEventListener("keydown",e=>{if(e.key==="+"||e.key==="="){e.preventDefault();zoomTo(zoom*1.25)}else if(e.key==="-"){e.preventDefault();zoomTo(zoom/1.25)}else if(["ArrowLeft","ArrowRight","ArrowUp","ArrowDown"].includes(e.key)){e.preventDefault();center[0]+=(e.key==="ArrowLeft"?-8:e.key==="ArrowRight"?8:0)/zoom;center[1]+=(e.key==="ArrowUp"?-8:e.key==="ArrowDown"?8:0)/zoom;clampCenter();draw()}});
 for(const e of [search,zone,type,level,loot,tame,mapped])e.addEventListener(e===search?"input":"change",update);
-fetch("/data/rares.json?v=20261010",{cache:"no-cache"}).then(r=>{if(!r.ok)throw Error("HTTP "+r.status);return r.json()}).then(data=>{
+fetch("/data/rares.json?v=20261010-paluns-fix",{cache:"no-cache"}).then(r=>{if(!r.ok)throw Error("HTTP "+r.status);return r.json()}).then(data=>{
 if(!Array.isArray(data.rares)||!data.zones)throw Error("Invalid JSON");db=data;rows=data.rares.filter(r=>r.zone&&db.zones[r.zone]&&Array.isArray(r.points)&&Array.isArray(r.loot));
 for(const key of [...new Set(rows.map(r=>r.zone))].sort((a,b)=>zname(a).localeCompare(zname(b),en?"en":"fr"))){const opt=m("option",zname(key));opt.value=key;zone.append(opt)}
 const qs=new URLSearchParams(location.search);if(db.zones[qs.get("zone")])zone.value=qs.get("zone");if(qs.get("q"))search.value=qs.get("q");
