@@ -2214,7 +2214,8 @@
         "x": 42,
         "y": 72,
         "zone": "westfall",
-        "note": "Entrée de la mine / Mine access, portail plus bas"
+        "note": "Entrée de la mine / Mine access, portail plus bas",
+        "source": "https://wowforever.be/guides/dungeons/the-deadmines/"
       },
       "mapMarkerPrecision": "annotated_map_approx"
     },
@@ -2236,8 +2237,8 @@
         "uiMapID": 1421
       },
       "access": {
-        "fr": "Entrée située dans : Forêt des Pins argentés. Consulter la carte et la source pour la localisation précise.",
-        "en": "Entrance in Silverpine Forest. See source map for precise directions."
+        "fr": "Dans la forêt des Pins argentés (44,5 ; 68), au nord du village de Bois-bûcher.",
+        "en": "Silverpine Forest (44.5, 68), north of Pyrewood Village."
       },
       "source": "https://foreverchanges.pro/dungeons/shadowfang-keep",
       "bosses": [
@@ -2519,7 +2520,14 @@
         "attribution": "Plan Classic annoté · eintr.net (archive Aetherflask)",
         "source": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html"
       },
-      "mapMarkerPrecision": "annotated_map_approx"
+      "mapMarkerPrecision": "annotated_map_approx",
+      "entry": {
+        "x": 44.5,
+        "y": 68,
+        "zone": "silverpine",
+        "source": "https://www.warcrafttavern.com/forever/guides/shadowfang-keep/",
+        "note": "Reported outdoor entrance; dungeon portal may be further inside"
+      }
     },
     {
       "id": "blackfathom-deeps",
@@ -2999,8 +3007,8 @@
         "uiMapID": 1426
       },
       "access": {
-        "fr": "Entrée située dans : Dun Morogh. Consulter la carte et la source pour la localisation précise.",
-        "en": "Entrance in Dun Morogh. See source map for precise directions."
+        "fr": "À Dun Morogh (24, 40), descendre par l'ascenseur et traverser les tunnels. La Horde peut utiliser le téléporteur de Baie-du-Butin après la quête.",
+        "en": "Dun Morogh (24, 40). Take the elevator and tunnels. Horde can unlock the Booty Bay transporter quest."
       },
       "source": "https://foreverchanges.pro/dungeons/gnomeregan",
       "bosses": [
@@ -3293,6 +3301,13 @@
         "kind": "existing_annotated_map",
         "attribution": "Carte Classic de parcours · eintr.net (archive Aetherflask)",
         "source": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html"
+      },
+      "entry": {
+        "x": 24,
+        "y": 40,
+        "zone": "dun-morogh",
+        "source": "https://www.warcrafttavern.com/wow-classic/guides/gnomeregan/",
+        "note": "Reported outdoor entrance; dungeon portal may be further inside"
       }
     },
     {
