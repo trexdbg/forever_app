@@ -843,9 +843,9 @@
       "loot_coverage": "not_documented"
     },
     {
-      "id": "mulgore-the-rake",
+      "id": "5807",
       "name": {
-        "fr": "Le Balafré",
+        "fr": "Le Rake",
         "en": "The Rake"
       },
       "zone": "mulgore",
@@ -856,24 +856,37 @@
       "respawn_max_hours": 1.5,
       "points": [
         [
-          32.7,
-          36.5
+          51.5,
+          27.5
         ]
       ],
-      "loot": [],
-      "source": "https://foreverdb.net/rares",
+      "loot": [
+        {
+          "name": {
+            "fr": "Armure en fourrure de lion",
+            "en": "Lionfur Armor"
+          },
+          "item_id": 17922,
+          "icon": "inv_chest_fur",
+          "chance_classic_percent": 100,
+          "source_version": "classic_reference",
+          "source_url": "https://www.wowhead.com/forever/fr/item=17922"
+        }
+      ],
+      "source": "https://foreverdb.net/rare/5807",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
       "notes": {
         "fr": "",
         "en": ""
       },
-      "name_fr_status": "community_translation_check_needed",
+      "name_fr_status": "wowhead_forever_fr",
       "beta_level30_in_scope": true,
-      "loot_coverage": "not_documented"
+      "loot_coverage": "notable_only_not_complete",
+      "coordinate_source": "https://foreverdb.net/rare/5807"
     },
     {
-      "id": "mulgore-mazzranache",
+      "id": "3068",
       "name": {
         "fr": "Mazzranache",
         "en": "Mazzranache"
@@ -886,12 +899,24 @@
       "respawn_max_hours": 48,
       "points": [
         [
-          55,
-          39
+          49,
+          49
         ]
       ],
-      "loot": [],
-      "source": "https://foreverdb.net/rares",
+      "loot": [
+        {
+          "name": {
+            "fr": "Tunique à plumes lisses",
+            "en": "Sleek Feathered Tunic"
+          },
+          "item_id": 4861,
+          "icon": "inv_chest_fur",
+          "chance_classic_percent": 50,
+          "source_version": "classic_reference",
+          "source_url": "https://www.wowhead.com/forever/item=4861"
+        }
+      ],
+      "source": "https://foreverdb.net/rare/3068",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
       "notes": {
@@ -899,7 +924,9 @@
         "en": "Approximate Classic position; requires rechecking."
       },
       "beta_level30_in_scope": true,
-      "loot_coverage": "not_documented"
+      "loot_coverage": "notable_only_not_complete",
+      "name_fr_status": "classic_reference",
+      "coordinate_source": "https://foreverdb.net/rare/3068"
     },
     {
       "id": "14430",
@@ -1280,7 +1307,7 @@
       "loot_coverage": "not_documented"
     },
     {
-      "id": "dun-morogh-bjarn",
+      "id": "1130",
       "name": {
         "fr": "Bjarn",
         "en": "Bjarn"
@@ -1293,8 +1320,20 @@
       "respawn_max_hours": 6,
       "points": [
         [
-          55.6,
-          58.5
+          56,
+          59
+        ],
+        [
+          63,
+          58
+        ],
+        [
+          59,
+          58
+        ],
+        [
+          53,
+          59
         ]
       ],
       "loot": [
@@ -1303,14 +1342,14 @@
             "fr": "Gilet en peau d'ours noir",
             "en": "Black Bear Hide Vest"
           },
-          "item_id": null,
+          "item_id": 2069,
           "icon": "inv_chest_leather_02",
           "chance_classic_percent": 25,
           "source_version": "classic_reference",
-          "source_url": "https://foreverdb.net/rare/1130"
+          "source_url": "https://www.wowhead.com/forever/fr/item=2069"
         }
       ],
-      "source": "https://foreverdb.net/rares",
+      "source": "https://foreverdb.net/rare/1130",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
       "notes": {
@@ -1318,7 +1357,9 @@
         "en": ""
       },
       "beta_level30_in_scope": true,
-      "loot_coverage": "notable_only_not_complete"
+      "loot_coverage": "notable_only_not_complete",
+      "name_fr_status": "classic_reference",
+      "coordinate_source": "https://foreverdb.net/rare/1130"
     },
     {
       "id": "dun-morogh-gibblewilt",
@@ -1794,7 +1835,7 @@
       "beta_level30_in_scope": false
     },
     {
-      "id": "arathi-nimar-the-slayer",
+      "id": "2606",
       "name": {
         "fr": "Nimar le Pourfendeur",
         "en": "Nimar the Slayer"
@@ -1811,8 +1852,20 @@
           73.7
         ]
       ],
-      "loot": [],
-      "source": "https://foreverdb.net/rares",
+      "loot": [
+        {
+          "name": {
+            "fr": "Coiffure tribale de Nimar",
+            "en": "Nimar's Tribal Headdress"
+          },
+          "item_id": 2622,
+          "icon": "inv_helmet_31",
+          "chance_classic_percent": 90,
+          "source_version": "classic_reference",
+          "source_url": "https://www.wowhead.com/forever/fr/item=2622"
+        }
+      ],
+      "source": "https://foreverdb.net/rare/2606",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
       "notes": {
@@ -1820,7 +1873,8 @@
         "en": ""
       },
       "name_fr_status": "wowhead_forever_fr",
-      "beta_level30_in_scope": false
+      "beta_level30_in_scope": false,
+      "loot_coverage": "notable_only_not_complete"
     },
     {
       "id": "arathi-molok-the-crusher",
@@ -2197,7 +2251,7 @@
     {
       "id": "573",
       "name": {
-        "fr": "Moissonneur mécanique 4000",
+        "fr": "Faucheur 4000",
         "en": "Foe Reaper 4000"
       },
       "zone": "westfall",
@@ -2301,14 +2355,14 @@
           "source_url": "https://foreverdb.net/rare/573"
         }
       ],
-      "source": "https://foreverdb.net/rare/573",
+      "source": "https://www.wowhead.com/forever/fr/npc=573",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
       "notes": {
         "fr": "20 des 40 positions Classic listées par la source ; un seul Faucheur peut apparaître à la fois. Sur Forever : à confirmer.",
         "en": "20 of 40 Classic reference positions listed; only one Reaper spawns at a time. Not verified in Forever."
       },
-      "name_fr_status": "community_translation_check_needed",
+      "name_fr_status": "wowhead_forever_fr",
       "beta_level30_in_scope": true,
       "loot_coverage": "notable_only_not_complete"
     },
@@ -7466,7 +7520,7 @@
       "loot_coverage": "not_documented"
     },
     {
-      "id": "classic-wailing-caverns-deviate-faerie-dragon",
+      "id": "5912",
       "name": {
         "fr": "Dragon féerique déviant",
         "en": "Deviate Faerie Dragon"
@@ -7484,7 +7538,7 @@
             "fr": "Crache-feu",
             "en": "Firebelcher"
           },
-          "item_id": null,
+          "item_id": 5243,
           "icon": "inv_wand_08",
           "chance_classic_percent": 50,
           "source_version": "classic_reference",
@@ -7495,14 +7549,14 @@
             "fr": "Cape d'écailles-faë",
             "en": "Feyscale Cloak"
           },
-          "item_id": null,
+          "item_id": 6632,
           "icon": "inv_misc_cape_07",
           "chance_classic_percent": 50,
           "source_version": "classic_reference",
           "source_url": "https://foreverdb.net/rare/5912"
         }
       ],
-      "source": "https://foreverdb.net/rares",
+      "source": "https://foreverdb.net/rare/5912",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
       "notes": {
@@ -8180,7 +8234,7 @@
       "loot_coverage": "not_documented"
     },
     {
-      "id": "classic-hillsbrad-tamra-stormpike",
+      "id": "14275",
       "name": {
         "fr": "Tamra Foudrepique",
         "en": "Tamra Stormpike"
@@ -8195,10 +8249,30 @@
         [
           70.7,
           78.1
+        ],
+        [
+          73,
+          81
+        ],
+        [
+          72,
+          82
         ]
       ],
-      "loot": [],
-      "source": "https://wow-guides.com/knowledge/creature-ranks",
+      "loot": [
+        {
+          "name": {
+            "fr": "Plastron d'Humbert",
+            "en": "Humbert's Chestpiece"
+          },
+          "item_id": 3053,
+          "icon": "inv_chest_chain_09",
+          "chance_classic_percent": 1.4,
+          "source_version": "classic_reference",
+          "source_url": "https://www.wowhead.com/forever/item=3053"
+        }
+      ],
+      "source": "https://foreverdb.net/rare/14275",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
       "notes": {
@@ -8206,10 +8280,10 @@
         "en": ""
       },
       "coordinate_status": "classic_reference",
-      "coordinate_source": "https://wow-guides.com/knowledge/creature-ranks",
+      "coordinate_source": "https://foreverdb.net/rare/14275",
       "name_fr_status": "community_translation_check_needed",
       "beta_level30_in_scope": true,
-      "loot_coverage": "not_documented"
+      "loot_coverage": "notable_only_not_complete"
     },
     {
       "id": "classic-hillsbrad-lady-zephris",
@@ -8638,7 +8712,7 @@
       "beta_level30_in_scope": false
     },
     {
-      "id": "classic-razorfen-kraul-razorfen-spearhide",
+      "id": "4438",
       "name": {
         "fr": "Lancepeau tranchebauge",
         "en": "Razorfen Spearhide"
@@ -8650,8 +8724,20 @@
       "respawn_min_hours": 2,
       "respawn_max_hours": 2,
       "points": [],
-      "loot": [],
-      "source": "https://foreverdb.net/rares",
+      "loot": [
+        {
+          "name": {
+            "fr": "Perce-fer",
+            "en": "Armor Piercer"
+          },
+          "item_id": 6679,
+          "icon": "inv_spear_06",
+          "chance_classic_percent": 79.6,
+          "source_version": "classic_reference",
+          "source_url": "https://www.wowhead.com/forever/fr/item=6679"
+        }
+      ],
+      "source": "https://foreverdb.net/rare/4438",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
       "notes": {
@@ -8661,7 +8747,7 @@
       "coordinate_status": "not_yet_documented",
       "name_fr_status": "community_translation_check_needed",
       "beta_level30_in_scope": true,
-      "loot_coverage": "not_documented"
+      "loot_coverage": "notable_only_not_complete"
     },
     {
       "id": "classic-razorfen-kraul-earthcaller-halmgar",
@@ -11628,7 +11714,8 @@
     "positions_and_loot": "https://foreverdb.net/rares",
     "rare_reference": "https://foreverdb.net/rares",
     "classic_spawn_crosscheck": "https://wow-guides.com/knowledge/creature-ranks",
-    "forever_npc_zone_crosscheck": "https://www.wowhead.com/forever/npc=2779/prince-nazjak"
+    "forever_npc_zone_crosscheck": "https://www.wowhead.com/forever/npc=2779/prince-nazjak",
+    "wowhead_forever_fr": "https://www.wowhead.com/forever/fr/"
   },
   "disclaimer": {
     "fr": "Bêta Forever : niveau maximum 30. Les nouveaux butins Forever sont identifiés séparément ; leurs taux observés ne garantissent pas les chances réelles. Les autres positions, butins notables et délais issus de Classic restent à confirmer sur Forever. La liste n'est pas une table de butin exhaustive (objets communs et butins mondiaux exclus).",
