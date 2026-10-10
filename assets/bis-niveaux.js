@@ -585,7 +585,11 @@ function renderAll(){renderFilters();renderSlots();renderFarm();renderRemoteStat
    const normalized=window.ForeverItemLocale?.record({...item,slot:normSlot(item)})||{...item,slot:normSlot(item)};
    const existing=byId.get(item.id);
    // Prefer sources with a known required level and rich tooltips; preserve provenances.
-   if(!existing||isObserved(normalized)||(required(normalized)!==null&&required(existing)===null)||isForever(normalized)&&!isForever(existing))byId.set(item.id,normalized);
+   if(isObserved(normalized)){
+     // An observed beta source takes priority for stats and acquisition, but
+     // must not discard an image already available in the local item archive.
+     byId.set(item.id,{...(existing||{}),...normalized,icon:normalized.icon||existing?.icon||null});
+    }else if(!existing||(required(normalized)!==null&&required(existing)===null)||isForever(normalized)&&!isForever(existing))byId.set(item.id,normalized);
   }
   all=[...byId.values()];
   if(db.classes.some(c=>c.id===params.get("classe")))classId=params.get("classe");
