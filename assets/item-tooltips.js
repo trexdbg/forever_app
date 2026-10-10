@@ -154,12 +154,16 @@ inner.append(group);
 }
 if(item.origin)write(inner,"forever-item-tooltip__origin",w.origin+" : "+item.origin);
 if(status==="unavailable"&&haveRich)write(inner,"forever-item-tooltip__muted",w.unavailable);
-write(inner,"forever-item-tooltip__disclaimer",forever?(en?"Recorded on Wowhead Forever (beta) · availability and final stats unconfirmed.":"Référence Wowhead Forever (bêta) · disponibilité et statistiques finales non garanties."):w.classic);
+write(inner,"forever-item-tooltip__disclaimer",
+ forever?(item.source_status==="forever_beta_observed"
+ ?(en?"Loot reported by the beta community; item and acquisition may change.":"Butin signalé par la communauté bêta ; objet et obtention susceptibles de changer.")
+ :(en?"Seen in Forever beta data; not proof of in-game availability.":"Présent dans les données bêta Forever ; obtention en jeu non confirmée."))
+ :w.classic);
 const foot=elt("div","forever-item-tooltip__foot");
 if(isId(item.id)){
 const sourceUrl=(()=>{const url=item.source_url||item.url;if(!forever||typeof url!=="string")return null;try{const u=new URL(url);return u.protocol==="https:"&&(u.hostname==="www.60.tools"&&u.pathname.startsWith("/items/")||u.hostname==="www.wowhead.com"&&u.pathname.startsWith("/forever/"))?u.href:null}catch{return null}})();
 const a=elt("a","forever-item-tooltip__source",forever?(en?"Forever beta source ↗":"Source Forever bêta ↗"):w.source+" ↗");
-a.href=forever?(sourceUrl||"https://www.wowhead.com/forever/item="+Number(item.id)):"https://wowdb.assemblee-defias.fr/?id=classic:item:"+Number(item.id);a.target="_blank";a.rel="noopener noreferrer";foot.append(a);
+a.href=forever?(item.source_status==="forever_beta_observed"&&typeof item.source_url==="string"&&item.source_url.startsWith("https://foreverchanges.pro/item/")?item.source_url:(sourceUrl||"https://www.wowhead.com/forever/item="+Number(item.id))):"https://wowdb.assemblee-defias.fr/?id=classic:item:"+Number(item.id);a.target="_blank";a.rel="noopener noreferrer";foot.append(a);
 }else write(foot,"forever-item-tooltip__source",w.source);
 inner.append(foot);
 }

@@ -11,10 +11,38 @@ const levels=["common","uncommon","rare","epic","legendary"];
 const labels=en?["Common","Uncommon","Rare","Epic","Legendary"]:["Commun","Inhabituel","Rare","Épique","Légendaire"];
 const colors={poor:"#9d9d9d",common:"#efeee9",uncommon:"#43bf66",rare:"#4c9df1",epic:"#b67cff",legendary:"#ffac46"};
 const slotLabels=en?{head:"Head",neck:"Neck",shoulders:"Shoulders",back:"Back",chest:"Chest",wrist:"Wrists",hands:"Hands",waist:"Waist",legs:"Legs",feet:"Feet",finger1:"Rings",trinket1:"Trinkets",mainhand:"Weapons",offhand:"Off hand",ranged:"Ranged / relic"}:{head:"Tête",neck:"Cou",shoulders:"Épaules",back:"Dos",chest:"Torse",wrist:"Poignets",hands:"Mains",waist:"Taille",legs:"Jambes",feet:"Pieds",finger1:"Anneaux",trinket1:"Bijoux",mainhand:"Armes",offhand:"Main gauche",ranged:"Distance / relique"};
-let classic=[],local=[],forever=[],selection=new Set(),status="all",key="",cursor=null,more=false,loading=false,error="",total=null,visibleLimit=200,sortKey="itemLevel",sortDirection="desc";
+let classic=[],local=[],forever=[],observed=[],selection=new Set(),status="beta30",key="",cursor=null,more=false,loading=false,error="",total=null,visibleLimit=200,sortKey="itemLevel",sortDirection="desc";
 const rowText=(row,value)=>{const cell=document.createElement("td");cell.textContent=String(value??"—");row.append(cell);return cell};
 function normalizeLocal(i){const x={...i,slot:service.LABELS[i.slot]||i.slot,source_status:i.source_status||"classic_reference"};return window.ForeverItemLocale?.record(x)||x}
 function sourceType(item){return typeof item.source_status==="string"&&item.source_status.startsWith("forever_beta_")?"forever":"classic"}
+const scopeLabels=en?{
+ scope:"Catalogue",beta30:"Forever beta · levels 1–30",betaOther:"Other beta records",classicOnly:"Classic references",allSources:"All sources",
+ betaNote:"Beta-client data is not proof an item is obtainable. Filtered by required level; unknown requirements appear under Other beta records.",
+ beyondNote:"Beta records beyond level 30 or with unknown required level. In-game availability is unconfirmed.",
+ classicNote:"Classic-only references: presence on Forever unverified. Missing beta data does not mean removed.",
+ allNote:"Beta records and unverified Classic references are mixed here. Check the source of each item.",
+ betaBadge:"Beta · client",observedBadge:"Beta · reported loot",classicBadge:"Classic · unverified"
+}:{
+ scope:"Catalogue",beta30:"Forever bêta · niveaux 1–30",betaOther:"Autres données bêta",classicOnly:"Références Classic",allSources:"Toutes les sources",
+ betaNote:"Présent dans les données bêta ≠ obtenable en jeu. Filtre sur le niveau requis ; les niveaux inconnus figurent dans « Autres données bêta ».",
+ beyondNote:"Données bêta au-delà du niveau 30 ou niveau requis inconnu. Disponibilité en jeu non confirmée.",
+ classicNote:"Références Classic non vérifiées sur Forever. Absence des données bêta ≠ objet supprimé.",
+ allNote:"Les données bêta et les références Classic non vérifiées sont réunies ici. Vérifiez la provenance de chaque objet.",
+ betaBadge:"Bêta · client",observedBadge:"Bêta · butin signalé",classicBadge:"Classic · non vérifié"
+};
+function betaLevel30(item){
+ const n=item.requiredLevel??item.required_level;
+ if(n===0||n==="0")return true;
+ const value=Number(n);
+ return n!==null&&n!==undefined&&n!==""&&Number.isFinite(value)&&value>0&&value<=30;
+}
+function precedence(item){
+ if(item.source_status==="forever_beta_observed")return 5;
+ if(item.source_status==="forever_beta_client_present"||item.source_status==="forever_beta_client_new"||item.source_status==="forever_beta_client")return 4;
+ if(item.source_status==="forever_beta_60tools"||item.source_status==="forever_beta_wowhead")return 3;
+ if(sourceType(item)==="forever")return 2;
+ return 0;
+}
 const validImage=i=>typeof i==="string"&&(/^[a-z0-9_-]{2,70}$/.test(i)||i.startsWith("https://wowdb.assemblee-defias.fr/database-icons/"));
 const genericSlotIcons={head:"inv_helmet_06",neck:"inv_jewelry_necklace_07",shoulders:"inv_shoulder_07",back:"inv_misc_cape_10",chest:"inv_chest_cloth_07",wrist:"inv_bracer_07",hands:"inv_gauntlets_04",waist:"inv_belt_10",legs:"inv_pants_07",feet:"inv_boots_07",finger1:"inv_jewelry_ring_03",finger2:"inv_jewelry_ring_15",trinket1:"inv_jewelry_talisman_05",trinket2:"inv_jewelry_talisman_06",mainhand:"inv_sword_04",offhand:"inv_shield_05",ranged:"inv_weapon_bow_07"};
 function imageUrl(i){if(i&&typeof i.icon==="string"&&i.icon.startsWith("https://wowdb.assemblee-defias.fr/database-icons/"))return i.icon;
@@ -23,15 +51,19 @@ return icon?"/assets/icons/"+icon+".jpg":null}
 
 function catalogItems(){
  const byID=new Map();
- for(const i of [...forever,...local,...classic]){
-  if(i.quality==="poor")continue;
-  if(!byID.has(i.id)||sourceType(i)==="forever")byID.set(i.id,i);
+ for(const i of [...classic,...local,...forever,...observed]){
+  if(i.quality==="poor"||!Number.isInteger(i.id))continue;
+  const prev=byID.get(i.id);
+  if(!prev||precedence(i)>precedence(prev))byID.set(i.id,i);
  }
  return [...byID.values()];
 }
 function matchesBase(item){
  if(item.quality==="poor")return false;
- if(status==="forever"&&sourceType(item)!=="forever"||status==="classic"&&sourceType(item)!=="classic")return false;
+ const kind=sourceType(item);
+ if(status==="beta30"&&(kind!=="forever"||!betaLevel30(item)))return false;
+ if(status==="betaOther"&&(kind!=="forever"||betaLevel30(item)))return false;
+ if(status==="classic"&&kind!=="classic")return false;
  if(slot.value!=="all"&&!service.compatible(item.slot,slot.value))return false;
  if(armor.value!=="all"&&window.ForeverEquipmentRules?.armorType(item)!==armor.value)return false;
  const q=search.value.trim().toLocaleLowerCase();
@@ -93,14 +125,14 @@ function render(){
  const rows=items.filter(matches).sort(compareItems);
  updateSortHeaders();
  table.replaceChildren();
- count.textContent=rows.length+" "+(rows.length===1?tr.item:tr.items)+(total!==null&&status!=="forever"?" · "+total.toLocaleString(en?"en":"fr")+" Classic ("+tr.loaded+" : "+classic.length+")":"");
+ count.textContent=rows.length+" "+(rows.length===1?tr.item:tr.items)+(total!==null&&(status==="all"||status==="classic")?" · "+total.toLocaleString(en?"en":"fr")+" Classic ("+tr.loaded+" : "+classic.length+")":"");
  if(!rows.length){const line=document.createElement("tr");rowText(line,loading?tr.loading:tr.noresult).colSpan=5;table.append(line)}
  for(const i of rows.slice(0,visibleLimit)){const row=document.createElement("tr"),name=rowText(row,"");name.className="item-v2-name";const imgSrc=imageUrl(i);
  if(imgSrc){const pic=document.createElement("img");pic.className="result-icon item-v2-icon";pic.src=imgSrc;pic.alt="";pic.loading="lazy";if(!i.icon)pic.title=en?"Illustrative slot icon":"Icône illustrative d’emplacement";pic.onerror=()=>{if(!pic.dataset.iconFallback&&/^[a-z0-9_-]{2,70}$/.test(i.icon||"")){pic.dataset.iconFallback="1";pic.src="https://wow.zamimg.com/images/wow/icons/medium/"+i.icon+".jpg"}else pic.remove()};name.append(pic)}
  const display=document.createElement("span");display.className="item-v2-label";display.style.setProperty("--rarity",colors[i.quality]||"#d7d7d7");
  const href=(typeof i.url==="string"&&(i.url.startsWith("https://www.wowhead.com/forever/")||i.url.startsWith("https://wowdb.assemblee-defias.fr/")||i.url.startsWith("https://www.60.tools/items/")))?i.url:null;
  const anchor=document.createElement(href?"a":"span");if(href){anchor.href=href;anchor.target="_blank";anchor.rel="noopener noreferrer"}anchor.textContent=i.name;display.append(anchor);name.append(display);
- const tag=document.createElement("span");tag.className="item-v3-provenance "+(sourceType(i)==="forever"?"forever":"classic");tag.textContent=sourceType(i)==="forever"?tr.badgeForever:tr.badgeClassic;name.append(tag);
+ const tag=document.createElement("span");tag.className="item-v3-provenance "+(sourceType(i)==="forever"?"forever":"classic");tag.textContent=sourceType(i)==="forever"?(i.source_status==="forever_beta_observed"?scopeLabels.observedBadge:scopeLabels.betaBadge):scopeLabels.classicBadge;name.append(tag);
  const detail=document.createElement("button");detail.type="button";detail.className="bis-v2-info-button item-v2-info";detail.textContent="ⓘ";detail.setAttribute("aria-label",tr.tooltip+" "+i.name);detail.addEventListener("click",()=>window.ForeverItemTooltip?.pin(i));name.append(detail);
  rowText(row,slotLabels[i.slot]||i.slot);
  rowText(row,numericLevel(i,"itemLevel")??"—").className="item-catalogue-numeric";
@@ -109,13 +141,14 @@ function render(){
  table.append(row);
  window.ForeverItemTooltip?.bind(row,i);
  }
- if(loading)notice.textContent=tr.loading;else if(error)notice.textContent=error;else notice.textContent=(Math.min(rows.length,visibleLimit)+" / "+rows.length+" "+tr.shown+" · ")+(status==="forever"?tr.beta:tr.classicNote);
+ if(loading)notice.textContent=tr.loading;else if(error)notice.textContent=error;else notice.textContent=(Math.min(rows.length,visibleLimit)+" / "+rows.length+" "+tr.shown);
+ scopeInfo.textContent=status==="beta30"?scopeLabels.betaNote:status==="betaOther"?scopeLabels.beyondNote:status==="classic"?scopeLabels.classicNote:scopeLabels.allNote;
  localMore.hidden=rows.length<=visibleLimit;localMore.textContent=tr.showMore;
- moreButton.hidden=status==="forever"||loading||(classic.length>0&&!more&&!error);moreButton.disabled=loading;moreButton.textContent=classic.length>0&&more?tr.load:tr.browse;
+ moreButton.hidden=!(status==="classic"||status==="all")||loading||(classic.length>0&&!more&&!error);moreButton.disabled=loading;moreButton.textContent=classic.length>0&&more?tr.load:tr.browse;
 }
 function signature(){return JSON.stringify([status,slot.value,armor.value,search.value.trim().toLowerCase(),[...selection].sort()])}
 async function queryClassic(expected,append=false){
- if(status==="forever"||loading)return;
+ if(!(status==="classic"||status==="all")||loading)return;
  loading=true;render();
  try{
   const q=search.value.trim(),numeric=/^\d{1,8}$/.test(q)?Number(q):null;
@@ -140,10 +173,12 @@ document.querySelectorAll(".item-catalogue-sort").forEach(button=>button.addEven
  else{sortKey=field;sortDirection="desc"}
  render();
 }));
-const control=document.createElement("label");control.className="item-v3-source-filter";control.textContent=tr.filter+" ";
-const select=document.createElement("select");select.id="item-source";select.setAttribute("aria-label",tr.filter);
-for(const [value,label] of [["all",tr.all],["forever",tr.forever],["classic",tr.classic]]){const opt=document.createElement("option");opt.value=value;opt.textContent=label;select.append(opt)}
+const control=document.createElement("label");control.className="item-v3-source-filter";control.textContent=scopeLabels.scope+" ";
+const select=document.createElement("select");select.id="item-source";select.setAttribute("aria-label",scopeLabels.scope);
+for(const [value,label] of [["beta30",scopeLabels.beta30],["betaOther",scopeLabels.betaOther],["classic",scopeLabels.classicOnly],["all",scopeLabels.allSources]]){const opt=document.createElement("option");opt.value=value;opt.textContent=label;select.append(opt)}
 control.append(select);document.querySelector(".item-catalogue-filter-fields")?.append(control);
+const scopeInfo=document.createElement("p");scopeInfo.className="item-catalogue-evidence-note";scopeInfo.setAttribute("role","note");
+document.querySelector(".item-v2-quality-controls")?.after(scopeInfo);
 const notice=document.createElement("p");notice.className="item-v3-live-note";notice.setAttribute("aria-live","polite");
 const localMore=document.createElement("button");localMore.className="bis-v2-more item-v3-load";localMore.type="button";localMore.hidden=true;localMore.addEventListener("click",()=>{visibleLimit+=200;render()});
 const moreButton=document.createElement("button");moreButton.className="bis-v2-more item-v3-load";moreButton.type="button";moreButton.textContent=tr.load;
@@ -156,12 +191,18 @@ const options=[...slot.options];slot.replaceChildren(options[0]);
 for(const [id,label] of Object.entries(slotLabels)){const o=document.createElement("option");o.value=id;o.textContent=label;slot.append(o)}
 (async()=>{
  try{
- const [catalog,archive,seed]=await Promise.all([fetch("/data/items.json",{credentials:"omit"}).then(r=>r.json()),fetch("/data/items-classic-cache.json?v=20261010-1",{credentials:"omit"}).then(r=>r.json()).catch(()=>({items:[]})),service.loadForever()]);
+ const [catalog,archive,observations,seed]=await Promise.all([
+ fetch("/data/items.json",{credentials:"omit"}).then(r=>r.ok?r.json():{items:[]}).catch(()=>({items:[]})),
+ fetch("/data/items-classic-cache.json?v=20261010-1",{credentials:"omit"}).then(r=>r.ok?r.json():{items:[]}).catch(()=>({items:[]})),
+ fetch("/data/bis-niveaux-forever-observed.json?v=20261010-1",{credentials:"omit"}).then(r=>r.ok?r.json():{items:[]}).catch(()=>({items:[]})),
+ service.loadForever()
+ ]);
  local=[...(Array.isArray(catalog.items)?catalog.items.filter(i=>i.verified===true&&Number.isInteger(i.id)):[]),...(Array.isArray(archive.items)?archive.items.filter(i=>i.verified===true&&Number.isInteger(i.id)):[])].map(normalizeLocal);
- forever=seed;source.replaceChildren();source.append(document.createTextNode(en?"Sources: ":"Sources : "));
+ forever=seed;observed=(Array.isArray(observations.items)?observations.items:[]).filter(i=>Number.isInteger(i.id)&&i.id>0&&typeof i.name==="string"&&i.source_status==="forever_beta_observed").map(normalizeLocal);source.replaceChildren();source.append(document.createTextNode(en?"Sources: ":"Sources : "));
 const aForever=document.createElement("a");aForever.href="https://www.wowhead.com/forever/items";aForever.target="_blank";aForever.rel="noopener noreferrer";aForever.textContent="Wowhead Forever";
 const aClassic=document.createElement("a");aClassic.href="https://wowdb.assemblee-defias.fr/";aClassic.target="_blank";aClassic.rel="noopener noreferrer";aClassic.textContent="WoWDB des Défias";
-source.append(aForever,document.createTextNode(" · "),aClassic,document.createTextNode(" · "+tr.beta));
+const aObserved=document.createElement("a");aObserved.href="https://foreverchanges.pro/dungeons";aObserved.target="_blank";aObserved.rel="noopener noreferrer";aObserved.textContent="ForeverChanges";
+source.append(aForever,document.createTextNode(" · "),aObserved,document.createTextNode(" · "),aClassic);
  }catch(e){error=tr.unavailable}
  queue();render();
 })();
