@@ -24,7 +24,7 @@ function checkIds(name,rows){
  assert.equal(new Set(rows.map(x=>x.id)).size,rows.length,name+" duplicate IDs");
  for(const i of rows){
   assert.ok(Number.isInteger(i.id)&&i.id>0,name+": invalid ID");
-  assert.ok(i.name?.trim()&&validSlots.has(i.slot)||["finger1","trinket1"].includes(i.slot),name+": missing name or slot");
+  assert.ok(i.name?.trim()&&(validSlots.has(i.slot)||["finger1","trinket1"].includes(i.slot)),name+": missing name or slot");
   assert.ok(Number.isInteger(i.itemLevel)&&i.itemLevel>0,name+": missing item level");
  }
 }
