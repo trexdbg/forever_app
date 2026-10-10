@@ -54,9 +54,10 @@ for(const item of guide.sources){
  assert.ok(item.name_en&&item.name_fr&&item.zone_en&&item.zone_fr&&item.min&&item.max&&item.url);
 }
 for(const [name,html] of [["fr",fr],["en",en]]){
- for(const id of ["level-paperdoll","level-picker","level-acquisition","level-farm-list","level-set-guide"])
+ for(const id of ["level-paperdoll","level-picker","level-acquisition","level-farm-list","level-set-guide","level-advanced","level-future","level-bands-future","level-stage"])
   assert.ok(html.includes(`id="${id}"`),name+" missing "+id);
  assert.ok(html.includes("bis-niveaux-forever-observed")===false,"observed references should be loaded by JS");
 }
 assert.ok(js.includes('renderFarm();')&&js.includes('renderSets();'));
+assert.ok(js.includes('futureBox')&&js.includes('activeFilters'),"optional filters and future brackets should be preserved");
 console.log("BiS par niveau OK: "+levels.length+" brackets, "+db.classes.length+" classes, "+classic.items.length+" Classic + "+observed.items.length+" beta-reported references, "+guide.sources.length+" dungeon guides, FR/EN pages.");
