@@ -7551,7 +7551,7 @@
       "coordinate_status": "not_yet_documented"
     },
     {
-      "id": "classic-arathi-big-samras",
+      "id": "14280",
       "name": {
         "fr": "Big Samras",
         "en": "Big Samras"
@@ -7569,7 +7569,7 @@
         ]
       ],
       "loot": [],
-      "source": "https://wow-guides.com/knowledge/creature-ranks",
+      "source": "https://www.wowhead.com/classic/npc=14280/big-samras",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
       "notes": {
