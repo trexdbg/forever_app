@@ -21,38 +21,81 @@ const isForever=i=>String(i.source_status||"").startsWith("forever_beta_");
 const normSlot=i=>window.ForeverGearData?.LABELS[i.slot]||i.slot;
 const required=i=>{
  if(Number.isInteger(i.requiredLevel)&&i.requiredLevel>=1)return i.requiredLevel;
- const line=Array.isArray(i.tooltip)?i.tooltip.find(t=>/^Requires Level \d+$/.test(t)):null;
+ const line=Array.isArray(i.tooltip)?i.tooltip.find(t=>/^(?:Requires Level \d+|Niveau \d+ requis)$/.test(t)):null;
  return line?Number(line.match(/\d+/)[0]):null;
 };
+/* Validate Classic weapon proficiencies, including French API type names. */
+const typeCode=i=>{
+ const raw=[i.type,i.type_name,...(Array.isArray(i.tooltip)?i.tooltip.slice(0,9):[])].filter(v=>typeof v==="string").join(" ").toLowerCase();
+ if(/\b(wand|baguette)\b/.test(raw))return "wand";
+ if(/\b(crossbow|arbal[eè]te)\b/.test(raw))return "crossbow";
+ if(/\b(thrown|thrown weapon|arme de jet|armes de jet)\b/.test(raw))return "thrown";
+ if(/\b(bow|arc)\b/.test(raw))return "bow";
+ if(/\b(gun|fusil)\b/.test(raw))return "gun";
+ if(/\b(idol|idole)\b/.test(raw))return "idol";
+ if(/\b(libram|librame)\b/.test(raw))return "libram";
+ if(/\b(totem)\b/.test(raw))return "totem";
+ if(/\b(shield|bouclier)\b/.test(raw))return "shield";
+ if(/\b(held in off.hand|tenu en main gauche|objet tenu en main gauche)\b/.test(raw))return "held";
+ if(/\b(dagger|dague|dagues)\b/.test(raw))return "dagger";
+ if(/\b(polearm|arme d.hast|armes d.hast)\b/.test(raw))return "polearm";
+ if(/\b(staff|staves|b[aâ]ton)\b/.test(raw))return "staff";
+ if(/\b(sword|sabre|[eé]p[eé]e)\b/.test(raw))return "sword";
+ if(/\b(axe|hache)\b/.test(raw))return "axe";
+ if(/\b(mace|marteau|masse)\b/.test(raw))return "mace";
+ if(/\b(fist weapon|arme de pugilat)\b/.test(raw))return "fist";
+ return null;
+};
+const twoHand=i=>{
+ const text=[i.slot_name,...(i.tooltip||[]).slice(0,8)].filter(v=>typeof v==="string").join(" ").toLowerCase();
+ return /\b(two.hand|two handed|deux mains)\b/.test(text);
+};
+const dualWield=()=>["voleur","guerrier","chasseur"].includes(classId)&&levels[band][1]>=((classId==="voleur")?10:20);
+const oneHand=i=>{
+ const text=[i.slot_name,...(i.tooltip||[]).slice(0,8)].filter(v=>typeof v==="string").join(" ").toLowerCase();
+ return !twoHand(i)&&/\b(one.hand|one handed|[aà] une main)\b/.test(text);
+};
 function weaponAllowed(i){
- const line=(Array.isArray(i.tooltip)?i.tooltip.slice(0,8).join(" "):"")+" "+(i.type_name||"")+" "+(i.type||"");
- const lower=line.toLowerCase();
  const slot=normSlot(i);
- if(slot==="ranged"){
-  if(/\bwand\b|\bbaguette\b/i.test(lower))return ["mage","pretre","demoniste"].includes(classId);
-  if(/\b(idol|libram|totem|relic)\b/i.test(lower))return classId==="druide"&&/idol/.test(lower)||classId==="paladin"&&/libram/.test(lower)||classId==="chaman"&&/totem/.test(lower);
-  if(/\b(bow|gun|crossbow|thrown)\b/i.test(lower))return ["guerrier","chasseur","voleur"].includes(classId);
+ if(!["mainhand","offhand","ranged"].includes(slot))return true;
+ const code=typeCode(i),max=levels[band][1];
+ // Type-less weapon references cannot be attributed to a class reliably.
+ if(!code)return false;
+ const allowed={
+  guerrier:["sword","axe","mace","dagger","fist","polearm","staff","shield","bow","gun","crossbow","thrown"],
+  paladin:["sword","axe","mace","polearm","shield","held","libram"],
+  chasseur:["sword","axe","dagger","fist","polearm","staff","bow","gun","crossbow"],
+  voleur:["sword","mace","dagger","fist","bow","gun","crossbow","thrown"],
+  pretre:["dagger","mace","staff","wand","held"],
+  chaman:["axe","mace","dagger","fist","staff","shield","held","totem"],
+  mage:["sword","dagger","staff","wand","held"],
+  demoniste:["sword","dagger","staff","wand","held"],
+  druide:["mace","dagger","fist","staff","held","idol"]
+ };
+ if(!allowed[classId]?.includes(code))return false;
+ if(classId==="voleur"){
+  if(twoHand(i))return false;
+  if(specId==="daggers"&&code!=="dagger"&&slot!=="ranged")return false;
+  if(specId==="swords"&&code==="dagger")return false;
  }
+ if(code==="polearm"&&max<20)return false;
+ if(classId==="chaman"&&twoHand(i)&&["axe","mace"].includes(code)&&!(specId==="enhance"&&max>=30))return false;
+ if(slot==="ranged")return ["bow","gun","crossbow","thrown","wand","idol","libram","totem"].includes(code);
  if(slot==="offhand"){
-  if(/\bshield\b|\bbouclier\b/i.test(lower))return ["guerrier","paladin","chaman"].includes(classId)&&!(classId==="guerrier"&&specId==="fury");
-  if(/\bheld in off hand\b|\bheld in offhand\b/i.test(lower))return ["mage","pretre","demoniste","druide","chaman","paladin"].includes(classId)&&!["tank","enhance","feral"].includes(specId);
-  if(["mage","pretre","demoniste"].includes(classId))return false;
- }
- if(slot==="mainhand"||slot==="offhand"){
-  if(classId==="voleur"){
-   if(/\btwo.hand\b|\b(two-handed)\b/i.test(lower))return false;
-   if(specId==="daggers"&&/\b(sword|mace|axe)\b/i.test(lower))return false;
-   if(specId==="swords"&&/\bdagger\b/i.test(lower))return false;
+  if(["shield","held"].includes(code)){
+   if(code==="shield"&&classId==="guerrier"&&specId==="fury")return false;
+   if(code==="held"&&["tank","enhance","feral"].includes(specId))return false;
+   return true;
   }
-  if(["mage","pretre","demoniste"].includes(classId)&&/\b(axe|polearm|fist weapon|shield)\b/i.test(lower))return false;
-  if(classId==="chasseur"&&/\b(mace|shield)\b/i.test(lower))return false;
+  return dualWield()&&oneHand(i);
  }
+ if(code==="shield"||code==="held"||["bow","gun","crossbow","thrown","wand","idol","libram","totem"].includes(code))return false;
  return true;
 }
 function eligible(i){
  const req=required(i),max=levels[band][1],rules=window.ForeverEquipmentRules;
  if(!Number.isInteger(i.id)||!i.name||req===null||req>max||req<1)return false;
- if(Number.isFinite(i.itemLevel)&&i.itemLevel>max+11)return false;
+ if(Number.isFinite(i.itemLevel)&&i.itemLevel>max+(max===60?18:11))return false;
  if(origin==="forever"&&!isForever(i)||origin==="classic"&&isForever(i))return false;
  if(!rules?.canEquip(i,classId)||!weaponAllowed(i))return false;
  const armor=rules.armorType(i),slot=normSlot(i);
