@@ -24,7 +24,7 @@ const isForever=i=>String(i.source_status||"").startsWith("forever_beta_");
    Never replace a sourced English item name with a French API value on EN pages. */
 const zoneFR={"Ragefire Chasm":"Gouffre de Ragefeu","The Deadmines":"Mortemines","Wailing Caverns":"Cavernes des Lamentations","Shadowfang Keep":"Donjon d’Ombrecroc","Blackfathom Deeps":"Profondeurs de Brassenoire","Razorfen Kraul":"Kraal de Tranchebauge","Razorfen Downs":"Souilles de Tranchebauge","Scarlet Monastery":"Monastère écarlate","Blackrock Depths":"Profondeurs de Rochenoire","Blackrock Spire":"Pic Rochenoire","Dire Maul":"Hache-tripes","The Temple of Atal'Hakkar":"Temple d’Atal’Hakkar","Elwynn Forest":"Forêt d’Elwynn","Tirisfal Glades":"Clairières de Tirisfal","Westfall":"Marche de l’Ouest","World drop":"Butin mondial","Crafting":"Fabrication","Enchanting":"Enchantement","Leatherworking":"Travail du cuir","Vendor":"Marchand","Zone drop":"Butin de zone","Rare drop":"Butin rare"};
 const knownFR={5191:"Barbelure cruelle",10399:"Armure défias noircie",16712:"Gants Sombreruse"};
-const localizedName=i=>en?(i.name_en||i.name):(i.name_fr||knownFR[i.id]||i.name);
+const localizedName=i=>en?(i.name_en||i.name):(i.name_fr||window.ForeverItemLocale?.name(i)||knownFR[i.id]||i.name);
 function localizedOrigin(i){
  let value=en?(i.origin_en||i.origin):(i.origin_fr||i.origin);
  if(typeof value!=="string")return "";
@@ -422,7 +422,7 @@ function renderPicker(){
  quality("all",u.all,list.length);
  for(const [q,meta] of Object.entries(qualities)){const n=list.filter(i=>i.quality===q).length;if(n||selectedQualities.has(q))quality(q,meta[en?2:1],n)}
  const term=pickerQuery.toLocaleLowerCase();
- const matches=(blocked?[]:list).filter(it=>(!selectedQualities.size||selectedQualities.has(it.quality))&&(!term||(localizedName(it)+" "+localizedOrigin(it)+" "+it.id).toLocaleLowerCase().includes(term)));
+ const matches=(blocked?[]:list).filter(it=>(!selectedQualities.size||selectedQualities.has(it.quality))&&(!term||((window.ForeverItemLocale?.aliases(it)||localizedName(it))+" "+localizedOrigin(it)+" "+it.id).toLocaleLowerCase().includes(term)));
  $("level-picker-count").textContent=matches.length+" "+u.candidates;
  const results=$("level-candidates");results.replaceChildren();
  if(!matches.length){results.append(mk("p","bis-v2-empty",blocked?u.twohand:u.none));return}
@@ -466,7 +466,7 @@ function renderAll(){renderFilters();renderSlots();renderRemoteStatus();selectio
   const byId=new Map();
   for(const item of [...core.items,...(Array.isArray(local.items)?local.items:[]),...(Array.isArray(curated.items)?curated.items:[]),...forever]){
    if(!Number.isInteger(item.id))continue;
-   const normalized={...item,slot:normSlot(item)};
+   const normalized=window.ForeverItemLocale?.record({...item,slot:normSlot(item)})||{...item,slot:normSlot(item)};
    const existing=byId.get(item.id);
    // Prefer sources with a known required level and rich tooltips; preserve provenances.
    if(!existing||(required(normalized)!==null&&required(existing)===null)||isForever(normalized)&&!isForever(existing))byId.set(item.id,normalized);
