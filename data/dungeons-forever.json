@@ -2,7 +2,7 @@
   "schema": 2,
   "updated": "2026-10-10",
   "scope": "9 Forever additions and 26 returning Classic dungeon wings in World of Warcraft Forever, no other servers.",
-  "sourcePolicy": "Loot lists from Classic tables, third-party beta guides or client item records; distinguish Classic boss association from observed beta item stats and official drop rates. Boss pins are transcribed approximations on published annotated maps.",
+  "sourcePolicy": "New Forever beta boss sources are kept separate from the Classic 1.12 boss rosters and loot; high-level Classic rosters are reference-only and NOT confirmed in Forever.",
   "mapImageBase": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/",
   "official": "https://worldofwarcraft.blizzard.com/en-us/news/24304160/",
   "listSource": "https://wowforevertalent.com/fr/dungeons/",
@@ -3929,10 +3929,43 @@
         "fr": "Entrée située dans : Clairières de Tirisfal. Consulter la carte et la source pour la localisation précise.",
         "en": "Entrance in Tirisfal Glades. See source map for precise directions."
       },
-      "source": "https://foreverchanges.pro/dungeons/scarlet-monastery-library",
-      "bosses": [],
+      "source": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+      "bosses": [
+        {
+          "name": {
+            "fr": "Maître-chien Loksey",
+            "en": "Houndmaster Loksey"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Arcaniste Doan",
+            "en": "Arcanist Doan"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        }
+      ],
       "beta": "classic_reference",
-      "changes": [],
+      "changes": [
+        {
+          "status": "classic_reference",
+          "fr": "Plan et rencontres de référence Classic. Aucune modification de butin Forever suffisamment documentée à ce stade.",
+          "en": "Classic reference map and encounters. No sufficiently documented Forever loot changes at this time."
+        }
+      ],
       "mapStatus": "reference",
       "note": {
         "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
@@ -3966,10 +3999,30 @@
         "fr": "Entrée située dans : Clairières de Tirisfal. Consulter la carte et la source pour la localisation précise.",
         "en": "Entrance in Tirisfal Glades. See source map for precise directions."
       },
-      "source": "https://foreverchanges.pro/dungeons/scarlet-monastery-armory",
-      "bosses": [],
+      "source": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+      "bosses": [
+        {
+          "name": {
+            "fr": "Hérode",
+            "en": "Herod"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        }
+      ],
       "beta": "classic_reference",
-      "changes": [],
+      "changes": [
+        {
+          "status": "classic_reference",
+          "fr": "Plan et rencontres de référence Classic. Aucune modification de butin Forever suffisamment documentée à ce stade.",
+          "en": "Classic reference map and encounters. No sufficiently documented Forever loot changes at this time."
+        }
+      ],
       "mapStatus": "reference",
       "note": {
         "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
@@ -4003,10 +4056,95 @@
         "fr": "Entrée située dans : Les Tarides. Consulter la carte et la source pour la localisation précise.",
         "en": "Entrance in The Barrens. See source map for precise directions."
       },
-      "source": "https://foreverchanges.pro/dungeons/razorfen-downs",
-      "bosses": [],
+      "source": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+      "bosses": [
+        {
+          "name": {
+            "fr": "Tuten'kash",
+            "en": "Tuten'kash"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Gueule putride",
+            "en": "Plaguemaw the Rotting"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Mordresh Oeil-de-Feu",
+            "en": "Mordresh Fire Eye"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Glouton",
+            "en": "Glutton"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Groinfendu",
+            "en": "Ragglesnout"
+          },
+          "rare": true,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Amnennar le Porte-froid",
+            "en": "Amnennar the Coldbringer"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        }
+      ],
       "beta": "classic_reference",
-      "changes": [],
+      "changes": [
+        {
+          "status": "classic_reference",
+          "fr": "Plan et rencontres de référence Classic. Aucune modification de butin Forever suffisamment documentée à ce stade.",
+          "en": "Classic reference map and encounters. No sufficiently documented Forever loot changes at this time."
+        }
+      ],
       "mapStatus": "reference",
       "note": {
         "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
@@ -4040,10 +4178,56 @@
         "fr": "Entrée située dans : Clairières de Tirisfal. Consulter la carte et la source pour la localisation précise.",
         "en": "Entrance in Tirisfal Glades. See source map for precise directions."
       },
-      "source": "https://foreverchanges.pro/dungeons/scarlet-monastery-cathedral",
-      "bosses": [],
+      "source": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+      "bosses": [
+        {
+          "name": {
+            "fr": "Grand Inquisiteur Fairbanks",
+            "en": "High Inquisitor Fairbanks"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Commandant écarlate Mograine",
+            "en": "Scarlet Commander Mograine"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Grande inquisitrice Blanchetête",
+            "en": "High Inquisitor Whitemane"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        }
+      ],
       "beta": "classic_reference",
-      "changes": [],
+      "changes": [
+        {
+          "status": "classic_reference",
+          "fr": "Plan et rencontres de référence Classic. Aucune modification de butin Forever suffisamment documentée à ce stade.",
+          "en": "Classic reference map and encounters. No sufficiently documented Forever loot changes at this time."
+        }
+      ],
       "mapStatus": "reference",
       "note": {
         "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
@@ -4077,10 +4261,108 @@
         "fr": "Entrée située dans : Terres ingrates. Consulter la carte et la source pour la localisation précise.",
         "en": "Entrance in Badlands. See source map for precise directions."
       },
-      "source": "https://foreverchanges.pro/dungeons/uldaman",
-      "bosses": [],
+      "source": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+      "bosses": [
+        {
+          "name": {
+            "fr": "Revelosh",
+            "en": "Revelosh"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Ironaya",
+            "en": "Ironaya"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Sentinelle d'obsidienne",
+            "en": "Obsidian Sentinel"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Gardien des pierres ancien",
+            "en": "Ancient Stone Keeper"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Galgann Martel-de-Feu",
+            "en": "Galgann Firehammer"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Grimlok",
+            "en": "Grimlok"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Archaedas",
+            "en": "Archaedas"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        }
+      ],
       "beta": "classic_reference",
-      "changes": [],
+      "changes": [
+        {
+          "status": "classic_reference",
+          "fr": "Plan et rencontres de référence Classic. Aucune modification de butin Forever suffisamment documentée à ce stade.",
+          "en": "Classic reference map and encounters. No sufficiently documented Forever loot changes at this time."
+        }
+      ],
       "mapStatus": "reference",
       "note": {
         "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
@@ -4114,10 +4396,147 @@
         "fr": "Entrée située dans : Tanaris. Consulter la carte et la source pour la localisation précise.",
         "en": "Entrance in Tanaris. See source map for precise directions."
       },
-      "source": "https://foreverchanges.pro/dungeons/zul-farrak",
-      "bosses": [],
+      "source": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+      "bosses": [
+        {
+          "name": {
+            "fr": "Antu'sul",
+            "en": "Antu'sul"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Theka le Martyr",
+            "en": "Theka the Martyr"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Sorcier-docteur Zum'rah",
+            "en": "Witch Doctor Zum'rah"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Prêtre des ombres Sezz'ziz",
+            "en": "Shadowpriest Sezz'ziz"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Sergent Bly",
+            "en": "Sergeant Bly"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Hydromancienne Velratha",
+            "en": "Hydromancer Velratha"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Gahz'rilla",
+            "en": "Gahz'rilla"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Chef Ukorz Scalpessable",
+            "en": "Chief Ukorz Sandscalp"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Zerillis",
+            "en": "Zerillis"
+          },
+          "rare": true,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Sandarr Ravadune",
+            "en": "Sandarr Dunereaver"
+          },
+          "rare": true,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        }
+      ],
       "beta": "classic_reference",
-      "changes": [],
+      "changes": [
+        {
+          "status": "classic_reference",
+          "fr": "Plan et rencontres de référence Classic. Aucune modification de butin Forever suffisamment documentée à ce stade.",
+          "en": "Classic reference map and encounters. No sufficiently documented Forever loot changes at this time."
+        }
+      ],
       "mapStatus": "reference",
       "note": {
         "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
@@ -4151,10 +4570,134 @@
         "fr": "Entrée située dans : Désolace. Consulter la carte et la source pour la localisation précise.",
         "en": "Entrance in Desolace. See source map for precise directions."
       },
-      "source": "https://foreverchanges.pro/dungeons/maraudon",
-      "bosses": [],
+      "source": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+      "bosses": [
+        {
+          "name": {
+            "fr": "Noxxion",
+            "en": "Noxxion"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Tranchefouet",
+            "en": "Razorlash"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Seigneur Vylelangue",
+            "en": "Lord Vyletongue"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Célébras le Maudit",
+            "en": "Celebras the Cursed"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Glissement de terrain",
+            "en": "Landslide"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Bricoleur Kadenaz",
+            "en": "Tinkerer Gizlock"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Grippe-charogne",
+            "en": "Rotgrip"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Princesse Theradras",
+            "en": "Princess Theradras"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Meshlok le Moissonneur",
+            "en": "Meshlok the Harvester"
+          },
+          "rare": true,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        }
+      ],
       "beta": "classic_reference",
-      "changes": [],
+      "changes": [
+        {
+          "status": "classic_reference",
+          "fr": "Plan et rencontres de référence Classic. Aucune modification de butin Forever suffisamment documentée à ce stade.",
+          "en": "Classic reference map and encounters. No sufficiently documented Forever loot changes at this time."
+        }
+      ],
       "mapStatus": "reference",
       "note": {
         "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
@@ -4188,10 +4731,121 @@
         "fr": "Entrée située dans : Marais des Chagrins. Consulter la carte et la source pour la localisation précise.",
         "en": "Entrance in Swamp of Sorrows. See source map for precise directions."
       },
-      "source": "https://foreverchanges.pro/dungeons/sunken-temple",
-      "bosses": [],
+      "source": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+      "bosses": [
+        {
+          "name": {
+            "fr": "Atal'alarion",
+            "en": "Atal'alarion"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Fauche-rêve",
+            "en": "Dreamscythe"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Tisseur",
+            "en": "Weaver"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Hazzas",
+            "en": "Hazzas"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Morphaz",
+            "en": "Morphaz"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Jammal'an le Prophète",
+            "en": "Jammal'an the Prophet"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Ogom le Misérable",
+            "en": "Ogom the Wretched"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Ombre d'Eranikus",
+            "en": "Shade of Eranikus"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        }
+      ],
       "beta": "classic_reference",
-      "changes": [],
+      "changes": [
+        {
+          "status": "classic_reference",
+          "fr": "Plan et rencontres de référence Classic. Aucune modification de butin Forever suffisamment documentée à ce stade.",
+          "en": "Classic reference map and encounters. No sufficiently documented Forever loot changes at this time."
+        }
+      ],
       "mapStatus": "reference",
       "note": {
         "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
@@ -4225,10 +4879,199 @@
         "fr": "Entrée située dans : Mont Rochenoire. Consulter la carte et la source pour la localisation précise.",
         "en": "Entrance in Blackrock Mountain. See source map for precise directions."
       },
-      "source": "https://foreverchanges.pro/dungeons/blackrock-depths",
-      "bosses": [],
+      "source": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+      "bosses": [
+        {
+          "name": {
+            "fr": "Grande interrogatrice Gerstahn",
+            "en": "High Interrogator Gerstahn"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Maître-chien Grebmar",
+            "en": "Houndmaster Grebmar"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Seigneur Roccor",
+            "en": "Lord Roccor"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Cercle de la loi",
+            "en": "Ring of Law"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Bael'Gar",
+            "en": "Bael'Gar"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Seigneur Incendius",
+            "en": "Lord Incendius"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Fineous Sombrevire",
+            "en": "Fineous Darkvire"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Gardien Stilgiss",
+            "en": "Warder Stilgiss"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Général Forgehargne",
+            "en": "General Angerforge"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Seigneur golem Argelmach",
+            "en": "Golem Lord Argelmach"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Coursemartel",
+            "en": "Flamelash"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Les Sept",
+            "en": "The Seven"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Magmus",
+            "en": "Magmus"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Empereur Dagran Thaurissan",
+            "en": "Emperor Dagran Thaurissan"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        }
+      ],
       "beta": "classic_reference",
-      "changes": [],
+      "changes": [
+        {
+          "status": "classic_reference",
+          "fr": "Plan et rencontres de référence Classic. Aucune modification de butin Forever suffisamment documentée à ce stade.",
+          "en": "Classic reference map and encounters. No sufficiently documented Forever loot changes at this time."
+        }
+      ],
       "mapStatus": "reference",
       "note": {
         "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
@@ -4262,10 +5105,82 @@
         "fr": "Entrée située dans : Féralas. Consulter la carte et la source pour la localisation précise.",
         "en": "Entrance in Feralas. See source map for precise directions."
       },
-      "source": "https://foreverchanges.pro/dungeons/dire-maul-east",
-      "bosses": [],
+      "source": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+      "bosses": [
+        {
+          "name": {
+            "fr": "Pusillin",
+            "en": "Pusillin"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Zevrim Sabot-de-Ronces",
+            "en": "Zevrim Thornhoof"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Hydrogénos",
+            "en": "Hydrospawn"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Lethtendris",
+            "en": "Lethtendris"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Alzzin le Modeleur",
+            "en": "Alzzin the Wildshaper"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        }
+      ],
       "beta": "classic_reference",
-      "changes": [],
+      "changes": [
+        {
+          "status": "classic_reference",
+          "fr": "Plan et rencontres de référence Classic. Aucune modification de butin Forever suffisamment documentée à ce stade.",
+          "en": "Classic reference map and encounters. No sufficiently documented Forever loot changes at this time."
+        }
+      ],
       "mapStatus": "reference",
       "note": {
         "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
@@ -4299,10 +5214,121 @@
         "fr": "Entrée située dans : Mont Rochenoire. Consulter la carte et la source pour la localisation précise.",
         "en": "Entrance in Blackrock Mountain. See source map for precise directions."
       },
-      "source": "https://foreverchanges.pro/dungeons/lower-blackrock-spire",
-      "bosses": [],
+      "source": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+      "bosses": [
+        {
+          "name": {
+            "fr": "Général Omokk",
+            "en": "Highlord Omokk"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Chasseresse des ombres Vosh'gajin",
+            "en": "Shadow Hunter Vosh'gajin"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Maître de guerre Voone",
+            "en": "War Master Voone"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Mère Couveuse",
+            "en": "Mother Smolderweb"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Urok Hurleruine",
+            "en": "Urok Doomhowl"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Intendant Zigris",
+            "en": "Quartermaster Zigris"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Halycon",
+            "en": "Halycon"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Seigneur Wyrmthalak",
+            "en": "Overlord Wyrmthalak"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        }
+      ],
       "beta": "classic_reference",
-      "changes": [],
+      "changes": [
+        {
+          "status": "classic_reference",
+          "fr": "Plan et rencontres de référence Classic. Aucune modification de butin Forever suffisamment documentée à ce stade.",
+          "en": "Classic reference map and encounters. No sufficiently documented Forever loot changes at this time."
+        }
+      ],
       "mapStatus": "reference",
       "note": {
         "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
@@ -4336,10 +5362,95 @@
         "fr": "Entrée située dans : Féralas. Consulter la carte et la source pour la localisation précise.",
         "en": "Entrance in Feralas. See source map for precise directions."
       },
-      "source": "https://foreverchanges.pro/dungeons/dire-maul-north",
-      "bosses": [],
+      "source": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+      "bosses": [
+        {
+          "name": {
+            "fr": "Garde Mol'dar",
+            "en": "Guard Mol'dar"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Kreeg le Marteleur",
+            "en": "Stomper Kreeg"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Garde Fengus",
+            "en": "Guard Fengus"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Garde Slip'kik",
+            "en": "Guard Slip'kik"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Capitaine Kromcrush",
+            "en": "Captain Kromcrush"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Roi Gordok",
+            "en": "King Gordok"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        }
+      ],
       "beta": "classic_reference",
-      "changes": [],
+      "changes": [
+        {
+          "status": "classic_reference",
+          "fr": "Plan et rencontres de référence Classic. Aucune modification de butin Forever suffisamment documentée à ce stade.",
+          "en": "Classic reference map and encounters. No sufficiently documented Forever loot changes at this time."
+        }
+      ],
       "mapStatus": "reference",
       "note": {
         "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
@@ -4373,10 +5484,95 @@
         "fr": "Entrée située dans : Féralas. Consulter la carte et la source pour la localisation précise.",
         "en": "Entrance in Feralas. See source map for precise directions."
       },
-      "source": "https://foreverchanges.pro/dungeons/dire-maul-west",
-      "bosses": [],
+      "source": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+      "bosses": [
+        {
+          "name": {
+            "fr": "Tendris Crochebois",
+            "en": "Tendris Warpwood"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Illyanna Corvichêne",
+            "en": "Illyanna Ravenoak"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Magistère Kalendris",
+            "en": "Magister Kalendris"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Immol'thar",
+            "en": "Immol'thar"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Prince Tortheldrin",
+            "en": "Prince Tortheldrin"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Tsu'zee",
+            "en": "Tsu'zee"
+          },
+          "rare": true,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        }
+      ],
       "beta": "classic_reference",
-      "changes": [],
+      "changes": [
+        {
+          "status": "classic_reference",
+          "fr": "Plan et rencontres de référence Classic. Aucune modification de butin Forever suffisamment documentée à ce stade.",
+          "en": "Classic reference map and encounters. No sufficiently documented Forever loot changes at this time."
+        }
+      ],
       "mapStatus": "reference",
       "note": {
         "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
@@ -4410,10 +5606,134 @@
         "fr": "Entrée située dans : Maleterres de l'Ouest. Consulter la carte et la source pour la localisation précise.",
         "en": "Entrance in Western Plaguelands. See source map for precise directions."
       },
-      "source": "https://foreverchanges.pro/dungeons/scholomance",
-      "bosses": [],
+      "source": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+      "bosses": [
+        {
+          "name": {
+            "fr": "Kirtonos le Héraut",
+            "en": "Kirtonos the Herald"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Jandice Barov",
+            "en": "Jandice Barov"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Cliquettripes",
+            "en": "Rattlegore"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Ras Murmegivre",
+            "en": "Ras Frostwhisper"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Instructeur Malicia",
+            "en": "Instructor Malicia"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Docteur Theolen Krastinov",
+            "en": "Doctor Theolen Krastinov"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Gardien du savoir Polkelt",
+            "en": "Lorekeeper Polkelt"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Le Voracien",
+            "en": "The Ravenian"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Sombre Maître Gandling",
+            "en": "Darkmaster Gandling"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        }
+      ],
       "beta": "classic_reference",
-      "changes": [],
+      "changes": [
+        {
+          "status": "classic_reference",
+          "fr": "Plan et rencontres de référence Classic. Aucune modification de butin Forever suffisamment documentée à ce stade.",
+          "en": "Classic reference map and encounters. No sufficiently documented Forever loot changes at this time."
+        }
+      ],
       "mapStatus": "reference",
       "note": {
         "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
@@ -4447,10 +5767,108 @@
         "fr": "Entrée située dans : Maleterres de l'Est. Consulter la carte et la source pour la localisation précise.",
         "en": "Entrance in Eastern Plaguelands. See source map for precise directions."
       },
-      "source": "https://foreverchanges.pro/dungeons/stratholme-main-gate",
-      "bosses": [],
+      "source": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+      "bosses": [
+        {
+          "name": {
+            "fr": "Fras Siabi",
+            "en": "Fras Siabi"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Chantecoeur Forresten",
+            "en": "Hearthsinger Forresten"
+          },
+          "rare": true,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Le Condamné",
+            "en": "The Unforgiven"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Timmy le Cruel",
+            "en": "Timmy the Cruel"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Maître canonnier Willey",
+            "en": "Cannon Master Willey"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Archiviste Galford",
+            "en": "Archivist Galford"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Balnazzar",
+            "en": "Balnazzar"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        }
+      ],
       "beta": "classic_reference",
-      "changes": [],
+      "changes": [
+        {
+          "status": "classic_reference",
+          "fr": "Plan et rencontres de référence Classic. Aucune modification de butin Forever suffisamment documentée à ce stade.",
+          "en": "Classic reference map and encounters. No sufficiently documented Forever loot changes at this time."
+        }
+      ],
       "mapStatus": "reference",
       "note": {
         "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
@@ -4484,10 +5902,95 @@
         "fr": "Entrée située dans : Maleterres de l'Est. Consulter la carte et la source pour la localisation précise.",
         "en": "Entrance in Eastern Plaguelands. See source map for precise directions."
       },
-      "source": "https://foreverchanges.pro/dungeons/stratholme-service-gate",
-      "bosses": [],
+      "source": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+      "bosses": [
+        {
+          "name": {
+            "fr": "Baronne Anastari",
+            "en": "Baroness Anastari"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Nerub'enkan",
+            "en": "Nerub'enkan"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Maleki le Blafard",
+            "en": "Maleki the Pallid"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Magistrat Barthilas",
+            "en": "Magistrate Barthilas"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Ramstein Grandgosier",
+            "en": "Ramstein the Gorger"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Baron Vaillefendre",
+            "en": "Baron Rivendare"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        }
+      ],
       "beta": "classic_reference",
-      "changes": [],
+      "changes": [
+        {
+          "status": "classic_reference",
+          "fr": "Plan et rencontres de référence Classic. Aucune modification de butin Forever suffisamment documentée à ce stade.",
+          "en": "Classic reference map and encounters. No sufficiently documented Forever loot changes at this time."
+        }
+      ],
       "mapStatus": "reference",
       "note": {
         "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
@@ -4521,10 +6024,121 @@
         "fr": "Entrée située dans : Mont Rochenoire. Consulter la carte et la source pour la localisation précise.",
         "en": "Entrance in Blackrock Mountain. See source map for precise directions."
       },
-      "source": "https://foreverchanges.pro/dungeons/upper-blackrock-spire",
-      "bosses": [],
+      "source": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+      "bosses": [
+        {
+          "name": {
+            "fr": "Pyrogarde Prophète ardent",
+            "en": "Pyroguard Emberseer"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Solakar Voluteflamme",
+            "en": "Solakar Flamewreath"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Goraluk Brisecroc",
+            "en": "Goraluk Anvilcrack"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Chef de guerre Rend Main-noire",
+            "en": "Warchief Rend Blackhand"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Gyth",
+            "en": "Gyth"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "La Bête",
+            "en": "The Beast"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Général Drakkisath",
+            "en": "General Drakkisath"
+          },
+          "rare": false,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        },
+        {
+          "name": {
+            "fr": "Jed Guette-runes",
+            "en": "Jed Runewatcher"
+          },
+          "rare": true,
+          "loot": [],
+          "reference_status": "classic_roster_unverified_forever",
+          "note": {
+            "fr": "Rencontre connue dans Classic. Sa présence et sa table de butin Forever restent à confirmer.",
+            "en": "Encounter documented in Classic; Forever appearance and drops are unverified."
+          }
+        }
+      ],
       "beta": "classic_reference",
-      "changes": [],
+      "changes": [
+        {
+          "status": "classic_reference",
+          "fr": "Plan et rencontres de référence Classic. Aucune modification de butin Forever suffisamment documentée à ce stade.",
+          "en": "Classic reference map and encounters. No sufficiently documented Forever loot changes at this time."
+        }
+      ],
       "mapStatus": "reference",
       "note": {
         "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
