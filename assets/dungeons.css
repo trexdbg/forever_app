@@ -5,3 +5,13 @@
 .dg-drop{cursor:help}.dg-drop>span{min-width:0;flex:1}.dg-drop small{line-height:1.25}
 .dg-item-page{margin-left:auto;flex:0 0 24px;display:grid;place-items:center;align-self:center;width:24px;height:24px;color:#f0d3a4!important;background:#3b3326;border:1px solid #7c6e4f;text-decoration:none!important;font-size:15px}.dg-item-page:hover,.dg-item-page:focus-visible{background:#65512f}
 .dg-other-title{font:500 16px Georgia,serif;color:#e5cfa9;margin:0 0 10px}
+
+/* Real maps and documented Forever-vs-Classic differences */
+.dg-mode button:disabled{opacity:.43;cursor:not-allowed;background:#101a15;color:#829383}
+.dg-changes{margin:13px 0;border-top:1px solid #3c4a3d;border-bottom:1px solid #3c4a3d;padding:5px 0}
+.dg-change{display:flex;gap:9px;align-items:start;margin:9px 0!important;color:#d1d9c5!important;font-size:11px!important}
+.dg-change .dg-chip{flex:none;white-space:nowrap}.dg-change span:last-child{flex:1}
+.dg-map{image-rendering:auto}.dg-map-caption{white-space:normal;max-width:min(95%,650px);line-height:1.45}
+.dg-entry .dg-chips{row-gap:5px}.dg-entry .dg-chip.live{font-weight:650}
+.dg-drop img{border-radius:2px}.dg-map-source-fallback{display:block;color:#d9c8a8;font-size:13px}
+@media(max-width:720px){.dg-change{display:grid;gap:4px}.dg-map-foot{line-height:1.6}.dg-map-caption{font-size:9px}}
