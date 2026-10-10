@@ -1735,7 +1735,15 @@
         "Equip: +4 Mana Regeneration",
         "Requires Level 17"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "itemSet": "Rotmender's Raiment",
+      "itemSetCount": 5,
+      "setBonus": [
+        "(2) +5 Shadow Resistance",
+        "(3) +10 Intellect",
+        "(4) Restore mana when mana falls below 15% (5 min cooldown)",
+        "(5) Healing spells can trigger additional healing"
+      ]
     },
     {
       "id": 271208,
@@ -2180,10 +2188,10 @@
       "itemSet": "Rotmender's Raiment",
       "itemSetCount": 5,
       "setBonus": [
-        "2: +5 Shadow Resistance",
-        "3: +10 Intellect",
-        "4: Restore Mana when low",
-        "5: Chance for extra healing effects"
+        "(2) +5 Shadow Resistance",
+        "(3) +10 Intellect",
+        "(4) Restore mana when mana falls below 15% (5 min cooldown)",
+        "(5) Healing spells can trigger additional healing"
       ]
     },
     {
@@ -2222,10 +2230,10 @@
       "itemSet": "Rotmender's Raiment",
       "itemSetCount": 5,
       "setBonus": [
-        "2: +5 Shadow Resistance",
-        "3: +10 Intellect",
-        "4: Restore Mana when low",
-        "5: Chance for extra healing effects"
+        "(2) +5 Shadow Resistance",
+        "(3) +10 Intellect",
+        "(4) Restore mana when mana falls below 15% (5 min cooldown)",
+        "(5) Healing spells can trigger additional healing"
       ]
     },
     {
@@ -2265,10 +2273,53 @@
       "itemSet": "Rotmender's Raiment",
       "itemSetCount": 5,
       "setBonus": [
-        "2: +5 Shadow Resistance",
-        "3: +10 Intellect",
-        "4: Restore Mana when low",
-        "5: Chance for extra healing effects"
+        "(2) +5 Shadow Resistance",
+        "(3) +10 Intellect",
+        "(4) Restore mana when mana falls below 15% (5 min cooldown)",
+        "(5) Healing spells can trigger additional healing"
+      ]
+    },
+    {
+      "id": 271214,
+      "name": "Rotmender's Treads",
+      "name_en": "Rotmender's Treads",
+      "slot": "feet",
+      "requiredLevel": 19,
+      "itemLevel": 24,
+      "quality": "rare",
+      "armorType": "cloth",
+      "type": null,
+      "origin": "Ruins of Lordaeron · Rath'mael",
+      "origin_en": "Ruins of Lordaeron · Rath'mael",
+      "origin_fr": "Ruines de Lordaeron · Rath'mael",
+      "acquisition": {
+        "kind": "dungeon",
+        "dungeon": "Ruins of Lordaeron",
+        "dungeon_fr": "Ruines de Lordaeron",
+        "boss": "Rath'mael",
+        "verification": "observed_beta_2026-10"
+      },
+      "source_status": "forever_beta_observed",
+      "source_url": "https://foreverchanges.pro/item/271214",
+      "url": "https://www.wowhead.com/forever/item=271214",
+      "source_dungeon_url": "https://foreverchanges.pro/dungeons/ruins-of-lordaeron",
+      "tooltip": [
+        "Rotmender's Treads",
+        "Item Level 24",
+        "Feet Cloth",
+        "+7 Stamina",
+        "Equip: +5 Spell Damage",
+        "Equip: +15 Healing",
+        "Requires Level 19"
+      ],
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "itemSet": "Rotmender's Raiment",
+      "itemSetCount": 5,
+      "setBonus": [
+        "(2) +5 Shadow Resistance",
+        "(3) +10 Intellect",
+        "(4) Restore mana when mana falls below 15% (5 min cooldown)",
+        "(5) Healing spells can trigger additional healing"
       ]
     }
   ]
