@@ -440,7 +440,7 @@ function renderSets(){
   for(const [index,bonus] of item.setBonus.entries()){
    const threshold=index+2;
    const line=mk("div","level-bis-set-effect"+(count>=threshold?" active":""),
-     (en?bonus.replace(/^[(]\\d+[)]\\s*/,""):bonus.replace(/^[(]\\d+[)]\\s*/,"")
+     (en?bonus.replace(/^[(]\d+[)]\s*/,""):bonus.replace(/^[(]\d+[)]\s*/,"")
        .replace(/Shadow Resistance/g,"Résistance à l’Ombre")
        .replace(/Intellect/g,"Intelligence")
        .replace(/Restore mana when mana falls below 15% \(5 min cooldown\)/g,"Restaure du mana sous 15 % de mana (5 min de recharge)")
