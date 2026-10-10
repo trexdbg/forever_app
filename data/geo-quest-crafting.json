@@ -1,0 +1,492 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-10",
+  "scope": "curated quest requirements and Wowhead Forever recipe references",
+  "status": "wowhead_forever_reference_not_verified_live_gameplay",
+  "disclaimer": {
+    "fr": "Fiches et compositions présentes dans les références Wowhead Forever ; ne garantissent pas la disponibilité, le vendeur, le stock ni la progression en jeu.",
+    "en": "Recorded in Wowhead Forever references; does not guarantee availability, sellers, inventory or quest progression in live gameplay."
+  },
+  "quests": [
+    {
+      "id": 713,
+      "name": {
+        "fr": "La tête froide l'emporte toujours",
+        "en": "Coolant Heads Prevail"
+      },
+      "location": {
+        "fr": "Terres ingrates",
+        "en": "Badlands"
+      },
+      "needs": [
+        {
+          "recipe": "frost-oil",
+          "quantity": 1
+        }
+      ],
+      "url": "https://www.wowhead.com/forever/quest=713",
+      "notes": {
+        "fr": "Huile fabriquée par un alchimiste ; Bro'kin vend la recette dans les références Classic, pas nécessairement l'huile.",
+        "en": "Oil crafted by an alchemist; Classic references list Bro'kin selling the recipe, not necessarily the oil."
+      }
+    },
+    {
+      "id": 714,
+      "name": {
+        "fr": "Un Gyro... quoi ?",
+        "en": "Gyro... What?"
+      },
+      "location": {
+        "fr": "Terres ingrates",
+        "en": "Badlands"
+      },
+      "needs": [
+        {
+          "recipe": "gyrochronatom",
+          "quantity": 1
+        }
+      ],
+      "url": "https://www.wowhead.com/forever/quest=714",
+      "notes": {
+        "fr": "Composant vendu en stock limité chez certains fournisseurs d'ingénierie Classic, ou fabriqué par un ingénieur.",
+        "en": "Classic engineering suppliers may sell limited stock; engineers can also craft it."
+      }
+    },
+    {
+      "id": 715,
+      "name": {
+        "fr": "Pierre liquide",
+        "en": "Liquid Stone"
+      },
+      "location": {
+        "fr": "Terres ingrates",
+        "en": "Badlands"
+      },
+      "needs": [
+        {
+          "recipe": "healing-potion",
+          "quantity": 1
+        },
+        {
+          "recipe": "lesser-invisibility-potion",
+          "quantity": 1
+        }
+      ],
+      "url": "https://www.wowhead.com/forever/quest=715",
+      "notes": {
+        "fr": "Deux potions distinctes préparées en alchimie ; quête annexe.",
+        "en": "Two separate alchemy potions; optional side quest."
+      }
+    },
+    {
+      "id": 716,
+      "name": {
+        "fr": "Mieux est la pierre que le tissu",
+        "en": "Stone Is Better than Cloth"
+      },
+      "location": {
+        "fr": "Terres ingrates",
+        "en": "Badlands"
+      },
+      "needs": [
+        {
+          "recipe": "patterned-bronze-bracers",
+          "quantity": 1
+        }
+      ],
+      "url": "https://www.wowhead.com/forever/quest=716",
+      "notes": {
+        "fr": "Brassards fabriqués par un forgeron ; quête annexe.",
+        "en": "Blacksmith-crafted bracers; optional side quest."
+      }
+    }
+  ],
+  "recipes": [
+    {
+      "key": "gyrochronatom",
+      "name": {
+        "fr": "Gyrochronatome",
+        "en": "Gyrochronatom"
+      },
+      "profession": "engineering",
+      "spellId": 3961,
+      "ingredients": [
+        {
+          "name": {
+            "fr": "Barre de fer",
+            "en": "Iron Bar"
+          },
+          "quantity": 1
+        },
+        {
+          "name": {
+            "fr": "Batterie en or",
+            "en": "Gold Power Core"
+          },
+          "quantity": 1
+        }
+      ],
+      "questIds": [
+        714
+      ],
+      "reference": {
+        "kind": "wowhead_forever_spell",
+        "url": "https://www.wowhead.com/forever/spell=3961"
+      },
+      "availability": "recipe_reference_not_live_verified"
+    },
+    {
+      "key": "frost-oil",
+      "name": {
+        "fr": "Huile glaciale",
+        "en": "Frost Oil"
+      },
+      "profession": "alchemy",
+      "spellId": 3454,
+      "ingredients": [
+        {
+          "name": {
+            "fr": "Moustache de Khadgar",
+            "en": "Khadgar's Whisker"
+          },
+          "quantity": 4
+        },
+        {
+          "name": {
+            "fr": "Hivernale",
+            "en": "Wintersbite"
+          },
+          "quantity": 2
+        },
+        {
+          "name": {
+            "fr": "Fiole plombée",
+            "en": "Leaded Vial"
+          },
+          "quantity": 1
+        }
+      ],
+      "questIds": [
+        713
+      ],
+      "reference": {
+        "kind": "wowhead_forever_spell",
+        "url": "https://www.wowhead.com/forever/spell=3454"
+      },
+      "availability": "recipe_reference_not_live_verified"
+    },
+    {
+      "key": "healing-potion",
+      "name": {
+        "fr": "Potion de soins",
+        "en": "Healing Potion"
+      },
+      "profession": "alchemy",
+      "spellId": 3447,
+      "ingredients": [
+        {
+          "name": {
+            "fr": "Doulourante",
+            "en": "Bruiseweed"
+          },
+          "quantity": 1
+        },
+        {
+          "name": {
+            "fr": "Églantine",
+            "en": "Briarthorn"
+          },
+          "quantity": 1
+        },
+        {
+          "name": {
+            "fr": "Fiole plombée",
+            "en": "Leaded Vial"
+          },
+          "quantity": 1
+        }
+      ],
+      "questIds": [
+        715
+      ],
+      "reference": {
+        "kind": "wowhead_forever_spell",
+        "url": "https://www.wowhead.com/forever/spell=3447"
+      },
+      "availability": "recipe_reference_not_live_verified"
+    },
+    {
+      "key": "lesser-invisibility-potion",
+      "name": {
+        "fr": "Potion d'invisibilité inférieure",
+        "en": "Lesser Invisibility Potion"
+      },
+      "profession": "alchemy",
+      "spellId": 3448,
+      "ingredients": [
+        {
+          "name": {
+            "fr": "Pâlerette",
+            "en": "Fadeleaf"
+          },
+          "quantity": 1
+        },
+        {
+          "name": {
+            "fr": "Aciérite sauvage",
+            "en": "Wild Steelbloom"
+          },
+          "quantity": 1
+        },
+        {
+          "name": {
+            "fr": "Fiole plombée",
+            "en": "Leaded Vial"
+          },
+          "quantity": 1
+        }
+      ],
+      "questIds": [
+        715
+      ],
+      "reference": {
+        "kind": "wowhead_forever_spell",
+        "url": "https://www.wowhead.com/forever/spell=3448"
+      },
+      "availability": "recipe_reference_not_live_verified"
+    },
+    {
+      "key": "patterned-bronze-bracers",
+      "name": {
+        "fr": "Brassards guillochés en bronze",
+        "en": "Patterned Bronze Bracers"
+      },
+      "profession": "blacksmithing",
+      "spellId": 2672,
+      "ingredients": [
+        {
+          "name": {
+            "fr": "Barre de bronze",
+            "en": "Bronze Bar"
+          },
+          "quantity": 5
+        },
+        {
+          "name": {
+            "fr": "Silex à aiguiser grossier",
+            "en": "Coarse Grinding Stone"
+          },
+          "quantity": 2
+        }
+      ],
+      "questIds": [
+        716
+      ],
+      "reference": {
+        "kind": "wowhead_forever_spell",
+        "url": "https://www.wowhead.com/forever/spell=2672"
+      },
+      "availability": "recipe_reference_not_live_verified"
+    },
+    {
+      "key": "minor-healing-potion",
+      "name": {
+        "fr": "Potion de soins mineure",
+        "en": "Minor Healing Potion"
+      },
+      "profession": "alchemy",
+      "spellId": 2330,
+      "ingredients": [
+        {
+          "name": {
+            "fr": "Pacifique",
+            "en": "Peacebloom"
+          },
+          "quantity": 1
+        },
+        {
+          "name": {
+            "fr": "Feuillargent",
+            "en": "Silverleaf"
+          },
+          "quantity": 1
+        },
+        {
+          "name": {
+            "fr": "Fiole vide",
+            "en": "Empty Vial"
+          },
+          "quantity": 1
+        }
+      ],
+      "questIds": [],
+      "reference": {
+        "kind": "wowhead_forever_spell",
+        "url": "https://www.wowhead.com/forever/spell=2330"
+      },
+      "availability": "recipe_reference_not_live_verified"
+    },
+    {
+      "key": "greater-healing-potion",
+      "name": {
+        "fr": "Potion de soins supérieure",
+        "en": "Greater Healing Potion"
+      },
+      "profession": "alchemy",
+      "spellId": 7181,
+      "ingredients": [
+        {
+          "name": {
+            "fr": "Vietérule",
+            "en": "Liferoot"
+          },
+          "quantity": 1
+        },
+        {
+          "name": {
+            "fr": "Sang-royal",
+            "en": "Kingsblood"
+          },
+          "quantity": 1
+        },
+        {
+          "name": {
+            "fr": "Fiole plombée",
+            "en": "Leaded Vial"
+          },
+          "quantity": 1
+        }
+      ],
+      "questIds": [],
+      "reference": {
+        "kind": "wowhead_forever_spell",
+        "url": "https://www.wowhead.com/forever/spell=7181"
+      },
+      "availability": "recipe_reference_not_live_verified"
+    },
+    {
+      "key": "lesser-mana-potion",
+      "name": {
+        "fr": "Potion de mana inférieure",
+        "en": "Lesser Mana Potion"
+      },
+      "profession": "alchemy",
+      "spellId": 3173,
+      "ingredients": [
+        {
+          "name": {
+            "fr": "Mage royal",
+            "en": "Mageroyal"
+          },
+          "quantity": 1
+        },
+        {
+          "name": {
+            "fr": "Étouffante",
+            "en": "Stranglekelp"
+          },
+          "quantity": 1
+        },
+        {
+          "name": {
+            "fr": "Fiole vide",
+            "en": "Empty Vial"
+          },
+          "quantity": 1
+        }
+      ],
+      "questIds": [],
+      "reference": {
+        "kind": "wowhead_forever_spell",
+        "url": "https://www.wowhead.com/forever/spell=3173"
+      },
+      "availability": "recipe_reference_not_live_verified"
+    },
+    {
+      "key": "mana-potion",
+      "name": {
+        "fr": "Potion de mana",
+        "en": "Mana Potion"
+      },
+      "profession": "alchemy",
+      "spellId": 3452,
+      "ingredients": [
+        {
+          "name": {
+            "fr": "Étouffante",
+            "en": "Stranglekelp"
+          },
+          "quantity": 1
+        },
+        {
+          "name": {
+            "fr": "Sang-royal",
+            "en": "Kingsblood"
+          },
+          "quantity": 1
+        },
+        {
+          "name": {
+            "fr": "Fiole plombée",
+            "en": "Leaded Vial"
+          },
+          "quantity": 1
+        }
+      ],
+      "questIds": [],
+      "reference": {
+        "kind": "wowhead_forever_spell",
+        "url": "https://www.wowhead.com/forever/spell=3452"
+      },
+      "availability": "recipe_reference_not_live_verified"
+    },
+    {
+      "key": "swiftness-potion",
+      "name": {
+        "fr": "Potion de rapidité",
+        "en": "Swiftness Potion"
+      },
+      "profession": "alchemy",
+      "spellId": 2335,
+      "ingredients": [
+        {
+          "name": {
+            "fr": "Chardonnier",
+            "en": "Swiftthistle"
+          },
+          "quantity": 1
+        },
+        {
+          "name": {
+            "fr": "Églantine",
+            "en": "Briarthorn"
+          },
+          "quantity": 1
+        },
+        {
+          "name": {
+            "fr": "Fiole vide",
+            "en": "Empty Vial"
+          },
+          "quantity": 1
+        }
+      ],
+      "questIds": [],
+      "reference": {
+        "kind": "wowhead_forever_spell",
+        "url": "https://www.wowhead.com/forever/spell=2335"
+      },
+      "availability": "recipe_reference_not_live_verified"
+    }
+  ],
+  "npc_reference": {
+    "item": 4389,
+    "classic_reference_vendor_examples": [
+      "Sovik",
+      "Gearcutter Cogspinner",
+      "Jinky Twizzlefixxit"
+    ],
+    "source": "data/npcs.json",
+    "stocks_verified_live": false
+  }
+}
