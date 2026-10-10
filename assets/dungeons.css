@@ -140,3 +140,10 @@
 .dg-map-foot span{flex:1;min-width:150px}
 .dg-item-page{cursor:pointer}
 .dg-boss-navitem:focus-visible,.dg-pager:focus-visible{outline:2px solid #eac98b;outline-offset:1px}
+
+
+.dg-way{display:flex;align-items:center;flex-wrap:wrap;gap:9px;margin:5px 0 13px}
+.dg-way:empty{display:none}
+.dg-way-button{border:1px solid #766440;color:#e8cb96;background:#322719;padding:7px 11px;font-size:11px;cursor:pointer}
+.dg-way-button:hover{background:#47361e;border-color:#c7a36c}
+.dg-way-coords{color:#99b0a1;font-size:11px;font-variant-numeric:tabular-nums}
