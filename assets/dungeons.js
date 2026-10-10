@@ -70,7 +70,7 @@ function renderDetail(){const d=selected;if(!d)return;const boss=d.bosses[select
  d.bosses.forEach((b,i)=>{const row=m("section",null,"dg-boss-row");row.id="dg-boss-"+(i+1);
  const sum=m("div",null,"dg-boss-summary");sum.append(elbtn(null,"dg-boss-button"+(selectedBoss===i?" active":""),()=>chooseBoss(i)));
  const button=sum.firstElementChild;button.append(m("span",i+1,"dg-index"),m("span",name(b.name)));
- if(b.rare)sum.append(smallchip(t("Rare","Rare"),"pending"));if(b.level)sum.append(smallchip(t("Niveau ","Level ")+b.level));sum.append(smallchip((b.loot||[]).length+" "+t("butins","drops")));row.append(sum);
+ if(b.rare)sum.append(smallchip(t("Rare","Rare"),"pending"));if(b.level)sum.append(smallchip(t("Niveau ","Level ")+b.level));if(d.id==="city-of-dalaran")sum.append(smallchip(b.floor==="city"?t("Ville","City"):t("Égouts","Sewers")));sum.append(smallchip((b.loot||[]).length+" "+t("butins","drops")));row.append(sum);
  if(b.note?.[en?"en":"fr"])row.append(m("p",name(b.note),"dg-boss-note"));
  const drops=m("div",null,"dg-drops");if(!b.loot.length)drops.append(m("span",t("Table d’équipement inconnue · pas de butin inventé.","Gear loot table unknown · no fabricated drops."),"dg-empty"));else b.loot.forEach(it=>drops.append(makeLootCard(it,b)));row.append(drops);
  bossRoot.append(row);
