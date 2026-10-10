@@ -581,7 +581,7 @@ body[data-page="talents"] .talent-class-meta .source-note{
 
 /* 1. Functional typography: labels, values and list entries.
    Do not enlarge purely decorative eyebrow text or map markers. */
-body[data-page] :is(
+html body[data-page] :is(
   .npc-field>label, .npc-verification-field, .rare-field,
   .dg-field, .item-catalogue-filter-fields>label, .filter-line>label,
   .quest-search-field>label, .quest-picker>legend,
@@ -594,7 +594,7 @@ body[data-page] :is(
   letter-spacing:.025em;
   color:var(--fo-ui-label);
 }
-body[data-page] :is(
+html body[data-page] :is(
   .npc-result-copy strong, .bis-v2-candidate-info strong,
   .mine-zone-text strong, .quest-step-button strong, .dg-drop strong,
   .prof-trainer-row strong
@@ -602,7 +602,7 @@ body[data-page] :is(
   font-size:var(--fo-ui-content-font);
   line-height:1.42;
 }
-body[data-page] :is(
+html body[data-page] :is(
   .npc-result-copy small, .npc-map-head span, .npc-map-footer,
   .npc-map-legend, .rare-map-title small, .rare-map-footer,
   .dg-map-top small, .dg-map-foot, .mine-map-header small,
@@ -614,24 +614,24 @@ body[data-page] :is(
   font-size:11.5px;
   line-height:1.4;
 }
-body[data-page] .result-table {font-size:13.5px;line-height:1.5}
-body[data-page] .result-table th {
+html body[data-page] .result-table {font-size:13.5px;line-height:1.5}
+html body[data-page] .result-table th {
   font-size:11.5px;
   line-height:1.35;
   letter-spacing:.05em;
 }
-body[data-page] :is(.status-pill,.dg-stat,.npc-rank-label) {
+html body[data-page] :is(.status-pill,.dg-stat,.npc-rank-label) {
   font-size:11.5px;
   line-height:1.3;
 }
-body[data-page] :is(.npc-intro,.level-bis-caution,.dg-heading p) {
+html body[data-page] :is(.npc-intro,.level-bis-caution,.dg-heading p) {
   font-size:13px;
   line-height:1.45;
 }
 
 /* 2. Search/select fields share focus, size, colors and corner treatment.
    Native controls stay native; special weapon/faction pickers are excluded. */
-body[data-page] :is(
+html body[data-page] :is(
   .npc-controls input:not([type="checkbox"]), .npc-controls select,
   .npc-verification-field select,
   .rare-filters input, .rare-filters select,
@@ -654,7 +654,7 @@ body[data-page] :is(
   color:var(--fo-ui-text);
   background-color:var(--fo-ui-field);
 }
-body[data-page] :is(
+html body[data-page] :is(
   .npc-controls input, .npc-controls select,
   .npc-verification-field select,
   .rare-filters input, .rare-filters select,
@@ -667,18 +667,18 @@ body[data-page] :is(
   outline-offset:2px;
   border-color:var(--fo-ui-focus);
 }
-body[data-page] :is(
+html body[data-page] :is(
   .npc-controls input, .rare-filters input, .dg-controls input,
   .filter-line input, .item-catalogue-filter-fields input,
   .bis-v2-search, .quest-search-input input
 )::placeholder {color:#9fac9e;opacity:1}
 
 /* Quest toolbar intentionally stays compact, without tiny input copy. */
-body[data-page="quests"] .quest-toolbar .quest-search-input input {
+html body[data-page="quests"] .quest-toolbar .quest-search-input input {
   font-size:13px;
   line-height:1.4;
 }
-body[data-page="quests"] .quest-toolbar .quest-search-input {
+html body[data-page="quests"] .quest-toolbar .quest-search-input {
   min-height:36px;
   height:36px;
   border-color:var(--fo-ui-edge);
@@ -686,18 +686,18 @@ body[data-page="quests"] .quest-toolbar .quest-search-input {
 }
 
 /* Trainer's custom icon picker is not a native select. */
-body[data-page] #prof-trainers :is(.npc-filter-trigger,.npc-filter-option) {
+html body[data-page] #prof-trainers :is(.npc-filter-trigger,.npc-filter-option) {
   font-size:13px;
   line-height:1.35;
 }
-body[data-page] #prof-trainers .npc-filter-trigger {
+html body[data-page] #prof-trainers .npc-filter-trigger {
   border-color:var(--fo-ui-edge);
   border-radius:var(--fo-ui-radius);
 }
 
 /* 3. Consistent panel outlines and section dividers.
    No forced heights/widths: each map and paper doll keeps its layout. */
-body[data-page] :is(
+html body[data-page] :is(
   .tool-panel, .npc-catalog, .npc-map-panel,
   .rare-listpanel, .rare-map-panel, .rare-detail,
   .dg-directory, .dg-map-card, .dg-info-card, .dg-bosses,
@@ -706,13 +706,13 @@ body[data-page] :is(
   border-color:var(--fo-ui-divider);
   border-radius:var(--fo-ui-radius);
 }
-body[data-page] :is(
+html body[data-page] :is(
   .npc-catalog-head, .npc-map-head, .rare-list-title, .rare-map-title,
   .dg-panel-title, .dg-map-top, .dg-info-head,
   .bis-v2-sheet-head, .bis-v2-picker-head, .mine-map-header,
   .quest-map-top, .quest-side-heading, .quest-timeline-heading
 ) {border-color:var(--fo-ui-divider)}
-body[data-page] :is(
+html body[data-page] :is(
   .npc-catalog-head h3, .npc-map-head h3,
   .rare-list-title h2, .rare-map-title h2,
   .dg-panel-title h2, .dg-map-top h2,
@@ -721,19 +721,19 @@ body[data-page] :is(
   font-size:17px;
   line-height:1.3;
 }
-body[data-page] :is(
+html body[data-page] :is(
   .npc-result, .npc-alternative-list button,
   .rare-results button, .dg-options button,
   .mine-zone-row, .bis-v2-candidate, .prof-trainer-row
 ) {border-radius:var(--fo-ui-radius)}
-body[data-page] :is(
+html body[data-page] :is(
   .npc-result, .npc-alternative-list button, .mine-zone-row,
   .bis-v2-candidate, .prof-trainer-row
 ):hover {border-color:#9f925e}
 
 /* 4. Map zoom buttons & choice buttons use a recognisable shared treatment.
    Pressed/rarity/faction states from each module retain their precedence. */
-body[data-page] :is(
+html body[data-page] :is(
   .npc-map-zoom button, .rare-zoom button,
   .dg-zoom button, .map-buttons button,
   .quest-map-controls button
@@ -748,7 +748,7 @@ body[data-page] :is(
   font-weight:700;
   line-height:1.2;
 }
-body[data-page] :is(
+html body[data-page] :is(
   .npc-map-zoom button, .rare-zoom button,
   .dg-zoom button, .map-buttons button,
   .quest-map-controls button
@@ -756,7 +756,7 @@ body[data-page] :is(
   border-color:var(--fo-ui-focus);
   background:var(--fo-ui-hover);
 }
-body[data-page] :is(
+html body[data-page] :is(
   .npc-actions button, .npc-actions a, .mine-filter-actions button,
   .dg-mode button, .bis-v2-tabs button, .bis-v2-quality,
   .item-v2-quality-controls .bis-v2-quality
@@ -765,24 +765,24 @@ body[data-page] :is(
   line-height:1.35;
   border-radius:var(--fo-ui-radius);
 }
-body[data-page] :is(
+html body[data-page] :is(
   .npc-actions button, .npc-actions a,
   .mine-filter-actions button, .dg-mode button
 ) {min-height:36px}
 
 /* 5. Tooltips remain WoW-like and preserve rarity borders/text colors. */
-body[data-page] .forever-item-tooltip__body {
+html body[data-page] .forever-item-tooltip__body {
   font-size:13px;
   line-height:1.5;
 }
-body[data-page] :is(
+html body[data-page] :is(
   .forever-item-tooltip__itemlevel,
   .forever-item-tooltip__vendor .forever-item-tooltip__line
 ) {font-size:12px;line-height:1.45}
-body[data-page] :is(
+html body[data-page] :is(
   .forever-item-tooltip__disclaimer,.forever-item-tooltip__source
 ) {font-size:11px;line-height:1.45}
-body[data-page] .dg-tooltip {
+html body[data-page] .dg-tooltip {
   font-size:13px;
   line-height:1.5;
   border-radius:var(--fo-ui-radius);
@@ -791,7 +791,7 @@ body[data-page] .dg-tooltip {
 /* 6. Phone readability: prevent iOS focus zoom and keep control targets.
    Filter grids continue to follow their individual responsive layouts. */
 @media(max-width:600px) {
-  body[data-page] :is(
+  html body[data-page] :is(
     .npc-controls input:not([type="checkbox"]), .npc-controls select,
     .npc-verification-field select, .rare-filters input, .rare-filters select,
     .dg-controls input, .dg-controls select,
@@ -800,7 +800,7 @@ body[data-page] .dg-tooltip {
     .bis-v2-search, .quest-search-input input,
     .prof-archive-controls input, .prof-archive-controls select
   ) {font-size:16px}
-  body[data-page] :is(
+  html body[data-page] :is(
     .npc-map-zoom button, .rare-zoom button,
     .dg-zoom button, .map-buttons button, .quest-map-controls button
   ) {min-height:38px;min-width:38px}
