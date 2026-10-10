@@ -334,12 +334,18 @@ function selectionLink(){
  }
 }
 function renderFilters(){
- const cBox=$("level-classes"),sBox=$("level-specs"),lBox=$("level-bands"),oBox=$("level-source"),aBox=$("level-acquisition");
- cBox.replaceChildren();sBox.replaceChildren();lBox.replaceChildren();oBox.replaceChildren();
+ const cBox=$("level-classes"),sBox=$("level-specs"),lBox=$("level-bands"),futureBox=$("level-bands-future"),oBox=$("level-source"),aBox=$("level-acquisition");
+ cBox.replaceChildren();sBox.replaceChildren();lBox.replaceChildren();futureBox?.replaceChildren();oBox.replaceChildren();
  for(const c of db.classes){const b=mk("button","bis-class level-bis-class"+(classId===c.id?" active":""),labelC(c));b.type="button";b.setAttribute("aria-pressed",String(classId===c.id));b.prepend(icon(c,c.icon));b.onclick=()=>{classId=c.id;specId=c.specs[0].id;clearPickerSearch();renderAll()};cBox.append(b)}
  for(const s of cls().specs){const b=mk("button","bis-spec level-bis-chip"+(specId===s.id?" active":""),labelS(s));b.type="button";b.setAttribute("aria-pressed",String(specId===s.id));b.onclick=()=>{specId=s.id;clearPickerSearch();renderAll()};sBox.append(b)}
- levels.forEach(([min,max],index)=>{const b=mk("button","level-bis-chip level-bis-band"+(band===index?" active":""),min===30&&max===30?(en?"30 · BETA":"30 · BÊTA"):min===max?String(min):min+"–"+max);b.type="button";if(min===30&&max===30)b.dataset.beta="true";b.setAttribute("aria-pressed",String(band===index));b.onclick=()=>{band=index;clearPickerSearch();renderAll()};lBox.append(b)});
+ levels.forEach(([min,max],index)=>{const b=mk("button","level-bis-chip level-bis-band"+(band===index?" active":""),min===30&&max===30?(en?"30 · BETA":"30 · BÊTA"):min===max?String(min):min+"–"+max);b.type="button";if(min===30&&max===30)b.dataset.beta="true";b.setAttribute("aria-pressed",String(band===index));b.onclick=()=>{band=index;clearPickerSearch();renderAll()};(max<=30?lBox:futureBox||lBox).append(b)});
  for(const [id,title] of [["all",T.all],["forever",T.sourceforever],["classic",T.sourceclassic]]){const b=mk("button","level-bis-chip"+(origin===id?" active":""),title);b.type="button";b.setAttribute("aria-pressed",String(origin===id));b.onclick=()=>{origin=id;clearPickerSearch();renderAll()};oBox.append(b)}
+ const advanced=$("level-advanced"),future=$("level-future"),activeFilters=Number(origin!=="all")+Number(sourceKind!=="all");
+ if(advanced&&activeFilters)advanced.open=true;
+ if(future&&levels[band][0]>30)future.open=true;
+ const countLabel=$("level-filter-count");
+ if(countLabel){countLabel.hidden=activeFilters===0;countLabel.textContent=String(activeFilters);}
+ 
  if(aBox){aBox.replaceChildren();for(const [kind,label] of Object.entries(kindLabel)){
   const button=mk("button","level-bis-chip level-bis-kind"+(sourceKind===kind?" active":""),label);
   button.type="button";button.setAttribute("aria-pressed",String(sourceKind===kind));
@@ -480,7 +486,7 @@ function renderPicker(){
  const slot=db.slots.find(s=>s.id===activeSlot),id=slot.id,i=currentPlan.selected.get(id);
  const blocked=currentPlan.blocked.has(id),manual=currentPlan.manual.has(id);
  $("level-picker-slot").textContent=labelSlot(slot);
- $("level-picker-hint").textContent=blocked?u.twohand:(en?"Target level ":"Objectif niveau ")+levels[band][1]+" · "+(en?"Unconfirmed gear references":"Références provisoires");
+ $("level-picker-hint").textContent=blocked?u.twohand:(en?"Up to level ":"Jusqu’au niveau ")+levels[band][1];
  const selected=$("level-picked");selected.replaceChildren(mk("span","bis-v2-eyebrow",manual?u.chosen:u.suggestion));
  if(!i)selected.append(mk("p","bis-v2-blank",blocked?u.twohand:u.missing));
  else{
@@ -536,16 +542,11 @@ function renderSlots(){
  if(!db)return;
  currentPlan=plan();
  const filled=[...currentPlan.selected.values()].filter(Boolean).length;
- $("level-count").textContent=filled+" / "+db.slots.length+" "+T.slots+" · "+currentPlan.pool.length+" "+T.total
-  +(levels[band][1]===30?(()=>{
-   const drops=currentPlan.pool.filter(i=>isObserved(i)&&i.acquisition?.kind==="dungeon").length;
-   const quests=currentPlan.pool.filter(i=>isObserved(i)&&i.acquisition?.kind==="quest").length;
-   return (drops?" · "+drops+" "+(en?"reported beta drops":"butins bêta rapportés"):"")
-     +(quests?" · "+quests+" "+(en?"quest rewards":"récompenses de quêtes"):"");
-  })():"");
+ $("level-count").textContent=filled+" / "+db.slots.length+" "+T.slots+" · "+currentPlan.pool.length+" "+(en?"items":"objets");
  $("level-current").textContent=labelC(cls())+" · "+labelS(spec())+" · "+(levels[band][0]===levels[band][1]?String(levels[band][1]):levels[band].join("–"));
  $("level-empty").hidden=currentPlan.pool.length>0;
  $("level-cap").textContent=T.levelCap;$("level-cap").hidden=levels[band][1]<=30;
+ const stage=$("level-stage");if(stage)stage.textContent=levels[band][1]<=30?(en?"Forever beta":"Bêta Forever"):(en?"Beyond beta":"Après la bêta");
  renderSheet();renderPicker();hydrateSelectedLocale();
 }
 
