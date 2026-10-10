@@ -40,7 +40,7 @@ function drawQuality(){
 function render(){
  drawQuality();
  const byID=new Map();for(const i of [...forever,...local,...classic])if(!byID.has(i.id)||sourceType(i)==="forever")byID.set(i.id,i);
- const rows=[...byID.values()].filter(matches).sort((a,b)=>Number(sourceType(b)==="forever")-Number(sourceType(a)==="forever")||(b.itemLevel||b.level||0)-(a.itemLevel||a.level||0)||a.name.localeCompare(b.name));
+ const rows=[...byID.values()].filter(matches).sort((a,b)=>(b.itemLevel||b.level||0)-(a.itemLevel||a.level||0)||Number(sourceType(b)==="forever")-Number(sourceType(a)==="forever")||a.name.localeCompare(b.name));
  table.replaceChildren();
  count.textContent=rows.length+" "+(rows.length===1?tr.item:tr.items)+(total!==null&&status!=="forever"?" · "+total.toLocaleString(en?"en":"fr")+" Classic ("+tr.loaded+" : "+classic.length+")":"");
  if(!rows.length){const line=document.createElement("tr");rowText(line,loading?tr.loading:tr.noresult).colSpan=4;table.append(line)}
