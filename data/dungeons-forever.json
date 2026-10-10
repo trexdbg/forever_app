@@ -2,7 +2,7 @@
   "schema": 2,
   "updated": "2026-10-10",
   "scope": "9 Forever additions and 26 returning Classic dungeon wings in World of Warcraft Forever, no other servers.",
-  "sourcePolicy": "Beta sightings/independent guides; loot chances unverified. Schematics represent encounter order, never physical map coordinates.",
+  "sourcePolicy": "Loot lists from Classic tables, third-party beta guides or client item records; distinguish Classic boss association from observed beta item stats and official drop rates. Boss pins are transcribed approximations on published annotated maps.",
   "mapImageBase": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/",
   "official": "https://worldofwarcraft.blizzard.com/en-us/news/24304160/",
   "listSource": "https://wowforevertalent.com/fr/dungeons/",
@@ -51,7 +51,8 @@
                 "+5 Spirit",
                 "Requires Level 13"
               ],
-              "itemUrl": "https://www.wowhead.com/forever/item=270227"
+              "itemUrl": "https://www.wowhead.com/forever/item=270227",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Brassards brindecieux",
@@ -68,12 +69,14 @@
                 "Wrist Cloth",
                 "Requires Level 13"
               ],
-              "itemUrl": "https://www.wowhead.com/forever/item=271096"
+              "itemUrl": "https://www.wowhead.com/forever/item=271096",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Drapé spectresprit",
               "en": "Spiritwraith Drape",
-              "slot": "Dos / Back"
+              "slot": "Dos / Back",
+              "source_status": "forever_beta_community"
             }
           ],
           "note": {
@@ -96,17 +99,20 @@
             {
               "fr": "Ceinturon avive-gemme",
               "en": "Kindlegem Girdle",
-              "slot": "Taille / Waist"
+              "slot": "Taille / Waist",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Poignes poing-de-flammes",
               "en": "Flamefist Grips",
-              "slot": "Mains / Hands"
+              "slot": "Mains / Hands",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Croc de Magmatus",
               "en": "Fang of Magmatus",
-              "slot": "Main droite / Main hand"
+              "slot": "Main droite / Main hand",
+              "source_status": "forever_beta_community"
             }
           ],
           "note": {
@@ -129,17 +135,20 @@
             {
               "fr": "Canne cœur-de-golem",
               "en": "Golemheart Stave",
-              "slot": "Deux mains / Two-hand"
+              "slot": "Deux mains / Two-hand",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Bottines du golem protecteur",
               "en": "Treads of the Protector Golem",
-              "slot": "Pieds / Feet"
+              "slot": "Pieds / Feet",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Plastron de garde golem",
               "en": "Golemguard Chest",
-              "slot": "Torse / Chest"
+              "slot": "Torse / Chest",
+              "source_status": "forever_beta_community"
             }
           ],
           "note": {
@@ -162,17 +171,20 @@
             {
               "fr": "Hache-croissant de Durgen",
               "en": "Durgen's Crescent Axe",
-              "slot": "Main droite / Main hand"
+              "slot": "Main droite / Main hand",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Jambières de Dirgehammer",
               "en": "Direhammer Leggings",
-              "slot": "Jambes / Legs"
+              "slot": "Jambes / Legs",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Robe de thane déshonoré",
               "en": "Robes of the Disgraced Thane",
-              "slot": "Torse / Chest"
+              "slot": "Torse / Chest",
+              "source_status": "forever_beta_community"
             }
           ],
           "note": {
@@ -256,7 +268,8 @@
               "slot": "Main droite / Main hand",
               "id": 271204,
               "quality": "rare",
-              "itemUrl": "https://foreverchanges.pro/fr/item/271204"
+              "itemUrl": "https://foreverchanges.pro/fr/item/271204",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Os d’abomination",
@@ -264,7 +277,8 @@
               "slot": "Torse / Chest",
               "id": 271205,
               "quality": "rare",
-              "itemUrl": "https://foreverchanges.pro/fr/item/271205"
+              "itemUrl": "https://foreverchanges.pro/fr/item/271205",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Restes de peau d’abomination",
@@ -272,7 +286,8 @@
               "slot": "Torse / Chest",
               "id": 271206,
               "quality": "rare",
-              "itemUrl": "https://foreverchanges.pro/fr/item/271206"
+              "itemUrl": "https://foreverchanges.pro/fr/item/271206",
+              "source_status": "forever_beta_community"
             }
           ],
           "note": {
@@ -292,17 +307,20 @@
             {
               "fr": "Ceinturon atrophique",
               "en": "Atrophic Girdle",
-              "slot": "Taille / Waist"
+              "slot": "Taille / Waist",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Brassards de flétrimorsure",
               "en": "Witherbite Bracers",
-              "slot": "Poignets / Wrists"
+              "slot": "Poignets / Wrists",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Patte d’araignée segmentée",
               "en": "Segmented Spider Leg",
-              "slot": "Deux mains / Two-hand"
+              "slot": "Deux mains / Two-hand",
+              "source_status": "forever_beta_community"
             }
           ],
           "note": {
@@ -322,17 +340,20 @@
             {
               "fr": "Jambières de soigneur de pourriture",
               "en": "Rotmender Leggings",
-              "slot": "Jambes / Legs"
+              "slot": "Jambes / Legs",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Poigne de la peur",
               "en": "Grasp of Fear",
-              "slot": "Mains / Hands"
+              "slot": "Mains / Hands",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Sceptre de l’Abandonné",
               "en": "Forsaken Scepter",
-              "slot": "Main droite / Main hand"
+              "slot": "Main droite / Main hand",
+              "source_status": "forever_beta_community"
             }
           ],
           "note": {
@@ -364,17 +385,20 @@
                 "Legs Mail",
                 "Requires Level 16"
               ],
-              "itemUrl": "https://www.wowhead.com/forever/item=271209"
+              "itemUrl": "https://www.wowhead.com/forever/item=271209",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Ceinture en brochebande",
               "en": "Bandclasp Belt",
-              "slot": "Taille / Waist"
+              "slot": "Taille / Waist",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Coupe-cadavre",
               "en": "Corpse Carver",
-              "slot": "Deux mains / Two-hand"
+              "slot": "Deux mains / Two-hand",
+              "source_status": "forever_beta_community"
             }
           ],
           "note": {
@@ -394,27 +418,32 @@
             {
               "fr": "Miroir de Rath’mael",
               "en": "Rath'mael's Mirror",
-              "slot": "Main gauche / Off hand"
+              "slot": "Main gauche / Off hand",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Bottines de soigneur de pourriture",
               "en": "Rotmender Boots",
-              "slot": "Pieds / Feet"
+              "slot": "Pieds / Feet",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Bâton flèchefroide",
               "en": "Coldfletch Staff",
-              "slot": "Deux mains / Two-hand"
+              "slot": "Deux mains / Two-hand",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Plan : fermenteur",
               "en": "Plans: Fermenter",
-              "slot": "Recette / Recipe"
+              "slot": "Recette / Recipe",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Plan : récupérateur arcanique",
               "en": "Plans: Arcane Recycler",
-              "slot": "Recette / Recipe"
+              "slot": "Recette / Recipe",
+              "source_status": "forever_beta_community"
             }
           ],
           "note": {
@@ -434,17 +463,20 @@
             {
               "fr": "Vils brodequins",
               "en": "Vilewalkers",
-              "slot": "Pieds / Feet"
+              "slot": "Pieds / Feet",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Protège-torse ensanglanté",
               "en": "Bloodied Chestwraps",
-              "slot": "Torse / Chest"
+              "slot": "Torse / Chest",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Cimeterre vilsang",
               "en": "Vileblood Scimitar",
-              "slot": "À une main / One-hand"
+              "slot": "À une main / One-hand",
+              "source_status": "forever_beta_community"
             }
           ],
           "note": {
@@ -464,12 +496,14 @@
             {
               "fr": "Lame de hantise",
               "en": "Haunting Blade",
-              "slot": "Deux mains / Two-hand"
+              "slot": "Deux mains / Two-hand",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Armure fantôme",
               "en": "Ghostly Armor",
-              "slot": "Torse / Chest"
+              "slot": "Torse / Chest",
+              "source_status": "forever_beta_community"
             }
           ],
           "note": {
@@ -559,7 +593,8 @@
             {
               "fr": "Pantoufles œil-brillant",
               "en": "Glinteye Slippers",
-              "slot": "Pieds / Feet"
+              "slot": "Pieds / Feet",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Ceinturon écaille-sel",
@@ -579,12 +614,14 @@
                 "+9 Stamina",
                 "Requires Level 26"
               ],
-              "itemUrl": "https://www.wowhead.com/forever/item=273023"
+              "itemUrl": "https://www.wowhead.com/forever/item=273023",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Jambières souples en cuir ventral",
               "en": "Supple Bellyskin Leggings",
-              "slot": "Jambes / Legs"
+              "slot": "Jambes / Legs",
+              "source_status": "forever_beta_community"
             }
           ],
           "note": {
@@ -603,22 +640,26 @@
             {
               "fr": "Grèves griffederaptor",
               "en": "Raptorclaw Greaves",
-              "slot": "Pieds / Feet"
+              "slot": "Pieds / Feet",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Regard du raptor",
               "en": "Raptor's Gaze",
-              "slot": "Main gauche / Off hand"
+              "slot": "Main gauche / Off hand",
+              "source_status": "forever_beta_community"
             },
             {
               "en": "Garb of Florid Feathers",
               "fr": "Tenue des plumes fleuries",
-              "slot": "Torse / Cuir"
+              "slot": "Torse / Cuir",
+              "source_status": "forever_beta_community"
             },
             {
               "en": "Blueprint: Greenhouse",
               "fr": "Plan : serre",
-              "slot": "Plan / Herboristerie"
+              "slot": "Plan / Herboristerie",
+              "source_status": "forever_beta_community"
             }
           ],
           "note": {
@@ -650,12 +691,14 @@
             {
               "fr": "Anneau de régulation de puissance",
               "en": "Ring of Power Regulation",
-              "slot": "Doigt / Ring"
+              "slot": "Doigt / Ring",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Long fusil de vision-golem",
               "en": "Golemsight Long Gun",
-              "slot": "À distance / Ranged"
+              "slot": "À distance / Ranged",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Mantelet du reliquaire",
@@ -675,12 +718,14 @@
                 "+4 Spirit",
                 "Requires Level 28"
               ],
-              "itemUrl": "https://www.wowhead.com/forever/item=273028"
+              "itemUrl": "https://www.wowhead.com/forever/item=273028",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Relique des Titans (quête)",
               "en": "Titan Relic (quest)",
-              "slot": "Quête / Quest"
+              "slot": "Quête / Quest",
+              "source_status": "forever_beta_community"
             }
           ],
           "note": {
@@ -754,21 +799,24 @@
               "en": "Graveweave Cuffs",
               "slot": "Poignets / Wrists",
               "chanceReported": 27,
-              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Chevalière de lieur-d’os",
               "en": "Bonebinder Signet",
               "slot": "Doigt / Ring",
               "chanceReported": 42,
-              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Arbalète à répétition pointetombe",
               "en": "Gravepoint Repeater",
               "slot": "À distance / Ranged",
               "chanceReported": 30,
-              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
+              "source_status": "forever_beta_community"
             }
           ],
           "note": {
@@ -790,21 +838,24 @@
               "en": "Cartilage Carver",
               "slot": "Mains / Hands",
               "chanceReported": 32,
-              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Dague écorche-tendons",
               "en": "Tendonflayer Dagger",
               "slot": "Main droite / Main hand",
               "chanceReported": 14,
-              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Oculaire de pile d’os",
               "en": "Bonepile Ocular",
               "slot": "Bouclier / Shield",
               "chanceReported": 54,
-              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
+              "source_status": "forever_beta_community"
             }
           ],
           "note": {
@@ -826,21 +877,24 @@
               "en": "Runemender's Seal",
               "slot": "Doigt / Ring",
               "chanceReported": 31,
-              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Poignes éphémères",
               "en": "Ephemeral Grips",
               "slot": "Mains / Hands",
               "chanceReported": 34,
-              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Cotte d’anneaux déformée par le mana",
               "en": "Mana-Warped Hauberk",
               "slot": "Torse / Chest",
               "chanceReported": 35,
-              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
+              "source_status": "forever_beta_community"
             }
           ],
           "note": {
@@ -862,21 +916,24 @@
               "en": "Fluxing Energy Drape",
               "slot": "Dos / Back",
               "chanceReported": 32,
-              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Robe de sorcier pourpre",
               "en": "Violet Wizard Robe",
               "slot": "Torse / Chest",
               "chanceReported": 39,
-              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Baguette de concentration de mana",
               "en": "Mana Focus Wand",
               "slot": "À distance / Ranged",
               "chanceReported": 29,
-              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
+              "source_status": "forever_beta_community"
             }
           ],
           "note": {
@@ -898,28 +955,32 @@
               "en": "Guardian's Doubleblade",
               "slot": "Deux mains / Two-hand",
               "chanceReported": 29,
-              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Gardécaille réfractaire",
               "en": "Refractive Scaleguard",
               "slot": "Jambes / Legs",
               "chanceReported": 40,
-              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Protège-épaules cristallins instables",
               "en": "Unstable Crystal Shoulders",
               "slot": "Épaules / Shoulders",
               "chanceReported": 31,
-              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Plan : rouet",
               "en": "Pattern: Spinning Wheel",
               "slot": "Recette / Recipe",
               "chanceReported": 9.3,
-              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
+              "source_status": "forever_beta_community"
             }
           ],
           "note": {
@@ -941,21 +1002,24 @@
               "en": "Devourer's Spine",
               "slot": "Deux mains / Two-hand",
               "chanceReported": 40,
-              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Bottines en écaille-de-mana",
               "en": "Manascale Boots",
               "slot": "Pieds / Feet",
               "chanceReported": 29,
-              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Ceinturon en ondule-bandes",
               "en": "Rippleband Girdle",
               "slot": "Taille / Waist",
               "chanceReported": 31,
-              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
+              "source_status": "forever_beta_community"
             }
           ],
           "note": {
@@ -977,21 +1041,24 @@
               "en": "Witherleaf Cord",
               "slot": "Taille / Waist",
               "chanceReported": 35,
-              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Atours du déchu Gangrécorce",
               "en": "Fallen Felbark Raiment",
               "slot": "Torse / Chest",
               "chanceReported": 28,
-              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Bras de gangrebranche",
               "en": "Felbranch Arm",
               "slot": "Deux mains / Two-hand",
               "chanceReported": 37,
-              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
+              "source_status": "forever_beta_community"
             }
           ],
           "note": {
@@ -1013,28 +1080,32 @@
               "en": "Weighted Orb",
               "slot": "Main gauche / Off hand",
               "chanceReported": 24,
-              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Mantelet de sorcier pourpre",
               "en": "Violet Wizard Mantle",
               "slot": "Épaules / Shoulders",
               "chanceReported": 37,
-              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Pendentif à facettes d’archimagistère",
               "en": "Archmagister's Faceted Pendant",
               "slot": "Cou / Neck",
               "chanceReported": 38,
-              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
+              "source_status": "forever_beta_community"
             },
             {
               "fr": "Plan : récupérateur arcanique",
               "en": "Pattern: Arcane Recycler",
               "slot": "Recette / Recipe",
               "chanceReported": 6.4,
-              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
+              "source_status": "forever_beta_community"
             }
           ],
           "note": {
@@ -1270,26 +1341,35 @@
               "en": "Barbaric Crossbow",
               "fr": "Arbalète barbare",
               "slot": "Distance / Ranged",
-              "isNew": true
+              "isNew": true,
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Trogg Scepter",
               "fr": "Sceptre trogg",
               "slot": "Main droite / Main hand",
-              "isNew": true
+              "isNew": true,
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Bone Knuckles",
               "fr": "Poings d'os",
               "slot": "Mains / Fist weapon",
-              "isNew": true
+              "isNew": true,
+              "source_status": "classic_loot_reference"
             }
           ],
           "rare": false,
           "note": {
             "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
             "en": "Classic/Forever reference: check beta loot changes."
-          }
+          },
+          "mapPoint": [
+            69,
+            63
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         },
         {
           "name": {
@@ -1301,24 +1381,33 @@
             {
               "en": "Subterranean Cape",
               "fr": "Cape souterraine",
-              "slot": "Dos / Back"
+              "slot": "Dos / Back",
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Crystalline Cuffs",
               "fr": "Manchettes cristallines",
-              "slot": "Poignets / Wrist"
+              "slot": "Poignets / Wrist",
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Cursed Felblade",
               "fr": "Lame gangrenée maudite",
-              "slot": "Main droite / Main hand"
+              "slot": "Main droite / Main hand",
+              "source_status": "classic_loot_reference"
             }
           ],
           "rare": false,
           "note": {
             "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
             "en": "Classic/Forever reference: check beta loot changes."
-          }
+          },
+          "mapPoint": [
+            41,
+            57
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         },
         {
           "name": {
@@ -1330,24 +1419,33 @@
             {
               "en": "Robe of Evocation",
               "fr": "Robe d'évocation",
-              "slot": "Torse / Chest"
+              "slot": "Torse / Chest",
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Cavedweller Bracers",
               "fr": "Brassards d'habitant des cavernes",
-              "slot": "Poignets / Wrist"
+              "slot": "Poignets / Wrist",
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Chanting Blade",
               "fr": "Lame chantante",
-              "slot": "Main droite / Main hand"
+              "slot": "Main droite / Main hand",
+              "source_status": "classic_loot_reference"
             }
           ],
           "rare": false,
           "note": {
             "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
             "en": "Classic/Forever reference: check beta loot changes."
-          }
+          },
+          "mapPoint": [
+            34,
+            80
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         },
         {
           "name": {
@@ -1360,26 +1458,35 @@
               "en": "Searing Dagger",
               "fr": "Dague incendiaire",
               "slot": "Main droite / Main hand",
-              "isNew": true
+              "isNew": true,
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Satyrskin Cloak",
               "fr": "Cape en peau de satyre",
               "slot": "Dos / Back",
-              "isNew": true
+              "isNew": true,
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Chasm Walkers",
               "fr": "Marcheurs des profondeurs",
               "slot": "Pieds / Feet",
-              "isNew": true
+              "isNew": true,
+              "source_status": "classic_loot_reference"
             }
           ],
           "rare": false,
           "note": {
             "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
             "en": "Classic/Forever reference: check beta loot changes."
-          }
+          },
+          "mapPoint": [
+            41,
+            85
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         }
       ],
       "beta": "classic_beta_accessible",
@@ -1396,10 +1503,10 @@
         "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
       },
       "floorMap": {
-        "url": "https://static.icy-veins.com/images/classic-plus/forever/dungeons/ragefire-chasm-map.jpg",
+        "url": "https://eintr.net/WoW/images/Ragefire-Chasm-walkthrough-map-1024x683.jpg",
         "kind": "existing_annotated_map",
-        "attribution": "Carte annotée · Icy Veins",
-        "source": "https://www.icy-veins.com/wow-forever/ragefire-chasm-guide/"
+        "attribution": "Plan Classic annoté · eintr.net (archive Aetherflask)",
+        "source": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html"
       }
     },
     {
@@ -1435,24 +1542,33 @@
             {
               "en": "Cobrahn's Grasp",
               "fr": "Étreinte de Cobrahn",
-              "slot": "Taille / Waist"
+              "slot": "Taille / Waist",
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Leggings of the Fang",
               "fr": "Jambières du Croc",
-              "slot": "Jambes / Legs"
+              "slot": "Jambes / Legs",
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Robe of the Moccasin",
               "fr": "Robe du mocassin",
-              "slot": "Torse / Chest"
+              "slot": "Torse / Chest",
+              "source_status": "classic_loot_reference"
             }
           ],
           "rare": false,
           "note": {
             "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
             "en": "Classic/Forever reference: check beta loot changes."
-          }
+          },
+          "mapPoint": [
+            16,
+            55
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         },
         {
           "name": {
@@ -1464,25 +1580,34 @@
             {
               "en": "Belt of the Fang",
               "fr": "Ceinture du Croc",
-              "slot": "Taille / Waist"
+              "slot": "Taille / Waist",
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Serpent's Shoulders",
               "fr": "Épaulières du serpent",
-              "slot": "Épaules / Shoulders"
+              "slot": "Épaules / Shoulders",
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Snake Eye Kaleidoscope",
               "fr": "Kaléidoscope œil-de-serpent",
               "slot": "Cou / Neck",
-              "isNew": true
+              "isNew": true,
+              "source_status": "classic_loot_reference"
             }
           ],
           "rare": false,
           "note": {
             "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
             "en": "Classic/Forever reference: check beta loot changes."
-          }
+          },
+          "mapPoint": [
+            31,
+            47
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         },
         {
           "name": {
@@ -1494,19 +1619,27 @@
             {
               "en": "Kresh's Back",
               "fr": "Carapace de Kresh",
-              "slot": "Bouclier / Shield"
+              "slot": "Bouclier / Shield",
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Worn Turtle Shell Shield",
               "fr": "Bouclier en carapace de tortue usé",
-              "slot": "Bouclier / Shield"
+              "slot": "Bouclier / Shield",
+              "source_status": "classic_loot_reference"
             }
           ],
           "rare": false,
           "note": {
             "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
             "en": "Classic/Forever reference: check beta loot changes."
-          }
+          },
+          "mapPoint": [
+            31,
+            35
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         },
         {
           "name": {
@@ -1518,19 +1651,27 @@
             {
               "en": "Stinging Viper",
               "fr": "Vipère à aiguillon",
-              "slot": "Masse / Mace"
+              "slot": "Masse / Mace",
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Armor of the Fang",
               "fr": "Armure du Croc",
-              "slot": "Torse / Chest"
+              "slot": "Torse / Chest",
+              "source_status": "classic_loot_reference"
             }
           ],
           "rare": false,
           "note": {
             "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
             "en": "Classic/Forever reference: check beta loot changes."
-          }
+          },
+          "mapPoint": [
+            85,
+            28
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         },
         {
           "name": {
@@ -1542,19 +1683,27 @@
             {
               "en": "Glowing Lizardscale Cloak",
               "fr": "Cape luminescente en écailles de lézard",
-              "slot": "Dos / Back"
+              "slot": "Dos / Back",
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Tail Spike",
               "fr": "Pique caudale",
-              "slot": "Dague / Dagger"
+              "slot": "Dague / Dagger",
+              "source_status": "classic_loot_reference"
             }
           ],
           "rare": false,
           "note": {
             "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
             "en": "Classic/Forever reference: check beta loot changes."
-          }
+          },
+          "mapPoint": [
+            93,
+            77
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         },
         {
           "name": {
@@ -1566,19 +1715,27 @@
             {
               "en": "Venomstrike",
               "fr": "Frappe venimeuse",
-              "slot": "Arc / Bow"
+              "slot": "Arc / Bow",
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Footpads of the Fang",
               "fr": "Souliers du Croc",
-              "slot": "Pieds / Feet"
+              "slot": "Pieds / Feet",
+              "source_status": "classic_loot_reference"
             }
           ],
           "rare": false,
           "note": {
             "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
             "en": "Classic/Forever reference: check beta loot changes."
-          }
+          },
+          "mapPoint": [
+            62,
+            49
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         },
         {
           "name": {
@@ -1590,19 +1747,27 @@
             {
               "en": "Seedcloud Buckler",
               "fr": "Rondache nuage-graine",
-              "slot": "Bouclier / Shield"
+              "slot": "Bouclier / Shield",
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Living Root",
               "fr": "Racine vivante",
-              "slot": "Bâton / Staff"
+              "slot": "Bâton / Staff",
+              "source_status": "classic_loot_reference"
             }
           ],
           "rare": false,
           "note": {
             "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
             "en": "Classic/Forever reference: check beta loot changes."
-          }
+          },
+          "mapPoint": [
+            55,
+            46
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         },
         {
           "name": {
@@ -1614,19 +1779,27 @@
             {
               "en": "Mutant Scale Breastplate",
               "fr": "Cuirasse en écailles mutantes",
-              "slot": "Torse / Chest"
+              "slot": "Torse / Chest",
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Deep Fathom Ring",
               "fr": "Anneau des profondeurs",
-              "slot": "Doigt / Ring"
+              "slot": "Doigt / Ring",
+              "source_status": "classic_loot_reference"
             }
           ],
           "rare": false,
           "note": {
             "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
             "en": "Classic/Forever reference: check beta loot changes."
-          }
+          },
+          "mapPoint": [
+            34,
+            12
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         },
         {
           "name": {
@@ -1638,14 +1811,21 @@
             {
               "en": "Firebelcher",
               "fr": "Crache-feu",
-              "slot": "Baguette / Wand"
+              "slot": "Baguette / Wand",
+              "source_status": "classic_loot_reference"
             }
           ],
           "rare": true,
           "note": {
             "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
             "en": "Classic/Forever reference: check beta loot changes."
-          }
+          },
+          "mapPoint": [
+            67,
+            35
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         }
       ],
       "beta": "classic_beta_accessible",
@@ -1691,10 +1871,10 @@
         "uiMapID": 1436
       },
       "access": {
-        "fr": "Entrée située dans : Marche de l'Ouest. Consulter la carte et la source pour la localisation précise.",
-        "en": "Entrance in Westfall. See source map for precise directions."
+        "fr": "Marche de l'Ouest, repaire Défias de Ruisselune (42, 72). Descendre dans la mine jusqu'au portail.",
+        "en": "Westfall, Defias Hideout in Moonbrook (42, 72). Descend through the mines to the portal."
       },
-      "source": "https://foreverchanges.pro/dungeons/the-deadmines",
+      "source": "https://wowforever.be/guides/dungeons/the-deadmines/",
       "bosses": [
         {
           "name": {
@@ -1702,48 +1882,33 @@
             "fr": "Rhahk'Zor"
           },
           "level": 19,
+          "rare": false,
           "loot": [
             {
               "en": "Rhahk'Zor's Hammer",
               "fr": "Marteau de Rhahk'Zor",
-              "slot": "Masse deux mains"
+              "slot": "Masse 2M",
+              "source_status": "classic_loot_reference",
+              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/rhahkzor/"
             },
             {
-              "en": "Ogre Loincloth",
-              "fr": "Pagne ogre",
-              "slot": "Jambes / Legs",
-              "isNew": true
+              "en": "Rockslicer",
+              "fr": "Tranche-roche",
+              "slot": "Hache 2M",
+              "source_status": "classic_loot_reference",
+              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/rhahkzor/"
             }
           ],
-          "rare": false,
           "note": {
             "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
             "en": "Classic/Forever reference: check beta loot changes."
-          }
-        },
-        {
-          "name": {
-            "en": "Miner Johnson",
-            "fr": "Mineur Johnson"
           },
-          "level": 19,
-          "loot": [
-            {
-              "en": "Gold-plated Buckler",
-              "fr": "Rondache plaquée or",
-              "slot": "Bouclier / Shield"
-            },
-            {
-              "en": "Miner's Cape",
-              "fr": "Cape du mineur",
-              "slot": "Dos / Back"
-            }
+          "mapPoint": [
+            16.4,
+            73
           ],
-          "rare": true,
-          "note": {
-            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
-            "en": "Classic/Forever reference: check beta loot changes."
-          }
+          "mapPointSource": "https://www.icy-veins.com/wow-forever/deadmines-guide",
+          "mapPointStatus": "approximate_from_annotated_map"
         },
         {
           "name": {
@@ -1751,37 +1916,81 @@
             "fr": "Sneed"
           },
           "level": 20,
-          "loot": [
-            {
-              "en": "Buzz Saw",
-              "fr": "Scie circulaire",
-              "slot": "Épée / Sword"
-            }
-          ],
           "rare": false,
-          "note": {
-            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
-            "en": "Classic/Forever reference: check beta loot changes."
-          }
-        },
-        {
-          "name": {
-            "en": "Sneed's Shredder",
-            "fr": "Déchiqueteur de Sneed"
-          },
-          "level": 20,
           "loot": [
             {
               "en": "Buzzer Blade",
               "fr": "Lame bourdonnante",
-              "slot": "Dague / Dagger"
+              "slot": "Dague",
+              "source_status": "classic_loot_reference",
+              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/sneed/"
+            },
+            {
+              "en": "Gold-flecked Gloves",
+              "fr": "Gants mouchetés d'or",
+              "slot": "Mains · Tissu",
+              "source_status": "classic_loot_reference",
+              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/sneed/"
+            },
+            {
+              "en": "Taskmaster Axe",
+              "fr": "Hache de contremaître",
+              "slot": "Hache 2M",
+              "source_status": "classic_loot_reference",
+              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/sneed/"
+            },
+            {
+              "en": "Buzz Saw",
+              "fr": "Scie circulaire",
+              "slot": "Épée 1M",
+              "source_status": "classic_loot_reference",
+              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/sneed/"
             }
           ],
-          "rare": false,
           "note": {
             "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
             "en": "Classic/Forever reference: check beta loot changes."
-          }
+          },
+          "mapPoint": [
+            28,
+            94
+          ],
+          "mapPointSource": "https://www.icy-veins.com/wow-forever/deadmines-guide",
+          "mapPointStatus": "approximate_from_annotated_map"
+        },
+        {
+          "name": {
+            "en": "Miner Johnson",
+            "fr": "Mineur Johnson"
+          },
+          "level": 19,
+          "rare": true,
+          "loot": [
+            {
+              "en": "Gold-plated Buckler",
+              "fr": "Rondache plaquée or",
+              "slot": "Bouclier",
+              "source_status": "classic_loot_reference",
+              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/miner-johnson/"
+            },
+            {
+              "en": "Miner's Cape",
+              "fr": "Cape du mineur",
+              "slot": "Dos",
+              "source_status": "classic_loot_reference",
+              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/miner-johnson/"
+            }
+          ],
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          },
+          "mapPoint": [
+            30,
+            65
+          ],
+          "mapPointSource": "https://www.icy-veins.com/wow-forever/deadmines-guide",
+          "mapPointStatus": "approximate_from_annotated_map"
         },
         {
           "name": {
@@ -1789,31 +1998,33 @@
             "fr": "Gilnid"
           },
           "level": 20,
-          "loot": [],
           "rare": false,
-          "note": {
-            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
-            "en": "Classic/Forever reference: check beta loot changes."
-          }
-        },
-        {
-          "name": {
-            "en": "Mr. Smite",
-            "fr": "M. Châtiment"
-          },
-          "level": 21,
           "loot": [
             {
-              "en": "First Mate Hat",
-              "fr": "Chapeau de premier maître",
-              "slot": "Tête / Head"
+              "en": "Smelting Pants",
+              "fr": "Pantalon de fonte",
+              "slot": "Jambes · Cuir",
+              "source_status": "classic_loot_reference",
+              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/gilnid/"
+            },
+            {
+              "en": "Lavishly Jeweled Ring",
+              "fr": "Anneau somptueusement orné",
+              "slot": "Doigt",
+              "source_status": "classic_loot_reference",
+              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/gilnid/"
             }
           ],
-          "rare": false,
           "note": {
             "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
             "en": "Classic/Forever reference: check beta loot changes."
-          }
+          },
+          "mapPoint": [
+            35,
+            71
+          ],
+          "mapPointSource": "https://www.icy-veins.com/wow-forever/deadmines-guide",
+          "mapPointStatus": "approximate_from_annotated_map"
         },
         {
           "name": {
@@ -1821,42 +2032,74 @@
             "fr": "Capitaine Vertepeau"
           },
           "level": 21,
+          "rare": false,
           "loot": [
             {
+              "en": "Blackened Defias Belt",
+              "fr": "Ceinture défias noircie",
+              "slot": "Taille · Cuir",
+              "source_status": "classic_loot_reference",
+              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/captain-greenskin/"
+            },
+            {
               "en": "Corsair's Overshirt",
-              "fr": "Chemise de corsaire",
-              "slot": "Torse / Chest"
+              "fr": "Surchemise de corsaire",
+              "slot": "Torse · Tissu",
+              "source_status": "classic_loot_reference",
+              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/captain-greenskin/"
             }
           ],
-          "rare": false,
           "note": {
             "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
             "en": "Classic/Forever reference: check beta loot changes."
-          }
+          },
+          "mapPoint": [
+            66,
+            48
+          ],
+          "mapPointSource": "https://www.icy-veins.com/wow-forever/deadmines-guide",
+          "mapPointStatus": "approximate_from_annotated_map"
         },
         {
           "name": {
-            "en": "Edwin VanCleef",
-            "fr": "Edwin VanCleef"
+            "en": "Mr. Smite",
+            "fr": "M. Châtiment"
           },
           "level": 21,
+          "rare": false,
           "loot": [
             {
-              "en": "Cruel Barb",
-              "fr": "Barbelure cruelle",
-              "slot": "Épée / Sword"
+              "en": "Thief's Blade",
+              "fr": "Lame du voleur",
+              "slot": "Épée 1M",
+              "source_status": "classic_loot_reference",
+              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/mr-smite/"
             },
             {
-              "en": "Cape of the Brotherhood",
-              "fr": "Cape de la confrérie",
-              "slot": "Dos / Back"
+              "en": "Smite's Reaver",
+              "fr": "Couperet de M. Châtiment",
+              "slot": "Hache 1M",
+              "source_status": "classic_loot_reference",
+              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/mr-smite/"
+            },
+            {
+              "en": "Smite's Mighty Hammer",
+              "fr": "Marteau puissant de M. Châtiment",
+              "slot": "Masse 2M",
+              "source_status": "classic_loot_reference",
+              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/mr-smite/"
             }
           ],
-          "rare": false,
           "note": {
             "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
             "en": "Classic/Forever reference: check beta loot changes."
-          }
+          },
+          "mapPoint": [
+            62,
+            37
+          ],
+          "mapPointSource": "https://www.icy-veins.com/wow-forever/deadmines-guide",
+          "mapPointStatus": "approximate_from_annotated_map"
         },
         {
           "name": {
@@ -1864,26 +2107,96 @@
             "fr": "Macaron"
           },
           "level": 20,
+          "rare": false,
           "loot": [
+            {
+              "en": "Cookie's Tenderizer",
+              "fr": "Attendrisseur de Macaron",
+              "slot": "Masse 1M",
+              "source_status": "classic_loot_reference",
+              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/cookie/"
+            },
             {
               "en": "Cookie's Stirring Rod",
               "fr": "Baguette agitatrice de Macaron",
-              "slot": "Baguette / Wand"
+              "slot": "Baguette",
+              "source_status": "classic_loot_reference",
+              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/cookie/"
+            },
+            {
+              "en": "Viridian Band",
+              "fr": "Anneau viridien",
+              "slot": "Doigt",
+              "source_status": "classic_loot_reference",
+              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/cookie/"
             }
           ],
-          "rare": false,
           "note": {
             "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
             "en": "Classic/Forever reference: check beta loot changes."
-          }
+          },
+          "mapPoint": [
+            72,
+            50
+          ],
+          "mapPointSource": "https://www.icy-veins.com/wow-forever/deadmines-guide",
+          "mapPointStatus": "approximate_from_annotated_map"
+        },
+        {
+          "name": {
+            "en": "Edwin VanCleef",
+            "fr": "Edwin VanCleef"
+          },
+          "level": 21,
+          "rare": false,
+          "loot": [
+            {
+              "en": "Cape of the Brotherhood",
+              "fr": "Cape de la confrérie",
+              "slot": "Dos",
+              "source_status": "classic_loot_reference",
+              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/edwin-vancleef/"
+            },
+            {
+              "en": "Corsair's Overshirt",
+              "fr": "Surchemise de corsaire",
+              "slot": "Torse · Tissu",
+              "source_status": "classic_loot_reference",
+              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/edwin-vancleef/"
+            },
+            {
+              "en": "Cruel Barb",
+              "fr": "Barbelure cruelle",
+              "slot": "Épée 1M",
+              "source_status": "classic_loot_reference",
+              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/edwin-vancleef/"
+            },
+            {
+              "en": "Blackened Defias Armor",
+              "fr": "Armure défias noircie",
+              "slot": "Torse · Cuir",
+              "source_status": "classic_loot_reference",
+              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/edwin-vancleef/"
+            }
+          ],
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          },
+          "mapPoint": [
+            68,
+            54
+          ],
+          "mapPointSource": "https://www.icy-veins.com/wow-forever/deadmines-guide",
+          "mapPointStatus": "approximate_from_annotated_map"
         }
       ],
       "beta": "classic_beta_accessible",
       "changes": [
         {
           "status": "observed_beta",
-          "fr": "Mineur Johnson est recensé dans les rencontres de la bêta ; de nouveaux butins de boss et des modifications d'ensembles existent.",
-          "en": "Miner Johnson appears in the beta encounter list; new boss drops and item-set changes are reported."
+          "fr": "Objets d’équipement et ensembles retravaillés pour Forever ; les caractéristiques proviennent du client bêta. Les tables ci-dessous sont des références Classic, pas des taux Forever.",
+          "en": "Gear and set bonuses were reworked for Forever (beta client stats). Below are Classic drop references, not Forever drop rates."
         }
       ],
       "mapStatus": "reference",
@@ -1896,7 +2209,14 @@
         "kind": "existing_annotated_map",
         "attribution": "Carte annotée · Icy Veins",
         "source": "https://www.icy-veins.com/wow-forever/deadmines-guide/"
-      }
+      },
+      "entry": {
+        "x": 42,
+        "y": 72,
+        "zone": "westfall",
+        "note": "Entrée de la mine / Mine access, portail plus bas"
+      },
+      "mapMarkerPrecision": "annotated_map_approx"
     },
     {
       "id": "shadowfang-keep",
@@ -1927,12 +2247,26 @@
             "fr": "Rethiltripe"
           },
           "level": 20,
-          "loot": [],
+          "loot": [
+            {
+              "en": "Rugged Spaulders",
+              "fr": "Spallières robustes",
+              "slot": "Épaules · Cuir",
+              "source_status": "classic_loot_reference",
+              "source_url": "https://theforeverera.com/en/dungeons/shadowfang-keep/rethilgore/"
+            }
+          ],
           "rare": false,
           "note": {
             "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
             "en": "Classic/Forever reference: check beta loot changes."
-          }
+          },
+          "mapPoint": [
+            61,
+            27
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         },
         {
           "name": {
@@ -1940,12 +2274,40 @@
             "fr": "Tranchegriffe le Boucher"
           },
           "level": 22,
-          "loot": [],
+          "loot": [
+            {
+              "en": "Bloody Apron",
+              "fr": "Tablier sanglant",
+              "slot": "Torse · Tissu",
+              "source_status": "classic_loot_reference",
+              "source_url": "https://theforeverera.com/en/dungeons/shadowfang-keep/razorclaw-the-butcher/"
+            },
+            {
+              "en": "Butcher's Slicer",
+              "fr": "Hachoir du boucher",
+              "slot": "Épée 1M",
+              "source_status": "classic_loot_reference",
+              "source_url": "https://theforeverera.com/en/dungeons/shadowfang-keep/razorclaw-the-butcher/"
+            },
+            {
+              "en": "Butcher's Cleaver",
+              "fr": "Fendoir du Boucher",
+              "slot": "Hache 1M",
+              "source_status": "classic_loot_reference",
+              "source_url": "https://theforeverera.com/en/dungeons/shadowfang-keep/razorclaw-the-butcher/"
+            }
+          ],
           "rare": false,
           "note": {
             "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
             "en": "Classic/Forever reference: check beta loot changes."
-          }
+          },
+          "mapPoint": [
+            24,
+            17
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         },
         {
           "name": {
@@ -1957,14 +2319,28 @@
             {
               "en": "Baron's Scepter",
               "fr": "Sceptre du baron",
-              "slot": "Masse / Mace"
+              "slot": "Masse / Mace",
+              "source_status": "classic_loot_reference"
+            },
+            {
+              "en": "Silverlaine's Family Seal",
+              "fr": "Sceau familial d'Argelaine",
+              "slot": "Doigt",
+              "source_status": "classic_loot_reference",
+              "source_url": "https://theforeverera.com/en/dungeons/shadowfang-keep/baron-silverlaine/"
             }
           ],
           "rare": false,
           "note": {
             "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
             "en": "Classic/Forever reference: check beta loot changes."
-          }
+          },
+          "mapPoint": [
+            12,
+            45
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         },
         {
           "name": {
@@ -1972,12 +2348,33 @@
             "fr": "Commandant Printeval"
           },
           "level": 24,
-          "loot": [],
+          "loot": [
+            {
+              "en": "Arced War Axe",
+              "fr": "Hache de guerre arquée",
+              "slot": "Hache 2M",
+              "source_status": "classic_loot_reference",
+              "source_url": "https://theforeverera.com/en/dungeons/shadowfang-keep/commander-springvale/"
+            },
+            {
+              "en": "Commander's Crest",
+              "fr": "Écu du commandant",
+              "slot": "Bouclier",
+              "source_status": "classic_loot_reference",
+              "source_url": "https://theforeverera.com/en/dungeons/shadowfang-keep/commander-springvale/"
+            }
+          ],
           "rare": false,
           "note": {
             "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
             "en": "Classic/Forever reference: check beta loot changes."
-          }
+          },
+          "mapPoint": [
+            36,
+            27
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         },
         {
           "name": {
@@ -1985,12 +2382,33 @@
             "fr": "Odo l'Aveugle"
           },
           "level": 24,
-          "loot": [],
+          "loot": [
+            {
+              "en": "Girdle of the Blindwatcher",
+              "fr": "Ceinturon de l'Aveugle",
+              "slot": "Taille · Cuir",
+              "source_status": "classic_loot_reference",
+              "source_url": "https://theforeverera.com/en/dungeons/shadowfang-keep/odo-the-blindwatcher/"
+            },
+            {
+              "en": "Odo's Ley Staff",
+              "fr": "Bâton tellurique d'Odo",
+              "slot": "Bâton 2M",
+              "source_status": "classic_loot_reference",
+              "source_url": "https://theforeverera.com/en/dungeons/shadowfang-keep/odo-the-blindwatcher/"
+            }
+          ],
           "rare": false,
           "note": {
             "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
             "en": "Classic/Forever reference: check beta loot changes."
-          }
+          },
+          "mapPoint": [
+            81,
+            32
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         },
         {
           "name": {
@@ -2003,7 +2421,13 @@
           "note": {
             "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
             "en": "Classic/Forever reference: check beta loot changes."
-          }
+          },
+          "mapPoint": [
+            42,
+            70
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         },
         {
           "name": {
@@ -2016,7 +2440,13 @@
           "note": {
             "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
             "en": "Classic/Forever reference: check beta loot changes."
-          }
+          },
+          "mapPoint": [
+            83,
+            87
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         },
         {
           "name": {
@@ -2028,19 +2458,27 @@
             {
               "en": "Arugal's Robes",
               "fr": "Robe d'Arugal",
-              "slot": "Torse / Chest"
+              "slot": "Torse / Chest",
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Meteor Shard",
               "fr": "Éclat de météore",
-              "slot": "Dague / Dagger"
+              "slot": "Dague / Dagger",
+              "source_status": "classic_loot_reference"
             }
           ],
           "rare": false,
           "note": {
             "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
             "en": "Classic/Forever reference: check beta loot changes."
-          }
+          },
+          "mapPoint": [
+            93,
+            70
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         },
         {
           "name": {
@@ -2053,7 +2491,13 @@
           "note": {
             "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
             "en": "Classic/Forever reference: check beta loot changes."
-          }
+          },
+          "mapPoint": [
+            79,
+            25
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         }
       ],
       "beta": "classic_beta_accessible",
@@ -2070,11 +2514,12 @@
         "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
       },
       "floorMap": {
-        "url": "https://static.icy-veins.com/images/classic-plus/forever/dungeons/shadowfang-keep-map.jpg",
+        "url": "https://eintr.net/WoW/images/Shadowfang-Keep-walkthrough-map-1024x768.jpg",
         "kind": "existing_annotated_map",
-        "attribution": "Carte annotée · Icy Veins",
-        "source": "https://www.icy-veins.com/wow-forever/shadowfang-keep-guide/"
-      }
+        "attribution": "Plan Classic annoté · eintr.net (archive Aetherflask)",
+        "source": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html"
+      },
+      "mapMarkerPrecision": "annotated_map_approx"
     },
     {
       "id": "blackfathom-deeps",
@@ -2105,23 +2550,31 @@
             "fr": "Ghamoo-Ra"
           },
           "level": 25,
+          "rare": false,
           "loot": [
             {
               "en": "Tortoise Armor",
               "fr": "Armure de la tortue",
-              "slot": "Torse / Chest"
+              "slot": "Torse / Chest",
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Ghamoo-ra's Bind",
               "fr": "Lien de Ghamoo-ra",
-              "slot": "Taille / Waist"
+              "slot": "Taille / Waist",
+              "source_status": "classic_loot_reference"
             }
           ],
-          "rare": false,
           "note": {
             "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
             "en": "Classic/Forever reference: check beta loot changes."
-          }
+          },
+          "mapPoint": [
+            25,
+            42
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         },
         {
           "name": {
@@ -2129,23 +2582,38 @@
             "fr": "Dame Sarevess"
           },
           "level": 25,
+          "rare": false,
           "loot": [
             {
               "en": "Naga Battle Gloves",
               "fr": "Gants de bataille nagas",
-              "slot": "Mains / Hands"
+              "slot": "Mains / Hands",
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Naga Heartpiercer",
               "fr": "Perce-cœur naga",
-              "slot": "À distance / Ranged"
+              "slot": "À distance / Ranged",
+              "source_status": "classic_loot_reference"
+            },
+            {
+              "en": "Darkwater Talwar",
+              "fr": "Talwar d'eau sombre",
+              "slot": "Épée 1M",
+              "source_status": "classic_loot_reference",
+              "source_url": "https://theforeverera.com/en/dungeons/blackfathom-deeps/lady-sarevess/"
             }
           ],
-          "rare": false,
           "note": {
             "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
             "en": "Classic/Forever reference: check beta loot changes."
-          }
+          },
+          "mapPoint": [
+            5,
+            28
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         },
         {
           "name": {
@@ -2153,12 +2621,33 @@
             "fr": "Gelihast"
           },
           "level": 26,
-          "loot": [],
           "rare": false,
+          "loot": [
+            {
+              "en": "Algae Fists",
+              "fr": "Poings d'algues",
+              "slot": "Mains · Mailles",
+              "source_status": "classic_loot_reference",
+              "source_url": "https://theforeverera.com/en/dungeons/blackfathom-deeps/geilhast/"
+            },
+            {
+              "en": "Reef Axe",
+              "fr": "Hache récifale",
+              "slot": "Hache 2M",
+              "source_status": "classic_loot_reference",
+              "source_url": "https://theforeverera.com/en/dungeons/blackfathom-deeps/geilhast/"
+            }
+          ],
           "note": {
             "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
             "en": "Classic/Forever reference: check beta loot changes."
-          }
+          },
+          "mapPoint": [
+            44,
+            40
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         },
         {
           "name": {
@@ -2166,44 +2655,18 @@
             "fr": "Lorgus Jett"
           },
           "level": 27,
-          "loot": [],
           "rare": false,
+          "loot": [],
           "note": {
             "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
             "en": "Classic/Forever reference: check beta loot changes."
-          }
-        },
-        {
-          "name": {
-            "en": "Baron Aquanis",
-            "fr": "Baron Aquanis"
           },
-          "level": 28,
-          "loot": [],
-          "rare": false,
-          "note": {
-            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
-            "en": "Classic/Forever reference: check beta loot changes."
-          }
-        },
-        {
-          "name": {
-            "en": "Twilight Lord Kelris",
-            "fr": "Seigneur du Crépuscule Kelris"
-          },
-          "level": 28,
-          "loot": [
-            {
-              "en": "Rod of the Sleepwalker",
-              "fr": "Bâton du somnambule",
-              "slot": "Bâton / Staff"
-            }
+          "mapPoint": [
+            50,
+            57
           ],
-          "rare": false,
-          "note": {
-            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
-            "en": "Classic/Forever reference: check beta loot changes."
-          }
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         },
         {
           "name": {
@@ -2211,12 +2674,73 @@
             "fr": "Vieux Serra'kis"
           },
           "level": 26,
-          "loot": [],
           "rare": false,
+          "loot": [
+            {
+              "en": "Glowing Thresher Cape",
+              "fr": "Cape lumineuse de batteur",
+              "slot": "Dos",
+              "source_status": "classic_loot_reference",
+              "source_url": "https://theforeverera.com/en/dungeons/blackfathom-deeps/old-serrakis/"
+            },
+            {
+              "en": "Bite of Serra'kis",
+              "fr": "Morsure de Serra'kis",
+              "slot": "Dague",
+              "source_status": "classic_loot_reference",
+              "source_url": "https://theforeverera.com/en/dungeons/blackfathom-deeps/old-serrakis/"
+            },
+            {
+              "en": "Bands of Serra'kis",
+              "fr": "Brassards de Serra'kis",
+              "slot": "Poignets · Cuir",
+              "source_status": "classic_loot_reference",
+              "source_url": "https://theforeverera.com/en/dungeons/blackfathom-deeps/old-serrakis/"
+            }
+          ],
           "note": {
             "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
             "en": "Classic/Forever reference: check beta loot changes."
-          }
+          },
+          "mapPoint": [
+            13,
+            77
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
+        },
+        {
+          "name": {
+            "en": "Twilight Lord Kelris",
+            "fr": "Seigneur du Crépuscule Kelris"
+          },
+          "level": 28,
+          "rare": false,
+          "loot": [
+            {
+              "en": "Rod of the Sleepwalker",
+              "fr": "Bâton du somnambule",
+              "slot": "Bâton / Staff",
+              "source_status": "classic_loot_reference"
+            },
+            {
+              "en": "Gaze Dreamer Pants",
+              "fr": "Pantalon du rêveur",
+              "slot": "Jambes · Tissu",
+              "source_status": "classic_loot_reference",
+              "source_url": "https://theforeverera.com/en/dungeons/blackfathom-deeps/twilight-lord-kelris/"
+            }
+          ],
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          },
+          "mapPoint": [
+            63,
+            84
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         },
         {
           "name": {
@@ -2224,26 +2748,47 @@
             "fr": "Aku'mai"
           },
           "level": 29,
+          "rare": false,
           "loot": [
             {
               "en": "Strike of the Hydra",
               "fr": "Frappe de l'hydre",
-              "slot": "Épée deux mains"
+              "slot": "Épée deux mains",
+              "source_status": "classic_loot_reference"
+            },
+            {
+              "en": "Moss Cinch",
+              "fr": "Ceinture de mousse",
+              "slot": "Taille · Cuir",
+              "source_status": "classic_loot_reference",
+              "source_url": "https://theforeverera.com/en/dungeons/blackfathom-deeps/akumai/"
+            },
+            {
+              "en": "Leech Pants",
+              "fr": "Pantalon de sangsue",
+              "slot": "Jambes · Tissu",
+              "source_status": "classic_loot_reference",
+              "source_url": "https://theforeverera.com/en/dungeons/blackfathom-deeps/akumai/"
             }
           ],
-          "rare": false,
           "note": {
             "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
             "en": "Classic/Forever reference: check beta loot changes."
-          }
+          },
+          "mapPoint": [
+            93,
+            90
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         }
       ],
       "beta": "classic_beta_accessible",
       "changes": [
         {
           "status": "beta_gear",
-          "fr": "Forever ajoute notamment une bague à carapace d'épines à Ghamoo-Ra ; nouvelles récompenses et équilibrage à vérifier par objet.",
-          "en": "Forever lists a new spiked-shell ring from Ghamoo-Ra; inspect individual item changes and tuning."
+          "fr": "Objets et caractéristiques vérifiables dans le client bêta ; la composition des tables et les pourcentages restent des références Classic.",
+          "en": "Item records exist in the beta client, but boss associations and rates are Classic references."
         }
       ],
       "mapStatus": "reference",
@@ -2256,7 +2801,8 @@
         "kind": "existing_annotated_map",
         "attribution": "Carte Classic · eintr.net",
         "source": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html"
-      }
+      },
+      "mapMarkerPrecision": "annotated_map_approx"
     },
     {
       "id": "the-stockade",
@@ -2291,13 +2837,27 @@
             {
               "en": "Blackrock Harness",
               "fr": "Harnais rochenoire",
-              "slot": "Torse / Chest"
+              "slot": "Torse / Chest",
+              "source_status": "classic_loot_reference",
+              "id": 273805,
+              "quality": "rare",
+              "icon": null,
+              "itemLevel": 26,
+              "requiredLevel": 21,
+              "tooltip": [
+                "Blackrock Harness",
+                "Item Level 26",
+                "Chest Leather",
+                "Requires Level 21"
+              ],
+              "itemUrl": "https://www.wowhead.com/forever/item=273805"
             },
             {
               "en": "Executioner Mantle",
               "fr": "Mantelet d'exécuteur",
               "slot": "Épaules / Shoulders",
-              "isNew": true
+              "isNew": true,
+              "source_status": "classic_loot_reference"
             }
           ],
           "rare": false,
@@ -2316,13 +2876,15 @@
             {
               "en": "Kam's Walking Stick",
               "fr": "Canne de Kam",
-              "slot": "Bâton / Staff"
+              "slot": "Bâton / Staff",
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Demolition Girdle",
               "fr": "Ceinturon de démolition",
               "slot": "Taille / Waist",
-              "isNew": true
+              "isNew": true,
+              "source_status": "classic_loot_reference"
             }
           ],
           "rare": false,
@@ -2341,7 +2903,8 @@
             {
               "en": "Hamhock's Cleaver",
               "fr": "Couperet de Jambon",
-              "slot": "Hache / Axe"
+              "slot": "Hache / Axe",
+              "source_status": "classic_loot_reference"
             }
           ],
           "rare": false,
@@ -2451,7 +3014,8 @@
             {
               "en": "Techbot CPU Shell",
               "fr": "Coque de processeur de Techbot",
-              "slot": "Bouclier"
+              "slot": "Bouclier",
+              "source_status": "classic_loot_reference"
             }
           ],
           "rare": false,
@@ -2470,26 +3034,35 @@
             {
               "en": "Grubbis Paws",
               "fr": "Pattes de Grubbis",
-              "slot": "Mains / Mailles"
+              "slot": "Mains / Mailles",
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Irradiated Shield",
               "fr": "Bouclier irradié",
               "slot": "Bouclier",
-              "isNew": true
+              "isNew": true,
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Skullduggery Belt",
               "fr": "Ceinture de filouterie",
               "slot": "Taille / Cuir",
-              "isNew": true
+              "isNew": true,
+              "source_status": "classic_loot_reference"
             }
           ],
           "rare": false,
           "note": {
             "fr": "Origines et taux de butin de référence Classic ; caractéristiques des objets modifiés issues du relevé Forever bêta.",
             "en": "Drop origins and rates are Classic reference; modified item stats derive from Forever beta observations."
-          }
+          },
+          "mapPoint": [
+            94,
+            27
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         },
         {
           "name": {
@@ -2501,24 +3074,33 @@
             {
               "en": "Acidic Walkers",
               "fr": "Bottes acides",
-              "slot": "Pieds"
+              "slot": "Pieds",
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Toxic Revenger",
               "fr": "Vengeur toxique",
-              "slot": "Dague"
+              "slot": "Dague",
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Hydrocane",
               "fr": "Hydrocanne",
-              "slot": "Bâton"
+              "slot": "Bâton",
+              "source_status": "classic_loot_reference"
             }
           ],
           "rare": false,
           "note": {
             "fr": "Origines et taux de butin de référence Classic ; caractéristiques des objets modifiés issues du relevé Forever bêta.",
             "en": "Drop origins and rates are Classic reference; modified item stats derive from Forever beta observations."
-          }
+          },
+          "mapPoint": [
+            49,
+            19
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         },
         {
           "name": {
@@ -2530,25 +3112,34 @@
             {
               "en": "Electrocutioner Lagnut",
               "fr": "Écrou de l'électrocuteur",
-              "slot": "Doigt"
+              "slot": "Doigt",
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Electrocutioner Leg",
               "fr": "Jambe de l'électrocuteur",
-              "slot": "Main droite"
+              "slot": "Main droite",
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Pattern: Defender's Leather Kilt",
               "fr": "Patron : kilt de défenseur en cuir",
               "slot": "Patron",
-              "isNew": true
+              "isNew": true,
+              "source_status": "classic_loot_reference"
             }
           ],
           "rare": false,
           "note": {
             "fr": "Origines et taux de butin de référence Classic ; caractéristiques des objets modifiés issues du relevé Forever bêta.",
             "en": "Drop origins and rates are Classic reference; modified item stats derive from Forever beta observations."
-          }
+          },
+          "mapPoint": [
+            12,
+            30
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         },
         {
           "name": {
@@ -2560,31 +3151,56 @@
             {
               "en": "Manual Crowd Pummeler",
               "fr": "Manuel du faucheur de foule",
-              "slot": "Deux mains"
+              "slot": "Deux mains",
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Gnomebot Operating Boots",
               "fr": "Bottes de commande gnome",
-              "slot": "Pieds"
+              "slot": "Pieds",
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Thermaplugg Medal of Honor",
               "fr": "Médaille d'honneur de Thermaplugg",
               "slot": "Cou",
-              "isNew": true
+              "isNew": true,
+              "source_status": "classic_loot_reference",
+              "id": 274068,
+              "quality": "rare",
+              "icon": null,
+              "itemLevel": 34,
+              "requiredLevel": 29,
+              "tooltip": [
+                "Thermaplugg Medal of Honor",
+                "Item Level 34",
+                "Neck",
+                "+6 Stamina",
+                "+6 Spirit",
+                "Equip: +10 Attack Power.",
+                "Requires Level 29"
+              ],
+              "itemUrl": "https://www.wowhead.com/forever/item=274068"
             },
             {
               "en": "Schematic: 9-60 Battery Pack",
               "fr": "Schéma : batterie du 9-60",
               "slot": "Schéma",
-              "isNew": true
+              "isNew": true,
+              "source_status": "classic_loot_reference"
             }
           ],
           "rare": false,
           "note": {
             "fr": "Origines et taux de butin de référence Classic ; caractéristiques des objets modifiés issues du relevé Forever bêta.",
             "en": "Drop origins and rates are Classic reference; modified item stats derive from Forever beta observations."
-          }
+          },
+          "mapPoint": [
+            67,
+            85
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         },
         {
           "name": {
@@ -2596,20 +3212,28 @@
             {
               "en": "Emissary Cuffs",
               "fr": "Manchettes d'émissaire",
-              "slot": "Poignets"
+              "slot": "Poignets",
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Pattern: Brawler's Leather Legguards",
               "fr": "Patron : garde-jambes de bagarreur en cuir",
               "slot": "Patron",
-              "isNew": true
+              "isNew": true,
+              "source_status": "classic_loot_reference"
             }
           ],
           "rare": true,
           "note": {
             "fr": "Origines et taux de butin de référence Classic ; caractéristiques des objets modifiés issues du relevé Forever bêta.",
             "en": "Drop origins and rates are Classic reference; modified item stats derive from Forever beta observations."
-          }
+          },
+          "mapPoint": [
+            8,
+            78
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         },
         {
           "name": {
@@ -2621,24 +3245,33 @@
             {
               "en": "Electromagnetic Gigaflux Reactivator",
               "fr": "Réactivateur gigaflux électromagnétique",
-              "slot": "Tête"
+              "slot": "Tête",
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Charged Gear",
               "fr": "Engrenage chargé",
-              "slot": "Doigt"
+              "slot": "Doigt",
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Thermaplugg's Left Arm",
               "fr": "Bras gauche de Thermojoncteur",
-              "slot": "Deux mains"
+              "slot": "Deux mains",
+              "source_status": "classic_loot_reference"
             }
           ],
           "rare": false,
           "note": {
             "fr": "Origines et taux de butin de référence Classic ; caractéristiques des objets modifiés issues du relevé Forever bêta.",
             "en": "Drop origins and rates are Classic reference; modified item stats derive from Forever beta observations."
-          }
+          },
+          "mapPoint": [
+            12,
+            58
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         }
       ],
       "beta": "classic_beta_accessible",
@@ -2695,32 +3328,57 @@
             {
               "en": "Thornspike",
               "fr": "Fleur d'épines",
-              "slot": "Dague"
+              "slot": "Dague",
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Death Prophet Spine",
               "fr": "Échine de prophète de la mort",
               "slot": "Bâton",
-              "isNew": true
+              "isNew": true,
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Thorncursed Grips",
               "fr": "Poignes de Malépine",
               "slot": "Mains / Cuir",
-              "isNew": true
+              "isNew": true,
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Brawler's Leather Helm",
               "fr": "Casque de bagarreur en cuir",
               "slot": "Tête / Cuir",
-              "isNew": true
+              "isNew": true,
+              "source_status": "classic_loot_reference",
+              "id": 252512,
+              "quality": "rare",
+              "icon": null,
+              "itemLevel": 30,
+              "requiredLevel": 25,
+              "tooltip": [
+                "Brawler's Leather Helm",
+                "Item Level 30",
+                "Head Leather",
+                "84 Armor",
+                "+10 Agility",
+                "+13 Stamina",
+                "Requires Level 25"
+              ],
+              "itemUrl": "https://www.wowhead.com/forever/item=252512"
             }
           ],
           "rare": false,
           "note": {
             "fr": "Origines et taux de butin de référence Classic ; caractéristiques des objets modifiés issues du relevé Forever bêta.",
             "en": "Drop origins and rates are Classic reference; modified item stats derive from Forever beta observations."
-          }
+          },
+          "mapPoint": [
+            81,
+            50
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         },
         {
           "name": {
@@ -2732,24 +3390,33 @@
             {
               "en": "Death Speaker Scepter",
               "fr": "Sceptre du nécrorateur",
-              "slot": "Main droite"
+              "slot": "Main droite",
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Death Speaker Mantle",
               "fr": "Mantelet du nécrorateur",
-              "slot": "Épaules"
+              "slot": "Épaules",
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Death Speaker Robes",
               "fr": "Robe du nécrorateur",
-              "slot": "Torse"
+              "slot": "Torse",
+              "source_status": "classic_loot_reference"
             }
           ],
           "rare": false,
           "note": {
             "fr": "Origines et taux de butin de référence Classic ; caractéristiques des objets modifiés issues du relevé Forever bêta.",
             "en": "Drop origins and rates are Classic reference; modified item stats derive from Forever beta observations."
-          }
+          },
+          "mapPoint": [
+            88,
+            41
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         },
         {
           "name": {
@@ -2762,20 +3429,28 @@
               "en": "Geomancer Headdress",
               "fr": "Coiffe de géomancien",
               "slot": "Tête",
-              "isNew": true
+              "isNew": true,
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Thornweaver Drape",
               "fr": "Cape de tisse-épines",
               "slot": "Dos",
-              "isNew": true
+              "isNew": true,
+              "source_status": "classic_loot_reference"
             }
           ],
           "rare": false,
           "note": {
             "fr": "Origines et taux de butin de référence Classic ; caractéristiques des objets modifiés issues du relevé Forever bêta.",
             "en": "Drop origins and rates are Classic reference; modified item stats derive from Forever beta observations."
-          }
+          },
+          "mapPoint": [
+            66,
+            48
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         },
         {
           "name": {
@@ -2787,25 +3462,34 @@
             {
               "en": "Corpsemaker",
               "fr": "Faiseur de cadavres",
-              "slot": "Hache deux mains"
+              "slot": "Hache deux mains",
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Tusken Helm",
               "fr": "Casque de défense en ivoire",
-              "slot": "Tête"
+              "slot": "Tête",
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Quillord Mail Leggings",
               "fr": "Jambières de seigneur des épines",
               "slot": "Jambes / Mailles",
-              "isNew": true
+              "isNew": true,
+              "source_status": "classic_loot_reference"
             }
           ],
           "rare": false,
           "note": {
             "fr": "Origines et taux de butin de référence Classic ; caractéristiques des objets modifiés issues du relevé Forever bêta.",
             "en": "Drop origins and rates are Classic reference; modified item stats derive from Forever beta observations."
-          }
+          },
+          "mapPoint": [
+            57,
+            27
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         },
         {
           "name": {
@@ -2817,14 +3501,21 @@
             {
               "en": "Armor Piercer",
               "fr": "Perce-fer",
-              "slot": "Arme d'hast"
+              "slot": "Arme d'hast",
+              "source_status": "classic_loot_reference"
             }
           ],
           "rare": false,
           "note": {
             "fr": "Origines et taux de butin de référence Classic ; caractéristiques des objets modifiés issues du relevé Forever bêta.",
             "en": "Drop origins and rates are Classic reference; modified item stats derive from Forever beta observations."
-          }
+          },
+          "mapPoint": [
+            61,
+            27
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         },
         {
           "name": {
@@ -2836,19 +3527,27 @@
             {
               "en": "Swinetusk Shank",
               "fr": "Dague du groin",
-              "slot": "Dague"
+              "slot": "Dague",
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Ferine Leggings",
               "fr": "Jambières sauvages",
-              "slot": "Jambes"
+              "slot": "Jambes",
+              "source_status": "classic_loot_reference"
             }
           ],
           "rare": false,
           "note": {
             "fr": "Origines et taux de butin de référence Classic ; caractéristiques des objets modifiés issues du relevé Forever bêta.",
             "en": "Drop origins and rates are Classic reference; modified item stats derive from Forever beta observations."
-          }
+          },
+          "mapPoint": [
+            8,
+            68
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         },
         {
           "name": {
@@ -2861,7 +3560,13 @@
           "note": {
             "fr": "Origines et taux de butin de référence Classic ; caractéristiques des objets modifiés issues du relevé Forever bêta.",
             "en": "Drop origins and rates are Classic reference; modified item stats derive from Forever beta observations."
-          }
+          },
+          "mapPoint": [
+            22,
+            31
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         },
         {
           "name": {
@@ -2873,24 +3578,33 @@
             {
               "en": "Stygian Bone Amulet",
               "fr": "Amulette d'os stygienne",
-              "slot": "Cou"
+              "slot": "Cou",
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Batwing Mantle",
               "fr": "Mantelet en aile de chauve-souris",
-              "slot": "Épaules"
+              "slot": "Épaules",
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Nightstalker Bow",
               "fr": "Arc de traqueur nocturne",
-              "slot": "Arc"
+              "slot": "Arc",
+              "source_status": "classic_loot_reference"
             }
           ],
           "rare": true,
           "note": {
             "fr": "Origines et taux de butin de référence Classic ; caractéristiques des objets modifiés issues du relevé Forever bêta.",
             "en": "Drop origins and rates are Classic reference; modified item stats derive from Forever beta observations."
-          }
+          },
+          "mapPoint": [
+            10,
+            27
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         },
         {
           "name": {
@@ -2903,7 +3617,13 @@
           "note": {
             "fr": "Origines et taux de butin de référence Classic ; caractéristiques des objets modifiés issues du relevé Forever bêta.",
             "en": "Drop origins and rates are Classic reference; modified item stats derive from Forever beta observations."
-          }
+          },
+          "mapPoint": [
+            49,
+            34
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         }
       ],
       "beta": "classic_beta_accessible",
@@ -2960,31 +3680,41 @@
             {
               "en": "Torturing Poker",
               "fr": "Tisonnier de torture",
-              "slot": "Dague"
+              "slot": "Dague",
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Bloody Brass Knuckles",
               "fr": "Coup de poing sanglant en laiton",
-              "slot": "Pugilat"
+              "slot": "Pugilat",
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Painwalker Buckler",
               "fr": "Targe de douleur vagabonde",
               "slot": "Bouclier",
-              "isNew": true
+              "isNew": true,
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Defender's Leather Helm",
               "fr": "Casque de défenseur en cuir",
               "slot": "Tête / Cuir",
-              "isNew": true
+              "isNew": true,
+              "source_status": "classic_loot_reference"
             }
           ],
           "rare": false,
           "note": {
             "fr": "Origines et taux de butin de référence Classic ; caractéristiques des objets modifiés issues du relevé Forever bêta.",
             "en": "Drop origins and rates are Classic reference; modified item stats derive from Forever beta observations."
-          }
+          },
+          "mapPoint": [
+            73,
+            54
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         },
         {
           "name": {
@@ -2996,25 +3726,34 @@
             {
               "en": "Orb of the Forgotten Seer",
               "fr": "Orbe de l'oracle oublié",
-              "slot": "Main gauche"
+              "slot": "Main gauche",
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Bloodmage Mantle",
               "fr": "Mantelet du mage de sang",
-              "slot": "Épaules"
+              "slot": "Épaules",
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Polished Skullcap",
               "fr": "Calotte polie",
               "slot": "Tête / Mailles",
-              "isNew": true
+              "isNew": true,
+              "source_status": "classic_loot_reference"
             }
           ],
           "rare": false,
           "note": {
             "fr": "Origines et taux de butin de référence Classic ; caractéristiques des objets modifiés issues du relevé Forever bêta.",
             "en": "Drop origins and rates are Classic reference; modified item stats derive from Forever beta observations."
-          }
+          },
+          "mapPoint": [
+            24,
+            51
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         },
         {
           "name": {
@@ -3026,25 +3765,49 @@
             {
               "en": "Blighted Leggings",
               "fr": "Jambières corrompues",
-              "slot": "Jambes / Tissu"
+              "slot": "Jambes / Tissu",
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Necrotic Wand",
               "fr": "Baguette nécrotique",
-              "slot": "Baguette"
+              "slot": "Baguette",
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Brawler's Leather Helm",
               "fr": "Casque de bagarreur en cuir",
               "slot": "Tête / Cuir",
-              "isNew": true
+              "isNew": true,
+              "source_status": "classic_loot_reference",
+              "id": 252512,
+              "quality": "rare",
+              "icon": null,
+              "itemLevel": 30,
+              "requiredLevel": 25,
+              "tooltip": [
+                "Brawler's Leather Helm",
+                "Item Level 30",
+                "Head Leather",
+                "84 Armor",
+                "+10 Agility",
+                "+13 Stamina",
+                "Requires Level 25"
+              ],
+              "itemUrl": "https://www.wowhead.com/forever/item=252512"
             }
           ],
           "rare": true,
           "note": {
             "fr": "Origines et taux de butin de référence Classic ; caractéristiques des objets modifiés issues du relevé Forever bêta.",
             "en": "Drop origins and rates are Classic reference; modified item stats derive from Forever beta observations."
-          }
+          },
+          "mapPoint": [
+            25,
+            72
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         },
         {
           "name": {
@@ -3056,25 +3819,34 @@
             {
               "en": "Embalmed Shroud",
               "fr": "Linceul embaumé",
-              "slot": "Tête / Tissu"
+              "slot": "Tête / Tissu",
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Ebon Vise",
               "fr": "Étreinte d'ébène",
-              "slot": "Mains / Cuir"
+              "slot": "Mains / Cuir",
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Pattern: Brawler's Leather Legguards",
               "fr": "Patron : garde-jambes de bagarreur en cuir",
               "slot": "Patron",
-              "isNew": true
+              "isNew": true,
+              "source_status": "classic_loot_reference"
             }
           ],
           "rare": true,
           "note": {
             "fr": "Origines et taux de butin de référence Classic ; caractéristiques des objets modifiés issues du relevé Forever bêta.",
             "en": "Drop origins and rates are Classic reference; modified item stats derive from Forever beta observations."
-          }
+          },
+          "mapPoint": [
+            22,
+            47
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         },
         {
           "name": {
@@ -3086,24 +3858,33 @@
             {
               "en": "Ironspine's Ribcage",
               "fr": "Cage thoracique d'Échine-de-Fer",
-              "slot": "Torse / Mailles"
+              "slot": "Torse / Mailles",
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Ironspine's Fist",
               "fr": "Poing d'Échine-de-Fer",
-              "slot": "Masse"
+              "slot": "Masse",
+              "source_status": "classic_loot_reference"
             },
             {
               "en": "Ironspine's Eye",
               "fr": "Œil d'Échine-de-Fer",
-              "slot": "Doigt"
+              "slot": "Doigt",
+              "source_status": "classic_loot_reference"
             }
           ],
           "rare": true,
           "note": {
             "fr": "Origines et taux de butin de référence Classic ; caractéristiques des objets modifiés issues du relevé Forever bêta.",
             "en": "Drop origins and rates are Classic reference; modified item stats derive from Forever beta observations."
-          }
+          },
+          "mapPoint": [
+            43,
+            72
+          ],
+          "mapPointSource": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html",
+          "mapPointStatus": "approximate_from_annotated_map"
         }
       ],
       "beta": "classic_beta_accessible",
@@ -3750,10 +4531,10 @@
         "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
       },
       "floorMap": {
-        "url": "https://wow.zamimg.com/uploads/screenshots/normal/852259-classic-ubrs-dungeon-guide.jpg",
+        "url": "https://eintr.net/WoW/images/Blackrock-Spire-Upper-walkthrough-map-1-1024x533.jpg",
         "kind": "existing_annotated_map",
-        "attribution": "Plan WoW Classic · galerie Wowhead",
-        "source": "https://www.wowhead.com/classic/gallery=1361/classic-ubrs-dungeon-guide"
+        "attribution": "Plan Classic annoté · eintr.net (archive Aetherflask)",
+        "source": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html"
       }
     }
   ],
