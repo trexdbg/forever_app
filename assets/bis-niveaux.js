@@ -19,6 +19,44 @@ const labelSlot=s=>en?(slotsEN[s.id]||s.label):s.label;
 const cls=()=>db.classes.find(c=>c.id===classId);
 const spec=()=>cls().specs.find(s=>s.id===specId);
 const isForever=i=>String(i.source_status||"").startsWith("forever_beta_");
+
+/* Localization is source-aware: the Classic API publishes French names only.
+   Never replace a sourced English item name with a French API value on EN pages. */
+const zoneFR={"Ragefire Chasm":"Gouffre de Ragefeu","The Deadmines":"Mortemines","Wailing Caverns":"Cavernes des Lamentations","Shadowfang Keep":"Donjon d’Ombrecroc","Blackfathom Deeps":"Profondeurs de Brassenoire","Razorfen Kraul":"Kraal de Tranchebauge","Razorfen Downs":"Souilles de Tranchebauge","Scarlet Monastery":"Monastère écarlate","Blackrock Depths":"Profondeurs de Rochenoire","Blackrock Spire":"Pic Rochenoire","Dire Maul":"Hache-tripes","The Temple of Atal'Hakkar":"Temple d’Atal’Hakkar","Elwynn Forest":"Forêt d’Elwynn","Tirisfal Glades":"Clairières de Tirisfal","Westfall":"Marche de l’Ouest","World drop":"Butin mondial","Crafting":"Fabrication","Enchanting":"Enchantement","Leatherworking":"Travail du cuir","Vendor":"Marchand","Zone drop":"Butin de zone","Rare drop":"Butin rare"};
+const knownFR={5191:"Barbelure cruelle",10399:"Armure défias noircie",16712:"Gants Sombreruse"};
+const localizedName=i=>en?(i.name_en||i.name):(i.name_fr||knownFR[i.id]||i.name);
+function localizedOrigin(i){
+ let value=en?(i.origin_en||i.origin):(i.origin_fr||i.origin);
+ if(typeof value!=="string")return "";
+ if(!en)for(const [a,b] of Object.entries(zoneFR))value=value.replaceAll(a,b);
+ return value;
+}
+const fmtItem=i=>({...i,name:localizedName(i),origin:localizedOrigin(i)});
+function localizedTooltip(i){
+ const copy=fmtItem(i);
+ if(!en&&Array.isArray(copy.tooltip)&&copy.tooltip.length){
+  copy.tooltip=copy.tooltip.map(line=>typeof line==="string"?line
+   .replace(/^Item Level (\d+)$/,"Niveau d'objet $1")
+   .replace(/^Requires Level (\d+)$/,"Niveau $1 requis")
+   .replace(/^\+([\d,.]+) Strength$/,"+$1 Force")
+   .replace(/^\+([\d,.]+) Agility$/,"+$1 Agilité")
+   .replace(/^\+([\d,.]+) Stamina$/,"+$1 Endurance")
+   .replace(/^\+([\d,.]+) Intellect$/,"+$1 Intelligence")
+   .replace(/^\+([\d,.]+) Spirit$/,"+$1 Esprit")
+   .replace(/^One-Hand /,"À une main · ").replace(/^Main Hand /,"Main droite · ")
+   .replace(/^Two-Hand /,"Deux mains · ").replace(/^Off Hand /,"Main gauche · ")
+   .replace(/^Ranged /,"Distance · ")
+   .replace(/ Sword$/," Épée").replace(/ Dagger$/," Dague").replace(/ Staff$/," Bâton")
+   .replace(/ Wand$/," Baguette").replace(/ Bow$/," Arc").replace(/ Axe$/," Hache")
+   .replace(/ Mace$/," Masse").replace(/ Shield$/," Bouclier")
+   .replace(/ Leather$/," Cuir").replace(/ Cloth$/," Tissu").replace(/ Mail$/," Mailles")
+   .replace(/ Plate$/," Plaques")
+   .replace(/^Equip: /,"Équipé : ")
+   :line);
+ }
+ return copy;
+}
+
 const normSlot=i=>window.ForeverGearData?.LABELS[i.slot]||i.slot;
 const required=i=>{
  if(Number.isInteger(i.requiredLevel)&&i.requiredLevel>=1)return i.requiredLevel;
@@ -170,16 +208,19 @@ function mergeRecords(rows){
   if(!record||!Number.isInteger(record.id)||record.id<=0||!record.name)continue;
   const item={...record,slot:normSlot(record)};
   const previous=map.get(item.id);
-  if(!previous){map.set(item.id,item);continue}
+  if(!previous){if(!en)map.set(item.id,item);continue}
   if(isForever(previous))continue; // Never downgrade a Forever beta reference to a Classic entry.
   if(isForever(item)){map.set(item.id,item);continue}
   const oldTooltip=previous.tooltip?.length||0,newTooltip=item.tooltip?.length||0;
   map.set(item.id,{...previous,...item,
+   name:en?(previous.name_en||previous.name):item.name,
+   name_en:previous.name_en||(en?previous.name:undefined),
+   name_fr:en?previous.name_fr:item.name,
    origin:previous.source_status==="classic_curated_leveling"?previous.origin:item.origin,
    url:previous.source_status==="classic_curated_leveling"?previous.url:item.url,
    source_status:previous.source_status==="classic_curated_leveling"?previous.source_status:item.source_status,
    requiredLevel:required(item)??required(previous),
-   tooltip:newTooltip>oldTooltip?item.tooltip:previous.tooltip,
+   tooltip:en?previous.tooltip:(newTooltip>oldTooltip?item.tooltip:previous.tooltip),
    icon:item.icon||previous.icon});
  }
  all=[...map.values()];
@@ -192,6 +233,7 @@ function getRemote(){
 function renderRemoteStatus(){
  const el=$("level-live"),btn=$("level-more");if(!el||!btn)return;
  const state=remoteByLevel.get(levels[band][1]);
+ if(en){el.textContent="English Classic references · French-only API data excluded";btn.hidden=true;return}
  if(origin==="forever"){el.textContent=extra.local;btn.hidden=true;return}
  if(!state){el.textContent=extra.local;btn.hidden=true;return}
  const qty=state.loaded.size;
@@ -201,7 +243,7 @@ function renderRemoteStatus(){
  btn.disabled=state.busy;
 }
 async function loadRemote(state,pages=1){
- if(state.busy)return;
+ if(state.busy||en)return;
  state.busy=true;renderRemoteStatus();
  const service=window.ForeverGearData;
  const maxItemLevel=state.max+(state.max===60?18:11);
@@ -227,7 +269,7 @@ async function loadRemote(state,pages=1){
  state.busy=false;renderRemoteStatus();renderSlots();
 }
 function ensureRemote(){
- if(origin==="forever"){renderRemoteStatus();return}
+ if(en||origin==="forever"){renderRemoteStatus();return}
  const state=getRemote();
  if(!state.started){state.started=true;loadRemote(state,2)}
  else renderRemoteStatus();
@@ -255,7 +297,7 @@ function itemRow(i,secondary=false){
  row.dataset.quality=i.quality||"common";
  row.append(icon(i,db.slots.find(slot=>window.ForeverGearData.compatible(normSlot(i),slot.id))?.icon||"inv_misc_questionmark"));
  const info=mk("div","level-bis-item-main");
- const title=mk("strong","",i.name);info.append(title);
+ const title=mk("strong","",localizedName(i));info.append(title);
  const meta=mk("span","",T.required+" "+required(i)+(Number.isFinite(i.itemLevel)?" · "+T.itemLevel+" "+i.itemLevel:""));
  info.append(meta);if(i.origin)info.append(mk("span","level-bis-source",i.origin));row.append(info);
  const badge=mk("span","level-bis-provenance"+(isForever(i)?" is-forever":""),isForever(i)?T.forever:T.classic);row.append(badge);
@@ -312,7 +354,7 @@ function sheetButton(id){
  const slot=db.slots.find(s=>s.id===id),i=currentPlan.selected.get(id),manual=currentPlan.manual.has(id),blocked=currentPlan.blocked.has(id);
  const btn=mk("button","bis-v2-slot"+(activeSlot===id?" active":"")+(i?" has-item":" no-item")+(manual?" acquired":""));
  btn.type="button";btn.dataset.quality=i?.quality||"none";
- btn.setAttribute("aria-pressed",String(activeSlot===id));btn.setAttribute("aria-label",labelSlot(slot)+" : "+(i?.name||(blocked?u.twohand:u.missing)));
+ btn.setAttribute("aria-pressed",String(activeSlot===id));btn.setAttribute("aria-label",labelSlot(slot)+" : "+(i?localizedName(i):(blocked?u.twohand:u.missing)));
  btn.append(sheetIcon(i,slot.icon));
  const info=mk("span","bis-v2-slot-copy");
  info.append(mk("strong","",labelSlot(slot)),mk("small","",i?.name||(blocked?u.twohand:u.missing)));
@@ -322,7 +364,7 @@ function sheetButton(id){
   renderSlots();
   if(window.matchMedia?.("(max-width: 980px)")?.matches)$("level-picker")?.scrollIntoView?.({behavior:"smooth",block:"start"});
  });
- if(i)window.ForeverItemTooltip?.bind(btn,{...i,slotLabel:labelSlot(slot)});
+ if(i)window.ForeverItemTooltip?.bind(btn,{...localizedTooltip(i),slotLabel:labelSlot(slot)});
  return btn;
 }
 function renderSheet(){
@@ -349,9 +391,9 @@ function renderPicker(){
   const detail=mk("div","bis-v2-selected-info");
   detail.append(mk("strong","",i.name),mk("small","",T.required+" "+required(i)+" · "+(isForever(i)?T.forever:T.classic)));
   item.append(sheetIcon(i,slot.icon),detail);selected.append(item);
-  window.ForeverItemTooltip?.bind(item,{...i,slotLabel:labelSlot(slot)});
+  window.ForeverItemTooltip?.bind(item,{...localizedTooltip(i),slotLabel:labelSlot(slot)});
   const actions=mk("div","bis-v2-actions"),button=mk("button","", "ⓘ "+u.details);
-  button.type="button";button.addEventListener("click",()=>window.ForeverItemTooltip?.pin({...i,slotLabel:labelSlot(slot)}));actions.append(button);
+  button.type="button";button.addEventListener("click",()=>window.ForeverItemTooltip?.pin({...localizedTooltip(i),slotLabel:labelSlot(slot)}));actions.append(button);
   if(manual){const reset=mk("button","bis-v2-clear",u.reset);reset.type="button";reset.addEventListener("click",()=>saveChoice(id,0));actions.append(reset)}
   selected.append(actions);
  }
@@ -367,22 +409,22 @@ function renderPicker(){
  quality("all",u.all,list.length);
  for(const [q,meta] of Object.entries(qualities)){const n=list.filter(i=>i.quality===q).length;if(n||selectedQualities.has(q))quality(q,meta[en?2:1],n)}
  const term=pickerQuery.toLocaleLowerCase();
- const matches=(blocked?[]:list).filter(it=>(!selectedQualities.size||selectedQualities.has(it.quality))&&(!term||(it.name+" "+(it.origin||"")+" "+it.id).toLocaleLowerCase().includes(term)));
+ const matches=(blocked?[]:list).filter(it=>(!selectedQualities.size||selectedQualities.has(it.quality))&&(!term||(localizedName(it)+" "+localizedOrigin(it)+" "+it.id).toLocaleLowerCase().includes(term)));
  $("level-picker-count").textContent=matches.length+" "+u.candidates;
  const results=$("level-candidates");results.replaceChildren();
  if(!matches.length){results.append(mk("p","bis-v2-empty",blocked?u.twohand:u.none));return}
  for(const candidate of matches.slice(0,visibleLimit)){
   const wrap=mk("div","bis-v2-candidate-wrap"),b=mk("button","bis-v2-candidate"+(i?.id===candidate.id?" selected":""));
   b.type="button";b.dataset.quality=candidate.quality||"common";
-  b.setAttribute("aria-pressed",String(i?.id===candidate.id));b.setAttribute("aria-label",u.select+" : "+candidate.name);
+  b.setAttribute("aria-pressed",String(i?.id===candidate.id));b.setAttribute("aria-label",u.select+" : "+localizedName(candidate));
   const info=mk("span","bis-v2-candidate-info");
-  info.append(mk("strong","",candidate.name),mk("small","",T.required+" "+required(candidate)+(Number.isFinite(candidate.itemLevel)?" · "+T.itemLevel+" "+candidate.itemLevel:"")),
-   mk("small","",(isForever(candidate)?T.forever:T.classic)+" · "+(candidate.origin||T.from)));
+  info.append(mk("strong","",localizedName(candidate)),mk("small","",T.required+" "+required(candidate)+(Number.isFinite(candidate.itemLevel)?" · "+T.itemLevel+" "+candidate.itemLevel:"")),
+   mk("small","",(isForever(candidate)?T.forever:T.classic)+" · "+(localizedOrigin(candidate)||T.from)));
   b.append(sheetIcon(candidate,slot.icon),info);b.addEventListener("click",()=>saveChoice(id,candidate.id));
-  window.ForeverItemTooltip?.bind(b,{...candidate,slotLabel:labelSlot(slot)});
+  window.ForeverItemTooltip?.bind(b,{...localizedTooltip(candidate),slotLabel:labelSlot(slot)});
   const detail=mk("button","bis-v2-info-button","ⓘ");detail.type="button";
-  detail.setAttribute("aria-label",u.details+" : "+candidate.name);
-  detail.addEventListener("click",()=>window.ForeverItemTooltip?.pin({...candidate,slotLabel:labelSlot(slot)}));
+  detail.setAttribute("aria-label",u.details+" : "+localizedName(candidate));
+  detail.addEventListener("click",()=>window.ForeverItemTooltip?.pin({...localizedTooltip(candidate),slotLabel:labelSlot(slot)}));
   wrap.append(b,detail);results.append(wrap);
  }
  if(matches.length>visibleLimit){const more=mk("button","bis-v2-more",u.more+" ("+(matches.length-visibleLimit)+")");more.type="button";more.addEventListener("click",()=>{visibleLimit+=45;renderPicker()});results.append(more)}
