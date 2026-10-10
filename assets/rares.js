@@ -59,7 +59,7 @@ const loots=m("div",null,"rare-loots");
 if(!r.loot.length)loots.append(m("p",T("Aucun butin notable documenté dans nos sources. La table Forever peut contenir de nouveaux objets.","No notable loot documented in our sources. The Forever loot table may contain new items."),"rare-empty"));
 if(r.loot.length){const foreverCount=r.loot.filter(isForeverLoot).length;if(foreverCount)loots.append(chip(T("Objets ajoutés dans Forever","Forever-specific items"),"green"));if(foreverCount!==r.loot.length)loots.append(chip(T("Autres objets : références Classic","Other items: Classic references"),"gold"))}
 for(const item of r.loot){
- const a=m("a",null,"rare-loot"+(isForeverLoot(item)?" rare-loot-forever":""));const href=item.source_url||(item.item_id?"https://foreverdb.net/item/"+item.item_id:r.source);a.href=href;a.target="_blank";a.rel="noopener noreferrer";
+ const a=m("a",null,"rare-loot"+(isForeverLoot(item)?" rare-loot-forever":""));const href=isForeverLoot(item)?(item.source_url||(item.item_id?"https://www.wowhead.com/forever/item="+item.item_id:r.source)):(item.item_id?"https://foreverdb.net/item/"+item.item_id:(item.source_url||r.source));a.href=href;a.target="_blank";a.rel="noopener noreferrer";
  const icon=m("img");icon.src="https://wow.zamimg.com/images/wow/icons/medium/"+encodeURIComponent(item.icon||"inv_misc_questionmark")+".jpg";icon.alt="";icon.width=38;icon.height=38;icon.loading="lazy";icon.onerror=()=>{icon.onerror=null;icon.src="/assets/icons/inv_scroll_07.jpg"};a.append(icon);
  const txt=m("span",null,"rare-loot-text");txt.append(m("strong",lootName(item)));
  const rate=isForeverLoot(item)?(item.chance_forever_observed_percent==null?T("Forever · taux à vérifier","Forever · rate not established"):T("Forever · taux observé ", "Forever · observed rate ")+fmt(item.chance_forever_observed_percent)+" %"):(item.chance_classic_percent==null?T("Classic · taux inconnu","Classic · unknown rate"):T("Classic · ", "Classic · ")+fmt(item.chance_classic_percent)+" %");txt.append(m("small",rate));
@@ -69,6 +69,7 @@ for(const item of r.loot){
 }out.append(loots);
 if(r.notes?.[en?"en":"fr"])out.append(m("p",r.notes[en?"en":"fr"],"rare-note"));
 const foot=m("div",null,"rare-detail-foot"),a=m("a",T("Voir la source ↗","View source ↗"));a.href=r.source||db.sources.timers_and_loot;a.target="_blank";a.rel="noopener noreferrer";foot.append(a);
+if(Number.isSafeInteger(Number(r.id))&&Number(r.id)>0){const l=m("a",T("Table de butin Forever ↗","Forever loot table ↗"));l.href="https://www.wowhead.com/forever/"+(en?"":"fr/")+"npc="+encodeURIComponent(r.id);l.target="_blank";l.rel="noopener noreferrer";foot.append(l)}
 if(r.coordinate_source&&r.coordinate_source!==r.source){const p=m("a",T("Source des positions ↗","Spawn position source ↗"));p.href=r.coordinate_source;p.target="_blank";p.rel="noopener noreferrer";foot.append(p)}
 if(r.points.length){const b=button(T("Copier /way","Copy /way"),"rare-copy");b.addEventListener("click",async()=>{const p=r.points[0],str="/way "+p[0]+" "+p[1];try{await navigator.clipboard.writeText(str);b.textContent=T("Copié ✓","Copied ✓")}catch{b.textContent=str}});foot.append(b)}
 out.append(foot);
