@@ -3,10 +3,10 @@ const nav=document.querySelector(".nav"),toggle=document.querySelector(".nav-tog
 const en=document.documentElement.lang==="en",root=en?"/en/":"/";
 const current=location.pathname.replace(/\/index\.html$/,"/").replace(/\/$/,"/")||"/";
 const tr=en?{
- home:"Home",quests:"Quests",talents:"Talents",gear:"Gear",bis:"Pre-raid BiS",catalog:"Item catalogue",
+ home:"Home",quests:"Quests",talents:"Talents",gear:"Gear",bis:"Pre-raid BiS",levelBis:"BiS by level",catalog:"Item catalogue",
  professions:"Professions",trainers:"Trainers & weapon masters",mining:"High-level mining",vendors:"Vendors",rare:"Rare",population:"Population"
 }:{
- home:"Accueil",quests:"Quêtes",talents:"Talents",gear:"Équipement",bis:"BiS par classe",catalog:"Catalogue d’objets",
+ home:"Accueil",quests:"Quêtes",talents:"Talents",gear:"Équipement",bis:"BiS par classe",levelBis:"BiS par niveau",catalog:"Catalogue d’objets",
  professions:"Métiers",trainers:"Maîtres de métiers et d’armes",mining:"Minage HL",vendors:"Marchands",rare:"Rare",population:"Population"
 };
 const href=slug=>root+(slug?slug+"/":"");
@@ -19,7 +19,7 @@ const group=(label,children)=>{const details=document.createElement("details");d
  return details};
 if(nav){
  nav.replaceChildren(link("",tr.home),link("quetes",tr.quests),link("talents",tr.talents),
-  group(tr.gear,[["bis",tr.bis],["equipements",tr.catalog]]),
+  group(tr.gear,[["bis",tr.bis],["bis-niveaux",tr.levelBis],["equipements",tr.catalog]]),
   group(tr.professions,[["metiers",tr.trainers],["minage",tr.mining]]),
   link("marchands",tr.vendors),link("rare",tr.rare),link("population",tr.population));
  const groups=[...nav.querySelectorAll(".nav-group")];
