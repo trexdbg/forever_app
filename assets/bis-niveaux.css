@@ -1,0 +1,39 @@
+/* Compact ForEveroth level-tier comparison */
+.level-bis-board{overflow:visible}
+.level-bis-section-label{display:block;margin:18px 0 8px;font-size:10px;text-transform:uppercase;letter-spacing:.12em;font-weight:800;color:#cbb27e}
+.level-bis-classes,.level-bis-row{display:flex;flex-wrap:wrap;gap:7px}
+.level-bis-class,.level-bis-chip{background:#18251e;border:1px solid #415044;border-radius:3px;color:#c8d1c6;cursor:pointer;font-weight:700;font-size:12px;line-height:1.2;transition:background .15s,border-color .15s;color:inherit}
+.level-bis-class{display:flex;align-items:center;gap:7px;min-height:46px;padding:5px 10px}
+.level-bis-chip{min-height:35px;padding:8px 13px}
+.level-bis-class:hover,.level-bis-chip:hover{border-color:#c3a473;background:#24352a}
+.level-bis-class.active,.level-bis-chip.active{border-color:#dbbc80;background:#6b593523;color:#efdeb8}
+.level-bis-class .level-bis-icon{width:30px;height:30px}
+.level-bis-main-bar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;border-top:1px solid #394638;margin:22px 0 14px;padding-top:18px}
+.level-bis-main-bar h2{font:normal 23px Georgia,serif;margin:0 0 4px;color:#ead5a4}
+.level-bis-main-bar p{font-size:12px;margin:0}
+.level-bis-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.level-bis-slot{background:linear-gradient(150deg,#17231b,#111b16);border:1px solid #3d4c3e;border-radius:4px;padding:11px;min-width:0}
+.level-bis-slot-head{display:flex;gap:9px;align-items:center;padding-bottom:9px;border-bottom:1px solid #43504375;margin-bottom:9px}
+.level-bis-slot-head h3{font:normal 15px Georgia,serif;margin:0;flex:1}
+.level-bis-num{color:#9dab9d;font-size:10px;white-space:nowrap}
+.level-bis-icon{width:39px;height:39px;flex:none;display:inline-grid;place-items:center;background:#0a130e;border:1px solid #58634f;border-radius:3px;overflow:hidden;color:#c9ae76}
+.level-bis-icon img{width:100%;height:100%;object-fit:cover}
+.level-bis-slot-head .level-bis-icon{width:30px;height:30px}
+.level-bis-item{display:flex;align-items:center;gap:9px;border-left:3px solid var(--rarity,#ac9f80);padding:8px 7px;background:#2331279c;border-radius:2px;min-width:0}
+.level-bis-item[data-quality="poor"]{--rarity:#9d9d9d}.level-bis-item[data-quality="common"]{--rarity:#efeee9}
+.level-bis-item[data-quality="uncommon"]{--rarity:#43bf66}.level-bis-item[data-quality="rare"]{--rarity:#4c9df1}
+.level-bis-item[data-quality="epic"]{--rarity:#b67cff}.level-bis-item[data-quality="legendary"]{--rarity:#ffac46}
+.level-bis-item-main{flex:1;min-width:0}.level-bis-item-main strong{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12px;color:var(--rarity,#e8e4d9)}
+.level-bis-item-main span{display:block;font-size:10px;color:#aab5a8;margin-top:3px}
+.level-bis-provenance{font-size:9px;white-space:nowrap;text-transform:uppercase;color:#b3bdb2}.level-bis-provenance.is-forever{color:#d1b47c}
+.level-bis-detail{font-size:16px;border:1px solid #586b54;background:#0e1b13;color:#e4c890;border-radius:3px;width:27px;height:29px;flex:none}
+.level-bis-detail:hover{border-color:#e0c38c}
+.level-bis-empty{padding:9px 4px;font-size:11px;color:#859688;margin:0;font-style:italic}
+.level-bis-alternatives{margin-top:8px}.level-bis-alternatives summary{font-size:11px;color:#d6ba87;cursor:pointer}
+.level-bis-alternatives .level-bis-item{margin:6px 0 0;opacity:.91}.level-bis-alternatives .level-bis-item.secondary{background:#18231a}
+.level-bis-footnote{font-size:11px;margin-top:16px}
+.level-bis-status{font-size:11px;color:#9aab9a}
+.level-bis-warning{margin:13px 0;color:#e6c790;font-size:11px;border-left:2px solid #bb9a5f;background:#8a723017;padding:9px 12px}
+.level-bis-warning[hidden]{display:none}
+@media(max-width:1040px){.level-bis-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.level-bis-grid{grid-template-columns:1fr}.level-bis-class{font-size:11px}.level-bis-item-main strong{font-size:12px}.level-bis-main-bar h2{font-size:19px}}
