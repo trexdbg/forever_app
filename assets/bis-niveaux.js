@@ -46,7 +46,10 @@ const localizedName=i=>en?(i.name_en||i.name):(i.name_fr||window.ForeverItemLoca
 function localizedOrigin(i){
  let value=en?(i.origin_en||i.origin):(i.origin_fr||i.origin);
  if(typeof value!=="string")return "";
- if(!en)for(const [a,b] of Object.entries(zoneFR))value=value.replaceAll(a,b);
+ if(en){
+  const translated={ "Quête":"Quest","Récompense de quête":"Quest reward","Marchand":"Vendor","Vendeurs":"Vendors","Forge":"Blacksmithing","Couture":"Tailoring","Travail du cuir":"Leatherworking","Enchantement":"Enchanting","Ingénierie":"Engineering","Butin mondial":"World drop","Butin de zone":"Zone drop","Butin rare":"Rare drop","Fabrication":"Crafting","Artisanat":"Crafting","Donjon":"Dungeon","Paluns":"Wetlands","Mortemines":"The Deadmines","Ruines de Lordaeron":"Ruins of Lordaeron","Cité de Dalaran":"City of Dalaran","Profondeurs de Brassenoire":"Blackfathom Deeps","Gouffre de Ragefeu":"Ragefire Chasm" };
+  for(const [a,b] of Object.entries(translated))value=value.replaceAll(a,b);
+ }else for(const [a,b] of Object.entries(zoneFR))value=value.replaceAll(a,b);
  return value;
 }
 const fmtItem=i=>({...i,name:localizedName(i),origin:localizedOrigin(i)});
@@ -534,8 +537,12 @@ function renderSlots(){
  currentPlan=plan();
  const filled=[...currentPlan.selected.values()].filter(Boolean).length;
  $("level-count").textContent=filled+" / "+db.slots.length+" "+T.slots+" · "+currentPlan.pool.length+" "+T.total
-  +(levels[band][1]===30?" · "+currentPlan.pool.filter(i=>isObserved(i)&&i.acquisition?.kind==="dungeon").length+" "+(en?"reported beta drops":"butins bêta rapportés")
-   +" · "+currentPlan.pool.filter(i=>isObserved(i)&&i.acquisition?.kind==="quest").length+" "+(en?"quest rewards":"récompenses de quêtes"):"");
+  +(levels[band][1]===30?(()=>{
+   const drops=currentPlan.pool.filter(i=>isObserved(i)&&i.acquisition?.kind==="dungeon").length;
+   const quests=currentPlan.pool.filter(i=>isObserved(i)&&i.acquisition?.kind==="quest").length;
+   return (drops?" · "+drops+" "+(en?"reported beta drops":"butins bêta rapportés"):"")
+     +(quests?" · "+quests+" "+(en?"quest rewards":"récompenses de quêtes"):"");
+  })():"");
  $("level-current").textContent=labelC(cls())+" · "+labelS(spec())+" · "+(levels[band][0]===levels[band][1]?String(levels[band][1]):levels[band].join("–"));
  $("level-empty").hidden=currentPlan.pool.length>0;
  $("level-cap").textContent=T.levelCap;$("level-cap").hidden=levels[band][1]<=30;
