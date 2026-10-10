@@ -210,7 +210,7 @@ async function loadRemote(state,pages=1){
    try{
     const response=await service.loadClassic({
      slot:"all",slotCodes:group.slots,maxLevel:state.max,maxItemLevel,
-     qualities:["uncommon","rare","epic"],limit:100,cursor:group.cursor
+     qualities:state.max<=19?["common","uncommon","rare","epic"]:["uncommon","rare","epic"],limit:100,cursor:group.cursor
     });
     group.cursor=response.cursor;
     group.more=Boolean(response.hasMore&&response.cursor);
