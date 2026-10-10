@@ -5568,7 +5568,7 @@
     {
       "id": "1920",
       "name": {
-        "fr": "Dalaran Spellscribe",
+        "fr": "Copiste de Dalaran",
         "en": "Dalaran Spellscribe"
       },
       "zone": "silverpine",
@@ -5605,9 +5605,22 @@
           "icon": "inv_staff_01",
           "source_version": "classic_reference",
           "source_url": "https://foreverdb.net/rare/1920"
+        },
+        {
+          "name": {
+            "fr": "Panier à chat (tigré noir)",
+            "en": "Cat Carrier (Black Tabby)"
+          },
+          "item_id": 8491,
+          "icon": "inv_box_petcarrier_01",
+          "chance_classic_percent": null,
+          "source_version": "classic_reference",
+          "source_url": "https://www.wowhead.com/forever/fr/item=8491",
+          "note_fr": "Butin historique de ce monstre ; taux réel à confirmer sur Forever.",
+          "note_en": "Historical rare-specific drop; actual Forever chance is unverified."
         }
       ],
-      "source": "https://foreverdb.net/rare/1920",
+      "source": "https://www.wowhead.com/forever/fr/npc=1920",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
       "notes": {
@@ -5616,12 +5629,13 @@
       },
       "coordinate_status": "classic_reference",
       "beta_level30_in_scope": true,
-      "loot_coverage": "notable_only_not_complete"
+      "loot_coverage": "notable_only_not_complete",
+      "name_fr_status": "wowhead_forever_fr"
     },
     {
       "id": "2283",
       "name": {
-        "fr": "Ravenclaw Regent",
+        "fr": "Régent Ravenclaw",
         "en": "Ravenclaw Regent"
       },
       "zone": "silverpine",
@@ -5660,7 +5674,7 @@
           "source_url": "https://foreverdb.net/rare/2283"
         }
       ],
-      "source": "https://foreverdb.net/rare/2283",
+      "source": "https://www.wowhead.com/forever/fr/npc=2283",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
       "notes": {
@@ -5671,7 +5685,8 @@
       "coordinate_source": "https://foreverdb.net/rare/2283",
       "source_reviewed_at": "2026-10-10",
       "beta_level30_in_scope": true,
-      "loot_coverage": "notable_only_not_complete"
+      "loot_coverage": "notable_only_not_complete",
+      "name_fr_status": "wowhead_forever_fr"
     },
     {
       "id": "7017",
