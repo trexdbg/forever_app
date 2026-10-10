@@ -302,7 +302,7 @@
         "fr": "Prince Nazjak",
         "en": "Prince Nazjak"
       },
-      "zone": "wetlands",
+      "zone": "arathi",
       "level": 41,
       "classification": "rare",
       "tameable": false,
@@ -310,8 +310,12 @@
       "respawn_max_hours": 48,
       "points": [
         [
-          28.4,
-          5.4
+          19.9,
+          91
+        ],
+        [
+          23.1,
+          84.9
         ]
       ],
       "loot": [
@@ -325,14 +329,15 @@
           "icon": "inv_jewelry_talisman_08"
         }
       ],
-      "source": "https://foreverdb.net/rare/2779",
+      "source": "https://www.wowhead.com/forever/npc=2779/prince-nazjak",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
       "notes": {
-        "fr": "Référence Classic : nord des Paluns, pas les Hautes-terres d’Arathi. À confirmer sur Forever.",
-        "en": "Classic reference: northern Wetlands, not Arathi Highlands. To be verified on Forever."
+        "fr": "Récif englouti, au sud de Stromgarde. Accès possible depuis la côte des Contreforts de Hautebrande. Repères Classic : 19,9 / 91 (base de positions 1.12) et 23,1 / 84,9 (Warcraft Wiki). Le rare peut apparaître près des épaves et des ruines sous-marines. Non confirmé sur Forever.",
+        "en": "Drowned Reef south of Stromgarde; accessible by swimming from the Hillsbrad Foothills coast. Classic references: 19.9 / 91 (1.12 spawn data) and 23.1 / 84.9 (Warcraft Wiki). Search the submerged wrecks and ruins. Not verified on Forever."
       },
-      "coordinate_status": "classic_reference"
+      "coordinate_status": "crosschecked_classic_sources",
+      "coordinate_source": "https://wow-guides.com/knowledge/creature-ranks"
     },
     {
       "id": "462",
@@ -7172,7 +7177,7 @@
       "coordinate_status": "not_yet_documented"
     },
     {
-      "id": "classic-wetlands-ma-ruk-wyrmscale",
+      "id": "2090",
       "name": {
         "fr": "Ma'ruk Wyrmscale",
         "en": "Ma'ruk Wyrmscale"
@@ -7183,19 +7188,25 @@
       "tameable": false,
       "respawn_min_hours": 4,
       "respawn_max_hours": 6,
-      "points": [],
+      "points": [
+        [
+          48.1,
+          74.7
+        ]
+      ],
       "loot": [],
-      "source": "https://foreverdb.net/rares",
+      "source": "https://foreverdb.net/rare/2090",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
       "notes": {
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "classic_reference",
+      "coordinate_source": "https://wow-guides.com/knowledge/creature-ranks"
     },
     {
-      "id": "classic-wetlands-gnawbone",
+      "id": "14425",
       "name": {
         "fr": "Gnawbone",
         "en": "Gnawbone"
@@ -7206,19 +7217,37 @@
       "tameable": false,
       "respawn_min_hours": 17,
       "respawn_max_hours": 25.5,
-      "points": [],
+      "points": [
+        [
+          30.1,
+          30.7
+        ],
+        [
+          31.5,
+          29.7
+        ],
+        [
+          35.2,
+          27.4
+        ],
+        [
+          38.9,
+          34.1
+        ]
+      ],
       "loot": [],
-      "source": "https://foreverdb.net/rares",
+      "source": "https://foreverdb.net/rare/14425",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
       "notes": {
-        "fr": "",
-        "en": ""
+        "fr": "Quatre positions Classic confirmées dans la description de la quête « Fire Taboo » ; d’autres emplacements peuvent exister.",
+        "en": "Four Classic positions documented in the Fire Taboo quest reference; other positions may exist."
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "classic_reference",
+      "coordinate_source": "https://foreverdb.net/quest/277-fire-taboo"
     },
     {
-      "id": "classic-wetlands-leech-widow",
+      "id": "1112",
       "name": {
         "fr": "Leech Widow",
         "en": "Leech Widow"
@@ -7229,19 +7258,25 @@
       "tameable": true,
       "respawn_min_hours": 5,
       "respawn_max_hours": 8,
-      "points": [],
+      "points": [
+        [
+          47.3,
+          59.2
+        ]
+      ],
       "loot": [],
-      "source": "https://foreverdb.net/rares",
+      "source": "https://foreverdb.net/rare/1112",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
       "notes": {
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "classic_reference",
+      "coordinate_source": "https://wow-guides.com/knowledge/creature-ranks"
     },
     {
-      "id": "classic-wetlands-mirelow",
+      "id": "14424",
       "name": {
         "fr": "Mirelow",
         "en": "Mirelow"
@@ -7252,19 +7287,45 @@
       "tameable": false,
       "respawn_min_hours": 8.5,
       "respawn_max_hours": 12.5,
-      "points": [],
+      "points": [
+        [
+          23.7,
+          29.4
+        ],
+        [
+          20.7,
+          33.2
+        ],
+        [
+          21.2,
+          35.4
+        ],
+        [
+          23.5,
+          35.6
+        ],
+        [
+          25,
+          38
+        ],
+        [
+          24,
+          26
+        ]
+      ],
       "loot": [],
-      "source": "https://foreverdb.net/rares",
+      "source": "https://foreverdb.net/rare/14424",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
       "notes": {
-        "fr": "",
-        "en": ""
+        "fr": "Six repères Classic vérifiables sur 21 emplacements annoncés par la référence ; autres emplacements à compléter. Un seul rare à la fois.",
+        "en": "Six Classic reference points out of 21 reported positions; more to document. Only one spawn at a time."
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "classic_reference",
+      "coordinate_source": "https://foreverdb.net/quest/565-bartolos-yeti-fur-cloak"
     },
     {
-      "id": "classic-wetlands-garneg-charskull",
+      "id": "2108",
       "name": {
         "fr": "Garneg Charskull",
         "en": "Garneg Charskull"
@@ -7275,19 +7336,25 @@
       "tameable": false,
       "respawn_min_hours": 5,
       "respawn_max_hours": 8,
-      "points": [],
+      "points": [
+        [
+          38.4,
+          46.1
+        ]
+      ],
       "loot": [],
-      "source": "https://foreverdb.net/rares",
+      "source": "https://foreverdb.net/rare/2108",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
       "notes": {
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "classic_reference",
+      "coordinate_source": "https://wow-guides.com/knowledge/creature-ranks"
     },
     {
-      "id": "classic-wetlands-dragonmaw-battlemaster",
+      "id": "1037",
       "name": {
         "fr": "Dragonmaw Battlemaster",
         "en": "Dragonmaw Battlemaster"
@@ -7298,19 +7365,25 @@
       "tameable": false,
       "respawn_min_hours": 10.5,
       "respawn_max_hours": 16,
-      "points": [],
+      "points": [
+        [
+          52.9,
+          54
+        ]
+      ],
       "loot": [],
-      "source": "https://foreverdb.net/rares",
+      "source": "https://foreverdb.net/rare/1037",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
       "notes": {
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "classic_reference",
+      "coordinate_source": "https://wow-guides.com/knowledge/creature-ranks"
     },
     {
-      "id": "classic-wetlands-sludginn",
+      "id": "14433",
       "name": {
         "fr": "Sludginn",
         "en": "Sludginn"
@@ -7321,19 +7394,25 @@
       "tameable": false,
       "respawn_min_hours": 21,
       "respawn_max_hours": 32,
-      "points": [],
+      "points": [
+        [
+          12.6,
+          67.5
+        ]
+      ],
       "loot": [],
-      "source": "https://foreverdb.net/rares",
+      "source": "https://foreverdb.net/rare/14433",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
       "notes": {
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "classic_reference",
+      "coordinate_source": "https://wow-guides.com/knowledge/creature-ranks"
     },
     {
-      "id": "classic-wetlands-razormaw-matriarch",
+      "id": "1140",
       "name": {
         "fr": "Razormaw Matriarch",
         "en": "Razormaw Matriarch"
@@ -7344,16 +7423,22 @@
       "tameable": true,
       "respawn_min_hours": 32,
       "respawn_max_hours": 48,
-      "points": [],
+      "points": [
+        [
+          69.9,
+          29.2
+        ]
+      ],
       "loot": [],
-      "source": "https://foreverdb.net/rares",
+      "source": "https://foreverdb.net/rare/1140",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
       "notes": {
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "classic_reference",
+      "coordinate_source": "https://wow-guides.com/knowledge/creature-ranks"
     },
     {
       "id": "classic-hillsbrad-ro-bark",
@@ -7367,16 +7452,22 @@
       "tameable": false,
       "respawn_min_hours": 5,
       "respawn_max_hours": 8,
-      "points": [],
+      "points": [
+        [
+          65.6,
+          60
+        ]
+      ],
       "loot": [],
-      "source": "https://foreverdb.net/rares",
+      "source": "https://wow-guides.com/knowledge/creature-ranks",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
       "notes": {
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "classic_reference",
+      "coordinate_source": "https://wow-guides.com/knowledge/creature-ranks"
     },
     {
       "id": "classic-hillsbrad-tamra-stormpike",
@@ -7390,16 +7481,22 @@
       "tameable": false,
       "respawn_min_hours": 5,
       "respawn_max_hours": 8,
-      "points": [],
+      "points": [
+        [
+          70.7,
+          78.1
+        ]
+      ],
       "loot": [],
-      "source": "https://foreverdb.net/rares",
+      "source": "https://wow-guides.com/knowledge/creature-ranks",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
       "notes": {
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "classic_reference",
+      "coordinate_source": "https://wow-guides.com/knowledge/creature-ranks"
     },
     {
       "id": "classic-hillsbrad-lady-zephris",
@@ -7413,16 +7510,22 @@
       "tameable": false,
       "respawn_min_hours": 5,
       "respawn_max_hours": 8,
-      "points": [],
+      "points": [
+        [
+          67.7,
+          87.8
+        ]
+      ],
       "loot": [],
-      "source": "https://foreverdb.net/rares",
+      "source": "https://wow-guides.com/knowledge/creature-ranks",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
       "notes": {
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "classic_reference",
+      "coordinate_source": "https://wow-guides.com/knowledge/creature-ranks"
     },
     {
       "id": "classic-shadowfang-keep-deathsworn-captain",
@@ -7453,22 +7556,28 @@
         "fr": "Big Samras",
         "en": "Big Samras"
       },
-      "zone": "arathi",
+      "zone": "hillsbrad",
       "level": 27,
       "classification": "rare",
       "tameable": true,
       "respawn_min_hours": 10.5,
       "respawn_max_hours": 16,
-      "points": [],
+      "points": [
+        [
+          86,
+          39.9
+        ]
+      ],
       "loot": [],
-      "source": "https://foreverdb.net/rares",
+      "source": "https://wow-guides.com/knowledge/creature-ranks",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
       "notes": {
-        "fr": "",
-        "en": ""
+        "fr": "Contreforts de Hautebrande (et non Hautes-terres d’Arathi) d’après la table de positions Classic 1.12.",
+        "en": "Hillsbrad Foothills, not Arathi Highlands, according to Classic 1.12 spawn reference."
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "classic_reference",
+      "coordinate_source": "https://wow-guides.com/knowledge/creature-ranks"
     },
     {
       "id": "classic-arathi-singer",
@@ -7482,16 +7591,22 @@
       "tameable": false,
       "respawn_min_hours": 10.5,
       "respawn_max_hours": 16,
-      "points": [],
+      "points": [
+        [
+          32.3,
+          31
+        ]
+      ],
       "loot": [],
-      "source": "https://foreverdb.net/rares",
+      "source": "https://wow-guides.com/knowledge/creature-ranks",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
       "notes": {
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "classic_reference",
+      "coordinate_source": "https://wow-guides.com/knowledge/creature-ranks"
     },
     {
       "id": "classic-arathi-darbel-montrose",
@@ -7505,16 +7620,22 @@
       "tameable": false,
       "respawn_min_hours": 10.5,
       "respawn_max_hours": 16,
-      "points": [],
+      "points": [
+        [
+          28.3,
+          60.7
+        ]
+      ],
       "loot": [],
-      "source": "https://foreverdb.net/rares",
+      "source": "https://wow-guides.com/knowledge/creature-ranks",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
       "notes": {
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "classic_reference",
+      "coordinate_source": "https://wow-guides.com/knowledge/creature-ranks"
     },
     {
       "id": "classic-arathi-ruul-onestone",
@@ -7528,16 +7649,22 @@
       "tameable": false,
       "respawn_min_hours": 21,
       "respawn_max_hours": 32,
-      "points": [],
+      "points": [
+        [
+          18,
+          69.2
+        ]
+      ],
       "loot": [],
-      "source": "https://foreverdb.net/rares",
+      "source": "https://wow-guides.com/knowledge/creature-ranks",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
       "notes": {
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "classic_reference",
+      "coordinate_source": "https://wow-guides.com/knowledge/creature-ranks"
     },
     {
       "id": "classic-arathi-foulbelly",
@@ -7551,16 +7678,22 @@
       "tameable": false,
       "respawn_min_hours": 32,
       "respawn_max_hours": 48,
-      "points": [],
+      "points": [
+        [
+          20.5,
+          68.6
+        ]
+      ],
       "loot": [],
-      "source": "https://foreverdb.net/rares",
+      "source": "https://wow-guides.com/knowledge/creature-ranks",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
       "notes": {
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "classic_reference",
+      "coordinate_source": "https://wow-guides.com/knowledge/creature-ranks"
     },
     {
       "id": "classic-duskwood-commander-felstrom",
@@ -10629,7 +10762,9 @@
     "coordinates": "https://wow-guides.com/knowledge/creature-ranks",
     "classic_items": "https://www.wowhead.com/classic/",
     "positions_and_loot": "https://foreverdb.net/rares",
-    "rare_reference": "https://foreverdb.net/rares"
+    "rare_reference": "https://foreverdb.net/rares",
+    "classic_spawn_crosscheck": "https://wow-guides.com/knowledge/creature-ranks",
+    "forever_npc_zone_crosscheck": "https://www.wowhead.com/forever/npc=2779/prince-nazjak"
   },
   "disclaimer": {
     "fr": "Données de référence Classic (CMaNGOS) compilées pour WoW Forever : présence, coordonnées, butins et délais à confirmer sur Forever. Aucune position n’est inventée. Les repères multiples d’un même rare sont des emplacements alternatifs, non des apparitions simultanées.",
