@@ -35,7 +35,7 @@ const fmtItem=i=>({...i,name:localizedName(i),origin:localizedOrigin(i)});
 function localizedTooltip(i){
  const copy=fmtItem(i);
  if(!en&&Array.isArray(copy.tooltip)&&copy.tooltip.length){
-  copy.tooltip=copy.tooltip.map(line=>typeof line==="string"?line
+  copy.tooltip=copy.tooltip.map(line=>typeof line==="string"?(line===i.name?localizedName(i):line)
    .replace(/^Item Level (\d+)$/,"Niveau d'objet $1")
    .replace(/^Requires Level (\d+)$/,"Niveau $1 requis")
    .replace(/^\+([\d,.]+) Strength$/,"+$1 Force")
@@ -312,6 +312,19 @@ const u=en?{missing:"No target",twohand:"Two-handed weapon equipped",chosen:"You
 let activeSlot="head",pickerQuery="",selectedQualities=new Set(),visibleLimit=45,currentPlan=null;
 function clearPickerSearch(){pickerQuery="";selectedQualities.clear();visibleLimit=45;const input=$("level-search");if(input)input.value=""}
 const savedProfiles=new Map();
+
+/* At most one localized Classic sheet lookup per visited slot item. */
+const localizedRequests=new Set();
+function hydrateSelectedFrench(){
+ if(en||origin==="forever"||!currentPlan)return;
+ const candidate=currentPlan.selected.get(activeSlot);
+ if(!candidate||isForever(candidate)||candidate.source_status==="classic_api"||candidate.name_fr||knownFR[candidate.id]||localizedRequests.has(candidate.id))return;
+ localizedRequests.add(candidate.id);
+ Promise.resolve().then(()=>window.ForeverGearData.itemById(candidate.id))
+ .then(item=>{if(!item||!db)return;mergeRecords([item]);renderSlots()})
+ .catch(()=>{}); // Keep local references when the French source is unavailable.
+}
+
 const savedKey=()=>["foreveroth","level-bis",classId,specId,band].join(":");
 function choices(){
  const k=savedKey();if(savedProfiles.has(k))return savedProfiles.get(k);
@@ -437,7 +450,7 @@ function renderSlots(){
  $("level-current").textContent=labelC(cls())+" · "+labelS(spec())+" · "+(levels[band][0]===levels[band][1]?String(levels[band][1]):levels[band].join("–"));
  $("level-empty").hidden=currentPlan.pool.length>0;
  $("level-cap").textContent=T.levelCap;$("level-cap").hidden=levels[band][1]<=30;
- renderSheet();renderPicker();
+ renderSheet();renderPicker();hydrateSelectedFrench();
 }
 function renderAll(){renderFilters();renderSlots();renderRemoteStatus();selectionLink();ensureRemote()}
 (async()=>{
