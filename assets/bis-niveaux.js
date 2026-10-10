@@ -120,9 +120,9 @@ function itemRow(i,secondary=false){
  const info=mk("div","level-bis-item-main");
  const title=mk("strong","",i.name);info.append(title);
  const meta=mk("span","",T.required+" "+required(i)+(Number.isFinite(i.itemLevel)?" · "+T.itemLevel+" "+i.itemLevel:""));
- info.append(meta);row.append(info);
+ info.append(meta);if(i.origin)info.append(mk("span","level-bis-source",i.origin));row.append(info);
  const badge=mk("span","level-bis-provenance"+(isForever(i)?" is-forever":""),isForever(i)?T.forever:T.classic);row.append(badge);
- const detail=mk("button","level-bis-detail","ⓘ");detail.type="button";detail.title=T.detail;detail.setAttribute("aria-label",T.detail+" "+i.name);detail.onclick=()=>window.ForeverItemTooltip?.pin(i);row.append(detail);
+ const detail=mk("button","level-bis-detail","ⓘ");detail.type="button";detail.title=T.detail;detail.setAttribute("aria-label",T.detail+" "+i.name);detail.onclick=()=>window.ForeverItemTooltip?.pin(i);row.append(detail);if(typeof i.url==="string"){try{const u=new URL(i.url);if(u.protocol==="https:"&&["www.60.tools","www.wowhead.com","wowdb.assemblee-defias.fr"].includes(u.hostname)){const a=mk("a","level-bis-outbound","↗");a.href=u.href;a.target="_blank";a.rel="noopener noreferrer";a.setAttribute("aria-label",T.from+" "+i.name);row.append(a)}}catch{}}
  window.ForeverItemTooltip?.bind(row,i);
  return row;
 }
