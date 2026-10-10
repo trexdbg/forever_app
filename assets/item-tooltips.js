@@ -3,6 +3,7 @@
    All external data is rendered through textContent, never injected as HTML. */
 (()=>{"use strict";
 const en=document.documentElement.lang==="en";
+const locale=()=>window.ForeverItemLocale;
 const w=en?{
   itemLevel:"Item level",classic:"Classic Era reference — NOT confirmed for Forever",loading:"Loading Classic item details…",unavailable:"Additional Classic stats unavailable.",origin:"Source",view:"Open Classic item sheet ↗",close:"Close item details",open:"Item details",bind:"Binding",slot:"Slot",subtype:"Type",damage:"Damage",speed:"Speed",dps:"damage per second",required:"Requires level",armor:"Armor",sell:"Sell price",effects:"Classic effects (original text)",longPress:"Long-press an item for details",source:"Classic data: WoWDB des Défias",unknown:"Undocumented",set:"Item set"
 }:{
@@ -24,7 +25,7 @@ if(!en)return slot||"";
 const map={head:"Head",neck:"Neck",shoulders:"Shoulders",back:"Back",chest:"Chest",wrist:"Wrists",hands:"Hands",waist:"Waist",legs:"Legs",feet:"Feet",finger1:"Finger 1",finger2:"Finger 2",trinket1:"Trinket 1",trinket2:"Trinket 2",mainhand:"Main hand",offhand:"Off hand",ranged:"Ranged / relic",Tête:"Head",Cou:"Neck",Épaules:"Shoulders",Dos:"Back",Torse:"Chest",Poignets:"Wrists",Mains:"Hands",Taille:"Waist",Jambes:"Legs",Pieds:"Feet","Anneau 1":"Ring 1","Anneau 2":"Ring 2","Bijou 1":"Trinket 1","Bijou 2":"Trinket 2","Main droite":"Main hand","Main gauche":"Off hand","Distance / relique":"Ranged / relic"};
 return map[slot]||slot||""}
 function translateLine(line){
-if(!en)return line;
+if(!en)return String(line).replace(/^Item Level (\d+)$/,"Niveau d’objet $1").replace(/^Requires Level (\d+)$/,"Niveau $1 requis").replace(/^Ranged Wand$/,"Baguette à distance").replace(/^Held in off hand$/,"Tenu en main gauche").replace(/^Binds when picked up$/,"Lié quand ramassé").replace(/^Binds when equipped$/,"Lié quand équipé").replace(/^Two-Hand /,"Deux mains · ").replace(/^One-Hand /,"À une main · ");
 const direct={"Lié quand ramassé":"Binds when picked up","Lié quand équipé":"Binds when equipped","Unique":"Unique","Unique (1)":"Unique (1)","Équipé":"Equip","Ensemble":"Set"};
 if(direct[line])return direct[line];
 const translated={ "Main droite":"Main hand","Main gauche":"Off hand","À une main":"One-hand","Deux mains":"Two-hand","Épée":"Sword","Hache":"Axe","Masse":"Mace","Dague":"Dagger","Bâton":"Staff","Arc":"Bow","Arbalète":"Crossbow","Arme à feu":"Gun","Bouclier":"Shield","Tissu":"Cloth","Cuir":"Leather","Mailles":"Mail","Plaques":"Plate","Baguette":"Wand","Bijou":"Trinket","Anneau":"Ring","Tenue":"Set","Tête":"Head","Épaules":"Shoulders","Torse":"Chest","Dos":"Back","Mains":"Hands","Poignets":"Wrists","Taille":"Waist","Jambes":"Legs","Pieds":"Feet" };
@@ -69,7 +70,12 @@ pic.loading="lazy";
 pic.onerror=()=>{if(!pic.dataset.fallback&&validIcon(item.icon)&&!officialIcon){pic.dataset.fallback="1";pic.src="https://wow.zamimg.com/images/wow/icons/large/"+item.icon+".jpg"}else pic.remove()};
 title.append(pic)}
 const heading=elt("div","forever-item-tooltip__heading");
-write(heading,"forever-item-tooltip__name",en?item.name:(data&&typeof data.name==="string"&&data.name?data.name:item.name));
+const label=!en&&!forever&&data&&typeof data.name==="string"&&data.name?data.name:(locale()?.name(item)||item.name);
+write(heading,"forever-item-tooltip__name",label);
+if(!en&&locale()?.resolved(item)?.translated&&(locale()?.resolved(item)?.original||"")!==label){
+ const original=elt("div","forever-item-tooltip__muted","EN : "+locale().resolved(item).original);original.lang="en";heading.append(original);
+ if(locale().resolved(item).indicative)write(heading,"forever-item-tooltip__muted","Traduction indicative · nom anglais conservé");
+}
 if(data&&Number.isFinite(data.item_level)&&data.item_level>0)write(heading,"forever-item-tooltip__itemlevel",w.itemLevel+" "+data.item_level);
 else if(Number.isFinite(item.itemLevel)&&item.itemLevel>0)write(heading,"forever-item-tooltip__itemlevel",w.itemLevel+" "+item.itemLevel);
 title.append(heading);inner.append(title);
@@ -78,7 +84,7 @@ const lines=data&&Array.isArray(data.tooltip)?data.tooltip.filter(x=>typeof x===
 let haveRich=false;
 if(lines.length){haveRich=true;let index=0;
 for(const original of lines){const text=original.trim();if(!text)continue;
-if(index++===0&&(text===data.name||text===item.name))continue;
+if(index++===0&&(text===data.name||text===item.name||text===item.name_en||text===item.original_name))continue;
 if(/^Niveau d'objet \d+/.test(text))continue;
 const out=translateLine(text);
 write(body,rawLineStyle(out),out);
