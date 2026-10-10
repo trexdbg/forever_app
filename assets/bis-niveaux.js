@@ -56,10 +56,11 @@ const oneHand=i=>{
  const text=[i.slot_name,...(i.tooltip||[]).slice(0,8)].filter(v=>typeof v==="string").join(" ").toLowerCase();
  return !twoHand(i)&&/\b(one.hand|one handed|[aà] une main)\b/.test(text);
 };
-function weaponAllowed(i){
- const slot=normSlot(i);
+function weaponAllowed(i,chosenSlot=normSlot(i)){
+ const slot=chosenSlot;
  if(!["mainhand","offhand","ranged"].includes(slot))return true;
  const code=typeCode(i),max=levels[band][1];
+ if(specId==="tank"&&slot==="mainhand"&&twoHand(i))return false;
  // Type-less weapon references cannot be attributed to a class reliably.
  if(!code)return false;
  const allowed={
@@ -252,34 +253,40 @@ function renderFilters(){
 function itemRow(i,secondary=false){
  const row=mk("div","level-bis-item"+(secondary?" secondary":""));
  row.dataset.quality=i.quality||"common";
- row.append(icon(i,"inv_misc_questionmark"));
+ row.append(icon(i,db.slots.find(slot=>window.ForeverGearData.compatible(normSlot(i),slot.id))?.icon||"inv_misc_questionmark"));
  const info=mk("div","level-bis-item-main");
  const title=mk("strong","",i.name);info.append(title);
  const meta=mk("span","",T.required+" "+required(i)+(Number.isFinite(i.itemLevel)?" · "+T.itemLevel+" "+i.itemLevel:""));
  info.append(meta);if(i.origin)info.append(mk("span","level-bis-source",i.origin));row.append(info);
  const badge=mk("span","level-bis-provenance"+(isForever(i)?" is-forever":""),isForever(i)?T.forever:T.classic);row.append(badge);
- const detail=mk("button","level-bis-detail","ⓘ");detail.type="button";detail.title=T.detail;detail.setAttribute("aria-label",T.detail+" "+i.name);detail.onclick=()=>window.ForeverItemTooltip?.pin(i);row.append(detail);if(typeof i.url==="string"){try{const u=new URL(i.url);if(u.protocol==="https:"&&["www.60.tools","www.wowhead.com","wowdb.assemblee-defias.fr"].includes(u.hostname)){const a=mk("a","level-bis-outbound","↗");a.href=u.href;a.target="_blank";a.rel="noopener noreferrer";a.setAttribute("aria-label",T.from+" "+i.name);row.append(a)}}catch{}}
+ const detail=mk("button","level-bis-detail","ⓘ");detail.type="button";detail.title=T.detail;detail.setAttribute("aria-label",T.detail+" "+i.name);detail.onclick=()=>window.ForeverItemTooltip?.pin(i);row.append(detail);if(typeof i.url==="string"){try{const u=new URL(i.url);if(u.protocol==="https:"&&["www.60.tools","www.wowhead.com","wowdb.assemblee-defias.fr","wowclassicdatabase.com"].includes(u.hostname)){const a=mk("a","level-bis-outbound","↗");a.href=u.href;a.target="_blank";a.rel="noopener noreferrer";a.setAttribute("aria-label",T.from+" "+i.name);row.append(a)}}catch{}}
  window.ForeverItemTooltip?.bind(row,i);
  return row;
 }
 function renderSlots(){
  const target=$("level-slots");target.replaceChildren();
- const covered=[];let pool=all.filter(eligible),used=new Set(),seenPerSlot=0;
+ const covered=[];const pool=all.filter(eligible),used=new Set();let mainHandItem=null;
  const status=$("level-count");
  const grouped=new Map();
  for(const slot of db.slots){
-  const list=pool.filter(i=>window.ForeverGearData.compatible(normSlot(i),slot.id)).sort((a,b)=>score(b)-score(a)||a.id-b.id);
+  const list=pool.filter(i=>window.ForeverGearData.compatible(normSlot(i),slot.id)||
+   slot.id==="offhand"&&normSlot(i)==="mainhand"&&dualWield()&&oneHand(i)&&weaponAllowed(i,"offhand"))
+   .filter(i=>slot.id!=="offhand"||weaponAllowed(i,"offhand"))
+   .sort((a,b)=>score(b)-score(a)||a.id-b.id);
   grouped.set(slot.id,list);
  }
  for(const slot of db.slots){
   const items=grouped.get(slot.id);
-  const best=items.find(i=>!used.has(i.id))||null;
-  const card=mk("section","level-bis-slot");
+  const blocked=slot.id==="offhand"&&mainHandItem&&twoHand(mainHandItem);
+  const best=blocked?null:(items.find(i=>!used.has(i.id))||null);
+  const card=mk("section","level-bis-slot"+(blocked?" is-blocked":""));
   const header=mk("div","level-bis-slot-head");header.append(icon({icon:slot.icon}),mk("h3","",labelSlot(slot)));
-  if(items.length){covered.push(slot.id);header.append(mk("span","level-bis-num",items.length+" "+(en?"options":"options")))}
+  if(items.length&&!blocked)header.append(mk("span","level-bis-num",items.length+" options"));
   card.append(header);
-  if(!best){card.append(mk("p","level-bis-empty",T.missing));target.append(card);continue}
+  if(!best){card.append(mk("p","level-bis-empty",blocked?(en?"Unavailable with a two-handed weapon":"Indisponible avec une arme à deux mains"):T.missing));target.append(card);continue}
+  covered.push(slot.id);
   used.add(best.id);
+  if(slot.id==="mainhand")mainHandItem=best;
   card.append(itemRow(best));
   const options=items.filter(i=>i.id!==best.id).slice(0,4);
   if(options.length){const details=mk("details","level-bis-alternatives");const summary=mk("summary","",T.more+" ("+options.length+(items.length>5?"+":"")+")");details.append(summary);for(const it of options)details.append(itemRow(it,true));card.append(details)}
