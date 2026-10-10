@@ -6356,7 +6356,7 @@
       "coordinate_status": "not_yet_documented"
     },
     {
-      "id": "classic-stonetalon-brother-ravenoak",
+      "id": "5915",
       "name": {
         "fr": "Brother Ravenoak",
         "en": "Brother Ravenoak"
@@ -6367,16 +6367,23 @@
       "tameable": false,
       "respawn_min_hours": 21,
       "respawn_max_hours": 32,
-      "points": [],
+      "points": [
+        [
+          28,
+          12
+        ]
+      ],
       "loot": [],
-      "source": "https://foreverdb.net/rares",
+      "source": "https://foreverdb.net/rare/5915",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
       "notes": {
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "classic_reference",
+      "coordinate_source": "https://foreverdb.net/rare/5915",
+      "source_reviewed_at": "2026-10-10"
     },
     {
       "id": "classic-stonetalon-nal-taszar",
@@ -7598,7 +7605,7 @@
       "coordinate_status": "not_yet_documented"
     },
     {
-      "id": "classic-badlands-anathemus",
+      "id": "2754",
       "name": {
         "fr": "Anathemus",
         "en": "Anathemus"
@@ -7609,16 +7616,23 @@
       "tameable": false,
       "respawn_min_hours": 5,
       "respawn_max_hours": 8,
-      "points": [],
+      "points": [
+        [
+          24,
+          74
+        ]
+      ],
       "loot": [],
-      "source": "https://foreverdb.net/rares",
+      "source": "https://foreverdb.net/rare/2754",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
       "notes": {
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "classic_reference",
+      "coordinate_source": "https://foreverdb.net/rare/2754",
+      "source_reviewed_at": "2026-10-10"
     },
     {
       "id": "classic-badlands-rumbler",
@@ -7897,7 +7911,7 @@
       "coordinate_status": "not_yet_documented"
     },
     {
-      "id": "classic-stranglethorn-verifonix",
+      "id": "14492",
       "name": {
         "fr": "Verifonix",
         "en": "Verifonix"
@@ -7908,16 +7922,39 @@
       "tameable": false,
       "respawn_min_hours": 21,
       "respawn_max_hours": 32,
-      "points": [],
+      "points": [
+        [
+          37,
+          57
+        ],
+        [
+          37,
+          54
+        ],
+        [
+          36,
+          55
+        ],
+        [
+          35,
+          56
+        ],
+        [
+          36,
+          56
+        ]
+      ],
       "loot": [],
-      "source": "https://foreverdb.net/rares",
+      "source": "https://foreverdb.net/rare/14492",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
       "notes": {
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "classic_reference",
+      "coordinate_source": "https://foreverdb.net/rare/14492",
+      "source_reviewed_at": "2026-10-10"
     },
     {
       "id": "classic-stranglethorn-mosh-ogg-butcher",
@@ -7943,7 +7980,7 @@
       "coordinate_status": "not_yet_documented"
     },
     {
-      "id": "classic-stranglethorn-rippa",
+      "id": "14490",
       "name": {
         "fr": "Rippa",
         "en": "Rippa"
@@ -7954,16 +7991,23 @@
       "tameable": false,
       "respawn_min_hours": 12,
       "respawn_max_hours": 24,
-      "points": [],
+      "points": [
+        [
+          29,
+          85
+        ]
+      ],
       "loot": [],
-      "source": "https://foreverdb.net/rares",
+      "source": "https://foreverdb.net/rare/14490",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
       "notes": {
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "classic_reference",
+      "coordinate_source": "https://foreverdb.net/rare/14490",
+      "source_reviewed_at": "2026-10-10"
     },
     {
       "id": "classic-stranglethorn-scale-belly",
@@ -9139,7 +9183,7 @@
       "coordinate_status": "not_yet_documented"
     },
     {
-      "id": "classic-felwood-dessecus",
+      "id": "7104",
       "name": {
         "fr": "Dessecus",
         "en": "Dessecus"
@@ -9150,16 +9194,23 @@
       "tameable": false,
       "respawn_min_hours": 10.5,
       "respawn_max_hours": 16,
-      "points": [],
+      "points": [
+        [
+          58,
+          22
+        ]
+      ],
       "loot": [],
-      "source": "https://foreverdb.net/rares",
+      "source": "https://foreverdb.net/rare/7104",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
       "notes": {
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "classic_reference",
+      "coordinate_source": "https://foreverdb.net/rare/7104",
+      "source_reviewed_at": "2026-10-10"
     },
     {
       "id": "classic-felwood-immolatus",
