@@ -4,6 +4,8 @@
 (()=>{"use strict";
 const API="https://api.wowdb.assemblee-defias.fr/v1/classic/items";
 const BASE="/";
+const locale=()=>window.ForeverItemLocale;
+const localize=i=>locale()?.record(i)||i;
 const SLOT_CODES={
  head:"head",neck:"neck",shoulders:"shoulder",back:"back",chest:"chest",wrist:"wrist",
  hands:"hands",waist:"waist",legs:"legs",feet:"feet",finger1:"finger",finger2:"finger",
@@ -42,14 +44,14 @@ function normalizedClassic(i,slot){
  }
  if(!appSlot||!SLOT_CODES[appSlot])return null;
  const url=(typeof i.url==="string"&&i.url.startsWith("https://wowdb.assemblee-defias.fr/"))?i.url:"https://wowdb.assemblee-defias.fr/?id=classic:item:"+i.id;
- return {id:i.id,name:i.name,slot:appSlot,slot_name:i.slot_name||null,type:i.type||null,type_name:i.type_name||null,icon:typeof i.icon==="string"&&i.icon.startsWith("https://wowdb.assemblee-defias.fr/database-icons/")?i.icon:iconFromUrl(i.icon)||null,iconUrl:typeof i.icon==="string"?i.icon:null,origin:"WoWDB · Classic 1.12",quality:i.quality||"common",url,reference:"Classic 1.12",source_status:"classic_api",verified_forever:false,itemLevel:i.item_level??null,requiredLevel:i.required_level??null,weapon:i.weapon||null,tooltip:Array.isArray(i.tooltip)?i.tooltip.filter(s=>typeof s==="string").slice(0,44):[]};
+ return localize({id:i.id,name:i.name,slot:appSlot,slot_name:i.slot_name||null,type:i.type||null,type_name:i.type_name||null,icon:typeof i.icon==="string"&&i.icon.startsWith("https://wowdb.assemblee-defias.fr/database-icons/")?i.icon:iconFromUrl(i.icon)||null,iconUrl:typeof i.icon==="string"?i.icon:null,origin:"WoWDB · Classic 1.12",quality:i.quality||"common",url,reference:"Classic 1.12",source_status:"classic_api",verified_forever:false,itemLevel:i.item_level??null,requiredLevel:i.required_level??null,weapon:i.weapon||null,tooltip:Array.isArray(i.tooltip)?i.tooltip.filter(s=>typeof s==="string").slice(0,44):[]});
 }
 function loadForever(){
  if(!foreverPromise)foreverPromise=Promise.all([
  fetch(BASE+"data/items-forever.json?v=20261009-152",{credentials:"omit"}).then(r=>{if(!r.ok)throw Error("Forever HTTP "+r.status);return r.json()}).catch(()=>({items:[]})),
  fetch(BASE+"data/items-forever-client.json",{credentials:"omit"}).then(r=>{if(!r.ok)throw Error("Forever client HTTP "+r.status);return r.json()}).catch(()=>({items:[]})),
  fetch(BASE+"data/items-forever-cache.json?v=20261010-1",{credentials:"omit"}).then(r=>{if(!r.ok)throw Error("Forever cache HTTP "+r.status);return r.json()}).catch(()=>({items:[]}))
- ]).then(([manual,client,archive])=>{const merged=new Map();for(const i of [...(Array.isArray(archive.items)?archive.items:[]),...(Array.isArray(client.items)?client.items:[]),...(Array.isArray(manual.items)?manual.items:[])])if(valid(i))merged.set(i.id,{...i,reference:i.reference||"Forever beta client",source_status:i.source_status||"forever_beta_client",verified_forever:false});return [...merged.values()]});
+ ]).then(([manual,client,archive])=>{const merged=new Map();for(const i of [...(Array.isArray(archive.items)?archive.items:[]),...(Array.isArray(client.items)?client.items:[]),...(Array.isArray(manual.items)?manual.items:[])])if(valid(i))merged.set(i.id,localize({...i,reference:i.reference||"Forever beta client",source_status:i.source_status||"forever_beta_client",verified_forever:false}));return [...merged.values()]});
  return foreverPromise;
 }
 async function loadClassic({slot="all",query="",qualities=[],types=[],cursor=null,signal=null,limit=100,minLevel=null,maxLevel=60,maxItemLevel=null,slotCodes=null}={}){
