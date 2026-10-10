@@ -25,7 +25,26 @@ if(!en)return slot||"";
 const map={head:"Head",neck:"Neck",shoulders:"Shoulders",back:"Back",chest:"Chest",wrist:"Wrists",hands:"Hands",waist:"Waist",legs:"Legs",feet:"Feet",finger1:"Finger 1",finger2:"Finger 2",trinket1:"Trinket 1",trinket2:"Trinket 2",mainhand:"Main hand",offhand:"Off hand",ranged:"Ranged / relic",Tête:"Head",Cou:"Neck",Épaules:"Shoulders",Dos:"Back",Torse:"Chest",Poignets:"Wrists",Mains:"Hands",Taille:"Waist",Jambes:"Legs",Pieds:"Feet","Anneau 1":"Ring 1","Anneau 2":"Ring 2","Bijou 1":"Trinket 1","Bijou 2":"Trinket 2","Main droite":"Main hand","Main gauche":"Off hand","Distance / relique":"Ranged / relic"};
 return map[slot]||slot||""}
 function translateLine(line){
-if(!en)return String(line).replace(/^Item Level (\d+)$/,"Niveau d’objet $1").replace(/^Requires Level (\d+)$/,"Niveau $1 requis").replace(/^Ranged Wand$/,"Baguette à distance").replace(/^Held in off hand$/,"Tenu en main gauche").replace(/^Binds when picked up$/,"Lié quand ramassé").replace(/^Binds when equipped$/,"Lié quand équipé").replace(/^Two-Hand /,"Deux mains · ").replace(/^One-Hand /,"À une main · ");
+if(!en){
+ const stats={"Strength":"Force","Agility":"Agilité","Stamina":"Endurance","Intellect":"Intelligence","Spirit":"Esprit","Armor":"Armure","Ranged Attack Power":"Puissance d'attaque à distance","Attack Power":"Puissance d'attaque"};
+ const types={"Sword":"Épée","Axe":"Hache","Mace":"Masse","Dagger":"Dague","Staff":"Bâton","Polearm":"Arme d'hast","Wand":"Baguette","Bow":"Arc","Crossbow":"Arbalète","Gun":"Arme à feu","Leather":"Cuir","Mail":"Mailles","Plate":"Plaques","Cloth":"Tissu","Shield":"Bouclier","Trinket":"Bijou","Ring":"Anneau","Relic":"Relique"};
+ return String(line)
+ .replace(/^Item Level (\d+)$/,"Niveau d’objet $1")
+ .replace(/^Requires Level (\d+)$/,"Niveau $1 requis")
+ .replace(/^Ranged Wand$/,"Baguette à distance")
+ .replace(/^Held in off hand$/,"Tenu en main gauche")
+ .replace(/^Binds when picked up$/,"Lié quand ramassé")
+ .replace(/^Binds when equipped$/,"Lié quand équipé")
+ .replace(/^Two-Hand /,"Deux mains · ")
+ .replace(/^One-Hand /,"À une main · ")
+ .replace(/^Main Hand /,"Main droite · ")
+ .replace(/^Off Hand /,"Main gauche · ")
+ .replace(/^Durability (\d+) \/ (\d+)$/,"Durabilité $1 / $2")
+ .replace(/^(\+\d+) (Strength|Agility|Stamina|Intellect|Spirit)$/,(full,n,attr)=>n+" "+stats[attr])
+ .replace(/^(\d+) Armor$/,"$1 points d’armure")
+ .replace(/^(Sword|Axe|Mace|Dagger|Staff|Polearm|Wand|Bow|Crossbow|Gun|Leather|Mail|Plate|Cloth|Shield|Trinket|Ring|Relic)$/,value=>types[value]||value)
+ .replace(/^Ranged /,"Distance · ");
+}
 const direct={"Lié quand ramassé":"Binds when picked up","Lié quand équipé":"Binds when equipped","Unique":"Unique","Unique (1)":"Unique (1)","Équipé":"Equip","Ensemble":"Set"};
 if(direct[line])return direct[line];
 const translated={ "Main droite":"Main hand","Main gauche":"Off hand","À une main":"One-hand","Deux mains":"Two-hand","Épée":"Sword","Hache":"Axe","Masse":"Mace","Dague":"Dagger","Bâton":"Staff","Arc":"Bow","Arbalète":"Crossbow","Arme à feu":"Gun","Bouclier":"Shield","Tissu":"Cloth","Cuir":"Leather","Mailles":"Mail","Plaques":"Plate","Baguette":"Wand","Bijou":"Trinket","Anneau":"Ring","Tenue":"Set","Tête":"Head","Épaules":"Shoulders","Torse":"Chest","Dos":"Back","Mains":"Hands","Poignets":"Wrists","Taille":"Waist","Jambes":"Legs","Pieds":"Feet" };
