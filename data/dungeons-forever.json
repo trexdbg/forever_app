@@ -38,12 +38,37 @@
             {
               "fr": "Sautoir éphémère",
               "en": "Ephemeral Choker",
-              "slot": "Cou / Neck"
+              "slot": "Cou / Neck",
+              "id": 270227,
+              "icon": null,
+              "quality": "rare",
+              "requiredLevel": 13,
+              "itemLevel": 18,
+              "tooltip": [
+                "Ephemeral Choker",
+                "Item Level 18",
+                "Neck",
+                "+5 Spirit",
+                "Requires Level 13"
+              ],
+              "itemUrl": "https://www.wowhead.com/forever/item=270227"
             },
             {
               "fr": "Brassards brindecieux",
               "en": "Aetherwisp Bracers",
-              "slot": "Poignets / Wrists"
+              "slot": "Poignets / Wrists",
+              "id": 271096,
+              "icon": null,
+              "quality": "rare",
+              "requiredLevel": 13,
+              "itemLevel": 18,
+              "tooltip": [
+                "Aetherwisp Bracers",
+                "Item Level 18",
+                "Wrist Cloth",
+                "Requires Level 13"
+              ],
+              "itemUrl": "https://www.wowhead.com/forever/item=271096"
             },
             {
               "fr": "Drapé spectresprit",
@@ -66,7 +91,7 @@
           "loot": [
             {
               "fr": "Ceinturon avive-gemme",
-              "en": "Gemkindle Girdle",
+              "en": "Kindlegem Girdle",
               "slot": "Taille / Waist"
             },
             {
@@ -76,7 +101,7 @@
             },
             {
               "fr": "Croc de Magmatus",
-              "en": "Magmatus's Fang",
+              "en": "Fang of Magmatus",
               "slot": "Main droite / Main hand"
             }
           ],
@@ -95,17 +120,17 @@
           "loot": [
             {
               "fr": "Canne cœur-de-golem",
-              "en": "Golemheart Cane",
+              "en": "Golemheart Stave",
               "slot": "Deux mains / Two-hand"
             },
             {
               "fr": "Bottines du golem protecteur",
-              "en": "Guardian Golem Boots",
+              "en": "Treads of the Protector Golem",
               "slot": "Pieds / Feet"
             },
             {
               "fr": "Plastron de garde golem",
-              "en": "Golemguard Breastplate",
+              "en": "Golemguard Chest",
               "slot": "Torse / Chest"
             }
           ],
@@ -158,7 +183,15 @@
         "y": 52,
         "zone": "ironforge",
         "note": "Haut Siège / High Seat"
-      }
+      },
+      "questLoot": [
+        {
+          "fr": "Tête de Durgen Mornemartel",
+          "en": "Durgen Dirgehammer's Head",
+          "slot": "Objet de quête / Quest item",
+          "boss": "Durgen Mornemartel"
+        }
+      ]
     },
     {
       "id": "ruins-of-lordaeron",
@@ -191,17 +224,26 @@
             {
               "fr": "Tranchoir grancrochet",
               "en": "Meathook Cleaver",
-              "slot": "Main droite / Main hand"
+              "slot": "Main droite / Main hand",
+              "id": 271204,
+              "quality": "rare",
+              "itemUrl": "https://foreverchanges.pro/fr/item/271204"
             },
             {
               "fr": "Os d’abomination",
               "en": "Abomination Bones",
-              "slot": "Torse / Chest"
+              "slot": "Torse / Chest",
+              "id": 271205,
+              "quality": "rare",
+              "itemUrl": "https://foreverchanges.pro/fr/item/271205"
             },
             {
               "fr": "Restes de peau d’abomination",
               "en": "Abomination Skin Remnants",
-              "slot": "Torse / Chest"
+              "slot": "Torse / Chest",
+              "id": 271206,
+              "quality": "rare",
+              "itemUrl": "https://foreverchanges.pro/fr/item/271206"
             }
           ],
           "note": {
@@ -209,7 +251,8 @@
             "en": "Knocks the tank away and stuns; watch the patrolling pack."
           },
           "floor": "main",
-          "rare": false
+          "rare": false,
+          "level": 17
         },
         {
           "name": {
@@ -238,7 +281,8 @@
             "en": "Clear the spiders around the encounter."
           },
           "floor": "main",
-          "rare": false
+          "rare": false,
+          "level": 17
         },
         {
           "name": {
@@ -267,7 +311,8 @@
             "en": "Triggered at the statue after waves; frost nova."
           },
           "floor": "main",
-          "rare": false
+          "rare": false,
+          "level": 18
         },
         {
           "name": {
@@ -278,7 +323,19 @@
             {
               "fr": "Jambières de rouille osseuse",
               "en": "Bonerust Leggings",
-              "slot": "Jambes / Legs"
+              "slot": "Jambes / Legs",
+              "id": 271209,
+              "icon": null,
+              "quality": "rare",
+              "requiredLevel": 16,
+              "itemLevel": 21,
+              "tooltip": [
+                "Bonerust Leggings",
+                "Item Level 21",
+                "Legs Mail",
+                "Requires Level 16"
+              ],
+              "itemUrl": "https://www.wowhead.com/forever/item=271209"
             },
             {
               "fr": "Ceinture en brochebande",
@@ -296,7 +353,8 @@
             "en": "Knockback, anti-magic shield and heavy hits."
           },
           "floor": "main",
-          "rare": false
+          "rare": false,
+          "level": 19
         },
         {
           "name": {
@@ -335,7 +393,8 @@
             "en": "Interrupt Flame Shock; sustained fight."
           },
           "floor": "main",
-          "rare": false
+          "rare": false,
+          "level": 20
         },
         {
           "name": {
@@ -364,7 +423,8 @@
             "en": "Waves activated at the fireplace, then poison."
           },
           "floor": "main",
-          "rare": false
+          "rare": false,
+          "level": 19
         },
         {
           "name": {
@@ -388,7 +448,8 @@
             "en": "Rare spawn, not guaranteed each run."
           },
           "floor": "main",
-          "rare": true
+          "rare": true,
+          "level": 19
         }
       ],
       "quests": 10,
@@ -397,7 +458,24 @@
         "fr": "Six boss et une rencontre rare. Quêtes et ensemble du soigneur de pourriture documentés en bêta.",
         "en": "Six bosses and one rare encounter. Beta quests and Rotmender set are documented."
       },
-      "mapStatus": "schematic"
+      "mapStatus": "schematic",
+      "trashLoot": [
+        {
+          "fr": "Écharpe de soigneur de pourriture",
+          "en": "Rotmender's Sash",
+          "slot": "Taille / Waist"
+        },
+        {
+          "fr": "Gants de soigneur de pourriture",
+          "en": "Rotmender's Gloves",
+          "slot": "Mains / Hands"
+        },
+        {
+          "fr": "Grande tenue de soigneur de pourriture",
+          "en": "Rotmender's Garb",
+          "slot": "Torse / Chest"
+        }
+      ]
     },
     {
       "id": "excavation-site-wetlands",
@@ -435,7 +513,22 @@
             {
               "fr": "Ceinturon écaille-sel",
               "en": "Saltscale Girdle",
-              "slot": "Taille / Waist"
+              "slot": "Taille / Waist",
+              "id": 273023,
+              "icon": "inv_belt_21",
+              "quality": "rare",
+              "requiredLevel": 26,
+              "itemLevel": 31,
+              "tooltip": [
+                "Saltscale Girdle",
+                "Item Level 31",
+                "Waist Mail",
+                "124 Armor",
+                "+9 Strength",
+                "+9 Stamina",
+                "Requires Level 26"
+              ],
+              "itemUrl": "https://www.wowhead.com/forever/item=273023"
             },
             {
               "fr": "Jambières souples en cuir ventral",
@@ -506,7 +599,22 @@
             {
               "fr": "Mantelet du reliquaire",
               "en": "Reliquary Mantle",
-              "slot": "Épaules / Shoulders"
+              "slot": "Épaules / Shoulders",
+              "id": 273028,
+              "icon": "inv_shoulder_27",
+              "quality": "rare",
+              "requiredLevel": 28,
+              "itemLevel": 33,
+              "tooltip": [
+                "Reliquary Mantle",
+                "Item Level 33",
+                "Shoulder Mail",
+                "171 Armor",
+                "+12 Stamina",
+                "+4 Spirit",
+                "Requires Level 28"
+              ],
+              "itemUrl": "https://www.wowhead.com/forever/item=273028"
             },
             {
               "fr": "Relique des Titans (quête)",
@@ -561,17 +669,23 @@
             {
               "fr": "Manchettes tissetombes",
               "en": "Graveweave Cuffs",
-              "slot": "Poignets / Wrists"
+              "slot": "Poignets / Wrists",
+              "chanceReported": 27,
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
             },
             {
               "fr": "Chevalière de lieur-d’os",
               "en": "Bonebinder Signet",
-              "slot": "Doigt / Ring"
+              "slot": "Doigt / Ring",
+              "chanceReported": 42,
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
             },
             {
               "fr": "Arbalète à répétition pointetombe",
               "en": "Gravepoint Repeater",
-              "slot": "À distance / Ranged"
+              "slot": "À distance / Ranged",
+              "chanceReported": 30,
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
             }
           ],
           "note": {
@@ -579,7 +693,8 @@
             "en": "Ritual circle in sewers; rising skeletons and disarm."
           },
           "floor": "sewers",
-          "rare": false
+          "rare": false,
+          "level": 29
         },
         {
           "name": {
@@ -590,17 +705,23 @@
             {
               "fr": "Sculpte-cartilage",
               "en": "Cartilage Carver",
-              "slot": "Mains / Hands"
+              "slot": "Mains / Hands",
+              "chanceReported": 32,
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
             },
             {
               "fr": "Dague écorche-tendons",
               "en": "Tendonflayer Dagger",
-              "slot": "Main droite / Main hand"
+              "slot": "Main droite / Main hand",
+              "chanceReported": 14,
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
             },
             {
               "fr": "Oculaire de pile d’os",
               "en": "Bonepile Ocular",
-              "slot": "Bouclier / Shield"
+              "slot": "Bouclier / Shield",
+              "chanceReported": 54,
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
             }
           ],
           "note": {
@@ -608,7 +729,8 @@
             "en": "Summoned using the Dalaran Tome; not initially present."
           },
           "floor": "sewers",
-          "rare": false
+          "rare": false,
+          "level": 31
         },
         {
           "name": {
@@ -619,17 +741,23 @@
             {
               "fr": "Sceau de répare-runes",
               "en": "Runemender's Seal",
-              "slot": "Doigt / Ring"
+              "slot": "Doigt / Ring",
+              "chanceReported": 31,
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
             },
             {
               "fr": "Poignes éphémères",
               "en": "Ephemeral Grips",
-              "slot": "Mains / Hands"
+              "slot": "Mains / Hands",
+              "chanceReported": 34,
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
             },
             {
               "fr": "Cotte d’anneaux déformée par le mana",
               "en": "Mana-Warped Hauberk",
-              "slot": "Torse / Chest"
+              "slot": "Torse / Chest",
+              "chanceReported": 35,
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
             }
           ],
           "note": {
@@ -637,7 +765,8 @@
             "en": "Avoid the channeled frontal arcane beam."
           },
           "floor": "sewers",
-          "rare": false
+          "rare": false,
+          "level": 30
         },
         {
           "name": {
@@ -648,17 +777,23 @@
             {
               "fr": "Drapé d’énergie fluctuante",
               "en": "Fluxing Energy Drape",
-              "slot": "Dos / Back"
+              "slot": "Dos / Back",
+              "chanceReported": 32,
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
             },
             {
               "fr": "Robe de sorcier pourpre",
               "en": "Violet Wizard Robe",
-              "slot": "Torse / Chest"
+              "slot": "Torse / Chest",
+              "chanceReported": 39,
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
             },
             {
               "fr": "Baguette de concentration de mana",
               "en": "Mana Focus Wand",
-              "slot": "À distance / Ranged"
+              "slot": "À distance / Ranged",
+              "chanceReported": 29,
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
             }
           ],
           "note": {
@@ -666,7 +801,8 @@
             "en": "Polymorph, silence and small summoned adds."
           },
           "floor": "sewers",
-          "rare": false
+          "rare": false,
+          "level": 30
         },
         {
           "name": {
@@ -677,22 +813,30 @@
             {
               "fr": "Lame double de gardien",
               "en": "Guardian's Doubleblade",
-              "slot": "Deux mains / Two-hand"
+              "slot": "Deux mains / Two-hand",
+              "chanceReported": 29,
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
             },
             {
               "fr": "Gardécaille réfractaire",
               "en": "Refractive Scaleguard",
-              "slot": "Jambes / Legs"
+              "slot": "Jambes / Legs",
+              "chanceReported": 40,
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
             },
             {
               "fr": "Protège-épaules cristallins instables",
               "en": "Unstable Crystal Shoulders",
-              "slot": "Épaules / Shoulders"
+              "slot": "Épaules / Shoulders",
+              "chanceReported": 31,
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
             },
             {
               "fr": "Plan : rouet",
               "en": "Pattern: Spinning Wheel",
-              "slot": "Recette / Recipe"
+              "slot": "Recette / Recipe",
+              "chanceReported": 9.3,
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
             }
           ],
           "note": {
@@ -700,7 +844,8 @@
             "en": "Move away during the area arcane blast."
           },
           "floor": "sewers",
-          "rare": false
+          "rare": false,
+          "level": 31
         },
         {
           "name": {
@@ -711,17 +856,23 @@
             {
               "fr": "Échine du dévoreur",
               "en": "Devourer's Spine",
-              "slot": "Deux mains / Two-hand"
+              "slot": "Deux mains / Two-hand",
+              "chanceReported": 40,
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
             },
             {
               "fr": "Bottines en écaille-de-mana",
               "en": "Manascale Boots",
-              "slot": "Pieds / Feet"
+              "slot": "Pieds / Feet",
+              "chanceReported": 29,
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
             },
             {
               "fr": "Ceinturon en ondule-bandes",
               "en": "Rippleband Girdle",
-              "slot": "Taille / Waist"
+              "slot": "Taille / Waist",
+              "chanceReported": 31,
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
             }
           ],
           "note": {
@@ -729,7 +880,8 @@
             "en": "Mana drain and dispellable tank debuff."
           },
           "floor": "sewers",
-          "rare": false
+          "rare": false,
+          "level": 31
         },
         {
           "name": {
@@ -740,17 +892,23 @@
             {
               "fr": "Corde feuilleflétrie",
               "en": "Witherleaf Cord",
-              "slot": "Taille / Waist"
+              "slot": "Taille / Waist",
+              "chanceReported": 35,
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
             },
             {
               "fr": "Atours du déchu Gangrécorce",
               "en": "Fallen Felbark Raiment",
-              "slot": "Torse / Chest"
+              "slot": "Torse / Chest",
+              "chanceReported": 28,
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
             },
             {
               "fr": "Bras de gangrebranche",
               "en": "Felbranch Arm",
-              "slot": "Deux mains / Two-hand"
+              "slot": "Deux mains / Two-hand",
+              "chanceReported": 37,
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
             }
           ],
           "note": {
@@ -758,7 +916,8 @@
             "en": "In the city behind a barrier; clear treants to unlock."
           },
           "floor": "city",
-          "rare": false
+          "rare": false,
+          "level": 32
         },
         {
           "name": {
@@ -769,22 +928,30 @@
             {
               "fr": "Orbe pesant",
               "en": "Weighted Orb",
-              "slot": "Main gauche / Off hand"
+              "slot": "Main gauche / Off hand",
+              "chanceReported": 24,
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
             },
             {
               "fr": "Mantelet de sorcier pourpre",
               "en": "Violet Wizard Mantle",
-              "slot": "Épaules / Shoulders"
+              "slot": "Épaules / Shoulders",
+              "chanceReported": 37,
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
             },
             {
               "fr": "Pendentif à facettes d’archimagistère",
               "en": "Archmagister's Faceted Pendant",
-              "slot": "Cou / Neck"
+              "slot": "Cou / Neck",
+              "chanceReported": 38,
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
             },
             {
               "fr": "Plan : récupérateur arcanique",
               "en": "Pattern: Arcane Recycler",
-              "slot": "Recette / Recipe"
+              "slot": "Recette / Recipe",
+              "chanceReported": 6.4,
+              "chanceSource": "ForeverChanges beta sighting (2026-10-03)"
             }
           ],
           "note": {
@@ -792,7 +959,8 @@
             "en": "Final violet chamber; avoid orbs and group-wide polymorph."
           },
           "floor": "city",
-          "rare": false
+          "rare": false,
+          "level": 33
         }
       ],
       "quests": 8,
@@ -928,5 +1096,7 @@
       "beta": "announced",
       "mapStatus": "none"
     }
-  ]
+  ],
+  "enTranslationStatus": "Item English names not established by original client should be treated as unofficial translations.",
+  "observationStatus": "Dungeon guide loot and percentages are community beta observations, not official or guaranteed."
 }
