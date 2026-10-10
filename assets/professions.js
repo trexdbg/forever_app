@@ -27,7 +27,9 @@ function openTrainerMap(p,name=""){
  $("prof-trainers")?.scrollIntoView({behavior:"smooth",block:"start"});
 }
 function item(id){return state.archive?.items?.[String(id)]||{name:T("Objet ","Item ")+id,id}}
-function itemText(id){const i=item(id);return (i.available===false?i.classicName||i.name:i.name)||T("Objet ","Item ")+id}
+function itemText(id){const i=item(id),raw=(i.available===false?i.classicName||i.name:i.name)||T("Objet ","Item ")+id;return window.ForeverItemLocale?.name({id:Number(id),name:raw})||raw}
+function itemAliases(id){const i=item(id),raw=(i.available===false?i.classicName||i.name:i.name)||"";return window.ForeverItemLocale?.aliases({id:Number(id),name:raw})||raw}
+function recipeText(r){return !en&&r.outputs?.length===1?itemText(r.outputs[0].id):(window.ForeverItemLocale?.name({id:0,name:r.name})||r.name)}
 function statusWord(status){return ({new:T("Nouveau Forever","New in Forever"),changed:T("Modifié","Changed"),unchanged:T("Identique à Classic","Same as Classic"),inherited:T("Identifiant hérité","Inherited ID"),removed:T("Absent de Forever","Not in Forever")})[status]||status}
 function choose(p,updateHash=true){
  state.active=p;state.page=0;cards.querySelectorAll("button[data-prof]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.prof===p.slug)));
@@ -115,7 +117,7 @@ async function loadArchive(){
  state.archive.searchIndex=new Map();
  for(const r of data.records){
   if(r.status==="removed"||r.seasonal)continue;
-  const idx=[r.name,r.id,r.category,r.description,...(r.outputs||[]).map(x=>itemText(x.id)),...(r.reagents||[]).map(x=>itemText(x.id)),...(r.books||[]).map(itemText)].join(" ").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
+  const idx=[r.name,recipeText(r),r.id,r.category,r.description,...(r.outputs||[]).map(x=>itemAliases(x.id)),...(r.reagents||[]).map(x=>itemAliases(x.id)),...(r.books||[]).map(itemAliases)].join(" ").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
   state.archive.searchIndex.set(r.professionID+":"+r.id,idx);
  }
  status.textContent=T("Archive Forever "+data.build+" chargée. Plus ancienne que le référentiel actuel ("+state.meta.reference_build+").","Loaded Forever archive "+data.build+". Older than the current reference ("+state.meta.reference_build+").");
@@ -144,7 +146,7 @@ function render(){
   if(state.query&&!state.archive.searchIndex.get(r.professionID+":"+r.id)?.includes(state.query))return false;
   return true;
  });
- if(state.sort==="name")rows.sort((a,b)=>a.name.localeCompare(b.name));
+ if(state.sort==="name")rows.sort((a,b)=>recipeText(a).localeCompare(recipeText(b)));
  else if(state.sort==="status")rows.sort((a,b)=>(a.status==="new"?-1:a.status==="changed"?0:1)-(b.status==="new"?-1:b.status==="changed"?0:1)||a.name.localeCompare(b.name));
  else rows.sort((a,b)=>safe(a.skillupLow)-safe(b.skillupLow)||a.name.localeCompare(b.name));
  const total=rows.length;const pages=Math.max(1,Math.ceil(total/PAGE));
@@ -160,7 +162,7 @@ function render(){
   const top=put(card,"div",null,"prof-recipe-heading");
   const typ=put(top,"span",statusWord(r.status),"prof-tag "+(r.status==="new"?"new":r.status==="changed"?"changed":""));
   if(r.category)put(top,"span",r.category,"prof-recipe-category");
-  const h=put(card,"h4",r.name);
+  const h=put(card,"h4",recipeText(r));
   const sub=put(card,"p",T("Sort ","Spell ")+r.id+(r.skillupLow||r.skillupHigh?" · "+T("Seuils de progression","Skill-up thresholds")+" "+r.skillupLow+" / "+r.skillupHigh:""),"prof-recipe-meta");
   const body=put(card,"div",null,"prof-recipe-parts");
   if(r.outputs?.length){const pane=put(body,"div");put(pane,"small",T("Fabrique","Produces"),"prof-recipe-label");
