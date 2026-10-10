@@ -337,7 +337,8 @@
         "en": "Drowned Reef south of Stromgarde; accessible by swimming from the Hillsbrad Foothills coast. Classic references: 19.9 / 91 (1.12 spawn data) and 23.1 / 84.9 (Warcraft Wiki). Search the submerged wrecks and ruins. Not verified on Forever."
       },
       "coordinate_status": "crosschecked_classic_sources",
-      "coordinate_source": "https://wow-guides.com/knowledge/creature-ranks"
+      "coordinate_source": "https://wow-guides.com/knowledge/creature-ranks",
+      "beta_level30_in_scope": false
     },
     {
       "id": "462",
@@ -425,7 +426,9 @@
           },
           "item_id": 4454,
           "chance_classic_percent": 25,
-          "icon": "inv_weapon_shortblade_16"
+          "icon": "inv_weapon_shortblade_16",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/462"
         }
       ],
       "source": "https://foreverdb.net/rare/462",
@@ -434,7 +437,10 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "notable_only_not_complete"
     },
     {
       "id": "599",
@@ -470,7 +476,9 @@
           },
           "item_id": null,
           "chance_classic_percent": 70,
-          "icon": "inv_boots_01"
+          "icon": "inv_boots_01",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/599"
         },
         {
           "name": {
@@ -479,7 +487,9 @@
           },
           "item_id": null,
           "chance_classic_percent": 30,
-          "icon": "inv_chest_cloth_07"
+          "icon": "inv_chest_cloth_07",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/599"
         }
       ],
       "source": "https://foreverdb.net/rare/599",
@@ -488,7 +498,10 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "notable_only_not_complete"
     },
     {
       "id": "574",
@@ -516,7 +529,9 @@
           },
           "item_id": null,
           "chance_classic_percent": 50,
-          "icon": "inv_weapon_shortblade_16"
+          "icon": "inv_weapon_shortblade_16",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/574"
         },
         {
           "name": {
@@ -525,7 +540,9 @@
           },
           "item_id": null,
           "chance_classic_percent": 50,
-          "icon": "inv_chest_chain_14"
+          "icon": "inv_chest_chain_14",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/574"
         }
       ],
       "source": "https://foreverdb.net/rare/574",
@@ -534,7 +551,10 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "notable_only_not_complete"
     },
     {
       "id": "2850",
@@ -573,12 +593,13 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "5828",
       "name": {
-        "fr": "Humar the Pridelord",
+        "fr": "Humar le Fier",
         "en": "Humar the Pridelord"
       },
       "zone": "barrens",
@@ -593,19 +614,37 @@
           33.3
         ]
       ],
-      "loot": [],
+      "loot": [
+        {
+          "name": {
+            "en": "Mark of the Pack Leader",
+            "fr": "Marque du chef de meute"
+          },
+          "item_id": 285331,
+          "icon": "inv_jewelry_necklace_04",
+          "chance_classic_percent": null,
+          "source_version": "forever_beta",
+          "source_url": "https://www.wowhead.com/forever/fr/item=285331",
+          "drop_evidence": "forever_wowhead_loot_and_player_report",
+          "chance_forever_observed_percent": 1.23
+        }
+      ],
       "source": "https://foreverdb.net/rare/5828",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "name_fr_status": "wowhead_forever_fr",
+      "loot_reviewed_at": "2026-10-10",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "notable_only_not_complete"
     },
     {
       "id": "5842",
       "name": {
-        "fr": "Takk the Leaper",
+        "fr": "Takk le Bondisseur",
         "en": "Takk the Leaper"
       },
       "zone": "barrens",
@@ -620,19 +659,37 @@
           8.3
         ]
       ],
-      "loot": [],
+      "loot": [
+        {
+          "name": {
+            "en": "Raptor Hide Cloak",
+            "fr": "Cape en cuir de raptor"
+          },
+          "item_id": 285329,
+          "icon": "inv_misc_cape_03",
+          "chance_classic_percent": null,
+          "source_version": "forever_beta",
+          "source_url": "https://www.wowhead.com/forever/item=285329",
+          "drop_evidence": "forever_wowhead_loot_and_player_report",
+          "chance_forever_observed_percent": 3.86
+        }
+      ],
       "source": "https://foreverdb.net/rare/5842",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "name_fr_status": "wowhead_forever_fr",
+      "loot_reviewed_at": "2026-10-10",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "notable_only_not_complete"
     },
     {
       "id": "5831",
       "name": {
-        "fr": "Swiftmane",
+        "fr": "Vif-crins",
         "en": "Swiftmane"
       },
       "zone": "barrens",
@@ -647,19 +704,37 @@
           34.5
         ]
       ],
-      "loot": [],
+      "loot": [
+        {
+          "name": {
+            "en": "Signet of the Zhevra",
+            "fr": "Chevalière des Zhévras"
+          },
+          "item_id": 285330,
+          "icon": "inv_jewelry_ring_03",
+          "chance_classic_percent": null,
+          "source_version": "forever_beta",
+          "source_url": "https://www.wowhead.com/forever/item=285330",
+          "drop_evidence": "forever_wowhead_loot_and_player_report",
+          "chance_forever_observed_percent": 0.82
+        }
+      ],
       "source": "https://foreverdb.net/rare/5831",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "name_fr_status": "wowhead_forever_fr",
+      "loot_reviewed_at": "2026-10-10",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "notable_only_not_complete"
     },
     {
       "id": "barrens-snort-the-heckler",
       "name": {
-        "fr": "Snort the Heckler",
+        "fr": "Snort la Moqueuse",
         "en": "Snort the Heckler"
       },
       "zone": "barrens",
@@ -681,12 +756,15 @@
       "notes": {
         "fr": "Créature observée sur Forever selon les relevés communautaires ; repop et coordonnées restent des références Classic.",
         "en": "Creature seen on Forever in community reports; coordinates and respawn remain Classic references."
-      }
+      },
+      "name_fr_status": "wowhead_forever_fr",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "barrens-stonearm",
       "name": {
-        "fr": "Stonearm",
+        "fr": "Bras-de-pierre",
         "en": "Stonearm"
       },
       "zone": "barrens",
@@ -708,12 +786,15 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "barrens-brokespear",
       "name": {
-        "fr": "Brokespear",
+        "fr": "Lance-brisée",
         "en": "Brokespear"
       },
       "zone": "barrens",
@@ -735,12 +816,15 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "mulgore-the-rake",
       "name": {
-        "fr": "The Rake",
+        "fr": "Le Balafré",
         "en": "The Rake"
       },
       "zone": "mulgore",
@@ -762,7 +846,10 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "mulgore-mazzranache",
@@ -789,12 +876,14 @@
       "notes": {
         "fr": "Position indicative Classic à recontrôler.",
         "en": "Approximate Classic position; requires rechecking."
-      }
+      },
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "14430",
       "name": {
-        "fr": "Duskstalker",
+        "fr": "Traqueur du crépuscule",
         "en": "Duskstalker"
       },
       "zone": "teldrassil",
@@ -809,14 +898,32 @@
           76.6
         ]
       ],
-      "loot": [],
+      "loot": [
+        {
+          "name": {
+            "en": "Duskstalker's Hide",
+            "fr": "Peau du traqueur du crépuscule"
+          },
+          "item_id": null,
+          "icon": "inv_chest_leather_03",
+          "chance_classic_percent": null,
+          "source_version": "forever_beta",
+          "source_url": "https://www.wowhead.com/forever/npc=14430",
+          "drop_evidence": "forever_wowhead_npc_drops_5_of_591",
+          "chance_forever_observed_percent": 0.85
+        }
+      ],
       "source": "https://foreverdb.net/rare/14430",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "name_fr_status": "community_translation_check_needed",
+      "loot_reviewed_at": "2026-10-10",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "notable_only_not_complete"
     },
     {
       "id": "teldrassil-threggil",
@@ -843,7 +950,9 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "teldrassil-uruson",
@@ -870,12 +979,14 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "teldrassil-fury-shelda",
       "name": {
-        "fr": "Fury Shelda",
+        "fr": "Shelda la Furieuse",
         "en": "Fury Shelda"
       },
       "zone": "teldrassil",
@@ -897,12 +1008,15 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "teldrassil-blackmoss-the-fetid",
       "name": {
-        "fr": "Blackmoss the Fetid",
+        "fr": "Moussenoire le Fétide",
         "en": "Blackmoss the Fetid"
       },
       "zone": "teldrassil",
@@ -924,12 +1038,15 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "tirisfal-lost-soul",
       "name": {
-        "fr": "Lost Soul",
+        "fr": "Âme perdue",
         "en": "Lost Soul"
       },
       "zone": "tirisfal",
@@ -951,12 +1068,15 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "tirisfal-farmer-solliden",
       "name": {
-        "fr": "Farmer Solliden",
+        "fr": "Fermier Solliden",
         "en": "Farmer Solliden"
       },
       "zone": "tirisfal",
@@ -978,12 +1098,15 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "tirisfal-tormented-spirit",
       "name": {
-        "fr": "Tormented Spirit",
+        "fr": "Esprit tourmenté",
         "en": "Tormented Spirit"
       },
       "zone": "tirisfal",
@@ -1005,12 +1128,15 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "tirisfal-ressan-the-needler",
       "name": {
-        "fr": "Ressan the Needler",
+        "fr": "Ressan le Harceleur",
         "en": "Ressan the Needler"
       },
       "zone": "tirisfal",
@@ -1032,7 +1158,10 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "10359",
@@ -1059,12 +1188,14 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "dun-morogh-edan-the-howler",
       "name": {
-        "fr": "Edan the Howler",
+        "fr": "Edan le Hurleur",
         "en": "Edan the Howler"
       },
       "zone": "dun-morogh",
@@ -1086,7 +1217,10 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "dun-morogh-timber",
@@ -1113,7 +1247,9 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "dun-morogh-bjarn",
@@ -1133,14 +1269,28 @@
           58.5
         ]
       ],
-      "loot": [],
+      "loot": [
+        {
+          "name": {
+            "fr": "Gilet en peau d'ours noir",
+            "en": "Black Bear Hide Vest"
+          },
+          "item_id": null,
+          "icon": "inv_chest_leather_02",
+          "chance_classic_percent": 25,
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/1130"
+        }
+      ],
       "source": "https://foreverdb.net/rares",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": true,
+      "loot_coverage": "notable_only_not_complete"
     },
     {
       "id": "dun-morogh-gibblewilt",
@@ -1167,12 +1317,14 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "elwynn-morgaine-the-sly",
       "name": {
-        "fr": "Morgaine the Sly",
+        "fr": "Morgaine la Rusée",
         "en": "Morgaine the Sly"
       },
       "zone": "elwynn",
@@ -1194,12 +1346,15 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "elwynn-mother-fang",
       "name": {
-        "fr": "Mother Fang",
+        "fr": "Mère Croc",
         "en": "Mother Fang"
       },
       "zone": "elwynn",
@@ -1221,12 +1376,15 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "elwynn-narg-the-taskmaster",
       "name": {
-        "fr": "Narg the Taskmaster",
+        "fr": "Narg le Sous-chef",
         "en": "Narg the Taskmaster"
       },
       "zone": "elwynn",
@@ -1248,12 +1406,15 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "elwynn-thuros-lightfingers",
       "name": {
-        "fr": "Thuros Lightfingers",
+        "fr": "Thuros Doigts-agiles",
         "en": "Thuros Lightfingers"
       },
       "zone": "elwynn",
@@ -1275,7 +1436,10 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "elwynn-fedfennel",
@@ -1302,12 +1466,14 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "darkshore-shadowclaw",
       "name": {
-        "fr": "Shadowclaw",
+        "fr": "Griffe-de-l'ombre",
         "en": "Shadowclaw"
       },
       "zone": "darkshore",
@@ -1329,7 +1495,10 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "darkshore-licillin",
@@ -1356,12 +1525,14 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "darkshore-carnivous-the-breaker",
       "name": {
-        "fr": "Carnivous the Breaker",
+        "fr": "Carnivous le Briseur",
         "en": "Carnivous the Breaker"
       },
       "zone": "darkshore",
@@ -1383,12 +1554,15 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "darkshore-lady-moongazer",
       "name": {
-        "fr": "Lady Moongazer",
+        "fr": "Dame Luneglace",
         "en": "Lady Moongazer"
       },
       "zone": "darkshore",
@@ -1410,12 +1584,15 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "ashenvale-apothecary-falthis",
       "name": {
-        "fr": "Apothecary Falthis",
+        "fr": "Apothicaire Falthis",
         "en": "Apothecary Falthis"
       },
       "zone": "ashenvale",
@@ -1437,12 +1614,15 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "ashenvale-lady-vespia",
       "name": {
-        "fr": "Lady Vespia",
+        "fr": "Dame Vespia",
         "en": "Lady Vespia"
       },
       "zone": "ashenvale",
@@ -1464,12 +1644,15 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "ashenvale-mist-howler",
       "name": {
-        "fr": "Mist Howler",
+        "fr": "Hurlebrume",
         "en": "Mist Howler"
       },
       "zone": "ashenvale",
@@ -1491,12 +1674,15 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "ashenvale-branch-snapper",
       "name": {
-        "fr": "Branch Snapper",
+        "fr": "Brise-branche",
         "en": "Branch Snapper"
       },
       "zone": "ashenvale",
@@ -1518,7 +1704,10 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "ashenvale-ursol-lok",
@@ -1545,7 +1734,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "arathi-kovork",
@@ -1572,12 +1762,13 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "arathi-nimar-the-slayer",
       "name": {
-        "fr": "Nimar the Slayer",
+        "fr": "Nimar le Pourfendeur",
         "en": "Nimar the Slayer"
       },
       "zone": "arathi",
@@ -1599,7 +1790,9 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "name_fr_status": "wowhead_forever_fr",
+      "beta_level30_in_scope": false
     },
     {
       "id": "arathi-molok-the-crusher",
@@ -1626,7 +1819,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "arathi-geomancer-flintdagger",
@@ -1653,7 +1847,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "arathi-zalas-witherbark",
@@ -1680,7 +1875,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "alterac-araga",
@@ -1707,7 +1903,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "alterac-skhowl",
@@ -1734,7 +1931,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "alterac-lo-grosh",
@@ -1761,7 +1959,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "desolace-giggler",
@@ -1788,7 +1987,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "desolace-hissperak",
@@ -1815,7 +2015,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "desolace-kaskk",
@@ -1842,7 +2043,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "hillsbrad-scargil",
@@ -1869,12 +2071,15 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "hillsbrad-creepthess",
       "name": {
-        "fr": "Creepthess",
+        "fr": "Rampante",
         "en": "Creepthess"
       },
       "zone": "hillsbrad",
@@ -1896,12 +2101,15 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "stonetalon-pridewing-patriarch",
       "name": {
-        "fr": "Pridewing Patriarch",
+        "fr": "Patriarche Aile-fière",
         "en": "Pridewing Patriarch"
       },
       "zone": "stonetalon",
@@ -1923,12 +2131,15 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "stonetalon-vengeful-ancient",
       "name": {
-        "fr": "Vengeful Ancient",
+        "fr": "Ancien vengeur",
         "en": "Vengeful Ancient"
       },
       "zone": "stonetalon",
@@ -1950,12 +2161,15 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "573",
       "name": {
-        "fr": "Foe Reaper 4000",
+        "fr": "Moissonneur mécanique 4000",
         "en": "Foe Reaper 4000"
       },
       "zone": "westfall",
@@ -2054,7 +2268,9 @@
           },
           "item_id": 4434,
           "chance_classic_percent": 25,
-          "icon": "inv_pants_06"
+          "icon": "inv_pants_06",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/573"
         }
       ],
       "source": "https://foreverdb.net/rare/573",
@@ -2063,7 +2279,10 @@
       "notes": {
         "fr": "20 des 40 positions Classic listées par la source ; un seul Faucheur peut apparaître à la fois. Sur Forever : à confirmer.",
         "en": "20 of 40 Classic reference positions listed; only one Reaper spawns at a time. Not verified in Forever."
-      }
+      },
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "notable_only_not_complete"
     },
     {
       "id": "loch-modan-grizlak",
@@ -2090,12 +2309,14 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "loch-modan-lord-condar",
       "name": {
-        "fr": "Lord Condar",
+        "fr": "Seigneur Condar",
         "en": "Lord Condar"
       },
       "zone": "loch-modan",
@@ -2117,7 +2338,10 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "hinterlands-old-cliff-jumper",
@@ -2144,7 +2368,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "hinterlands-zul-arek-hatefowler",
@@ -2171,7 +2396,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "hinterlands-ironback",
@@ -2198,7 +2424,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "feralas-snarler",
@@ -2225,7 +2452,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "feralas-arash-ethis",
@@ -2252,7 +2480,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "stranglethorn-lord-sakrasis",
@@ -2279,7 +2508,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "stranglethorn-kurmokk",
@@ -2306,7 +2536,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "tanaris-kregg-keelhaul",
@@ -2333,7 +2564,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "tanaris-haarka-the-ravenous",
@@ -2360,7 +2592,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "tanaris-murderous-blisterpaw",
@@ -2387,7 +2620,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "blasted-lands-deatheye",
@@ -2414,7 +2648,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "blasted-lands-grunter",
@@ -2441,7 +2676,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "blasted-lands-akubar-the-seer",
@@ -2468,7 +2704,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "azshara-the-evalcharr",
@@ -2495,7 +2732,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "azshara-antilos",
@@ -2522,7 +2760,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "azshara-lady-sesspira",
@@ -2549,7 +2788,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "azshara-magister-hawkhelm",
@@ -2576,7 +2816,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "felwood-death-howl",
@@ -2603,7 +2844,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "felwood-mongress",
@@ -2630,7 +2872,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "felwood-alshirr-banebreath",
@@ -2657,7 +2900,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "searing-gorge-faulty-war-golem",
@@ -2684,7 +2928,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "searing-gorge-rekk-tilac",
@@ -2711,7 +2956,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "searing-gorge-smoldar",
@@ -2738,7 +2984,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "ungoro-ravasaur-matriarch",
@@ -2765,7 +3012,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "silithus-krellack",
@@ -2792,7 +3040,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "silithus-gretheer",
@@ -2819,7 +3068,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "silithus-grubthor",
@@ -2846,7 +3096,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "silithus-twilight-lord-everun",
@@ -2873,7 +3124,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "winterspring-mezzir-the-howler",
@@ -2900,7 +3152,8 @@
       "notes": {
         "fr": "Emplacement indicatif à recontrôler sur le fond Forever.",
         "en": "Approximate point; needs verification on Forever map."
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "10200",
@@ -2927,7 +3180,8 @@
       "notes": {
         "fr": "Repère Classic indicatif, à vérifier sur Forever.",
         "en": "Approximate Classic marker; verify on Forever."
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "10199",
@@ -2954,7 +3208,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "epl-duggan-wildhammer",
@@ -2981,7 +3236,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "epl-deathspeaker-selendre",
@@ -3008,7 +3264,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "epl-gish-the-unmoving",
@@ -3035,7 +3292,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "epl-zul-brin-warpbranch",
@@ -3062,7 +3320,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "wpl-foulmane",
@@ -3089,7 +3348,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "wpl-lord-maldazzar",
@@ -3116,7 +3376,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "wpl-foreman-marcrid",
@@ -3143,7 +3404,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "6489",
@@ -3193,12 +3455,13 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "1720",
       "name": {
-        "fr": "Bruegal Ironknuckle",
+        "fr": "Bruegal Poing-de-fer",
         "en": "Bruegal Ironknuckle"
       },
       "zone": "stockade",
@@ -3216,7 +3479,9 @@
           },
           "item_id": null,
           "chance_classic_percent": 33.3,
-          "icon": "inv_weapon_shortblade_16"
+          "icon": "inv_weapon_shortblade_16",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/1720"
         },
         {
           "name": {
@@ -3225,7 +3490,9 @@
           },
           "item_id": null,
           "chance_classic_percent": 33.3,
-          "icon": "inv_gauntlets_04"
+          "icon": "inv_gauntlets_04",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/1720"
         },
         {
           "name": {
@@ -3234,7 +3501,9 @@
           },
           "item_id": null,
           "chance_classic_percent": 33.3,
-          "icon": "inv_bracer_07"
+          "icon": "inv_bracer_07",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/1720"
         }
       ],
       "source": "https://foreverdb.net/rare/1720",
@@ -3243,7 +3512,10 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "notable_only_not_complete"
     },
     {
       "id": "scarlet-monastery-azshir-the-sleepless",
@@ -3265,7 +3537,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "razorfen-kraul-blind-hunter",
@@ -3287,7 +3560,8 @@
       "notes": {
         "fr": "",
         "en": ""
-      }
+      },
+      "beta_level30_in_scope": false
     },
     {
       "id": "519",
@@ -3315,7 +3589,9 @@
           },
           "item_id": 6180,
           "chance_classic_percent": 60,
-          "icon": "inv_chest_chain_14"
+          "icon": "inv_chest_chain_14",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/519"
         },
         {
           "name": {
@@ -3324,7 +3600,9 @@
           },
           "item_id": 3188,
           "chance_classic_percent": 40,
-          "icon": "inv_sword_09"
+          "icon": "inv_sword_09",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/519"
         }
       ],
       "source": "https://foreverdb.net/rare/519",
@@ -3333,7 +3611,9 @@
       "notes": {
         "fr": "Objets et taux de butin Classic, non confirmés sur Forever.",
         "en": "Classic item drops and chances, not yet confirmed on Forever."
-      }
+      },
+      "beta_level30_in_scope": true,
+      "loot_coverage": "notable_only_not_complete"
     },
     {
       "id": "5808",
@@ -3368,7 +3648,9 @@
       "notes": {
         "fr": "Présence signalée sur Forever par 1 joueur (ForeverDB). Les coordonnées et le délai restent issus de Classic.",
         "en": "Seen on Forever by 1 player (ForeverDB); coordinates and respawn timer remain Classic references."
-      }
+      },
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "10356",
@@ -3396,7 +3678,9 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "classic_reference"
+      "coordinate_status": "classic_reference",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "1910",
@@ -3424,7 +3708,9 @@
           },
           "item_id": null,
           "chance_classic_percent": 25.4,
-          "icon": "inv_weapon_shortblade_01"
+          "icon": "inv_weapon_shortblade_01",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/1910"
         }
       ],
       "source": "https://foreverdb.net/rare/1910",
@@ -3434,12 +3720,15 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "classic_reference"
+      "coordinate_status": "classic_reference",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "notable_only_not_complete"
     },
     {
       "id": "12433",
       "name": {
-        "fr": "Krethis Shadowspinner",
+        "fr": "Krethis Tisse-l'ombre",
         "en": "Krethis Shadowspinner"
       },
       "zone": "tirisfal",
@@ -3462,12 +3751,15 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "classic_reference"
+      "coordinate_status": "classic_reference",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "5826",
       "name": {
-        "fr": "Geolord Mottle",
+        "fr": "Géoseigneur Mottle",
         "en": "Geolord Mottle"
       },
       "zone": "durotar",
@@ -3498,12 +3790,15 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "classic_reference"
+      "coordinate_status": "classic_reference",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "5809",
       "name": {
-        "fr": "Watch Commander Zalaphil",
+        "fr": "Commandant de garde Zalaphil",
         "en": "Watch Commander Zalaphil"
       },
       "zone": "durotar",
@@ -3530,12 +3825,15 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "classic_reference"
+      "coordinate_status": "classic_reference",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "5823",
       "name": {
-        "fr": "Death Flayer",
+        "fr": "Écorcheur mortel",
         "en": "Death Flayer"
       },
       "zone": "durotar",
@@ -3558,12 +3856,15 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "classic_reference"
+      "coordinate_status": "classic_reference",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "5822",
       "name": {
-        "fr": "Felweaver Scornn",
+        "fr": "Scornn Tisse-corruption",
         "en": "Felweaver Scornn"
       },
       "zone": "durotar",
@@ -3594,7 +3895,10 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "classic_reference"
+      "coordinate_status": "classic_reference",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "5865",
@@ -3622,12 +3926,14 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "classic_reference"
+      "coordinate_status": "classic_reference",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "3056",
       "name": {
-        "fr": "Ghost Howl",
+        "fr": "Hurlement fantôme",
         "en": "Ghost Howl"
       },
       "zone": "mulgore",
@@ -3658,7 +3964,10 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "classic_reference"
+      "coordinate_status": "classic_reference",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "521",
@@ -3730,7 +4039,9 @@
           },
           "item_id": 3018,
           "chance_classic_percent": 75,
-          "icon": "inv_misc_cape_03"
+          "icon": "inv_misc_cape_03",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/521"
         },
         {
           "name": {
@@ -3739,7 +4050,9 @@
           },
           "item_id": 3227,
           "chance_classic_percent": 25,
-          "icon": "inv_staff_01"
+          "icon": "inv_staff_01",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/521"
         }
       ],
       "source": "https://foreverdb.net/rare/521",
@@ -3749,12 +4062,14 @@
         "fr": "La source documente également quatre repères dans le Bois de la Pénombre : 70,6/26,6 ; 67,3/26,8 ; 64,5/26,7 ; 62/24,9. Seuls les douze points en forêt d’Elwynn sont dessinés.",
         "en": "The source also records four Duskwood spawns: 70.6/26.6, 67.3/26.8, 64.5/26.7, 62/24.9. Only 12 Elwynn locations are plotted."
       },
-      "coordinate_status": "classic_reference"
+      "coordinate_status": "classic_reference",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "notable_only_not_complete"
     },
     {
       "id": "12432",
       "name": {
-        "fr": "Old Vicejaw",
+        "fr": "Vieux Mâchoire-de-vice",
         "en": "Old Vicejaw"
       },
       "zone": "silverpine",
@@ -3777,12 +4092,15 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "classic_reference"
+      "coordinate_status": "classic_reference",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "2172",
       "name": {
-        "fr": "Strider Clutchmother",
+        "fr": "Matriarche trotteuse",
         "en": "Strider Clutchmother"
       },
       "zone": "darkshore",
@@ -3805,12 +4123,15 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "classic_reference"
+      "coordinate_status": "classic_reference",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "3652",
       "name": {
-        "fr": "Trigore the Lasher",
+        "fr": "Trigore le Flagelleur",
         "en": "Trigore the Lasher"
       },
       "zone": "barrens",
@@ -3833,7 +4154,9 @@
           },
           "item_id": 5426,
           "chance_classic_percent": 40,
-          "icon": "inv_weapon_shortblade_01"
+          "icon": "inv_weapon_shortblade_01",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/3652"
         },
         {
           "name": {
@@ -3842,7 +4165,9 @@
           },
           "item_id": 5425,
           "chance_classic_percent": 60,
-          "icon": "inv_belt_09"
+          "icon": "inv_belt_09",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/3652"
         }
       ],
       "source": "https://foreverdb.net/rare/3652",
@@ -3852,7 +4177,10 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "classic_reference"
+      "coordinate_status": "classic_reference",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "notable_only_not_complete"
     },
     {
       "id": "3672",
@@ -3880,7 +4208,9 @@
           },
           "item_id": 5423,
           "chance_classic_percent": 35,
-          "icon": "inv_weapon_shortblade_01"
+          "icon": "inv_weapon_shortblade_01",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/3672"
         },
         {
           "name": {
@@ -3889,7 +4219,9 @@
           },
           "item_id": 5422,
           "chance_classic_percent": 65,
-          "icon": "inv_pants_06"
+          "icon": "inv_pants_06",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/3672"
         }
       ],
       "source": "https://foreverdb.net/rare/3672",
@@ -3899,7 +4231,9 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "classic_reference"
+      "coordinate_status": "classic_reference",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "notable_only_not_complete"
     },
     {
       "id": "3398",
@@ -3927,7 +4261,9 @@
           },
           "item_id": 5183,
           "chance_classic_percent": 25,
-          "icon": "inv_misc_orb_03"
+          "icon": "inv_misc_orb_03",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/3398"
         },
         {
           "name": {
@@ -3936,7 +4272,9 @@
           },
           "item_id": 5182,
           "chance_classic_percent": 75,
-          "icon": "inv_sword_04"
+          "icon": "inv_sword_04",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/3398"
         }
       ],
       "source": "https://foreverdb.net/rare/3398",
@@ -3946,12 +4284,15 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "classic_reference"
+      "coordinate_status": "classic_reference",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "notable_only_not_complete"
     },
     {
       "id": "5834",
       "name": {
-        "fr": "Azzere the Skyblade",
+        "fr": "Azzere la Lame céleste",
         "en": "Azzere the Skyblade"
       },
       "zone": "barrens",
@@ -3974,12 +4315,15 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "classic_reference"
+      "coordinate_status": "classic_reference",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "1424",
       "name": {
-        "fr": "Master Digger",
+        "fr": "Maître terrassier",
         "en": "Master Digger"
       },
       "zone": "westfall",
@@ -4002,7 +4346,9 @@
           },
           "item_id": 6205,
           "chance_classic_percent": 25,
-          "icon": "inv_hammer_04"
+          "icon": "inv_hammer_04",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/1424"
         }
       ],
       "source": "https://foreverdb.net/rare/1424",
@@ -4012,7 +4358,10 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "classic_reference"
+      "coordinate_status": "classic_reference",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "notable_only_not_complete"
     },
     {
       "id": "520",
@@ -4040,7 +4389,9 @@
           },
           "item_id": 6179,
           "chance_classic_percent": 60,
-          "icon": "inv_misc_cape_03"
+          "icon": "inv_misc_cape_03",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/520"
         },
         {
           "name": {
@@ -4049,7 +4400,9 @@
           },
           "item_id": 2235,
           "chance_classic_percent": 40,
-          "icon": "inv_weapon_shortblade_01"
+          "icon": "inv_weapon_shortblade_01",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/520"
         }
       ],
       "source": "https://foreverdb.net/rare/520",
@@ -4059,12 +4412,14 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "classic_reference"
+      "coordinate_status": "classic_reference",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "notable_only_not_complete"
     },
     {
       "id": "14271",
       "name": {
-        "fr": "Ribchaser",
+        "fr": "Chasse-côtes",
         "en": "Ribchaser"
       },
       "zone": "redridge",
@@ -4135,7 +4490,9 @@
           },
           "item_id": 1214,
           "chance_classic_percent": 1,
-          "icon": "inv_mace_01"
+          "icon": "inv_mace_01",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/14271"
         }
       ],
       "source": "https://foreverdb.net/rare/14271",
@@ -4145,12 +4502,15 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "classic_reference"
+      "coordinate_status": "classic_reference",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "notable_only_not_complete"
     },
     {
       "id": "14269",
       "name": {
-        "fr": "Seeker Aqualon",
+        "fr": "Aqualon le Chercheur",
         "en": "Seeker Aqualon"
       },
       "zone": "redridge",
@@ -4181,7 +4541,10 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "classic_reference"
+      "coordinate_status": "classic_reference",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "10643",
@@ -4209,7 +4572,10 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "classic_reference"
+      "coordinate_status": "classic_reference",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "6652",
@@ -4255,7 +4621,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "classic_reference"
+      "coordinate_status": "classic_reference",
+      "beta_level30_in_scope": false
     },
     {
       "id": "13896",
@@ -4283,7 +4650,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "classic_reference"
+      "coordinate_status": "classic_reference",
+      "beta_level30_in_scope": false
     },
     {
       "id": "10196",
@@ -4319,7 +4687,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "classic_reference"
+      "coordinate_status": "classic_reference",
+      "beta_level30_in_scope": false
     },
     {
       "id": "10202",
@@ -4347,7 +4716,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "classic_reference"
+      "coordinate_status": "classic_reference",
+      "beta_level30_in_scope": false
     },
     {
       "id": "14471",
@@ -4375,7 +4745,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "classic_reference"
+      "coordinate_status": "classic_reference",
+      "beta_level30_in_scope": false
     },
     {
       "id": "1911",
@@ -4403,7 +4774,9 @@
           },
           "item_id": 4303,
           "chance_classic_percent": 25,
-          "icon": "inv_mace_01"
+          "icon": "inv_mace_01",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/1911"
         }
       ],
       "source": "https://foreverdb.net/rare/1911",
@@ -4415,12 +4788,14 @@
       },
       "coordinate_status": "classic_reference",
       "coordinate_source": "https://foreverdb.net/rare/1911",
-      "source_reviewed_at": "2026-10-10"
+      "source_reviewed_at": "2026-10-10",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "notable_only_not_complete"
     },
     {
       "id": "10358",
       "name": {
-        "fr": "Fellicent's Shade",
+        "fr": "Ombre de Fellicent",
         "en": "Fellicent's Shade"
       },
       "zone": "tirisfal",
@@ -4445,7 +4820,10 @@
       },
       "coordinate_status": "classic_reference",
       "coordinate_source": "https://foreverdb.net/rare/10358",
-      "source_reviewed_at": "2026-10-10"
+      "source_reviewed_at": "2026-10-10",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "14429",
@@ -4473,12 +4851,15 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "classic_reference"
+      "coordinate_status": "classic_reference",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "1260",
       "name": {
-        "fr": "Great Father Arctikus",
+        "fr": "Grand-père Arctikus",
         "en": "Great Father Arctikus"
       },
       "zone": "dun-morogh",
@@ -4521,7 +4902,9 @@
           },
           "item_id": 3223,
           "chance_classic_percent": 25,
-          "icon": "inv_staff_01"
+          "icon": "inv_staff_01",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/1260"
         }
       ],
       "source": "https://foreverdb.net/rare/1260",
@@ -4531,12 +4914,15 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "classic_reference"
+      "coordinate_status": "classic_reference",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "notable_only_not_complete"
     },
     {
       "id": "1119",
       "name": {
-        "fr": "Hammerspine",
+        "fr": "Marteau-d'échine",
         "en": "Hammerspine"
       },
       "zone": "dun-morogh",
@@ -4559,7 +4945,9 @@
           },
           "item_id": 2254,
           "chance_classic_percent": 25,
-          "icon": "inv_hammer_04"
+          "icon": "inv_hammer_04",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/1119"
         }
       ],
       "source": "https://foreverdb.net/rare/1119",
@@ -4571,12 +4959,15 @@
       },
       "coordinate_status": "classic_reference",
       "coordinate_source": "https://foreverdb.net/rare/1119",
-      "source_reviewed_at": "2026-10-10"
+      "source_reviewed_at": "2026-10-10",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "notable_only_not_complete"
     },
     {
       "id": "5824",
       "name": {
-        "fr": "Captain Flat Tusk",
+        "fr": "Capitaine Défense-plate",
         "en": "Captain Flat Tusk"
       },
       "zone": "durotar",
@@ -4607,7 +4998,10 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "classic_reference"
+      "coordinate_status": "classic_reference",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "3470",
@@ -4635,7 +5029,9 @@
           },
           "item_id": 5111,
           "chance_classic_percent": 75,
-          "icon": "inv_misc_cape_03"
+          "icon": "inv_misc_cape_03",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/3470"
         },
         {
           "name": {
@@ -4644,7 +5040,9 @@
           },
           "item_id": 5112,
           "chance_classic_percent": 25,
-          "icon": "inv_weapon_shortblade_01"
+          "icon": "inv_weapon_shortblade_01",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/3470"
         }
       ],
       "source": "https://foreverdb.net/rare/3470",
@@ -4654,7 +5052,10 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "classic_reference"
+      "coordinate_status": "classic_reference",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "notable_only_not_complete"
     },
     {
       "id": "5786",
@@ -4686,12 +5087,15 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "classic_reference"
+      "coordinate_status": "classic_reference",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "5787",
       "name": {
-        "fr": "Enforcer Emilgund",
+        "fr": "Exécuteur Emilgund",
         "en": "Enforcer Emilgund"
       },
       "zone": "mulgore",
@@ -4716,12 +5120,15 @@
       },
       "coordinate_status": "classic_reference",
       "coordinate_source": "https://foreverdb.net/rare/5787",
-      "source_reviewed_at": "2026-10-10"
+      "source_reviewed_at": "2026-10-10",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "5785",
       "name": {
-        "fr": "Sister Hatelash",
+        "fr": "Sœur Fouet-de-haine",
         "en": "Sister Hatelash"
       },
       "zone": "mulgore",
@@ -4744,7 +5151,9 @@
           },
           "item_id": 4772,
           "chance_classic_percent": 46.2,
-          "icon": "inv_misc_cape_03"
+          "icon": "inv_misc_cape_03",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/5785"
         }
       ],
       "source": "https://foreverdb.net/rare/5785",
@@ -4754,12 +5163,15 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "classic_reference"
+      "coordinate_status": "classic_reference",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "notable_only_not_complete"
     },
     {
       "id": "5863",
       "name": {
-        "fr": "Geopriest Gukk'rok",
+        "fr": "Géoprêtre Gukk'rok",
         "en": "Geopriest Gukk'rok"
       },
       "zone": "mulgore",
@@ -4782,7 +5194,9 @@
           },
           "item_id": null,
           "chance_classic_percent": 25,
-          "icon": "inv_staff_01"
+          "icon": "inv_staff_01",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/5863"
         }
       ],
       "source": "https://foreverdb.net/rare/5863",
@@ -4794,12 +5208,15 @@
       },
       "coordinate_status": "classic_reference",
       "coordinate_source": "https://foreverdb.net/rare/5863",
-      "source_reviewed_at": "2026-10-10"
+      "source_reviewed_at": "2026-10-10",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "notable_only_not_complete"
     },
     {
       "id": "5864",
       "name": {
-        "fr": "Swinegart Spearhide",
+        "fr": "Swinegart Peau-de-lance",
         "en": "Swinegart Spearhide"
       },
       "zone": "mulgore",
@@ -4824,7 +5241,10 @@
       },
       "coordinate_status": "classic_reference",
       "coordinate_source": "https://foreverdb.net/rare/5864",
-      "source_reviewed_at": "2026-10-10"
+      "source_reviewed_at": "2026-10-10",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "14225",
@@ -4854,12 +5274,13 @@
       },
       "coordinate_status": "classic_reference",
       "coordinate_source": "https://foreverdb.net/rare/14225",
-      "source_reviewed_at": "2026-10-10"
+      "source_reviewed_at": "2026-10-10",
+      "beta_level30_in_scope": false
     },
     {
       "id": "100",
       "name": {
-        "fr": "Gruff Swiftbite",
+        "fr": "Gruff Morsure-vive",
         "en": "Gruff Swiftbite"
       },
       "zone": "elwynn",
@@ -4898,7 +5319,10 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "classic_reference"
+      "coordinate_status": "classic_reference",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "503",
@@ -4959,7 +5383,8 @@
       },
       "coordinate_status": "classic_reference",
       "coordinate_source": "https://foreverdb.net/rare/503",
-      "source_reviewed_at": "2026-10-10"
+      "source_reviewed_at": "2026-10-10",
+      "beta_level30_in_scope": false
     },
     {
       "id": "3581",
@@ -4993,7 +5418,8 @@
       },
       "coordinate_status": "classic_reference",
       "coordinate_source": "https://foreverdb.net/rare/3581",
-      "source_reviewed_at": "2026-10-10"
+      "source_reviewed_at": "2026-10-10",
+      "beta_level30_in_scope": false
     },
     {
       "id": "12431",
@@ -5021,7 +5447,9 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "classic_reference"
+      "coordinate_status": "classic_reference",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "1920",
@@ -5049,7 +5477,9 @@
           },
           "item_id": 4436,
           "chance_classic_percent": 60,
-          "icon": "inv_belt_09"
+          "icon": "inv_belt_09",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/1920"
         },
         {
           "name": {
@@ -5058,7 +5488,9 @@
           },
           "item_id": 4437,
           "chance_classic_percent": 25,
-          "icon": "inv_staff_01"
+          "icon": "inv_staff_01",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/1920"
         }
       ],
       "source": "https://foreverdb.net/rare/1920",
@@ -5068,7 +5500,9 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "classic_reference"
+      "coordinate_status": "classic_reference",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "notable_only_not_complete"
     },
     {
       "id": "2283",
@@ -5096,7 +5530,9 @@
           },
           "item_id": 5969,
           "chance_classic_percent": 75,
-          "icon": "inv_misc_cape_03"
+          "icon": "inv_misc_cape_03",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/2283"
         },
         {
           "name": {
@@ -5105,7 +5541,9 @@
           },
           "item_id": 6628,
           "chance_classic_percent": 25,
-          "icon": "inv_gauntlets_04"
+          "icon": "inv_gauntlets_04",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/2283"
         }
       ],
       "source": "https://foreverdb.net/rare/2283",
@@ -5117,12 +5555,14 @@
       },
       "coordinate_status": "classic_reference",
       "coordinate_source": "https://foreverdb.net/rare/2283",
-      "source_reviewed_at": "2026-10-10"
+      "source_reviewed_at": "2026-10-10",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "notable_only_not_complete"
     },
     {
       "id": "7017",
       "name": {
-        "fr": "Lord Sinslayer",
+        "fr": "Seigneur Tue-péchés",
         "en": "Lord Sinslayer"
       },
       "zone": "darkshore",
@@ -5149,12 +5589,15 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "classic_reference"
+      "coordinate_status": "classic_reference",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "7015",
       "name": {
-        "fr": "Flagglemurk the Cruel",
+        "fr": "Flagglemurk le Cruel",
         "en": "Flagglemurk the Cruel"
       },
       "zone": "darkshore",
@@ -5183,12 +5626,15 @@
       },
       "coordinate_status": "classic_reference",
       "coordinate_source": "https://foreverdb.net/rare/7015",
-      "source_reviewed_at": "2026-10-10"
+      "source_reviewed_at": "2026-10-10",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "2192",
       "name": {
-        "fr": "Firecaller Radison",
+        "fr": "Radison l'Invocateur de feu",
         "en": "Firecaller Radison"
       },
       "zone": "darkshore",
@@ -5211,12 +5657,15 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "classic_reference"
+      "coordinate_status": "classic_reference",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "3270",
       "name": {
-        "fr": "Elder Mystic Razorsnout",
+        "fr": "Ancien mystique Tranchegroin",
         "en": "Elder Mystic Razorsnout"
       },
       "zone": "barrens",
@@ -5239,7 +5688,9 @@
           },
           "item_id": 4768,
           "chance_classic_percent": 50,
-          "icon": "inv_gauntlets_04"
+          "icon": "inv_gauntlets_04",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/3270"
         },
         {
           "name": {
@@ -5248,7 +5699,9 @@
           },
           "item_id": 4771,
           "chance_classic_percent": 50,
-          "icon": "inv_misc_cape_03"
+          "icon": "inv_misc_cape_03",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/3270"
         }
       ],
       "source": "https://foreverdb.net/rare/3270",
@@ -5260,12 +5713,15 @@
       },
       "coordinate_status": "classic_reference",
       "coordinate_source": "https://foreverdb.net/rare/3270",
-      "source_reviewed_at": "2026-10-10"
+      "source_reviewed_at": "2026-10-10",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "notable_only_not_complete"
     },
     {
       "id": "5841",
       "name": {
-        "fr": "Rocklance",
+        "fr": "Lance-de-pierre",
         "en": "Rocklance"
       },
       "zone": "barrens",
@@ -5290,12 +5746,15 @@
       },
       "coordinate_status": "classic_reference",
       "coordinate_source": "https://foreverdb.net/rare/5841",
-      "source_reviewed_at": "2026-10-10"
+      "source_reviewed_at": "2026-10-10",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "5836",
       "name": {
-        "fr": "Engineer Whirleygig",
+        "fr": "Ingénieur Tournevis",
         "en": "Engineer Whirleygig"
       },
       "zone": "barrens",
@@ -5320,12 +5779,15 @@
       },
       "coordinate_status": "classic_reference",
       "coordinate_source": "https://foreverdb.net/rare/5836",
-      "source_reviewed_at": "2026-10-10"
+      "source_reviewed_at": "2026-10-10",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "5835",
       "name": {
-        "fr": "Foreman Grills",
+        "fr": "Contremaître Grills",
         "en": "Foreman Grills"
       },
       "zone": "barrens",
@@ -5350,12 +5812,15 @@
       },
       "coordinate_status": "classic_reference",
       "coordinate_source": "https://foreverdb.net/rare/5835",
-      "source_reviewed_at": "2026-10-10"
+      "source_reviewed_at": "2026-10-10",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "3295",
       "name": {
-        "fr": "Sludge Beast",
+        "fr": "Bête de vase",
         "en": "Sludge Beast"
       },
       "zone": "barrens",
@@ -5380,12 +5845,15 @@
       },
       "coordinate_status": "classic_reference",
       "coordinate_source": "https://foreverdb.net/rare/3295",
-      "source_reviewed_at": "2026-10-10"
+      "source_reviewed_at": "2026-10-10",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "5849",
       "name": {
-        "fr": "Digger Flameforge",
+        "fr": "Terrassier Forgeflamme",
         "en": "Digger Flameforge"
       },
       "zone": "barrens",
@@ -5408,7 +5876,9 @@
           },
           "item_id": 4785,
           "chance_classic_percent": 20,
-          "icon": "inv_belt_09"
+          "icon": "inv_belt_09",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/5849"
         }
       ],
       "source": "https://foreverdb.net/rare/5849",
@@ -5420,7 +5890,10 @@
       },
       "coordinate_status": "classic_reference",
       "coordinate_source": "https://foreverdb.net/rare/5849",
-      "source_reviewed_at": "2026-10-10"
+      "source_reviewed_at": "2026-10-10",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "notable_only_not_complete"
     },
     {
       "id": "classic-barrens-hannah-bladeleaf",
@@ -5443,7 +5916,9 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "classic-barrens-heggin-stonewhisker",
@@ -5466,7 +5941,9 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "classic-barrens-marcus-bel",
@@ -5489,12 +5966,14 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "3253",
       "name": {
-        "fr": "Silithid Harvester",
+        "fr": "Moissonneur silithide",
         "en": "Silithid Harvester"
       },
       "zone": "barrens",
@@ -5519,12 +5998,15 @@
       },
       "coordinate_status": "classic_reference",
       "coordinate_source": "https://foreverdb.net/rare/3253",
-      "source_reviewed_at": "2026-10-10"
+      "source_reviewed_at": "2026-10-10",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "5832",
       "name": {
-        "fr": "Thunderstomp",
+        "fr": "Piétine-tonnerre",
         "en": "Thunderstomp"
       },
       "zone": "barrens",
@@ -5549,7 +6031,10 @@
       },
       "coordinate_status": "classic_reference",
       "coordinate_source": "https://foreverdb.net/rare/5832",
-      "source_reviewed_at": "2026-10-10"
+      "source_reviewed_at": "2026-10-10",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "classic-barrens-aean-swiftriver",
@@ -5572,7 +6057,9 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "classic-barrens-malgin-barleybrew",
@@ -5595,7 +6082,9 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "classic-barrens-thora-feathermoon",
@@ -5618,12 +6107,14 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "5859",
       "name": {
-        "fr": "Hagg Taurenbane",
+        "fr": "Hagg Fléau-des-taurens",
         "en": "Hagg Taurenbane"
       },
       "zone": "barrens",
@@ -5656,7 +6147,10 @@
       },
       "coordinate_status": "classic_reference",
       "coordinate_source": "https://foreverdb.net/rare/5859",
-      "source_reviewed_at": "2026-10-10"
+      "source_reviewed_at": "2026-10-10",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "5827",
@@ -5686,12 +6180,14 @@
       },
       "coordinate_status": "classic_reference",
       "coordinate_source": "https://foreverdb.net/rare/5827",
-      "source_reviewed_at": "2026-10-10"
+      "source_reviewed_at": "2026-10-10",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "5851",
       "name": {
-        "fr": "Captain Gerogg Hammertoe",
+        "fr": "Capitaine Gerogg Marteau-d'orteil",
         "en": "Captain Gerogg Hammertoe"
       },
       "zone": "barrens",
@@ -5716,12 +6212,15 @@
       },
       "coordinate_status": "classic_reference",
       "coordinate_source": "https://foreverdb.net/rare/5851",
-      "source_reviewed_at": "2026-10-10"
+      "source_reviewed_at": "2026-10-10",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "14426",
       "name": {
-        "fr": "Harb Foulmountain",
+        "fr": "Harb Montagne-fétide",
         "en": "Harb Foulmountain"
       },
       "zone": "barrens",
@@ -5746,7 +6245,10 @@
       },
       "coordinate_status": "classic_reference",
       "coordinate_source": "https://foreverdb.net/rare/14426",
-      "source_reviewed_at": "2026-10-10"
+      "source_reviewed_at": "2026-10-10",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "classic-barrens-ambassador-bloodrage",
@@ -5769,7 +6271,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-barrens-darkmist-widow",
@@ -5792,12 +6295,13 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "14267",
       "name": {
-        "fr": "Emogg the Crusher",
+        "fr": "Emogg l'Écraseur",
         "en": "Emogg the Crusher"
       },
       "zone": "loch-modan",
@@ -5820,7 +6324,9 @@
           },
           "item_id": 2821,
           "chance_classic_percent": 1,
-          "icon": "inv_mace_01"
+          "icon": "inv_mace_01",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/14267"
         }
       ],
       "source": "https://foreverdb.net/rare/14267",
@@ -5832,12 +6338,15 @@
       },
       "coordinate_status": "classic_reference",
       "coordinate_source": "https://foreverdb.net/rare/14267",
-      "source_reviewed_at": "2026-10-10"
+      "source_reviewed_at": "2026-10-10",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "notable_only_not_complete"
     },
     {
       "id": "14266",
       "name": {
-        "fr": "Shanda the Spinner",
+        "fr": "Shanda la Tisseuse",
         "en": "Shanda the Spinner"
       },
       "zone": "loch-modan",
@@ -5862,7 +6371,10 @@
       },
       "coordinate_status": "classic_reference",
       "coordinate_source": "https://foreverdb.net/rare/14266",
-      "source_reviewed_at": "2026-10-10"
+      "source_reviewed_at": "2026-10-10",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "1399",
@@ -5890,7 +6402,9 @@
           },
           "item_id": 3571,
           "chance_classic_percent": 50,
-          "icon": "inv_mace_01"
+          "icon": "inv_mace_01",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/1399"
         },
         {
           "name": {
@@ -5899,7 +6413,9 @@
           },
           "item_id": 2241,
           "chance_classic_percent": 50,
-          "icon": "inv_misc_cape_03"
+          "icon": "inv_misc_cape_03",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/1399"
         }
       ],
       "source": "https://foreverdb.net/rare/1399",
@@ -5911,12 +6427,15 @@
       },
       "coordinate_status": "classic_reference",
       "coordinate_source": "https://foreverdb.net/rare/1399",
-      "source_reviewed_at": "2026-10-10"
+      "source_reviewed_at": "2026-10-10",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "notable_only_not_complete"
     },
     {
       "id": "1398",
       "name": {
-        "fr": "Boss Galgosh",
+        "fr": "Chef Galgosh",
         "en": "Boss Galgosh"
       },
       "zone": "loch-modan",
@@ -5939,7 +6458,9 @@
           },
           "item_id": 1215,
           "chance_classic_percent": 60,
-          "icon": "inv_belt_09"
+          "icon": "inv_belt_09",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/1398"
         },
         {
           "name": {
@@ -5948,7 +6469,9 @@
           },
           "item_id": 1938,
           "chance_classic_percent": 40,
-          "icon": "inv_mace_01"
+          "icon": "inv_mace_01",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/1398"
         }
       ],
       "source": "https://foreverdb.net/rare/1398",
@@ -5960,12 +6483,15 @@
       },
       "coordinate_status": "classic_reference",
       "coordinate_source": "https://foreverdb.net/rare/1398",
-      "source_reviewed_at": "2026-10-10"
+      "source_reviewed_at": "2026-10-10",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "notable_only_not_complete"
     },
     {
       "id": "2476",
       "name": {
-        "fr": "Large Loch Crocolisk",
+        "fr": "Grand crocilisque du Loch",
         "en": "Large Loch Crocolisk"
       },
       "zone": "loch-modan",
@@ -5992,7 +6518,9 @@
           },
           "item_id": 3563,
           "chance_classic_percent": 65,
-          "icon": "inv_pants_06"
+          "icon": "inv_pants_06",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/2476"
         },
         {
           "name": {
@@ -6001,7 +6529,9 @@
           },
           "item_id": 6197,
           "chance_classic_percent": 35,
-          "icon": "inv_chest_leather_03"
+          "icon": "inv_chest_leather_03",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/2476"
         }
       ],
       "source": "https://foreverdb.net/rare/2476",
@@ -6013,12 +6543,15 @@
       },
       "coordinate_status": "classic_reference",
       "coordinate_source": "https://foreverdb.net/rare/2476",
-      "source_reviewed_at": "2026-10-10"
+      "source_reviewed_at": "2026-10-10",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "notable_only_not_complete"
     },
     {
       "id": "596",
       "name": {
-        "fr": "Brainwashed Noble",
+        "fr": "Noble manipulé",
         "en": "Brainwashed Noble"
       },
       "zone": "westfall",
@@ -6041,7 +6574,9 @@
           },
           "item_id": 5967,
           "chance_classic_percent": 70,
-          "icon": "inv_belt_09"
+          "icon": "inv_belt_09",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/596"
         },
         {
           "name": {
@@ -6050,7 +6585,9 @@
           },
           "item_id": 3902,
           "chance_classic_percent": 30,
-          "icon": "inv_staff_01"
+          "icon": "inv_staff_01",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/596"
         }
       ],
       "source": "https://foreverdb.net/rare/596",
@@ -6062,12 +6599,15 @@
       },
       "coordinate_status": "classic_reference",
       "coordinate_source": "https://foreverdb.net/rare/596",
-      "source_reviewed_at": "2026-10-10"
+      "source_reviewed_at": "2026-10-10",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "notable_only_not_complete"
     },
     {
       "id": "506",
       "name": {
-        "fr": "Sergeant Brashclaw",
+        "fr": "Sergent Griffe-hardie",
         "en": "Sergeant Brashclaw"
       },
       "zone": "westfall",
@@ -6090,7 +6630,9 @@
           },
           "item_id": null,
           "chance_classic_percent": 75,
-          "icon": "inv_spear_05"
+          "icon": "inv_spear_05",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/506"
         },
         {
           "name": {
@@ -6099,7 +6641,9 @@
           },
           "item_id": null,
           "chance_classic_percent": 25,
-          "icon": "inv_axe_09"
+          "icon": "inv_axe_09",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/506"
         }
       ],
       "source": "https://foreverdb.net/rare/506",
@@ -6111,7 +6655,10 @@
       },
       "coordinate_status": "classic_reference",
       "coordinate_source": "https://foreverdb.net/rare/506",
-      "source_reviewed_at": "2026-10-10"
+      "source_reviewed_at": "2026-10-10",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "notable_only_not_complete"
     },
     {
       "id": "572",
@@ -6147,7 +6694,9 @@
           },
           "item_id": 1314,
           "chance_classic_percent": 75,
-          "icon": "inv_gauntlets_04"
+          "icon": "inv_gauntlets_04",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/572"
         },
         {
           "name": {
@@ -6156,7 +6705,9 @@
           },
           "item_id": 1387,
           "chance_classic_percent": 25,
-          "icon": "inv_weapon_shortblade_01"
+          "icon": "inv_weapon_shortblade_01",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/572"
         }
       ],
       "source": "https://foreverdb.net/rare/572",
@@ -6168,12 +6719,15 @@
       },
       "coordinate_status": "classic_reference",
       "coordinate_source": "https://foreverdb.net/rare/572",
-      "source_reviewed_at": "2026-10-10"
+      "source_reviewed_at": "2026-10-10",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "notable_only_not_complete"
     },
     {
       "id": "14272",
       "name": {
-        "fr": "Snarlflare",
+        "fr": "Flamme-grogne",
         "en": "Snarlflare"
       },
       "zone": "redridge",
@@ -6242,7 +6796,10 @@
       },
       "coordinate_status": "classic_reference",
       "coordinate_source": "https://foreverdb.net/rare/14272",
-      "source_reviewed_at": "2026-10-10"
+      "source_reviewed_at": "2026-10-10",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "14270",
@@ -6346,7 +6903,9 @@
           },
           "item_id": 1469,
           "chance_classic_percent": 0.5,
-          "icon": "inv_sword_04"
+          "icon": "inv_sword_04",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/14270"
         }
       ],
       "source": "https://foreverdb.net/rare/14270",
@@ -6358,12 +6917,15 @@
       },
       "coordinate_status": "classic_reference",
       "coordinate_source": "https://foreverdb.net/rare/14270",
-      "source_reviewed_at": "2026-10-10"
+      "source_reviewed_at": "2026-10-10",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "notable_only_not_complete"
     },
     {
       "id": "616",
       "name": {
-        "fr": "Chatter",
+        "fr": "Bavard",
         "en": "Chatter"
       },
       "zone": "redridge",
@@ -6438,7 +7000,9 @@
           },
           "item_id": 3229,
           "chance_classic_percent": 25,
-          "icon": "inv_belt_09"
+          "icon": "inv_belt_09",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/616"
         }
       ],
       "source": "https://foreverdb.net/rare/616",
@@ -6450,12 +7014,15 @@
       },
       "coordinate_status": "classic_reference",
       "coordinate_source": "https://foreverdb.net/rare/616",
-      "source_reviewed_at": "2026-10-10"
+      "source_reviewed_at": "2026-10-10",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "notable_only_not_complete"
     },
     {
       "id": "14273",
       "name": {
-        "fr": "Boulderheart",
+        "fr": "Cœur-de-roche",
         "en": "Boulderheart"
       },
       "zone": "redridge",
@@ -6480,12 +7047,15 @@
       },
       "coordinate_status": "classic_reference",
       "coordinate_source": "https://foreverdb.net/rare/14273",
-      "source_reviewed_at": "2026-10-10"
+      "source_reviewed_at": "2026-10-10",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "947",
       "name": {
-        "fr": "Rohh the Silent",
+        "fr": "Rohh le Silencieux",
         "en": "Rohh the Silent"
       },
       "zone": "redridge",
@@ -6556,7 +7126,9 @@
           },
           "item_id": 4446,
           "chance_classic_percent": 25,
-          "icon": "inv_weapon_shortblade_01"
+          "icon": "inv_weapon_shortblade_01",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/947"
         },
         {
           "name": {
@@ -6565,7 +7137,9 @@
           },
           "item_id": 4447,
           "chance_classic_percent": 75,
-          "icon": "inv_misc_cape_03"
+          "icon": "inv_misc_cape_03",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/947"
         }
       ],
       "source": "https://foreverdb.net/rare/947",
@@ -6577,7 +7151,10 @@
       },
       "coordinate_status": "classic_reference",
       "coordinate_source": "https://foreverdb.net/rare/947",
-      "source_reviewed_at": "2026-10-10"
+      "source_reviewed_at": "2026-10-10",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "notable_only_not_complete"
     },
     {
       "id": "584",
@@ -6617,7 +7194,9 @@
           },
           "item_id": 3231,
           "chance_classic_percent": 75,
-          "icon": "inv_shoulder_01"
+          "icon": "inv_shoulder_01",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/584"
         },
         {
           "name": {
@@ -6626,7 +7205,9 @@
           },
           "item_id": 2058,
           "chance_classic_percent": 25,
-          "icon": "inv_mace_01"
+          "icon": "inv_mace_01",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/584"
         }
       ],
       "source": "https://foreverdb.net/rare/584",
@@ -6638,12 +7219,14 @@
       },
       "coordinate_status": "classic_reference",
       "coordinate_source": "https://foreverdb.net/rare/584",
-      "source_reviewed_at": "2026-10-10"
+      "source_reviewed_at": "2026-10-10",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "notable_only_not_complete"
     },
     {
       "id": "classic-stonetalon-sister-rathtalon",
       "name": {
-        "fr": "Sister Rathtalon",
+        "fr": "Sœur Rancune-serre",
         "en": "Sister Rathtalon"
       },
       "zone": "stonetalon",
@@ -6661,12 +7244,15 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "classic-stonetalon-taskmaster-whipfang",
       "name": {
-        "fr": "Taskmaster Whipfang",
+        "fr": "Sous-chef Fouet-croc",
         "en": "Taskmaster Whipfang"
       },
       "zone": "stonetalon",
@@ -6684,12 +7270,15 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "classic-stonetalon-foreman-rigger",
       "name": {
-        "fr": "Foreman Rigger",
+        "fr": "Contremaître Rigger",
         "en": "Foreman Rigger"
       },
       "zone": "stonetalon",
@@ -6707,12 +7296,15 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "classic-stonetalon-sentinel-amarassan",
       "name": {
-        "fr": "Sentinel Amarassan",
+        "fr": "Sentinelle Amarassan",
         "en": "Sentinel Amarassan"
       },
       "zone": "stonetalon",
@@ -6730,12 +7322,15 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "classic-stonetalon-sorrow-wing",
       "name": {
-        "fr": "Sorrow Wing",
+        "fr": "Aile-de-chagrin",
         "en": "Sorrow Wing"
       },
       "zone": "stonetalon",
@@ -6753,12 +7348,15 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "classic-stonetalon-sister-riven",
       "name": {
-        "fr": "Sister Riven",
+        "fr": "Sœur Riven",
         "en": "Sister Riven"
       },
       "zone": "stonetalon",
@@ -6776,12 +7374,15 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "5915",
       "name": {
-        "fr": "Brother Ravenoak",
+        "fr": "Frère Chênecorbeau",
         "en": "Brother Ravenoak"
       },
       "zone": "stonetalon",
@@ -6806,7 +7407,10 @@
       },
       "coordinate_status": "classic_reference",
       "coordinate_source": "https://foreverdb.net/rare/5915",
-      "source_reviewed_at": "2026-10-10"
+      "source_reviewed_at": "2026-10-10",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "classic-stonetalon-nal-taszar",
@@ -6829,12 +7433,14 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "classic-wailing-caverns-deviate-faerie-dragon",
       "name": {
-        "fr": "Deviate Faerie Dragon",
+        "fr": "Dragon féerique déviant",
         "en": "Deviate Faerie Dragon"
       },
       "zone": "wailing-caverns",
@@ -6844,7 +7450,30 @@
       "respawn_min_hours": 24,
       "respawn_max_hours": 24,
       "points": [],
-      "loot": [],
+      "loot": [
+        {
+          "name": {
+            "fr": "Crache-feu",
+            "en": "Firebelcher"
+          },
+          "item_id": null,
+          "icon": "inv_wand_08",
+          "chance_classic_percent": 50,
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/5912"
+        },
+        {
+          "name": {
+            "fr": "Cape d'écailles-faë",
+            "en": "Feyscale Cloak"
+          },
+          "item_id": null,
+          "icon": "inv_misc_cape_07",
+          "chance_classic_percent": 50,
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/5912"
+        }
+      ],
       "source": "https://foreverdb.net/rares",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
@@ -6852,7 +7481,10 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "name_fr_status": "wowhead_forever_fr",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "notable_only_not_complete"
     },
     {
       "id": "classic-ashenvale-rorgish-jowl",
@@ -6875,7 +7507,10 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "classic-ashenvale-akkrilus",
@@ -6898,7 +7533,9 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "classic-ashenvale-eck-alom",
@@ -6921,12 +7558,14 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "classic-ashenvale-oakpaw",
       "name": {
-        "fr": "Oakpaw",
+        "fr": "Patte-de-chêne",
         "en": "Oakpaw"
       },
       "zone": "ashenvale",
@@ -6944,7 +7583,10 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "classic-ashenvale-terrowulf-packlord",
@@ -6967,7 +7609,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-ashenvale-prince-raze",
@@ -6990,7 +7633,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-ashenvale-varo-then-s-ghost",
@@ -7013,12 +7657,13 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-alterac-rot-hide-bruiser",
       "name": {
-        "fr": "Rot Hide Bruiser",
+        "fr": "Cogneur Poil-putride",
         "en": "Rot Hide Bruiser"
       },
       "zone": "alterac",
@@ -7036,12 +7681,15 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "classic-alterac-jimmy-the-bleeder",
       "name": {
-        "fr": "Jimmy the Bleeder",
+        "fr": "Jimmy le Saigneur",
         "en": "Jimmy the Bleeder"
       },
       "zone": "alterac",
@@ -7059,12 +7707,15 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "classic-alterac-snarlmane",
       "name": {
-        "fr": "Snarlmane",
+        "fr": "Crinière-grognante",
         "en": "Snarlmane"
       },
       "zone": "alterac",
@@ -7082,7 +7733,10 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "classic-alterac-cranky-benj",
@@ -7105,7 +7759,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-alterac-gravis-slipknot",
@@ -7128,7 +7783,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-alterac-stone-fury",
@@ -7151,7 +7807,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-alterac-narillasanz",
@@ -7174,12 +7831,13 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "2090",
       "name": {
-        "fr": "Ma'ruk Wyrmscale",
+        "fr": "Ma'ruk Écaille-de-wyrm",
         "en": "Ma'ruk Wyrmscale"
       },
       "zone": "wetlands",
@@ -7203,12 +7861,15 @@
         "en": ""
       },
       "coordinate_status": "classic_reference",
-      "coordinate_source": "https://wow-guides.com/knowledge/creature-ranks"
+      "coordinate_source": "https://wow-guides.com/knowledge/creature-ranks",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "14425",
       "name": {
-        "fr": "Gnawbone",
+        "fr": "Ronge-os",
         "en": "Gnawbone"
       },
       "zone": "wetlands",
@@ -7244,12 +7905,15 @@
         "en": "Four Classic positions documented in the Fire Taboo quest reference; other positions may exist."
       },
       "coordinate_status": "classic_reference",
-      "coordinate_source": "https://foreverdb.net/quest/277-fire-taboo"
+      "coordinate_source": "https://foreverdb.net/quest/277-fire-taboo",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "1112",
       "name": {
-        "fr": "Leech Widow",
+        "fr": "Veuve-sangsue",
         "en": "Leech Widow"
       },
       "zone": "wetlands",
@@ -7273,7 +7937,10 @@
         "en": ""
       },
       "coordinate_status": "classic_reference",
-      "coordinate_source": "https://wow-guides.com/knowledge/creature-ranks"
+      "coordinate_source": "https://wow-guides.com/knowledge/creature-ranks",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "14424",
@@ -7322,12 +7989,14 @@
         "en": "Six Classic reference points out of 21 reported positions; more to document. Only one spawn at a time."
       },
       "coordinate_status": "classic_reference",
-      "coordinate_source": "https://foreverdb.net/quest/565-bartolos-yeti-fur-cloak"
+      "coordinate_source": "https://foreverdb.net/quest/565-bartolos-yeti-fur-cloak",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "2108",
       "name": {
-        "fr": "Garneg Charskull",
+        "fr": "Garneg Brûlecrâne",
         "en": "Garneg Charskull"
       },
       "zone": "wetlands",
@@ -7351,12 +8020,15 @@
         "en": ""
       },
       "coordinate_status": "classic_reference",
-      "coordinate_source": "https://wow-guides.com/knowledge/creature-ranks"
+      "coordinate_source": "https://wow-guides.com/knowledge/creature-ranks",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "1037",
       "name": {
-        "fr": "Dragonmaw Battlemaster",
+        "fr": "Maître de guerre Gueule-de-dragon",
         "en": "Dragonmaw Battlemaster"
       },
       "zone": "wetlands",
@@ -7380,7 +8052,10 @@
         "en": ""
       },
       "coordinate_status": "classic_reference",
-      "coordinate_source": "https://wow-guides.com/knowledge/creature-ranks"
+      "coordinate_source": "https://wow-guides.com/knowledge/creature-ranks",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "14433",
@@ -7409,7 +8084,10 @@
         "en": ""
       },
       "coordinate_status": "classic_reference",
-      "coordinate_source": "https://wow-guides.com/knowledge/creature-ranks"
+      "coordinate_source": "https://wow-guides.com/knowledge/creature-ranks",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "1140",
@@ -7438,7 +8116,8 @@
         "en": ""
       },
       "coordinate_status": "classic_reference",
-      "coordinate_source": "https://wow-guides.com/knowledge/creature-ranks"
+      "coordinate_source": "https://wow-guides.com/knowledge/creature-ranks",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-hillsbrad-ro-bark",
@@ -7467,12 +8146,15 @@
         "en": ""
       },
       "coordinate_status": "classic_reference",
-      "coordinate_source": "https://wow-guides.com/knowledge/creature-ranks"
+      "coordinate_source": "https://wow-guides.com/knowledge/creature-ranks",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "classic-hillsbrad-tamra-stormpike",
       "name": {
-        "fr": "Tamra Stormpike",
+        "fr": "Tamra Foudrepique",
         "en": "Tamra Stormpike"
       },
       "zone": "hillsbrad",
@@ -7496,7 +8178,10 @@
         "en": ""
       },
       "coordinate_status": "classic_reference",
-      "coordinate_source": "https://wow-guides.com/knowledge/creature-ranks"
+      "coordinate_source": "https://wow-guides.com/knowledge/creature-ranks",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "classic-hillsbrad-lady-zephris",
@@ -7525,12 +8210,13 @@
         "en": ""
       },
       "coordinate_status": "classic_reference",
-      "coordinate_source": "https://wow-guides.com/knowledge/creature-ranks"
+      "coordinate_source": "https://wow-guides.com/knowledge/creature-ranks",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-shadowfang-keep-deathsworn-captain",
       "name": {
-        "fr": "Deathsworn Captain",
+        "fr": "Capitaine lige-mort",
         "en": "Deathsworn Captain"
       },
       "zone": "shadowfang-keep",
@@ -7548,12 +8234,15 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "14280",
       "name": {
-        "fr": "Big Samras",
+        "fr": "Grand Samras",
         "en": "Big Samras"
       },
       "zone": "hillsbrad",
@@ -7577,7 +8266,10 @@
         "en": "Hillsbrad Foothills, not Arathi Highlands, according to Classic 1.12 spawn reference."
       },
       "coordinate_status": "classic_reference",
-      "coordinate_source": "https://wow-guides.com/knowledge/creature-ranks"
+      "coordinate_source": "https://wow-guides.com/knowledge/creature-ranks",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "classic-arathi-singer",
@@ -7606,7 +8298,8 @@
         "en": ""
       },
       "coordinate_status": "classic_reference",
-      "coordinate_source": "https://wow-guides.com/knowledge/creature-ranks"
+      "coordinate_source": "https://wow-guides.com/knowledge/creature-ranks",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-arathi-darbel-montrose",
@@ -7635,7 +8328,8 @@
         "en": ""
       },
       "coordinate_status": "classic_reference",
-      "coordinate_source": "https://wow-guides.com/knowledge/creature-ranks"
+      "coordinate_source": "https://wow-guides.com/knowledge/creature-ranks",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-arathi-ruul-onestone",
@@ -7664,7 +8358,8 @@
         "en": ""
       },
       "coordinate_status": "classic_reference",
-      "coordinate_source": "https://wow-guides.com/knowledge/creature-ranks"
+      "coordinate_source": "https://wow-guides.com/knowledge/creature-ranks",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-arathi-foulbelly",
@@ -7693,7 +8388,8 @@
         "en": ""
       },
       "coordinate_status": "classic_reference",
-      "coordinate_source": "https://wow-guides.com/knowledge/creature-ranks"
+      "coordinate_source": "https://wow-guides.com/knowledge/creature-ranks",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-duskwood-commander-felstrom",
@@ -7716,7 +8412,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-duskwood-fenros",
@@ -7739,7 +8436,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-duskwood-nefaru",
@@ -7762,7 +8460,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-thousand-needles-gibblesnik",
@@ -7785,7 +8484,10 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "classic-thousand-needles-achellios-the-banished",
@@ -7808,7 +8510,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-thousand-needles-heartrazor",
@@ -7831,7 +8534,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-thousand-needles-vile-sting",
@@ -7854,7 +8558,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-thousand-needles-silithid-ravager",
@@ -7877,7 +8582,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-thousand-needles-ironeye-the-invincible",
@@ -7900,12 +8606,13 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-razorfen-kraul-razorfen-spearhide",
       "name": {
-        "fr": "Razorfen Spearhide",
+        "fr": "Lancepeau tranchebauge",
         "en": "Razorfen Spearhide"
       },
       "zone": "razorfen-kraul",
@@ -7923,7 +8630,10 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "not_documented"
     },
     {
       "id": "classic-razorfen-kraul-earthcaller-halmgar",
@@ -7946,7 +8656,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-scarlet-monastery-fallen-champion",
@@ -7969,7 +8680,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-gnomeregan-dark-iron-ambassador",
@@ -7992,7 +8704,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-desolace-accursed-slitherblade",
@@ -8015,7 +8728,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-desolace-cursed-centaur",
@@ -8038,7 +8752,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-badlands-war-golem",
@@ -8061,7 +8776,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-badlands-digmaster-shovelphlange",
@@ -8084,7 +8800,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-badlands-shadowforge-commander",
@@ -8107,7 +8824,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-badlands-siege-golem",
@@ -8130,7 +8848,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-badlands-7-xt",
@@ -8153,7 +8872,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "2754",
@@ -8183,7 +8903,8 @@
       },
       "coordinate_status": "classic_reference",
       "coordinate_source": "https://foreverdb.net/rare/2754",
-      "source_reviewed_at": "2026-10-10"
+      "source_reviewed_at": "2026-10-10",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-badlands-rumbler",
@@ -8206,7 +8927,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-badlands-zaricotl",
@@ -8229,7 +8951,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-dustwallow-drogoth-the-roamer",
@@ -8252,7 +8975,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-dustwallow-burgle-eye",
@@ -8275,7 +8999,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-dustwallow-dart",
@@ -8298,7 +9023,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-dustwallow-ripscale",
@@ -8321,7 +9047,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-dustwallow-hayoc",
@@ -8344,7 +9071,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-dustwallow-oozeworm",
@@ -8367,7 +9095,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-dustwallow-the-rot",
@@ -8390,7 +9119,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-dustwallow-lord-angler",
@@ -8413,7 +9143,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-dustwallow-brimgore",
@@ -8436,7 +9167,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-stranglethorn-gluggle",
@@ -8459,7 +9191,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "14492",
@@ -8505,7 +9238,8 @@
       },
       "coordinate_status": "classic_reference",
       "coordinate_source": "https://foreverdb.net/rare/14492",
-      "source_reviewed_at": "2026-10-10"
+      "source_reviewed_at": "2026-10-10",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-stranglethorn-mosh-ogg-butcher",
@@ -8528,7 +9262,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "14490",
@@ -8558,7 +9293,8 @@
       },
       "coordinate_status": "classic_reference",
       "coordinate_source": "https://foreverdb.net/rare/14490",
-      "source_reviewed_at": "2026-10-10"
+      "source_reviewed_at": "2026-10-10",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-stranglethorn-scale-belly",
@@ -8581,7 +9317,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-swamp-of-sorrows-lost-one-cook",
@@ -8604,7 +9341,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-swamp-of-sorrows-lost-one-chieftain",
@@ -8627,7 +9365,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-swamp-of-sorrows-molt-thorn",
@@ -8650,7 +9389,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-swamp-of-sorrows-fingat",
@@ -8673,7 +9413,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-swamp-of-sorrows-gilmorian",
@@ -8696,7 +9437,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-swamp-of-sorrows-lord-captain-wyrmak",
@@ -8719,7 +9461,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-swamp-of-sorrows-jade",
@@ -8742,7 +9485,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-swamp-of-sorrows-veyzhak-the-cannibal",
@@ -8765,7 +9509,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-swamp-of-sorrows-zekkis",
@@ -8788,7 +9533,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-hinterlands-razortalon",
@@ -8811,7 +9557,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-hinterlands-witherheart-the-stalker",
@@ -8834,7 +9581,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-hinterlands-retherokk-the-berserker",
@@ -8857,7 +9605,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-hinterlands-jalinde-summerdrake",
@@ -8880,7 +9629,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-hinterlands-the-reak",
@@ -8903,7 +9653,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-hinterlands-grimungous",
@@ -8926,7 +9677,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-hinterlands-mith-rethis-the-enchanter",
@@ -8949,7 +9701,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-feralas-old-grizzlegut",
@@ -8972,7 +9725,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-feralas-gnarl-leafbrother",
@@ -8995,7 +9749,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-feralas-diamond-head",
@@ -9018,7 +9773,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-feralas-lady-szallah",
@@ -9041,7 +9797,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-feralas-qirot",
@@ -9064,7 +9821,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-feralas-antilus-the-soarer",
@@ -9087,7 +9845,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-feralas-bloodroar-the-stalker",
@@ -9110,7 +9869,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-tanaris-warleader-krazzilak",
@@ -9133,7 +9893,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-tanaris-greater-firebird",
@@ -9156,7 +9917,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-zulfarrak-dustwraith",
@@ -9179,7 +9941,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-zulfarrak-sandarr-dunereaver",
@@ -9202,7 +9965,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-zulfarrak-zerillis",
@@ -9225,7 +9989,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-searing-gorge-shleipnarr",
@@ -9248,7 +10013,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-searing-gorge-scald",
@@ -9271,7 +10037,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-searing-gorge-slave-master-blackheart",
@@ -9294,7 +10061,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-searing-gorge-highlord-mastrogonde",
@@ -9317,7 +10085,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-ungoro-jin-zallah-the-sandbringer",
@@ -9340,7 +10109,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-ungoro-cyclok-the-mad",
@@ -9363,7 +10133,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-ungoro-omgorn-the-lost",
@@ -9386,7 +10157,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-ungoro-soriid-the-devourer",
@@ -9409,7 +10181,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-ungoro-uhk-loc",
@@ -9432,7 +10205,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-ungoro-clutchmother-zavas",
@@ -9455,7 +10229,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-ungoro-gruff",
@@ -9478,7 +10253,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-ungoro-king-mosh",
@@ -9501,7 +10277,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-maraudon-meshlok-the-harvester",
@@ -9524,7 +10301,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-blasted-lands-mojo-the-twisted",
@@ -9547,7 +10325,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-blasted-lands-ravage",
@@ -9570,7 +10349,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-blasted-lands-magronos-the-unyielding",
@@ -9593,12 +10373,13 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-azshara-gatekeeper-rageroar",
       "name": {
-        "fr": "Gatekeeper Rageroar",
+        "fr": "Gardien Rugissement-de-rage",
         "en": "Gatekeeper Rageroar"
       },
       "zone": "azshara",
@@ -9616,7 +10397,9 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-azshara-general-fangferror",
@@ -9639,7 +10422,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-azshara-monnos-the-elder",
@@ -9662,7 +10446,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-felwood-ragepaw",
@@ -9685,7 +10470,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-felwood-the-ongar",
@@ -9708,7 +10494,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-felwood-olm-the-wise",
@@ -9731,7 +10518,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "7104",
@@ -9761,7 +10549,8 @@
       },
       "coordinate_status": "classic_reference",
       "coordinate_source": "https://foreverdb.net/rare/7104",
-      "source_reviewed_at": "2026-10-10"
+      "source_reviewed_at": "2026-10-10",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-felwood-immolatus",
@@ -9784,7 +10573,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-burning-steppes-the-behemoth",
@@ -9807,7 +10597,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-burning-steppes-deathmaw",
@@ -9830,7 +10621,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-burning-steppes-gorgon-och",
@@ -9853,7 +10645,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-burning-steppes-hahk-zor",
@@ -9876,7 +10669,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-burning-steppes-scarshield-quartermaster",
@@ -9899,7 +10693,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-burning-steppes-terrorspark",
@@ -9922,7 +10717,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-burning-steppes-malfunctioning-reaver",
@@ -9945,7 +10741,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-burning-steppes-thauris-balgarr",
@@ -9968,7 +10765,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-burning-steppes-gruklash",
@@ -9991,7 +10789,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-burning-steppes-hematos",
@@ -10014,7 +10813,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-burning-steppes-volchan",
@@ -10037,7 +10837,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-wpl-putridius",
@@ -10060,7 +10861,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-wpl-scarlet-smith",
@@ -10083,7 +10885,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-wpl-scarlet-executioner",
@@ -10106,7 +10909,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-wpl-scarlet-judge",
@@ -10129,7 +10933,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-wpl-scarlet-interrogator",
@@ -10152,7 +10957,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-wpl-foreman-jerris",
@@ -10175,7 +10981,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-wpl-the-husk",
@@ -10198,7 +11005,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-wpl-scarlet-high-clerist",
@@ -10221,7 +11029,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-epl-hed-mush-the-rotting",
@@ -10244,7 +11053,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-epl-lord-darkscythe",
@@ -10267,7 +11077,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-epl-warlord-thresh-jin",
@@ -10290,7 +11101,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-epl-high-general-abbendis",
@@ -10313,7 +11125,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-epl-ranger-lord-hawkspear",
@@ -10336,7 +11149,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-winterspring-kashoch-the-reaver",
@@ -10359,7 +11173,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-winterspring-lady-hederine",
@@ -10382,7 +11197,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-blackrock-depths-verek",
@@ -10405,7 +11221,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-blackrock-depths-panzor-the-invincible",
@@ -10428,7 +11245,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-silithus-rex-ashil",
@@ -10451,7 +11269,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-silithus-huricanian",
@@ -10474,7 +11293,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-silithus-zora",
@@ -10497,7 +11317,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-silithus-lapress",
@@ -10520,7 +11341,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-blackrock-spire-spirestone-butcher",
@@ -10543,7 +11365,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-blackrock-spire-spirestone-battle-lord",
@@ -10566,7 +11389,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-blackrock-spire-spirestone-lord-magus",
@@ -10589,7 +11413,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-blackrock-spire-bannok-grimaxe",
@@ -10612,7 +11437,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-blackrock-spire-ghok-bashguud",
@@ -10635,7 +11461,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-blackrock-spire-jed-runewatcher",
@@ -10658,7 +11485,8 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "classic-blackrock-spire-crystal-fang",
@@ -10681,12 +11509,13 @@
         "fr": "",
         "en": ""
       },
-      "coordinate_status": "not_yet_documented"
+      "coordinate_status": "not_yet_documented",
+      "beta_level30_in_scope": false
     },
     {
       "id": "7016",
       "name": {
-        "fr": "Lady Vespira",
+        "fr": "Dame Vespira",
         "en": "Lady Vespira"
       },
       "zone": "darkshore",
@@ -10733,7 +11562,9 @@
           },
           "item_id": 6332,
           "chance_classic_percent": 40,
-          "icon": "inv_jewelry_ring_03"
+          "icon": "inv_jewelry_ring_03",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/7016"
         },
         {
           "name": {
@@ -10742,7 +11573,9 @@
           },
           "item_id": 6333,
           "chance_classic_percent": 60,
-          "icon": "inv_weapon_shortblade_01"
+          "icon": "inv_weapon_shortblade_01",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/7016"
         }
       ],
       "source": "https://foreverdb.net/rare/7016",
@@ -10754,7 +11587,10 @@
       },
       "coordinate_status": "classic_reference",
       "coordinate_source": "https://foreverdb.net/rare/7016",
-      "source_reviewed_at": "2026-10-10"
+      "source_reviewed_at": "2026-10-10",
+      "name_fr_status": "community_translation_check_needed",
+      "beta_level30_in_scope": true,
+      "loot_coverage": "notable_only_not_complete"
     }
   ],
   "sources": {
@@ -10767,13 +11603,23 @@
     "forever_npc_zone_crosscheck": "https://www.wowhead.com/forever/npc=2779/prince-nazjak"
   },
   "disclaimer": {
-    "fr": "Données de référence Classic (CMaNGOS) compilées pour WoW Forever : présence, coordonnées, butins et délais à confirmer sur Forever. Aucune position n’est inventée. Les repères multiples d’un même rare sont des emplacements alternatifs, non des apparitions simultanées.",
-    "en": "Classic (CMaNGOS) reference data indexed for WoW Forever: spawns, loot, coordinates and timers need verification on Forever. No positions are invented. Multiple pins represent alternative spawn locations, not simultaneous creatures."
+    "fr": "Bêta Forever : niveau maximum 30. Les nouveaux butins Forever sont identifiés séparément ; leurs taux observés ne garantissent pas les chances réelles. Les autres positions, butins notables et délais issus de Classic restent à confirmer sur Forever. La liste n'est pas une table de butin exhaustive (objets communs et butins mondiaux exclus).",
+    "en": "Forever beta level cap: 30. New Forever drops are marked separately; observed rates are sample data, not guaranteed actual chances. Other spawn points, notable loot and respawn times are Classic references unverified on Forever. This is not a complete loot table (common/world drops excluded)."
   },
   "catalog_reference": {
     "provider": "ForeverDB",
     "url": "https://foreverdb.net/rares",
     "basis": "Classic CMaNGOS reference, not confirmed on WoW Forever",
     "last_reviewed": "2026-10-10"
+  },
+  "beta": {
+    "level_cap": 30,
+    "client_build": "1.60.1.70291",
+    "client_extracted": "2026-10-08",
+    "source": "https://foreverdb.net/rares",
+    "forever_items_source": "https://www.wowhead.com/forever/items",
+    "loot_policy": "Forever-specific drops and Classic notable loot kept separate, only notable items, not a full loot table",
+    "note_fr": "Bêta plafonnée au niveau 30. Les objets ajoutés par Forever sont sourcés via Wowhead Forever ; taux observés ≠ probabilités réelles. Références Classic explicitement séparées.",
+    "note_en": "Beta level cap 30. Forever-specific items sourced to Wowhead Forever; observed sample rate is not a guaranteed drop chance. Classic references are separate."
   }
 }
