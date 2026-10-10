@@ -10,6 +10,7 @@ const local=new Set(["azshara","blasted-lands","burning-steppes","epl","searing-
 let db,rows=[],filtered=[],selected=null,zoneId="",img=null,token=0,zoom=1,center=[50,50],pins=[],hover=null,drag=null;
 const search=$("rare-search"),zone=$("rare-zone"),type=$("rare-rank"),level=$("rare-level"),loot=$("rare-loot"),tame=$("rare-tame"),mapped=$("rare-mapped");
 const zname=id=>db?.zones?.[id]?.[en?"en":"fr"]||id;
+const lootName=item=>en?item.name.en:(item.name.fr&&item.name.fr!==item.name.en?item.name.fr:(window.ForeverItemLocale?.name({id:item.item_id||0,name:item.name.en})||item.name.fr||item.name.en));
 const colors=new Map();
 function buildColors(){colors.clear();const zones=[...new Set(rows.map(r=>r.zone))];for(const z of zones){const list=rows.filter(r=>r.zone===z).sort((a,b)=>a.name.en.localeCompare(b.name.en));list.forEach((r,i)=>{const hue=Math.round((198+i*137.508)%360);colors.set(r.id,`hsl(${hue} 76% 67%)`)})}}
 const markerColor=r=>colors.get(r.id)||"#e0be7e";
@@ -23,7 +24,7 @@ function results(){
 const q=norm(search.value.trim());
 return rows.filter(r=>(zone.value==="all"||r.zone===zone.value)&&(type.value==="all"||r.classification===type.value)&&
 (level.value==="all"||(level.value==="low"?r.level<=30:r.level>30))&&(!loot.checked||r.loot.length)&&(!tame.checked||r.tameable)&&(!mapped.checked||r.points.length)&&
-(!q||norm([r.name.fr,r.name.en,zname(r.zone),...r.loot.map(i=>i.name.fr),...r.loot.map(i=>i.name.en),r.notes?.fr||"",r.notes?.en||""].join(" ")).includes(q)))
+(!q||norm([r.name.fr,r.name.en,zname(r.zone),...r.loot.map(i=>lootName(i)),...r.loot.map(i=>i.name.fr),...r.loot.map(i=>i.name.en),r.notes?.fr||"",r.notes?.en||""].join(" ")).includes(q)))
 .sort((a,b)=>Number(!!b.loot.length)-Number(!!a.loot.length)||a.level-b.level||a.name.en.localeCompare(b.name.en));
 }
 function showList(){
@@ -58,9 +59,9 @@ for(const item of r.loot){
  const a=m(item.item_id?"a":"div",null,"rare-loot");
  if(item.item_id){a.href="https://foreverdb.net/item/"+item.item_id;a.target="_blank";a.rel="noopener noreferrer"}
  const icon=m("img");icon.src="https://wow.zamimg.com/images/wow/icons/medium/"+encodeURIComponent(item.icon||"inv_misc_questionmark")+".jpg";icon.alt="";icon.width=38;icon.height=38;icon.loading="lazy";icon.onerror=()=>{icon.onerror=null;icon.src="/assets/icons/inv_scroll_07.jpg"};a.append(icon);
- const txt=m("span",null,"rare-loot-text");txt.append(m("strong",item.name[en?"en":"fr"]));
+ const txt=m("span",null,"rare-loot-text");txt.append(m("strong",lootName(item)));
  txt.append(m("small",item.chance_classic_percent==null?T("Taux inconnu","Chance unknown"):T("Classic : ","Classic: ")+fmt(item.chance_classic_percent)+" %"));a.append(txt);
- if(item.item_id&&window.ForeverItemTooltip)window.ForeverItemTooltip.bind(a,{id:item.item_id,name:item.name[en?"en":"fr"],source:"Classic"});loots.append(a)
+ if(item.item_id&&window.ForeverItemTooltip)window.ForeverItemTooltip.bind(a,{id:item.item_id,name:lootName(item),name_en:item.name.en,name_fr:lootName(item),source:"Classic"});loots.append(a)
 }out.append(loots);
 if(r.notes?.[en?"en":"fr"])out.append(m("p",r.notes[en?"en":"fr"],"rare-note"));
 const foot=m("div",null,"rare-detail-foot"),a=m("a",T("Voir la source ↗","View source ↗"));a.href=r.source||db.sources.timers_and_loot;a.target="_blank";a.rel="noopener noreferrer";foot.append(a);
