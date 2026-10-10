@@ -54,7 +54,12 @@ function catalogItems(){
  for(const i of [...classic,...local,...forever,...observed]){
   if(i.quality==="poor"||!Number.isInteger(i.id))continue;
   const prev=byID.get(i.id);
-  if(!prev||precedence(i)>precedence(prev))byID.set(i.id,i);
+  if(!prev||precedence(i)>precedence(prev)){
+   // Preserve an icon or armor classification from an earlier Forever source;
+   // a reported boss drop often has richer acquisition data but no icon field.
+   const priorBeta=prev&&sourceType(prev)==="forever"?prev:null;
+   byID.set(i.id,priorBeta?{...priorBeta,...i,icon:i.icon||priorBeta.icon,armorType:i.armorType??priorBeta.armorType}:i);
+  }
  }
  return [...byID.values()];
 }
