@@ -130,3 +130,13 @@
 .dg-controls{grid-template-columns:minmax(0,1fr)}
 .dg-controls>.dg-field:first-child{grid-column:auto}
 }
+
+
+/* Boss hover and direct source-map access */
+.dg-map-hover{position:absolute;z-index:3;pointer-events:none;border:1px solid #d8b77c;background:#101b15f2;box-shadow:0 5px 20px #0009;color:#f3deb5;font-size:12px;font-weight:700;padding:7px 10px;max-width:230px;line-height:1.25}
+.dg-map-hover[hidden],.dg-open-map[hidden]{display:none!important}
+.dg-open-map{padding:4px 7px;border:1px solid #4d664e;background:#1b2c20;text-decoration:none!important;white-space:nowrap}
+.dg-map-foot>a{display:inline-flex;align-items:center}
+.dg-map-foot span{flex:1;min-width:150px}
+.dg-item-page{cursor:pointer}
+.dg-boss-navitem:focus-visible,.dg-pager:focus-visible{outline:2px solid #eac98b;outline-offset:1px}
