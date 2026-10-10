@@ -37,3 +37,7 @@
 .level-bis-warning[hidden]{display:none}
 @media(max-width:1040px){.level-bis-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:650px){.level-bis-grid{grid-template-columns:1fr}.level-bis-class{font-size:11px}.level-bis-item-main strong{font-size:12px}.level-bis-main-bar h2{font-size:19px}}
+
+.level-bis-item-main .level-bis-source{color:#8f9f8d;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.level-bis-outbound{color:#d3b47b;font-size:16px;border-radius:3px;padding:4px;flex:none}
+.level-bis-outbound:hover{color:#ffe0a3}
