@@ -252,7 +252,7 @@
           "loot": [
             {
               "fr": "Tranchoir grancrochet",
-              "en": "Meathook Cleaver",
+              "en": "Meathook Slicer",
               "slot": "Main droite / Main hand",
               "id": 271204,
               "quality": "rare",
@@ -433,12 +433,12 @@
           "loot": [
             {
               "fr": "Vils brodequins",
-              "en": "Vile Brogans",
+              "en": "Vilewalkers",
               "slot": "Pieds / Feet"
             },
             {
               "fr": "Protège-torse ensanglanté",
-              "en": "Bloodied Chestguard",
+              "en": "Bloodied Chestwraps",
               "slot": "Torse / Chest"
             },
             {
@@ -473,8 +473,8 @@
             }
           ],
           "note": {
-            "fr": "Apparition rare, non garantie à chaque instance.",
-            "en": "Rare spawn, not guaranteed each run."
+            "fr": "Apparition rare dans la partie ouest une fois les autres boss vaincus. Amical envers l'Alliance, attaquable par la Horde (relevé du guide bêta).",
+            "en": "Rare in the western section after other bosses. Friendly to Alliance, hostile to Horde (beta guide report)."
           },
           "floor": "main",
           "rare": true,
@@ -519,6 +519,11 @@
           "status": "new_forever",
           "fr": "Nouveau donjon exclusif à Forever.",
           "en": "New dungeon exclusive to Forever."
+        },
+        {
+          "status": "observed_beta",
+          "fr": "Guide bêta : le Capitaine de Lordaeron n’est attaquable que par la Horde. Position de la patrouille : partie ouest après les autres boss.",
+          "en": "Beta guide: Lordaeron Captain is attackable by Horde only, in the western wing after other bosses."
         }
       ],
       "mapSource": "https://www.icy-veins.com/wow-forever/ruins-of-lordaeron-guide/"
@@ -604,6 +609,16 @@
               "fr": "Regard du raptor",
               "en": "Raptor's Gaze",
               "slot": "Main gauche / Off hand"
+            },
+            {
+              "en": "Garb of Florid Feathers",
+              "fr": "Tenue des plumes fleuries",
+              "slot": "Torse / Cuir"
+            },
+            {
+              "en": "Blueprint: Greenhouse",
+              "fr": "Plan : serre",
+              "slot": "Plan / Herboristerie"
             }
           ],
           "note": {
@@ -620,11 +635,11 @@
           },
           "loot": [],
           "note": {
-            "fr": "Butin d'équipement non encore documenté ; l’objet de quête Horrible Rootcore est signalé.",
-            "en": "Gear drops not yet documented; Horrible Rootcore quest item is reported."
+            "fr": "Rencontre supplémentaire signalée dans certaines sources de bêta ; butin d’équipement non confirmé par le guide Icy Veins.",
+            "en": "Additional encounter reported by some beta sources; equipment drops not confirmed by Icy Veins."
           },
           "floor": "main",
-          "rare": false
+          "rare": true
         },
         {
           "name": {
@@ -697,6 +712,11 @@
           "status": "new_forever",
           "fr": "Nouveau donjon exclusif à Forever.",
           "en": "New dungeon exclusive to Forever."
+        },
+        {
+          "status": "observed_beta",
+          "fr": "Le guide Icy Veins documente trois boss principaux (Saltspine, Shadetooth et le Gardien des reliques) et plusieurs nouveautés, dont un plan de serre. La rencontre Highland Horror reste séparée.",
+          "en": "Icy Veins documents three main bosses (Saltspine, Shadetooth and Relic Guardian), with additions including a Greenhouse blueprint. Highland Horror remains a separate, provisional encounter."
         }
       ],
       "mapSource": "https://www.icy-veins.com/wow-forever/excavation-site-wetlands-guide/"
@@ -2376,13 +2396,21 @@
           "status": "beta_gear",
           "fr": "Forever ajoute des objets de qualité rare à plusieurs boss ; certaines rencontres rares de Classic sont conservées comme références.",
           "en": "Forever adds Rare-quality items to several bosses; some Classic rare encounters remain reference-only."
+        },
+        {
+          "status": "client_beta",
+          "fr": "Les données de recherche de groupe du client Forever limitent la prison à 5 joueurs, contre 10 dans Classic Era. Les témoignages de butin en jeu sont encore insuffisants pour établir des taux fiables.",
+          "en": "Forever Group Finder client data caps the Stockade at five players versus ten in Classic Era. In-game drop reports are still too sparse for reliable rates."
         }
       ],
       "mapStatus": "reference",
       "note": {
         "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
         "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
-      }
+      },
+      "partySize": 5,
+      "partySizeClassic": 10,
+      "guideExtra": "https://foreverdb.net/dungeon/34-stormwind-stockade"
     },
     {
       "id": "gnomeregan",
