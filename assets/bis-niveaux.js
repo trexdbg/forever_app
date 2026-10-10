@@ -534,7 +534,8 @@ function renderSlots(){
  currentPlan=plan();
  const filled=[...currentPlan.selected.values()].filter(Boolean).length;
  $("level-count").textContent=filled+" / "+db.slots.length+" "+T.slots+" · "+currentPlan.pool.length+" "+T.total
-  +(levels[band][1]===30?" · "+currentPlan.pool.filter(isObserved).length+" "+(en?"beta-observed drops":"butins observés en bêta"):"");
+  +(levels[band][1]===30?" · "+currentPlan.pool.filter(i=>isObserved(i)&&i.acquisition?.kind==="dungeon").length+" "+(en?"reported beta drops":"butins bêta rapportés")
+   +" · "+currentPlan.pool.filter(i=>isObserved(i)&&i.acquisition?.kind==="quest").length+" "+(en?"quest rewards":"récompenses de quêtes"):"");
  $("level-current").textContent=labelC(cls())+" · "+labelS(spec())+" · "+(levels[band][0]===levels[band][1]?String(levels[band][1]):levels[band].join("–"));
  $("level-empty").hidden=currentPlan.pool.length>0;
  $("level-cap").textContent=T.levelCap;$("level-cap").hidden=levels[band][1]<=30;
@@ -593,6 +594,6 @@ function renderAll(){renderFilters();renderSlots();renderFarm();renderRemoteStat
   $("level-more")?.addEventListener("click",()=>loadRemote(getRemote(),1));
   $("level-search")?.addEventListener("input",e=>{pickerQuery=e.target.value.trim().toLocaleLowerCase();visibleLimit=45;renderPicker()});
   renderAll();
- }catch(err){$("level-current").textContent=T.error;$("level-count").textContent="";$("level-slots").replaceChildren(mk("p","level-bis-empty",T.error))}
+ }catch(err){$("level-current").textContent=T.error;$("level-count").textContent="";$("level-paperdoll")?.replaceChildren(mk("p","level-bis-empty",T.error));$("level-picked")?.replaceChildren(mk("p","bis-v2-empty",T.error))}
 })();
 })();
