@@ -783,7 +783,7 @@
       "loot_coverage": "not_documented"
     },
     {
-      "id": "barrens-stonearm",
+      "id": "5837",
       "name": {
         "fr": "Bras-de-pierre",
         "en": "Stonearm"
@@ -797,20 +797,37 @@
       "points": [
         [
           42,
-          24.7
+          25
+        ],
+        [
+          47,
+          23
         ]
       ],
-      "loot": [],
-      "source": "https://foreverdb.net/rares",
+      "loot": [
+        {
+          "name": {
+            "fr": "Cape en peau de daim",
+            "en": "Buckskin Cape"
+          },
+          "item_id": 1355,
+          "source_version": "classic_reference",
+          "chance_classic_percent": 25,
+          "icon": "inv_misc_pelt_bear_02",
+          "source_url": "https://foreverdb.net/item/1355"
+        }
+      ],
+      "source": "https://foreverdb.net/rare/5837",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
       "notes": {
-        "fr": "",
-        "en": ""
+        "fr": "Deux repères dans les Tarides. Un troisième emplacement alternatif est documenté à Mulgore (67 / 12), hors de cette carte.",
+        "en": "Two Barrens pins. A third alternate location is documented in Mulgore (67 / 12), outside this map."
       },
       "name_fr_status": "community_translation_check_needed",
       "beta_level30_in_scope": true,
-      "loot_coverage": "not_documented"
+      "loot_coverage": "notable_only_not_complete",
+      "coordinate_status": "classic_reference"
     },
     {
       "id": "barrens-brokespear",
@@ -873,7 +890,7 @@
           "source_url": "https://www.wowhead.com/forever/fr/item=17922"
         }
       ],
-      "source": "https://foreverdb.net/rare/5807",
+      "source": "https://www.wowhead.com/forever/fr/npc=5807",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
       "notes": {
@@ -2251,7 +2268,7 @@
     {
       "id": "573",
       "name": {
-        "fr": "Faucheur 4000",
+        "fr": "Découpeur 4000",
         "en": "Foe Reaper 4000"
       },
       "zone": "westfall",
@@ -2353,6 +2370,21 @@
           "icon": "inv_pants_06",
           "source_version": "classic_reference",
           "source_url": "https://foreverdb.net/rare/573"
+        },
+        {
+          "name": {
+            "fr": "Grand sac à dos",
+            "en": "Large Rucksack"
+          },
+          "item_id": 933,
+          "source_version": "classic_reference",
+          "chance_classic_percent": null,
+          "icon": "inv_misc_bag_10_black",
+          "source_url": "https://www.wowhead.com/forever/item=933",
+          "notes": {
+            "fr": "Objet retrouvé dans la table Forever ; taux réel à confirmer.",
+            "en": "Item appears in the Forever item database; actual chance needs verification."
+          }
         }
       ],
       "source": "https://www.wowhead.com/forever/fr/npc=573",
