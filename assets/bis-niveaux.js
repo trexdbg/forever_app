@@ -421,6 +421,32 @@ function sheetButton(id){
  if(i)window.ForeverItemTooltip?.bind(btn,{...localizedTooltip(i),slotLabel:labelSlot(slot)});
  return btn;
 }
+
+function renderSets(){
+ const el=$("level-set-guide");if(!el)return;
+ el.replaceChildren();
+ const counts=new Map();
+ for(const item of currentPlan.selected.values()){
+  if(!item?.itemSet||!Array.isArray(item.setBonus))continue;
+  const prev=counts.get(item.itemSet);
+  counts.set(item.itemSet,{count:(prev?.count||0)+1,item});
+ }
+ el.hidden=!counts.size;
+ for(const [name,{count,item}] of counts){
+  const box=mk("details","level-bis-set");
+  const summary=mk("summary","",(en?name:({ "Rotmender's Raiment":"Atours du soigneur de peste" }[name]||name))
+    +" · "+count+" / "+(item.itemSetCount||5)+" "+(en?"pieces":"pièces"));
+  box.append(summary);
+  for(const [index,bonus] of item.setBonus.entries()){
+   const threshold=index+2;
+   const line=mk("div","level-bis-set-effect"+(count>=threshold?" active":""),
+     bonus.replace(/^[(]\d+[)]\s*/,""));
+   line.prepend(mk("span","level-bis-set-tier",threshold+"p"));
+   box.append(line);
+  }
+  el.append(box);
+ }
+}
 function renderSheet(){
  const paper=$("level-paperdoll");paper.replaceChildren();
  const stage=mk("div","bis-v2-stage"),left=mk("div","bis-v2-rail left"),right=mk("div","bis-v2-rail right");
@@ -431,7 +457,7 @@ function renderSheet(){
  middle.append(mk("span","bis-v2-avatar-top","FOREVEROTH"),medal,mk("strong","",labelC(cls())),mk("span","",labelS(spec())));
  stage.append(left,middle,right);
  const weapons=mk("div","bis-v2-weapons");for(const id of weaponSlots)weapons.append(sheetButton(id));
- paper.append(stage,weapons);
+ paper.append(stage,weapons);renderSets();
 }
 function renderPicker(){
  const slot=db.slots.find(s=>s.id===activeSlot),id=slot.id,i=currentPlan.selected.get(id);
