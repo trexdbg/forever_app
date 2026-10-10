@@ -5,7 +5,7 @@
 <meta property="og:type" content="website"><meta property="og:site_name" content="ForEveroth"><meta property="og:title" content="Leveling BiS by level bracket — WoW Forever | ForEveroth"><meta property="og:description" content="Find level-bracket gear candidates for WoW Forever with class and role filters, required levels and sources."><meta property="og:url" content="https://foreveroth.com/en/bis-niveaux/">
 <title>Leveling BiS by level bracket — WoW Forever | ForEveroth</title>
 <link rel="alternate" hreflang="fr" href="https://foreveroth.com/bis-niveaux/"><link rel="alternate" hreflang="en" href="https://foreveroth.com/en/bis-niveaux/"><link rel="alternate" hreflang="x-default" href="https://foreveroth.com/bis-niveaux/">
-<link rel="stylesheet" href="/assets/site.css"><script defer src="/assets/i18n.js?v=1"></script><script defer src="/assets/common.js?v=6"></script><link rel="stylesheet" href="/assets/refined.css?v=20261009-1"><link rel="stylesheet" href="/assets/language.css?v=1"><link rel="stylesheet" href="/assets/bis-v2.css?v=6"><link rel="stylesheet" href="/assets/bis-niveaux.css?v=6"><link rel="stylesheet" href="/assets/item-tooltips.css?v=4"><link rel="stylesheet" href="/assets/foreveroth-brand.css?v=1">
+<link rel="stylesheet" href="/assets/site.css"><script defer src="/assets/i18n.js?v=1"></script><script defer src="/assets/common.js?v=6"></script><link rel="stylesheet" href="/assets/refined.css?v=20261009-1"><link rel="stylesheet" href="/assets/language.css?v=1"><link rel="stylesheet" href="/assets/bis-v2.css?v=6"><link rel="stylesheet" href="/assets/bis-niveaux.css?v=20261010-beta30-1"><link rel="stylesheet" href="/assets/item-tooltips.css?v=4"><link rel="stylesheet" href="/assets/foreveroth-brand.css?v=1">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://foreveroth.com/en/bis-niveaux/#webpage","name":"Leveling BiS by level bracket — WoW Forever | ForEveroth","url":"https://foreveroth.com/en/bis-niveaux/","description":"Find level-bracket gear candidates for WoW Forever with class and role filters, required levels and sources.","inLanguage":"en","isPartOf":{"@id":"https://foreveroth.com/#website"}},{"@type":"WebApplication","@id":"https://foreveroth.com/en/bis-niveaux/#application","name":"Leveling BiS by level bracket — WoW Forever | ForEveroth","url":"https://foreveroth.com/en/bis-niveaux/","applicationCategory":"GameApplication","operatingSystem":"Web","isAccessibleForFree":true,"inLanguage":"en"}]}</script></head>
 <body data-page="items"><a class="skip" href="#contenu">Skip to content</a>
 <header class="site-header"><div class="wrap header-inner"><a class="brand" href="/en/" aria-label="ForEveroth, home"><img class="brand-lockup" src="/assets/foreveroth-logo.png" width="400" height="74" alt="" decoding="async"></a><button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button><nav class="nav" aria-label="Main navigation"><a href="/en/">Home</a><a href="/en/quetes/">Quests</a><a href="/en/talents/">Talents</a><a href="/en/minage/">Mining</a><a aria-current="page" href="/en/bis-niveaux/">Gear</a><a href="/en/marchands/">Vendors</a><a href="/en/metiers/">Professions</a><a href="/en/population/">Population</a></nav><div class="lang-switch" role="group" aria-label="Language"><a lang="fr" href="/bis-niveaux/"  title="Français">FR</a><a lang="en" href="/en/bis-niveaux/" aria-current="true" title="English">EN</a></div></div></header>
@@ -15,13 +15,14 @@
 </section>
 <section class="section wrap slim-top" id="level-bis" aria-label="Leveling equipment">
 <div class="tool-panel level-bis-board">
-<div class="tool-head"><h2>Leveling equipment</h2><span class="status-pill">Beta / Classic references</span></div>
+<div class="tool-head"><h2>Leveling equipment</h2><span class="status-pill">Forever beta / Classic references</span></div>
 <div class="notice bis-warning"><strong>Provisional gear candidates, not certified Forever BiS.</strong><p>The module uses documented required levels, class restrictions and available stats. Items may not be obtainable in game; unconfirmed entries are not presented as definitive BiS.</p></div>
 <span class="level-bis-section-label">Choose a class</span><div id="level-classes" class="bis-class-grid level-bis-classes" role="group" aria-label="Choose a class"></div>
 <span class="level-bis-section-label">Build / role</span><div id="level-specs" class="bis-spec-row level-bis-row" role="group" aria-label="Build / role"></div>
 <span class="level-bis-section-label">Level bracket</span><div id="level-bands" class="level-bis-row" role="group" aria-label="Level bracket"></div>
 <span class="level-bis-section-label">Data source</span><div id="level-source" class="level-bis-row" role="group" aria-label="Data source"></div>
-<div class="level-bis-main-bar"><div><h2 id="level-current">Loading level references…</h2><p id="level-count" class="level-bis-status" aria-live="polite"></p></div><span class="status-pill">Illustrative selection</span></div>
+<span class="level-bis-section-label">Acquisition method</span><div id="level-acquisition" class="level-bis-row" role="group" aria-label="Filter by acquisition method"></div>
+<div class="level-bis-main-bar"><div><h2 id="level-current">Loading level references…</h2><p id="level-count" class="level-bis-status" aria-live="polite"></p></div><span class="status-pill">Level 30 beta</span></div>
 <p class="level-bis-warning" id="level-cap" hidden></p>
 <div class="bis-v2-workspace level-bis-workspace">
  <section class="bis-v2-sheet" aria-label="Interactive character equipment sheet">
@@ -39,10 +40,14 @@
   <p class="bis-v2-footnote">Provisional Classic / Forever beta references. Not a confirmed in-game BiS.</p>
  </aside>
 </div>
+<section class="level-bis-farm" aria-label="Where to find gear">
+ <div class="level-bis-farm-head"><div><span class="bis-v2-eyebrow">DUNGEONS AND SOURCES</span><h3>Where to look for upgrades</h3></div><span class="level-bis-farm-note">Indicative levels · not guaranteed drops</span></div>
+ <div id="level-farm-list" class="level-bis-farm-list" aria-live="polite"></div>
+ </section>
 <div class="level-bis-load"><p id="level-live" class="level-bis-status" aria-live="polite">Local references</p><button class="btn secondary btn-sm" type="button" id="level-more" hidden>Load more Classic references</button></div>
 <p id="level-empty" class="level-bis-empty" hidden>Some slots intentionally remain empty when there is no documented level requirement.</p>
 <p class="level-bis-footnote">Hover over an item or use the info button to inspect the tooltip.</p>
 <details class="atlas-detail"><summary>Sources and limitations</summary><p>Reference data from the local Forever beta catalogue and Classic records. Item tooltips use Classic 1.12 references when available. No guaranteed drop, stock or optimality. This page preserves English item names. Since the public WoWDB API provides French-only names, it is not used to add untranslated English results; the local curated references remain available.</p></details>
 </div></section>
-<script defer src="/assets/item-locale.js?v=20261010-locales5"></script><script defer src="/assets/gear-data.js?v=20261010-locales1"></script><script defer src="/assets/equipment-rules.js?v=20261009-gear140"></script><script defer src="/assets/item-tooltips.js?v=20261010-locales3"></script><script defer src="/assets/bis-niveaux.js?v=20261010-locales1"></script>
+<script defer src="/assets/item-locale.js?v=20261010-locales5"></script><script defer src="/assets/gear-data.js?v=20261010-locales1"></script><script defer src="/assets/equipment-rules.js?v=20261009-gear140"></script><script defer src="/assets/item-tooltips.js?v=20261010-locales3"></script><script defer src="/assets/bis-niveaux.js?v=20261010-beta30-1"></script>
 </main><footer class="footer"><div class="wrap footer-simple"><span>ForEveroth · Independent community project</span><nav aria-label="Useful links"><a href="https://talentsforever.com/" target="_blank" rel="noopener noreferrer">Talent data · CC BY 4.0 ↗</a></nav></div><div class="wrap legal">World of Warcraft © Blizzard Entertainment · Unofficial and unaffiliated. Beta data may change.</div></footer></body></html>
