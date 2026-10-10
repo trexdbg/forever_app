@@ -152,7 +152,7 @@ function renderSlots(){
  status.textContent=covered.length+" / "+db.slots.length+" "+T.slots+" · "+pool.length+" "+T.total;
  $("level-current").textContent=labelC(cls())+" · "+labelS(spec())+" · "+(levels[band][0]===levels[band][1]?String(levels[band][1]):levels[band].join("–"));
  $("level-empty").hidden=pool.length>0;
- $("level-cap").hidden=levels[band][1]<=30;
+ $("level-cap").textContent=T.levelCap;$("level-cap").hidden=levels[band][1]<=30;
 }
 function renderAll(){renderFilters();renderSlots();selectionLink()}
 (async()=>{
