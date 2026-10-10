@@ -13,6 +13,7 @@ const levels=[[1,9],[10,19],[20,24],[25,29],[30,30],[31,39],[40,49],[50,59],[60,
 const betaBand=levels.findIndex(([min,max])=>min===30&&max===30);
 const params=new URLSearchParams(location.search);
 let db=null,all=[],classId="guerrier",specId="fury",band=betaBand,origin="all",sourceKind="all";
+let farmingSources=[];
 const remoteByLevel=new Map();
 const mk=(tag,klass,value)=>{const node=document.createElement(tag);if(klass)node.className=klass;if(value!==undefined)node.textContent=value;return node};
 const labelC=c=>en?(classesEN[c.id]||c.label):c.label;
@@ -39,7 +40,7 @@ const sourceDetails=en?{drop:"Observed beta drop",observed:"Seen in beta",client
 
 /* Localization is source-aware: the Classic API publishes French names only.
    Never replace a sourced English item name with a French API value on EN pages. */
-const zoneFR={"Ragefire Chasm":"Gouffre de Ragefeu","The Deadmines":"Mortemines","Wailing Caverns":"Cavernes des Lamentations","Shadowfang Keep":"Donjon d’Ombrecroc","Blackfathom Deeps":"Profondeurs de Brassenoire","Razorfen Kraul":"Kraal de Tranchebauge","Razorfen Downs":"Souilles de Tranchebauge","Scarlet Monastery":"Monastère écarlate","Blackrock Depths":"Profondeurs de Rochenoire","Blackrock Spire":"Pic Rochenoire","Dire Maul":"Hache-tripes","The Temple of Atal'Hakkar":"Temple d’Atal’Hakkar","Elwynn Forest":"Forêt d’Elwynn","Tirisfal Glades":"Clairières de Tirisfal","Westfall":"Marche de l’Ouest","World drop":"Butin mondial","Crafting":"Fabrication","Enchanting":"Enchantement","Leatherworking":"Travail du cuir","Vendor":"Marchand","Zone drop":"Butin de zone","Rare drop":"Butin rare"};
+const zoneFR={"City of Dalaran":"Cité de Dalaran","Excavation Site: Wetlands":"Excavations des Paluns","Hall of Thanes":"Hall of Thanes","Ruins of Lordaeron":"Ruines de Lordaeron","The Stockade":"La Prison","Ragefire Chasm":"Gouffre de Ragefeu","The Deadmines":"Mortemines","Wailing Caverns":"Cavernes des Lamentations","Shadowfang Keep":"Donjon d’Ombrecroc","Blackfathom Deeps":"Profondeurs de Brassenoire","Razorfen Kraul":"Kraal de Tranchebauge","Razorfen Downs":"Souilles de Tranchebauge","Scarlet Monastery":"Monastère écarlate","Blackrock Depths":"Profondeurs de Rochenoire","Blackrock Spire":"Pic Rochenoire","Dire Maul":"Hache-tripes","The Temple of Atal'Hakkar":"Temple d’Atal’Hakkar","Elwynn Forest":"Forêt d’Elwynn","Tirisfal Glades":"Clairières de Tirisfal","Westfall":"Marche de l’Ouest","World drop":"Butin mondial","Crafting":"Fabrication","Enchanting":"Enchantement","Leatherworking":"Travail du cuir","Vendor":"Marchand","Zone drop":"Butin de zone","Rare drop":"Butin rare"};
 const knownFR={5191:"Barbelure cruelle",10399:"Armure défias noircie",16712:"Gants Sombreruse"};
 const localizedName=i=>en?(i.name_en||i.name):(i.name_fr||window.ForeverItemLocale?.name(i)||knownFR[i.id]||i.name);
 function localizedOrigin(i){
@@ -49,6 +50,23 @@ function localizedOrigin(i){
  return value;
 }
 const fmtItem=i=>({...i,name:localizedName(i),origin:localizedOrigin(i)});
+
+function sourceLabel(i){
+ if(isObserved(i))return sourceDetails.observed;
+ if(isForever(i))return sourceDetails.client;
+ return sourceDetails.classic;
+}
+function safeSourceUrl(i){
+ const v=isObserved(i)?i.source_url||i.source_dungeon_url:i.source_url||i.url;
+ if(typeof v!=="string")return null;
+ try{const a=new URL(v);return a.protocol==="https:"&&["foreverchanges.pro","www.wowhead.com","www.60.tools","wowclassicdatabase.com","wowdb.assemblee-defias.fr"].includes(a.hostname)?a.href:null}catch{return null}
+}
+function sourceLink(i){
+ const url=safeSourceUrl(i);if(!url)return null;
+ const a=mk("a","level-bis-source-link",en?"↗ Source details":"↗ Voir la source");
+ a.href=url;a.target="_blank";a.rel="noopener noreferrer";return a;
+}
+
 function localizedTooltip(i){
  const copy=fmtItem(i);
  if(!en&&Array.isArray(copy.tooltip)&&copy.tooltip.length){
@@ -469,24 +487,44 @@ function renderSlots(){
  if(!db)return;
  currentPlan=plan();
  const filled=[...currentPlan.selected.values()].filter(Boolean).length;
- $("level-count").textContent=filled+" / "+db.slots.length+" "+T.slots+" · "+currentPlan.pool.length+" "+T.total;
+ $("level-count").textContent=filled+" / "+db.slots.length+" "+T.slots+" · "+currentPlan.pool.length+" "+T.total
+  +(levels[band][1]===30?" · "+currentPlan.pool.filter(isObserved).length+" "+(en?"beta-observed drops":"butins observés en bêta"):"");
  $("level-current").textContent=labelC(cls())+" · "+labelS(spec())+" · "+(levels[band][0]===levels[band][1]?String(levels[band][1]):levels[band].join("–"));
  $("level-empty").hidden=currentPlan.pool.length>0;
  $("level-cap").textContent=T.levelCap;$("level-cap").hidden=levels[band][1]<=30;
  renderSheet();renderPicker();hydrateSelectedLocale();
 }
-function renderAll(){renderFilters();renderSlots();renderRemoteStatus();selectionLink();ensureRemote()}
+
+function renderFarm(){
+ const node=$("level-farm-list");if(!node)return;
+ node.replaceChildren();
+ const [min,max]=levels[band];
+ const candidates=farmingSources.filter(s=>s.min<=max&&s.max>=Math.max(1,min-2))
+   .sort((a,b)=>Number(b.kind==="forever")-Number(a.kind==="forever")||b.min-a.min)
+   .slice(0,9);
+ if(!candidates.length){node.append(mk("p","level-bis-farm-empty",en?"No dungeon recommendations yet for this bracket.":"Pas de donjon recommandé pour cette tranche."));return}
+ for(const d of candidates){
+  const a=mk("a","level-bis-farm-item"+(d.kind==="forever"?" is-forever":""));
+  a.href=d.url;a.target="_blank";a.rel="noopener noreferrer";
+  a.append(mk("strong","",(en?d.name_en:d.name_fr)+" ↗"),
+   mk("span","level-bis-farm-meta",d.min+"–"+d.max+" · "+(en?d.zone_en:d.zone_fr)+" · "+(d.kind==="forever"?(en?"Forever beta":"Forever bêta"):"Classic")),
+   mk("span","level-bis-farm-detail",en?d.note_en:d.note_fr));
+  node.append(a);
+ }
+}
+function renderAll(){renderFilters();renderSlots();renderFarm();renderRemoteStatus();selectionLink();ensureRemote()}
 (async()=>{
  try{
-  const [core,forever,local,curated,observed]=await Promise.all([
+  const [core,forever,local,curated,observed,sources]=await Promise.all([
    fetch("/data/bis.json").then(r=>{if(!r.ok)throw Error("bis");return r.json()}),
    window.ForeverGearData.loadForever(),
    fetch("/data/items.json").then(r=>{if(!r.ok)throw Error("catalogue");return r.json()}).catch(()=>({items:[]})),
    fetch("/data/bis-niveaux-classic.json").then(r=>{if(!r.ok)throw Error("curated");return r.json()}).catch(()=>({items:[]})),
-   fetch("/data/bis-niveaux-forever-observed.json").then(r=>{if(!r.ok)throw Error("observed");return r.json()}).catch(()=>({items:[]}))
+   fetch("/data/bis-niveaux-forever-observed.json").then(r=>{if(!r.ok)throw Error("observed");return r.json()}).catch(()=>({items:[]})),
+   fetch("/data/bis-niveaux-sources.json").then(r=>{if(!r.ok)throw Error("sources");return r.json()}).catch(()=>({sources:[]}))
   ]);
   if(!Array.isArray(core.classes)||!Array.isArray(core.slots))throw Error("schema");
-  db=core;
+  db=core;farmingSources=Array.isArray(sources.sources)?sources.sources:[];
   const byId=new Map();
   for(const item of [...core.items,...(Array.isArray(local.items)?local.items:[]),...(Array.isArray(curated.items)?curated.items:[]),...forever,...(Array.isArray(observed.items)?observed.items:[])]){
    if(!Number.isInteger(item.id))continue;
