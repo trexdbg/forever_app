@@ -10,7 +10,10 @@
     "https://wowclassicdatabase.com/dungeon/blackfathom-deeps",
     "https://docs.wowdb.assemblee-defias.fr/items",
     "https://wowclassicdatabase.com/zone/elwynn-forest",
-    "https://wowclassicdatabase.com/zone/tirisfal-glades"
+    "https://wowclassicdatabase.com/zone/tirisfal-glades",
+    "https://wowclassicdatabase.com/dungeon/gnomeregan",
+    "https://wowclassicdatabase.com/dungeon/razorfen-kraul",
+    "https://wowclassicdatabase.com/dungeon/scarlet-monastery"
   ],
   "meaning": "Curated Classic items with verifiable IDs, item levels and required levels. These are not guaranteed obtainable on WoW Forever.",
   "items": [
@@ -613,6 +616,175 @@
         "Item Level 10",
         "One-Hand Dagger",
         "Requires Level 5"
+      ]
+    },
+    {
+      "id": 9456,
+      "name": "Glass Shooter",
+      "slot": "ranged",
+      "requiredLevel": 30,
+      "itemLevel": 35,
+      "quality": "rare",
+      "armorType": null,
+      "origin": "Gnomeregan · Dark Iron Ambassador",
+      "type": "gun",
+      "url": "https://wowclassicdatabase.com/item/glass-shooter",
+      "source_url": "https://wowclassicdatabase.com/item/glass-shooter",
+      "source_status": "classic_curated_leveling",
+      "tooltip": [
+        "Glass Shooter",
+        "Item Level 35",
+        "Ranged Gun",
+        "Requires Level 30"
+      ]
+    },
+    {
+      "id": 9446,
+      "name": "Electrocutioner Leg",
+      "slot": "mainhand",
+      "requiredLevel": 29,
+      "itemLevel": 34,
+      "quality": "rare",
+      "armorType": null,
+      "origin": "Gnomeregan · Electrocutioner 6000",
+      "type": "sword",
+      "url": "https://wowclassicdatabase.com/item/electrocutioner-leg",
+      "source_url": "https://wowclassicdatabase.com/item/electrocutioner-leg",
+      "source_status": "classic_curated_leveling",
+      "tooltip": [
+        "Electrocutioner Leg",
+        "Item Level 34",
+        "Main Hand Sword",
+        "Requires Level 29"
+      ]
+    },
+    {
+      "id": 9449,
+      "name": "Manual Crowd Pummeler",
+      "slot": "mainhand",
+      "requiredLevel": 29,
+      "itemLevel": 34,
+      "quality": "rare",
+      "armorType": null,
+      "origin": "Gnomeregan · Crowd Pummeler 9-60",
+      "type": "mace",
+      "url": "https://wowclassicdatabase.com/item/manual-crowd-pummeler",
+      "source_url": "https://wowclassicdatabase.com/item/manual-crowd-pummeler",
+      "source_status": "classic_curated_leveling",
+      "tooltip": [
+        "Manual Crowd Pummeler",
+        "Item Level 34",
+        "Two-Hand Mace",
+        "+16 Strength",
+        "+5 Agility",
+        "Requires Level 29"
+      ]
+    },
+    {
+      "id": 9454,
+      "name": "Acidic Walkers",
+      "slot": "feet",
+      "requiredLevel": 27,
+      "itemLevel": 32,
+      "quality": "rare",
+      "armorType": "cloth",
+      "origin": "Gnomeregan · Viscous Fallout",
+      "type": null,
+      "url": "https://wowclassicdatabase.com/item/acidic-walkers",
+      "source_url": "https://wowclassicdatabase.com/item/acidic-walkers",
+      "source_status": "classic_curated_leveling",
+      "tooltip": [
+        "Acidic Walkers",
+        "Item Level 32",
+        "Feet Cloth",
+        "+8 Intellect",
+        "+4 Spirit",
+        "Requires Level 27"
+      ]
+    },
+    {
+      "id": 6694,
+      "name": "Heart of Agamaggan",
+      "slot": "offhand",
+      "requiredLevel": 31,
+      "itemLevel": 36,
+      "quality": "rare",
+      "armorType": null,
+      "origin": "Razorfen Kraul · Charlga Razorflank",
+      "type": "shield",
+      "url": "https://wowclassicdatabase.com/item/heart-of-agamaggan",
+      "source_url": "https://wowclassicdatabase.com/item/heart-of-agamaggan",
+      "source_status": "classic_curated_leveling",
+      "tooltip": [
+        "Heart of Agamaggan",
+        "Item Level 36",
+        "Off Hand Shield",
+        "+7 Stamina",
+        "Requires Level 31"
+      ]
+    },
+    {
+      "id": 6687,
+      "name": "Corpsemaker",
+      "slot": "mainhand",
+      "requiredLevel": 29,
+      "itemLevel": 34,
+      "quality": "rare",
+      "armorType": null,
+      "origin": "Razorfen Kraul · Overlord Ramtusk",
+      "type": "axe",
+      "url": "https://wowclassicdatabase.com/item/corpsemaker",
+      "source_url": "https://wowclassicdatabase.com/item/corpsemaker",
+      "source_status": "classic_curated_leveling",
+      "tooltip": [
+        "Corpsemaker",
+        "Item Level 34",
+        "Two-Hand Axe",
+        "+15 Strength",
+        "+8 Stamina",
+        "Requires Level 29"
+      ]
+    },
+    {
+      "id": 7726,
+      "name": "Aegis of the Scarlet Commander",
+      "slot": "offhand",
+      "requiredLevel": 39,
+      "itemLevel": 44,
+      "quality": "rare",
+      "armorType": null,
+      "origin": "Scarlet Monastery · Scarlet Commander Mograine",
+      "type": "shield",
+      "url": "https://wowclassicdatabase.com/item/aegis-of-the-scarlet-commander",
+      "source_url": "https://wowclassicdatabase.com/item/aegis-of-the-scarlet-commander",
+      "source_status": "classic_curated_leveling",
+      "tooltip": [
+        "Aegis of the Scarlet Commander",
+        "Item Level 44",
+        "Off Hand Shield",
+        "+7 Strength",
+        "+8 Stamina",
+        "Requires Level 39"
+      ]
+    },
+    {
+      "id": 7721,
+      "name": "Hand of Righteousness",
+      "slot": "mainhand",
+      "requiredLevel": 39,
+      "itemLevel": 44,
+      "quality": "rare",
+      "armorType": null,
+      "origin": "Scarlet Monastery · High Inquisitor Whitemane",
+      "type": "mace",
+      "url": "https://wowclassicdatabase.com/item/hand-of-righteousness",
+      "source_url": "https://wowclassicdatabase.com/item/hand-of-righteousness",
+      "source_status": "classic_curated_leveling",
+      "tooltip": [
+        "Hand of Righteousness",
+        "Item Level 44",
+        "Main Hand Mace",
+        "Requires Level 39"
       ]
     }
   ]
