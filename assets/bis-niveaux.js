@@ -134,7 +134,7 @@ function weaponAllowed(i,chosenSlot=normSlot(i)){
 }
 function eligible(i){
  const req=required(i),max=levels[band][1],rules=window.ForeverEquipmentRules;
- if(!Number.isInteger(i.id)||!i.name||req===null||req>max||req<1)return false;
+ if(!Number.isInteger(i.id)||!i.name||i.quality==="poor"||req===null||req>max||req<1)return false;
  if(Number.isFinite(i.itemLevel)&&i.itemLevel>max+(max===60?18:11))return false;
  if(origin==="forever"&&!isForever(i)||origin==="classic"&&isForever(i))return false;
  if(!rules?.canEquip(i,classId)||!weaponAllowed(i))return false;
@@ -307,18 +307,18 @@ function itemRow(i,secondary=false){
 }
 
 const leftSlots=["head","neck","shoulders","back","chest","wrist","hands"],rightSlots=["waist","legs","feet","finger1","finger2","trinket1","trinket2"],weaponSlots=["mainhand","offhand","ranged"];
-const qualities={poor:["#9d9d9d","Médiocre","Poor"],common:["#efeee9","Commun","Common"],uncommon:["#43bf66","Inhabituel","Uncommon"],rare:["#4c9df1","Rare","Rare"],epic:["#b67cff","Épique","Epic"],legendary:["#ffac46","Légendaire","Legendary"]};
+const qualities={common:["#efeee9","Commun","Common"],uncommon:["#43bf66","Inhabituel","Uncommon"],rare:["#4c9df1","Rare","Rare"],epic:["#b67cff","Épique","Epic"],legendary:["#ffac46","Légendaire","Legendary"]};
 const u=en?{missing:"No target",twohand:"Two-handed weapon equipped",chosen:"Your selection",suggestion:"Suggested item",reset:"Use suggestion",details:"Details",more:"Show more",none:"No items match these filters",all:"All qualities",select:"Set as target",candidates:"references"}:{missing:"Aucun objectif",twohand:"Arme à deux mains équipée",chosen:"Votre sélection",suggestion:"Objet suggéré",reset:"Revenir à la suggestion",details:"Détails",more:"Afficher plus",none:"Aucun objet avec ces filtres",all:"Toutes qualités",select:"Définir comme objectif",candidates:"références"};
 let activeSlot="head",pickerQuery="",selectedQualities=new Set(),visibleLimit=45,currentPlan=null;
 function clearPickerSearch(){pickerQuery="";selectedQualities.clear();visibleLimit=45;const input=$("level-search");if(input)input.value=""}
 const savedProfiles=new Map();
 
-/* At most one localized Classic sheet lookup per visited slot item. */
+/* At most one localized Classic sheet lookup per visited item; EN keeps the English label and acquires only the icon. */
 const localizedRequests=new Set();
-function hydrateSelectedFrench(){
- if(en||origin==="forever"||!currentPlan)return;
+function hydrateSelectedLocale(){
+ if(origin==="forever"||!currentPlan)return;
  const candidate=currentPlan.selected.get(activeSlot);
- if(!candidate||isForever(candidate)||candidate.source_status==="classic_api"||candidate.name_fr||knownFR[candidate.id]||localizedRequests.has(candidate.id))return;
+ if(!candidate||isForever(candidate)||candidate.source_status==="classic_api"||localizedRequests.has(candidate.id)||(en&&candidate.icon)||(!en&&candidate.name_fr&&candidate.icon))return;
  localizedRequests.add(candidate.id);
  Promise.resolve().then(()=>window.ForeverGearData.itemById(candidate.id))
  .then(item=>{if(!item||!db)return;mergeRecords([item]);renderSlots()})
@@ -450,7 +450,7 @@ function renderSlots(){
  $("level-current").textContent=labelC(cls())+" · "+labelS(spec())+" · "+(levels[band][0]===levels[band][1]?String(levels[band][1]):levels[band].join("–"));
  $("level-empty").hidden=currentPlan.pool.length>0;
  $("level-cap").textContent=T.levelCap;$("level-cap").hidden=levels[band][1]<=30;
- renderSheet();renderPicker();hydrateSelectedFrench();
+ renderSheet();renderPicker();hydrateSelectedLocale();
 }
 function renderAll(){renderFilters();renderSlots();renderRemoteStatus();selectionLink();ensureRemote()}
 (async()=>{
