@@ -8,7 +8,9 @@
     "https://wowclassicdatabase.com/dungeon/wailing-caverns",
     "https://wowclassicdatabase.com/dungeon/shadowfang-keep",
     "https://wowclassicdatabase.com/dungeon/blackfathom-deeps",
-    "https://docs.wowdb.assemblee-defias.fr/items"
+    "https://docs.wowdb.assemblee-defias.fr/items",
+    "https://wowclassicdatabase.com/zone/elwynn-forest",
+    "https://wowclassicdatabase.com/zone/tirisfal-glades"
   ],
   "meaning": "Curated Classic items with verifiable IDs, item levels and required levels. These are not guaranteed obtainable on WoW Forever.",
   "items": [
@@ -491,6 +493,126 @@
         "+6 Stamina",
         "+4 Spirit",
         "Requires Level 30"
+      ]
+    },
+    {
+      "id": 5744,
+      "name": "Pale Skinner",
+      "slot": "mainhand",
+      "requiredLevel": 7,
+      "itemLevel": 12,
+      "quality": "uncommon",
+      "armorType": null,
+      "origin": "Elwynn Forest · Fedfennel",
+      "type": "sword",
+      "url": "https://wowclassicdatabase.com/item/pale-skinner",
+      "source_url": "https://wowclassicdatabase.com/item/pale-skinner",
+      "source_status": "classic_curated_leveling",
+      "tooltip": [
+        "Pale Skinner",
+        "Item Level 12",
+        "Main Hand Sword",
+        "Requires Level 7"
+      ]
+    },
+    {
+      "id": 6202,
+      "name": "Fingerless Gloves",
+      "slot": "hands",
+      "requiredLevel": 6,
+      "itemLevel": 11,
+      "quality": "common",
+      "armorType": "cloth",
+      "origin": "Elwynn Forest · Zone drop",
+      "type": null,
+      "url": "https://wowclassicdatabase.com/item/fingerless-gloves",
+      "source_url": "https://wowclassicdatabase.com/item/fingerless-gloves",
+      "source_status": "classic_curated_leveling",
+      "tooltip": [
+        "Fingerless Gloves",
+        "Item Level 11",
+        "Hands Cloth",
+        "Requires Level 6"
+      ]
+    },
+    {
+      "id": 6203,
+      "name": "Thuggish Shield",
+      "slot": "offhand",
+      "requiredLevel": 6,
+      "itemLevel": 11,
+      "quality": "common",
+      "armorType": null,
+      "origin": "Elwynn Forest · Thuros Lightfingers",
+      "type": "shield",
+      "url": "https://wowclassicdatabase.com/item/thuggish-shield",
+      "source_url": "https://wowclassicdatabase.com/item/thuggish-shield",
+      "source_status": "classic_curated_leveling",
+      "tooltip": [
+        "Thuggish Shield",
+        "Item Level 11",
+        "Off Hand Shield",
+        "Requires Level 6"
+      ]
+    },
+    {
+      "id": 3330,
+      "name": "Dargol's Hauberk",
+      "slot": "chest",
+      "requiredLevel": 8,
+      "itemLevel": 13,
+      "quality": "uncommon",
+      "armorType": "mail",
+      "origin": "Tirisfal Glades · Captain Dargol",
+      "type": null,
+      "url": "https://wowclassicdatabase.com/item/dargols-hauberk",
+      "source_url": "https://wowclassicdatabase.com/item/dargols-hauberk",
+      "source_status": "classic_curated_leveling",
+      "tooltip": [
+        "Dargol's Hauberk",
+        "Item Level 13",
+        "+2 Strength",
+        "+1 Stamina",
+        "Requires Level 8"
+      ]
+    },
+    {
+      "id": 3331,
+      "name": "Melrache's Cape",
+      "slot": "back",
+      "requiredLevel": 7,
+      "itemLevel": 12,
+      "quality": "common",
+      "armorType": null,
+      "origin": "Tirisfal Glades · Captain Melrache",
+      "type": null,
+      "url": "https://wowclassicdatabase.com/item/melraches-cape",
+      "source_url": "https://wowclassicdatabase.com/item/melraches-cape",
+      "source_status": "classic_curated_leveling",
+      "tooltip": [
+        "Melrache's Cape",
+        "Item Level 12",
+        "Requires Level 7"
+      ]
+    },
+    {
+      "id": 4302,
+      "name": "Small Green Dagger",
+      "slot": "mainhand",
+      "requiredLevel": 5,
+      "itemLevel": 10,
+      "quality": "common",
+      "armorType": null,
+      "origin": "Tirisfal Glades · Zone drop",
+      "type": "dagger",
+      "url": "https://wowclassicdatabase.com/item/small-green-dagger",
+      "source_url": "https://wowclassicdatabase.com/item/small-green-dagger",
+      "source_status": "classic_curated_leveling",
+      "tooltip": [
+        "Small Green Dagger",
+        "Item Level 10",
+        "One-Hand Dagger",
+        "Requires Level 5"
       ]
     }
   ]
