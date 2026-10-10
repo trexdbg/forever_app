@@ -245,10 +245,10 @@ function selectionLink(){
 function renderFilters(){
  const cBox=$("level-classes"),sBox=$("level-specs"),lBox=$("level-bands"),oBox=$("level-source");
  cBox.replaceChildren();sBox.replaceChildren();lBox.replaceChildren();oBox.replaceChildren();
- for(const c of db.classes){const b=mk("button","bis-class level-bis-class"+(classId===c.id?" active":""),labelC(c));b.type="button";b.setAttribute("aria-pressed",String(classId===c.id));b.prepend(icon(c,c.icon));b.onclick=()=>{classId=c.id;specId=c.specs[0].id;renderAll()};cBox.append(b)}
- for(const s of cls().specs){const b=mk("button","bis-spec level-bis-chip"+(specId===s.id?" active":""),labelS(s));b.type="button";b.setAttribute("aria-pressed",String(specId===s.id));b.onclick=()=>{specId=s.id;renderAll()};sBox.append(b)}
- levels.forEach(([min,max],index)=>{const b=mk("button","level-bis-chip level-bis-band"+(band===index?" active":""),min===max?String(min):min+"–"+max);b.type="button";b.setAttribute("aria-pressed",String(band===index));b.onclick=()=>{band=index;renderAll()};lBox.append(b)});
- for(const [id,title] of [["all",T.all],["forever",T.sourceforever],["classic",T.sourceclassic]]){const b=mk("button","level-bis-chip"+(origin===id?" active":""),title);b.type="button";b.setAttribute("aria-pressed",String(origin===id));b.onclick=()=>{origin=id;renderAll()};oBox.append(b)}
+ for(const c of db.classes){const b=mk("button","bis-class level-bis-class"+(classId===c.id?" active":""),labelC(c));b.type="button";b.setAttribute("aria-pressed",String(classId===c.id));b.prepend(icon(c,c.icon));b.onclick=()=>{classId=c.id;specId=c.specs[0].id;clearPickerSearch();renderAll()};cBox.append(b)}
+ for(const s of cls().specs){const b=mk("button","bis-spec level-bis-chip"+(specId===s.id?" active":""),labelS(s));b.type="button";b.setAttribute("aria-pressed",String(specId===s.id));b.onclick=()=>{specId=s.id;clearPickerSearch();renderAll()};sBox.append(b)}
+ levels.forEach(([min,max],index)=>{const b=mk("button","level-bis-chip level-bis-band"+(band===index?" active":""),min===max?String(min):min+"–"+max);b.type="button";b.setAttribute("aria-pressed",String(band===index));b.onclick=()=>{band=index;clearPickerSearch();renderAll()};lBox.append(b)});
+ for(const [id,title] of [["all",T.all],["forever",T.sourceforever],["classic",T.sourceclassic]]){const b=mk("button","level-bis-chip"+(origin===id?" active":""),title);b.type="button";b.setAttribute("aria-pressed",String(origin===id));b.onclick=()=>{origin=id;clearPickerSearch();renderAll()};oBox.append(b)}
 }
 function itemRow(i,secondary=false){
  const row=mk("div","level-bis-item"+(secondary?" secondary":""));
@@ -268,6 +268,7 @@ const leftSlots=["head","neck","shoulders","back","chest","wrist","hands"],right
 const qualities={poor:["#9d9d9d","Médiocre","Poor"],common:["#efeee9","Commun","Common"],uncommon:["#43bf66","Inhabituel","Uncommon"],rare:["#4c9df1","Rare","Rare"],epic:["#b67cff","Épique","Epic"],legendary:["#ffac46","Légendaire","Legendary"]};
 const u=en?{missing:"No target",twohand:"Two-handed weapon equipped",chosen:"Your selection",suggestion:"Suggested item",reset:"Use suggestion",details:"Details",more:"Show more",none:"No items match these filters",all:"All qualities",select:"Set as target",candidates:"references"}:{missing:"Aucun objectif",twohand:"Arme à deux mains équipée",chosen:"Votre sélection",suggestion:"Objet suggéré",reset:"Revenir à la suggestion",details:"Détails",more:"Afficher plus",none:"Aucun objet avec ces filtres",all:"Toutes qualités",select:"Définir comme objectif",candidates:"références"};
 let activeSlot="head",pickerQuery="",selectedQualities=new Set(),visibleLimit=45,currentPlan=null;
+function clearPickerSearch(){pickerQuery="";selectedQualities.clear();visibleLimit=45;const input=$("level-search");if(input)input.value=""}
 const savedProfiles=new Map();
 const savedKey=()=>["foreveroth","level-bis",classId,specId,band].join(":");
 function choices(){
@@ -317,7 +318,7 @@ function sheetButton(id){
  info.append(mk("strong","",labelSlot(slot)),mk("small","",i?.name||(blocked?u.twohand:u.missing)));
  btn.append(info,mk("span","bis-v2-slot-indicator",manual?"✓":""));
  btn.addEventListener("click",()=>{
-  window.ForeverItemTooltip?.hide?.();activeSlot=id;pickerQuery="";selectedQualities.clear();visibleLimit=45;
+  window.ForeverItemTooltip?.hide?.();activeSlot=id;clearPickerSearch();
   renderSlots();
   if(window.matchMedia?.("(max-width: 980px)")?.matches)$("level-picker")?.scrollIntoView?.({behavior:"smooth",block:"start"});
  });
