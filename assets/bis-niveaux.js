@@ -11,6 +11,7 @@ const slotsEN={head:"Head",neck:"Neck",shoulders:"Shoulders",back:"Back",chest:"
 const levels=[[1,9],[10,19],[20,29],[30,39],[40,49],[50,59],[60,60]];
 const params=new URLSearchParams(location.search);
 let db=null,all=[],classId="guerrier",specId="fury",band=2,origin="all";
+const remoteByLevel=new Map();
 const mk=(tag,klass,value)=>{const node=document.createElement(tag);if(klass)node.className=klass;if(value!==undefined)node.textContent=value;return node};
 const labelC=c=>en?(classesEN[c.id]||c.label):c.label;
 const labelS=s=>en?(specsEN[s.label]||s.label):s.label;
@@ -151,6 +152,85 @@ function icon(i,fallback){
  }else shell.textContent="✦";
  return shell;
 }
+/* Cache Classic API results per level range. No GitHub Action or daily job needed. */
+const remoteGroups=[
+ {key:"armor",slots:["head","shoulder","back","chest","wrist","hands","waist","legs","feet"]},
+ {key:"accessories",slots:["neck","finger","trinket"]},
+ {key:"weapons",slots:["one_hand","main_hand","two_hand","off_hand","held_in_off_hand","ranged","thrown","relic"]}
+];
+const extra=en?{
+ fetch:"Loading additional Classic items…",ready:"additional Classic items indexed",more:"Load more Classic references",error:"Classic API unavailable; verified local records remain visible",local:"Local references (Classic API not requested)",running:"Classic data loading"
+}:{
+ fetch:"Recherche de nouveaux équipements Classic…",ready:"références Classic supplémentaires indexées",more:"Charger d’autres références Classic",error:"API Classic indisponible : les références locales restent visibles",local:"Références locales",running:"Chargement Classic"
+};
+function mergeRecords(rows){
+ const map=new Map(all.map(i=>[i.id,i]));
+ for(const record of rows){
+  if(!record||!Number.isInteger(record.id)||record.id<=0||!record.name)continue;
+  const item={...record,slot:normSlot(record)};
+  const previous=map.get(item.id);
+  if(!previous){map.set(item.id,item);continue}
+  if(isForever(previous))continue; // Never downgrade a Forever beta reference to a Classic entry.
+  if(isForever(item)){map.set(item.id,item);continue}
+  const oldTooltip=previous.tooltip?.length||0,newTooltip=item.tooltip?.length||0;
+  map.set(item.id,{...previous,...item,
+   origin:previous.source_status==="classic_curated_leveling"?previous.origin:item.origin,
+   url:previous.source_status==="classic_curated_leveling"?previous.url:item.url,
+   source_status:previous.source_status==="classic_curated_leveling"?previous.source_status:item.source_status,
+   requiredLevel:required(item)??required(previous),
+   tooltip:newTooltip>oldTooltip?item.tooltip:previous.tooltip,
+   icon:item.icon||previous.icon});
+ }
+ all=[...map.values()];
+}
+function getRemote(){
+ const max=levels[band][1];
+ if(!remoteByLevel.has(max))remoteByLevel.set(max,{max,busy:false,started:false,failed:false,loaded:new Set(),groups:remoteGroups.map(g=>({...g,cursor:null,more:true}))});
+ return remoteByLevel.get(max);
+}
+function renderRemoteStatus(){
+ const el=$("level-live"),btn=$("level-more");if(!el||!btn)return;
+ const state=remoteByLevel.get(levels[band][1]);
+ if(origin==="forever"){el.textContent=extra.local;btn.hidden=true;return}
+ if(!state){el.textContent=extra.local;btn.hidden=true;return}
+ const qty=state.loaded.size;
+ el.textContent=(state.busy?extra.fetch:state.failed&&qty===0?extra.error:qty+" "+extra.ready)
+  +(state.failed&&qty>0?" · "+extra.error:"");
+ btn.textContent=extra.more;btn.hidden=state.busy||!state.started||state.groups.every(g=>!g.more);
+ btn.disabled=state.busy;
+}
+async function loadRemote(state,pages=1){
+ if(state.busy)return;
+ state.busy=true;renderRemoteStatus();
+ const service=window.ForeverGearData;
+ const maxItemLevel=state.max+(state.max===60?18:11);
+ await Promise.all(state.groups.filter(g=>g.more).map(async group=>{
+  for(let page=0;page<pages&&group.more;page++){
+   try{
+    const response=await service.loadClassic({
+     slot:"all",slotCodes:group.slots,maxLevel:state.max,maxItemLevel,
+     qualities:["uncommon","rare","epic"],limit:100,cursor:group.cursor
+    });
+    group.cursor=response.cursor;
+    group.more=Boolean(response.hasMore&&response.cursor);
+    mergeRecords(response.items);
+    for(const item of response.items)state.loaded.add(item.id);
+    // Keep the first page useful even when subsequent pages fail.
+    renderSlots();
+   }catch(err){
+    group.more=false;state.failed=true;
+    break;
+   }
+  }
+ }));
+ state.busy=false;renderRemoteStatus();renderSlots();
+}
+function ensureRemote(){
+ if(origin==="forever"){renderRemoteStatus();return}
+ const state=getRemote();
+ if(!state.started){state.started=true;loadRemote(state,2)}
+ else renderRemoteStatus();
+}
 function selectionLink(){
  const url=new URL(location.href);
  url.searchParams.set("classe",classId);url.searchParams.set("spe",specId);url.searchParams.set("niveau",String(band));url.searchParams.set("origine",origin);
@@ -210,18 +290,19 @@ function renderSlots(){
  $("level-empty").hidden=pool.length>0;
  $("level-cap").textContent=T.levelCap;$("level-cap").hidden=levels[band][1]<=30;
 }
-function renderAll(){renderFilters();renderSlots();selectionLink()}
+function renderAll(){renderFilters();renderSlots();renderRemoteStatus();selectionLink();ensureRemote()}
 (async()=>{
  try{
-  const [core,forever,local]=await Promise.all([
+  const [core,forever,local,curated]=await Promise.all([
    fetch("/data/bis.json").then(r=>{if(!r.ok)throw Error("bis");return r.json()}),
    window.ForeverGearData.loadForever(),
-   fetch("/data/items.json").then(r=>{if(!r.ok)throw Error("catalogue");return r.json()}).catch(()=>({items:[]}))
+   fetch("/data/items.json").then(r=>{if(!r.ok)throw Error("catalogue");return r.json()}).catch(()=>({items:[]})),
+   fetch("/data/bis-niveaux-classic.json").then(r=>{if(!r.ok)throw Error("curated");return r.json()}).catch(()=>({items:[]}))
   ]);
   if(!Array.isArray(core.classes)||!Array.isArray(core.slots))throw Error("schema");
   db=core;
   const byId=new Map();
-  for(const item of [...core.items,...(Array.isArray(local.items)?local.items:[]),...forever]){
+  for(const item of [...core.items,...(Array.isArray(local.items)?local.items:[]),...(Array.isArray(curated.items)?curated.items:[]),...forever]){
    if(!Number.isInteger(item.id))continue;
    const normalized={...item,slot:normSlot(item)};
    const existing=byId.get(item.id);
@@ -233,6 +314,7 @@ function renderAll(){renderFilters();renderSlots();selectionLink()}
   const s=params.get("spe");if(cls().specs.some(x=>x.id===s))specId=s;else specId=cls().specs[0].id;
   const p=Number(params.get("niveau"));if(params.has("niveau")&&Number.isInteger(p)&&p>=0&&p<levels.length)band=p;
   if(["forever","classic","all"].includes(params.get("origine")))origin=params.get("origine");
+  $("level-more")?.addEventListener("click",()=>loadRemote(getRemote(),1));
   renderAll();
  }catch(err){$("level-current").textContent=T.error;$("level-count").textContent="";$("level-slots").replaceChildren(mk("p","level-bis-empty",T.error))}
 })();
