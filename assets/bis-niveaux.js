@@ -8,9 +8,11 @@ const T=en?{
 const classesEN={guerrier:"Warrior",paladin:"Paladin",chasseur:"Hunter",voleur:"Rogue",pretre:"Priest",chaman:"Shaman",mage:"Mage",demoniste:"Warlock",druide:"Druid"};
 const specsEN={"Fury":"Fury","Tank":"Tank","Soins":"Healer","DPS distance":"Ranged DPS","DPS magique":"Spell DPS","Combat épées":"Combat swords","Combat dagues":"Combat daggers","Ombre":"Shadow","Amélioration":"Enhancement","Farouche":"Feral"};
 const slotsEN={head:"Head",neck:"Neck",shoulders:"Shoulders",back:"Back",chest:"Chest",wrist:"Wrist",hands:"Hands",waist:"Waist",legs:"Legs",feet:"Feet",finger1:"Ring 1",finger2:"Ring 2",trinket1:"Trinket 1",trinket2:"Trinket 2",mainhand:"Main hand",offhand:"Off hand",ranged:"Ranged / relic"};
-const levels=[[1,9],[10,19],[20,29],[30,39],[40,49],[50,59],[60,60]];
+/* Level 30 is the ACTUAL beta endpoint, not a 30–39 range. */
+const levels=[[1,9],[10,19],[20,24],[25,29],[30,30],[31,39],[40,49],[50,59],[60,60]];
+const betaBand=levels.findIndex(([min,max])=>min===30&&max===30);
 const params=new URLSearchParams(location.search);
-let db=null,all=[],classId="guerrier",specId="fury",band=2,origin="all";
+let db=null,all=[],classId="guerrier",specId="fury",band=betaBand,origin="all";
 const remoteByLevel=new Map();
 const mk=(tag,klass,value)=>{const node=document.createElement(tag);if(klass)node.className=klass;if(value!==undefined)node.textContent=value;return node};
 const labelC=c=>en?(classesEN[c.id]||c.label):c.label;
@@ -276,7 +278,7 @@ function ensureRemote(){
 }
 function selectionLink(){
  const url=new URL(location.href);
- url.searchParams.set("classe",classId);url.searchParams.set("spe",specId);url.searchParams.set("niveau",String(band));url.searchParams.set("origine",origin);
+ url.searchParams.set("classe",classId);url.searchParams.set("spe",specId);url.searchParams.set("niveau",String(levels[band][1]));url.searchParams.set("origine",origin);
  history.replaceState(null,"",url);
  for(const a of document.querySelectorAll(".lang-switch a")){
   const u=new URL(a.href,location.origin);
@@ -289,7 +291,7 @@ function renderFilters(){
  cBox.replaceChildren();sBox.replaceChildren();lBox.replaceChildren();oBox.replaceChildren();
  for(const c of db.classes){const b=mk("button","bis-class level-bis-class"+(classId===c.id?" active":""),labelC(c));b.type="button";b.setAttribute("aria-pressed",String(classId===c.id));b.prepend(icon(c,c.icon));b.onclick=()=>{classId=c.id;specId=c.specs[0].id;clearPickerSearch();renderAll()};cBox.append(b)}
  for(const s of cls().specs){const b=mk("button","bis-spec level-bis-chip"+(specId===s.id?" active":""),labelS(s));b.type="button";b.setAttribute("aria-pressed",String(specId===s.id));b.onclick=()=>{specId=s.id;clearPickerSearch();renderAll()};sBox.append(b)}
- levels.forEach(([min,max],index)=>{const b=mk("button","level-bis-chip level-bis-band"+(band===index?" active":""),min===max?String(min):min+"–"+max);b.type="button";b.setAttribute("aria-pressed",String(band===index));b.onclick=()=>{band=index;clearPickerSearch();renderAll()};lBox.append(b)});
+ levels.forEach(([min,max],index)=>{const b=mk("button","level-bis-chip level-bis-band"+(band===index?" active":""),min===30&&max===30?(en?"30 · BETA":"30 · BÊTA"):min===max?String(min):min+"–"+max);b.type="button";b.setAttribute("aria-pressed",String(band===index));b.onclick=()=>{band=index;clearPickerSearch();renderAll()};lBox.append(b)});
  for(const [id,title] of [["all",T.all],["forever",T.sourceforever],["classic",T.sourceclassic]]){const b=mk("button","level-bis-chip"+(origin===id?" active":""),title);b.type="button";b.setAttribute("aria-pressed",String(origin===id));b.onclick=()=>{origin=id;clearPickerSearch();renderAll()};oBox.append(b)}
 }
 function itemRow(i,secondary=false){
@@ -325,7 +327,7 @@ function hydrateSelectedLocale(){
  .catch(()=>{}); // Keep local references when the French source is unavailable.
 }
 
-const savedKey=()=>["foreveroth","level-bis",classId,specId,band].join(":");
+const savedKey=()=>["foreveroth","level-bis",classId,specId,"max"+levels[band][1]].join(":");
 function choices(){
  const k=savedKey();if(savedProfiles.has(k))return savedProfiles.get(k);
  let value={};try{const v=JSON.parse(localStorage.getItem(k)||"{}");if(v&&typeof v==="object"&&!Array.isArray(v))value=v}catch{}
@@ -474,7 +476,12 @@ function renderAll(){renderFilters();renderSlots();renderRemoteStatus();selectio
   all=[...byId.values()];
   if(db.classes.some(c=>c.id===params.get("classe")))classId=params.get("classe");
   const s=params.get("spe");if(cls().specs.some(x=>x.id===s))specId=s;else specId=cls().specs[0].id;
-  const p=Number(params.get("niveau"));if(params.has("niveau")&&Number.isInteger(p)&&p>=0&&p<levels.length)band=p;
+  const p=Number(params.get("niveau"));
+   if(params.has("niveau")&&Number.isInteger(p)){
+    const precise=levels.findIndex(([,max])=>max===p);
+    if(precise>=0)band=precise;
+    else if(p>=0&&p<=6)band=[0,1,3,5,6,7,8][p]; // Backwards-compatible 2026 links using the old bracket index.
+   }
   if(["forever","classic","all"].includes(params.get("origine")))origin=params.get("origine");
   $("level-more")?.addEventListener("click",()=>loadRemote(getRemote(),1));
   $("level-search")?.addEventListener("input",e=>{pickerQuery=e.target.value.trim().toLocaleLowerCase();visibleLimit=45;renderPicker()});
