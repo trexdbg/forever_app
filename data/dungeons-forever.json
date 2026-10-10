@@ -2410,7 +2410,13 @@
       },
       "partySize": 5,
       "partySizeClassic": 10,
-      "guideExtra": "https://foreverdb.net/dungeon/34-stormwind-stockade"
+      "guideExtra": "https://foreverdb.net/dungeon/34-stormwind-stockade",
+      "floorMap": {
+        "url": "https://eintr.net/WoW/images/The-Stockades-walkthrough-map-1024x683.jpg",
+        "kind": "existing_annotated_map",
+        "attribution": "Carte Classic de parcours · eintr.net (archive Aetherflask)",
+        "source": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html"
+      }
     },
     {
       "id": "gnomeregan",
@@ -2648,7 +2654,13 @@
         "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
         "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
       },
-      "mapSource": "https://foreverchanges.pro/dungeons/gnomeregan"
+      "mapSource": "https://foreverchanges.pro/dungeons/gnomeregan",
+      "floorMap": {
+        "url": "https://eintr.net/WoW/images/Gnomeregan-walkthrough-map-v2-1024x777.jpg",
+        "kind": "existing_annotated_map",
+        "attribution": "Carte Classic de parcours · eintr.net (archive Aetherflask)",
+        "source": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html"
+      }
     },
     {
       "id": "razorfen-kraul",
@@ -2907,7 +2919,13 @@
         "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
         "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
       },
-      "mapSource": "https://foreverchanges.pro/dungeons/razorfen-kraul"
+      "mapSource": "https://foreverchanges.pro/dungeons/razorfen-kraul",
+      "floorMap": {
+        "url": "https://eintr.net/WoW/images/Razorfen-Kraul-walkthrough-map.jpg",
+        "kind": "existing_annotated_map",
+        "attribution": "Carte Classic de parcours · eintr.net (archive Aetherflask)",
+        "source": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html"
+      }
     },
     {
       "id": "scarlet-monastery-graveyard",
@@ -3101,7 +3119,13 @@
         "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
         "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
       },
-      "mapSource": "https://foreverchanges.pro/dungeons/scarlet-monastery-graveyard"
+      "mapSource": "https://foreverchanges.pro/dungeons/scarlet-monastery-graveyard",
+      "floorMap": {
+        "url": "https://eintr.net/WoW/images/SM-Graveyard-walkthrough-map-1024x683.jpg",
+        "kind": "existing_annotated_map",
+        "attribution": "Carte Classic de parcours · eintr.net (archive Aetherflask)",
+        "source": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html"
+      }
     },
     {
       "id": "scarlet-monastery-library",
@@ -3132,6 +3156,12 @@
       "note": {
         "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
         "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
+      },
+      "floorMap": {
+        "url": "https://eintr.net/WoW/images/SM-Library-walkthrough-map-1024x683.jpg",
+        "kind": "existing_annotated_map",
+        "attribution": "Carte Classic de parcours · eintr.net (archive Aetherflask)",
+        "source": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html"
       }
     },
     {
@@ -3163,6 +3193,12 @@
       "note": {
         "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
         "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
+      },
+      "floorMap": {
+        "url": "https://eintr.net/WoW/images/SM-Armory-Cathedral-entrance-walkthrough-map.jpg",
+        "kind": "existing_annotated_map",
+        "attribution": "Carte Classic de parcours · eintr.net (archive Aetherflask)",
+        "source": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html"
       }
     },
     {
@@ -3194,6 +3230,12 @@
       "note": {
         "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
         "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
+      },
+      "floorMap": {
+        "url": "https://eintr.net/WoW/images/Razorfen-Downs-walkthrough-map.jpg",
+        "kind": "existing_annotated_map",
+        "attribution": "Carte Classic de parcours · eintr.net (archive Aetherflask)",
+        "source": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html"
       }
     },
     {
@@ -3225,6 +3267,12 @@
       "note": {
         "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
         "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
+      },
+      "floorMap": {
+        "url": "https://eintr.net/WoW/images/SM-Armory-Cathedral-entrance-walkthrough-map.jpg",
+        "kind": "existing_annotated_map",
+        "attribution": "Carte Classic de parcours · eintr.net (archive Aetherflask)",
+        "source": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html"
       }
     },
     {
@@ -3256,6 +3304,12 @@
       "note": {
         "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
         "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
+      },
+      "floorMap": {
+        "url": "https://eintr.net/WoW/images/Uldaman-walkthrough-map.jpg",
+        "kind": "existing_annotated_map",
+        "attribution": "Carte Classic de parcours · eintr.net (archive Aetherflask)",
+        "source": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html"
       }
     },
     {
@@ -3287,6 +3341,12 @@
       "note": {
         "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
         "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
+      },
+      "floorMap": {
+        "url": "https://eintr.net/WoW/images/ZulFarrak-walkthrough-map-1024x683.jpg",
+        "kind": "existing_annotated_map",
+        "attribution": "Carte Classic de parcours · eintr.net (archive Aetherflask)",
+        "source": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html"
       }
     },
     {
@@ -3318,6 +3378,12 @@
       "note": {
         "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
         "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
+      },
+      "floorMap": {
+        "url": "https://eintr.net/WoW/images/Maraudon-walkthrough-map-1024x589.jpg",
+        "kind": "existing_annotated_map",
+        "attribution": "Carte Classic de parcours · eintr.net (archive Aetherflask)",
+        "source": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html"
       }
     },
     {
@@ -3349,6 +3415,12 @@
       "note": {
         "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
         "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
+      },
+      "floorMap": {
+        "url": "https://eintr.net/WoW/images/Sunken-Temple-walkthrough-map-1024x733.jpg",
+        "kind": "existing_annotated_map",
+        "attribution": "Carte Classic de parcours · eintr.net (archive Aetherflask)",
+        "source": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html"
       }
     },
     {
@@ -3380,6 +3452,12 @@
       "note": {
         "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
         "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
+      },
+      "floorMap": {
+        "url": "https://eintr.net/WoW/images/Blackrock-Depths-walkthrough-map-1-1024x683.jpg",
+        "kind": "existing_annotated_map",
+        "attribution": "Carte Classic de parcours · eintr.net (archive Aetherflask)",
+        "source": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html"
       }
     },
     {
@@ -3411,6 +3489,12 @@
       "note": {
         "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
         "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
+      },
+      "floorMap": {
+        "url": "https://eintr.net/WoW/images/Dire-Maul-East-walkthrough-map-1-1024x848.jpg",
+        "kind": "existing_annotated_map",
+        "attribution": "Carte Classic de parcours · eintr.net (archive Aetherflask)",
+        "source": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html"
       }
     },
     {
@@ -3442,6 +3526,12 @@
       "note": {
         "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
         "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
+      },
+      "floorMap": {
+        "url": "https://eintr.net/WoW/images/Blackrock-Spire-Lower-walkthrough-map-1-1024x684.jpg",
+        "kind": "existing_annotated_map",
+        "attribution": "Carte Classic de parcours · eintr.net (archive Aetherflask)",
+        "source": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html"
       }
     },
     {
@@ -3473,6 +3563,12 @@
       "note": {
         "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
         "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
+      },
+      "floorMap": {
+        "url": "https://eintr.net/WoW/images/Dire-Maul-North-walkthrough-map.jpg",
+        "kind": "existing_annotated_map",
+        "attribution": "Carte Classic de parcours · eintr.net (archive Aetherflask)",
+        "source": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html"
       }
     },
     {
@@ -3504,6 +3600,12 @@
       "note": {
         "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
         "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
+      },
+      "floorMap": {
+        "url": "https://eintr.net/WoW/images/Dire-Maul-West-walkthrough-map-1024x635.jpg",
+        "kind": "existing_annotated_map",
+        "attribution": "Carte Classic de parcours · eintr.net (archive Aetherflask)",
+        "source": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html"
       }
     },
     {
@@ -3535,6 +3637,12 @@
       "note": {
         "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
         "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
+      },
+      "floorMap": {
+        "url": "https://eintr.net/WoW/images/Scholomance-walkthrough-map-v2-1024x868.jpg",
+        "kind": "existing_annotated_map",
+        "attribution": "Carte Classic de parcours · eintr.net (archive Aetherflask)",
+        "source": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html"
       }
     },
     {
@@ -3566,6 +3674,12 @@
       "note": {
         "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
         "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
+      },
+      "floorMap": {
+        "url": "https://eintr.net/WoW/images/Stratholme-walkthrough-map-1024x781.jpg",
+        "kind": "existing_annotated_map",
+        "attribution": "Carte Classic de parcours · eintr.net (archive Aetherflask)",
+        "source": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html"
       }
     },
     {
@@ -3597,6 +3711,12 @@
       "note": {
         "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
         "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
+      },
+      "floorMap": {
+        "url": "https://eintr.net/WoW/images/Stratholme-walkthrough-map-1024x781.jpg",
+        "kind": "existing_annotated_map",
+        "attribution": "Carte Classic de parcours · eintr.net (archive Aetherflask)",
+        "source": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html"
       }
     },
     {
@@ -3636,7 +3756,7 @@
   "mapPolicy": "Actual client mosaics for available new instances and source-attributed existing annotated Classic maps; no invented floor schematics. Missing floors visibly labeled.",
   "provenance": {
     "newInstanceMaps": "WoW Forever beta 1.60.1.69893, stitched dungeon minimap textures hosted by warcraftforever.games",
-    "classicPlans": "Icy Veins and eintr.net existing annotated Classic dungeon maps; view at original source, no file copies",
+    "classicPlans": "25 returning Classic wing maps from Icy Veins/eintr.net (former Aetherflask maps), one higher-level wing still missing a reliably loading map; credit/link original hosts. Links do not assert new Forever interior geometry.",
     "classicLoot": "ForeverChanges dungeon pages cross-check against Classic Era and observed Forever beta, unverified drop rates omitted",
     "verifiedBetaStats": "Counts come from ForeverChanges item comparisons, not verified live server drop observations. Loot sources and percentage chances are Classic-based."
   }
