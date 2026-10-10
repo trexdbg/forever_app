@@ -37,3 +37,9 @@
 @media(max-width:650px){.rare-map-legend{max-height:80px}.rare-legend-entry{font-size:10px;padding:4px 6px}}
 
 .rare-chip.rare-pending{border-color:#536056;background:#172018;color:#9fae9f;font-weight:400}
+
+/* Beta rare loot provenance: Forever drops get a separate quiet edge. */
+.rare-loot-forever{border-left:3px solid #69ab80!important;background:linear-gradient(90deg,#17322545,transparent 70%)}
+.rare-loot-stats{display:block;color:#c4d0bd;font-size:11px;line-height:1.5;margin-top:3px}
+.rare-loots>.rare-chip{margin:4px 7px 8px 0}
+.rare-loot>.rare-chip{white-space:nowrap;align-self:flex-start}
