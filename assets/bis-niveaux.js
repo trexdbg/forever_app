@@ -12,7 +12,7 @@ const slotsEN={head:"Head",neck:"Neck",shoulders:"Shoulders",back:"Back",chest:"
 const levels=[[1,9],[10,19],[20,24],[25,29],[30,30],[31,39],[40,49],[50,59],[60,60]];
 const betaBand=levels.findIndex(([min,max])=>min===30&&max===30);
 const params=new URLSearchParams(location.search);
-let db=null,all=[],classId="guerrier",specId="fury",band=betaBand,origin="all";
+let db=null,all=[],classId="guerrier",specId="fury",band=betaBand,origin="all",sourceKind="all";
 const remoteByLevel=new Map();
 const mk=(tag,klass,value)=>{const node=document.createElement(tag);if(klass)node.className=klass;if(value!==undefined)node.textContent=value;return node};
 const labelC=c=>en?(classesEN[c.id]||c.label):c.label;
@@ -21,6 +21,21 @@ const labelSlot=s=>en?(slotsEN[s.id]||s.label):s.label;
 const cls=()=>db.classes.find(c=>c.id===classId);
 const spec=()=>cls().specs.find(s=>s.id===specId);
 const isForever=i=>String(i.source_status||"").startsWith("forever_beta_");
+
+const isObserved=i=>i.source_status==="forever_beta_observed";
+const kindLabel=en?{all:"All acquisition sources",dungeon:"Dungeons",quest:"Quests",crafted:"Crafting",vendor:"Vendors",world:"World / Other"}:{all:"Toutes les sources",dungeon:"Donjons",quest:"Quêtes",crafted:"Métiers",vendor:"Marchands",world:"Monde / Divers"};
+function getKind(i){
+ const kind=i.acquisition?.kind||i.source_kind;
+ if(["dungeon","quest","crafted","vendor","world"].includes(kind))return kind;
+ const origin=(i.origin||"")+" "+(i.origin_fr||"")+" "+(i.origin_en||"");
+ if(/dungeon|donjon|chasm|deadmines|wailing|keep|deeps|h[âa]che.tripes|gne|dalaran|stockade|monastery|citadel|lordaeron|than(e|es)|[eé]xcavat|blackrock|maraudon|gnomeregan|razorfen/i.test(origin))return "dungeon";
+ if(/quest|qu[eê]te|class quest|mission/i.test(origin))return "quest";
+ if(/craft|tailor|leatherwork|enchant|forge|cui(r|s)|m[eé]tier|engineering|alchemy|blacksmith|artisan|couture|ing[eé]nierie/i.test(origin))return "crafted";
+ if(/vendor|marchand|merchant|vendeur|boutique/i.test(origin))return "vendor";
+ return "world";
+}
+const sourceDetails=en?{drop:"Observed beta drop",observed:"Seen in beta",client:"Beta client reference · unverified acquisition",classic:"Classic reference · availability unverified",obtained:"How to obtain",boss:"Boss",level30:"Level 30 · beta cap"}:{drop:"Butin observé en bêta",observed:"Vu en bêta",client:"Référence du client bêta · obtention à confirmer",classic:"Référence Classic · disponibilité non vérifiée",obtained:"Où l’obtenir",boss:"Boss",level30:"Niveau 30 · plafond bêta"};
+
 
 /* Localization is source-aware: the Classic API publishes French names only.
    Never replace a sourced English item name with a French API value on EN pages. */
@@ -139,6 +154,7 @@ function eligible(i){
  if(!Number.isInteger(i.id)||!i.name||i.quality==="poor"||req===null||req>max||req<1)return false;
  if(Number.isFinite(i.itemLevel)&&i.itemLevel>max+(max===60?18:11))return false;
  if(origin==="forever"&&!isForever(i)||origin==="classic"&&isForever(i))return false;
+  if(sourceKind!=="all"&&getKind(i)!==sourceKind)return false;
  if(!rules?.canEquip(i,classId)||!weaponAllowed(i))return false;
  const armor=rules.armorType(i),slot=normSlot(i);
  if(["head","shoulders","chest","wrist","hands","waist","legs","feet"].includes(slot)){
@@ -183,7 +199,7 @@ function roleBonus(i){
  if((caster||heal)&&twoHand(i)&&test("mana"))bonus+=3;
  return bonus;
 }
-const score=i=>(i.itemLevel||required(i)||0)*2+Math.min(required(i)||0,levels[band][1])*.7+roleBonus(i)+({poor:-6,common:0,uncommon:2,rare:4,epic:6,legendary:8}[i.quality]||0)+(isForever(i)?1:0);
+const score=i=>(i.itemLevel||required(i)||0)*2+Math.min(required(i)||0,levels[band][1])*.7+roleBonus(i)+({poor:-6,common:0,uncommon:2,rare:4,epic:6,legendary:8}[i.quality]||0)+(isObserved(i)?3:isForever(i)?1:0);
 function icon(i,fallback){
  const shell=mk("span","level-bis-icon"),value=i?.icon||fallback;
  if(typeof value==="string"&&(/^([a-z0-9_-]{2,70})$/.test(value)||value.startsWith("https://wowdb.assemblee-defias.fr/database-icons/"))){
@@ -278,7 +294,7 @@ function ensureRemote(){
 }
 function selectionLink(){
  const url=new URL(location.href);
- url.searchParams.set("classe",classId);url.searchParams.set("spe",specId);url.searchParams.set("niveau",String(levels[band][1]));url.searchParams.set("origine",origin);
+ url.searchParams.set("classe",classId);url.searchParams.set("spe",specId);url.searchParams.set("niveau",String(levels[band][1]));url.searchParams.set("origine",origin);url.searchParams.set("source",sourceKind);
  history.replaceState(null,"",url);
  for(const a of document.querySelectorAll(".lang-switch a")){
   const u=new URL(a.href,location.origin);
@@ -287,12 +303,17 @@ function selectionLink(){
  }
 }
 function renderFilters(){
- const cBox=$("level-classes"),sBox=$("level-specs"),lBox=$("level-bands"),oBox=$("level-source");
+ const cBox=$("level-classes"),sBox=$("level-specs"),lBox=$("level-bands"),oBox=$("level-source"),aBox=$("level-acquisition");
  cBox.replaceChildren();sBox.replaceChildren();lBox.replaceChildren();oBox.replaceChildren();
  for(const c of db.classes){const b=mk("button","bis-class level-bis-class"+(classId===c.id?" active":""),labelC(c));b.type="button";b.setAttribute("aria-pressed",String(classId===c.id));b.prepend(icon(c,c.icon));b.onclick=()=>{classId=c.id;specId=c.specs[0].id;clearPickerSearch();renderAll()};cBox.append(b)}
  for(const s of cls().specs){const b=mk("button","bis-spec level-bis-chip"+(specId===s.id?" active":""),labelS(s));b.type="button";b.setAttribute("aria-pressed",String(specId===s.id));b.onclick=()=>{specId=s.id;clearPickerSearch();renderAll()};sBox.append(b)}
  levels.forEach(([min,max],index)=>{const b=mk("button","level-bis-chip level-bis-band"+(band===index?" active":""),min===30&&max===30?(en?"30 · BETA":"30 · BÊTA"):min===max?String(min):min+"–"+max);b.type="button";b.setAttribute("aria-pressed",String(band===index));b.onclick=()=>{band=index;clearPickerSearch();renderAll()};lBox.append(b)});
  for(const [id,title] of [["all",T.all],["forever",T.sourceforever],["classic",T.sourceclassic]]){const b=mk("button","level-bis-chip"+(origin===id?" active":""),title);b.type="button";b.setAttribute("aria-pressed",String(origin===id));b.onclick=()=>{origin=id;clearPickerSearch();renderAll()};oBox.append(b)}
+ if(aBox){aBox.replaceChildren();for(const [kind,label] of Object.entries(kindLabel)){
+  const button=mk("button","level-bis-chip level-bis-kind"+(sourceKind===kind?" active":""),label);
+  button.type="button";button.setAttribute("aria-pressed",String(sourceKind===kind));
+  button.onclick=()=>{sourceKind=kind;clearPickerSearch();renderAll()};aBox.append(button);
+ }}
 }
 function itemRow(i,secondary=false){
  const row=mk("div","level-bis-item"+(secondary?" secondary":""));
@@ -457,21 +478,22 @@ function renderSlots(){
 function renderAll(){renderFilters();renderSlots();renderRemoteStatus();selectionLink();ensureRemote()}
 (async()=>{
  try{
-  const [core,forever,local,curated]=await Promise.all([
+  const [core,forever,local,curated,observed]=await Promise.all([
    fetch("/data/bis.json").then(r=>{if(!r.ok)throw Error("bis");return r.json()}),
    window.ForeverGearData.loadForever(),
    fetch("/data/items.json").then(r=>{if(!r.ok)throw Error("catalogue");return r.json()}).catch(()=>({items:[]})),
-   fetch("/data/bis-niveaux-classic.json").then(r=>{if(!r.ok)throw Error("curated");return r.json()}).catch(()=>({items:[]}))
+   fetch("/data/bis-niveaux-classic.json").then(r=>{if(!r.ok)throw Error("curated");return r.json()}).catch(()=>({items:[]})),
+   fetch("/data/bis-niveaux-forever-observed.json").then(r=>{if(!r.ok)throw Error("observed");return r.json()}).catch(()=>({items:[]}))
   ]);
   if(!Array.isArray(core.classes)||!Array.isArray(core.slots))throw Error("schema");
   db=core;
   const byId=new Map();
-  for(const item of [...core.items,...(Array.isArray(local.items)?local.items:[]),...(Array.isArray(curated.items)?curated.items:[]),...forever]){
+  for(const item of [...core.items,...(Array.isArray(local.items)?local.items:[]),...(Array.isArray(curated.items)?curated.items:[]),...forever,...(Array.isArray(observed.items)?observed.items:[])]){
    if(!Number.isInteger(item.id))continue;
    const normalized=window.ForeverItemLocale?.record({...item,slot:normSlot(item)})||{...item,slot:normSlot(item)};
    const existing=byId.get(item.id);
    // Prefer sources with a known required level and rich tooltips; preserve provenances.
-   if(!existing||(required(normalized)!==null&&required(existing)===null)||isForever(normalized)&&!isForever(existing))byId.set(item.id,normalized);
+   if(!existing||isObserved(normalized)||(required(normalized)!==null&&required(existing)===null)||isForever(normalized)&&!isForever(existing))byId.set(item.id,normalized);
   }
   all=[...byId.values()];
   if(db.classes.some(c=>c.id===params.get("classe")))classId=params.get("classe");
@@ -483,6 +505,7 @@ function renderAll(){renderFilters();renderSlots();renderRemoteStatus();selectio
     else if(p>=0&&p<=6)band=[0,1,3,5,6,7,8][p]; // Backwards-compatible 2026 links using the old bracket index.
    }
   if(["forever","classic","all"].includes(params.get("origine")))origin=params.get("origine");
+   if(["all","dungeon","quest","crafted","vendor","world"].includes(params.get("source")))sourceKind=params.get("source");
   $("level-more")?.addEventListener("click",()=>loadRemote(getRemote(),1));
   $("level-search")?.addEventListener("input",e=>{pickerQuery=e.target.value.trim().toLocaleLowerCase();visibleLimit=45;renderPicker()});
   renderAll();
