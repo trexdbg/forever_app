@@ -325,7 +325,7 @@ function renderFilters(){
  cBox.replaceChildren();sBox.replaceChildren();lBox.replaceChildren();oBox.replaceChildren();
  for(const c of db.classes){const b=mk("button","bis-class level-bis-class"+(classId===c.id?" active":""),labelC(c));b.type="button";b.setAttribute("aria-pressed",String(classId===c.id));b.prepend(icon(c,c.icon));b.onclick=()=>{classId=c.id;specId=c.specs[0].id;clearPickerSearch();renderAll()};cBox.append(b)}
  for(const s of cls().specs){const b=mk("button","bis-spec level-bis-chip"+(specId===s.id?" active":""),labelS(s));b.type="button";b.setAttribute("aria-pressed",String(specId===s.id));b.onclick=()=>{specId=s.id;clearPickerSearch();renderAll()};sBox.append(b)}
- levels.forEach(([min,max],index)=>{const b=mk("button","level-bis-chip level-bis-band"+(band===index?" active":""),min===30&&max===30?(en?"30 · BETA":"30 · BÊTA"):min===max?String(min):min+"–"+max);b.type="button";b.setAttribute("aria-pressed",String(band===index));b.onclick=()=>{band=index;clearPickerSearch();renderAll()};lBox.append(b)});
+ levels.forEach(([min,max],index)=>{const b=mk("button","level-bis-chip level-bis-band"+(band===index?" active":""),min===30&&max===30?(en?"30 · BETA":"30 · BÊTA"):min===max?String(min):min+"–"+max);b.type="button";if(min===30&&max===30)b.dataset.beta="true";b.setAttribute("aria-pressed",String(band===index));b.onclick=()=>{band=index;clearPickerSearch();renderAll()};lBox.append(b)});
  for(const [id,title] of [["all",T.all],["forever",T.sourceforever],["classic",T.sourceclassic]]){const b=mk("button","level-bis-chip"+(origin===id?" active":""),title);b.type="button";b.setAttribute("aria-pressed",String(origin===id));b.onclick=()=>{origin=id;clearPickerSearch();renderAll()};oBox.append(b)}
  if(aBox){aBox.replaceChildren();for(const [kind,label] of Object.entries(kindLabel)){
   const button=mk("button","level-bis-chip level-bis-kind"+(sourceKind===kind?" active":""),label);
@@ -411,7 +411,7 @@ function sheetButton(id){
  btn.setAttribute("aria-pressed",String(activeSlot===id));btn.setAttribute("aria-label",labelSlot(slot)+" : "+(i?localizedName(i):(blocked?u.twohand:u.missing)));
  btn.append(sheetIcon(i,slot.icon));
  const info=mk("span","bis-v2-slot-copy");
- info.append(mk("strong","",labelSlot(slot)),mk("small","",i?.name||(blocked?u.twohand:u.missing)));
+ info.append(mk("strong","",labelSlot(slot)),mk("small","",i?localizedName(i):(blocked?u.twohand:u.missing)));
  btn.append(info,mk("span","bis-v2-slot-indicator",manual?"✓":""));
  btn.addEventListener("click",()=>{
   window.ForeverItemTooltip?.hide?.();activeSlot=id;clearPickerSearch();
@@ -443,12 +443,16 @@ function renderPicker(){
  else{
   const item=mk("div","bis-v2-selected");item.dataset.quality=i.quality||"common";
   const detail=mk("div","bis-v2-selected-info");
-  detail.append(mk("strong","",i.name),mk("small","",T.required+" "+required(i)+" · "+(isForever(i)?T.forever:T.classic)));
+  detail.append(mk("strong","",localizedName(i)),
+   mk("small","",T.required+" "+required(i)+(Number.isFinite(i.itemLevel)?" · "+T.itemLevel+" "+i.itemLevel:"")),
+   mk("span","level-bis-source-proof"+(isForever(i)?"":" is-classic")+(isObserved(i)?"":" is-client"),sourceLabel(i)));
+  if(localizedOrigin(i))detail.append(mk("small","level-bis-acquisition-inline",localizedOrigin(i)));
   item.append(sheetIcon(i,slot.icon),detail);selected.append(item);
   window.ForeverItemTooltip?.bind(item,{...localizedTooltip(i),slotLabel:labelSlot(slot)});
   const actions=mk("div","bis-v2-actions"),button=mk("button","", "ⓘ "+u.details);
   button.type="button";button.addEventListener("click",()=>window.ForeverItemTooltip?.pin({...localizedTooltip(i),slotLabel:labelSlot(slot)}));actions.append(button);
   if(manual){const reset=mk("button","bis-v2-clear",u.reset);reset.type="button";reset.addEventListener("click",()=>saveChoice(id,0));actions.append(reset)}
+  const reference=sourceLink(i);if(reference)actions.append(reference);
   selected.append(actions);
  }
  const list=currentPlan.available.get(id)||[],root=$("level-quality");root.replaceChildren();
@@ -473,7 +477,7 @@ function renderPicker(){
   b.setAttribute("aria-pressed",String(i?.id===candidate.id));b.setAttribute("aria-label",u.select+" : "+localizedName(candidate));
   const info=mk("span","bis-v2-candidate-info");
   info.append(mk("strong","",localizedName(candidate)),mk("small","",T.required+" "+required(candidate)+(Number.isFinite(candidate.itemLevel)?" · "+T.itemLevel+" "+candidate.itemLevel:"")),
-   mk("small","",(isForever(candidate)?T.forever:T.classic)+" · "+(localizedOrigin(candidate)||T.from)));
+   mk("small","",(isObserved(candidate)?sourceDetails.drop:isForever(candidate)?T.forever:T.classic)+" · "+(localizedOrigin(candidate)||T.from)));
   b.append(sheetIcon(candidate,slot.icon),info);b.addEventListener("click",()=>saveChoice(id,candidate.id));
   window.ForeverItemTooltip?.bind(b,{...localizedTooltip(candidate),slotLabel:labelSlot(slot)});
   const detail=mk("button","bis-v2-info-button","ⓘ");detail.type="button";
