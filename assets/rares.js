@@ -27,7 +27,7 @@ return rows.filter(r=>(zone.value==="all"||r.zone===zone.value)&&(type.value==="
 .sort((a,b)=>Number(!!b.loot.length)-Number(!!a.loot.length)||a.level-b.level||a.name.en.localeCompare(b.name.en));
 }
 function showList(){
-const box=$("rare-results");box.replaceChildren();$("rare-count").textContent=filtered.length+" / "+rows.length;
+const box=$("rare-results"),lastScroll=box.scrollTop;box.replaceChildren();$("rare-count").textContent=filtered.length+" / "+rows.length;
 if(!filtered.length)box.append(m("p",T("Aucun résultat.","No results."),"rare-empty"));
 for(const r of filtered){
  const b=button(null,"rare-row"+(selected?.id===r.id?" active":""));b.setAttribute("role","option");b.setAttribute("aria-selected",String(r.id===selected?.id));
@@ -38,7 +38,7 @@ for(const r of filtered){
  if(r.tameable)meta.append(chip(T("Apprivoisable","Tameable"),"green"));if(!r.points.length&&!db.zones[r.zone]?.instance)meta.append(chip(T("Position à documenter","No position yet"),"rare-pending"));b.append(meta);
  b.addEventListener("click",()=>choose(r));box.append(b);
 }
-paintLegend();
+box.scrollTop=lastScroll;paintLegend();
 }
 function detail(){
 const out=$("rare-detail");out.replaceChildren();if(!selected){out.append(m("p",T("Aucun rare sélectionné","No rare selected")));return}
@@ -56,7 +56,7 @@ const loots=m("div",null,"rare-loots");
 if(!r.loot.length)loots.append(m("p",T("Aucun butin rare propre à ce monstre documenté ici (butins mondiaux possibles).","No unique uncommon-or-better loot recorded here (world drops remain possible)."),"rare-empty"));
 for(const item of r.loot){
  const a=m(item.item_id?"a":"div",null,"rare-loot");
- if(item.item_id){a.href="https://www.wowhead.com/classic/item="+item.item_id;a.target="_blank";a.rel="noopener noreferrer"}
+ if(item.item_id){a.href="https://foreverdb.net/item/"+item.item_id;a.target="_blank";a.rel="noopener noreferrer"}
  const icon=m("img");icon.src="https://wow.zamimg.com/images/wow/icons/medium/"+encodeURIComponent(item.icon||"inv_misc_questionmark")+".jpg";icon.alt="";icon.width=38;icon.height=38;icon.loading="lazy";icon.onerror=()=>{icon.onerror=null;icon.src="/assets/icons/inv_scroll_07.jpg"};a.append(icon);
  const txt=m("span",null,"rare-loot-text");txt.append(m("strong",item.name[en?"en":"fr"]));
  txt.append(m("small",item.chance_classic_percent==null?T("Taux inconnu","Chance unknown"):T("Classic : ","Classic: ")+fmt(item.chance_classic_percent)+" %"));a.append(txt);
