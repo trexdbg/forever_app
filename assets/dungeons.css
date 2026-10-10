@@ -15,3 +15,118 @@
 .dg-entry .dg-chips{row-gap:5px}.dg-entry .dg-chip.live{font-weight:650}
 .dg-drop img{border-radius:2px}.dg-map-source-fallback{display:block;color:#d9c8a8;font-size:13px}
 @media(max-width:720px){.dg-change{display:grid;gap:4px}.dg-map-foot{line-height:1.6}.dg-map-caption{font-size:9px}}
+
+
+/* v5 — ForEveroth's unified Rare / PNJ map explorer language */
+.dungeon-main{padding-top:12px}
+.dg-shell{padding:15px 17px 23px}
+.dg-heading{align-items:center;margin-bottom:12px}
+.dg-heading h1{font:500 clamp(25px,2.5vw,30px) Georgia,serif;color:#ead4af;margin:3px 0}
+.dg-heading p{font-size:12px;line-height:1.45;max-width:650px}
+.dg-stats{gap:6px}
+.dg-stat{background:#19251d;border:1px solid #3b4d3e;color:#b5c2b1;font-size:11px;padding:6px 9px}
+.dg-stat strong{color:#eed2a2;font-size:12px}
+.dg-controls{margin:11px 0 13px;grid-template-columns:minmax(175px,1.5fr) minmax(130px,.8fr) minmax(170px,1fr)}
+.dg-field{font-size:11px;color:#b8c3b4}
+.dg-field input,.dg-field select{height:37px;font-size:12px;background:#0c1610;border:1px solid #4a584a}
+.dg-grid{grid-template-columns:minmax(230px,285px) minmax(0,1fr);gap:12px}
+.dg-directory{background:#0c1711;border-color:#39473b;max-height:745px}
+.dg-entry{padding:12px 11px}
+.dg-entry strong{font-size:13px;font-weight:650}
+.dg-entry small{font-size:11px}
+.dg-entry.active{background:#27372b;border-left-color:#dcb37c}
+.dg-entry .dg-chips{gap:5px}
+.dg-entry .dg-chip{font-size:9px;padding:3px 5px}
+.dg-content{display:grid;grid-template-columns:minmax(0,1fr) minmax(295px,350px);gap:12px;align-items:start}
+.dg-map-card{grid-column:1/-1;background:#0c1711;border-color:#39473b}
+.dg-map-top{padding:11px 13px}
+.dg-map-top h2{font-size:17px}
+.dg-map-top small{margin-top:2px}
+.dg-map{aspect-ratio:1002/620}
+.dg-map-caption{background:#08150bdc;border:1px solid #52634d;left:9px;bottom:9px;padding:5px 9px;font-size:10px;letter-spacing:.035em}
+.dg-map-foot{padding:8px 12px;font-size:10px}
+.dg-info-card{grid-column:1;min-height:200px;background:#0c1711;border-color:#39473b;padding:14px}
+.dg-info-head h2{font-size:22px}
+.dg-info-card h3{font:600 12px "Trebuchet MS","Segoe UI",sans-serif;color:#d4bd8e;margin:14px 0 5px}
+.dg-info-card p{font-size:12px;line-height:1.65;margin:5px 0}
+.dg-info-actions{margin-top:10px}
+.dg-info-actions a{display:inline-flex;align-items:center;padding:7px 10px;color:#ddbc86!important;border:1px solid #61563f;text-decoration:none;background:#221f19;font-size:11px}
+.dg-info-actions a:hover{background:#30281e}
+.dg-changes{margin:11px 0 4px;padding:7px 0;border-color:#36463a}
+.dg-change{gap:8px;font-size:11px!important;line-height:1.5}
+.dg-change .dg-chip{white-space:nowrap}
+.dg-bosses{grid-column:2;background:#0c1711;border-color:#39473b;padding:12px;min-height:220px}
+.dg-bosses .dg-section-title{margin-bottom:10px}
+.dg-bosses .dg-section-title h2{font-size:18px}
+.dg-boss-nav{max-height:188px;overflow-y:auto;display:grid;border:1px solid #344537;scrollbar-color:#4c614c transparent}
+.dg-boss-navitem{min-height:35px;border:0;border-left:3px solid transparent;border-bottom:1px solid #304135;background:#132018;color:#d9ddce;padding:7px 9px;text-align:left;display:flex;align-items:center;gap:8px;border-radius:0;cursor:pointer}
+.dg-boss-navitem:last-child{border-bottom:0}
+.dg-boss-navitem:hover{background:#24352a}
+.dg-boss-navitem.active{background:#273a2a;color:#f0d2a2;border-left-color:#dcb47c}
+.dg-boss-n{font-size:10px;color:#d3b77e;font-weight:800;letter-spacing:.045em}
+.dg-boss-navname{flex:1;font-size:12px;font-weight:600;min-width:0}
+.dg-nav-rare{color:#c8a4df;font-size:9px;white-space:nowrap}
+.dg-selected-boss{padding:12px 1px 3px}
+.dg-selected-heading{display:flex;align-items:center;gap:10px;padding:0 2px 10px}
+.dg-selected-index{display:grid;place-items:center;width:40px;height:40px;flex:none;border:1px solid #947752;color:#e4c58b;background:#272518;font-size:14px;font-weight:800}
+.dg-selected-heading div{min-width:0}
+.dg-selected-heading small{display:block;color:#a7b9a4;letter-spacing:.13em;font-size:9px;margin-bottom:3px}
+.dg-selected-heading h3{font:500 19px Georgia,serif;color:#f0d8b1;margin:0;line-height:1.25}
+.dg-selected-boss .dg-chips{margin-bottom:10px}
+.dg-selected-note{border-left:2px solid #756345;margin:7px 0 12px!important;padding-left:10px;font-size:11px;color:#b8c4b0;line-height:1.55}
+.dg-loot-heading{display:flex;justify-content:space-between;align-items:center;border-top:1px solid #354437;border-bottom:1px solid #354437;padding:9px 2px;font-size:12px;color:#e3ca9c}
+.dg-loot-heading span{color:#b2bfae}
+.dg-selected-boss .dg-drops{grid-template-columns:minmax(0,1fr);gap:6px;padding-top:9px}
+.dg-drop{padding:7px 8px;min-height:50px;gap:8px;background:#17261c;border-color:#3c4d40;color:#c7afec}
+.dg-drop strong{font-size:12px}
+.dg-drop small{font-size:10px}
+.dg-drop img{width:34px;height:34px}
+.dg-drop:hover,.dg-drop:focus-visible{background:#233229;border-color:#b19bc4}
+.dg-loot-provenance{font-size:9px!important;color:#9daaa0!important}
+.dg-panel-disclaimer{font-size:10px!important;color:#a4b1a4!important;line-height:1.45!important;margin:10px 0!important}
+.dg-boss-actions{display:flex;gap:6px;justify-content:space-between;padding:9px 0}
+.dg-pager{color:#ead0a0;background:#1c2d22;border:1px solid #58634e;padding:7px 9px;font-size:11px}
+.dg-pager:hover{background:#2a392b}
+.dg-extra-loot{border-top:1px solid #3b4b3c;padding-top:10px;margin-top:6px}
+.dg-extra-loot summary{font-size:11px;color:#e0c28e;cursor:pointer}
+.dg-extra-loot h4{font-size:12px;color:#d7c396;margin:12px 0 6px}
+.dg-extra-loot .dg-drops{grid-template-columns:minmax(0,1fr)}
+.dg-zero{padding:12px;background:#15231a;border:1px solid #3b493b}
+.dg-zero strong{font-size:13px;color:#e2d0a8}
+.dg-zero p{font-size:12px;color:#a6b3a3;margin:8px 0}
+.dg-zero a{font-size:12px;color:#e1c38d;text-decoration:underline}
+.dg-source-note{line-height:1.5}
+.dg-bosses>.dg-source-note{font-size:10px;margin-top:10px;color:#8f9f8d}
+.dg-sources{margin-top:13px;padding:9px 4px;border-top:1px solid #344336;color:#9fae9e}
+.dg-sources strong{font-size:11px;color:#ccba96}
+.dg-sources p{font-size:11px;line-height:1.55;margin:6px 0}
+@media(max-width:1100px){
+.dg-content{grid-template-columns:minmax(0,1fr)}
+.dg-map-card,.dg-info-card,.dg-bosses{grid-column:1}
+.dg-boss-nav{grid-template-columns:repeat(2,minmax(0,1fr));max-height:210px}
+.dg-selected-boss .dg-drops{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:780px){
+.dg-grid{display:flex;flex-direction:column}
+.dg-content{width:100%;display:flex;flex-direction:column}
+.dg-map-card,.dg-bosses,.dg-info-card{width:100%}
+.dg-map-card{order:0}
+.dg-bosses{order:1}
+.dg-info-card{order:2}
+.dg-directory{width:100%;max-height:230px}
+.dg-controls{grid-template-columns:repeat(2,minmax(0,1fr))}
+.dg-controls>.dg-field:first-child{grid-column:1/-1}
+.dg-boss-nav{max-height:190px}
+}
+@media(max-width:520px){
+.dg-shell{padding:12px}
+.dg-heading h1{font-size:26px}
+.dg-stats{width:100%}
+.dg-stat{flex:1;text-align:center}
+.dg-map-top{gap:7px}
+.dg-map-top>div:first-child{width:100%}
+.dg-boss-nav{grid-template-columns:1fr}
+.dg-selected-boss .dg-drops{grid-template-columns:minmax(0,1fr)}
+.dg-controls{grid-template-columns:minmax(0,1fr)}
+.dg-controls>.dg-field:first-child{grid-column:auto}
+}
