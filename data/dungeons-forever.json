@@ -1,7 +1,7 @@
 {
-  "schema": 1,
+  "schema": 2,
   "updated": "2026-10-10",
-  "scope": "WoW Forever official beta dungeons only. No private server datasets.",
+  "scope": "9 Forever additions and 26 returning Classic dungeon wings in World of Warcraft Forever, no other servers.",
   "sourcePolicy": "Beta sightings/independent guides; loot chances unverified. Schematics represent encounter order, never physical map coordinates.",
   "mapImageBase": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/",
   "official": "https://worldofwarcraft.blizzard.com/en-us/news/24304160/",
@@ -81,7 +81,11 @@
             "en": "Patrols Anvilmar’s Rest. Curse and mind blast."
           },
           "floor": "main",
-          "rare": false
+          "rare": false,
+          "mapPoint": [
+            45,
+            70
+          ]
         },
         {
           "name": {
@@ -110,7 +114,11 @@
             "en": "Kill the summoner first; watch out for fire nova."
           },
           "floor": "main",
-          "rare": false
+          "rare": false,
+          "mapPoint": [
+            84,
+            54
+          ]
         },
         {
           "name": {
@@ -139,7 +147,11 @@
             "en": "Knockback: fight with your back to a wall, away from trash."
           },
           "floor": "main",
-          "rare": false
+          "rare": false,
+          "mapPoint": [
+            46,
+            62
+          ]
         },
         {
           "name": {
@@ -168,7 +180,11 @@
             "en": "Final boss in the Reliquary of Kings; fear and two stone golems."
           },
           "floor": "main",
-          "rare": false
+          "rare": false,
+          "mapPoint": [
+            47,
+            35
+          ]
         }
       ],
       "quests": 5,
@@ -178,12 +194,7 @@
         "en": "Week-one beta dungeon. Twelve listed boss drops; quest rewards are separate."
       },
       "mapStatus": "schematic",
-      "entry": {
-        "x": 43.5,
-        "y": 52,
-        "zone": "ironforge",
-        "note": "Haut Siège / High Seat"
-      },
+      "entry": null,
       "questLoot": [
         {
           "fr": "Tête de Durgen Mornemartel",
@@ -191,7 +202,25 @@
           "slot": "Objet de quête / Quest item",
           "boss": "Durgen Mornemartel"
         }
-      ]
+      ],
+      "type": "forever",
+      "floorMap": {
+        "url": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/dungeons/3065.webp",
+        "w": 560,
+        "h": 764,
+        "kind": "client_minimap_mosaic",
+        "attribution": "Blizzard Entertainment · WoW Forever beta 1.60.1.69893; mosaïque WFG",
+        "source": "https://warcraftforever.games/maps/the-hall-of-thanes"
+      },
+      "changes": [
+        {
+          "status": "new_forever",
+          "fr": "Nouveau donjon exclusif à Forever.",
+          "en": "New dungeon exclusive to Forever."
+        }
+      ],
+      "mapMarkerPrecision": "annotated_map_approx",
+      "mapMarkerSource": "https://www.icy-veins.com/wow-forever/hall-of-thanes-guide/"
     },
     {
       "id": "ruins-of-lordaeron",
@@ -475,7 +504,24 @@
           "en": "Rotmender's Garb",
           "slot": "Torse / Chest"
         }
-      ]
+      ],
+      "type": "forever",
+      "floorMap": {
+        "url": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/dungeons/2999.webp",
+        "w": 698,
+        "h": 762,
+        "kind": "client_minimap_mosaic",
+        "attribution": "Blizzard Entertainment · WoW Forever beta 1.60.1.69893; mosaïque WFG",
+        "source": "https://warcraftforever.games/maps/ruins-of-lordaeron"
+      },
+      "changes": [
+        {
+          "status": "new_forever",
+          "fr": "Nouveau donjon exclusif à Forever.",
+          "en": "New dungeon exclusive to Forever."
+        }
+      ],
+      "mapSource": "https://www.icy-veins.com/wow-forever/ruins-of-lordaeron-guide/"
     },
     {
       "id": "excavation-site-wetlands",
@@ -636,7 +682,24 @@
         "fr": "Quatre rencontres relevées ; butin de Highland Horror encore inconnu. Les 12 quêtes incluent les deux factions.",
         "en": "Four encounters; Highland Horror gear drops remain unknown. Twelve quests across both factions."
       },
-      "mapStatus": "schematic"
+      "mapStatus": "schematic",
+      "type": "forever",
+      "floorMap": {
+        "url": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/dungeons/2998.webp",
+        "w": 1242,
+        "h": 890,
+        "kind": "client_minimap_mosaic",
+        "attribution": "Blizzard Entertainment · WoW Forever beta 1.60.1.69893; mosaïque WFG",
+        "source": "https://warcraftforever.games/maps/excavation-site-wetlands"
+      },
+      "changes": [
+        {
+          "status": "new_forever",
+          "fr": "Nouveau donjon exclusif à Forever.",
+          "en": "New dungeon exclusive to Forever."
+        }
+      ],
+      "mapSource": "https://www.icy-veins.com/wow-forever/excavation-site-wetlands-guide/"
     },
     {
       "id": "city-of-dalaran",
@@ -969,7 +1032,24 @@
         "fr": "Huit boss documentés. Deux secteurs (égouts et ville), une clé de quête et plusieurs immunités. Bêta niveau 30 : les derniers boss sont au-dessus du plafond.",
         "en": "Eight documented bosses, sewers and city, quest key and immunities. Some bosses exceed the current beta level-30 cap."
       },
-      "mapStatus": "schematic"
+      "mapStatus": "schematic",
+      "type": "forever",
+      "floorMap": {
+        "url": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/dungeons/2959.webp",
+        "w": 1114,
+        "h": 1370,
+        "kind": "client_minimap_mosaic",
+        "attribution": "Blizzard Entertainment · WoW Forever beta 1.60.1.69893; mosaïque WFG",
+        "source": "https://warcraftforever.games/maps/city-of-dalaran"
+      },
+      "changes": [
+        {
+          "status": "new_forever",
+          "fr": "Nouveau donjon exclusif à Forever.",
+          "en": "New dungeon exclusive to Forever."
+        }
+      ],
+      "mapSource": "https://foreverchanges.pro/fr/dungeons/city-of-dalaran"
     },
     {
       "id": "drowned-city",
@@ -994,7 +1074,15 @@
       "source": "https://wowforevertalent.com/fr/dungeons/the-drowned-city/",
       "bosses": [],
       "beta": "announced",
-      "mapStatus": "none"
+      "mapStatus": "none",
+      "type": "forever",
+      "changes": [
+        {
+          "status": "new_forever",
+          "fr": "Nouveau donjon exclusif à Forever.",
+          "en": "New dungeon exclusive to Forever."
+        }
+      ]
     },
     {
       "id": "kroldok-stronghold",
@@ -1019,7 +1107,15 @@
       "source": "https://wowforevertalent.com/fr/dungeons/kroldok-stronghold/",
       "bosses": [],
       "beta": "announced",
-      "mapStatus": "none"
+      "mapStatus": "none",
+      "type": "forever",
+      "changes": [
+        {
+          "status": "new_forever",
+          "fr": "Nouveau donjon exclusif à Forever.",
+          "en": "New dungeon exclusive to Forever."
+        }
+      ]
     },
     {
       "id": "alcaz-prison",
@@ -1044,7 +1140,15 @@
       "source": "https://wowforevertalent.com/fr/dungeons/alcaz-prison/",
       "bosses": [],
       "beta": "announced",
-      "mapStatus": "none"
+      "mapStatus": "none",
+      "type": "forever",
+      "changes": [
+        {
+          "status": "new_forever",
+          "fr": "Nouveau donjon exclusif à Forever.",
+          "en": "New dungeon exclusive to Forever."
+        }
+      ]
     },
     {
       "id": "blackmaw-hold",
@@ -1069,7 +1173,15 @@
       "source": "https://wowforevertalent.com/fr/dungeons/blackmaw-hold/",
       "bosses": [],
       "beta": "announced",
-      "mapStatus": "none"
+      "mapStatus": "none",
+      "type": "forever",
+      "changes": [
+        {
+          "status": "new_forever",
+          "fr": "Nouveau donjon exclusif à Forever.",
+          "en": "New dungeon exclusive to Forever."
+        }
+      ]
     },
     {
       "id": "shapers-terrace",
@@ -1094,9 +1206,1806 @@
       "source": "https://wowforevertalent.com/fr/dungeons/shapers-terrace/",
       "bosses": [],
       "beta": "announced",
-      "mapStatus": "none"
+      "mapStatus": "none",
+      "type": "forever",
+      "changes": [
+        {
+          "status": "new_forever",
+          "fr": "Nouveau donjon exclusif à Forever.",
+          "en": "New dungeon exclusive to Forever."
+        }
+      ]
+    },
+    {
+      "id": "ragefire-chasm",
+      "type": "classic",
+      "name": {
+        "fr": "Gouffre de Ragefeu",
+        "en": "Ragefire Chasm"
+      },
+      "level": [
+        13,
+        18
+      ],
+      "zone": {
+        "id": "orgrimmar",
+        "fr": "Orgrimmar",
+        "en": "Orgrimmar",
+        "uiMapID": 1454
+      },
+      "access": {
+        "fr": "Entrée située dans : Orgrimmar. Consulter la carte et la source pour la localisation précise.",
+        "en": "Entrance in Orgrimmar. See source map for precise directions."
+      },
+      "source": "https://foreverchanges.pro/dungeons/ragefire-chasm",
+      "bosses": [
+        {
+          "name": {
+            "en": "Oggleflint",
+            "fr": "Oggleflint"
+          },
+          "level": 16,
+          "loot": [
+            {
+              "en": "Barbaric Crossbow",
+              "fr": "Arbalète barbare",
+              "slot": "Distance / Ranged",
+              "isNew": true
+            },
+            {
+              "en": "Trogg Scepter",
+              "fr": "Sceptre trogg",
+              "slot": "Main droite / Main hand",
+              "isNew": true
+            },
+            {
+              "en": "Bone Knuckles",
+              "fr": "Poings d'os",
+              "slot": "Mains / Fist weapon",
+              "isNew": true
+            }
+          ],
+          "rare": false,
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          }
+        },
+        {
+          "name": {
+            "en": "Taragaman the Hungerer",
+            "fr": "Taragaman l'Affameur"
+          },
+          "level": 16,
+          "loot": [
+            {
+              "en": "Subterranean Cape",
+              "fr": "Cape souterraine",
+              "slot": "Dos / Back"
+            },
+            {
+              "en": "Crystalline Cuffs",
+              "fr": "Manchettes cristallines",
+              "slot": "Poignets / Wrist"
+            },
+            {
+              "en": "Cursed Felblade",
+              "fr": "Lame gangrenée maudite",
+              "slot": "Main droite / Main hand"
+            }
+          ],
+          "rare": false,
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          }
+        },
+        {
+          "name": {
+            "en": "Jergosh the Invoker",
+            "fr": "Jergosh l'Invocateur"
+          },
+          "level": 16,
+          "loot": [
+            {
+              "en": "Robe of Evocation",
+              "fr": "Robe d'évocation",
+              "slot": "Torse / Chest"
+            },
+            {
+              "en": "Cavedweller Bracers",
+              "fr": "Brassards d'habitant des cavernes",
+              "slot": "Poignets / Wrist"
+            },
+            {
+              "en": "Chanting Blade",
+              "fr": "Lame chantante",
+              "slot": "Main droite / Main hand"
+            }
+          ],
+          "rare": false,
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          }
+        },
+        {
+          "name": {
+            "en": "Bazzalan",
+            "fr": "Bazzalan"
+          },
+          "level": 16,
+          "loot": [
+            {
+              "en": "Searing Dagger",
+              "fr": "Dague incendiaire",
+              "slot": "Main droite / Main hand",
+              "isNew": true
+            },
+            {
+              "en": "Satyrskin Cloak",
+              "fr": "Cape en peau de satyre",
+              "slot": "Dos / Back",
+              "isNew": true
+            },
+            {
+              "en": "Chasm Walkers",
+              "fr": "Marcheurs des profondeurs",
+              "slot": "Pieds / Feet",
+              "isNew": true
+            }
+          ],
+          "rare": false,
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          }
+        }
+      ],
+      "beta": "classic_beta_accessible",
+      "changes": [
+        {
+          "status": "observed_beta",
+          "fr": "12 butins présentés dans la bêta ; de nouveaux objets apparaissent sur Oggleflint et Bazzalan.",
+          "en": "Twelve drops reported from the beta, with new items on Oggleflint and Bazzalan."
+        }
+      ],
+      "mapStatus": "reference",
+      "note": {
+        "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
+        "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
+      },
+      "floorMap": {
+        "url": "https://static.icy-veins.com/images/classic-plus/forever/dungeons/ragefire-chasm-map.jpg",
+        "kind": "existing_annotated_map",
+        "attribution": "Carte annotée · Icy Veins",
+        "source": "https://www.icy-veins.com/wow-forever/ragefire-chasm-guide/"
+      }
+    },
+    {
+      "id": "wailing-caverns",
+      "type": "classic",
+      "name": {
+        "fr": "Cavernes des lamentations",
+        "en": "Wailing Caverns"
+      },
+      "level": [
+        17,
+        24
+      ],
+      "zone": {
+        "id": "barrens",
+        "fr": "Les Tarides",
+        "en": "The Barrens",
+        "uiMapID": 1413
+      },
+      "access": {
+        "fr": "Entrée située dans : Les Tarides. Consulter la carte et la source pour la localisation précise.",
+        "en": "Entrance in The Barrens. See source map for precise directions."
+      },
+      "source": "https://foreverchanges.pro/dungeons/wailing-caverns",
+      "bosses": [
+        {
+          "name": {
+            "en": "Lord Cobrahn",
+            "fr": "Seigneur Cobrahn"
+          },
+          "level": 20,
+          "loot": [
+            {
+              "en": "Cobrahn's Grasp",
+              "fr": "Étreinte de Cobrahn",
+              "slot": "Taille / Waist"
+            },
+            {
+              "en": "Leggings of the Fang",
+              "fr": "Jambières du Croc",
+              "slot": "Jambes / Legs"
+            },
+            {
+              "en": "Robe of the Moccasin",
+              "fr": "Robe du mocassin",
+              "slot": "Torse / Chest"
+            }
+          ],
+          "rare": false,
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          }
+        },
+        {
+          "name": {
+            "en": "Lady Anacondra",
+            "fr": "Dame Anacondra"
+          },
+          "level": 20,
+          "loot": [
+            {
+              "en": "Belt of the Fang",
+              "fr": "Ceinture du Croc",
+              "slot": "Taille / Waist"
+            },
+            {
+              "en": "Serpent's Shoulders",
+              "fr": "Épaulières du serpent",
+              "slot": "Épaules / Shoulders"
+            },
+            {
+              "en": "Snake Eye Kaleidoscope",
+              "fr": "Kaléidoscope œil-de-serpent",
+              "slot": "Cou / Neck",
+              "isNew": true
+            }
+          ],
+          "rare": false,
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          }
+        },
+        {
+          "name": {
+            "en": "Kresh",
+            "fr": "Kresh"
+          },
+          "level": 20,
+          "loot": [
+            {
+              "en": "Kresh's Back",
+              "fr": "Carapace de Kresh",
+              "slot": "Bouclier / Shield"
+            },
+            {
+              "en": "Worn Turtle Shell Shield",
+              "fr": "Bouclier en carapace de tortue usé",
+              "slot": "Bouclier / Shield"
+            }
+          ],
+          "rare": false,
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          }
+        },
+        {
+          "name": {
+            "en": "Lord Pythas",
+            "fr": "Seigneur Pythas"
+          },
+          "level": 21,
+          "loot": [
+            {
+              "en": "Stinging Viper",
+              "fr": "Vipère à aiguillon",
+              "slot": "Masse / Mace"
+            },
+            {
+              "en": "Armor of the Fang",
+              "fr": "Armure du Croc",
+              "slot": "Torse / Chest"
+            }
+          ],
+          "rare": false,
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          }
+        },
+        {
+          "name": {
+            "en": "Skum",
+            "fr": "Skum"
+          },
+          "level": 21,
+          "loot": [
+            {
+              "en": "Glowing Lizardscale Cloak",
+              "fr": "Cape luminescente en écailles de lézard",
+              "slot": "Dos / Back"
+            },
+            {
+              "en": "Tail Spike",
+              "fr": "Pique caudale",
+              "slot": "Dague / Dagger"
+            }
+          ],
+          "rare": false,
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          }
+        },
+        {
+          "name": {
+            "en": "Lord Serpentis",
+            "fr": "Seigneur Serpentis"
+          },
+          "level": 21,
+          "loot": [
+            {
+              "en": "Venomstrike",
+              "fr": "Frappe venimeuse",
+              "slot": "Arc / Bow"
+            },
+            {
+              "en": "Footpads of the Fang",
+              "fr": "Souliers du Croc",
+              "slot": "Pieds / Feet"
+            }
+          ],
+          "rare": false,
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          }
+        },
+        {
+          "name": {
+            "en": "Verdan the Everliving",
+            "fr": "Verdan l'Éternel"
+          },
+          "level": 21,
+          "loot": [
+            {
+              "en": "Seedcloud Buckler",
+              "fr": "Rondache nuage-graine",
+              "slot": "Bouclier / Shield"
+            },
+            {
+              "en": "Living Root",
+              "fr": "Racine vivante",
+              "slot": "Bâton / Staff"
+            }
+          ],
+          "rare": false,
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          }
+        },
+        {
+          "name": {
+            "en": "Mutanus the Devourer",
+            "fr": "Mutanus le Dévoreur"
+          },
+          "level": 22,
+          "loot": [
+            {
+              "en": "Mutant Scale Breastplate",
+              "fr": "Cuirasse en écailles mutantes",
+              "slot": "Torse / Chest"
+            },
+            {
+              "en": "Deep Fathom Ring",
+              "fr": "Anneau des profondeurs",
+              "slot": "Doigt / Ring"
+            }
+          ],
+          "rare": false,
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          }
+        },
+        {
+          "name": {
+            "en": "Deviate Faerie Dragon",
+            "fr": "Dragon féerique déviant"
+          },
+          "level": 20,
+          "loot": [
+            {
+              "en": "Firebelcher",
+              "fr": "Crache-feu",
+              "slot": "Baguette / Wand"
+            }
+          ],
+          "rare": true,
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          }
+        }
+      ],
+      "beta": "classic_beta_accessible",
+      "changes": [
+        {
+          "status": "observed_beta",
+          "fr": "Les cinq pièces de l'ensemble Étreinte de la vipère bénéficient de nouveaux bonus dans Forever ; l'effet de transformation druidique est signalé.",
+          "en": "Five-piece Embrace of the Viper set has updated bonuses in Forever; Druid snake transformation is reported."
+        }
+      ],
+      "mapStatus": "reference",
+      "note": {
+        "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
+        "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
+      },
+      "floorMap": {
+        "url": "https://eintr.net/WoW/images/Wailing-Caverns-walkthrough-map-1024x683.jpg",
+        "kind": "existing_annotated_map",
+        "attribution": "Carte Classic · eintr.net",
+        "source": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html"
+      }
+    },
+    {
+      "id": "the-deadmines",
+      "type": "classic",
+      "name": {
+        "fr": "Mortemines",
+        "en": "The Deadmines"
+      },
+      "level": [
+        17,
+        26
+      ],
+      "zone": {
+        "id": "westfall",
+        "fr": "Marche de l'Ouest",
+        "en": "Westfall",
+        "uiMapID": 1436
+      },
+      "access": {
+        "fr": "Entrée située dans : Marche de l'Ouest. Consulter la carte et la source pour la localisation précise.",
+        "en": "Entrance in Westfall. See source map for precise directions."
+      },
+      "source": "https://foreverchanges.pro/dungeons/the-deadmines",
+      "bosses": [
+        {
+          "name": {
+            "en": "Rhahk'Zor",
+            "fr": "Rhahk'Zor"
+          },
+          "level": 19,
+          "loot": [
+            {
+              "en": "Rhahk'Zor's Hammer",
+              "fr": "Marteau de Rhahk'Zor",
+              "slot": "Masse deux mains"
+            },
+            {
+              "en": "Ogre Loincloth",
+              "fr": "Pagne ogre",
+              "slot": "Jambes / Legs",
+              "isNew": true
+            }
+          ],
+          "rare": false,
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          }
+        },
+        {
+          "name": {
+            "en": "Miner Johnson",
+            "fr": "Mineur Johnson"
+          },
+          "level": 19,
+          "loot": [
+            {
+              "en": "Gold-plated Buckler",
+              "fr": "Rondache plaquée or",
+              "slot": "Bouclier / Shield"
+            },
+            {
+              "en": "Miner's Cape",
+              "fr": "Cape du mineur",
+              "slot": "Dos / Back"
+            }
+          ],
+          "rare": true,
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          }
+        },
+        {
+          "name": {
+            "en": "Sneed",
+            "fr": "Sneed"
+          },
+          "level": 20,
+          "loot": [
+            {
+              "en": "Buzz Saw",
+              "fr": "Scie circulaire",
+              "slot": "Épée / Sword"
+            }
+          ],
+          "rare": false,
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          }
+        },
+        {
+          "name": {
+            "en": "Sneed's Shredder",
+            "fr": "Déchiqueteur de Sneed"
+          },
+          "level": 20,
+          "loot": [
+            {
+              "en": "Buzzer Blade",
+              "fr": "Lame bourdonnante",
+              "slot": "Dague / Dagger"
+            }
+          ],
+          "rare": false,
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          }
+        },
+        {
+          "name": {
+            "en": "Gilnid",
+            "fr": "Gilnid"
+          },
+          "level": 20,
+          "loot": [],
+          "rare": false,
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          }
+        },
+        {
+          "name": {
+            "en": "Mr. Smite",
+            "fr": "M. Châtiment"
+          },
+          "level": 21,
+          "loot": [
+            {
+              "en": "First Mate Hat",
+              "fr": "Chapeau de premier maître",
+              "slot": "Tête / Head"
+            }
+          ],
+          "rare": false,
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          }
+        },
+        {
+          "name": {
+            "en": "Captain Greenskin",
+            "fr": "Capitaine Vertepeau"
+          },
+          "level": 21,
+          "loot": [
+            {
+              "en": "Corsair's Overshirt",
+              "fr": "Chemise de corsaire",
+              "slot": "Torse / Chest"
+            }
+          ],
+          "rare": false,
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          }
+        },
+        {
+          "name": {
+            "en": "Edwin VanCleef",
+            "fr": "Edwin VanCleef"
+          },
+          "level": 21,
+          "loot": [
+            {
+              "en": "Cruel Barb",
+              "fr": "Barbelure cruelle",
+              "slot": "Épée / Sword"
+            },
+            {
+              "en": "Cape of the Brotherhood",
+              "fr": "Cape de la confrérie",
+              "slot": "Dos / Back"
+            }
+          ],
+          "rare": false,
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          }
+        },
+        {
+          "name": {
+            "en": "Cookie",
+            "fr": "Macaron"
+          },
+          "level": 20,
+          "loot": [
+            {
+              "en": "Cookie's Stirring Rod",
+              "fr": "Baguette agitatrice de Macaron",
+              "slot": "Baguette / Wand"
+            }
+          ],
+          "rare": false,
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          }
+        }
+      ],
+      "beta": "classic_beta_accessible",
+      "changes": [
+        {
+          "status": "observed_beta",
+          "fr": "Mineur Johnson est recensé dans les rencontres de la bêta ; de nouveaux butins de boss et des modifications d'ensembles existent.",
+          "en": "Miner Johnson appears in the beta encounter list; new boss drops and item-set changes are reported."
+        }
+      ],
+      "mapStatus": "reference",
+      "note": {
+        "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
+        "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
+      },
+      "floorMap": {
+        "url": "https://static.icy-veins.com/images/classic-plus/forever/dungeons/deadmines-map.jpg",
+        "kind": "existing_annotated_map",
+        "attribution": "Carte annotée · Icy Veins",
+        "source": "https://www.icy-veins.com/wow-forever/deadmines-guide/"
+      }
+    },
+    {
+      "id": "shadowfang-keep",
+      "type": "classic",
+      "name": {
+        "fr": "Donjon d'Ombrecroc",
+        "en": "Shadowfang Keep"
+      },
+      "level": [
+        22,
+        30
+      ],
+      "zone": {
+        "id": "silverpine",
+        "fr": "Forêt des Pins argentés",
+        "en": "Silverpine Forest",
+        "uiMapID": 1421
+      },
+      "access": {
+        "fr": "Entrée située dans : Forêt des Pins argentés. Consulter la carte et la source pour la localisation précise.",
+        "en": "Entrance in Silverpine Forest. See source map for precise directions."
+      },
+      "source": "https://foreverchanges.pro/dungeons/shadowfang-keep",
+      "bosses": [
+        {
+          "name": {
+            "en": "Rethilgore",
+            "fr": "Rethiltripe"
+          },
+          "level": 20,
+          "loot": [],
+          "rare": false,
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          }
+        },
+        {
+          "name": {
+            "en": "Razorclaw the Butcher",
+            "fr": "Tranchegriffe le Boucher"
+          },
+          "level": 22,
+          "loot": [],
+          "rare": false,
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          }
+        },
+        {
+          "name": {
+            "en": "Baron Silverlaine",
+            "fr": "Baron d'Argelaine"
+          },
+          "level": 24,
+          "loot": [
+            {
+              "en": "Baron's Scepter",
+              "fr": "Sceptre du baron",
+              "slot": "Masse / Mace"
+            }
+          ],
+          "rare": false,
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          }
+        },
+        {
+          "name": {
+            "en": "Commander Springvale",
+            "fr": "Commandant Printeval"
+          },
+          "level": 24,
+          "loot": [],
+          "rare": false,
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          }
+        },
+        {
+          "name": {
+            "en": "Odo the Blindwatcher",
+            "fr": "Odo l'Aveugle"
+          },
+          "level": 24,
+          "loot": [],
+          "rare": false,
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          }
+        },
+        {
+          "name": {
+            "en": "Fenrus the Devourer",
+            "fr": "Fenrus le Dévoreur"
+          },
+          "level": 25,
+          "loot": [],
+          "rare": false,
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          }
+        },
+        {
+          "name": {
+            "en": "Wolf Master Nandos",
+            "fr": "Maître-loup Nandos"
+          },
+          "level": 25,
+          "loot": [],
+          "rare": false,
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          }
+        },
+        {
+          "name": {
+            "en": "Archmage Arugal",
+            "fr": "Archimage Arugal"
+          },
+          "level": 26,
+          "loot": [
+            {
+              "en": "Arugal's Robes",
+              "fr": "Robe d'Arugal",
+              "slot": "Torse / Chest"
+            },
+            {
+              "en": "Meteor Shard",
+              "fr": "Éclat de météore",
+              "slot": "Dague / Dagger"
+            }
+          ],
+          "rare": false,
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          }
+        },
+        {
+          "name": {
+            "en": "Deathsworn Captain",
+            "fr": "Capitaine Ligemort"
+          },
+          "level": 25,
+          "loot": [],
+          "rare": true,
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          }
+        }
+      ],
+      "beta": "classic_beta_accessible",
+      "changes": [
+        {
+          "status": "beta_gear",
+          "fr": "Bêta : des objets supplémentaires sont répertoriés pour plusieurs boss ; les emplacements et taux Classic ne prouvent pas ceux de Forever.",
+          "en": "Beta: additional items are listed for some bosses; Classic drops and rates are not evidence of Forever's final loot."
+        }
+      ],
+      "mapStatus": "reference",
+      "note": {
+        "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
+        "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
+      },
+      "floorMap": {
+        "url": "https://static.icy-veins.com/images/classic-plus/forever/dungeons/shadowfang-keep-map.jpg",
+        "kind": "existing_annotated_map",
+        "attribution": "Carte annotée · Icy Veins",
+        "source": "https://www.icy-veins.com/wow-forever/shadowfang-keep-guide/"
+      }
+    },
+    {
+      "id": "blackfathom-deeps",
+      "type": "classic",
+      "name": {
+        "fr": "Profondeurs de Brassenoire",
+        "en": "Blackfathom Deeps"
+      },
+      "level": [
+        24,
+        32
+      ],
+      "zone": {
+        "id": "ashenvale",
+        "fr": "Orneval",
+        "en": "Ashenvale",
+        "uiMapID": 1440
+      },
+      "access": {
+        "fr": "Entrée située dans : Orneval. Consulter la carte et la source pour la localisation précise.",
+        "en": "Entrance in Ashenvale. See source map for precise directions."
+      },
+      "source": "https://foreverchanges.pro/dungeons/blackfathom-deeps",
+      "bosses": [
+        {
+          "name": {
+            "en": "Ghamoo-Ra",
+            "fr": "Ghamoo-Ra"
+          },
+          "level": 25,
+          "loot": [
+            {
+              "en": "Tortoise Armor",
+              "fr": "Armure de la tortue",
+              "slot": "Torse / Chest"
+            },
+            {
+              "en": "Ghamoo-ra's Bind",
+              "fr": "Lien de Ghamoo-ra",
+              "slot": "Taille / Waist"
+            }
+          ],
+          "rare": false,
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          }
+        },
+        {
+          "name": {
+            "en": "Lady Sarevess",
+            "fr": "Dame Sarevess"
+          },
+          "level": 25,
+          "loot": [
+            {
+              "en": "Naga Battle Gloves",
+              "fr": "Gants de bataille nagas",
+              "slot": "Mains / Hands"
+            },
+            {
+              "en": "Naga Heartpiercer",
+              "fr": "Perce-cœur naga",
+              "slot": "À distance / Ranged"
+            }
+          ],
+          "rare": false,
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          }
+        },
+        {
+          "name": {
+            "en": "Gelihast",
+            "fr": "Gelihast"
+          },
+          "level": 26,
+          "loot": [],
+          "rare": false,
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          }
+        },
+        {
+          "name": {
+            "en": "Lorgus Jett",
+            "fr": "Lorgus Jett"
+          },
+          "level": 27,
+          "loot": [],
+          "rare": false,
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          }
+        },
+        {
+          "name": {
+            "en": "Baron Aquanis",
+            "fr": "Baron Aquanis"
+          },
+          "level": 28,
+          "loot": [],
+          "rare": false,
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          }
+        },
+        {
+          "name": {
+            "en": "Twilight Lord Kelris",
+            "fr": "Seigneur du Crépuscule Kelris"
+          },
+          "level": 28,
+          "loot": [
+            {
+              "en": "Rod of the Sleepwalker",
+              "fr": "Bâton du somnambule",
+              "slot": "Bâton / Staff"
+            }
+          ],
+          "rare": false,
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          }
+        },
+        {
+          "name": {
+            "en": "Old Serra'kis",
+            "fr": "Vieux Serra'kis"
+          },
+          "level": 26,
+          "loot": [],
+          "rare": false,
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          }
+        },
+        {
+          "name": {
+            "en": "Aku'mai",
+            "fr": "Aku'mai"
+          },
+          "level": 29,
+          "loot": [
+            {
+              "en": "Strike of the Hydra",
+              "fr": "Frappe de l'hydre",
+              "slot": "Épée deux mains"
+            }
+          ],
+          "rare": false,
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          }
+        }
+      ],
+      "beta": "classic_beta_accessible",
+      "changes": [
+        {
+          "status": "beta_gear",
+          "fr": "Forever ajoute notamment une bague à carapace d'épines à Ghamoo-Ra ; nouvelles récompenses et équilibrage à vérifier par objet.",
+          "en": "Forever lists a new spiked-shell ring from Ghamoo-Ra; inspect individual item changes and tuning."
+        }
+      ],
+      "mapStatus": "reference",
+      "note": {
+        "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
+        "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
+      },
+      "floorMap": {
+        "url": "https://eintr.net/WoW/images/Black-fathom-Deeps-walkthrough-map-1024x865.jpg",
+        "kind": "existing_annotated_map",
+        "attribution": "Carte Classic · eintr.net",
+        "source": "https://eintr.net/WoW/World-of-Warcraft-Classic-Dungeon-Walkthrough.html"
+      }
+    },
+    {
+      "id": "the-stockade",
+      "type": "classic",
+      "name": {
+        "fr": "Prison de Hurlevent",
+        "en": "The Stockade"
+      },
+      "level": [
+        24,
+        32
+      ],
+      "zone": {
+        "id": "stormwind",
+        "fr": "Hurlevent",
+        "en": "Stormwind City",
+        "uiMapID": 1453
+      },
+      "access": {
+        "fr": "Entrée située dans : Hurlevent. Consulter la carte et la source pour la localisation précise.",
+        "en": "Entrance in Stormwind City. See source map for precise directions."
+      },
+      "source": "https://foreverchanges.pro/dungeons/the-stockade",
+      "bosses": [
+        {
+          "name": {
+            "en": "Targorr the Dread",
+            "fr": "Targorr l'Effroyable"
+          },
+          "level": 24,
+          "loot": [
+            {
+              "en": "Blackrock Harness",
+              "fr": "Harnais rochenoire",
+              "slot": "Torse / Chest"
+            },
+            {
+              "en": "Executioner Mantle",
+              "fr": "Mantelet d'exécuteur",
+              "slot": "Épaules / Shoulders",
+              "isNew": true
+            }
+          ],
+          "rare": false,
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          }
+        },
+        {
+          "name": {
+            "en": "Kam Deepfury",
+            "fr": "Kam Furie-du-Fond"
+          },
+          "level": 25,
+          "loot": [
+            {
+              "en": "Kam's Walking Stick",
+              "fr": "Canne de Kam",
+              "slot": "Bâton / Staff"
+            },
+            {
+              "en": "Demolition Girdle",
+              "fr": "Ceinturon de démolition",
+              "slot": "Taille / Waist",
+              "isNew": true
+            }
+          ],
+          "rare": false,
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          }
+        },
+        {
+          "name": {
+            "en": "Hamhock",
+            "fr": "Jambon"
+          },
+          "level": 26,
+          "loot": [
+            {
+              "en": "Hamhock's Cleaver",
+              "fr": "Couperet de Jambon",
+              "slot": "Hache / Axe"
+            }
+          ],
+          "rare": false,
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          }
+        },
+        {
+          "name": {
+            "en": "Bazil Thredd",
+            "fr": "Bazil Thredd"
+          },
+          "level": 26,
+          "loot": [],
+          "rare": false,
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          }
+        },
+        {
+          "name": {
+            "en": "Dextren Ward",
+            "fr": "Dextren Ward"
+          },
+          "level": 26,
+          "loot": [],
+          "rare": false,
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          }
+        },
+        {
+          "name": {
+            "en": "Bruegal Ironknuckle",
+            "fr": "Bruegal Poing-de-Fer"
+          },
+          "level": 26,
+          "loot": [],
+          "rare": true,
+          "note": {
+            "fr": "Référence Classic/Forever : vérifier les modifications de butin de la bêta.",
+            "en": "Classic/Forever reference: check beta loot changes."
+          }
+        }
+      ],
+      "beta": "classic_beta_accessible",
+      "changes": [
+        {
+          "status": "beta_gear",
+          "fr": "Forever ajoute des objets de qualité rare à plusieurs boss ; certaines rencontres rares de Classic sont conservées comme références.",
+          "en": "Forever adds Rare-quality items to several bosses; some Classic rare encounters remain reference-only."
+        }
+      ],
+      "mapStatus": "reference",
+      "note": {
+        "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
+        "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
+      }
+    },
+    {
+      "id": "gnomeregan",
+      "type": "classic",
+      "name": {
+        "fr": "Gnomeregan",
+        "en": "Gnomeregan"
+      },
+      "level": [
+        29,
+        38
+      ],
+      "zone": {
+        "id": "dun-morogh",
+        "fr": "Dun Morogh",
+        "en": "Dun Morogh",
+        "uiMapID": 1426
+      },
+      "access": {
+        "fr": "Entrée située dans : Dun Morogh. Consulter la carte et la source pour la localisation précise.",
+        "en": "Entrance in Dun Morogh. See source map for precise directions."
+      },
+      "source": "https://foreverchanges.pro/dungeons/gnomeregan",
+      "bosses": [],
+      "beta": "classic_beta_accessible",
+      "changes": [],
+      "mapStatus": "reference",
+      "note": {
+        "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
+        "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
+      }
+    },
+    {
+      "id": "razorfen-kraul",
+      "type": "classic",
+      "name": {
+        "fr": "Kraal de Tranchebauge",
+        "en": "Razorfen Kraul"
+      },
+      "level": [
+        29,
+        38
+      ],
+      "zone": {
+        "id": "barrens",
+        "fr": "Les Tarides",
+        "en": "The Barrens",
+        "uiMapID": 1413
+      },
+      "access": {
+        "fr": "Entrée située dans : Les Tarides. Consulter la carte et la source pour la localisation précise.",
+        "en": "Entrance in The Barrens. See source map for precise directions."
+      },
+      "source": "https://foreverchanges.pro/dungeons/razorfen-kraul",
+      "bosses": [],
+      "beta": "classic_beta_accessible",
+      "changes": [],
+      "mapStatus": "reference",
+      "note": {
+        "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
+        "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
+      }
+    },
+    {
+      "id": "scarlet-monastery-graveyard",
+      "type": "classic",
+      "name": {
+        "fr": "Monastère écarlate : cimetière",
+        "en": "Scarlet Monastery: Graveyard"
+      },
+      "level": [
+        30,
+        38
+      ],
+      "zone": {
+        "id": "tirisfal",
+        "fr": "Clairières de Tirisfal",
+        "en": "Tirisfal Glades",
+        "uiMapID": 1420
+      },
+      "access": {
+        "fr": "Entrée située dans : Clairières de Tirisfal. Consulter la carte et la source pour la localisation précise.",
+        "en": "Entrance in Tirisfal Glades. See source map for precise directions."
+      },
+      "source": "https://foreverchanges.pro/dungeons/scarlet-monastery-graveyard",
+      "bosses": [],
+      "beta": "classic_beta_accessible",
+      "changes": [],
+      "mapStatus": "reference",
+      "note": {
+        "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
+        "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
+      }
+    },
+    {
+      "id": "scarlet-monastery-library",
+      "type": "classic",
+      "name": {
+        "fr": "Monastère écarlate : bibliothèque",
+        "en": "Scarlet Monastery: Library"
+      },
+      "level": [
+        33,
+        41
+      ],
+      "zone": {
+        "id": "tirisfal",
+        "fr": "Clairières de Tirisfal",
+        "en": "Tirisfal Glades",
+        "uiMapID": 1420
+      },
+      "access": {
+        "fr": "Entrée située dans : Clairières de Tirisfal. Consulter la carte et la source pour la localisation précise.",
+        "en": "Entrance in Tirisfal Glades. See source map for precise directions."
+      },
+      "source": "https://foreverchanges.pro/dungeons/scarlet-monastery-library",
+      "bosses": [],
+      "beta": "classic_reference",
+      "changes": [],
+      "mapStatus": "reference",
+      "note": {
+        "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
+        "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
+      }
+    },
+    {
+      "id": "scarlet-monastery-armory",
+      "type": "classic",
+      "name": {
+        "fr": "Monastère écarlate : armurerie",
+        "en": "Scarlet Monastery: Armory"
+      },
+      "level": [
+        36,
+        44
+      ],
+      "zone": {
+        "id": "tirisfal",
+        "fr": "Clairières de Tirisfal",
+        "en": "Tirisfal Glades",
+        "uiMapID": 1420
+      },
+      "access": {
+        "fr": "Entrée située dans : Clairières de Tirisfal. Consulter la carte et la source pour la localisation précise.",
+        "en": "Entrance in Tirisfal Glades. See source map for precise directions."
+      },
+      "source": "https://foreverchanges.pro/dungeons/scarlet-monastery-armory",
+      "bosses": [],
+      "beta": "classic_reference",
+      "changes": [],
+      "mapStatus": "reference",
+      "note": {
+        "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
+        "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
+      }
+    },
+    {
+      "id": "razorfen-downs",
+      "type": "classic",
+      "name": {
+        "fr": "Souilles de Tranchebauge",
+        "en": "Razorfen Downs"
+      },
+      "level": [
+        37,
+        46
+      ],
+      "zone": {
+        "id": "barrens",
+        "fr": "Les Tarides",
+        "en": "The Barrens",
+        "uiMapID": 1413
+      },
+      "access": {
+        "fr": "Entrée située dans : Les Tarides. Consulter la carte et la source pour la localisation précise.",
+        "en": "Entrance in The Barrens. See source map for precise directions."
+      },
+      "source": "https://foreverchanges.pro/dungeons/razorfen-downs",
+      "bosses": [],
+      "beta": "classic_reference",
+      "changes": [],
+      "mapStatus": "reference",
+      "note": {
+        "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
+        "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
+      }
+    },
+    {
+      "id": "scarlet-monastery-cathedral",
+      "type": "classic",
+      "name": {
+        "fr": "Monastère écarlate : cathédrale",
+        "en": "Scarlet Monastery: Cathedral"
+      },
+      "level": [
+        38,
+        46
+      ],
+      "zone": {
+        "id": "tirisfal",
+        "fr": "Clairières de Tirisfal",
+        "en": "Tirisfal Glades",
+        "uiMapID": 1420
+      },
+      "access": {
+        "fr": "Entrée située dans : Clairières de Tirisfal. Consulter la carte et la source pour la localisation précise.",
+        "en": "Entrance in Tirisfal Glades. See source map for precise directions."
+      },
+      "source": "https://foreverchanges.pro/dungeons/scarlet-monastery-cathedral",
+      "bosses": [],
+      "beta": "classic_reference",
+      "changes": [],
+      "mapStatus": "reference",
+      "note": {
+        "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
+        "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
+      }
+    },
+    {
+      "id": "uldaman",
+      "type": "classic",
+      "name": {
+        "fr": "Uldaman",
+        "en": "Uldaman"
+      },
+      "level": [
+        41,
+        51
+      ],
+      "zone": {
+        "id": "badlands",
+        "fr": "Terres ingrates",
+        "en": "Badlands",
+        "uiMapID": 1418
+      },
+      "access": {
+        "fr": "Entrée située dans : Terres ingrates. Consulter la carte et la source pour la localisation précise.",
+        "en": "Entrance in Badlands. See source map for precise directions."
+      },
+      "source": "https://foreverchanges.pro/dungeons/uldaman",
+      "bosses": [],
+      "beta": "classic_reference",
+      "changes": [],
+      "mapStatus": "reference",
+      "note": {
+        "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
+        "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
+      }
+    },
+    {
+      "id": "zul-farrak",
+      "type": "classic",
+      "name": {
+        "fr": "Zul'Farrak",
+        "en": "Zul'Farrak"
+      },
+      "level": [
+        44,
+        54
+      ],
+      "zone": {
+        "id": "tanaris",
+        "fr": "Tanaris",
+        "en": "Tanaris",
+        "uiMapID": 1446
+      },
+      "access": {
+        "fr": "Entrée située dans : Tanaris. Consulter la carte et la source pour la localisation précise.",
+        "en": "Entrance in Tanaris. See source map for precise directions."
+      },
+      "source": "https://foreverchanges.pro/dungeons/zul-farrak",
+      "bosses": [],
+      "beta": "classic_reference",
+      "changes": [],
+      "mapStatus": "reference",
+      "note": {
+        "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
+        "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
+      }
+    },
+    {
+      "id": "maraudon",
+      "type": "classic",
+      "name": {
+        "fr": "Maraudon",
+        "en": "Maraudon"
+      },
+      "level": [
+        46,
+        55
+      ],
+      "zone": {
+        "id": "desolace",
+        "fr": "Désolace",
+        "en": "Desolace",
+        "uiMapID": 1443
+      },
+      "access": {
+        "fr": "Entrée située dans : Désolace. Consulter la carte et la source pour la localisation précise.",
+        "en": "Entrance in Desolace. See source map for precise directions."
+      },
+      "source": "https://foreverchanges.pro/dungeons/maraudon",
+      "bosses": [],
+      "beta": "classic_reference",
+      "changes": [],
+      "mapStatus": "reference",
+      "note": {
+        "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
+        "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
+      }
+    },
+    {
+      "id": "sunken-temple",
+      "type": "classic",
+      "name": {
+        "fr": "Temple englouti",
+        "en": "Sunken Temple"
+      },
+      "level": [
+        50,
+        60
+      ],
+      "zone": {
+        "id": "swamp-of-sorrows",
+        "fr": "Marais des Chagrins",
+        "en": "Swamp of Sorrows",
+        "uiMapID": 1435
+      },
+      "access": {
+        "fr": "Entrée située dans : Marais des Chagrins. Consulter la carte et la source pour la localisation précise.",
+        "en": "Entrance in Swamp of Sorrows. See source map for precise directions."
+      },
+      "source": "https://foreverchanges.pro/dungeons/sunken-temple",
+      "bosses": [],
+      "beta": "classic_reference",
+      "changes": [],
+      "mapStatus": "reference",
+      "note": {
+        "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
+        "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
+      }
+    },
+    {
+      "id": "blackrock-depths",
+      "type": "classic",
+      "name": {
+        "fr": "Profondeurs de Rochenoire",
+        "en": "Blackrock Depths"
+      },
+      "level": [
+        52,
+        60
+      ],
+      "zone": {
+        "id": "burning-steppes",
+        "fr": "Mont Rochenoire",
+        "en": "Blackrock Mountain",
+        "uiMapID": 1428
+      },
+      "access": {
+        "fr": "Entrée située dans : Mont Rochenoire. Consulter la carte et la source pour la localisation précise.",
+        "en": "Entrance in Blackrock Mountain. See source map for precise directions."
+      },
+      "source": "https://foreverchanges.pro/dungeons/blackrock-depths",
+      "bosses": [],
+      "beta": "classic_reference",
+      "changes": [],
+      "mapStatus": "reference",
+      "note": {
+        "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
+        "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
+      }
+    },
+    {
+      "id": "dire-maul-east",
+      "type": "classic",
+      "name": {
+        "fr": "Hache-tripes : Est",
+        "en": "Dire Maul: East"
+      },
+      "level": [
+        54,
+        60
+      ],
+      "zone": {
+        "id": "feralas",
+        "fr": "Féralas",
+        "en": "Feralas",
+        "uiMapID": 1444
+      },
+      "access": {
+        "fr": "Entrée située dans : Féralas. Consulter la carte et la source pour la localisation précise.",
+        "en": "Entrance in Feralas. See source map for precise directions."
+      },
+      "source": "https://foreverchanges.pro/dungeons/dire-maul-east",
+      "bosses": [],
+      "beta": "classic_reference",
+      "changes": [],
+      "mapStatus": "reference",
+      "note": {
+        "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
+        "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
+      }
+    },
+    {
+      "id": "lower-blackrock-spire",
+      "type": "classic",
+      "name": {
+        "fr": "Pic de Rochenoire inférieur",
+        "en": "Lower Blackrock Spire"
+      },
+      "level": [
+        55,
+        60
+      ],
+      "zone": {
+        "id": "burning-steppes",
+        "fr": "Mont Rochenoire",
+        "en": "Blackrock Mountain",
+        "uiMapID": 1428
+      },
+      "access": {
+        "fr": "Entrée située dans : Mont Rochenoire. Consulter la carte et la source pour la localisation précise.",
+        "en": "Entrance in Blackrock Mountain. See source map for precise directions."
+      },
+      "source": "https://foreverchanges.pro/dungeons/lower-blackrock-spire",
+      "bosses": [],
+      "beta": "classic_reference",
+      "changes": [],
+      "mapStatus": "reference",
+      "note": {
+        "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
+        "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
+      }
+    },
+    {
+      "id": "dire-maul-north",
+      "type": "classic",
+      "name": {
+        "fr": "Hache-tripes : Nord",
+        "en": "Dire Maul: North"
+      },
+      "level": [
+        56,
+        60
+      ],
+      "zone": {
+        "id": "feralas",
+        "fr": "Féralas",
+        "en": "Feralas",
+        "uiMapID": 1444
+      },
+      "access": {
+        "fr": "Entrée située dans : Féralas. Consulter la carte et la source pour la localisation précise.",
+        "en": "Entrance in Feralas. See source map for precise directions."
+      },
+      "source": "https://foreverchanges.pro/dungeons/dire-maul-north",
+      "bosses": [],
+      "beta": "classic_reference",
+      "changes": [],
+      "mapStatus": "reference",
+      "note": {
+        "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
+        "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
+      }
+    },
+    {
+      "id": "dire-maul-west",
+      "type": "classic",
+      "name": {
+        "fr": "Hache-tripes : Ouest",
+        "en": "Dire Maul: West"
+      },
+      "level": [
+        56,
+        60
+      ],
+      "zone": {
+        "id": "feralas",
+        "fr": "Féralas",
+        "en": "Feralas",
+        "uiMapID": 1444
+      },
+      "access": {
+        "fr": "Entrée située dans : Féralas. Consulter la carte et la source pour la localisation précise.",
+        "en": "Entrance in Feralas. See source map for precise directions."
+      },
+      "source": "https://foreverchanges.pro/dungeons/dire-maul-west",
+      "bosses": [],
+      "beta": "classic_reference",
+      "changes": [],
+      "mapStatus": "reference",
+      "note": {
+        "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
+        "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
+      }
+    },
+    {
+      "id": "scholomance",
+      "type": "classic",
+      "name": {
+        "fr": "Scholomance",
+        "en": "Scholomance"
+      },
+      "level": [
+        58,
+        60
+      ],
+      "zone": {
+        "id": "wpl",
+        "fr": "Maleterres de l'Ouest",
+        "en": "Western Plaguelands",
+        "uiMapID": 1422
+      },
+      "access": {
+        "fr": "Entrée située dans : Maleterres de l'Ouest. Consulter la carte et la source pour la localisation précise.",
+        "en": "Entrance in Western Plaguelands. See source map for precise directions."
+      },
+      "source": "https://foreverchanges.pro/dungeons/scholomance",
+      "bosses": [],
+      "beta": "classic_reference",
+      "changes": [],
+      "mapStatus": "reference",
+      "note": {
+        "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
+        "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
+      }
+    },
+    {
+      "id": "stratholme-main-gate",
+      "type": "classic",
+      "name": {
+        "fr": "Stratholme : entrée principale",
+        "en": "Stratholme: Main Gate"
+      },
+      "level": [
+        58,
+        60
+      ],
+      "zone": {
+        "id": "epl",
+        "fr": "Maleterres de l'Est",
+        "en": "Eastern Plaguelands",
+        "uiMapID": 1423
+      },
+      "access": {
+        "fr": "Entrée située dans : Maleterres de l'Est. Consulter la carte et la source pour la localisation précise.",
+        "en": "Entrance in Eastern Plaguelands. See source map for precise directions."
+      },
+      "source": "https://foreverchanges.pro/dungeons/stratholme-main-gate",
+      "bosses": [],
+      "beta": "classic_reference",
+      "changes": [],
+      "mapStatus": "reference",
+      "note": {
+        "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
+        "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
+      }
+    },
+    {
+      "id": "stratholme-service-gate",
+      "type": "classic",
+      "name": {
+        "fr": "Stratholme : entrée de service",
+        "en": "Stratholme: Service Gate"
+      },
+      "level": [
+        58,
+        60
+      ],
+      "zone": {
+        "id": "epl",
+        "fr": "Maleterres de l'Est",
+        "en": "Eastern Plaguelands",
+        "uiMapID": 1423
+      },
+      "access": {
+        "fr": "Entrée située dans : Maleterres de l'Est. Consulter la carte et la source pour la localisation précise.",
+        "en": "Entrance in Eastern Plaguelands. See source map for precise directions."
+      },
+      "source": "https://foreverchanges.pro/dungeons/stratholme-service-gate",
+      "bosses": [],
+      "beta": "classic_reference",
+      "changes": [],
+      "mapStatus": "reference",
+      "note": {
+        "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
+        "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
+      }
+    },
+    {
+      "id": "upper-blackrock-spire",
+      "type": "classic",
+      "name": {
+        "fr": "Pic de Rochenoire supérieur",
+        "en": "Upper Blackrock Spire"
+      },
+      "level": [
+        59,
+        60
+      ],
+      "zone": {
+        "id": "burning-steppes",
+        "fr": "Mont Rochenoire",
+        "en": "Blackrock Mountain",
+        "uiMapID": 1428
+      },
+      "access": {
+        "fr": "Entrée située dans : Mont Rochenoire. Consulter la carte et la source pour la localisation précise.",
+        "en": "Entrance in Blackrock Mountain. See source map for precise directions."
+      },
+      "source": "https://foreverchanges.pro/dungeons/upper-blackrock-spire",
+      "bosses": [],
+      "beta": "classic_reference",
+      "changes": [],
+      "mapStatus": "reference",
+      "note": {
+        "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
+        "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
+      }
     }
   ],
   "enTranslationStatus": "Item English names not established by original client should be treated as unofficial translations.",
-  "observationStatus": "Dungeon guide loot and percentages are community beta observations, not official or guaranteed."
+  "observationStatus": "Dungeon guide loot and percentages are community beta observations, not official or guaranteed.",
+  "mapPolicy": "Actual client mosaics for available new instances and source-attributed existing annotated Classic maps; no invented floor schematics. Missing floors visibly labeled.",
+  "provenance": {
+    "newInstanceMaps": "WoW Forever beta 1.60.1.69893, stitched dungeon minimap textures hosted by warcraftforever.games",
+    "classicPlans": "Icy Veins and eintr.net existing annotated Classic dungeon maps; view at original source, no file copies",
+    "classicLoot": "ForeverChanges dungeon pages cross-check against Classic Era and observed Forever beta, unverified drop rates omitted"
+  }
 }
