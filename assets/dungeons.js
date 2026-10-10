@@ -36,10 +36,21 @@ function makeLootCard(item,boss){const card=m("div",null,"dg-drop");card.tabInde
  const icon=m("img");icon.width=34;icon.height=34;icon.loading="lazy";icon.alt="";
  const slot=(item.slot||"").toLowerCase();
  let ico=/recette|recipe/.test(slot)?"inv_scroll_07":/tête|head/.test(slot)?"inv_helmet_22":/épaules|shoulders/.test(slot)?"inv_shoulder_09":/arme|main|hand|two-hand|distance|ranged|bâton|dagger/.test(slot)?"inv_sword_04":/tissu|chest|torse|robe/.test(slot)?"inv_chest_cloth_17":"inv_misc_questionmark";
- icon.src="/assets/icons/"+ico+".jpg";icon.onerror=()=>{icon.onerror=null;icon.src="/assets/icons/inv_scroll_07.jpg"};card.append(icon);
- const text=m("span");text.append(m("strong",name(item)),m("small",t("Emplacement : ","Slot: ")+item.slot));card.append(text);
- const show=e=>{tooltip.replaceChildren();tooltip.append(m("strong",name(item)),m("span",t("Butin possible : ","Possible drop: ")+name(boss.name)),m("span",item.slot),m("small",t("Relevé bêta communautaire · taux exact non garanti. Cliquer sur la source du donjon pour les caractéristiques.","Community beta report · drop rate not guaranteed. Open the dungeon source for item stats.")));tooltip.hidden=false;const x=Math.min(window.innerWidth-350,Math.max(8,(e.clientX||card.getBoundingClientRect().left)+12));const y=Math.min(window.innerHeight-180,Math.max(8,(e.clientY||card.getBoundingClientRect().top)+12));tooltip.style.left=x+"px";tooltip.style.top=y+"px"};
- card.addEventListener("mouseenter",show);card.addEventListener("mousemove",e=>{if(!tooltip.hidden)show(e)});card.addEventListener("mouseleave",()=>tooltip.hidden=true);card.addEventListener("focus",show);card.addEventListener("blur",()=>tooltip.hidden=true);
+ icon.src=item.icon&&/^[a-z0-9_]+$/.test(item.icon)?"https://wow.zamimg.com/images/wow/icons/medium/"+item.icon+".jpg":"/assets/icons/"+ico+".jpg";icon.onerror=()=>{icon.onerror=null;icon.src="/assets/icons/inv_scroll_07.jpg"};card.append(icon);
+ const text=m("span");text.append(m("strong",name(item)),m("small",t("Emplacement : ","Slot: ")+item.slot));
+ if(Number.isFinite(item.chanceReported))text.append(m("small",t("Taux signalé en bêta : ","Beta-reported chance: ")+String(item.chanceReported).replace(".",",")+" %"));
+ if(item.itemLevel)text.append(m("small",t("Niveau d’objet ","Item level ")+item.itemLevel+(item.requiredLevel?" · "+t("Niveau requis ","Required level ")+item.requiredLevel:"")));
+ card.append(text);
+ if(item.itemUrl){const link=m("a","↗","dg-item-page");link.href=item.itemUrl;link.target="_blank";link.rel="noopener noreferrer";link.title=t("Ouvrir la fiche de l’objet","Open item details");link.setAttribute("aria-label",t("Fiche d’objet : ","Item page: ")+name(item));card.append(link)}
+
+ const show=e=>{tooltip.replaceChildren();tooltip.append(m("strong",name(item)),m("span",t("Butin possible : ","Possible drop: ")+name(boss.name)),m("span",item.slot));
+ if(item.tooltip?.length)item.tooltip.forEach(line=>tooltip.append(m("span",line)));
+ if(Number.isFinite(item.chanceReported))tooltip.append(m("span",t("Taux relevé en bêta : ","Reported beta rate: ")+item.chanceReported+" %"));
+ tooltip.append(m("small",t("Butin signalé en bêta · taux non garanti. Les noms anglais non officiels sont indicatifs.","Beta-reported drop · chance not guaranteed. Unofficial English names are indicative.")));tooltip.hidden=false;const x=Math.max(8,Math.min(window.innerWidth-355,Math.max(8,(e.clientX||card.getBoundingClientRect().left)+12)));const y=Math.max(8,Math.min(window.innerHeight-185,Math.max(8,(e.clientY||card.getBoundingClientRect().top)+12)));tooltip.style.left=x+"px";tooltip.style.top=y+"px"};
+ if(item.id&&window.ForeverItemTooltip){
+ window.ForeverItemTooltip.bind(card,{id:item.id,name:name(item),name_en:item.en,name_fr:item.fr,quality:item.quality||"rare",source_status:"forever_beta_community",itemLevel:item.itemLevel,requiredLevel:item.requiredLevel,tooltip:item.tooltip||[],icon:item.icon,origin:t("Butin signalé · Donjon Forever","Reported drop · Forever dungeon"),url:item.itemUrl||selected?.source});
+ }else{card.addEventListener("mouseenter",show);card.addEventListener("mousemove",e=>{if(!tooltip.hidden)show(e)});card.addEventListener("mouseleave",()=>tooltip.hidden=true);card.addEventListener("focus",show);card.addEventListener("blur",()=>tooltip.hidden=true)}
+
  return card;
 }
 function renderDetail(){const d=selected;if(!d)return;const boss=d.bosses[selectedBoss];
@@ -59,11 +70,13 @@ function renderDetail(){const d=selected;if(!d)return;const boss=d.bosses[select
  d.bosses.forEach((b,i)=>{const row=m("section",null,"dg-boss-row");row.id="dg-boss-"+(i+1);
  const sum=m("div",null,"dg-boss-summary");sum.append(elbtn(null,"dg-boss-button"+(selectedBoss===i?" active":""),()=>chooseBoss(i)));
  const button=sum.firstElementChild;button.append(m("span",i+1,"dg-index"),m("span",name(b.name)));
- if(b.rare)sum.append(smallchip(t("Rare","Rare"),"pending"));sum.append(smallchip((b.loot||[]).length+" "+t("butins","drops")));row.append(sum);
+ if(b.rare)sum.append(smallchip(t("Rare","Rare"),"pending"));if(b.level)sum.append(smallchip(t("Niveau ","Level ")+b.level));sum.append(smallchip((b.loot||[]).length+" "+t("butins","drops")));row.append(sum);
  if(b.note?.[en?"en":"fr"])row.append(m("p",name(b.note),"dg-boss-note"));
  const drops=m("div",null,"dg-drops");if(!b.loot.length)drops.append(m("span",t("Table d’équipement inconnue · pas de butin inventé.","Gear loot table unknown · no fabricated drops."),"dg-empty"));else b.loot.forEach(it=>drops.append(makeLootCard(it,b)));row.append(drops);
  bossRoot.append(row);
  });
+ if(d.trashLoot?.length){const box=m("section",null,"dg-boss-row");box.append(m("h3",t("Butins des ennemis ordinaires","Regular enemy drops"),"dg-other-title"));const cards=m("div",null,"dg-drops");d.trashLoot.forEach(it=>cards.append(makeLootCard(it,{name:{fr:"Ennemis du donjon",en:"Dungeon enemies"}})));box.append(cards);bossRoot.append(box)}
+ if(d.questLoot?.length){const box=m("section",null,"dg-boss-row");box.append(m("h3",t("Objets de quête (hors équipement)","Quest items (not gear)"),"dg-other-title"));const cards=m("div",null,"dg-drops");d.questLoot.forEach(it=>cards.append(makeLootCard(it,{name:{fr:it.boss,en:it.boss}})));box.append(cards);bossRoot.append(box)}
 }
 function resetCamera(){scale=1;offsetX=0;offsetY=0;$("dg-zoom-label").textContent="100 %"}
 function setZoom(next,mx=W/2,my=H/2){const n=Math.min(4.2,Math.max(1,next));offsetX=mx-(mx-offsetX)*(n/scale);offsetY=my-(my-offsetY)*(n/scale);scale=n;if(scale===1){offsetX=0;offsetY=0}clamp();$("dg-zoom-label").textContent=Math.round(scale*100)+" %";paint()}
