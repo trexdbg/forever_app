@@ -4,10 +4,10 @@ const en=document.documentElement.lang==="en",root=en?"/en/":"/";
 const current=location.pathname.replace(/\/index\.html$/,"/").replace(/\/$/,"/")||"/";
 const tr=en?{
  home:"Home",quests:"Quests",talents:"Talents",gear:"Gear",bis:"Pre-raid BiS",levelBis:"BiS by level",catalog:"Item catalogue",
- professions:"Professions",trainers:"Trainers & weapon masters",mining:"High-level mining",vendors:"Vendors",rare:"Rare",population:"Population"
+ professions:"Professions",trainers:"Trainers & weapon masters",mining:"High-level mining",vendors:"Vendors",rare:"Rare",dungeons:"Dungeons",exploration:"Explore",population:"Population"
 }:{
  home:"Accueil",quests:"Quêtes",talents:"Talents",gear:"Équipement",bis:"BiS par classe",levelBis:"BiS par niveau",catalog:"Catalogue d’objets",
- professions:"Métiers",trainers:"Maîtres de métiers et d’armes",mining:"Minage HL",vendors:"Marchands",rare:"Rare",population:"Population"
+ professions:"Métiers",trainers:"Maîtres de métiers et d’armes",mining:"Minage HL",vendors:"Marchands",rare:"Rare",dungeons:"Donjons",exploration:"Explorer",population:"Population"
 };
 const href=slug=>root+(slug?slug+"/":"");
 const active=slug=>slug?current===href(slug)||(slug==="talents"&&current.startsWith(href("talents"))):current===root;
@@ -18,10 +18,10 @@ const group=(label,children)=>{const details=document.createElement("details");d
  details.append(menu);if(children.some(([slug])=>active(slug)))details.classList.add("nav-group--active");
  return details};
 if(nav){
- nav.replaceChildren(link("",tr.home),link("quetes",tr.quests),link("talents",tr.talents),
+ nav.replaceChildren(link("",tr.home),group(tr.exploration,[["quetes",tr.quests],["donjons",tr.dungeons],["rare",tr.rare]]),link("talents",tr.talents),
   group(tr.gear,[["bis",tr.bis],["bis-niveaux",tr.levelBis],["equipements",tr.catalog]]),
   group(tr.professions,[["metiers",tr.trainers],["minage",tr.mining]]),
-  link("marchands",tr.vendors),link("rare",tr.rare),link("population",tr.population));
+  link("marchands",tr.vendors),link("population",tr.population));
  const groups=[...nav.querySelectorAll(".nav-group")];
  for(const g of groups){g.addEventListener("toggle",()=>{if(g.open)for(const other of groups)if(other!==g)other.open=false});g.addEventListener("mouseenter",()=>{if(matchMedia("(hover: hover) and (min-width: 1121px)").matches)g.open=true});g.addEventListener("mouseleave",()=>{if(matchMedia("(hover: hover) and (min-width: 1121px)").matches&&!g.contains(document.activeElement))g.open=false})}
  const close=()=>{for(const g of groups)g.open=false;nav.classList.remove("open");if(toggle){toggle.setAttribute("aria-expanded","false");toggle.textContent="☰"}};
