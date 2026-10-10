@@ -1,0 +1,497 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-10",
+  "status": "classic_reference_not_forever_bis",
+  "sources": [
+    "https://wowclassicdatabase.com/dungeon/ragefire-chasm",
+    "https://wowclassicdatabase.com/dungeon/the-deadmines",
+    "https://wowclassicdatabase.com/dungeon/wailing-caverns",
+    "https://wowclassicdatabase.com/dungeon/shadowfang-keep",
+    "https://wowclassicdatabase.com/dungeon/blackfathom-deeps",
+    "https://docs.wowdb.assemblee-defias.fr/items"
+  ],
+  "meaning": "Curated Classic items with verifiable IDs, item levels and required levels. These are not guaranteed obtainable on WoW Forever.",
+  "items": [
+    {
+      "id": 14147,
+      "name": "Cavedweller Bracers",
+      "slot": "wrist",
+      "requiredLevel": 13,
+      "itemLevel": 18,
+      "quality": "uncommon",
+      "armorType": "mail",
+      "origin": "Ragefire Chasm · Jergosh the Invoker",
+      "type": null,
+      "url": "https://wowclassicdatabase.com/item/cavedweller-bracers",
+      "source_url": "https://wowclassicdatabase.com/item/cavedweller-bracers",
+      "source_status": "classic_curated_leveling",
+      "tooltip": [
+        "Cavedweller Bracers",
+        "Item Level 18",
+        "+1 Strength",
+        "+2 Stamina",
+        "Requires Level 13"
+      ]
+    },
+    {
+      "id": 14145,
+      "name": "Cursed Felblade",
+      "slot": "mainhand",
+      "requiredLevel": 13,
+      "itemLevel": 18,
+      "quality": "uncommon",
+      "armorType": null,
+      "origin": "Ragefire Chasm · Taragaman the Hungerer",
+      "type": "sword",
+      "url": "https://wowclassicdatabase.com/item/cursed-felblade",
+      "source_url": "https://wowclassicdatabase.com/item/cursed-felblade",
+      "source_status": "classic_curated_leveling",
+      "tooltip": [
+        "Cursed Felblade",
+        "Item Level 18",
+        "Main Hand Sword",
+        "Requires Level 13"
+      ]
+    },
+    {
+      "id": 14149,
+      "name": "Subterranean Cape",
+      "slot": "back",
+      "requiredLevel": 13,
+      "itemLevel": 18,
+      "quality": "uncommon",
+      "armorType": null,
+      "origin": "Ragefire Chasm · Taragaman the Hungerer",
+      "type": null,
+      "url": "https://wowclassicdatabase.com/item/subterranean-cape",
+      "source_url": "https://wowclassicdatabase.com/item/subterranean-cape",
+      "source_status": "classic_curated_leveling",
+      "tooltip": [
+        "Subterranean Cape",
+        "Item Level 18",
+        "+2 Strength",
+        "+2 Agility",
+        "Requires Level 13"
+      ]
+    },
+    {
+      "id": 14150,
+      "name": "Robe of Evocation",
+      "slot": "chest",
+      "requiredLevel": 13,
+      "itemLevel": 18,
+      "quality": "uncommon",
+      "armorType": "cloth",
+      "origin": "Ragefire Chasm · Jergosh the Invoker",
+      "type": null,
+      "url": "https://wowclassicdatabase.com/item/robe-of-evocation",
+      "source_url": "https://wowclassicdatabase.com/item/robe-of-evocation",
+      "source_status": "classic_curated_leveling",
+      "tooltip": [
+        "Robe of Evocation",
+        "Item Level 18",
+        "+4 Intellect",
+        "+3 Stamina",
+        "Requires Level 13"
+      ]
+    },
+    {
+      "id": 5191,
+      "name": "Cruel Barb",
+      "slot": "mainhand",
+      "requiredLevel": 19,
+      "itemLevel": 24,
+      "quality": "rare",
+      "armorType": null,
+      "origin": "The Deadmines · Edwin VanCleef",
+      "type": "sword",
+      "url": "https://wowclassicdatabase.com/item/cruel-barb",
+      "source_url": "https://wowclassicdatabase.com/item/cruel-barb",
+      "source_status": "classic_curated_leveling",
+      "tooltip": [
+        "Cruel Barb",
+        "Item Level 24",
+        "One-Hand Sword",
+        "Equip: +12 Attack Power.",
+        "Requires Level 19"
+      ]
+    },
+    {
+      "id": 10399,
+      "name": "Blackened Defias Armor",
+      "slot": "chest",
+      "requiredLevel": 19,
+      "itemLevel": 24,
+      "quality": "rare",
+      "armorType": "leather",
+      "origin": "The Deadmines · Edwin VanCleef",
+      "type": null,
+      "url": "https://wowclassicdatabase.com/item/blackened-defias-armor",
+      "source_url": "https://wowclassicdatabase.com/item/blackened-defias-armor",
+      "source_status": "classic_curated_leveling",
+      "tooltip": [
+        "Blackened Defias Armor",
+        "Item Level 24",
+        "+4 Strength",
+        "+3 Agility",
+        "+11 Stamina",
+        "Requires Level 19"
+      ]
+    },
+    {
+      "id": 5198,
+      "name": "Cookie's Stirring Rod",
+      "slot": "ranged",
+      "requiredLevel": 17,
+      "itemLevel": 22,
+      "quality": "rare",
+      "armorType": null,
+      "origin": "The Deadmines · Cookie",
+      "type": "wand",
+      "url": "https://wowclassicdatabase.com/item/cookies-stirring-rod",
+      "source_url": "https://wowclassicdatabase.com/item/cookies-stirring-rod",
+      "source_status": "classic_curated_leveling",
+      "tooltip": [
+        "Cookie's Stirring Rod",
+        "Item Level 22",
+        "Ranged Wand",
+        "Requires Level 17"
+      ]
+    },
+    {
+      "id": 1156,
+      "name": "Lavishly Jeweled Ring",
+      "slot": "finger1",
+      "requiredLevel": 17,
+      "itemLevel": 22,
+      "quality": "rare",
+      "armorType": null,
+      "origin": "The Deadmines · Gilnid",
+      "type": null,
+      "url": "https://wowclassicdatabase.com/item/lavishly-jeweled-ring",
+      "source_url": "https://wowclassicdatabase.com/item/lavishly-jeweled-ring",
+      "source_status": "classic_curated_leveling",
+      "tooltip": [
+        "Lavishly Jeweled Ring",
+        "Item Level 22",
+        "+2 Agility",
+        "+6 Intellect",
+        "Requires Level 17"
+      ]
+    },
+    {
+      "id": 5243,
+      "name": "Firebelcher",
+      "slot": "ranged",
+      "requiredLevel": 15,
+      "itemLevel": 20,
+      "quality": "rare",
+      "armorType": null,
+      "origin": "Wailing Caverns · Deviate Faerie Dragon",
+      "type": "wand",
+      "url": "https://wowclassicdatabase.com/item/firebelcher",
+      "source_url": "https://wowclassicdatabase.com/item/firebelcher",
+      "source_status": "classic_curated_leveling",
+      "tooltip": [
+        "Firebelcher",
+        "Item Level 20",
+        "Ranged Wand",
+        "Requires Level 15"
+      ]
+    },
+    {
+      "id": 6449,
+      "name": "Glowing Lizardscale Cloak",
+      "slot": "back",
+      "requiredLevel": 17,
+      "itemLevel": 22,
+      "quality": "rare",
+      "armorType": null,
+      "origin": "Wailing Caverns · Skum",
+      "type": null,
+      "url": "https://wowclassicdatabase.com/item/glowing-lizardscale-cloak",
+      "source_url": "https://wowclassicdatabase.com/item/glowing-lizardscale-cloak",
+      "source_status": "classic_curated_leveling",
+      "tooltip": [
+        "Glowing Lizardscale Cloak",
+        "Item Level 22",
+        "+6 Agility",
+        "+2 Spirit",
+        "Requires Level 17"
+      ]
+    },
+    {
+      "id": 10410,
+      "name": "Leggings of the Fang",
+      "slot": "legs",
+      "requiredLevel": 18,
+      "itemLevel": 23,
+      "quality": "rare",
+      "armorType": "leather",
+      "origin": "Wailing Caverns · Lord Cobrahn",
+      "type": null,
+      "url": "https://wowclassicdatabase.com/item/leggings-of-the-fang",
+      "source_url": "https://wowclassicdatabase.com/item/leggings-of-the-fang",
+      "source_status": "classic_curated_leveling",
+      "tooltip": [
+        "Leggings of the Fang",
+        "Item Level 23",
+        "Requires Level 18"
+      ]
+    },
+    {
+      "id": 6469,
+      "name": "Venomstrike",
+      "slot": "ranged",
+      "requiredLevel": 19,
+      "itemLevel": 24,
+      "quality": "rare",
+      "armorType": null,
+      "origin": "Wailing Caverns · Lord Serpentis",
+      "type": "bow",
+      "url": "https://wowclassicdatabase.com/item/venomstrike",
+      "source_url": "https://wowclassicdatabase.com/item/venomstrike",
+      "source_status": "classic_curated_leveling",
+      "tooltip": [
+        "Venomstrike",
+        "Item Level 24",
+        "Ranged Bow",
+        "Requires Level 19"
+      ]
+    },
+    {
+      "id": 6463,
+      "name": "Deep Fathom Ring",
+      "slot": "finger1",
+      "requiredLevel": 21,
+      "itemLevel": 26,
+      "quality": "rare",
+      "armorType": null,
+      "origin": "Wailing Caverns · Mutanus the Devourer",
+      "type": null,
+      "url": "https://wowclassicdatabase.com/item/deep-fathom-ring",
+      "source_url": "https://wowclassicdatabase.com/item/deep-fathom-ring",
+      "source_status": "classic_curated_leveling",
+      "tooltip": [
+        "Deep Fathom Ring",
+        "Item Level 26",
+        "+3 Intellect",
+        "+3 Stamina",
+        "+6 Spirit",
+        "Requires Level 21"
+      ]
+    },
+    {
+      "id": 6321,
+      "name": "Silverlaine's Family Seal",
+      "slot": "finger1",
+      "requiredLevel": 21,
+      "itemLevel": 26,
+      "quality": "rare",
+      "armorType": null,
+      "origin": "Shadowfang Keep · Baron Silverlaine",
+      "type": null,
+      "url": "https://wowclassicdatabase.com/item/silverlaines-family-seal",
+      "source_url": "https://wowclassicdatabase.com/item/silverlaines-family-seal",
+      "source_status": "classic_curated_leveling",
+      "tooltip": [
+        "Silverlaine's Family Seal",
+        "Item Level 26",
+        "+7 Strength",
+        "+3 Stamina",
+        "Requires Level 21"
+      ]
+    },
+    {
+      "id": 3748,
+      "name": "Feline Mantle",
+      "slot": "shoulders",
+      "requiredLevel": 23,
+      "itemLevel": 28,
+      "quality": "rare",
+      "armorType": "cloth",
+      "origin": "Shadowfang Keep · Wolf Master Nandos",
+      "type": null,
+      "url": "https://wowclassicdatabase.com/item/feline-mantle",
+      "source_url": "https://wowclassicdatabase.com/item/feline-mantle",
+      "source_status": "classic_curated_leveling",
+      "tooltip": [
+        "Feline Mantle",
+        "Item Level 28",
+        "+10 Intellect",
+        "+3 Spirit",
+        "Requires Level 23"
+      ]
+    },
+    {
+      "id": 6324,
+      "name": "Robes of Arugal",
+      "slot": "chest",
+      "requiredLevel": 24,
+      "itemLevel": 29,
+      "quality": "rare",
+      "armorType": "cloth",
+      "origin": "Shadowfang Keep · Archmage Arugal",
+      "type": null,
+      "url": "https://wowclassicdatabase.com/item/robes-of-arugal",
+      "source_url": "https://wowclassicdatabase.com/item/robes-of-arugal",
+      "source_status": "classic_curated_leveling",
+      "tooltip": [
+        "Robes of Arugal",
+        "Item Level 29",
+        "+9 Intellect",
+        "+5 Stamina",
+        "+10 Spirit",
+        "Requires Level 24"
+      ]
+    },
+    {
+      "id": 6220,
+      "name": "Meteor Shard",
+      "slot": "mainhand",
+      "requiredLevel": 24,
+      "itemLevel": 29,
+      "quality": "rare",
+      "armorType": null,
+      "origin": "Shadowfang Keep · Archmage Arugal",
+      "type": "dagger",
+      "url": "https://wowclassicdatabase.com/item/meteor-shard",
+      "source_url": "https://wowclassicdatabase.com/item/meteor-shard",
+      "source_status": "classic_curated_leveling",
+      "tooltip": [
+        "Meteor Shard",
+        "Item Level 29",
+        "One-Hand Dagger",
+        "Requires Level 24"
+      ]
+    },
+    {
+      "id": 6901,
+      "name": "Glowing Thresher Cape",
+      "slot": "back",
+      "requiredLevel": 24,
+      "itemLevel": 29,
+      "quality": "rare",
+      "armorType": null,
+      "origin": "Blackfathom Deeps · Old Serra'kis",
+      "type": null,
+      "url": "https://wowclassicdatabase.com/item/glowing-thresher-cape",
+      "source_url": "https://wowclassicdatabase.com/item/glowing-thresher-cape",
+      "source_status": "classic_curated_leveling",
+      "tooltip": [
+        "Glowing Thresher Cape",
+        "Item Level 29",
+        "+3 Strength",
+        "+8 Spirit",
+        "Requires Level 24"
+      ]
+    },
+    {
+      "id": 6910,
+      "name": "Leech Pants",
+      "slot": "legs",
+      "requiredLevel": 26,
+      "itemLevel": 31,
+      "quality": "rare",
+      "armorType": "cloth",
+      "origin": "Blackfathom Deeps · Aku'mai",
+      "type": null,
+      "url": "https://wowclassicdatabase.com/item/leech-pants",
+      "source_url": "https://wowclassicdatabase.com/item/leech-pants",
+      "source_status": "classic_curated_leveling",
+      "tooltip": [
+        "Leech Pants",
+        "Item Level 31",
+        "+5 Intellect",
+        "+15 Spirit",
+        "Requires Level 26"
+      ]
+    },
+    {
+      "id": 1155,
+      "name": "Rod of the Sleepwalker",
+      "slot": "mainhand",
+      "requiredLevel": 24,
+      "itemLevel": 29,
+      "quality": "rare",
+      "armorType": null,
+      "origin": "Blackfathom Deeps · Twilight Lord Kelris",
+      "type": "staff",
+      "url": "https://wowclassicdatabase.com/item/rod-of-the-sleepwalker",
+      "source_url": "https://wowclassicdatabase.com/item/rod-of-the-sleepwalker",
+      "source_status": "classic_curated_leveling",
+      "tooltip": [
+        "Rod of the Sleepwalker",
+        "Item Level 29",
+        "Two-Hand Staff",
+        "+11 Intellect",
+        "+10 Spirit",
+        "Requires Level 24"
+      ]
+    },
+    {
+      "id": 6904,
+      "name": "Bite of Serra'kis",
+      "slot": "mainhand",
+      "requiredLevel": 23,
+      "itemLevel": 28,
+      "quality": "rare",
+      "armorType": null,
+      "origin": "Blackfathom Deeps · Old Serra'kis",
+      "type": "dagger",
+      "url": "https://wowclassicdatabase.com/item/bite-of-serrakis",
+      "source_url": "https://wowclassicdatabase.com/item/bite-of-serrakis",
+      "source_status": "classic_curated_leveling",
+      "tooltip": [
+        "Bite of Serra'kis",
+        "Item Level 28",
+        "One-Hand Dagger",
+        "Requires Level 23"
+      ]
+    },
+    {
+      "id": 888,
+      "name": "Naga Battle Gloves",
+      "slot": "hands",
+      "requiredLevel": 22,
+      "itemLevel": 27,
+      "quality": "rare",
+      "armorType": "leather",
+      "origin": "Blackfathom Deeps · Lady Sarevess",
+      "type": null,
+      "url": "https://wowclassicdatabase.com/item/naga-battle-gloves",
+      "source_url": "https://wowclassicdatabase.com/item/naga-battle-gloves",
+      "source_status": "classic_curated_leveling",
+      "tooltip": [
+        "Naga Battle Gloves",
+        "Item Level 27",
+        "+4 Strength",
+        "+4 Stamina",
+        "+7 Spirit",
+        "Requires Level 22"
+      ]
+    },
+    {
+      "id": 6691,
+      "name": "Swinetusk Shank",
+      "slot": "mainhand",
+      "requiredLevel": 30,
+      "itemLevel": 35,
+      "quality": "rare",
+      "armorType": null,
+      "origin": "Razorfen Kraul · boss reference",
+      "type": "dagger",
+      "url": "https://wowclassicdatabase.com/item/swinetusk-shank",
+      "source_url": "https://wowclassicdatabase.com/item/swinetusk-shank",
+      "source_status": "classic_curated_leveling",
+      "tooltip": [
+        "Swinetusk Shank",
+        "Item Level 35",
+        "One-Hand Dagger",
+        "+6 Stamina",
+        "+4 Spirit",
+        "Requires Level 30"
+      ]
+    }
+  ]
+}
