@@ -5,7 +5,7 @@ const en=document.documentElement.lang==="en",t=(fr,eng)=>en?eng:fr,$=s=>documen
 const endpoint="/data/dungeons-forever.json",q=new URLSearchParams(location.search);
 const cvs=$("dg-map"),ctx=cvs.getContext("2d"),W=1002,H=620;
 const modes={route:"route",world:"world"};
-let db=null,selected=null,selectedBoss=0,view="route",scale=1,offsetX=0,offsetY=0,drag=null,points=[],worldImage=null,worldToken=0,floorImage=null,floorToken=0,floorFit=null;
+let db=null,selected=null,selectedBoss=0,view="route",scale=1,offsetX=0,offsetY=0,drag=null,points=[],worldImage=null,worldToken=0,floorImage=null,floorToken=0,floorFit=null,floorFailed=false;
 const result=$("dg-directory-list"),bossRoot=$("dg-bosses"),tooltip=$("dg-tooltip");
 const routeButton=$("dg-route"),worldButton=$("dg-world"),search=$("dg-search"),level=$("dg-level"),status=$("dg-status");
 const m=(tag,txt,cls)=>{const n=document.createElement(tag);if(txt!==undefined&&txt!==null)n.textContent=String(txt);if(cls)n.className=cls;return n};
@@ -30,7 +30,7 @@ function renderDirectory(){if(!db)return;const rows=visibleList(),scroll=result.
  b.append(line);result.append(b);
  }if(!rows.length)result.append(m("p",t("Aucun donjon avec ces filtres.","No dungeons match these filters."),"dg-empty"));result.scrollTop=scroll;
 }
-function select(d,focus=false){if(!d)return;selected=d;selectedBoss=0;view=d.floorMap?"route":"world";resetCamera();worldToken++;worldImage=null;floorToken++;floorImage=null;updateUrl();renderDirectory();renderDetail();loadWorld();loadFloor();paint();if(focus)document.getElementById("dg-map-title").scrollIntoView({block:"nearest",behavior:"smooth"})}
+function select(d,focus=false){if(!d)return;selected=d;selectedBoss=0;view=d.floorMap?"route":"world";resetCamera();worldToken++;worldImage=null;floorToken++;floorImage=null;floorFailed=false;updateUrl();renderDirectory();renderDetail();loadWorld();loadFloor();paint();if(focus)document.getElementById("dg-map-title").scrollIntoView({block:"nearest",behavior:"smooth"})}
 function chooseBoss(i,focus=false){if(!selected?.bosses[i])return;selectedBoss=i;updateUrl();renderDetail();paint();if(focus)document.getElementById("dg-info-title").scrollIntoView({block:"nearest",behavior:"smooth"})}
 function makeLootCard(item,boss){const card=m("div",null,"dg-drop");card.tabIndex=0;card.setAttribute("role","group");card.setAttribute("aria-label",name(item)+" · "+item.slot);
  const icon=m("img");icon.width=34;icon.height=34;icon.loading="lazy";icon.alt="";
@@ -56,7 +56,7 @@ function makeLootCard(item,boss){const card=m("div",null,"dg-drop");card.tabInde
 function renderDetail(){const d=selected;if(!d)return;const boss=d.bosses[selectedBoss];
  $("dg-map-title").textContent=name(d.name);$("dg-map-subtitle").textContent=name(d.zone)+" · "+d.level.join("–")+" · "+d.bosses.length+" "+t("rencontres","encounters");
  $("dg-info-title").textContent=name(d.name);$("dg-boss-count").textContent=d.bosses.length+" "+t("rencontres","encounters");
- const chips=$("dg-tags");chips.replaceChildren();chips.append(smallchip(t("Niveaux ","Levels ")+d.level.join("–")));chips.append(smallchip(statusText(d),d.beta==="observed"?"live":"pending"));if(d.quests)chips.append(smallchip(d.quests+" "+t("quêtes relevées","reported quests")));if(count(d))chips.append(smallchip(count(d)+" "+t("butins relevés","reported drops")));
+ const chips=$("dg-tags");chips.replaceChildren();chips.append(smallchip(t("Niveaux ","Levels ")+d.level.join("–")));chips.append(smallchip(statusText(d),d.beta==="observed"?"live":"pending"));if(d.quests)chips.append(smallchip(d.quests+" "+t("quêtes relevées","reported quests")));if(d.floorMap)chips.append(smallchip(d.floorMap.kind==="client_minimap_mosaic"?t("Carte client Forever","Forever client map"):t("Carte Classic annotée","Annotated Classic map"),"live"));if(count(d))chips.append(smallchip(count(d)+" "+t("butins relevés","reported drops")));
  $("dg-access").textContent=name(d.access);
  $("dg-description").textContent=name(d.note)|| (d.bosses.length?t("Boss documentés par des guides indépendants de la bêta.","Boss encounters documented by independent beta guides."):t("Leurs boss, plans intérieurs et objets ne sont pas encore documentés de façon suffisamment fiable.","Bosses, floor maps and drops are not yet reliably documented."));
  $("dg-main-source").href=d.source||db.listSource;
@@ -67,7 +67,7 @@ function renderDetail(){const d=selected;if(!d)return;const boss=d.bosses[select
  routeButton.classList.toggle("active",view==="route");worldButton.classList.toggle("active",view==="world");
  routeButton.setAttribute("aria-pressed",String(view==="route"));worldButton.setAttribute("aria-pressed",String(view==="world"));
  $("dg-map-caption").textContent=view==="route"?(d.floorMap?.kind==="client_minimap_mosaic"?t("PLAN INTÉRIEUR RÉEL · mosaïque du minimap du client Forever","REAL INTERIOR MAP · Forever client minimap mosaic"):t("PLAN DE DONJON CLASSIC ANNOTÉ · source externe","ANNOTATED CLASSIC DUNGEON MAP · external source")):(d.entry?t("Carte du client Forever · accès reporté","Forever client zone map · reported entrance"):t("Carte de région · entrée exacte non confirmée","Zone map · exact entrance unconfirmed"));
- const noteBox=$("dg-changes");if(noteBox){noteBox.replaceChildren();for(const ch of d.changes||[]){const p=m("p",null,"dg-change");p.append(smallchip(ch.status==="observed_beta"?t("Relevé bêta","Beta observed"):ch.status==="new_forever"?t("Forever inédit","New in Forever"):t("Forever / à contrôler","Forever / verify"),ch.status==="observed_beta"?"live":"pending"),m("span",name(ch)));noteBox.append(p)}}
+ const noteBox=$("dg-changes");if(noteBox){noteBox.replaceChildren();if(d.mapMarkerPrecision==="annotated_map_approx")noteBox.append(m("p",t("Repères de boss approximatifs reportés depuis une carte annotée, à ajuster en jeu.","Approximate boss markers transcribed from an annotated map; in-game precision unverified."),"dg-source-note"));for(const ch of d.changes||[]){const p=m("p",null,"dg-change");p.append(smallchip(ch.status==="observed_beta"?t("Relevé bêta","Beta observed"):ch.status==="new_forever"?t("Forever inédit","New in Forever"):t("Forever / à contrôler","Forever / verify"),ch.status==="observed_beta"?"live":"pending"),m("span",name(ch)));noteBox.append(p)}}
 
  bossRoot.replaceChildren();
  if(!d.bosses.length){bossRoot.append(m("p",d.type==="classic"?t("Ce donjon Classic est référencé. La liste détaillée des boss et butins Forever reste à compléter : ouvrir le guide source.","This returning Classic dungeon is indexed. Detailed Forever bosses and drops remain to be added: open the source guide."):t("Boss et butins encore insuffisamment documentés pour cette nouvelle instance.","Boss and loot tables are not reliably documented for this new instance yet."),"dg-empty"));return}
@@ -88,12 +88,12 @@ function clamp(){const limx=W*(scale-1),limy=H*(scale-1);offsetX=Math.max(-limx,
 function circle(x,y,r,col){ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2);ctx.fillStyle=col;ctx.fill()}
 function outlineText(str,x,y,size=14,col="#e2d2af"){ctx.font=size+"px Trebuchet MS, sans-serif";ctx.textAlign="center";ctx.textBaseline="middle";ctx.lineWidth=4;ctx.strokeStyle="#07140ede";ctx.strokeText(str,x,y);ctx.fillStyle=col;ctx.fillText(str,x,y)}
 function cutText(s,n){return s.length>n?s.slice(0,n-1)+"…":s}
-function loadFloor(){const d=selected,token=++floorToken;floorImage=null;floorFit=null;paint();if(!d?.floorMap?.url)return;
- const img=new Image();img.onload=()=>{if(token!==floorToken)return;floorImage=img;paint()};img.onerror=()=>{if(token!==floorToken)return;floorImage=null;paint()};img.src=d.floorMap.url;
+function loadFloor(){const d=selected,token=++floorToken;floorImage=null;floorFit=null;floorFailed=false;paint();if(!d?.floorMap?.url)return;
+ const img=new Image();img.onload=()=>{if(token!==floorToken)return;floorImage=img;paint()};img.onerror=()=>{if(token!==floorToken)return;floorImage=null;floorFailed=true;paint()};img.src=d.floorMap.url;
 }
 function drawRoute(d){ctx.fillStyle="#0e1a13";ctx.fillRect(0,0,W,H);points=[];floorFit=null;
  if(!d.floorMap){outlineText(t("Plan intérieur non vérifié","No verified interior map"),W/2,H/2-14,20);outlineText(t("Consultez le guide source. Aucune carte inventée.","Open the source guide. No fabricated floor plans."),W/2,H/2+26,13);return}
- if(!floorImage){outlineText(t("Chargement du plan réel…","Loading real dungeon map…"),W/2,H/2,19);return}
+ if(!floorImage){outlineText(floorFailed?t("Image indisponible chez la source","Map image unavailable from source"):t("Chargement du plan réel…","Loading real dungeon map…"),W/2,H/2,19);if(floorFailed)outlineText(t("Ouvrez le plan dans le guide original ↗","Open the original map source guide ↗"),W/2,H/2+40,13);return}
  const ratio=Math.min((W-32)/floorImage.width,(H-32)/floorImage.height),dw=floorImage.width*ratio,dh=floorImage.height*ratio;
  const dx=(W-dw)/2,dy=(H-dh)/2;floorFit={dx,dy,dw,dh};ctx.imageSmoothingEnabled=true;ctx.imageSmoothingQuality="high";ctx.drawImage(floorImage,dx,dy,dw,dh);
  for(let i=0;i<d.bosses.length;i++){const p=d.bosses[i].mapPoint;if(!Array.isArray(p)||p.length!==2)continue;
