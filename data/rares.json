@@ -326,7 +326,9 @@
           },
           "item_id": 1404,
           "chance_classic_percent": 50,
-          "icon": "inv_jewelry_talisman_08"
+          "icon": "inv_jewelry_talisman_08",
+          "source_version": "classic_reference",
+          "source_url": "https://www.wowhead.com/forever/npc=2779/prince-nazjak"
         }
       ],
       "source": "https://www.wowhead.com/forever/npc=2779/prince-nazjak",
@@ -2362,7 +2364,7 @@
       "loot": [
         {
           "name": {
-            "fr": "Scarecrow Trousers",
+            "fr": "Chausses d’épouvantail",
             "en": "Scarecrow Trousers"
           },
           "item_id": 4434,
@@ -3542,7 +3544,9 @@
           },
           "item_id": null,
           "chance_classic_percent": 33.3,
-          "icon": "inv_jewelry_ring_03"
+          "icon": "inv_jewelry_ring_03",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/6489"
         },
         {
           "name": {
@@ -3551,7 +3555,9 @@
           },
           "item_id": null,
           "chance_classic_percent": 33.3,
-          "icon": "inv_gauntlets_04"
+          "icon": "inv_gauntlets_04",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/6489"
         },
         {
           "name": {
@@ -3560,7 +3566,9 @@
           },
           "item_id": null,
           "chance_classic_percent": 33.3,
-          "icon": "inv_chest_chain_14"
+          "icon": "inv_chest_chain_14",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/6489"
         }
       ],
       "source": "https://foreverdb.net/rare/6489",
@@ -4263,7 +4271,7 @@
       "loot": [
         {
           "name": {
-            "fr": "Serpent's Kiss",
+            "fr": "Baiser du serpent",
             "en": "Serpent's Kiss"
           },
           "item_id": 5426,
@@ -4725,7 +4733,9 @@
           },
           "item_id": 12662,
           "chance_classic_percent": 11.7,
-          "icon": "inv_misc_rune_04"
+          "icon": "inv_misc_rune_04",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/6652"
         }
       ],
       "source": "https://foreverdb.net/rare/6652",
@@ -5476,7 +5486,9 @@
           },
           "item_id": null,
           "chance_classic_percent": 50,
-          "icon": "inv_misc_cape_03"
+          "icon": "inv_misc_cape_03",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/503"
         },
         {
           "name": {
@@ -5485,7 +5497,9 @@
           },
           "item_id": null,
           "chance_classic_percent": 50,
-          "icon": "inv_jewelry_necklace_01"
+          "icon": "inv_jewelry_necklace_01",
+          "source_version": "classic_reference",
+          "source_url": "https://foreverdb.net/rare/503"
         }
       ],
       "source": "https://foreverdb.net/rare/503",
@@ -5597,7 +5611,7 @@
         },
         {
           "name": {
-            "fr": "Channeler's Staff",
+            "fr": "Bâton du canaliste",
             "en": "Channeler's Staff"
           },
           "item_id": 4437,
