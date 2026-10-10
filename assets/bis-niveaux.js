@@ -52,6 +52,7 @@ function localizedOrigin(i){
 const fmtItem=i=>({...i,name:localizedName(i),origin:localizedOrigin(i)});
 
 function sourceLabel(i){
+ if(i.acquisition?.kind==="quest")return en?"Beta quest reward":"Récompense de quête bêta";
  if(isObserved(i))return sourceDetails.observed;
  if(isForever(i))return sourceDetails.client;
  return sourceDetails.classic;
@@ -98,6 +99,15 @@ const required=i=>{
  const line=Array.isArray(i.tooltip)?i.tooltip.find(t=>/^(?:Requires Level \d+|Niveau \d+ requis)$/.test(t)):null;
  return line?Number(line.match(/\d+/)[0]):null;
 };
+const progressionLevel=i=>required(i)??(i.acquisition?.kind==="quest"&&Number.isInteger(i.questLevel)?i.questLevel:null);
+const requirementText=i=>{
+ const req=required(i);if(req!==null)return T.required+" "+req;
+ if(i.acquisition?.kind==="quest"&&Number.isInteger(i.questLevel))return (en?"Quest level ":"Quête niveau ")+i.questLevel;
+ return en?"Required level unknown":"Niveau requis inconnu";
+};
+const factionText=i=>i.acquisition?.faction==="alliance"?(en?"Alliance only":"Alliance uniquement"):
+ i.acquisition?.faction==="horde"?(en?"Horde only":"Horde uniquement"):
+ i.acquisition?.faction==="both"?"Alliance / Horde":"";
 /* Validate Classic weapon proficiencies, including French API type names. */
 const typeCode=i=>{
  const raw=[i.type,i.type_name,...(Array.isArray(i.tooltip)?i.tooltip.slice(0,9):[])].filter(v=>typeof v==="string").join(" ").toLowerCase();
@@ -168,7 +178,7 @@ function weaponAllowed(i,chosenSlot=normSlot(i)){
  return true;
 }
 function eligible(i){
- const req=required(i),max=levels[band][1],rules=window.ForeverEquipmentRules;
+ const req=progressionLevel(i),max=levels[band][1],rules=window.ForeverEquipmentRules;
  if(!Number.isInteger(i.id)||!i.name||i.quality==="poor"||req===null||req>max||req<1)return false;
  if(Number.isFinite(i.itemLevel)&&i.itemLevel>max+(max===60?18:11))return false;
  if(origin==="forever"&&!isForever(i)||origin==="classic"&&isForever(i))return false;
@@ -217,7 +227,7 @@ function roleBonus(i){
  if((caster||heal)&&twoHand(i)&&test("mana"))bonus+=3;
  return bonus;
 }
-const score=i=>(i.itemLevel||required(i)||0)*2+Math.min(required(i)||0,levels[band][1])*.7+roleBonus(i)+({poor:-6,common:0,uncommon:2,rare:4,epic:6,legendary:8}[i.quality]||0)+(isObserved(i)?3:isForever(i)?1:0);
+const score=i=>(i.itemLevel||progressionLevel(i)||0)*2+Math.min(progressionLevel(i)||0,levels[band][1])*.7+roleBonus(i)+({poor:-6,common:0,uncommon:2,rare:4,epic:6,legendary:8}[i.quality]||0)+(isObserved(i)?3:isForever(i)?1:0);
 function icon(i,fallback){
  const shell=mk("span","level-bis-icon"),value=i?.icon||fallback;
  if(typeof value==="string"&&(/^([a-z0-9_-]{2,70})$/.test(value)||value.startsWith("https://wowdb.assemblee-defias.fr/database-icons/"))){
@@ -339,7 +349,7 @@ function itemRow(i,secondary=false){
  row.append(icon(i,db.slots.find(slot=>window.ForeverGearData.compatible(normSlot(i),slot.id))?.icon||"inv_misc_questionmark"));
  const info=mk("div","level-bis-item-main");
  const title=mk("strong","",localizedName(i));info.append(title);
- const meta=mk("span","",T.required+" "+required(i)+(Number.isFinite(i.itemLevel)?" · "+T.itemLevel+" "+i.itemLevel:""));
+ const meta=mk("span","",requirementText(i)+(Number.isFinite(i.itemLevel)?" · "+T.itemLevel+" "+i.itemLevel:""));
  info.append(meta);if(i.origin)info.append(mk("span","level-bis-source",i.origin));row.append(info);
  const badge=mk("span","level-bis-provenance"+(isForever(i)?" is-forever":""),isForever(i)?T.forever:T.classic);row.append(badge);
  const detail=mk("button","level-bis-detail","ⓘ");detail.type="button";detail.title=T.detail;detail.setAttribute("aria-label",T.detail+" "+i.name);detail.onclick=()=>window.ForeverItemTooltip?.pin(i);row.append(detail);if(typeof i.url==="string"){try{const u=new URL(i.url);if(u.protocol==="https:"&&["www.60.tools","www.wowhead.com","wowdb.assemblee-defias.fr","wowclassicdatabase.com"].includes(u.hostname)){const a=mk("a","level-bis-outbound","↗");a.href=u.href;a.target="_blank";a.rel="noopener noreferrer";a.setAttribute("aria-label",T.from+" "+i.name);row.append(a)}}catch{}}
@@ -467,7 +477,7 @@ function renderPicker(){
  const slot=db.slots.find(s=>s.id===activeSlot),id=slot.id,i=currentPlan.selected.get(id);
  const blocked=currentPlan.blocked.has(id),manual=currentPlan.manual.has(id);
  $("level-picker-slot").textContent=labelSlot(slot);
- $("level-picker-hint").textContent=blocked?u.twohand:T.required+" ≤ "+levels[band][1]+" · "+(en?"Unconfirmed gear references":"Références provisoires");
+ $("level-picker-hint").textContent=blocked?u.twohand:(en?"Target level ":"Objectif niveau ")+levels[band][1]+" · "+(en?"Unconfirmed gear references":"Références provisoires");
  const selected=$("level-picked");selected.replaceChildren(mk("span","bis-v2-eyebrow",manual?u.chosen:u.suggestion));
  if(!i)selected.append(mk("p","bis-v2-blank",blocked?u.twohand:u.missing));
  else{
@@ -475,8 +485,9 @@ function renderPicker(){
   const detail=mk("div","bis-v2-selected-info");
   detail.append(mk("strong","",localizedName(i)),
    mk("small","",T.required+" "+required(i)+(Number.isFinite(i.itemLevel)?" · "+T.itemLevel+" "+i.itemLevel:"")),
-   mk("span","level-bis-source-proof"+(isForever(i)?"":" is-classic")+(isObserved(i)?"":" is-client"),sourceLabel(i)));
+   mk("span","level-bis-source-proof"+(isForever(i)?"":" is-classic")+(isObserved(i)?"":" is-client"),(i.acquisition?.kind==="quest"?(en?"Beta quest reward":"Récompense de quête bêta"):sourceLabel(i))));
   if(localizedOrigin(i))detail.append(mk("small","level-bis-acquisition-inline",localizedOrigin(i)));
+  if(factionText(i))detail.append(mk("small","level-bis-acquisition-inline",factionText(i)));
   item.append(sheetIcon(i,slot.icon),detail);selected.append(item);
   window.ForeverItemTooltip?.bind(item,{...localizedTooltip(i),slotLabel:labelSlot(slot)});
   const actions=mk("div","bis-v2-actions"),button=mk("button","", "ⓘ "+u.details);
@@ -506,8 +517,9 @@ function renderPicker(){
   b.type="button";b.dataset.quality=candidate.quality||"common";
   b.setAttribute("aria-pressed",String(i?.id===candidate.id));b.setAttribute("aria-label",u.select+" : "+localizedName(candidate));
   const info=mk("span","bis-v2-candidate-info");
-  info.append(mk("strong","",localizedName(candidate)),mk("small","",T.required+" "+required(candidate)+(Number.isFinite(candidate.itemLevel)?" · "+T.itemLevel+" "+candidate.itemLevel:"")),
-   mk("small","",(isObserved(candidate)?sourceDetails.drop:isForever(candidate)?T.forever:T.classic)+" · "+(localizedOrigin(candidate)||T.from)));
+  info.append(mk("strong","",localizedName(candidate)),mk("small","",requirementText(candidate)+(Number.isFinite(candidate.itemLevel)?" · "+T.itemLevel+" "+candidate.itemLevel:"")),
+   mk("small","",(candidate.acquisition?.kind==="quest"?(en?"Quest reward":"Récompense de quête"):isObserved(candidate)?sourceDetails.drop:isForever(candidate)?T.forever:T.classic)+" · "+(localizedOrigin(candidate)||T.from)));
+  if(factionText(candidate))info.append(mk("small","",factionText(candidate)));
   b.append(sheetIcon(candidate,slot.icon),info);b.addEventListener("click",()=>saveChoice(id,candidate.id));
   window.ForeverItemTooltip?.bind(b,{...localizedTooltip(candidate),slotLabel:labelSlot(slot)});
   const detail=mk("button","bis-v2-info-button","ⓘ");detail.type="button";
