@@ -100,3 +100,13 @@
 .level-bis-farm-empty{font-size:12px;color:#99ac98}
 @media(max-width:1000px){.level-bis-farm-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.level-bis-farm-list{grid-template-columns:1fr}.level-bis-farm-head h3{font-size:19px}}
+
+/* Optional set progress in the character sheet. */
+.level-bis-set-guide{border-top:1px solid #44513b;margin-top:13px;padding-top:12px}
+.level-bis-set-guide[hidden]{display:none}
+.level-bis-set{background:#15221a;border:1px solid #3d4b39;border-radius:3px;padding:8px 11px}
+.level-bis-set summary{cursor:pointer;font-weight:750;font-size:11px;color:#e7d5a4}
+.level-bis-set-effect{display:flex;gap:9px;align-items:center;padding:7px 0;color:#8b9e8f;font-size:11px;line-height:1.4}
+.level-bis-set-effect.active{color:#a8e1b2}
+.level-bis-set-tier{display:inline-grid;place-items:center;min-width:24px;height:22px;border:1px solid #566345;border-radius:3px;color:#ccb67e;font-size:10px;font-weight:800}
+.level-bis-set-effect.active .level-bis-set-tier{border-color:#6bab74;color:#9adcaf}
