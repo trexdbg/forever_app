@@ -434,13 +434,17 @@ function renderSets(){
  el.hidden=!counts.size;
  for(const [name,{count,item}] of counts){
   const box=mk("details","level-bis-set");
-  const summary=mk("summary","",(en?name:({ "Rotmender's Raiment":"Atours du soigneur de peste" }[name]||name))
+  const summary=mk("summary","",name
     +" · "+count+" / "+(item.itemSetCount||5)+" "+(en?"pieces":"pièces"));
   box.append(summary);
   for(const [index,bonus] of item.setBonus.entries()){
    const threshold=index+2;
    const line=mk("div","level-bis-set-effect"+(count>=threshold?" active":""),
-     bonus.replace(/^[(]\d+[)]\s*/,""));
+     (en?bonus.replace(/^[(]\\d+[)]\\s*/,""):bonus.replace(/^[(]\\d+[)]\\s*/,"")
+       .replace(/Shadow Resistance/g,"Résistance à l’Ombre")
+       .replace(/Intellect/g,"Intelligence")
+       .replace(/Restore mana when mana falls below 15% \(5 min cooldown\)/g,"Restaure du mana sous 15 % de mana (5 min de recharge)")
+       .replace(/Healing spells can trigger additional healing/g,"Les sorts de soins peuvent déclencher des soins supplémentaires")));
    line.prepend(mk("span","level-bis-set-tier",threshold+"p"));
    box.append(line);
   }
