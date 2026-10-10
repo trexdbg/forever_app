@@ -42,7 +42,7 @@ function normalizedClassic(i,slot){
  }
  if(!appSlot||!SLOT_CODES[appSlot])return null;
  const url=(typeof i.url==="string"&&i.url.startsWith("https://wowdb.assemblee-defias.fr/"))?i.url:"https://wowdb.assemblee-defias.fr/?id=classic:item:"+i.id;
- return {id:i.id,name:i.name,slot:appSlot,slot_name:i.slot_name||null,type:i.type||null,type_name:i.type_name||null,icon:typeof i.icon==="string"&&i.icon.startsWith("https://wowdb.assemblee-defias.fr/database-icons/")?i.icon:iconFromUrl(i.icon)||null,iconUrl:typeof i.icon==="string"?i.icon:null,origin:"WoWDB · Classic 1.12",quality:i.quality||"common",url,reference:"Classic 1.12",source_status:"classic_api",verified_forever:false,itemLevel:i.item_level??null,requiredLevel:i.required_level??null,tooltip:Array.isArray(i.tooltip)?i.tooltip.filter(s=>typeof s==="string").slice(0,44):[]};
+ return {id:i.id,name:i.name,slot:appSlot,slot_name:i.slot_name||null,type:i.type||null,type_name:i.type_name||null,icon:typeof i.icon==="string"&&i.icon.startsWith("https://wowdb.assemblee-defias.fr/database-icons/")?i.icon:iconFromUrl(i.icon)||null,iconUrl:typeof i.icon==="string"?i.icon:null,origin:"WoWDB · Classic 1.12",quality:i.quality||"common",url,reference:"Classic 1.12",source_status:"classic_api",verified_forever:false,itemLevel:i.item_level??null,requiredLevel:i.required_level??null,weapon:i.weapon||null,tooltip:Array.isArray(i.tooltip)?i.tooltip.filter(s=>typeof s==="string").slice(0,44):[]};
 }
 function loadForever(){
  if(!foreverPromise)foreverPromise=Promise.all([
@@ -51,11 +51,13 @@ function loadForever(){
  ]).then(([manual,client])=>{const merged=new Map();for(const i of [...(Array.isArray(client.items)?client.items:[]),...(Array.isArray(manual.items)?manual.items:[])])if(valid(i))merged.set(i.id,{...i,reference:i.reference||"Forever beta client",source_status:i.source_status||"forever_beta_client",verified_forever:false});return [...merged.values()]});
  return foreverPromise;
 }
-async function loadClassic({slot="all",query="",qualities=[],types=[],cursor=null,signal=null,limit=100}={}){
+async function loadClassic({slot="all",query="",qualities=[],types=[],cursor=null,signal=null,limit=100,minLevel=null,maxLevel=60,maxItemLevel=null,slotCodes=null}={}){
  const params=new URLSearchParams();
- params.set("slot",SLOT_CODES[slot]||ALL_SLOTS);
+ params.set("slot",Array.isArray(slotCodes)&&slotCodes.length?slotCodes.join(","):(SLOT_CODES[slot]||ALL_SLOTS));
  params.set("limit",String(Math.max(1,Math.min(100,limit))));
- params.set("max_level","60");
+ params.set("max_level",String(Number.isInteger(maxLevel)&&maxLevel>=1&&maxLevel<=60?maxLevel:60));
+ if(Number.isInteger(minLevel)&&minLevel>=1&&minLevel<=60)params.set("min_level",String(minLevel));
+ if(Number.isInteger(maxItemLevel)&&maxItemLevel>=1&&maxItemLevel<=100)params.set("max_item_level",String(maxItemLevel));
  params.set("sort","-item_level");
  params.set("include_total","true");
  if(query&&query.trim())params.set("q",query.trim());
