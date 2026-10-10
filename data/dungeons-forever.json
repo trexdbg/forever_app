@@ -3748,6 +3748,12 @@
       "note": {
         "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
         "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
+      },
+      "floorMap": {
+        "url": "https://wow.zamimg.com/uploads/screenshots/normal/852259-classic-ubrs-dungeon-guide.jpg",
+        "kind": "existing_annotated_map",
+        "attribution": "Plan WoW Classic · galerie Wowhead",
+        "source": "https://www.wowhead.com/classic/gallery=1361/classic-ubrs-dungeon-guide"
       }
     }
   ],
@@ -3756,7 +3762,7 @@
   "mapPolicy": "Actual client mosaics for available new instances and source-attributed existing annotated Classic maps; no invented floor schematics. Missing floors visibly labeled.",
   "provenance": {
     "newInstanceMaps": "WoW Forever beta 1.60.1.69893, stitched dungeon minimap textures hosted by warcraftforever.games",
-    "classicPlans": "25 returning Classic wing maps from Icy Veins/eintr.net (former Aetherflask maps), one higher-level wing still missing a reliably loading map; credit/link original hosts. Links do not assert new Forever interior geometry.",
+    "classicPlans": "All 26 returning Classic wing entries have verified genuine Classic floor maps sourced from Icy Veins, eintr.net (archive Aetherflask), and Wowhead gallery. These are Classic maps, not a claim of pixel-identical Forever geometry. Hosted at original source.",
     "classicLoot": "ForeverChanges dungeon pages cross-check against Classic Era and observed Forever beta, unverified drop rates omitted",
     "verifiedBetaStats": "Counts come from ForeverChanges item comparisons, not verified live server drop observations. Loot sources and percentage chances are Classic-based."
   }
