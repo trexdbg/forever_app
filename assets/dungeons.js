@@ -16,7 +16,9 @@ const statusText=d=>d.type==="classic"?t("Classic · référence","Classic · re
 function count(d){return d.bosses.reduce((n,b)=>n+(b.loot?.length||0),0)}
 function elbtn(text,cls,fn){const b=m("button",text,cls);b.type="button";b.addEventListener("click",fn);return b}
 function smallchip(s,cls=""){return m("span",s,"dg-chip "+cls)}
-function updateUrl(){const u=new URL(location.href);u.searchParams.set("donjon",selected.id);if(selected.bosses.length)u.searchParams.set("boss",String(selectedBoss+1));else u.searchParams.delete("boss");history.replaceState(null,"",u.pathname+u.search+u.hash)}
+function updateUrl(){const u=new URL(location.href);u.searchParams.set("donjon",selected.id);if(selected.bosses.length)u.searchParams.set("boss",String(selectedBoss+1));else u.searchParams.delete("boss");history.replaceState(null,"",u.pathname+u.search+u.hash);
+ for(const l of document.querySelectorAll(".lang-switch a")){const target=new URL(l.href,location.origin);target.searchParams.set("donjon",selected.id);if(selected.bosses.length)target.searchParams.set("boss",String(selectedBoss+1));l.href=target.pathname+target.search}
+}
 function visibleList(){if(!db)return[];const txt=esc(search.value.trim()),mode=status.value,levelN=Number(level.value);
  return db.dungeons.filter(d=>(!txt||esc([name(d.name),d.name.en,d.name.fr,d.zone.en,d.zone.fr,...d.bosses.flatMap(b=>[b.name.en,b.name.fr,...(b.loot||[]).flatMap(i=>[i.en,i.fr])])].join(" ")).includes(txt))&&(mode==="all"||d.beta===mode||(mode==="classic"&&d.type==="classic")||(mode==="forever"&&d.type==="forever")||(mode==="mapped"&&!!d.floorMap)||(mode==="accessible"&&d.level[0]<=30))&&(!levelN||(d.level[0]<=levelN&&d.level[1]>=levelN)));
 }
@@ -64,6 +66,12 @@ function renderDetail(){const d=selected;if(!d)return;
  if(positions)chips.append(smallchip(positions+"/"+d.bosses.length+" "+t("repères de boss","boss markers")));
  $("dg-access").textContent=name(d.access);
  $("dg-description").textContent=name(d.note)||t("Seules les données vérifiables sont affichées.","Only documented data is shown.");
+const actions=$("dg-way");if(actions){actions.replaceChildren();if(d.entry?.x!=null&&d.entry?.y!=null){
+ const cmd="/way #"+d.zone.uiMapID+" "+d.entry.x+" "+d.entry.y;
+ const b=elbtn(t("⌖ Copier /way","⌖ Copy /way"),"dg-way-button",async()=>{try{await navigator.clipboard.writeText(cmd);b.textContent=t("✓ Copié","✓ Copied")}catch(e){b.textContent=cmd;b.title=cmd}});
+ b.title=cmd;actions.append(b);
+ const n=m("span",d.entry.x+" / "+d.entry.y,"dg-way-coords");n.title=t("Entrée extérieure indicative · vérifier la zone","Reported outdoor entrance · verify zone");actions.append(n);
+ }}
  $("dg-main-source").href=d.source||db.listSource;
  $("dg-main-source").textContent=t("Guide du donjon ↗","Dungeon guide ↗");
  const a=$("dg-map-source");a.href=d.floorMap?.source||d.mapSource||d.source||db.listSource;
