@@ -76,3 +76,27 @@
 .bis-spec-row.level-bis-row{padding-bottom:13px;border-bottom:1px solid #435144}
 @media(max-width:1000px){.bis-class-grid.level-bis-classes{grid-template-columns:repeat(5,minmax(0,1fr))}}
 @media(max-width:650px){.bis-class-grid.level-bis-classes{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+/* Dedicated Forever beta 30 state and factual acquisition guide. */
+.level-bis-band[data-beta="true"]{border-color:#bd9a53;background:linear-gradient(130deg,#6650274a,#1c281f);color:#f3d696}
+.level-bis-main-bar .status-pill{font-size:11px}
+.level-bis-source-proof{display:inline-flex;gap:5px;align-items:center;width:max-content;max-width:100%;color:#92c9a6;font-size:10px;font-weight:700}
+.level-bis-source-proof.is-classic{color:#afb5a8}
+.level-bis-source-proof.is-client{color:#d6b987}
+.level-bis-source-link{display:inline-flex;align-items:center;gap:5px;font-size:11px;color:#e3c889;text-decoration:none}
+.level-bis-source-link:hover{text-decoration:underline}
+.level-bis-acquisition-inline{font-size:11px;color:#aebbac;line-height:1.4}
+.level-bis-farm{margin:17px 0 0;border-top:1px solid #425141;padding-top:15px}
+.level-bis-farm-head{display:flex;justify-content:space-between;align-items:end;gap:15px;flex-wrap:wrap;margin-bottom:12px}
+.level-bis-farm-head h3{font:normal 21px Georgia,serif;color:#e6d6aa;margin:5px 0 0}
+.level-bis-farm-note{font-size:10px;color:#91a394}
+.level-bis-farm-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.level-bis-farm-item{min-width:0;padding:10px 12px;border:1px solid #3e4e40;background:linear-gradient(130deg,#16221a,#101912);border-radius:3px;color:#dadfcc;display:flex;flex-direction:column;gap:5px;text-decoration:none}
+.level-bis-farm-item:hover{border-color:#bd9f64;background:#213226}
+.level-bis-farm-item.is-forever{border-left:3px solid #b69c65}
+.level-bis-farm-item strong{font-size:12px;color:#e7d6b5}
+.level-bis-farm-item .level-bis-farm-meta{font-size:10px;color:#b9c4b3}
+.level-bis-farm-item .level-bis-farm-detail{font-size:10px;color:#90a28f;line-height:1.4}
+.level-bis-farm-empty{font-size:12px;color:#99ac98}
+@media(max-width:1000px){.level-bis-farm-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.level-bis-farm-list{grid-template-columns:1fr}.level-bis-farm-head h3{font-size:19px}}
