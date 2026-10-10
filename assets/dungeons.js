@@ -12,7 +12,7 @@ const m=(tag,txt,cls)=>{const n=document.createElement(tag);if(txt!==undefined&&
 const str=v=>typeof v==="string"?v:"";
 const name=obj=>str(obj?.[en?"en":"fr"]||obj?.en||obj?.fr);
 const esc=x=>String(x??"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
-const statusText=d=>d.type==="classic"?t("Classic / Forever","Classic / Forever"):d.beta==="observed"?t("Bêta documentée","Beta documented"):t("Annoncé","Announced");
+const statusText=d=>d.type==="classic"?t("Classic · référence","Classic · reference"):d.beta==="observed"?t("Bêta documentée","Beta documented"):t("Annoncé","Announced");
 function count(d){return d.bosses.reduce((n,b)=>n+(b.loot?.length||0),0)}
 function elbtn(text,cls,fn){const b=m("button",text,cls);b.type="button";b.addEventListener("click",fn);return b}
 function smallchip(s,cls=""){return m("span",s,"dg-chip "+cls)}
@@ -38,14 +38,14 @@ function makeLootCard(item,boss){const card=m("div",null,"dg-drop");card.tabInde
  let ico=/recette|recipe/.test(slot)?"inv_scroll_07":/tête|head/.test(slot)?"inv_helmet_22":/épaules|shoulders/.test(slot)?"inv_shoulder_09":/arme|main|hand|two-hand|distance|ranged|bâton|dagger/.test(slot)?"inv_sword_04":/tissu|chest|torse|robe/.test(slot)?"inv_scroll_07":"inv_scroll_07";
  icon.src=item.icon&&/^[a-z0-9_]+$/.test(item.icon)?"https://wow.zamimg.com/images/wow/icons/medium/"+item.icon+".jpg":"/assets/icons/"+ico+".jpg";icon.onerror=()=>{icon.onerror=null;icon.src="/assets/icons/inv_scroll_07.jpg"};card.append(icon);
  const text=m("span");text.append(m("strong",name(item)),m("small",t("Emplacement : ","Slot: ")+item.slot));
- if(Number.isFinite(item.chanceReported))text.append(m("small",t("Taux signalé en bêta : ","Beta-reported chance: ")+String(item.chanceReported).replace(".",",")+" %"));
- if(item.isNew)text.append(m("small",t("Nouveau Forever / à vérifier","New in Forever / verify")));if(item.itemLevel)text.append(m("small",t("Niveau d’objet ","Item level ")+item.itemLevel+(item.requiredLevel?" · "+t("Niveau requis ","Required level ")+item.requiredLevel:"")));
+ if(Number.isFinite(item.chanceReported))text.append(m("small",t("Taux indicatif du guide : ","Guide-reported chance: ")+String(item.chanceReported).replace(".",",")+" %"));
+ if(item.isNew)text.append(m("small",t("Changement Forever signalé","Reported Forever change")));if(item.itemLevel)text.append(m("small",t("Niveau d’objet ","Item level ")+item.itemLevel+(item.requiredLevel?" · "+t("Niveau requis ","Required level ")+item.requiredLevel:"")));
  if(item.source_status==="classic_loot_reference")text.append(m("small",t("Provenance Classic à vérifier","Classic origin · unverified"),"dg-loot-provenance"));card.append(text);
  if(item.itemUrl){const link=m("a","↗","dg-item-page");link.href=item.itemUrl;link.target="_blank";link.rel="noopener noreferrer";link.title=t("Ouvrir la fiche de l’objet","Open item details");link.setAttribute("aria-label",t("Fiche d’objet : ","Item page: ")+name(item));card.append(link)}
 
  const show=e=>{tooltip.replaceChildren();tooltip.append(m("strong",name(item)),m("span",(item.source_status==="classic_loot_reference"?t("Butin Classic de référence : ","Classic reference drop: "):t("Butin signalé : ","Reported drop: "))+name(boss.name)),m("span",item.slot));
  if(item.tooltip?.length)item.tooltip.forEach(line=>tooltip.append(m("span",line)));
- if(Number.isFinite(item.chanceReported))tooltip.append(m("span",t("Taux relevé en bêta : ","Reported beta rate: ")+item.chanceReported+" %"));
+ if(Number.isFinite(item.chanceReported))tooltip.append(m("span",t("Taux mentionné par le guide : ","Guide-reported chance: ")+item.chanceReported+" %"));
  tooltip.append(m("small",item.source_status==="classic_loot_reference"?t("Provenance du butin : Classic · NON confirmée pour Forever. Statistiques du client bêta possibles.","Loot source: Classic · NOT confirmed on Forever. Client beta item stats may be available."):t("Relevé de bêta communautaire · taux non garanti.","Community beta report · drop chance not guaranteed.")));tooltip.hidden=false;const x=Math.max(8,Math.min(window.innerWidth-355,Math.max(8,(e.clientX||card.getBoundingClientRect().left)+12)));const y=Math.max(8,Math.min(window.innerHeight-185,Math.max(8,(e.clientY||card.getBoundingClientRect().top)+12)));tooltip.style.left=x+"px";tooltip.style.top=y+"px"};
  if(item.id&&Array.isArray(item.tooltip)&&item.tooltip.length&&window.ForeverItemTooltip){
  window.ForeverItemTooltip.bind(card,{id:item.id,name:name(item),name_en:item.en,name_fr:item.fr,quality:item.quality||"rare",source_status:"forever_beta_community",itemLevel:item.itemLevel,requiredLevel:item.requiredLevel,tooltip:item.tooltip||[],icon:item.icon,origin:t("Butin signalé · Donjon Forever","Reported drop · Forever dungeon"),url:item.itemUrl||selected?.source});
@@ -67,6 +67,9 @@ function renderDetail(){const d=selected;if(!d)return;
  $("dg-main-source").href=d.source||db.listSource;
  $("dg-main-source").textContent=t("Guide du donjon ↗","Dungeon guide ↗");
  const a=$("dg-map-source");a.href=d.floorMap?.source||d.mapSource||d.source||db.listSource;
+ const full=$("dg-open-map");if(full){full.hidden=!d.floorMap?.url;if(d.floorMap?.url)full.href=d.floorMap.url}
+ for(const l of document.querySelectorAll(".lang-switch a")){const target=new URL(l.href,location.origin);target.searchParams.set("donjon",d.id);if(d.bosses.length)target.searchParams.set("boss",String(selectedBoss+1));l.href=target.pathname+target.search}
+
  a.textContent=d.floorMap?t("Source de la carte ↗","Map source ↗"):t("Guide source ↗","Source guide ↗");
  routeButton.disabled=!d.floorMap;routeButton.title=d.floorMap?"":t("Aucun plan intérieur publié","No interior map documented");
  routeButton.classList.toggle("active",view==="route");worldButton.classList.toggle("active",view==="world");
@@ -79,7 +82,7 @@ function renderDetail(){const d=selected;if(!d)return;
  renderBosses();
 }
 function renderBosses(){
- const d=selected;if(!d)return;bossRoot.replaceChildren();
+ const d=selected;if(!d)return;const oldScroll=bossRoot.querySelector(".dg-boss-nav")?.scrollTop||0;bossRoot.replaceChildren();
  if(!d.bosses.length){
   const empty=m("div",null,"dg-zero");
   empty.append(m("strong",t("Rencontres à documenter","Encounters need documentation")),m("p",d.type==="classic"?t("Le plan Classic est disponible ; la table des boss Forever est encore en cours de vérification.","Classic floor map available; the Forever boss list has not been validated yet."):t("Pas encore de position de boss ni de butin confirmé.","No boss position or verified loot yet.")));
@@ -88,7 +91,7 @@ function renderBosses(){
  const nav=m("nav",null,"dg-boss-nav");nav.setAttribute("aria-label",t("Sélection d’un boss","Choose boss"));
  d.bosses.forEach((b,i)=>{const button=elbtn(null,"dg-boss-navitem"+(i===selectedBoss?" active":""),()=>chooseBoss(i,true));
  button.setAttribute("aria-pressed",String(i===selectedBoss));const n=m("span",String(i+1).padStart(2,"0"),"dg-boss-n");button.append(n,m("span",name(b.name),"dg-boss-navname"));if(b.rare)button.append(m("span",t("Rare","Rare"),"dg-nav-rare"));nav.append(button)});
- bossRoot.append(nav);
+ bossRoot.append(nav);nav.scrollTop=oldScroll;
  const b=d.bosses[selectedBoss]||d.bosses[0];
  const panel=m("article",null,"dg-selected-boss");panel.id="dg-boss-selected";
  const heading=m("div",null,"dg-selected-heading");heading.append(m("span",String(selectedBoss+1).padStart(2,"0"),"dg-selected-index"));const title=m("div");title.append(m("small",t("BOSS SÉLECTIONNÉ","SELECTED BOSS")),m("h3",name(b.name)));heading.append(title);panel.append(heading);
@@ -137,20 +140,21 @@ function loadWorld(){const d=selected,token=++worldToken;worldImage=null;if(!d?.
 }
 function switchView(v){if(!selected)return;view=v;resetCamera();renderDetail();paint()}
 function canvasPoint(e){const rect=cvs.getBoundingClientRect();return{x:(e.clientX-rect.left)*W/rect.width,y:(e.clientY-rect.top)*H/rect.height}}
-function hit(x,y){const px=(x-offsetX)/scale,py=(y-offsetY)/scale;return points.find(p=>Math.hypot(p.x-px,p.y-py)<36)}
+function hit(x,y){const px=(x-offsetX)/scale,py=(y-offsetY)/scale;return points.map(p=>({p,dist:Math.hypot(p.x-px,p.y-py)})).filter(x=>x.dist<32).sort((a,b)=>a.dist-b.dist)[0]?.p||null}
 routeButton.addEventListener("click",()=>switchView("route"));worldButton.addEventListener("click",()=>switchView("world"));
 $("dg-zoom-in").addEventListener("click",()=>setZoom(scale*1.35));
 $("dg-zoom-out").addEventListener("click",()=>setZoom(scale/1.35));
 $("dg-zoom-reset").addEventListener("click",()=>{resetCamera();paint()});
 cvs.addEventListener("wheel",e=>{e.preventDefault();const p=canvasPoint(e);setZoom(scale*(e.deltaY<0?1.16:1/1.16),p.x,p.y)},{passive:false});
 cvs.addEventListener("pointerdown",e=>{const p=canvasPoint(e);drag={x:p.x,y:p.y,ox:offsetX,oy:offsetY,moved:false};cvs.setPointerCapture(e.pointerId)});
-cvs.addEventListener("pointermove",e=>{const p=canvasPoint(e);if(!drag){cvs.style.cursor=hit(p.x,p.y)?"pointer":"grab";return}if(Math.abs(drag.x-p.x)+Math.abs(drag.y-p.y)>6)drag.moved=true;if(drag.moved){offsetX=drag.ox+(p.x-drag.x);offsetY=drag.oy+(p.y-drag.y);clamp();paint()}});
-cvs.addEventListener("pointerup",e=>{if(!drag)return;const p=canvasPoint(e);if(!drag.moved&&view==="route"){const pin=hit(p.x,p.y);if(pin?.i>=0)chooseBoss(pin.i)}drag=null});
-cvs.addEventListener("pointercancel",()=>drag=null);
+cvs.addEventListener("pointermove",e=>{const p=canvasPoint(e);if(!drag){const pin=view==="route"?hit(p.x,p.y):null;cvs.style.cursor=pin?"pointer":"grab";
+ const hover=$("dg-map-hover");if(hover){hover.hidden=!pin;if(pin&&selected?.bosses?.[pin.i]){hover.textContent=(pin.i+1)+" · "+name(selected.bosses[pin.i].name);const rect=cvs.getBoundingClientRect();hover.style.left=Math.min(rect.width-160,Math.max(7,e.clientX-rect.left+15))+"px";hover.style.top=Math.min(rect.height-42,Math.max(7,e.clientY-rect.top+12))+"px"}}return}if(Math.abs(drag.x-p.x)+Math.abs(drag.y-p.y)>6)drag.moved=true;if(drag.moved){offsetX=drag.ox+(p.x-drag.x);offsetY=drag.oy+(p.y-drag.y);clamp();paint()}});
+cvs.addEventListener("pointerup",e=>{if(!drag)return;const p=canvasPoint(e);if(!drag.moved&&view==="route"){const pin=hit(p.x,p.y);if(pin?.i>=0)chooseBoss(pin.i,true)}drag=null});
+cvs.addEventListener("pointercancel",()=>drag=null);cvs.addEventListener("pointerleave",()=>{const h=$("dg-map-hover");if(h)h.hidden=true});
 cvs.addEventListener("keydown",e=>{if(!selected?.bosses.length)return;if(e.key==="ArrowRight"||e.key==="ArrowDown"){e.preventDefault();chooseBoss((selectedBoss+1)%selected.bosses.length)}if(e.key==="ArrowLeft"||e.key==="ArrowUp"){e.preventDefault();chooseBoss((selectedBoss+selected.bosses.length-1)%selected.bosses.length)}});
 [search,level,status].forEach(e=>e.addEventListener(e.tagName==="INPUT"?"input":"change",()=>{renderDirectory()}));
 fetch(endpoint,{cache:"no-cache"}).then(r=>{if(!r.ok)throw Error("HTTP "+r.status);return r.json()}).then(d=>{if(!Array.isArray(d.dungeons))throw Error("Invalid data");db=d;
- const all=d.dungeons;all.sort((a,b)=>a.level[0]-b.level[0]||(a.type==="forever"?-1:1));const planned=all.find(x=>x.id===q.get("donjon"))||all[0];select(planned);
+ const all=d.dungeons;all.sort((a,b)=>a.level[0]-b.level[0]||(a.type==="forever"?-1:1));const planned=all.find(x=>x.id===q.get("donjon"))||all.find(x=>x.id==="hall-of-thanes")||all[0];select(planned);
  const bossIndex=Number(q.get("boss"));if(bossIndex>1&&bossIndex<=planned.bosses.length)chooseBoss(bossIndex-1);
  $("dg-total").textContent=String(all.filter(x=>x.type==="forever").length);$("dg-observed").textContent=String(all.filter(x=>x.type==="classic").length);$("dg-loot-total").textContent=String(all.reduce((n,x)=>n+count(x),0));
 }).catch(err=>{result.replaceChildren(m("p",t("Chargement des données impossible. Réessayez après actualisation.","Unable to load dungeon data. Refresh and retry."),"dg-empty"));console.error("Dungeon atlas:",err)});
