@@ -61,10 +61,17 @@ function resolved(item){
  if(!fr)fr=translateEnglish(raw);
  const english=ref?.[0]||raw;
  const translated=!!fr&&fr!==raw;
- return {fr:fr||raw,en:english||raw,original:raw,translated,indicative:translated&&!ref&&!custom[raw]};
+ return {fr:fr||raw,en:english||raw,original:raw,translated,indicative:translated&&!ref};
+}
+const originFR={"World drops":"Butin mondial","World drop":"Butin mondial","Vendors":"Marchands","Vendor":"Marchand","Enchanting":"Enchantement","Blacksmithing":"Forge","Leatherworking":"Travail du cuir","Tailoring":"Couture","Engineering":"Ingénierie","Alchemy":"Alchimie","Cooking":"Cuisine","Quest reward":"Récompense de quête","Quest":"Quête","Crafting":"Fabrication","Dungeons":"Donjons","Dungeon":"Donjon","Raids":"Raids","Raid":"Raid","PvP":"JcJ","Battleground":"Champ de bataille","Fishing":"Pêche","Mining":"Minage","Herbalism":"Herboristerie","Skinning":"Dépeçage","Rare spawn":"Créature rare","Unknown":"Non documenté"};
+const originEN=Object.fromEntries(Object.entries(originFR).map(([k,v])=>[v,k]));
+function origin(text,english=en()){
+ const value=String(text||"");
+ if(english)return originEN[value]||value.replace("Enchantement (","Enchanting (");
+ return originFR[value]||value.replace("Enchanting (","Enchantement (");
 }
 function name(item){const d=resolved(item);return en()?d.en:d.fr}
 function aliases(item){const d=resolved(item);return [d.fr,d.en,d.original,String(item?.id||"")].filter(Boolean).join(" ")}
-function record(item){const d=resolved(item);return {...item,name:en()?d.en:d.fr,name_en:d.en,name_fr:d.fr,original_name:d.original,translation_indicative:d.indicative}}
-window.ForeverItemLocale={name,aliases,record,resolved,translateEnglish};
+function record(item){const d=resolved(item);return {...item,name:en()?d.en:d.fr,name_en:d.en,name_fr:d.fr,original_name:d.original,translation_indicative:d.indicative,origin_en:origin(item.origin,true),origin_fr:origin(item.origin,false),origin:origin(item.origin)}}
+window.ForeverItemLocale={name,aliases,record,resolved,translateEnglish,origin};
 })();
