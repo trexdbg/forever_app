@@ -1634,6 +1634,11 @@
           "status": "observed_beta",
           "fr": "Les cinq pièces de l'ensemble Étreinte de la vipère bénéficient de nouveaux bonus dans Forever ; l'effet de transformation druidique est signalé.",
           "en": "Five-piece Embrace of the Viper set has updated bonuses in Forever; Druid snake transformation is reported."
+        },
+        {
+          "status": "beta_gear",
+          "fr": "Certains taux affichés dans les sources restent ceux de Classic ; ne pas les présenter comme taux de butin Forever.",
+          "en": "Some displayed source drop rates are Classic-based and must not be presented as Forever rates."
         }
       ],
       "mapStatus": "reference",
@@ -2401,14 +2406,221 @@
         "en": "Entrance in Dun Morogh. See source map for precise directions."
       },
       "source": "https://foreverchanges.pro/dungeons/gnomeregan",
-      "bosses": [],
+      "bosses": [
+        {
+          "name": {
+            "en": "Techbot",
+            "fr": "Techbot"
+          },
+          "level": 26,
+          "loot": [
+            {
+              "en": "Techbot CPU Shell",
+              "fr": "Coque de processeur de Techbot",
+              "slot": "Bouclier"
+            }
+          ],
+          "rare": false,
+          "note": {
+            "fr": "Origines et taux de butin de référence Classic ; caractéristiques des objets modifiés issues du relevé Forever bêta.",
+            "en": "Drop origins and rates are Classic reference; modified item stats derive from Forever beta observations."
+          }
+        },
+        {
+          "name": {
+            "en": "Grubbis",
+            "fr": "Grubbis"
+          },
+          "level": 32,
+          "loot": [
+            {
+              "en": "Grubbis Paws",
+              "fr": "Pattes de Grubbis",
+              "slot": "Mains / Mailles"
+            },
+            {
+              "en": "Irradiated Shield",
+              "fr": "Bouclier irradié",
+              "slot": "Bouclier",
+              "isNew": true
+            },
+            {
+              "en": "Skullduggery Belt",
+              "fr": "Ceinture de filouterie",
+              "slot": "Taille / Cuir",
+              "isNew": true
+            }
+          ],
+          "rare": false,
+          "note": {
+            "fr": "Origines et taux de butin de référence Classic ; caractéristiques des objets modifiés issues du relevé Forever bêta.",
+            "en": "Drop origins and rates are Classic reference; modified item stats derive from Forever beta observations."
+          }
+        },
+        {
+          "name": {
+            "en": "Viscous Fallout",
+            "fr": "Retombée visqueuse"
+          },
+          "level": 30,
+          "loot": [
+            {
+              "en": "Acidic Walkers",
+              "fr": "Bottes acides",
+              "slot": "Pieds"
+            },
+            {
+              "en": "Toxic Revenger",
+              "fr": "Vengeur toxique",
+              "slot": "Dague"
+            },
+            {
+              "en": "Hydrocane",
+              "fr": "Hydrocanne",
+              "slot": "Bâton"
+            }
+          ],
+          "rare": false,
+          "note": {
+            "fr": "Origines et taux de butin de référence Classic ; caractéristiques des objets modifiés issues du relevé Forever bêta.",
+            "en": "Drop origins and rates are Classic reference; modified item stats derive from Forever beta observations."
+          }
+        },
+        {
+          "name": {
+            "en": "Electrocutioner 6000",
+            "fr": "Électrocuteur 6000"
+          },
+          "level": 32,
+          "loot": [
+            {
+              "en": "Electrocutioner Lagnut",
+              "fr": "Écrou de l'électrocuteur",
+              "slot": "Doigt"
+            },
+            {
+              "en": "Electrocutioner Leg",
+              "fr": "Jambe de l'électrocuteur",
+              "slot": "Main droite"
+            },
+            {
+              "en": "Pattern: Defender's Leather Kilt",
+              "fr": "Patron : kilt de défenseur en cuir",
+              "slot": "Patron",
+              "isNew": true
+            }
+          ],
+          "rare": false,
+          "note": {
+            "fr": "Origines et taux de butin de référence Classic ; caractéristiques des objets modifiés issues du relevé Forever bêta.",
+            "en": "Drop origins and rates are Classic reference; modified item stats derive from Forever beta observations."
+          }
+        },
+        {
+          "name": {
+            "en": "Crowd Pummeler 9-60",
+            "fr": "Faucheur de foule 9-60"
+          },
+          "level": 32,
+          "loot": [
+            {
+              "en": "Manual Crowd Pummeler",
+              "fr": "Manuel du faucheur de foule",
+              "slot": "Deux mains"
+            },
+            {
+              "en": "Gnomebot Operating Boots",
+              "fr": "Bottes de commande gnome",
+              "slot": "Pieds"
+            },
+            {
+              "en": "Thermaplugg Medal of Honor",
+              "fr": "Médaille d'honneur de Thermaplugg",
+              "slot": "Cou",
+              "isNew": true
+            },
+            {
+              "en": "Schematic: 9-60 Battery Pack",
+              "fr": "Schéma : batterie du 9-60",
+              "slot": "Schéma",
+              "isNew": true
+            }
+          ],
+          "rare": false,
+          "note": {
+            "fr": "Origines et taux de butin de référence Classic ; caractéristiques des objets modifiés issues du relevé Forever bêta.",
+            "en": "Drop origins and rates are Classic reference; modified item stats derive from Forever beta observations."
+          }
+        },
+        {
+          "name": {
+            "en": "Dark Iron Ambassador",
+            "fr": "Ambassadeur sombrefer"
+          },
+          "level": 33,
+          "loot": [
+            {
+              "en": "Emissary Cuffs",
+              "fr": "Manchettes d'émissaire",
+              "slot": "Poignets"
+            },
+            {
+              "en": "Pattern: Brawler's Leather Legguards",
+              "fr": "Patron : garde-jambes de bagarreur en cuir",
+              "slot": "Patron",
+              "isNew": true
+            }
+          ],
+          "rare": true,
+          "note": {
+            "fr": "Origines et taux de butin de référence Classic ; caractéristiques des objets modifiés issues du relevé Forever bêta.",
+            "en": "Drop origins and rates are Classic reference; modified item stats derive from Forever beta observations."
+          }
+        },
+        {
+          "name": {
+            "en": "Mekgineer Thermaplugg",
+            "fr": "Mekgénieur Thermojoncteur"
+          },
+          "level": 34,
+          "loot": [
+            {
+              "en": "Electromagnetic Gigaflux Reactivator",
+              "fr": "Réactivateur gigaflux électromagnétique",
+              "slot": "Tête"
+            },
+            {
+              "en": "Charged Gear",
+              "fr": "Engrenage chargé",
+              "slot": "Doigt"
+            },
+            {
+              "en": "Thermaplugg's Left Arm",
+              "fr": "Bras gauche de Thermojoncteur",
+              "slot": "Deux mains"
+            }
+          ],
+          "rare": false,
+          "note": {
+            "fr": "Origines et taux de butin de référence Classic ; caractéristiques des objets modifiés issues du relevé Forever bêta.",
+            "en": "Drop origins and rates are Classic reference; modified item stats derive from Forever beta observations."
+          }
+        }
+      ],
       "beta": "classic_beta_accessible",
-      "changes": [],
+      "changes": [
+        {
+          "status": "beta_gear",
+          "fr": "Données du client Forever : 17 des 49 références de butin de cette instance présentent des caractéristiques observées en bêta. Plusieurs nouveaux objets sont liés à Grubbis, à l'Électrocuteur et au Faucheur de foule.",
+          "en": "Forever client data: 17 of the source's 49 drops have beta-observed stats. New items appear on Grubbis, Electrocutioner and Crowd Pummeler."
+        }
+      ],
       "mapStatus": "reference",
       "note": {
         "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
         "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
-      }
+      },
+      "mapSource": "https://foreverchanges.pro/dungeons/gnomeregan"
     },
     {
       "id": "razorfen-kraul",
@@ -2432,14 +2644,242 @@
         "en": "Entrance in The Barrens. See source map for precise directions."
       },
       "source": "https://foreverchanges.pro/dungeons/razorfen-kraul",
-      "bosses": [],
+      "bosses": [
+        {
+          "name": {
+            "en": "Aggem Thorncurse",
+            "fr": "Aggem Malépine"
+          },
+          "level": 30,
+          "loot": [
+            {
+              "en": "Thornspike",
+              "fr": "Fleur d'épines",
+              "slot": "Dague"
+            },
+            {
+              "en": "Death Prophet Spine",
+              "fr": "Échine de prophète de la mort",
+              "slot": "Bâton",
+              "isNew": true
+            },
+            {
+              "en": "Thorncursed Grips",
+              "fr": "Poignes de Malépine",
+              "slot": "Mains / Cuir",
+              "isNew": true
+            },
+            {
+              "en": "Brawler's Leather Helm",
+              "fr": "Casque de bagarreur en cuir",
+              "slot": "Tête / Cuir",
+              "isNew": true
+            }
+          ],
+          "rare": false,
+          "note": {
+            "fr": "Origines et taux de butin de référence Classic ; caractéristiques des objets modifiés issues du relevé Forever bêta.",
+            "en": "Drop origins and rates are Classic reference; modified item stats derive from Forever beta observations."
+          }
+        },
+        {
+          "name": {
+            "en": "Death Speaker Jargba",
+            "fr": "Nécrorateur Jargba"
+          },
+          "level": 30,
+          "loot": [
+            {
+              "en": "Death Speaker Scepter",
+              "fr": "Sceptre du nécrorateur",
+              "slot": "Main droite"
+            },
+            {
+              "en": "Death Speaker Mantle",
+              "fr": "Mantelet du nécrorateur",
+              "slot": "Épaules"
+            },
+            {
+              "en": "Death Speaker Robes",
+              "fr": "Robe du nécrorateur",
+              "slot": "Torse"
+            }
+          ],
+          "rare": false,
+          "note": {
+            "fr": "Origines et taux de butin de référence Classic ; caractéristiques des objets modifiés issues du relevé Forever bêta.",
+            "en": "Drop origins and rates are Classic reference; modified item stats derive from Forever beta observations."
+          }
+        },
+        {
+          "name": {
+            "en": "Roogug",
+            "fr": "Roogug"
+          },
+          "level": 28,
+          "loot": [
+            {
+              "en": "Geomancer Headdress",
+              "fr": "Coiffe de géomancien",
+              "slot": "Tête",
+              "isNew": true
+            },
+            {
+              "en": "Thornweaver Drape",
+              "fr": "Cape de tisse-épines",
+              "slot": "Dos",
+              "isNew": true
+            }
+          ],
+          "rare": false,
+          "note": {
+            "fr": "Origines et taux de butin de référence Classic ; caractéristiques des objets modifiés issues du relevé Forever bêta.",
+            "en": "Drop origins and rates are Classic reference; modified item stats derive from Forever beta observations."
+          }
+        },
+        {
+          "name": {
+            "en": "Overlord Ramtusk",
+            "fr": "Seigneur Brusquebroche"
+          },
+          "level": 32,
+          "loot": [
+            {
+              "en": "Corpsemaker",
+              "fr": "Faiseur de cadavres",
+              "slot": "Hache deux mains"
+            },
+            {
+              "en": "Tusken Helm",
+              "fr": "Casque de défense en ivoire",
+              "slot": "Tête"
+            },
+            {
+              "en": "Quillord Mail Leggings",
+              "fr": "Jambières de seigneur des épines",
+              "slot": "Jambes / Mailles",
+              "isNew": true
+            }
+          ],
+          "rare": false,
+          "note": {
+            "fr": "Origines et taux de butin de référence Classic ; caractéristiques des objets modifiés issues du relevé Forever bêta.",
+            "en": "Drop origins and rates are Classic reference; modified item stats derive from Forever beta observations."
+          }
+        },
+        {
+          "name": {
+            "en": "Razorfen Spearhide",
+            "fr": "Razorfen Spearhide"
+          },
+          "level": 30,
+          "loot": [
+            {
+              "en": "Armor Piercer",
+              "fr": "Perce-fer",
+              "slot": "Arme d'hast"
+            }
+          ],
+          "rare": false,
+          "note": {
+            "fr": "Origines et taux de butin de référence Classic ; caractéristiques des objets modifiés issues du relevé Forever bêta.",
+            "en": "Drop origins and rates are Classic reference; modified item stats derive from Forever beta observations."
+          }
+        },
+        {
+          "name": {
+            "en": "Agathelos the Raging",
+            "fr": "Agathelos le Déchaîné"
+          },
+          "level": 33,
+          "loot": [
+            {
+              "en": "Swinetusk Shank",
+              "fr": "Dague du groin",
+              "slot": "Dague"
+            },
+            {
+              "en": "Ferine Leggings",
+              "fr": "Jambières sauvages",
+              "slot": "Jambes"
+            }
+          ],
+          "rare": false,
+          "note": {
+            "fr": "Origines et taux de butin de référence Classic ; caractéristiques des objets modifiés issues du relevé Forever bêta.",
+            "en": "Drop origins and rates are Classic reference; modified item stats derive from Forever beta observations."
+          }
+        },
+        {
+          "name": {
+            "en": "Charlga Razorflank",
+            "fr": "Charlga Trancheflanc"
+          },
+          "level": 33,
+          "loot": [],
+          "rare": false,
+          "note": {
+            "fr": "Origines et taux de butin de référence Classic ; caractéristiques des objets modifiés issues du relevé Forever bêta.",
+            "en": "Drop origins and rates are Classic reference; modified item stats derive from Forever beta observations."
+          }
+        },
+        {
+          "name": {
+            "en": "Blind Hunter",
+            "fr": "Chasseur aveugle"
+          },
+          "level": 32,
+          "loot": [
+            {
+              "en": "Stygian Bone Amulet",
+              "fr": "Amulette d'os stygienne",
+              "slot": "Cou"
+            },
+            {
+              "en": "Batwing Mantle",
+              "fr": "Mantelet en aile de chauve-souris",
+              "slot": "Épaules"
+            },
+            {
+              "en": "Nightstalker Bow",
+              "fr": "Arc de traqueur nocturne",
+              "slot": "Arc"
+            }
+          ],
+          "rare": true,
+          "note": {
+            "fr": "Origines et taux de butin de référence Classic ; caractéristiques des objets modifiés issues du relevé Forever bêta.",
+            "en": "Drop origins and rates are Classic reference; modified item stats derive from Forever beta observations."
+          }
+        },
+        {
+          "name": {
+            "en": "Earthcaller Halmgar",
+            "fr": "Implorateur de la terre Halmgar"
+          },
+          "level": 32,
+          "loot": [],
+          "rare": true,
+          "note": {
+            "fr": "Origines et taux de butin de référence Classic ; caractéristiques des objets modifiés issues du relevé Forever bêta.",
+            "en": "Drop origins and rates are Classic reference; modified item stats derive from Forever beta observations."
+          }
+        }
+      ],
       "beta": "classic_beta_accessible",
-      "changes": [],
+      "changes": [
+        {
+          "status": "observed_beta",
+          "fr": "Sur 45 objets listés dans la source, 39 ont été observés dans les données de bêta. Plusieurs créations Forever inédites et des pièces de bagarreur/défenseur en cuir ont été ajoutées.",
+          "en": "The guide reports 39 of 45 item records observed in beta data, including new Forever items and Brawler/Defender leather pieces."
+        }
+      ],
       "mapStatus": "reference",
       "note": {
         "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
         "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
-      }
+      },
+      "mapSource": "https://foreverchanges.pro/dungeons/razorfen-kraul"
     },
     {
       "id": "scarlet-monastery-graveyard",
@@ -2463,14 +2903,177 @@
         "en": "Entrance in Tirisfal Glades. See source map for precise directions."
       },
       "source": "https://foreverchanges.pro/dungeons/scarlet-monastery-graveyard",
-      "bosses": [],
+      "bosses": [
+        {
+          "name": {
+            "en": "Interrogator Vishas",
+            "fr": "Interrogateur Vislar"
+          },
+          "level": 32,
+          "loot": [
+            {
+              "en": "Torturing Poker",
+              "fr": "Tisonnier de torture",
+              "slot": "Dague"
+            },
+            {
+              "en": "Bloody Brass Knuckles",
+              "fr": "Coup de poing sanglant en laiton",
+              "slot": "Pugilat"
+            },
+            {
+              "en": "Painwalker Buckler",
+              "fr": "Targe de douleur vagabonde",
+              "slot": "Bouclier",
+              "isNew": true
+            },
+            {
+              "en": "Defender's Leather Helm",
+              "fr": "Casque de défenseur en cuir",
+              "slot": "Tête / Cuir",
+              "isNew": true
+            }
+          ],
+          "rare": false,
+          "note": {
+            "fr": "Origines et taux de butin de référence Classic ; caractéristiques des objets modifiés issues du relevé Forever bêta.",
+            "en": "Drop origins and rates are Classic reference; modified item stats derive from Forever beta observations."
+          }
+        },
+        {
+          "name": {
+            "en": "Bloodmage Thalnos",
+            "fr": "Mage de sang Thalnos"
+          },
+          "level": 34,
+          "loot": [
+            {
+              "en": "Orb of the Forgotten Seer",
+              "fr": "Orbe de l'oracle oublié",
+              "slot": "Main gauche"
+            },
+            {
+              "en": "Bloodmage Mantle",
+              "fr": "Mantelet du mage de sang",
+              "slot": "Épaules"
+            },
+            {
+              "en": "Polished Skullcap",
+              "fr": "Calotte polie",
+              "slot": "Tête / Mailles",
+              "isNew": true
+            }
+          ],
+          "rare": false,
+          "note": {
+            "fr": "Origines et taux de butin de référence Classic ; caractéristiques des objets modifiés issues du relevé Forever bêta.",
+            "en": "Drop origins and rates are Classic reference; modified item stats derive from Forever beta observations."
+          }
+        },
+        {
+          "name": {
+            "en": "Azshir the Sleepless",
+            "fr": "Azshir le Sans-sommeil"
+          },
+          "level": 33,
+          "loot": [
+            {
+              "en": "Blighted Leggings",
+              "fr": "Jambières corrompues",
+              "slot": "Jambes / Tissu"
+            },
+            {
+              "en": "Necrotic Wand",
+              "fr": "Baguette nécrotique",
+              "slot": "Baguette"
+            },
+            {
+              "en": "Brawler's Leather Helm",
+              "fr": "Casque de bagarreur en cuir",
+              "slot": "Tête / Cuir",
+              "isNew": true
+            }
+          ],
+          "rare": true,
+          "note": {
+            "fr": "Origines et taux de butin de référence Classic ; caractéristiques des objets modifiés issues du relevé Forever bêta.",
+            "en": "Drop origins and rates are Classic reference; modified item stats derive from Forever beta observations."
+          }
+        },
+        {
+          "name": {
+            "en": "Fallen Champion",
+            "fr": "Champion déchu"
+          },
+          "level": 33,
+          "loot": [
+            {
+              "en": "Embalmed Shroud",
+              "fr": "Linceul embaumé",
+              "slot": "Tête / Tissu"
+            },
+            {
+              "en": "Ebon Vise",
+              "fr": "Étreinte d'ébène",
+              "slot": "Mains / Cuir"
+            },
+            {
+              "en": "Pattern: Brawler's Leather Legguards",
+              "fr": "Patron : garde-jambes de bagarreur en cuir",
+              "slot": "Patron",
+              "isNew": true
+            }
+          ],
+          "rare": true,
+          "note": {
+            "fr": "Origines et taux de butin de référence Classic ; caractéristiques des objets modifiés issues du relevé Forever bêta.",
+            "en": "Drop origins and rates are Classic reference; modified item stats derive from Forever beta observations."
+          }
+        },
+        {
+          "name": {
+            "en": "Ironspine",
+            "fr": "Échine-de-Fer"
+          },
+          "level": 33,
+          "loot": [
+            {
+              "en": "Ironspine's Ribcage",
+              "fr": "Cage thoracique d'Échine-de-Fer",
+              "slot": "Torse / Mailles"
+            },
+            {
+              "en": "Ironspine's Fist",
+              "fr": "Poing d'Échine-de-Fer",
+              "slot": "Masse"
+            },
+            {
+              "en": "Ironspine's Eye",
+              "fr": "Œil d'Échine-de-Fer",
+              "slot": "Doigt"
+            }
+          ],
+          "rare": true,
+          "note": {
+            "fr": "Origines et taux de butin de référence Classic ; caractéristiques des objets modifiés issues du relevé Forever bêta.",
+            "en": "Drop origins and rates are Classic reference; modified item stats derive from Forever beta observations."
+          }
+        }
+      ],
       "beta": "classic_beta_accessible",
-      "changes": [],
+      "changes": [
+        {
+          "status": "observed_beta",
+          "fr": "14 des 48 objets de la source disposent de caractéristiques de bêta. Nouveaux objets d’équipement, et ensemble de la Croisade écarlate entièrement retravaillé : nouveaux bonus selon le nombre de pièces.",
+          "en": "14 of the source's 48 items have beta stats. New gear and a reworked Scarlet Crusade set with new multi-piece bonuses."
+        }
+      ],
       "mapStatus": "reference",
       "note": {
         "fr": "Donjon Classic conservé dans Forever. Boss et provenance des objets à comparer avec la bêta : une présence dans Classic ne prouve pas un butin inchangé.",
         "en": "Returning Classic dungeon. Bosses and loot origins must be checked against the beta; a Classic drop is not proof of unchanged Forever loot."
-      }
+      },
+      "mapSource": "https://foreverchanges.pro/dungeons/scarlet-monastery-graveyard"
     },
     {
       "id": "scarlet-monastery-library",
@@ -3006,6 +3609,7 @@
   "provenance": {
     "newInstanceMaps": "WoW Forever beta 1.60.1.69893, stitched dungeon minimap textures hosted by warcraftforever.games",
     "classicPlans": "Icy Veins and eintr.net existing annotated Classic dungeon maps; view at original source, no file copies",
-    "classicLoot": "ForeverChanges dungeon pages cross-check against Classic Era and observed Forever beta, unverified drop rates omitted"
+    "classicLoot": "ForeverChanges dungeon pages cross-check against Classic Era and observed Forever beta, unverified drop rates omitted",
+    "verifiedBetaStats": "Counts come from ForeverChanges item comparisons, not verified live server drop observations. Loot sources and percentage chances are Classic-based."
   }
 }
