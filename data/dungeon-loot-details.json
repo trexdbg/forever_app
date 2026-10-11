@@ -5,6 +5,1558 @@
   "itemCount": 208,
   "items": [
     {
+      "key": "872",
+      "id": 872,
+      "name": "Rockslicer",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=872",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "888",
+      "id": 888,
+      "name": "Naga Battle Gloves",
+      "source_status": "classic_loot_reference",
+      "itemLevel": 27,
+      "requiredLevel": 22,
+      "quality": "rare",
+      "tooltip": [
+        "Naga Battle Gloves",
+        "Item Level 27",
+        "+4 Strength",
+        "+4 Stamina",
+        "+7 Spirit",
+        "Requires Level 22"
+      ],
+      "source_url": "https://wowclassicdatabase.com/item/naga-battle-gloves",
+      "documentation": "classic_partial"
+    },
+    {
+      "key": "1155",
+      "id": 1155,
+      "name": "Rod of the Sleepwalker",
+      "source_status": "classic_loot_reference",
+      "itemLevel": 29,
+      "requiredLevel": 24,
+      "quality": "rare",
+      "tooltip": [
+        "Rod of the Sleepwalker",
+        "Item Level 29",
+        "Two-Hand Staff",
+        "+11 Intellect",
+        "+10 Spirit",
+        "Requires Level 24"
+      ],
+      "source_url": "https://wowclassicdatabase.com/item/rod-of-the-sleepwalker",
+      "documentation": "classic_partial"
+    },
+    {
+      "key": "1156",
+      "id": 1156,
+      "name": "Lavishly Jeweled Ring",
+      "source_status": "classic_loot_reference",
+      "itemLevel": 22,
+      "requiredLevel": 17,
+      "quality": "rare",
+      "tooltip": [
+        "Lavishly Jeweled Ring",
+        "Item Level 22",
+        "+2 Agility",
+        "+6 Intellect",
+        "Requires Level 17"
+      ],
+      "source_url": "https://wowclassicdatabase.com/item/lavishly-jeweled-ring",
+      "documentation": "classic_partial"
+    },
+    {
+      "key": "1292",
+      "id": 1292,
+      "name": "Butcher's Cleaver",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=1292",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "1937",
+      "id": 1937,
+      "name": "Buzz Saw",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=1937",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "2169",
+      "id": 2169,
+      "name": "Buzzer Blade",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=2169",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "2280",
+      "id": 2280,
+      "name": "Kam's Walking Stick",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=2280",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "2816",
+      "id": 2816,
+      "name": "Death Speaker Scepter",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=2816",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "3078",
+      "id": 3078,
+      "name": "Naga Heartpiercer",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=3078",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "3191",
+      "id": 3191,
+      "name": "Arced War Axe",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=3191",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "5187",
+      "id": 5187,
+      "name": "Rhahk'Zor's Hammer",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=5187",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "5191",
+      "id": 5191,
+      "name": "Cruel Barb",
+      "source_status": "classic_loot_reference",
+      "itemLevel": 24,
+      "requiredLevel": 19,
+      "quality": "rare",
+      "tooltip": [
+        "Cruel Barb",
+        "Item Level 24",
+        "One-Hand Sword",
+        "Equip: +12 Attack Power.",
+        "Requires Level 19"
+      ],
+      "source_url": "https://wowclassicdatabase.com/item/cruel-barb",
+      "documentation": "classic_partial"
+    },
+    {
+      "key": "5192",
+      "id": 5192,
+      "name": "Thief's Blade",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=5192",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "5193",
+      "id": 5193,
+      "name": "Cape of the Brotherhood",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=5193",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "5194",
+      "id": 5194,
+      "name": "Taskmaster Axe",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=5194",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "5195",
+      "id": 5195,
+      "name": "Gold-flecked Gloves",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=5195",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "5196",
+      "id": 5196,
+      "name": "Smite's Reaver",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=5196",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "5197",
+      "id": 5197,
+      "name": "Cookie's Tenderizer",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=5197",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "5198",
+      "id": 5198,
+      "name": "Cookie's Stirring Rod",
+      "source_status": "classic_loot_reference",
+      "itemLevel": 22,
+      "requiredLevel": 17,
+      "quality": "rare",
+      "tooltip": [
+        "Cookie's Stirring Rod",
+        "Item Level 22",
+        "Ranged Wand",
+        "Requires Level 17"
+      ],
+      "source_url": "https://wowclassicdatabase.com/item/cookies-stirring-rod",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "5199",
+      "id": 5199,
+      "name": "Smelting Pants",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=5199",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "5202",
+      "id": 5202,
+      "name": "Corsair's Overshirt",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=5202",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "5243",
+      "id": 5243,
+      "name": "Firebelcher",
+      "source_status": "classic_loot_reference",
+      "itemLevel": 20,
+      "requiredLevel": 15,
+      "quality": "rare",
+      "tooltip": [
+        "Firebelcher",
+        "Item Level 20",
+        "Ranged Wand",
+        "Requires Level 15"
+      ],
+      "source_url": "https://wowclassicdatabase.com/item/firebelcher",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "5254",
+      "id": 5254,
+      "name": "Rugged Spaulders",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=5254",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "5404",
+      "id": 5404,
+      "name": "Serpent's Shoulders",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=5404",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "5443",
+      "id": 5443,
+      "name": "Gold-plated Buckler",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=5443",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "5444",
+      "id": 5444,
+      "name": "Miner's Cape",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=5444",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "6220",
+      "id": 6220,
+      "name": "Meteor Shard",
+      "source_status": "classic_loot_reference",
+      "itemLevel": 29,
+      "requiredLevel": 24,
+      "quality": "rare",
+      "tooltip": [
+        "Meteor Shard",
+        "Item Level 29",
+        "One-Hand Dagger",
+        "Requires Level 24"
+      ],
+      "source_url": "https://wowclassicdatabase.com/item/meteor-shard",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "6226",
+      "id": 6226,
+      "name": "Bloody Apron",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=6226",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "6318",
+      "id": 6318,
+      "name": "Odo's Ley Staff",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=6318",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "6319",
+      "id": 6319,
+      "name": "Girdle of the Blindwatcher",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=6319",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "6320",
+      "id": 6320,
+      "name": "Commander's Crest",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=6320",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "6321",
+      "id": 6321,
+      "name": "Silverlaine's Family Seal",
+      "source_status": "classic_loot_reference",
+      "itemLevel": 26,
+      "requiredLevel": 21,
+      "quality": "rare",
+      "tooltip": [
+        "Silverlaine's Family Seal",
+        "Item Level 26",
+        "+7 Strength",
+        "+3 Stamina",
+        "Requires Level 21"
+      ],
+      "source_url": "https://wowclassicdatabase.com/item/silverlaines-family-seal",
+      "documentation": "classic_partial"
+    },
+    {
+      "key": "6323",
+      "id": 6323,
+      "name": "Baron's Scepter",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=6323",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "6324",
+      "id": 6324,
+      "name": "Robes of Arugal",
+      "source_status": "classic_loot_reference",
+      "itemLevel": 29,
+      "requiredLevel": 24,
+      "quality": "rare",
+      "tooltip": [
+        "Robes of Arugal",
+        "Item Level 29",
+        "+9 Intellect",
+        "+5 Stamina",
+        "+10 Spirit",
+        "Requires Level 24"
+      ],
+      "source_url": "https://wowclassicdatabase.com/item/robes-of-arugal",
+      "documentation": "classic_partial"
+    },
+    {
+      "key": "6447",
+      "id": 6447,
+      "name": "Worn Turtle Shell Shield",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=6447",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "6448",
+      "id": 6448,
+      "name": "Tail Spike",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=6448",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "6449",
+      "id": 6449,
+      "name": "Glowing Lizardscale Cloak",
+      "source_status": "classic_loot_reference",
+      "itemLevel": 22,
+      "requiredLevel": 17,
+      "quality": "rare",
+      "tooltip": [
+        "Glowing Lizardscale Cloak",
+        "Item Level 22",
+        "+6 Agility",
+        "+2 Spirit",
+        "Requires Level 17"
+      ],
+      "source_url": "https://wowclassicdatabase.com/item/glowing-lizardscale-cloak",
+      "documentation": "classic_partial"
+    },
+    {
+      "key": "6460",
+      "id": 6460,
+      "name": "Cobrahn's Grasp",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=6460",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "6463",
+      "id": 6463,
+      "name": "Deep Fathom Ring",
+      "source_status": "classic_loot_reference",
+      "itemLevel": 26,
+      "requiredLevel": 21,
+      "quality": "rare",
+      "tooltip": [
+        "Deep Fathom Ring",
+        "Item Level 26",
+        "+3 Intellect",
+        "+3 Stamina",
+        "+6 Spirit",
+        "Requires Level 21"
+      ],
+      "source_url": "https://wowclassicdatabase.com/item/deep-fathom-ring",
+      "documentation": "classic_partial"
+    },
+    {
+      "key": "6465",
+      "id": 6465,
+      "name": "Robe of the Moccasin",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=6465",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "6469",
+      "id": 6469,
+      "name": "Venomstrike",
+      "source_status": "classic_loot_reference",
+      "itemLevel": 24,
+      "requiredLevel": 19,
+      "quality": "rare",
+      "tooltip": [
+        "Venomstrike",
+        "Item Level 24",
+        "Ranged Bow",
+        "Requires Level 19"
+      ],
+      "source_url": "https://wowclassicdatabase.com/item/venomstrike",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "6472",
+      "id": 6472,
+      "name": "Stinging Viper",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=6472",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "6473",
+      "id": 6473,
+      "name": "Armor of the Fang",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=6473",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "6627",
+      "id": 6627,
+      "name": "Mutant Scale Breastplate",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=6627",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "6630",
+      "id": 6630,
+      "name": "Seedcloud Buckler",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=6630",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "6631",
+      "id": 6631,
+      "name": "Living Root",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=6631",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "6633",
+      "id": 6633,
+      "name": "Butcher's Slicer",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=6633",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "6641",
+      "id": 6641,
+      "name": "Haunting Blade",
+      "source_status": "forever_beta_community",
+      "itemLevel": 27,
+      "requiredLevel": 22,
+      "quality": "rare",
+      "tooltip": [
+        "Haunting Blade",
+        "Item Level 27",
+        "Two-Hand Sword",
+        "Dégâts : 68 - 102",
+        "Vitesse 3.80",
+        "(22.4 dégâts par seconde)",
+        "Equip: +33 Healing",
+        "Equip: +11 Spell Damage",
+        "Requires Level 22"
+      ],
+      "source_url": "https://foreverchanges.pro/item/6641",
+      "documentation": "documented",
+      "weaponStats": {
+        "damageMin": 68,
+        "damageMax": 102,
+        "speed": 3.8,
+        "dps": 22.4
+      }
+    },
+    {
+      "key": "6642",
+      "id": 6642,
+      "name": "Phantom Armor",
+      "source_status": "forever_beta_community",
+      "itemLevel": 27,
+      "requiredLevel": 22,
+      "quality": "rare",
+      "tooltip": [
+        "Phantom Armor",
+        "Item Level 27",
+        "Chest Mail",
+        "+5 Spirit",
+        "+12 Stamina",
+        "+3 Strength",
+        "Requires Level 22"
+      ],
+      "source_url": "https://foreverchanges.pro/item/6642",
+      "documentation": "documented"
+    },
+    {
+      "key": "6679",
+      "id": 6679,
+      "name": "Armor Piercer",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=6679",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "6681",
+      "id": 6681,
+      "name": "Thornspike",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=6681",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "6682",
+      "id": 6682,
+      "name": "Death Speaker Robes",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=6682",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "6685",
+      "id": 6685,
+      "name": "Death Speaker Mantle",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=6685",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "6686",
+      "id": 6686,
+      "name": "Tusken Helm",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=6686",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "6687",
+      "id": 6687,
+      "name": "Corpsemaker",
+      "source_status": "classic_loot_reference",
+      "itemLevel": 34,
+      "requiredLevel": 29,
+      "quality": "rare",
+      "tooltip": [
+        "Corpsemaker",
+        "Item Level 34",
+        "Two-Hand Axe",
+        "+15 Strength",
+        "+8 Stamina",
+        "Requires Level 29"
+      ],
+      "source_url": "https://wowclassicdatabase.com/item/corpsemaker",
+      "documentation": "classic_partial"
+    },
+    {
+      "key": "6690",
+      "id": 6690,
+      "name": "Ferine Leggings",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=6690",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "6691",
+      "id": 6691,
+      "name": "Swinetusk Shank",
+      "source_status": "classic_loot_reference",
+      "itemLevel": 35,
+      "requiredLevel": 30,
+      "quality": "rare",
+      "tooltip": [
+        "Swinetusk Shank",
+        "Item Level 35",
+        "One-Hand Dagger",
+        "+6 Stamina",
+        "+4 Spirit",
+        "Requires Level 30"
+      ],
+      "source_url": "https://wowclassicdatabase.com/item/swinetusk-shank",
+      "documentation": "classic_partial"
+    },
+    {
+      "key": "6695",
+      "id": 6695,
+      "name": "Stygian Bone Amulet",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=6695",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "6696",
+      "id": 6696,
+      "name": "Nightstalker Bow",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=6696",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "6697",
+      "id": 6697,
+      "name": "Batwing Mantle",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=6697",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "6901",
+      "id": 6901,
+      "name": "Glowing Thresher Cape",
+      "source_status": "classic_loot_reference",
+      "itemLevel": 29,
+      "requiredLevel": 24,
+      "quality": "rare",
+      "tooltip": [
+        "Glowing Thresher Cape",
+        "Item Level 29",
+        "+3 Strength",
+        "+8 Spirit",
+        "Requires Level 24"
+      ],
+      "source_url": "https://wowclassicdatabase.com/item/glowing-thresher-cape",
+      "documentation": "classic_partial"
+    },
+    {
+      "key": "6902",
+      "id": 6902,
+      "name": "Bands of Serra'kis",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=6902",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "6903",
+      "id": 6903,
+      "name": "Gaze Dreamer Pants",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=6903",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "6904",
+      "id": 6904,
+      "name": "Bite of Serra'kis",
+      "source_status": "classic_loot_reference",
+      "itemLevel": 28,
+      "requiredLevel": 23,
+      "quality": "rare",
+      "tooltip": [
+        "Bite of Serra'kis",
+        "Item Level 28",
+        "One-Hand Dagger",
+        "Requires Level 23"
+      ],
+      "source_url": "https://wowclassicdatabase.com/item/bite-of-serrakis",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "6905",
+      "id": 6905,
+      "name": "Reef Axe",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=6905",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "6906",
+      "id": 6906,
+      "name": "Algae Fists",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=6906",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "6907",
+      "id": 6907,
+      "name": "Tortoise Armor",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=6907",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "6908",
+      "id": 6908,
+      "name": "Ghamoo-ra's Bind",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=6908",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "6909",
+      "id": 6909,
+      "name": "Strike of the Hydra",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=6909",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "6910",
+      "id": 6910,
+      "name": "Leech Pants",
+      "source_status": "classic_loot_reference",
+      "itemLevel": 31,
+      "requiredLevel": 26,
+      "quality": "rare",
+      "tooltip": [
+        "Leech Pants",
+        "Item Level 31",
+        "+5 Intellect",
+        "+15 Spirit",
+        "Requires Level 26"
+      ],
+      "source_url": "https://wowclassicdatabase.com/item/leech-pants",
+      "documentation": "classic_partial"
+    },
+    {
+      "key": "6911",
+      "id": 6911,
+      "name": "Moss Cinch",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=6911",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "7230",
+      "id": 7230,
+      "name": "Smite's Mighty Hammer",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=7230",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "7682",
+      "id": 7682,
+      "name": "Torturing Poker",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=7682",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "7683",
+      "id": 7683,
+      "name": "Bloody Brass Knuckles",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=7683",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "7684",
+      "id": 7684,
+      "name": "Bloodmage Mantle",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=7684",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "7685",
+      "id": 7685,
+      "name": "Orb of the Forgotten Seer",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=7685",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "7686",
+      "id": 7686,
+      "name": "Ironspine's Eye",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=7686",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "7687",
+      "id": 7687,
+      "name": "Ironspine's Fist",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=7687",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "7688",
+      "id": 7688,
+      "name": "Ironspine's Ribcage",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=7688",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "7690",
+      "id": 7690,
+      "name": "Ebon Vise",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=7690",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "7691",
+      "id": 7691,
+      "name": "Embalmed Shroud",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=7691",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "7708",
+      "id": 7708,
+      "name": "Necrotic Wand",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=7708",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "7709",
+      "id": 7709,
+      "name": "Blighted Leggings",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=7709",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "9444",
+      "id": 9444,
+      "name": "Techbot CPU Shell",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=9444",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "9445",
+      "id": 9445,
+      "name": "Grubbis Paws",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=9445",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "9446",
+      "id": 9446,
+      "name": "Electrocutioner Leg",
+      "source_status": "classic_loot_reference",
+      "itemLevel": 34,
+      "requiredLevel": 29,
+      "quality": "rare",
+      "tooltip": [
+        "Electrocutioner Leg",
+        "Item Level 34",
+        "Main Hand Sword",
+        "Requires Level 29"
+      ],
+      "source_url": "https://wowclassicdatabase.com/item/electrocutioner-leg",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "9447",
+      "id": 9447,
+      "name": "Electrocutioner Lagnut",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=9447",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "9449",
+      "id": 9449,
+      "name": "Manual Crowd Pummeler",
+      "source_status": "classic_loot_reference",
+      "itemLevel": 34,
+      "requiredLevel": 29,
+      "quality": "rare",
+      "tooltip": [
+        "Manual Crowd Pummeler",
+        "Item Level 34",
+        "Two-Hand Mace",
+        "+16 Strength",
+        "+5 Agility",
+        "Requires Level 29"
+      ],
+      "source_url": "https://wowclassicdatabase.com/item/manual-crowd-pummeler",
+      "documentation": "classic_partial"
+    },
+    {
+      "key": "9450",
+      "id": 9450,
+      "name": "Gnomebot Operating Boots",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=9450",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "9452",
+      "id": 9452,
+      "name": "Hydrocane",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=9452",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "9453",
+      "id": 9453,
+      "name": "Toxic Revenger",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=9453",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "9454",
+      "id": 9454,
+      "name": "Acidic Walkers",
+      "source_status": "classic_loot_reference",
+      "itemLevel": 32,
+      "requiredLevel": 27,
+      "quality": "rare",
+      "tooltip": [
+        "Acidic Walkers",
+        "Item Level 32",
+        "Feet Cloth",
+        "+8 Intellect",
+        "+4 Spirit",
+        "Requires Level 27"
+      ],
+      "source_url": "https://wowclassicdatabase.com/item/acidic-walkers",
+      "documentation": "classic_partial"
+    },
+    {
+      "key": "9455",
+      "id": 9455,
+      "name": "Emissary Cuffs",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=9455",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "9459",
+      "id": 9459,
+      "name": "Thermaplugg's Left Arm",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=9459",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "9461",
+      "id": 9461,
+      "name": "Charged Gear",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=9461",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "9492",
+      "id": 9492,
+      "name": "Electromagnetic Gigaflux Reactivator",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=9492",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "10399",
+      "id": 10399,
+      "name": "Blackened Defias Armor",
+      "source_status": "classic_loot_reference",
+      "itemLevel": 24,
+      "requiredLevel": 19,
+      "quality": "rare",
+      "tooltip": [
+        "Blackened Defias Armor",
+        "Item Level 24",
+        "+4 Strength",
+        "+3 Agility",
+        "+11 Stamina",
+        "Requires Level 19"
+      ],
+      "source_url": "https://wowclassicdatabase.com/item/blackened-defias-armor",
+      "documentation": "classic_partial"
+    },
+    {
+      "key": "10403",
+      "id": 10403,
+      "name": "Blackened Defias Belt",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=10403",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "10410",
+      "id": 10410,
+      "name": "Leggings of the Fang",
+      "source_status": "classic_loot_reference",
+      "itemLevel": 23,
+      "requiredLevel": 18,
+      "quality": "rare",
+      "tooltip": [
+        "Leggings of the Fang",
+        "Item Level 23",
+        "Requires Level 18"
+      ],
+      "source_url": "https://wowclassicdatabase.com/item/leggings-of-the-fang",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "10411",
+      "id": 10411,
+      "name": "Footpads of the Fang",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=10411",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "10412",
+      "id": 10412,
+      "name": "Belt of the Fang",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=10412",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "11121",
+      "id": 11121,
+      "name": "Darkwater Talwar",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=11121",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "11982",
+      "id": 11982,
+      "name": "Viridian Band",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=11982",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "13245",
+      "id": 13245,
+      "name": "Kresh's Back",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=13245",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "14145",
+      "id": 14145,
+      "name": "Cursed Felblade",
+      "source_status": "classic_loot_reference",
+      "itemLevel": 18,
+      "requiredLevel": 13,
+      "quality": "uncommon",
+      "tooltip": [
+        "Cursed Felblade",
+        "Item Level 18",
+        "Main Hand Sword",
+        "Requires Level 13"
+      ],
+      "source_url": "https://wowclassicdatabase.com/item/cursed-felblade",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "14147",
+      "id": 14147,
+      "name": "Cavedweller Bracers",
+      "source_status": "classic_loot_reference",
+      "itemLevel": 18,
+      "requiredLevel": 13,
+      "quality": "uncommon",
+      "tooltip": [
+        "Cavedweller Bracers",
+        "Item Level 18",
+        "+1 Strength",
+        "+2 Stamina",
+        "Requires Level 13"
+      ],
+      "source_url": "https://wowclassicdatabase.com/item/cavedweller-bracers",
+      "documentation": "classic_partial"
+    },
+    {
+      "key": "14148",
+      "id": 14148,
+      "name": "Crystalline Cuffs",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=14148",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "14149",
+      "id": 14149,
+      "name": "Subterranean Cape",
+      "source_status": "classic_loot_reference",
+      "itemLevel": 18,
+      "requiredLevel": 13,
+      "quality": "uncommon",
+      "tooltip": [
+        "Subterranean Cape",
+        "Item Level 18",
+        "+2 Strength",
+        "+2 Agility",
+        "Requires Level 13"
+      ],
+      "source_url": "https://wowclassicdatabase.com/item/subterranean-cape",
+      "documentation": "classic_partial"
+    },
+    {
+      "key": "14150",
+      "id": 14150,
+      "name": "Robe of Evocation",
+      "source_status": "classic_loot_reference",
+      "itemLevel": 18,
+      "requiredLevel": 13,
+      "quality": "uncommon",
+      "tooltip": [
+        "Robe of Evocation",
+        "Item Level 18",
+        "+4 Intellect",
+        "+3 Stamina",
+        "Requires Level 13"
+      ],
+      "source_url": "https://wowclassicdatabase.com/item/robe-of-evocation",
+      "documentation": "classic_partial"
+    },
+    {
+      "key": "14151",
+      "id": 14151,
+      "name": "Chanting Blade",
+      "source_status": "classic_loot_reference",
+      "itemLevel": null,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [],
+      "source_url": "https://www.wowhead.com/classic/item=14151",
+      "documentation": "classic_on_demand"
+    },
+    {
+      "key": "252455",
+      "id": 252455,
+      "name": "Defender's Leather Helm",
+      "source_status": "forever_beta_cache",
+      "itemLevel": 30,
+      "requiredLevel": 25,
+      "quality": null,
+      "tooltip": [
+        "Defender's Leather Helm",
+        "Item Level 30",
+        "Head Leather",
+        "84 Armor",
+        "+13 Stamina",
+        "+12 Strength",
+        "Requires Level 25"
+      ],
+      "source_url": "https://foreverchanges.pro/item/252455",
+      "documentation": "documented"
+    },
+    {
+      "key": "252512",
+      "id": 252512,
+      "name": "Brawler's Leather Helm",
+      "source_status": "forever_beta_community",
+      "itemLevel": 30,
+      "requiredLevel": 25,
+      "quality": "rare",
+      "tooltip": [
+        "Brawler's Leather Helm",
+        "Item Level 30",
+        "Head Leather",
+        "84 Armor",
+        "+10 Agility",
+        "+13 Stamina",
+        "Requires Level 25"
+      ],
+      "source_url": "https://www.60.tools/items/252512-brawlers-leather-helm",
+      "documentation": "documented"
+    },
+    {
       "key": "270227",
       "id": 270227,
       "name": "Ephemeral Choker",
@@ -21,109 +1573,6 @@
       ],
       "source_url": "https://foreverchanges.pro/item/270227",
       "documentation": "documented"
-    },
-    {
-      "key": "271096",
-      "id": 271096,
-      "name": "Aetherwisp Bracers",
-      "source_status": "forever_beta_community",
-      "itemLevel": 18,
-      "requiredLevel": 13,
-      "quality": "rare",
-      "tooltip": [
-        "Aetherwisp Bracers",
-        "Item Level 18",
-        "Wrist Cloth",
-        "+30 Armor",
-        "Equip: +3 Spell Power",
-        "Requires Level 13"
-      ],
-      "source_url": "https://foreverchanges.pro/item/271096",
-      "documentation": "documented"
-    },
-    {
-      "key": "271097",
-      "id": 271097,
-      "name": "Spiritwraith Drape",
-      "source_status": "forever_beta_community",
-      "itemLevel": 18,
-      "requiredLevel": 13,
-      "quality": "rare",
-      "tooltip": [
-        "Spiritwraith Drape",
-        "Item Level 18",
-        "Back Cloth",
-        "+3 Agility",
-        "+4 Spirit",
-        "Requires Level 13"
-      ],
-      "source_url": "https://foreverchanges.pro/item/271097",
-      "documentation": "documented"
-    },
-    {
-      "key": "270230",
-      "id": 270230,
-      "name": "Kindlegem Girdle",
-      "source_status": "forever_beta_community",
-      "itemLevel": 18,
-      "requiredLevel": 13,
-      "quality": "rare",
-      "tooltip": [
-        "Kindlegem Girdle",
-        "Item Level 18",
-        "Waist Mail",
-        "+7 Stamina",
-        "Requires Level 13"
-      ],
-      "source_url": "https://foreverchanges.pro/item/270230",
-      "documentation": "documented"
-    },
-    {
-      "key": "270231",
-      "id": 270231,
-      "name": "Flamefist Grips",
-      "source_status": "forever_beta_community",
-      "itemLevel": 18,
-      "requiredLevel": 13,
-      "quality": "rare",
-      "tooltip": [
-        "Flamefist Grips",
-        "Item Level 18",
-        "Hands Leather",
-        "+5 Agility",
-        "+5 Spirit",
-        "Requires Level 13"
-      ],
-      "source_url": "https://foreverchanges.pro/item/270231",
-      "documentation": "documented"
-    },
-    {
-      "key": "271095",
-      "id": 271095,
-      "name": "Fang of Magmatus",
-      "source_status": "forever_beta_community",
-      "itemLevel": 18,
-      "requiredLevel": 13,
-      "quality": "rare",
-      "tooltip": [
-        "Fang of Magmatus",
-        "Item Level 18",
-        "Main Hand Dagger",
-        "Dégâts : 9 - 18",
-        "Vitesse 1.70",
-        "(7.9 dégâts par seconde)",
-        "+4 Intellect",
-        "Equip: +18 Spell Power",
-        "Requires Level 13"
-      ],
-      "source_url": "https://foreverchanges.pro/item/271095",
-      "documentation": "documented",
-      "weaponStats": {
-        "damageMin": 9,
-        "damageMax": 18,
-        "speed": 1.7,
-        "dps": 7.9
-      }
     },
     {
       "key": "270228",
@@ -165,27 +1614,50 @@
         "Treads of the Protector Golem",
         "Item Level 18",
         "Feet Mail",
+        "122 Armor",
+        "+5 Strength",
+        "+50 Armor",
         "Requires Level 13"
       ],
       "source_url": "https://foreverchanges.pro/item/270229",
-      "documentation": "missing"
+      "documentation": "documented"
     },
     {
-      "key": "271098",
-      "id": 271098,
-      "name": "Golemguard Chest",
+      "key": "270230",
+      "id": 270230,
+      "name": "Kindlegem Girdle",
       "source_status": "forever_beta_community",
       "itemLevel": 18,
       "requiredLevel": 13,
       "quality": "rare",
       "tooltip": [
-        "Golemguard Chest",
+        "Kindlegem Girdle",
         "Item Level 18",
-        "Chest Mail",
+        "Waist Mail",
+        "+7 Stamina",
         "Requires Level 13"
       ],
-      "source_url": "https://foreverchanges.pro/item/271098",
-      "documentation": "missing"
+      "source_url": "https://foreverchanges.pro/item/270230",
+      "documentation": "documented"
+    },
+    {
+      "key": "270231",
+      "id": 270231,
+      "name": "Flamefist Grips",
+      "source_status": "forever_beta_community",
+      "itemLevel": 18,
+      "requiredLevel": 13,
+      "quality": "rare",
+      "tooltip": [
+        "Flamefist Grips",
+        "Item Level 18",
+        "Hands Leather",
+        "+5 Agility",
+        "+5 Spirit",
+        "Requires Level 13"
+      ],
+      "source_url": "https://foreverchanges.pro/item/270231",
+      "documentation": "documented"
     },
     {
       "key": "270256",
@@ -226,10 +1698,13 @@
         "Direhammer Leggings",
         "Item Level 18",
         "Legs Leather",
+        "72 Armor",
+        "+7 Stamina",
+        "+4 Agility",
         "Requires Level 13"
       ],
       "source_url": "https://foreverchanges.pro/item/270260",
-      "documentation": "missing"
+      "documentation": "documented"
     },
     {
       "key": "270261",
@@ -243,86 +1718,118 @@
         "Robes of the Disgraced Thane",
         "Item Level 18",
         "Chest Cloth",
+        "35 Armor",
+        "+4 Spirit",
+        "Equip: +8 Spell Power",
         "Requires Level 13"
       ],
       "source_url": "https://foreverchanges.pro/item/270261",
-      "documentation": "missing"
-    },
-    {
-      "key": "name:durgen dirgehammer's head",
-      "id": null,
-      "name": "Durgen Dirgehammer's Head",
-      "source_status": "unknown",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": null,
-      "documentation": "missing"
-    },
-    {
-      "key": "271204",
-      "id": 271204,
-      "name": "Meathook Slicer",
-      "source_status": "forever_beta_community",
-      "itemLevel": 20,
-      "requiredLevel": 15,
-      "quality": "rare",
-      "tooltip": [
-        "Meathook Slicer",
-        "Item Level 20",
-        "One-Hand Dagger",
-        "Dégâts : 17 - 32",
-        "Vitesse 1.80",
-        "(13.6 dégâts par seconde)",
-        "+5 Stamina",
-        "Requires Level 15"
-      ],
-      "source_url": "https://foreverchanges.pro/item/271204",
-      "documentation": "documented",
-      "weaponStats": {
-        "damageMin": 17,
-        "damageMax": 32,
-        "speed": 1.8,
-        "dps": 13.6
-      }
-    },
-    {
-      "key": "271205",
-      "id": 271205,
-      "name": "Abomination Bones",
-      "source_status": "forever_beta_community",
-      "itemLevel": 20,
-      "requiredLevel": 15,
-      "quality": "rare",
-      "tooltip": [
-        "Abomination Bones",
-        "Item Level 20",
-        "Chest Mail",
-        "+8 Strength",
-        "+5 Shadow Resistance",
-        "Requires Level 15"
-      ],
-      "source_url": "https://foreverchanges.pro/item/271205",
       "documentation": "documented"
     },
     {
-      "key": "271206",
-      "id": 271206,
-      "name": "Leftover Abomination Skin",
+      "key": "270865",
+      "id": 270865,
+      "name": "Titan Relic (quest)",
+      "source_status": "forever_beta_wowhead",
+      "itemLevel": 1,
+      "requiredLevel": null,
+      "quality": null,
+      "tooltip": [
+        "Titan Relic (quest)",
+        "Item Level 1",
+        "Quest Item",
+        "Binds when picked up",
+        "Unique",
+        "This Item Begins a Quest",
+        "Titan Relic: Lost Relic Carry / Elder Knowledge."
+      ],
+      "source_url": "https://www.wowhead.com/forever/item=270865",
+      "documentation": "documented"
+    },
+    {
+      "key": "271095",
+      "id": 271095,
+      "name": "Fang of Magmatus",
       "source_status": "forever_beta_community",
-      "itemLevel": 20,
-      "requiredLevel": 15,
+      "itemLevel": 18,
+      "requiredLevel": 13,
       "quality": "rare",
       "tooltip": [
-        "Leftover Abomination Skin",
-        "Item Level 20",
-        "Chest Cloth",
-        "+9 Spirit",
-        "Equip: +7 Shadow Spell Damage",
-        "Requires Level 15"
+        "Fang of Magmatus",
+        "Item Level 18",
+        "Main Hand Dagger",
+        "Dégâts : 9 - 18",
+        "Vitesse 1.70",
+        "(7.9 dégâts par seconde)",
+        "+4 Intellect",
+        "Equip: +18 Spell Power",
+        "Requires Level 13"
       ],
-      "source_url": "https://foreverchanges.pro/item/271206",
+      "source_url": "https://foreverchanges.pro/item/271095",
+      "documentation": "documented",
+      "weaponStats": {
+        "damageMin": 9,
+        "damageMax": 18,
+        "speed": 1.7,
+        "dps": 7.9
+      }
+    },
+    {
+      "key": "271096",
+      "id": 271096,
+      "name": "Aetherwisp Bracers",
+      "source_status": "forever_beta_community",
+      "itemLevel": 18,
+      "requiredLevel": 13,
+      "quality": "rare",
+      "tooltip": [
+        "Aetherwisp Bracers",
+        "Item Level 18",
+        "Wrist Cloth",
+        "+30 Armor",
+        "Equip: +3 Spell Power",
+        "Requires Level 13"
+      ],
+      "source_url": "https://foreverchanges.pro/item/271096",
+      "documentation": "documented"
+    },
+    {
+      "key": "271097",
+      "id": 271097,
+      "name": "Spiritwraith Drape",
+      "source_status": "forever_beta_community",
+      "itemLevel": 18,
+      "requiredLevel": 13,
+      "quality": "rare",
+      "tooltip": [
+        "Spiritwraith Drape",
+        "Item Level 18",
+        "Back Cloth",
+        "+3 Agility",
+        "+4 Spirit",
+        "Requires Level 13"
+      ],
+      "source_url": "https://foreverchanges.pro/item/271097",
+      "documentation": "documented"
+    },
+    {
+      "key": "271098",
+      "id": 271098,
+      "name": "Golemguard Chest",
+      "source_status": "forever_beta_community",
+      "itemLevel": 18,
+      "requiredLevel": 13,
+      "quality": "rare",
+      "tooltip": [
+        "Golemguard Chest",
+        "Item Level 18",
+        "Chest Mail",
+        "178 Armor",
+        "+6 Stamina",
+        "+60 Armor",
+        "Requires Level 13"
+      ],
+      "source_url": "https://foreverchanges.pro/item/271098",
       "documentation": "documented"
     },
     {
@@ -392,6 +1899,71 @@
       }
     },
     {
+      "key": "271204",
+      "id": 271204,
+      "name": "Meathook Slicer",
+      "source_status": "forever_beta_community",
+      "itemLevel": 20,
+      "requiredLevel": 15,
+      "quality": "rare",
+      "tooltip": [
+        "Meathook Slicer",
+        "Item Level 20",
+        "One-Hand Dagger",
+        "Dégâts : 17 - 32",
+        "Vitesse 1.80",
+        "(13.6 dégâts par seconde)",
+        "+5 Stamina",
+        "Requires Level 15"
+      ],
+      "source_url": "https://foreverchanges.pro/item/271204",
+      "documentation": "documented",
+      "weaponStats": {
+        "damageMin": 17,
+        "damageMax": 32,
+        "speed": 1.8,
+        "dps": 13.6
+      }
+    },
+    {
+      "key": "271205",
+      "id": 271205,
+      "name": "Abomination Bones",
+      "source_status": "forever_beta_community",
+      "itemLevel": 20,
+      "requiredLevel": 15,
+      "quality": "rare",
+      "tooltip": [
+        "Abomination Bones",
+        "Item Level 20",
+        "Chest Mail",
+        "+8 Strength",
+        "+5 Shadow Resistance",
+        "Requires Level 15"
+      ],
+      "source_url": "https://foreverchanges.pro/item/271205",
+      "documentation": "documented"
+    },
+    {
+      "key": "271206",
+      "id": 271206,
+      "name": "Leftover Abomination Skin",
+      "source_status": "forever_beta_community",
+      "itemLevel": 20,
+      "requiredLevel": 15,
+      "quality": "rare",
+      "tooltip": [
+        "Leftover Abomination Skin",
+        "Item Level 20",
+        "Chest Cloth",
+        "+9 Spirit",
+        "Equip: +7 Shadow Spell Damage",
+        "Requires Level 15"
+      ],
+      "source_url": "https://foreverchanges.pro/item/271206",
+      "documentation": "documented"
+    },
+    {
       "key": "271207",
       "id": 271207,
       "name": "Rotmender's Leggings",
@@ -428,34 +2000,6 @@
       ],
       "source_url": "https://foreverchanges.pro/item/271208",
       "documentation": "documented"
-    },
-    {
-      "key": "271216",
-      "id": 271216,
-      "name": "Scepter of the Abandoned",
-      "source_status": "forever_beta_community",
-      "itemLevel": 22,
-      "requiredLevel": 17,
-      "quality": "rare",
-      "tooltip": [
-        "Scepter of the Abandoned",
-        "Item Level 22",
-        "Main Hand Mace",
-        "Dégâts : 17 - 33",
-        "Vitesse 2.60",
-        "(9.6 dégâts par seconde)",
-        "+5 Shadow Resistance",
-        "Equip: +24 Spell Power",
-        "Requires Level 17"
-      ],
-      "source_url": "https://foreverchanges.pro/item/271216",
-      "documentation": "documented",
-      "weaponStats": {
-        "damageMin": 17,
-        "damageMax": 33,
-        "speed": 2.6,
-        "dps": 9.6
-      }
     },
     {
       "key": "271209",
@@ -496,31 +2040,42 @@
       "documentation": "documented"
     },
     {
-      "key": "271217",
-      "id": 271217,
-      "name": "Corpse Chopper",
+      "key": "271211",
+      "id": 271211,
+      "name": "Vilewalkers",
       "source_status": "forever_beta_community",
-      "itemLevel": 21,
-      "requiredLevel": 16,
+      "itemLevel": 22,
+      "requiredLevel": 17,
       "quality": "rare",
       "tooltip": [
-        "Corpse Chopper",
-        "Item Level 21",
-        "Two-Hand Axe",
-        "Dégâts : 52 - 79",
-        "Vitesse 3.60",
-        "(18.2 dégâts par seconde)",
-        "Use: Chop a nearby Humanoid or Undead corpse, restoring 150 Health, 150 Mana and 15 Rage.",
-        "Requires Level 16"
+        "Vilewalkers",
+        "Item Level 22",
+        "Feet Mail",
+        "+7 Strength",
+        "+5 Stamina",
+        "Requires Level 17"
       ],
-      "source_url": "https://foreverchanges.pro/item/271217",
-      "documentation": "documented",
-      "weaponStats": {
-        "damageMin": 52,
-        "damageMax": 79,
-        "speed": 3.6,
-        "dps": 18.2
-      }
+      "source_url": "https://foreverchanges.pro/item/271211",
+      "documentation": "documented"
+    },
+    {
+      "key": "271212",
+      "id": 271212,
+      "name": "Bloodied Chestwraps",
+      "source_status": "forever_beta_community",
+      "itemLevel": 22,
+      "requiredLevel": 17,
+      "quality": "rare",
+      "tooltip": [
+        "Bloodied Chestwraps",
+        "Item Level 22",
+        "Chest Leather",
+        "+7 Agility",
+        "+9 Spirit",
+        "Requires Level 17"
+      ],
+      "source_url": "https://foreverchanges.pro/item/271212",
+      "documentation": "documented"
     },
     {
       "key": "271213",
@@ -590,72 +2145,59 @@
       }
     },
     {
-      "key": "273085",
-      "id": 273085,
-      "name": "Blueprint: Fermenter",
-      "source_status": "forever_beta_wowhead",
-      "itemLevel": 25,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [
-        "Recipe · Alchemy",
-        "Item Level 25",
-        "Requires Alchemy (140)",
-        "Use: Craft a Fermenter.",
-        "Teaches you how to place a Fermenter at a campsite."
-      ],
-      "source_url": "https://foreverchanges.pro/item/273085",
-      "documentation": "documented"
-    },
-    {
-      "key": "name:plans: arcane recycler",
-      "id": null,
-      "name": "Plans: Arcane Recycler",
-      "source_status": "forever_beta_community",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": null,
-      "documentation": "missing"
-    },
-    {
-      "key": "271211",
-      "id": 271211,
-      "name": "Vilewalkers",
+      "key": "271216",
+      "id": 271216,
+      "name": "Scepter of the Abandoned",
       "source_status": "forever_beta_community",
       "itemLevel": 22,
       "requiredLevel": 17,
       "quality": "rare",
       "tooltip": [
-        "Vilewalkers",
+        "Scepter of the Abandoned",
         "Item Level 22",
-        "Feet Mail",
-        "+7 Strength",
-        "+5 Stamina",
+        "Main Hand Mace",
+        "Dégâts : 17 - 33",
+        "Vitesse 2.60",
+        "(9.6 dégâts par seconde)",
+        "+5 Shadow Resistance",
+        "Equip: +24 Spell Power",
         "Requires Level 17"
       ],
-      "source_url": "https://foreverchanges.pro/item/271211",
-      "documentation": "documented"
+      "source_url": "https://foreverchanges.pro/item/271216",
+      "documentation": "documented",
+      "weaponStats": {
+        "damageMin": 17,
+        "damageMax": 33,
+        "speed": 2.6,
+        "dps": 9.6
+      }
     },
     {
-      "key": "271212",
-      "id": 271212,
-      "name": "Bloodied Chestwraps",
+      "key": "271217",
+      "id": 271217,
+      "name": "Corpse Chopper",
       "source_status": "forever_beta_community",
-      "itemLevel": 22,
-      "requiredLevel": 17,
+      "itemLevel": 21,
+      "requiredLevel": 16,
       "quality": "rare",
       "tooltip": [
-        "Bloodied Chestwraps",
-        "Item Level 22",
-        "Chest Leather",
-        "+7 Agility",
-        "+9 Spirit",
-        "Requires Level 17"
+        "Corpse Chopper",
+        "Item Level 21",
+        "Two-Hand Axe",
+        "Dégâts : 52 - 79",
+        "Vitesse 3.60",
+        "(18.2 dégâts par seconde)",
+        "Use: Chop a nearby Humanoid or Undead corpse, restoring 150 Health, 150 Mana and 15 Rage.",
+        "Requires Level 16"
       ],
-      "source_url": "https://foreverchanges.pro/item/271212",
-      "documentation": "documented"
+      "source_url": "https://foreverchanges.pro/item/271217",
+      "documentation": "documented",
+      "weaponStats": {
+        "damageMin": 52,
+        "damageMax": 79,
+        "speed": 3.6,
+        "dps": 18.2
+      }
     },
     {
       "key": "271218",
@@ -683,827 +2225,6 @@
         "speed": 2.6,
         "dps": 14.6
       }
-    },
-    {
-      "key": "6641",
-      "id": 6641,
-      "name": "Haunting Blade",
-      "source_status": "forever_beta_community",
-      "itemLevel": 27,
-      "requiredLevel": 22,
-      "quality": "rare",
-      "tooltip": [
-        "Haunting Blade",
-        "Item Level 27",
-        "Two-Hand Sword",
-        "Dégâts : 68 - 102",
-        "Vitesse 3.80",
-        "(22.4 dégâts par seconde)",
-        "Equip: +33 Healing",
-        "Equip: +11 Spell Damage",
-        "Requires Level 22"
-      ],
-      "source_url": "https://foreverchanges.pro/item/6641",
-      "documentation": "documented",
-      "weaponStats": {
-        "damageMin": 68,
-        "damageMax": 102,
-        "speed": 3.8,
-        "dps": 22.4
-      }
-    },
-    {
-      "key": "6642",
-      "id": 6642,
-      "name": "Phantom Armor",
-      "source_status": "forever_beta_community",
-      "itemLevel": 27,
-      "requiredLevel": 22,
-      "quality": "rare",
-      "tooltip": [
-        "Phantom Armor",
-        "Item Level 27",
-        "Chest Mail",
-        "+5 Spirit",
-        "+12 Stamina",
-        "+3 Strength",
-        "Requires Level 22"
-      ],
-      "source_url": "https://foreverchanges.pro/item/6642",
-      "documentation": "documented"
-    },
-    {
-      "key": "name:rotmender's sash",
-      "id": null,
-      "name": "Rotmender's Sash",
-      "source_status": "unknown",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": null,
-      "documentation": "missing"
-    },
-    {
-      "key": "name:rotmender's gloves",
-      "id": null,
-      "name": "Rotmender's Gloves",
-      "source_status": "unknown",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": null,
-      "documentation": "missing"
-    },
-    {
-      "key": "name:rotmender's garb",
-      "id": null,
-      "name": "Rotmender's Garb",
-      "source_status": "unknown",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": null,
-      "documentation": "missing"
-    },
-    {
-      "key": "273024",
-      "id": 273024,
-      "name": "Glinteye Slippers",
-      "source_status": "forever_beta_community",
-      "itemLevel": 31,
-      "requiredLevel": 26,
-      "quality": "rare",
-      "tooltip": [
-        "Glinteye Slippers",
-        "Item Level 31",
-        "Feet Cloth",
-        "Requires Level 26"
-      ],
-      "source_url": "https://foreverchanges.pro/item/273024",
-      "documentation": "missing"
-    },
-    {
-      "key": "273023",
-      "id": 273023,
-      "name": "Saltscale Girdle",
-      "source_status": "forever_beta_community",
-      "itemLevel": 31,
-      "requiredLevel": 26,
-      "quality": "rare",
-      "tooltip": [
-        "Saltscale Girdle",
-        "Item Level 31",
-        "Waist Mail",
-        "124 Armor",
-        "+9 Strength",
-        "+9 Stamina",
-        "Requires Level 26"
-      ],
-      "source_url": "https://foreverchanges.pro/item/273023",
-      "documentation": "documented"
-    },
-    {
-      "key": "273022",
-      "id": 273022,
-      "name": "Supple Bellyskin Leggings",
-      "source_status": "forever_beta_community",
-      "itemLevel": 31,
-      "requiredLevel": 26,
-      "quality": "rare",
-      "tooltip": [
-        "Supple Bellyskin Leggings",
-        "Item Level 31",
-        "Legs Leather",
-        "+14 Stamina",
-        "+6 Strength",
-        "Requires Level 26"
-      ],
-      "source_url": "https://foreverchanges.pro/item/273022",
-      "documentation": "documented"
-    },
-    {
-      "key": "273025",
-      "id": 273025,
-      "name": "Raptorclaw Greaves",
-      "source_status": "forever_beta_community",
-      "itemLevel": 31,
-      "requiredLevel": 26,
-      "quality": "rare",
-      "tooltip": [
-        "Raptorclaw Greaves",
-        "Item Level 31",
-        "Feet Mail",
-        "+7 Strength",
-        "+7 Stamina",
-        "+6 Intellect",
-        "Requires Level 26"
-      ],
-      "source_url": "https://foreverchanges.pro/item/273025",
-      "documentation": "documented"
-    },
-    {
-      "key": "273027",
-      "id": 273027,
-      "name": "Raptor's Gaze",
-      "source_status": "forever_beta_community",
-      "itemLevel": 31,
-      "requiredLevel": 26,
-      "quality": "rare",
-      "tooltip": [
-        "Raptor's Gaze",
-        "Item Level 31",
-        "Held in off hand",
-        "+4 Stamina",
-        "+4 Intellect",
-        "Equip: +8 Spell Power",
-        "Requires Level 26"
-      ],
-      "source_url": "https://foreverchanges.pro/item/273027",
-      "documentation": "documented"
-    },
-    {
-      "key": "273026",
-      "id": 273026,
-      "name": "Garb of Florid Feathers",
-      "source_status": "forever_beta_community",
-      "itemLevel": 31,
-      "requiredLevel": 26,
-      "quality": "rare",
-      "tooltip": [
-        "Garb of Florid Feathers",
-        "Item Level 31",
-        "Chest Leather",
-        "+9 Agility",
-        "+15 Intellect",
-        "Requires Level 26"
-      ],
-      "source_url": "https://foreverchanges.pro/item/273026",
-      "documentation": "documented"
-    },
-    {
-      "key": "273106",
-      "id": 273106,
-      "name": "Blueprint: Greenhouse",
-      "source_status": "forever_beta_wowhead",
-      "itemLevel": 25,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [
-        "Recipe · Herbalism",
-        "Item Level 25",
-        "Requires Herbalism (140)",
-        "Use: Craft a Greenhouse.",
-        "Teaches you how to place a Greenhouse at a campsite."
-      ],
-      "source_url": "https://foreverchanges.pro/item/273106",
-      "documentation": "documented"
-    },
-    {
-      "key": "273030",
-      "id": 273030,
-      "name": "Ring of Power Regulation",
-      "source_status": "forever_beta_community",
-      "itemLevel": 33,
-      "requiredLevel": 28,
-      "quality": "rare",
-      "tooltip": [
-        "Ring of Power Regulation",
-        "Item Level 33",
-        "Unique-Equipped",
-        "Equip: +6 Spell Power",
-        "Equip: +3 Mana Regeneration",
-        "Requires Level 28"
-      ],
-      "source_url": "https://foreverchanges.pro/item/273030",
-      "documentation": "documented"
-    },
-    {
-      "key": "273029",
-      "id": 273029,
-      "name": "Golemsight Long Gun",
-      "source_status": "forever_beta_community",
-      "itemLevel": 33,
-      "requiredLevel": 28,
-      "quality": "rare",
-      "tooltip": [
-        "Golemsight Long Gun",
-        "Item Level 33",
-        "Ranged Gun",
-        "+6 Agility",
-        "Requires Level 28"
-      ],
-      "source_url": "https://foreverchanges.pro/item/273029",
-      "documentation": "documented"
-    },
-    {
-      "key": "273028",
-      "id": 273028,
-      "name": "Reliquary Mantle",
-      "source_status": "forever_beta_community",
-      "itemLevel": 33,
-      "requiredLevel": 28,
-      "quality": "rare",
-      "tooltip": [
-        "Reliquary Mantle",
-        "Item Level 33",
-        "Shoulder Mail",
-        "171 Armor",
-        "+12 Stamina",
-        "+4 Spirit",
-        "Requires Level 28"
-      ],
-      "source_url": "https://foreverchanges.pro/item/273028",
-      "documentation": "documented"
-    },
-    {
-      "key": "name:titan relic (quest)",
-      "id": null,
-      "name": "Titan Relic (quest)",
-      "source_status": "forever_beta_wowhead",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": null,
-      "documentation": "missing"
-    },
-    {
-      "key": "273036",
-      "id": 273036,
-      "name": "Graveweave Bindings",
-      "source_status": "forever_beta_community",
-      "itemLevel": 31,
-      "requiredLevel": 26,
-      "quality": "rare",
-      "tooltip": [
-        "Graveweave Bindings",
-        "Item Level 31",
-        "Wrist Cloth",
-        "+6 Strength",
-        "Equip: +5 Spell Power",
-        "Equip: +2 Mana Regeneration",
-        "Requires Level 26"
-      ],
-      "source_url": "https://foreverchanges.pro/item/273036",
-      "documentation": "documented"
-    },
-    {
-      "key": "273032",
-      "id": 273032,
-      "name": "Bonebinder's Signet",
-      "source_status": "forever_beta_community",
-      "itemLevel": 31,
-      "requiredLevel": 26,
-      "quality": "rare",
-      "tooltip": [
-        "Bonebinder's Signet",
-        "Item Level 31",
-        "Requires Level 26"
-      ],
-      "source_url": "https://foreverchanges.pro/item/273032",
-      "documentation": "missing"
-    },
-    {
-      "key": "273033",
-      "id": 273033,
-      "name": "Gravespike Repeater",
-      "source_status": "forever_beta_community",
-      "itemLevel": 31,
-      "requiredLevel": 26,
-      "quality": "rare",
-      "tooltip": [
-        "Gravespike Repeater",
-        "Item Level 31",
-        "Ranged Crossbow",
-        "Requires Level 26"
-      ],
-      "source_url": "https://foreverchanges.pro/item/273033",
-      "documentation": "missing"
-    },
-    {
-      "key": "273054",
-      "id": 273054,
-      "name": "Cartilage Shapers",
-      "source_status": "forever_beta_community",
-      "itemLevel": 33,
-      "requiredLevel": 28,
-      "quality": "rare",
-      "tooltip": [
-        "Cartilage Shapers",
-        "Item Level 33",
-        "Hands Leather",
-        "+9 Agility",
-        "+8 Spirit",
-        "Requires Level 28"
-      ],
-      "source_url": "https://foreverchanges.pro/item/273054",
-      "documentation": "documented"
-    },
-    {
-      "key": "273053",
-      "id": 273053,
-      "name": "Tendonscraper Dagger",
-      "source_status": "forever_beta_community",
-      "itemLevel": 33,
-      "requiredLevel": 28,
-      "quality": "rare",
-      "tooltip": [
-        "Tendonscraper Dagger",
-        "Item Level 33",
-        "Main Hand Dagger",
-        "Dégâts : 16 - 30",
-        "Vitesse 1.60",
-        "(14.4 dégâts par seconde)",
-        "+5 Stamina",
-        "Equip: +8 Health Regeneration",
-        "Equip: +36 Spell Power",
-        "Requires Level 28"
-      ],
-      "source_url": "https://foreverchanges.pro/item/273053",
-      "documentation": "documented",
-      "weaponStats": {
-        "damageMin": 16,
-        "damageMax": 30,
-        "speed": 1.6,
-        "dps": 14.4
-      }
-    },
-    {
-      "key": "273055",
-      "id": 273055,
-      "name": "Bonepile Gaze",
-      "source_status": "forever_beta_community",
-      "itemLevel": 33,
-      "requiredLevel": 28,
-      "quality": "rare",
-      "tooltip": [
-        "Bonepile Gaze",
-        "Item Level 33",
-        "Off Hand Shield",
-        "Requires Level 28"
-      ],
-      "source_url": "https://foreverchanges.pro/item/273055",
-      "documentation": "missing"
-    },
-    {
-      "key": "273031",
-      "id": 273031,
-      "name": "Runemender's Seal",
-      "source_status": "forever_beta_community",
-      "itemLevel": 32,
-      "requiredLevel": 27,
-      "quality": "rare",
-      "tooltip": [
-        "Runemender's Seal",
-        "Item Level 32",
-        "Unique-Equipped",
-        "+4 Stamina",
-        "+7 Spirit",
-        "Equip: +9 Healing",
-        "Equip: +3 Spell Damage",
-        "Requires Level 27"
-      ],
-      "source_url": "https://foreverchanges.pro/item/273031",
-      "documentation": "documented"
-    },
-    {
-      "key": "273034",
-      "id": 273034,
-      "name": "Ephemeral Grips",
-      "source_status": "forever_beta_community",
-      "itemLevel": 32,
-      "requiredLevel": 27,
-      "quality": "rare",
-      "tooltip": [
-        "Ephemeral Grips",
-        "Item Level 32",
-        "Hands Cloth",
-        "Requires Level 27"
-      ],
-      "source_url": "https://foreverchanges.pro/item/273034",
-      "documentation": "missing"
-    },
-    {
-      "key": "273035",
-      "id": 273035,
-      "name": "Mana-Warped Chain Shirt",
-      "source_status": "forever_beta_community",
-      "itemLevel": 32,
-      "requiredLevel": 27,
-      "quality": "rare",
-      "tooltip": [
-        "Mana-Warped Chain Shirt",
-        "Item Level 32",
-        "Chest Mail",
-        "Requires Level 27"
-      ],
-      "source_url": "https://foreverchanges.pro/item/273035",
-      "documentation": "missing"
-    },
-    {
-      "key": "273045",
-      "id": 273045,
-      "name": "Drape of Shifting Energy",
-      "source_status": "forever_beta_community",
-      "itemLevel": 32,
-      "requiredLevel": 27,
-      "quality": "rare",
-      "tooltip": [
-        "Drape of Shifting Energy",
-        "Item Level 32",
-        "Back Cloth",
-        "+7 Spirit",
-        "Equip: +12 Attack Power",
-        "Requires Level 27"
-      ],
-      "source_url": "https://foreverchanges.pro/item/273045",
-      "documentation": "documented"
-    },
-    {
-      "key": "273044",
-      "id": 273044,
-      "name": "Violet Sorcerer's Robes",
-      "source_status": "forever_beta_community",
-      "itemLevel": 32,
-      "requiredLevel": 27,
-      "quality": "rare",
-      "tooltip": [
-        "Violet Sorcerer's Robes",
-        "Item Level 32",
-        "Chest Cloth",
-        "+15 Intellect",
-        "Equip: +9 Spell Power",
-        "Requires Level 27"
-      ],
-      "source_url": "https://foreverchanges.pro/item/273044",
-      "documentation": "documented"
-    },
-    {
-      "key": "273043",
-      "id": 273043,
-      "name": "Wand of Mana Concentration",
-      "source_status": "forever_beta_community",
-      "itemLevel": 32,
-      "requiredLevel": 27,
-      "quality": "rare",
-      "tooltip": [
-        "Wand of Mana Concentration",
-        "Item Level 32",
-        "Ranged Wand",
-        "+4 Intellect",
-        "Equip: +2 Mana Regeneration",
-        "Requires Level 27"
-      ],
-      "source_url": "https://foreverchanges.pro/item/273043",
-      "documentation": "documented"
-    },
-    {
-      "key": "273046",
-      "id": 273046,
-      "name": "Guardian's Dualblade",
-      "source_status": "forever_beta_community",
-      "itemLevel": 33,
-      "requiredLevel": 28,
-      "quality": "rare",
-      "tooltip": [
-        "Guardian's Dualblade",
-        "Item Level 33",
-        "Two-Hand Axe",
-        "Dégâts : 78 - 117",
-        "Vitesse 3.50",
-        "(27.9 dégâts par seconde)",
-        "Equip: When damaged, has a chance to grant 1080 armor for 12 sec.",
-        "Requires Level 28"
-      ],
-      "source_url": "https://foreverchanges.pro/item/273046",
-      "documentation": "documented",
-      "weaponStats": {
-        "damageMin": 78,
-        "damageMax": 117,
-        "speed": 3.5,
-        "dps": 27.9
-      }
-    },
-    {
-      "key": "273048",
-      "id": 273048,
-      "name": "Refractory Scaleguards",
-      "source_status": "forever_beta_community",
-      "itemLevel": 33,
-      "requiredLevel": 28,
-      "quality": "rare",
-      "tooltip": [
-        "Refractory Scaleguards",
-        "Item Level 33",
-        "Legs Mail",
-        "+12 Strength",
-        "+5 Arcane Resistance",
-        "+100 Armor",
-        "Requires Level 28"
-      ],
-      "source_url": "https://foreverchanges.pro/item/273048",
-      "documentation": "documented"
-    },
-    {
-      "key": "273047",
-      "id": 273047,
-      "name": "Unstable Crystalline Shoulderpads",
-      "source_status": "forever_beta_community",
-      "itemLevel": 33,
-      "requiredLevel": 28,
-      "quality": "rare",
-      "tooltip": [
-        "Unstable Crystalline Shoulderpads",
-        "Item Level 33",
-        "Shoulder Leather",
-        "81 Armor",
-        "+9 Agility",
-        "+5 Stamina",
-        "Restores +8 health per 5 sec.",
-        "Requires Level 28"
-      ],
-      "source_url": "https://foreverchanges.pro/item/273047",
-      "documentation": "documented"
-    },
-    {
-      "key": "273099",
-      "id": 273099,
-      "name": "Blueprint: Spinning Wheel",
-      "source_status": "forever_beta_community",
-      "itemLevel": 25,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [
-        "Recipe · Tailoring",
-        "Item Level 25",
-        "Requires Tailoring (140)",
-        "Use: Craft a Spinning Wheel.",
-        "Teaches you how to place a Spinning Wheel at a campsite."
-      ],
-      "source_url": "https://foreverchanges.pro/item/273099",
-      "documentation": "documented"
-    },
-    {
-      "key": "273040",
-      "id": 273040,
-      "name": "Spine of the Devourer",
-      "source_status": "forever_beta_community",
-      "itemLevel": 33,
-      "requiredLevel": 28,
-      "quality": "rare",
-      "tooltip": [
-        "Spine of the Devourer",
-        "Item Level 33",
-        "Two-Hand Staff",
-        "Dégâts : 59 - 90",
-        "Vitesse 3.60",
-        "(20.7 dégâts par seconde)",
-        "+14 Stamina",
-        "Equip: +3 Spell Penetration",
-        "Equip: +36 Spell Power",
-        "Requires Level 28"
-      ],
-      "source_url": "https://foreverchanges.pro/item/273040",
-      "documentation": "documented",
-      "weaponStats": {
-        "damageMin": 59,
-        "damageMax": 90,
-        "speed": 3.6,
-        "dps": 20.7
-      }
-    },
-    {
-      "key": "273042",
-      "id": 273042,
-      "name": "Manascale Treads",
-      "source_status": "forever_beta_community",
-      "itemLevel": 33,
-      "requiredLevel": 28,
-      "quality": "rare",
-      "tooltip": [
-        "Manascale Treads",
-        "Item Level 33",
-        "Feet Mail",
-        "Requires Level 28"
-      ],
-      "source_url": "https://foreverchanges.pro/item/273042",
-      "documentation": "missing"
-    },
-    {
-      "key": "273041",
-      "id": 273041,
-      "name": "Slitherwrap Girdle",
-      "source_status": "forever_beta_community",
-      "itemLevel": 33,
-      "requiredLevel": 28,
-      "quality": "rare",
-      "tooltip": [
-        "Slitherwrap Girdle",
-        "Item Level 33",
-        "Waist Leather",
-        "+9 Agility",
-        "+6 Stamina",
-        "Requires Level 28"
-      ],
-      "source_url": "https://foreverchanges.pro/item/273041",
-      "documentation": "documented"
-    },
-    {
-      "key": "273039",
-      "id": 273039,
-      "name": "Blightleaf Rope",
-      "source_status": "forever_beta_community",
-      "itemLevel": 34,
-      "requiredLevel": 29,
-      "quality": "rare",
-      "tooltip": [
-        "Blightleaf Rope",
-        "Item Level 34",
-        "Waist Cloth",
-        "Requires Level 29"
-      ],
-      "source_url": "https://foreverchanges.pro/item/273039",
-      "documentation": "missing"
-    },
-    {
-      "key": "273038",
-      "id": 273038,
-      "name": "Garb of Fallen Felbark",
-      "source_status": "forever_beta_community",
-      "itemLevel": 34,
-      "requiredLevel": 29,
-      "quality": "rare",
-      "tooltip": [
-        "Garb of Fallen Felbark",
-        "Item Level 34",
-        "Chest Leather",
-        "Requires Level 29"
-      ],
-      "source_url": "https://foreverchanges.pro/item/273038",
-      "documentation": "missing"
-    },
-    {
-      "key": "273037",
-      "id": 273037,
-      "name": "Felbough Arm",
-      "source_status": "forever_beta_community",
-      "itemLevel": 34,
-      "requiredLevel": 29,
-      "quality": "rare",
-      "tooltip": [
-        "Felbough Arm",
-        "Item Level 34",
-        "Two-Hand Polearm",
-        "Dégâts : 69 - 104",
-        "Vitesse 3.00",
-        "(28.8 dégâts par seconde)",
-        "+10 Agility",
-        "+9 Nature Resistance",
-        "Equip: +10 Hit Rating",
-        "Requires Level 29"
-      ],
-      "source_url": "https://foreverchanges.pro/item/273037",
-      "documentation": "documented",
-      "weaponStats": {
-        "damageMin": 69,
-        "damageMax": 104,
-        "speed": 3,
-        "dps": 28.8
-      }
-    },
-    {
-      "key": "273052",
-      "id": 273052,
-      "name": "Ponderous Orb",
-      "source_status": "forever_beta_community",
-      "itemLevel": 35,
-      "requiredLevel": 30,
-      "quality": "rare",
-      "tooltip": [
-        "Ponderous Orb",
-        "Item Level 35",
-        "Held in off hand",
-        "Requires Level 30"
-      ],
-      "source_url": "https://foreverchanges.pro/item/273052",
-      "documentation": "missing"
-    },
-    {
-      "key": "273051",
-      "id": 273051,
-      "name": "Violet Sorcerer's Mantle",
-      "source_status": "forever_beta_community",
-      "itemLevel": 35,
-      "requiredLevel": 30,
-      "quality": "rare",
-      "tooltip": [
-        "Violet Sorcerer's Mantle",
-        "Item Level 35",
-        "Shoulder Cloth",
-        "+9 Intellect",
-        "Equip: +4 Spell Penetration",
-        "Requires Level 30"
-      ],
-      "source_url": "https://foreverchanges.pro/item/273051",
-      "documentation": "documented"
-    },
-    {
-      "key": "273049",
-      "id": 273049,
-      "name": "Archmagister's Faceted Pendant",
-      "source_status": "forever_beta_community",
-      "itemLevel": 35,
-      "requiredLevel": 30,
-      "quality": "rare",
-      "tooltip": [
-        "Archmagister's Faceted Pendant",
-        "Item Level 35",
-        "+6 Intellect",
-        "Equip: +12 Attack Power",
-        "Requires Level 30"
-      ],
-      "source_url": "https://foreverchanges.pro/item/273049",
-      "documentation": "documented"
-    },
-    {
-      "key": "273103",
-      "id": 273103,
-      "name": "Blueprint: Arcane Salvager",
-      "source_status": "forever_beta_community",
-      "itemLevel": 25,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [
-        "Recipe · Enchanting",
-        "Item Level 25",
-        "Requires Enchanting (140)",
-        "Use: Craft an Arcane Salvager.",
-        "Teaches you how to place an Arcane Salvager at a campsite."
-      ],
-      "source_url": "https://foreverchanges.pro/item/273103",
-      "documentation": "documented"
-    },
-    {
-      "key": "272999",
-      "id": 272999,
-      "name": "Barbaric Crossbow",
-      "source_status": "forever_beta_cache",
-      "itemLevel": 18,
-      "requiredLevel": 13,
-      "quality": null,
-      "tooltip": [
-        "Ranged Crossbow",
-        "Item Level 18",
-        "15 - 23 Damage Speed 2.00",
-        "(9.5 damage per second)",
-        "Chance on hit: Wounds the target for 14 Physical damage.",
-        "Requires Level 13"
-      ],
-      "source_url": "https://foreverchanges.pro/item/272999",
-      "documentation": "documented"
     },
     {
       "key": "272996",
@@ -1541,8 +2262,9 @@
       "requiredLevel": 13,
       "quality": null,
       "tooltip": [
-        "Main Hand Fist Weapon",
+        "Bone Knuckles",
         "Item Level 18",
+        "Main Hand Fist Weapon",
         "17 - 32 Damage Speed 2.00",
         "(12.3 damage per second)",
         "Equip: +6 Attack Power Vs Beasts",
@@ -1553,99 +2275,24 @@
       "documentation": "documented"
     },
     {
-      "key": "14149",
-      "id": 14149,
-      "name": "Subterranean Cape",
-      "source_status": "classic_loot_reference",
+      "key": "272999",
+      "id": 272999,
+      "name": "Barbaric Crossbow",
+      "source_status": "forever_beta_cache",
       "itemLevel": 18,
       "requiredLevel": 13,
-      "quality": "uncommon",
-      "tooltip": [
-        "Subterranean Cape",
-        "Item Level 18",
-        "+2 Strength",
-        "+2 Agility",
-        "Requires Level 13"
-      ],
-      "source_url": "https://wowclassicdatabase.com/item/subterranean-cape",
-      "documentation": "classic_partial"
-    },
-    {
-      "key": "14148",
-      "id": 14148,
-      "name": "Crystalline Cuffs",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
       "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=14148",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "14145",
-      "id": 14145,
-      "name": "Cursed Felblade",
-      "source_status": "classic_loot_reference",
-      "itemLevel": 18,
-      "requiredLevel": 13,
-      "quality": "uncommon",
       "tooltip": [
-        "Cursed Felblade",
+        "Barbaric Crossbow",
         "Item Level 18",
-        "Main Hand Sword",
+        "Ranged Crossbow",
+        "15 - 23 Damage Speed 2.00",
+        "(9.5 damage per second)",
+        "Chance on hit: Wounds the target for 14 Physical damage.",
         "Requires Level 13"
       ],
-      "source_url": "https://wowclassicdatabase.com/item/cursed-felblade",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "14150",
-      "id": 14150,
-      "name": "Robe of Evocation",
-      "source_status": "classic_loot_reference",
-      "itemLevel": 18,
-      "requiredLevel": 13,
-      "quality": "uncommon",
-      "tooltip": [
-        "Robe of Evocation",
-        "Item Level 18",
-        "+4 Intellect",
-        "+3 Stamina",
-        "Requires Level 13"
-      ],
-      "source_url": "https://wowclassicdatabase.com/item/robe-of-evocation",
-      "documentation": "classic_partial"
-    },
-    {
-      "key": "14147",
-      "id": 14147,
-      "name": "Cavedweller Bracers",
-      "source_status": "classic_loot_reference",
-      "itemLevel": 18,
-      "requiredLevel": 13,
-      "quality": "uncommon",
-      "tooltip": [
-        "Cavedweller Bracers",
-        "Item Level 18",
-        "+1 Strength",
-        "+2 Stamina",
-        "Requires Level 13"
-      ],
-      "source_url": "https://wowclassicdatabase.com/item/cavedweller-bracers",
-      "documentation": "classic_partial"
-    },
-    {
-      "key": "14151",
-      "id": 14151,
-      "name": "Chanting Blade",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=14151",
-      "documentation": "classic_on_demand"
+      "source_url": "https://foreverchanges.pro/item/272999",
+      "documentation": "documented"
     },
     {
       "key": "273003",
@@ -1682,8 +2329,9 @@
       "requiredLevel": 13,
       "quality": null,
       "tooltip": [
-        "Back Cloth",
+        "Satyrskin Cloak",
         "Item Level 18",
+        "Back Cloth",
         "17 Armor",
         "+3 Stamina",
         "+3 Fire Resistance",
@@ -1701,8 +2349,9 @@
       "requiredLevel": 13,
       "quality": null,
       "tooltip": [
-        "Feet Leather",
+        "Chasm Walkers",
         "Item Level 18",
+        "Feet Leather",
         "56 Armor",
         "+5 Spirit",
         "Equip: +4 Attack Power",
@@ -1712,68 +2361,708 @@
       "documentation": "documented"
     },
     {
-      "key": "6460",
-      "id": 6460,
-      "name": "Cobrahn's Grasp",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=6460",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "10410",
-      "id": 10410,
-      "name": "Leggings of the Fang",
-      "source_status": "classic_loot_reference",
-      "itemLevel": 23,
-      "requiredLevel": 18,
+      "key": "273022",
+      "id": 273022,
+      "name": "Supple Bellyskin Leggings",
+      "source_status": "forever_beta_community",
+      "itemLevel": 31,
+      "requiredLevel": 26,
       "quality": "rare",
       "tooltip": [
-        "Leggings of the Fang",
-        "Item Level 23",
-        "Requires Level 18"
+        "Supple Bellyskin Leggings",
+        "Item Level 31",
+        "Legs Leather",
+        "+14 Stamina",
+        "+6 Strength",
+        "Requires Level 26"
       ],
-      "source_url": "https://wowclassicdatabase.com/item/leggings-of-the-fang",
-      "documentation": "classic_on_demand"
+      "source_url": "https://foreverchanges.pro/item/273022",
+      "documentation": "documented"
     },
     {
-      "key": "6465",
-      "id": 6465,
-      "name": "Robe of the Moccasin",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=6465",
-      "documentation": "classic_on_demand"
+      "key": "273023",
+      "id": 273023,
+      "name": "Saltscale Girdle",
+      "source_status": "forever_beta_community",
+      "itemLevel": 31,
+      "requiredLevel": 26,
+      "quality": "rare",
+      "tooltip": [
+        "Saltscale Girdle",
+        "Item Level 31",
+        "Waist Mail",
+        "124 Armor",
+        "+9 Strength",
+        "+9 Stamina",
+        "Requires Level 26"
+      ],
+      "source_url": "https://foreverchanges.pro/item/273023",
+      "documentation": "documented"
     },
     {
-      "key": "10412",
-      "id": 10412,
-      "name": "Belt of the Fang",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=10412",
-      "documentation": "classic_on_demand"
+      "key": "273024",
+      "id": 273024,
+      "name": "Glinteye Slippers",
+      "source_status": "forever_beta_community",
+      "itemLevel": 31,
+      "requiredLevel": 26,
+      "quality": "rare",
+      "tooltip": [
+        "Glinteye Slippers",
+        "Item Level 31",
+        "Feet Cloth",
+        "33 Armor",
+        "+6 Spirit",
+        "+9 Stamina",
+        "Equip: +7 Spell Power",
+        "Requires Level 26"
+      ],
+      "source_url": "https://foreverchanges.pro/item/273024",
+      "documentation": "documented"
     },
     {
-      "key": "5404",
-      "id": 5404,
-      "name": "Serpent's Shoulders",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
+      "key": "273025",
+      "id": 273025,
+      "name": "Raptorclaw Greaves",
+      "source_status": "forever_beta_community",
+      "itemLevel": 31,
+      "requiredLevel": 26,
+      "quality": "rare",
+      "tooltip": [
+        "Raptorclaw Greaves",
+        "Item Level 31",
+        "Feet Mail",
+        "+7 Strength",
+        "+7 Stamina",
+        "+6 Intellect",
+        "Requires Level 26"
+      ],
+      "source_url": "https://foreverchanges.pro/item/273025",
+      "documentation": "documented"
+    },
+    {
+      "key": "273026",
+      "id": 273026,
+      "name": "Garb of Florid Feathers",
+      "source_status": "forever_beta_community",
+      "itemLevel": 31,
+      "requiredLevel": 26,
+      "quality": "rare",
+      "tooltip": [
+        "Garb of Florid Feathers",
+        "Item Level 31",
+        "Chest Leather",
+        "+9 Agility",
+        "+15 Intellect",
+        "Requires Level 26"
+      ],
+      "source_url": "https://foreverchanges.pro/item/273026",
+      "documentation": "documented"
+    },
+    {
+      "key": "273027",
+      "id": 273027,
+      "name": "Raptor's Gaze",
+      "source_status": "forever_beta_community",
+      "itemLevel": 31,
+      "requiredLevel": 26,
+      "quality": "rare",
+      "tooltip": [
+        "Raptor's Gaze",
+        "Item Level 31",
+        "Held in off hand",
+        "+4 Stamina",
+        "+4 Intellect",
+        "Equip: +8 Spell Power",
+        "Requires Level 26"
+      ],
+      "source_url": "https://foreverchanges.pro/item/273027",
+      "documentation": "documented"
+    },
+    {
+      "key": "273028",
+      "id": 273028,
+      "name": "Reliquary Mantle",
+      "source_status": "forever_beta_community",
+      "itemLevel": 33,
+      "requiredLevel": 28,
+      "quality": "rare",
+      "tooltip": [
+        "Reliquary Mantle",
+        "Item Level 33",
+        "Shoulder Mail",
+        "171 Armor",
+        "+12 Stamina",
+        "+4 Spirit",
+        "Requires Level 28"
+      ],
+      "source_url": "https://foreverchanges.pro/item/273028",
+      "documentation": "documented"
+    },
+    {
+      "key": "273029",
+      "id": 273029,
+      "name": "Golemsight Long Gun",
+      "source_status": "forever_beta_community",
+      "itemLevel": 33,
+      "requiredLevel": 28,
+      "quality": "rare",
+      "tooltip": [
+        "Golemsight Long Gun",
+        "Item Level 33",
+        "Ranged Gun",
+        "+6 Agility",
+        "Requires Level 28"
+      ],
+      "source_url": "https://foreverchanges.pro/item/273029",
+      "documentation": "documented"
+    },
+    {
+      "key": "273030",
+      "id": 273030,
+      "name": "Ring of Power Regulation",
+      "source_status": "forever_beta_community",
+      "itemLevel": 33,
+      "requiredLevel": 28,
+      "quality": "rare",
+      "tooltip": [
+        "Ring of Power Regulation",
+        "Item Level 33",
+        "Unique-Equipped",
+        "Equip: +6 Spell Power",
+        "Equip: +3 Mana Regeneration",
+        "Requires Level 28"
+      ],
+      "source_url": "https://foreverchanges.pro/item/273030",
+      "documentation": "documented"
+    },
+    {
+      "key": "273031",
+      "id": 273031,
+      "name": "Runemender's Seal",
+      "source_status": "forever_beta_community",
+      "itemLevel": 32,
+      "requiredLevel": 27,
+      "quality": "rare",
+      "tooltip": [
+        "Runemender's Seal",
+        "Item Level 32",
+        "Unique-Equipped",
+        "+4 Stamina",
+        "+7 Spirit",
+        "Equip: +9 Healing",
+        "Equip: +3 Spell Damage",
+        "Requires Level 27"
+      ],
+      "source_url": "https://foreverchanges.pro/item/273031",
+      "documentation": "documented"
+    },
+    {
+      "key": "273032",
+      "id": 273032,
+      "name": "Bonebinder's Signet",
+      "source_status": "forever_beta_community",
+      "itemLevel": 31,
+      "requiredLevel": 26,
+      "quality": "rare",
+      "tooltip": [
+        "Bonebinder's Signet",
+        "Item Level 31",
+        "Requires Level 26"
+      ],
+      "source_url": "https://foreverchanges.pro/item/273032",
+      "documentation": "missing"
+    },
+    {
+      "key": "273033",
+      "id": 273033,
+      "name": "Gravespike Repeater",
+      "source_status": "forever_beta_community",
+      "itemLevel": 31,
+      "requiredLevel": 26,
+      "quality": "rare",
+      "tooltip": [
+        "Gravespike Repeater",
+        "Item Level 31",
+        "Ranged Crossbow",
+        "28 - 43 Damage Speed 2.30",
+        "(15.4 damage per second)",
+        "Equip: +8 Attack Power",
+        "Equip: +9 Attack Power Vs Humanoids",
+        "Requires Level 26"
+      ],
+      "source_url": "https://foreverchanges.pro/item/273033",
+      "documentation": "documented"
+    },
+    {
+      "key": "273034",
+      "id": 273034,
+      "name": "Ephemeral Grips",
+      "source_status": "forever_beta_community",
+      "itemLevel": 32,
+      "requiredLevel": 27,
+      "quality": "rare",
+      "tooltip": [
+        "Ephemeral Grips",
+        "Item Level 32",
+        "Hands Cloth",
+        "31 Armor",
+        "+7 Stamina",
+        "+7 Intellect",
+        "Equip: +9 Arcane Spell Damage",
+        "Equip: +9 Shadow Spell Damage",
+        "Requires Level 27"
+      ],
+      "source_url": "https://foreverchanges.pro/item/273034",
+      "documentation": "documented"
+    },
+    {
+      "key": "273035",
+      "id": 273035,
+      "name": "Mana-Warped Chain Shirt",
+      "source_status": "forever_beta_community",
+      "itemLevel": 32,
+      "requiredLevel": 27,
+      "quality": "rare",
+      "tooltip": [
+        "Mana-Warped Chain Shirt",
+        "Item Level 32",
+        "Chest Mail",
+        "225 Armor",
+        "+8 Stamina",
+        "+12 Strength",
+        "Equip: +3 Mana Regeneration",
+        "Requires Level 27"
+      ],
+      "source_url": "https://foreverchanges.pro/item/273035",
+      "documentation": "documented"
+    },
+    {
+      "key": "273036",
+      "id": 273036,
+      "name": "Graveweave Bindings",
+      "source_status": "forever_beta_community",
+      "itemLevel": 31,
+      "requiredLevel": 26,
+      "quality": "rare",
+      "tooltip": [
+        "Graveweave Bindings",
+        "Item Level 31",
+        "Wrist Cloth",
+        "+6 Strength",
+        "Equip: +5 Spell Power",
+        "Equip: +2 Mana Regeneration",
+        "Requires Level 26"
+      ],
+      "source_url": "https://foreverchanges.pro/item/273036",
+      "documentation": "documented"
+    },
+    {
+      "key": "273037",
+      "id": 273037,
+      "name": "Felbough Arm",
+      "source_status": "forever_beta_community",
+      "itemLevel": 34,
+      "requiredLevel": 29,
+      "quality": "rare",
+      "tooltip": [
+        "Felbough Arm",
+        "Item Level 34",
+        "Two-Hand Polearm",
+        "Dégâts : 69 - 104",
+        "Vitesse 3.00",
+        "(28.8 dégâts par seconde)",
+        "+10 Agility",
+        "+9 Nature Resistance",
+        "Equip: +10 Hit Rating",
+        "Requires Level 29"
+      ],
+      "source_url": "https://foreverchanges.pro/item/273037",
+      "documentation": "documented",
+      "weaponStats": {
+        "damageMin": 69,
+        "damageMax": 104,
+        "speed": 3,
+        "dps": 28.8
+      }
+    },
+    {
+      "key": "273038",
+      "id": 273038,
+      "name": "Garb of Fallen Felbark",
+      "source_status": "forever_beta_community",
+      "itemLevel": 34,
+      "requiredLevel": 29,
+      "quality": "rare",
+      "tooltip": [
+        "Garb of Fallen Felbark",
+        "Item Level 34",
+        "Chest Leather",
+        "110 Armor",
+        "+13 Intellect",
+        "+9 Agility",
+        "+7 Stamina",
+        "Requires Level 29"
+      ],
+      "source_url": "https://foreverchanges.pro/item/273038",
+      "documentation": "documented"
+    },
+    {
+      "key": "273039",
+      "id": 273039,
+      "name": "Blightleaf Rope",
+      "source_status": "forever_beta_community",
+      "itemLevel": 34,
+      "requiredLevel": 29,
+      "quality": "rare",
+      "tooltip": [
+        "Blightleaf Rope",
+        "Item Level 34",
+        "Waist Cloth",
+        "28 Armor",
+        "+10 Intellect",
+        "Equip: +7 Spell Power",
+        "Equip: +5 Health Regeneration",
+        "Requires Level 29"
+      ],
+      "source_url": "https://foreverchanges.pro/item/273039",
+      "documentation": "documented"
+    },
+    {
+      "key": "273040",
+      "id": 273040,
+      "name": "Spine of the Devourer",
+      "source_status": "forever_beta_community",
+      "itemLevel": 33,
+      "requiredLevel": 28,
+      "quality": "rare",
+      "tooltip": [
+        "Spine of the Devourer",
+        "Item Level 33",
+        "Two-Hand Staff",
+        "Dégâts : 59 - 90",
+        "Vitesse 3.60",
+        "(20.7 dégâts par seconde)",
+        "+14 Stamina",
+        "Equip: +3 Spell Penetration",
+        "Equip: +36 Spell Power",
+        "Requires Level 28"
+      ],
+      "source_url": "https://foreverchanges.pro/item/273040",
+      "documentation": "documented",
+      "weaponStats": {
+        "damageMin": 59,
+        "damageMax": 90,
+        "speed": 3.6,
+        "dps": 20.7
+      }
+    },
+    {
+      "key": "273041",
+      "id": 273041,
+      "name": "Slitherwrap Girdle",
+      "source_status": "forever_beta_community",
+      "itemLevel": 33,
+      "requiredLevel": 28,
+      "quality": "rare",
+      "tooltip": [
+        "Slitherwrap Girdle",
+        "Item Level 33",
+        "Waist Leather",
+        "+9 Agility",
+        "+6 Stamina",
+        "Requires Level 28"
+      ],
+      "source_url": "https://foreverchanges.pro/item/273041",
+      "documentation": "documented"
+    },
+    {
+      "key": "273042",
+      "id": 273042,
+      "name": "Manascale Treads",
+      "source_status": "forever_beta_community",
+      "itemLevel": 33,
+      "requiredLevel": 28,
+      "quality": "rare",
+      "tooltip": [
+        "Manascale Treads",
+        "Item Level 33",
+        "Feet Mail",
+        "157 Armor",
+        "+7 Strength",
+        "+7 Intellect",
+        "Equip: +7 Critical Strike Rating",
+        "Requires Level 28"
+      ],
+      "source_url": "https://foreverchanges.pro/item/273042",
+      "documentation": "documented"
+    },
+    {
+      "key": "273043",
+      "id": 273043,
+      "name": "Wand of Mana Concentration",
+      "source_status": "forever_beta_community",
+      "itemLevel": 32,
+      "requiredLevel": 27,
+      "quality": "rare",
+      "tooltip": [
+        "Wand of Mana Concentration",
+        "Item Level 32",
+        "Ranged Wand",
+        "+4 Intellect",
+        "Equip: +2 Mana Regeneration",
+        "Requires Level 27"
+      ],
+      "source_url": "https://foreverchanges.pro/item/273043",
+      "documentation": "documented"
+    },
+    {
+      "key": "273044",
+      "id": 273044,
+      "name": "Violet Sorcerer's Robes",
+      "source_status": "forever_beta_community",
+      "itemLevel": 32,
+      "requiredLevel": 27,
+      "quality": "rare",
+      "tooltip": [
+        "Violet Sorcerer's Robes",
+        "Item Level 32",
+        "Chest Cloth",
+        "+15 Intellect",
+        "Equip: +9 Spell Power",
+        "Requires Level 27"
+      ],
+      "source_url": "https://foreverchanges.pro/item/273044",
+      "documentation": "documented"
+    },
+    {
+      "key": "273045",
+      "id": 273045,
+      "name": "Drape of Shifting Energy",
+      "source_status": "forever_beta_community",
+      "itemLevel": 32,
+      "requiredLevel": 27,
+      "quality": "rare",
+      "tooltip": [
+        "Drape of Shifting Energy",
+        "Item Level 32",
+        "Back Cloth",
+        "+7 Spirit",
+        "Equip: +12 Attack Power",
+        "Requires Level 27"
+      ],
+      "source_url": "https://foreverchanges.pro/item/273045",
+      "documentation": "documented"
+    },
+    {
+      "key": "273046",
+      "id": 273046,
+      "name": "Guardian's Dualblade",
+      "source_status": "forever_beta_community",
+      "itemLevel": 33,
+      "requiredLevel": 28,
+      "quality": "rare",
+      "tooltip": [
+        "Guardian's Dualblade",
+        "Item Level 33",
+        "Two-Hand Axe",
+        "Dégâts : 78 - 117",
+        "Vitesse 3.50",
+        "(27.9 dégâts par seconde)",
+        "Equip: When damaged, has a chance to grant 1080 armor for 12 sec.",
+        "Requires Level 28"
+      ],
+      "source_url": "https://foreverchanges.pro/item/273046",
+      "documentation": "documented",
+      "weaponStats": {
+        "damageMin": 78,
+        "damageMax": 117,
+        "speed": 3.5,
+        "dps": 27.9
+      }
+    },
+    {
+      "key": "273047",
+      "id": 273047,
+      "name": "Unstable Crystalline Shoulderpads",
+      "source_status": "forever_beta_community",
+      "itemLevel": 33,
+      "requiredLevel": 28,
+      "quality": "rare",
+      "tooltip": [
+        "Unstable Crystalline Shoulderpads",
+        "Item Level 33",
+        "Shoulder Leather",
+        "81 Armor",
+        "+9 Agility",
+        "+5 Stamina",
+        "Restores +8 health per 5 sec.",
+        "Requires Level 28"
+      ],
+      "source_url": "https://foreverchanges.pro/item/273047",
+      "documentation": "documented"
+    },
+    {
+      "key": "273048",
+      "id": 273048,
+      "name": "Refractory Scaleguards",
+      "source_status": "forever_beta_community",
+      "itemLevel": 33,
+      "requiredLevel": 28,
+      "quality": "rare",
+      "tooltip": [
+        "Refractory Scaleguards",
+        "Item Level 33",
+        "Legs Mail",
+        "+12 Strength",
+        "+5 Arcane Resistance",
+        "+100 Armor",
+        "Requires Level 28"
+      ],
+      "source_url": "https://foreverchanges.pro/item/273048",
+      "documentation": "documented"
+    },
+    {
+      "key": "273049",
+      "id": 273049,
+      "name": "Archmagister's Faceted Pendant",
+      "source_status": "forever_beta_community",
+      "itemLevel": 35,
+      "requiredLevel": 30,
+      "quality": "rare",
+      "tooltip": [
+        "Archmagister's Faceted Pendant",
+        "Item Level 35",
+        "+6 Intellect",
+        "Equip: +12 Attack Power",
+        "Requires Level 30"
+      ],
+      "source_url": "https://foreverchanges.pro/item/273049",
+      "documentation": "documented"
+    },
+    {
+      "key": "273051",
+      "id": 273051,
+      "name": "Violet Sorcerer's Mantle",
+      "source_status": "forever_beta_community",
+      "itemLevel": 35,
+      "requiredLevel": 30,
+      "quality": "rare",
+      "tooltip": [
+        "Violet Sorcerer's Mantle",
+        "Item Level 35",
+        "Shoulder Cloth",
+        "+9 Intellect",
+        "Equip: +4 Spell Penetration",
+        "Requires Level 30"
+      ],
+      "source_url": "https://foreverchanges.pro/item/273051",
+      "documentation": "documented"
+    },
+    {
+      "key": "273052",
+      "id": 273052,
+      "name": "Ponderous Orb",
+      "source_status": "forever_beta_community",
+      "itemLevel": 35,
+      "requiredLevel": 30,
+      "quality": "rare",
+      "tooltip": [
+        "Ponderous Orb",
+        "Item Level 35",
+        "Held In Off-hand",
+        "+8 Spirit",
+        "+2 Intellect",
+        "Equip: +11 Healing",
+        "Equip: +4 Spell Damage",
+        "Requires Level 30"
+      ],
+      "source_url": "https://foreverchanges.pro/item/273052",
+      "documentation": "documented"
+    },
+    {
+      "key": "273053",
+      "id": 273053,
+      "name": "Tendonscraper Dagger",
+      "source_status": "forever_beta_community",
+      "itemLevel": 33,
+      "requiredLevel": 28,
+      "quality": "rare",
+      "tooltip": [
+        "Tendonscraper Dagger",
+        "Item Level 33",
+        "Main Hand Dagger",
+        "Dégâts : 16 - 30",
+        "Vitesse 1.60",
+        "(14.4 dégâts par seconde)",
+        "+5 Stamina",
+        "Equip: +8 Health Regeneration",
+        "Equip: +36 Spell Power",
+        "Requires Level 28"
+      ],
+      "source_url": "https://foreverchanges.pro/item/273053",
+      "documentation": "documented",
+      "weaponStats": {
+        "damageMin": 16,
+        "damageMax": 30,
+        "speed": 1.6,
+        "dps": 14.4
+      }
+    },
+    {
+      "key": "273054",
+      "id": 273054,
+      "name": "Cartilage Shapers",
+      "source_status": "forever_beta_community",
+      "itemLevel": 33,
+      "requiredLevel": 28,
+      "quality": "rare",
+      "tooltip": [
+        "Cartilage Shapers",
+        "Item Level 33",
+        "Hands Leather",
+        "+9 Agility",
+        "+8 Spirit",
+        "Requires Level 28"
+      ],
+      "source_url": "https://foreverchanges.pro/item/273054",
+      "documentation": "documented"
+    },
+    {
+      "key": "273055",
+      "id": 273055,
+      "name": "Bonepile Gaze",
+      "source_status": "forever_beta_community",
+      "itemLevel": 33,
+      "requiredLevel": 28,
+      "quality": "rare",
+      "tooltip": [
+        "Bonepile Gaze",
+        "Item Level 33",
+        "Off Hand Shield",
+        "Requires Level 28"
+      ],
+      "source_url": "https://foreverchanges.pro/item/273055",
+      "documentation": "missing"
+    },
+    {
+      "key": "273085",
+      "id": 273085,
+      "name": "Blueprint: Fermenter",
+      "source_status": "forever_beta_wowhead",
+      "itemLevel": 25,
       "requiredLevel": null,
       "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=5404",
-      "documentation": "classic_on_demand"
+      "tooltip": [
+        "Blueprint: Fermenter",
+        "Item Level 25",
+        "Recipe · Alchemy",
+        "Requires Alchemy (140)",
+        "Use: Craft a Fermenter.",
+        "Teaches you how to place a Fermenter at a campsite."
+      ],
+      "source_url": "https://foreverchanges.pro/item/273085",
+      "documentation": "documented"
     },
     {
       "key": "273088",
@@ -1784,8 +3073,9 @@
       "requiredLevel": 17,
       "quality": null,
       "tooltip": [
-        "Neck",
+        "Snake Eye Kaleidoscope",
         "Item Level 22",
+        "Neck",
         "+1 Strength",
         "+1 Agility",
         "+1 Stamina",
@@ -1802,832 +3092,81 @@
       "documentation": "documented"
     },
     {
-      "key": "13245",
-      "id": 13245,
-      "name": "Kresh's Back",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
+      "key": "273099",
+      "id": 273099,
+      "name": "Blueprint: Spinning Wheel",
+      "source_status": "forever_beta_community",
+      "itemLevel": 25,
       "requiredLevel": null,
       "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=13245",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "6447",
-      "id": 6447,
-      "name": "Worn Turtle Shell Shield",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=6447",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "6472",
-      "id": 6472,
-      "name": "Stinging Viper",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=6472",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "6473",
-      "id": 6473,
-      "name": "Armor of the Fang",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=6473",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "6449",
-      "id": 6449,
-      "name": "Glowing Lizardscale Cloak",
-      "source_status": "classic_loot_reference",
-      "itemLevel": 22,
-      "requiredLevel": 17,
-      "quality": "rare",
       "tooltip": [
-        "Glowing Lizardscale Cloak",
-        "Item Level 22",
-        "+6 Agility",
-        "+2 Spirit",
-        "Requires Level 17"
+        "Blueprint: Spinning Wheel",
+        "Item Level 25",
+        "Recipe · Tailoring",
+        "Requires Tailoring (140)",
+        "Use: Craft a Spinning Wheel.",
+        "Teaches you how to place a Spinning Wheel at a campsite."
       ],
-      "source_url": "https://wowclassicdatabase.com/item/glowing-lizardscale-cloak",
-      "documentation": "classic_partial"
+      "source_url": "https://foreverchanges.pro/item/273099",
+      "documentation": "documented"
     },
     {
-      "key": "6448",
-      "id": 6448,
-      "name": "Tail Spike",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
+      "key": "273103",
+      "id": 273103,
+      "name": "Blueprint: Arcane Salvager",
+      "source_status": "forever_beta_community",
+      "itemLevel": 25,
       "requiredLevel": null,
       "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=6448",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "6469",
-      "id": 6469,
-      "name": "Venomstrike",
-      "source_status": "classic_loot_reference",
-      "itemLevel": 24,
-      "requiredLevel": 19,
-      "quality": "rare",
       "tooltip": [
-        "Venomstrike",
-        "Item Level 24",
-        "Ranged Bow",
-        "Requires Level 19"
+        "Blueprint: Arcane Salvager",
+        "Item Level 25",
+        "Recipe · Enchanting",
+        "Requires Enchanting (140)",
+        "Use: Craft an Arcane Salvager.",
+        "Teaches you how to place an Arcane Salvager at a campsite."
       ],
-      "source_url": "https://wowclassicdatabase.com/item/venomstrike",
-      "documentation": "classic_on_demand"
+      "source_url": "https://foreverchanges.pro/item/273103",
+      "documentation": "documented"
     },
     {
-      "key": "10411",
-      "id": 10411,
-      "name": "Footpads of the Fang",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
+      "key": "273106",
+      "id": 273106,
+      "name": "Blueprint: Greenhouse",
+      "source_status": "forever_beta_wowhead",
+      "itemLevel": 25,
       "requiredLevel": null,
       "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=10411",
-      "documentation": "classic_on_demand"
+      "tooltip": [
+        "Blueprint: Greenhouse",
+        "Item Level 25",
+        "Recipe · Herbalism",
+        "Requires Herbalism (140)",
+        "Use: Craft a Greenhouse.",
+        "Teaches you how to place a Greenhouse at a campsite."
+      ],
+      "source_url": "https://foreverchanges.pro/item/273106",
+      "documentation": "documented"
     },
     {
-      "key": "6630",
-      "id": 6630,
-      "name": "Seedcloud Buckler",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=6630",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "6631",
-      "id": 6631,
-      "name": "Living Root",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=6631",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "6627",
-      "id": 6627,
-      "name": "Mutant Scale Breastplate",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=6627",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "6463",
-      "id": 6463,
-      "name": "Deep Fathom Ring",
-      "source_status": "classic_loot_reference",
+      "key": "273804",
+      "id": 273804,
+      "name": "Executioner Mantle",
+      "source_status": "forever_beta_wowhead",
       "itemLevel": 26,
       "requiredLevel": 21,
-      "quality": "rare",
+      "quality": null,
       "tooltip": [
-        "Deep Fathom Ring",
+        "Executioner Mantle",
         "Item Level 26",
-        "+3 Intellect",
-        "+3 Stamina",
-        "+6 Spirit",
+        "Shoulder Leather",
+        "72 Armor",
+        "+9 Spirit",
+        "Equip: +10 Attack Power",
         "Requires Level 21"
       ],
-      "source_url": "https://wowclassicdatabase.com/item/deep-fathom-ring",
-      "documentation": "classic_partial"
-    },
-    {
-      "key": "5243",
-      "id": 5243,
-      "name": "Firebelcher",
-      "source_status": "classic_loot_reference",
-      "itemLevel": 20,
-      "requiredLevel": 15,
-      "quality": "rare",
-      "tooltip": [
-        "Firebelcher",
-        "Item Level 20",
-        "Ranged Wand",
-        "Requires Level 15"
-      ],
-      "source_url": "https://wowclassicdatabase.com/item/firebelcher",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "5187",
-      "id": 5187,
-      "name": "Rhahk'Zor's Hammer",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=5187",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "872",
-      "id": 872,
-      "name": "Rockslicer",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=872",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "2169",
-      "id": 2169,
-      "name": "Buzzer Blade",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=2169",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "5195",
-      "id": 5195,
-      "name": "Gold-flecked Gloves",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=5195",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "5194",
-      "id": 5194,
-      "name": "Taskmaster Axe",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=5194",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "1937",
-      "id": 1937,
-      "name": "Buzz Saw",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=1937",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "5443",
-      "id": 5443,
-      "name": "Gold-plated Buckler",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=5443",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "5444",
-      "id": 5444,
-      "name": "Miner's Cape",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=5444",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "5199",
-      "id": 5199,
-      "name": "Smelting Pants",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=5199",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "1156",
-      "id": 1156,
-      "name": "Lavishly Jeweled Ring",
-      "source_status": "classic_loot_reference",
-      "itemLevel": 22,
-      "requiredLevel": 17,
-      "quality": "rare",
-      "tooltip": [
-        "Lavishly Jeweled Ring",
-        "Item Level 22",
-        "+2 Agility",
-        "+6 Intellect",
-        "Requires Level 17"
-      ],
-      "source_url": "https://wowclassicdatabase.com/item/lavishly-jeweled-ring",
-      "documentation": "classic_partial"
-    },
-    {
-      "key": "10403",
-      "id": 10403,
-      "name": "Blackened Defias Belt",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=10403",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "5202",
-      "id": 5202,
-      "name": "Corsair's Overshirt",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=5202",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "5192",
-      "id": 5192,
-      "name": "Thief's Blade",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=5192",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "5196",
-      "id": 5196,
-      "name": "Smite's Reaver",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=5196",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "7230",
-      "id": 7230,
-      "name": "Smite's Mighty Hammer",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=7230",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "5197",
-      "id": 5197,
-      "name": "Cookie's Tenderizer",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=5197",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "5198",
-      "id": 5198,
-      "name": "Cookie's Stirring Rod",
-      "source_status": "classic_loot_reference",
-      "itemLevel": 22,
-      "requiredLevel": 17,
-      "quality": "rare",
-      "tooltip": [
-        "Cookie's Stirring Rod",
-        "Item Level 22",
-        "Ranged Wand",
-        "Requires Level 17"
-      ],
-      "source_url": "https://wowclassicdatabase.com/item/cookies-stirring-rod",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "11982",
-      "id": 11982,
-      "name": "Viridian Band",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=11982",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "5193",
-      "id": 5193,
-      "name": "Cape of the Brotherhood",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=5193",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "5191",
-      "id": 5191,
-      "name": "Cruel Barb",
-      "source_status": "classic_loot_reference",
-      "itemLevel": 24,
-      "requiredLevel": 19,
-      "quality": "rare",
-      "tooltip": [
-        "Cruel Barb",
-        "Item Level 24",
-        "One-Hand Sword",
-        "Equip: +12 Attack Power.",
-        "Requires Level 19"
-      ],
-      "source_url": "https://wowclassicdatabase.com/item/cruel-barb",
-      "documentation": "classic_partial"
-    },
-    {
-      "key": "10399",
-      "id": 10399,
-      "name": "Blackened Defias Armor",
-      "source_status": "classic_loot_reference",
-      "itemLevel": 24,
-      "requiredLevel": 19,
-      "quality": "rare",
-      "tooltip": [
-        "Blackened Defias Armor",
-        "Item Level 24",
-        "+4 Strength",
-        "+3 Agility",
-        "+11 Stamina",
-        "Requires Level 19"
-      ],
-      "source_url": "https://wowclassicdatabase.com/item/blackened-defias-armor",
-      "documentation": "classic_partial"
-    },
-    {
-      "key": "5254",
-      "id": 5254,
-      "name": "Rugged Spaulders",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=5254",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "6226",
-      "id": 6226,
-      "name": "Bloody Apron",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=6226",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "6633",
-      "id": 6633,
-      "name": "Butcher's Slicer",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=6633",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "1292",
-      "id": 1292,
-      "name": "Butcher's Cleaver",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=1292",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "6323",
-      "id": 6323,
-      "name": "Baron's Scepter",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=6323",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "6321",
-      "id": 6321,
-      "name": "Silverlaine's Family Seal",
-      "source_status": "classic_loot_reference",
-      "itemLevel": 26,
-      "requiredLevel": 21,
-      "quality": "rare",
-      "tooltip": [
-        "Silverlaine's Family Seal",
-        "Item Level 26",
-        "+7 Strength",
-        "+3 Stamina",
-        "Requires Level 21"
-      ],
-      "source_url": "https://wowclassicdatabase.com/item/silverlaines-family-seal",
-      "documentation": "classic_partial"
-    },
-    {
-      "key": "3191",
-      "id": 3191,
-      "name": "Arced War Axe",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=3191",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "6320",
-      "id": 6320,
-      "name": "Commander's Crest",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=6320",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "6319",
-      "id": 6319,
-      "name": "Girdle of the Blindwatcher",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=6319",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "6318",
-      "id": 6318,
-      "name": "Odo's Ley Staff",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=6318",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "6324",
-      "id": 6324,
-      "name": "Robes of Arugal",
-      "source_status": "classic_loot_reference",
-      "itemLevel": 29,
-      "requiredLevel": 24,
-      "quality": "rare",
-      "tooltip": [
-        "Robes of Arugal",
-        "Item Level 29",
-        "+9 Intellect",
-        "+5 Stamina",
-        "+10 Spirit",
-        "Requires Level 24"
-      ],
-      "source_url": "https://wowclassicdatabase.com/item/robes-of-arugal",
-      "documentation": "classic_partial"
-    },
-    {
-      "key": "6220",
-      "id": 6220,
-      "name": "Meteor Shard",
-      "source_status": "classic_loot_reference",
-      "itemLevel": 29,
-      "requiredLevel": 24,
-      "quality": "rare",
-      "tooltip": [
-        "Meteor Shard",
-        "Item Level 29",
-        "One-Hand Dagger",
-        "Requires Level 24"
-      ],
-      "source_url": "https://wowclassicdatabase.com/item/meteor-shard",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "6907",
-      "id": 6907,
-      "name": "Tortoise Armor",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=6907",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "6908",
-      "id": 6908,
-      "name": "Ghamoo-ra's Bind",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=6908",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "888",
-      "id": 888,
-      "name": "Naga Battle Gloves",
-      "source_status": "classic_loot_reference",
-      "itemLevel": 27,
-      "requiredLevel": 22,
-      "quality": "rare",
-      "tooltip": [
-        "Naga Battle Gloves",
-        "Item Level 27",
-        "+4 Strength",
-        "+4 Stamina",
-        "+7 Spirit",
-        "Requires Level 22"
-      ],
-      "source_url": "https://wowclassicdatabase.com/item/naga-battle-gloves",
-      "documentation": "classic_partial"
-    },
-    {
-      "key": "3078",
-      "id": 3078,
-      "name": "Naga Heartpiercer",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=3078",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "11121",
-      "id": 11121,
-      "name": "Darkwater Talwar",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=11121",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "6906",
-      "id": 6906,
-      "name": "Algae Fists",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=6906",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "6905",
-      "id": 6905,
-      "name": "Reef Axe",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=6905",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "6901",
-      "id": 6901,
-      "name": "Glowing Thresher Cape",
-      "source_status": "classic_loot_reference",
-      "itemLevel": 29,
-      "requiredLevel": 24,
-      "quality": "rare",
-      "tooltip": [
-        "Glowing Thresher Cape",
-        "Item Level 29",
-        "+3 Strength",
-        "+8 Spirit",
-        "Requires Level 24"
-      ],
-      "source_url": "https://wowclassicdatabase.com/item/glowing-thresher-cape",
-      "documentation": "classic_partial"
-    },
-    {
-      "key": "6904",
-      "id": 6904,
-      "name": "Bite of Serra'kis",
-      "source_status": "classic_loot_reference",
-      "itemLevel": 28,
-      "requiredLevel": 23,
-      "quality": "rare",
-      "tooltip": [
-        "Bite of Serra'kis",
-        "Item Level 28",
-        "One-Hand Dagger",
-        "Requires Level 23"
-      ],
-      "source_url": "https://wowclassicdatabase.com/item/bite-of-serrakis",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "6902",
-      "id": 6902,
-      "name": "Bands of Serra'kis",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=6902",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "1155",
-      "id": 1155,
-      "name": "Rod of the Sleepwalker",
-      "source_status": "classic_loot_reference",
-      "itemLevel": 29,
-      "requiredLevel": 24,
-      "quality": "rare",
-      "tooltip": [
-        "Rod of the Sleepwalker",
-        "Item Level 29",
-        "Two-Hand Staff",
-        "+11 Intellect",
-        "+10 Spirit",
-        "Requires Level 24"
-      ],
-      "source_url": "https://wowclassicdatabase.com/item/rod-of-the-sleepwalker",
-      "documentation": "classic_partial"
-    },
-    {
-      "key": "6903",
-      "id": 6903,
-      "name": "Gaze Dreamer Pants",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=6903",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "6909",
-      "id": 6909,
-      "name": "Strike of the Hydra",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=6909",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "6911",
-      "id": 6911,
-      "name": "Moss Cinch",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=6911",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "6910",
-      "id": 6910,
-      "name": "Leech Pants",
-      "source_status": "classic_loot_reference",
-      "itemLevel": 31,
-      "requiredLevel": 26,
-      "quality": "rare",
-      "tooltip": [
-        "Leech Pants",
-        "Item Level 31",
-        "+5 Intellect",
-        "+15 Spirit",
-        "Requires Level 26"
-      ],
-      "source_url": "https://wowclassicdatabase.com/item/leech-pants",
-      "documentation": "classic_partial"
+      "source_url": "https://foreverchanges.pro/item/273804",
+      "documentation": "documented"
     },
     {
       "key": "273805",
@@ -2641,41 +3180,14 @@
         "Blackrock Harness",
         "Item Level 26",
         "Chest Leather",
+        "96 Armor",
+        "+8 Stamina",
+        "Equip: +4 Defense Rating",
+        "Equip: +14 Attack Power",
         "Requires Level 21"
       ],
-      "source_url": "https://www.60.tools/items/273805-blackrock-harness",
-      "documentation": "missing"
-    },
-    {
-      "key": "273804",
-      "id": 273804,
-      "name": "Executioner Mantle",
-      "source_status": "forever_beta_wowhead",
-      "itemLevel": 26,
-      "requiredLevel": 21,
-      "quality": null,
-      "tooltip": [
-        "Shoulder Leather",
-        "Item Level 26",
-        "72 Armor",
-        "+9 Spirit",
-        "Equip: +10 Attack Power",
-        "Requires Level 21"
-      ],
-      "source_url": "https://foreverchanges.pro/item/273804",
+      "source_url": "https://foreverchanges.pro/item/273805",
       "documentation": "documented"
-    },
-    {
-      "key": "2280",
-      "id": 2280,
-      "name": "Kam's Walking Stick",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=2280",
-      "documentation": "classic_on_demand"
     },
     {
       "key": "273807",
@@ -2686,8 +3198,9 @@
       "requiredLevel": 24,
       "quality": null,
       "tooltip": [
-        "Waist Leather",
+        "Demolition Girdle",
         "Item Level 29",
+        "Waist Leather",
         "57 Armor",
         "+8 Strength",
         "Equip: +9 Spell Damage",
@@ -2724,28 +3237,18 @@
       }
     },
     {
-      "key": "9444",
-      "id": 9444,
-      "name": "Techbot CPU Shell",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
+      "key": "274042",
+      "id": 274042,
+      "name": "Skullduggery Belt",
+      "source_status": "forever_beta_wowhead",
+      "itemLevel": 34,
+      "requiredLevel": 29,
       "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=9444",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "9445",
-      "id": 9445,
-      "name": "Grubbis Paws",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=9445",
-      "documentation": "classic_on_demand"
+      "tooltip": [
+        "Waist Leather"
+      ],
+      "source_url": "https://www.wowhead.com/forever/item=274042",
+      "documentation": "partial"
     },
     {
       "key": "274043",
@@ -2762,121 +3265,22 @@
       "documentation": "partial"
     },
     {
-      "key": "274042",
-      "id": 274042,
-      "name": "Skullduggery Belt",
+      "key": "274049",
+      "id": 274049,
+      "name": "Schematic: 9-60 Battery Pack",
       "source_status": "forever_beta_wowhead",
       "itemLevel": 34,
-      "requiredLevel": 29,
-      "quality": null,
-      "tooltip": [
-        "Waist Leather"
-      ],
-      "source_url": "https://www.wowhead.com/forever/item=274042",
-      "documentation": "partial"
-    },
-    {
-      "key": "9454",
-      "id": 9454,
-      "name": "Acidic Walkers",
-      "source_status": "classic_loot_reference",
-      "itemLevel": 32,
-      "requiredLevel": 27,
-      "quality": "rare",
-      "tooltip": [
-        "Acidic Walkers",
-        "Item Level 32",
-        "Feet Cloth",
-        "+8 Intellect",
-        "+4 Spirit",
-        "Requires Level 27"
-      ],
-      "source_url": "https://wowclassicdatabase.com/item/acidic-walkers",
-      "documentation": "classic_partial"
-    },
-    {
-      "key": "9453",
-      "id": 9453,
-      "name": "Toxic Revenger",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
       "requiredLevel": null,
       "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=9453",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "9452",
-      "id": 9452,
-      "name": "Hydrocane",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=9452",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "9447",
-      "id": 9447,
-      "name": "Electrocutioner Lagnut",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=9447",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "9446",
-      "id": 9446,
-      "name": "Electrocutioner Leg",
-      "source_status": "classic_loot_reference",
-      "itemLevel": 34,
-      "requiredLevel": 29,
-      "quality": "rare",
       "tooltip": [
-        "Electrocutioner Leg",
+        "Schematic: 9-60 Battery Pack",
         "Item Level 34",
-        "Main Hand Sword",
-        "Requires Level 29"
+        "Schematic · Engineering",
+        "Requires Engineering (125)",
+        "Teaches you how to make a 9-60 Battery Pack."
       ],
-      "source_url": "https://wowclassicdatabase.com/item/electrocutioner-leg",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "9449",
-      "id": 9449,
-      "name": "Manual Crowd Pummeler",
-      "source_status": "classic_loot_reference",
-      "itemLevel": 34,
-      "requiredLevel": 29,
-      "quality": "rare",
-      "tooltip": [
-        "Manual Crowd Pummeler",
-        "Item Level 34",
-        "Two-Hand Mace",
-        "+16 Strength",
-        "+5 Agility",
-        "Requires Level 29"
-      ],
-      "source_url": "https://wowclassicdatabase.com/item/manual-crowd-pummeler",
-      "documentation": "classic_partial"
-    },
-    {
-      "key": "9450",
-      "id": 9450,
-      "name": "Gnomebot Operating Boots",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=9450",
-      "documentation": "classic_on_demand"
+      "source_url": "https://foreverchanges.pro/item/274049",
+      "documentation": "documented"
     },
     {
       "key": "274068",
@@ -2899,81 +3303,45 @@
       "documentation": "documented"
     },
     {
-      "key": "274049",
-      "id": 274049,
-      "name": "Schematic: 9-60 Battery Pack",
-      "source_status": "forever_beta_wowhead",
-      "itemLevel": 34,
-      "requiredLevel": null,
+      "key": "274149",
+      "id": 274149,
+      "name": "Thornweaver Drape",
+      "source_status": "forever_beta_cache",
+      "itemLevel": 30,
+      "requiredLevel": 25,
       "quality": null,
       "tooltip": [
-        "Schematic · Engineering",
-        "Item Level 34",
-        "Requires Engineering (125)",
-        "Teaches you how to make a 9-60 Battery Pack."
+        "Thornweaver Drape",
+        "Item Level 30",
+        "Back Cloth",
+        "24 Armor",
+        "+6 Spirit",
+        "Equip: +7 Spell Power",
+        "Requires Level 25"
       ],
-      "source_url": "https://foreverchanges.pro/item/274049",
+      "source_url": "https://foreverchanges.pro/item/274149",
       "documentation": "documented"
     },
     {
-      "key": "9455",
-      "id": 9455,
-      "name": "Emissary Cuffs",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
+      "key": "274155",
+      "id": 274155,
+      "name": "Geomancer Headdress",
+      "source_status": "forever_beta_wowhead",
+      "itemLevel": 30,
+      "requiredLevel": 25,
       "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=9455",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "9492",
-      "id": 9492,
-      "name": "Electromagnetic Gigaflux Reactivator",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=9492",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "9461",
-      "id": 9461,
-      "name": "Charged Gear",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=9461",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "9459",
-      "id": 9459,
-      "name": "Thermaplugg's Left Arm",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=9459",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "6681",
-      "id": 6681,
-      "name": "Thornspike",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=6681",
-      "documentation": "classic_on_demand"
+      "tooltip": [
+        "Geomancer Headdress",
+        "Item Level 30",
+        "Head Leather",
+        "84 Armor",
+        "+14 Spirit",
+        "Equip: +4 Spell Damage",
+        "Equip: +13 Healing",
+        "Requires Level 25"
+      ],
+      "source_url": "https://wowsrc.com/loot/razorfen-kraul/",
+      "documentation": "documented"
     },
     {
       "key": "274158",
@@ -3011,140 +3379,15 @@
       "requiredLevel": 27,
       "quality": null,
       "tooltip": [
-        "Hands Leather",
+        "Thorncursed Grips",
         "Item Level 33",
+        "Hands Leather",
         "68 Armor",
         "Equip: +18 Attack Power",
         "Requires Level 27"
       ],
       "source_url": "https://wowsrc.com/loot/razorfen-kraul/",
       "documentation": "documented"
-    },
-    {
-      "key": "252512",
-      "id": 252512,
-      "name": "Brawler's Leather Helm",
-      "source_status": "forever_beta_community",
-      "itemLevel": 30,
-      "requiredLevel": 25,
-      "quality": "rare",
-      "tooltip": [
-        "Brawler's Leather Helm",
-        "Item Level 30",
-        "Head Leather",
-        "84 Armor",
-        "+10 Agility",
-        "+13 Stamina",
-        "Requires Level 25"
-      ],
-      "source_url": "https://www.60.tools/items/252512-brawlers-leather-helm",
-      "documentation": "documented"
-    },
-    {
-      "key": "2816",
-      "id": 2816,
-      "name": "Death Speaker Scepter",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=2816",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "6685",
-      "id": 6685,
-      "name": "Death Speaker Mantle",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=6685",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "6682",
-      "id": 6682,
-      "name": "Death Speaker Robes",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=6682",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "274155",
-      "id": 274155,
-      "name": "Geomancer Headdress",
-      "source_status": "forever_beta_wowhead",
-      "itemLevel": 30,
-      "requiredLevel": 25,
-      "quality": null,
-      "tooltip": [
-        "Head Leather",
-        "Item Level 30",
-        "84 Armor",
-        "+14 Spirit",
-        "Equip: +4 Spell Damage",
-        "Equip: +13 Healing",
-        "Requires Level 25"
-      ],
-      "source_url": "https://wowsrc.com/loot/razorfen-kraul/",
-      "documentation": "documented"
-    },
-    {
-      "key": "274149",
-      "id": 274149,
-      "name": "Thornweaver Drape",
-      "source_status": "forever_beta_cache",
-      "itemLevel": 30,
-      "requiredLevel": 25,
-      "quality": null,
-      "tooltip": [
-        "Back Cloth",
-        "Item Level 30",
-        "24 Armor",
-        "+6 Spirit",
-        "Equip: +7 Spell Power",
-        "Requires Level 25"
-      ],
-      "source_url": "https://foreverchanges.pro/item/274149",
-      "documentation": "documented"
-    },
-    {
-      "key": "6687",
-      "id": 6687,
-      "name": "Corpsemaker",
-      "source_status": "classic_loot_reference",
-      "itemLevel": 34,
-      "requiredLevel": 29,
-      "quality": "rare",
-      "tooltip": [
-        "Corpsemaker",
-        "Item Level 34",
-        "Two-Hand Axe",
-        "+15 Strength",
-        "+8 Stamina",
-        "Requires Level 29"
-      ],
-      "source_url": "https://wowclassicdatabase.com/item/corpsemaker",
-      "documentation": "classic_partial"
-    },
-    {
-      "key": "6686",
-      "id": 6686,
-      "name": "Tusken Helm",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=6686",
-      "documentation": "classic_on_demand"
     },
     {
       "key": "274161",
@@ -3155,8 +3398,9 @@
       "requiredLevel": 29,
       "quality": null,
       "tooltip": [
-        "Legs Mail",
+        "Quillord Mail Leggings",
         "Item Level 34",
+        "Legs Mail",
         "202 Armor",
         "+11 Stamina",
         "+8 Spirit",
@@ -3167,107 +3411,21 @@
       "documentation": "documented"
     },
     {
-      "key": "6679",
-      "id": 6679,
-      "name": "Armor Piercer",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
+      "key": "274286",
+      "id": 274286,
+      "name": "Durgen Dirgehammer's Head",
+      "itemLevel": 1,
       "requiredLevel": null,
       "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=6679",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "6691",
-      "id": 6691,
-      "name": "Swinetusk Shank",
-      "source_status": "classic_loot_reference",
-      "itemLevel": 35,
-      "requiredLevel": 30,
-      "quality": "rare",
       "tooltip": [
-        "Swinetusk Shank",
-        "Item Level 35",
-        "One-Hand Dagger",
-        "+6 Stamina",
-        "+4 Spirit",
-        "Requires Level 30"
+        "Durgen Dirgehammer's Head",
+        "Item Level 1",
+        "Quest Item",
+        "Unique",
+        "Needed for Old Ironforge Incursion."
       ],
-      "source_url": "https://wowclassicdatabase.com/item/swinetusk-shank",
-      "documentation": "classic_partial"
-    },
-    {
-      "key": "6690",
-      "id": 6690,
-      "name": "Ferine Leggings",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=6690",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "6695",
-      "id": 6695,
-      "name": "Stygian Bone Amulet",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=6695",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "6697",
-      "id": 6697,
-      "name": "Batwing Mantle",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=6697",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "6696",
-      "id": 6696,
-      "name": "Nightstalker Bow",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=6696",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "7682",
-      "id": 7682,
-      "name": "Torturing Poker",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=7682",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "7683",
-      "id": 7683,
-      "name": "Bloody Brass Knuckles",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=7683",
-      "documentation": "classic_on_demand"
+      "source_url": "https://www.wowhead.com/forever/item=274286",
+      "documentation": "documented"
     },
     {
       "key": "274290",
@@ -3278,8 +3436,9 @@
       "requiredLevel": 29,
       "quality": null,
       "tooltip": [
-        "Off Hand Shield",
+        "Painwalker Buckler",
         "Item Level 34",
+        "Off Hand Shield",
         "738 Armor",
         "16 Block",
         "+6 Stamina",
@@ -3291,49 +3450,6 @@
       "documentation": "documented"
     },
     {
-      "key": "252455",
-      "id": 252455,
-      "name": "Defender's Leather Helm",
-      "source_status": "forever_beta_cache",
-      "itemLevel": 30,
-      "requiredLevel": 25,
-      "quality": null,
-      "tooltip": [
-        "Head Leather",
-        "Item Level 30",
-        "84 Armor",
-        "+13 Stamina",
-        "+12 Strength",
-        "Requires Level 25"
-      ],
-      "source_url": "https://foreverchanges.pro/item/252455",
-      "documentation": "documented"
-    },
-    {
-      "key": "7685",
-      "id": 7685,
-      "name": "Orb of the Forgotten Seer",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=7685",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "7684",
-      "id": 7684,
-      "name": "Bloodmage Mantle",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=7684",
-      "documentation": "classic_on_demand"
-    },
-    {
       "key": "274291",
       "id": 274291,
       "name": "Polished Skullcap",
@@ -3342,8 +3458,9 @@
       "requiredLevel": 31,
       "quality": null,
       "tooltip": [
-        "Head Mail",
+        "Polished Skullcap",
         "Item Level 36",
+        "Head Mail",
         "193 Armor",
         "+8 Stamina",
         "+7 Strength",
@@ -3354,88 +3471,92 @@
       "documentation": "documented"
     },
     {
-      "key": "7709",
-      "id": 7709,
-      "name": "Blighted Leggings",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
+      "key": "286978",
+      "id": 286978,
+      "name": "Rotmender's Garb",
+      "itemLevel": 23,
+      "requiredLevel": 18,
       "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=7709",
-      "documentation": "classic_on_demand"
+      "tooltip": [
+        "Rotmender's Garb",
+        "Item Level 23",
+        "Binds when picked up",
+        "Chest Cloth",
+        "41 Armor",
+        "+10 Intellect",
+        "Equip: +11 Healing",
+        "Equip: +4 Spell Damage",
+        "Rotmender's Raiment (0/5)",
+        "(2) Set: +5 Shadow Resistance.",
+        "(3) Set: +10 Intellect.",
+        "(4) Set: When Mana falls below 15%, restore 200 Mana over 10 sec.",
+        "(5) Set: Healing spells can apply an extra 40 Health every 3 sec for 15 sec.",
+        "Requires Level 18"
+      ],
+      "source_url": "https://www.wowhead.com/forever/item=286978",
+      "documentation": "documented"
     },
     {
-      "key": "7708",
-      "id": 7708,
-      "name": "Necrotic Wand",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
+      "key": "286979",
+      "id": 286979,
+      "name": "Rotmender's Gloves",
+      "itemLevel": 22,
+      "requiredLevel": 17,
       "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=7708",
-      "documentation": "classic_on_demand"
+      "tooltip": [
+        "Rotmender's Gloves",
+        "Item Level 22",
+        "Binds when equipped",
+        "Hands Cloth",
+        "25 Armor",
+        "+3 Intellect",
+        "+8 Spirit",
+        "Rotmender's Raiment (0/5)",
+        "(2) Set: +5 Shadow Resistance.",
+        "(3) Set: +10 Intellect.",
+        "(4) Set: When Mana falls below 15%, restore 200 Mana over 10 sec.",
+        "(5) Set: Healing spells can apply an extra 40 Health every 3 sec for 15 sec.",
+        "Requires Level 17"
+      ],
+      "source_url": "https://www.wowhead.com/forever/item=286979",
+      "documentation": "documented"
     },
     {
-      "key": "7691",
-      "id": 7691,
-      "name": "Embalmed Shroud",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
+      "key": "286980",
+      "id": 286980,
+      "name": "Rotmender's Sash",
+      "itemLevel": 22,
+      "requiredLevel": 17,
       "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=7691",
-      "documentation": "classic_on_demand"
+      "tooltip": [
+        "Rotmender's Sash",
+        "Item Level 22",
+        "Binds when equipped",
+        "Waist Cloth",
+        "22 Armor",
+        "+6 Stamina",
+        "+6 Intellect",
+        "Rotmender's Raiment (0/5)",
+        "(2) Set: +5 Shadow Resistance.",
+        "(3) Set: +10 Intellect.",
+        "(4) Set: When Mana falls below 15%, restore 200 Mana over 10 sec.",
+        "(5) Set: Healing spells can apply an extra 40 Health every 3 sec for 15 sec.",
+        "Requires Level 17"
+      ],
+      "source_url": "https://foreverchanges.pro/item/286980",
+      "documentation": "documented"
     },
     {
-      "key": "7690",
-      "id": 7690,
-      "name": "Ebon Vise",
-      "source_status": "classic_loot_reference",
+      "key": "name:plans: arcane recycler",
+      "id": null,
+      "name": "Plans: Arcane Recycler",
+      "source_status": "forever_beta_community",
       "itemLevel": null,
       "requiredLevel": null,
       "quality": null,
       "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=7690",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "7688",
-      "id": 7688,
-      "name": "Ironspine's Ribcage",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=7688",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "7687",
-      "id": 7687,
-      "name": "Ironspine's Fist",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=7687",
-      "documentation": "classic_on_demand"
-    },
-    {
-      "key": "7686",
-      "id": 7686,
-      "name": "Ironspine's Eye",
-      "source_status": "classic_loot_reference",
-      "itemLevel": null,
-      "requiredLevel": null,
-      "quality": null,
-      "tooltip": [],
-      "source_url": "https://www.wowhead.com/classic/item=7686",
-      "documentation": "classic_on_demand"
+      "source_url": null,
+      "documentation": "missing"
     }
   ]
 }
