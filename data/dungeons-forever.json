@@ -2688,7 +2688,9 @@
               "fr": "Spallières robustes",
               "slot": "Épaules · Cuir",
               "source_status": "classic_loot_reference",
-              "source_url": "https://theforeverera.com/en/dungeons/shadowfang-keep/rethilgore/"
+              "source_url": "https://theforeverera.com/en/dungeons/shadowfang-keep/rethilgore/",
+              "iconFileId": 135039,
+              "icon_source": "https://www.icy-veins.com/wow-forever/shadowfang-keep-guide"
             }
           ],
           "rare": false,
@@ -2715,21 +2717,27 @@
               "fr": "Tablier sanglant",
               "slot": "Torse · Tissu",
               "source_status": "classic_loot_reference",
-              "source_url": "https://theforeverera.com/en/dungeons/shadowfang-keep/razorclaw-the-butcher/"
+              "source_url": "https://theforeverera.com/en/dungeons/shadowfang-keep/razorclaw-the-butcher/",
+              "iconFileId": 132665,
+              "icon_source": "https://www.icy-veins.com/wow-forever/shadowfang-keep-guide"
             },
             {
               "en": "Butcher's Slicer",
               "fr": "Hachoir du boucher",
               "slot": "Épée 1M",
               "source_status": "classic_loot_reference",
-              "source_url": "https://theforeverera.com/en/dungeons/shadowfang-keep/razorclaw-the-butcher/"
+              "source_url": "https://theforeverera.com/en/dungeons/shadowfang-keep/razorclaw-the-butcher/",
+              "iconFileId": 135314,
+              "icon_source": "https://www.icy-veins.com/wow-forever/shadowfang-keep-guide"
             },
             {
               "en": "Butcher's Cleaver",
               "fr": "Fendoir du Boucher",
               "slot": "Hache 1M",
               "source_status": "classic_loot_reference",
-              "source_url": "https://theforeverera.com/en/dungeons/shadowfang-keep/razorclaw-the-butcher/"
+              "source_url": "https://theforeverera.com/en/dungeons/shadowfang-keep/razorclaw-the-butcher/",
+              "iconFileId": 132417,
+              "icon_source": "https://www.icy-veins.com/wow-forever/shadowfang-keep-guide"
             }
           ],
           "rare": false,
@@ -2755,7 +2763,9 @@
               "en": "Baron's Scepter",
               "fr": "Sceptre du baron",
               "slot": "Masse / Mace",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "iconFileId": 133477,
+              "icon_source": "https://www.icy-veins.com/wow-forever/shadowfang-keep-guide"
             },
             {
               "en": "Silverlaine's Family Seal",
@@ -2767,7 +2777,9 @@
               "quality": "rare",
               "itemLevel": 26,
               "requiredLevel": 21,
-              "itemUrl": "https://www.wowhead.com/classic/item=6321"
+              "itemUrl": "https://www.wowhead.com/classic/item=6321",
+              "iconFileId": 132518,
+              "icon_source": "https://www.icy-veins.com/wow-forever/shadowfang-keep-guide"
             }
           ],
           "rare": false,
@@ -2794,14 +2806,18 @@
               "fr": "Hache de guerre arquée",
               "slot": "Hache 2M",
               "source_status": "classic_loot_reference",
-              "source_url": "https://theforeverera.com/en/dungeons/shadowfang-keep/commander-springvale/"
+              "source_url": "https://theforeverera.com/en/dungeons/shadowfang-keep/commander-springvale/",
+              "iconFileId": 132397,
+              "icon_source": "https://www.icy-veins.com/wow-forever/shadowfang-keep-guide"
             },
             {
               "en": "Commander's Crest",
               "fr": "Écu du commandant",
               "slot": "Bouclier",
               "source_status": "classic_loot_reference",
-              "source_url": "https://theforeverera.com/en/dungeons/shadowfang-keep/commander-springvale/"
+              "source_url": "https://theforeverera.com/en/dungeons/shadowfang-keep/commander-springvale/",
+              "iconFileId": 134949,
+              "icon_source": "https://www.icy-veins.com/wow-forever/shadowfang-keep-guide"
             }
           ],
           "rare": false,
@@ -2828,14 +2844,18 @@
               "fr": "Ceinturon de l'Aveugle",
               "slot": "Taille · Cuir",
               "source_status": "classic_loot_reference",
-              "source_url": "https://theforeverera.com/en/dungeons/shadowfang-keep/odo-the-blindwatcher/"
+              "source_url": "https://theforeverera.com/en/dungeons/shadowfang-keep/odo-the-blindwatcher/",
+              "iconFileId": 132492,
+              "icon_source": "https://www.icy-veins.com/wow-forever/shadowfang-keep-guide"
             },
             {
               "en": "Odo's Ley Staff",
               "fr": "Bâton tellurique d'Odo",
               "slot": "Bâton 2M",
               "source_status": "classic_loot_reference",
-              "source_url": "https://theforeverera.com/en/dungeons/shadowfang-keep/odo-the-blindwatcher/"
+              "source_url": "https://theforeverera.com/en/dungeons/shadowfang-keep/odo-the-blindwatcher/",
+              "iconFileId": 135164,
+              "icon_source": "https://www.icy-veins.com/wow-forever/shadowfang-keep-guide"
             }
           ],
           "rare": false,
@@ -2899,7 +2919,9 @@
               "en": "Arugal's Robes",
               "fr": "Robe d'Arugal",
               "slot": "Torse / Chest",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "iconFileId": 132672,
+              "icon_source": "https://www.icy-veins.com/wow-forever/shadowfang-keep-guide"
             },
             {
               "en": "Meteor Shard",
@@ -2910,7 +2932,9 @@
               "quality": "rare",
               "itemLevel": 29,
               "requiredLevel": 24,
-              "itemUrl": "https://www.wowhead.com/classic/item=6220"
+              "itemUrl": "https://www.wowhead.com/classic/item=6220",
+              "iconFileId": 135661,
+              "icon_source": "https://www.icy-veins.com/wow-forever/shadowfang-keep-guide"
             }
           ],
           "rare": false,
@@ -3008,13 +3032,17 @@
               "en": "Tortoise Armor",
               "fr": "Armure de la tortue",
               "slot": "Torse / Chest",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "iconFileId": 135010,
+              "icon_source": "https://www.icy-veins.com/wow-forever/blackfathom-deeps-guide"
             },
             {
               "en": "Ghamoo-ra's Bind",
               "fr": "Lien de Ghamoo-ra",
               "slot": "Taille / Waist",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "iconFileId": 132513,
+              "icon_source": "https://www.icy-veins.com/wow-forever/blackfathom-deeps-guide"
             }
           ],
           "note": {
@@ -3045,20 +3073,26 @@
               "quality": "rare",
               "itemLevel": 27,
               "requiredLevel": 22,
-              "itemUrl": "https://www.wowhead.com/classic/item=888"
+              "itemUrl": "https://www.wowhead.com/classic/item=888",
+              "iconFileId": 132947,
+              "icon_source": "https://www.icy-veins.com/wow-forever/blackfathom-deeps-guide"
             },
             {
               "en": "Naga Heartpiercer",
               "fr": "Perce-cœur naga",
               "slot": "À distance / Ranged",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "iconFileId": 135492,
+              "icon_source": "https://www.icy-veins.com/wow-forever/blackfathom-deeps-guide"
             },
             {
               "en": "Darkwater Talwar",
               "fr": "Talwar d'eau sombre",
               "slot": "Épée 1M",
               "source_status": "classic_loot_reference",
-              "source_url": "https://theforeverera.com/en/dungeons/blackfathom-deeps/lady-sarevess/"
+              "source_url": "https://theforeverera.com/en/dungeons/blackfathom-deeps/lady-sarevess/",
+              "iconFileId": 135346,
+              "icon_source": "https://www.icy-veins.com/wow-forever/blackfathom-deeps-guide"
             }
           ],
           "note": {
@@ -3085,14 +3119,18 @@
               "fr": "Poings d'algues",
               "slot": "Mains · Mailles",
               "source_status": "classic_loot_reference",
-              "source_url": "https://theforeverera.com/en/dungeons/blackfathom-deeps/geilhast/"
+              "source_url": "https://theforeverera.com/en/dungeons/blackfathom-deeps/geilhast/",
+              "iconFileId": 132944,
+              "icon_source": "https://www.icy-veins.com/wow-forever/blackfathom-deeps-guide"
             },
             {
               "en": "Reef Axe",
               "fr": "Hache récifale",
               "slot": "Hache 2M",
               "source_status": "classic_loot_reference",
-              "source_url": "https://theforeverera.com/en/dungeons/blackfathom-deeps/geilhast/"
+              "source_url": "https://theforeverera.com/en/dungeons/blackfathom-deeps/geilhast/",
+              "iconFileId": 135576,
+              "icon_source": "https://www.icy-veins.com/wow-forever/blackfathom-deeps-guide"
             }
           ],
           "note": {
@@ -3143,7 +3181,9 @@
               "quality": "rare",
               "itemLevel": 29,
               "requiredLevel": 24,
-              "itemUrl": "https://www.wowhead.com/classic/item=6901"
+              "itemUrl": "https://www.wowhead.com/classic/item=6901",
+              "iconFileId": 134305,
+              "icon_source": "https://www.icy-veins.com/wow-forever/blackfathom-deeps-guide"
             },
             {
               "en": "Bite of Serra'kis",
@@ -3155,14 +3195,18 @@
               "quality": "rare",
               "itemLevel": 28,
               "requiredLevel": 23,
-              "itemUrl": "https://www.wowhead.com/classic/item=6904"
+              "itemUrl": "https://www.wowhead.com/classic/item=6904",
+              "iconFileId": 134298,
+              "icon_source": "https://www.icy-veins.com/wow-forever/blackfathom-deeps-guide"
             },
             {
               "en": "Bands of Serra'kis",
               "fr": "Brassards de Serra'kis",
               "slot": "Poignets · Cuir",
               "source_status": "classic_loot_reference",
-              "source_url": "https://theforeverera.com/en/dungeons/blackfathom-deeps/old-serrakis/"
+              "source_url": "https://theforeverera.com/en/dungeons/blackfathom-deeps/old-serrakis/",
+              "iconFileId": 132607,
+              "icon_source": "https://www.icy-veins.com/wow-forever/blackfathom-deeps-guide"
             }
           ],
           "note": {
@@ -3193,14 +3237,18 @@
               "quality": "rare",
               "itemLevel": 29,
               "requiredLevel": 24,
-              "itemUrl": "https://www.wowhead.com/classic/item=1155"
+              "itemUrl": "https://www.wowhead.com/classic/item=1155",
+              "iconFileId": 135143,
+              "icon_source": "https://www.icy-veins.com/wow-forever/blackfathom-deeps-guide"
             },
             {
               "en": "Gaze Dreamer Pants",
               "fr": "Pantalon du rêveur",
               "slot": "Jambes · Tissu",
               "source_status": "classic_loot_reference",
-              "source_url": "https://theforeverera.com/en/dungeons/blackfathom-deeps/twilight-lord-kelris/"
+              "source_url": "https://theforeverera.com/en/dungeons/blackfathom-deeps/twilight-lord-kelris/",
+              "iconFileId": 134582,
+              "icon_source": "https://www.icy-veins.com/wow-forever/blackfathom-deeps-guide"
             }
           ],
           "note": {
@@ -3226,14 +3274,18 @@
               "en": "Strike of the Hydra",
               "fr": "Frappe de l'hydre",
               "slot": "Épée deux mains",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "iconFileId": 135352,
+              "icon_source": "https://www.icy-veins.com/wow-forever/blackfathom-deeps-guide"
             },
             {
               "en": "Moss Cinch",
               "fr": "Ceinture de mousse",
               "slot": "Taille · Cuir",
               "source_status": "classic_loot_reference",
-              "source_url": "https://theforeverera.com/en/dungeons/blackfathom-deeps/akumai/"
+              "source_url": "https://theforeverera.com/en/dungeons/blackfathom-deeps/akumai/",
+              "iconFileId": 132514,
+              "icon_source": "https://www.icy-veins.com/wow-forever/blackfathom-deeps-guide"
             },
             {
               "en": "Leech Pants",
@@ -3245,7 +3297,9 @@
               "quality": "rare",
               "itemLevel": 31,
               "requiredLevel": 26,
-              "itemUrl": "https://www.wowhead.com/classic/item=6910"
+              "itemUrl": "https://www.wowhead.com/classic/item=6910",
+              "iconFileId": 134594,
+              "icon_source": "https://www.icy-veins.com/wow-forever/blackfathom-deeps-guide"
             }
           ],
           "note": {
@@ -3327,14 +3381,18 @@
                 "Chest Leather",
                 "Requires Level 21"
               ],
-              "itemUrl": "https://www.wowhead.com/forever/item=273805"
+              "itemUrl": "https://www.wowhead.com/forever/item=273805",
+              "iconFileId": 132719,
+              "icon_source": "https://www.icy-veins.com/wow-forever/the-stockade-guide"
             },
             {
               "en": "Executioner Mantle",
               "fr": "Mantelet d'exécuteur",
               "slot": "Épaules / Shoulders",
               "isNew": true,
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "iconFileId": 135039,
+              "icon_source": "https://www.icy-veins.com/wow-forever/the-stockade-guide"
             }
           ],
           "rare": false,
@@ -3354,14 +3412,18 @@
               "en": "Kam's Walking Stick",
               "fr": "Canne de Kam",
               "slot": "Bâton / Staff",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "iconFileId": 135143,
+              "icon_source": "https://www.icy-veins.com/wow-forever/the-stockade-guide"
             },
             {
               "en": "Demolition Girdle",
               "fr": "Ceinturon de démolition",
               "slot": "Taille / Waist",
               "isNew": true,
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "iconFileId": 132513,
+              "icon_source": "https://www.icy-veins.com/wow-forever/the-stockade-guide"
             }
           ],
           "rare": false,
@@ -3381,7 +3443,9 @@
               "en": "Hamhock's Cleaver",
               "fr": "Couperet de Jambon",
               "slot": "Hache / Axe",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "iconFileId": 132392,
+              "icon_source": "https://www.icy-veins.com/wow-forever/the-stockade-guide"
             }
           ],
           "rare": false,
@@ -6673,6 +6737,6 @@
     "iconRuins": "https://woweternity.com/forever/dungeons/ruins-of-lordaeron",
     "classicIconDoc": "https://docs.wowdb.assemblee-defias.fr/items"
   },
-  "iconPolicy": "Exact Blizzard icon tokens only from item sources (WoWEternity original item icon labels, Wowhead Classic or beta client). For mapped Classic item IDs, client may request WoWDB des Défias icon by ID. Unknown icon stays questionmark; never substitute a different item or a scroll icon by slot.",
+  "iconPolicy": "Exact Blizzard icon tokens only from item sources (WoWEternity original item icon labels, Wowhead Classic or beta client). For mapped Classic item IDs, client may request WoWDB des Défias icon by ID. Unknown icon stays questionmark; never substitute a different item or a scroll icon by slot. Item icon asset IDs from Icy Veins Forever loot guides are hosted on their original CDN. For classic boss items, unknown icons are resolved via exact ID/name match against WoWDB des Défias where possible.",
   "qualityPolicy": "Quality comes from matched beta/Classic item records or trusted item guides. Missing or ambiguous quality is neutral, not epic/rare by default."
 }
