@@ -280,3 +280,32 @@
  .dg-map-top{padding:9px}
  .dg-map-top h2{font-size:16px}
 }
+
+
+/* Dungeon loot: strict Blizzard item-quality palette.
+   Never infer epic/violet from an unknown source or from an equipment slot. */
+.dg-drop{--dg-item-name:#e2e5db;--dg-item-frame:#526052;--dg-item-halo:transparent;color:#e2e5db;border-color:#3b4c3d;background:#16251b}
+.dg-drop strong{color:var(--dg-item-name);font-weight:650}
+.dg-drop img{border:2px solid var(--dg-item-frame);background:#080e0b;box-shadow:0 0 0 1px var(--dg-item-halo);border-radius:2px}
+.dg-drop[data-quality="poor"]{--dg-item-name:#a1a1a1;--dg-item-frame:#747474}
+.dg-drop[data-quality="common"]{--dg-item-name:#f1f1ec;--dg-item-frame:#a2a8a0}
+.dg-drop[data-quality="uncommon"]{--dg-item-name:#52d56c;--dg-item-frame:#349147}
+.dg-drop[data-quality="rare"]{--dg-item-name:#61a7ff;--dg-item-frame:#287bd7}
+.dg-drop[data-quality="epic"]{--dg-item-name:#c28af4;--dg-item-frame:#954cc3}
+.dg-drop[data-quality="legendary"]{--dg-item-name:#ffa452;--dg-item-frame:#d47d21}
+.dg-drop[data-quality="artifact"]{--dg-item-name:#e5cd82;--dg-item-frame:#a78d42}
+.dg-drop[data-quality="heirloom"]{--dg-item-name:#83d8e0;--dg-item-frame:#5ba1ad}
+.dg-drop:hover,.dg-drop:focus-visible{background:#203428;border-color:#799576}
+.dg-drop:hover strong,.dg-drop:focus-visible strong{color:var(--dg-item-name)}
+.dg-drop.dg-icon-unavailable img{border-color:#4f6152;opacity:.72}
+.dg-drop.dg-icon-unavailable img:hover{opacity:.94}
+.dg-tooltip{border-color:#546d58}
+.dg-tooltip strong{color:#e6dbc4}
+.dg-tooltip[data-quality="poor"] strong{color:#a1a1a1}
+.dg-tooltip[data-quality="common"] strong{color:#f1f1ec}
+.dg-tooltip[data-quality="uncommon"] strong{color:#52d56c}
+.dg-tooltip[data-quality="rare"] strong{color:#61a7ff}
+.dg-tooltip[data-quality="epic"] strong{color:#c28af4}
+.dg-tooltip[data-quality="legendary"] strong{color:#ffa452}
+.dg-tooltip[data-quality="artifact"] strong{color:#e5cd82}
+.dg-tooltip[data-quality="heirloom"] strong{color:#83d8e0}
