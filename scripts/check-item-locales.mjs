@@ -49,6 +49,23 @@ for(const [id,english,french] of [[5243,"Firebelcher","Crache-feu"],[6220,"Meteo
  assert.equal(en.name(item),english);
  assert.equal(fr.resolved(item).verified,true);
 }
+// Source-reviewed item names (Classic frFR) shared across dungeon loot, BiS,
+// the main equipment table and homepage search results.
+for(const [id,english,french] of [
+ [14150,"Robe of Evocation","Robe d'évocation"],
+ [1156,"Lavishly Jeweled Ring","Anneau somptueux"],
+ [6463,"Deep Fathom Ring","Anneau des grandes profondeurs"],
+ [14147,"Cavedweller Bracers","Brassards cavernicoles"],
+ [9449,"Manual Crowd Pummeler","Roueur manuel"],
+ [6904,"Bite of Serra'kis","Morsure de Serra'kis"],
+ [6691,"Swinetusk Shank","Surin de brochepourceau"]
+]){
+ const item={id,name:english,name_fr:"Traduction obsolète",source_status:"classic_curated_leveling"};
+ assert.equal(fr.name(item),french,"Published Classic French name regression: "+id);
+ assert.equal(en.name(item),english);
+ assert.equal(fr.resolved(item).verified,true);
+ assert.ok(fr.aliases(item).includes(french),"Search alias missing for "+id);
+}
 const untranslatedBeta={id:273030,name:"Ring of Power Regulation",name_fr:"Anneau de régulation de puissance",source_status:"forever_beta_observed"};
 assert.equal(fr.name(untranslatedBeta),"Ring of Power Regulation","Non-localized Wowhead Forever items must remain English");
 assert.equal(fr.resolved(untranslatedBeta).translation_missing,true);
