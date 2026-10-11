@@ -28,7 +28,8 @@ function visibleList(){if(!db)return[];const txt=esc(search.value.trim()),mode=s
  return db.dungeons.filter(d=>(!txt||esc([name(d.name),d.name.en,d.name.fr,d.zone.en,d.zone.fr,...d.bosses.flatMap(b=>[b.name.en,b.name.fr,...(b.loot||[]).flatMap(i=>[i.en,i.fr,itemName(i)])])].join(" ")).includes(txt))&&(mode==="all"||d.beta===mode||(mode==="classic"&&d.type==="classic")||(mode==="forever"&&d.type==="forever")||(mode==="mapped"&&!!d.floorMap)||(mode==="accessible"&&d.level[0]<=30))&&(!levelN||(d.level[0]<=levelN&&d.level[1]>=levelN)));
 }
 function renderDirectory(){if(!db)return;const rows=visibleList(),scroll=result.scrollTop;result.replaceChildren();$("dg-count").textContent=rows.length+" / "+db.dungeons.length;
- for(const d of rows){const b=elbtn(null,"dg-entry"+(selected?.id===d.id?" active":""),()=>select(d));
+ const label=$("dg-active-dungeon");if(label)label.textContent=selected?name(selected.name):t("Choisir un donjon","Choose a dungeon");
+ for(const d of rows){const b=elbtn(null,"dg-entry"+(selected?.id===d.id?" active":""),()=>{select(d);$("dg-directory").open=false});
  b.setAttribute("aria-current",selected?.id===d.id?"true":"false");
  const top=m("span",null,"dg-entry-top");top.append(m("strong",name(d.name)),m("span",d.level.join("–"),"dg-level"));b.append(top);
  b.append(m("small",name(d.zone),"dg-entry-zone"));
@@ -208,7 +209,9 @@ cvs.addEventListener("pointermove",e=>{const p=canvasPoint(e);if(!drag){const pi
 cvs.addEventListener("pointerup",e=>{if(!drag)return;const p=canvasPoint(e);if(!drag.moved&&view==="route"){const pin=hit(p.x,p.y);if(pin?.i>=0)chooseBoss(pin.i,true)}drag=null});
 cvs.addEventListener("pointercancel",()=>drag=null);cvs.addEventListener("pointerleave",()=>{const h=$("dg-map-hover");if(h)h.hidden=true});
 cvs.addEventListener("keydown",e=>{if(!selected?.bosses.length)return;if(e.key==="ArrowRight"||e.key==="ArrowDown"){e.preventDefault();chooseBoss((selectedBoss+1)%selected.bosses.length)}if(e.key==="ArrowLeft"||e.key==="ArrowUp"){e.preventDefault();chooseBoss((selectedBoss+selected.bosses.length-1)%selected.bosses.length)}});
-[search,level,status].forEach(e=>e.addEventListener(e.tagName==="INPUT"?"input":"change",()=>{renderDirectory()}));
+[search,level,status].forEach(e=>e.addEventListener(e.tagName==="INPUT"?"input":"change",()=>{renderDirectory();if(e===search&&search.value.trim())$("dg-directory").open=true}));
+document.addEventListener("pointerdown",e=>{const picker=$("dg-directory");if(picker.open&&!picker.contains(e.target))picker.open=false});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")$("dg-directory").open=false});
 fetch(endpoint,{cache:"no-cache"}).then(r=>{if(!r.ok)throw Error("HTTP "+r.status);return r.json()}).then(d=>{if(!Array.isArray(d.dungeons))throw Error("Invalid data");db=d;
  const all=d.dungeons;all.sort((a,b)=>a.level[0]-b.level[0]||(a.type==="forever"?-1:1));const planned=all.find(x=>x.id===q.get("donjon"))||all.find(x=>x.id==="hall-of-thanes")||all[0];select(planned);
  const bossIndex=Number(q.get("boss"));if(bossIndex>1&&bossIndex<=planned.bosses.length)chooseBoss(bossIndex-1);
