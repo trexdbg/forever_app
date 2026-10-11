@@ -29,7 +29,6 @@ const categories={
  talents:T("Talents & BiS","Talents & BiS"),professions:T("Métiers","Professions")
 };
 let entries=[],known=new Set(),loaded=0,failed=0,started=false,complete=false,active="all",limit=12,shown=[];
-const totalSources=14;
 function add(kind,name,detail,href,aliases=[],boost=0){
  const title=String(name??"").trim();
  if(!title||!href)return;
@@ -40,10 +39,11 @@ function add(kind,name,detail,href,aliases=[],boost=0){
  entries.push({kind,title,detail:String(detail||""),href,boost,exact:clean(title),terms:clean(all.join(" "))});
 }
 function itemLabels(i){
- const local=window.ForeverItemLocale?.resolved?.(i);
- const original=typeof i.name==="string"?i.name:(label(i.name)||"");
- const fr=local?.fr||i.name_fr||i.name?.fr||original;
- const english=local?.en||i.name_en||i.name?.en||original;
+ const original=typeof i.name==="string"?i.name:(i.name?.en||i.name?.fr||"");
+ const normalized={...i,name:original,name_fr:i.name_fr||i.name?.fr,name_en:i.name_en||i.name?.en};
+ const local=window.ForeverItemLocale?.resolved?.(normalized);
+ const fr=normalized.name_fr||local?.fr||original;
+ const english=normalized.name_en||local?.en||original;
  return {display:en?english:fr,names:[fr,english,original,String(i.id||"")]};
 }
 function itemRows(db){
@@ -53,7 +53,7 @@ function itemRows(db){
   const source=String(i.source_status||"");
   const origin=i.origin_fr||i.origin_en||i.origin||"";
   const type=source.includes("forever")?T("Forever bêta","Forever beta"):T("Référence Classic","Classic reference");
-  add("items",n.display,type+(origin?" · "+origin:""),url("equipements/",{q:i.id}),[...n.names,origin,i.slot,i.armorType],8);
+  add("items",n.display,type+(origin?" · "+origin:""),url("equipements/",{q:i.id}),[...n.names,origin,i.slot,i.armorType,i.tooltip||[]],8);
  }
 }
 function npcRows(db){
@@ -316,7 +316,7 @@ input.addEventListener("keydown",e=>{
  if(e.key==="Enter"&&shown.length){e.preventDefault();location.assign(shown[0].href);}
 });
 results.addEventListener("keydown",e=>{
- if(e.key==="Escape"){e.preventDefault();panel.hidden=true;input.focus();}
+ if(e.key==="Escape"){e.preventDefault();input.focus();panel.hidden=true;input.setAttribute("aria-expanded","false");}
  if(e.key!=="ArrowDown"&&e.key!=="ArrowUp")return;
  e.preventDefault();
  const ix=shown.indexOf(document.activeElement),move=e.key==="ArrowDown"?ix+1:ix-1;
