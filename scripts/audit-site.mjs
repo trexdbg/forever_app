@@ -57,6 +57,13 @@ const obj=JSON.parse(m[1]);for(const part of obj["@graph"]||[obj])if(part["@type
 catch(e){issue("error","BAD_JSON_LD",path,String(e).slice(0,90))}}
 if(!hasArticle)issue("warning","ARTICLE_MISSING",path,"Structured data has no Article");
 if(!s.includes("/sources/"))issue("warning","METHODOLOGY_LINK_MISSING",path,"No link to source methodology")}
+// Public pages must link to readable pages instead of raw JSON datasets.
+for(const m of s.matchAll(/<a\b[^>]*\bhref=["']([^"']+)["'][^>]*>/gi)){
+  try{const destination=new URL(m[1],url);if(/\.json$/i.test(destination.pathname))issue("error","PUBLIC_JSON_LINK",path,m[1])}
+  catch{issue("warning","INVALID_LINK",path,m[1])}
+}
+if(guide&&/"citation"\s*:\s*\[[^\]]*\/data\/[^"\]]+\.json/i.test(s))
+ issue("error","PUBLIC_JSON_CITATION",path,"Article citation links to a raw JSON dataset");
 for(const m of s.matchAll(/(?:href|src)=["']([^"']+)["']/gi)){const v=m[1];if(v.startsWith("#")||/^(?:data:|mailto:|tel:|javascript:)/i.test(v))continue;
 try{const target=new URL(v,url);if(target.origin!==origin)continue;links++;if(!known.has(toFile(target)))issue("warning","BROKEN_INTERNAL_LINK",path,v)}
 catch{issue("warning","INVALID_LINK",path,v)}}
