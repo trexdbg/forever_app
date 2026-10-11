@@ -14091,13 +14091,19 @@
       "offer_details": {
         "250365": {
           "source": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
-          "source_kind": "forever_beta_vendor_guide",
-          "currency": "merchants_favor",
+          "source_kind": "forever_guide_named_vendor",
           "price_amount": 180,
           "reputation": {
             "faction": "Azeroth Commerce Authority",
             "rank": "Honored"
-          }
+          },
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-11",
+          "price": {
+            "amount": 180,
+            "currency": "merchants_favor"
+          },
+          "bind": "pickup"
         },
         "250376": {
           "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
@@ -14123,25 +14129,43 @@
         },
         "250383": {
           "source": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
-          "source_kind": "forever_beta_vendor_guide",
-          "currency": "merchants_favor",
+          "source_kind": "forever_guide_named_vendor",
           "price_amount": 120,
           "reputation": {
             "faction": "Azeroth Commerce Authority",
             "rank": "Friendly"
-          }
+          },
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-11",
+          "price": {
+            "amount": 120,
+            "currency": "merchants_favor"
+          },
+          "bind": "pickup"
         },
         "250388": {
           "source": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
-          "source_kind": "forever_beta_vendor_guide",
-          "currency": "merchants_favor",
-          "price_amount": 45
+          "source_kind": "forever_guide_named_vendor",
+          "price_amount": 45,
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-11",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "bind": "pickup"
         },
         "250990": {
           "source": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
-          "source_kind": "forever_beta_vendor_guide",
-          "currency": "merchants_favor",
-          "price_amount": 45
+          "source_kind": "forever_guide_named_vendor",
+          "price_amount": 45,
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-11",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "bind": "pickup"
         },
         "250998": {
           "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
@@ -14198,35 +14222,59 @@
       "offer_details": {
         "250365": {
           "source": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
-          "source_kind": "forever_beta_vendor_guide",
-          "currency": "merchants_favor",
+          "source_kind": "forever_guide_named_vendor",
           "price_amount": 180,
           "reputation": {
             "faction": "Durotar Supply and Logistics",
             "rank": "Honored"
-          }
+          },
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-11",
+          "price": {
+            "amount": 180,
+            "currency": "merchants_favor"
+          },
+          "bind": "pickup"
         },
         "250383": {
           "source": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
-          "source_kind": "forever_beta_vendor_guide",
-          "currency": "merchants_favor",
+          "source_kind": "forever_guide_named_vendor",
           "price_amount": 120,
           "reputation": {
             "faction": "Durotar Supply and Logistics",
             "rank": "Friendly"
-          }
+          },
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-11",
+          "price": {
+            "amount": 120,
+            "currency": "merchants_favor"
+          },
+          "bind": "pickup"
         },
         "250388": {
           "source": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
-          "source_kind": "forever_beta_vendor_guide",
-          "currency": "merchants_favor",
-          "price_amount": 45
+          "source_kind": "forever_guide_named_vendor",
+          "price_amount": 45,
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-11",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "bind": "pickup"
         },
         "250990": {
           "source": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
-          "source_kind": "forever_beta_vendor_guide",
-          "currency": "merchants_favor",
-          "price_amount": 45
+          "source_kind": "forever_guide_named_vendor",
+          "price_amount": 45,
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-11",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "bind": "pickup"
         },
         "250998": {
           "source": "https://www.wowhead.com/forever/item=250998",
@@ -15428,6 +15476,9 @@
     "scope": "Forever beta guide verified items and vendor tables; Classic guide offers retained as unverified",
     "forever_vendor_offers": 43,
     "classic_unverified_offers": 588,
-    "source": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce"
+    "source": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+    "forever_documented_offers": 54,
+    "forever_documented_items": 27,
+    "classic_offer_policy": "Any pair without verification_status=forever_documented is only a Classic or unverified source; never claim server inventory."
   }
 }
