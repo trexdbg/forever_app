@@ -4658,13 +4658,21 @@
               "en": "Torturing Poker",
               "fr": "Tisonnier de torture",
               "slot": "Dague",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "id": 7682,
+              "itemUrl": "https://www.wowhead.com/classic/item=7682",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             },
             {
               "en": "Bloody Brass Knuckles",
               "fr": "Coup de poing sanglant en laiton",
               "slot": "Pugilat",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "id": 7683,
+              "itemUrl": "https://www.wowhead.com/classic/item=7683",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             },
             {
               "en": "Painwalker Buckler",
@@ -4713,14 +4721,22 @@
               "en": "Bloodmage Mantle",
               "fr": "Mantelet du mage de sang",
               "slot": "Épaules",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "id": 7684,
+              "itemUrl": "https://www.wowhead.com/classic/item=7684",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             },
             {
               "en": "Polished Skullcap",
               "fr": "Calotte polie",
               "slot": "Tête / Mailles",
               "isNew": true,
-              "source_status": "classic_loot_reference"
+              "source_status": "forever_beta_wowhead",
+              "id": 274291,
+              "itemUrl": "https://www.wowhead.com/forever/item=274291",
+              "id_reference_status": "forever_item_page_verified",
+              "forever_loot_confirmed": null
             }
           ],
           "rare": false,
@@ -4746,13 +4762,21 @@
               "en": "Blighted Leggings",
               "fr": "Jambières corrompues",
               "slot": "Jambes / Tissu",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "id": 7709,
+              "itemUrl": "https://www.wowhead.com/classic/item=7709",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             },
             {
               "en": "Necrotic Wand",
               "fr": "Baguette nécrotique",
               "slot": "Baguette",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "id": 7708,
+              "itemUrl": "https://www.wowhead.com/classic/item=7708",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             },
             {
               "en": "Brawler's Leather Helm",
@@ -4800,13 +4824,21 @@
               "en": "Embalmed Shroud",
               "fr": "Linceul embaumé",
               "slot": "Tête / Tissu",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "id": 7691,
+              "itemUrl": "https://www.wowhead.com/classic/item=7691",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             },
             {
               "en": "Ebon Vise",
               "fr": "Étreinte d'ébène",
               "slot": "Mains / Cuir",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "id": 7690,
+              "itemUrl": "https://www.wowhead.com/classic/item=7690",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             }
           ],
           "rare": true,
@@ -4832,13 +4864,21 @@
               "en": "Ironspine's Ribcage",
               "fr": "Cage thoracique d'Échine-de-Fer",
               "slot": "Torse / Mailles",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "id": 7688,
+              "itemUrl": "https://www.wowhead.com/classic/item=7688",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             },
             {
               "en": "Ironspine's Fist",
               "fr": "Poing d'Échine-de-Fer",
               "slot": "Masse",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "id": 7687,
+              "itemUrl": "https://www.wowhead.com/classic/item=7687",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             },
             {
               "en": "Ironspine's Eye",
