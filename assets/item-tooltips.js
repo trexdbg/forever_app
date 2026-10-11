@@ -26,18 +26,26 @@ const map={head:"Head",neck:"Neck",shoulders:"Shoulders",back:"Back",chest:"Ches
 return map[slot]||slot||""}
 function translateLine(line){
 if(!en){
- const stats={"Strength":"Force","Agility":"Agilité","Stamina":"Endurance","Intellect":"Intelligence","Spirit":"Esprit","Armor":"Armure","Ranged Attack Power":"Puissance d'attaque à distance","Attack Power":"Puissance d'attaque","Fire Resistance":"résistance au Feu","Frost Resistance":"résistance au Givre","Shadow Resistance":"résistance à l’Ombre","Nature Resistance":"résistance à la Nature"};
+ const stats={"Strength":"Force","Agility":"Agilité","Stamina":"Endurance","Intellect":"Intelligence","Spirit":"Esprit","Armor":"Armure","Ranged Attack Power":"Puissance d'attaque à distance","Attack Power":"Puissance d'attaque","Fire Resistance":"résistance au Feu","Frost Resistance":"résistance au Givre","Shadow Resistance":"résistance à l’Ombre","Nature Resistance":"résistance à la Nature","Arcane Resistance":"résistance aux Arcanes"};
  const types={"Sword":"Épée","Axe":"Hache","Mace":"Masse","Dagger":"Dague","Staff":"Bâton","Polearm":"Arme d'hast","Wand":"Baguette","Bow":"Arc","Crossbow":"Arbalète","Gun":"Arme à feu","Leather":"Cuir","Mail":"Mailles","Plate":"Plaques","Cloth":"Tissu","Shield":"Bouclier","Trinket":"Bijou","Ring":"Anneau","Relic":"Relique"};
  const slots={"Head":"Tête","Shoulder":"Épaules","Chest":"Torse","Wrist":"Poignets","Hands":"Mains","Waist":"Taille","Legs":"Jambes","Feet":"Pieds","Back":"Dos","Main Hand":"Main droite","Off Hand":"Main gauche","Ranged":"Distance","Two-Hand":"Deux mains","One-Hand":"À une main"};
  const source=String(line).trim();
+ const weapon=/^(\d+)\s*-\s*(\d+) Damage Speed (\d+(?:\.\d+)?)$/i.exec(source);
+ if(weapon)return "Dégâts : "+weapon[1]+" - "+weapon[2]+" · Vitesse "+weapon[3];
+ const block=/^(\d+) Block$/i.exec(source);
+ if(block)return block[1]+" points de blocage";
+ const extraArmor=/^\+(\d+) Bonus Armor$/i.exec(source);
+ if(extraArmor)return "+"+extraArmor[1]+" armure supplémentaire";
+ const skill=/^Requires (Tailoring|Alchemy|Herbalism|Enchanting|Engineering) \((\d+)\)$/i.exec(source);
+ if(skill)return "Nécessite "+({Tailoring:"Couture",Alchemy:"Alchimie",Herbalism:"Herboristerie",Enchanting:"Enchantement",Engineering:"Ingénierie"}[skill[1]]||skill[1])+" ("+skill[2]+")";
  const location=/^(Head|Shoulder|Chest|Wrist|Hands|Waist|Legs|Feet|Back|Main Hand|Off Hand|Ranged|Two-Hand|One-Hand) (Cloth|Leather|Mail|Plate|Sword|Axe|Mace|Dagger|Staff|Polearm|Wand|Bow|Crossbow|Gun|Shield)$/.exec(source);
  if(location)return slots[location[1]]+" · "+types[location[2]];
  const hit=/^Equip: Improves (?:your )?chance to hit by (\d+(?:[.,]\d+)?)%\.?$/i.exec(source);
  if(hit)return "Équipé : Augmente vos chances de toucher de "+hit[1]+" %.";
  const crit=/^Equip: (?:Improves (?:your )?chance to (?:crit|critically strike|get a critical strike)|Increases your chance to score a critical strike) by (\d+(?:[.,]\d+)?)%\.?$/i.exec(source);
  if(crit)return "Équipé : Augmente vos chances d’infliger un coup critique de "+crit[1]+" %.";
- const bonus=/^Equip: \+(\d+) (Attack Power|Spell Power|Hit Rating|Crit Rating|Spell Damage|Healing|Mana Regeneration|Health Regeneration|Spell Penetration|Shadow Spell Damage)\.?$/i.exec(source);
- const bonusFR={"Attack Power":"à la puissance d’attaque","Spell Power":"à la puissance des sorts","Hit Rating":"au score de toucher","Crit Rating":"au score de coup critique","Spell Damage":"aux dégâts des sorts","Healing":"aux soins","Mana Regeneration":"à la régénération de mana","Health Regeneration":"à la régénération des points de vie","Spell Penetration":"à la pénétration des sorts","Shadow Spell Damage":"aux dégâts des sorts d’ombre"};
+ const bonus=/^Equip: \+(\d+) (Attack Power|Spell Power|Hit Rating|Crit Rating|Spell Damage|Healing|Mana Regeneration|Health Regeneration|Spell Penetration|Shadow Spell Damage|Arcane Spell Damage|Block Rating|Block Value|Critical Strike Rating)\.?$/i.exec(source);
+ const bonusFR={"Attack Power":"à la puissance d’attaque","Spell Power":"à la puissance des sorts","Hit Rating":"au score de toucher","Crit Rating":"au score de coup critique","Spell Damage":"aux dégâts des sorts","Healing":"aux soins","Mana Regeneration":"à la régénération de mana","Health Regeneration":"à la régénération des points de vie","Spell Penetration":"à la pénétration des sorts","Shadow Spell Damage":"aux dégâts des sorts d’ombre","Arcane Spell Damage":"aux dégâts des sorts des Arcanes","Block Rating":"au score de blocage","Block Value":"à la valeur de blocage","Critical Strike Rating":"au score de coup critique"};
  if(bonus)return "Équipé : +"+bonus[1]+" "+bonusFR[bonus[2]]+".";
  const versus=/^Equip: \+(\d+) Attack Power Vs (Humanoids|Beasts|Undead)\.?$/i.exec(source);
  if(versus)return "Équipé : +"+versus[1]+" à la puissance d’attaque contre les "+({Humanoids:"humanoïdes",Beasts:"bêtes",Undead:"morts-vivants"}[versus[2]]||versus[2])+".";
@@ -54,13 +62,25 @@ if(!en){
  .replace(/^Held in off hand$/,"Tenu en main gauche")
  .replace(/^Binds when picked up$/,"Lié quand ramassé")
  .replace(/^Binds when equipped$/,"Lié quand équipé")
+ .replace(/^Quest Item$/,"Objet de quête")
+ .replace(/^Unique-Equipped$/,"Unique – équipé")
+ .replace(/^Unique$/,"Unique")
+ .replace(/^Recipe · Alchemy$/,"Recette · Alchimie")
+ .replace(/^Recipe · Herbalism$/,"Recette · Herboristerie")
+ .replace(/^Recipe · Tailoring$/,"Recette · Couture")
+ .replace(/^Recipe · Enchanting$/,"Recette · Enchantement")
+ .replace(/^Schematic · Engineering$/,"Schéma · Ingénierie")
+ .replace(/^Recipe ·/,"Recette ·")
+ .replace(/^Teaches you how to place a (.+) at a campsite\.$/,"Vous apprend à installer un $1 dans un campement.")
+ .replace(/^This Item Begins a Quest$/,"Cet objet permet de commencer une quête.")
  .replace(/^Two-Hand /,"Deux mains · ")
  .replace(/^One-Hand /,"À une main · ")
  .replace(/^Main Hand /,"Main droite · ")
  .replace(/^Off Hand /,"Main gauche · ")
  .replace(/^Durability (\d+) \/ (\d+)$/,"Durabilité $1 / $2")
- .replace(/^(\+\d+) (Strength|Agility|Stamina|Intellect|Spirit|Fire Resistance|Frost Resistance|Shadow Resistance|Nature Resistance)$/,(full,n,attr)=>n+" "+stats[attr])
+ .replace(/^(\+\d+) (Strength|Agility|Stamina|Intellect|Spirit|Fire Resistance|Frost Resistance|Shadow Resistance|Nature Resistance|Arcane Resistance)$/,(full,n,attr)=>n+" "+stats[attr])
  .replace(/^(\d+) Armor$/,"$1 points d’armure")
+ .replace(/\(([\d.]+) damage per second\)/,"($1 dégâts par seconde)")
  .replace(/^(Sword|Axe|Mace|Dagger|Staff|Polearm|Wand|Bow|Crossbow|Gun|Leather|Mail|Plate|Cloth|Shield|Trinket|Ring|Relic)$/,value=>types[value]||value)
  .replace(/^Ranged /,"Distance · ");
 }
@@ -87,6 +107,7 @@ return line.replace(/^Niveau d'objet (\d+)/,"Item level $1")
 .replace(/^\+([\d,.]+) résistance au Givre$/,"+$1 Frost Resistance")
 .replace(/^\+([\d,.]+) résistance à l’Ombre$/,"+$1 Shadow Resistance")
 .replace(/^\+([\d,.]+) résistance à la Nature$/,"+$1 Nature Resistance")
+.replace(/^\+([\d,.]+) résistance aux Arcanes$/,"+$1 Arcane Resistance")
 .replace(/^Équipé : /,"Equip: ")
 .replace(/^Utiliser : /,"Use: ")
 .replace(/^Armure : (\d+)/,"Armor: $1")}
@@ -177,7 +198,9 @@ if(v.sharedStock)write(group,"forever-item-tooltip__vendor-warning",en?"Shared v
 inner.append(group);
 }
 if(item.origin)write(inner,"forever-item-tooltip__origin",w.origin+" : "+item.origin);
+if(status==="loading"&&!forever)write(inner,"forever-item-tooltip__muted",w.loading);
 if(status==="unavailable"&&haveRich)write(inner,"forever-item-tooltip__muted",w.unavailable);
+if(forever&&(item.details_status==="partial"||item.details_status==="missing"))write(inner,"forever-item-tooltip__muted",en?"Additional beta statistics not yet confirmed; consult the linked source.":"Autres caractéristiques bêta non confirmées ; consulter la source liée.");
 write(inner,"forever-item-tooltip__disclaimer",
  forever?(item.source_status==="forever_beta_observed"
  ?(en?"Loot reported by the beta community; item and acquisition may change.":"Butin signalé par la communauté bêta ; objet et obtention susceptibles de changer.")
@@ -185,7 +208,7 @@ write(inner,"forever-item-tooltip__disclaimer",
  :w.classic);
 const foot=elt("div","forever-item-tooltip__foot");
 if(isId(item.id)){
-const sourceUrl=(()=>{const url=item.source_url||item.url;if(!forever||typeof url!=="string")return null;try{const u=new URL(url);return u.protocol==="https:"&&(u.hostname==="www.60.tools"&&u.pathname.startsWith("/items/")||u.hostname==="www.wowhead.com"&&u.pathname.startsWith("/forever/")||u.hostname==="foreverchanges.pro"&&u.pathname==="/item/"+Number(item.id))?u.href:null}catch{return null}})();
+const sourceUrl=(()=>{const url=item.source_url||item.url;if(!forever||typeof url!=="string")return null;try{const u=new URL(url);return u.protocol==="https:"&&(u.hostname==="www.60.tools"&&u.pathname.startsWith("/items/")||u.hostname==="www.wowhead.com"&&u.pathname.startsWith("/forever/")||u.hostname==="foreverchanges.pro"&&(u.pathname==="/item/"+Number(item.id)||u.pathname==="/fr/item/"+Number(item.id)))?u.href:null}catch{return null}})();
 const a=elt("a","forever-item-tooltip__source",forever?(en?"Forever beta source ↗":"Source Forever bêta ↗"):w.source+" ↗");
 a.href=forever?(sourceUrl||"https://www.wowhead.com/forever/item="+Number(item.id)):"https://wowdb.assemblee-defias.fr/?id=classic:item:"+Number(item.id);a.target="_blank";a.rel="noopener noreferrer";foot.append(a);
 }else write(foot,"forever-item-tooltip__source",w.source);
@@ -204,7 +227,7 @@ function hide(){
 clearTimeout(loadTimer);token++;visible=false;pinned=false;active=null;panel.hidden=true;panel.classList.remove("is-pinned");panel.style.left="";panel.style.top="";
 }
 function queueDetails(item,requestToken){
-if(!isId(item.id)||typeof item.source_status==="string"&&item.source_status.startsWith("forever_beta_")||(Array.isArray(item.tooltip)&&item.tooltip.length))return;
+if(!isId(item.id)||typeof item.source_status==="string"&&item.source_status.startsWith("forever_beta_"))return;
 const id=Number(item.id);
 if(cache.has(id)){if(active&&requestToken===token){render(item,cache.get(id),"complete");if(!pinned)place(active.x,active.y)}return}
 if(Date.now()<suspendUntil||Date.now()<(unavailableUntil.get(id)||0)){if(active&&requestToken===token)render(item,null,"unavailable");return;}
@@ -228,7 +251,7 @@ const rect=anchor?anchor.getBoundingClientRect():null;
 const x=evt&&Number.isFinite(evt.clientX)?evt.clientX:rect?rect.right:window.innerWidth/2;
 const y=evt&&Number.isFinite(evt.clientY)?evt.clientY:rect?rect.top:window.innerHeight/2;
 active={item,x,y};panel.classList.toggle("is-pinned",pinned);panel.hidden=false;
-render(item,cache.get(Number(item.id))||null,isId(item.id)&&!cache.has(Number(item.id))&&!(Array.isArray(item.tooltip)&&item.tooltip.length)&&!(typeof item.source_status==="string"&&item.source_status.startsWith("forever_beta_"))?"loading":"complete");
+render(item,cache.get(Number(item.id))||null,isId(item.id)&&!cache.has(Number(item.id))&&!(typeof item.source_status==="string"&&item.source_status.startsWith("forever_beta_"))?"loading":"complete");
 if(!pinned)place(x,y);
 else {panel.style.left="";panel.style.top="";}
 queueDetails(item,currentToken);
@@ -251,5 +274,5 @@ document.addEventListener("keydown",e=>{if(e.key==="Escape")hide()});
 document.addEventListener("pointerdown",e=>{if(pinned&&!panel.contains(e.target)&&!e.target.closest(".bis-v2-info-button"))hide()},true);
 window.addEventListener("resize",hide);
 window.addEventListener("scroll",()=>{if(!pinned)hide()},{passive:true,capture:true});
-window.ForeverItemTooltip={bind,hide,pin};
+window.ForeverItemTooltip={bind,hide,pin,translateLine};
 })();
