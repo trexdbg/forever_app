@@ -227,7 +227,7 @@ function hide(){
 clearTimeout(loadTimer);token++;visible=false;pinned=false;active=null;panel.hidden=true;panel.classList.remove("is-pinned");panel.style.left="";panel.style.top="";
 }
 function queueDetails(item,requestToken){
-if(!isId(item.id)||typeof item.source_status==="string"&&item.source_status.startsWith("forever_beta_"))return;
+if(!isId(item.id)||typeof item.source_status==="string"&&item.source_status.startsWith("forever_beta_")||(Array.isArray(item.tooltip)&&item.tooltip.length&&!item.fetch_classic_details))return;
 const id=Number(item.id);
 if(cache.has(id)){if(active&&requestToken===token){render(item,cache.get(id),"complete");if(!pinned)place(active.x,active.y)}return}
 if(Date.now()<suspendUntil||Date.now()<(unavailableUntil.get(id)||0)){if(active&&requestToken===token)render(item,null,"unavailable");return;}
@@ -251,7 +251,7 @@ const rect=anchor?anchor.getBoundingClientRect():null;
 const x=evt&&Number.isFinite(evt.clientX)?evt.clientX:rect?rect.right:window.innerWidth/2;
 const y=evt&&Number.isFinite(evt.clientY)?evt.clientY:rect?rect.top:window.innerHeight/2;
 active={item,x,y};panel.classList.toggle("is-pinned",pinned);panel.hidden=false;
-render(item,cache.get(Number(item.id))||null,isId(item.id)&&!cache.has(Number(item.id))&&!(typeof item.source_status==="string"&&item.source_status.startsWith("forever_beta_"))?"loading":"complete");
+render(item,cache.get(Number(item.id))||null,isId(item.id)&&!cache.has(Number(item.id))&&!(typeof item.source_status==="string"&&item.source_status.startsWith("forever_beta_"))&&(!item.tooltip?.length||item.fetch_classic_details)?"loading":"complete");
 if(!pinned)place(x,y);
 else {panel.style.left="";panel.style.top="";}
 queueDetails(item,currentToken);
