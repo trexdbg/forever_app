@@ -42,6 +42,13 @@ for(const [id,english,french] of [[270228,"Golemheart Stave","Canne cœur-de-gol
  assert.equal(en.name(item),english);
  assert.equal(fr.resolved(item).verified,true);
 }
+// More reviewed Classic level 1-30 gear: names must not regress to English.
+for(const [id,english,french] of [[5243,"Firebelcher","Crache-feu"],[6220,"Meteor Shard","Eclat de météore"],[6910,"Leech Pants","Pantalon de sangsue"],[9446,"Electrocutioner Leg","Jambe de l'électrocuteur"],[9454,"Acidic Walkers","Brodequins acides"]]){
+ const item={id,name:english,source_status:"classic_curated_leveling"};
+ assert.equal(fr.name(item),french,"Classic FR regression "+id);
+ assert.equal(en.name(item),english);
+ assert.equal(fr.resolved(item).verified,true);
+}
 const untranslatedBeta={id:273030,name:"Ring of Power Regulation",name_fr:"Anneau de régulation de puissance",source_status:"forever_beta_observed"};
 assert.equal(fr.name(untranslatedBeta),"Ring of Power Regulation","Non-localized Wowhead Forever items must remain English");
 assert.equal(fr.resolved(untranslatedBeta).translation_missing,true);
