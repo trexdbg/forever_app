@@ -3880,7 +3880,11 @@
               "en": "Techbot CPU Shell",
               "fr": "Coque de processeur de Techbot",
               "slot": "Bouclier",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "id": 9444,
+              "itemUrl": "https://www.wowhead.com/classic/item=9444",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             }
           ],
           "rare": false,
@@ -3900,7 +3904,11 @@
               "en": "Grubbis Paws",
               "fr": "Pattes de Grubbis",
               "slot": "Mains / Mailles",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "id": 9445,
+              "itemUrl": "https://www.wowhead.com/classic/item=9445",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             },
             {
               "en": "Irradiated Shield",
@@ -3915,7 +3923,11 @@
               "fr": "Ceinture de filouterie",
               "slot": "Taille / Cuir",
               "isNew": true,
-              "source_status": "classic_loot_reference"
+              "source_status": "forever_beta_wowhead",
+              "id": 274042,
+              "itemUrl": "https://www.wowhead.com/forever/item=274042",
+              "id_reference_status": "forever_item_page_verified",
+              "forever_loot_confirmed": null
             }
           ],
           "rare": false,
@@ -3952,13 +3964,21 @@
               "en": "Toxic Revenger",
               "fr": "Vengeur toxique",
               "slot": "Dague",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "id": 9453,
+              "itemUrl": "https://www.wowhead.com/classic/item=9453",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             },
             {
               "en": "Hydrocane",
               "fr": "Hydrocanne",
               "slot": "Bâton",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "id": 9452,
+              "itemUrl": "https://www.wowhead.com/classic/item=9452",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             }
           ],
           "rare": false,
@@ -3997,13 +4017,6 @@
               "itemLevel": 34,
               "requiredLevel": 29,
               "itemUrl": "https://www.wowhead.com/classic/item=9446"
-            },
-            {
-              "en": "Pattern: Defender's Leather Kilt",
-              "fr": "Patron : kilt de défenseur en cuir",
-              "slot": "Patron",
-              "isNew": true,
-              "source_status": "classic_loot_reference"
             }
           ],
           "rare": false,
@@ -4040,7 +4053,11 @@
               "en": "Gnomebot Operating Boots",
               "fr": "Bottes de commande gnome",
               "slot": "Pieds",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "id": 9450,
+              "itemUrl": "https://www.wowhead.com/classic/item=9450",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             },
             {
               "en": "Thermaplugg Medal of Honor",
@@ -4069,7 +4086,11 @@
               "fr": "Schéma : batterie du 9-60",
               "slot": "Schéma",
               "isNew": true,
-              "source_status": "classic_loot_reference"
+              "source_status": "forever_beta_wowhead",
+              "id": 274049,
+              "itemUrl": "https://www.wowhead.com/forever/item=274049",
+              "id_reference_status": "forever_item_page_verified",
+              "forever_loot_confirmed": null
             }
           ],
           "rare": false,
@@ -4095,14 +4116,11 @@
               "en": "Emissary Cuffs",
               "fr": "Manchettes d'émissaire",
               "slot": "Poignets",
-              "source_status": "classic_loot_reference"
-            },
-            {
-              "en": "Pattern: Brawler's Leather Legguards",
-              "fr": "Patron : garde-jambes de bagarreur en cuir",
-              "slot": "Patron",
-              "isNew": true,
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "id": 9455,
+              "itemUrl": "https://www.wowhead.com/classic/item=9455",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             }
           ],
           "rare": true,
@@ -4142,7 +4160,11 @@
               "en": "Thermaplugg's Left Arm",
               "fr": "Bras gauche de Thermojoncteur",
               "slot": "Deux mains",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "id": 9459,
+              "itemUrl": "https://www.wowhead.com/classic/item=9459",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             }
           ],
           "rare": false,
@@ -4732,13 +4754,6 @@
               "en": "Ebon Vise",
               "fr": "Étreinte d'ébène",
               "slot": "Mains / Cuir",
-              "source_status": "classic_loot_reference"
-            },
-            {
-              "en": "Pattern: Brawler's Leather Legguards",
-              "fr": "Patron : garde-jambes de bagarreur en cuir",
-              "slot": "Patron",
-              "isNew": true,
               "source_status": "classic_loot_reference"
             }
           ],
@@ -7072,5 +7087,13 @@
     "classicIconDoc": "https://docs.wowdb.assemblee-defias.fr/items"
   },
   "iconPolicy": "Exact Blizzard icon tokens only from item sources (WoWEternity original item icon labels, Wowhead Classic or beta client). For mapped Classic item IDs, client may request WoWDB des Défias icon by ID. Unknown icon stays questionmark; never substitute a different item or a scroll icon by slot. Item icon asset IDs from Icy Veins Forever loot guides are hosted on their original CDN. For classic boss items, unknown icons are resolved via exact ID/name match against WoWDB des Défias where possible.",
-  "qualityPolicy": "Quality comes from matched beta/Classic item records or trusted item guides. Missing or ambiguous quality is neutral, not epic/rare by default."
+  "qualityPolicy": "Quality comes from matched beta/Classic item records or trusted item guides. Missing or ambiguous quality is neutral, not epic/rare by default.",
+  "catalogAudit": {
+    "corrected_at": "2026-10-11",
+    "excludedVendorOnlyRecipeIds": [
+      252820,
+      252822
+    ],
+    "notes": "The leatherworking patterns are vendor-sold (Wowhead Forever), not confirmed dungeon boss loot. Their earlier placement under bosses was removed; source provenance retained here."
+  }
 }
