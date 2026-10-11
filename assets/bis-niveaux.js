@@ -42,7 +42,10 @@ const sourceDetails=en?{drop:"Observed beta drop",observed:"Seen in beta",client
    Never replace a sourced English item name with a French API value on EN pages. */
 const zoneFR={"City of Dalaran":"Cité de Dalaran","Excavation Site: Wetlands":"Excavations des Paluns","Hall of Thanes":"Hall of Thanes","Ruins of Lordaeron":"Ruines de Lordaeron","The Stockade":"La Prison","Ragefire Chasm":"Gouffre de Ragefeu","The Deadmines":"Mortemines","Wailing Caverns":"Cavernes des Lamentations","Shadowfang Keep":"Donjon d’Ombrecroc","Blackfathom Deeps":"Profondeurs de Brassenoire","Razorfen Kraul":"Kraal de Tranchebauge","Razorfen Downs":"Souilles de Tranchebauge","Scarlet Monastery":"Monastère écarlate","Blackrock Depths":"Profondeurs de Rochenoire","Blackrock Spire":"Pic Rochenoire","Dire Maul":"Hache-tripes","The Temple of Atal'Hakkar":"Temple d’Atal’Hakkar","Elwynn Forest":"Forêt d’Elwynn","Tirisfal Glades":"Clairières de Tirisfal","Westfall":"Marche de l’Ouest","World drop":"Butin mondial","Crafting":"Fabrication","Enchanting":"Enchantement","Leatherworking":"Travail du cuir","Vendor":"Marchand","Zone drop":"Butin de zone","Rare drop":"Butin rare"};
 const knownFR={5191:"Barbelure cruelle",10399:"Armure défias noircie",16712:"Gants Sombreruse"};
-const localizedName=i=>window.ForeverItemLocale?.name(i)||(en?(i.name_en||i.name):(i.name_fr||knownFR[i.id]||i.name));
+const localizedName=i=>{
+ const ref=window.ForeverItemLocale?.resolved(i);
+ return en?(ref?.en||i.name_en||i.name):(ref?.verified?ref.fr:(i.name_fr||knownFR[i.id]||ref?.fr||i.name));
+};
 function localizedOrigin(i){
  let value=en?(i.origin_en||i.origin):(i.origin_fr||i.origin);
  if(typeof value!=="string")return "";
