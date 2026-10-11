@@ -1067,7 +1067,7 @@
               "source_status": "forever_beta_community",
               "id": 273032,
               "itemUrl": "https://www.wowhead.com/forever/item=273032",
-              "identification_source": "https://wowfwiki.com/wiki/Bonebinders_Signet",
+              "identification_source": "https://wowfwiki.com/wiki/Bonebinder%27s_Signet",
               "name_fr_status": "community_translation_unverified"
             },
             {
@@ -1297,7 +1297,7 @@
               "source_status": "forever_beta_community",
               "id": 273099,
               "itemUrl": "https://www.wowhead.com/forever/item=273099",
-              "identification_source": "https://wowfwiki.com/wiki/Spinning_Wheel",
+              "identification_source": "https://wowfwiki.com/wiki/Spinning_Wheel_blueprint",
               "name_fr_status": "community_translation_unverified"
             }
           ],
@@ -1463,7 +1463,7 @@
               "source_status": "forever_beta_community",
               "id": 273103,
               "itemUrl": "https://www.wowhead.com/forever/item=273103",
-              "identification_source": "https://wowfwiki.com/wiki/Arcane_Salvager",
+              "identification_source": "https://wowfwiki.com/wiki/Arcane_Salvager_blueprint",
               "name_fr_status": "community_translation_unverified",
               "boss_association_status": "guide_only_unconfirmed"
             }
@@ -2919,7 +2919,11 @@
               "source_status": "classic_loot_reference",
               "source_url": "https://theforeverera.com/en/dungeons/shadowfang-keep/rethilgore/",
               "iconFileId": 135039,
-              "icon_source": "https://www.icy-veins.com/wow-forever/shadowfang-keep-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/shadowfang-keep-guide",
+              "id": 5254,
+              "itemUrl": "https://www.wowhead.com/classic/item=5254",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             }
           ],
           "rare": false,
@@ -2948,7 +2952,11 @@
               "source_status": "classic_loot_reference",
               "source_url": "https://theforeverera.com/en/dungeons/shadowfang-keep/razorclaw-the-butcher/",
               "iconFileId": 132665,
-              "icon_source": "https://www.icy-veins.com/wow-forever/shadowfang-keep-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/shadowfang-keep-guide",
+              "id": 6226,
+              "itemUrl": "https://www.wowhead.com/classic/item=6226",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             },
             {
               "en": "Butcher's Slicer",
@@ -2957,7 +2965,11 @@
               "source_status": "classic_loot_reference",
               "source_url": "https://theforeverera.com/en/dungeons/shadowfang-keep/razorclaw-the-butcher/",
               "iconFileId": 135314,
-              "icon_source": "https://www.icy-veins.com/wow-forever/shadowfang-keep-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/shadowfang-keep-guide",
+              "id": 6633,
+              "itemUrl": "https://www.wowhead.com/classic/item=6633",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             },
             {
               "en": "Butcher's Cleaver",
@@ -2966,7 +2978,11 @@
               "source_status": "classic_loot_reference",
               "source_url": "https://theforeverera.com/en/dungeons/shadowfang-keep/razorclaw-the-butcher/",
               "iconFileId": 132417,
-              "icon_source": "https://www.icy-veins.com/wow-forever/shadowfang-keep-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/shadowfang-keep-guide",
+              "id": 1292,
+              "itemUrl": "https://www.wowhead.com/classic/item=1292",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             }
           ],
           "rare": false,
@@ -2994,7 +3010,11 @@
               "slot": "Masse / Mace",
               "source_status": "classic_loot_reference",
               "iconFileId": 133477,
-              "icon_source": "https://www.icy-veins.com/wow-forever/shadowfang-keep-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/shadowfang-keep-guide",
+              "id": 6323,
+              "itemUrl": "https://www.wowhead.com/classic/item=6323",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             },
             {
               "en": "Silverlaine's Family Seal",
@@ -3037,7 +3057,11 @@
               "source_status": "classic_loot_reference",
               "source_url": "https://theforeverera.com/en/dungeons/shadowfang-keep/commander-springvale/",
               "iconFileId": 132397,
-              "icon_source": "https://www.icy-veins.com/wow-forever/shadowfang-keep-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/shadowfang-keep-guide",
+              "id": 3191,
+              "itemUrl": "https://www.wowhead.com/classic/item=3191",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             },
             {
               "en": "Commander's Crest",
@@ -3076,7 +3100,11 @@
               "source_status": "classic_loot_reference",
               "source_url": "https://theforeverera.com/en/dungeons/shadowfang-keep/odo-the-blindwatcher/",
               "iconFileId": 132492,
-              "icon_source": "https://www.icy-veins.com/wow-forever/shadowfang-keep-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/shadowfang-keep-guide",
+              "id": 6319,
+              "itemUrl": "https://www.wowhead.com/classic/item=6319",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             },
             {
               "en": "Odo's Ley Staff",
@@ -3085,7 +3113,11 @@
               "source_status": "classic_loot_reference",
               "source_url": "https://theforeverera.com/en/dungeons/shadowfang-keep/odo-the-blindwatcher/",
               "iconFileId": 135164,
-              "icon_source": "https://www.icy-veins.com/wow-forever/shadowfang-keep-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/shadowfang-keep-guide",
+              "id": 6318,
+              "itemUrl": "https://www.wowhead.com/classic/item=6318",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             }
           ],
           "rare": false,
@@ -3146,12 +3178,16 @@
           "level": 26,
           "loot": [
             {
-              "en": "Arugal's Robes",
+              "en": "Robes of Arugal",
               "fr": "Robe d'Arugal",
               "slot": "Torse / Chest",
               "source_status": "classic_loot_reference",
               "iconFileId": 132672,
-              "icon_source": "https://www.icy-veins.com/wow-forever/shadowfang-keep-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/shadowfang-keep-guide",
+              "id": 6324,
+              "itemUrl": "https://www.wowhead.com/classic/item=6324",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             },
             {
               "en": "Meteor Shard",
