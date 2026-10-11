@@ -181,6 +181,10 @@ for(const dungeon of dungeonData.dungeons||[]){
 assert.equal(missingDungeonIds,2,"Unexpected unresolved dungeon reference count");
 assert.ok(knownDungeonIds>=204,"Documented dungeon coverage regressed");
 assert.ok(canonicalMatches>=15,"Not enough canonical ID/name comparisons");
+// Source-checked Classic item name (Wowhead Classic item 3188), shared by rares and equipment.
+const coral={id:3188,name:"Coral Claymore",name_fr:"Épée à deux mains de corail",source_status:"classic_reference"};
+assert.equal(fr.name(coral),"Claymore des coraux","Classic FR item 3188 must not use a literal translation");
+assert.equal(en.name(coral),"Coral Claymore","Classic EN item 3188 must remain canonical");
 assert.equal(fr.name({id:5202,name:"Corsair's Overshirt",name_fr:"Surchemise de corsaire",source_status:"classic_reference"}),"Casaque de corsaire");
 assert.equal(fr.name({id:6318,name:"Odo's Ley Staff",name_fr:"Bâton tellurique d'Odo",source_status:"classic_reference"}),"Bâton d'Odo");
 assert.equal(fr.name({id:6324,name:"Robes of Arugal",source_status:"classic_reference"}),"Robe d'Arugal");
@@ -202,6 +206,22 @@ assert.equal(fr.name({id:273106,name:"Blueprint: Greenhouse",name_fr:"Plan : ser
 const iconCatalog=JSON.parse(readFileSync(resolve(root,"data/items-classic-cache.json"),"utf8"));
 const catalogIconById=new Map((iconCatalog.items||[]).filter(i=>i.id&&i.icon).map(i=>[Number(i.id),i.icon]));
 const rareCatalog=JSON.parse(readFileSync(resolve(root,"data/rares.json"),"utf8"));
+// Rare NPC names are keyed by verified Classic French localizations, never guessed from English.
+for(const [english,french] of [["Lord Sakrasis","Seigneur Sakrasis"],["Azshir the Sleepless","Azshir le Sans-sommeil"],["Blind Hunter","Chasseur aveugle"],["Sewer Beast","Bête des égouts"]]){
+ const npc=rareCatalog.rares.find(row=>row.name?.en===english);
+ assert.ok(npc,"Missing source-checked rare "+english);
+ assert.equal(npc.name.fr,french,"Untranslated Classic rare NPC "+english);
+}
+const coralRare=rareCatalog.rares.flatMap(row=>row.loot||[]).find(item=>Number(item.item_id)===3188);
+assert.equal(coralRare?.name?.fr,"Claymore des coraux","Rare loot French name must match Classic item 3188");
+for(const rare of rareCatalog.rares||[]){
+ for(const drop of rare.loot||[]){
+  assert.ok(Number.isSafeInteger(Number(drop.item_id))&&Number(drop.item_id)>0,"Rare loot is missing an item ID: "+rare.name.en);
+  const known=canonical.get(Number(drop.item_id));
+  if(known)assert.equal(drop.name.en,known,"Rare item ID / English-name mismatch: "+drop.item_id);
+  if(drop.item_source_url){const m=/(?:item=|\/item\/)(\d+)/.exec(drop.item_source_url);assert.ok(m,"Invalid rare item link: "+drop.item_source_url);assert.equal(Number(m[1]),Number(drop.item_id),"Rare item link does not match its ID: "+drop.item_id);}
+ }
+}
 let rareIconMatches=0;
 for(const rare of rareCatalog.rares||[]){
  for(const drop of rare.loot||[]){
