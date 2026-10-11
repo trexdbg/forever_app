@@ -2648,7 +2648,7 @@
     {
       "id": "stranglethorn-lord-sakrasis",
       "name": {
-        "fr": "Lord Sakrasis",
+        "fr": "Seigneur Sakrasis",
         "en": "Lord Sakrasis"
       },
       "zone": "stranglethorn",
@@ -3700,7 +3700,7 @@
     {
       "id": "scarlet-monastery-azshir-the-sleepless",
       "name": {
-        "fr": "Azshir the Sleepless",
+        "fr": "Azshir le Sans-sommeil",
         "en": "Azshir the Sleepless"
       },
       "zone": "scarlet-monastery",
@@ -3723,7 +3723,7 @@
     {
       "id": "razorfen-kraul-blind-hunter",
       "name": {
-        "fr": "Blind Hunter",
+        "fr": "Chasseur aveugle",
         "en": "Blind Hunter"
       },
       "zone": "razorfen-kraul",
@@ -3775,7 +3775,7 @@
         },
         {
           "name": {
-            "fr": "Coral Claymore",
+            "fr": "Claymore des coraux",
             "en": "Coral Claymore"
           },
           "item_id": 3188,
@@ -5583,7 +5583,7 @@
     {
       "id": "3581",
       "name": {
-        "fr": "Sewer Beast",
+        "fr": "Bête des égouts",
         "en": "Sewer Beast"
       },
       "zone": "elwynn",
