@@ -15474,11 +15474,12 @@
   "audit": {
     "date": "2026-10-11",
     "scope": "Forever beta guide verified items and vendor tables; Classic guide offers retained as unverified",
-    "forever_vendor_offers": 43,
-    "classic_unverified_offers": 588,
+    "forever_vendor_offers": 54,
+    "classic_unverified_offers": 577,
     "source": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
     "forever_documented_offers": 54,
     "forever_documented_items": 27,
-    "classic_offer_policy": "Any pair without verification_status=forever_documented is only a Classic or unverified source; never claim server inventory."
+    "classic_offer_policy": "Any pair without verification_status=forever_documented is only a Classic or unverified source; never claim server inventory.",
+    "total_vendor_offers": 631
   }
 }
