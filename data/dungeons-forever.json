@@ -4242,21 +4242,33 @@
               "en": "Thornspike",
               "fr": "Fleur d'épines",
               "slot": "Dague",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "id": 6681,
+              "itemUrl": "https://www.wowhead.com/classic/item=6681",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             },
             {
               "en": "Death Prophet Spine",
               "fr": "Échine de prophète de la mort",
               "slot": "Bâton",
               "isNew": true,
-              "source_status": "classic_loot_reference"
+              "source_status": "forever_beta_wowhead",
+              "id": 274158,
+              "itemUrl": "https://www.wowhead.com/forever/item=274158",
+              "id_reference_status": "forever_item_page_verified",
+              "forever_loot_confirmed": null
             },
             {
               "en": "Thorncursed Grips",
               "fr": "Poignes de Malépine",
               "slot": "Mains / Cuir",
               "isNew": true,
-              "source_status": "classic_loot_reference"
+              "source_status": "forever_beta_wowhead",
+              "id": 274159,
+              "itemUrl": "https://www.wowhead.com/forever/item=274159",
+              "id_reference_status": "forever_item_page_verified",
+              "forever_loot_confirmed": null
             },
             {
               "en": "Brawler's Leather Helm",
@@ -4304,19 +4316,31 @@
               "en": "Death Speaker Scepter",
               "fr": "Sceptre du nécrorateur",
               "slot": "Main droite",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "id": 2816,
+              "itemUrl": "https://www.wowhead.com/classic/item=2816",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             },
             {
               "en": "Death Speaker Mantle",
               "fr": "Mantelet du nécrorateur",
               "slot": "Épaules",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "id": 6685,
+              "itemUrl": "https://www.wowhead.com/classic/item=6685",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             },
             {
               "en": "Death Speaker Robes",
               "fr": "Robe du nécrorateur",
               "slot": "Torse",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "id": 6682,
+              "itemUrl": "https://www.wowhead.com/classic/item=6682",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             }
           ],
           "rare": false,
@@ -4343,7 +4367,11 @@
               "fr": "Coiffe de géomancien",
               "slot": "Tête",
               "isNew": true,
-              "source_status": "classic_loot_reference"
+              "source_status": "forever_beta_wowhead",
+              "id": 274155,
+              "itemUrl": "https://www.wowhead.com/forever/item=274155",
+              "id_reference_status": "forever_item_page_verified",
+              "forever_loot_confirmed": null
             },
             {
               "en": "Thornweaver Drape",
@@ -4388,14 +4416,22 @@
               "en": "Tusken Helm",
               "fr": "Casque de défense en ivoire",
               "slot": "Tête",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "id": 6686,
+              "itemUrl": "https://www.wowhead.com/classic/item=6686",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             },
             {
               "en": "Quillord Mail Leggings",
               "fr": "Jambières de seigneur des épines",
               "slot": "Jambes / Mailles",
               "isNew": true,
-              "source_status": "classic_loot_reference"
+              "source_status": "forever_beta_wowhead",
+              "id": 274161,
+              "itemUrl": "https://www.wowhead.com/forever/item=274161",
+              "id_reference_status": "forever_item_page_verified",
+              "forever_loot_confirmed": null
             }
           ],
           "rare": false,
@@ -4421,7 +4457,11 @@
               "en": "Armor Piercer",
               "fr": "Perce-fer",
               "slot": "Arme d'hast",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "id": 6679,
+              "itemUrl": "https://www.wowhead.com/classic/item=6679",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             }
           ],
           "rare": false,
@@ -4458,7 +4498,11 @@
               "en": "Ferine Leggings",
               "fr": "Jambières sauvages",
               "slot": "Jambes",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "id": 6690,
+              "itemUrl": "https://www.wowhead.com/classic/item=6690",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             }
           ],
           "rare": false,
@@ -4510,13 +4554,21 @@
               "en": "Batwing Mantle",
               "fr": "Mantelet en aile de chauve-souris",
               "slot": "Épaules",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "id": 6697,
+              "itemUrl": "https://www.wowhead.com/classic/item=6697",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             },
             {
               "en": "Nightstalker Bow",
               "fr": "Arc de traqueur nocturne",
               "slot": "Arc",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "id": 6696,
+              "itemUrl": "https://www.wowhead.com/classic/item=6696",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             }
           ],
           "rare": true,
