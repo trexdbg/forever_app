@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-10",
+  "updated_at": "2026-10-11",
   "scope": "curated quest requirements and Wowhead Forever recipe references",
-  "status": "wowhead_forever_reference_not_verified_live_gameplay",
+  "status": "forever_beta_spell_and_guides_reference_unverified_live_gameplay",
   "disclaimer": {
-    "fr": "Fiches et compositions présentes dans les références Wowhead Forever ; ne garantissent pas la disponibilité, le vendeur, le stock ni la progression en jeu.",
-    "en": "Recorded in Wowhead Forever references; does not guarantee availability, sellers, inventory or quest progression in live gameplay."
+    "fr": "Références issues des sorts et guides Wowhead Forever (bêta), avec une différence importante : les potions de soins relèvent des Premiers soins. Certaines anciennes recettes d'alchimie subsistent dans les bases sans prouver leur disponibilité en jeu. Disponibilités et stocks non vérifiés.",
+    "en": "Based on Wowhead Forever beta crafting spells and guides; healing potions are First Aid crafts. Legacy Alchemy spells may remain in databases without being available in the live build. Vendor stock and live availability are not verified."
   },
   "quests": [
     {
@@ -74,8 +74,8 @@
       ],
       "url": "https://www.wowhead.com/forever/quest=715",
       "notes": {
-        "fr": "Deux potions distinctes préparées en alchimie ; quête annexe.",
-        "en": "Two separate alchemy potions; optional side quest."
+        "fr": "La potion de soins est fabriquée via les Premiers soins dans la bêta Forever, tandis que la potion d'invisibilité inférieure relève de l'alchimie.",
+        "en": "In the Forever beta, Healing Potions come from First Aid; Lesser Invisibility Potions are Alchemy crafts."
       }
     },
     {
@@ -130,10 +130,13 @@
         714
       ],
       "reference": {
-        "kind": "wowhead_forever_spell",
-        "url": "https://www.wowhead.com/forever/spell=3961"
+        "kind": "wowhead_forever_beta_crafting_spell",
+        "url": "https://www.wowhead.com/forever/spell=3961",
+        "guide": null
       },
-      "availability": "recipe_reference_not_live_verified"
+      "availability": "beta_record_not_live_verified",
+      "outputQuantity": 2,
+      "requiredProfessionSkill": 170
     },
     {
       "key": "frost-oil",
@@ -170,10 +173,12 @@
         713
       ],
       "reference": {
-        "kind": "wowhead_forever_spell",
-        "url": "https://www.wowhead.com/forever/spell=3454"
+        "kind": "wowhead_forever_beta_crafting_spell",
+        "url": "https://www.wowhead.com/forever/spell=3454",
+        "guide": null
       },
-      "availability": "recipe_reference_not_live_verified"
+      "availability": "beta_record_not_live_verified",
+      "outputQuantity": 3
     },
     {
       "key": "healing-potion",
@@ -181,27 +186,27 @@
         "fr": "Potion de soins",
         "en": "Healing Potion"
       },
-      "profession": "alchemy",
-      "spellId": 3447,
+      "profession": "first-aid",
+      "spellId": 1244433,
       "ingredients": [
-        {
-          "name": {
-            "fr": "Doulourante",
-            "en": "Bruiseweed"
-          },
-          "quantity": 1
-        },
-        {
-          "name": {
-            "fr": "Églantine",
-            "en": "Briarthorn"
-          },
-          "quantity": 1
-        },
         {
           "name": {
             "fr": "Fiole plombée",
             "en": "Leaded Vial"
+          },
+          "quantity": 1
+        },
+        {
+          "name": {
+            "fr": "Épices fortes",
+            "en": "Hot Spices"
+          },
+          "quantity": 1
+        },
+        {
+          "name": {
+            "fr": "Doulourante",
+            "en": "Bruiseweed"
           },
           "quantity": 1
         }
@@ -210,10 +215,13 @@
         715
       ],
       "reference": {
-        "kind": "wowhead_forever_spell",
-        "url": "https://www.wowhead.com/forever/spell=3447"
+        "kind": "wowhead_forever_beta_crafting_spell",
+        "url": "https://www.wowhead.com/forever/spell=1244433",
+        "guide": "https://www.wowhead.com/forever/guide/professions/first-aid/overview"
       },
-      "availability": "recipe_reference_not_live_verified"
+      "availability": "beta_record_not_live_verified",
+      "outputQuantity": 2,
+      "requiredProfessionSkill": 110
     },
     {
       "key": "lesser-invisibility-potion",
@@ -250,10 +258,12 @@
         715
       ],
       "reference": {
-        "kind": "wowhead_forever_spell",
-        "url": "https://www.wowhead.com/forever/spell=3448"
+        "kind": "wowhead_forever_beta_crafting_spell",
+        "url": "https://www.wowhead.com/forever/spell=3448",
+        "guide": null
       },
-      "availability": "recipe_reference_not_live_verified"
+      "availability": "beta_record_not_live_verified",
+      "outputQuantity": 2
     },
     {
       "key": "patterned-bronze-bracers",
@@ -283,10 +293,12 @@
         716
       ],
       "reference": {
-        "kind": "wowhead_forever_spell",
-        "url": "https://www.wowhead.com/forever/spell=2672"
+        "kind": "wowhead_forever_beta_crafting_spell",
+        "url": "https://www.wowhead.com/forever/spell=2672",
+        "guide": null
       },
-      "availability": "recipe_reference_not_live_verified"
+      "availability": "beta_record_not_live_verified",
+      "outputQuantity": 2
     },
     {
       "key": "minor-healing-potion",
@@ -294,37 +306,81 @@
         "fr": "Potion de soins mineure",
         "en": "Minor Healing Potion"
       },
-      "profession": "alchemy",
-      "spellId": 2330,
+      "profession": "first-aid",
+      "spellId": 1244431,
       "ingredients": [
-        {
-          "name": {
-            "fr": "Pacifique",
-            "en": "Peacebloom"
-          },
-          "quantity": 1
-        },
-        {
-          "name": {
-            "fr": "Feuillargent",
-            "en": "Silverleaf"
-          },
-          "quantity": 1
-        },
         {
           "name": {
             "fr": "Fiole vide",
             "en": "Empty Vial"
           },
           "quantity": 1
+        },
+        {
+          "name": {
+            "fr": "Épices douces",
+            "en": "Mild Spices"
+          },
+          "quantity": 1
+        },
+        {
+          "name": {
+            "fr": "Pacifique",
+            "en": "Peacebloom"
+          },
+          "quantity": 1
         }
       ],
       "questIds": [],
       "reference": {
-        "kind": "wowhead_forever_spell",
-        "url": "https://www.wowhead.com/forever/spell=2330"
+        "kind": "wowhead_forever_beta_crafting_spell",
+        "url": "https://www.wowhead.com/forever/spell=1244431",
+        "guide": "https://www.wowhead.com/forever/guide/professions/first-aid/overview"
       },
-      "availability": "recipe_reference_not_live_verified"
+      "availability": "beta_record_not_live_verified",
+      "outputQuantity": 2,
+      "requiredProfessionSkill": 1
+    },
+    {
+      "key": "lesser-healing-potion",
+      "name": {
+        "fr": "Potion de soins inférieure",
+        "en": "Lesser Healing Potion"
+      },
+      "profession": "first-aid",
+      "spellId": 1244432,
+      "ingredients": [
+        {
+          "name": {
+            "fr": "Fiole vide",
+            "en": "Empty Vial"
+          },
+          "quantity": 1
+        },
+        {
+          "name": {
+            "fr": "Épices douces",
+            "en": "Mild Spices"
+          },
+          "quantity": 2
+        },
+        {
+          "name": {
+            "fr": "Églantine",
+            "en": "Briarthorn"
+          },
+          "quantity": 1
+        }
+      ],
+      "questIds": [],
+      "reference": {
+        "kind": "wowhead_forever_beta_crafting_spell",
+        "url": "https://www.wowhead.com/forever/spell=1244432",
+        "guide": "https://www.wowhead.com/forever/guide/professions/first-aid/overview"
+      },
+      "availability": "beta_record_not_live_verified",
+      "outputQuantity": 2,
+      "requiredProfessionSkill": 55
     },
     {
       "key": "greater-healing-potion",
@@ -332,37 +388,40 @@
         "fr": "Potion de soins supérieure",
         "en": "Greater Healing Potion"
       },
-      "profession": "alchemy",
-      "spellId": 7181,
+      "profession": "first-aid",
+      "spellId": 1244434,
       "ingredients": [
-        {
-          "name": {
-            "fr": "Vietérule",
-            "en": "Liferoot"
-          },
-          "quantity": 1
-        },
-        {
-          "name": {
-            "fr": "Sang-royal",
-            "en": "Kingsblood"
-          },
-          "quantity": 1
-        },
         {
           "name": {
             "fr": "Fiole plombée",
             "en": "Leaded Vial"
           },
           "quantity": 1
+        },
+        {
+          "name": {
+            "fr": "Épices fortes",
+            "en": "Hot Spices"
+          },
+          "quantity": 3
+        },
+        {
+          "name": {
+            "fr": "Vietérule",
+            "en": "Liferoot"
+          },
+          "quantity": 1
         }
       ],
       "questIds": [],
       "reference": {
-        "kind": "wowhead_forever_spell",
-        "url": "https://www.wowhead.com/forever/spell=7181"
+        "kind": "wowhead_forever_beta_crafting_spell",
+        "url": "https://www.wowhead.com/forever/spell=1244434",
+        "guide": "https://www.wowhead.com/forever/guide/professions/first-aid/overview"
       },
-      "availability": "recipe_reference_not_live_verified"
+      "availability": "beta_record_not_live_verified",
+      "outputQuantity": 2,
+      "requiredProfessionSkill": 155
     },
     {
       "key": "lesser-mana-potion",
@@ -397,10 +456,13 @@
       ],
       "questIds": [],
       "reference": {
-        "kind": "wowhead_forever_spell",
-        "url": "https://www.wowhead.com/forever/spell=3173"
+        "kind": "wowhead_forever_beta_crafting_spell",
+        "url": "https://www.wowhead.com/forever/spell=3173",
+        "guide": null
       },
-      "availability": "recipe_reference_not_live_verified"
+      "availability": "beta_record_not_live_verified",
+      "outputQuantity": 2,
+      "requiredProfessionSkill": 120
     },
     {
       "key": "mana-potion",
@@ -435,10 +497,12 @@
       ],
       "questIds": [],
       "reference": {
-        "kind": "wowhead_forever_spell",
-        "url": "https://www.wowhead.com/forever/spell=3452"
+        "kind": "wowhead_forever_beta_crafting_spell",
+        "url": "https://www.wowhead.com/forever/spell=3452",
+        "guide": null
       },
-      "availability": "recipe_reference_not_live_verified"
+      "availability": "beta_record_not_live_verified",
+      "outputQuantity": 2
     },
     {
       "key": "swiftness-potion",
@@ -473,10 +537,13 @@
       ],
       "questIds": [],
       "reference": {
-        "kind": "wowhead_forever_spell",
-        "url": "https://www.wowhead.com/forever/spell=2335"
+        "kind": "wowhead_forever_beta_crafting_spell",
+        "url": "https://www.wowhead.com/forever/spell=2335",
+        "guide": null
       },
-      "availability": "recipe_reference_not_live_verified"
+      "availability": "beta_record_not_live_verified",
+      "outputQuantity": 2,
+      "requiredProfessionSkill": 60
     }
   ],
   "npc_reference": {
@@ -488,5 +555,11 @@
     ],
     "source": "data/npcs.json",
     "stocks_verified_live": false
+  },
+  "source_audit": {
+    "reviewed_at": "2026-10-11",
+    "guide": "https://www.wowhead.com/forever/guide/professions/first-aid/overview",
+    "reason": "Healing potions switched from Alchemy to First Aid in Forever beta; spells 1244431-1244434 and ingredient lists checked against Forever sources.",
+    "verification": "source_records_only_not_live_server"
   }
 }

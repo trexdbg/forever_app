@@ -26,3 +26,17 @@
 .geo-related a{display:inline-block;border:1px solid #6b715b;padding:8px 12px;border-radius:5px;text-decoration:none}
 .geo-content code{background:#18261f;padding:2px 4px;border-radius:3px}
 @media(max-width:600px){.geo-page{padding:13px 0 27px}.geo-content section{padding:17px 0 5px}.geo-table th,.geo-table td{padding:9px 10px}.geo-article h1{font-size:1.9rem}}
+
+
+/* Short, optional answers for human readers; full HTML remains crawlable without JS. */
+.geo-qa-section{margin-top:10px}
+.geo-qa-list{display:grid;gap:8px;margin:14px 0 20px}
+.geo-qa{border:1px solid #475746;border-radius:7px;background:rgba(12,24,17,.45);overflow:hidden}
+.geo-qa summary{cursor:pointer;list-style:none;padding:11px 38px 11px 13px;position:relative;font-weight:660;line-height:1.55;color:#eee3d0}
+.geo-qa summary::-webkit-details-marker{display:none}
+.geo-qa summary::after{content:"+";position:absolute;right:14px;top:9px;font-size:1.2rem;color:#dbc58d}
+.geo-qa[open] summary::after{content:"−"}
+.geo-qa[open] summary{background:rgba(45,59,42,.35)}
+.geo-qa p{margin:0;padding:11px 13px 14px;border-top:1px solid #475746;line-height:1.7}
+.geo-qa summary:focus-visible{outline:2px solid #e1c68e;outline-offset:-2px}
+@media(max-width:600px){.geo-qa summary{padding:10px 36px 10px 11px}.geo-qa p{padding:10px 11px 13px}}
