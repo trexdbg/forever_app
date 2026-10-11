@@ -47,4 +47,41 @@ for(const path of paths){
   total++;
  }
 }
-console.log("Item locale / references: OK ("+total+" catalogued entries, FR+EN, IDs 13404 and 13098).");
+// Check the item-name lookup against every bilingual dungeon drop; these sheets
+// use Forever's own source data rather than an English word-for-word rendering.
+const dungeonData=JSON.parse(readFileSync(resolve(root,"data/dungeons-forever.json"),"utf8"));
+let dungeonChecked=0,officialChecked=0;
+for(const dungeon of dungeonData.dungeons||[]){
+ for(const boss of dungeon.bosses||[]){
+  for(const drop of boss.loot||[]){
+   if(!drop.id||!drop.en||!drop.fr)continue;
+   const sample={id:drop.id,name:drop.en,name_fr:drop.fr,source_status:drop.source_status==="classic_loot_reference"?"classic_reference":"forever_beta_community"};
+   assert.equal(fr.name(sample),drop.fr,"Dungeon FR naming mismatch for item "+drop.id);
+   assert.equal(en.name(sample),drop.en,"Dungeon EN naming mismatch for item "+drop.id);
+   if(fr.resolved(sample).verified)officialChecked++;
+   dungeonChecked++;
+  }
+ }
+}
+assert.ok(dungeonChecked>=70,"Dungeon item coverage fell unexpectedly");
+assert.ok(officialChecked>=19,"Confirmed Forever localization count regressed");
+const staleForever={id:270227,name:"Ephemeral Choker",name_fr:"Collier éphémère",source_status:"forever_beta_observed"};
+assert.equal(fr.name(staleForever),"Sautoir éphémère","Never show previous literal name for official Forever item 270227");
+assert.equal(en.name(staleForever),"Ephemeral Choker");
+assert.equal(fr.resolved(staleForever).verified,true);
+const bracers={id:271096,name:"Aetherwisp Bracers",name_fr:"Brassards du feu follet d’éther",source_status:"forever_beta_community"};
+assert.equal(fr.name(bracers),"Brassards brindecieux");
+const iconCatalog=JSON.parse(readFileSync(resolve(root,"data/items-classic-cache.json"),"utf8"));
+const catalogIconById=new Map((iconCatalog.items||[]).filter(i=>i.id&&i.icon).map(i=>[Number(i.id),i.icon]));
+const rareCatalog=JSON.parse(readFileSync(resolve(root,"data/rares.json"),"utf8"));
+let rareIconMatches=0;
+for(const rare of rareCatalog.rares||[]){
+ for(const drop of rare.loot||[]){
+  const reference=catalogIconById.get(Number(drop.item_id));
+  if(!reference||!drop.icon)continue;
+  assert.equal(drop.icon,reference,"Rare drop icon does not match catalogue: "+drop.item_id);
+  rareIconMatches++;
+ }
+}
+assert.ok(rareIconMatches>0,"No rare loot icons checked");
+console.log("Item locale / references: OK ("+total+" catalogued entries, "+dungeonChecked+" dungeon drops, "+rareIconMatches+" rare drop icons, FR+EN).");
