@@ -1015,7 +1015,7 @@
             "en": "Duskstalker's Hide",
             "fr": "Peau du traqueur du crépuscule"
           },
-          "item_id": null,
+          "item_id": 284165,
           "icon": "inv_chest_leather_03",
           "chance_classic_percent": null,
           "source_version": "forever_beta",
@@ -1029,7 +1029,8 @@
             "en": "58 Armor · +2 Agility"
           },
           "collection_status": "forever_database_observed",
-          "item_id_status": "unresolved_forever_beta"
+          "item_id_status": "forever_beta_wowhead_verified",
+          "item_source_url": "https://www.wowhead.com/forever/item=284165"
         }
       ],
       "source": "https://www.wowhead.com/forever/npc=14430",
