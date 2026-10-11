@@ -9,6 +9,17 @@
     && (location.hostname === "foreveroth.com" || location.hostname === "www.foreveroth.com");
   if (!enabled) return;
 
+  // Optional opt-out for maintainers testing many pages on their own devices.
+  // ?fo_dev=off enables the exclusion in this browser; ?fo_dev=on removes it.
+  // Never affects other visitors, and never overrides the consent requirement.
+  const INTERNAL_OPT_OUT_KEY = "foreveroth.analytics.internal_optout.v1";
+  try {
+    const devChoice = new URLSearchParams(location.search).get("fo_dev");
+    if (devChoice === "off") localStorage.setItem(INTERNAL_OPT_OUT_KEY, "1");
+    if (devChoice === "on") localStorage.removeItem(INTERNAL_OPT_OUT_KEY);
+    if (localStorage.getItem(INTERNAL_OPT_OUT_KEY) === "1") return;
+  } catch (_) { /* Keep normal consent behavior if local storage is unavailable. */ }
+
   const en = document.documentElement.lang === "en";
   const strings = en ? {
     title: "Audience measurement",
