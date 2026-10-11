@@ -1048,27 +1048,39 @@
           "loot": [
             {
               "fr": "Manchettes tissetombes",
-              "en": "Graveweave Cuffs",
+              "en": "Graveweave Bindings",
               "slot": "Poignets / Wrists",
               "chanceReported": 27,
               "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 273036,
+              "itemUrl": "https://www.wowhead.com/forever/item=273036",
+              "identification_source": "https://wowfwiki.com/wiki/Graveweave_Bindings",
+              "name_fr_status": "community_translation_unverified"
             },
             {
               "fr": "Chevalière de lieur-d’os",
-              "en": "Bonebinder Signet",
+              "en": "Bonebinder's Signet",
               "slot": "Doigt / Ring",
               "chanceReported": 42,
               "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 273032,
+              "itemUrl": "https://www.wowhead.com/forever/item=273032",
+              "identification_source": "https://wowfwiki.com/wiki/Bonebinders_Signet",
+              "name_fr_status": "community_translation_unverified"
             },
             {
               "fr": "Arbalète à répétition pointetombe",
-              "en": "Gravepoint Repeater",
+              "en": "Gravespike Repeater",
               "slot": "À distance / Ranged",
               "chanceReported": 30,
               "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 273033,
+              "itemUrl": "https://www.wowhead.com/forever/item=273033",
+              "identification_source": "https://wowfwiki.com/wiki/Gravespike_Repeater",
+              "name_fr_status": "community_translation_unverified"
             }
           ],
           "note": {
@@ -1087,27 +1099,39 @@
           "loot": [
             {
               "fr": "Sculpte-cartilage",
-              "en": "Cartilage Carver",
+              "en": "Cartilage Shapers",
               "slot": "Mains / Hands",
               "chanceReported": 32,
               "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 273054,
+              "itemUrl": "https://www.wowhead.com/forever/item=273054",
+              "identification_source": "https://wowfwiki.com/wiki/Cartilage_Shapers",
+              "name_fr_status": "community_translation_unverified"
             },
             {
               "fr": "Dague écorche-tendons",
-              "en": "Tendonflayer Dagger",
+              "en": "Tendonscraper Dagger",
               "slot": "Main droite / Main hand",
               "chanceReported": 14,
               "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 273053,
+              "itemUrl": "https://www.wowhead.com/forever/item=273053",
+              "identification_source": "https://wowfwiki.com/wiki/Tendonscraper_Dagger",
+              "name_fr_status": "community_translation_unverified"
             },
             {
               "fr": "Oculaire de pile d’os",
-              "en": "Bonepile Ocular",
+              "en": "Bonepile Gaze",
               "slot": "Bouclier / Shield",
               "chanceReported": 54,
               "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 273055,
+              "itemUrl": "https://www.wowhead.com/forever/item=273055",
+              "identification_source": "https://wowfwiki.com/wiki/Bonepile_Gaze",
+              "name_fr_status": "community_translation_unverified"
             }
           ],
           "note": {
@@ -1152,11 +1176,15 @@
             },
             {
               "fr": "Cotte d’anneaux déformée par le mana",
-              "en": "Mana-Warped Hauberk",
+              "en": "Mana-Warped Chain Shirt",
               "slot": "Torse / Chest",
               "chanceReported": 35,
               "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 273035,
+              "itemUrl": "https://www.wowhead.com/forever/item=273035",
+              "identification_source": "https://wowfwiki.com/wiki/Mana-Warped_Chain_Shirt",
+              "name_fr_status": "community_translation_unverified"
             }
           ],
           "note": {
@@ -1175,27 +1203,39 @@
           "loot": [
             {
               "fr": "Drapé d’énergie fluctuante",
-              "en": "Fluxing Energy Drape",
+              "en": "Drape of Shifting Energy",
               "slot": "Dos / Back",
               "chanceReported": 32,
               "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 273045,
+              "itemUrl": "https://www.wowhead.com/forever/item=273045",
+              "identification_source": "https://wowfwiki.com/wiki/Drape_of_Shifting_Energy",
+              "name_fr_status": "community_translation_unverified"
             },
             {
               "fr": "Robe de sorcier pourpre",
-              "en": "Violet Wizard Robe",
+              "en": "Violet Sorcerer's Robes",
               "slot": "Torse / Chest",
               "chanceReported": 39,
               "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 273044,
+              "itemUrl": "https://www.wowhead.com/forever/item=273044",
+              "identification_source": "https://wowfwiki.com/wiki/Violet_Sorcerers_Robes",
+              "name_fr_status": "community_translation_unverified"
             },
             {
               "fr": "Baguette de concentration de mana",
-              "en": "Mana Focus Wand",
+              "en": "Wand of Mana Concentration",
               "slot": "À distance / Ranged",
               "chanceReported": 29,
               "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 273043,
+              "itemUrl": "https://www.wowhead.com/forever/item=273043",
+              "identification_source": "https://wowfwiki.com/wiki/Wand_of_Mana_Concentration",
+              "name_fr_status": "community_translation_unverified"
             }
           ],
           "note": {
@@ -1214,35 +1254,51 @@
           "loot": [
             {
               "fr": "Lame double de gardien",
-              "en": "Guardian's Doubleblade",
+              "en": "Guardian's Dualblade",
               "slot": "Deux mains / Two-hand",
               "chanceReported": 29,
               "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 273046,
+              "itemUrl": "https://www.wowhead.com/forever/item=273046",
+              "identification_source": "https://wowfwiki.com/wiki/Guardians_Dualblade",
+              "name_fr_status": "community_translation_unverified"
             },
             {
               "fr": "Gardécaille réfractaire",
-              "en": "Refractive Scaleguard",
+              "en": "Refractory Scaleguards",
               "slot": "Jambes / Legs",
               "chanceReported": 40,
               "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 273048,
+              "itemUrl": "https://www.wowhead.com/forever/item=273048",
+              "identification_source": "https://wowfwiki.com/wiki/Refractory_Scaleguards",
+              "name_fr_status": "community_translation_unverified"
             },
             {
               "fr": "Protège-épaules cristallins instables",
-              "en": "Unstable Crystal Shoulders",
+              "en": "Unstable Crystalline Shoulderpads",
               "slot": "Épaules / Shoulders",
               "chanceReported": 31,
               "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 273047,
+              "itemUrl": "https://www.wowhead.com/forever/item=273047",
+              "identification_source": "https://wowfwiki.com/wiki/Unstable_Crystalline_Shoulderpads",
+              "name_fr_status": "community_translation_unverified"
             },
             {
               "fr": "Plan : rouet",
-              "en": "Pattern: Spinning Wheel",
+              "en": "Blueprint: Spinning Wheel",
               "slot": "Recette / Recipe",
               "chanceReported": 9.3,
               "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 273099,
+              "itemUrl": "https://www.wowhead.com/forever/item=273099",
+              "identification_source": "https://wowfwiki.com/wiki/Spinning_Wheel",
+              "name_fr_status": "community_translation_unverified"
             }
           ],
           "note": {
@@ -1261,27 +1317,39 @@
           "loot": [
             {
               "fr": "Échine du dévoreur",
-              "en": "Devourer's Spine",
+              "en": "Spine of the Devourer",
               "slot": "Deux mains / Two-hand",
               "chanceReported": 40,
               "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 273040,
+              "itemUrl": "https://www.wowhead.com/forever/item=273040",
+              "identification_source": "https://wowfwiki.com/wiki/Spine_of_the_Devourer",
+              "name_fr_status": "community_translation_unverified"
             },
             {
               "fr": "Bottines en écaille-de-mana",
-              "en": "Manascale Boots",
+              "en": "Manascale Treads",
               "slot": "Pieds / Feet",
               "chanceReported": 29,
               "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 273042,
+              "itemUrl": "https://www.wowhead.com/forever/item=273042",
+              "identification_source": "https://wowfwiki.com/wiki/Manascale_Treads",
+              "name_fr_status": "community_translation_unverified"
             },
             {
               "fr": "Ceinturon en ondule-bandes",
-              "en": "Rippleband Girdle",
+              "en": "Slitherwrap Girdle",
               "slot": "Taille / Waist",
               "chanceReported": 31,
               "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 273041,
+              "itemUrl": "https://www.wowhead.com/forever/item=273041",
+              "identification_source": "https://wowfwiki.com/wiki/Slitherwrap_Girdle",
+              "name_fr_status": "community_translation_unverified"
             }
           ],
           "note": {
@@ -1300,27 +1368,39 @@
           "loot": [
             {
               "fr": "Corde feuilleflétrie",
-              "en": "Witherleaf Cord",
+              "en": "Blightleaf Rope",
               "slot": "Taille / Waist",
               "chanceReported": 35,
               "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 273039,
+              "itemUrl": "https://www.wowhead.com/forever/item=273039",
+              "identification_source": "https://wowfwiki.com/wiki/Blightleaf_Rope",
+              "name_fr_status": "community_translation_unverified"
             },
             {
               "fr": "Atours du déchu Gangrécorce",
-              "en": "Fallen Felbark Raiment",
+              "en": "Garb of Fallen Felbark",
               "slot": "Torse / Chest",
               "chanceReported": 28,
               "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 273038,
+              "itemUrl": "https://www.wowhead.com/forever/item=273038",
+              "identification_source": "https://wowfwiki.com/wiki/Garb_of_Fallen_Felbark",
+              "name_fr_status": "community_translation_unverified"
             },
             {
               "fr": "Bras de gangrebranche",
-              "en": "Felbranch Arm",
+              "en": "Felbough Arm",
               "slot": "Deux mains / Two-hand",
               "chanceReported": 37,
               "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 273037,
+              "itemUrl": "https://www.wowhead.com/forever/item=273037",
+              "identification_source": "https://wowfwiki.com/wiki/Felbough_Arm",
+              "name_fr_status": "community_translation_unverified"
             }
           ],
           "note": {
@@ -1339,19 +1419,27 @@
           "loot": [
             {
               "fr": "Orbe pesant",
-              "en": "Weighted Orb",
+              "en": "Ponderous Orb",
               "slot": "Main gauche / Off hand",
               "chanceReported": 24,
               "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 273052,
+              "itemUrl": "https://www.wowhead.com/forever/item=273052",
+              "identification_source": "https://wowfwiki.com/wiki/Ponderous_Orb",
+              "name_fr_status": "community_translation_unverified"
             },
             {
               "fr": "Mantelet de sorcier pourpre",
-              "en": "Violet Wizard Mantle",
+              "en": "Violet Sorcerer's Mantle",
               "slot": "Épaules / Shoulders",
               "chanceReported": 37,
               "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 273051,
+              "itemUrl": "https://www.wowhead.com/forever/item=273051",
+              "identification_source": "https://wowfwiki.com/wiki/Violet_Sorcerers_Mantle",
+              "name_fr_status": "community_translation_unverified"
             },
             {
               "fr": "Pendentif à facettes d’archimagistère",
@@ -1368,11 +1456,16 @@
             },
             {
               "fr": "Plan : récupérateur arcanique",
-              "en": "Pattern: Arcane Recycler",
+              "en": "Blueprint: Arcane Salvager",
               "slot": "Recette / Recipe",
               "chanceReported": 6.4,
               "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 273103,
+              "itemUrl": "https://www.wowhead.com/forever/item=273103",
+              "identification_source": "https://wowfwiki.com/wiki/Arcane_Salvager",
+              "name_fr_status": "community_translation_unverified",
+              "boss_association_status": "guide_only_unconfirmed"
             }
           ],
           "note": {
