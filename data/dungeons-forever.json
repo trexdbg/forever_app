@@ -4091,7 +4091,7 @@
           "loot": [
             {
               "en": "Manual Crowd Pummeler",
-              "fr": "Manuel du faucheur de foule",
+              "fr": "Roueur manuel",
               "slot": "Deux mains",
               "source_status": "classic_loot_reference",
               "id": 9449,
@@ -4539,7 +4539,7 @@
           "loot": [
             {
               "en": "Swinetusk Shank",
-              "fr": "Dague du groin",
+              "fr": "Surin de brochepourceau",
               "slot": "Dague",
               "source_status": "classic_loot_reference",
               "id": 6691,
