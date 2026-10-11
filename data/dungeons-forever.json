@@ -1888,9 +1888,13 @@
               "fr": "Marcheurs des profondeurs",
               "slot": "Pieds / Feet",
               "isNew": true,
-              "source_status": "classic_loot_reference",
+              "source_status": "forever_beta_wowhead",
               "iconFileId": 132540,
-              "icon_source": "https://www.icy-veins.com/wow-forever/ragefire-chasm-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/ragefire-chasm-guide",
+              "id": 273007,
+              "itemUrl": "https://www.wowhead.com/forever/item=273007",
+              "id_reference_status": "forever_item_page_verified",
+              "forever_loot_confirmed": null
             }
           ],
           "rare": false,
@@ -3696,9 +3700,13 @@
               "fr": "Mantelet d'exécuteur",
               "slot": "Épaules / Shoulders",
               "isNew": true,
-              "source_status": "classic_loot_reference",
+              "source_status": "forever_beta_wowhead",
               "iconFileId": 135039,
-              "icon_source": "https://www.icy-veins.com/wow-forever/the-stockade-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/the-stockade-guide",
+              "id": 273804,
+              "itemUrl": "https://www.wowhead.com/forever/item=273804",
+              "id_reference_status": "forever_item_page_verified",
+              "forever_loot_confirmed": null
             }
           ],
           "rare": false,
@@ -3720,7 +3728,11 @@
               "slot": "Bâton / Staff",
               "source_status": "classic_loot_reference",
               "iconFileId": 135143,
-              "icon_source": "https://www.icy-veins.com/wow-forever/the-stockade-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/the-stockade-guide",
+              "id": 2280,
+              "itemUrl": "https://www.wowhead.com/classic/item=2280",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             },
             {
               "en": "Demolition Girdle",
