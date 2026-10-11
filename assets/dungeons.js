@@ -2,7 +2,7 @@
 (()=>{"use strict";
 const root=document.getElementById("dungeon-app");if(!root)return;
 const en=document.documentElement.lang==="en",t=(fr,eng)=>en?eng:fr,$=s=>document.getElementById(s);
-const endpoint="/data/dungeons-forever.json",q=new URLSearchParams(location.search);
+const endpoint="/data/dungeons-forever.json?v=20261011-catalog7",q=new URLSearchParams(location.search);
 const cvs=$("dg-map"),ctx=cvs.getContext("2d"),W=1002,H=620;
 const modes={route:"route",world:"world"};
 let db=null,selected=null,selectedBoss=0,view="route",scale=1,offsetX=0,offsetY=0,drag=null,points=[],worldImage=null,worldToken=0,floorImage=null,floorToken=0,floorFit=null,floorFailed=false;
