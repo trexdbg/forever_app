@@ -687,7 +687,7 @@
               "quality": "rare",
               "itemLevel": 27,
               "requiredLevel": 22,
-              "itemUrl": "https://www.wowhead.com/classic/item=6641",
+              "itemUrl": "https://www.wowhead.com/forever/item=6641",
               "icon": "inv_sword_17",
               "icon_source": "woweternity_forever_ruins_of_lordaeron"
             },
@@ -700,7 +700,7 @@
               "quality": "rare",
               "itemLevel": 27,
               "requiredLevel": 22,
-              "itemUrl": "https://www.wowhead.com/classic/item=6642",
+              "itemUrl": "https://www.wowhead.com/forever/item=6642",
               "icon": "inv_chest_chain_05",
               "icon_source": "woweternity_forever_ruins_of_lordaeron"
             }
@@ -1732,7 +1732,8 @@
               "isNew": true,
               "source_status": "forever_beta_cache",
               "iconFileId": 135531,
-              "icon_source": "https://www.icy-veins.com/wow-forever/ragefire-chasm-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/ragefire-chasm-guide",
+              "itemUrl": "https://www.wowhead.com/forever/item=272999"
             },
             {
               "en": "Trogg Scepter",
@@ -1742,7 +1743,8 @@
               "isNew": true,
               "source_status": "forever_beta_cache",
               "iconFileId": 133727,
-              "icon_source": "https://www.icy-veins.com/wow-forever/ragefire-chasm-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/ragefire-chasm-guide",
+              "itemUrl": "https://www.wowhead.com/forever/item=272996"
             },
             {
               "en": "Bone Knuckles",
@@ -1752,7 +1754,8 @@
               "isNew": true,
               "source_status": "forever_beta_cache",
               "iconFileId": 132369,
-              "icon_source": "https://www.icy-veins.com/wow-forever/ragefire-chasm-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/ragefire-chasm-guide",
+              "itemUrl": "https://www.wowhead.com/forever/item=272998"
             }
           ],
           "rare": false,
@@ -1898,7 +1901,8 @@
               "isNew": true,
               "source_status": "forever_beta_cache",
               "iconFileId": 135639,
-              "icon_source": "https://www.icy-veins.com/wow-forever/ragefire-chasm-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/ragefire-chasm-guide",
+              "itemUrl": "https://www.wowhead.com/forever/item=273003"
             },
             {
               "en": "Satyrskin Cloak",
@@ -1908,7 +1912,8 @@
               "isNew": true,
               "source_status": "forever_beta_cache",
               "iconFileId": 133770,
-              "icon_source": "https://www.icy-veins.com/wow-forever/ragefire-chasm-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/ragefire-chasm-guide",
+              "itemUrl": "https://www.wowhead.com/forever/item=273005"
             },
             {
               "en": "Chasm Walkers",
@@ -2076,7 +2081,8 @@
               "isNew": true,
               "source_status": "forever_beta_cache",
               "iconFileId": 133884,
-              "icon_source": "https://www.icy-veins.com/wow-forever/wailing-caverns-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/wailing-caverns-guide",
+              "itemUrl": "https://www.wowhead.com/forever/item=273088"
             }
           ],
           "rare": false,
@@ -2283,7 +2289,8 @@
               "slot": "Bouclier / Shield",
               "source_status": "classic_loot_reference",
               "iconFileId": 134956,
-              "icon_source": "https://www.icy-veins.com/wow-forever/wailing-caverns-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/wailing-caverns-guide",
+              "itemUrl": "https://www.wowhead.com/classic/item=6630"
             },
             {
               "en": "Living Root",
@@ -3104,7 +3111,8 @@
               "source_status": "classic_loot_reference",
               "source_url": "https://theforeverera.com/en/dungeons/shadowfang-keep/commander-springvale/",
               "iconFileId": 134949,
-              "icon_source": "https://www.icy-veins.com/wow-forever/shadowfang-keep-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/shadowfang-keep-guide",
+              "itemUrl": "https://www.wowhead.com/classic/item=6320"
             }
           ],
           "rare": false,
@@ -3773,7 +3781,8 @@
               "isNew": true,
               "source_status": "forever_beta_cache",
               "iconFileId": 132513,
-              "icon_source": "https://www.icy-veins.com/wow-forever/the-stockade-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/the-stockade-guide",
+              "itemUrl": "https://www.wowhead.com/forever/item=273807"
             }
           ],
           "rare": false,
@@ -3796,7 +3805,8 @@
               "slot": "Hache / Axe",
               "source_status": "forever_beta_cache",
               "iconFileId": 132392,
-              "icon_source": "https://www.icy-veins.com/wow-forever/the-stockade-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/the-stockade-guide",
+              "itemUrl": "https://www.wowhead.com/forever/item=273809"
             }
           ],
           "rare": false,
@@ -3943,7 +3953,8 @@
               "fr": "Bouclier irradié",
               "slot": "Bouclier",
               "isNew": true,
-              "source_status": "forever_beta_cache"
+              "source_status": "forever_beta_cache",
+              "itemUrl": "https://www.wowhead.com/forever/item=274043"
             },
             {
               "en": "Skullduggery Belt",
@@ -4032,7 +4043,8 @@
               "id": 9447,
               "fr": "Écrou de l'électrocuteur",
               "slot": "Doigt",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "itemUrl": "https://www.wowhead.com/classic/item=9447"
             },
             {
               "en": "Electrocutioner Leg",
@@ -4174,14 +4186,16 @@
               "id": 9492,
               "fr": "Réactivateur gigaflux électromagnétique",
               "slot": "Tête",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "itemUrl": "https://www.wowhead.com/classic/item=9492"
             },
             {
               "en": "Charged Gear",
               "id": 9461,
               "fr": "Engrenage chargé",
               "slot": "Doigt",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "itemUrl": "https://www.wowhead.com/classic/item=9461"
             },
             {
               "en": "Thermaplugg's Left Arm",
@@ -4406,7 +4420,8 @@
               "fr": "Cape de tisse-épines",
               "slot": "Dos",
               "isNew": true,
-              "source_status": "forever_beta_cache"
+              "source_status": "forever_beta_cache",
+              "itemUrl": "https://www.wowhead.com/forever/item=274149"
             }
           ],
           "rare": false,
@@ -4575,7 +4590,8 @@
               "id": 6695,
               "fr": "Amulette d'os stygienne",
               "slot": "Cou",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "itemUrl": "https://www.wowhead.com/classic/item=6695"
             },
             {
               "en": "Batwing Mantle",
@@ -4707,7 +4723,8 @@
               "fr": "Targe de douleur vagabonde",
               "slot": "Bouclier",
               "isNew": true,
-              "source_status": "forever_beta_cache"
+              "source_status": "forever_beta_cache",
+              "itemUrl": "https://www.wowhead.com/forever/item=274290"
             },
             {
               "en": "Defender's Leather Helm",
@@ -4715,7 +4732,8 @@
               "fr": "Casque de défenseur en cuir",
               "slot": "Tête / Cuir",
               "isNew": true,
-              "source_status": "forever_beta_cache"
+              "source_status": "forever_beta_cache",
+              "itemUrl": "https://www.wowhead.com/forever/item=252455"
             }
           ],
           "rare": false,
@@ -4742,7 +4760,8 @@
               "id": 7685,
               "fr": "Orbe de l'oracle oublié",
               "slot": "Main gauche",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "itemUrl": "https://www.wowhead.com/classic/item=7685"
             },
             {
               "en": "Bloodmage Mantle",
@@ -4912,7 +4931,8 @@
               "id": 7686,
               "fr": "Œil d'Échine-de-Fer",
               "slot": "Doigt",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "itemUrl": "https://www.wowhead.com/classic/item=7686"
             }
           ],
           "rare": true,
