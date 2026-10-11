@@ -597,10 +597,13 @@
             },
             {
               "fr": "Plan : fermenteur",
-              "en": "Plans: Fermenter",
+              "en": "Blueprint: Fermenter",
               "slot": "Recette / Recipe",
-              "source_status": "forever_beta_community",
-              "item_id_status": "not_confirmed"
+              "source_status": "forever_beta_wowhead",
+              "id": 273085,
+              "itemUrl": "https://www.wowhead.com/forever/item=273085",
+              "id_reference_status": "forever_item_page_verified",
+              "name_fr_status": "wowhead_forever_frFR_to_verify"
             },
             {
               "fr": "Plan : récupérateur arcanique",
@@ -895,10 +898,13 @@
               "en": "Blueprint: Greenhouse",
               "fr": "Plan : serre",
               "slot": "Plan / Herboristerie",
-              "source_status": "forever_beta_community",
+              "source_status": "forever_beta_wowhead",
               "iconFileId": 1001491,
               "icon_source": "https://www.icy-veins.com/wow-forever/excavation-site-wetlands-guide",
-              "item_id_status": "not_confirmed"
+              "id": 273106,
+              "itemUrl": "https://www.wowhead.com/forever/item=273106",
+              "id_reference_status": "forever_item_page_verified",
+              "name_fr_status": "wowhead_forever_frFR_verified"
             }
           ],
           "note": {
@@ -980,8 +986,14 @@
               "fr": "Relique des Titans (quête)",
               "en": "Titan Relic (quest)",
               "slot": "Quête / Quest",
-              "source_status": "forever_beta_community",
-              "item_id_status": "not_confirmed"
+              "source_status": "forever_beta_wowhead",
+              "item_id_status": "faction_variant_unresolved",
+              "item_id_candidates": [
+                270865,
+                270866
+              ],
+              "note_fr": "Deux identifiants Forever (270865 et 270866) existent pour la relique ; faction et variante non vérifiées.",
+              "note_en": "Two Forever item IDs (270865, 270866) exist for the relic; faction-to-ID mapping is not verified."
             }
           ],
           "note": {
