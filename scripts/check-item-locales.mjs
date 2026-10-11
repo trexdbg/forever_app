@@ -212,6 +212,16 @@ for(const [english,french] of [["Lord Sakrasis","Seigneur Sakrasis"],["Azshir th
  assert.ok(npc,"Missing source-checked rare "+english);
  assert.equal(npc.name.fr,french,"Untranslated Classic rare NPC "+english);
 }
+// Regression: verified item names must match in rare source data and the shared FR/EN renderer.
+for(const [id,english,french] of [[6180,"Slarkskin","Peau de Slark"],[3018,"Hide of Lupos","Peau de Lupos"],[3227,"Nightbane Staff","Bâton plaie-de-nuit"],[5425,"Runescale Girdle","Ceinturon en écailles runiques"],[5423,"Boahn's Fang","Croc de Boahn"],[5183,"Pulsating Hydra Heart","Coeur d'hydre palpitant"],[6628,"Raven's Claws","Serres du corbeau"],[6179,"Privateer's Cape","Cape de corsaire"]]){
+ const record={id,name:english,name_fr:english,source_status:"classic_reference"};
+ assert.equal(fr.name(record),french,"Incorrect Classic French item name for "+id);
+ assert.equal(en.name(record),english,"Incorrect Classic English item name for "+id);
+ const rareDrop=rareCatalog.rares.flatMap(row=>row.loot||[]).find(item=>Number(item.item_id)===id);
+ assert.ok(rareDrop,"Missing rare drop reference for item "+id);
+ assert.equal(rareDrop.name.en,english,"Rare English ID mismatch: "+id);
+ assert.equal(rareDrop.name.fr,french,"Rare French ID mismatch: "+id);
+}
 const coralRare=rareCatalog.rares.flatMap(row=>row.loot||[]).find(item=>Number(item.item_id)===3188);
 assert.equal(coralRare?.name?.fr,"Claymore des coraux","Rare loot French name must match Classic item 3188");
 for(const rare of rareCatalog.rares||[]){
