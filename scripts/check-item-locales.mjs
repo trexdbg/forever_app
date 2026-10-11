@@ -88,21 +88,25 @@ for(const file of ["data/items-classic-cache.json","data/items-forever-cache.jso
  }
 }
 let knownDungeonIds=0,missingDungeonIds=0,canonicalMatches=0;
-const vendorOnlyRecipes=new Set([252820,252822]);
+// These recipes have vendor sources; boss attribution requires independent confirmation.
+const unverifiedBossRecipes=new Set([252820,252822]);
 const checkedDungeons=new Set(["ragefire-chasm","wailing-caverns","the-deadmines","shadowfang-keep","blackfathom-deeps","the-stockade","gnomeregan","razorfen-kraul","scarlet-monastery-graveyard","city-of-dalaran"]);
+const unresolvedForeverNames=new Set(["Plans: Arcane Recycler","Titan Relic (quest)"]);
 for(const dungeon of dungeonData.dungeons||[]){
  for(const boss of dungeon.bosses||[]){
   for(const drop of boss.loot||[]){
    if(!drop.id){
     missingDungeonIds++;
     assert.ok(!checkedDungeons.has(dungeon.id),"Missing linked loot ID in reviewed dungeon "+dungeon.id+": "+drop.en);
-    assert.equal(drop.item_id_status,"not_confirmed","Unresolved item reference must be explicitly unconfirmed");
+    assert.ok(unresolvedForeverNames.has(drop.en),"Unrecognized unresolved dungeon drop: "+drop.en);
+    assert.ok(["not_confirmed","faction_variant_unresolved"].includes(drop.item_id_status),"Unresolved item must be explicitly marked as uncertain");
+    if(drop.item_id_candidates)assert.ok(drop.item_id_candidates.every(Number.isSafeInteger),"Non-numeric item ID candidate");
     assert.ok(!drop.itemUrl,"Unknown item ID must not have guessed URL");
     continue;
    }
    const id=Number(drop.id);
    assert.ok(Number.isSafeInteger(id)&&id>0,"Invalid dungeon item ID "+id);
-   assert.ok(!vendorOnlyRecipes.has(id),"Vendor-only recipe attributed to boss: "+id);
+   assert.ok(!unverifiedBossRecipes.has(id),"Unverified boss recipe placement: "+id);
    const known=canonical.get(id);
    if(known){assert.equal(drop.en,known,"English item name does not match ID "+id);canonicalMatches++;}
    assert.ok(typeof drop.itemUrl==="string","Missing item URL "+id);
@@ -120,8 +124,8 @@ for(const dungeon of dungeonData.dungeons||[]){
   }
  }
 }
-assert.equal(missingDungeonIds,4,"Unexpected unresolved dungeon reference count");
-assert.ok(knownDungeonIds>=200,"Documented dungeon coverage regressed");
+assert.equal(missingDungeonIds,2,"Unexpected unresolved dungeon reference count");
+assert.ok(knownDungeonIds>=204,"Documented dungeon coverage regressed");
 assert.ok(canonicalMatches>=15,"Not enough canonical ID/name comparisons");
 assert.equal(fr.name({id:5202,name:"Corsair's Overshirt",name_fr:"Surchemise de corsaire",source_status:"classic_reference"}),"Casaque de corsaire");
 assert.equal(fr.name({id:6318,name:"Odo's Ley Staff",name_fr:"Bâton tellurique d'Odo",source_status:"classic_reference"}),"Bâton d'Odo");
@@ -131,6 +135,7 @@ assert.equal(en.name({id:6909,name:"Strike of the Hydra",source_status:"classic_
 const unresolvedRare=(JSON.parse(readFileSync(resolve(root,"data/rares.json"),"utf8")).rares||[])
  .flatMap(row=>row.loot||[]).filter(i=>!i.item_id);
 assert.equal(unresolvedRare.length,1,"Unresolved rare item reference count changed");
+assert.equal(fr.name({id:273106,name:"Blueprint: Greenhouse",name_fr:"Plan : serre",source_status:"forever_beta_wowhead"}),"Plan : serre");
 assert.equal(unresolvedRare[0].name.en,"Duskstalker's Hide");
 const iconCatalog=JSON.parse(readFileSync(resolve(root,"data/items-classic-cache.json"),"utf8"));
 const catalogIconById=new Map((iconCatalog.items||[]).filter(i=>i.id&&i.icon).map(i=>[Number(i.id),i.icon]));
