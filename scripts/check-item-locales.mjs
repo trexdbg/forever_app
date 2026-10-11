@@ -31,11 +31,27 @@ assert.equal(fr.name(classicRogueItem),"Lame de cruauté","Rogue BiS ID 5191 mus
 assert.equal(en.name(classicRogueItem),"Cruel Barb");
 assert.equal(fr.name({id:10399,name:"Blackened Defias Armor",source_status:"classic_reference"}),"Armure défias noircie");
 assert.equal(fr.name({id:16712,name:"Shadowcraft Gloves",source_status:"classic_reference"}),"Gants Sombreruse");
+// Audited low-level Classic names from Classic frFR item pages.
+for(const [id,english,french] of [[1155,"Rod of the Sleepwalker","Bâtonnet du somnanbule"],[3748,"Feline Mantle","Mantelet félin"],[5198,"Cookie's Stirring Rod","Bâton à touiller de Macaron"],[6321,"Silverlaine's Family Seal","Sceau de la famille d'Argelaine"],[6469,"Venomstrike","Frappe-venin"],[10410,"Leggings of the Fang","Jambières du Croc"],[14145,"Cursed Felblade","Lame corrompue maudite"],[14149,"Subterranean Cape","Cape souterraine"]]){
+ assert.equal(fr.name({id,name:english,source_status:"classic_curated_leveling"}),french,"Classic frFR regression: "+id);
+ assert.equal(en.name({id,name:english,source_status:"classic_curated_leveling"}),english);
+}
+for(const [id,english,french] of [[270228,"Golemheart Stave","Canne cœur-de-golem"],[270229,"Treads of the Protector Golem","Bottines du golem protecteur"],[270260,"Direhammer Leggings","Jambières de Dirgehammer"],[271098,"Golemguard Chest","Plastron de garde golem"]]){
+ const item={id,name:english,source_status:"forever_beta_observed",name_fr:"Traduction éditoriale obsolète"};
+ assert.equal(fr.name(item),french,"Forever official name mismatch: "+id);
+ assert.equal(en.name(item),english);
+ assert.equal(fr.resolved(item).verified,true);
+}
+const untranslatedBeta={id:273030,name:"Ring of Power Regulation",name_fr:"Anneau de régulation de puissance",source_status:"forever_beta_observed"};
+assert.equal(fr.name(untranslatedBeta),"Ring of Power Regulation","Non-localized Wowhead Forever items must remain English");
+assert.equal(fr.resolved(untranslatedBeta).translation_missing,true);
 const newBeta={id:271095,name:"Fang of Magmatus",source_status:"forever_beta_observed"};
 assert.equal(fr.name(newBeta),"Croc de Magmatus");
 assert.equal(en.name(newBeta),"Fang of Magmatus");
-assert.equal(fr.resolved(newBeta).indicative,true,"New Forever translations must be labelled indicative");
-assert.equal(fr.name({id:250486,name:"Sterling Silver Shoulders",source_status:"forever_beta_wowhead"}),"Épaulières en argent sterling");
+assert.equal(fr.resolved(newBeta).verified,true,"Confirmed Wowhead Forever FR localization must be authoritative");
+assert.equal(fr.name({id:250486,name:"Sterling Silver Shoulders",source_status:"forever_beta_wowhead"}),"Sterling Silver Shoulders","No invented French label for undocumented beta name");
+assert.equal(fr.resolved({id:250486,name:"Sterling Silver Shoulders",source_status:"forever_beta_wowhead"}).translation_missing,true);
+assert.ok(fr.aliases({id:250486,name:"Sterling Silver Shoulders",source_status:"forever_beta_wowhead"}).includes("Épaulières en argent sterling"),"Search can still find French editorial aliases");
 const beta={...sample,source_status:"forever_beta_observed",name_fr:"Nom officiel Forever"};
 assert.equal(fr.name(beta),"Nom officiel Forever","Do not overwrite distinct Forever names");
 const paths=["data/bis.json","data/items.json","data/items-forever.json","data/items-classic-cache.json","data/items-forever-cache.json","data/bis-niveaux-classic.json","data/bis-niveaux-forever-observed.json"];
@@ -62,7 +78,9 @@ for(const dungeon of dungeonData.dungeons||[]){
    if(!drop.id||!drop.en||!drop.fr)continue;
    if(Number(drop.id)>=240000)assert.ok(String(drop.source_status||"").startsWith("forever_beta_"),"Forever-only item incorrectly marked Classic: "+drop.id);
    const sample={id:drop.id,name:drop.en,name_fr:drop.fr,source_status:drop.source_status==="classic_loot_reference"?"classic_reference":"forever_beta_community"};
-   assert.equal(fr.name(sample),drop.fr,"Dungeon FR naming mismatch for item "+drop.id);
+   const official=fr.resolved(sample).verified;
+   const expectedFr=Number(drop.id)>=200000&&!official?drop.en:drop.fr;
+   assert.equal(fr.name(sample),expectedFr,"Dungeon FR naming mismatch for item "+drop.id);
    assert.equal(en.name(sample),drop.en,"Dungeon EN naming mismatch for item "+drop.id);
    if(fr.resolved(sample).verified)officialChecked++;
    dungeonChecked++;
@@ -70,7 +88,7 @@ for(const dungeon of dungeonData.dungeons||[]){
  }
 }
 assert.ok(dungeonChecked>=90,"Dungeon item coverage fell unexpectedly");
-assert.ok(officialChecked>=19,"Confirmed Forever localization count regressed");
+assert.ok(officialChecked>=24,"Confirmed Forever localization count regressed");
 const staleForever={id:270227,name:"Ephemeral Choker",name_fr:"Collier éphémère",source_status:"forever_beta_observed"};
 assert.equal(fr.name(staleForever),"Sautoir éphémère","Never show previous literal name for official Forever item 270227");
 assert.equal(en.name(staleForever),"Ephemeral Choker");
@@ -144,7 +162,7 @@ assert.equal(hide?.item_source_url,"https://www.wowhead.com/forever/item=284165"
 assert.equal(fr.name({id:7686,name:"Ironspine's Eye",name_fr:"Œil d'Ironspine",source_status:"classic_reference"}),"Oeil d'Echine-de-fer");
 assert.equal(fr.name({id:7688,name:"Ironspine's Ribcage",source_status:"classic_reference"}),"Thorax d'Echine-de-fer");
 assert.equal(fr.name({id:4448,name:"Husk of Naraxis",source_status:"classic_reference"}),"Carcasse de Naraxis");
-assert.equal(fr.name({id:273106,name:"Blueprint: Greenhouse",name_fr:"Plan : serre",source_status:"forever_beta_wowhead"}),"Plan : serre");
+assert.equal(fr.name({id:273106,name:"Blueprint: Greenhouse",name_fr:"Plan : serre",source_status:"forever_beta_wowhead"}),"Blueprint: Greenhouse","No unverified French label for beta recipe");
 const iconCatalog=JSON.parse(readFileSync(resolve(root,"data/items-classic-cache.json"),"utf8"));
 const catalogIconById=new Map((iconCatalog.items||[]).filter(i=>i.id&&i.icon).map(i=>[Number(i.id),i.icon]));
 const rareCatalog=JSON.parse(readFileSync(resolve(root,"data/rares.json"),"utf8"));
