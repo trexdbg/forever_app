@@ -30,6 +30,19 @@ Les sorts bêta Forever de potion de soins mineure, inférieure, normale et sup�
 
 Les articles de quêtes distinguent les objets finis, les recettes, les PNJ vendeurs et la production par un autre joueur. Les liens contextualisés filtrent directement Marchands et Métiers.
 
+## Dernier résultat d'audit strict
+
+Le **11 octobre 2026 à 06:20 UTC**, après enrichissement ciblé des 23 guides courts, le workflow GitHub Actions [audit GEO/SEO](https://github.com/trexdbg/forever_app/actions/runs/38117710241) a terminé avec succès :
+
+- **330 pages HTML** analysées ;
+- **328 URL** dans le sitemap, deux anciennes redirections PNJ volontairement non indexées ;
+- **282 pages Article sur 282** disposant d'une attribution de sources dans les données structurées ;
+- **7 663 liens internes** contrôlés ;
+- **0 erreur, 0 avertissement** (y compris les vérifications statiques mobiles) ;
+- GitHub Pages : dernière compilation et déploiement de la passe validés avec succès.
+
+Le rapport JSON a été conservé dans l'artefact `geo-audit` du workflow pour cinq jours. Il ne certifie pas la vitesse, le comportement interactif des cartes ou la disponibilité publique depuis tous les pays : ces points nécessitent de véritables essais réseau et navigateur.
+
 ## Reproduire la vérification
 
 ~~~bash
