@@ -3300,7 +3300,11 @@
               "slot": "Torse / Chest",
               "source_status": "classic_loot_reference",
               "iconFileId": 135010,
-              "icon_source": "https://www.icy-veins.com/wow-forever/blackfathom-deeps-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/blackfathom-deeps-guide",
+              "id": 6907,
+              "itemUrl": "https://www.wowhead.com/classic/item=6907",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             },
             {
               "en": "Ghamoo-ra's Bind",
@@ -3308,7 +3312,11 @@
               "slot": "Taille / Waist",
               "source_status": "classic_loot_reference",
               "iconFileId": 132513,
-              "icon_source": "https://www.icy-veins.com/wow-forever/blackfathom-deeps-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/blackfathom-deeps-guide",
+              "id": 6908,
+              "itemUrl": "https://www.wowhead.com/classic/item=6908",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             }
           ],
           "note": {
@@ -3349,7 +3357,11 @@
               "slot": "À distance / Ranged",
               "source_status": "classic_loot_reference",
               "iconFileId": 135492,
-              "icon_source": "https://www.icy-veins.com/wow-forever/blackfathom-deeps-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/blackfathom-deeps-guide",
+              "id": 3078,
+              "itemUrl": "https://www.wowhead.com/classic/item=3078",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             },
             {
               "en": "Darkwater Talwar",
@@ -3358,7 +3370,11 @@
               "source_status": "classic_loot_reference",
               "source_url": "https://theforeverera.com/en/dungeons/blackfathom-deeps/lady-sarevess/",
               "iconFileId": 135346,
-              "icon_source": "https://www.icy-veins.com/wow-forever/blackfathom-deeps-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/blackfathom-deeps-guide",
+              "id": 11121,
+              "itemUrl": "https://www.wowhead.com/classic/item=11121",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             }
           ],
           "note": {
@@ -3387,7 +3403,11 @@
               "source_status": "classic_loot_reference",
               "source_url": "https://theforeverera.com/en/dungeons/blackfathom-deeps/geilhast/",
               "iconFileId": 132944,
-              "icon_source": "https://www.icy-veins.com/wow-forever/blackfathom-deeps-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/blackfathom-deeps-guide",
+              "id": 6906,
+              "itemUrl": "https://www.wowhead.com/classic/item=6906",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             },
             {
               "en": "Reef Axe",
@@ -3396,7 +3416,11 @@
               "source_status": "classic_loot_reference",
               "source_url": "https://theforeverera.com/en/dungeons/blackfathom-deeps/geilhast/",
               "iconFileId": 135576,
-              "icon_source": "https://www.icy-veins.com/wow-forever/blackfathom-deeps-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/blackfathom-deeps-guide",
+              "id": 6905,
+              "itemUrl": "https://www.wowhead.com/classic/item=6905",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             }
           ],
           "note": {
@@ -3472,7 +3496,11 @@
               "source_status": "classic_loot_reference",
               "source_url": "https://theforeverera.com/en/dungeons/blackfathom-deeps/old-serrakis/",
               "iconFileId": 132607,
-              "icon_source": "https://www.icy-veins.com/wow-forever/blackfathom-deeps-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/blackfathom-deeps-guide",
+              "id": 6902,
+              "itemUrl": "https://www.wowhead.com/classic/item=6902",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             }
           ],
           "note": {
@@ -3514,7 +3542,11 @@
               "source_status": "classic_loot_reference",
               "source_url": "https://theforeverera.com/en/dungeons/blackfathom-deeps/twilight-lord-kelris/",
               "iconFileId": 134582,
-              "icon_source": "https://www.icy-veins.com/wow-forever/blackfathom-deeps-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/blackfathom-deeps-guide",
+              "id": 6903,
+              "itemUrl": "https://www.wowhead.com/classic/item=6903",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             }
           ],
           "note": {
@@ -3542,7 +3574,11 @@
               "slot": "Épée deux mains",
               "source_status": "classic_loot_reference",
               "iconFileId": 135352,
-              "icon_source": "https://www.icy-veins.com/wow-forever/blackfathom-deeps-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/blackfathom-deeps-guide",
+              "id": 6909,
+              "itemUrl": "https://www.wowhead.com/classic/item=6909",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             },
             {
               "en": "Moss Cinch",
@@ -3551,7 +3587,11 @@
               "source_status": "classic_loot_reference",
               "source_url": "https://theforeverera.com/en/dungeons/blackfathom-deeps/akumai/",
               "iconFileId": 132514,
-              "icon_source": "https://www.icy-veins.com/wow-forever/blackfathom-deeps-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/blackfathom-deeps-guide",
+              "id": 6911,
+              "itemUrl": "https://www.wowhead.com/classic/item=6911",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             },
             {
               "en": "Leech Pants",
