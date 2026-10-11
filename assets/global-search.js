@@ -42,9 +42,9 @@ function itemLabels(i){
  const original=typeof i.name==="string"?i.name:(i.name?.en||i.name?.fr||"");
  const normalized={...i,name:original,name_fr:i.name_fr||i.name?.fr,name_en:i.name_en||i.name?.en};
  const local=window.ForeverItemLocale?.resolved?.(normalized);
- const fr=normalized.name_fr||local?.fr||original;
- const english=normalized.name_en||local?.en||original;
- return {display:en?english:fr,names:[fr,english,original,String(i.id||"")]};
+ const fr=local?.fr||normalized.name_fr||original;
+ const english=local?.en||normalized.name_en||original;
+ return {display:en?english:fr,names:[fr,english,original,normalized.name_fr||"",String(i.id||"")]};
 }
 function itemRows(db){
  for(const i of db?.items||[]){
@@ -89,8 +89,11 @@ function dungeonRows(db){
    const bhref=url("donjons/",{donjon:d.id,boss:i+1});
    add("dungeons",label(b.name),T("Boss de ","Boss in ")+dName,bhref,[...pair(b.name),...pair(d.name)],9);
    for(const loot of b.loot||[])if(label(loot)||loot.id){
-    add("items",label(loot),T("Butin · ","Loot · ")+dName+" · "+label(b.name),bhref,
-     [...pair(loot),String(loot.id||""),...pair(b.name),...pair(d.name)],7);
+    // The dossier and every search result must agree on the same ID-based
+    // client name; retain community French aliases for finding a result.
+    const resolved=loot.id?itemLabels({id:loot.id,name:loot.en||loot.fr||"",name_en:loot.en,name_fr:loot.fr,source_status:loot.source_status==="classic_loot_reference"?"classic_reference":loot.source_status||"forever_beta_community"}):null;
+    add("items",resolved?.display||label(loot),T("Butin · ","Loot · ")+dName+" · "+label(b.name),bhref,
+     [...(resolved?.names||[]),...pair(loot),String(loot.id||""),...pair(b.name),...pair(d.name)],7);
    }
   });
   for(const q of d.questLoot||[])if(label(q))
@@ -105,7 +108,7 @@ function rareRows(db){
    [...pair(r.name),...zone,r.id],9);
   for(const item of r.loot||[]){
    if(!item.name)continue;
-   const n=itemLabels({id:item.item_id||item.id||0,name:item.name});
+   const n=itemLabels({id:item.item_id||item.id||0,name:item.name,source_status:item.source_version==="forever_beta"?"forever_beta_community":"classic_reference"});
    add("items",n.display,T("Butin rare · ","Rare drop · ")+label(r.name),href,[...n.names,...pair(r.name),...zone],6);
   }
  }
