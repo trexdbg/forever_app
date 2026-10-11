@@ -599,13 +599,15 @@
               "fr": "Plan : fermenteur",
               "en": "Plans: Fermenter",
               "slot": "Recette / Recipe",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "item_id_status": "not_confirmed"
             },
             {
               "fr": "Plan : récupérateur arcanique",
               "en": "Plans: Arcane Recycler",
               "slot": "Recette / Recipe",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "item_id_status": "not_confirmed"
             }
           ],
           "note": {
@@ -895,7 +897,8 @@
               "slot": "Plan / Herboristerie",
               "source_status": "forever_beta_community",
               "iconFileId": 1001491,
-              "icon_source": "https://www.icy-veins.com/wow-forever/excavation-site-wetlands-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/excavation-site-wetlands-guide",
+              "item_id_status": "not_confirmed"
             }
           ],
           "note": {
@@ -977,7 +980,8 @@
               "fr": "Relique des Titans (quête)",
               "en": "Titan Relic (quest)",
               "slot": "Quête / Quest",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "item_id_status": "not_confirmed"
             }
           ],
           "note": {
@@ -1055,8 +1059,9 @@
               "source_status": "forever_beta_community",
               "id": 273036,
               "itemUrl": "https://www.wowhead.com/forever/item=273036",
-              "identification_source": "https://wowfwiki.com/wiki/Graveweave_Bindings",
-              "name_fr_status": "community_translation_unverified"
+              "identification_source": "https://www.wowhead.com/forever/item=273036",
+              "name_fr_status": "community_translation_unverified",
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
             },
             {
               "fr": "Chevalière de lieur-d’os",
@@ -1067,8 +1072,9 @@
               "source_status": "forever_beta_community",
               "id": 273032,
               "itemUrl": "https://www.wowhead.com/forever/item=273032",
-              "identification_source": "https://wowfwiki.com/wiki/Bonebinder%27s_Signet",
-              "name_fr_status": "community_translation_unverified"
+              "identification_source": "https://www.wowhead.com/forever/item=273032",
+              "name_fr_status": "community_translation_unverified",
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
             },
             {
               "fr": "Arbalète à répétition pointetombe",
@@ -1079,8 +1085,9 @@
               "source_status": "forever_beta_community",
               "id": 273033,
               "itemUrl": "https://www.wowhead.com/forever/item=273033",
-              "identification_source": "https://wowfwiki.com/wiki/Gravespike_Repeater",
-              "name_fr_status": "community_translation_unverified"
+              "identification_source": "https://www.wowhead.com/forever/item=273033",
+              "name_fr_status": "community_translation_unverified",
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
             }
           ],
           "note": {
@@ -1106,8 +1113,9 @@
               "source_status": "forever_beta_community",
               "id": 273054,
               "itemUrl": "https://www.wowhead.com/forever/item=273054",
-              "identification_source": "https://wowfwiki.com/wiki/Cartilage_Shapers",
-              "name_fr_status": "community_translation_unverified"
+              "identification_source": "https://www.wowhead.com/forever/item=273054",
+              "name_fr_status": "community_translation_unverified",
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
             },
             {
               "fr": "Dague écorche-tendons",
@@ -1118,8 +1126,9 @@
               "source_status": "forever_beta_community",
               "id": 273053,
               "itemUrl": "https://www.wowhead.com/forever/item=273053",
-              "identification_source": "https://wowfwiki.com/wiki/Tendonscraper_Dagger",
-              "name_fr_status": "community_translation_unverified"
+              "identification_source": "https://www.wowhead.com/forever/item=273053",
+              "name_fr_status": "community_translation_unverified",
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
             },
             {
               "fr": "Oculaire de pile d’os",
@@ -1130,8 +1139,9 @@
               "source_status": "forever_beta_community",
               "id": 273055,
               "itemUrl": "https://www.wowhead.com/forever/item=273055",
-              "identification_source": "https://wowfwiki.com/wiki/Bonepile_Gaze",
-              "name_fr_status": "community_translation_unverified"
+              "identification_source": "https://www.wowhead.com/forever/item=273055",
+              "name_fr_status": "community_translation_unverified",
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
             }
           ],
           "note": {
@@ -1183,8 +1193,9 @@
               "source_status": "forever_beta_community",
               "id": 273035,
               "itemUrl": "https://www.wowhead.com/forever/item=273035",
-              "identification_source": "https://wowfwiki.com/wiki/Mana-Warped_Chain_Shirt",
-              "name_fr_status": "community_translation_unverified"
+              "identification_source": "https://www.wowhead.com/forever/item=273035",
+              "name_fr_status": "community_translation_unverified",
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
             }
           ],
           "note": {
@@ -1210,8 +1221,9 @@
               "source_status": "forever_beta_community",
               "id": 273045,
               "itemUrl": "https://www.wowhead.com/forever/item=273045",
-              "identification_source": "https://wowfwiki.com/wiki/Drape_of_Shifting_Energy",
-              "name_fr_status": "community_translation_unverified"
+              "identification_source": "https://www.wowhead.com/forever/item=273045",
+              "name_fr_status": "community_translation_unverified",
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
             },
             {
               "fr": "Robe de sorcier pourpre",
@@ -1222,8 +1234,9 @@
               "source_status": "forever_beta_community",
               "id": 273044,
               "itemUrl": "https://www.wowhead.com/forever/item=273044",
-              "identification_source": "https://wowfwiki.com/wiki/Violet_Sorcerers_Robes",
-              "name_fr_status": "community_translation_unverified"
+              "identification_source": "https://www.wowhead.com/forever/item=273044",
+              "name_fr_status": "community_translation_unverified",
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
             },
             {
               "fr": "Baguette de concentration de mana",
@@ -1234,8 +1247,9 @@
               "source_status": "forever_beta_community",
               "id": 273043,
               "itemUrl": "https://www.wowhead.com/forever/item=273043",
-              "identification_source": "https://wowfwiki.com/wiki/Wand_of_Mana_Concentration",
-              "name_fr_status": "community_translation_unverified"
+              "identification_source": "https://www.wowhead.com/forever/item=273043",
+              "name_fr_status": "community_translation_unverified",
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
             }
           ],
           "note": {
@@ -1261,8 +1275,9 @@
               "source_status": "forever_beta_community",
               "id": 273046,
               "itemUrl": "https://www.wowhead.com/forever/item=273046",
-              "identification_source": "https://wowfwiki.com/wiki/Guardians_Dualblade",
-              "name_fr_status": "community_translation_unverified"
+              "identification_source": "https://www.wowhead.com/forever/item=273046",
+              "name_fr_status": "community_translation_unverified",
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
             },
             {
               "fr": "Gardécaille réfractaire",
@@ -1273,8 +1288,9 @@
               "source_status": "forever_beta_community",
               "id": 273048,
               "itemUrl": "https://www.wowhead.com/forever/item=273048",
-              "identification_source": "https://wowfwiki.com/wiki/Refractory_Scaleguards",
-              "name_fr_status": "community_translation_unverified"
+              "identification_source": "https://www.wowhead.com/forever/item=273048",
+              "name_fr_status": "community_translation_unverified",
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
             },
             {
               "fr": "Protège-épaules cristallins instables",
@@ -1285,8 +1301,9 @@
               "source_status": "forever_beta_community",
               "id": 273047,
               "itemUrl": "https://www.wowhead.com/forever/item=273047",
-              "identification_source": "https://wowfwiki.com/wiki/Unstable_Crystalline_Shoulderpads",
-              "name_fr_status": "community_translation_unverified"
+              "identification_source": "https://www.wowhead.com/forever/item=273047",
+              "name_fr_status": "community_translation_unverified",
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
             },
             {
               "fr": "Plan : rouet",
@@ -1297,8 +1314,9 @@
               "source_status": "forever_beta_community",
               "id": 273099,
               "itemUrl": "https://www.wowhead.com/forever/item=273099",
-              "identification_source": "https://wowfwiki.com/wiki/Spinning_Wheel_blueprint",
-              "name_fr_status": "community_translation_unverified"
+              "identification_source": "https://www.wowhead.com/forever/item=273099",
+              "name_fr_status": "community_translation_unverified",
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
             }
           ],
           "note": {
@@ -1324,8 +1342,9 @@
               "source_status": "forever_beta_community",
               "id": 273040,
               "itemUrl": "https://www.wowhead.com/forever/item=273040",
-              "identification_source": "https://wowfwiki.com/wiki/Spine_of_the_Devourer",
-              "name_fr_status": "community_translation_unverified"
+              "identification_source": "https://www.wowhead.com/forever/item=273040",
+              "name_fr_status": "community_translation_unverified",
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
             },
             {
               "fr": "Bottines en écaille-de-mana",
@@ -1336,8 +1355,9 @@
               "source_status": "forever_beta_community",
               "id": 273042,
               "itemUrl": "https://www.wowhead.com/forever/item=273042",
-              "identification_source": "https://wowfwiki.com/wiki/Manascale_Treads",
-              "name_fr_status": "community_translation_unverified"
+              "identification_source": "https://www.wowhead.com/forever/item=273042",
+              "name_fr_status": "community_translation_unverified",
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
             },
             {
               "fr": "Ceinturon en ondule-bandes",
@@ -1348,8 +1368,9 @@
               "source_status": "forever_beta_community",
               "id": 273041,
               "itemUrl": "https://www.wowhead.com/forever/item=273041",
-              "identification_source": "https://wowfwiki.com/wiki/Slitherwrap_Girdle",
-              "name_fr_status": "community_translation_unverified"
+              "identification_source": "https://www.wowhead.com/forever/item=273041",
+              "name_fr_status": "community_translation_unverified",
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
             }
           ],
           "note": {
@@ -1375,8 +1396,9 @@
               "source_status": "forever_beta_community",
               "id": 273039,
               "itemUrl": "https://www.wowhead.com/forever/item=273039",
-              "identification_source": "https://wowfwiki.com/wiki/Blightleaf_Rope",
-              "name_fr_status": "community_translation_unverified"
+              "identification_source": "https://www.wowhead.com/forever/item=273039",
+              "name_fr_status": "community_translation_unverified",
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
             },
             {
               "fr": "Atours du déchu Gangrécorce",
@@ -1387,8 +1409,9 @@
               "source_status": "forever_beta_community",
               "id": 273038,
               "itemUrl": "https://www.wowhead.com/forever/item=273038",
-              "identification_source": "https://wowfwiki.com/wiki/Garb_of_Fallen_Felbark",
-              "name_fr_status": "community_translation_unverified"
+              "identification_source": "https://www.wowhead.com/forever/item=273038",
+              "name_fr_status": "community_translation_unverified",
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
             },
             {
               "fr": "Bras de gangrebranche",
@@ -1399,8 +1422,9 @@
               "source_status": "forever_beta_community",
               "id": 273037,
               "itemUrl": "https://www.wowhead.com/forever/item=273037",
-              "identification_source": "https://wowfwiki.com/wiki/Felbough_Arm",
-              "name_fr_status": "community_translation_unverified"
+              "identification_source": "https://www.wowhead.com/forever/item=273037",
+              "name_fr_status": "community_translation_unverified",
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
             }
           ],
           "note": {
@@ -1426,8 +1450,9 @@
               "source_status": "forever_beta_community",
               "id": 273052,
               "itemUrl": "https://www.wowhead.com/forever/item=273052",
-              "identification_source": "https://wowfwiki.com/wiki/Ponderous_Orb",
-              "name_fr_status": "community_translation_unverified"
+              "identification_source": "https://www.wowhead.com/forever/item=273052",
+              "name_fr_status": "community_translation_unverified",
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
             },
             {
               "fr": "Mantelet de sorcier pourpre",
@@ -1438,8 +1463,9 @@
               "source_status": "forever_beta_community",
               "id": 273051,
               "itemUrl": "https://www.wowhead.com/forever/item=273051",
-              "identification_source": "https://wowfwiki.com/wiki/Violet_Sorcerers_Mantle",
-              "name_fr_status": "community_translation_unverified"
+              "identification_source": "https://www.wowhead.com/forever/item=273051",
+              "name_fr_status": "community_translation_unverified",
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
             },
             {
               "fr": "Pendentif à facettes d’archimagistère",
@@ -1463,9 +1489,10 @@
               "source_status": "forever_beta_community",
               "id": 273103,
               "itemUrl": "https://www.wowhead.com/forever/item=273103",
-              "identification_source": "https://wowfwiki.com/wiki/Arcane_Salvager_blueprint",
+              "identification_source": "https://www.wowhead.com/forever/item=273103",
               "name_fr_status": "community_translation_unverified",
-              "boss_association_status": "guide_only_unconfirmed"
+              "boss_association_status": "guide_only_unconfirmed",
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
             }
           ],
           "note": {
