@@ -37,11 +37,52 @@ function renderDirectory(){if(!db)return;const rows=visibleList(),scroll=result.
 }
 function select(d,focus=false){if(!d)return;selected=d;selectedBoss=0;view=d.floorMap?"route":"world";resetCamera();worldToken++;worldImage=null;floorToken++;floorImage=null;floorFailed=false;updateUrl();renderDirectory();renderDetail();loadWorld();loadFloor();paint();if(focus)document.getElementById("dg-map-title").scrollIntoView({block:"nearest",behavior:"smooth"})}
 function chooseBoss(i,focus=false){if(!selected?.bosses[i])return;selectedBoss=i;updateUrl();renderBosses();paint();if(focus&&window.matchMedia("(max-width: 760px)").matches)document.getElementById("dg-boss-selected").scrollIntoView({block:"nearest",behavior:"smooth"})}
+const ITEM_QUALITY=new Set(["poor","common","uncommon","rare","epic","legendary","artifact","heirloom"]);
+const WOW_ICON_MISSING="https://wow.zamimg.com/images/wow/icons/medium/inv_misc_questionmark.jpg";
+const classicIconResponses=new Map();
+const trustedIcon=url=>typeof url==="string"&&/^https:\/\/wowdb\.assemblee-defias\.fr\/database-icons\/[a-z0-9_-]+\.(?:jpg|jpeg|png|webp)$/i.test(url);
+const qualityOf=item=>ITEM_QUALITY.has(item?.quality)?item.quality:"unknown";
+const normExact=s=>String(s||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim();
+function enrichClassicIcon(card,pic,item){
+ if(item.source_status!=="classic_loot_reference"||item.icon)return;
+ const id=Number(item.id),withId=Number.isSafeInteger(id)&&id>0&&id<100000;
+ const nameFr=String(item.fr||"").trim();
+ if(!withId&&nameFr.length<4)return;
+ const key=withId?"classic:"+id:"classic-name:"+normExact(nameFr);
+ if(!classicIconResponses.has(key)){
+  const url=withId?"https://api.wowdb.assemblee-defias.fr/v1/classic/items/"+id
+  :"https://api.wowdb.assemblee-defias.fr/v1/search?type=item&version=classic&limit=5&q="+encodeURIComponent(nameFr);
+  const promise=fetch(url,{mode:"cors",credentials:"omit",signal:AbortSignal.timeout(6500)})
+    .then(r=>{if(!r.ok)throw Error("Classic icon source HTTP "+r.status);return r.json()})
+    .then(json=>{
+      const found=withId?(json&&json.object==="item"&&json.version==="classic"&&Number(json.id)===id?json:null)
+        :(Array.isArray(json?.data)?json.data.find(x=>x.object==="item"&&x.version==="classic"&&normExact(x.name)===normExact(nameFr)):null);
+      return found&&trustedIcon(found.icon)?{icon:found.icon,quality:ITEM_QUALITY.has(found.quality)?found.quality:null}:null;
+    }).catch(()=>null);
+  classicIconResponses.set(key,promise);
+ }
+ classicIconResponses.get(key).then(found=>{if(!found||!card.isConnected)return;
+   pic.onerror=()=>{pic.onerror=null;pic.src=WOW_ICON_MISSING;card.classList.add("dg-icon-unavailable")};
+   pic.src=found.icon;pic.title=t("Icône de l'objet Classic · WoWDB","Classic item icon · WoWDB");
+   card.classList.remove("dg-icon-unavailable");
+   if(!ITEM_QUALITY.has(item.quality)&&found.quality){card.dataset.quality=found.quality;item.quality=found.quality}
+ });
+}
 function makeLootCard(item,boss){const card=m("div",null,"dg-drop");card.tabIndex=0;card.setAttribute("role","group");card.setAttribute("aria-label",itemName(item)+" · "+item.slot);
  const icon=m("img");icon.width=34;icon.height=34;icon.loading="lazy";icon.alt="";
- const slot=(item.slot||"").toLowerCase();
- let ico=/recette|recipe/.test(slot)?"inv_scroll_07":/tête|head/.test(slot)?"inv_helmet_22":/épaules|shoulders/.test(slot)?"inv_shoulder_09":/arme|main|hand|two-hand|distance|ranged|bâton|dagger/.test(slot)?"inv_sword_04":/tissu|chest|torse|robe/.test(slot)?"inv_scroll_07":"inv_scroll_07";
- icon.src=item.icon&&/^[a-z0-9_]+$/.test(item.icon)?"https://wow.zamimg.com/images/wow/icons/medium/"+item.icon+".jpg":"/assets/icons/"+ico+".jpg";icon.onerror=()=>{icon.onerror=null;icon.src="/assets/icons/inv_scroll_07.jpg"};card.append(icon);
+ card.dataset.quality=qualityOf(item);
+ const exactIcon=typeof item.icon==="string"&&/^[a-z0-9_]{3,80}$/.test(item.icon)?item.icon:null;
+ icon.src=exactIcon?"https://wow.zamimg.com/images/wow/icons/medium/"+exactIcon+".jpg":WOW_ICON_MISSING;
+ icon.onerror=()=>{icon.onerror=null;icon.src=WOW_ICON_MISSING;card.classList.add("dg-icon-unavailable")};
+ if(!exactIcon){card.classList.add("dg-icon-unavailable");icon.title=t("Icône non encore vérifiée","Item icon not yet verified")}
+ else icon.title=t("Icône authentique du jeu","Authentic game icon");
+ card.append(icon);
+ if(!exactIcon&&item.source_status==="classic_loot_reference"){
+   if("IntersectionObserver" in window){
+     const observer=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){observer.disconnect();enrichClassicIcon(card,icon,item)}},{rootMargin:"150px"});
+     observer.observe(card);
+   }else enrichClassicIcon(card,icon,item);
+ }
  const text=m("span");text.append(m("strong",itemName(item)),m("small",t("Emplacement : ","Slot: ")+item.slot));
  if(Number.isFinite(item.chanceReported))text.append(m("small",t("Taux indicatif du guide : ","Guide-reported chance: ")+String(item.chanceReported).replace(".",",")+" %"));
  if(item.isNew)text.append(m("small",t("Changement Forever signalé","Reported Forever change")));if(item.itemLevel)text.append(m("small",t("Niveau d’objet ","Item level ")+item.itemLevel+(item.requiredLevel?" · "+t("Niveau requis ","Required level ")+item.requiredLevel:"")));
@@ -53,7 +94,7 @@ function makeLootCard(item,boss){const card=m("div",null,"dg-drop");card.tabInde
  if(Number.isFinite(item.chanceReported))tooltip.append(m("span",t("Taux mentionné par le guide : ","Guide-reported chance: ")+item.chanceReported+" %"));
  tooltip.append(m("small",item.source_status==="classic_loot_reference"?t("Provenance du butin : Classic · NON confirmée pour Forever. Statistiques du client bêta possibles.","Loot source: Classic · NOT confirmed on Forever. Client beta item stats may be available."):t("Relevé de bêta communautaire · taux non garanti.","Community beta report · drop chance not guaranteed.")));tooltip.hidden=false;const x=Math.max(8,Math.min(window.innerWidth-355,Math.max(8,(e.clientX||card.getBoundingClientRect().left)+12)));const y=Math.max(8,Math.min(window.innerHeight-185,Math.max(8,(e.clientY||card.getBoundingClientRect().top)+12)));tooltip.style.left=x+"px";tooltip.style.top=y+"px"};
  if(item.id&&Array.isArray(item.tooltip)&&item.tooltip.length&&window.ForeverItemTooltip){
- window.ForeverItemTooltip.bind(card,{id:item.id,name:itemName(item),name_en:item.en,name_fr:item.fr,quality:item.quality||"rare",source_status:item.source_status==="classic_loot_reference"?"classic_reference":"forever_beta_community",itemLevel:item.itemLevel,requiredLevel:item.requiredLevel,tooltip:item.tooltip||[],icon:item.icon,origin:t("Butin signalé · Donjon Forever","Reported drop · Forever dungeon"),url:item.itemUrl||selected?.source});
+ window.ForeverItemTooltip.bind(card,{id:item.id,name:itemName(item),name_en:item.en,name_fr:item.fr,quality:qualityOf(item)==="unknown"?"common":qualityOf(item),source_status:item.source_status==="classic_loot_reference"?"classic_reference":"forever_beta_community",itemLevel:item.itemLevel,requiredLevel:item.requiredLevel,tooltip:item.tooltip||[],icon:item.icon,origin:t("Butin signalé · Donjon Forever","Reported drop · Forever dungeon"),url:item.itemUrl||selected?.source});
  }else{card.addEventListener("mouseenter",show);card.addEventListener("mousemove",e=>{if(!tooltip.hidden)show(e)});card.addEventListener("mouseleave",()=>tooltip.hidden=true);card.addEventListener("focus",show);card.addEventListener("blur",()=>tooltip.hidden=true)}
 
  return card;
