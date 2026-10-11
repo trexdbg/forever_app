@@ -1,0 +1,30 @@
+name: Normalize GEO attribution (one-time)
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/normalize-geo.mjs'
+      - '.github/workflows/normalize-geo.yml'
+permissions:
+  contents: write
+jobs:
+  normalize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - name: Add only evidence-based citations and discreet methodology links
+        run: node scripts/normalize-geo.mjs
+      - name: Verify pages and sitemap after normalization
+        run: node scripts/audit-site.mjs
+      - name: Commit deterministic metadata fixes once (no recurring workflow)
+        run: |
+          if [ -n "$(git status --porcelain -- guides en/guides)" ]; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add guides en/guides
+            git commit -m 'fix(geo): attach source citations and methodology to existing articles'
+            git push origin HEAD:main
+          else
+            echo 'No changes needed.'
+          fi
