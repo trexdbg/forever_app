@@ -6,38 +6,61 @@ body[data-page="items"] .item-catalogue-filter-fields{
 body[data-page="items"] .item-catalogue-filter-fields>label{display:block;min-width:0}
 body[data-page="items"] .item-catalogue-filter-fields input,
 body[data-page="items"] .item-catalogue-filter-fields select{height:41px;margin-top:8px}
+/* Compact WoW-inspired quality bar: the entire chip carries its rarity colour. */
 body[data-page="items"] .item-v2-quality-controls{
- display:flex;align-items:center;gap:12px 20px;flex-wrap:wrap;
- padding:14px 0 16px;margin-bottom:6px;border-top:1px solid #35483a;min-width:0
+ display:flex;align-items:center;gap:9px 14px;flex-wrap:wrap;
+ padding:11px 0 12px;margin-bottom:5px;
+ border-top:1px solid #35483a;min-width:0
 }
 body[data-page="items"] .item-v2-quality-heading{
- color:#d2bea0;font-size:12px;font-weight:750;flex:0 0 68px
+ color:#d2bea0;font-size:11px;font-weight:750;flex:0 0 72px;
 }
 body[data-page="items"] .item-v2-quality-controls .bis-v2-quality-row{
- margin:0;min-height:0;display:flex;align-items:center;gap:7px;flex:1 1 650px;flex-wrap:wrap
+ margin:0;min-height:0;display:flex;align-items:center;
+ gap:6px;flex:1 1 600px;flex-wrap:wrap;
 }
 body[data-page="items"] .item-v2-quality-controls .bis-v2-quality{
- display:inline-flex;align-items:center;justify-content:center;gap:8px;
- min-height:36px;padding:7px 10px;border-radius:4px;border:1px solid #4a5a4a;
- background:#15231a;color:#d3d8c9;line-height:1.2;white-space:nowrap;
- font-size:11px;font-weight:650;transition:background .15s,border-color .15s
+ --quality-bg:#282a23;--quality-border:#7c6c48;--quality-text:#f4dbac;
+ display:inline-flex;align-items:center;justify-content:center;gap:6px;
+ min-height:34px;padding:7px 12px;
+ border-radius:4px;border:1px solid var(--quality-border);
+ background:var(--quality-bg);color:var(--quality-text);
+ font-size:11px;font-weight:750;line-height:1.15;letter-spacing:.01em;
+ white-space:nowrap;opacity:.82;position:relative;
+ box-shadow:inset 0 1px 0 #ffffff18;
+ transition:filter .15s ease,opacity .15s ease,box-shadow .15s ease;
 }
-body[data-page="items"] .item-v2-quality-controls .bis-v2-quality:not(:first-child){
- border-left:3px solid var(--rarity)
+body[data-page="items"] .item-v2-quality-controls .bis-v2-quality[data-quality="all"]{
+ --quality-bg:#31291d;--quality-border:#ac925c;--quality-text:#f4dba5;
+}
+body[data-page="items"] .item-v2-quality-controls .bis-v2-quality[data-quality="common"]{
+ --quality-bg:#f4f2e9;--quality-border:#e7e2d6;--quality-text:#1b211d;
+}
+body[data-page="items"] .item-v2-quality-controls .bis-v2-quality[data-quality="uncommon"]{
+ --quality-bg:#286a3a;--quality-border:#4cbd69;--quality-text:#f2fff4;
+}
+body[data-page="items"] .item-v2-quality-controls .bis-v2-quality[data-quality="rare"]{
+ --quality-bg:#215a95;--quality-border:#509de5;--quality-text:#f1f8ff;
+}
+body[data-page="items"] .item-v2-quality-controls .bis-v2-quality[data-quality="epic"]{
+ --quality-bg:#663594;--quality-border:#ad77d9;--quality-text:#fcf5ff;
+}
+body[data-page="items"] .item-v2-quality-controls .bis-v2-quality[data-quality="legendary"]{
+ --quality-bg:#93541f;--quality-border:#e99c45;--quality-text:#fff8e9;
 }
 body[data-page="items"] .item-v2-quality-controls .bis-v2-quality:hover{
- background:#223329;border-color:#ab966d
+ filter:brightness(1.13);opacity:1;
 }
 body[data-page="items"] .item-v2-quality-controls .bis-v2-quality.active{
- background:#473d273e;border-color:#c8aa72;color:#f3deb4
+ /* A gold outline identifies selection without replacing the rarity colour. */
+ opacity:1;box-shadow:0 0 0 1px #dfc188,inset 0 1px 0 #ffffff33,0 2px 9px #0005;
 }
-body[data-page="items"] .item-v2-quality-controls .bis-v2-quality.active:not(:first-child){
- border-color:var(--rarity);background:#243127;color:#f5f0de
+body[data-page="items"] .item-v2-quality-controls .bis-v2-quality.active::after{
+ content:"✓";font-size:11px;line-height:1;font-weight:900;color:inherit;
 }
-body[data-page="items"] .item-catalogue-quality-count{
- color:#aebaae;font-size:10px;font-weight:600;font-variant-numeric:tabular-nums
+body[data-page="items"] .item-v2-quality-controls .bis-v2-quality:focus-visible{
+ outline:2px solid #f2d59a;outline-offset:3px;
 }
-body[data-page="items"] .item-v2-quality-controls .bis-v2-quality.active .item-catalogue-quality-count{color:inherit}
 body[data-page="items"] .result-table{min-width:750px}
 body[data-page="items"] .result-table th.item-catalogue-numeric,
 body[data-page="items"] .result-table td.item-catalogue-numeric{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}

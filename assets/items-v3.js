@@ -75,10 +75,9 @@ function matchesBase(item){
  return !q||String(item.id)===q||((window.ForeverItemLocale?.aliases(item)||item.name)+" "+(item.origin||"")+" "+displayOrigin(item.origin||"")).toLocaleLowerCase().includes(q);
 }
 function matches(item){return matchesBase(item)&&(!selection.size||selection.has(item.quality))}
-function drawQuality(items){
+function drawQuality(){
  chips.replaceChildren();
- const group=items.filter(matchesBase);
- function control(quality,label,amount){
+ function control(quality,label){
   const active=quality==="all"?!selection.size:selection.has(quality);
   const btn=document.createElement("button");btn.type="button";
   btn.className="bis-v2-quality"+(active?" active":"");
@@ -86,9 +85,6 @@ function drawQuality(items){
   btn.setAttribute("aria-pressed",String(active));
   if(quality!=="all")btn.style.setProperty("--rarity",colors[quality]);
   const name=document.createElement("span");name.textContent=label;btn.append(name);
-  if(quality!=="all"){
-   const qty=document.createElement("span");qty.className="item-catalogue-quality-count";qty.textContent=amount.toLocaleString(en?"en":"fr");btn.append(qty);
-  }
   btn.addEventListener("click",()=>{
    if(quality==="all")selection.clear();
    else if(selection.has(quality))selection.delete(quality);
@@ -98,8 +94,8 @@ function drawQuality(items){
   });
   chips.append(btn);
  }
- control("all",tr.all,group.length);
- levels.forEach((quality,n)=>control(quality,labels[n],group.filter(i=>i.quality===quality).length));
+ control("all",tr.all);
+ levels.forEach((quality,n)=>control(quality,labels[n]));
 }
 function numericLevel(item,field){
  const raw=field==="itemLevel"?(item.itemLevel??item.level):(item.requiredLevel??item.required_level);
@@ -126,7 +122,7 @@ function updateSortHeaders(){
 }
 function render(){
  const items=catalogItems();
- drawQuality(items);
+ drawQuality();
  const rows=items.filter(matches).sort(compareItems);
  updateSortHeaders();
  table.replaceChildren();
