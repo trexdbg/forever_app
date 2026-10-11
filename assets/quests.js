@@ -79,18 +79,29 @@ function renderSelection(){
 }
 function selectWaypoint(i,focus=false){
  const step=s.steps[s.index];if(!step||i<0||i>=step.waypoints.length)return;
- s.selected=i;renderSelection();renderWaypoints();draw();
+ s.selected=i;renderSelection();
+ // Keep the clicked button mounted: preserve keyboard focus and list scroll position.
+ for(const [index,button] of $("quest-waypoints").querySelectorAll(".quest-waypoint").entries()){
+  const selected=index===i;
+  button.classList.toggle("selected",selected);
+  button.setAttribute("aria-pressed",String(selected));
+ }
+ draw();
  if(focus&&typeof window!=="undefined"&&window.innerWidth<=900)$("quest-map-title").scrollIntoView({behavior:"smooth",block:"start"});
 }
 function renderWaypoints(){
  const list=$("quest-waypoints");list.replaceChildren();
  const pts=s.steps[s.index].waypoints;
+ const count=$("quest-waypoint-count");
+ if(count)count.textContent=String(pts.length)+" "+QT(pts.length===1?"point":"points",pts.length===1?"point":"stops");
  const typeIcons={starts:"＋",objectives:"◆",ends:"↩",completed:"✓",travel:"➜",prepare:"◈",combat:"⚔",interact:"●",tip:"✦"};
  pts.forEach((w,i)=>{
   const b=element("button",undefined,"quest-waypoint"+(s.selected===i?" selected":""));
   b.type="button";b.setAttribute("aria-pressed",String(s.selected===i));
+  b.title=QT("Localiser ce point sur la carte","Locate this waypoint on the map");
   const title=element("div",undefined,"quest-waypoint-heading");
-  title.append(element("b",String(i+1)),element("strong",waypointTitle(w)));
+  const pin=element("span","⌖","quest-waypoint-pin");pin.setAttribute("aria-hidden","true");
+  title.append(element("b",String(i+1)),element("strong",waypointTitle(w)),pin);
   b.append(title);
   const actions=element("div",undefined,"quest-actions");
   const groups=[];
