@@ -493,6 +493,95 @@
       "source": "forever_beta_community",
       "source_url": "https://foreverchanges.pro/item/273805",
       "completeness": "documented"
+    },
+    {
+      "id": 274286,
+      "itemLevel": 1,
+      "requiredLevel": null,
+      "tooltip": [
+        "Quest Item",
+        "Unique",
+        "Needed for Old Ironforge Incursion."
+      ],
+      "source_url": "https://www.wowhead.com/forever/item=274286",
+      "source": "forever_beta_wowhead",
+      "completeness": "documented"
+    },
+    {
+      "id": 270865,
+      "itemLevel": 1,
+      "requiredLevel": null,
+      "tooltip": [
+        "Quest Item",
+        "Binds when picked up",
+        "Unique",
+        "This Item Begins a Quest",
+        "Titan Relic: Lost Relic Carry / Elder Knowledge."
+      ],
+      "source_url": "https://www.wowhead.com/forever/item=270865",
+      "source": "forever_beta_wowhead",
+      "completeness": "documented"
+    },
+    {
+      "id": 286980,
+      "itemLevel": 22,
+      "requiredLevel": 17,
+      "tooltip": [
+        "Binds when equipped",
+        "Waist Cloth",
+        "22 Armor",
+        "+6 Stamina",
+        "+6 Intellect",
+        "Rotmender's Raiment (0/5)",
+        "(2) Set: +5 Shadow Resistance.",
+        "(3) Set: +10 Intellect.",
+        "(4) Set: When Mana falls below 15%, restore 200 Mana over 10 sec.",
+        "(5) Set: Healing spells can apply an extra 40 Health every 3 sec for 15 sec."
+      ],
+      "source_url": "https://foreverchanges.pro/item/286980",
+      "source": "forever_beta_community",
+      "completeness": "documented"
+    },
+    {
+      "id": 286979,
+      "itemLevel": 22,
+      "requiredLevel": 17,
+      "tooltip": [
+        "Binds when equipped",
+        "Hands Cloth",
+        "25 Armor",
+        "+3 Intellect",
+        "+8 Spirit",
+        "Rotmender's Raiment (0/5)",
+        "(2) Set: +5 Shadow Resistance.",
+        "(3) Set: +10 Intellect.",
+        "(4) Set: When Mana falls below 15%, restore 200 Mana over 10 sec.",
+        "(5) Set: Healing spells can apply an extra 40 Health every 3 sec for 15 sec."
+      ],
+      "source_url": "https://www.wowhead.com/forever/item=286979",
+      "source": "forever_beta_wowhead",
+      "completeness": "documented"
+    },
+    {
+      "id": 286978,
+      "itemLevel": 23,
+      "requiredLevel": 18,
+      "tooltip": [
+        "Binds when picked up",
+        "Chest Cloth",
+        "41 Armor",
+        "+10 Intellect",
+        "Equip: +11 Healing",
+        "Equip: +4 Spell Damage",
+        "Rotmender's Raiment (0/5)",
+        "(2) Set: +5 Shadow Resistance.",
+        "(3) Set: +10 Intellect.",
+        "(4) Set: When Mana falls below 15%, restore 200 Mana over 10 sec.",
+        "(5) Set: Healing spells can apply an extra 40 Health every 3 sec for 15 sec."
+      ],
+      "source_url": "https://www.wowhead.com/forever/item=286978",
+      "source": "forever_beta_wowhead",
+      "completeness": "documented"
     }
   ]
 }
