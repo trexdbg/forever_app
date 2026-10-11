@@ -1,0 +1,243 @@
+{
+  "schema": 1,
+  "updated": "2026-10-11",
+  "scope": "Dungeon loot weapon tooltips: Forever beta observations, NOT Classic stats",
+  "source": "ForeverChanges item pages, Forever beta seen in game. Different beta builds can alter damage, attributes and acquisition. Does not prove future release stats.",
+  "items": [
+    {
+      "id": 271095,
+      "type": "Main Hand Dagger",
+      "damageMin": 9,
+      "damageMax": 18,
+      "speed": 1.7,
+      "dps": 7.9,
+      "bonuses": [
+        "+4 Intellect",
+        "Equip: +18 Spell Power"
+      ],
+      "source_url": "https://foreverchanges.pro/item/271095"
+    },
+    {
+      "id": 270228,
+      "type": "Two-Hand Staff",
+      "damageMin": 30,
+      "damageMax": 46,
+      "speed": 3.2,
+      "dps": 11.9,
+      "bonuses": [
+        "+9 Fire Resistance",
+        "Equip: +18 Spell Power"
+      ],
+      "source_url": "https://foreverchanges.pro/item/270228"
+    },
+    {
+      "id": 270256,
+      "type": "Main Hand Axe",
+      "damageMin": 20,
+      "damageMax": 39,
+      "speed": 2.4,
+      "dps": 12.3,
+      "bonuses": [
+        "+4 Strength"
+      ],
+      "source_url": "https://foreverchanges.pro/item/270256"
+    },
+    {
+      "id": 271204,
+      "type": "One-Hand Dagger",
+      "damageMin": 17,
+      "damageMax": 32,
+      "speed": 1.8,
+      "dps": 13.6,
+      "bonuses": [
+        "+5 Stamina"
+      ],
+      "source_url": "https://foreverchanges.pro/item/271204"
+    },
+    {
+      "id": 271203,
+      "type": "Two-Hand Staff",
+      "damageMin": 50,
+      "damageMax": 76,
+      "speed": 3.6,
+      "dps": 17.5,
+      "bonuses": [
+        "+9 Agility",
+        "+5 Spirit"
+      ],
+      "source_url": "https://foreverchanges.pro/item/271203"
+    },
+    {
+      "id": 271216,
+      "type": "Main Hand Mace",
+      "damageMin": 17,
+      "damageMax": 33,
+      "speed": 2.6,
+      "dps": 9.6,
+      "bonuses": [
+        "+5 Shadow Resistance",
+        "Equip: +24 Spell Power"
+      ],
+      "source_url": "https://foreverchanges.pro/item/271216"
+    },
+    {
+      "id": 271217,
+      "type": "Two-Hand Axe",
+      "damageMin": 52,
+      "damageMax": 79,
+      "speed": 3.6,
+      "dps": 18.2,
+      "bonuses": [
+        "Use: Chop a nearby Humanoid or Undead corpse, restoring 150 Health, 150 Mana and 15 Rage."
+      ],
+      "source_url": "https://foreverchanges.pro/item/271217"
+    },
+    {
+      "id": 271215,
+      "type": "Two-Hand Staff",
+      "damageMin": 43,
+      "damageMax": 66,
+      "speed": 3.6,
+      "dps": 15.1,
+      "bonuses": [
+        "+13 Frost Resistance",
+        "Equip: +32 Frost Spell Damage"
+      ],
+      "source_url": "https://foreverchanges.pro/item/271215"
+    },
+    {
+      "id": 271218,
+      "type": "One-Hand Sword",
+      "damageMin": 26,
+      "damageMax": 50,
+      "speed": 2.6,
+      "dps": 14.6,
+      "bonuses": [
+        "+5 Spirit"
+      ],
+      "source_url": "https://foreverchanges.pro/item/271218"
+    },
+    {
+      "id": 6641,
+      "type": "Two-Hand Sword",
+      "damageMin": 68,
+      "damageMax": 102,
+      "speed": 3.8,
+      "dps": 22.4,
+      "bonuses": [
+        "Equip: +33 Healing",
+        "Equip: +11 Spell Damage"
+      ],
+      "source_url": "https://foreverchanges.pro/item/6641"
+    },
+    {
+      "id": 273053,
+      "type": "Main Hand Dagger",
+      "damageMin": 16,
+      "damageMax": 30,
+      "speed": 1.6,
+      "dps": 14.4,
+      "bonuses": [
+        "+5 Stamina",
+        "Equip: +8 Health Regeneration",
+        "Equip: +36 Spell Power"
+      ],
+      "source_url": "https://foreverchanges.pro/item/273053"
+    },
+    {
+      "id": 273046,
+      "type": "Two-Hand Axe",
+      "damageMin": 78,
+      "damageMax": 117,
+      "speed": 3.5,
+      "dps": 27.9,
+      "bonuses": [
+        "Equip: When damaged, has a chance to grant 1080 armor for 12 sec."
+      ],
+      "source_url": "https://foreverchanges.pro/item/273046"
+    },
+    {
+      "id": 273040,
+      "type": "Two-Hand Staff",
+      "damageMin": 59,
+      "damageMax": 90,
+      "speed": 3.6,
+      "dps": 20.7,
+      "bonuses": [
+        "+14 Stamina",
+        "Equip: +3 Spell Penetration",
+        "Equip: +36 Spell Power"
+      ],
+      "source_url": "https://foreverchanges.pro/item/273040"
+    },
+    {
+      "id": 273037,
+      "type": "Two-Hand Polearm",
+      "damageMin": 69,
+      "damageMax": 104,
+      "speed": 3,
+      "dps": 28.8,
+      "bonuses": [
+        "+10 Agility",
+        "+9 Nature Resistance",
+        "Equip: +10 Hit Rating"
+      ],
+      "source_url": "https://foreverchanges.pro/item/273037"
+    },
+    {
+      "id": 272996,
+      "type": "Main Hand Mace",
+      "damageMin": 13,
+      "damageMax": 26,
+      "speed": 2.4,
+      "dps": 8.1,
+      "bonuses": [
+        "+4 Spirit",
+        "Equip: +33 Healing",
+        "Equip: +11 Spell Damage"
+      ],
+      "source_url": "https://foreverchanges.pro/item/272996"
+    },
+    {
+      "id": 273003,
+      "type": "Main Hand Dagger",
+      "damageMin": 9,
+      "damageMax": 17,
+      "speed": 1.6,
+      "dps": 8.1,
+      "bonuses": [
+        "+4 Spirit",
+        "Equip: Harmful spell casts sear the target for 7 Fire damage."
+      ],
+      "source_url": "https://foreverchanges.pro/item/273003"
+    },
+    {
+      "id": 273809,
+      "type": "Main Hand Axe",
+      "damageMin": 29,
+      "damageMax": 54,
+      "speed": 2.2,
+      "dps": 18.9,
+      "bonuses": [
+        "+4 Strength",
+        "Equip: +9 Attack Power Vs Humanoids",
+        "Equip: +8 Attack Power"
+      ],
+      "source_url": "https://foreverchanges.pro/item/273809"
+    },
+    {
+      "id": 274158,
+      "type": "Two-Hand Staff",
+      "damageMin": 42,
+      "damageMax": 64,
+      "speed": 2.8,
+      "dps": 18.9,
+      "bonuses": [
+        "+11 Stamina",
+        "Equip: +5 Mana Regeneration",
+        "Equip: +35 Spell Power"
+      ],
+      "source_url": "https://foreverchanges.pro/item/274158"
+    }
+  ]
+}
