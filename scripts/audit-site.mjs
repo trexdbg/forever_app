@@ -36,12 +36,20 @@ const title=first(s,/<title>([^<]+)<\/title>/i);
 if(!title)issue("error","TITLE_MISSING",path,"No HTML title");
 else{const t=textOf(title).toLowerCase();if(titles.has(t))issue("warning","DUPLICATE_TITLE",path,titles.get(t));else titles.set(t,path)}
 if(!/<meta\b[^>]*\bname=["']description["']/i.test(s))issue("error","META_DESCRIPTION_MISSING",path,"Missing");
+if(!/<meta\b[^>]*name=["']viewport["'][^>]*content=["'][^"']*width=device-width/i.test(s))
+ issue("error","MOBILE_VIEWPORT_MISSING",path,"Mobile viewport meta is absent");
+if(!/<main(?:\s|>)/i.test(s))
+ issue("warning","MAIN_LANDMARK_MISSING",path,"No main landmark for keyboard/screen-reader navigation");
+
 const h1=(s.match(/<h1(?:\s|>)/gi)||[]).length;if(h1!==1)issue("warning","H1_COUNT",path,String(h1));
 const alternate=[...s.matchAll(/<link\b[^>]*\brel=["']alternate["'][^>]*\bhreflang=["']([^"']+)["'][^>]*\bhref=["']([^"']+)/gi)];
 if(!alternate.some(m=>m[1]==="fr")||!alternate.some(m=>m[1]==="en"))issue("error","HREFLANG_MISSING",path,"FR/EN alternates missing");
 for(const m of alternate){try{const target=new URL(m[2]);if(target.origin!==origin||!known.has(toFile(target)))issue("error","HREFLANG_TARGET_MISSING",path,m[2])}
 catch{issue("error","HREFLANG_URL_INVALID",path,m[2])}}
 const guide=(path.startsWith("guides/")||path.startsWith("en/guides/"))&&path!=="guides/index.html"&&path!=="en/guides/index.html";
+if(guide&&s.includes('class="geo-table"')&&!s.includes('class="geo-table-scroll"'))
+ issue("warning","MOBILE_TABLE_OVERFLOW_MISSING",path,"Table is not wrapped in a horizontally scrollable surface");
+
 if(guide){guides++;const content=first(s,/(<main\b[\s\S]*?<\/main>)/i)||s,words=textOf(content).split(/\s+/).length;
 if(words<180)issue("warning","THIN_GUIDE",path,String(words)+" words");
 let hasArticle=false;for(const m of s.matchAll(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)){try{
