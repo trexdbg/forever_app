@@ -1606,28 +1606,31 @@
           "loot": [
             {
               "en": "Barbaric Crossbow",
+              "id": 272999,
               "fr": "Arbalète barbare",
               "slot": "Distance / Ranged",
               "isNew": true,
-              "source_status": "classic_loot_reference",
+              "source_status": "forever_beta_cache",
               "iconFileId": 135531,
               "icon_source": "https://www.icy-veins.com/wow-forever/ragefire-chasm-guide"
             },
             {
               "en": "Trogg Scepter",
+              "id": 272996,
               "fr": "Sceptre trogg",
               "slot": "Main droite / Main hand",
               "isNew": true,
-              "source_status": "classic_loot_reference",
+              "source_status": "forever_beta_cache",
               "iconFileId": 133727,
               "icon_source": "https://www.icy-veins.com/wow-forever/ragefire-chasm-guide"
             },
             {
               "en": "Bone Knuckles",
+              "id": 272998,
               "fr": "Poings d'os",
               "slot": "Mains / Fist weapon",
               "isNew": true,
-              "source_status": "classic_loot_reference",
+              "source_status": "forever_beta_cache",
               "iconFileId": 132369,
               "icon_source": "https://www.icy-veins.com/wow-forever/ragefire-chasm-guide"
             }
@@ -1761,19 +1764,21 @@
           "loot": [
             {
               "en": "Searing Dagger",
+              "id": 273003,
               "fr": "Dague incendiaire",
               "slot": "Main droite / Main hand",
               "isNew": true,
-              "source_status": "classic_loot_reference",
+              "source_status": "forever_beta_cache",
               "iconFileId": 135639,
               "icon_source": "https://www.icy-veins.com/wow-forever/ragefire-chasm-guide"
             },
             {
               "en": "Satyrskin Cloak",
+              "id": 273005,
               "fr": "Cape en peau de satyre",
               "slot": "Dos / Back",
               "isNew": true,
-              "source_status": "classic_loot_reference",
+              "source_status": "forever_beta_cache",
               "iconFileId": 133770,
               "icon_source": "https://www.icy-veins.com/wow-forever/ragefire-chasm-guide"
             },
@@ -1917,10 +1922,11 @@
             },
             {
               "en": "Snake Eye Kaleidoscope",
+              "id": 273088,
               "fr": "Kaléidoscope œil-de-serpent",
               "slot": "Cou / Neck",
               "isNew": true,
-              "source_status": "classic_loot_reference",
+              "source_status": "forever_beta_cache",
               "iconFileId": 133884,
               "icon_source": "https://www.icy-veins.com/wow-forever/wailing-caverns-guide"
             }
@@ -2100,6 +2106,7 @@
           "loot": [
             {
               "en": "Seedcloud Buckler",
+              "id": 6630,
               "fr": "Rondache nuage-graine",
               "slot": "Bouclier / Shield",
               "source_status": "classic_loot_reference",
@@ -2812,6 +2819,7 @@
             },
             {
               "en": "Commander's Crest",
+              "id": 6320,
               "fr": "Écu du commandant",
               "slot": "Bouclier",
               "source_status": "classic_loot_reference",
@@ -3418,10 +3426,11 @@
             },
             {
               "en": "Demolition Girdle",
+              "id": 273807,
               "fr": "Ceinturon de démolition",
               "slot": "Taille / Waist",
               "isNew": true,
-              "source_status": "classic_loot_reference",
+              "source_status": "forever_beta_cache",
               "iconFileId": 132513,
               "icon_source": "https://www.icy-veins.com/wow-forever/the-stockade-guide"
             }
@@ -3441,9 +3450,10 @@
           "loot": [
             {
               "en": "Hamhock's Cleaver",
+              "id": 273809,
               "fr": "Couperet de Jambon",
               "slot": "Hache / Axe",
-              "source_status": "classic_loot_reference",
+              "source_status": "forever_beta_cache",
               "iconFileId": 132392,
               "icon_source": "https://www.icy-veins.com/wow-forever/the-stockade-guide"
             }
@@ -3580,10 +3590,11 @@
             },
             {
               "en": "Irradiated Shield",
+              "id": 274043,
               "fr": "Bouclier irradié",
               "slot": "Bouclier",
               "isNew": true,
-              "source_status": "classic_loot_reference"
+              "source_status": "forever_beta_cache"
             },
             {
               "en": "Skullduggery Belt",
@@ -3657,6 +3668,7 @@
           "loot": [
             {
               "en": "Electrocutioner Lagnut",
+              "id": 9447,
               "fr": "Écrou de l'électrocuteur",
               "slot": "Doigt",
               "source_status": "classic_loot_reference"
@@ -3800,12 +3812,14 @@
           "loot": [
             {
               "en": "Electromagnetic Gigaflux Reactivator",
+              "id": 9492,
               "fr": "Réactivateur gigaflux électromagnétique",
               "slot": "Tête",
               "source_status": "classic_loot_reference"
             },
             {
               "en": "Charged Gear",
+              "id": 9461,
               "fr": "Engrenage chargé",
               "slot": "Doigt",
               "source_status": "classic_loot_reference"
@@ -3997,10 +4011,11 @@
             },
             {
               "en": "Thornweaver Drape",
+              "id": 274149,
               "fr": "Cape de tisse-épines",
               "slot": "Dos",
               "isNew": true,
-              "source_status": "classic_loot_reference"
+              "source_status": "forever_beta_cache"
             }
           ],
           "rare": false,
@@ -4150,6 +4165,7 @@
           "loot": [
             {
               "en": "Stygian Bone Amulet",
+              "id": 6695,
               "fr": "Amulette d'os stygienne",
               "slot": "Cou",
               "source_status": "classic_loot_reference"
@@ -4264,17 +4280,19 @@
             },
             {
               "en": "Painwalker Buckler",
+              "id": 274290,
               "fr": "Targe de douleur vagabonde",
               "slot": "Bouclier",
               "isNew": true,
-              "source_status": "classic_loot_reference"
+              "source_status": "forever_beta_cache"
             },
             {
               "en": "Defender's Leather Helm",
+              "id": 252455,
               "fr": "Casque de défenseur en cuir",
               "slot": "Tête / Cuir",
               "isNew": true,
-              "source_status": "classic_loot_reference"
+              "source_status": "forever_beta_cache"
             }
           ],
           "rare": false,
@@ -4298,6 +4316,7 @@
           "loot": [
             {
               "en": "Orb of the Forgotten Seer",
+              "id": 7685,
               "fr": "Orbe de l'oracle oublié",
               "slot": "Main gauche",
               "source_status": "classic_loot_reference"
@@ -4442,6 +4461,7 @@
             },
             {
               "en": "Ironspine's Eye",
+              "id": 7686,
               "fr": "Œil d'Échine-de-Fer",
               "slot": "Doigt",
               "source_status": "classic_loot_reference"
