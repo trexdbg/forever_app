@@ -1609,21 +1609,27 @@
               "fr": "Arbalète barbare",
               "slot": "Distance / Ranged",
               "isNew": true,
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "iconFileId": 135531,
+              "icon_source": "https://www.icy-veins.com/wow-forever/ragefire-chasm-guide"
             },
             {
               "en": "Trogg Scepter",
               "fr": "Sceptre trogg",
               "slot": "Main droite / Main hand",
               "isNew": true,
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "iconFileId": 133727,
+              "icon_source": "https://www.icy-veins.com/wow-forever/ragefire-chasm-guide"
             },
             {
               "en": "Bone Knuckles",
               "fr": "Poings d'os",
               "slot": "Mains / Fist weapon",
               "isNew": true,
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "iconFileId": 132369,
+              "icon_source": "https://www.icy-veins.com/wow-forever/ragefire-chasm-guide"
             }
           ],
           "rare": false,
@@ -1654,13 +1660,17 @@
               "quality": "uncommon",
               "itemLevel": 18,
               "requiredLevel": 13,
-              "itemUrl": "https://www.wowhead.com/classic/item=14149"
+              "itemUrl": "https://www.wowhead.com/classic/item=14149",
+              "iconFileId": 133770,
+              "icon_source": "https://www.icy-veins.com/wow-forever/ragefire-chasm-guide"
             },
             {
               "en": "Crystalline Cuffs",
               "fr": "Manchettes cristallines",
               "slot": "Poignets / Wrist",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "iconFileId": 132612,
+              "icon_source": "https://www.icy-veins.com/wow-forever/ragefire-chasm-guide"
             },
             {
               "en": "Cursed Felblade",
@@ -1671,7 +1681,9 @@
               "quality": "uncommon",
               "itemLevel": 18,
               "requiredLevel": 13,
-              "itemUrl": "https://www.wowhead.com/classic/item=14145"
+              "itemUrl": "https://www.wowhead.com/classic/item=14145",
+              "iconFileId": 135648,
+              "icon_source": "https://www.icy-veins.com/wow-forever/ragefire-chasm-guide"
             }
           ],
           "rare": false,
@@ -1702,7 +1714,9 @@
               "quality": "uncommon",
               "itemLevel": 18,
               "requiredLevel": 13,
-              "itemUrl": "https://www.wowhead.com/classic/item=14150"
+              "itemUrl": "https://www.wowhead.com/classic/item=14150",
+              "iconFileId": 132665,
+              "icon_source": "https://www.icy-veins.com/wow-forever/ragefire-chasm-guide"
             },
             {
               "en": "Cavedweller Bracers",
@@ -1713,13 +1727,17 @@
               "quality": "uncommon",
               "itemLevel": 18,
               "requiredLevel": 13,
-              "itemUrl": "https://www.wowhead.com/classic/item=14147"
+              "itemUrl": "https://www.wowhead.com/classic/item=14147",
+              "iconFileId": 132606,
+              "icon_source": "https://www.icy-veins.com/wow-forever/ragefire-chasm-guide"
             },
             {
               "en": "Chanting Blade",
               "fr": "Lame chantante",
               "slot": "Main droite / Main hand",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "iconFileId": 135661,
+              "icon_source": "https://www.icy-veins.com/wow-forever/ragefire-chasm-guide"
             }
           ],
           "rare": false,
@@ -1746,21 +1764,27 @@
               "fr": "Dague incendiaire",
               "slot": "Main droite / Main hand",
               "isNew": true,
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "iconFileId": 135639,
+              "icon_source": "https://www.icy-veins.com/wow-forever/ragefire-chasm-guide"
             },
             {
               "en": "Satyrskin Cloak",
               "fr": "Cape en peau de satyre",
               "slot": "Dos / Back",
               "isNew": true,
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "iconFileId": 133770,
+              "icon_source": "https://www.icy-veins.com/wow-forever/ragefire-chasm-guide"
             },
             {
               "en": "Chasm Walkers",
               "fr": "Marcheurs des profondeurs",
               "slot": "Pieds / Feet",
               "isNew": true,
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "iconFileId": 132540,
+              "icon_source": "https://www.icy-veins.com/wow-forever/ragefire-chasm-guide"
             }
           ],
           "rare": false,
@@ -1830,7 +1854,9 @@
               "en": "Cobrahn's Grasp",
               "fr": "Étreinte de Cobrahn",
               "slot": "Taille / Waist",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "iconFileId": 132492,
+              "icon_source": "https://www.icy-veins.com/wow-forever/wailing-caverns-guide"
             },
             {
               "en": "Leggings of the Fang",
@@ -1841,13 +1867,17 @@
               "quality": "rare",
               "itemLevel": 23,
               "requiredLevel": 18,
-              "itemUrl": "https://www.wowhead.com/classic/item=10410"
+              "itemUrl": "https://www.wowhead.com/classic/item=10410",
+              "iconFileId": 134591,
+              "icon_source": "https://www.icy-veins.com/wow-forever/wailing-caverns-guide"
             },
             {
               "en": "Robe of the Moccasin",
               "fr": "Robe du mocassin",
               "slot": "Torse / Chest",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "iconFileId": 132677,
+              "icon_source": "https://www.icy-veins.com/wow-forever/wailing-caverns-guide"
             }
           ],
           "rare": false,
@@ -1873,20 +1903,26 @@
               "en": "Belt of the Fang",
               "fr": "Ceinture du Croc",
               "slot": "Taille / Waist",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "iconFileId": 132519,
+              "icon_source": "https://www.icy-veins.com/wow-forever/wailing-caverns-guide"
             },
             {
               "en": "Serpent's Shoulders",
               "fr": "Épaulières du serpent",
               "slot": "Épaules / Shoulders",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "iconFileId": 135039,
+              "icon_source": "https://www.icy-veins.com/wow-forever/wailing-caverns-guide"
             },
             {
               "en": "Snake Eye Kaleidoscope",
               "fr": "Kaléidoscope œil-de-serpent",
               "slot": "Cou / Neck",
               "isNew": true,
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "iconFileId": 133884,
+              "icon_source": "https://www.icy-veins.com/wow-forever/wailing-caverns-guide"
             }
           ],
           "rare": false,
@@ -1912,13 +1948,17 @@
               "en": "Kresh's Back",
               "fr": "Carapace de Kresh",
               "slot": "Bouclier / Shield",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "iconFileId": 134964,
+              "icon_source": "https://www.icy-veins.com/wow-forever/wailing-caverns-guide"
             },
             {
               "en": "Worn Turtle Shell Shield",
               "fr": "Bouclier en carapace de tortue usé",
               "slot": "Bouclier / Shield",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "iconFileId": 134967,
+              "icon_source": "https://www.icy-veins.com/wow-forever/wailing-caverns-guide"
             }
           ],
           "rare": false,
@@ -1944,13 +1984,17 @@
               "en": "Stinging Viper",
               "fr": "Vipère à aiguillon",
               "slot": "Masse / Mace",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "iconFileId": 135472,
+              "icon_source": "https://www.icy-veins.com/wow-forever/wailing-caverns-guide"
             },
             {
               "en": "Armor of the Fang",
               "fr": "Armure du Croc",
               "slot": "Torse / Chest",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "iconFileId": 135020,
+              "icon_source": "https://www.icy-veins.com/wow-forever/wailing-caverns-guide"
             }
           ],
           "rare": false,
@@ -1981,13 +2025,17 @@
               "quality": "rare",
               "itemLevel": 22,
               "requiredLevel": 17,
-              "itemUrl": "https://www.wowhead.com/classic/item=6449"
+              "itemUrl": "https://www.wowhead.com/classic/item=6449",
+              "iconFileId": 132656,
+              "icon_source": "https://www.icy-veins.com/wow-forever/wailing-caverns-guide"
             },
             {
               "en": "Tail Spike",
               "fr": "Pique caudale",
               "slot": "Dague / Dagger",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "iconFileId": 135646,
+              "icon_source": "https://www.icy-veins.com/wow-forever/wailing-caverns-guide"
             }
           ],
           "rare": false,
@@ -2018,13 +2066,17 @@
               "quality": "rare",
               "itemLevel": 24,
               "requiredLevel": 19,
-              "itemUrl": "https://www.wowhead.com/classic/item=6469"
+              "itemUrl": "https://www.wowhead.com/classic/item=6469",
+              "iconFileId": 135498,
+              "icon_source": "https://www.icy-veins.com/wow-forever/wailing-caverns-guide"
             },
             {
               "en": "Footpads of the Fang",
               "fr": "Souliers du Croc",
               "slot": "Pieds / Feet",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "iconFileId": 132538,
+              "icon_source": "https://www.icy-veins.com/wow-forever/wailing-caverns-guide"
             }
           ],
           "rare": false,
@@ -2050,13 +2102,17 @@
               "en": "Seedcloud Buckler",
               "fr": "Rondache nuage-graine",
               "slot": "Bouclier / Shield",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "iconFileId": 134956,
+              "icon_source": "https://www.icy-veins.com/wow-forever/wailing-caverns-guide"
             },
             {
               "en": "Living Root",
               "fr": "Racine vivante",
               "slot": "Bâton / Staff",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "iconFileId": 135162,
+              "icon_source": "https://www.icy-veins.com/wow-forever/wailing-caverns-guide"
             }
           ],
           "rare": false,
@@ -2082,7 +2138,9 @@
               "en": "Mutant Scale Breastplate",
               "fr": "Cuirasse en écailles mutantes",
               "slot": "Torse / Chest",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "iconFileId": 132743,
+              "icon_source": "https://www.icy-veins.com/wow-forever/wailing-caverns-guide"
             },
             {
               "en": "Deep Fathom Ring",
@@ -2093,7 +2151,9 @@
               "quality": "rare",
               "itemLevel": 26,
               "requiredLevel": 21,
-              "itemUrl": "https://www.wowhead.com/classic/item=6463"
+              "itemUrl": "https://www.wowhead.com/classic/item=6463",
+              "iconFileId": 133357,
+              "icon_source": "https://www.icy-veins.com/wow-forever/wailing-caverns-guide"
             }
           ],
           "rare": false,
