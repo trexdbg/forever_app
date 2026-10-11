@@ -56,7 +56,7 @@ function translateEnglish(original){
 }
 function rawName(item){return typeof item==="string"?item:(typeof item?.name_en==="string"?item.name_en:typeof item?.name==="string"?item.name:(item?.name?.en||item?.en||""))}
 // Additional cross-checked Classic item names reused in Forever beta.
-Object.assign(ID,{"5191":["Cruel Barb","Lame de cruauté"],"10399":["Blackened Defias Armor","Armure défias noircie"],"16712":["Shadowcraft Gloves","Gants Sombreruse"],"6641":["Haunting Blade","Lame de hantise"],"6642":["Phantom Armor","Armure fantôme"]});
+Object.assign(ID,{"1155":["Rod of the Sleepwalker","Bâtonnet du somnanbule"],"3748":["Feline Mantle","Mantelet félin"],"5191":["Cruel Barb","Lame de cruauté"],"5198":["Cookie's Stirring Rod","Bâton à touiller de Macaron"],"6321":["Silverlaine's Family Seal","Sceau de la famille d'Argelaine"],"6469":["Venomstrike","Frappe-venin"],"6641":["Haunting Blade","Lame de hantise"],"6642":["Phantom Armor","Armure fantôme"],"10399":["Blackened Defias Armor","Armure défias noircie"],"10410":["Leggings of the Fang","Jambières du Croc"],"14145":["Cursed Felblade","Lame corrompue maudite"],"14149":["Subterranean Cape","Cape souterraine"],"16712":["Shadowcraft Gloves","Gants Sombreruse"]});
 // WoW Classic frFR names checked by item ID against Wowhead Classic item sheets.
 Object.assign(ID,{"5193":["Cape of the Brotherhood","Cape de la confrérie"],"5202":["Corsair's Overshirt","Casaque de corsaire"],"6318":["Odo's Ley Staff","Bâton d'Odo"],"6324":["Robes of Arugal","Robe d'Arugal"],"6907":["Tortoise Armor","Armure de la tortue"],"6909":["Strike of the Hydra","Frappe de l'Hydre"],"10412":["Belt of the Fang","Ceinture du Croc"]});
 // Classic frFR equipment names confirmed from Wowhead Classic by numeric item ID.
