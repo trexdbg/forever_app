@@ -301,6 +301,198 @@
       "source": "unverified_reference",
       "source_url": "https://www.wowhead.com/forever/item=274042",
       "completeness": "partial"
+    },
+    {
+      "id": 270229,
+      "itemLevel": 18,
+      "requiredLevel": 13,
+      "tooltip": [
+        "Feet Mail",
+        "122 Armor",
+        "+5 Strength",
+        "+50 Armor"
+      ],
+      "source": "forever_beta_community",
+      "source_url": "https://foreverchanges.pro/item/270229",
+      "completeness": "documented"
+    },
+    {
+      "id": 271098,
+      "itemLevel": 18,
+      "requiredLevel": 13,
+      "tooltip": [
+        "Chest Mail",
+        "178 Armor",
+        "+6 Stamina",
+        "+60 Armor"
+      ],
+      "source": "forever_beta_community",
+      "source_url": "https://foreverchanges.pro/item/271098",
+      "completeness": "documented"
+    },
+    {
+      "id": 270260,
+      "itemLevel": 18,
+      "requiredLevel": 13,
+      "tooltip": [
+        "Legs Leather",
+        "72 Armor",
+        "+7 Stamina",
+        "+4 Agility"
+      ],
+      "source": "forever_beta_community",
+      "source_url": "https://foreverchanges.pro/item/270260",
+      "completeness": "documented"
+    },
+    {
+      "id": 270261,
+      "itemLevel": 18,
+      "requiredLevel": 13,
+      "tooltip": [
+        "Chest Cloth",
+        "35 Armor",
+        "+4 Spirit",
+        "Equip: +8 Spell Power"
+      ],
+      "source": "forever_beta_community",
+      "source_url": "https://foreverchanges.pro/item/270261",
+      "completeness": "documented"
+    },
+    {
+      "id": 273024,
+      "itemLevel": 31,
+      "requiredLevel": 26,
+      "tooltip": [
+        "Feet Cloth",
+        "33 Armor",
+        "+6 Spirit",
+        "+9 Stamina",
+        "Equip: +7 Spell Power"
+      ],
+      "source": "forever_beta_community",
+      "source_url": "https://foreverchanges.pro/item/273024",
+      "completeness": "documented"
+    },
+    {
+      "id": 273033,
+      "itemLevel": 31,
+      "requiredLevel": 26,
+      "tooltip": [
+        "Ranged Crossbow",
+        "28 - 43 Damage Speed 2.30",
+        "(15.4 damage per second)",
+        "Equip: +8 Attack Power",
+        "Equip: +9 Attack Power Vs Humanoids"
+      ],
+      "source": "forever_beta_community",
+      "source_url": "https://foreverchanges.pro/item/273033",
+      "completeness": "documented"
+    },
+    {
+      "id": 273034,
+      "itemLevel": 32,
+      "requiredLevel": 27,
+      "tooltip": [
+        "Hands Cloth",
+        "31 Armor",
+        "+7 Stamina",
+        "+7 Intellect",
+        "Equip: +9 Arcane Spell Damage",
+        "Equip: +9 Shadow Spell Damage"
+      ],
+      "source": "forever_beta_community",
+      "source_url": "https://foreverchanges.pro/item/273034",
+      "completeness": "documented"
+    },
+    {
+      "id": 273035,
+      "itemLevel": 32,
+      "requiredLevel": 27,
+      "tooltip": [
+        "Chest Mail",
+        "225 Armor",
+        "+8 Stamina",
+        "+12 Strength",
+        "Equip: +3 Mana Regeneration"
+      ],
+      "source": "forever_beta_community",
+      "source_url": "https://foreverchanges.pro/item/273035",
+      "completeness": "documented"
+    },
+    {
+      "id": 273042,
+      "itemLevel": 33,
+      "requiredLevel": 28,
+      "tooltip": [
+        "Feet Mail",
+        "157 Armor",
+        "+7 Strength",
+        "+7 Intellect",
+        "Equip: +7 Critical Strike Rating"
+      ],
+      "source": "forever_beta_community",
+      "source_url": "https://foreverchanges.pro/item/273042",
+      "completeness": "documented"
+    },
+    {
+      "id": 273039,
+      "itemLevel": 34,
+      "requiredLevel": 29,
+      "tooltip": [
+        "Waist Cloth",
+        "28 Armor",
+        "+10 Intellect",
+        "Equip: +7 Spell Power",
+        "Equip: +5 Health Regeneration"
+      ],
+      "source": "forever_beta_community",
+      "source_url": "https://foreverchanges.pro/item/273039",
+      "completeness": "documented"
+    },
+    {
+      "id": 273038,
+      "itemLevel": 34,
+      "requiredLevel": 29,
+      "tooltip": [
+        "Chest Leather",
+        "110 Armor",
+        "+13 Intellect",
+        "+9 Agility",
+        "+7 Stamina"
+      ],
+      "source": "forever_beta_community",
+      "source_url": "https://foreverchanges.pro/item/273038",
+      "completeness": "documented"
+    },
+    {
+      "id": 273052,
+      "itemLevel": 35,
+      "requiredLevel": 30,
+      "tooltip": [
+        "Held In Off-hand",
+        "+8 Spirit",
+        "+2 Intellect",
+        "Equip: +11 Healing",
+        "Equip: +4 Spell Damage"
+      ],
+      "source": "forever_beta_community",
+      "source_url": "https://foreverchanges.pro/item/273052",
+      "completeness": "documented"
+    },
+    {
+      "id": 273805,
+      "itemLevel": 26,
+      "requiredLevel": 21,
+      "tooltip": [
+        "Chest Leather",
+        "96 Armor",
+        "+8 Stamina",
+        "Equip: +4 Defense Rating",
+        "Equip: +14 Attack Power"
+      ],
+      "source": "forever_beta_community",
+      "source_url": "https://foreverchanges.pro/item/273805",
+      "completeness": "documented"
     }
   ]
 }
