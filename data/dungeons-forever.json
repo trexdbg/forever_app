@@ -3245,7 +3245,7 @@
             },
             {
               "en": "Meteor Shard",
-              "fr": "Éclat de météore",
+              "fr": "Eclat de météore",
               "slot": "Dague / Dagger",
               "source_status": "classic_loot_reference",
               "id": 6220,
@@ -4001,7 +4001,7 @@
           "loot": [
             {
               "en": "Acidic Walkers",
-              "fr": "Bottes acides",
+              "fr": "Brodequins acides",
               "slot": "Pieds",
               "source_status": "classic_loot_reference",
               "id": 9454,
