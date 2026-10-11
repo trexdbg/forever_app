@@ -28,7 +28,18 @@ function translateLine(line){
 if(!en){
  const stats={"Strength":"Force","Agility":"Agilité","Stamina":"Endurance","Intellect":"Intelligence","Spirit":"Esprit","Armor":"Armure","Ranged Attack Power":"Puissance d'attaque à distance","Attack Power":"Puissance d'attaque"};
  const types={"Sword":"Épée","Axe":"Hache","Mace":"Masse","Dagger":"Dague","Staff":"Bâton","Polearm":"Arme d'hast","Wand":"Baguette","Bow":"Arc","Crossbow":"Arbalète","Gun":"Arme à feu","Leather":"Cuir","Mail":"Mailles","Plate":"Plaques","Cloth":"Tissu","Shield":"Bouclier","Trinket":"Bijou","Ring":"Anneau","Relic":"Relique"};
- return String(line)
+ const slots={"Head":"Tête","Shoulder":"Épaules","Chest":"Torse","Wrist":"Poignets","Hands":"Mains","Waist":"Taille","Legs":"Jambes","Feet":"Pieds","Back":"Dos","Main Hand":"Main droite","Off Hand":"Main gauche","Ranged":"Distance","Two-Hand":"Deux mains","One-Hand":"À une main"};
+ const source=String(line).trim();
+ const location=/^(Head|Shoulder|Chest|Wrist|Hands|Waist|Legs|Feet|Back|Main Hand|Off Hand|Ranged|Two-Hand|One-Hand) (Cloth|Leather|Mail|Plate|Sword|Axe|Mace|Dagger|Staff|Polearm|Wand|Bow|Crossbow|Gun|Shield)$/.exec(source);
+ if(location)return slots[location[1]]+" · "+types[location[2]];
+ const hit=/^Equip: Improves (?:your )?chance to hit by (\d+(?:[.,]\d+)?)%\.?$/i.exec(source);
+ if(hit)return "Équipé : Augmente vos chances de toucher de "+hit[1]+" %.";
+ const crit=/^Equip: (?:Improves (?:your )?chance to (?:crit|critically strike|get a critical strike)|Increases your chance to score a critical strike) by (\d+(?:[.,]\d+)?)%\.?$/i.exec(source);
+ if(crit)return "Équipé : Augmente vos chances d’infliger un coup critique de "+crit[1]+" %.";
+ const bonus=/^Equip: \+(\d+) (Attack Power|Spell Power|Hit Rating|Crit Rating|Spell Damage|Healing|Mana Regeneration|Health Regeneration|Spell Penetration|Shadow Spell Damage)\.?$/i.exec(source);
+ const bonusFR={"Attack Power":"à la puissance d’attaque","Spell Power":"à la puissance des sorts","Hit Rating":"au score de toucher","Crit Rating":"au score de coup critique","Spell Damage":"aux dégâts des sorts","Healing":"aux soins","Mana Regeneration":"à la régénération de mana","Health Regeneration":"à la régénération des points de vie","Spell Penetration":"à la pénétration des sorts","Shadow Spell Damage":"aux dégâts des sorts d’ombre"};
+ if(bonus)return "Équipé : +"+bonus[1]+" "+bonusFR[bonus[2]]+".";
+ return source
  .replace(/^Item Level (\d+)$/,"Niveau d’objet $1")
  .replace(/^Requires Level (\d+)$/,"Niveau $1 requis")
  .replace(/^Ranged Wand$/,"Baguette à distance")
@@ -89,7 +100,7 @@ pic.loading="lazy";
 pic.onerror=()=>{if(!pic.dataset.fallback&&validIcon(item.icon)&&!officialIcon){pic.dataset.fallback="1";pic.src="https://wow.zamimg.com/images/wow/icons/large/"+item.icon+".jpg"}else pic.remove()};
 title.append(pic)}
 const heading=elt("div","forever-item-tooltip__heading");
-const label=!en&&!forever&&data&&typeof data.name==="string"&&data.name?data.name:(locale()?.name(item)||item.name);
+const label=locale()?.name(item)||(!en&&data&&typeof data.name==="string"&&data.name?data.name:item.name);
 write(heading,"forever-item-tooltip__name",label);
 if(!en&&locale()?.resolved(item)?.translated&&(locale()?.resolved(item)?.original||"")!==label){
  const original=elt("div","forever-item-tooltip__muted","EN : "+locale().resolved(item).original);original.lang="en";heading.append(original);
@@ -103,9 +114,9 @@ const lines=data&&Array.isArray(data.tooltip)?data.tooltip.filter(x=>typeof x===
 let haveRich=false;
 if(lines.length){haveRich=true;let index=0;
 for(const original of lines){const text=original.trim();if(!text)continue;
-if(index++===0&&(text===data.name||text===item.name||text===item.name_en||text===item.original_name))continue;
-if(/^Niveau d'objet \d+/.test(text))continue;
+if(index++===0&&(text===data.name||text===item.name||text===item.name_en||text===item.original_name||text===locale()?.resolved(item)?.en||text===locale()?.resolved(item)?.fr))continue;
 const out=translateLine(text);
+if(/^(?:Niveau d[’']objet|Item [Ll]evel) \d+$/.test(out))continue;
 write(body,rawLineStyle(out),out);
 }
 }else if(data&&typeof data==="object"){haveRich=true;

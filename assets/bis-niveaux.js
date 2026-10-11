@@ -42,7 +42,7 @@ const sourceDetails=en?{drop:"Observed beta drop",observed:"Seen in beta",client
    Never replace a sourced English item name with a French API value on EN pages. */
 const zoneFR={"City of Dalaran":"Cité de Dalaran","Excavation Site: Wetlands":"Excavations des Paluns","Hall of Thanes":"Hall of Thanes","Ruins of Lordaeron":"Ruines de Lordaeron","The Stockade":"La Prison","Ragefire Chasm":"Gouffre de Ragefeu","The Deadmines":"Mortemines","Wailing Caverns":"Cavernes des Lamentations","Shadowfang Keep":"Donjon d’Ombrecroc","Blackfathom Deeps":"Profondeurs de Brassenoire","Razorfen Kraul":"Kraal de Tranchebauge","Razorfen Downs":"Souilles de Tranchebauge","Scarlet Monastery":"Monastère écarlate","Blackrock Depths":"Profondeurs de Rochenoire","Blackrock Spire":"Pic Rochenoire","Dire Maul":"Hache-tripes","The Temple of Atal'Hakkar":"Temple d’Atal’Hakkar","Elwynn Forest":"Forêt d’Elwynn","Tirisfal Glades":"Clairières de Tirisfal","Westfall":"Marche de l’Ouest","World drop":"Butin mondial","Crafting":"Fabrication","Enchanting":"Enchantement","Leatherworking":"Travail du cuir","Vendor":"Marchand","Zone drop":"Butin de zone","Rare drop":"Butin rare"};
 const knownFR={5191:"Barbelure cruelle",10399:"Armure défias noircie",16712:"Gants Sombreruse"};
-const localizedName=i=>en?(i.name_en||i.name):(i.name_fr||window.ForeverItemLocale?.name(i)||knownFR[i.id]||i.name);
+const localizedName=i=>window.ForeverItemLocale?.name(i)||(en?(i.name_en||i.name):(i.name_fr||knownFR[i.id]||i.name));
 function localizedOrigin(i){
  let value=en?(i.origin_en||i.origin):(i.origin_fr||i.origin);
  if(typeof value!=="string")return "";
@@ -71,30 +71,8 @@ function sourceLink(i){
  a.href=url;a.target="_blank";a.rel="noopener noreferrer";return a;
 }
 
-function localizedTooltip(i){
- const copy=fmtItem(i);
- if(!en&&Array.isArray(copy.tooltip)&&copy.tooltip.length){
-  copy.tooltip=copy.tooltip.map(line=>typeof line==="string"?(line===i.name?localizedName(i):line)
-   .replace(/^Item Level (\d+)$/,"Niveau d'objet $1")
-   .replace(/^Requires Level (\d+)$/,"Niveau $1 requis")
-   .replace(/^\+([\d,.]+) Strength$/,"+$1 Force")
-   .replace(/^\+([\d,.]+) Agility$/,"+$1 Agilité")
-   .replace(/^\+([\d,.]+) Stamina$/,"+$1 Endurance")
-   .replace(/^\+([\d,.]+) Intellect$/,"+$1 Intelligence")
-   .replace(/^\+([\d,.]+) Spirit$/,"+$1 Esprit")
-   .replace(/^One-Hand /,"À une main · ").replace(/^Main Hand /,"Main droite · ")
-   .replace(/^Two-Hand /,"Deux mains · ").replace(/^Off Hand /,"Main gauche · ")
-   .replace(/^Ranged /,"Distance · ")
-   .replace(/ Sword$/," Épée").replace(/ Dagger$/," Dague").replace(/ Staff$/," Bâton")
-   .replace(/ Wand$/," Baguette").replace(/ Bow$/," Arc").replace(/ Axe$/," Hache")
-   .replace(/ Mace$/," Masse").replace(/ Shield$/," Bouclier")
-   .replace(/ Leather$/," Cuir").replace(/ Cloth$/," Tissu").replace(/ Mail$/," Mailles")
-   .replace(/ Plate$/," Plaques")
-   .replace(/^Equip: /,"Équipé : ")
-   :line);
- }
- return copy;
-}
+// Tooltip stat lines are translated once in the shared renderer.
+function localizedTooltip(i){return fmtItem(i)}
 
 const normSlot=i=>window.ForeverGearData?.LABELS[i.slot]||i.slot;
 const required=i=>{
