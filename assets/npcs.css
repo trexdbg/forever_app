@@ -385,3 +385,6 @@
 #npcs-app .npc-seller-verification.is-forever{border-color:#68885d;color:#d8f2c1}
 #npcs-app .npc-seller-verification.is-classic{border-color:#6f6655;color:#b2afa5}
 @media(max-width:580px){#npcs-app .npc-seller-verification{white-space:normal}}
+
+/* A descriptive page heading remains accessible without reintroducing visible hero text. */
+.fo-visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}

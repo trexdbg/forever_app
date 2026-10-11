@@ -20,6 +20,14 @@ let sources=0,links=0,guides=0;
 const titles=new Map();
 for(const path of html){
 const s=readFileSync(join(root,path),"utf8"),url=origin+"/"+path.replace(/index\.html$/,""),lang=path.startsWith("en/")?"en":"fr";
+const redirect=/<meta\b[^>]*name=["']robots["'][^>]*content=["']noindex,follow["']/i.test(s)&&s.includes("location.replace");
+if(redirect){
+ const can=first(s,/<link\b[^>]*rel=["']canonical["'][^>]*href=["']([^"']+)/i);
+ try{const target=new URL(can);if(target.origin!==origin||!known.has(toFile(target)))issue("error","BAD_REDIRECT_TARGET",path,can)}
+ catch{issue("error","BAD_REDIRECT_TARGET",path,can)}
+ if(locSet.has(url))issue("warning","REDIRECT_IN_SITEMAP",path,url);
+ continue;
+}
 const actualLang=first(s,/<html\b[^>]*\blang=["']([^"']+)/i);
 if(actualLang!==lang)issue("error","WRONG_LANGUAGE",path,actualLang||"missing");
 const canonical=first(s,/<link\b[^>]*\brel=["']canonical["'][^>]*\bhref=["']([^"']+)/i);
@@ -33,7 +41,7 @@ const alternate=[...s.matchAll(/<link\b[^>]*\brel=["']alternate["'][^>]*\bhrefla
 if(!alternate.some(m=>m[1]==="fr")||!alternate.some(m=>m[1]==="en"))issue("error","HREFLANG_MISSING",path,"FR/EN alternates missing");
 for(const m of alternate){try{const target=new URL(m[2]);if(target.origin!==origin||!known.has(toFile(target)))issue("error","HREFLANG_TARGET_MISSING",path,m[2])}
 catch{issue("error","HREFLANG_URL_INVALID",path,m[2])}}
-const guide=path.startsWith("guides/")||path.startsWith("en/guides/");
+const guide=(path.startsWith("guides/")||path.startsWith("en/guides/"))&&path!=="guides/index.html"&&path!=="en/guides/index.html";
 if(guide){guides++;const content=first(s,/(<main\b[\s\S]*?<\/main>)/i)||s,words=textOf(content).split(/\s+/).length;
 if(words<180)issue("warning","THIN_GUIDE",path,String(words)+" words");
 let hasArticle=false;for(const m of s.matchAll(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)){try{
