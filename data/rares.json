@@ -642,7 +642,9 @@
             "en": "Neck"
           },
           "set_bonus_threshold": 2,
-          "set_source_url": "https://www.wowhead.com/news/open-world-rare-spawn-item-sets-make-rares-more-valuable-in-forever-383053"
+          "set_source_url": "https://www.wowhead.com/news/open-world-rare-spawn-item-sets-make-rares-more-valuable-in-forever-383053",
+          "observed_rate_reviewed_at": "2026-10-11",
+          "observed_rate_source_url": "https://www.wowhead.com/forever/item=285331"
         }
       ],
       "source": "https://foreverdb.net/rare/5828",
@@ -690,7 +692,7 @@
           "source_version": "forever_beta",
           "source_url": "https://www.wowhead.com/forever/item=285329",
           "drop_evidence": "forever_wowhead_loot_and_player_report",
-          "chance_forever_observed_percent": 3.86,
+          "chance_forever_observed_percent": 4.09,
           "item_level": 21,
           "required_level": 16,
           "stats": {
@@ -704,7 +706,9 @@
             "en": "Cloak"
           },
           "set_bonus_threshold": 2,
-          "set_source_url": "https://www.wowhead.com/news/open-world-rare-spawn-item-sets-make-rares-more-valuable-in-forever-383053"
+          "set_source_url": "https://www.wowhead.com/news/open-world-rare-spawn-item-sets-make-rares-more-valuable-in-forever-383053",
+          "observed_rate_reviewed_at": "2026-10-11",
+          "observed_rate_source_url": "https://www.wowhead.com/forever/item=285329"
         }
       ],
       "source": "https://foreverdb.net/rare/5842",
@@ -752,7 +756,7 @@
           "source_version": "forever_beta",
           "source_url": "https://www.wowhead.com/forever/item=285330",
           "drop_evidence": "forever_wowhead_loot_and_player_report",
-          "chance_forever_observed_percent": 0.82,
+          "chance_forever_observed_percent": 4.68,
           "item_level": 23,
           "required_level": 18,
           "stats": {
@@ -766,7 +770,9 @@
             "en": "Ring"
           },
           "set_bonus_threshold": 2,
-          "set_source_url": "https://www.wowhead.com/news/open-world-rare-spawn-item-sets-make-rares-more-valuable-in-forever-383053"
+          "set_source_url": "https://www.wowhead.com/news/open-world-rare-spawn-item-sets-make-rares-more-valuable-in-forever-383053",
+          "observed_rate_reviewed_at": "2026-10-11",
+          "observed_rate_source_url": "https://www.wowhead.com/forever/item=285330"
         }
       ],
       "source": "https://foreverdb.net/rare/5831",
@@ -11885,7 +11891,8 @@
       "notes": {
         "fr": "Ensemble vérifié dans les bases Forever. Les chances affichées sur les fiches sont des taux observés, non des probabilités garanties.",
         "en": "Verified in Forever references. Listed drops are observed samples, not guaranteed chances."
-      }
+      },
+      "reviewed_at": "2026-10-11"
     }
   }
 }
