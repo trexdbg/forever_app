@@ -4920,7 +4920,7 @@
           "loot": [
             {
               "en": "Ironspine's Ribcage",
-              "fr": "Cage thoracique d'Échine-de-Fer",
+              "fr": "Thorax d'Echine-de-fer",
               "slot": "Torse / Mailles",
               "source_status": "classic_loot_reference",
               "id": 7688,
@@ -4930,7 +4930,7 @@
             },
             {
               "en": "Ironspine's Fist",
-              "fr": "Poing d'Échine-de-Fer",
+              "fr": "Poing d'Echine-de-fer",
               "slot": "Masse",
               "source_status": "classic_loot_reference",
               "id": 7687,
@@ -4941,7 +4941,7 @@
             {
               "en": "Ironspine's Eye",
               "id": 7686,
-              "fr": "Œil d'Échine-de-Fer",
+              "fr": "Oeil d'Echine-de-fer",
               "slot": "Doigt",
               "source_status": "classic_loot_reference",
               "itemUrl": "https://www.wowhead.com/classic/item=7686"
