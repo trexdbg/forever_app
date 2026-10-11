@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-10",
+  "updated_at": "2026-10-11",
   "scope": "Classic/Vanilla references for WoW Forever. No alternative private-server datasets.",
   "coordinate_system": "zone_percent_0_100_not_gps",
   "data_status": "classic_reference_not_forever_verified",
@@ -626,7 +626,7 @@
           "icon": "inv_jewelry_necklace_04",
           "chance_classic_percent": null,
           "source_version": "forever_beta",
-          "source_url": "https://www.wowhead.com/forever/fr/item=285331",
+          "source_url": "https://www.wowhead.com/forever/item=285331",
           "drop_evidence": "forever_wowhead_loot_and_player_report",
           "chance_forever_observed_percent": 1.23,
           "item_level": 25,
@@ -635,7 +635,14 @@
             "fr": "+5 Force · +5 Intelligence",
             "en": "+5 Strength · +5 Intellect"
           },
-          "collection_status": "forever_database_observed"
+          "collection_status": "forever_database_observed",
+          "set_id": "blessing-of-kalimdor",
+          "slot": {
+            "fr": "Collier",
+            "en": "Neck"
+          },
+          "set_bonus_threshold": 2,
+          "set_source_url": "https://www.wowhead.com/news/open-world-rare-spawn-item-sets-make-rares-more-valuable-in-forever-383053"
         }
       ],
       "source": "https://foreverdb.net/rare/5828",
@@ -648,7 +655,10 @@
       "name_fr_status": "wowhead_forever_fr",
       "loot_reviewed_at": "2026-10-10",
       "beta_level30_in_scope": true,
-      "loot_coverage": "notable_only_not_complete"
+      "loot_coverage": "notable_only_not_complete",
+      "rare_set_ids": [
+        "blessing-of-kalimdor"
+      ]
     },
     {
       "id": "5842",
@@ -675,7 +685,7 @@
             "fr": "Cape en cuir de raptor"
           },
           "item_id": 285329,
-          "icon": "inv_misc_cape_03",
+          "icon": "inv_misc_cape_17",
           "chance_classic_percent": null,
           "source_version": "forever_beta",
           "source_url": "https://www.wowhead.com/forever/item=285329",
@@ -687,7 +697,14 @@
             "fr": "19 Armure · +4 Endurance · +3 Esprit",
             "en": "19 Armor · +4 Stamina · +3 Spirit"
           },
-          "collection_status": "forever_database_observed"
+          "collection_status": "forever_database_observed",
+          "set_id": "blessing-of-kalimdor",
+          "slot": {
+            "fr": "Cape",
+            "en": "Cloak"
+          },
+          "set_bonus_threshold": 2,
+          "set_source_url": "https://www.wowhead.com/news/open-world-rare-spawn-item-sets-make-rares-more-valuable-in-forever-383053"
         }
       ],
       "source": "https://foreverdb.net/rare/5842",
@@ -700,7 +717,10 @@
       "name_fr_status": "wowhead_forever_fr",
       "loot_reviewed_at": "2026-10-10",
       "beta_level30_in_scope": true,
-      "loot_coverage": "notable_only_not_complete"
+      "loot_coverage": "notable_only_not_complete",
+      "rare_set_ids": [
+        "blessing-of-kalimdor"
+      ]
     },
     {
       "id": "5831",
@@ -739,7 +759,14 @@
             "fr": "+6 Agilité · +2 Esprit",
             "en": "+6 Agility · +2 Spirit"
           },
-          "collection_status": "forever_database_observed"
+          "collection_status": "forever_database_observed",
+          "set_id": "blessing-of-kalimdor",
+          "slot": {
+            "fr": "Anneau",
+            "en": "Ring"
+          },
+          "set_bonus_threshold": 2,
+          "set_source_url": "https://www.wowhead.com/news/open-world-rare-spawn-item-sets-make-rares-more-valuable-in-forever-383053"
         }
       ],
       "source": "https://foreverdb.net/rare/5831",
@@ -752,7 +779,10 @@
       "name_fr_status": "wowhead_forever_fr",
       "loot_reviewed_at": "2026-10-10",
       "beta_level30_in_scope": true,
-      "loot_coverage": "notable_only_not_complete"
+      "loot_coverage": "notable_only_not_complete",
+      "rare_set_ids": [
+        "blessing-of-kalimdor"
+      ]
     },
     {
       "id": "barrens-snort-the-heckler",
@@ -11797,5 +11827,65 @@
     "loot_policy": "Forever-specific drops and Classic notable loot kept separate, only notable items, not a full loot table",
     "note_fr": "Bêta plafonnée au niveau 30. Les objets ajoutés par Forever sont sourcés via Wowhead Forever ; taux observés ≠ probabilités réelles. Références Classic explicitement séparées.",
     "note_en": "Beta level cap 30. Forever-specific items sourced to Wowhead Forever; observed sample rate is not a guaranteed drop chance. Classic references are separate."
+  },
+  "rare_sets": {
+    "blessing-of-kalimdor": {
+      "id": "blessing-of-kalimdor",
+      "name": {
+        "fr": "Bénédiction de Kalimdor",
+        "en": "Blessing of Kalimdor"
+      },
+      "scope": "forever_beta",
+      "required_pieces": 2,
+      "total_pieces": 3,
+      "level_range": [
+        16,
+        25
+      ],
+      "bonus": {
+        "fr": "+5 % de vitesse de déplacement dans les Tarides et les Serres-Rocheuses.",
+        "en": "+5% movement speed in The Barrens and Stonetalon Mountains."
+      },
+      "bonus_type": "zone_movement_speed",
+      "bonus_percent": 5,
+      "zones": [
+        "barrens",
+        "stonetalon"
+      ],
+      "pieces": [
+        {
+          "npc_id": "5828",
+          "item_id": 285331,
+          "slot": {
+            "fr": "Collier",
+            "en": "Neck"
+          }
+        },
+        {
+          "npc_id": "5831",
+          "item_id": 285330,
+          "slot": {
+            "fr": "Anneau",
+            "en": "Ring"
+          }
+        },
+        {
+          "npc_id": "5842",
+          "item_id": 285329,
+          "slot": {
+            "fr": "Cape",
+            "en": "Cloak"
+          }
+        }
+      ],
+      "source_urls": [
+        "https://www.wowhead.com/news/open-world-rare-spawn-item-sets-make-rares-more-valuable-in-forever-383053",
+        "https://wowclassicforever.info/fr/news/rare-spawn-sets/"
+      ],
+      "notes": {
+        "fr": "Ensemble vérifié dans les bases Forever. Les chances affichées sur les fiches sont des taux observés, non des probabilités garanties.",
+        "en": "Verified in Forever references. Listed drops are observed samples, not guaranteed chances."
+      }
+    }
   }
 }
