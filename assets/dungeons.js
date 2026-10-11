@@ -3,8 +3,7 @@
 const root=document.getElementById("dungeon-app");if(!root)return;
 const en=document.documentElement.lang==="en",t=(fr,eng)=>en?eng:fr,$=s=>document.getElementById(s);
 const endpoint="/data/dungeons-forever.json?v=20261011-catalog7";
-const observedEndpoint="/data/bis-niveaux-forever-observed.json?v=20261011";
-const weaponsEndpoint="/data/dungeon-weapon-stats.json?v=20261011-weaponstats1",q=new URLSearchParams(location.search);
+const detailsEndpoint="/data/dungeon-loot-details.json?v=20261011-allloot1",q=new URLSearchParams(location.search);
 const cvs=$("dg-map"),ctx=cvs.getContext("2d"),W=1002,H=620;
 const modes={route:"route",world:"world"};
 let db=null,selected=null,selectedBoss=0,view="route",scale=1,offsetX=0,offsetY=0,drag=null,points=[],worldImage=null,worldToken=0,floorImage=null,floorToken=0,floorFit=null,floorFailed=false;
@@ -46,33 +45,22 @@ const classicIconResponses=new Map();
 const trustedIcon=url=>typeof url==="string"&&/^https:\/\/wowdb\.assemblee-defias\.fr\/database-icons\/[a-z0-9_-]+\.(?:jpg|jpeg|png|webp)$/i.test(url);
 const qualityOf=item=>ITEM_QUALITY.has(item?.quality)?item.quality:"unknown";
 const normExact=s=>String(s||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim();
-function enrichLootStats(database,observed,weaponCatalog){
- const observedById=new Map((Array.isArray(observed?.items)?observed.items:[]).filter(x=>Number.isSafeInteger(Number(x.id))).map(x=>[Number(x.id),x]));
- const weaponById=new Map((Array.isArray(weaponCatalog?.items)?weaponCatalog.items:[]).filter(x=>Number.isSafeInteger(Number(x.id))).map(x=>[Number(x.id),x]));
+function enrichLootStats(database,details){
+ const records=new Map((Array.isArray(details?.items)?details.items:[]).filter(x=>typeof x.key==="string").map(x=>[x.key,x]));
  for(const dungeon of database.dungeons){
-  const items=[...dungeon.bosses.flatMap(b=>b.loot||[]),...(dungeon.trashLoot||[]),...(dungeon.questLoot||[])];
-  for(const item of items){
-   if(item.source_status==="classic_loot_reference")continue;
-   const id=Number(item.id),observedItem=observedById.get(id),weapon=weaponById.get(id);
-   if(observedItem){
-    if(!item.tooltip?.length&&Array.isArray(observedItem.tooltip)&&observedItem.tooltip.length)item.tooltip=observedItem.tooltip.slice();
-    if(!item.itemLevel&&observedItem.itemLevel)item.itemLevel=observedItem.itemLevel;
-    if(!item.requiredLevel&&observedItem.requiredLevel)item.requiredLevel=observedItem.requiredLevel;
-   }
-   if(weapon&&Number.isFinite(weapon.damageMin)&&Number.isFinite(weapon.damageMax)&&Number.isFinite(weapon.speed)&&Number.isFinite(weapon.dps)){
-    item.weaponStats=weapon;
-    item.statsSource=weapon.source_url;
-    // Classic weapon damage must never replace the observed Forever weapon values.
-    item.tooltip=[
-     item.en||item.fr||String(id),
-     ...(item.itemLevel?["Item Level "+item.itemLevel]:[]),
-     weapon.type,
-     "Dégâts : "+weapon.damageMin+" - "+weapon.damageMax,
-     "Vitesse "+weapon.speed.toFixed(2),
-     "("+weapon.dps.toFixed(1)+" dégâts par seconde)",
-     ...(Array.isArray(weapon.bonuses)?weapon.bonuses:[]),
-     ...(item.requiredLevel?["Requires Level "+item.requiredLevel]:[])
-    ];
+  for(const item of [...dungeon.bosses.flatMap(b=>b.loot||[]),...(dungeon.trashLoot||[]),...(dungeon.questLoot||[])]){
+   const key=Number.isSafeInteger(Number(item.id))&&Number(item.id)>0?String(item.id):"name:"+String(item.en||item.fr||"").toLowerCase().trim();
+   const d=records.get(key);
+   if(!d)continue;
+   item.detailsStatus=d.documentation||"missing";
+   if(Array.isArray(d.tooltip)&&d.tooltip.length)item.tooltip=d.tooltip;
+   if(!item.itemLevel&&d.itemLevel)item.itemLevel=d.itemLevel;
+   if(!item.requiredLevel&&d.requiredLevel)item.requiredLevel=d.requiredLevel;
+   if(!item.quality&&d.quality)item.quality=d.quality;
+   if(d.source_url)item.statsSource=d.source_url;
+   if(d.weaponStats&&Number.isFinite(d.weaponStats.dps))item.weaponStats=d.weaponStats;
+   if(!item.weaponStats&&Array.isArray(item.tooltip)){
+    item.previewStats=item.tooltip.filter(x=>/^(?:\d+ Armor|\+\d+ |Equip: \+\d+ |\d+ Block|\d+ - \d+ Damage)/i.test(x)).slice(0,2);
    }
   }
  }
@@ -125,10 +113,14 @@ function makeLootCard(item,boss){const card=m("div",null,"dg-drop");card.tabInde
  if(item.weaponStats){
   const w=item.weaponStats,num=n=>en?n.toFixed(1):n.toFixed(1).replace(".",",");
   text.append(m("small",w.damageMin+"–"+w.damageMax+" "+t("dégâts","damage")+" · "+t("vit. ","spd ")+(en?w.speed.toFixed(2):w.speed.toFixed(2).replace(".",","))+" · "+num(w.dps)+" DPS","dg-weapon-preview"));
+ }else if(item.previewStats?.length){
+  text.append(m("small",item.previewStats.map(s=>window.ForeverItemTooltip?.translateLine?.(s)||s).join(" · "),"dg-stat-preview"));
+ }else if(item.detailsStatus==="missing"||item.detailsStatus==="partial"){
+  text.append(m("small",t("Caractéristiques à confirmer","Stats to confirm"),"dg-stat-pending"));
  }
  if(Number.isFinite(item.chanceReported))text.append(m("small",t("Taux indicatif du guide : ","Guide-reported chance: ")+String(item.chanceReported).replace(".",",")+" %"));
  if(item.isNew)text.append(m("small",t("Changement Forever signalé","Reported Forever change")));if(item.itemLevel)text.append(m("small",t("Niveau d’objet ","Item level ")+item.itemLevel+(item.requiredLevel?" · "+t("Niveau requis ","Required level ")+item.requiredLevel:"")));
- if(item.source_status==="classic_loot_reference")text.append(m("small",t("Provenance Classic à vérifier","Classic origin · unverified"),"dg-loot-provenance"));card.append(text);
+ if(item.source_status==="classic_loot_reference")text.append(m("small",t("Référence Classic — données à vérifier","Classic reference — verify on Forever"),"dg-loot-provenance"));card.append(text);
  if(item.itemUrl){const link=m("a","↗","dg-item-page");link.href=item.itemUrl;link.target="_blank";link.rel="noopener noreferrer";link.title=t("Ouvrir la fiche de l’objet","Open item details");link.setAttribute("aria-label",t("Fiche d’objet : ","Item page: ")+itemName(item));card.append(link)}
 
  const show=e=>{tooltip.replaceChildren();tooltip.append(m("strong",itemName(item)),m("span",(item.source_status==="classic_loot_reference"?t("Butin Classic de référence : ","Classic reference drop: "):t("Butin signalé : ","Reported drop: "))+name(boss.name)),m("span",item.slot));
@@ -136,10 +128,10 @@ function makeLootCard(item,boss){const card=m("div",null,"dg-drop");card.tabInde
  if(Number.isFinite(item.chanceReported))tooltip.append(m("span",t("Taux mentionné par le guide : ","Guide-reported chance: ")+item.chanceReported+" %"));
  tooltip.append(m("small",item.source_status==="classic_loot_reference"?t("Provenance du butin : Classic · NON confirmée pour Forever. Statistiques du client bêta possibles.","Loot source: Classic · NOT confirmed on Forever. Client beta item stats may be available."):t("Relevé de bêta communautaire · taux non garanti.","Community beta report · drop chance not guaranteed.")));tooltip.dataset.quality=qualityOf(item);tooltip.hidden=false;const x=Math.max(8,Math.min(window.innerWidth-355,Math.max(8,(e.clientX||card.getBoundingClientRect().left)+12)));const y=Math.max(8,Math.min(window.innerHeight-185,Math.max(8,(e.clientY||card.getBoundingClientRect().top)+12)));tooltip.style.left=x+"px";tooltip.style.top=y+"px"};
  if(window.ForeverItemTooltip){
- const tipItem={id:item.id,name:itemName(item),name_en:item.en,name_fr:item.fr,quality:qualityOf(item)==="unknown"?"common":qualityOf(item),source_status:item.source_status==="classic_loot_reference"?"classic_reference":item.source_status||"forever_beta_community",slot:item.slot,slotLabel:item.slot,itemLevel:item.itemLevel,requiredLevel:item.requiredLevel,tooltip:item.tooltip||[],icon:item.icon,origin:name(selected?.name||{})+" · "+name(boss.name),source_url:item.statsSource||item.itemUrl,url:item.itemUrl||selected?.source};
+ const tipItem={id:item.id,name:itemName(item),name_en:item.en,name_fr:item.fr,quality:qualityOf(item)==="unknown"?"common":qualityOf(item),source_status:item.source_status==="classic_loot_reference"?"classic_reference":item.source_status||"forever_beta_community",slot:item.slot,slotLabel:item.slot,itemLevel:item.itemLevel,requiredLevel:item.requiredLevel,tooltip:item.tooltip||[],icon:item.icon,origin:name(selected?.name||{})+" · "+name(boss.name),source_url:item.statsSource||item.itemUrl,url:item.itemUrl||selected?.source,details_status:item.detailsStatus||"missing",fetch_classic_details:item.source_status==="classic_loot_reference"};
  window.ForeverItemTooltip.bind(card,tipItem);
  card.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();window.ForeverItemTooltip.pin(tipItem)}});
- card.addEventListener("click",e=>{if(!e.target.closest("a")&&window.matchMedia("(hover: none)").matches)window.ForeverItemTooltip.pin(tipItem)});
+ card.addEventListener("click",e=>{if(!e.target.closest("a"))window.ForeverItemTooltip.pin(tipItem)});
  }else{card.addEventListener("mouseenter",show);card.addEventListener("mousemove",e=>{if(!tooltip.hidden)show(e)});card.addEventListener("mouseleave",()=>tooltip.hidden=true);card.addEventListener("focus",show);card.addEventListener("blur",()=>tooltip.hidden=true)}
 
  return card;
@@ -253,7 +245,7 @@ cvs.addEventListener("keydown",e=>{if(!selected?.bosses.length)return;if(e.key==
 document.addEventListener("pointerdown",e=>{const picker=$("dg-directory");if(picker.open&&!picker.contains(e.target))picker.open=false});
 document.addEventListener("keydown",e=>{if(e.key==="Escape")$("dg-directory").open=false});
 const loadExtra=url=>fetch(url,{cache:"no-cache"}).then(r=>{if(!r.ok)throw Error("HTTP "+r.status);return r.json()}).catch(err=>{console.warn("Dungeon item detail source unavailable:",url,err);return{items:[]}});
-Promise.all([fetch(endpoint,{cache:"no-cache"}).then(r=>{if(!r.ok)throw Error("HTTP "+r.status);return r.json()}),loadExtra(observedEndpoint),loadExtra(weaponsEndpoint)]).then(([d,observed,weapons])=>{if(!Array.isArray(d.dungeons))throw Error("Invalid data");db=d;enrichLootStats(d,observed,weapons);
+Promise.all([fetch(endpoint,{cache:"no-cache"}).then(r=>{if(!r.ok)throw Error("HTTP "+r.status);return r.json()}),loadExtra(detailsEndpoint)]).then(([d,details])=>{if(!Array.isArray(d.dungeons))throw Error("Invalid data");db=d;enrichLootStats(d,details);
  const all=d.dungeons;all.sort((a,b)=>a.level[0]-b.level[0]||(a.type==="forever"?-1:1));const planned=all.find(x=>x.id===q.get("donjon"))||all.find(x=>x.id==="hall-of-thanes")||all[0];select(planned);
  const bossIndex=Number(q.get("boss"));if(bossIndex>1&&bossIndex<=planned.bosses.length)chooseBoss(bossIndex-1);
  $("dg-total").textContent=String(all.filter(x=>x.type==="forever").length);$("dg-observed").textContent=String(all.filter(x=>x.type==="classic").length);$("dg-loot-total").textContent=String(all.reduce((n,x)=>n+count(x),0));

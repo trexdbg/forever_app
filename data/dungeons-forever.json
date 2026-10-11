@@ -284,7 +284,9 @@
           "fr": "Tête de Durgen Mornemartel",
           "en": "Durgen Dirgehammer's Head",
           "slot": "Objet de quête / Quest item",
-          "boss": "Durgen Mornemartel"
+          "boss": "Durgen Mornemartel",
+          "id": 274286,
+          "itemUrl": "https://www.wowhead.com/forever/item=274286"
         }
       ],
       "type": "forever",
@@ -728,17 +730,23 @@
         {
           "fr": "Écharpe de soigneur de pourriture",
           "en": "Rotmender's Sash",
-          "slot": "Taille / Waist"
+          "slot": "Taille / Waist",
+          "id": 286980,
+          "itemUrl": "https://www.wowhead.com/forever/item=286980"
         },
         {
           "fr": "Gants de soigneur de pourriture",
           "en": "Rotmender's Gloves",
-          "slot": "Mains / Hands"
+          "slot": "Mains / Hands",
+          "id": 286979,
+          "itemUrl": "https://www.wowhead.com/forever/item=286979"
         },
         {
           "fr": "Grande tenue de soigneur de pourriture",
           "en": "Rotmender's Garb",
-          "slot": "Torse / Chest"
+          "slot": "Torse / Chest",
+          "id": 286978,
+          "itemUrl": "https://www.wowhead.com/forever/item=286978"
         }
       ],
       "type": "forever",
@@ -993,7 +1001,9 @@
                 270866
               ],
               "note_fr": "Deux identifiants Forever (270865 et 270866) existent pour la relique ; faction et variante non vérifiées.",
-              "note_en": "Two Forever item IDs (270865, 270866) exist for the relic; faction-to-ID mapping is not verified."
+              "note_en": "Two Forever item IDs (270865, 270866) exist for the relic; faction-to-ID mapping is not verified.",
+              "id": 270865,
+              "itemUrl": "https://www.wowhead.com/forever/item=270865"
             }
           ],
           "note": {

@@ -423,3 +423,10 @@
  font-variant-numeric:tabular-nums;white-space:normal;
 }
 .dg-drop:focus-visible{outline:2px solid #dab87f;outline-offset:2px}
+
+
+/* Atlas Donjons: uniform loot stat previews, all gear categories. */
+.dg-stat-preview{display:block;margin-top:5px;padding-top:4px;border-top:1px solid #334a39;color:#dacfac!important;font-size:10px!important;line-height:1.45!important;overflow-wrap:anywhere}
+.dg-stat-pending{display:block;margin-top:4px;color:#91a496!important;font-size:10px!important;font-style:italic}
+.dg-drop{align-items:center}
+.dg-drop>span{flex:1;min-width:0}
