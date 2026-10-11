@@ -3,6 +3,9 @@
 const service=window.ForeverGearData;
 const table=document.getElementById("item-results"),search=document.getElementById("item-search"),slot=document.getElementById("item-slot"),armor=document.getElementById("item-armor"),chips=document.getElementById("item-quality-filters"),count=document.getElementById("item-count"),source=document.getElementById("items-source");
 if(!service||!table||!search||!slot||!armor||!chips)return;
+// Deep links from the homepage global search open the requested item ID directly.
+const linkedQuery=new URLSearchParams(location.search).get("q");
+if(linkedQuery)search.value=linkedQuery.slice(0,120);
 const en=document.documentElement.lang==="en";
 const originLabelsEN={"Forge":"Blacksmithing","Pic Blackrock":"Blackrock Spire","Profondeurs de Blackrock":"Blackrock Depths","Travail du cuir":"Leatherworking","Quête · Maleterres":"Quest · Plaguelands","Hache-tripes":"Dire Maul","Quête · Pic Blackrock":"Quest · Blackrock Spire","Couture · Mage":"Tailoring · Mage","Quête · Un'Goro":"Quest · Un'Goro","Butin mondial":"World drop","Couture · Prêtre":"Tailoring · Priest","Quête · Hache-tripes":"Quest · Dire Maul","Quête légendaire (référence Classic)":"Legendary quest (Classic reference)","Objet légendaire (référence Classic)":"Legendary item (Classic reference)","Forge (référence Classic)":"Blacksmithing (Classic reference)"};
 const displayOrigin=s=>en?(originLabelsEN[s]||s):s;
