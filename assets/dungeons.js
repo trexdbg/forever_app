@@ -31,14 +31,12 @@ function renderDirectory(){if(!db)return;const rows=visibleList(),scroll=result.
  for(const d of rows){const b=elbtn(null,"dg-entry"+(selected?.id===d.id?" active":""),()=>select(d));
  b.setAttribute("aria-current",selected?.id===d.id?"true":"false");
  const top=m("span",null,"dg-entry-top");top.append(m("strong",name(d.name)),m("span",d.level.join("–"),"dg-level"));b.append(top);
- b.append(m("small",name(d.zone)));
- const line=m("span",null,"dg-chips");line.append(smallchip(statusText(d),d.beta==="observed"?"live":"pending"));
- if(d.floorMap)line.append(smallchip(t("Plan réel","Real map"),"live"));if(d.bosses.length)line.append(smallchip(d.bosses.length+" "+t("boss","bosses")));if(count(d))line.append(smallchip(count(d)+" "+t("butins","drops")));
- b.append(line);result.append(b);
+ b.append(m("small",name(d.zone),"dg-entry-zone"));
+ b.title=name(d.name)+" · "+name(d.zone)+" · "+d.level.join("–");result.append(b);
  }if(!rows.length)result.append(m("p",t("Aucun donjon avec ces filtres.","No dungeons match these filters."),"dg-empty"));result.scrollTop=scroll;
 }
 function select(d,focus=false){if(!d)return;selected=d;selectedBoss=0;view=d.floorMap?"route":"world";resetCamera();worldToken++;worldImage=null;floorToken++;floorImage=null;floorFailed=false;updateUrl();renderDirectory();renderDetail();loadWorld();loadFloor();paint();if(focus)document.getElementById("dg-map-title").scrollIntoView({block:"nearest",behavior:"smooth"})}
-function chooseBoss(i,focus=false){if(!selected?.bosses[i])return;selectedBoss=i;updateUrl();renderBosses();paint();if(focus)document.getElementById("dg-boss-selected").scrollIntoView({block:"nearest",behavior:"smooth"})}
+function chooseBoss(i,focus=false){if(!selected?.bosses[i])return;selectedBoss=i;updateUrl();renderBosses();paint();if(focus&&window.matchMedia("(max-width: 760px)").matches)document.getElementById("dg-boss-selected").scrollIntoView({block:"nearest",behavior:"smooth"})}
 function makeLootCard(item,boss){const card=m("div",null,"dg-drop");card.tabIndex=0;card.setAttribute("role","group");card.setAttribute("aria-label",itemName(item)+" · "+item.slot);
  const icon=m("img");icon.width=34;icon.height=34;icon.loading="lazy";icon.alt="";
  const slot=(item.slot||"").toLowerCase();
