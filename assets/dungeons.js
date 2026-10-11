@@ -60,7 +60,7 @@ function enrichLootStats(database,details){
    if(d.source_url)item.statsSource=d.source_url;
    if(d.weaponStats&&Number.isFinite(d.weaponStats.dps))item.weaponStats=d.weaponStats;
    if(!item.weaponStats&&Array.isArray(item.tooltip)){
-    item.previewStats=item.tooltip.filter(x=>/^(?:\\d+ Armor|\\+\\d+ |Equip: \\+\\d+ |\\d+ Block|\\d+ - \\d+ Damage)/i.test(x)).slice(0,2);
+    item.previewStats=item.tooltip.filter(x=>/^(?:\d+ Armor|\+\d+ |Equip: \+\d+ |\d+ Block|\d+ - \d+ Damage)/i.test(x)).slice(0,2);
    }
   }
  }
