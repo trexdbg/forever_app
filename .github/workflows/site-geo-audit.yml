@@ -16,7 +16,7 @@ jobs:
       - name: Audit every HTML page, the sitemap, locale alternates and local links
         run: |
           node scripts/audit-site.mjs --json > geo-audit.json
-          node scripts/audit-site.mjs
+          node scripts/audit-site.mjs --strict
       - name: Retain report for five days
         uses: actions/upload-artifact@v4
         with:
