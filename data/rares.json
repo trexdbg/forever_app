@@ -476,22 +476,26 @@
             "fr": "Bottes de marche",
             "en": "Walking Boots"
           },
-          "item_id": null,
+          "item_id": 4660,
           "chance_classic_percent": 70,
           "icon": "inv_boots_01",
           "source_version": "classic_reference",
-          "source_url": "https://foreverdb.net/rare/599"
+          "source_url": "https://foreverdb.net/rare/599",
+          "item_id_status": "classic_reference_verified",
+          "item_source_url": "https://www.wowhead.com/classic/item=4660"
         },
         {
           "name": {
             "fr": "Robe noble",
             "en": "Noble's Robe"
           },
-          "item_id": null,
+          "item_id": 3019,
           "chance_classic_percent": 30,
           "icon": "inv_chest_cloth_07",
           "source_version": "classic_reference",
-          "source_url": "https://foreverdb.net/rare/599"
+          "source_url": "https://foreverdb.net/rare/599",
+          "item_id_status": "classic_reference_verified",
+          "item_source_url": "https://www.wowhead.com/classic/item=3019"
         }
       ],
       "source": "https://foreverdb.net/rare/599",
@@ -529,22 +533,26 @@
             "fr": "Croc de Naraxis",
             "en": "Naraxis' Fang"
           },
-          "item_id": null,
+          "item_id": 4449,
           "chance_classic_percent": 50,
           "icon": "inv_weapon_shortblade_16",
           "source_version": "classic_reference",
-          "source_url": "https://foreverdb.net/rare/574"
+          "source_url": "https://foreverdb.net/rare/574",
+          "item_id_status": "classic_reference_verified",
+          "item_source_url": "https://www.wowhead.com/classic/item=4449"
         },
         {
           "name": {
             "fr": "Carapace de Naraxis",
             "en": "Husk of Naraxis"
           },
-          "item_id": null,
+          "item_id": 4448,
           "chance_classic_percent": 50,
           "icon": "inv_chest_chain_14",
           "source_version": "classic_reference",
-          "source_url": "https://foreverdb.net/rare/574"
+          "source_url": "https://foreverdb.net/rare/574",
+          "item_id_status": "classic_reference_verified",
+          "item_source_url": "https://www.wowhead.com/classic/item=4448"
         }
       ],
       "source": "https://foreverdb.net/rare/574",
@@ -1020,7 +1028,8 @@
             "fr": "58 Armure · +2 Agilité",
             "en": "58 Armor · +2 Agility"
           },
-          "collection_status": "forever_database_observed"
+          "collection_status": "forever_database_observed",
+          "item_id_status": "unresolved_forever_beta"
         }
       ],
       "source": "https://www.wowhead.com/forever/npc=14430",
@@ -3578,33 +3587,39 @@
             "fr": "Œil d’Ironspine",
             "en": "Ironspine's Eye"
           },
-          "item_id": null,
+          "item_id": 7686,
           "chance_classic_percent": 33.3,
           "icon": "inv_jewelry_ring_03",
           "source_version": "classic_reference",
-          "source_url": "https://foreverdb.net/rare/6489"
+          "source_url": "https://foreverdb.net/rare/6489",
+          "item_id_status": "classic_reference_verified",
+          "item_source_url": "https://www.wowhead.com/classic/item=7686"
         },
         {
           "name": {
             "fr": "Poing d’Ironspine",
             "en": "Ironspine's Fist"
           },
-          "item_id": null,
+          "item_id": 7687,
           "chance_classic_percent": 33.3,
           "icon": "inv_gauntlets_04",
           "source_version": "classic_reference",
-          "source_url": "https://foreverdb.net/rare/6489"
+          "source_url": "https://foreverdb.net/rare/6489",
+          "item_id_status": "classic_reference_verified",
+          "item_source_url": "https://www.wowhead.com/classic/item=7687"
         },
         {
           "name": {
             "fr": "Cage thoracique d’Ironspine",
             "en": "Ironspine's Ribcage"
           },
-          "item_id": null,
+          "item_id": 7688,
           "chance_classic_percent": 33.3,
           "icon": "inv_chest_chain_14",
           "source_version": "classic_reference",
-          "source_url": "https://foreverdb.net/rare/6489"
+          "source_url": "https://foreverdb.net/rare/6489",
+          "item_id_status": "classic_reference_verified",
+          "item_source_url": "https://www.wowhead.com/classic/item=7688"
         }
       ],
       "source": "https://foreverdb.net/rare/6489",
@@ -3635,33 +3650,39 @@
             "fr": "Dague de prisonnier",
             "en": "Prison Shank"
           },
-          "item_id": null,
+          "item_id": 2941,
           "chance_classic_percent": 33.3,
           "icon": "inv_weapon_shortblade_16",
           "source_version": "classic_reference",
-          "source_url": "https://foreverdb.net/rare/1720"
+          "source_url": "https://foreverdb.net/rare/1720",
+          "item_id_status": "classic_reference_verified",
+          "item_source_url": "https://www.wowhead.com/classic/item=2941"
         },
         {
           "name": {
             "fr": "Poings de fer",
             "en": "Iron Knuckles"
           },
-          "item_id": null,
+          "item_id": 2942,
           "chance_classic_percent": 33.3,
           "icon": "inv_gauntlets_04",
           "source_version": "classic_reference",
-          "source_url": "https://foreverdb.net/rare/1720"
+          "source_url": "https://foreverdb.net/rare/1720",
+          "item_id_status": "classic_reference_verified",
+          "item_source_url": "https://www.wowhead.com/classic/item=2942"
         },
         {
           "name": {
             "fr": "Menottes forcées",
             "en": "Jimmied Handcuffs"
           },
-          "item_id": null,
+          "item_id": 3228,
           "chance_classic_percent": 33.3,
           "icon": "inv_bracer_07",
           "source_version": "classic_reference",
-          "source_url": "https://foreverdb.net/rare/1720"
+          "source_url": "https://foreverdb.net/rare/1720",
+          "item_id_status": "classic_reference_verified",
+          "item_source_url": "https://www.wowhead.com/classic/item=3228"
         }
       ],
       "source": "https://foreverdb.net/rare/1720",
@@ -3864,11 +3885,13 @@
             "fr": "Small Green Dagger",
             "en": "Small Green Dagger"
           },
-          "item_id": null,
+          "item_id": 4302,
           "chance_classic_percent": 25.4,
           "icon": "inv_weapon_shortblade_01",
           "source_version": "classic_reference",
-          "source_url": "https://foreverdb.net/rare/1910"
+          "source_url": "https://foreverdb.net/rare/1910",
+          "item_id_status": "classic_reference_verified",
+          "item_source_url": "https://www.wowhead.com/classic/item=4302"
         }
       ],
       "source": "https://foreverdb.net/rare/1910",
@@ -5352,11 +5375,13 @@
             "fr": "Gnarled Hermit's Staff",
             "en": "Gnarled Hermit's Staff"
           },
-          "item_id": null,
+          "item_id": 1539,
           "chance_classic_percent": 25,
           "icon": "inv_staff_01",
           "source_version": "classic_reference",
-          "source_url": "https://foreverdb.net/rare/5863"
+          "source_url": "https://foreverdb.net/rare/5863",
+          "item_id_status": "classic_reference_verified",
+          "item_source_url": "https://www.wowhead.com/classic/item=1539"
         }
       ],
       "source": "https://foreverdb.net/rare/5863",
@@ -5520,22 +5545,26 @@
             "fr": "Cloak of Rot",
             "en": "Cloak of Rot"
           },
-          "item_id": null,
+          "item_id": 4462,
           "chance_classic_percent": 50,
           "icon": "inv_misc_cape_03",
           "source_version": "classic_reference",
-          "source_url": "https://foreverdb.net/rare/503"
+          "source_url": "https://foreverdb.net/rare/503",
+          "item_id_status": "classic_reference_verified",
+          "item_source_url": "https://www.wowhead.com/classic/item=4462"
         },
         {
           "name": {
             "fr": "Spiked Collar",
             "en": "Spiked Collar"
           },
-          "item_id": null,
+          "item_id": 1187,
           "chance_classic_percent": 50,
           "icon": "inv_jewelry_necklace_01",
           "source_version": "classic_reference",
-          "source_url": "https://foreverdb.net/rare/503"
+          "source_url": "https://foreverdb.net/rare/503",
+          "item_id_status": "classic_reference_verified",
+          "item_source_url": "https://www.wowhead.com/classic/item=1187"
         }
       ],
       "source": "https://foreverdb.net/rare/503",
@@ -6807,22 +6836,26 @@
             "fr": "Brashclaw's Skewer",
             "en": "Brashclaw's Skewer"
           },
-          "item_id": null,
+          "item_id": 2204,
           "chance_classic_percent": 75,
           "icon": "inv_spear_05",
           "source_version": "classic_reference",
-          "source_url": "https://foreverdb.net/rare/506"
+          "source_url": "https://foreverdb.net/rare/506",
+          "item_id_status": "classic_reference_verified",
+          "item_source_url": "https://www.wowhead.com/classic/item=2204"
         },
         {
           "name": {
             "fr": "Brashclaw's Chopper",
             "en": "Brashclaw's Chopper"
           },
-          "item_id": null,
+          "item_id": 2203,
           "chance_classic_percent": 25,
           "icon": "inv_axe_09",
           "source_version": "classic_reference",
-          "source_url": "https://foreverdb.net/rare/506"
+          "source_url": "https://foreverdb.net/rare/506",
+          "item_id_status": "classic_reference_verified",
+          "item_source_url": "https://www.wowhead.com/classic/item=2203"
         }
       ],
       "source": "https://foreverdb.net/rare/506",
