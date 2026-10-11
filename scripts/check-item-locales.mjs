@@ -26,6 +26,11 @@ assert.equal(fr.name(painweaver),"Anneau de puissance mortelle","Classic ID 1309
 assert.equal(en.name(painweaver),"Painweaver Band");
 assert.equal(fr.record(painweaver).id,13098);
 assert.equal(fr.resolved(painweaver).indicative,false,"Classic reviewed translations should be authoritative");
+const classicRogueItem={id:5191,name:"Cruel Barb",name_fr:"Barbelure cruelle",source_status:"classic_curated_leveling"};
+assert.equal(fr.name(classicRogueItem),"Lame de cruauté","Rogue BiS ID 5191 must use published official FR");
+assert.equal(en.name(classicRogueItem),"Cruel Barb");
+assert.equal(fr.name({id:10399,name:"Blackened Defias Armor",source_status:"classic_reference"}),"Armure défias noircie");
+assert.equal(fr.name({id:16712,name:"Shadowcraft Gloves",source_status:"classic_reference"}),"Gants Sombreruse");
 const newBeta={id:271095,name:"Fang of Magmatus",source_status:"forever_beta_observed"};
 assert.equal(fr.name(newBeta),"Croc de Magmatus");
 assert.equal(en.name(newBeta),"Fang of Magmatus");
