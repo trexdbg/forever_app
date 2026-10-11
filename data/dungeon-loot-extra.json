@@ -582,6 +582,39 @@
       "source_url": "https://www.wowhead.com/forever/item=286978",
       "source": "forever_beta_wowhead",
       "completeness": "documented"
+    },
+    {
+      "id": 273032,
+      "itemLevel": 31,
+      "requiredLevel": 25,
+      "tooltip": [
+        "Binds when picked up",
+        "Unique-Equipped",
+        "Finger",
+        "+6 Spirit",
+        "+5 Strength",
+        "+40 Bonus Armor"
+      ],
+      "source_url": "https://foreverchanges.pro/fr/item/273032",
+      "source": "forever_beta_community",
+      "completeness": "documented"
+    },
+    {
+      "id": 273055,
+      "itemLevel": 33,
+      "requiredLevel": 28,
+      "tooltip": [
+        "Binds when picked up",
+        "Off Hand Shield",
+        "718 Armor",
+        "16 Block",
+        "+5 Strength",
+        "+5 Stamina",
+        "Equip: +8 Block Value"
+      ],
+      "source_url": "https://foreverchanges.pro/fr/item/273055",
+      "source": "forever_beta_community",
+      "completeness": "documented"
     }
   ]
 }
