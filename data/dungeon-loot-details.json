@@ -2563,15 +2563,21 @@
       "name": "Bonebinder's Signet",
       "source_status": "forever_beta_community",
       "itemLevel": 31,
-      "requiredLevel": 26,
+      "requiredLevel": 25,
       "quality": "rare",
       "tooltip": [
         "Bonebinder's Signet",
         "Item Level 31",
-        "Requires Level 26"
+        "Binds when picked up",
+        "Unique-Equipped",
+        "Finger",
+        "+6 Spirit",
+        "+5 Strength",
+        "+40 Bonus Armor",
+        "Requires Level 25"
       ],
-      "source_url": "https://foreverchanges.pro/item/273032",
-      "documentation": "missing"
+      "source_url": "https://foreverchanges.pro/fr/item/273032",
+      "documentation": "documented"
     },
     {
       "key": "273033",
@@ -3039,11 +3045,17 @@
       "tooltip": [
         "Bonepile Gaze",
         "Item Level 33",
+        "Binds when picked up",
         "Off Hand Shield",
+        "718 Armor",
+        "16 Block",
+        "+5 Strength",
+        "+5 Stamina",
+        "Equip: +8 Block Value",
         "Requires Level 28"
       ],
-      "source_url": "https://foreverchanges.pro/item/273055",
-      "documentation": "missing"
+      "source_url": "https://foreverchanges.pro/fr/item/273055",
+      "documentation": "documented"
     },
     {
       "key": "273085",
