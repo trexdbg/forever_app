@@ -77,6 +77,61 @@ assert.equal(en.name(staleForever),"Ephemeral Choker");
 assert.equal(fr.resolved(staleForever).verified,true);
 const bracers={id:271096,name:"Aetherwisp Bracers",name_fr:"Brassards du feu follet d’éther",source_status:"forever_beta_community"};
 assert.equal(fr.name(bracers),"Brassards brindecieux");
+// Extended deterministic QA without external HTTP or scheduled Actions.
+const canonical=new Map();
+for(const file of ["data/items-classic-cache.json","data/items-forever-cache.json"]){
+ const db=JSON.parse(readFileSync(resolve(root,file),"utf8"));
+ for(const row of db.items||[])if(row.id&&row.name){
+  const previous=canonical.get(Number(row.id));
+  if(previous)assert.equal(previous,row.name,"Conflicting English item names for ID "+row.id);
+  canonical.set(Number(row.id),row.name);
+ }
+}
+let knownDungeonIds=0,missingDungeonIds=0,canonicalMatches=0;
+const vendorOnlyRecipes=new Set([252820,252822]);
+const checkedDungeons=new Set(["ragefire-chasm","wailing-caverns","the-deadmines","shadowfang-keep","blackfathom-deeps","the-stockade","gnomeregan","razorfen-kraul","scarlet-monastery-graveyard","city-of-dalaran"]);
+for(const dungeon of dungeonData.dungeons||[]){
+ for(const boss of dungeon.bosses||[]){
+  for(const drop of boss.loot||[]){
+   if(!drop.id){
+    missingDungeonIds++;
+    assert.ok(!checkedDungeons.has(dungeon.id),"Missing linked loot ID in reviewed dungeon "+dungeon.id+": "+drop.en);
+    assert.equal(drop.item_id_status,"not_confirmed","Unresolved item reference must be explicitly unconfirmed");
+    assert.ok(!drop.itemUrl,"Unknown item ID must not have guessed URL");
+    continue;
+   }
+   const id=Number(drop.id);
+   assert.ok(Number.isSafeInteger(id)&&id>0,"Invalid dungeon item ID "+id);
+   assert.ok(!vendorOnlyRecipes.has(id),"Vendor-only recipe attributed to boss: "+id);
+   const known=canonical.get(id);
+   if(known){assert.equal(drop.en,known,"English item name does not match ID "+id);canonicalMatches++;}
+   assert.ok(typeof drop.itemUrl==="string","Missing item URL "+id);
+   const url=new URL(drop.itemUrl);
+   assert.equal(url.protocol,"https:","Invalid item link");
+   assert.ok(["www.wowhead.com","foreverchanges.pro"].includes(url.hostname),"Unexpected item source "+url.hostname);
+   const match=/(?:item=|\/item\/)(\d+)/.exec(drop.itemUrl);
+   assert.ok(match,"Item number missing in link "+drop.itemUrl);
+   assert.equal(Number(match[1]),id,"Dungeon item URL mismatch "+id);
+   if(id>=240000){
+    assert.ok(String(drop.source_status||"").startsWith("forever_beta_"),"Forever-only item incorrectly marked Classic "+id);
+    assert.ok(drop.itemUrl.includes("/forever/")||drop.itemUrl.includes("foreverchanges.pro"),"Forever-only ID linked to Classic "+id);
+   }
+   knownDungeonIds++;
+  }
+ }
+}
+assert.equal(missingDungeonIds,4,"Unexpected unresolved dungeon reference count");
+assert.ok(knownDungeonIds>=200,"Documented dungeon coverage regressed");
+assert.ok(canonicalMatches>=15,"Not enough canonical ID/name comparisons");
+assert.equal(fr.name({id:5202,name:"Corsair's Overshirt",name_fr:"Surchemise de corsaire",source_status:"classic_reference"}),"Casaque de corsaire");
+assert.equal(fr.name({id:6318,name:"Odo's Ley Staff",name_fr:"Bâton tellurique d'Odo",source_status:"classic_reference"}),"Bâton d'Odo");
+assert.equal(fr.name({id:6324,name:"Robes of Arugal",source_status:"classic_reference"}),"Robe d'Arugal");
+assert.equal(fr.name({id:6909,name:"Strike of the Hydra",source_status:"classic_reference"}),"Frappe de l'Hydre");
+assert.equal(en.name({id:6909,name:"Strike of the Hydra",source_status:"classic_reference"}),"Strike of the Hydra");
+const unresolvedRare=(JSON.parse(readFileSync(resolve(root,"data/rares.json"),"utf8")).rares||[])
+ .flatMap(row=>row.loot||[]).filter(i=>!i.item_id);
+assert.equal(unresolvedRare.length,1,"Unresolved rare item reference count changed");
+assert.equal(unresolvedRare[0].name.en,"Duskstalker's Hide");
 const iconCatalog=JSON.parse(readFileSync(resolve(root,"data/items-classic-cache.json"),"utf8"));
 const catalogIconById=new Map((iconCatalog.items||[]).filter(i=>i.id&&i.icon).map(i=>[Number(i.id),i.icon]));
 const rareCatalog=JSON.parse(readFileSync(resolve(root,"data/rares.json"),"utf8"));
@@ -90,4 +145,4 @@ for(const rare of rareCatalog.rares||[]){
  }
 }
 assert.ok(rareIconMatches>0,"No rare loot icons checked");
-console.log("Item locale / references: OK ("+total+" catalogued entries, "+dungeonChecked+" dungeon drops, "+rareIconMatches+" rare drop icons, FR+EN).");
+console.log("Item locale / references: OK ("+total+" catalogued entries, "+knownDungeonIds+" dungeon items with ID, "+missingDungeonIds+" pending, "+canonicalMatches+" canonical names, "+rareIconMatches+" rare icon checks, FR+EN).");
