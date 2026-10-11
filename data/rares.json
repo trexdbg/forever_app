@@ -486,7 +486,7 @@
         },
         {
           "name": {
-            "fr": "Robe noble",
+            "fr": "Robe de noble",
             "en": "Noble's Robe"
           },
           "item_id": 3019,
@@ -543,7 +543,7 @@
         },
         {
           "name": {
-            "fr": "Carapace de Naraxis",
+            "fr": "Carcasse de Naraxis",
             "en": "Husk of Naraxis"
           },
           "item_id": 4448,
@@ -3584,7 +3584,7 @@
       "loot": [
         {
           "name": {
-            "fr": "Œil d’Ironspine",
+            "fr": "Oeil d'Echine-de-fer",
             "en": "Ironspine's Eye"
           },
           "item_id": 7686,
@@ -3597,7 +3597,7 @@
         },
         {
           "name": {
-            "fr": "Poing d’Ironspine",
+            "fr": "Poing d'Echine-de-fer",
             "en": "Ironspine's Fist"
           },
           "item_id": 7687,
@@ -3610,7 +3610,7 @@
         },
         {
           "name": {
-            "fr": "Cage thoracique d’Ironspine",
+            "fr": "Thorax d'Echine-de-fer",
             "en": "Ironspine's Ribcage"
           },
           "item_id": 7688,
