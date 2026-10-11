@@ -12,7 +12,14 @@ const search=$("rare-search"),zone=$("rare-zone"),type=$("rare-rank"),level=$("r
 const zname=id=>db?.zones?.[id]?.[en?"en":"fr"]||id;
 const npcName=r=>r.name[en?"en":"fr"]||r.name.en;
 const isForeverLoot=item=>item.source_version==="forever_beta";
-const lootName=item=>en?item.name.en:(item.name.fr&&item.name.fr!==item.name.en?item.name.fr:(window.ForeverItemLocale?.name({id:item.item_id||0,name:item.name.en})||item.name.fr||item.name.en));
+const lootName=item=>{
+ const localized=window.ForeverItemLocale?.name({
+  id:item.item_id||0,name:item.name.en,
+  name_fr:item.name.fr&&item.name.fr!==item.name.en?item.name.fr:undefined,
+  source_status:isForeverLoot(item)?"forever_beta_community":"classic_reference"
+ });
+ return localized||(en?item.name.en:(item.name.fr||item.name.en));
+};
 const colors=new Map();
 function buildColors(){colors.clear();const zones=[...new Set(rows.map(r=>r.zone))];for(const z of zones){const list=rows.filter(r=>r.zone===z).sort((a,b)=>a.name.en.localeCompare(b.name.en));list.forEach((r,i)=>{const hue=Math.round((198+i*137.508)%360);colors.set(r.id,`hsl(${hue} 76% 67%)`)})}}
 const markerColor=r=>colors.get(r.id)||"#e0be7e";
