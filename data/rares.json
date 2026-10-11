@@ -3764,7 +3764,7 @@
       "loot": [
         {
           "name": {
-            "fr": "Slarkskin",
+            "fr": "Peau de Slark",
             "en": "Slarkskin"
           },
           "item_id": 6180,
@@ -4216,7 +4216,7 @@
       "loot": [
         {
           "name": {
-            "fr": "Hide of Lupos",
+            "fr": "Peau de Lupos",
             "en": "Hide of Lupos"
           },
           "item_id": 3018,
@@ -4227,7 +4227,7 @@
         },
         {
           "name": {
-            "fr": "Nightbane Staff",
+            "fr": "Bâton plaie-de-nuit",
             "en": "Nightbane Staff"
           },
           "item_id": 3227,
@@ -4342,7 +4342,7 @@
         },
         {
           "name": {
-            "fr": "Runescale Girdle",
+            "fr": "Ceinturon en écailles runiques",
             "en": "Runescale Girdle"
           },
           "item_id": 5425,
@@ -4385,7 +4385,7 @@
       "loot": [
         {
           "name": {
-            "fr": "Boahn's Fang",
+            "fr": "Croc de Boahn",
             "en": "Boahn's Fang"
           },
           "item_id": 5423,
@@ -4438,7 +4438,7 @@
       "loot": [
         {
           "name": {
-            "fr": "Pulsating Hydra Heart",
+            "fr": "Coeur d'hydre palpitant",
             "en": "Pulsating Hydra Heart"
           },
           "item_id": 5183,
@@ -4566,7 +4566,7 @@
       "loot": [
         {
           "name": {
-            "fr": "Privateer's Cape",
+            "fr": "Cape de corsaire",
             "en": "Privateer's Cape"
           },
           "item_id": 6179,
@@ -5744,7 +5744,7 @@
         },
         {
           "name": {
-            "fr": "Raven's Claws",
+            "fr": "Serres du corbeau",
             "en": "Raven's Claws"
           },
           "item_id": 6628,
