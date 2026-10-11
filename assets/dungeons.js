@@ -72,12 +72,16 @@ function makeLootCard(item,boss){const card=m("div",null,"dg-drop");card.tabInde
  const icon=m("img");icon.width=34;icon.height=34;icon.loading="lazy";icon.alt="";
  card.dataset.quality=qualityOf(item);
  const exactIcon=typeof item.icon==="string"&&/^[a-z0-9_]{3,80}$/.test(item.icon)?item.icon:null;
- icon.src=exactIcon?"https://wow.zamimg.com/images/wow/icons/medium/"+exactIcon+".jpg":WOW_ICON_MISSING;
+ const guideIconId=Number(item.iconFileId);
+ const guideIcon=Number.isSafeInteger(guideIconId)&&guideIconId>=100000&&guideIconId<=9999999
+   ?"https://static.icy-veins.com/wp/static/icydb/wow_classic_beta/icons/"+guideIconId+".webp":null;
+ const verifiedIcon=Boolean(exactIcon||guideIcon);
+ icon.src=exactIcon?"https://wow.zamimg.com/images/wow/icons/medium/"+exactIcon+".jpg":guideIcon||WOW_ICON_MISSING;
  icon.onerror=()=>{icon.onerror=null;icon.src=WOW_ICON_MISSING;card.classList.add("dg-icon-unavailable")};
- if(!exactIcon){card.classList.add("dg-icon-unavailable");icon.title=t("Icône non encore vérifiée","Item icon not yet verified")}
- else icon.title=t("Icône authentique du jeu","Authentic game icon");
+ if(!verifiedIcon){card.classList.add("dg-icon-unavailable");icon.title=t("Icône non encore vérifiée","Item icon not yet verified")}
+ else icon.title=t("Icône du jeu · source vérifiée","Game icon · verified source");
  card.append(icon);
- if(!exactIcon&&item.source_status==="classic_loot_reference"){
+ if(!verifiedIcon&&item.source_status==="classic_loot_reference"){
    if("IntersectionObserver" in window){
      const observer=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){observer.disconnect();enrichClassicIcon(card,icon,item)}},{rootMargin:"150px"});
      observer.observe(card);
