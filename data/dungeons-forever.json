@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "updated": "2026-10-10",
+  "updated": "2026-10-11",
   "scope": "9 Forever additions and 26 returning Classic dungeon wings in World of Warcraft Forever, no other servers.",
   "sourcePolicy": "New Forever beta boss sources are kept separate from the Classic 1.12 boss rosters and loot; high-level Classic rosters are reference-only and NOT confirmed in Forever.",
   "mapImageBase": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/",
@@ -40,7 +40,7 @@
               "en": "Ephemeral Choker",
               "slot": "Cou / Neck",
               "id": 270227,
-              "icon": null,
+              "icon": "inv_misc_necklacea8",
               "quality": "rare",
               "requiredLevel": 13,
               "itemLevel": 18,
@@ -52,14 +52,15 @@
                 "Requires Level 13"
               ],
               "itemUrl": "https://www.wowhead.com/forever/item=270227",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "icon_source": "woweternity_forever_hall_of_thanes"
             },
             {
               "fr": "Brassards brindecieux",
               "en": "Aetherwisp Bracers",
               "slot": "Poignets / Wrists",
               "id": 271096,
-              "icon": null,
+              "icon": "inv_bracer_11",
               "quality": "rare",
               "requiredLevel": 13,
               "itemLevel": 18,
@@ -70,13 +71,21 @@
                 "Requires Level 13"
               ],
               "itemUrl": "https://www.wowhead.com/forever/item=271096",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "icon_source": "woweternity_forever_hall_of_thanes"
             },
             {
               "fr": "Drapé spectresprit",
               "en": "Spiritwraith Drape",
               "slot": "Dos / Back",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 271097,
+              "quality": "rare",
+              "itemLevel": 18,
+              "requiredLevel": 13,
+              "itemUrl": "https://www.wowhead.com/forever/item=271097",
+              "icon": "inv_misc_cape_12",
+              "icon_source": "woweternity_forever_hall_of_thanes"
             }
           ],
           "note": {
@@ -100,19 +109,40 @@
               "fr": "Ceinturon avive-gemme",
               "en": "Kindlegem Girdle",
               "slot": "Taille / Waist",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 270230,
+              "quality": "rare",
+              "itemLevel": 18,
+              "requiredLevel": 13,
+              "itemUrl": "https://www.wowhead.com/forever/item=270230",
+              "icon": "inv_belt_20",
+              "icon_source": "woweternity_forever_hall_of_thanes"
             },
             {
               "fr": "Poignes poing-de-flammes",
               "en": "Flamefist Grips",
               "slot": "Mains / Hands",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 270231,
+              "quality": "rare",
+              "itemLevel": 18,
+              "requiredLevel": 13,
+              "itemUrl": "https://www.wowhead.com/forever/item=270231",
+              "icon": "inv_gauntlets_25",
+              "icon_source": "woweternity_forever_hall_of_thanes"
             },
             {
               "fr": "Croc de Magmatus",
               "en": "Fang of Magmatus",
               "slot": "Main droite / Main hand",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 271095,
+              "quality": "rare",
+              "itemLevel": 18,
+              "requiredLevel": 13,
+              "itemUrl": "https://www.wowhead.com/forever/item=271095",
+              "icon": "inv_misc_bone_06",
+              "icon_source": "woweternity_forever_hall_of_thanes"
             }
           ],
           "note": {
@@ -136,19 +166,40 @@
               "fr": "Canne cœur-de-golem",
               "en": "Golemheart Stave",
               "slot": "Deux mains / Two-hand",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 270228,
+              "quality": "rare",
+              "itemLevel": 18,
+              "requiredLevel": 13,
+              "itemUrl": "https://www.wowhead.com/forever/item=270228",
+              "icon": "inv_wand_11",
+              "icon_source": "woweternity_forever_hall_of_thanes"
             },
             {
               "fr": "Bottines du golem protecteur",
               "en": "Treads of the Protector Golem",
               "slot": "Pieds / Feet",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 270229,
+              "quality": "rare",
+              "itemLevel": 18,
+              "requiredLevel": 13,
+              "itemUrl": "https://www.wowhead.com/forever/item=270229",
+              "icon": "inv_boots_01",
+              "icon_source": "woweternity_forever_hall_of_thanes"
             },
             {
               "fr": "Plastron de garde golem",
               "en": "Golemguard Chest",
               "slot": "Torse / Chest",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 271098,
+              "quality": "rare",
+              "itemLevel": 18,
+              "requiredLevel": 13,
+              "itemUrl": "https://www.wowhead.com/forever/item=271098",
+              "icon": "inv_chest_chain",
+              "icon_source": "woweternity_forever_hall_of_thanes"
             }
           ],
           "note": {
@@ -172,19 +223,40 @@
               "fr": "Hache-croissant de Durgen",
               "en": "Durgen's Crescent Axe",
               "slot": "Main droite / Main hand",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 270256,
+              "quality": "rare",
+              "itemLevel": 18,
+              "requiredLevel": 13,
+              "itemUrl": "https://www.wowhead.com/forever/item=270256",
+              "icon": "inv_axe_18",
+              "icon_source": "woweternity_forever_hall_of_thanes"
             },
             {
               "fr": "Jambières de Dirgehammer",
               "en": "Direhammer Leggings",
               "slot": "Jambes / Legs",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 270260,
+              "quality": "rare",
+              "itemLevel": 18,
+              "requiredLevel": 13,
+              "itemUrl": "https://www.wowhead.com/forever/item=270260",
+              "icon": "inv_pants_06",
+              "icon_source": "woweternity_forever_hall_of_thanes"
             },
             {
               "fr": "Robe de thane déshonoré",
               "en": "Robes of the Disgraced Thane",
               "slot": "Torse / Chest",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 270261,
+              "quality": "rare",
+              "itemLevel": 18,
+              "requiredLevel": 13,
+              "itemUrl": "https://www.wowhead.com/forever/item=270261",
+              "icon": "inv_chest_cloth_09",
+              "icon_source": "woweternity_forever_hall_of_thanes"
             }
           ],
           "note": {
@@ -269,7 +341,11 @@
               "id": 271204,
               "quality": "rare",
               "itemUrl": "https://foreverchanges.pro/fr/item/271204",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "itemLevel": 20,
+              "requiredLevel": 15,
+              "icon": "inv_misc_monsterfang_01",
+              "icon_source": "woweternity_forever_ruins_of_lordaeron"
             },
             {
               "fr": "Os d’abomination",
@@ -278,16 +354,24 @@
               "id": 271205,
               "quality": "rare",
               "itemUrl": "https://foreverchanges.pro/fr/item/271205",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "itemLevel": 20,
+              "requiredLevel": 15,
+              "icon": "inv_chest_chain_15",
+              "icon_source": "woweternity_forever_ruins_of_lordaeron"
             },
             {
               "fr": "Restes de peau d’abomination",
-              "en": "Abomination Skin Remnants",
+              "en": "Leftover Abomination Skin",
               "slot": "Torse / Chest",
               "id": 271206,
               "quality": "rare",
               "itemUrl": "https://foreverchanges.pro/fr/item/271206",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "itemLevel": 20,
+              "requiredLevel": 15,
+              "icon": "inv_chest_cloth_46",
+              "icon_source": "woweternity_forever_ruins_of_lordaeron"
             }
           ],
           "note": {
@@ -308,19 +392,40 @@
               "fr": "Ceinturon atrophique",
               "en": "Atrophic Girdle",
               "slot": "Taille / Waist",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 271201,
+              "quality": "rare",
+              "itemLevel": 20,
+              "requiredLevel": 15,
+              "itemUrl": "https://www.wowhead.com/forever/item=271201",
+              "icon": "inv_belt_21",
+              "icon_source": "woweternity_forever_ruins_of_lordaeron"
             },
             {
               "fr": "Brassards de flétrimorsure",
               "en": "Witherbite Bracers",
               "slot": "Poignets / Wrists",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 271202,
+              "quality": "rare",
+              "itemLevel": 20,
+              "requiredLevel": 15,
+              "itemUrl": "https://www.wowhead.com/forever/item=271202",
+              "icon": "inv_bracer_07",
+              "icon_source": "woweternity_forever_ruins_of_lordaeron"
             },
             {
               "fr": "Patte d’araignée segmentée",
               "en": "Segmented Spider Leg",
               "slot": "Deux mains / Two-hand",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 271203,
+              "quality": "rare",
+              "itemLevel": 20,
+              "requiredLevel": 15,
+              "itemUrl": "https://www.wowhead.com/forever/item=271203",
+              "icon": "inv_staff_09",
+              "icon_source": "woweternity_forever_ruins_of_lordaeron"
             }
           ],
           "note": {
@@ -339,21 +444,42 @@
           "loot": [
             {
               "fr": "Jambières de soigneur de pourriture",
-              "en": "Rotmender Leggings",
+              "en": "Rotmender's Leggings",
               "slot": "Jambes / Legs",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 271207,
+              "quality": "rare",
+              "itemLevel": 22,
+              "requiredLevel": 17,
+              "itemUrl": "https://www.wowhead.com/forever/item=271207",
+              "icon": "inv_pants_cloth_05",
+              "icon_source": "woweternity_forever_ruins_of_lordaeron"
             },
             {
               "fr": "Poigne de la peur",
-              "en": "Grasp of Fear",
+              "en": "Grip of Fear",
               "slot": "Mains / Hands",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 271208,
+              "quality": "rare",
+              "itemLevel": 22,
+              "requiredLevel": 17,
+              "itemUrl": "https://www.wowhead.com/forever/item=271208",
+              "icon": "inv_gauntlets_04",
+              "icon_source": "woweternity_forever_ruins_of_lordaeron"
             },
             {
               "fr": "Sceptre de l’Abandonné",
-              "en": "Forsaken Scepter",
+              "en": "Scepter of the Abandoned",
               "slot": "Main droite / Main hand",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 271216,
+              "quality": "rare",
+              "itemLevel": 22,
+              "requiredLevel": 17,
+              "itemUrl": "https://www.wowhead.com/forever/item=271216",
+              "icon": "inv_misc_bone_dwarfskull_01",
+              "icon_source": "woweternity_forever_ruins_of_lordaeron"
             }
           ],
           "note": {
@@ -375,7 +501,7 @@
               "en": "Bonerust Leggings",
               "slot": "Jambes / Legs",
               "id": 271209,
-              "icon": null,
+              "icon": "inv_pants_mail_01",
               "quality": "rare",
               "requiredLevel": 16,
               "itemLevel": 21,
@@ -386,19 +512,34 @@
                 "Requires Level 16"
               ],
               "itemUrl": "https://www.wowhead.com/forever/item=271209",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "icon_source": "woweternity_forever_ruins_of_lordaeron"
             },
             {
               "fr": "Ceinture en brochebande",
-              "en": "Bandclasp Belt",
+              "en": "Tuskwrap Belt",
               "slot": "Taille / Waist",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 271210,
+              "quality": "rare",
+              "itemLevel": 21,
+              "requiredLevel": 16,
+              "itemUrl": "https://www.wowhead.com/forever/item=271210",
+              "icon": "inv_belt_26",
+              "icon_source": "woweternity_forever_ruins_of_lordaeron"
             },
             {
               "fr": "Coupe-cadavre",
-              "en": "Corpse Carver",
+              "en": "Corpse Chopper",
               "slot": "Deux mains / Two-hand",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 271217,
+              "quality": "rare",
+              "itemLevel": 21,
+              "requiredLevel": 16,
+              "itemUrl": "https://www.wowhead.com/forever/item=271217",
+              "icon": "inv_axe_09",
+              "icon_source": "woweternity_forever_ruins_of_lordaeron"
             }
           ],
           "note": {
@@ -417,21 +558,42 @@
           "loot": [
             {
               "fr": "Miroir de Rath’mael",
-              "en": "Rath'mael's Mirror",
+              "en": "Mirror of Rath'mael",
               "slot": "Main gauche / Off hand",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 271213,
+              "quality": "rare",
+              "itemLevel": 24,
+              "requiredLevel": 19,
+              "itemUrl": "https://www.wowhead.com/forever/item=271213",
+              "icon": "inv_shield_02",
+              "icon_source": "woweternity_forever_ruins_of_lordaeron"
             },
             {
               "fr": "Bottines de soigneur de pourriture",
-              "en": "Rotmender Boots",
+              "en": "Rotmender's Treads",
               "slot": "Pieds / Feet",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 271214,
+              "quality": "rare",
+              "itemLevel": 24,
+              "requiredLevel": 19,
+              "itemUrl": "https://www.wowhead.com/forever/item=271214",
+              "icon": "inv_boots_05",
+              "icon_source": "woweternity_forever_ruins_of_lordaeron"
             },
             {
               "fr": "Bâton flèchefroide",
-              "en": "Coldfletch Staff",
+              "en": "Coldspire Staff",
               "slot": "Deux mains / Two-hand",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 271215,
+              "quality": "rare",
+              "itemLevel": 24,
+              "requiredLevel": 19,
+              "itemUrl": "https://www.wowhead.com/forever/item=271215",
+              "icon": "inv_staff_07",
+              "icon_source": "woweternity_forever_ruins_of_lordaeron"
             },
             {
               "fr": "Plan : fermenteur",
@@ -464,19 +626,40 @@
               "fr": "Vils brodequins",
               "en": "Vilewalkers",
               "slot": "Pieds / Feet",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 271211,
+              "quality": "rare",
+              "itemLevel": 22,
+              "requiredLevel": 17,
+              "itemUrl": "https://www.wowhead.com/forever/item=271211",
+              "icon": "inv_boots_chain_08",
+              "icon_source": "woweternity_forever_ruins_of_lordaeron"
             },
             {
               "fr": "Protège-torse ensanglanté",
               "en": "Bloodied Chestwraps",
               "slot": "Torse / Chest",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 271212,
+              "quality": "rare",
+              "itemLevel": 22,
+              "requiredLevel": 17,
+              "itemUrl": "https://www.wowhead.com/forever/item=271212",
+              "icon": "inv_misc_bandage_14",
+              "icon_source": "woweternity_forever_ruins_of_lordaeron"
             },
             {
               "fr": "Cimeterre vilsang",
               "en": "Vileblood Scimitar",
               "slot": "À une main / One-hand",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 271218,
+              "quality": "rare",
+              "itemLevel": 22,
+              "requiredLevel": 17,
+              "itemUrl": "https://www.wowhead.com/forever/item=271218",
+              "icon": "inv_sword_16",
+              "icon_source": "woweternity_forever_ruins_of_lordaeron"
             }
           ],
           "note": {
@@ -497,13 +680,27 @@
               "fr": "Lame de hantise",
               "en": "Haunting Blade",
               "slot": "Deux mains / Two-hand",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 6641,
+              "quality": "rare",
+              "itemLevel": 27,
+              "requiredLevel": 22,
+              "itemUrl": "https://www.wowhead.com/classic/item=6641",
+              "icon": "inv_sword_17",
+              "icon_source": "woweternity_forever_ruins_of_lordaeron"
             },
             {
               "fr": "Armure fantôme",
-              "en": "Ghostly Armor",
+              "en": "Phantom Armor",
               "slot": "Torse / Chest",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 6642,
+              "quality": "rare",
+              "itemLevel": 27,
+              "requiredLevel": 22,
+              "itemUrl": "https://www.wowhead.com/classic/item=6642",
+              "icon": "inv_chest_chain_05",
+              "icon_source": "woweternity_forever_ruins_of_lordaeron"
             }
           ],
           "note": {
@@ -594,7 +791,12 @@
               "fr": "Pantoufles œil-brillant",
               "en": "Glinteye Slippers",
               "slot": "Pieds / Feet",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 273024,
+              "quality": "rare",
+              "itemLevel": 31,
+              "requiredLevel": 26,
+              "itemUrl": "https://www.wowhead.com/forever/item=273024"
             },
             {
               "fr": "Ceinturon écaille-sel",
@@ -621,7 +823,12 @@
               "fr": "Jambières souples en cuir ventral",
               "en": "Supple Bellyskin Leggings",
               "slot": "Jambes / Legs",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 273022,
+              "quality": "rare",
+              "itemLevel": 31,
+              "requiredLevel": 26,
+              "itemUrl": "https://www.wowhead.com/forever/item=273022"
             }
           ],
           "note": {
@@ -641,19 +848,34 @@
               "fr": "Grèves griffederaptor",
               "en": "Raptorclaw Greaves",
               "slot": "Pieds / Feet",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 273025,
+              "quality": "rare",
+              "itemLevel": 31,
+              "requiredLevel": 26,
+              "itemUrl": "https://www.wowhead.com/forever/item=273025"
             },
             {
               "fr": "Regard du raptor",
               "en": "Raptor's Gaze",
               "slot": "Main gauche / Off hand",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 273027,
+              "quality": "rare",
+              "itemLevel": 31,
+              "requiredLevel": 26,
+              "itemUrl": "https://www.wowhead.com/forever/item=273027"
             },
             {
               "en": "Garb of Florid Feathers",
               "fr": "Tenue des plumes fleuries",
               "slot": "Torse / Cuir",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 273026,
+              "quality": "rare",
+              "itemLevel": 31,
+              "requiredLevel": 26,
+              "itemUrl": "https://www.wowhead.com/forever/item=273026"
             },
             {
               "en": "Blueprint: Greenhouse",
@@ -692,13 +914,23 @@
               "fr": "Anneau de régulation de puissance",
               "en": "Ring of Power Regulation",
               "slot": "Doigt / Ring",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 273030,
+              "quality": "rare",
+              "itemLevel": 33,
+              "requiredLevel": 28,
+              "itemUrl": "https://www.wowhead.com/forever/item=273030"
             },
             {
               "fr": "Long fusil de vision-golem",
               "en": "Golemsight Long Gun",
               "slot": "À distance / Ranged",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 273029,
+              "quality": "rare",
+              "itemLevel": 33,
+              "requiredLevel": 28,
+              "itemUrl": "https://www.wowhead.com/forever/item=273029"
             },
             {
               "fr": "Mantelet du reliquaire",
@@ -878,7 +1110,12 @@
               "slot": "Doigt / Ring",
               "chanceReported": 31,
               "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 273031,
+              "quality": "rare",
+              "itemLevel": 32,
+              "requiredLevel": 27,
+              "itemUrl": "https://www.wowhead.com/forever/item=273031"
             },
             {
               "fr": "Poignes éphémères",
@@ -886,7 +1123,12 @@
               "slot": "Mains / Hands",
               "chanceReported": 34,
               "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 273034,
+              "quality": "rare",
+              "itemLevel": 32,
+              "requiredLevel": 27,
+              "itemUrl": "https://www.wowhead.com/forever/item=273034"
             },
             {
               "fr": "Cotte d’anneaux déformée par le mana",
@@ -1097,7 +1339,12 @@
               "slot": "Cou / Neck",
               "chanceReported": 38,
               "chanceSource": "ForeverChanges beta sighting (2026-10-03)",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "id": 273049,
+              "quality": "rare",
+              "itemLevel": 35,
+              "requiredLevel": 30,
+              "itemUrl": "https://www.wowhead.com/forever/item=273049"
             },
             {
               "fr": "Plan : récupérateur arcanique",
@@ -1382,7 +1629,12 @@
               "en": "Subterranean Cape",
               "fr": "Cape souterraine",
               "slot": "Dos / Back",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "id": 14149,
+              "quality": "uncommon",
+              "itemLevel": 18,
+              "requiredLevel": 13,
+              "itemUrl": "https://www.wowhead.com/classic/item=14149"
             },
             {
               "en": "Crystalline Cuffs",
@@ -1394,7 +1646,12 @@
               "en": "Cursed Felblade",
               "fr": "Lame gangrenée maudite",
               "slot": "Main droite / Main hand",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "id": 14145,
+              "quality": "uncommon",
+              "itemLevel": 18,
+              "requiredLevel": 13,
+              "itemUrl": "https://www.wowhead.com/classic/item=14145"
             }
           ],
           "rare": false,
@@ -1420,13 +1677,23 @@
               "en": "Robe of Evocation",
               "fr": "Robe d'évocation",
               "slot": "Torse / Chest",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "id": 14150,
+              "quality": "uncommon",
+              "itemLevel": 18,
+              "requiredLevel": 13,
+              "itemUrl": "https://www.wowhead.com/classic/item=14150"
             },
             {
               "en": "Cavedweller Bracers",
               "fr": "Brassards d'habitant des cavernes",
               "slot": "Poignets / Wrist",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "id": 14147,
+              "quality": "uncommon",
+              "itemLevel": 18,
+              "requiredLevel": 13,
+              "itemUrl": "https://www.wowhead.com/classic/item=14147"
             },
             {
               "en": "Chanting Blade",
@@ -1549,7 +1816,12 @@
               "en": "Leggings of the Fang",
               "fr": "Jambières du Croc",
               "slot": "Jambes / Legs",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "id": 10410,
+              "quality": "rare",
+              "itemLevel": 23,
+              "requiredLevel": 18,
+              "itemUrl": "https://www.wowhead.com/classic/item=10410"
             },
             {
               "en": "Robe of the Moccasin",
@@ -1684,7 +1956,12 @@
               "en": "Glowing Lizardscale Cloak",
               "fr": "Cape luminescente en écailles de lézard",
               "slot": "Dos / Back",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "id": 6449,
+              "quality": "rare",
+              "itemLevel": 22,
+              "requiredLevel": 17,
+              "itemUrl": "https://www.wowhead.com/classic/item=6449"
             },
             {
               "en": "Tail Spike",
@@ -1716,7 +1993,12 @@
               "en": "Venomstrike",
               "fr": "Frappe venimeuse",
               "slot": "Arc / Bow",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "id": 6469,
+              "quality": "rare",
+              "itemLevel": 24,
+              "requiredLevel": 19,
+              "itemUrl": "https://www.wowhead.com/classic/item=6469"
             },
             {
               "en": "Footpads of the Fang",
@@ -1786,7 +2068,12 @@
               "en": "Deep Fathom Ring",
               "fr": "Anneau des profondeurs",
               "slot": "Doigt / Ring",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "id": 6463,
+              "quality": "rare",
+              "itemLevel": 26,
+              "requiredLevel": 21,
+              "itemUrl": "https://www.wowhead.com/classic/item=6463"
             }
           ],
           "rare": false,
@@ -1812,7 +2099,12 @@
               "en": "Firebelcher",
               "fr": "Crache-feu",
               "slot": "Baguette / Wand",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "id": 5243,
+              "quality": "rare",
+              "itemLevel": 20,
+              "requiredLevel": 15,
+              "itemUrl": "https://www.wowhead.com/classic/item=5243"
             }
           ],
           "rare": true,
@@ -2012,7 +2304,12 @@
               "fr": "Anneau somptueusement orné",
               "slot": "Doigt",
               "source_status": "classic_loot_reference",
-              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/gilnid/"
+              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/gilnid/",
+              "id": 1156,
+              "quality": "rare",
+              "itemLevel": 22,
+              "requiredLevel": 17,
+              "itemUrl": "https://www.wowhead.com/classic/item=1156"
             }
           ],
           "note": {
@@ -2121,7 +2418,12 @@
               "fr": "Baguette agitatrice de Macaron",
               "slot": "Baguette",
               "source_status": "classic_loot_reference",
-              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/cookie/"
+              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/cookie/",
+              "id": 5198,
+              "quality": "rare",
+              "itemLevel": 22,
+              "requiredLevel": 17,
+              "itemUrl": "https://www.wowhead.com/classic/item=5198"
             },
             {
               "en": "Viridian Band",
@@ -2169,14 +2471,26 @@
               "fr": "Barbelure cruelle",
               "slot": "Épée 1M",
               "source_status": "classic_loot_reference",
-              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/edwin-vancleef/"
+              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/edwin-vancleef/",
+              "id": 5191,
+              "quality": "rare",
+              "itemLevel": 24,
+              "requiredLevel": 19,
+              "itemUrl": "https://www.wowhead.com/classic/item=5191",
+              "icon": "inv_sword_24",
+              "icon_source": "wowhead_classic_item_page"
             },
             {
               "en": "Blackened Defias Armor",
               "fr": "Armure défias noircie",
               "slot": "Torse · Cuir",
               "source_status": "classic_loot_reference",
-              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/edwin-vancleef/"
+              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/edwin-vancleef/",
+              "id": 10399,
+              "quality": "rare",
+              "itemLevel": 24,
+              "requiredLevel": 19,
+              "itemUrl": "https://www.wowhead.com/classic/item=10399"
             }
           ],
           "note": {
@@ -2328,7 +2642,12 @@
               "fr": "Sceau familial d'Argelaine",
               "slot": "Doigt",
               "source_status": "classic_loot_reference",
-              "source_url": "https://theforeverera.com/en/dungeons/shadowfang-keep/baron-silverlaine/"
+              "source_url": "https://theforeverera.com/en/dungeons/shadowfang-keep/baron-silverlaine/",
+              "id": 6321,
+              "quality": "rare",
+              "itemLevel": 26,
+              "requiredLevel": 21,
+              "itemUrl": "https://www.wowhead.com/classic/item=6321"
             }
           ],
           "rare": false,
@@ -2466,7 +2785,12 @@
               "en": "Meteor Shard",
               "fr": "Éclat de météore",
               "slot": "Dague / Dagger",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "id": 6220,
+              "quality": "rare",
+              "itemLevel": 29,
+              "requiredLevel": 24,
+              "itemUrl": "https://www.wowhead.com/classic/item=6220"
             }
           ],
           "rare": false,
@@ -2596,7 +2920,12 @@
               "en": "Naga Battle Gloves",
               "fr": "Gants de bataille nagas",
               "slot": "Mains / Hands",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "id": 888,
+              "quality": "rare",
+              "itemLevel": 27,
+              "requiredLevel": 22,
+              "itemUrl": "https://www.wowhead.com/classic/item=888"
             },
             {
               "en": "Naga Heartpiercer",
@@ -2689,14 +3018,24 @@
               "fr": "Cape lumineuse de batteur",
               "slot": "Dos",
               "source_status": "classic_loot_reference",
-              "source_url": "https://theforeverera.com/en/dungeons/blackfathom-deeps/old-serrakis/"
+              "source_url": "https://theforeverera.com/en/dungeons/blackfathom-deeps/old-serrakis/",
+              "id": 6901,
+              "quality": "rare",
+              "itemLevel": 29,
+              "requiredLevel": 24,
+              "itemUrl": "https://www.wowhead.com/classic/item=6901"
             },
             {
               "en": "Bite of Serra'kis",
               "fr": "Morsure de Serra'kis",
               "slot": "Dague",
               "source_status": "classic_loot_reference",
-              "source_url": "https://theforeverera.com/en/dungeons/blackfathom-deeps/old-serrakis/"
+              "source_url": "https://theforeverera.com/en/dungeons/blackfathom-deeps/old-serrakis/",
+              "id": 6904,
+              "quality": "rare",
+              "itemLevel": 28,
+              "requiredLevel": 23,
+              "itemUrl": "https://www.wowhead.com/classic/item=6904"
             },
             {
               "en": "Bands of Serra'kis",
@@ -2729,7 +3068,12 @@
               "en": "Rod of the Sleepwalker",
               "fr": "Bâton du somnambule",
               "slot": "Bâton / Staff",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "id": 1155,
+              "quality": "rare",
+              "itemLevel": 29,
+              "requiredLevel": 24,
+              "itemUrl": "https://www.wowhead.com/classic/item=1155"
             },
             {
               "en": "Gaze Dreamer Pants",
@@ -2776,7 +3120,12 @@
               "fr": "Pantalon de sangsue",
               "slot": "Jambes · Tissu",
               "source_status": "classic_loot_reference",
-              "source_url": "https://theforeverera.com/en/dungeons/blackfathom-deeps/akumai/"
+              "source_url": "https://theforeverera.com/en/dungeons/blackfathom-deeps/akumai/",
+              "id": 6910,
+              "quality": "rare",
+              "itemLevel": 31,
+              "requiredLevel": 26,
+              "itemUrl": "https://www.wowhead.com/classic/item=6910"
             }
           ],
           "note": {
@@ -3083,7 +3432,12 @@
               "en": "Acidic Walkers",
               "fr": "Bottes acides",
               "slot": "Pieds",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "id": 9454,
+              "quality": "rare",
+              "itemLevel": 32,
+              "requiredLevel": 27,
+              "itemUrl": "https://www.wowhead.com/classic/item=9454"
             },
             {
               "en": "Toxic Revenger",
@@ -3127,7 +3481,12 @@
               "en": "Electrocutioner Leg",
               "fr": "Jambe de l'électrocuteur",
               "slot": "Main droite",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "id": 9446,
+              "quality": "rare",
+              "itemLevel": 34,
+              "requiredLevel": 29,
+              "itemUrl": "https://www.wowhead.com/classic/item=9446"
             },
             {
               "en": "Pattern: Defender's Leather Kilt",
@@ -3160,7 +3519,12 @@
               "en": "Manual Crowd Pummeler",
               "fr": "Manuel du faucheur de foule",
               "slot": "Deux mains",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "id": 9449,
+              "quality": "rare",
+              "itemLevel": 34,
+              "requiredLevel": 29,
+              "itemUrl": "https://www.wowhead.com/classic/item=9449"
             },
             {
               "en": "Gnomebot Operating Boots",
@@ -3478,7 +3842,12 @@
               "en": "Corpsemaker",
               "fr": "Faiseur de cadavres",
               "slot": "Hache deux mains",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "id": 6687,
+              "quality": "rare",
+              "itemLevel": 34,
+              "requiredLevel": 29,
+              "itemUrl": "https://www.wowhead.com/classic/item=6687"
             },
             {
               "en": "Tusken Helm",
@@ -3543,7 +3912,12 @@
               "en": "Swinetusk Shank",
               "fr": "Dague du groin",
               "slot": "Dague",
-              "source_status": "classic_loot_reference"
+              "source_status": "classic_loot_reference",
+              "id": 6691,
+              "quality": "rare",
+              "itemLevel": 35,
+              "requiredLevel": 30,
+              "itemUrl": "https://www.wowhead.com/classic/item=6691"
             },
             {
               "en": "Ferine Leggings",
@@ -6174,6 +6548,11 @@
     "newInstanceMaps": "WoW Forever beta 1.60.1.69893, stitched dungeon minimap textures hosted by warcraftforever.games",
     "classicPlans": "All 26 returning Classic wing entries have verified genuine Classic floor maps sourced from Icy Veins, eintr.net (archive Aetherflask), and Wowhead gallery. These are Classic maps, not a claim of pixel-identical Forever geometry. Hosted at original source.",
     "classicLoot": "ForeverChanges dungeon pages cross-check against Classic Era and observed Forever beta, unverified drop rates omitted",
-    "verifiedBetaStats": "Counts come from ForeverChanges item comparisons, not verified live server drop observations. Loot sources and percentage chances are Classic-based."
-  }
+    "verifiedBetaStats": "Counts come from ForeverChanges item comparisons, not verified live server drop observations. Loot sources and percentage chances are Classic-based.",
+    "iconHall": "https://woweternity.com/forever/dungeons/hall-of-thanes",
+    "iconRuins": "https://woweternity.com/forever/dungeons/ruins-of-lordaeron",
+    "classicIconDoc": "https://docs.wowdb.assemblee-defias.fr/items"
+  },
+  "iconPolicy": "Exact Blizzard icon tokens only from item sources (WoWEternity original item icon labels, Wowhead Classic or beta client). For mapped Classic item IDs, client may request WoWDB des Défias icon by ID. Unknown icon stays questionmark; never substitute a different item or a scroll icon by slot.",
+  "qualityPolicy": "Quality comes from matched beta/Classic item records or trusted item guides. Missing or ambiguous quality is neutral, not epic/rare by default."
 }
