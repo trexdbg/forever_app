@@ -3567,6 +3567,30 @@
       "currency": "merchants_favor",
       "price_amount": 90
     },
+    "250365": {
+      "id": 250365,
+      "name": {
+        "fr": "Recette : Élixir de la phalange",
+        "en": "Recipe: Elixir of the Phalanx"
+      },
+      "profession": "Alchimie",
+      "kind": "recipe",
+      "skill": 250,
+      "supply": "unlimited",
+      "bind": "pickup",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source_status": "forever_beta_wowhead_vendor",
+      "reference_status": "forever_vendor_documented",
+      "source": "https://www.wowhead.com/forever/item=250365",
+      "source_guide": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+      "currency": "merchants_favor",
+      "price_amount": 180,
+      "reputation": {
+        "faction": "Azeroth Commerce Authority / Durotar Supply and Logistics",
+        "rank": "Honored"
+      }
+    },
     "250376": {
       "id": 250376,
       "name": {
@@ -3604,6 +3628,70 @@
       "reference_status": "forever_vendor_documented",
       "source_guide": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
       "bind": "pickup",
+      "currency": "merchants_favor",
+      "price_amount": 45
+    },
+    "250383": {
+      "id": 250383,
+      "name": {
+        "fr": "Recette : Élixir d'esprit supérieur",
+        "en": "Recipe: Elixir of Greater Spirit"
+      },
+      "profession": "Alchimie",
+      "kind": "recipe",
+      "skill": 165,
+      "supply": "unlimited",
+      "bind": "pickup",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source_status": "forever_beta_wowhead_vendor",
+      "reference_status": "forever_vendor_documented",
+      "source": "https://www.wowhead.com/forever/item=250383",
+      "source_guide": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+      "currency": "merchants_favor",
+      "price_amount": 120,
+      "reputation": {
+        "faction": "Azeroth Commerce Authority / Durotar Supply and Logistics",
+        "rank": "Friendly"
+      }
+    },
+    "250388": {
+      "id": 250388,
+      "name": {
+        "fr": "Recette : Élixir d'intelligence inférieure",
+        "en": "Recipe: Elixir of Lesser Intellect"
+      },
+      "profession": "Alchimie",
+      "kind": "recipe",
+      "skill": 95,
+      "supply": "unlimited",
+      "bind": "pickup",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source_status": "forever_beta_wowhead_vendor",
+      "reference_status": "forever_vendor_documented",
+      "source": "https://www.wowhead.com/forever/item=250388",
+      "source_guide": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+      "currency": "merchants_favor",
+      "price_amount": 45
+    },
+    "250990": {
+      "id": 250990,
+      "name": {
+        "fr": "Recette : Potion du guérisseur",
+        "en": "Recipe: Mender's Potion"
+      },
+      "profession": "Alchimie",
+      "kind": "recipe",
+      "skill": 130,
+      "supply": "unlimited",
+      "bind": "pickup",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source_status": "forever_beta_wowhead_vendor",
+      "reference_status": "forever_vendor_documented",
+      "source": "https://www.wowhead.com/forever/item=250990",
+      "source_guide": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
       "currency": "merchants_favor",
       "price_amount": 45
     },
@@ -13994,9 +14082,23 @@
         "250381",
         "250376",
         "250998",
-        "271621"
+        "271621",
+        "250388",
+        "250990",
+        "250383",
+        "250365"
       ],
       "offer_details": {
+        "250365": {
+          "source": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+          "source_kind": "forever_beta_vendor_guide",
+          "currency": "merchants_favor",
+          "price_amount": 180,
+          "reputation": {
+            "faction": "Azeroth Commerce Authority",
+            "rank": "Honored"
+          }
+        },
         "250376": {
           "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
           "source_kind": "forever_guide_named_vendor",
@@ -14018,6 +14120,28 @@
             "currency": "merchants_favor"
           },
           "bind": "pickup"
+        },
+        "250383": {
+          "source": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+          "source_kind": "forever_beta_vendor_guide",
+          "currency": "merchants_favor",
+          "price_amount": 120,
+          "reputation": {
+            "faction": "Azeroth Commerce Authority",
+            "rank": "Friendly"
+          }
+        },
+        "250388": {
+          "source": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+          "source_kind": "forever_beta_vendor_guide",
+          "currency": "merchants_favor",
+          "price_amount": 45
+        },
+        "250990": {
+          "source": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+          "source_kind": "forever_beta_vendor_guide",
+          "currency": "merchants_favor",
+          "price_amount": 45
         },
         "250998": {
           "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
@@ -14065,9 +14189,45 @@
       "faction": "horde",
       "offers": [
         "250998",
-        "271621"
+        "271621",
+        "250388",
+        "250990",
+        "250383",
+        "250365"
       ],
       "offer_details": {
+        "250365": {
+          "source": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+          "source_kind": "forever_beta_vendor_guide",
+          "currency": "merchants_favor",
+          "price_amount": 180,
+          "reputation": {
+            "faction": "Durotar Supply and Logistics",
+            "rank": "Honored"
+          }
+        },
+        "250383": {
+          "source": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+          "source_kind": "forever_beta_vendor_guide",
+          "currency": "merchants_favor",
+          "price_amount": 120,
+          "reputation": {
+            "faction": "Durotar Supply and Logistics",
+            "rank": "Friendly"
+          }
+        },
+        "250388": {
+          "source": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+          "source_kind": "forever_beta_vendor_guide",
+          "currency": "merchants_favor",
+          "price_amount": 45
+        },
+        "250990": {
+          "source": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+          "source_kind": "forever_beta_vendor_guide",
+          "currency": "merchants_favor",
+          "price_amount": 45
+        },
         "250998": {
           "source": "https://www.wowhead.com/forever/item=250998",
           "source_kind": "forever_guide_named_vendor",
@@ -15262,5 +15422,12 @@
       "Sewa Mistrunner",
       "Tansy Puddlefizz"
     ]
+  },
+  "audit": {
+    "date": "2026-10-11",
+    "scope": "Forever beta guide verified items and vendor tables; Classic guide offers retained as unverified",
+    "forever_vendor_offers": 43,
+    "classic_unverified_offers": 588,
+    "source": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce"
   }
 }
