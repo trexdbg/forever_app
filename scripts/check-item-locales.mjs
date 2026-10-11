@@ -60,6 +60,7 @@ for(const dungeon of dungeonData.dungeons||[]){
  for(const boss of dungeon.bosses||[]){
   for(const drop of boss.loot||[]){
    if(!drop.id||!drop.en||!drop.fr)continue;
+   if(Number(drop.id)>=240000)assert.ok(String(drop.source_status||"").startsWith("forever_beta_"),"Forever-only item incorrectly marked Classic: "+drop.id);
    const sample={id:drop.id,name:drop.en,name_fr:drop.fr,source_status:drop.source_status==="classic_loot_reference"?"classic_reference":"forever_beta_community"};
    assert.equal(fr.name(sample),drop.fr,"Dungeon FR naming mismatch for item "+drop.id);
    assert.equal(en.name(sample),drop.en,"Dungeon EN naming mismatch for item "+drop.id);
@@ -68,7 +69,7 @@ for(const dungeon of dungeonData.dungeons||[]){
   }
  }
 }
-assert.ok(dungeonChecked>=70,"Dungeon item coverage fell unexpectedly");
+assert.ok(dungeonChecked>=90,"Dungeon item coverage fell unexpectedly");
 assert.ok(officialChecked>=19,"Confirmed Forever localization count regressed");
 const staleForever={id:270227,name:"Ephemeral Choker",name_fr:"Collier éphémère",source_status:"forever_beta_observed"};
 assert.equal(fr.name(staleForever),"Sautoir éphémère","Never show previous literal name for official Forever item 270227");
