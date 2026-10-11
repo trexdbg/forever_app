@@ -61,6 +61,38 @@ const spot=m("div",null,"rare-spots");spot.append(m("strong",T("Points d’appar
 const coords=m("div",null,"rare-coords");
 if(!r.points.length)coords.append(m("span",db.zones[r.zone]?.instance?T("Rare d’instance · pas de coordonnées de zone","Instance rare · no outdoor coordinates"):T("Coordonnées non encore documentées · aucun repère inventé","Coordinates not yet documented · no fabricated marker"),"rare-muted"));
 for(const p of r.points){const b=button(fmt(p[0])+" / "+fmt(p[1]),"rare-coord");b.title=T("Centrer la carte","Center map");b.addEventListener("click",()=>{zoom=Math.max(zoom,1.8);center=[p[0],p[1]];clampCenter();draw()});coords.append(b)}spot.append(coords);out.append(spot);
+const setIds=[...new Set((r.loot||[]).map(item=>item.set_id).filter(Boolean))];
+for(const id of setIds){
+ const set=db.rare_sets?.[id];if(!set)continue;
+ const section=m("section",null,"rare-set");
+ const header=m("div",null,"rare-set-header");
+ header.append(m("strong",set.name[en?"en":"fr"]));
+ header.append(chip(set.required_pieces+"/"+set.total_pieces+" "+T("pièces","pieces"),"green"));
+ section.append(header);
+ section.append(m("p",set.bonus[en?"en":"fr"],"rare-set-bonus"));
+ const links=m("div",null,"rare-set-pieces");
+ for(const piece of set.pieces){
+  const mob=rows.find(x=>x.id===piece.npc_id);
+  const item=mob?.loot.find(x=>x.item_id===piece.item_id);
+  if(!mob||!item)continue;
+  const b=button(null,"rare-set-piece"+(mob.id===r.id?" current":""));
+  b.append(m("span",piece.slot[en?"en":"fr"]+": "+lootName(item),"rare-set-item"));
+  b.append(m("small",npcName(mob)+(mob.id===r.id?" "+T("· sélectionné","· selected"):""),"rare-set-mob"));
+  b.addEventListener("click",()=>{
+    if(!filtered.includes(mob)){
+      search.value="";zone.value="all";type.value="all";level.value=mob.level<=30?"low":"high";
+      loot.checked=false;tame.checked=false;mapped.checked=false;filtered=results();
+    }
+    choose(mob);
+  });
+  links.append(b);
+ }
+ section.append(links);
+ const source=m("a",T("Source : Wowhead Forever ↗","Source: Wowhead Forever ↗"),"rare-set-source");
+ source.href=set.source_urls?.[0]||"https://www.wowhead.com/forever";
+ source.target="_blank";source.rel="noopener noreferrer";section.append(source);
+ out.append(section);
+}
 out.append(m("h4",T("Butins notables · Forever et Classic","Notable loot · Forever and Classic"),"rare-loot-title"));
 const loots=m("div",null,"rare-loots");
 if(!r.loot.length)loots.append(m("p",T("Aucun butin notable documenté dans nos sources. La table Forever peut contenir de nouveaux objets.","No notable loot documented in our sources. The Forever loot table may contain new items."),"rare-empty"));
@@ -128,7 +160,7 @@ canvas.addEventListener("pointerup",e=>{const moved=drag?.moved;drag=null;if(mov
 canvas.addEventListener("pointercancel",()=>drag=null);canvas.addEventListener("pointerleave",()=>{hover=null;draw()});
 canvas.addEventListener("keydown",e=>{if(e.key==="+"||e.key==="="){e.preventDefault();zoomTo(zoom*1.25)}else if(e.key==="-"){e.preventDefault();zoomTo(zoom/1.25)}else if(["ArrowLeft","ArrowRight","ArrowUp","ArrowDown"].includes(e.key)){e.preventDefault();center[0]+=(e.key==="ArrowLeft"?-8:e.key==="ArrowRight"?8:0)/zoom;center[1]+=(e.key==="ArrowUp"?-8:e.key==="ArrowDown"?8:0)/zoom;clampCenter();draw()}});
 for(const e of [search,zone,type,level,loot,tame,mapped])e.addEventListener(e===search?"input":"change",update);
-fetch("/data/rares.json?v=20261010-rare-beta-fr-loot-v2",{cache:"no-cache"}).then(r=>{if(!r.ok)throw Error("HTTP "+r.status);return r.json()}).then(data=>{
+fetch("/data/rares.json?v=20261011-rare-sets",{cache:"no-cache"}).then(r=>{if(!r.ok)throw Error("HTTP "+r.status);return r.json()}).then(data=>{
 if(!Array.isArray(data.rares)||!data.zones)throw Error("Invalid JSON");db=data;rows=data.rares.filter(r=>r.zone&&db.zones[r.zone]&&Array.isArray(r.points)&&Array.isArray(r.loot));
 for(const key of [...new Set(rows.map(r=>r.zone))].sort((a,b)=>zname(a).localeCompare(zname(b),en?"en":"fr"))){const opt=m("option",zname(key));opt.value=key;zone.append(opt)}
 const qs=new URLSearchParams(location.search);if(db.zones[qs.get("zone")])zone.value=qs.get("zone");if(qs.get("q"))search.value=qs.get("q");level.value=qs.get("level")==="all"?"all":qs.get("level")==="high"?"high":"low";
