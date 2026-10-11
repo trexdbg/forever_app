@@ -26,7 +26,7 @@ const map={head:"Head",neck:"Neck",shoulders:"Shoulders",back:"Back",chest:"Ches
 return map[slot]||slot||""}
 function translateLine(line){
 if(!en){
- const stats={"Strength":"Force","Agility":"Agilité","Stamina":"Endurance","Intellect":"Intelligence","Spirit":"Esprit","Armor":"Armure","Ranged Attack Power":"Puissance d'attaque à distance","Attack Power":"Puissance d'attaque"};
+ const stats={"Strength":"Force","Agility":"Agilité","Stamina":"Endurance","Intellect":"Intelligence","Spirit":"Esprit","Armor":"Armure","Ranged Attack Power":"Puissance d'attaque à distance","Attack Power":"Puissance d'attaque","Fire Resistance":"résistance au Feu","Frost Resistance":"résistance au Givre","Shadow Resistance":"résistance à l’Ombre","Nature Resistance":"résistance à la Nature"};
  const types={"Sword":"Épée","Axe":"Hache","Mace":"Masse","Dagger":"Dague","Staff":"Bâton","Polearm":"Arme d'hast","Wand":"Baguette","Bow":"Arc","Crossbow":"Arbalète","Gun":"Arme à feu","Leather":"Cuir","Mail":"Mailles","Plate":"Plaques","Cloth":"Tissu","Shield":"Bouclier","Trinket":"Bijou","Ring":"Anneau","Relic":"Relique"};
  const slots={"Head":"Tête","Shoulder":"Épaules","Chest":"Torse","Wrist":"Poignets","Hands":"Mains","Waist":"Taille","Legs":"Jambes","Feet":"Pieds","Back":"Dos","Main Hand":"Main droite","Off Hand":"Main gauche","Ranged":"Distance","Two-Hand":"Deux mains","One-Hand":"À une main"};
  const source=String(line).trim();
@@ -39,6 +39,14 @@ if(!en){
  const bonus=/^Equip: \+(\d+) (Attack Power|Spell Power|Hit Rating|Crit Rating|Spell Damage|Healing|Mana Regeneration|Health Regeneration|Spell Penetration|Shadow Spell Damage)\.?$/i.exec(source);
  const bonusFR={"Attack Power":"à la puissance d’attaque","Spell Power":"à la puissance des sorts","Hit Rating":"au score de toucher","Crit Rating":"au score de coup critique","Spell Damage":"aux dégâts des sorts","Healing":"aux soins","Mana Regeneration":"à la régénération de mana","Health Regeneration":"à la régénération des points de vie","Spell Penetration":"à la pénétration des sorts","Shadow Spell Damage":"aux dégâts des sorts d’ombre"};
  if(bonus)return "Équipé : +"+bonus[1]+" "+bonusFR[bonus[2]]+".";
+ const versus=/^Equip: \+(\d+) Attack Power Vs (Humanoids|Beasts|Undead)\.?$/i.exec(source);
+ if(versus)return "Équipé : +"+versus[1]+" à la puissance d’attaque contre les "+({Humanoids:"humanoïdes",Beasts:"bêtes",Undead:"morts-vivants"}[versus[2]]||versus[2])+".";
+ const spellBurn=/^Equip: Harmful spell casts sear the target for (\d+) Fire damage\.?$/i.exec(source);
+ if(spellBurn)return "Équipé : les sorts offensifs brûlent la cible et infligent "+spellBurn[1]+" points de dégâts de Feu.";
+ const useCorpse=/^Use: Chop a nearby Humanoid or Undead corpse, restoring (\d+) Health, (\d+) Mana and (\d+) Rage\.?$/i.exec(source);
+ if(useCorpse)return "Utiliser : découpe le cadavre d’un humanoïde ou mort-vivant proche et rend "+useCorpse[1]+" points de vie, "+useCorpse[2]+" points de mana et "+useCorpse[3]+" points de rage.";
+ const armourProc=/^Equip: When damaged, has a chance to grant (\d+) armor for (\d+) sec\.?$/i.exec(source);
+ if(armourProc)return "Équipé : lorsque vous subissez des dégâts, chance d’obtenir "+armourProc[1]+" points d’armure pendant "+armourProc[2]+" s.";
  return source
  .replace(/^Item Level (\d+)$/,"Niveau d’objet $1")
  .replace(/^Requires Level (\d+)$/,"Niveau $1 requis")
@@ -51,7 +59,7 @@ if(!en){
  .replace(/^Main Hand /,"Main droite · ")
  .replace(/^Off Hand /,"Main gauche · ")
  .replace(/^Durability (\d+) \/ (\d+)$/,"Durabilité $1 / $2")
- .replace(/^(\+\d+) (Strength|Agility|Stamina|Intellect|Spirit)$/,(full,n,attr)=>n+" "+stats[attr])
+ .replace(/^(\+\d+) (Strength|Agility|Stamina|Intellect|Spirit|Fire Resistance|Frost Resistance|Shadow Resistance|Nature Resistance)$/,(full,n,attr)=>n+" "+stats[attr])
  .replace(/^(\d+) Armor$/,"$1 points d’armure")
  .replace(/^(Sword|Axe|Mace|Dagger|Staff|Polearm|Wand|Bow|Crossbow|Gun|Leather|Mail|Plate|Cloth|Shield|Trinket|Ring|Relic)$/,value=>types[value]||value)
  .replace(/^Ranged /,"Distance · ");
@@ -75,6 +83,10 @@ return line.replace(/^Niveau d'objet (\d+)/,"Item level $1")
 .replace(/^\+([\d,.]+) Endurance$/,"+$1 Stamina")
 .replace(/^\+([\d,.]+) Intelligence$/,"+$1 Intellect")
 .replace(/^\+([\d,.]+) Esprit$/,"+$1 Spirit")
+.replace(/^\+([\d,.]+) résistance au Feu$/,"+$1 Fire Resistance")
+.replace(/^\+([\d,.]+) résistance au Givre$/,"+$1 Frost Resistance")
+.replace(/^\+([\d,.]+) résistance à l’Ombre$/,"+$1 Shadow Resistance")
+.replace(/^\+([\d,.]+) résistance à la Nature$/,"+$1 Nature Resistance")
 .replace(/^Équipé : /,"Equip: ")
 .replace(/^Utiliser : /,"Use: ")
 .replace(/^Armure : (\d+)/,"Armor: $1")}
@@ -135,6 +147,7 @@ write(body,"forever-item-tooltip__line",localizedSlot(item.slotLabel||item.slot)
 if(typeof item.typeName==="string")write(body,"forever-item-tooltip__line",item.typeName);
 if(status==="loading")write(body,"forever-item-tooltip__muted",w.loading);
 else if(status==="unavailable")write(body,"forever-item-tooltip__muted",w.unavailable);
+else if(forever)write(body,"forever-item-tooltip__muted",en?"No weapon or armor stats documented yet for this beta item.":"Statistiques de cet objet non encore documentées pour cette bêta.");
 }
 if(item.vendorDetails&&typeof item.vendorDetails==="object"){
 const v=item.vendorDetails,group=elt("section","forever-item-tooltip__vendor");
@@ -172,9 +185,9 @@ write(inner,"forever-item-tooltip__disclaimer",
  :w.classic);
 const foot=elt("div","forever-item-tooltip__foot");
 if(isId(item.id)){
-const sourceUrl=(()=>{const url=item.source_url||item.url;if(!forever||typeof url!=="string")return null;try{const u=new URL(url);return u.protocol==="https:"&&(u.hostname==="www.60.tools"&&u.pathname.startsWith("/items/")||u.hostname==="www.wowhead.com"&&u.pathname.startsWith("/forever/"))?u.href:null}catch{return null}})();
+const sourceUrl=(()=>{const url=item.source_url||item.url;if(!forever||typeof url!=="string")return null;try{const u=new URL(url);return u.protocol==="https:"&&(u.hostname==="www.60.tools"&&u.pathname.startsWith("/items/")||u.hostname==="www.wowhead.com"&&u.pathname.startsWith("/forever/")||u.hostname==="foreverchanges.pro"&&u.pathname==="/item/"+Number(item.id))?u.href:null}catch{return null}})();
 const a=elt("a","forever-item-tooltip__source",forever?(en?"Forever beta source ↗":"Source Forever bêta ↗"):w.source+" ↗");
-a.href=forever?(item.source_status==="forever_beta_observed"&&typeof item.source_url==="string"&&item.source_url.startsWith("https://foreverchanges.pro/item/")?item.source_url:(sourceUrl||"https://www.wowhead.com/forever/item="+Number(item.id))):"https://wowdb.assemblee-defias.fr/?id=classic:item:"+Number(item.id);a.target="_blank";a.rel="noopener noreferrer";foot.append(a);
+a.href=forever?(sourceUrl||"https://www.wowhead.com/forever/item="+Number(item.id)):"https://wowdb.assemblee-defias.fr/?id=classic:item:"+Number(item.id);a.target="_blank";a.rel="noopener noreferrer";foot.append(a);
 }else write(foot,"forever-item-tooltip__source",w.source);
 inner.append(foot);
 }
