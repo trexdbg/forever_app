@@ -20,6 +20,12 @@ assert.equal(en.name(sample),"Mask of the Unforgiven");
 assert.equal(fr.origin(sample.origin),"Stratholme · Le Condamné");
 assert.equal(en.origin("Stratholme · Le Condamné"),"Stratholme · The Unforgiven");
 assert.equal(fr.record(sample).id,13404);
+// Regression: official French Classic name for item 13098, not a literal word-by-word translation.
+const painweaver={id:13098,name:"Painweaver Band",name_fr:"Anneau du tisseur de douleur",source_status:"classic_reference",icon:"inv_jewelry_ring_18",url:"https://www.wowhead.com/classic/item=13098"};
+assert.equal(fr.name(painweaver),"Anneau de puissance mortelle","Classic ID 13098 must override a stale local name");
+assert.equal(en.name(painweaver),"Painweaver Band");
+assert.equal(fr.record(painweaver).id,13098);
+assert.equal(fr.resolved(painweaver).indicative,false,"Classic reviewed translations should be authoritative");
 const newBeta={id:271095,name:"Fang of Magmatus",source_status:"forever_beta_observed"};
 assert.equal(fr.name(newBeta),"Croc de Magmatus");
 assert.equal(en.name(newBeta),"Fang of Magmatus");
@@ -41,4 +47,4 @@ for(const path of paths){
   total++;
  }
 }
-console.log("Item locale / references: OK ("+total+" catalogued entries, FR+EN, ID 13404).");
+console.log("Item locale / references: OK ("+total+" catalogued entries, FR+EN, IDs 13404 and 13098).");
