@@ -66,6 +66,18 @@ for(const [id,english,french] of [
  assert.equal(fr.resolved(item).verified,true);
  assert.ok(fr.aliases(item).includes(french),"Search alias missing for "+id);
 }
+// WoWhead Classic frFR item-ID regression coverage (October 2026).
+for(const [id,english,french] of [
+ [6630,"Seedcloud Buckler","Targe de Seedcloud"],
+ [12996,"Band of Purification","Anneau de purification"],
+ [1314,"Ghoul Fingers","Doigts de goule"]
+]){
+ const sample={id,name:english,name_fr:"Ancienne traduction non officielle",source_status:"classic_reference"};
+ assert.equal(fr.name(sample),french,"Classic French name missing: "+id);
+ assert.equal(en.name(sample),english);
+ assert.equal(fr.resolved(sample).verified,true);
+ assert.ok(fr.aliases(sample).includes(french));
+}
 const untranslatedBeta={id:273030,name:"Ring of Power Regulation",name_fr:"Anneau de régulation de puissance",source_status:"forever_beta_observed"};
 assert.equal(fr.name(untranslatedBeta),"Ring of Power Regulation","Non-localized Wowhead Forever items must remain English");
 assert.equal(fr.resolved(untranslatedBeta).translation_missing,true);
