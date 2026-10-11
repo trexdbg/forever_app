@@ -44,7 +44,11 @@ const zoneFR={"City of Dalaran":"Cité de Dalaran","Excavation Site: Wetlands":"
 const knownFR={5191:"Lame de cruauté",10399:"Armure défias noircie",16712:"Gants Sombreruse"};
 const localizedName=i=>{
  const ref=window.ForeverItemLocale?.resolved(i);
- return en?(ref?.en||i.name_en||i.name):(ref?.verified?ref.fr:(i.name_fr||knownFR[i.id]||ref?.fr||i.name));
+ if(en)return ref?.en||i.name_en||i.name;
+ // Official Forever names come from the shared ID registry. Unknown beta names
+ // remain English; an old local name_fr must not override the verified status.
+ if(isForever(i)&&Number(i.id)>=200000)return ref?.fr||i.name_en||i.name;
+ return ref?.verified?ref.fr:(i.name_fr||knownFR[i.id]||ref?.fr||i.name);
 };
 function localizedOrigin(i){
  let value=en?(i.origin_en||i.origin):(i.origin_fr||i.origin);
