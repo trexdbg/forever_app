@@ -17,7 +17,11 @@ function citationsOf(html,path){
     const raw=m[1];try{const u=new URL(raw,base);
       if(u.origin===base){
         if(!u.pathname.startsWith("/data/")||!u.pathname.endsWith(".json")||!available.has(u.pathname.slice(1)))continue;
-      }else if(!allowedExternal.test(u.hostname))continue;
+        // Cite the human-readable methodology page rather than an exposed dataset.
+        found.push(base+(path.startsWith("en/")?"/en/sources/":"/sources/"));
+        continue;
+      }
+      if(!allowedExternal.test(u.hostname)||u.pathname.endsWith(".json"))continue;
       found.push(u.href);
     }catch{}
   }
@@ -30,7 +34,7 @@ function citationsOf(html,path){
       [/dungeon|donjon|boss/i,"data/dungeons-forever.json"],
       [/talent/i,"data/talents.json"]
     ];
-    for(const [pattern,filepath] of guesses)if(pattern.test(path)&&available.has(filepath)){found.push(base+"/"+filepath);break}
+    for(const [pattern,filepath] of guesses)if(pattern.test(path)&&available.has(filepath)){found.push(base+(path.startsWith("en/")?"/en/sources/":"/sources/"));break}
   }
   return [...new Set(found)].slice(0,12);
 }
