@@ -75,3 +75,9 @@ Projet de fans, **non affilié à Blizzard**. Sources communautaires en évoluti
 - Les coordonnées de **8 commerçants historiques** ont été comparées au guide Cuisine Forever ; **4 écarts corrigés**. Sept nouveaux vendeurs Forever sans coordonnées publiées restent **indiqués par zone uniquement**, sans épingle inventée. La zone Riverglades possède une entrée de zone sans fond de carte précis confirmé.
 - La compétence du patron *Sac rouge en lin* a été corrigée de 70 (ancienne valeur Classic) à **50** selon la base des patrons Forever. Les schémas d'ingénierie dont la liaison n'est pas établie ne sont pas déclarés « liés quand ramassés ».
 
+
+## Audit des ventes Forever — 11 octobre 2026
+
+- Les ventes Classic ne sont **pas** des confirmations de stock en jeu sur Forever. Les associations vérifiées sont identifiées au niveau du couple **PNJ + objet** par `offer_details[ID].verification_status = forever_documented`, avec source et date. La présence d'un objet dans le client ne suffit pas à valider un marchand.
+- Extension : quatre nouvelles recettes d'alchimie Forever (`250388`, `250990`, `250383`, `250365`) chez Nina Surefire (Alliance) et Apothecary Durelle (Horde), montants en Faveur marchande et réputation lorsque requise. Source : https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce et fiches Wowhead Forever correspondantes.
+- Après ajout : **244 objets** dont **27 fiches Forever bêta**, **631 associations de vente**, dont **54 documentées Forever** et **577 seulement Classic ou non vérifiées**. Ces nombres sont un état des données, pas de la disponibilité réelle en jeu. Le filtre Forever du module Marchands s'appuie sur le statut de l'association, pas seulement celui de l'objet.
