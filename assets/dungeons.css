@@ -415,3 +415,11 @@
  .dg-stats{display:none}
 }
 @media(prefers-reduced-motion:reduce){.dg-directory-chevron{transition:none}}
+
+/* Dungeon weapon previews: beta-sourced numbers, discreet but legible beside loot names. */
+.dg-weapon-preview{
+ display:block;margin-top:5px;padding-top:4px;border-top:1px solid #334a39;
+ color:#e1cba3!important;font-size:10px!important;line-height:1.35!important;
+ font-variant-numeric:tabular-nums;white-space:normal;
+}
+.dg-drop:focus-visible{outline:2px solid #dab87f;outline-offset:2px}
