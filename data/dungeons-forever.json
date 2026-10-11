@@ -2642,7 +2642,7 @@
             },
             {
               "en": "Corsair's Overshirt",
-              "fr": "Surchemise de corsaire",
+              "fr": "Casaque de corsaire",
               "slot": "Torse · Tissu",
               "source_status": "classic_loot_reference",
               "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/captain-greenskin/",
@@ -2651,7 +2651,8 @@
               "id": 5202,
               "itemUrl": "https://www.wowhead.com/classic/item=5202",
               "id_reference_status": "classic_id_crosschecked",
-              "forever_loot_confirmed": false
+              "forever_loot_confirmed": false,
+              "name_fr_status": "classic_wowhead_frFR_verified"
             }
           ],
           "note": {
@@ -2806,7 +2807,7 @@
             },
             {
               "en": "Corsair's Overshirt",
-              "fr": "Surchemise de corsaire",
+              "fr": "Casaque de corsaire",
               "slot": "Torse · Tissu",
               "source_status": "classic_loot_reference",
               "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/edwin-vancleef/",
@@ -2815,7 +2816,8 @@
               "id": 5202,
               "itemUrl": "https://www.wowhead.com/classic/item=5202",
               "id_reference_status": "classic_id_crosschecked",
-              "forever_loot_confirmed": false
+              "forever_loot_confirmed": false,
+              "name_fr_status": "classic_wowhead_frFR_verified"
             },
             {
               "en": "Cruel Barb",
@@ -3112,7 +3114,7 @@
             },
             {
               "en": "Odo's Ley Staff",
-              "fr": "Bâton tellurique d'Odo",
+              "fr": "Bâton d'Odo",
               "slot": "Bâton 2M",
               "source_status": "classic_loot_reference",
               "source_url": "https://theforeverera.com/en/dungeons/shadowfang-keep/odo-the-blindwatcher/",
@@ -3121,7 +3123,8 @@
               "id": 6318,
               "itemUrl": "https://www.wowhead.com/classic/item=6318",
               "id_reference_status": "classic_id_crosschecked",
-              "forever_loot_confirmed": false
+              "forever_loot_confirmed": false,
+              "name_fr_status": "classic_wowhead_frFR_verified"
             }
           ],
           "rare": false,
@@ -3574,7 +3577,7 @@
           "loot": [
             {
               "en": "Strike of the Hydra",
-              "fr": "Frappe de l'hydre",
+              "fr": "Frappe de l'Hydre",
               "slot": "Épée deux mains",
               "source_status": "classic_loot_reference",
               "iconFileId": 135352,
@@ -3582,7 +3585,8 @@
               "id": 6909,
               "itemUrl": "https://www.wowhead.com/classic/item=6909",
               "id_reference_status": "classic_id_crosschecked",
-              "forever_loot_confirmed": false
+              "forever_loot_confirmed": false,
+              "name_fr_status": "classic_wowhead_frFR_verified"
             },
             {
               "en": "Moss Cinch",
