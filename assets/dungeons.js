@@ -11,6 +11,11 @@ const routeButton=$("dg-route"),worldButton=$("dg-world"),search=$("dg-search"),
 const m=(tag,txt,cls)=>{const n=document.createElement(tag);if(txt!==undefined&&txt!==null)n.textContent=String(txt);if(cls)n.className=cls;return n};
 const str=v=>typeof v==="string"?v:"";
 const name=obj=>str(obj?.[en?"en":"fr"]||obj?.en||obj?.fr);
+const itemName=item=>window.ForeverItemLocale?.name({
+ id:item.id||0,name:item.en,
+ name_fr:item.fr&&item.fr!==item.en?item.fr:undefined,
+ source_status:item.source_status==="classic_loot_reference"?"classic_reference":"forever_beta_community"
+})||name(item);
 const esc=x=>String(x??"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
 const statusText=d=>d.type==="classic"?t("Classic · référence","Classic · reference"):d.beta==="observed"?t("Bêta documentée","Beta documented"):t("Annoncé","Announced");
 function count(d){return d.bosses.reduce((n,b)=>n+(b.loot?.length||0),0)}
@@ -20,7 +25,7 @@ function updateUrl(){const u=new URL(location.href);u.searchParams.set("donjon",
  for(const l of document.querySelectorAll(".lang-switch a")){const target=new URL(l.href,location.origin);target.searchParams.set("donjon",selected.id);if(selected.bosses.length)target.searchParams.set("boss",String(selectedBoss+1));l.href=target.pathname+target.search}
 }
 function visibleList(){if(!db)return[];const txt=esc(search.value.trim()),mode=status.value,levelN=Number(level.value);
- return db.dungeons.filter(d=>(!txt||esc([name(d.name),d.name.en,d.name.fr,d.zone.en,d.zone.fr,...d.bosses.flatMap(b=>[b.name.en,b.name.fr,...(b.loot||[]).flatMap(i=>[i.en,i.fr])])].join(" ")).includes(txt))&&(mode==="all"||d.beta===mode||(mode==="classic"&&d.type==="classic")||(mode==="forever"&&d.type==="forever")||(mode==="mapped"&&!!d.floorMap)||(mode==="accessible"&&d.level[0]<=30))&&(!levelN||(d.level[0]<=levelN&&d.level[1]>=levelN)));
+ return db.dungeons.filter(d=>(!txt||esc([name(d.name),d.name.en,d.name.fr,d.zone.en,d.zone.fr,...d.bosses.flatMap(b=>[b.name.en,b.name.fr,...(b.loot||[]).flatMap(i=>[i.en,i.fr,itemName(i)])])].join(" ")).includes(txt))&&(mode==="all"||d.beta===mode||(mode==="classic"&&d.type==="classic")||(mode==="forever"&&d.type==="forever")||(mode==="mapped"&&!!d.floorMap)||(mode==="accessible"&&d.level[0]<=30))&&(!levelN||(d.level[0]<=levelN&&d.level[1]>=levelN)));
 }
 function renderDirectory(){if(!db)return;const rows=visibleList(),scroll=result.scrollTop;result.replaceChildren();$("dg-count").textContent=rows.length+" / "+db.dungeons.length;
  for(const d of rows){const b=elbtn(null,"dg-entry"+(selected?.id===d.id?" active":""),()=>select(d));
@@ -34,23 +39,23 @@ function renderDirectory(){if(!db)return;const rows=visibleList(),scroll=result.
 }
 function select(d,focus=false){if(!d)return;selected=d;selectedBoss=0;view=d.floorMap?"route":"world";resetCamera();worldToken++;worldImage=null;floorToken++;floorImage=null;floorFailed=false;updateUrl();renderDirectory();renderDetail();loadWorld();loadFloor();paint();if(focus)document.getElementById("dg-map-title").scrollIntoView({block:"nearest",behavior:"smooth"})}
 function chooseBoss(i,focus=false){if(!selected?.bosses[i])return;selectedBoss=i;updateUrl();renderBosses();paint();if(focus)document.getElementById("dg-boss-selected").scrollIntoView({block:"nearest",behavior:"smooth"})}
-function makeLootCard(item,boss){const card=m("div",null,"dg-drop");card.tabIndex=0;card.setAttribute("role","group");card.setAttribute("aria-label",name(item)+" · "+item.slot);
+function makeLootCard(item,boss){const card=m("div",null,"dg-drop");card.tabIndex=0;card.setAttribute("role","group");card.setAttribute("aria-label",itemName(item)+" · "+item.slot);
  const icon=m("img");icon.width=34;icon.height=34;icon.loading="lazy";icon.alt="";
  const slot=(item.slot||"").toLowerCase();
  let ico=/recette|recipe/.test(slot)?"inv_scroll_07":/tête|head/.test(slot)?"inv_helmet_22":/épaules|shoulders/.test(slot)?"inv_shoulder_09":/arme|main|hand|two-hand|distance|ranged|bâton|dagger/.test(slot)?"inv_sword_04":/tissu|chest|torse|robe/.test(slot)?"inv_scroll_07":"inv_scroll_07";
  icon.src=item.icon&&/^[a-z0-9_]+$/.test(item.icon)?"https://wow.zamimg.com/images/wow/icons/medium/"+item.icon+".jpg":"/assets/icons/"+ico+".jpg";icon.onerror=()=>{icon.onerror=null;icon.src="/assets/icons/inv_scroll_07.jpg"};card.append(icon);
- const text=m("span");text.append(m("strong",name(item)),m("small",t("Emplacement : ","Slot: ")+item.slot));
+ const text=m("span");text.append(m("strong",itemName(item)),m("small",t("Emplacement : ","Slot: ")+item.slot));
  if(Number.isFinite(item.chanceReported))text.append(m("small",t("Taux indicatif du guide : ","Guide-reported chance: ")+String(item.chanceReported).replace(".",",")+" %"));
  if(item.isNew)text.append(m("small",t("Changement Forever signalé","Reported Forever change")));if(item.itemLevel)text.append(m("small",t("Niveau d’objet ","Item level ")+item.itemLevel+(item.requiredLevel?" · "+t("Niveau requis ","Required level ")+item.requiredLevel:"")));
  if(item.source_status==="classic_loot_reference")text.append(m("small",t("Provenance Classic à vérifier","Classic origin · unverified"),"dg-loot-provenance"));card.append(text);
- if(item.itemUrl){const link=m("a","↗","dg-item-page");link.href=item.itemUrl;link.target="_blank";link.rel="noopener noreferrer";link.title=t("Ouvrir la fiche de l’objet","Open item details");link.setAttribute("aria-label",t("Fiche d’objet : ","Item page: ")+name(item));card.append(link)}
+ if(item.itemUrl){const link=m("a","↗","dg-item-page");link.href=item.itemUrl;link.target="_blank";link.rel="noopener noreferrer";link.title=t("Ouvrir la fiche de l’objet","Open item details");link.setAttribute("aria-label",t("Fiche d’objet : ","Item page: ")+itemName(item));card.append(link)}
 
- const show=e=>{tooltip.replaceChildren();tooltip.append(m("strong",name(item)),m("span",(item.source_status==="classic_loot_reference"?t("Butin Classic de référence : ","Classic reference drop: "):t("Butin signalé : ","Reported drop: "))+name(boss.name)),m("span",item.slot));
+ const show=e=>{tooltip.replaceChildren();tooltip.append(m("strong",itemName(item)),m("span",(item.source_status==="classic_loot_reference"?t("Butin Classic de référence : ","Classic reference drop: "):t("Butin signalé : ","Reported drop: "))+name(boss.name)),m("span",item.slot));
  if(item.tooltip?.length)item.tooltip.forEach(line=>tooltip.append(m("span",line)));
  if(Number.isFinite(item.chanceReported))tooltip.append(m("span",t("Taux mentionné par le guide : ","Guide-reported chance: ")+item.chanceReported+" %"));
  tooltip.append(m("small",item.source_status==="classic_loot_reference"?t("Provenance du butin : Classic · NON confirmée pour Forever. Statistiques du client bêta possibles.","Loot source: Classic · NOT confirmed on Forever. Client beta item stats may be available."):t("Relevé de bêta communautaire · taux non garanti.","Community beta report · drop chance not guaranteed.")));tooltip.hidden=false;const x=Math.max(8,Math.min(window.innerWidth-355,Math.max(8,(e.clientX||card.getBoundingClientRect().left)+12)));const y=Math.max(8,Math.min(window.innerHeight-185,Math.max(8,(e.clientY||card.getBoundingClientRect().top)+12)));tooltip.style.left=x+"px";tooltip.style.top=y+"px"};
  if(item.id&&Array.isArray(item.tooltip)&&item.tooltip.length&&window.ForeverItemTooltip){
- window.ForeverItemTooltip.bind(card,{id:item.id,name:name(item),name_en:item.en,name_fr:item.fr,quality:item.quality||"rare",source_status:"forever_beta_community",itemLevel:item.itemLevel,requiredLevel:item.requiredLevel,tooltip:item.tooltip||[],icon:item.icon,origin:t("Butin signalé · Donjon Forever","Reported drop · Forever dungeon"),url:item.itemUrl||selected?.source});
+ window.ForeverItemTooltip.bind(card,{id:item.id,name:itemName(item),name_en:item.en,name_fr:item.fr,quality:item.quality||"rare",source_status:item.source_status==="classic_loot_reference"?"classic_reference":"forever_beta_community",itemLevel:item.itemLevel,requiredLevel:item.requiredLevel,tooltip:item.tooltip||[],icon:item.icon,origin:t("Butin signalé · Donjon Forever","Reported drop · Forever dungeon"),url:item.itemUrl||selected?.source});
  }else{card.addEventListener("mouseenter",show);card.addEventListener("mousemove",e=>{if(!tooltip.hidden)show(e)});card.addEventListener("mouseleave",()=>tooltip.hidden=true);card.addEventListener("focus",show);card.addEventListener("blur",()=>tooltip.hidden=true)}
 
  return card;
