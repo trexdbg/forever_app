@@ -796,7 +796,9 @@
               "quality": "rare",
               "itemLevel": 31,
               "requiredLevel": 26,
-              "itemUrl": "https://www.wowhead.com/forever/item=273024"
+              "itemUrl": "https://www.wowhead.com/forever/item=273024",
+              "iconFileId": 132539,
+              "icon_source": "https://www.icy-veins.com/wow-forever/excavation-site-wetlands-guide"
             },
             {
               "fr": "Ceinturon écaille-sel",
@@ -817,7 +819,9 @@
                 "Requires Level 26"
               ],
               "itemUrl": "https://www.wowhead.com/forever/item=273023",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "iconFileId": 132510,
+              "icon_source": "https://www.icy-veins.com/wow-forever/excavation-site-wetlands-guide"
             },
             {
               "fr": "Jambières souples en cuir ventral",
@@ -828,7 +832,9 @@
               "quality": "rare",
               "itemLevel": 31,
               "requiredLevel": 26,
-              "itemUrl": "https://www.wowhead.com/forever/item=273022"
+              "itemUrl": "https://www.wowhead.com/forever/item=273022",
+              "iconFileId": 134591,
+              "icon_source": "https://www.icy-veins.com/wow-forever/excavation-site-wetlands-guide"
             }
           ],
           "note": {
@@ -853,7 +859,9 @@
               "quality": "rare",
               "itemLevel": 31,
               "requiredLevel": 26,
-              "itemUrl": "https://www.wowhead.com/forever/item=273025"
+              "itemUrl": "https://www.wowhead.com/forever/item=273025",
+              "iconFileId": 132551,
+              "icon_source": "https://www.icy-veins.com/wow-forever/excavation-site-wetlands-guide"
             },
             {
               "fr": "Regard du raptor",
@@ -864,7 +872,9 @@
               "quality": "rare",
               "itemLevel": 31,
               "requiredLevel": 26,
-              "itemUrl": "https://www.wowhead.com/forever/item=273027"
+              "itemUrl": "https://www.wowhead.com/forever/item=273027",
+              "iconFileId": 136017,
+              "icon_source": "https://www.icy-veins.com/wow-forever/excavation-site-wetlands-guide"
             },
             {
               "en": "Garb of Florid Feathers",
@@ -875,13 +885,17 @@
               "quality": "rare",
               "itemLevel": 31,
               "requiredLevel": 26,
-              "itemUrl": "https://www.wowhead.com/forever/item=273026"
+              "itemUrl": "https://www.wowhead.com/forever/item=273026",
+              "iconFileId": 133684,
+              "icon_source": "https://www.icy-veins.com/wow-forever/excavation-site-wetlands-guide"
             },
             {
               "en": "Blueprint: Greenhouse",
               "fr": "Plan : serre",
               "slot": "Plan / Herboristerie",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "iconFileId": 1001491,
+              "icon_source": "https://www.icy-veins.com/wow-forever/excavation-site-wetlands-guide"
             }
           ],
           "note": {
@@ -919,7 +933,9 @@
               "quality": "rare",
               "itemLevel": 33,
               "requiredLevel": 28,
-              "itemUrl": "https://www.wowhead.com/forever/item=273030"
+              "itemUrl": "https://www.wowhead.com/forever/item=273030",
+              "iconFileId": 133370,
+              "icon_source": "https://www.icy-veins.com/wow-forever/excavation-site-wetlands-guide"
             },
             {
               "fr": "Long fusil de vision-golem",
@@ -930,7 +946,9 @@
               "quality": "rare",
               "itemLevel": 33,
               "requiredLevel": 28,
-              "itemUrl": "https://www.wowhead.com/forever/item=273029"
+              "itemUrl": "https://www.wowhead.com/forever/item=273029",
+              "iconFileId": 134536,
+              "icon_source": "https://www.icy-veins.com/wow-forever/excavation-site-wetlands-guide"
             },
             {
               "fr": "Mantelet du reliquaire",
@@ -951,7 +969,9 @@
                 "Requires Level 28"
               ],
               "itemUrl": "https://www.wowhead.com/forever/item=273028",
-              "source_status": "forever_beta_community"
+              "source_status": "forever_beta_community",
+              "iconFileId": 135058,
+              "icon_source": "https://www.icy-veins.com/wow-forever/excavation-site-wetlands-guide"
             },
             {
               "fr": "Relique des Titans (quête)",
@@ -2181,14 +2201,18 @@
               "fr": "Marteau de Rhahk'Zor",
               "slot": "Masse 2M",
               "source_status": "classic_loot_reference",
-              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/rhahkzor/"
+              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/rhahkzor/",
+              "iconFileId": 133046,
+              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide"
             },
             {
               "en": "Rockslicer",
               "fr": "Tranche-roche",
               "slot": "Hache 2M",
               "source_status": "classic_loot_reference",
-              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/rhahkzor/"
+              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/rhahkzor/",
+              "iconFileId": 135419,
+              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide"
             }
           ],
           "note": {
@@ -2215,28 +2239,36 @@
               "fr": "Lame bourdonnante",
               "slot": "Dague",
               "source_status": "classic_loot_reference",
-              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/sneed/"
+              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/sneed/",
+              "iconFileId": 135641,
+              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide"
             },
             {
               "en": "Gold-flecked Gloves",
               "fr": "Gants mouchetés d'or",
               "slot": "Mains · Tissu",
               "source_status": "classic_loot_reference",
-              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/sneed/"
+              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/sneed/",
+              "iconFileId": 132957,
+              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide"
             },
             {
               "en": "Taskmaster Axe",
               "fr": "Hache de contremaître",
               "slot": "Hache 2M",
               "source_status": "classic_loot_reference",
-              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/sneed/"
+              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/sneed/",
+              "iconFileId": 135424,
+              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide"
             },
             {
               "en": "Buzz Saw",
               "fr": "Scie circulaire",
               "slot": "Épée 1M",
               "source_status": "classic_loot_reference",
-              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/sneed/"
+              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/sneed/",
+              "iconFileId": 135325,
+              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide"
             }
           ],
           "note": {
@@ -2263,14 +2295,18 @@
               "fr": "Rondache plaquée or",
               "slot": "Bouclier",
               "source_status": "classic_loot_reference",
-              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/miner-johnson/"
+              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/miner-johnson/",
+              "iconFileId": 134948,
+              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide"
             },
             {
               "en": "Miner's Cape",
               "fr": "Cape du mineur",
               "slot": "Dos",
               "source_status": "classic_loot_reference",
-              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/miner-johnson/"
+              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/miner-johnson/",
+              "iconFileId": 133763,
+              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide"
             }
           ],
           "note": {
@@ -2297,7 +2333,9 @@
               "fr": "Pantalon de fonte",
               "slot": "Jambes · Cuir",
               "source_status": "classic_loot_reference",
-              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/gilnid/"
+              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/gilnid/",
+              "iconFileId": 134582,
+              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide"
             },
             {
               "en": "Lavishly Jeweled Ring",
@@ -2309,7 +2347,9 @@
               "quality": "rare",
               "itemLevel": 22,
               "requiredLevel": 17,
-              "itemUrl": "https://www.wowhead.com/classic/item=1156"
+              "itemUrl": "https://www.wowhead.com/classic/item=1156",
+              "iconFileId": 133351,
+              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide"
             }
           ],
           "note": {
@@ -2336,14 +2376,18 @@
               "fr": "Ceinture défias noircie",
               "slot": "Taille · Cuir",
               "source_status": "classic_loot_reference",
-              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/captain-greenskin/"
+              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/captain-greenskin/",
+              "iconFileId": 132515,
+              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide"
             },
             {
               "en": "Corsair's Overshirt",
               "fr": "Surchemise de corsaire",
               "slot": "Torse · Tissu",
               "source_status": "classic_loot_reference",
-              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/captain-greenskin/"
+              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/captain-greenskin/",
+              "iconFileId": 135012,
+              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide"
             }
           ],
           "note": {
@@ -2370,21 +2414,27 @@
               "fr": "Lame du voleur",
               "slot": "Épée 1M",
               "source_status": "classic_loot_reference",
-              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/mr-smite/"
+              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/mr-smite/",
+              "iconFileId": 135325,
+              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide"
             },
             {
               "en": "Smite's Reaver",
               "fr": "Couperet de M. Châtiment",
               "slot": "Hache 1M",
               "source_status": "classic_loot_reference",
-              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/mr-smite/"
+              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/mr-smite/",
+              "iconFileId": 132416,
+              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide"
             },
             {
               "en": "Smite's Mighty Hammer",
               "fr": "Marteau puissant de M. Châtiment",
               "slot": "Masse 2M",
               "source_status": "classic_loot_reference",
-              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/mr-smite/"
+              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/mr-smite/",
+              "iconFileId": 133046,
+              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide"
             }
           ],
           "note": {
@@ -2411,7 +2461,9 @@
               "fr": "Attendrisseur de Macaron",
               "slot": "Masse 1M",
               "source_status": "classic_loot_reference",
-              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/cookie/"
+              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/cookie/",
+              "iconFileId": 132906,
+              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide"
             },
             {
               "en": "Cookie's Stirring Rod",
@@ -2423,7 +2475,9 @@
               "quality": "rare",
               "itemLevel": 22,
               "requiredLevel": 17,
-              "itemUrl": "https://www.wowhead.com/classic/item=5198"
+              "itemUrl": "https://www.wowhead.com/classic/item=5198",
+              "iconFileId": 135139,
+              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide"
             },
             {
               "en": "Viridian Band",
@@ -2457,14 +2511,18 @@
               "fr": "Cape de la confrérie",
               "slot": "Dos",
               "source_status": "classic_loot_reference",
-              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/edwin-vancleef/"
+              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/edwin-vancleef/",
+              "iconFileId": 133760,
+              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide"
             },
             {
               "en": "Corsair's Overshirt",
               "fr": "Surchemise de corsaire",
               "slot": "Torse · Tissu",
               "source_status": "classic_loot_reference",
-              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/edwin-vancleef/"
+              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/edwin-vancleef/",
+              "iconFileId": 135012,
+              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide"
             },
             {
               "en": "Cruel Barb",
@@ -2490,7 +2548,9 @@
               "quality": "rare",
               "itemLevel": 24,
               "requiredLevel": 19,
-              "itemUrl": "https://www.wowhead.com/classic/item=10399"
+              "itemUrl": "https://www.wowhead.com/classic/item=10399",
+              "iconFileId": 132723,
+              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide"
             }
           ],
           "note": {
