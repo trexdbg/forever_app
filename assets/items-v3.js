@@ -180,6 +180,7 @@ document.querySelectorAll(".item-catalogue-sort").forEach(button=>button.addEven
 const control=document.createElement("label");control.className="item-v3-source-filter";control.textContent=scopeLabels.scope+" ";
 const select=document.createElement("select");select.id="item-source";select.setAttribute("aria-label",scopeLabels.scope);
 for(const [value,label] of [["beta30",scopeLabels.beta30],["betaOther",scopeLabels.betaOther],["classic",scopeLabels.classicOnly],["all",scopeLabels.allSources]]){const opt=document.createElement("option");opt.value=value;opt.textContent=label;select.append(opt)}
+if(linkedQuery){status="all";select.value="all";}
 control.append(select);document.querySelector(".item-catalogue-filter-fields")?.append(control);
 const scopeInfo=document.createElement("p");scopeInfo.className="item-catalogue-evidence-note";scopeInfo.setAttribute("role","note");
 document.querySelector(".item-v2-quality-controls")?.after(scopeInfo);
