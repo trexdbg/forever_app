@@ -1862,7 +1862,7 @@
             },
             {
               "en": "Cavedweller Bracers",
-              "fr": "Brassards d'habitant des cavernes",
+              "fr": "Brassards cavernicoles",
               "slot": "Poignets / Wrist",
               "source_status": "classic_loot_reference",
               "id": 14147,
@@ -2350,7 +2350,7 @@
             },
             {
               "en": "Deep Fathom Ring",
-              "fr": "Anneau des profondeurs",
+              "fr": "Anneau des grandes profondeurs",
               "slot": "Doigt / Ring",
               "source_status": "classic_loot_reference",
               "id": 6463,
@@ -2641,7 +2641,7 @@
             },
             {
               "en": "Lavishly Jeweled Ring",
-              "fr": "Anneau somptueusement orné",
+              "fr": "Anneau somptueux",
               "slot": "Doigt",
               "source_status": "classic_loot_reference",
               "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/gilnid/",
