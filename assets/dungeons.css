@@ -147,3 +147,136 @@
 .dg-way-button{border:1px solid #766440;color:#e8cb96;background:#322719;padding:7px 11px;font-size:11px;cursor:pointer}
 .dg-way-button:hover{background:#47361e;border-color:#c7a36c}
 .dg-way-coords{color:#99b0a1;font-size:11px;font-variant-numeric:tabular-nums}
+
+
+/* v8 · Dungeon workspace: compact navigation | map | interactive boss loot */
+.dg-grid{
+ display:grid;
+ grid-template-columns:clamp(180px,15vw,200px) minmax(0,1fr);
+ gap:11px;
+ align-items:start;
+}
+.dg-directory{
+ align-self:start;
+ height:min(720px,calc(100vh - 175px));
+ max-height:none;
+ min-height:280px;
+ overflow:hidden;
+}
+.dg-options{flex:1;min-height:0;overflow-y:auto;scrollbar-width:thin}
+.dg-panel-title{padding:10px 11px}
+.dg-panel-title h2{font:500 16px Georgia,serif}
+.dg-panel-title small{font-size:10px;white-space:nowrap}
+.dg-entry{
+ display:grid;
+ gap:3px;
+ min-height:0;
+ padding:10px 9px 9px;
+ border-bottom:1px solid #2b392e;
+ border-left-width:3px;
+}
+.dg-entry-top{display:flex;align-items:baseline;justify-content:space-between;gap:5px}
+.dg-entry-top strong{min-width:0;font-size:12px;line-height:1.3;overflow-wrap:break-word;font-weight:650}
+.dg-entry .dg-level{font-size:10px;white-space:nowrap;flex:none;color:#eacb90}
+.dg-entry .dg-entry-zone{
+ display:block;
+ min-width:0;
+ overflow:hidden;
+ text-overflow:ellipsis;
+ white-space:nowrap;
+ font-size:10px;
+ line-height:1.4;
+ color:#a6b7a5;
+}
+.dg-entry .dg-chips{display:none}
+.dg-content{
+ display:grid;
+ grid-template-columns:minmax(0,1fr) minmax(298px,340px);
+ grid-template-rows:auto auto;
+ column-gap:11px;
+ row-gap:11px;
+ align-items:start;
+ min-width:0;
+}
+.dg-map-card{
+ grid-column:1;
+ grid-row:1;
+ min-width:0;
+ width:100%;
+ overflow:hidden;
+}
+.dg-bosses{
+ grid-column:2;
+ grid-row:1 / span 2;
+ min-width:0;
+ width:100%;
+ align-self:start;
+ padding:12px;
+}
+.dg-info-card{
+ grid-column:1;
+ grid-row:2;
+ min-width:0;
+ width:100%;
+ align-self:start;
+}
+.dg-map-top{gap:8px;padding:10px 11px}
+.dg-map-top h2{font-size:17px;line-height:1.3}
+.dg-map-top small{font-size:10px}
+.dg-mode{gap:4px}
+.dg-mode button{padding:6px 8px}
+.dg-zoom{gap:3px}
+.dg-zoom button{padding:6px 8px}
+.dg-map-foot{gap:6px 11px;padding:9px 11px}
+.dg-map-foot span{min-width:155px}
+.dg-map-foot a{font-size:10px}
+.dg-bosses .dg-section-title{margin-bottom:9px}
+.dg-bosses .dg-section-title h2{font-size:17px}
+.dg-boss-nav{
+ max-height:185px;
+ grid-template-columns:minmax(0,1fr);
+ overflow:auto;
+}
+.dg-boss-navitem{min-height:33px;padding:6px 8px}
+.dg-boss-navname{font-size:12px}
+.dg-selected-heading h3{font-size:18px}
+.dg-selected-boss .dg-drops{grid-template-columns:minmax(0,1fr)}
+.dg-info-card .dg-info-head{gap:9px}
+.dg-info-card .dg-info-head h2{font-size:21px}
+@media(max-width:1050px){
+ .dg-grid{grid-template-columns:190px minmax(0,1fr)}
+ .dg-content{
+  display:grid;
+  grid-template-columns:minmax(0,1fr);
+  grid-template-rows:auto;
+ }
+ .dg-map-card{grid-column:1;grid-row:1}
+ .dg-bosses{grid-column:1;grid-row:2}
+ .dg-info-card{grid-column:1;grid-row:3}
+ .dg-boss-nav{grid-template-columns:repeat(2,minmax(0,1fr));max-height:165px}
+ .dg-selected-boss .dg-drops{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:790px){
+ .dg-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:10px}
+ .dg-directory{
+  width:100%;
+  height:183px;
+  min-height:0;
+  max-height:183px;
+ }
+ .dg-options{width:100%;overflow:auto}
+ .dg-content{width:100%;display:grid;grid-template-columns:minmax(0,1fr)}
+ .dg-map-card,.dg-bosses,.dg-info-card{grid-column:1;width:100%}
+ .dg-map-card{grid-row:1}
+ .dg-bosses{grid-row:2}
+ .dg-info-card{grid-row:3}
+ .dg-boss-nav{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:520px){
+ .dg-directory{height:161px;max-height:161px}
+ .dg-entry{padding:8px 10px}
+ .dg-boss-nav{grid-template-columns:minmax(0,1fr)}
+ .dg-selected-boss .dg-drops{grid-template-columns:minmax(0,1fr)}
+ .dg-map-top{padding:9px}
+ .dg-map-top h2{font-size:16px}
+}
