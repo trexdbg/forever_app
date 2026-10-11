@@ -1,0 +1,43 @@
+/* ForEveroth / global homepage search — compact, accessible and responsive. */
+.global-search{position:relative;z-index:35;margin:0 auto 18px;}
+.global-search-shell{display:flex;align-items:center;gap:14px;min-height:66px;padding:10px 15px 10px 19px;background:#121e17;border:1px solid #8c77513d;box-shadow:0 7px 21px #0002;transition:border-color .16s,background .16s}
+.global-search-shell:focus-within{background:#18251b;border-color:#c6a56b;box-shadow:0 0 0 1px #c6a56b32,0 12px 28px #0004}
+.global-search-icon{flex:0 0 auto;width:23px;height:23px;color:#d9bd85;display:grid;place-items:center}
+.global-search-icon svg{width:21px;height:21px}
+.global-search-content{flex:1;min-width:0;display:flex;flex-direction:column;gap:0}
+.global-search-content label{font-size:10px;letter-spacing:.11em;text-transform:uppercase;font-weight:800;color:#b8a47d}
+#global-search-input{display:block;margin:0;width:100%;height:31px;padding:0;background:transparent;border:0;outline:0;box-shadow:none;border-radius:0;color:#f1ece1;font:500 clamp(14px,1.5vw,18px) "Trebuchet MS","Segoe UI",sans-serif}
+#global-search-input:focus-visible{outline:0}
+#global-search-input::placeholder{color:#8e9e91;opacity:1}
+#global-search-input::-webkit-search-cancel-button{cursor:pointer}
+.global-search-hint{flex:0 0 auto;border:1px solid #65705b7a;border-radius:3px;padding:5px 9px;font-size:10px;color:#b5b7a5;white-space:nowrap}
+.global-search-panel{position:absolute;left:0;right:0;top:calc(100% + 5px);z-index:40;background:#101b14;border:1px solid #b69b697d;box-shadow:0 20px 42px #000b;overflow:hidden}
+.global-search-panel[hidden]{display:none!important}
+.global-search-filterbar{display:flex;gap:7px;overflow-x:auto;padding:12px 13px;border-bottom:1px solid #43503a;scrollbar-width:thin}
+.global-search-filter{flex:0 0 auto;padding:6px 11px;background:#1b291e;border:1px solid #465640;color:#b6c2af;font-size:11px;font-weight:700;cursor:pointer;border-radius:3px}
+.global-search-filter:hover,.global-search-filter:focus-visible{border-color:#bfa06c;color:#f6ddaa}
+.global-search-filter.is-active{background:#d4b47b;color:#142018;border-color:#e1c28e}
+.global-search-status{font-size:11px;color:#a9b6a4;padding:9px 16px 7px;min-height:32px}
+.global-search-results{max-height:min(54vh,450px);overflow-y:auto;overscroll-behavior:contain}
+.global-search-result{display:flex;align-items:center;gap:15px;min-height:62px;padding:9px 17px;color:#e8e7dd;border-top:1px solid #ffffff0d;transition:background .12s}
+.global-search-result:hover,.global-search-result:focus-visible{background:#213025;outline-offset:-2px}
+.global-search-result-type{flex:0 0 135px;font:800 10px "Trebuchet MS",sans-serif;letter-spacing:.035em;text-transform:uppercase;color:#d1b47a}
+.global-search-result-copy{display:flex;min-width:0;flex:1;flex-direction:column;gap:2px}
+.global-search-result-copy strong{color:#f3eee1;font-size:14px;font-weight:700;overflow-wrap:anywhere}
+.global-search-result-copy small{color:#a5b4a5;font-size:11px;overflow-wrap:anywhere}
+.global-search-result-arrow{margin-left:auto;color:#d9b778;font-size:17px;flex:0 0 auto}
+.global-search-empty{padding:23px 17px;margin:0;font-size:13px}
+.global-search-more{display:block;width:100%;background:#19271c;color:#dabb7c;border:0;border-top:1px solid #536049;padding:12px;font-size:12px;font-weight:750}
+.global-search-more:hover{background:#273c2b}
+.global-search-more[hidden]{display:none!important}
+@media(max-width:680px){
+ .global-search{margin-bottom:13px}
+ .global-search-shell{min-height:63px;padding:9px 11px;gap:10px}
+ .global-search-hint{display:none}
+ .global-search-result{gap:9px;padding:10px 12px;min-height:64px}
+ .global-search-result-type{flex-basis:84px;font-size:9px}
+ .global-search-result-copy strong{font-size:13px}
+ .global-search-result-copy small{font-size:10px}
+ .global-search-results{max-height:53vh}
+ .global-search-panel{top:calc(100% + 2px)}
+}
