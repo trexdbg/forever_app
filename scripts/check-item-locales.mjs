@@ -134,9 +134,17 @@ assert.equal(fr.name({id:6909,name:"Strike of the Hydra",source_status:"classic_
 assert.equal(en.name({id:6909,name:"Strike of the Hydra",source_status:"classic_reference"}),"Strike of the Hydra");
 const unresolvedRare=(JSON.parse(readFileSync(resolve(root,"data/rares.json"),"utf8")).rares||[])
  .flatMap(row=>row.loot||[]).filter(i=>!i.item_id);
-assert.equal(unresolvedRare.length,1,"Unresolved rare item reference count changed");
+assert.equal(unresolvedRare.length,0,"All rare drops must have item IDs");
+const rareDataset=JSON.parse(readFileSync(resolve(root,"data/rares.json"),"utf8"));
+const duskstalker=rareDataset.rares.find(r=>r.name?.en==="Duskstalker");
+const hide=duskstalker?.loot?.find(i=>i.name?.en==="Duskstalker's Hide");
+assert.equal(hide?.item_id,284165,"Duskstalker's Hide Forever ID mismatch");
+assert.equal(hide?.source_version,"forever_beta","Duskstalker's Hide is new Forever, not Classic");
+assert.equal(hide?.item_source_url,"https://www.wowhead.com/forever/item=284165");
+assert.equal(fr.name({id:7686,name:"Ironspine's Eye",name_fr:"Œil d'Ironspine",source_status:"classic_reference"}),"Oeil d'Echine-de-fer");
+assert.equal(fr.name({id:7688,name:"Ironspine's Ribcage",source_status:"classic_reference"}),"Thorax d'Echine-de-fer");
+assert.equal(fr.name({id:4448,name:"Husk of Naraxis",source_status:"classic_reference"}),"Carcasse de Naraxis");
 assert.equal(fr.name({id:273106,name:"Blueprint: Greenhouse",name_fr:"Plan : serre",source_status:"forever_beta_wowhead"}),"Plan : serre");
-assert.equal(unresolvedRare[0].name.en,"Duskstalker's Hide");
 const iconCatalog=JSON.parse(readFileSync(resolve(root,"data/items-classic-cache.json"),"utf8"));
 const catalogIconById=new Map((iconCatalog.items||[]).filter(i=>i.id&&i.icon).map(i=>[Number(i.id),i.icon]));
 const rareCatalog=JSON.parse(readFileSync(resolve(root,"data/rares.json"),"utf8"));
