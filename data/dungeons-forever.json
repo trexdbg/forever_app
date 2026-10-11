@@ -2419,7 +2419,11 @@
               "source_status": "classic_loot_reference",
               "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/rhahkzor/",
               "iconFileId": 133046,
-              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide",
+              "id": 5187,
+              "itemUrl": "https://www.wowhead.com/classic/item=5187",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             },
             {
               "en": "Rockslicer",
@@ -2428,7 +2432,11 @@
               "source_status": "classic_loot_reference",
               "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/rhahkzor/",
               "iconFileId": 135419,
-              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide",
+              "id": 872,
+              "itemUrl": "https://www.wowhead.com/classic/item=872",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             }
           ],
           "note": {
@@ -2457,7 +2465,11 @@
               "source_status": "classic_loot_reference",
               "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/sneed/",
               "iconFileId": 135641,
-              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide",
+              "id": 2169,
+              "itemUrl": "https://www.wowhead.com/classic/item=2169",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             },
             {
               "en": "Gold-flecked Gloves",
@@ -2466,7 +2478,11 @@
               "source_status": "classic_loot_reference",
               "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/sneed/",
               "iconFileId": 132957,
-              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide",
+              "id": 5195,
+              "itemUrl": "https://www.wowhead.com/classic/item=5195",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             },
             {
               "en": "Taskmaster Axe",
@@ -2475,7 +2491,11 @@
               "source_status": "classic_loot_reference",
               "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/sneed/",
               "iconFileId": 135424,
-              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide",
+              "id": 5194,
+              "itemUrl": "https://www.wowhead.com/classic/item=5194",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             },
             {
               "en": "Buzz Saw",
@@ -2484,7 +2504,11 @@
               "source_status": "classic_loot_reference",
               "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/sneed/",
               "iconFileId": 135325,
-              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide",
+              "id": 1937,
+              "itemUrl": "https://www.wowhead.com/classic/item=1937",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             }
           ],
           "note": {
@@ -2513,7 +2537,11 @@
               "source_status": "classic_loot_reference",
               "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/miner-johnson/",
               "iconFileId": 134948,
-              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide",
+              "id": 5443,
+              "itemUrl": "https://www.wowhead.com/classic/item=5443",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             },
             {
               "en": "Miner's Cape",
@@ -2522,7 +2550,11 @@
               "source_status": "classic_loot_reference",
               "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/miner-johnson/",
               "iconFileId": 133763,
-              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide",
+              "id": 5444,
+              "itemUrl": "https://www.wowhead.com/classic/item=5444",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             }
           ],
           "note": {
@@ -2551,7 +2583,11 @@
               "source_status": "classic_loot_reference",
               "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/gilnid/",
               "iconFileId": 134582,
-              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide",
+              "id": 5199,
+              "itemUrl": "https://www.wowhead.com/classic/item=5199",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             },
             {
               "en": "Lavishly Jeweled Ring",
@@ -2594,7 +2630,11 @@
               "source_status": "classic_loot_reference",
               "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/captain-greenskin/",
               "iconFileId": 132515,
-              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide",
+              "id": 10403,
+              "itemUrl": "https://www.wowhead.com/classic/item=10403",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             },
             {
               "en": "Corsair's Overshirt",
@@ -2603,7 +2643,11 @@
               "source_status": "classic_loot_reference",
               "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/captain-greenskin/",
               "iconFileId": 135012,
-              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide",
+              "id": 5202,
+              "itemUrl": "https://www.wowhead.com/classic/item=5202",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             }
           ],
           "note": {
@@ -2632,7 +2676,11 @@
               "source_status": "classic_loot_reference",
               "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/mr-smite/",
               "iconFileId": 135325,
-              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide",
+              "id": 5192,
+              "itemUrl": "https://www.wowhead.com/classic/item=5192",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             },
             {
               "en": "Smite's Reaver",
@@ -2641,7 +2689,11 @@
               "source_status": "classic_loot_reference",
               "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/mr-smite/",
               "iconFileId": 132416,
-              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide",
+              "id": 5196,
+              "itemUrl": "https://www.wowhead.com/classic/item=5196",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             },
             {
               "en": "Smite's Mighty Hammer",
@@ -2650,7 +2702,11 @@
               "source_status": "classic_loot_reference",
               "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/mr-smite/",
               "iconFileId": 133046,
-              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide",
+              "id": 7230,
+              "itemUrl": "https://www.wowhead.com/classic/item=7230",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             }
           ],
           "note": {
@@ -2679,7 +2735,11 @@
               "source_status": "classic_loot_reference",
               "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/cookie/",
               "iconFileId": 132906,
-              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide",
+              "id": 5197,
+              "itemUrl": "https://www.wowhead.com/classic/item=5197",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             },
             {
               "en": "Cookie's Stirring Rod",
@@ -2700,7 +2760,12 @@
               "fr": "Anneau viridien",
               "slot": "Doigt",
               "source_status": "classic_loot_reference",
-              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/cookie/"
+              "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/cookie/",
+              "id": 11982,
+              "itemUrl": "https://www.wowhead.com/classic/item=11982",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false,
+              "boss_association_status": "classic_reference_unverified_forever"
             }
           ],
           "note": {
@@ -2729,7 +2794,11 @@
               "source_status": "classic_loot_reference",
               "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/edwin-vancleef/",
               "iconFileId": 133760,
-              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide",
+              "id": 5193,
+              "itemUrl": "https://www.wowhead.com/classic/item=5193",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             },
             {
               "en": "Corsair's Overshirt",
@@ -2738,7 +2807,11 @@
               "source_status": "classic_loot_reference",
               "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/edwin-vancleef/",
               "iconFileId": 135012,
-              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/deadmines-guide",
+              "id": 5202,
+              "itemUrl": "https://www.wowhead.com/classic/item=5202",
+              "id_reference_status": "classic_id_crosschecked",
+              "forever_loot_confirmed": false
             },
             {
               "en": "Cruel Barb",
