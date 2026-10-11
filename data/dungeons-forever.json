@@ -1816,7 +1816,7 @@
             },
             {
               "en": "Cursed Felblade",
-              "fr": "Lame gangrenée maudite",
+              "fr": "Lame corrompue maudite",
               "slot": "Main droite / Main hand",
               "source_status": "classic_loot_reference",
               "id": 14145,
@@ -2251,7 +2251,7 @@
           "loot": [
             {
               "en": "Venomstrike",
-              "fr": "Frappe venimeuse",
+              "fr": "Frappe-venin",
               "slot": "Arc / Bow",
               "source_status": "classic_loot_reference",
               "id": 6469,
@@ -2794,7 +2794,7 @@
             },
             {
               "en": "Cookie's Stirring Rod",
-              "fr": "Baguette agitatrice de Macaron",
+              "fr": "Bâton à touiller de Macaron",
               "slot": "Baguette",
               "source_status": "classic_loot_reference",
               "source_url": "https://theforeverera.com/en/dungeons/the-deadmines/cookie/",
@@ -3070,7 +3070,7 @@
             },
             {
               "en": "Silverlaine's Family Seal",
-              "fr": "Sceau familial d'Argelaine",
+              "fr": "Sceau de la famille d'Argelaine",
               "slot": "Doigt",
               "source_status": "classic_loot_reference",
               "source_url": "https://theforeverera.com/en/dungeons/shadowfang-keep/baron-silverlaine/",
@@ -3578,7 +3578,7 @@
           "loot": [
             {
               "en": "Rod of the Sleepwalker",
-              "fr": "Bâton du somnambule",
+              "fr": "Bâtonnet du somnanbule",
               "slot": "Bâton / Staff",
               "source_status": "classic_loot_reference",
               "id": 1155,
