@@ -34,7 +34,7 @@ const detailsOf=ref=>{
  const french=betaName?.fr||((id!==undefined&&id!==null)?s.data.translations[String(id)]:null);
  const questId=Number.isInteger(Number(id))&&Number(id)>0?Number(id):null;
  const level=questId===null?null:s.questLevels?.[String(questId)];
- return {name:document.documentElement.lang==="en"?(betaName?.en||Q.questName(name)):(french||Q.questName(name)),original:name,french:french||"",id:questId,level:betaName?({97977:3,87288:7,99046:9}[id]||null):(Number.isInteger(level)&&level>=1&&level<=65?level:null),origin:betaName?.origin||"classic",source:betaName?.source||null,titleStatus:betaName?.title_status||""};
+ return {name:document.documentElement.lang==="en"?(betaName?.en||Q.questName(name)):(french||Q.questName(name)),original:name,french:french||"",id:questId,level:betaName?.origin==="forever"?({97977:3,87288:7,99046:9}[id]||null):(Number.isInteger(level)&&level>=1&&level<=65?level:null),origin:betaName?.origin||"classic",source:betaName?.source||null,titleStatus:betaName?.title_status||""};
 };
 const waypointTitle=w=>Array.isArray(w.header)?QT(w.header[1],w.header[0]):Q.header(w.header);
 const syncUrl=()=>{const u=new URL(location.href);u.searchParams.set("faction",s.faction);u.searchParams.set("race",s.profile);u.searchParams.set("peuple",s.race);u.searchParams.set("step",String(s.index+1));if(s.mode==="beta")u.searchParams.set("mode","forever-beta");else u.searchParams.delete("mode");history.replaceState(null,"",u.pathname+u.search+u.hash)};
@@ -253,6 +253,13 @@ function updateModeControls(){
   b.classList.toggle("selected",active);b.setAttribute("aria-pressed",String(active));
  }
  info.hidden=s.mode!=="beta";
+ for(const a of document.querySelectorAll(".nav-submenu a")){
+  const url=new URL(a.href);
+  if(!url.pathname.endsWith("/quetes/"))continue;
+  const isBetaLink=url.searchParams.get("mode")==="forever-beta";
+  if(isBetaLink===(s.mode==="beta"))a.setAttribute("aria-current","page");
+  else a.removeAttribute("aria-current");
+ }
  if(s.mode==="beta")info.textContent=QT(
   "Parcours expérimental 1–10 : étapes Classic + quêtes Forever documentées. Points Forever indicatifs, validation en jeu nécessaire.",
   "Experimental 1–10 route: Classic steps + documented Forever quests. Forever markers are indicative; in-game validation is needed."
