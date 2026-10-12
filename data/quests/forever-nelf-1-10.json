@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "guide_version": "2026-10-12-beta4-safe-levels",
+  "guide_version": "2026-10-12-beta5-safe-levels",
   "source_commit": "e82b38b7477f4cbef0474a27b8c1abf1ae641d27",
   "faction": "alliance",
   "race": "nelf",
@@ -200,7 +200,13 @@
               "p1"
             ]
           ]
-        },
+        }
+      ]
+    },
+    {
+      "zone": "teldrassil",
+      "experience": 2,
+      "waypoints": [
         {
           "coords": {
             "x": 58,
@@ -237,7 +243,14 @@
               "p2"
             ]
           ],
-          "priority": "optional"
+          "priority": "optional",
+          "uncertain_position": true,
+          "special": [
+            [
+              "Classic location only: Grell and Grellkin drop Fel Moss, near the western camps of Shadowglen. Verify drops on Forever.",
+              "Position Classic : les grells et grellins donnent la mousse corrompue près des campements ouest de Sombrevallon. Butin à vérifier dans Forever."
+            ]
+          ]
         }
       ]
     },
