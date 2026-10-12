@@ -220,3 +220,43 @@
  .bis-v2-quality-label{display:none}
  .bis-v2-weapons .bis-v2-slot{min-height:86px}
 }
+
+/* 2026-10-12: compact BiS equipment picker. The core actions stay available on demand. */
+.bis-v2-picker{gap:9px}
+.bis-v2-picker-head h3{margin:0;font-size:23px;line-height:1.12}
+.bis-v2-picked,.level-bis-picked{padding:9px 10px;border:1px solid #465a43;background:#18261b}
+.bis-v2-selected.bis-v2-selected-compact{display:flex;align-items:center;justify-content:space-between;gap:9px;margin:0;min-height:43px}
+.bis-v2-selected-preview{display:flex;align-items:center;gap:9px;min-width:0;flex:1}
+.bis-v2-selected-preview>.bis-v2-icon{width:39px;height:39px}
+.bis-v2-selected-preview>.bis-v2-icon>.level-bis-icon{width:100%;height:100%;border:0;border-radius:0;background:transparent}
+.bis-v2-selected-preview>.bis-v2-icon>.level-bis-icon img{width:100%;height:100%}
+.bis-v2-selected-info{min-width:0}
+.bis-v2-selected-info strong{font-size:13px;line-height:1.25}
+.bis-v2-selected-info small{font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.bis-v2-selected-actions{display:flex;align-items:center;gap:5px;flex:none}
+.bis-v2-selected-actions .bis-v2-inline-details,.bis-v2-more-trigger{background:#243126;color:#e8d4a5;border:1px solid #59654f;border-radius:4px;min-height:34px;cursor:pointer}
+.bis-v2-selected-actions .bis-v2-inline-details{padding:7px 9px;font-size:11px;font-weight:750}
+.bis-v2-selected-actions .bis-v2-inline-details:hover,.bis-v2-more-trigger:hover{background:#354330;border-color:#c7a56b}
+.bis-v2-more-actions{position:relative;flex:none}
+.bis-v2-more-trigger{display:flex;align-items:center;justify-content:center;list-style:none;width:34px;height:34px;font-size:22px;line-height:1}
+.bis-v2-more-trigger::-webkit-details-marker{display:none}
+.bis-v2-more-trigger::marker{content:""}
+.bis-v2-more-actions[open] .bis-v2-more-trigger{border-color:#d9ba7e;background:#354330}
+.bis-v2-more-actions>.bis-v2-actions{position:absolute;top:calc(100% + 6px);right:0;z-index:35;display:flex;flex-direction:column;gap:4px;min-width:185px;width:max-content;max-width:min(240px,80vw);margin:0;padding:7px;background:#17251b;border:1px solid #748065;border-radius:5px;box-shadow:0 10px 30px #0009}
+.bis-v2-more-actions>.bis-v2-actions button,.bis-v2-more-actions>.bis-v2-actions a{display:block;text-align:left;white-space:normal;width:100%;font-size:11px;min-height:34px;padding:8px 9px}
+.bis-v2-more-actions:focus-within{z-index:40}
+.bis-v2-selected-actions button:focus-visible,.bis-v2-more-trigger:focus-visible,.bis-v2-mode-row select:focus-visible{outline:2px solid #e6c68d;outline-offset:2px}
+.bis-v2-mode-row{display:flex;align-items:center;gap:10px;justify-content:space-between;font-size:11px;color:#9fb49d}
+.bis-v2-mode-row label{font-size:11px;font-weight:700}
+.bis-v2-mode-row select{flex:1;max-width:220px;min-height:35px;padding:6px 28px 6px 10px;border:1px solid #53664e;border-radius:4px;background:#1d2c22;color:#e6e2d3;font-size:12px;cursor:pointer}
+.bis-v2-picked .bis-v2-blank,.level-bis-picked .bis-v2-blank{margin:0;padding:7px 0}
+.bis-v2-selected-compact.is-acquired .bis-v2-selected-info strong:after{content:" ✓";color:#81dba1;font-family:Arial,sans-serif;font-size:12px}
+.bis-v2-selected-compact.is-custom .bis-v2-selected-info strong:after{content:" ★";color:#e6c68d;font-family:Arial,sans-serif;font-size:11px}
+@media(max-width:650px){
+ .bis-v2-picker-head h3{font-size:21px}
+ .bis-v2-selected-preview>.bis-v2-icon{width:35px;height:35px}
+ .bis-v2-selected-info strong{font-size:12px}
+ .bis-v2-selected-actions .bis-v2-inline-details{font-size:0;padding:7px 9px}
+ .bis-v2-selected-actions .bis-v2-inline-details::first-letter{font-size:15px}
+ .bis-v2-mode-row select{max-width:190px}
+}

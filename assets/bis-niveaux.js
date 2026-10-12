@@ -469,24 +469,33 @@ function renderPicker(){
  const slot=db.slots.find(s=>s.id===activeSlot),id=slot.id,i=currentPlan.selected.get(id);
  const blocked=currentPlan.blocked.has(id),manual=currentPlan.manual.has(id);
  $("level-picker-slot").textContent=labelSlot(slot);
- $("level-picker-hint").textContent=blocked?u.twohand:(en?"Up to level ":"Jusqu’au niveau ")+levels[band][1];
- const selected=$("level-picked");selected.replaceChildren(mk("span","bis-v2-eyebrow",manual?u.chosen:u.suggestion));
+ 
+ const selected=$("level-picked");selected.replaceChildren();
  if(!i)selected.append(mk("p","bis-v2-blank",blocked?u.twohand:u.missing));
  else{
-  const item=mk("div","bis-v2-selected");item.dataset.quality=i.quality||"common";
-  const detail=mk("div","bis-v2-selected-info");
-  detail.append(mk("strong","",localizedName(i)),
-   mk("small","",T.required+" "+required(i)+(Number.isFinite(i.itemLevel)?" · "+T.itemLevel+" "+i.itemLevel:"")),
-   mk("span","level-bis-source-proof"+(isForever(i)?"":" is-classic")+(isObserved(i)?"":" is-client"),(i.acquisition?.kind==="quest"?(en?"Beta quest reward":"Récompense de quête bêta"):sourceLabel(i))));
-  if(localizedOrigin(i))detail.append(mk("small","level-bis-acquisition-inline",localizedOrigin(i)));
-  if(factionText(i))detail.append(mk("small","level-bis-acquisition-inline",factionText(i)));
-  item.append(sheetIcon(i,slot.icon),detail);selected.append(item);
-  window.ForeverItemTooltip?.bind(item,{...localizedTooltip(i),slotLabel:labelSlot(slot)});
-  const actions=mk("div","bis-v2-actions"),button=mk("button","", "ⓘ "+u.details);
-  button.type="button";button.addEventListener("click",()=>window.ForeverItemTooltip?.pin({...localizedTooltip(i),slotLabel:labelSlot(slot)}));actions.append(button);
-  if(manual){const reset=mk("button","bis-v2-clear",u.reset);reset.type="button";reset.addEventListener("click",()=>saveChoice(id,0));actions.append(reset)}
-  const reference=sourceLink(i);if(reference)actions.append(reference);
-  selected.append(actions);
+  const item=mk("div","bis-v2-selected bis-v2-selected-compact"+(manual?" is-custom":""));
+  item.dataset.quality=i.quality||"common";
+  const preview=mk("div","bis-v2-selected-preview");
+  preview.append(sheetIcon(i,slot.icon));
+  const text=mk("div","bis-v2-selected-info");
+  text.append(mk("strong","",localizedName(i)),mk("small","",localizedOrigin(i)||sourceLabel(i)));
+  preview.append(text);item.append(preview);
+  window.ForeverItemTooltip?.bind(preview,{...localizedTooltip(i),slotLabel:labelSlot(slot)});
+  const controls=mk("div","bis-v2-selected-actions");
+  const detail=mk("button","bis-v2-info-button bis-v2-inline-details","ⓘ "+u.details);
+  detail.type="button";detail.setAttribute("aria-label",u.details+" : "+localizedName(i));
+  detail.addEventListener("click",()=>window.ForeverItemTooltip?.pin({...localizedTooltip(i),slotLabel:labelSlot(slot)}));
+  controls.append(detail);
+  const reference=sourceLink(i);
+  if(manual||reference){
+   const extra=mk("details","bis-v2-more-actions");
+   const toggle=mk("summary","bis-v2-more-trigger","⋯");toggle.setAttribute("aria-label",en?"More equipment actions":"Autres actions pour l’objet");toggle.title=en?"More actions":"Plus d’actions";
+   const menu=mk("div","bis-v2-actions");
+   if(manual){const reset=mk("button","bis-v2-clear",u.reset);reset.type="button";reset.addEventListener("click",()=>saveChoice(id,0));menu.append(reset)}
+   if(reference)menu.append(reference);
+   extra.append(toggle,menu);controls.append(extra);
+  }
+  item.append(controls);selected.append(item);
  }
  const list=currentPlan.available.get(id)||[],root=$("level-quality");root.replaceChildren();
  function quality(q,label,n){
