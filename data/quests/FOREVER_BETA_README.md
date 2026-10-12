@@ -1,46 +1,45 @@
-# Quêtes Forever — pilote elfe de la nuit niveaux 1–10
+# Quêtes Forever — elfes de la nuit 1–10 (bêta, révision du 12 octobre 2026)
 
-Version expérimentale **non validée en jeu**, préparée le 12 octobre 2026. Ne pas confondre une référence Classic, un texte de quête Forever attesté et une position réellement vérifiée dans le client Forever.
+## Limites importantes
 
-## Activation
+**Ce n'est pas une route entièrement validée dans le jeu WoW Forever.** L'itinéraire de base suit des quêtes Classic connues et leurs coordonnées de référence, sans supposer que les objectifs ou l'XP sont inchangés dans Forever. Les ajouts Forever attestés dans les textes du client bêta sont montrés dans un **panneau séparé** ; les sources ne confirment pas leur donneur ni la position exacte. Les titres français des quêtes Forever sans texte français officiel sont des traductions éditoriales.
 
-Dans `/quetes/` et `/en/quetes/`, choisir l'Alliance puis « Elfe de la nuit / Night Elf » et basculer « Forever Bêta / Beta ». Le guide Classic et toutes les autres races restent inchangés. L'URL conserve `?faction=alliance&race=nelf&peuple=nelf&mode=forever-beta&step=...` pour un partage reproductible. Aucune progression n'est enregistrée.
+## Itinéraire principal simplifié
 
-## Périmètre et route
+- **15 étapes**, dans Teldrassil puis Darnassus, avec **60 points de passage** au dernier contrôle.
+- Départ à Sombrevallon niveau 1 ; les deux étapes de « La Protectrice sylvestre » sont distinguées.
+- Dolanaar : quêtes Classic simples et regroupées géographiquement.
+- Vers Darnassus autour du niveau 9 ; passage final et maîtrise de classe au niveau 10 selon personnage.
+- Règle automatique stricte : aucune quête dont le niveau est **supérieur au niveau conseillé de l'étape +1** et aucune quête de niveau supérieur à **10**. Les quêtes élites/détours (« Ursal le Marteleur », etc.) sont exclues. Certaines chaînes restent donc volontairement incomplètes et se poursuivront après le niveau 10 ; ne pas les présenter comme terminées.
+- Le niveau indiqué est un **niveau conseillé**, pas une mesure de l'XP Forever. Si vous n'avez pas atteint ce niveau, terminer les objectifs du secteur adaptés à votre classe ou éliminer quelques monstres proches de votre niveau avant l'étape suivante.
+- L'URL conserve le mode `?mode=forever-beta`. Le mode Classic et les autres races conservent leurs parcours existants.
 
-- Niveaux ~1–5 : 5 nouvelles étapes et 25 points de passage Classic (Sombrevallon : Protectrice sylvestre, Équilibre de la nature, Venin/Œuf Tissebois, Antidote d'Iverron, Couronne de la Terre). Positionnement 0–100 Classic non garanti sur Forever.
-- Niveaux ~5–10 : les 11 étapes de la source Vanilla Questing Night Elf (Dolanaar, Teldrassil, Darnassus), puis une étape de niveau cible 10. **Niveau estimé, pas XP exact ou niveau réel du personnage**.
-- Trois nouvelles quêtes de Forever attestées par les caches de textes de quête :
-  - `97977` « La llamada de la naturaleza » / « L'appel de la nature » (FR éditorial) : 4 totems des Pins-tordus à rendre à Tarindrella ; le camp ouest est un **secteur estimé**, et le donneur exact inconnu. Conditionnelle.
-  - `87288` « Los pelambres de sable de la noche suaves » / « Peaux souples de sabre-de-nuit » (FR éditorial) : 6 peaux à remettre à Aldria près de Dolanaar ; **secteur estimé, donneur non confirmé**. Conditionnelle.
-  - `99046` « The Lost Runner » / « La messagère disparue » (FR éditorial) : rechercher la sentinelle Eralya Leafshadow sur la route du Bosquet de l'Oracle. **80 XP seulement**, optionnelle ; coordonnées estimées.
+## Trois quêtes Forever documentées, facultatives
 
-**Important :** les nouveaux textes Forever sont attestés, mais les NPC qui les proposent, les emplacements exacts des objets et l'accès par niveau/personnage ne sont pas tous vérifiés. Le code interdit le bouton copier `/way` pour les nouvelles positions incertaines. Les quêtes élites de niveau supérieur ne sont pas recommandées dans la route 1–10.
+| ID | Nom français (éditorial) | Niveau | Requis | Indication |
+| --- | --- | --- | --- | --- |
+| [97977](https://forever-codex.com/quests/97977/) | L'appel de la nature | 3 | 1 | 4 totems de Pins-tordus, à remettre à Tarindrella ; secteur de Sombrevallon, donneur et lieux exacts inconnus |
+| [87288](https://forever-codex.com/quests/87288/) | Peaux souples de sabre-de-nuit | 7 | 4 | 6 peaux à remettre à Aldria, Dolanaar ; donneur et lieux exacts non vérifiés |
+| [99046](https://forever-codex.com/quests/99046/) | La messagère disparue | 9 | 4 | Rechercher Eralya Leafshadow vers le Bosquet de l'Oracle ; 80 XP, donneur et position exacte inconnus |
 
-## Changements Classic observés sur la bêta
+Les niveaux, objectifs et identifiants de ces trois quêtes proviennent des **textes et métadonnées de la bêta**, pas d'une validation en jeu. Elles ne sont **plus** des arrêts obligatoires sur la carte, et aucune coordonnée n'a été inventée.
 
-Les métadonnées `changes_classic` enregistrent « Bounty: Gnarlpine Furbolg » (20 → 15 cibles) et « Escaping Ban'ethil » (sentinelle plus lente). Ces quêtes ne sont pas insérées de force dans le parcours 1–10 ; le changement est enregistré pour l'extension des routes.
+## Sources complémentaires
 
-## Provenances
+- Quêtes Classic de Teldrassil : https://theforeverera.com/en/quests/zone/teldrassil/
+- Classic, « The Woodland Protector » (459) : https://foreverdb.net/quest/459-the-woodland-protector
+- Changements des quêtes Forever : https://theforeverera.com/fr/changes/
+- Itinéraire Classic historique conservé : `data/quests/alliance.json` + `data/quests/levels.json`
 
-- Itinéraire Classic de départ : https://www.joanasworld.com/alliance-1-12-teldrassil.php
-- Référence identifiants des quêtes Classic : https://theforeverera.com/en/quests/zone/teldrassil/
-- Nouvelle quête `97977` : https://forever-codex.com/quests/97977/
-- Nouvelle quête `87288` : https://forever-codex.com/quests/87288/
-- Nouvelle quête `99046` : https://forever-codex.com/quests/99046/
-- Correctifs bêta : https://theforeverera.com/fr/changes/
-- Traductions des quêtes Classic : fiches WoWHead Forever, lorsque vérifiées.
+## Contrôles
 
-## Vérification avant publication
+- [x] Structure JSON et JavaScript validée
+- [x] Aucun nom/ID de quête non connu dans les étapes
+- [x] Quêtes Classic plafonnées à niveau conseillé +1 et niveau de quête au plus 10
+- [x] Nouveautés Forever référencées et séparées des étapes Classic
+- [x] Versions FR et EN à jour, guide Classic non modifié
+- [ ] Parcours optimisé chronométré avec un personnage elfe de la nuit en bêta Forever
+- [ ] Vérification en jeu des donneurs, positions et butins des trois quêtes Forever
+- [ ] Essais visuels et de navigation sur mobile après publication
 
-- [x] JavaScript valide syntaxiquement et `manifest.source_commit` compatible.
-- [x] 17 étapes jusqu'au niveau cible 10 et 81 points de passage Classic + Forever.
-- [x] Toutes les coordonnées calculées sont comprises entre 0 et 100 ; aucun autre secteur que Teldrassil/Darnassus.
-- [x] 3 nouvelles quêtes Forever et liens sources ; nouvelles positions non confirmées signalées.
-- [x] Pages FR et EN chargent le nouveau JS et les nouveaux styles ; script Classic préservé.
-- [ ] Tester réellement les cartes et les interactions sur mobile et ordinateur (pas de déploiement de cette branche).
-- [ ] Valider en jeu le nom, le donneur, les objectifs, la suite et les positions des 3 quêtes Forever.
-- [ ] Mesurer les niveaux et le temps de parcours avec l'XP actuelle de la bêta.
-- [ ] Vérifier les chaînes de quêtes de classe selon le personnage.
-
-La base `data/quests/alliance.json` d'origine n'est **pas modifiée** : le pilote est un overlay indépendant sous `data/quests/forever-nelf-1-10.json`.
+Pour les modifications futures, ajouter une quête Forever au parcours principal **uniquement après vérification de son donneur, objectif, coordonnées et faisabilité au niveau conseillé**.
