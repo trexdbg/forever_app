@@ -6,8 +6,7 @@ const Q=window.ForeverQuestLocale||{header:s=>s||"",note:s=>String(Array.isArray
 const $=id=>document.getElementById(id),canvas=$("quest-canvas");
 if(!canvas)return;
 const ctx=canvas.getContext("2d"),W=canvas.width,H=canvas.height;
-const cache={},s={meta:null,data:null,questLevels:null,faction:"alliance",profile:"human",race:"human",steps:[],index:0,selected:0,zoom:1,center:{x:50,y:50},image:null,mapUrl:"",mapLoaded:false,mode:"classic",beta:null};
-let betaCache=null;
+const cache={},s={meta:null,data:null,questLevels:null,faction:"alliance",profile:"human",race:"human",steps:[],index:0,selected:0,zoom:1,center:{x:50,y:50},image:null,mapUrl:"",mapLoaded:false};
 const RACES={
  alliance:[{id:"human",profile:"human",label:"Humain"},{id:"dwarf",profile:"gnorf",label:"Nain"},{id:"gnome",profile:"gnorf",label:"Gnome"},{id:"nelf",profile:"nelf",label:"Elfe de la nuit"}],
  horde:[{id:"orc",profile:"trorc",label:"Orc"},{id:"troll",profile:"trorc",label:"Troll"},{id:"undead",profile:"undead",label:"Mort-vivant"},{id:"tauren",profile:"tauren",label:"Tauren"}]
@@ -27,17 +26,16 @@ const cleanStr=v=>String(v||"").trim();
 const normal=v=>cleanStr(v).normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
 const detailsOf=ref=>{
  const name=Array.isArray(ref)?ref[0]:ref;
- const target=(s.mode==="beta"&&s.beta?.quest_ids?.[name])??s.data.quest_ids[name];
+ const target=s.data.quest_ids[name];
  let id=target;
  if(Array.isArray(target)){const suffix=Array.isArray(ref)?String(ref[1]||""):"";const n=suffix.match(/(?:p|^)(\d+)/);id=target[n?clamp(Number(n[1])-1,0,target.length-1):0];}
- const betaName=s.mode==="beta"?s.beta?.names?.[String(id)]:null;
- const french=betaName?.fr||((id!==undefined&&id!==null)?s.data.translations[String(id)]:null);
+ const french=(id!==undefined&&id!==null)?s.data.translations[String(id)]:null;
  const questId=Number.isInteger(Number(id))&&Number(id)>0?Number(id):null;
  const level=questId===null?null:s.questLevels?.[String(questId)];
- return {name:document.documentElement.lang==="en"?(betaName?.en||Q.questName(name)):(french||Q.questName(name)),original:name,french:french||"",id:questId,level:betaName?.origin==="forever"?({97977:3,87288:7,99046:9}[id]||null):(Number.isInteger(level)&&level>=1&&level<=65?level:null),origin:betaName?.origin||"classic",source:betaName?.source||null,titleStatus:betaName?.title_status||""};
+ return {name:document.documentElement.lang==="en"?Q.questName(name):(french||Q.questName(name)),original:name,french:french||"",id:questId,level:Number.isInteger(level)&&level>=1&&level<=65?level:null};
 };
-const waypointTitle=w=>Array.isArray(w.header)?QT(w.header[1],w.header[0]):Q.header(w.header);
-const syncUrl=()=>{const u=new URL(location.href);u.searchParams.set("faction",s.faction);u.searchParams.set("race",s.profile);u.searchParams.set("peuple",s.race);u.searchParams.set("step",String(s.index+1));if(s.mode==="beta")u.searchParams.set("mode","forever-beta");else u.searchParams.delete("mode");history.replaceState(null,"",u.pathname+u.search+u.hash)};
+const waypointTitle=w=>Q.header(w.header);
+const syncUrl=()=>{const u=new URL(location.href);u.searchParams.set("faction",s.faction);u.searchParams.set("race",s.profile);u.searchParams.set("peuple",s.race);u.searchParams.set("step",String(s.index+1));history.replaceState(null,"",u.pathname+u.search+u.hash)};
 const project=(x,y)=>({x:(50+(x-s.center.x)*s.zoom)*W/100,y:(50+(y-s.center.y)*s.zoom)*H/100});
 const clientPoint=e=>{const r=canvas.getBoundingClientRect();return{x:(e.clientX-r.left)*W/r.width,y:(e.clientY-r.top)*H/r.height}};
 const format=n=>Number(n).toFixed(1).replace(".",document.documentElement.lang==="en"?".":",");
@@ -71,14 +69,12 @@ function renderSelection(){
  if(!w){box.append(element("p",QT("Sélectionnez un point sur la carte.","Select a waypoint on the map.")));return}
  box.append(element("strong",(s.selected+1)+". "+waypointTitle(w)),element("p","X : "+format(w.coords.x)+" % · Y : "+format(w.coords.y)+" %"));
  const cmd="/way "+tomtom(w.coords.x)+" "+tomtom(w.coords.y);
- if(w.uncertain_position){
-  box.append(element("p",QT("Secteur estimé : la position exacte sur Forever n'est pas confirmée. Aucun /way précis proposé.","Estimated area: the exact Forever position is unconfirmed. No exact /way command is provided."),"quest-beta-warning"));
- }else box.append(element("code",cmd));
+ box.append(element("code",cmd));
  const copy=element("button",QT("Copier /way","Copy /way"));copy.type="button";
  copy.addEventListener("click",()=>{if(navigator.clipboard?.writeText){navigator.clipboard.writeText(cmd).then(()=>{copy.textContent=QT("Copié !","Copied!")},()=>{copy.textContent=QT("Sélectionnez la commande ci-dessus","Select and copy the command above")})}else{copy.textContent=QT("Sélectionnez la commande ci-dessus","Select and copy the command above")}});
- if(!w.uncertain_position)box.append(copy);
- const links=[];for(const type of ["starts","objectives","ends","completed"])for(const q of w[type]||[]){const d=detailsOf(q);if(d.id&&d.id>0&&!links.some(item=>item.id===d.id))links.push(d)}
- if(links.length){const entry=links[0],a=element("a",entry.origin==="forever"?QT("Source quête Forever ↗","Forever quest source ↗"):QT("Détails de quête Classic ↗","Classic quest details ↗"));a.href=entry.origin==="forever"&&entry.source?entry.source:"https://www.wowhead.com/classic/quest="+entry.id;a.target="_blank";a.rel="noopener noreferrer";a.style.cssText="display:inline-block;margin-left:13px;color:#f1c988;font-size:12px;text-decoration:underline";box.append(a)}
+ box.append(copy);
+ const links=[];for(const type of ["starts","objectives","ends","completed"])for(const q of w[type]||[]){const d=detailsOf(q);if(d.id&&d.id>0&&!links.includes(d.id))links.push(d.id)}
+ if(links.length){const a=element("a",QT("Détails de quête Classic ↗","Classic quest details ↗"));a.href="https://www.wowhead.com/classic/quest="+links[0];a.target="_blank";a.rel="noopener noreferrer";a.style.cssText="display:inline-block;margin-left:13px;color:#f1c988;font-size:12px;text-decoration:underline";box.append(a)}
  const note=element("p",QT("Commande utilisable dans la zone ","Command usable in ")+stepName(s.steps[s.index])+QT(". Certaines quêtes peuvent varier sur Forever.",". Some quests may differ in Forever."));note.style.color="#a9b7c7";box.append(note);
 }
 function selectWaypoint(i,focus=false){
@@ -100,16 +96,12 @@ function renderWaypoints(){
  if(count)count.textContent=String(pts.length)+" "+QT(pts.length===1?"point":"points",pts.length===1?"point":"stops");
  const typeIcons={starts:"＋",objectives:"◆",ends:"↩",completed:"✓",travel:"➜",prepare:"◈",combat:"⚔",interact:"●",tip:"✦"};
  pts.forEach((w,i)=>{
-  const b=element("button",undefined,"quest-waypoint"+(s.selected===i?" selected":"")+(w.uncertain_position?" quest-uncertain":""));
+  const b=element("button",undefined,"quest-waypoint"+(s.selected===i?" selected":""));
   b.type="button";b.setAttribute("aria-pressed",String(s.selected===i));
   b.title=QT("Localiser ce point sur la carte","Locate this waypoint on the map");
   const title=element("div",undefined,"quest-waypoint-heading");
   const pin=element("span","⌖","quest-waypoint-pin");pin.setAttribute("aria-hidden","true");
   title.append(element("b",String(i+1)),element("strong",waypointTitle(w)),pin);
-  if(s.mode==="beta"&&w.priority){
-   const badge=element("span",w.priority==="conditional"?QT("Si disponible","If available"):w.priority==="optional"?QT("Optionnel","Optional"):QT("Prioritaire","Priority"),"quest-priority-badge "+w.priority);
-   title.append(badge);
-  }
   b.append(title);
   const actions=element("div",undefined,"quest-actions");
   const groups=[];
@@ -134,11 +126,10 @@ function renderWaypoints(){
    for(const entry of entries){
     const action=element("span",undefined,"quest-action");
     const quest=isNote?null:detailsOf(entry);
-    const name=isNote&&Array.isArray(entry)&&entry.length===2?QT(entry[1],entry[0]):(isNote?Q.note(entry):quest.name);
+    const name=isNote?Q.note(entry):quest.name;
     action.append(element("span",name,"quest-action-name"));
-    if(quest?.origin==="forever"){const flag=element("small",QT("Forever · bêta","Forever · beta"),"quest-beta-label");flag.title=quest.titleStatus||"";action.append(flag);}
     if(quest&&quest.level!==null){
-     const level=element("small",quest.level,"quest-quest-level");
+     const level=element("small",QT("niv. ","lvl ")+quest.level,"quest-quest-level");
      level.title=QT("Niveau de la quête Classic","Classic quest level");
      action.append(level);
     }
@@ -147,15 +138,13 @@ function renderWaypoints(){
    group.append(heading,items);actions.append(group);
   }
   if(!groups.length)actions.append(element("span",QT("Rejoindre ce point de passage.","Go to this waypoint."),"quest-no-action"));
-  if(w.uncertain_position)actions.append(element("span",QT("Coordonnées indicatives","Indicative coordinates"),"quest-beta-warning"));
   b.append(actions);
   b.addEventListener("click",()=>selectWaypoint(i,true));
   list.append(b);
  });
 }
 function renderFactionChoices(){
- for(const button of document.querySelectorAll("#quest-mode-switch [data-mode]"))button.addEventListener("click",()=>changeMode(button.dataset.mode));
-for(const button of $("quest-factions").querySelectorAll("button[data-faction]")){
+ for(const button of $("quest-factions").querySelectorAll("button[data-faction]")){
   const active=button.dataset.faction===s.faction;
   button.classList.toggle("selected",active);button.setAttribute("aria-pressed",String(active));
  }
@@ -182,12 +171,11 @@ function selectRace(id){
  if(!race||!s.data||s.race===id)return;
  const changedRoute=s.profile!==race.profile;
  s.race=id;s.profile=race.profile;renderRaceChoices();
- if(s.mode==="beta"&&s.profile!=="nelf"){s.mode="classic";s.beta=null;}
  if(changedRoute){
-  s.steps=s.mode==="beta"?buildBetaSteps():[...s.data.routes[s.profile],...s.data.routes.shared];s.index=0;s.selected=0;
+  s.steps=[...s.data.routes[s.profile],...s.data.routes.shared];s.index=0;s.selected=0;
   s.zoom=1;s.center={x:50,y:50};s.mapUrl="";renderMilestones();
  }
- updateModeControls();render();search();
+ render();search();
 }
 function previewStep(index){
  if(!s.steps.length)return;
@@ -200,7 +188,7 @@ function previewStep(index){
 function renderMilestones(){
  const wrap=$("quest-milestones");wrap.replaceChildren();
  if(!s.steps.length)return;
- const levels=s.mode==="beta"?[0,2,3,4,5,6,7,8,9,10,Infinity]:[0,20,25,30,32,35,40,42,45,47,50,51,53,55,56,57,58,59,Infinity];
+ const levels=[0,20,25,30,32,35,40,42,45,47,50,51,53,55,56,57,58,59,Infinity];
  const maxIndex=Math.max(s.steps.length-1,1);
  for(const level of levels){
   // A level marker occupies the exact horizontal position of its first eligible guide step.
@@ -242,74 +230,6 @@ function render(){
  updateMilestones();renderWaypoints();renderSelection();setImage(st.zone);draw();syncUrl();
 }
 function go(n){if(scrubTimer!==null){clearTimeout(scrubTimer);scrubTimer=null}if(!s.steps.length)return;s.index=clamp(n,0,s.steps.length-1);s.selected=0;s.center={x:50,y:50};s.zoom=1;$("quest-zoom-reset").textContent="100 %";render();}
-
-function updateModeControls(){
- const wrap=$("quest-mode-switch"),info=$("quest-beta-status");
- if(!wrap||!info)return;
- const eligible=s.faction==="alliance"&&s.profile==="nelf";
- wrap.hidden=!eligible;
- for(const b of wrap.querySelectorAll("[data-mode]")){
-  const active=b.dataset.mode===s.mode;
-  b.classList.toggle("selected",active);b.setAttribute("aria-pressed",String(active));
- }
- info.hidden=s.mode!=="beta";
- for(const a of document.querySelectorAll(".nav-submenu a")){
-  const url=new URL(a.href);
-  if(!url.pathname.endsWith("/quetes/"))continue;
-  const isBetaLink=url.searchParams.get("mode")==="forever-beta";
-  if(isBetaLink===(s.mode==="beta"))a.setAttribute("aria-current","page");
-  else a.removeAttribute("aria-current");
- }
- if(s.mode==="beta")info.textContent=QT(
-  "Parcours expérimental 1–10 : étapes Classic + quêtes Forever documentées. Points Forever indicatifs, validation en jeu nécessaire.",
-  "Experimental 1–10 route: Classic steps + documented Forever quests. Forever markers are indicative; in-game validation is needed."
- );
-}
-async function fetchBetaGuide(){
- if(betaCache)return betaCache;
- const response=await fetch(ROOT+"data/quests/forever-nelf-1-10.json");
- if(!response.ok)throw Error("HTTP "+response.status);
- const guide=await response.json();
- if(guide.schema_version!==1||guide.source_commit!==s.meta.source_commit||!Array.isArray(guide.intro)||!Array.isArray(guide.supplements))throw Error("Version de guide Forever incompatible");
- betaCache=guide;return guide;
-}
-function buildBetaSteps(){
- if(!s.beta||s.profile!=="nelf")return [];
- const clone=step=>({...step,waypoints:step.waypoints.map(w=>({...w,coords:{...w.coords}}))});
- const route=s.data.routes.nelf.filter(step=>Number(step.experience)<10).map(clone);
- for(const add of s.beta.supplements){
-  const step=route[add.step];
-  if(!step||!add.point)continue;
-  const at=clamp(Number(add.after)+1,0,step.waypoints.length);
-  step.waypoints.splice(at,0,add.point);
- }
- const intro=s.beta.intro.map(clone);
- const final={zone:"teldrassil",experience:10,waypoints:[{
-  coords:{x:56,y:60},type:"hub",header:["Dolanaar — level 10","Dolanaar — niveau 10"],
-  special:[s.beta.final_note]
- }]};
- return [...intro,...route,final];
-}
-async function changeMode(mode){
- if(mode==="beta"&&(s.faction!=="alliance"||s.profile!=="nelf"))return;
- if((mode==="beta"?"beta":"classic")===s.mode)return;
- const token=++pending;
- $("quest-data-status").textContent=QT("Chargement du parcours…","Loading route…");
- try{
-  if(mode==="beta"){s.beta=await fetchBetaGuide();s.mode="beta";}
-  else{s.beta=null;s.mode="classic";}
-  if(token!==pending)return;
-  s.steps=s.mode==="beta"?buildBetaSteps():[...s.data.routes[s.profile],...s.data.routes.shared];
-  s.index=0;s.selected=0;s.zoom=1;s.center={x:50,y:50};s.mapUrl="";
-  updateModeControls();renderMilestones();render();search();
-  $("quest-data-status").textContent=s.steps.length+QT(" étapes disponibles"," steps available");
- }catch(err){
-  if(token!==pending)return;
-  s.mode="classic";s.beta=null;updateModeControls();
-  $("quest-data-status").textContent=QT("Bêta indisponible","Beta unavailable");
- }
-}
-
 async function loadFaction(faction,fromUrl=false){
  const token=++pending,params=new URLSearchParams(location.search);
  if(!RACES[faction])return;
@@ -332,12 +252,7 @@ async function loadFaction(faction,fromUrl=false){
   if(token!==pending)return;
   s.data=cache[faction];
   if(s.data.source_commit!==s.meta.source_commit||s.data.schema_version!==1)throw Error("Versions de données incompatibles");
-  if(fromUrl&&params.get("mode")==="forever-beta"&&s.faction==="alliance"&&s.profile==="nelf"){
-   try{s.beta=await fetchBetaGuide();s.mode="beta";}catch(_){s.beta=null;s.mode="classic";}
-  }else{s.mode="classic";s.beta=null;}
-  if(token!==pending)return;
-  s.steps=s.mode==="beta"?buildBetaSteps():[...s.data.routes[s.profile],...s.data.routes.shared];
-  updateModeControls();
+  s.steps=[...s.data.routes[s.profile],...s.data.routes.shared];
   const number=fromUrl&&params.get("faction")===faction&&params.get("race")===s.profile?Number(params.get("step"))-1:NaN;
   s.index=Number.isInteger(number)?clamp(number,0,s.steps.length-1):0;
   s.selected=0;s.zoom=1;s.center={x:50,y:50};s.mapUrl="";
@@ -362,8 +277,8 @@ function search(){
    normal(s.meta?.zones?.[st.zone]).includes(text)||
    normal(window.ForeverI18n?.zone(st.zone)).includes(text)||
    st.waypoints.some(w=>
-    normal(Array.isArray(w.header)?w.header[1]:Q.header(w.header,"fr")).includes(text)||
-    normal(Array.isArray(w.header)?w.header[0]:Q.header(w.header,"en")).includes(text)||
+    normal(Q.header(w.header,"fr")).includes(text)||
+    normal(Q.header(w.header,"en")).includes(text)||
     ["starts","ends","objectives","completed"].some(k=>(w[k]||[]).some(q=>{
      const a=detailsOf(q);
      return normal(a.name).includes(text)||normal(a.original).includes(text)||

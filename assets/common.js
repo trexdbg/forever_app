@@ -4,26 +4,21 @@ const en=document.documentElement.lang==="en",root=en?"/en/":"/";
 const current=location.pathname.replace(/\/index\.html$/,"/").replace(/\/$/,"/")||"/";
 const tr=en?{
  home:"Home",quests:"Quests",talents:"Talents",gear:"Gear",bis:"Pre-raid BiS",levelBis:"BiS by level",catalog:"Item catalogue",
- professions:"Professions",trainers:"Trainers & weapon masters",mining:"High-level mining",vendors:"Vendors",rare:"Rare",dungeons:"Dungeons",exploration:"Explore",foreverQuests:"Forever quests · Beta",population:"Population"
+ professions:"Professions",trainers:"Trainers & weapon masters",mining:"High-level mining",vendors:"Vendors",rare:"Rare",dungeons:"Dungeons",exploration:"Explore",population:"Population"
 }:{
  home:"Accueil",quests:"Quêtes",talents:"Talents",gear:"Équipement",bis:"BiS par classe",levelBis:"BiS par niveau",catalog:"Catalogue d’objets",
- professions:"Métiers",trainers:"Maîtres de métiers et d’armes",mining:"Minage HL",vendors:"Marchands",rare:"Rare",dungeons:"Donjons",exploration:"Explorer",foreverQuests:"Quêtes Forever · Bêta",population:"Population"
+ professions:"Métiers",trainers:"Maîtres de métiers et d’armes",mining:"Minage HL",vendors:"Marchands",rare:"Rare",dungeons:"Donjons",exploration:"Explorer",population:"Population"
 };
 const href=slug=>root+(slug?slug+"/":"");
-const active=(slug,query="")=>{
- if(!slug)return current===root;
- if(query)return current===href(slug)&&new URLSearchParams(location.search).get("mode")==="forever-beta";
- if(slug==="quetes"&&new URLSearchParams(location.search).get("mode")==="forever-beta")return false;
- return current===href(slug)||(slug==="talents"&&current.startsWith(href("talents")));
-};
-const link=(slug,label,query="")=>{const a=document.createElement("a");a.href=href(slug)+(query||((slug==="equipements")?"?v=20261009-catalogue":""));a.textContent=label;if(active(slug,query))a.setAttribute("aria-current","page");return a};
+const active=slug=>slug?current===href(slug)||(slug==="talents"&&current.startsWith(href("talents"))):current===root;
+const link=(slug,label)=>{const a=document.createElement("a");a.href=slug==="equipements"?href(slug)+"?v=20261009-catalogue":href(slug);a.textContent=label;if(active(slug))a.setAttribute("aria-current","page");return a};
 const group=(label,children)=>{const details=document.createElement("details");details.className="nav-group";
  const summary=document.createElement("summary");summary.textContent=label;details.append(summary);
- const menu=document.createElement("div");menu.className="nav-submenu";for(const [slug,title,query] of children)menu.append(link(slug,title,query));
- details.append(menu);if(children.some(([slug,,query])=>active(slug,query)))details.classList.add("nav-group--active");
+ const menu=document.createElement("div");menu.className="nav-submenu";for(const [slug,title] of children)menu.append(link(slug,title));
+ details.append(menu);if(children.some(([slug])=>active(slug)))details.classList.add("nav-group--active");
  return details};
 if(nav){
- nav.replaceChildren(link("",tr.home),group(tr.exploration,[["quetes",tr.quests],["quetes",tr.foreverQuests,"?faction=alliance&race=nelf&peuple=nelf&mode=forever-beta"],["donjons",tr.dungeons],["rare",tr.rare]]),link("talents",tr.talents),
+ nav.replaceChildren(link("",tr.home),group(tr.exploration,[["quetes",tr.quests],["donjons",tr.dungeons],["rare",tr.rare]]),link("talents",tr.talents),
   group(tr.gear,[["bis",tr.bis],["bis-niveaux",tr.levelBis],["equipements",tr.catalog]]),
   group(tr.professions,[["metiers",tr.trainers],["minage",tr.mining]]),
   link("marchands",tr.vendors),link("population",tr.population));
