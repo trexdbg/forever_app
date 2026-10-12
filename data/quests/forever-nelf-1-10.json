@@ -256,8 +256,8 @@
           "uncertain_position": true,
           "special": [
             [
-              "Forever #97977: If you have this quest, collect 4 Gnarlpine totems among the grells and turn in to Tarindrella. Quest pickup and exact drops remain unverified.",
-              "Forever n° 97977 : si vous avez cette quête, récupérer 4 totems des Pins-tordus chez les grells et rendre à Tarindrella. Prise de quête et emplacements exacts non vérifiés."
+              "Forever #97977: if this quest is available in your log, search for 4 Gnarlpine totems near the abandoned furbolg camps west of Shadowglen, then bring them to Tarindrella. No precise loot or pickup location verified.",
+              "Forever n° 97977 : si la quête est dans votre journal, chercher 4 totems des Pins-tordus autour des anciens campements à l'ouest de Sombrevallon puis les rendre à Tarindrella. Aucun lieu exact de collecte ou de prise de quête vérifié."
             ]
           ]
         }
@@ -648,8 +648,8 @@
         ],
         "special": [
           [
-            "Forever #87288: collect 6 soft nightsaber pelts only IF Aldria offers this quest. Exact pickup and drop locations unverified.",
-            "Forever n° 87288 : récupérer 6 peaux souples de sabre-de-nuit UNIQUEMENT si Aldria propose cette quête. Donneur et points de butin non confirmés."
+            "Forever #87288: If you have this quest, collect 6 soft nightsaber pelts and bring them to Aldria in Dolanaar. Quest giver and exact drop locations are not confirmed.",
+            "Forever n° 87288 : si cette quête est active, récupérer 6 peaux souples de sabre-de-nuit et les apporter à Aldria à Dolanaar. Donneur de quête et lieux de butin non confirmés."
           ]
         ],
         "priority": "conditional",
