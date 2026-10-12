@@ -60,3 +60,27 @@ body[data-page="quests"] .quest-priority-badge.optional{
 body[data-page="quests"] .quest-waypoint-heading .quest-priority-badge{
  margin-left:auto;
 }
+
+/* Forever's new quest text is a transparent reference, never a mandatory travel marker. */
+body[data-page="quests"] .quest-forever-panel{
+ margin-top:8px;padding:7px 10px;border-radius:7px;
+ border:1px solid rgba(198,170,117,.34);background:rgba(21,34,27,.64);
+}
+body[data-page="quests"] .quest-forever-panel[hidden]{display:none}
+body[data-page="quests"] .quest-forever-panel>summary{
+ cursor:pointer;color:#e9d2a3;font-size:12px;font-weight:700;line-height:1.4;
+}
+body[data-page="quests"] .quest-forever-panel>summary span{
+ display:inline;margin-left:8px;color:var(--muted);font-size:11px;font-weight:450;
+}
+body[data-page="quests"] .quest-forever-panel summary:focus-visible{outline:2px solid #efca88;outline-offset:3px}
+body[data-page="quests"] .quest-forever-references{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-top:10px}
+body[data-page="quests"] .quest-forever-reference{
+ padding:9px;border:1px solid rgba(201,181,142,.18);border-radius:6px;background:rgba(5,17,14,.4);
+}
+body[data-page="quests"] .quest-forever-reference-main{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:baseline}
+body[data-page="quests"] .quest-forever-reference strong{font-size:12px;line-height:1.4;color:#e8d5b2}
+body[data-page="quests"] .quest-forever-reference small{font-size:10px;color:#c8b28c;white-space:normal}
+body[data-page="quests"] .quest-forever-reference p{margin:5px 0;color:var(--muted);font-size:11px;line-height:1.45}
+body[data-page="quests"] .quest-forever-reference>a{font-size:11px;text-decoration:underline;text-underline-offset:2px;color:#f2c88e}
+@media(max-width:720px){body[data-page="quests"] .quest-forever-references{grid-template-columns:1fr}}
