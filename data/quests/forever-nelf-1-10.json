@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "guide_version": "2026-10-12-beta1",
+  "guide_version": "2026-10-12-beta2",
   "source_commit": "e82b38b7477f4cbef0474a27b8c1abf1ae641d27",
   "faction": "alliance",
   "race": "nelf",
@@ -18,8 +18,7 @@
     "https://forever-codex.com/quests/87288/",
     "https://forever-codex.com/quests/99046/",
     "https://forever-codex.com/quests/98392/",
-    "https://forever-codex.com/quests/98403/",
-    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-october-8/2360696"
+    "https://forever-codex.com/quests/98403/"
   ],
   "quest_ids": {
     "the balance of nature": [
@@ -44,6 +43,91 @@
     "the lost runner": 99046
   },
   "names": {
+    "456": {
+      "fr": "L'équilibre de la nature",
+      "en": "The Balance of Nature",
+      "origin": "classic"
+    },
+    "457": {
+      "fr": "L'équilibre de la nature",
+      "en": "The Balance of Nature",
+      "origin": "classic"
+    },
+    "458": {
+      "fr": "Le protecteur de la forêt",
+      "en": "The Woodland Protector",
+      "origin": "classic"
+    },
+    "459": {
+      "fr": "Le protecteur de la forêt",
+      "en": "The Woodland Protector",
+      "origin": "classic"
+    },
+    "916": {
+      "fr": "Le venin des Tissebois",
+      "en": "Webwood Venom",
+      "origin": "classic"
+    },
+    "917": {
+      "fr": "L'œuf des Tissebois",
+      "en": "Webwood Egg",
+      "origin": "classic"
+    },
+    "920": {
+      "fr": "Les appels de Tenaron",
+      "en": "Tenaron's Summons",
+      "origin": "classic"
+    },
+    "921": {
+      "fr": "La couronne de la Terre",
+      "en": "Crown of the Earth",
+      "origin": "classic"
+    },
+    "928": {
+      "fr": "La couronne de la Terre",
+      "en": "Crown of the Earth",
+      "origin": "classic"
+    },
+    "929": {
+      "fr": "La couronne de la Terre",
+      "en": "Crown of the Earth",
+      "origin": "classic"
+    },
+    "933": {
+      "fr": "La couronne de la Terre",
+      "en": "Crown of the Earth",
+      "origin": "classic"
+    },
+    "934": {
+      "fr": "La couronne de la Terre",
+      "en": "Crown of the Earth",
+      "origin": "classic"
+    },
+    "935": {
+      "fr": "La couronne de la Terre",
+      "en": "Crown of the Earth",
+      "origin": "classic"
+    },
+    "3519": {
+      "fr": "Un ami dans le besoin",
+      "en": "A Friend in Need",
+      "origin": "classic"
+    },
+    "3521": {
+      "fr": "L'antidote d'Iverron",
+      "en": "Iverron's Antidote",
+      "origin": "classic"
+    },
+    "3522": {
+      "fr": "L'antidote d'Iverron",
+      "en": "Iverron's Antidote",
+      "origin": "classic"
+    },
+    "4495": {
+      "fr": "Un bon ami",
+      "en": "A Good Friend",
+      "origin": "classic"
+    },
     "87288": {
       "fr": "Peaux souples de sabre-de-nuit",
       "en": "Los pelambres de sable de la noche suaves",
@@ -153,13 +237,29 @@
               "p2"
             ]
           ],
+          "priority": "optional"
+        },
+        {
+          "coords": {
+            "x": 55,
+            "y": 46
+          },
+          "type": "objective",
+          "header": [
+            "Shadowglen grell area (approx.)",
+            "Secteur grell de Sombrevallon (approximatif)"
+          ],
+          "objectives": [
+            "la llamada de la naturaleza"
+          ],
+          "priority": "conditional",
+          "uncertain_position": true,
           "special": [
             [
-              "Forever #97977: check for 'La llamada de la naturaleza' in Shadowglen. Its quest giver and exact pickup are not confirmed.",
-              "Forever n° 97977 : rechercher « La llamada de la naturaleza » dans Sombrevallon. Donneur et lieu d'obtention non confirmés."
+              "Forever #97977: If you have this quest, collect 4 Gnarlpine totems among the grells and turn in to Tarindrella. Quest pickup and exact drops remain unverified.",
+              "Forever n° 97977 : si vous avez cette quête, récupérer 4 totems des Pins-tordus chez les grells et rendre à Tarindrella. Prise de quête et emplacements exacts non vérifiés."
             ]
-          ],
-          "priority": "optional"
+          ]
         }
       ]
     },
@@ -523,51 +623,6 @@
             [
               "crown of the earth",
               "p1"
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "zone": "teldrassil",
-      "experience": 5.2,
-      "waypoints": [
-        {
-          "coords": {
-            "x": 59,
-            "y": 39
-          },
-          "header": "tenaron stromgrip",
-          "type": "quest",
-          "special": [
-            [
-              "Continue the Crown of the Earth chain; this is the hand-off to the existing Dolanaar route.",
-              "Poursuivre la suite « La couronne de la Terre » : jonction avec le parcours existant de Dolanaar."
-            ]
-          ]
-        },
-        {
-          "coords": {
-            "x": 61,
-            "y": 48
-          },
-          "header": "porthannius",
-          "type": "quest",
-          "starts": [
-            "dolanaar delivery"
-          ]
-        },
-        {
-          "coords": {
-            "x": 61,
-            "y": 56
-          },
-          "header": "zenn foulhoof",
-          "type": "quest",
-          "special": [
-            [
-              "Follow the existing Dolanaar route next; gather local quest objectives together.",
-              "Continuer avec l'itinéraire existant de Dolanaar ; regrouper les objectifs proches."
             ]
           ]
         }
