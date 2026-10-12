@@ -167,7 +167,7 @@ const copperFmt=c=>{const g=Math.floor(c/10000),s=Math.floor(c%10000/100),b=c%10
 const foreverItem=item=>typeof item?.source_status==="string"&&item.source_status.startsWith("forever_beta_");
 const foreverOffer=(vendor,item)=>vendor?.offer_details?.[String(item?.id)]?.verification_status==="forever_documented";
 const statusWord=(vendor,item)=>foreverOffer(vendor,item)?S("Vente référencée Forever (bêta)","Forever beta vendor documented"):S("Vente Classic à vérifier","Classic vendor unverified");
-const stockWord=(item,vendor)=>foreverOffer(vendor,item)||foreverItem(item)?S("Vente Forever bêta référencée · stock réel non vérifié","Forever beta sale documented · live stock unverified"):item.supply==="unlimited"?S("Stock illimité (référence Classic)","Unlimited stock (Classic reference)"):item.supply==="reputation"?S("Vente liée à la réputation Classic","Classic reputation sale"):S("Stock limité (référence Classic)","Limited stock (Classic reference)");
+const stockWord=(item,vendor)=>foreverOffer(vendor,item)?S("Vente Forever bêta référencée · stock réel non vérifié","Forever beta sale documented · live stock unverified"):item.supply==="unlimited"?S("Stock illimité (référence Classic)","Unlimited stock (Classic reference)"):item.supply==="reputation"?S("Vente liée à la réputation Classic","Classic reputation sale"):S("Stock limité (référence Classic)","Limited stock (Classic reference)");
 
 /* Share the actual Equipment tooltip with vendors; no fabricated Forever stats. */
 const merchantItemTooltip=(item,vendor=null,vendorCount=0)=>{
@@ -297,6 +297,7 @@ function renderList(){
    b.addEventListener("click",()=>{
     const keep=g.records.find(r=>r.npc.name===store.active?.npc.name);
     selectRecord(keep||g.records.find(r=>foreverOffer(r.npc,r.item))||g.records[0]);
+     if(window.matchMedia("(max-width:780px)").matches)$("npc-merchant-context")?.scrollIntoView({behavior:window.matchMedia("(prefers-reduced-motion:reduce)").matches?"auto":"smooth",block:"start"});
    });
    list.append(b);
   }
@@ -396,10 +397,78 @@ function renderTrainerDetail(n){
   selectRecord(matched);
  },{type:type?.value||"all",profession:trade?.value||"all",weaponSkill:weapon?.value||"all"});
 }
+
+/* Merchant-only contextual controls: every offer has its own verification state. */
+function merchantSwitch(seller,item){
+ const rec=store.records.find(r=>r.npc.name===seller.name&&String(r.item?.id)===String(item.id));
+ if(!rec)return;
+ if(!store.filtered.some(r=>r.key===rec.key)){
+  q.value="";zone.value="all";trade.value="all";aff.value="all";
+  if(kind)kind.value="all";if(verification)verification.value="all";
+  store.showReportsOnly=false;if(reports)reports.checked=false;
+  store.filtered=filteredRecords();
+ }
+ selectRecord(rec);
+ syncMerchantUX();
+}
+function renderMerchantContext(item,n){
+ const panel=$("npc-merchant-context");
+ if(!panel||store.mode!=="merchant")return;
+ panel.replaceChildren();panel.hidden=!item||!n;
+ if(!item||!n)return;
+ const row=append(panel,"div",null,"npc-merchant-context-top");row.append(iconNode(item));
+ const text=append(row,"div",null,"npc-merchant-context-name");
+ append(text,"small",S("Objet sélectionné","Selected item"));append(text,"strong",title(item));
+ const sellerRow=append(panel,"div",null,"npc-merchant-seller-label");
+ append(sellerRow,"span",S("Vendeur :","Vendor:"));append(sellerRow,"strong",n.name);
+ append(sellerRow,"span",faction[n.faction]||n.faction,"npc-mini-faction "+n.faction);
+ const location=append(panel,"div",null,"npc-merchant-location");
+ append(location,"span",side(n));
+ append(location,"b",hasCoords(n)?fmt(n.coordinates.x)+" / "+fmt(n.coordinates.y):S("Position non précisée","No known waypoint"));
+ if(hasCoords(n)){
+  const mapId=store.db.zone_maps?.[n.zone.id]?.uiMapID;
+  const command="/way "+(mapId?"#"+mapId+" ":"")+n.coordinates.x+" "+n.coordinates.y;
+  const copy=append(location,"button",S("Copier /way","Copy /way"));copy.type="button";
+  copy.addEventListener("click",async()=>{try{await navigator.clipboard.writeText(command);copy.textContent=S("Copié ✓","Copied ✓")}catch(_){copy.textContent=command}});
+ }
+ const vendors=store.db.npcs.filter(v=>v.role==="merchant"&&(v.offers||[]).includes(String(item.id)));
+ if(vendors.length>1){
+  const strip=append(panel,"div",null,"npc-merchant-seller-strip");
+  const head=append(strip,"div",null,"npc-merchant-seller-strip-title");
+  append(head,"span",S("Choisir un vendeur","Choose a vendor"));
+  append(head,"small",vendors.length+" "+S("vendeurs connus","known vendors"));
+  const list=append(strip,"div",null,"npc-merchant-seller-strip-list");
+  const sorted=[...vendors].sort((a,b)=>(a.name===n.name?-1:b.name===n.name?1:0)||(Number(foreverOffer(b,item))-Number(foreverOffer(a,item)))||side(a).localeCompare(side(b),en?"en":"fr"));
+  for(const vendor of sorted){
+   const btn=append(list,"button",null,"npc-merchant-seller-chip");btn.type="button";
+   btn.setAttribute("aria-pressed",String(vendor.name===n.name));
+   append(btn,"strong",vendor.name);
+   append(btn,"small",side(vendor)+" · "+(faction[vendor.faction]||vendor.faction));
+   append(btn,"span",foreverOffer(vendor,item)?S("Source Forever bêta","Forever beta source"):S("Référence Classic","Classic reference"));
+   btn.addEventListener("click",()=>merchantSwitch(vendor,item));
+  }
+ }
+ append(panel,"p",foreverOffer(n,item)?S("Vente documentée pendant la bêta ; stock non garanti.","Documented in beta; live stock not guaranteed."):S("Vente et position Classic à vérifier dans Forever.","Classic vendor and waypoint to verify in Forever."));
+}
+function syncMerchantUX(){
+ if(store.mode!=="merchant"||!store.db)return;
+ const active=[q.value.trim(),aff.value!=="all",zone.value!=="all",trade.value!=="all",kind?.value!=="all",verification?.value!=="all",store.showReportsOnly].filter(Boolean).length;
+ const reset=$("npc-merchant-reset");if(reset)reset.hidden=!active;
+ const advanced=[trade.value!=="all",kind?.value!=="all",verification?.value!=="all",store.showReportsOnly].filter(Boolean).length;
+ const indicator=$("npc-merchant-filter-count");if(indicator)indicator.textContent=advanced?"("+advanced+")":"";
+ for(const b of document.querySelectorAll("[data-merchant-query]"))b.setAttribute("aria-pressed",String(!!q.value.trim()&&val(b.dataset.merchantQuery)===val(q.value)));
+ for(const b of document.querySelectorAll("[data-merchant-kind]"))b.setAttribute("aria-pressed",String(kind?.value===b.dataset.merchantKind));
+ for(const b of document.querySelectorAll("[data-merchant-verification]"))b.setAttribute("aria-pressed",String(verification?.value===b.dataset.merchantVerification));
+ const info=$("npc-merchant-filter-summary");
+ if(info){
+  const count=new Set(store.filtered.map(r=>r.item?.id).filter(Boolean)).size;
+  info.textContent=count?count+" "+S(count>1?"objets trouvés":"objet trouvé",count>1?"matching items":"matching item")+" · "+S("Choisissez l’objet puis son vendeur.","Choose an item, then a vendor."):S("Aucun objet trouvé : élargissez la recherche.","No matching items. Try fewer filters.");
+ }
+}
 function renderDetail(){
- detail.replaceChildren();const r=store.active;if(!r){append(detail,"p",S("Sélectionnez un résultat.","Select a result."),"npc-empty");if(store.mode==="trainer")window.ForeverNpcMap?.clear?.();return}
+ detail.replaceChildren();const r=store.active;if(!r){renderMerchantContext(null,null);append(detail,"p",S("Sélectionnez un résultat.","Select a result."),"npc-empty");window.ForeverNpcMap?.clear?.();return}
  const n=r.npc,i=r.item;
- if(store.mode==="trainer"){renderTrainerDetail(n);return}
+ if(store.mode==="trainer"){renderTrainerDetail(n);return}renderMerchantContext(i,n)
  append(detail,"span",i?S("Objet · Vendeur","Item · Vendor"):trainerType(n)==="weapon"?S("Armes · Maître d’armes","Weapons · Weapon master"):S("Métier · Maître","Profession · Trainer"),"npc-detail-kicker");
  if(i){const heading=append(detail,"div",null,"npc-item-heading");heading.append(iconNode(i));append(heading,"h3",title(i));heading.tabIndex=0;
  const totalSellers=store.db.npcs.filter(v=>v.role==="merchant"&&v.offers.includes(String(i.id))).length;
@@ -505,12 +574,18 @@ function renderDetail(){
   if(type&&type.value!=="all"&&trainerType(matched.npc)!==type.value)type.value="all";
   if(weapon&&weapon.value!=="all"&&!(matched.npc.weapon_skills||[]).includes(weapon.value))weapon.value="all";
   selectRecord(matched);
- },{type:type?.value||"all",profession:trade.value,weaponSkill:weapon?.value||"all"});
+ },{type:type?.value||"all",profession:trade.value,weaponSkill:weapon?.value||"all",itemId:i?.id});
  append(detail,"p",store.mode==="merchant"?(foreverOffer(n,i)?S("Cette vente est référencée dans une source Forever bêta ; stock actuel, présence réelle et version finale non garantis.","This sale is documented in a Forever beta source; live stock, actual presence and final version unconfirmed."):S("Vente de référence Classic non vérifiée sur Forever ; disponibilité, stock et coordonnées à confirmer.","Classic sale not verified for Forever; availability, stock and coordinates remain uncertain.")):S("Certaines fiches proviennent des guides Forever ; les autres restent des références Classic. Les PNJ et leurs positions peuvent différer en jeu.","Some entries come from Forever guides; others are Classic references. NPC presence and locations may differ in-game."),"npc-datacaveat");
 }
-function refresh(){updateTrainerZones();syncTrainerFilters();store.filtered=filteredRecords();if(!store.filtered.some(r=>r.key===store.active?.key))store.active=store.filtered[0]||null;renderList();renderDetail()}
+function refresh(){updateTrainerZones();syncTrainerFilters();store.filtered=filteredRecords();if(!store.filtered.some(r=>r.key===store.active?.key))store.active=store.filtered[0]||null;renderList();renderDetail();syncMerchantUX()}
 for(const e of [q,zone,trade,aff,kind,verification,rank,type,weapon].filter(Boolean))e.addEventListener(e===q?"input":"change",()=>{if(e===type){if(type.value==="weapon"){trade.value="all";if(rank)rank.value="all"}if(weapon)weapon.value="all"}if(e===trade&&trade.value!=="all"&&type){type.value="profession";if(weapon)weapon.value="all"}if(e===weapon&&weapon.value!=="all"&&type){type.value="weapon";trade.value="all";if(rank)rank.value="all"}updateFilterVisibility();refresh()});
 if(reports)reports.addEventListener("change",e=>{store.showReportsOnly=e.target.checked;refresh()});
+if(store.mode==="merchant"){
+ $("npc-merchant-reset")?.addEventListener("click",()=>{q.value="";aff.value="all";trade.value="all";zone.value="all";if(kind)kind.value="all";if(verification)verification.value="all";store.showReportsOnly=false;if(reports)reports.checked=false;refresh();q.focus()});
+ for(const b of document.querySelectorAll("[data-merchant-query]"))b.addEventListener("click",()=>{q.value=val(q.value)===val(b.dataset.merchantQuery)?"":b.dataset.merchantQuery;refresh();q.focus()});
+ for(const b of document.querySelectorAll("[data-merchant-kind]"))b.addEventListener("click",()=>{kind.value=kind.value===b.dataset.merchantKind?"all":b.dataset.merchantKind;refresh()});
+ for(const b of document.querySelectorAll("[data-merchant-verification]"))b.addEventListener("click",()=>{verification.value=verification.value===b.dataset.merchantVerification?"all":b.dataset.merchantVerification;refresh()});
+}
 const params=new URLSearchParams(location.search);
 if(params.get("q"))q.value=params.get("q").slice(0,120);
 if(type&&["all","profession","weapon"].includes(params.get("type")))type.value=params.get("type");
