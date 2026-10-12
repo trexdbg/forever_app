@@ -257,6 +257,6 @@
  .bis-v2-selected-preview>.bis-v2-icon{width:35px;height:35px}
  .bis-v2-selected-info strong{font-size:12px}
  .bis-v2-selected-actions .bis-v2-inline-details{font-size:0;padding:7px 9px}
- .bis-v2-selected-actions .bis-v2-inline-details::first-letter{font-size:15px}
+ .bis-v2-selected-actions .bis-v2-inline-details::after{content:"ⓘ";font-size:15px}
  .bis-v2-mode-row select{max-width:190px}
 }
