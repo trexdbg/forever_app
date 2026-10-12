@@ -79,7 +79,10 @@ function renderSelection(){
  if(!w.uncertain_position)box.append(copy);
  const links=[];for(const type of ["starts","objectives","ends","completed"])for(const q of w[type]||[]){const d=detailsOf(q);if(d.id&&d.id>0&&!links.some(item=>item.id===d.id))links.push(d)}
  if(links.length){const entry=links[0],a=element("a",entry.origin==="forever"?QT("Source quête Forever ↗","Forever quest source ↗"):QT("Détails de quête Classic ↗","Classic quest details ↗"));a.href=entry.origin==="forever"&&entry.source?entry.source:"https://www.wowhead.com/classic/quest="+entry.id;a.target="_blank";a.rel="noopener noreferrer";a.style.cssText="display:inline-block;margin-left:13px;color:#f1c988;font-size:12px;text-decoration:underline";box.append(a)}
- const note=element("p",QT("Commande utilisable dans la zone ","Command usable in ")+stepName(s.steps[s.index])+QT(". Certaines quêtes peuvent varier sur Forever.",". Some quests may differ in Forever."));note.style.color="#a9b7c7";box.append(note);
+ const note=element("p",w.uncertain_position?
+  QT("Secteur approximatif issu des références Classic, non confirmé sur Forever.","Approximate area from Classic references, not confirmed on Forever."):
+  QT("Coordonnées de référence Classic pour ","Classic reference coordinates for ")+stepName(s.steps[s.index])+QT(" · non vérifiées individuellement sur Forever."," · not individually verified on Forever."));
+ note.style.color="#a9b7c7";box.append(note);
 }
 function selectWaypoint(i,focus=false){
  const step=s.steps[s.index];if(!step||i<0||i>=step.waypoints.length)return;
@@ -310,7 +313,7 @@ function buildBetaSteps(){
    return next;
   }).filter(w=>
    ["starts","objectives","ends","completed"].some(type=>w[type]?.length)||
-   w.special.length>0||/darnassus gates|darnassus inn/i.test(String(w.header))
+   w.special.length>0||/darnassus inn/i.test(String(w.header))||(recommended===9&&/darnassus gates/i.test(String(w.header)))
   );
   if(!step.waypoints.length)throw Error("Étape sans objectif");
   return step;
