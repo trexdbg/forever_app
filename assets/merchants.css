@@ -121,3 +121,11 @@ body[data-page="merchants"] .npc-merchant-hero{padding-bottom:8px}
  .npc-app[data-mode="merchant"] .npc-detail{padding:12px}
 }
 @media(prefers-reduced-motion:reduce){.npc-app[data-mode="merchant"] *{scroll-behavior:auto}}
+
+/* Long vendor archives stay accessible without pushing the map below the fold. */
+.npc-app[data-mode="merchant"] details.npc-alternatives{border:1px solid #40543e;background:#16251a;border-radius:4px;padding:0;margin:12px 0}
+.npc-app[data-mode="merchant"] details.npc-alternatives>summary{padding:11px 13px;color:#e6c995;font-size:12px;font-weight:700;cursor:pointer;list-style-position:inside}
+.npc-app[data-mode="merchant"] details.npc-alternatives[open]>summary{border-bottom:1px solid #40543e}
+.npc-app[data-mode="merchant"] details.npc-alternatives>.npc-group-intro{margin:10px 12px}
+.npc-app[data-mode="merchant"] details.npc-alternatives>.npc-alternative-list{margin:0 12px 12px}
+.npc-app[data-mode="merchant"] details.npc-alternatives>summary:hover{background:#233626}
