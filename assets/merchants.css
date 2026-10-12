@@ -1,0 +1,123 @@
+/* Merchants only: search > seller > location. Keep trainer directory unchanged. */
+body[data-page="merchants"] .npc-merchant-hero{padding-bottom:8px}
+.npc-merchant-hero-line{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.npc-merchant-hero-line p{margin:0;color:#c7d0bd;font-size:14px;line-height:1.5}
+.npc-merchant-hero-line a{color:#e8c994;text-decoration:none;font-size:12px;white-space:nowrap;border-bottom:1px solid #9e835b;padding:4px 0}
+.npc-merchant-guides{margin:10px 0 0;color:#b7c5b5;font-size:11px}
+.npc-merchant-guides summary{cursor:pointer;max-width:max-content}
+.npc-merchant-guides nav{display:flex;flex-wrap:wrap;gap:8px 17px;margin:9px 0}
+.npc-merchant-guides a{color:#e0c598;text-decoration:underline;text-underline-offset:3px}
+.npc-app[data-mode="merchant"]{min-height:unset}
+.npc-app[data-mode="merchant"] .npc-merchant-toolbar{padding:17px 19px 13px;margin:-2px -2px 14px;background:linear-gradient(135deg,#19271e 0%,#101a14 76%);border:1px solid #354d3b}
+.npc-merchant-heading{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:14px}
+.npc-merchant-heading h2{font:500 clamp(22px,2.6vw,30px)/1.2 Georgia,serif;color:#f1e6d2;margin:3px 0 0}
+.npc-merchant-eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:.14em;color:#d2b77c;font-weight:700}
+.npc-merchant-heading .status-pill{font-size:10px;color:#b7c4b1;background:#15241b;border:1px solid #35483a;padding:5px 9px;white-space:nowrap}
+.npc-merchant-search{position:relative}
+.npc-merchant-search label{display:block;font-size:11px;color:#dbc492;font-weight:700;margin:0 0 6px}
+.npc-merchant-search input{height:54px;display:block;width:100%;background:#08130e;border:1px solid #8c825b;border-radius:5px;padding:0 16px 0 45px;font-size:16px;color:#f5eee2;box-shadow:0 3px 20px #07120c50}
+.npc-merchant-search:before{content:"⌕";position:absolute;top:27px;left:15px;font-size:25px;line-height:54px;color:#ddc48b;pointer-events:none}
+.npc-merchant-search input::placeholder{color:#809688;opacity:1}
+.npc-merchant-search input:focus-visible{outline:2px solid #e7cb93;outline-offset:2px}
+.npc-merchant-search small{display:block;font-size:10px;color:#a4b3a2;margin:6px 1px 0}
+.npc-merchant-primary{display:grid;grid-template-columns:minmax(145px,200px) minmax(170px,270px) auto;align-items:end;gap:10px;margin-top:13px}
+.npc-app[data-mode="merchant"] .npc-field{min-width:0}
+.npc-app[data-mode="merchant"] .npc-field>label{color:#cbb88e;letter-spacing:.05em;font-size:10px}
+.npc-app[data-mode="merchant"] .npc-field select{height:38px;background:#101e16;border-color:#405744;border-radius:4px;color:#e7e7d9;font-size:12px}
+.npc-merchant-reset{border:0;background:transparent;color:#dfc496;font-size:11px;padding:10px 0;cursor:pointer;justify-self:end;white-space:nowrap}
+.npc-merchant-reset:hover{text-decoration:underline;text-underline-offset:3px}
+.npc-merchant-reset[hidden]{display:none}
+.npc-merchant-shortcuts{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:13px 0 12px}
+.npc-merchant-shortcuts>span{font-size:10px;letter-spacing:.03em;color:#8fa490;margin-right:4px}
+.npc-merchant-shortcuts button{border:1px solid #425443;background:#1a2b20;color:#d9dfd0;border-radius:20px;padding:6px 10px;cursor:pointer;font-size:11px;line-height:1.3}
+.npc-merchant-shortcuts button:hover,.npc-merchant-shortcuts button[aria-pressed="true"]{color:#241d11;background:#dfbd82;border-color:#dfbd82}
+.npc-merchant-advanced{border-top:1px solid #35483a;margin-top:4px;padding-top:10px}
+.npc-merchant-advanced summary{width:max-content;max-width:100%;font-size:11px;color:#dbc28c;cursor:pointer;font-weight:700}
+.npc-merchant-advanced summary span{color:#f1ead9;margin-left:3px}
+.npc-merchant-advanced-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px;align-items:end;padding:14px 0 4px}
+.npc-merchant-advanced-grid .npc-toggle{grid-column:1/-1;padding:3px 0;color:#c1ccb9}
+.npc-merchant-filter-summary{font-size:11px;color:#a9bca7;margin-top:9px;min-height:17px}
+.npc-app[data-mode="merchant"] .npc-columns{grid-template-columns:minmax(255px,.78fr) minmax(0,1.55fr);gap:12px}
+.npc-app[data-mode="merchant"] .npc-catalog{background:#0d1912;border-color:#3b4e3d;border-radius:5px;overflow:hidden;align-self:start}
+.npc-app[data-mode="merchant"] .npc-catalog-head{align-items:center;background:#19291d;padding:12px 13px}
+.npc-app[data-mode="merchant"] .npc-catalog-head h3{font-size:17px}
+.npc-app[data-mode="merchant"] .npc-catalog-head span{white-space:normal;text-align:right;font-size:10px;line-height:1.35}
+.npc-app[data-mode="merchant"] .npc-results{max-height:735px;scrollbar-width:thin}
+.npc-app[data-mode="merchant"] .npc-result{min-height:63px;padding:9px 11px;gap:10px;border-bottom-color:#263b2b}
+.npc-app[data-mode="merchant"] .npc-result-copy{gap:4px}
+.npc-app[data-mode="merchant"] .npc-result-copy strong{font-size:13px;line-height:1.35}
+.npc-app[data-mode="merchant"] .npc-result-copy small{font-size:11px;line-height:1.25;color:#a9bca7}
+.npc-app[data-mode="merchant"] .npc-result-copy .npc-verify-tag{align-self:start;font-size:9px;letter-spacing:0;padding:2px 5px}
+.npc-app[data-mode="merchant"] .npc-result .npc-evidence-flag{font-size:9px}
+.npc-app[data-mode="merchant"] .npc-result[aria-selected="true"]{background:#273a2a;box-shadow:inset 4px 0 #e0bb79}
+.npc-app[data-mode="merchant"] .npc-result .npc-arrow{font-size:22px}
+.npc-app[data-mode="merchant"] .npc-map-panel{border-color:#4a644c;border-radius:5px;background:#101d15;padding:12px}
+.npc-app[data-mode="merchant"] .npc-map-head{margin-top:10px}
+.npc-app[data-mode="merchant"] .npc-map-head h3{font-size:21px}
+.npc-app[data-mode="merchant"] .npc-map-stage{border-color:#62765a}
+.npc-merchant-context{background:linear-gradient(145deg,#223526,#132219);border:1px solid #486048;border-radius:4px;padding:11px 11px 9px}
+.npc-merchant-context[hidden]{display:none}
+.npc-merchant-context-top{display:flex;align-items:center;gap:9px}
+.npc-merchant-context-top .npc-image-icon{width:42px;height:42px;overflow:hidden;flex:none}
+.npc-merchant-context-name{min-width:0;flex:1}
+.npc-merchant-context-name small{display:block;font-size:10px;color:#cbb785;line-height:1.3}
+.npc-merchant-context-name strong{display:block;font:500 19px/1.25 Georgia,serif;color:#f6eddb;overflow-wrap:anywhere}
+.npc-merchant-seller-label{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin:9px 0 7px;font-size:12px;color:#d5e1cc}
+.npc-merchant-seller-label strong{font-size:12px;color:#f1e4ca}
+.npc-merchant-seller-label .npc-mini-faction{border:1px solid #536653;border-radius:2px;padding:2px 5px;font-size:10px;color:#c8ddcb}
+.npc-merchant-seller-label .npc-mini-faction.alliance{color:#9cd0f7;border-color:#345c7b}
+.npc-merchant-seller-label .npc-mini-faction.horde{color:#f2b2a4;border-color:#8a4e43}
+.npc-merchant-location{display:flex;align-items:center;justify-content:space-between;gap:9px;font-size:11px;color:#abbfa9;flex-wrap:wrap}
+.npc-merchant-location b{font-size:13px;color:#f0d09a;font-variant-numeric:tabular-nums}
+.npc-merchant-location button{background:#e0bb7a;border:1px solid #e0bb7a;color:#18251a;border-radius:3px;padding:6px 9px;font-size:11px;font-weight:700;cursor:pointer}
+.npc-merchant-location button:disabled{opacity:.45;cursor:not-allowed}
+.npc-merchant-context > p{font-size:10px;color:#a6b4a3;margin:7px 0 0;line-height:1.4}
+.npc-merchant-seller-strip{border-top:1px solid #42563f;margin-top:10px;padding-top:9px}
+.npc-merchant-seller-strip-title{display:flex;justify-content:space-between;align-items:center;gap:7px;font-size:10px;color:#cab88c;letter-spacing:.03em;margin-bottom:6px}
+.npc-merchant-seller-strip-title small{font-size:10px;color:#97aa97}
+.npc-merchant-seller-strip-list{display:flex;gap:7px;overflow-x:auto;padding:0 0 4px;scrollbar-width:thin}
+.npc-merchant-seller-chip{display:flex;flex-direction:column;gap:3px;min-width:138px;max-width:160px;flex:0 0 auto;text-align:left;padding:7px 9px;background:#101e16;border:1px solid #455b44;border-radius:3px;color:#e5e4d5;cursor:pointer}
+.npc-merchant-seller-chip strong{font-size:11px;line-height:1.2;overflow-wrap:anywhere}
+.npc-merchant-seller-chip small{font-size:10px;color:#acbba6}
+.npc-merchant-seller-chip span{font-size:9px;color:#d2c092}
+.npc-merchant-seller-chip:hover,.npc-merchant-seller-chip[aria-pressed="true"]{border-color:#dbb777;background:#30432b}
+.npc-merchant-seller-chip:focus-visible{outline:2px solid #ebce91;outline-offset:2px}
+.npc-app[data-mode="merchant"] .npc-detail{padding:16px 18px;border-radius:5px;background:#101d15}
+.npc-app[data-mode="merchant"] .npc-detail h3{font-size:24px}
+.npc-app[data-mode="merchant"] .npc-detail h4{font-size:17px}
+.npc-app[data-mode="merchant"] .npc-stock{margin:12px 0}
+.npc-app[data-mode="merchant"] .npc-alternatives{margin:12px 0}
+.npc-app[data-mode="merchant"] .npc-alternative-list{max-height:205px}
+.npc-app[data-mode="merchant"] .npc-actions a,.npc-app[data-mode="merchant"] .npc-actions button{font-size:11px}
+.npc-app[data-mode="merchant"] .npc-merchant-primary select:focus-visible,.npc-app[data-mode="merchant"] .npc-merchant-advanced select:focus-visible,.npc-app[data-mode="merchant"] button:focus-visible{outline:2px solid #e7c68b;outline-offset:2px}
+@media(max-width:1150px){
+ .npc-app[data-mode="merchant"] .npc-columns{grid-template-columns:minmax(230px,.87fr) minmax(0,1.22fr)}
+ .npc-app[data-mode="merchant"] .npc-catalog-head{align-items:flex-start;flex-direction:column;gap:5px}
+ .npc-app[data-mode="merchant"] .npc-catalog-head span{text-align:left}
+}
+@media(max-width:780px){
+ .npc-merchant-heading{align-items:flex-start}
+ .npc-app[data-mode="merchant"] .npc-columns{grid-template-columns:minmax(0,1fr)}
+ .npc-app[data-mode="merchant"] .npc-results{max-height:335px}
+ .npc-app[data-mode="merchant"] .npc-map-panel{padding:10px}
+ .npc-app[data-mode="merchant"] .npc-merchant-toolbar{padding:14px}
+ .npc-merchant-advanced-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:520px){
+ .npc-merchant-hero-line{align-items:flex-start}
+ .npc-merchant-heading{gap:6px}
+ .npc-merchant-heading .status-pill{display:none}
+ .npc-merchant-search input{font-size:14px;padding-right:10px}
+ .npc-merchant-primary{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .npc-merchant-reset{grid-column:1/-1;justify-self:start;padding:5px 0}
+ .npc-merchant-shortcuts{gap:5px}
+ .npc-merchant-shortcuts>span{flex-basis:100%}
+ .npc-merchant-shortcuts button{font-size:10px;padding:6px 8px}
+ .npc-merchant-advanced-grid{grid-template-columns:1fr}
+ .npc-merchant-context-name strong{font-size:17px}
+ .npc-app[data-mode="merchant"] .npc-map-head{gap:5px}
+ .npc-app[data-mode="merchant"] .npc-map-head h3{font-size:17px}
+ .npc-app[data-mode="merchant"] .npc-map-stage{aspect-ratio:1.38}
+ .npc-app[data-mode="merchant"] .npc-detail{padding:12px}
+}
+@media(prefers-reduced-motion:reduce){.npc-app[data-mode="merchant"] *{scroll-behavior:auto}}
