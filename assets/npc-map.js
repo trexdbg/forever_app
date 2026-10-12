@@ -8,14 +8,14 @@ const el=(tag,label,klass)=>{const o=document.createElement(tag);if(label!=null)
 const fmt=n=>Number(n).toFixed(1).replace(".",en?".":",");
 const clamp=(n,a,b)=>Math.min(b,Math.max(a,n));
 const LOCAL_MAPS=new Set(["azshara","blasted-lands","burning-steppes","epl","searing-gorge","silithus","swamp-of-sorrows","ungoro","winterspring","wpl"]);
-const state={data:null,zone:null,selected:null,onSelect:null,visible:[],mode:"merchant",zoom:1,center:{x:50,y:50},image:null,loaded:false,source:"none",token:0,hover:null,drag:null,filters:{type:"all",profession:"all",weaponSkill:"all"}};
+const state={data:null,zone:null,selected:null,onSelect:null,visible:[],mode:"merchant",zoom:1,center:{x:50,y:50},image:null,loaded:false,source:"none",token:0,hover:null,drag:null,filters:{type:"all",profession:"all",weaponSkill:"all"},selectedItemId:null};
 const coordLabel=$("npc-map-selected-coords"),copyPin=$("npc-map-copy-way");
 function waypoint(){const n=state.selected,id=state.data?.zone_maps?.[n?.zone?.id]?.uiMapID;return n?.coordinates&&id?"/mappin "+id+" "+n.coordinates.x+" "+n.coordinates.y:null}
 if(copyPin)copyPin.addEventListener("click",async()=>{const pin=waypoint();if(!pin)return;try{await navigator.clipboard.writeText(pin);copyPin.textContent=T("Copié ✓","Copied ✓")}catch(e){copyPin.textContent=pin}});
 function updateSelectedCoords(){const n=state.selected,p=n?.coordinates,ok=Number.isFinite(p?.x)&&Number.isFinite(p?.y);if(coordLabel)coordLabel.textContent=ok?fmt(p.x)+" / "+fmt(p.y):T("Position indisponible","No waypoint");if(copyPin){copyPin.disabled=!waypoint();copyPin.textContent=T("Copier /mappin","Copy /mappin")}}
 const trainerTranslation={"Alchimie":"Alchemy","Couture":"Tailoring","Ingénierie":"Engineering","Enchantement":"Enchanting","Forge":"Blacksmithing","Travail du cuir":"Leatherworking","Secourisme":"First Aid","Cuisine":"Cooking","Herboristerie":"Herbalism","Minage":"Mining","Dépeçage":"Skinning","Pêche":"Fishing"};
 const teaching=n=>n.role!=="trainer"?n.name:n.trainer_kind==="weapon"?T("Maître d’armes","Weapon master"):en?(trainerTranslation[n.profession]||n.profession):n.profession;
-function points(){return (state.data?.npcs||[]).filter(n=>n.role===state.mode&&n.zone.id===state.zone&&Number.isFinite(n.coordinates?.x)&&Number.isFinite(n.coordinates?.y)&&(state.mode!=="trainer"||(state.filters.type==="all"||((n.trainer_kind||"profession")===state.filters.type))&&(state.filters.profession==="all"||n.profession===state.filters.profession)&&(state.filters.weaponSkill==="all"||(n.weapon_skills||[]).includes(state.filters.weaponSkill))))}
+function points(){return (state.data?.npcs||[]).filter(n=>n.role===state.mode&&n.zone.id===state.zone&&(state.mode!=="merchant"||!state.selectedItemId||(n.offers||[]).includes(state.selectedItemId))&&Number.isFinite(n.coordinates?.x)&&Number.isFinite(n.coordinates?.y)&&(state.mode!=="trainer"||(state.filters.type==="all"||((n.trainer_kind||"profession")===state.filters.type))&&(state.filters.profession==="all"||n.profession===state.filters.profession)&&(state.filters.weaponSkill==="all"||(n.weapon_skills||[]).includes(state.filters.weaponSkill))))}
 function keepInBounds(){const half=50/state.zoom;state.center.x=clamp(state.center.x,half,100-half);state.center.y=clamp(state.center.y,half,100-half)}
 function toScreen(p){return {x:W/2+(p.x-state.center.x)*W*state.zoom/100,y:H/2+(p.y-state.center.y)*H*state.zoom/100}}
 function toMap(px,py){return {x:state.center.x+(px/W-.5)*100/state.zoom,y:state.center.y+(py/H-.5)*100/state.zoom}}
@@ -83,7 +83,7 @@ function sourceLabel(){
 }
 function nearby(){
  const out=$("npc-map-nearby");out.replaceChildren();const focus=state.selected?.coordinates||{x:50,y:50};const ns=points().sort((a,b)=>{const sa=a.name===state.selected?.name?-1000:Math.hypot(a.coordinates.x-focus.x,a.coordinates.y-focus.y),sb=b.name===state.selected?.name?-1000:Math.hypot(b.coordinates.x-focus.x,b.coordinates.y-focus.y);return sa-sb});
- $("npc-map-count").textContent=ns.length+" "+(state.mode==="trainer"?T("maîtres dans cette zone","trainers in this zone"):T("marchands dans cette zone","vendors in this zone"));
+ $("npc-map-count").textContent=ns.length+" "+(state.mode==="trainer"?T("maîtres dans cette zone","trainers in this zone"):state.selectedItemId?T("vendeurs de cet objet dans cette zone","vendors of this item in this zone"):T("marchands dans cette zone","vendors in this zone"));
  for(const n of ns.slice(0,12)){const btn=el("button",teaching(n)+" · "+fmt(n.coordinates.x)+"/"+fmt(n.coordinates.y),"npc-map-neighbor");
  btn.type="button";btn.setAttribute("aria-pressed",String(n.name===state.selected?.name));
  btn.title=n.trainer_kind==="weapon"?T("Maître d’armes","Weapon master"):n.role==="trainer"?T("Maître de métier","Profession trainer"):T("Marchand","Vendor");
@@ -120,7 +120,7 @@ canvas.addEventListener("pointerleave",()=>{state.hover=null;canvas.style.cursor
 canvas.addEventListener("dblclick",()=>{state.zoom=1;state.center={x:50,y:50};draw()});
 canvas.addEventListener("keydown",e=>{if(e.key==="+"||e.key==="="){e.preventDefault();zoomTo(state.zoom*1.25)}else if(e.key==="-"){e.preventDefault();zoomTo(state.zoom/1.25)}else if(["ArrowLeft","ArrowRight","ArrowUp","ArrowDown"].includes(e.key)){e.preventDefault();const step=9/state.zoom;state.center.x+=e.key==="ArrowLeft"?-step:e.key==="ArrowRight"?step:0;state.center.y+=e.key==="ArrowUp"?-step:e.key==="ArrowDown"?step:0;keepInBounds();draw()}});
 window.ForeverNpcMap={clear(){
- ++state.token;state.data=null;state.zone=null;state.selected=null;state.visible=[];state.image=null;state.loaded=false;state.hover=null;state.source="none";state.zoom=1;state.center={x:50,y:50};
+ ++state.token;state.data=null;state.zone=null;state.selected=null;state.visible=[];state.image=null;state.loaded=false;state.hover=null;state.source="none";state.selectedItemId=null;state.zoom=1;state.center={x:50,y:50};
  $("npc-map-title").textContent=T("Aucune position sélectionnée","No position selected");
  $("npc-map-count").textContent="0 "+T("maître","trainers");
  $("npc-map-source").textContent=T("Choisissez un autre filtre","Choose another filter");
@@ -129,7 +129,7 @@ window.ForeverNpcMap={clear(){
 },show(n,data,onSelect,filters={}){
  if(!n||!data)return;
  const isNewZone=n.zone.id!==state.zone;
- state.data=data;state.zone=n.zone.id;state.mode=n.role;state.selected=n;state.onSelect=onSelect;state.hover=null;state.filters={type:filters.type||"all",profession:filters.profession||"all",weaponSkill:filters.weaponSkill||"all"};
+ state.data=data;state.zone=n.zone.id;state.mode=n.role;state.selected=n;state.onSelect=onSelect;state.hover=null;state.selectedItemId=n.role==="merchant"&&filters.itemId?String(filters.itemId):null;state.filters={type:filters.type||"all",profession:filters.profession||"all",weaponSkill:filters.weaponSkill||"all"};
  $("npc-map-title").textContent=n.zone[en?"en":"fr"];
  if(isNewZone){state.zoom=1;state.center={x:50,y:50};loadImage()}
  else {if(n.coordinates){const p=toScreen(n.coordinates);if(p.x<45||p.x>W-45||p.y<45||p.y>H-45){state.center={x:n.coordinates.x,y:n.coordinates.y};keepInBounds()}}draw()}
