@@ -106,6 +106,10 @@ function renderWaypoints(){
   const title=element("div",undefined,"quest-waypoint-heading");
   const pin=element("span","⌖","quest-waypoint-pin");pin.setAttribute("aria-hidden","true");
   title.append(element("b",String(i+1)),element("strong",waypointTitle(w)),pin);
+  if(s.mode==="beta"&&w.priority){
+   const badge=element("span",w.priority==="conditional"?QT("Si disponible","If available"):w.priority==="optional"?QT("Optionnel","Optional"):QT("Prioritaire","Priority"),"quest-priority-badge "+w.priority);
+   title.append(badge);
+  }
   b.append(title);
   const actions=element("div",undefined,"quest-actions");
   const groups=[];
@@ -134,7 +138,7 @@ function renderWaypoints(){
     action.append(element("span",name,"quest-action-name"));
     if(quest?.origin==="forever"){const flag=element("small",QT("Forever · bêta","Forever · beta"),"quest-beta-label");flag.title=quest.titleStatus||"";action.append(flag);}
     if(quest&&quest.level!==null){
-     const level=element("small",QT("niv. ","lvl ")+quest.level,"quest-quest-level");
+     const level=element("small",quest.level,"quest-quest-level");
      level.title=QT("Niveau de la quête Classic","Classic quest level");
      action.append(level);
     }
