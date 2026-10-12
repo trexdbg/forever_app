@@ -34,3 +34,6 @@ if(footer){const fnav=footer.children[1];if(fnav&&!fnav.querySelector('a[href="/
 })();
 /* Optional audience measurement. Disabled until configured and consented. */
 (()=>{const s=document.createElement("script");s.src="/assets/analytics.js?v=1";document.head.append(s)})();
+
+/* Load the discreet community feedback form on every page. */
+(()=>{const s=document.createElement("script");s.src="/assets/feedback.js?v=20261012-1";s.async=true;document.head.append(s)})();
