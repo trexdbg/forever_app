@@ -48,7 +48,15 @@ const seed=[
  {key:"npc:merchants",kind:"merchant",title:T("Marchands","Vendors"),href:prefix+"marchands/",icon:"inv_scroll_07",count:T("Objets et emplacements","Items and locations")},
  {key:"bis:guerrier",kind:"bis",title:T("Équipement du Guerrier","Warrior gear"),href:prefix+"bis/?classe=guerrier",icon:"class_warrior",count:T("Profils d'équipement","Gear profiles")}
 ];
-let slides=seed,index=0,previousKey="",timer=null,visible=true,nonce=0;
+// Shuffle locally on every page load: no shared order or visitor storage.
+function shuffle(items){
+ for(let i=items.length-1;i>0;i--){
+  const j=Math.floor(Math.random()*(i+1));
+  [items[i],items[j]]=[items[j],items[i]];
+ }
+ return items;
+}
+let slides=shuffle(seed.slice()),index=0,previousKey="",timer=null,visible=true,nonce=0,userNavigated=false;
 function txt(link,label){
  const arrow=link.querySelector("span");
  if(link.firstChild?.nodeType===Node.TEXT_NODE)link.firstChild.nodeValue=label+" ";
@@ -159,10 +167,15 @@ function assemble(results){
   disclaimer:T("Aucun chiffre inventé · Suivi en préparation","No invented numbers · Tracking in development")});
  // Round-robin across all modules. No slide count ceiling: every catalog record is eligible.
  const order=["mining","merchant","quest","talent","profession","trainer","bis","item","npc","population"];
+ // Randomize entries and category order while keeping modules interleaved.
+ for(const pool of Object.values(pools))shuffle(pool);
  const ordered=[];
  let hasMore=true;
- while(hasMore){hasMore=false;for(const k of order)if(pools[k].length){hasMore=true;ordered.push(pools[k].shift());}}
- return ordered.length?ordered:seed;
+ while(hasMore){
+  hasMore=false;
+  for(const k of shuffle(order.slice()))if(pools[k].length){hasMore=true;ordered.push(pools[k].shift());}
+ }
+ return ordered.length?ordered:shuffle(seed.slice());
 }
 function labelOf(s){
  return s.overline||({
@@ -279,7 +292,7 @@ function show(next,manual=false){
   featureVisual(s);
  }
  nextPreload();
- if(manual)resetTimer();
+ if(manual){userNavigated=true;resetTimer();}
 }
 function resetTimer(){
  if(timer!==null)clearInterval(timer);
@@ -305,7 +318,8 @@ Promise.all([
 ]).then(([mining,npc,prof,bis,quests])=>{
  const current=slides[index]?.key;
  slides=assemble({mining,npc,prof,bis,quests});
- const retained=slides.findIndex(s=>s.key===current);
+ // Start on a newly randomized article unless a visitor already used the arrows.
+ const retained=userNavigated?slides.findIndex(s=>s.key===current):-1;
  index=retained>=0?retained:0;
  show(index);
 });
