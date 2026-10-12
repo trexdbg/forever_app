@@ -11,7 +11,7 @@ const KINDS = Object.freeze({
   bug: "Technical problem",
   suggestion: "Suggestion"
 });
-const json = (body, status, origin) => new Response(JSON.stringify(body), {
+const json = (body, status, origin) => new Response(status === 204 ? null : JSON.stringify(body), {
   status,
   headers: {
     "Content-Type": "application/json; charset=utf-8",
