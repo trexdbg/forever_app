@@ -141,3 +141,16 @@
  .level-bis-extra>summary,.level-bis-farm>summary{padding:11px}
  .level-bis-board .level-bis-main-bar{gap:6px}
 }
+
+/* Leveling BiS: tighter filters and a clearly marked manual choice. */
+.level-bis-board .level-bis-section-label{margin:10px 0 6px;font-size:11px;color:#d8c394}
+.level-bis-board .level-bis-caution{margin:2px 0 10px;font-size:12px;color:#b7c8b7}
+.level-bis-board .level-bis-primary-bands{gap:7px}
+.level-bis-board .level-bis-primary-bands .level-bis-chip{font-size:13px;min-height:36px}
+.level-bis-board .level-bis-main-bar{padding-top:12px;margin:13px 0 10px}
+.level-bis-board .level-bis-main-bar h2{font-size:21px}
+.level-bis-board .bis-v2-candidate-info small{line-height:1.45}
+.level-bis-board .level-bis-source-proof{font-size:11px}
+.level-bis-board .level-bis-class .level-bis-icon{width:39px;height:39px}
+.level-bis-board .bis-class-grid.level-bis-classes{margin-bottom:10px}
+.level-bis-board .bis-spec-row.level-bis-row{padding-bottom:10px}

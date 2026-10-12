@@ -354,8 +354,10 @@ function itemRow(i,secondary=false){
 const leftSlots=["head","neck","shoulders","back","chest","wrist","hands"],rightSlots=["waist","legs","feet","finger1","finger2","trinket1","trinket2"],weaponSlots=["mainhand","offhand","ranged"];
 const qualities={common:["#efeee9","Commun","Common"],uncommon:["#43bf66","Inhabituel","Uncommon"],rare:["#4c9df1","Rare","Rare"],epic:["#b67cff","Épique","Epic"],legendary:["#ffac46","Légendaire","Legendary"]};
 const u=en?{missing:"No target",twohand:"Two-handed weapon equipped",chosen:"Your selection",suggestion:"Suggested item",reset:"Use suggestion",details:"Details",more:"Show more",none:"No items match these filters",all:"All qualities",select:"Set as target",candidates:"references"}:{missing:"Aucun objectif",twohand:"Arme à deux mains équipée",chosen:"Votre sélection",suggestion:"Objet suggéré",reset:"Revenir à la suggestion",details:"Détails",more:"Afficher plus",none:"Aucun objet avec ces filtres",all:"Toutes qualités",select:"Définir comme objectif",candidates:"références"};
-let activeSlot="head",pickerQuery="",selectedQualities=new Set(),visibleLimit=45,currentPlan=null;
-function clearPickerSearch(){pickerQuery="";selectedQualities.clear();visibleLimit=45;const input=$("level-search");if(input)input.value=""}
+let activeSlot="head",pickerQuery="",selectedQualities=new Set(),visibleLimit=8,currentPlan=null;
+function clearPickerSearch(){pickerQuery="";selectedQualities.clear();visibleLimit=8;const input=$("level-search");if(input)input.value=""}
+function selectLevelSlot(id){window.ForeverItemTooltip?.hide?.();activeSlot=id;clearPickerSearch();renderSlots();if(window.matchMedia?.("(max-width: 980px)")?.matches)$("level-picker")?.scrollIntoView?.({behavior:"smooth",block:"start"})}
+function stepLevelSlot(delta){const slots=[...leftSlots,...rightSlots,...weaponSlots],index=slots.indexOf(activeSlot);selectLevelSlot(slots[(index+delta+slots.length)%slots.length])}
 const savedProfiles=new Map();
 
 /* At most one localized Classic sheet lookup per visited item; EN keeps the English label and acquires only the icon. */
@@ -410,18 +412,14 @@ function plan(){
 }
 function sheetButton(id){
  const slot=db.slots.find(s=>s.id===id),i=currentPlan.selected.get(id),manual=currentPlan.manual.has(id),blocked=currentPlan.blocked.has(id);
- const btn=mk("button","bis-v2-slot"+(activeSlot===id?" active":"")+(i?" has-item":" no-item")+(manual?" acquired":""));
+ const btn=mk("button","bis-v2-slot"+(activeSlot===id?" active":"")+(i?" has-item":" no-item")+(manual?" is-custom":""));
  btn.type="button";btn.dataset.quality=i?.quality||"none";
  btn.setAttribute("aria-pressed",String(activeSlot===id));btn.setAttribute("aria-label",labelSlot(slot)+" : "+(i?localizedName(i):(blocked?u.twohand:u.missing)));
  btn.append(sheetIcon(i,slot.icon));
  const info=mk("span","bis-v2-slot-copy");
  info.append(mk("strong","",labelSlot(slot)),mk("small","",i?localizedName(i):(blocked?u.twohand:u.missing)));
- btn.append(info,mk("span","bis-v2-slot-indicator",manual?"✓":""));
- btn.addEventListener("click",()=>{
-  window.ForeverItemTooltip?.hide?.();activeSlot=id;clearPickerSearch();
-  renderSlots();
-  if(window.matchMedia?.("(max-width: 980px)")?.matches)$("level-picker")?.scrollIntoView?.({behavior:"smooth",block:"start"});
- });
+ btn.append(info,mk("span","bis-v2-slot-indicator",manual?"★":""));
+ btn.addEventListener("click",()=>selectLevelSlot(id));
  if(i)window.ForeverItemTooltip?.bind(btn,{...localizedTooltip(i),slotLabel:labelSlot(slot)});
  return btn;
 }
@@ -496,13 +494,14 @@ function renderPicker(){
   const button=mk("button","bis-v2-quality"+(on?" active":""),label+(isAll?"":" "+n));
   button.type="button";button.setAttribute("aria-pressed",String(on));
   if(!isAll){button.style.setProperty("--rarity",qualities[q][0]);button.disabled=!n&&!on}
-  button.addEventListener("click",()=>{if(isAll)selectedQualities.clear();else if(on)selectedQualities.delete(q);else selectedQualities.add(q);visibleLimit=45;renderPicker()});
+  button.addEventListener("click",()=>{if(isAll)selectedQualities.clear();else if(on)selectedQualities.delete(q);else selectedQualities.add(q);visibleLimit=8;renderPicker()});
   root.append(button);
  }
+ const badge=$("level-quality-active");if(badge){badge.hidden=selectedQualities.size===0;badge.textContent=String(selectedQualities.size)}
  quality("all",u.all,list.length);
  for(const [q,meta] of Object.entries(qualities)){const n=list.filter(i=>i.quality===q).length;if(n||selectedQualities.has(q))quality(q,meta[en?2:1],n)}
  const term=pickerQuery.toLocaleLowerCase();
- const matches=(blocked?[]:list).filter(it=>(!selectedQualities.size||selectedQualities.has(it.quality))&&(!term||((window.ForeverItemLocale?.aliases(it)||localizedName(it))+" "+localizedOrigin(it)+" "+it.id).toLocaleLowerCase().includes(term)));
+ const matches=(blocked?[]:list).filter(it=>(!selectedQualities.size||selectedQualities.has(it.quality))&&(!term||((window.ForeverItemLocale?.aliases(it)||localizedName(it))+" "+localizedOrigin(it)+" "+it.id).toLocaleLowerCase().includes(term))).sort((a,b)=>Number(b.id===i?.id)-Number(a.id===i?.id));
  $("level-picker-count").textContent=matches.length+" "+u.candidates;
  const results=$("level-candidates");results.replaceChildren();
  if(!matches.length){results.append(mk("p","bis-v2-empty",blocked?u.twohand:u.none));return}
@@ -521,7 +520,7 @@ function renderPicker(){
   detail.addEventListener("click",()=>window.ForeverItemTooltip?.pin({...localizedTooltip(candidate),slotLabel:labelSlot(slot)}));
   wrap.append(b,detail);results.append(wrap);
  }
- if(matches.length>visibleLimit){const more=mk("button","bis-v2-more",u.more+" ("+(matches.length-visibleLimit)+")");more.type="button";more.addEventListener("click",()=>{visibleLimit+=45;renderPicker()});results.append(more)}
+ if(matches.length>visibleLimit){const more=mk("button","bis-v2-more",u.more+" ("+(matches.length-visibleLimit)+")");more.type="button";more.addEventListener("click",()=>{visibleLimit+=8;renderPicker()});results.append(more)}
 }
 function renderSlots(){
  if(!db)return;
@@ -589,7 +588,9 @@ function renderAll(){renderFilters();renderSlots();renderFarm();renderRemoteStat
   if(["forever","classic","all"].includes(params.get("origine")))origin=params.get("origine");
    if(["all","dungeon","quest","crafted","vendor","world"].includes(params.get("source")))sourceKind=params.get("source");
   $("level-more")?.addEventListener("click",()=>loadRemote(getRemote(),1));
-  $("level-search")?.addEventListener("input",e=>{pickerQuery=e.target.value.trim().toLocaleLowerCase();visibleLimit=45;renderPicker()});
+ $("level-slot-prev")?.addEventListener("click",()=>stepLevelSlot(-1));
+ $("level-slot-next")?.addEventListener("click",()=>stepLevelSlot(1));
+  $("level-search")?.addEventListener("input",e=>{pickerQuery=e.target.value.trim().toLocaleLowerCase();visibleLimit=8;renderPicker()});
   renderAll();
  }catch(err){$("level-current").textContent=T.error;$("level-count").textContent="";$("level-paperdoll")?.replaceChildren(mk("p","level-bis-empty",T.error));$("level-picked")?.replaceChildren(mk("p","bis-v2-empty",T.error))}
 })();
