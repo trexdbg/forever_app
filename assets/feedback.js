@@ -179,6 +179,10 @@
     document.body.classList.add("fo-feedback-open");
     trigger.setAttribute("aria-expanded", "true");
     status.textContent = "";
+    if (submit.hidden) {
+      submit.hidden = false;
+      submit.textContent = T("Envoyer le signalement", "Send report");
+    }
     message.focus();
     loadCaptcha();
   }
