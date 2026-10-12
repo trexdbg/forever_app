@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "guide_version": "2026-10-12-beta3",
+  "guide_version": "2026-10-12-beta4-safe-levels",
   "source_commit": "e82b38b7477f4cbef0474a27b8c1abf1ae641d27",
   "faction": "alliance",
   "race": "nelf",
@@ -8,9 +8,9 @@
     1,
     10
   ],
-  "status": "community_route_beta_not_game_verified",
-  "disclaimer_fr": "Départ 1–5 issu des quêtes et coordonnées Classic. Forever ajoute des quêtes attestées par caches de bêta, mais les donneurs et coordonnées de leurs objectifs ne sont pas tous connus. Les points Forever sont des SECTEURS indicatifs, pas des positions vérifiées.",
-  "disclaimer_en": "Levels 1–5 use Classic quest and coordinate references. Forever beta caches establish new quests, but not all quest givers and objective locations. Forever pins indicate AREAS, not confirmed positions.",
+  "status": "beta_classic_route_with_3_documented_forever_quest_references",
+  "disclaimer_fr": "La route principale montre des quêtes Classic de niveau raisonnable. Les 3 quêtes nouvelles de Forever possèdent des textes de bêta documentés, mais leurs donneurs et emplacements exacts ne sont pas vérifiés : elles figurent en encadré facultatif, pas comme étapes obligatoires.",
+  "disclaimer_en": "The core route uses level-appropriate Classic quests. Three new Forever quest texts are documented from beta data, but quest givers and exact coordinates are unverified. They appear as optional references, never mandatory route stops.",
   "sources": [
     "https://www.joanasworld.com/alliance-1-12-teldrassil.php",
     "https://theforeverera.com/en/quests/zone/teldrassil/",
@@ -238,34 +238,12 @@
             ]
           ],
           "priority": "optional"
-        },
-        {
-          "coords": {
-            "x": 55,
-            "y": 46
-          },
-          "type": "objective",
-          "header": [
-            "Shadowglen grell area (approx.)",
-            "Secteur grell de Sombrevallon (approximatif)"
-          ],
-          "objectives": [
-            "la llamada de la naturaleza"
-          ],
-          "priority": "conditional",
-          "uncertain_position": true,
-          "special": [
-            [
-              "Forever #97977: if this quest is available in your log, search for 4 Gnarlpine totems near the abandoned furbolg camps west of Shadowglen, then bring them to Tarindrella. No precise loot or pickup location verified.",
-              "Forever n° 97977 : si la quête est dans votre journal, chercher 4 totems des Pins-tordus autour des anciens campements à l'ouest de Sombrevallon puis les rendre à Tarindrella. Aucun lieu exact de collecte ou de prise de quête vérifié."
-            ]
-          ]
         }
       ]
     },
     {
       "zone": "teldrassil",
-      "experience": 2.1,
+      "experience": 3,
       "waypoints": [
         {
           "coords": {
@@ -280,12 +258,7 @@
               "p2"
             ]
           ],
-          "special": [
-            [
-              "If you have Forever #97977, turn 4 Gnarlpine totems in to Tarindrella. Check quest availability first.",
-              "Si vous avez la quête Forever n° 97977, remettre 4 totems des Pins-tordus à Tarindrella. Vérifier d'abord sa disponibilité."
-            ]
-          ]
+          "special": []
         },
         {
           "coords": {
@@ -350,7 +323,7 @@
     },
     {
       "zone": "teldrassil",
-      "experience": 2.9,
+      "experience": 3.6,
       "waypoints": [
         {
           "coords": {
@@ -438,7 +411,7 @@
     },
     {
       "zone": "teldrassil",
-      "experience": 3.8,
+      "experience": 4.3,
       "waypoints": [
         {
           "coords": {
@@ -516,7 +489,7 @@
     },
     {
       "zone": "teldrassil",
-      "experience": 4.7,
+      "experience": 5,
       "waypoints": [
         {
           "coords": {
@@ -629,63 +602,10 @@
       ]
     }
   ],
-  "supplements": [
-    {
-      "step": 1,
-      "after": 3,
-      "point": {
-        "coords": {
-          "x": 58,
-          "y": 59
-        },
-        "header": [
-          "Dolanaar outskirts (area only)",
-          "Abords de Dolanaar (secteur uniquement)"
-        ],
-        "type": "objective",
-        "objectives": [
-          "los pelambres de sable de la noche suaves"
-        ],
-        "special": [
-          [
-            "Forever #87288: If you have this quest, collect 6 soft nightsaber pelts and bring them to Aldria in Dolanaar. Quest giver and exact drop locations are not confirmed.",
-            "Forever n° 87288 : si cette quête est active, récupérer 6 peaux souples de sabre-de-nuit et les apporter à Aldria à Dolanaar. Donneur de quête et lieux de butin non confirmés."
-          ]
-        ],
-        "priority": "conditional",
-        "uncertain_position": true
-      }
-    },
-    {
-      "step": 9,
-      "after": 1,
-      "point": {
-        "coords": {
-          "x": 40,
-          "y": 38
-        },
-        "header": [
-          "Road to the Oracle Glade (area only)",
-          "Route du Bosquet de l'Oracle (secteur uniquement)"
-        ],
-        "type": "objective",
-        "objectives": [
-          "the lost runner"
-        ],
-        "special": [
-          [
-            "Forever #99046: optional and very low XP (80). Look for Sentinel Eralya Leafshadow near the Oracle Glade road only if you already have this quest. Marker is an indicative AREA; do not follow it as an exact coordinate.",
-            "Forever n° 99046 : quête optionnelle, très peu d'XP (80). Chercher la sentinelle Eralya Leafshadow sur la route du Bosquet de l'Oracle uniquement si la quête est active. Repère de SECTEUR, pas une coordonnée exacte."
-          ]
-        ],
-        "priority": "optional",
-        "uncertain_position": true
-      }
-    }
-  ],
+  "supplements": [],
   "final_note": [
-    "Reach level 10 with nearby yellow-level mobs if needed. Level estimates and XP may vary in Forever.",
-    "Atteindre le niveau 10 sur les monstres proches de votre niveau si nécessaire. L'XP et les niveaux indiqués restent estimatifs sur Forever."
+    "At level 10, continue toward Darkshore when ready. Quest XP and objectives may differ in Forever.",
+    "Au niveau 10, poursuivez vers Sombrivage lorsque vous êtes prêt. L'XP et les objectifs peuvent varier dans Forever."
   ],
   "changes_classic": [
     {
@@ -709,5 +629,93 @@
       "note_fr": "Quête non incluse dans le parcours 1–10 actuel.",
       "note_en": "Quest not included in the current 1–10 route."
     }
-  ]
+  ],
+  "forever_quests": [
+    {
+      "id": 97977,
+      "level": 3,
+      "required_level": 1,
+      "name": {
+        "fr": "L'appel de la nature",
+        "en": "La llamada de la naturaleza"
+      },
+      "zone": "Sombrevallon / Shadowglen",
+      "objective": {
+        "fr": "Récupérer 4 totems des Pins-tordus et les apporter à Tarindrella. Donneur de quête non confirmé.",
+        "en": "Gather 4 Gnarlpine totems and bring them to Tarindrella. Quest giver not confirmed."
+      },
+      "status": "official_beta_quest_text_not_gameplay_route_verified",
+      "source": "https://forever-codex.com/quests/97977/"
+    },
+    {
+      "id": 87288,
+      "level": 7,
+      "required_level": 4,
+      "name": {
+        "fr": "Peaux souples de sabre-de-nuit",
+        "en": "Los pelambres de sable de la noche suaves"
+      },
+      "zone": "Dolanaar / Teldrassil",
+      "objective": {
+        "fr": "Apporter 6 peaux souples de sabre-de-nuit à Aldria. Donneur de quête et butin non confirmés.",
+        "en": "Bring 6 soft nightsaber pelts to Aldria. Quest giver and loot locations not confirmed."
+      },
+      "status": "official_beta_quest_text_not_gameplay_route_verified",
+      "source": "https://forever-codex.com/quests/87288/"
+    },
+    {
+      "id": 99046,
+      "level": 9,
+      "required_level": 4,
+      "name": {
+        "fr": "La messagère disparue",
+        "en": "The Lost Runner"
+      },
+      "zone": "Teldrassil",
+      "objective": {
+        "fr": "Trouver la sentinelle Eralya Leafshadow sur la route du Bosquet de l'Oracle. Position exacte non confirmée.",
+        "en": "Find Sentinel Eralya Leafshadow on the road to Oracle Glade. Exact location unverified."
+      },
+      "status": "official_beta_quest_text_not_gameplay_route_verified",
+      "source": "https://forever-codex.com/quests/99046/"
+    }
+  ],
+  "route_recipe": {
+    "version": 2,
+    "classic_source_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "recommended_levels": [
+      5,
+      6,
+      6,
+      7,
+      7,
+      8,
+      8,
+      9,
+      10
+    ],
+    "max_quest_level_above_recommended": 1,
+    "maximum_quest_level": 10,
+    "exclude_classic_quests": [
+      "ursal the mauler",
+      "tears of the moon",
+      "the relics of wakening",
+      "druid of the claw",
+      "the sleeping druid",
+      "the glowing fruit",
+      "tumors"
+    ],
+    "notes_fr": "Avant le niveau 10 : pas de quêtes 11+, ni d'élites difficiles ou de détours isolés. Les quêtes Forever sont affichées séparément, car les donneurs et positions exactes ne sont pas vérifiés.",
+    "notes_en": "Before level 10: no level 11+ quests, risky elites, or out-of-the-way detours. Forever quests appear separately because their quest givers and exact coordinates are unverified."
+  }
 }
