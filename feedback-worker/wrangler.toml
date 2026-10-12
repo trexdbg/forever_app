@@ -1,0 +1,13 @@
+name = "foreveroth-feedback"
+main = "src/index.mjs"
+compatibility_date = "2026-10-01"
+workers_dev = true
+
+# Applied per Cloudflare location. Combined with mandatory Turnstile verification.
+[[ratelimits]]
+name = "FEEDBACK_LIMITER"
+namespace_id = "30102026"
+
+[ratelimits.simple]
+limit = 5
+period = 60
