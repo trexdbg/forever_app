@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "guide_version": "2026-10-12-beta2",
+  "guide_version": "2026-10-12-beta3",
   "source_commit": "e82b38b7477f4cbef0474a27b8c1abf1ae641d27",
   "faction": "alliance",
   "race": "nelf",
@@ -54,12 +54,12 @@
       "origin": "classic"
     },
     "458": {
-      "fr": "Le protecteur de la forêt",
+      "fr": "La Protectrice sylvestre",
       "en": "The Woodland Protector",
       "origin": "classic"
     },
     "459": {
-      "fr": "Le protecteur de la forêt",
+      "fr": "La Protectrice sylvestre",
       "en": "The Woodland Protector",
       "origin": "classic"
     },
@@ -69,7 +69,7 @@
       "origin": "classic"
     },
     "917": {
-      "fr": "L'œuf des Tissebois",
+      "fr": "L'œuf d'araignée Tissebois",
       "en": "Webwood Egg",
       "origin": "classic"
     },
@@ -674,11 +674,11 @@
         ],
         "special": [
           [
-            "Forever #99046: find Sentinel Eralya Leafshadow on the Oracle Glade road, only if you have the quest. This pin is indicative; her exact location is unverified.",
-            "Forever n° 99046 : chercher la sentinelle Eralya Leafshadow sur la route du Bosquet de l'Oracle, si la quête est active. Position exacte non vérifiée."
+            "Forever #99046: optional and very low XP (80). Look for Sentinel Eralya Leafshadow near the Oracle Glade road only if you already have this quest. Marker is an indicative AREA; do not follow it as an exact coordinate.",
+            "Forever n° 99046 : quête optionnelle, très peu d'XP (80). Chercher la sentinelle Eralya Leafshadow sur la route du Bosquet de l'Oracle uniquement si la quête est active. Repère de SECTEUR, pas une coordonnée exacte."
           ]
         ],
-        "priority": "conditional",
+        "priority": "optional",
         "uncertain_position": true
       }
     }
@@ -686,5 +686,28 @@
   "final_note": [
     "Reach level 10 with nearby yellow-level mobs if needed. Level estimates and XP may vary in Forever.",
     "Atteindre le niveau 10 sur les monstres proches de votre niveau si nécessaire. L'XP et les niveaux indiqués restent estimatifs sur Forever."
+  ],
+  "changes_classic": [
+    {
+      "zone": "teldrassil",
+      "quest_name_en": "Bounty: Gnarlpine Furbolg",
+      "quest_name_fr": "Prime : les furbolgs Pignoueux",
+      "old_count": 20,
+      "new_count": 15,
+      "source": "https://theforeverera.com/fr/changes/",
+      "status": "confirmed_beta_patch",
+      "note_fr": "Changement confirmé par les notes de bêta. Quête hors parcours optimisé 1–10.",
+      "note_en": "Confirmed in beta patch notes. Not in the optimized 1–10 route."
+    },
+    {
+      "zone": "teldrassil",
+      "quest_name_en": "Escaping Ban'ethil",
+      "change_en": "Sentinel Lynessa Duskblossom walks more slowly.",
+      "change_fr": "La sentinelle Lynessa Duskblossom se déplace plus lentement.",
+      "source": "https://theforeverera.com/fr/changes/",
+      "status": "confirmed_beta_patch",
+      "note_fr": "Quête non incluse dans le parcours 1–10 actuel.",
+      "note_en": "Quest not included in the current 1–10 route."
+    }
   ]
 }
