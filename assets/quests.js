@@ -253,6 +253,7 @@ function updateModeControls(){
   b.classList.toggle("selected",active);b.setAttribute("aria-pressed",String(active));
  }
  info.hidden=s.mode!=="beta";
+ renderForeverReferences();
  for(const a of document.querySelectorAll(".nav-submenu a")){
   const url=new URL(a.href);
   if(!url.pathname.endsWith("/quetes/"))continue;
@@ -261,8 +262,8 @@ function updateModeControls(){
   else a.removeAttribute("aria-current");
  }
  if(s.mode==="beta")info.textContent=QT(
-  "Parcours expérimental 1–10 : étapes Classic + quêtes Forever documentées. Points Forever indicatifs, validation en jeu nécessaire.",
-  "Experimental 1–10 route: Classic steps + documented Forever quests. Forever markers are indicative; in-game validation is needed."
+  "Itinéraire Classic simplifié et limité aux quêtes adaptées au niveau. Les 3 nouvelles quêtes Forever ci-dessous proviennent de textes bêta ; donneurs et coordonnées à confirmer en jeu.",
+  "Simplified, level-appropriate Classic core route. The 3 new Forever quests below have beta quest text, but quest givers and locations still require in-game verification."
  );
 }
 async function fetchBetaGuide(){
@@ -275,20 +276,73 @@ async function fetchBetaGuide(){
 }
 function buildBetaSteps(){
  if(!s.beta||s.profile!=="nelf")return [];
+ const recipe=s.beta.route_recipe;
+ if(!recipe||!s.questLevels)throw Error("Références de niveaux Classic indisponibles");
  const clone=step=>({...step,waypoints:step.waypoints.map(w=>({...w,coords:{...w.coords}}))});
- const route=s.data.routes.nelf.filter(step=>Number(step.experience)<10).map(clone);
- for(const add of s.beta.supplements){
-  const step=route[add.step];
-  if(!step||!add.point)continue;
-  const at=clamp(Number(add.after)+1,0,step.waypoints.length);
-  step.waypoints.splice(at,0,add.point);
- }
+ const blocked=new Set(recipe.exclude_classic_quests||[]);
+ const excludedIds=new Set([933,934,935]); // Late Crown of the Earth chain is out of scope before level 10.
+ const questId=ref=>{
+  const key=Array.isArray(ref)?ref[0]:ref;
+  const target=s.beta.quest_ids?.[key]??s.data.quest_ids[key];
+  if(!Array.isArray(target))return Number(target)||null;
+  const suffix=Array.isArray(ref)?String(ref[1]||""):"";
+  const match=suffix.match(/p(\d+)/);
+  return Number(target[match?Number(match[1])-1:0])||null;
+ };
+ const allowed=(ref,recommended)=>{
+  const key=Array.isArray(ref)?ref[0]:ref;
+  const id=questId(ref),level=Number(s.questLevels[String(id)]);
+  return !blocked.has(key)&&id&&!excludedIds.has(id)&&Number.isInteger(level)&&level>=1&&
+   level<=recipe.maximum_quest_level&&level<=recommended+recipe.max_quest_level_above_recommended;
+ };
+ const keepSpecial=entry=>typeof entry==="string"&&/^(set hearthstone|learn the flightpath|learn flightpath|learn the skinning profession|buy 1x skinning knife)$/i.test(entry.trim());
+ const stages=recipe.classic_source_indices.map((sourceIndex,i)=>{
+  const source=s.data.routes.nelf[sourceIndex];
+  if(!source)throw Error("Étape Classic manquante");
+  const recommended=recipe.recommended_levels[i];
+  if(!Number.isInteger(recommended))throw Error("Niveau de route invalide");
+  const step=clone(source);step.experience=recommended;
+  step.waypoints=step.waypoints.map(w=>{
+   const next={...w};
+   for(const type of ["starts","objectives","ends","completed"])
+    if(next[type])next[type]=next[type].filter(ref=>allowed(ref,recommended));
+   next.special=(next.special||[]).filter(keepSpecial);
+   return next;
+  }).filter(w=>
+   ["starts","objectives","ends","completed"].some(type=>w[type]?.length)||
+   w.special.length>0||/darnassus gates|darnassus inn/i.test(String(w.header))
+  );
+  if(!step.waypoints.length)throw Error("Étape sans objectif");
+  return step;
+ });
  const intro=s.beta.intro.map(clone);
- const final={zone:"teldrassil",experience:10,waypoints:[{
-  coords:{x:56,y:60},type:"hub",header:["Dolanaar — level 10","Dolanaar — niveau 10"],
-  special:[s.beta.final_note]
- }]};
- return [...intro,...route,final];
+ // Refuse high-level recommendations even if upstream route data changes.
+ for(const step of [...intro,...stages]){
+  const ceiling=Math.floor(Number(step.experience))+1;
+  for(const w of step.waypoints)for(const type of ["starts","objectives","ends","completed"])
+   for(const q of w[type]||[]){
+    const id=questId(q),lv=Number(s.questLevels[String(id)]);
+    if(!Number.isInteger(lv)||lv>ceiling||lv>10)
+     throw Error("Quête incompatible avec le niveau conseillé : "+id);
+   }
+ }
+ return [...intro,...stages];
+}
+function renderForeverReferences(){
+ const panel=$("quest-forever-panel"),list=$("quest-forever-references");
+ if(!panel||!list)return;
+ const quests=s.mode==="beta"&&Array.isArray(s.beta?.forever_quests)?s.beta.forever_quests:[];
+ panel.hidden=!quests.length;list.replaceChildren();
+ for(const q of quests){
+  const line=element("div",undefined,"quest-forever-reference");
+  const main=element("div",undefined,"quest-forever-reference-main");
+  main.append(element("strong",QT(q.name.fr,q.name.en)));
+  const meta=element("small",QT("Quête ","Quest ")+q.level+" · "+QT("disponible dès ","available from ")+q.required_level);
+  main.append(meta);
+  const objective=element("p",QT(q.objective.fr,q.objective.en));
+  const source=element("a",QT("Texte bêta ↗","Beta quest text ↗"));source.href=q.source;source.target="_blank";source.rel="noopener noreferrer";
+  line.append(main,objective,source);list.append(line);
+ }
 }
 async function changeMode(mode){
  if(mode==="beta"&&(s.faction!=="alliance"||s.profile!=="nelf"))return;
