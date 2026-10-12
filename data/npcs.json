@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-09",
+  "updated_at": "2026-10-12",
   "status": "classic_reference_not_forever_verified",
   "coordinate_system": "zone_percent_0_100_classic_reference",
   "stock_status": "classic_reference_not_live",
@@ -30,7 +30,10 @@
     "cooking_vendor_expansion": "https://www.wowhead.com/classic/guide/cooking-vendor-recipes-wow-classic",
     "blacksmithing_vendor_expansion": "https://www.wowhead.com/classic/guide/blacksmithing-vendor-recipes-wow-classic",
     "forever_merchant_guide": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
-    "forever_cooking_guide": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling"
+    "forever_cooking_guide": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
+    "forever_weapon_masters": "https://www.warcrafttavern.com/forever/guides/weapon-trainers/",
+    "forever_city_services": "https://forever-codex.com/map/stormwind-city/",
+    "forever_ironforge_services": "https://forever-codex.com/map/ironforge/"
   },
   "items": {
     "728": {
@@ -11509,8 +11512,8 @@
         "en": "Ironforge"
       },
       "coordinates": {
-        "x": 62.2,
-        "y": 89.6
+        "x": 61.2,
+        "y": 89.5
       },
       "faction": "alliance",
       "offers": [],
@@ -11522,10 +11525,10 @@
         "Two-Handed Axes",
         "Two-Handed Maces"
       ],
-      "source": "https://www.warcrafttavern.com/wow-classic/guides/weapon-skill-trainers-and-locations/",
-      "note": "",
-      "note_en": "",
-      "coordinate_status": "classic_reference_unverified"
+      "source": "https://forever-codex.com/map/ironforge/",
+      "note": "Forgefer, quartier militaire, Armurerie de Timberline (étage). Position distincte de Bixi Wobblebonk ; coordonnée de référence Classic reportée sur la carte Forever, non confirmée en jeu.",
+      "note_en": "Ironforge, Military Ward, upper floor of Timberline Arms. Separate pin from Bixi Wobblebonk; Classic reference mapped onto Forever, not verified in-game.",
+      "coordinate_status": "forever_guides_classic_waypoint_not_ingame_verified"
     },
     {
       "id": null,
@@ -11540,8 +11543,8 @@
         "en": "Stormwind"
       },
       "coordinates": {
-        "x": 57.1,
-        "y": 57.7
+        "x": 63.9,
+        "y": 69.1
       },
       "faction": "alliance",
       "offers": [],
@@ -11553,10 +11556,10 @@
         "Staves",
         "Two-Handed Swords"
       ],
-      "source": "https://www.warcrafttavern.com/wow-classic/guides/weapon-skill-trainers-and-locations/",
-      "note": "",
-      "note_en": "",
-      "coordinate_status": "classic_reference_unverified"
+      "source": "https://www.warcrafttavern.com/forever/guides/weapon-trainers/",
+      "note": "Arsenal de Weller, quartier commerçant. Carte de Hurlevent agrandie dans Forever : coordonnées Classic 57,1 / 57,7 obsolètes sur cette carte. Position publiée pour Forever ≈ 63,8–63,9 / 69,0–69,1 ; présence à confirmer en jeu.",
+      "note_en": "Weller’s Arsenal, Trade District. Stormwind map expanded in Forever: Classic 57.1 / 57.7 no longer matches this map. Published Forever waypoint ≈ 63.8–63.9 / 69.0–69.1; in-game spawn not confirmed.",
+      "coordinate_status": "forever_guide_waypoint"
     },
     {
       "id": null,
@@ -15481,5 +15484,31 @@
     "forever_documented_items": 27,
     "classic_offer_policy": "Any pair without verification_status=forever_documented is only a Classic or unverified source; never claim server inventory.",
     "total_vendor_offers": 631
+  },
+  "weapon_master_position_audit": {
+    "date": "2026-10-12",
+    "coordinate_system": "in_game_zone_percent_on_forever_beta_map",
+    "scope": "8 Classic capital weapon masters; coordinate comparison for Forever's zone maps, not verified live on server",
+    "checked_names": [
+      "Ilyenia Moonfire",
+      "Bixi Wobblebonk",
+      "Buliwyf Stonehand",
+      "Woo Ping",
+      "Hanashi",
+      "Sayoc",
+      "Ansekhwa",
+      "Archibald"
+    ],
+    "updated_points": {
+      "Woo Ping": "Stormwind map redrawn in Forever; 63.9,69.1 (Forever Codex projection; Warcraft Tavern Forever lists 63.8,69.0)",
+      "Buliwyf Stonehand": "Ironforge 61.2,89.5, separate from Bixi Wobblebonk 62.2,89.6"
+    },
+    "unchanged_points": "Ilyenia Moonfire, Bixi Wobblebonk, Hanashi, Sayoc, Ansekhwa, Archibald match Classic-reference waypoint compilations; player beta verification pending",
+    "references": [
+      "https://www.warcrafttavern.com/forever/guides/weapon-trainers/",
+      "https://forever-codex.com/map/stormwind-city/",
+      "https://forever-codex.com/map/ironforge/",
+      "https://www.wowhead.com/forever/npc=11867/woo-ping"
+    ]
   }
 }
