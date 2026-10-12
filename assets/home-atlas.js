@@ -43,6 +43,7 @@ const imagePreloads=new Map();
 const seed=[
  {key:"mining:winterspring",kind:"mining",title:T("Berceau-de-l’Hiver","Winterspring"),count:T("Carte des filons","Ore node map"),zone:"winterspring",href:prefix+"minage/?zone=winterspring",image:"/assets/maps/winterspring.jpg",coords:[]},
  {key:"quests:alliance",kind:"quest",title:T("Itinéraires Alliance","Alliance quest routes"),href:prefix+"quetes/?faction=alliance",icon:"inv_scroll_07",count:T("Guides de progression","Leveling routes")},
+ {key:"quests:forever-beta:nelf",kind:"quest",title:T("Quêtes Forever · Elfes de la nuit","Forever quests · Night elves"),href:dataHref("quetes/",{faction:"alliance",race:"nelf",peuple:"nelf",mode:"forever-beta"}),icon:"alliance",count:T("Bêta : niveaux 1–10","Beta: levels 1–10"),overline:T("EXPLORATION / FOREVER BÊTA","EXPLORATION / FOREVER BETA"),disclaimer:T("Parcours en validation · Positions Forever indicatives","Route under validation · Forever locations indicative")},
  {key:"talent:voleur",kind:"talent",title:T("Talents du Voleur","Rogue talents"),href:prefix+"talents/voleur/",icon:"class_rogue",count:T("Arbres de talents","Talent trees")},
  {key:"profession:engineering",kind:"profession",title:T("Ingénierie","Engineering"),href:prefix+"metiers/",icon:"inv_hammer_04",count:T("Métiers de WoW Forever","WoW Forever professions")},
  {key:"npc:merchants",kind:"merchant",title:T("Marchands","Vendors"),href:prefix+"marchands/",icon:"inv_scroll_07",count:T("Objets et emplacements","Items and locations")},
@@ -159,6 +160,12 @@ function assemble(results){
      disclaimer:T("Parcours communautaires Classic · Variations possibles sur Forever","Classic community routes · May vary on Forever")});
    }
   }
+  pools.quest.push({key:"quest:forever-beta:nelf",kind:"quest",
+   title:T("Quêtes Forever · Elfes de la nuit","Forever quests · Night elves"),
+   count:T("Bêta : niveaux 1–10","Beta: levels 1–10"),
+   href:dataHref("quetes/",{faction:"alliance",race:"nelf",peuple:"nelf",mode:"forever-beta"}),
+   icon:"alliance",overline:T("EXPLORATION / FOREVER BÊTA","EXPLORATION / FOREVER BETA"),
+   disclaimer:T("Parcours en validation · Positions Forever indicatives","Route under validation · Forever locations indicative")});
  }
  // Real verified population data is unavailable: show the module without invented numbers.
  pools.population.push({key:"population:status",kind:"population",title:T("Population des royaumes","Realm population"),
