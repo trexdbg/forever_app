@@ -1,0 +1,132 @@
+/* Community reporting UI — purposefully discreet and independent of GitHub. */
+.fo-feedback-trigger {
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  z-index: 105;
+  border: 1px solid #665c45;
+  border-radius: 5px;
+  color: #d5d4c6;
+  background: #111d17ed;
+  box-shadow: 0 4px 18px #0007;
+  padding: 9px 12px;
+  font: 600 12px/1.25 "Trebuchet MS", "Segoe UI", sans-serif;
+  cursor: pointer;
+  opacity: .83;
+  max-width: calc(100vw - 32px);
+}
+.fo-feedback-trigger:hover,.fo-feedback-trigger:focus-visible {
+  opacity: 1;
+  border-color: #d6b678;
+  color: #f0d5a6;
+}
+.fo-feedback-shade[hidden],.fo-feedback-captcha[hidden],.fo-feedback-primary[hidden] {
+  display: none!important;
+}
+.fo-feedback-shade {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: #030704c9;
+  backdrop-filter: blur(5px);
+}
+body.fo-feedback-open { overflow: hidden; }
+.fo-feedback-dialog {
+  width: min(460px,100%);
+  max-height: min(90dvh,760px);
+  overflow-y: auto;
+  border: 1px solid #6a6851;
+  background: #111b16;
+  color: #eee9df;
+  border-radius: 8px;
+  box-shadow: 0 28px 70px #000b;
+  padding: 22px;
+  line-height: 1.4;
+}
+.fo-feedback-top { display:flex; gap:14px; align-items:center; justify-content:space-between; }
+.fo-feedback-top h2 {
+  font: 500 26px/1.2 Georgia,"Times New Roman",serif;
+  letter-spacing: -.02em;
+  margin: 0;
+  color: #eee9df;
+}
+.fo-feedback-close {
+  width: 36px;
+  height: 36px;
+  flex: none;
+  border: 1px solid #415044;
+  border-radius: 5px;
+  background: #1b2a20;
+  color: #eee9df;
+  font-size: 25px;
+  line-height: 1;
+}
+.fo-feedback-intro {
+  margin: 12px 0 20px;
+  font: 13px/1.6 "Trebuchet MS","Segoe UI",sans-serif;
+  color: #b7beb0;
+}
+.fo-feedback-form { display:grid; gap:9px; margin:0; }
+.fo-feedback-form label {
+  color: #e5dfcf;
+  font: 700 13px/1.5 "Trebuchet MS","Segoe UI",sans-serif;
+}
+.fo-feedback-form select,.fo-feedback-form textarea {
+  box-sizing: border-box;
+  width:100%;
+  min-width:0;
+  max-width:100%;
+  border:1px solid #536353;
+  border-radius: 4px;
+  background:#08130d;
+  color:#f0ecdf;
+  padding:10px 12px;
+  font:14px/1.5 "Trebuchet MS","Segoe UI",sans-serif;
+}
+.fo-feedback-form select { height:44px; cursor:pointer; }
+.fo-feedback-form textarea { min-height:132px; resize:vertical; }
+.fo-feedback-form :is(select,textarea,button):focus-visible {
+  outline:2px solid #edcc94;
+  outline-offset:2px;
+}
+.fo-feedback-page {
+  margin:2px 0;
+  overflow-wrap:anywhere;
+  color:#b4bcb1;
+  font:12px/1.4 "Trebuchet MS","Segoe UI",sans-serif;
+}
+.fo-feedback-page strong { color:#d7d1c3; }
+.fo-feedback-honey {
+  position:absolute!important;
+  height:0!important;
+  width:0!important;
+  opacity:0!important;
+  pointer-events:none!important;
+  overflow:hidden!important;
+}
+.fo-feedback-captcha { min-height:65px; }
+.fo-feedback-status {
+  min-height:18px;
+  margin:0;
+  color:#e8c88b;
+  font:13px/1.45 "Trebuchet MS","Segoe UI",sans-serif;
+}
+.fo-feedback-actions { display:flex; justify-content:flex-end; align-items:center; gap:10px; flex-wrap:wrap; }
+.fo-feedback-actions button { min-height:42px; border-radius:4px; padding:9px 13px; font:700 13px/1.3 "Trebuchet MS","Segoe UI",sans-serif; cursor:pointer; }
+.fo-feedback-secondary { background:transparent; border:1px solid #526152; color:#e1ded4; }
+.fo-feedback-primary { background:#d6b678; border:1px solid #edd097; color:#19231b; }
+.fo-feedback-primary:disabled { opacity:.5; cursor:wait; }
+.fo-feedback-note { margin:2px 0 0; color:#96a597; font:11px/1.55 "Trebuchet MS","Segoe UI",sans-serif; }
+@media (max-width:620px) {
+  .fo-feedback-trigger { left:10px; bottom:10px; padding:8px 10px; font-size:11px; }
+  .fo-feedback-shade { padding:12px; }
+  .fo-feedback-dialog { padding:17px; }
+  .fo-feedback-top h2 { font-size:23px; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .fo-feedback-trigger,.fo-feedback-dialog { transition:none!important; animation:none!important; }
+}
