@@ -128,8 +128,8 @@
         "Automatic submission is not enabled yet. You can prepare and copy the report.")));
   } else {
     form.append(make("p", "fo-feedback-note", T(
-      "Votre signalement sera traité en privé. Ne saisissez aucune donnée personnelle.",
-      "Your report will be handled privately. Do not include personal information.")));
+      "Votre signalement sera transmis à l'équipe du site. Ne saisissez aucune donnée personnelle.",
+      "Your report will be sent to the site team. Do not include personal information.")));
   }
   dialog.append(form);
   document.body.append(shade);
