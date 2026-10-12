@@ -273,7 +273,19 @@ function groupedItems(){
   if(evidence(r.npc,r.item))b.evidence=true;
   if(foreverOffer(r.npc,r.item))b.forever=true;
  }
+ const needle=val(q.value);
+ const relevance=g=>{
+  if(!needle)return 10;
+  const keys=[title(g.item),g.item.name?.fr,g.item.name?.en,...(g.item.search_aliases||[]),String(g.item.id)].map(val);
+  if(keys.some(x=>x===needle))return 0;
+  if(keys.some(x=>x.startsWith(needle)))return 1;
+  if(keys.some(x=>x.includes(needle)))return 2;
+  if(g.records.some(r=>val(r.npc.name).includes(needle)))return 3;
+  return 4;
+ };
  return [...buckets.values()].sort((a,b)=>{
+  if(needle&&relevance(a)!==relevance(b))return relevance(a)-relevance(b);
+  if(!!a.forever!==!!b.forever)return a.forever?-1:1;
   if(a.evidence!==b.evidence)return a.evidence?-1:1;
   return title(a.item).localeCompare(title(b.item),en?"en":"fr");
  });
@@ -519,8 +531,8 @@ function renderDetail(){
   if(a.name===n.name)return -1;if(b.name===n.name)return 1;
   return side(a).localeCompare(side(b),en?"en":"fr")||a.name.localeCompare(b.name);
  });
- const group=append(detail,"section",null,"npc-alternatives");
- append(group,"h4",S("Où acheter cet objet ? ("+others.length+")","Where to buy this item ("+others.length+")"));
+ const group=append(detail,"details",null,"npc-alternatives");
+ append(group,"summary",S("Voir tous les vendeurs ("+others.length+")","View all vendors ("+others.length+")"));
  append(group,"p",S("Vendeurs regroupés par objet · référence Classic, pas de stock en direct.","Vendors grouped by item · Classic references, no live inventory."),"npc-group-intro");
  const choices=append(group,"div",null,"npc-alternative-list");
  for(const seller of others){
@@ -530,13 +542,7 @@ function renderDetail(){
   append(main,"strong",seller.name);append(main,"small",side(seller)+" · "+faction[seller.faction]);
   append(b,"span",foreverOffer(seller,i)?S("Forever bêta","Forever beta"):S("Classic","Classic"),"npc-seller-verification "+(foreverOffer(seller,i)?"is-forever":"is-classic"));
   if(evidence(seller,i))append(b,"span",S("Avis stock","Stock report"),"npc-seller-report");
-  b.addEventListener("click",()=>{
-   q.value="";zone.value="all";trade.value="all";aff.value="all";
-   if(kind)kind.value="all";if(rank)rank.value="all";
-   store.showReportsOnly=false;if(reports)reports.checked=false;
-   const choice=store.records.find(rec=>rec.npc.name===seller.name&&rec.item?.id===i.id);
-   if(choice){store.filtered=filteredRecords();selectRecord(choice)}
-  });
+  b.addEventListener("click",()=>merchantSwitch(seller,i));
  }
  const purchase=n.offer_details?.[String(i.id)]||{};
  if(purchase.price?.currency==="merchants_favor")append(panel,"p",S("Coût Forever : ","Forever cost: ")+purchase.price.amount+" "+S("Faveurs marchandes","Merchant’s Favor"),"npc-forever-cost");
@@ -567,13 +573,13 @@ function renderDetail(){
   if(!matched)return;
   if(!store.filtered.some(r=>r.key===matched.key)){
    q.value="";zone.value="all";trade.value="all";aff.value="all";
-   if(kind)kind.value="all";if(rank)rank.value="all";
+   if(kind)kind.value="all";if(rank)rank.value="all";if(verification)verification.value="all";
    store.showReportsOnly=false;if(reports)reports.checked=false;
    store.filtered=filteredRecords();
   }
   if(type&&type.value!=="all"&&trainerType(matched.npc)!==type.value)type.value="all";
   if(weapon&&weapon.value!=="all"&&!(matched.npc.weapon_skills||[]).includes(weapon.value))weapon.value="all";
-  selectRecord(matched);
+  selectRecord(matched);syncMerchantUX();
  },{type:type?.value||"all",profession:trade.value,weaponSkill:weapon?.value||"all",itemId:i?.id});
  append(detail,"p",store.mode==="merchant"?(foreverOffer(n,i)?S("Cette vente est référencée dans une source Forever bêta ; stock actuel, présence réelle et version finale non garantis.","This sale is documented in a Forever beta source; live stock, actual presence and final version unconfirmed."):S("Vente de référence Classic non vérifiée sur Forever ; disponibilité, stock et coordonnées à confirmer.","Classic sale not verified for Forever; availability, stock and coordinates remain uncertain.")):S("Certaines fiches proviennent des guides Forever ; les autres restent des références Classic. Les PNJ et leurs positions peuvent différer en jeu.","Some entries come from Forever guides; others are Classic references. NPC presence and locations may differ in-game."),"npc-datacaveat");
 }
