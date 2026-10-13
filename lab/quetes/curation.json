@@ -276,10 +276,10 @@
         "en": "Deadly Blunderbuss"
       },
       "reason": {
-        "fr": "À fournir pour « Lames de scie du clan Chanteguerre ». Ingénieur ou hôtel des ventes ; anticiper pendant le passage aux Pitons-du-Tonnerre.",
-        "en": "Required for Warsong Saw Blades. Crafted by an engineer or bought at the auction house; prepare during the Thunder Bluff stop."
+        "fr": "À remettre à Pixel au Poste de Bois-brisé pour « Lames du clan Warsong » (quête Classic 6581), pendant la chaîne « Fournitures Warsong ». À fabriquer par un ingénieur ou acheter à l’hôtel des ventes avant d’aller en Orneval.",
+        "en": "Give this to Pixel at Splintertree Post for Warsong Saw Blades (Classic quest 6581), part of the Warsong Supplies chain. Have an engineer craft it or buy it at the auction house before Ashenvale."
       },
-      "source": "https://www.wowhead.com/tbc/quest=6571/warsong-supplies"
+      "source": "https://www.wowhead.com/classic/quest=6581/warsong-saw-blades"
     },
     {
       "id": "swift-potion",
