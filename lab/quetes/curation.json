@@ -1,0 +1,319 @@
+{
+  "schema_version": 1,
+  "game": "classic",
+  "guide_source": "data/quests/{faction}.json — VanillaQuesting; source notes are community guidance rather than confirmed live-game requirements",
+  "policies": {
+    "max_quest_level_delta": 0,
+    "nearby_objective_radius": 9,
+    "show_previous_level_stages": true,
+    "guide_min_level": 5
+  },
+  "dungeons": [
+    {
+      "id": "ragefire",
+      "faction": "horde",
+      "pattern": "ragefire chasm",
+      "level": 17,
+      "window": 2,
+      "zone": "orgrimmar",
+      "name": {
+        "fr": "Gouffre de Ragefeu",
+        "en": "Ragefire Chasm"
+      },
+      "reason": {
+        "fr": "Court, proche d'Orgrimmar et plusieurs quêtes à regrouper avant la visite.",
+        "en": "Short, near Orgrimmar, with several quests to gather before entering."
+      },
+      "source": "https://www.wowhead.com/classic/guide/dungeon-quests-wow-classic"
+    },
+    {
+      "id": "deadmines",
+      "faction": "alliance",
+      "pattern": "deadmines",
+      "level": 20,
+      "window": 3,
+      "zone": "westfall",
+      "name": {
+        "fr": "Les Mortemines",
+        "en": "The Deadmines"
+      },
+      "reason": {
+        "fr": "Un passage utile après les quêtes des Défias ; regrouper les quêtes d'instance avant d'entrer.",
+        "en": "Worth doing after the Defias chain; collect related dungeon quests first."
+      },
+      "source": "https://www.wowhead.com/classic/guide/dungeon-quests-wow-classic"
+    },
+    {
+      "id": "wailing",
+      "faction": "horde",
+      "pattern": "wailing caverns",
+      "level": 22,
+      "window": 3,
+      "zone": "barrens",
+      "name": {
+        "fr": "Cavernes des Lamentations",
+        "en": "Wailing Caverns"
+      },
+      "reason": {
+        "fr": "Plusieurs objectifs et quêtes au même endroit ; privilégier une visite préparée.",
+        "en": "Several nearby quests and objectives; best visited after preparation."
+      },
+      "source": "https://www.wowhead.com/classic/guide/dungeon-quests-wow-classic"
+    },
+    {
+      "id": "shadowfang",
+      "faction": "horde",
+      "pattern": "shadowfang keep",
+      "level": 24,
+      "window": 3,
+      "zone": "silverpine",
+      "name": {
+        "fr": "Donjon d'Ombrecroc",
+        "en": "Shadowfang Keep"
+      },
+      "reason": {
+        "fr": "Trois quêtes d'instance prévues dans le parcours communautaire ; visite facultative mais intéressante.",
+        "en": "Three dungeon quests included in the community route; optional but worthwhile."
+      },
+      "source": "https://www.wowhead.com/classic/guide/dungeon-quests-wow-classic"
+    },
+    {
+      "id": "blackfathom",
+      "faction": "horde",
+      "pattern": "blackfathom",
+      "level": 28,
+      "window": 3,
+      "zone": "ashenvale",
+      "name": {
+        "fr": "Profondeurs de Brassenoire",
+        "en": "Blackfathom Deeps"
+      },
+      "reason": {
+        "fr": "Intéressant autour du niveau 28 si les quêtes sont déjà réunies ; trajet à anticiper.",
+        "en": "Worth considering around level 28 if you have gathered the quests; account for travel."
+      },
+      "source": "https://www.wowhead.com/classic/guide/dungeon-quests-wow-classic"
+    }
+  ],
+  "preparations": [
+    {
+      "id": "thunder-ale",
+      "faction": "alliance",
+      "profile": "gnorf",
+      "level": 7,
+      "during": [
+        6,
+        8
+      ],
+      "quantity": 1,
+      "kind": "guide",
+      "name": {
+        "fr": "Tonnelet de bière du tonnerre",
+        "en": "Thunder Ale"
+      },
+      "reason": {
+        "fr": "Le parcours recommande d'en acheter à Kharanos, à l'étape de « Rivaux amers ».",
+        "en": "The source route recommends buying it in Kharanos around Bitter Rivals."
+      },
+      "source": "guide"
+    },
+    {
+      "id": "coarse-thread",
+      "faction": "horde",
+      "level": 10,
+      "during": [
+        9,
+        11
+      ],
+      "quantity": 1,
+      "kind": "guide",
+      "name": {
+        "fr": "Fil grossier",
+        "en": "Coarse Thread"
+      },
+      "reason": {
+        "fr": "Achat mentionné à Brill par le guide d'origine : vérifie l'utilité dans ton journal.",
+        "en": "Source route mentions buying this at Brill; verify its use in your quest log."
+      },
+      "source": "guide"
+    },
+    {
+      "id": "bronze-tube",
+      "faction": "alliance",
+      "level": 24,
+      "during": [
+        21,
+        25
+      ],
+      "quantity": 1,
+      "kind": "quest",
+      "quest_id": 174,
+      "name": {
+        "fr": "Tube en bronze",
+        "en": "Bronze Tube"
+      },
+      "reason": {
+        "fr": "À préparer avant « Les étoiles » : ingénieur, vendeur à stock limité ou hôtel des ventes. Le parcours en reparle à Hurlevent.",
+        "en": "Prepare ahead for Look To The Stars: Engineering, limited-stock vendor, or auction house. The route also mentions Stormwind."
+      },
+      "source": "https://warcraft.wiki.gg/wiki/Look_To_The_Stars_%28Classic%29"
+    },
+    {
+      "id": "seasoning-herbs",
+      "faction": "alliance",
+      "level": 24,
+      "during": [
+        22,
+        25
+      ],
+      "quantity": 1,
+      "kind": "quest",
+      "quest_id": 90,
+      "name": {
+        "fr": "Herbes aromatiques de Hurlevent",
+        "en": "Stormwind Seasoning Herbs"
+      },
+      "reason": {
+        "fr": "Pour « Brochettes de loup assaisonnées » (quête 90) : Felicia Gump, quartier des canaux de Hurlevent. Profiter d'un passage en ville.",
+        "en": "For Seasoned Wolf Kabobs (quest 90): buy from Felicia Gump in Stormwind's canal district during a city visit."
+      },
+      "source": "https://warcraft.wiki.gg/wiki/Seasoned_Wolf_Kabobs_%28Classic%29"
+    },
+    {
+      "id": "dry-times",
+      "faction": "alliance",
+      "level": 19,
+      "during": [
+        17,
+        19
+      ],
+      "quantity": 3,
+      "kind": "guide",
+      "name": {
+        "fr": "Moonshine, merlot et rhum doux",
+        "en": "Moonshine, Merlot and Sweet Rum"
+      },
+      "reason": {
+        "fr": "Le guide les achète dans trois lieux successifs vers les niveaux 18–19 : penser à les prendre pendant ces passages.",
+        "en": "The source guide buys these in three successive locations around levels 18–19; collect them while passing through."
+      },
+      "source": "guide"
+    },
+    {
+      "id": "flagon-mead",
+      "faction": "alliance",
+      "level": 27,
+      "during": [
+        25,
+        28
+      ],
+      "quantity": 1,
+      "kind": "guide",
+      "name": {
+        "fr": "Flacon d'hydromel",
+        "en": "Flagon of Mead"
+      },
+      "reason": {
+        "fr": "Achat recommandé par le guide à Menethil ; prévoir lors de la visite.",
+        "en": "Buy during the guide's Menethil visit."
+      },
+      "source": "guide"
+    },
+    {
+      "id": "silk-cloth",
+      "faction": "alliance",
+      "level": 29,
+      "during": [
+        27,
+        30
+      ],
+      "quantity": 3,
+      "kind": "guide",
+      "name": {
+        "fr": "Étoffes de soie",
+        "en": "Silk Cloth"
+      },
+      "reason": {
+        "fr": "Le guide conseille d'en acheter trois à l'hôtel des ventes de Hurlevent ; usage à vérifier en jeu.",
+        "en": "Source route suggests buying three at Stormwind's auction house; confirm the intended quest in game."
+      },
+      "source": "guide"
+    },
+    {
+      "id": "deadly-blunderbuss",
+      "faction": "horde",
+      "level": 28,
+      "during": [
+        25,
+        29
+      ],
+      "quantity": 1,
+      "kind": "quest",
+      "quest_id": 6581,
+      "name": {
+        "fr": "Espingole mortelle",
+        "en": "Deadly Blunderbuss"
+      },
+      "reason": {
+        "fr": "À fournir pour « Lames de scie du clan Chanteguerre ». Ingénieur ou hôtel des ventes ; anticiper pendant le passage aux Pitons-du-Tonnerre.",
+        "en": "Required for Warsong Saw Blades. Crafted by an engineer or bought at the auction house; prepare during the Thunder Bluff stop."
+      },
+      "source": "https://www.wowhead.com/tbc/quest=6571/warsong-supplies"
+    },
+    {
+      "id": "swift-potion",
+      "faction": "alliance",
+      "level": 27,
+      "during": [
+        26,
+        28
+      ],
+      "quantity": 1,
+      "kind": "route",
+      "name": {
+        "fr": "Potion de rapidité",
+        "en": "Swiftness Potion"
+      },
+      "reason": {
+        "fr": "Conseil de déplacement du parcours (pont de Thandol), pas un objet obligatoire pour une quête.",
+        "en": "Travel trick suggested by the guide (Thandol Span), not a mandatory quest item."
+      },
+      "source": "guide"
+    }
+  ],
+  "grouped_examples": [
+    {
+      "zone": "teldrassil",
+      "quests": [
+        "timberling seeds",
+        "timberling sprouts"
+      ],
+      "note": {
+        "fr": "Récolter les graines et pousses sur les mêmes sylvains avant de repartir.",
+        "en": "Gather seeds and sprouts from the same timberlings before leaving."
+      }
+    },
+    {
+      "zone": "westfall",
+      "quests": [
+        "westfall stew",
+        "goretusk liver pie"
+      ],
+      "note": {
+        "fr": "Regrouper les sangliers pour les ingrédients des deux quêtes, quand elles sont toutes les deux accessibles.",
+        "en": "Combine boar farming for both quests when they are each accessible."
+      }
+    },
+    {
+      "zone": "duskwood",
+      "quests": [
+        "seasoned wolf kabobs",
+        "wolves at our heels"
+      ],
+      "note": {
+        "fr": "Combiner les loups lorsque les deux quêtes sont accessibles et acceptées.",
+        "en": "Combine wolf kills when both quests are accessible and accepted."
+      }
+    }
+  ]
+}
