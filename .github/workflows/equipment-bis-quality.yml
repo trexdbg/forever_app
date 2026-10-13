@@ -1,0 +1,31 @@
+name: Equipment and BiS offline regression
+on:
+  pull_request:
+    paths:
+      - 'assets/bis-niveaux.js'
+      - 'assets/item-locale.js'
+      - 'assets/equipment-rules.js'
+      - 'assets/gear-data.js'
+      - 'assets/items-v3.js'
+      - 'data/bis*.json'
+      - 'data/items*.json'
+      - 'scripts/check-bis-niveaux.mjs'
+      - 'scripts/check-item-locales.mjs'
+      - 'scripts/check-bis-behavior.mjs'
+      - '.github/workflows/equipment-bis-quality.yml'
+permissions:
+  contents: read
+jobs:
+  equipment-bis:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - name: Native Node.js checks — offline, read-only
+        run: |
+          node --version
+          node --check assets/bis-niveaux.js
+          node --check assets/item-locale.js
+          node scripts/check-bis-niveaux.mjs
+          node scripts/check-item-locales.mjs
+          node scripts/check-bis-behavior.mjs
