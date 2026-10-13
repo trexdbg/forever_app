@@ -97,7 +97,7 @@
       quest.removed = patch.removed === true;
     }
     return {edition: overlay?.edition || "classic", faction: data.faction, profile,
-      zones: manifest?.zones || {}, mapBase: manifest?.map_base || "",
+      zones: {...(manifest?.zones || {}), ...(overlay?.zones || {})}, mapBase: manifest?.map_base || "",
       quests, points, totalStages: all.length, source: data.source_commit || ""};
   }
 
@@ -122,7 +122,7 @@
   }
 
   function getStatus(state, key) { return state.questStates?.[key] || "available"; }
-  function canOffer(quest, state, opts) {
+  function canOffer(quest, state, opts = {}) {
     if (quest.removed || getStatus(state, quest.key) !== "available") return {ok: false, reason: "state"};
     if (quest.requires.some(key => getStatus(state, key) !== "done")) return {ok: false, reason: "prerequisites"};
     if (quest.minLevel !== null && state.level < quest.minLevel) return {ok: false, reason: "minimum"};
