@@ -117,6 +117,27 @@
   ],
   "preparations": [
     {
+      "id": "nelf-skinning-knife-optional",
+      "faction": "alliance",
+      "profile": "nelf",
+      "level": 5,
+      "during": [
+        5,
+        7
+      ],
+      "quantity": 1,
+      "kind": "guide",
+      "name": {
+        "fr": "Couteau à dépecer (facultatif)",
+        "en": "Skinning Knife (optional)"
+      },
+      "reason": {
+        "fr": "Si tu as choisi le Dépeçage, profite de ton passage à Dolanaar pour acheter un couteau. Ce n’est pas un objet nécessaire à une quête et il ne faut pas faire un détour pour lui.",
+        "en": "If you trained Skinning, buy a knife during your Dolanaar visit. Not a quest requirement; do not make a separate trip."
+      },
+      "source": "guide"
+    },
+    {
       "id": "thunder-ale",
       "faction": "alliance",
       "profile": "gnorf",
