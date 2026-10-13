@@ -31,7 +31,8 @@ const DICT={
  purchaseQuest:"Objet de quête vérifié",purchaseGuide:"Note du guide à vérifier",purchaseGather:"À conserver",purchaseRoute:"Option de déplacement",source:"Source",levelFor:"À prévoir vers le niveau",stage:"étape",steps:"arrêts",
  hidden:"quêtes au-dessus de ton niveau écartées de ces étapes.",unknown:"Niveau non répertorié",questLevel:"Niveau",mapUnavailable:"Carte indisponible",loading:"Chargement des données Classic…",loaded:"Guide Classic chargé",error:"Impossible de charger les données Classic.",
  dungeonMore:"Voir les quêtes Classic",footer:"ForEveroth Quest Lab · Itinéraires communautaires Classic (VanillaQuesting). Parcours expérimental, distinct du guide public.",
- next:"Étape suivante",previous:"Étape précédente",mapFocus:"Voir le repère"
+ next:"Étape suivante",previous:"Étape précédente",mapFocus:"Voir le repère",
+ xpToNext:"XP nécessaires pour le prochain niveau",xpKnown:"XP des rendus documentés",xpMissing:"XP d’autres quêtes non renseignées",xpNotMeasured:"XP des monstres et progression réelle non incluses",xpQuest:"XP à la validation",xpLater:"Récompense si rendue"
  },
  en:{
  brand:"Optimized guide",eyebrow:"CLASSIC ROUTES · LABORATORY",headline:"A <em>smarter route.</em>",
@@ -54,7 +55,8 @@ const DICT={
  purchaseQuest:"Verified quest item",purchaseGuide:"Source guide suggestion",purchaseGather:"Keep for later",purchaseRoute:"Optional travel tip",source:"Source",levelFor:"Prepare around level",stage:"step",steps:"stops",
  hidden:"above-level quests filtered out of these steps.",unknown:"Unknown quest level",questLevel:"Level",mapUnavailable:"Map unavailable",loading:"Loading Classic data…",loaded:"Classic guide loaded",error:"Failed to load Classic data.",
  dungeonMore:"See Classic quests",footer:"ForEveroth Quest Lab · Community Classic routes (VanillaQuesting). Experimental guide, separate from the public version.",
- next:"Next step",previous:"Previous step",mapFocus:"Show marker"
+ next:"Next step",previous:"Previous step",mapFocus:"Show marker",
+ xpToNext:"XP needed to reach next level",xpKnown:"Documented turn-in XP",xpMissing:"Other quest XP not documented",xpNotMeasured:"Kill XP and actual character progress not included",xpQuest:"XP on turn-in",xpLater:"Reward when turned in"
  }
 };
 const T=k=>DICT[view.lang]?.[k]||k;
@@ -123,7 +125,7 @@ function urlSync(){
 function build(){
  if(!source)return;
  const data=source[view.faction];
- guide=Engine.build({data,manifest:source.manifest,levels:source.levels.levels,curation:source.curation,profile:profile(),level:view.level,mode:view.mode});
+ guide=Engine.build({data,manifest:source.manifest,levels:source.levels.levels,curation:source.curation,xpData:source.xpData,profile:profile(),level:view.level,mode:view.mode});
  if(!guide.stages.some(s=>s.index===view.stageIndex))view.stageIndex=guide.stages.at(0)?.index??null;
  stage=guide.stages.find(s=>s.index===view.stageIndex)||null;
  view.focusPoint=0;
@@ -169,6 +171,12 @@ function renderHeading(){
  $("map-name").textContent=stage?zoneName(stage.zone):"—";
  $("actions-counter").textContent=stage?stage.points.length+" "+T("steps"):"—";
  $("level-notice").textContent=guide.excludedOverLevel+" "+T("hidden");
+ const xpItems=[];
+ if(guide.xpToNext!==null)xpItems.push(T("xpToNext")+": "+guide.xpToNext.toLocaleString(view.lang==="fr"?"fr-FR":"en-US")+" XP");
+ if(stage?.rewardXpKnownCount)xpItems.push(T("xpKnown")+": "+stage.rewardXpKnown.toLocaleString(view.lang==="fr"?"fr-FR":"en-US")+" XP ("+stage.rewardXpKnownCount+")");
+ if(stage?.rewardXpUnknownCount)xpItems.push(T("xpMissing")+": "+stage.rewardXpUnknownCount);
+ if(xpItems.length)xpItems.push(T("xpNotMeasured"));
+ $("xp-summary").textContent=xpItems.join(" · ");
 }
 function renderStops(){
  const target=$("stops");target.replaceChildren();
@@ -195,6 +203,8 @@ function renderStops(){
     const qcontent=dom("span","quest-data");
     qcontent.append(dom("strong",null,questName(a)));
     qcontent.append(dom("small",null,a.level===null?T("unknown"):T("questLevel")+" "+a.level));
+    if(a.rewardXp!==null&&a.rewardXp!==undefined)qcontent.append(dom("small","quest-xp",
+      (a.kind==="turnin"||a.kind==="instant"?T("xpQuest"):T("xpLater"))+": "+a.rewardXp.toLocaleString(view.lang==="fr"?"fr-FR":"en-US")+" XP"));
     arow.append(label,qcontent);
     if(a.id)arow.append(external("https://www.wowhead.com/classic/quest="+a.id,"↗"));
     acts.append(arow);
@@ -375,11 +385,11 @@ function bind(){
 async function boot(){
  translate();$("status").textContent=T("loading");bind();
  try{
-  const files=["/data/quests/manifest.json","/data/quests/alliance.json","/data/quests/horde.json","/data/quests/levels.json","./curation.json"];
+  const files=["/data/quests/manifest.json","/data/quests/alliance.json","/data/quests/horde.json","/data/quests/levels.json","./curation.json","./xp-classic.json"];
   const responses=await Promise.all(files.map(file=>fetch(file)));
   if(responses.some(r=>!r.ok))throw Error("route data unavailable");
-  const [manifest,alliance,horde,levels,curation]=await Promise.all(responses.map(r=>r.json()));
-  source={manifest,alliance,horde,levels,curation};
+  const [manifest,alliance,horde,levels,curation,xpData]=await Promise.all(responses.map(r=>r.json()));
+  source={manifest,alliance,horde,levels,curation,xpData};
   if(!RACES[view.faction].some(r=>r[0]===view.race))view.race=RACES[view.faction][0][0];
   build();$("main").setAttribute("aria-busy","false");$("status").textContent=T("loaded");
  }catch(error){
