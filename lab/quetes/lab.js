@@ -28,7 +28,7 @@ const DICT={
  noImage:"Fond de carte indisponible — les positions X/Y restent visibles.",
  starts:"Accepter",objectives:"Faire",ends:"Rendre",completed:"Prendre et rendre",
  sector:"Secteur",objectiveGroup:"À faire ensemble",groupDescription:"Objectifs proches : profiter d'un seul passage pour les réunir.",notes:"Notes du parcours",
- purchaseQuest:"Objet de quête vérifié",purchaseGuide:"Note du guide à vérifier",purchaseRoute:"Option de déplacement",source:"Source",levelFor:"À prévoir vers le niveau",stage:"étape",steps:"arrêts",
+ purchaseQuest:"Objet de quête vérifié",purchaseGuide:"Note du guide à vérifier",purchaseGather:"À conserver",purchaseRoute:"Option de déplacement",source:"Source",levelFor:"À prévoir vers le niveau",stage:"étape",steps:"arrêts",
  hidden:"quêtes au-dessus de ton niveau écartées de ces étapes.",unknown:"Niveau non répertorié",questLevel:"Niveau",mapUnavailable:"Carte indisponible",loading:"Chargement des données Classic…",loaded:"Guide Classic chargé",error:"Impossible de charger les données Classic.",
  dungeonMore:"Voir les quêtes Classic",footer:"ForEveroth Quest Lab · Itinéraires communautaires Classic (VanillaQuesting). Parcours expérimental, distinct du guide public.",
  next:"Étape suivante",previous:"Étape précédente",mapFocus:"Voir le repère"
@@ -51,7 +51,7 @@ const DICT={
  noImage:"Map background unavailable — X/Y positions still work.",
  starts:"Accept",objectives:"Do",ends:"Turn in",completed:"Accept & turn in",
  sector:"Area",objectiveGroup:"Combine objectives",groupDescription:"Nearby objectives: handle them in one visit.",notes:"Route notes",
- purchaseQuest:"Verified quest item",purchaseGuide:"Source guide suggestion",purchaseRoute:"Optional travel tip",source:"Source",levelFor:"Prepare around level",stage:"step",steps:"stops",
+ purchaseQuest:"Verified quest item",purchaseGuide:"Source guide suggestion",purchaseGather:"Keep for later",purchaseRoute:"Optional travel tip",source:"Source",levelFor:"Prepare around level",stage:"step",steps:"stops",
  hidden:"above-level quests filtered out of these steps.",unknown:"Unknown quest level",questLevel:"Level",mapUnavailable:"Map unavailable",loading:"Loading Classic data…",loaded:"Classic guide loaded",error:"Failed to load Classic data.",
  dungeonMore:"See Classic quests",footer:"ForEveroth Quest Lab · Community Classic routes (VanillaQuesting). Experimental guide, separate from the public version.",
  next:"Next step",previous:"Previous step",mapFocus:"Show marker"
@@ -219,8 +219,8 @@ function renderPreps(){
  if(!preps.length){el.append(dom("p","empty-small",T("nonePrep")));return;}
  preps.forEach(p=>{
   const item=dom("div","prep-item");
-  const caption=dom("span","prep-tag "+p.kind,T(p.kind==="quest"?"purchaseQuest":p.kind==="route"?"purchaseRoute":"purchaseGuide"));
-  const title=dom("strong","prep-name",String(p.quantity)+" × "+p.name[view.lang]);
+  const caption=dom("span","prep-tag "+p.kind,T(p.kind==="quest"?"purchaseQuest":p.kind==="route"?"purchaseRoute":p.kind==="gather"?"purchaseGather":"purchaseGuide"));
+  const title=dom("strong","prep-name",p.fromGuideAuto?textOfNote(p.rawNote):String(p.quantity)+" × "+p.name[view.lang]);
   const req=dom("p","prep-info",p.reason[view.lang]);
   const level=dom("span","prep-level",T("levelFor")+" "+p.level);
   item.append(caption,title,level,req);
