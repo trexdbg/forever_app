@@ -161,6 +161,12 @@ function renderTimeline(){
   title.append(dom("strong",null,step.name?step.name[view.lang]:zoneName(step.zone)),dom("small",null,Math.floor(step.expected)+" · "+step.points.length+" "+T("steps")+(step.optional?" · "+T("optional"):"")));
   b.append(n,title);b.addEventListener("click",()=>selectStage(step.index));list.append(b);
  });
+ const active=list.querySelector(".stage-choice.active");
+ if(active&&list.clientHeight){
+  const top=active.offsetTop-list.offsetTop;
+  if(top<list.scrollTop||top+active.offsetHeight>list.scrollTop+list.clientHeight)
+   list.scrollTop=Math.max(0,top-48);
+ }
 }
 function renderHeading(){
  $("stage-title").textContent=stage?(stage.name?stage.name[view.lang]:zoneName(stage.zone)):T("stageTitle");
