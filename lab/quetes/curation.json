@@ -153,7 +153,7 @@
         "en": "Bronze Tube"
       },
       "reason": {
-        "fr": "À préparer avant « Les étoiles » : ingénieur, vendeur à stock limité ou hôtel des ventes. Le parcours en reparle à Hurlevent.",
+        "fr": "Pour la quête « Les étoiles » (ID 174) : à fabriquer par un ingénieur, ou à acheter à un marchand spécialisé (stock limité) ou à l'hôtel des ventes avant Sombre-comté.",
         "en": "Prepare ahead for Look To The Stars: Engineering, limited-stock vendor, or auction house. The route also mentions Stormwind."
       },
       "source": "https://warcraft.wiki.gg/wiki/Look_To_The_Stars_%28Classic%29"
@@ -184,20 +184,21 @@
       "faction": "alliance",
       "level": 19,
       "during": [
-        17,
+        15,
         19
       ],
-      "quantity": 3,
-      "kind": "guide",
+      "quantity": 4,
+      "kind": "quest",
       "name": {
-        "fr": "Moonshine, merlot et rhum doux",
-        "en": "Moonshine, Merlot and Sweet Rum"
+        "fr": "Boissons du « Régime sec » (4 éléments)",
+        "en": "Dry Times drinks (four items)"
       },
       "reason": {
-        "fr": "Le guide les achète dans trois lieux successifs vers les niveaux 18–19 : penser à les prendre pendant ces passages.",
-        "en": "The source guide buys these in three successive locations around levels 18–19; collect them while passing through."
+        "fr": "Acheter 1 merlot à Hurlevent, 1 moonshine à Sombre-comté et 1 rhum doux à Comté-de-l'Or ; garder 5 houblons des moissonneurs de la Marche de l'Ouest pour obtenir la quatrième boisson (bière du tonnerre) auprès de Grimbooze.",
+        "en": "Buy 1 Merlot in Stormwind, 1 Moonshine in Darkshire and 1 Sweet Rum in Goldshire; keep 5 Hops from Westfall harvesters to obtain the fourth drink (Thunderbrew Lager) from Grimbooze."
       },
-      "source": "guide"
+      "source": "https://www.wowhead.com/classic/quest=116/dry-times",
+      "quest_id": 116
     },
     {
       "id": "flagon-mead",
@@ -251,7 +252,7 @@
       "kind": "quest",
       "quest_id": 6581,
       "name": {
-        "fr": "Espingole mortelle",
+        "fr": "Tromblon mortel",
         "en": "Deadly Blunderbuss"
       },
       "reason": {
@@ -277,6 +278,46 @@
       "reason": {
         "fr": "Conseil de déplacement du parcours (pont de Thandol), pas un objet obligatoire pour une quête.",
         "en": "Travel trick suggested by the guide (Thandol Span), not a mandatory quest item."
+      },
+      "source": "guide"
+    },
+    {
+      "id": "westfall-save",
+      "faction": "alliance",
+      "level": 17,
+      "during": [
+        15,
+        18
+      ],
+      "quantity": 5,
+      "kind": "gather",
+      "name": {
+        "fr": "Houblons de la Marche de l'Ouest",
+        "en": "Hops in Westfall"
+      },
+      "reason": {
+        "fr": "Les moissonneurs mécaniques lâchent le houblon. En garder 5 pour le tonnelet de la quête « Régime sec », au lieu de revenir farmer.",
+        "en": "Harvest golems drop Hops. Keep five for the Dry Times keg instead of backtracking later."
+      },
+      "source": "https://www.wowhead.com/classic/quest=116/dry-times"
+    },
+    {
+      "id": "flask-oil",
+      "faction": "alliance",
+      "level": 17,
+      "during": [
+        16,
+        19
+      ],
+      "quantity": 5,
+      "kind": "guide",
+      "name": {
+        "fr": "Fioles d'huile (à conserver)",
+        "en": "Flasks of Oil (keep)"
+      },
+      "reason": {
+        "fr": "Le guide communautaire recommande de garder 5 fioles d'huile pendant les quêtes de la Marche de l'Ouest ; usage exact à vérifier.",
+        "en": "Community route recommends keeping five Flasks of Oil during Westfall questing; check their later use."
       },
       "source": "guide"
     }
