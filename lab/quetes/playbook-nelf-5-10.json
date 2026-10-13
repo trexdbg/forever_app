@@ -882,7 +882,7 @@
       },
       "steps": [
         {
-          "header": "Entrée des terriers",
+          "header": "Terrier de Ban'ethil — Reliques, Oben et Rageclaw",
           "coords": {
             "x": 43,
             "y": 58
@@ -891,113 +891,35 @@
             {
               "id": 483,
               "kind": "objective"
-            }
-          ],
-          "tip": {
-            "fr": "Récupérer les quatre reliques d'éveil dans la grotte (griffe, plume, saphir, rune).",
-            "en": "Collect all four relics inside (claw, quill, sapphire and rune)."
-          }
-        },
-        {
-          "header": "Oben Rageclaw / terriers",
-          "coords": {
-            "x": 43,
-            "y": 58
-          },
-          "actions": [
+            },
             {
               "id": 2541,
               "kind": "accept"
-            }
-          ],
-          "tip": {
-            "fr": "Parler à Oben puis récupérer le charme vaudou sur les chamans de la grotte.",
-            "en": "Speak to Oben, then loot the voodoo charm from shamans in the den."
-          }
-        },
-        {
-          "header": "Chaman pin-tordu / terriers",
-          "coords": {
-            "x": 43,
-            "y": 58
-          },
-          "actions": [
+            },
             {
               "id": 2541,
               "kind": "objective"
-            }
-          ],
-          "tip": {
-            "fr": "Récupérer le charme vaudou sur les chamans, puis retourner aussitôt voir Oben avant de prendre la suite.",
-            "en": "Recover the voodoo charm from shamans, then return to Oben before accepting the follow-up."
-          }
-        },
-        {
-          "header": "Oben Rageclaw / terriers",
-          "coords": {
-            "x": 43,
-            "y": 58
-          },
-          "actions": [
+            },
             {
               "id": 2541,
               "kind": "turnin"
-            }
-          ],
-          "tip": {
-            "fr": "Rendre Le druide endormi, puis accepter immédiatement Le druide de la Griffe (niveau 10). Ne ressors pas de la grotte.",
-            "en": "Turn in The Sleeping Druid and immediately accept Druid of the Claw (level 10). Stay inside the den."
-          }
-        },
-        {
-          "header": "Oben Rageclaw / terriers",
-          "coords": {
-            "x": 43,
-            "y": 58
-          },
-          "actions": [
+            },
             {
               "id": 2561,
               "kind": "accept"
-            }
-          ],
-          "tip": {
-            "fr": "À prendre juste après Le druide endormi, auprès d’Oben.",
-            "en": "Accept immediately after turning in The Sleeping Druid to Oben."
-          }
-        },
-        {
-          "header": "Rageclaw / terriers",
-          "coords": {
-            "x": 43,
-            "y": 58
-          },
-          "actions": [
+            },
             {
               "id": 2561,
               "kind": "objective"
-            }
-          ],
-          "tip": {
-            "fr": "Vaincre Rageclaw puis utiliser le charme vaudou. Ne fais pas une deuxième descente juste pour cela.",
-            "en": "Defeat Rageclaw and use the voodoo charm; don't make a second cave trip."
-          }
-        },
-        {
-          "header": "Oben Rageclaw / terriers",
-          "coords": {
-            "x": 43,
-            "y": 58
-          },
-          "actions": [
+            },
             {
               "id": 2561,
               "kind": "turnin"
             }
           ],
           "tip": {
-            "fr": "Rendre sur place, puis sortir du terrier.",
-            "en": "Turn in here and then exit the den."
+            "fr": "Dans une seule descente : ramasser les 4 reliques, parler à Oben, obtenir le charme sur les chamans, rendre Le druide endormi, accepter Le druide de la Griffe, vaincre Rageclaw et rendre sur place. Ne ressors pas entre les deux quêtes.",
+            "en": "In a single descent: collect all 4 relics, speak to Oben, loot the charm from shamans, turn in The Sleeping Druid, accept Druid of the Claw, defeat Rageclaw and turn in. Do not leave the den between quests."
           }
         }
       ],
