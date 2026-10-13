@@ -3,6 +3,7 @@ on:
   pull_request:
     paths:
       - data/npcs.json
+      - assets/npcs.js
       - data/professions.json
       - scripts/check-npc-professions.mjs
       - tests/npc-professions.test.mjs
@@ -22,6 +23,7 @@ jobs:
       - name: JavaScript syntax
         run: |
           node --check scripts/check-npc-professions.mjs
+          node --check assets/npcs.js
           node --check tests/npc-professions.test.mjs
       - name: Native cross-catalogue data quality
         run: node scripts/check-data-quality.mjs
