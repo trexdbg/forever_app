@@ -65,7 +65,17 @@
     all.forEach((stage, i) => (stage.waypoints || []).forEach(p => addPoint(p, i, stage.zone, number(stage.experience, 1))));
     for (const extra of overlay?.waypoints || []) {
       if (!extra.zone || !Array.isArray(extra.waypoints) || !valid(extra.level)) continue;
-      extra.waypoints.forEach(p => addPoint(p, all.length + number(extra.order, 0), extra.zone, number(extra.level)));
+      if (extra.faction && extra.faction !== data.faction) continue;
+      if (Array.isArray(extra.profiles) && !extra.profiles.includes(profile)) continue;
+      // Overlay stops join the existing Classic stage timeline by level/zone;
+      // they are NOT appended after level 60, so low-level Forever additions remain reachable.
+      let insertAt = 0, distance = Infinity;
+      all.forEach((stage, i) => {
+        const value = Math.abs(number(stage.experience, 1) - Number(extra.level)) + (stage.zone === extra.zone ? 0 : 2);
+        if (value < distance) {insertAt = i; distance = value;}
+      });
+      const stageIndex = Math.max(0, insertAt + number(extra.order, 0));
+      extra.waypoints.forEach(p => addPoint(p, stageIndex, extra.zone, number(extra.level)));
     }
     for (const quest of Object.values(quests)) {
       const patch = overlays[String(quest.id)] || overlays[quest.key] || {};
