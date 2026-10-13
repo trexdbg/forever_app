@@ -56,7 +56,8 @@
             "en": "Pick up the delivery along the road."
           }
         }
-      ]
+      ],
+      "zone": "teldrassil"
     },
     {
       "level": 5,
@@ -181,7 +182,8 @@
             "en": "Pick up Denalan's soil delivery."
           }
         }
-      ]
+      ],
+      "zone": "teldrassil"
     },
     {
       "level": 5,
@@ -246,7 +248,8 @@
             "en": "Turn in Crown 929. Its level-9 follow-up can wait."
           }
         }
-      ]
+      ],
+      "zone": "teldrassil"
     },
     {
       "level": 6,
@@ -340,7 +343,8 @@
             "en": "Turn in both quests on a single return trip. Tallonkai's follow-up is for level 8."
           }
         }
-      ]
+      ],
+      "zone": "teldrassil"
     },
     {
       "level": 7,
@@ -444,7 +448,8 @@
             "en": "Hand in both quests, then take the letter for Rellian. Carry it until the Darnassus trip at level 9."
           }
         }
-      ]
+      ],
+      "zone": "teldrassil"
     },
     {
       "level": 7,
@@ -480,7 +485,7 @@
           }
         },
         {
-          "header": "Fel Rock",
+          "header": "Syral Bladeleaf et Tallonkai Swiftroot / Dolanaar",
           "coords": {
             "x": 54,
             "y": 52
@@ -547,7 +552,8 @@
             "en": "Turn in Melenas's head if completed; otherwise continue leveling."
           }
         }
-      ]
+      ],
+      "zone": "teldrassil"
     },
     {
       "level": 8,
@@ -613,7 +619,8 @@
             "en": "Turn in both objectives in a single visit."
           }
         }
-      ]
+      ],
+      "zone": "teldrassil"
     },
     {
       "level": 8,
@@ -678,7 +685,8 @@
             "en": "Turn in here, not in Darnassus: the quest ends at the priestess."
           }
         }
-      ]
+      ],
+      "zone": "teldrassil"
     },
     {
       "level": 9,
@@ -743,7 +751,8 @@
             "en": "Fill the Tourmaline Phial on the way to the Ban'ethil dens."
           }
         }
-      ]
+      ],
+      "zone": "teldrassil"
     },
     {
       "level": 9,
@@ -825,7 +834,8 @@
             "en": "Turn in The Sleeping Druid here."
           }
         }
-      ]
+      ],
+      "zone": "teldrassil"
     },
     {
       "level": 9,
@@ -873,7 +883,8 @@
             "en": "Turn in all four relics together."
           }
         }
-      ]
+      ],
+      "zone": "teldrassil"
     },
     {
       "level": 9,
@@ -908,7 +919,8 @@
             "en": "Turn in Rellian, then accept Tumors (quest level 9)."
           }
         }
-      ]
+      ],
+      "zone": "darnassus"
     },
     {
       "level": 9,
@@ -939,7 +951,8 @@
             "en": "Collect 5 Mossy Tumors from corrupted timberlings."
           }
         }
-      ]
+      ],
+      "zone": "teldrassil"
     },
     {
       "level": 9,
@@ -970,7 +983,8 @@
             "en": "Turn in Tumors and check your XP before level 10."
           }
         }
-      ]
+      ],
+      "zone": "darnassus"
     },
     {
       "level": 10,
@@ -1036,7 +1050,8 @@
           }
         }
       ],
-      "optional": true
+      "optional": true,
+      "zone": "teldrassil"
     },
     {
       "level": 10,
@@ -1084,7 +1099,8 @@
             "en": "Turn in the quest; save the follow-up for later."
           }
         }
-      ]
+      ],
+      "zone": "darnassus"
     },
     {
       "level": 10,
@@ -1116,7 +1132,8 @@
           }
         }
       ],
-      "optional": true
+      "optional": true,
+      "zone": "darnassus"
     },
     {
       "level": 10,
@@ -1173,7 +1190,95 @@
           }
         }
       ],
-      "optional": true
+      "optional": true,
+      "zone": "teldrassil"
     }
-  ]
+  ],
+  "requirements": {
+    "475": {
+      "min_level": 4
+    },
+    "476": {
+      "min_level": 4,
+      "previous_id": 475
+    },
+    "483": {
+      "min_level": 4,
+      "previous_id": 476
+    },
+    "487": {
+      "min_level": 5
+    },
+    "488": {
+      "min_level": 4
+    },
+    "489": {
+      "min_level": 4,
+      "previous_id": 488
+    },
+    "918": {
+      "min_level": 4,
+      "previous_id": 997
+    },
+    "919": {
+      "min_level": 4
+    },
+    "922": {
+      "min_level": 4,
+      "previous_id": 918
+    },
+    "923": {
+      "min_level": 4,
+      "previous_id": 922
+    },
+    "928": {
+      "min_level": 1,
+      "previous_id": 921
+    },
+    "929": {
+      "min_level": 1,
+      "previous_id": 928
+    },
+    "932": {
+      "min_level": 4
+    },
+    "933": {
+      "min_level": 1,
+      "previous_id": 929
+    },
+    "997": {
+      "min_level": 4
+    },
+    "2159": {
+      "min_level": 1
+    },
+    "2438": {
+      "min_level": 1
+    },
+    "2459": {
+      "min_level": 1,
+      "previous_id": 2438
+    },
+    "2519": {
+      "min_level": 5
+    },
+    "2541": {
+      "min_level": 3
+    },
+    "2561": {
+      "min_level": 3,
+      "previous_id": 2541
+    },
+    "6341": {
+      "min_level": 10,
+      "previous_id": 6344
+    },
+    "6342": {
+      "min_level": 10,
+      "previous_id": 6341
+    },
+    "6344": {
+      "min_level": 10
+    }
+  }
 }
