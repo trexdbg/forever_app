@@ -12,7 +12,7 @@
   const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
   const unique = arr => Array.from(new Set(arr));
   const slug = value => String(value || "").trim().toLowerCase().replace(/\s+/g, " ");
-  const title = value => String(value || "").replace(/\b[a-z]/g, c => c.toUpperCase());
+  const title = value => String(value || "").replace(/(^|\s)([a-z])/g, (_, space, c) => space + c.toUpperCase());
 
   function resolveRef(ref, data, levels) {
     let name = Array.isArray(ref) ? ref[0] : ref;
@@ -114,7 +114,6 @@
     return {ok: true};
   }
   function chooseAnchor(catalog, state) {
-    if (state.cursor !== null) return state.cursor;
     const stages = new Map();
     for (const p of catalog.points) {
       if (!stages.has(p.stage)) stages.set(p.stage, {level:p.experience, zone:p.zone});
@@ -124,7 +123,8 @@
       const dist = Math.abs(p.level - state.level) + (p.zone === state.zone ? 0 : 1.8);
       if (dist < score) {score = dist; best = i;}
     }
-    return best;
+    // Leveling never strands a character at a stale saved guide stage.
+    return state.cursor === null ? best : Math.max(best, state.cursor);
   }
   const hypot = (a,b,x,y) => Math.hypot((a ?? 50) - x, (b ?? 50) - y);
   function calculate(catalog, stateInput, options = {}) {
@@ -154,18 +154,24 @@
         if (action.kind === "accept" || action.kind === "instant" || action.kind === "objective" || action.kind === "turnin")
           actions.push({...action, status});
       }
-      if (actions.length) pool.push({...point, actions});
+      // A quest completed immediately at this location must not also be proposed for acceptance.
+      const instantKeys = new Set(actions.filter(a => a.kind === "instant").map(a => a.questKey));
+      const distinctActions = actions.filter(a => a.kind !== "accept" || !instantKeys.has(a.questKey));
+      if (distinctActions.length) pool.push({...point, actions: distinctActions});
     }
     const itinerary = [];
     let position = {zone:state.zone,x:state.x,y:state.y};
     let stage = anchor;
     const visited = new Set();
+    const committed = new Set();
     for (let stop = 0; stop < maxStops && pool.length; stop++) {
       let bestIndex = -1, bestScore = Infinity;
       pool.forEach((p, i) => {
         if (visited.has(p.id)) return;
+        const actions = p.actions.filter(a => a.kind === "objective" || !committed.has(a.questKey));
+        if (!actions.length) return;
         const ranks = {turnin: -80, objective: -48, instant: -5, accept: 0};
-        const rank = Math.min(...p.actions.map(a => ranks[a.kind]));
+        const rank = Math.min(...actions.map(a => ranks[a.kind]));
         const zonePenalty = p.zone === position.zone ? 0 : 90;
         const distance = p.zone === position.zone ? hypot(position.x,position.y,p.x,p.y) * 0.65 : 0;
         const stagePenalty = Math.abs(p.stage - stage) * 6;
@@ -174,7 +180,9 @@
       });
       if (bestIndex < 0) break;
       const point = pool[bestIndex];
-      itinerary.push({...point, score: bestScore});
+      const actions = point.actions.filter(a => a.kind === "objective" || !committed.has(a.questKey));
+      actions.forEach(a => {if (a.kind !== "objective") committed.add(a.questKey);});
+      itinerary.push({...point, actions, score: bestScore});
       visited.add(point.id);
       // Earlier or repeated waypoints must not make the simulated route oscillate backwards.
       stage = Math.max(stage, point.stage);
