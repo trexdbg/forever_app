@@ -24,7 +24,11 @@
         "fr": "Court, proche d'Orgrimmar et plusieurs quêtes à regrouper avant la visite.",
         "en": "Short, near Orgrimmar, with several quests to gather before entering."
       },
-      "source": "https://www.wowhead.com/classic/guide/dungeon-quests-wow-classic"
+      "source": "https://www.wowhead.com/classic/guide/dungeon-quests-wow-classic",
+      "checklist": {
+        "fr": "Avant d'entrer : récupérer les quêtes à Orgrimmar, Fossoyeuse et aux Pitons-du-Tonnerre ; « Ennemis cachés » débute par une chaîne auprès de Thrall.",
+        "en": "Before entering: gather quests in Orgrimmar, Undercity and Thunder Bluff; Hidden Enemies starts with Thrall's quest chain."
+      }
     },
     {
       "id": "deadmines",
@@ -41,7 +45,11 @@
         "fr": "À privilégier autour du niveau 22 : enchaînement des Défias et plusieurs quêtes du même donjon réunies en une visite.",
         "en": "Best around level 22: Defias chain plus several dungeon quests batched into one run."
       },
-      "source": "https://www.wowhead.com/classic/guide/dungeon-quests-wow-classic"
+      "source": "https://www.wowhead.com/classic/guide/dungeon-quests-wow-classic",
+      "checklist": {
+        "fr": "Avant d'entrer : avancer la chaîne de la Confrérie défias, prendre « Foulards de soie rouge », « Assaut souterrain » et les quêtes disponibles autour de la Marche de l'Ouest.",
+        "en": "Before entering: progress the Defias Brotherhood chain and pick up Red Silk Bandanas, Underground Assault and nearby Westfall quests."
+      }
     },
     {
       "id": "wailing",
@@ -58,7 +66,11 @@
         "fr": "Plusieurs objectifs et quêtes au même endroit ; privilégier une visite préparée.",
         "en": "Several nearby quests and objectives; best visited after preparation."
       },
-      "source": "https://www.wowhead.com/classic/guide/dungeon-quests-wow-classic"
+      "source": "https://www.wowhead.com/classic/guide/dungeon-quests-wow-classic",
+      "checklist": {
+        "fr": "Avant d'entrer : compléter les prérequis de « Chefs des crocs » (chaîne des oasis des Tarides) et réunir les quêtes de la caverne.",
+        "en": "Before entering: finish Leaders of the Fang prerequisites (The Barrens Oases chain) and gather the cave quests."
+      }
     },
     {
       "id": "shadowfang",
@@ -75,7 +87,11 @@
         "fr": "À viser autour du niveau 27 pour combiner les trois quêtes Classic, dont « Arugal doit mourir » et sa récompense.",
         "en": "Aim for around level 27 to combine all three Classic quests, including Arugal Must Die and its reward."
       },
-      "source": "https://www.wowhead.com/classic/guide/dungeon-quests-wow-classic"
+      "source": "https://www.wowhead.com/classic/guide/dungeon-quests-wow-classic",
+      "checklist": {
+        "fr": "Avant d'entrer : « Le Livre d'Ur » se prend à Fossoyeuse, « Arugal doit mourir » et les Traqueurs noirs au Sépulcre.",
+        "en": "Before entering: collect The Book of Ur in Undercity, and Arugal Must Die plus Deathstalkers in Shadowfang at the Sepulcher."
+      }
     },
     {
       "id": "blackfathom",
@@ -92,7 +108,11 @@
         "fr": "Intéressant autour du niveau 28 si les quêtes sont déjà réunies ; trajet à anticiper.",
         "en": "Worth considering around level 28 if you have gathered the quests; account for travel."
       },
-      "source": "https://www.wowhead.com/classic/guide/dungeon-quests-wow-classic"
+      "source": "https://www.wowhead.com/classic/guide/dungeon-quests-wow-classic",
+      "checklist": {
+        "fr": "Avant d'entrer : terminer l'étape extérieure d'« Allégeance aux dieux très anciens » et regrouper les quêtes d'Orneval.",
+        "en": "Before entering: finish the outdoor step of Allegiance to the Old Gods and gather Ashenvale quests."
+      }
     }
   ],
   "preparations": [
