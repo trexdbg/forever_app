@@ -1,0 +1,26 @@
+name: Data reliability (offline PR gate)
+on:
+  pull_request:
+    paths:
+      - 'AGENTS.md'
+      - 'docs/data-quality.md'
+      - 'scripts/check-data-quality.mjs'
+      - 'tests/data-quality.test.mjs'
+      - '.github/workflows/data-quality.yml'
+      - 'data/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  data-quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Regression fixtures (no network)
+        run: node --test tests/data-quality.test.mjs
+      - name: Full JSON reliability scan (errors block; warnings reviewed)
+        run: node scripts/check-data-quality.mjs
