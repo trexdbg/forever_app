@@ -4,6 +4,8 @@ const S=(fr,eng)=>en?eng:fr;
 const $=id=>document.getElementById(id);
 const mk=(tag,text,cls)=>{const e=document.createElement(tag);if(text!=null)e.textContent=text;if(cls)e.className=cls;return e};
 const val=x=>String(x??"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().trim();
+const offerSourceUrl=p=>[p?.evidence_url,p?.source_url,p?.source].find(u=>typeof u==="string"&&/^https:\/\/[^\s/]+/.test(u))||null;
+const offerSourceLabel=english=>english?"Source for this sale ↗":"Source de cette vente ↗";
 const fmt=n=>new Intl.NumberFormat(en?"en-US":"fr-FR",{maximumFractionDigits:1}).format(n);
 const title=d=>d.name[en?"en":"fr"];
 const side=d=>d.zone[en?"en":"fr"];
@@ -556,7 +558,8 @@ function renderDetail(){
  if(i.seasonal||purchase.seasonal)append(panel,"p",S("Vente saisonnière Classic : Voile d'hiver (non vérifié sur Forever).","Classic seasonal sale: Winter Veil (not confirmed for Forever)."),"npc-requirement");
   if(i.bind==="pickup"||purchase.bind==="pickup")append(panel,"p",S("Lié quand ramassé (référence Classic).","Bind on Pickup (Classic reference)."),"npc-requirement");
  if(purchase.shared_stock_group)append(panel,"p",S("Emplacement de stock partagé : une autre recette peut apparaître à la place.","Shared inventory slot: a different recipe may appear instead."),"npc-requirement");
- if(purchase.source){const cite=append(panel,"p",null,"npc-offer-source");link(cite,S("Source de cette vente ↗","Source for this sale ↗"),purchase.source)}
+ const saleProof=offerSourceUrl(purchase);
+  if(saleProof){const cite=append(panel,"p",null,"npc-offer-source");link(cite,offerSourceLabel(en),saleProof)}
  }else if(trainerType(n)==="weapon"){
  append(detail,"h4",S("Armes enseignées","Weapons taught"));
  const types=append(detail,"div",null,"npc-weapon-skills");for(const k of n.weapon_skills||[])append(types,"span",weaponLabels[k]||k,"npc-chip");
