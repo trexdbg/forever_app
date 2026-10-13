@@ -118,8 +118,9 @@
     },
     "932": {
       "xp": 625,
-      "source": "https://wowforever.wclbox.com/en/renwu/932",
-      "zone": "teldrassil"
+      "source": "https://classicdb.ch/?quest=932",
+      "zone": "teldrassil",
+      "note": "ClassicDB and historical Classic comments report 625 XP and quest level 7; another 2026 WCLBox rendering reports 700 XP and quest level 8. Treat as a Classic reference pending in-game validation."
     },
     "933": {
       "xp": 775,
