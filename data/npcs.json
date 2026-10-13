@@ -13991,7 +13991,14 @@
             "amount": 30,
             "currency": "merchants_favor"
           },
-          "bind": "pickup"
+          "bind": "pickup",
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/azabek",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/azabek",
+          "observed_at": "2026-10-13",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Le guide Forever consulté répertorie Aza'bek vendant Recipe: Venomous Smoothie (objet 249885) pour 30 Merchant's Favor. Vente et conditions citées par le guide bêta, ni stock actuel ni capture directe en jeu confirmés."
         },
         "249886": {
           "source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
@@ -14002,7 +14009,14 @@
             "amount": 30,
             "currency": "merchants_favor"
           },
-          "bind": "pickup"
+          "bind": "pickup",
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/azabek",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/azabek",
+          "observed_at": "2026-10-13",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Le guide Forever consulté répertorie Aza'bek vendant Recipe: Slimy Smoothie (objet 249886) pour 30 Merchant's Favor. Vente et conditions citées par le guide bêta, ni stock actuel ni capture directe en jeu confirmés."
         },
         "249887": {
           "source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
@@ -14013,7 +14027,14 @@
             "amount": 30,
             "currency": "merchants_favor"
           },
-          "bind": "pickup"
+          "bind": "pickup",
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/azabek",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/azabek",
+          "observed_at": "2026-10-13",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Le guide Forever consulté répertorie Aza'bek vendant Recipe: Mrrggl Smrrthle (objet 249887) pour 30 Merchant's Favor. Vente et conditions citées par le guide bêta, ni stock actuel ni capture directe en jeu confirmés."
         },
         "249888": {
           "source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
@@ -14028,7 +14049,14 @@
             "faction": "Durotar Supply and Logistics",
             "rank": "Friendly"
           },
-          "bind": "pickup"
+          "bind": "pickup",
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/azabek",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/azabek",
+          "observed_at": "2026-10-13",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Le guide Forever consulté répertorie Aza'bek vendant Recipe: Calcified Smoothie (objet 249888) pour 60 Merchant's Favor, réputation Friendly. Vente et conditions citées par le guide bêta, ni stock actuel ni capture directe en jeu confirmés."
         },
         "249889": {
           "source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
@@ -14043,7 +14071,14 @@
             "faction": "Durotar Supply and Logistics",
             "rank": "Friendly"
           },
-          "bind": "pickup"
+          "bind": "pickup",
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/azabek",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/azabek",
+          "observed_at": "2026-10-13",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Le guide Forever consulté répertorie Aza'bek vendant Recipe: Spicy Smoothie (objet 249889) pour 60 Merchant's Favor, réputation Friendly. Vente et conditions citées par le guide bêta, ni stock actuel ni capture directe en jeu confirmés."
         },
         "249890": {
           "source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
@@ -14058,7 +14093,14 @@
             "faction": "Durotar Supply and Logistics",
             "rank": "Honored"
           },
-          "bind": "pickup"
+          "bind": "pickup",
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/azabek",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/azabek",
+          "observed_at": "2026-10-13",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Le guide Forever consulté répertorie Aza'bek vendant Recipe: Wicked Smoothie (objet 249890) pour 90 Merchant's Favor, réputation Honored. Vente et conditions citées par le guide bêta, ni stock actuel ni capture directe en jeu confirmés."
         }
       },
       "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
@@ -14117,7 +14159,14 @@
             "amount": 45,
             "currency": "merchants_favor"
           },
-          "bind": "pickup"
+          "bind": "pickup",
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/nina-surefire",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/nina-surefire",
+          "observed_at": "2026-10-13",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Le guide Forever consulté répertorie Nina Surefire vendant Recipe: Lesser Mageblood Elixir (objet 250376) pour 45 Merchant's Favor. Vente et conditions citées par le guide bêta, ni stock actuel ni capture directe en jeu confirmés."
         },
         "250381": {
           "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
@@ -14128,7 +14177,14 @@
             "amount": 45,
             "currency": "merchants_favor"
           },
-          "bind": "pickup"
+          "bind": "pickup",
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/nina-surefire",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/nina-surefire",
+          "observed_at": "2026-10-13",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Le guide Forever consulté répertorie Nina Surefire vendant Recipe: Elixir of Lesser Spirit (objet 250381) pour 45 Merchant's Favor. Vente et conditions citées par le guide bêta, ni stock actuel ni capture directe en jeu confirmés."
         },
         "250383": {
           "source": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
@@ -14156,7 +14212,14 @@
             "amount": 45,
             "currency": "merchants_favor"
           },
-          "bind": "pickup"
+          "bind": "pickup",
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/nina-surefire",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/nina-surefire",
+          "observed_at": "2026-10-13",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Le guide Forever consulté répertorie Nina Surefire vendant Recipe: Elixir of Lesser Intellect (objet 250388) pour 45 Merchant's Favor. Vente et conditions citées par le guide bêta, ni stock actuel ni capture directe en jeu confirmés."
         },
         "250990": {
           "source": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
@@ -14168,7 +14231,14 @@
             "amount": 45,
             "currency": "merchants_favor"
           },
-          "bind": "pickup"
+          "bind": "pickup",
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/nina-surefire",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/nina-surefire",
+          "observed_at": "2026-10-13",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Le guide Forever consulté répertorie Nina Surefire vendant Recipe: Mender's Potion (objet 250990) pour 45 Merchant's Favor. Vente et conditions citées par le guide bêta, ni stock actuel ni capture directe en jeu confirmés."
         },
         "250998": {
           "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
