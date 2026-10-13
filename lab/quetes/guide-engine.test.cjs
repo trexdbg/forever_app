@@ -10,12 +10,13 @@ const manifest=read("data/quests/manifest.json");
 const curation=read("lab/quetes/curation.json");
 const levels=read("data/quests/levels.json").levels;
 const xpData=read("lab/quetes/xp-classic.json");
+const playbook=read("lab/quetes/playbook-nelf-5-10.json");
 const alliance=read("data/quests/alliance.json");
 const horde=read("data/quests/horde.json");
 const profiles=[["alliance","human",alliance],["alliance","gnorf",alliance],["alliance","nelf",alliance],
  ["horde","trorc",horde],["horde","undead",horde],["horde","tauren",horde]];
 let checks=0,groupCount=0,filtered=0;
-const build=(data,profile,level,mode)=>guide.build({data,manifest,levels,curation,xpData,profile,level,mode});
+const build=(data,profile,level,mode)=>guide.build({data,manifest,levels,curation,xpData,playbook,profile,level,mode});
 function test(name,fn){fn();checks++;console.log("✓ "+name);}
 test("curation schema and source constraints",()=>{
  assert.equal(curation.schema_version,1);
@@ -119,6 +120,72 @@ test("stage XP subtotal only counts turn-ins and avoids double counting repeated
   assert.equal(stage.rewardXpKnown,[...found.values()].reduce((total,x)=>total+x,0));
   assert.equal(stage.rewardXpKnownCount,found.size);
  }
+});
+test("nelf 5–10 playbook stays level-safe and uses both selectable modes",()=>{
+ assert.equal(playbook.schema_version,1);
+ for(let level=5;level<=10;level++)for(const mode of ["solo","essentials"]){
+  const result=build(alliance,"nelf",level,mode);
+  assert.equal(result.curatedRange,"nelf-5-10");
+  assert(result.stages.length>=3);
+  assert(result.stages.every(s=>s.level<=level));
+  assert(result.stages.every(s=>s.points.every(p=>p.actions.every(a=>a.level<=level))));
+  assert(result.stages.every(s=>s.points.every(p=>p.members.every(m=>m.x>=0&&m.x<=100&&m.y>=0&&m.y<=100))));
+  assert(result.stages.every(s=>!s.dungeonId));
+ }
+ assert(!build(alliance,"human",8,"solo").playbook);
+ assert(!build(alliance,"nelf",11,"solo").playbook);
+});
+test("nelf playbook actions form a walkable accept-objective-turnin chain",()=>{
+ const active=new Set(),done=new Set([921]); // Crown chain 1–4 happens before this guide begins.
+ const visited=[];
+ for(const chapter of playbook.chapters)for(const point of chapter.steps){
+  assert.equal(chapter.zone==="teldrassil"||chapter.zone==="darnassus",true);
+  assert(point.coords.x>=0&&point.coords.x<=100&&point.coords.y>=0&&point.coords.y<=100);
+  for(const action of point.actions){
+   const rule=playbook.requirements[String(action.id)];
+   assert(rule);
+   const questLevel=levels[String(action.id)];
+   assert(questLevel!==undefined);
+   assert(questLevel<=chapter.level);
+   if(action.kind==="accept"){
+    assert(!active.has(action.id));
+    assert(!done.has(action.id));
+    if(rule.previous_id)assert(done.has(rule.previous_id));
+    assert(rule.min_level<=chapter.level);
+    active.add(action.id);
+   }else if(action.kind==="objective"){
+    assert(active.has(action.id));
+   }else if(action.kind==="turnin"){
+    assert(active.has(action.id));
+    active.delete(action.id);done.add(action.id);
+   }else throw Error("Unsupported step action "+action.kind);
+   visited.push({id:action.id,kind:action.kind});
+  }
+ }
+ assert.equal(active.size,1); // Flight to Auberdine continues across the zone boundary.
+ assert(active.has(6342));
+ assert(done.has(918)&&done.has(919)&&done.has(2541)&&done.has(2561));
+});
+test("nelf pairs sylvains and avoids repeating the dangerous den",()=>{
+ const result=build(alliance,"nelf",10,"solo");
+ const lake=result.stages.find(s=>s.name?.en?.includes("Timberlings"));
+ assert(lake);
+ assert(lake.points.some(p=>p.clustered&&
+   p.actions.some(a=>a.id===918&&a.kind==="objective")&&
+   p.actions.some(a=>a.id===919&&a.kind==="objective")));
+ const dens=result.stages.filter(s=>s.name?.en?.includes("Barrow Den"));
+ assert.equal(dens.length,1);
+ for(const id of [483,2541,2561])assert(dens[0].points.some(p=>p.actions.some(a=>a.id===id)));
+ assert(!build(alliance,"nelf",9,"solo").stages.some(s=>s.points.some(p=>p.actions.some(a=>a.id===2561))));
+});
+test("nelf prerequisites are checked and quest 12 is never recommended at player level 8",()=>{
+ assert.equal(playbook.requirements["489"].previous_id,488);
+ assert.equal(playbook.requirements["476"].previous_id,475);
+ assert.equal(playbook.requirements["483"].previous_id,476);
+ assert.equal(playbook.requirements["922"].previous_id,918);
+ assert.equal(playbook.requirements["2561"].previous_id,2541);
+ const r=build(alliance,"nelf",8,"solo");
+ assert(r.stages.every(s=>s.points.every(p=>p.actions.every(a=>a.level<=8))));
 });
 console.log("\n"+checks+" guide invariants passed; "+
  filtered+" over-level actions excluded across the matrix, "+
