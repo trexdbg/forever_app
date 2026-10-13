@@ -69,6 +69,28 @@ Les divergences de source sont conservées explicitement : pour la quête 919, W
 
 **Prochaine validation en jeu :** relever l'XP affichée avant/après chaque rendu, les kills effectivement nécessaires pour chaque quête et l'XP de combat, puis comparer cette somme à la progression de niveau. Ne pas utiliser les chiffres fractionnaires \`experience\` de VanillaQuesting comme des récompenses XP vérifiées.
 
+## Relecture comme un joueur : Elfe de la nuit, niveaux 5–10
+
+**Couverture éditoriale approfondie pour cette livraison : Elfe de la nuit (Alliance) uniquement.** Les cinq autres profils continuent d’utiliser l'ancien parcours Classic filtré par niveau ; ils ne sont pas encore audités quête par quête. Ce travail constitue une **simulation du déroulement en jeu à partir des données Classic**, pas le récit d'une session réelle effectuée sur un client de jeu.
+
+L’interface charge \`playbook-nelf-5-10.json\` uniquement avec la race/profil \`nelf\` et un niveau de 5 à 10. Ce cahier de route remplace alors la sélection automatique de tranches \`experience\` par **17 chapitres ordonnés / 44 arrêts**, avec instructions FR/EN, points X/Y du guide historique et les **24 identifiants Classic** réellement utilisés. Au niveau 8, l’interface sélectionne d’abord le premier chapitre de niveau 8, tout en laissant les précédents accessibles en remontant la liste. Le changement « Sans donjons / Donjons utiles » reste disponible, mais il n'y a **aucun donjon dans Teldrassil aux niveaux 5–10**.
+
+La séquence jouée, vérifiée par un test d’états successifs :
+- **5** : quitter Sombrevallon avec la Couronne, récupérer la livraison de Porthannius, faire les trois butins de Zenn **sur le même circuit**, rendre livraison et Couronne à Dolanaar, faire la fiole près de Dolanaar en chemin vers Denalan.
+- **6** : accepter le rapport à Gaerolas et le Capteur de rêves **avant un unique passage à Brise-étoile**, puis rendre les deux au retour. Les quêtes de niveau 7 restent hors du parcours strict même si leur minimum d'acceptation est inférieur.
+- **7** : prendre **Graines et Pousses** ensemble à Denalan, les collecter sur **les mêmes sylvains**, les rendre en même temps et garder le message vers Rellian jusqu'au passage de Darnassus ; regrouper les cônes de Zenn avec le secteur de Fel Rock. Lord Melenas est difficile en solo et n'est pas un verrou de progression.
+- **8** : faire le bijou de Ferocitas dans le secteur est, puis les embusqués de la route ouest. Éviter de traverser les deux côtés de la carte plusieurs fois pour le même objectif.
+- **9** : accepter les Reliques en amont, puis préparer et rendre la Couronne 933. Faire l'aller-retour Darnassus → rivière Wellspring → Darnassus pour **Rellian puis Tumeurs dans cet ordre**. Ne pas descendre au Terrier trop tôt.
+- **10** : **une seule entrée au Terrier de Ban’ethil** pour les quatre reliques, Le druide endormi et Le druide de la Griffe (suite prise sur place), rendre les reliques à Dolanaar, faire la livraison du Temple de la Lune. La suite de Nessa et le vol vers Auberdine sont affichés comme **facultatifs** si le joueur quitte la zone, sans forcer un départ niveau 10.
+
+Les \`requirements\` du cahier de route documentent les minima Classic d'acceptation et les IDs de quêtes précédentes issus de [TyrsDev/WoW-Classic-Quests](https://github.com/TyrsDev/WoW-Classic-Quests) ; ils ne sont **pas des preuves de compatibilité Forever**. Exemple : **Ordres de Zenn (488)** est de niveau de quête 5 mais demande seulement le niveau 4 ; **Graines des sylvains (918)** est de niveau de quête 7 et demande le niveau 4 (après la livraison à Denalan). La politique actuelle masque volontairement les actions dont **le niveau de quête** dépasse le niveau du joueur, même si le jeu les autoriserait — un choix de confort, pas une barrière mécanique.
+
+Chaque entrée contient ses actions de prise/objectif/rendu dans l’ordre. Le validateur parcourt la route depuis Sombrevallon (quête préliminaire 921 supposée accomplie), exige qu'un objectif soit précédé de l'acceptation, qu'un rendu ait un objectif déjà accepté et qu'une suite ne soit prise qu'après la quête précédente. Les combats, le butin RNG, les quêtes de classe, l'XP en cours, les quêtes déjà accomplies avant d’ouvrir le guide et les conditions d'apparition des monstres **ne sont pas synchronisés avec le jeu**. En cas de niveau insuffisant au passage d'un chapitre, tuer des monstres du secteur de niveau comparable jusqu'au prochain palier — **sans montant de grind inventé**.
+
+La carte conserve les véritables coordonnées X/Y communautaires mais ne représente pas l'altitude/les étages des grottes. Les actions des quêtes enchaînées dans le Terrier sont **rassemblées sur un seul repère**, pas empilées en 7 marqueurs. Le couteau à dépecer est noté comme **achat de métier facultatif**, et non comme prérequis de quête. Aucun objet coûteux ni course vers Darnassus n'est conseillé sans raison explicite.
+
+**Avant publication du guide définitif :** faire tester chacune des sept tranches de départ du profil en jeu, vérifier les récompenses XP/temps, difficultés de monstres, trajectoires réelles et éventuelles divergences client. Garder la séparation Classic/Forever stricte.
+
 ## Vérifications
 
 Lancer sans dépendances, sans minute GitHub Actions :

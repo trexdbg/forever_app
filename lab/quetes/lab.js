@@ -32,6 +32,7 @@ const DICT={
  hidden:"quêtes au-dessus de ton niveau écartées de ces étapes.",unknown:"Niveau non répertorié",questLevel:"Niveau",mapUnavailable:"Carte indisponible",loading:"Chargement des données Classic…",loaded:"Guide Classic chargé",error:"Impossible de charger les données Classic.",
  dungeonMore:"Voir les quêtes Classic",footer:"ForEveroth Quest Lab · Itinéraires communautaires Classic (VanillaQuesting). Parcours expérimental, distinct du guide public.",
  next:"Étape suivante",previous:"Étape précédente",mapFocus:"Voir le repère",
+ played:"Parcours joué",optional:"Facultatif",minimum:"Minimum d’acceptation Classic",previousQuest:"Suite de la quête",
  xpToNext:"XP nécessaires pour le prochain niveau",xpKnown:"XP des rendus documentés",xpMissing:"XP d’autres quêtes non renseignées",xpNotMeasured:"XP des monstres et progression réelle non incluses",xpQuest:"XP à la validation",xpLater:"Récompense si rendue"
  },
  en:{
@@ -56,6 +57,7 @@ const DICT={
  hidden:"above-level quests filtered out of these steps.",unknown:"Unknown quest level",questLevel:"Level",mapUnavailable:"Map unavailable",loading:"Loading Classic data…",loaded:"Classic guide loaded",error:"Failed to load Classic data.",
  dungeonMore:"See Classic quests",footer:"ForEveroth Quest Lab · Community Classic routes (VanillaQuesting). Experimental guide, separate from the public version.",
  next:"Next step",previous:"Previous step",mapFocus:"Show marker",
+ played:"Playtested route design",optional:"Optional",minimum:"Classic minimum acceptance level",previousQuest:"Requires prior quest",
  xpToNext:"XP needed to reach next level",xpKnown:"Documented turn-in XP",xpMissing:"Other quest XP not documented",xpNotMeasured:"Kill XP and actual character progress not included",xpQuest:"XP on turn-in",xpLater:"Reward when turned in"
  }
 };
@@ -125,8 +127,8 @@ function urlSync(){
 function build(){
  if(!source)return;
  const data=source[view.faction];
- guide=Engine.build({data,manifest:source.manifest,levels:source.levels.levels,curation:source.curation,xpData:source.xpData,profile:profile(),level:view.level,mode:view.mode});
- if(!guide.stages.some(s=>s.index===view.stageIndex))view.stageIndex=guide.stages.at(0)?.index??null;
+ guide=Engine.build({data,manifest:source.manifest,levels:source.levels.levels,curation:source.curation,xpData:source.xpData,playbook:source.playbook,profile:profile(),level:view.level,mode:view.mode});
+ if(!guide.stages.some(s=>s.index===view.stageIndex))view.stageIndex=(guide.playbook?guide.stages.find(s=>s.level===view.level):null)?.index??guide.stages.at(0)?.index??null;
  stage=guide.stages.find(s=>s.index===view.stageIndex)||null;
  view.focusPoint=0;
  view.zoom=1;view.cx=50;view.cy=50;
@@ -156,15 +158,23 @@ function renderTimeline(){
   b.type="button";b.setAttribute("aria-current",step.index===view.stageIndex?"step":"false");
   const n=dom("span","stage-number",String(i+1).padStart(2,"0"));
   const title=dom("span","stage-description");
-  title.append(dom("strong",null,step.name?step.name[view.lang]:zoneName(step.zone)),dom("small",null,Math.floor(step.expected)+" · "+step.points.length+" "+T("steps")));
+  title.append(dom("strong",null,step.name?step.name[view.lang]:zoneName(step.zone)),dom("small",null,Math.floor(step.expected)+" · "+step.points.length+" "+T("steps")+(step.optional?" · "+T("optional"):"")));
   b.append(n,title);b.addEventListener("click",()=>selectStage(step.index));list.append(b);
  });
+ const active=list.querySelector(".stage-choice.active");
+ if(active&&list.clientHeight){
+  const top=active.offsetTop-list.offsetTop;
+  if(top<list.scrollTop||top+active.offsetHeight>list.scrollTop+list.clientHeight)
+   list.scrollTop=Math.max(0,top-48);
+ }
 }
 function renderHeading(){
  $("stage-title").textContent=stage?(stage.name?stage.name[view.lang]:zoneName(stage.zone)):T("stageTitle");
  $("stage-subtitle").textContent=stage?
-  (T("stage")+" "+Math.floor(stage.expected)+" · "+stage.points.length+" "+T("steps")+" · "+(view.mode==="solo"?T("solo"):T("essentials"))):
+  (T("stage")+" "+Math.floor(stage.expected)+" · "+stage.points.length+" "+T("steps")+" · "+(view.mode==="solo"?T("solo"):T("essentials"))+(stage.optional?" · "+T("optional"):"")):
   T("stageSubtitle");
+ $("stage-advice").hidden=!stage?.intro;
+ $("stage-advice").textContent=stage?.intro?.[view.lang]||"";
  $("stage-counter").textContent=stage?(guide.stages.indexOf(stage)+1)+" / "+guide.stages.length:"—";
  const i=guide.stages.indexOf(stage);
  $("prev").disabled=i<=0;$("next").disabled=i<0||i>=guide.stages.length-1;
@@ -203,6 +213,10 @@ function renderStops(){
     const qcontent=dom("span","quest-data");
     qcontent.append(dom("strong",null,questName(a)));
     qcontent.append(dom("small",null,a.level===null?T("unknown"):T("questLevel")+" "+a.level));
+    if(a.requiredLevel!==undefined&&a.requiredLevel!==null){
+      const details=T("minimum")+" : "+a.requiredLevel+(a.previousId?" · "+T("previousQuest")+" #"+a.previousId:"");
+      qcontent.append(dom("small","quest-prereq",details));
+    }
     if(a.rewardXp!==null&&a.rewardXp!==undefined)qcontent.append(dom("small","quest-xp",
       (a.kind==="turnin"||a.kind==="instant"?T("xpQuest"):T("xpLater"))+": "+a.rewardXp.toLocaleString(view.lang==="fr"?"fr-FR":"en-US")+" XP"));
     arow.append(label,qcontent);
@@ -211,6 +225,7 @@ function renderStops(){
    }
    content.append(acts);
   }
+  if(point.tip?.[view.lang])content.append(dom("p","played-tip",point.tip[view.lang]));
   if(point.notes.length){
    const notes=dom("p","note",T("notes")+" : "+point.notes.map(textOfNote).join(" · "));
    content.append(notes);
@@ -385,11 +400,11 @@ function bind(){
 async function boot(){
  translate();$("status").textContent=T("loading");bind();
  try{
-  const files=["/data/quests/manifest.json","/data/quests/alliance.json","/data/quests/horde.json","/data/quests/levels.json","./curation.json","./xp-classic.json"];
+  const files=["/data/quests/manifest.json","/data/quests/alliance.json","/data/quests/horde.json","/data/quests/levels.json","./curation.json","./xp-classic.json","./playbook-nelf-5-10.json"];
   const responses=await Promise.all(files.map(file=>fetch(file)));
   if(responses.some(r=>!r.ok))throw Error("route data unavailable");
-  const [manifest,alliance,horde,levels,curation,xpData]=await Promise.all(responses.map(r=>r.json()));
-  source={manifest,alliance,horde,levels,curation,xpData};
+  const [manifest,alliance,horde,levels,curation,xpData,playbook]=await Promise.all(responses.map(r=>r.json()));
+  source={manifest,alliance,horde,levels,curation,xpData,playbook};
   if(!RACES[view.faction].some(r=>r[0]===view.race))view.race=RACES[view.faction][0][0];
   build();$("main").setAttribute("aria-busy","false");$("status").textContent=T("loaded");
  }catch(error){
