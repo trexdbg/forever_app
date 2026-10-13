@@ -10,6 +10,39 @@ Date de consultation : **2026-10-13**. Version comparée : **Forever 1.60.1.7029
 - **0** vente au joueur confirmée sur Forever ; **0** quantité de production tranchée quand les publications sont contradictoires ; **0** chronomètre de réapprovisionnement certifié ; **0** composant attribué à un butin/une quête sans preuve dédiée.
 - Les **8 voies de fabrication documentées** ne prouvent ni l'apprentissage auprès du PNJ sur la version actuellement jouée, ni l'obtention en jeu. Niveau de certitude principal : `documented_forever`. Les identités 4371 et 4389 issues de la comparaison client versionnée : `datamined`.
 
+## Correctifs de revue — seuils de couleur et niveau d'apprentissage
+
+La [revue technique de la PR #42](https://github.com/trexdbg/forever_app/pull/42#issuecomment-6153906206) a révélé une confusion entre l'exigence de métier et le **seuil jaune** : pour le **Tube en cuivre (objet 4361, sort 3924)**, la fiche de couleurs client Forever affiche **jaune 80, vert 95, gris 110**. L'ancien catalogue avait à tort mis `skill_yellow=95` (vert) et `skill_required=80` (jaune).
+
+Le [guide d'ingénierie consacré à Forever sur wowtbc.gg](https://wowtbc.gg/warcraftforever/professions/engineering/) publie séparément un **niveau d'apprentissage de 50** pour Copper Tube, avec jaune 80, vert 95 et gris 110. **50 est donc une affirmation communautaire documentée Forever**, pas une extraction du client ni une observation en jeu. Les champs `skill_required_source_url`, `skill_required_evidence_level`, `skill_required_observed_at`, `skill_required_observed_build`, `skill_required_evidence_kind` et `skill_required_evidence_note` portent explicitement cette attribution. Le [catalogue WoW Forever Talents](https://wowforevertalents.com/professions/engineering/parts/) avertit que le **niveau d'apprentissage du maître n'est pas dans les tables du client** ; aucune disponibilité auprès d'un PNJ n'est certifiée.
+
+**Contrôle des huit seuils jaunes** dans la même page Forever Talents, qui décrit le client `1.60.1.70338` (la page précise que les sorts sont inchangés par rapport à `1.60.1.70291`).
+
+| ID du sort | Recette | `skill_required` (claim documentaire) | `skill_yellow` (index de couleurs Forever) |
+| --- | --- | ---: | ---: |
+| 3918 | Rough Blasting Powder | 1 | **20** |
+| 3924 | Copper Tube | 50, d'après wowtbc.gg Forever | **80** |
+| 3929 | Coarse Blasting Powder | 75 | **85** |
+| 3938 | Bronze Tube | 105 | **105** |
+| 3942 | Whirring Bronze Gizmo | 125 | **125** |
+| 12584 | Gold Power Core | 150 | **150** |
+| 3958 | Iron Strut | 160 | **160** |
+| 3961 | Gyrochronatom | 170 | **170** |
+
+Pour les autres recettes apprises auprès d'un maître, le champ `skill_required` provient des références documentaires du lot initial, **et non de l'extraction client Forever Talents** : cette valeur ne doit pas être interprétée comme une vérification en jeu. Les huit seuils `skill_yellow` possèdent désormais une URL, une date, un build et une note **propres à l'affirmation de couleur**. Les nouveaux tests figent ces seuils par sort.
+
+### Quantités produites : distinguer véritable contradiction et simple inconnue
+
+| Sort | Source A : [Forever Talents / Parts](https://wowforevertalents.com/professions/engineering/parts/) | Source B : fiche de sort Forever | Statut |
+| --- | ---: | ---: | --- |
+| 3924 Copper Tube | **1** | **2** ([Wowhead](https://www.wowhead.com/forever/spell=3924/copper-tube)) | `conflicting_sources`, quantité `null` |
+| 3938 Bronze Tube | **1** | **2** ([Wowhead](https://www.wowhead.com/forever/spell=3938/bronze-tube)) | `conflicting_sources`, quantité `null` |
+| 12584 Gold Power Core | **3** | **4** ([Wowhead](https://www.wowhead.com/forever/spell=12584/gold-power-core)) | `conflicting_sources`, quantité `null` |
+| 3961 Gyrochronatom | **1** | **2** ([Wowhead](https://www.wowhead.com/forever/spell=3961/gyrochronatom)) | `conflicting_sources`, quantité `null` |
+| 3918, 3929, 3942, 3958 | **1** chacun | Deuxième preuve de rendement non établie | `unknown`, quantité `null` |
+
+Ce sont des **valeurs affichées par des sites**, pas une observation d'une fabrication dans le jeu : ni la mention « Makes 1 » d'un index dérivé du client, ni l'effet « Create Item » de Wowhead ne prouvent le nombre produit par un personnage réel sur le serveur. Pour 3918, 3929, 3942 et 3958, la seconde source du premier lot ne permettait pas d'établir assez précisément une divergence : les faux conflits ont été retirés. Chaque valeur candidate désormais conservée possède `source_url` et `evidence_note` propres ; une future résolution de rendement ne nécessitera que la recette concernée, avec une source explicite.
+
 ## Étape A — Bronze Tube / Tube en bronze (4371)
 
 | Assertion | Forever bêta : constat documentaire | Classic / lacune |
@@ -62,9 +95,9 @@ Date de consultation : **2026-10-13**. Version comparée : **Forever 1.60.1.7029
  └─ 2880 Catalyseur léger × 1 [index vendeurs Classic, pas de preuve Forever]
 ```
 
-Les autres six recettes d'ingénierie (1–30) ajoutées : **3918** poudre d'explosion basique (4357), **3924** tube en cuivre (4361), **3929** poudre d'explosion grossière (4364), **3942** bidule bourdonnant en bronze (4375), **12584** batterie en or (10558), **3958** contrefiche en fer (4387). Toutes ont un sort identifié, des ingrédients quantifiés, des identifiants d'items vérifiables, une indication d'apprentissage et la preuve liée à cette assertion. Le rendement est conservé explicitement `null` lorsqu'un désaccord de source demeure ; `recipe_item_id: null` signifie qu'aucun objet de recette distinct n'a été établi, et non « sort = ID d'objet-recette ».
+Les autres six recettes d'ingénierie (1–30) ajoutées : **3918** poudre d'explosion basique (4357), **3924** tube en cuivre (4361), **3929** poudre d'explosion grossière (4364), **3942** bidule bourdonnant en bronze (4375), **12584** batterie en or (10558), **3958** contrefiche en fer (4387). Toutes ont un sort identifié, des ingrédients quantifiés, des identifiants d'items vérifiables, une indication d'apprentissage et la preuve liée à cette assertion. Le rendement est conservé explicitement `null` lorsque les sources se contredisent **ou** lorsque le rendement reste non tranché ; `recipe_item_id: null` signifie qu'aucun objet de recette distinct n'a été établi, et non « sort = ID d'objet-recette ».
 
-**Note de méthode :** les recettes d'ingénierie très bas niveau sont des recettes connues dans Classic ; leur présence dans une fiche ciblant Forever atteste une *documentation Forever*, non leur création en jeu. Les sources ont aussi des incohérences sur la difficulté/les points jaune : le validateur distingue `skill_required` et `skill_yellow`.
+**Note de méthode :** les recettes d'ingénierie très bas niveau sont des recettes connues dans Classic ; leur présence dans une fiche ciblant Forever atteste une *documentation Forever*, non leur création en jeu. Les sources séparent la compétence requise et la couleur de la recette : le validateur distingue `skill_required` et `skill_yellow`, et les nouveaux tests valident les seuils jaunes directement contre la table Forever.
 
 ### Sources d'approvisionnement sous vérification
 
@@ -75,7 +108,7 @@ Le [catalogue Weak Flux de WowSeer](https://wowseer.gg/items/Weak_Flux_2880) con
 ### Limites à conserver
 
 - Aucune capture en jeu, build exact non publié pour certaines pages de recettes, ni vérification du serveur de production.
-- **Rendements contradictoires** entre index et pages de sorts Forever : ils restent `null`, malgré les quantités candidates traçables.
+- **Rendements contradictoires pour 3924, 3938, 12584 et 3961 ; rendements non arbitrés pour 3918, 3929, 3942 et 3958** : tous restent `null` dans le catalogue de recherche, avec les sources candidates traçables.
 - Les ventes de tubes/gyrochronatomes, leurs prix, stocks, timers et localisations **sur Forever** restent sans preuve : ne pas promouvoir les marchands Classic.
 - Aucun lien de fiche d'objet sur le site n'est ajouté : ce lot est **research-only**, tant que les sorties unitaires et l'accès en jeu sont ambigus.
 - Aucune recette d'alchimie ajoutée dans ce lot : privilégier la validation ciblée des chaînes d'ingénierie avant de généraliser.
