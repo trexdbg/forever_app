@@ -164,6 +164,41 @@
    const dungeons=mode==="essentials"?(curation.dungeons||[]).filter(d=>
      d.faction===faction&&playerLevel>=d.level&&playerLevel<=d.level+d.window
    ):[];
+   // A strong dungeon quest bundle can have been scheduled too early in the source
+   // guide. Surface one explicit optional chapter at a suitable current level,
+   // rather than losing the instance completely when the old stage falls behind.
+   for(const dungeon of dungeons){
+     if(planned.some(st=>st.points.some(p=>p.dungeonId===dungeon.id)))continue;
+     const candidates=[];
+     for(const sourceStage of stages)for(const wp of sourceStage.waypoints||[]){
+       if(dungeonFor(wp,curation)?.id!==dungeon.id)continue;
+       const actions=[];
+       for(const [field,kind] of ACTION_TYPES)for(const ref of wp[field]||[]){
+         const q=refDetails(ref,data,levels);
+         if(q.level!==null&&q.level>playerLevel)continue;
+         // A waypoint inside this dungeon can carry an unmarked acquisition step
+         // (e.g. the Unsent Letter at Deadmines); it still belongs to this visit.
+         actions.push({...q,kind});
+       }
+       if(!actions.length)continue;
+       candidates.push({sourceStage,wp,actions});
+     }
+     candidates.sort((a,b)=>b.actions.length-a.actions.length||a.sourceStage.index-b.sourceStage.index);
+     const best=candidates[0];
+     if(!best)continue;
+     const x=num(best.wp.coords?.x),y=num(best.wp.coords?.y);
+     if(x===null||y===null||x<0||x>100||y<0||y>100)continue;
+     const point={
+       key:"dungeon-"+dungeon.id,header:best.wp.header||dungeon.name.en,
+       x,y,zone:dungeon.zone,kind:"dungeon",notes:best.wp.special||[],
+       actions:best.actions,clustered:best.actions.filter(a=>a.kind==="objective").length>=2,
+       actionable:true,dungeonId:dungeon.id,members:[{x,y,header:best.wp.header||dungeon.name.en}]
+     };
+     planned.push({index:10000+(curation.dungeons||[]).indexOf(dungeon),zone:dungeon.zone,
+       expected:dungeon.level,points:[point],hints:[],dungeonId:dungeon.id,
+       name:dungeon.name});
+   }
+   planned.sort((a,b)=>a.expected-b.expected||a.index-b.index);
    return {profile,faction,level:playerLevel,mode,stages:planned,preparations,dungeons,
      excludedOverLevel,excludedDungeons,source:data.source_commit,mapBase:manifest.map_base||"",
      zones:manifest.zones||{},strict:true};
