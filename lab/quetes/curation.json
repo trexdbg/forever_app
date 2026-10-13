@@ -30,16 +30,16 @@
       "id": "deadmines",
       "faction": "alliance",
       "pattern": "deadmines",
-      "level": 20,
-      "window": 3,
+      "level": 22,
+      "window": 2,
       "zone": "westfall",
       "name": {
         "fr": "Les Mortemines",
         "en": "The Deadmines"
       },
       "reason": {
-        "fr": "Un passage utile après les quêtes des Défias ; regrouper les quêtes d'instance avant d'entrer.",
-        "en": "Worth doing after the Defias chain; collect related dungeon quests first."
+        "fr": "À privilégier autour du niveau 22 : enchaînement des Défias et plusieurs quêtes du même donjon réunies en une visite.",
+        "en": "Best around level 22: Defias chain plus several dungeon quests batched into one run."
       },
       "source": "https://www.wowhead.com/classic/guide/dungeon-quests-wow-classic"
     },
@@ -47,7 +47,7 @@
       "id": "wailing",
       "faction": "horde",
       "pattern": "wailing caverns",
-      "level": 22,
+      "level": 23,
       "window": 3,
       "zone": "barrens",
       "name": {
@@ -64,16 +64,16 @@
       "id": "shadowfang",
       "faction": "horde",
       "pattern": "shadowfang keep",
-      "level": 24,
-      "window": 3,
+      "level": 27,
+      "window": 2,
       "zone": "silverpine",
       "name": {
         "fr": "Donjon d'Ombrecroc",
         "en": "Shadowfang Keep"
       },
       "reason": {
-        "fr": "Trois quêtes d'instance prévues dans le parcours communautaire ; visite facultative mais intéressante.",
-        "en": "Three dungeon quests included in the community route; optional but worthwhile."
+        "fr": "À viser autour du niveau 27 pour combiner les trois quêtes Classic, dont « Arugal doit mourir » et sa récompense.",
+        "en": "Aim for around level 27 to combine all three Classic quests, including Arugal Must Die and its reward."
       },
       "source": "https://www.wowhead.com/classic/guide/dungeon-quests-wow-classic"
     },
