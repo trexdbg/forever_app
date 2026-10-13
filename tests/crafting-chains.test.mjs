@@ -40,15 +40,69 @@ test("Gyrochronatom 4389 has actual spell 3961 and nested Gold Power Core recipe
  assert.equal(nested.spell_id,12584);
  assert.deepEqual(nested.ingredients,[{item_id:3577,quantity:1}]);
 });
-test("disputed recipe output stays unknown, with competing source reports",()=>{
+test("Copper Tube 3924 separates documented trainer minimum 50 from Yellow 80 and Green 95",()=>{
+ const r=source.recipes.find(x=>x.spell_id===3924);
+ assert.equal(r.output_item_id,4361);
+ assert.equal(r.skill_required,50);
+ assert.equal(r.skill_yellow,80);
+ assert.equal(r.skill_required_source_url,"https://wowtbc.gg/warcraftforever/professions/engineering/");
+ assert.equal(r.skill_required_evidence_level,"documented_forever");
+ assert.equal(r.skill_required_evidence_kind,"forever_community_page");
+ assert.equal(r.skill_required_observed_at,"2026-10-13");
+ assert.match(r.skill_required_evidence_note,/not a gameplay capture/i);
+ assert.equal(r.skill_yellow_source_url,"https://wowforevertalents.com/professions/engineering/parts/");
+ assert.match(r.skill_yellow_evidence_note,/Yellow 80/);
+ assert.match(r.skill_note,/green 95/);
+ const bad=clone();bad.recipes.find(x=>x.spell_id===3924).skill_required_source_url="";
+ assert.ok(codes(run(bad)).includes("CRAFT_SKILL_REQUIRED_PROVENANCE"));
+});
+test("eight recipe Yellow thresholds match the Forever client index, not Green values",()=>{
+ const expected=new Map([[3918,20],[3924,80],[3929,85],[3938,105],[3942,125],[12584,150],[3958,160],[3961,170]]);
+ assert.equal(source.recipes.length,expected.size);
  for(const r of source.recipes){
-  assert.equal(r.output_quantity,null);
-  assert.equal(r.output_quantity_status,"conflicting_sources");
-  assert.ok(r.output_quantity_candidates.length>=2);
-  assert.ok(new Set(r.output_quantity_candidates.map(c=>c.quantity)).size>1);
+  assert.equal(r.skill_yellow,expected.get(r.spell_id),"Wrong Yellow for spell "+r.spell_id);
+  assert.equal(r.skill_yellow_source_url,"https://wowforevertalents.com/professions/engineering/parts/");
+  assert.equal(r.skill_yellow_observed_build,"1.60.1.70338");
+  assert.equal(r.skill_yellow_observed_at,"2026-10-13");
+  assert.match(r.skill_yellow_evidence_note,new RegExp("Yellow "+r.skill_yellow+"\\b"));
  }
- const broken=clone();broken.recipes[0].output_quantity=2;
- assert.ok(codes(run(broken)).includes("CRAFT_OUTPUT_CONFLICT_HIDDEN"));
+ const bad=clone();bad.recipes[3].skill_yellow_source_url="http://example.net/forever";
+ assert.ok(codes(run(bad)).includes("CRAFT_SKILL_YELLOW_PROVENANCE"));
+});
+test("independently documented yield conflicts remain unresolved for specific recipes",()=>{
+ const index="https://wowforevertalents.com/professions/engineering/parts/";
+ const contested=new Map([
+  [3924,[1,2,"https://www.wowhead.com/forever/spell=3924/copper-tube"]],
+  [3938,[1,2,"https://www.wowhead.com/forever/spell=3938/bronze-tube"]],
+  [12584,[3,4,"https://www.wowhead.com/forever/spell=12584/gold-power-core"]],
+  [3961,[1,2,"https://www.wowhead.com/forever/spell=3961/gyrochronatom"]]
+ ]);
+ for(const [spell,[first,second,spellUrl]] of contested){
+  const r=source.recipes.find(x=>x.spell_id===spell);
+  assert.equal(r.output_quantity,null,"Do not invent yield for "+spell);
+  assert.equal(r.output_quantity_status,"conflicting_sources");
+  assert.deepEqual(r.output_quantity_candidates.map(c=>c.quantity),[first,second]);
+  assert.deepEqual(r.output_quantity_candidates.map(c=>c.source_url),[index,spellUrl]);
+  assert.ok(r.output_quantity_candidates.every(c=>c.evidence_note.includes("not direct")||c.evidence_note.includes("not an observed")));
+ }
+ const bad=clone();bad.recipes.find(x=>x.spell_id===3938).output_quantity=2;
+ assert.ok(codes(run(bad)).includes("CRAFT_OUTPUT_CONFLICT_HIDDEN"));
+});
+test("other yields are unknown with just one supportable source, without false conflicts",()=>{
+ for(const spell of [3918,3929,3942,3958]){
+  const r=source.recipes.find(x=>x.spell_id===spell);
+  assert.equal(r.output_quantity,null);
+  assert.equal(r.output_quantity_status,"unknown");
+  assert.deepEqual(r.output_quantity_candidates.map(c=>c.quantity),[1]);
+  assert.equal(r.output_quantity_candidates[0].source_url,"https://wowforevertalents.com/professions/engineering/parts/");
+ }
+ const c=clone();const first=c.recipes.find(r=>r.spell_id===3918);
+ first.output_quantity=1;first.output_quantity_status="documented_forever";
+ first.output_quantity_source_url="https://wowforevertalents.com/professions/engineering/parts/";
+ first.output_quantity_evidence_note="Fixture: an explicitly sourced, recipe-specific index value; not a live gameplay result.";
+ assert.deepEqual(codes(run(c)),[],"Resolving one sourced recipe must not break the remaining seven recipes");
+ const missing=clone();missing.recipes.find(r=>r.spell_id===3918).output_quantity=1;
+ assert.ok(codes(run(missing)).includes("CRAFT_OUTPUT_RESOLUTION_UNSOURCED"));
 });
 test("ingredient references, IDs and quantities are enforced",()=>{
  const c=clone();c.recipes[0].ingredients=[{item_id:999999,quantity:0}];
