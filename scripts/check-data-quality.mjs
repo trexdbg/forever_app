@@ -33,6 +33,62 @@ export function classifyRecord(record = {}) {
   return "unverified";
 }
 
+/** Evidence metadata is strict only for NEW explicitly classified records.
+ * Historical entries are never migrated or rejected merely for lacking it.
+ */
+export const EVIDENCE_KINDS = Object.freeze({
+  confirmed_in_game: ["gameplay_capture","gameplay_log"],
+  documented_forever: ["forever_official_page","forever_community_page"],
+  datamined: ["client_db2","addon_snapshot","cache_snapshot"],
+  classic_reference: ["classic_database","classic_guide"],
+  unverified: ["unknown"]
+});
+const pinnedBuild = value => meaningful(value) && /^\d+\.\d+\.\d+\.\d+$/.test(value);
+const validDate = value => {
+  if (typeof value !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(value)) return false;
+  const d=new Date(value+"T00:00:00Z");
+  return !Number.isNaN(d.getTime()) && d.toISOString().slice(0,10)===value;
+};
+export function checkExplicitProvenance(record, path, report) {
+  if (!Object.prototype.hasOwnProperty.call(record,"evidence_level")) return;
+  const level=record.evidence_level;
+  if (!LEVELS.includes(level)) {
+    report("error","UNKNOWN_EVIDENCE_LEVEL",path,String(level));
+    return;
+  }
+  const positive = level!=="unverified";
+  for (const key of ["source_url","evidence_url"]) {
+    const value=record[key];
+    if (positive && !meaningful(value))
+      report("error","PROVENANCE_FIELD_MISSING",path+"."+key,"Required for explicit "+level);
+    else if (value != null && value !== "" && !link(value))
+      report("error","PROVENANCE_INVALID_URL",path+"."+key,"Expected HTTPS URL");
+  }
+  const date=record.observed_at;
+  if (positive && !meaningful(date))
+    report("error","PROVENANCE_FIELD_MISSING",path+".observed_at","Evidence collection date required");
+  else if (date != null && date !== "" && !validDate(date))
+    report("error","PROVENANCE_INVALID_DATE",path+".observed_at","Expected valid calendar date YYYY-MM-DD");
+  const build=record.observed_build;
+  if (positive && !meaningful(build))
+    report("error","PROVENANCE_FIELD_MISSING",path+".observed_build","Client/build or Classic edition required");
+  else if (build != null && build !== "" && (
+    !meaningful(build) ||
+    (["confirmed_in_game","datamined"].includes(level) && !pinnedBuild(build)) ||
+    (level==="classic_reference" && build==="unknown")
+  )) report("error","PROVENANCE_INVALID_BUILD",path+".observed_build","Exact build N.N.N.N for game/datamined, identified edition for Classic");
+  const kind=record.evidence_kind;
+  if (positive && !meaningful(kind))
+    report("error","PROVENANCE_FIELD_MISSING",path+".evidence_kind","Evidence type required");
+  else if (kind != null && kind !== "" && !EVIDENCE_KINDS[level].includes(kind))
+    report("error","PROVENANCE_KIND_MISMATCH",path+".evidence_kind","Evidence kind does not support "+level);
+  if (!meaningful(record.evidence_note) || record.evidence_note.trim().length<12)
+    report("error","PROVENANCE_NOTE_INSUFFICIENT",path+".evidence_note","Describe the exact claim and limitations (at least 12 chars)");
+  if (level==="confirmed_in_game" && (!link(record.evidence_url) ||
+      /\/(?:item|items)(?:[=/]|\/)/i.test(record.evidence_url)))
+    report("error","UNSUPPORTED_GAME_CONFIRMATION",path,"Direct gameplay capture/log URL required; an item page is not game confirmation");
+}
+
 export function auditDatasets(datasets) {
   const issues = [];
   const report = (severity, code, path, detail) => issues.push({severity, code, path, detail});
@@ -72,13 +128,9 @@ export function auditDatasets(datasets) {
         report("error","ITEM_URL_ID_MISMATCH",p+"."+key,"Item ID "+item.id+" vs URL "+match[1]);
     }
     const classification = classifyRecord(item);
-    if (item.evidence_level !== undefined && !LEVELS.includes(item.evidence_level))
-      report("error","UNKNOWN_EVIDENCE_LEVEL",p,String(item.evidence_level));
+    checkExplicitProvenance(item,p,report);
     if (classification === "classic_reference" && item.verified_forever === true)
       report("error","CLASSIC_MARKED_FOREVER_VERIFIED",p,"Classic source alone cannot verify Forever");
-    if (item.evidence_level === "confirmed_in_game" &&
-      !(link(item.evidence_url) && meaningful(item.observed_build) && meaningful(item.observed_at)))
-      report("error","UNSUPPORTED_GAME_CONFIRMATION",p,"Game confirmation requires capture URL, build and date");
     if (requireStatus && !meaningful(item.source_status) && !meaningful(item.reference))
       report("warning","MISSING_PROVENANCE_STATUS",p,"Legacy record lacks source_status/reference");
     if (![item.source_url,item.url,item.itemUrl].some(link))
