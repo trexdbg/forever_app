@@ -54,8 +54,9 @@ test("mode solo omits explicit Classic instance objectives",()=>{
 test("recommended mode only exposes curated low-level instances",()=>{
  const h17=build(horde,"trorc",17,"essentials");
  assert.deepEqual(h17.dungeons.map(d=>d.id),["ragefire"]);
- const a20=build(alliance,"human",20,"essentials");
- assert.deepEqual(a20.dungeons.map(d=>d.id),["deadmines"]);
+ const a22=build(alliance,"human",22,"essentials");
+ assert.deepEqual(a22.dungeons.map(d=>d.id),["deadmines"]);
+ assert(a22.stages.some(s=>s.dungeonId==="deadmines"&&s.points.some(p=>p.actions.some(q=>q.en==="The Defias Brotherhood"))));
  const h26=build(horde,"undead",26,"essentials");
  assert(!h26.dungeons.some(d=>d.id==="stockades"||d.id==="gnomeregan"));
 });
@@ -68,6 +69,12 @@ test("Dry Times purchase pack also alerts for Hops",()=>{
  const preps=build(alliance,"gnorf",17,"solo").preparations;
  assert(preps.some(p=>p.id==="dry-times"&&p.quest_id===116));
  assert(preps.some(p=>p.id==="westfall-save"&&p.quantity===5));
+});
+test("shadowfang dungeon chapter is only suggested when its quest bundle is level-safe",()=>{
+ const earlier=build(horde,"undead",24,"essentials");
+ assert(!earlier.dungeons.some(d=>d.id==="shadowfang"));
+ const recommended=build(horde,"undead",27,"essentials");
+ assert(recommended.stages.some(s=>s.dungeonId==="shadowfang"&&s.points[0].actions.length>=3));
 });
 test("Horde equipment quest purchase is distinct",()=>{
  const preps=build(horde,"tauren",26,"solo").preparations;
