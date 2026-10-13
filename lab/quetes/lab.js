@@ -92,7 +92,8 @@ const canvas=$("map-canvas"),ctx=canvas.getContext("2d");
 const profileId=()=> (RACES[session.faction]||RACES.alliance).find(r=>r[0]===session.race)?.[1]||"human";
 const profileKey=()=> session.faction+":"+profileId();
 const questTitle=q=>session.lang==="en"?q.en:q.fr||q.en;
-const zoneName=zone=>session.lang==="en"?(zone.replace(/-/g," ").replace(/\b\w/g,c=>c.toUpperCase())):(catalog?.zones?.[zone]||zone);
+const EN_ZONES={morogh:"Dun Morogh",elwynn:"Elwynn Forest",loch:"Loch Modan",darkshore:"Darkshore",barrens:"The Barrens",needles:"Thousand Needles",duskwood:"Duskwood",westfall:"Westfall",stormwind:"Stormwind City",ironforge:"Ironforge",teldrassil:"Teldrassil",tirisfal:"Tirisfal Glades",undercity:"Undercity",redridge:"Redridge Mountains",wetlands:"Wetlands",hillsbrad:"Hillsbrad Foothills",stonetalon:"Stonetalon Mountains",morogh:"Dun Morogh",durotar:"Durotar",mulgore:"Mulgore",silverpine:"Silverpine Forest",ashenvale:"Ashenvale",arathi:"Arathi Highlands",alterac:"Alterac Mountains",stv:"Stranglethorn Vale",swamp:"Swamp of Sorrows",dustwallow:"Dustwallow Marsh",badlands:"Badlands",searing:"Searing Gorge",blasted:"Blasted Lands",steppes:"Burning Steppes",tanaris:"Tanaris",desolace:"Desolace",feralas:"Feralas",hinterlands:"The Hinterlands",felwood:"Felwood",ungoro:"Un\u0027Goro Crater",azshara:"Azshara",silithus:"Silithus",winterspring:"Winterspring",wpl:"Western Plaguelands",epl:"Eastern Plaguelands",deadwind:"Deadwind Pass",darnassus:"Darnassus",orgrimmar:"Orgrimmar",thunderbluff:"Thunder Bluff",moonglade:"Moonglade"};
+const zoneName=zone=>session.lang==="en"?(EN_ZONES[zone]||zone.replace(/-/g," ").replace(/\b\w/g,c=>c.toUpperCase())):(catalog?.zones?.[zone]||zone);
 const waypointName=p=>{
  const Q=window.ForeverQuestLocale;
  return session.lang==="fr" && Q?.header ? Q.header(p.header)||p.header : (p.header||zoneName(p.zone)).replace(/(^|\s)([a-z])/g,(_,space,c)=>space+c.toUpperCase());
@@ -108,6 +109,7 @@ function save(){
  try{localStorage.setItem(STORAGE,JSON.stringify(session));}catch(_){status(text("jsonError"),true);}
 }
 function initProfile(){
+ if(!source)return;
  const data=source[session.faction];
  catalog=Planner.buildCatalog({manifest:source.manifest,data,levels:source.levels.levels,profile:profileId()});
  state=Planner.normalizeState(session.profiles[profileKey()]||{level:5},catalog);
@@ -146,6 +148,7 @@ function renderLabels(){
 }
 function renderControls(){
  renderLabels();
+ if(!catalog)return;
  $("faction").value=session.faction;
  const races=$("race");races.replaceChildren();
  for(const [id,_profile,fr,en] of RACES[session.faction]){
@@ -188,6 +191,7 @@ function renderAll(){
  renderLog();renderRoute();drawMap();
 }
 function renderLog(){
+ if(!catalog)return;
  const search=normalize($("quest-search").value.trim());
  const list=$("quest-browser");list.replaceChildren();
  const data=Object.values(catalog.quests).filter(q=>!q.removed);
@@ -255,7 +259,7 @@ function renderRoute(){
  });
 }
 function setMapZone(zone){
- if(!catalog.zones[zone])return;
+ if(!catalog||!catalog.zones[zone])return;
  mapZone=zone;$("map-zone").value=zone;
  mapView={x:50,y:50,zoom:1};imageZone="";loadMap();
 }
@@ -314,11 +318,11 @@ function drawMap(){
 }
 function bind(){
  $("language").addEventListener("click",()=>{
-  session.lang=session.lang==="fr"?"en":"fr";renderControls();renderAll();save();status(text("loaded"));
+  session.lang=session.lang==="fr"?"en":"fr";renderControls();if(catalog){renderAll();save();status(text("loaded"));}
  });
  $("faction").addEventListener("change",()=>{session.faction=$("faction").value;session.race=RACES[session.faction][0][0];initProfile();});
  $("race").addEventListener("change",()=>{session.race=$("race").value;initProfile();});
- $("level").addEventListener("input",()=>{const v=$("level").value;if(v!==""&&Number.isFinite(Number(v))) updateState({...state,level:Number(v)});});
+ $("level").addEventListener("input",()=>{if(!catalog)return;const v=$("level").value;if(v!==""&&Number.isFinite(Number(v))) updateState({...state,level:Number(v)});});
  $("zone").addEventListener("change",()=>{updateState({...state,zone:$("zone").value,x:null,y:null});setMapZone(state.zone);});
  for(const [id,field] of [["pos-x","x"],["pos-y","y"]]) $(id).addEventListener("change",()=>{
   const raw=$(id).value;updateState({...state,[field]:raw===""?null:Number(raw)});
@@ -330,11 +334,13 @@ function bind(){
   logFilter=button.dataset.filter;document.querySelectorAll("[data-filter]").forEach(b=>{const active=b===button;b.classList.toggle("selected",active);b.setAttribute("aria-pressed",active?"true":"false");});renderLog();
  }));
  $("export-session").addEventListener("click",()=>{
+  if(!catalog)return;
   save();const blob=new Blob([JSON.stringify(session,null,2)],{type:"application/json"});
   const url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;a.download="foreveroth-classic-quest-lab.json";a.click();
   setTimeout(()=>URL.revokeObjectURL(url),4000);
  });
  $("import-session").addEventListener("change",async event=>{
+  if(!source)return;
   const file=event.target.files?.[0];if(!file)return;
   try{
    if(file.size>2000000)throw Error("oversize");
@@ -348,6 +354,7 @@ function bind(){
   finally{event.target.value="";}
  });
  $("reset-session").addEventListener("click",()=>{
+  if(!catalog)return;
   if(!confirm(text("confirmReset")))return;
   session.profiles[profileKey()]={level:5};initProfile();status(text("saved"));
  });
