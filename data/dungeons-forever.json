@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "updated": "2026-10-11",
+  "updated": "2026-10-13",
   "scope": "9 Forever additions and 26 returning Classic dungeon wings in World of Warcraft Forever, no other servers.",
   "sourcePolicy": "New Forever beta boss sources are kept separate from the Classic 1.12 boss rosters and loot; high-level Classic rosters are reference-only and NOT confirmed in Forever.",
   "mapImageBase": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/",
@@ -53,7 +53,8 @@
               ],
               "itemUrl": "https://www.wowhead.com/forever/item=270227",
               "source_status": "forever_beta_community",
-              "icon_source": "woweternity_forever_hall_of_thanes"
+              "icon_source": "woweternity_forever_hall_of_thanes",
+              "statsSource": "https://foreverchanges.pro/item/270227"
             },
             {
               "fr": "Brassards brindecieux",
@@ -72,7 +73,8 @@
               ],
               "itemUrl": "https://www.wowhead.com/forever/item=271096",
               "source_status": "forever_beta_community",
-              "icon_source": "woweternity_forever_hall_of_thanes"
+              "icon_source": "woweternity_forever_hall_of_thanes",
+              "statsSource": "https://foreverchanges.pro/item/271096"
             },
             {
               "fr": "Drapé spectresprit",
@@ -85,7 +87,8 @@
               "requiredLevel": 13,
               "itemUrl": "https://www.wowhead.com/forever/item=271097",
               "icon": "inv_misc_cape_12",
-              "icon_source": "woweternity_forever_hall_of_thanes"
+              "icon_source": "woweternity_forever_hall_of_thanes",
+              "statsSource": "https://foreverchanges.pro/item/271097"
             }
           ],
           "note": {
@@ -116,7 +119,8 @@
               "requiredLevel": 13,
               "itemUrl": "https://www.wowhead.com/forever/item=270230",
               "icon": "inv_belt_20",
-              "icon_source": "woweternity_forever_hall_of_thanes"
+              "icon_source": "woweternity_forever_hall_of_thanes",
+              "statsSource": "https://foreverchanges.pro/item/270230"
             },
             {
               "fr": "Poignes poing-de-flammes",
@@ -129,7 +133,8 @@
               "requiredLevel": 13,
               "itemUrl": "https://www.wowhead.com/forever/item=270231",
               "icon": "inv_gauntlets_25",
-              "icon_source": "woweternity_forever_hall_of_thanes"
+              "icon_source": "woweternity_forever_hall_of_thanes",
+              "statsSource": "https://foreverchanges.pro/item/270231"
             },
             {
               "fr": "Croc de Magmatus",
@@ -142,7 +147,8 @@
               "requiredLevel": 13,
               "itemUrl": "https://www.wowhead.com/forever/item=271095",
               "icon": "inv_misc_bone_06",
-              "icon_source": "woweternity_forever_hall_of_thanes"
+              "icon_source": "woweternity_forever_hall_of_thanes",
+              "statsSource": "https://foreverchanges.pro/item/271095"
             }
           ],
           "note": {
@@ -173,7 +179,8 @@
               "requiredLevel": 13,
               "itemUrl": "https://www.wowhead.com/forever/item=270228",
               "icon": "inv_wand_11",
-              "icon_source": "woweternity_forever_hall_of_thanes"
+              "icon_source": "woweternity_forever_hall_of_thanes",
+              "statsSource": "https://foreverchanges.pro/item/270228"
             },
             {
               "fr": "Bottines du golem protecteur",
@@ -186,7 +193,8 @@
               "requiredLevel": 13,
               "itemUrl": "https://www.wowhead.com/forever/item=270229",
               "icon": "inv_boots_01",
-              "icon_source": "woweternity_forever_hall_of_thanes"
+              "icon_source": "woweternity_forever_hall_of_thanes",
+              "statsSource": "https://foreverchanges.pro/item/270229"
             },
             {
               "fr": "Plastron de garde golem",
@@ -199,7 +207,8 @@
               "requiredLevel": 13,
               "itemUrl": "https://www.wowhead.com/forever/item=271098",
               "icon": "inv_chest_chain",
-              "icon_source": "woweternity_forever_hall_of_thanes"
+              "icon_source": "woweternity_forever_hall_of_thanes",
+              "statsSource": "https://foreverchanges.pro/item/271098"
             }
           ],
           "note": {
@@ -230,7 +239,8 @@
               "requiredLevel": 13,
               "itemUrl": "https://www.wowhead.com/forever/item=270256",
               "icon": "inv_axe_18",
-              "icon_source": "woweternity_forever_hall_of_thanes"
+              "icon_source": "woweternity_forever_hall_of_thanes",
+              "statsSource": "https://foreverchanges.pro/item/270256"
             },
             {
               "fr": "Jambières de Dirgehammer",
@@ -243,7 +253,8 @@
               "requiredLevel": 13,
               "itemUrl": "https://www.wowhead.com/forever/item=270260",
               "icon": "inv_pants_06",
-              "icon_source": "woweternity_forever_hall_of_thanes"
+              "icon_source": "woweternity_forever_hall_of_thanes",
+              "statsSource": "https://foreverchanges.pro/item/270260"
             },
             {
               "fr": "Robe de thane déshonoré",
@@ -256,7 +267,8 @@
               "requiredLevel": 13,
               "itemUrl": "https://www.wowhead.com/forever/item=270261",
               "icon": "inv_chest_cloth_09",
-              "icon_source": "woweternity_forever_hall_of_thanes"
+              "icon_source": "woweternity_forever_hall_of_thanes",
+              "statsSource": "https://foreverchanges.pro/item/270261"
             }
           ],
           "note": {
@@ -347,7 +359,8 @@
               "itemLevel": 20,
               "requiredLevel": 15,
               "icon": "inv_misc_monsterfang_01",
-              "icon_source": "woweternity_forever_ruins_of_lordaeron"
+              "icon_source": "woweternity_forever_ruins_of_lordaeron",
+              "statsSource": "https://foreverchanges.pro/item/271204"
             },
             {
               "fr": "Os d’abomination",
@@ -360,7 +373,8 @@
               "itemLevel": 20,
               "requiredLevel": 15,
               "icon": "inv_chest_chain_15",
-              "icon_source": "woweternity_forever_ruins_of_lordaeron"
+              "icon_source": "woweternity_forever_ruins_of_lordaeron",
+              "statsSource": "https://foreverchanges.pro/item/271205"
             },
             {
               "fr": "Restes de peau d’abomination",
@@ -373,7 +387,8 @@
               "itemLevel": 20,
               "requiredLevel": 15,
               "icon": "inv_chest_cloth_46",
-              "icon_source": "woweternity_forever_ruins_of_lordaeron"
+              "icon_source": "woweternity_forever_ruins_of_lordaeron",
+              "statsSource": "https://foreverchanges.pro/item/271206"
             }
           ],
           "note": {
@@ -401,7 +416,8 @@
               "requiredLevel": 15,
               "itemUrl": "https://www.wowhead.com/forever/item=271201",
               "icon": "inv_belt_21",
-              "icon_source": "woweternity_forever_ruins_of_lordaeron"
+              "icon_source": "woweternity_forever_ruins_of_lordaeron",
+              "statsSource": "https://foreverchanges.pro/item/271201"
             },
             {
               "fr": "Brassards de flétrimorsure",
@@ -414,7 +430,8 @@
               "requiredLevel": 15,
               "itemUrl": "https://www.wowhead.com/forever/item=271202",
               "icon": "inv_bracer_07",
-              "icon_source": "woweternity_forever_ruins_of_lordaeron"
+              "icon_source": "woweternity_forever_ruins_of_lordaeron",
+              "statsSource": "https://foreverchanges.pro/item/271202"
             },
             {
               "fr": "Patte d’araignée segmentée",
@@ -427,7 +444,8 @@
               "requiredLevel": 15,
               "itemUrl": "https://www.wowhead.com/forever/item=271203",
               "icon": "inv_staff_09",
-              "icon_source": "woweternity_forever_ruins_of_lordaeron"
+              "icon_source": "woweternity_forever_ruins_of_lordaeron",
+              "statsSource": "https://foreverchanges.pro/item/271203"
             }
           ],
           "note": {
@@ -455,7 +473,8 @@
               "requiredLevel": 17,
               "itemUrl": "https://www.wowhead.com/forever/item=271207",
               "icon": "inv_pants_cloth_05",
-              "icon_source": "woweternity_forever_ruins_of_lordaeron"
+              "icon_source": "woweternity_forever_ruins_of_lordaeron",
+              "statsSource": "https://foreverchanges.pro/item/271207"
             },
             {
               "fr": "Poigne de la peur",
@@ -468,7 +487,8 @@
               "requiredLevel": 17,
               "itemUrl": "https://www.wowhead.com/forever/item=271208",
               "icon": "inv_gauntlets_04",
-              "icon_source": "woweternity_forever_ruins_of_lordaeron"
+              "icon_source": "woweternity_forever_ruins_of_lordaeron",
+              "statsSource": "https://foreverchanges.pro/item/271208"
             },
             {
               "fr": "Sceptre de l’Abandonné",
@@ -481,7 +501,8 @@
               "requiredLevel": 17,
               "itemUrl": "https://www.wowhead.com/forever/item=271216",
               "icon": "inv_misc_bone_dwarfskull_01",
-              "icon_source": "woweternity_forever_ruins_of_lordaeron"
+              "icon_source": "woweternity_forever_ruins_of_lordaeron",
+              "statsSource": "https://foreverchanges.pro/item/271216"
             }
           ],
           "note": {
@@ -515,7 +536,8 @@
               ],
               "itemUrl": "https://www.wowhead.com/forever/item=271209",
               "source_status": "forever_beta_community",
-              "icon_source": "woweternity_forever_ruins_of_lordaeron"
+              "icon_source": "woweternity_forever_ruins_of_lordaeron",
+              "statsSource": "https://foreverchanges.pro/item/271209"
             },
             {
               "fr": "Ceinture en brochebande",
@@ -528,7 +550,8 @@
               "requiredLevel": 16,
               "itemUrl": "https://www.wowhead.com/forever/item=271210",
               "icon": "inv_belt_26",
-              "icon_source": "woweternity_forever_ruins_of_lordaeron"
+              "icon_source": "woweternity_forever_ruins_of_lordaeron",
+              "statsSource": "https://foreverchanges.pro/item/271210"
             },
             {
               "fr": "Coupe-cadavre",
@@ -541,7 +564,8 @@
               "requiredLevel": 16,
               "itemUrl": "https://www.wowhead.com/forever/item=271217",
               "icon": "inv_axe_09",
-              "icon_source": "woweternity_forever_ruins_of_lordaeron"
+              "icon_source": "woweternity_forever_ruins_of_lordaeron",
+              "statsSource": "https://foreverchanges.pro/item/271217"
             }
           ],
           "note": {
@@ -569,7 +593,8 @@
               "requiredLevel": 19,
               "itemUrl": "https://www.wowhead.com/forever/item=271213",
               "icon": "inv_shield_02",
-              "icon_source": "woweternity_forever_ruins_of_lordaeron"
+              "icon_source": "woweternity_forever_ruins_of_lordaeron",
+              "statsSource": "https://foreverchanges.pro/item/271213"
             },
             {
               "fr": "Bottines de soigneur de pourriture",
@@ -582,7 +607,8 @@
               "requiredLevel": 19,
               "itemUrl": "https://www.wowhead.com/forever/item=271214",
               "icon": "inv_boots_05",
-              "icon_source": "woweternity_forever_ruins_of_lordaeron"
+              "icon_source": "woweternity_forever_ruins_of_lordaeron",
+              "statsSource": "https://foreverchanges.pro/item/271214"
             },
             {
               "fr": "Bâton flèchefroide",
@@ -595,7 +621,8 @@
               "requiredLevel": 19,
               "itemUrl": "https://www.wowhead.com/forever/item=271215",
               "icon": "inv_staff_07",
-              "icon_source": "woweternity_forever_ruins_of_lordaeron"
+              "icon_source": "woweternity_forever_ruins_of_lordaeron",
+              "statsSource": "https://foreverchanges.pro/item/271215"
             },
             {
               "fr": "Plan : fermenteur",
@@ -605,7 +632,9 @@
               "id": 273085,
               "itemUrl": "https://www.wowhead.com/forever/item=273085",
               "id_reference_status": "forever_item_page_verified",
-              "name_fr_status": "wowhead_forever_frFR_to_verify"
+              "name_fr_status": "wowhead_forever_frFR_to_verify",
+              "itemLevel": 25,
+              "statsSource": "https://foreverchanges.pro/item/273085"
             },
             {
               "fr": "Plan : récupérateur arcanique",
@@ -640,7 +669,8 @@
               "requiredLevel": 17,
               "itemUrl": "https://www.wowhead.com/forever/item=271211",
               "icon": "inv_boots_chain_08",
-              "icon_source": "woweternity_forever_ruins_of_lordaeron"
+              "icon_source": "woweternity_forever_ruins_of_lordaeron",
+              "statsSource": "https://foreverchanges.pro/item/271211"
             },
             {
               "fr": "Protège-torse ensanglanté",
@@ -653,7 +683,8 @@
               "requiredLevel": 17,
               "itemUrl": "https://www.wowhead.com/forever/item=271212",
               "icon": "inv_misc_bandage_14",
-              "icon_source": "woweternity_forever_ruins_of_lordaeron"
+              "icon_source": "woweternity_forever_ruins_of_lordaeron",
+              "statsSource": "https://foreverchanges.pro/item/271212"
             },
             {
               "fr": "Cimeterre vilsang",
@@ -666,7 +697,8 @@
               "requiredLevel": 17,
               "itemUrl": "https://www.wowhead.com/forever/item=271218",
               "icon": "inv_sword_16",
-              "icon_source": "woweternity_forever_ruins_of_lordaeron"
+              "icon_source": "woweternity_forever_ruins_of_lordaeron",
+              "statsSource": "https://foreverchanges.pro/item/271218"
             }
           ],
           "note": {
@@ -694,7 +726,8 @@
               "requiredLevel": 22,
               "itemUrl": "https://www.wowhead.com/forever/item=6641",
               "icon": "inv_sword_17",
-              "icon_source": "woweternity_forever_ruins_of_lordaeron"
+              "icon_source": "woweternity_forever_ruins_of_lordaeron",
+              "statsSource": "https://foreverchanges.pro/item/6641"
             },
             {
               "fr": "Armure fantôme",
@@ -707,7 +740,8 @@
               "requiredLevel": 22,
               "itemUrl": "https://www.wowhead.com/forever/item=6642",
               "icon": "inv_chest_chain_05",
-              "icon_source": "woweternity_forever_ruins_of_lordaeron"
+              "icon_source": "woweternity_forever_ruins_of_lordaeron",
+              "statsSource": "https://foreverchanges.pro/item/6642"
             }
           ],
           "note": {
@@ -811,7 +845,8 @@
               "requiredLevel": 26,
               "itemUrl": "https://www.wowhead.com/forever/item=273024",
               "iconFileId": 132539,
-              "icon_source": "https://www.icy-veins.com/wow-forever/excavation-site-wetlands-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/excavation-site-wetlands-guide",
+              "statsSource": "https://foreverchanges.pro/item/273024"
             },
             {
               "fr": "Ceinturon écaille-sel",
@@ -834,7 +869,8 @@
               "itemUrl": "https://www.wowhead.com/forever/item=273023",
               "source_status": "forever_beta_community",
               "iconFileId": 132510,
-              "icon_source": "https://www.icy-veins.com/wow-forever/excavation-site-wetlands-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/excavation-site-wetlands-guide",
+              "statsSource": "https://foreverchanges.pro/item/273023"
             },
             {
               "fr": "Jambières souples en cuir ventral",
@@ -847,7 +883,8 @@
               "requiredLevel": 26,
               "itemUrl": "https://www.wowhead.com/forever/item=273022",
               "iconFileId": 134591,
-              "icon_source": "https://www.icy-veins.com/wow-forever/excavation-site-wetlands-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/excavation-site-wetlands-guide",
+              "statsSource": "https://foreverchanges.pro/item/273022"
             }
           ],
           "note": {
@@ -874,7 +911,8 @@
               "requiredLevel": 26,
               "itemUrl": "https://www.wowhead.com/forever/item=273025",
               "iconFileId": 132551,
-              "icon_source": "https://www.icy-veins.com/wow-forever/excavation-site-wetlands-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/excavation-site-wetlands-guide",
+              "statsSource": "https://foreverchanges.pro/item/273025"
             },
             {
               "fr": "Regard du raptor",
@@ -887,7 +925,8 @@
               "requiredLevel": 26,
               "itemUrl": "https://www.wowhead.com/forever/item=273027",
               "iconFileId": 136017,
-              "icon_source": "https://www.icy-veins.com/wow-forever/excavation-site-wetlands-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/excavation-site-wetlands-guide",
+              "statsSource": "https://foreverchanges.pro/item/273027"
             },
             {
               "en": "Garb of Florid Feathers",
@@ -900,7 +939,8 @@
               "requiredLevel": 26,
               "itemUrl": "https://www.wowhead.com/forever/item=273026",
               "iconFileId": 133684,
-              "icon_source": "https://www.icy-veins.com/wow-forever/excavation-site-wetlands-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/excavation-site-wetlands-guide",
+              "statsSource": "https://foreverchanges.pro/item/273026"
             },
             {
               "en": "Blueprint: Greenhouse",
@@ -912,7 +952,9 @@
               "id": 273106,
               "itemUrl": "https://www.wowhead.com/forever/item=273106",
               "id_reference_status": "forever_item_page_verified",
-              "name_fr_status": "wowhead_forever_frFR_verified"
+              "name_fr_status": "wowhead_forever_frFR_verified",
+              "itemLevel": 25,
+              "statsSource": "https://foreverchanges.pro/item/273106"
             }
           ],
           "note": {
@@ -952,7 +994,8 @@
               "requiredLevel": 28,
               "itemUrl": "https://www.wowhead.com/forever/item=273030",
               "iconFileId": 133370,
-              "icon_source": "https://www.icy-veins.com/wow-forever/excavation-site-wetlands-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/excavation-site-wetlands-guide",
+              "statsSource": "https://foreverchanges.pro/item/273030"
             },
             {
               "fr": "Long fusil de vision-golem",
@@ -965,7 +1008,8 @@
               "requiredLevel": 28,
               "itemUrl": "https://www.wowhead.com/forever/item=273029",
               "iconFileId": 134536,
-              "icon_source": "https://www.icy-veins.com/wow-forever/excavation-site-wetlands-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/excavation-site-wetlands-guide",
+              "statsSource": "https://foreverchanges.pro/item/273029"
             },
             {
               "fr": "Mantelet du reliquaire",
@@ -988,7 +1032,8 @@
               "itemUrl": "https://www.wowhead.com/forever/item=273028",
               "source_status": "forever_beta_community",
               "iconFileId": 135058,
-              "icon_source": "https://www.icy-veins.com/wow-forever/excavation-site-wetlands-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/excavation-site-wetlands-guide",
+              "statsSource": "https://foreverchanges.pro/item/273028"
             },
             {
               "fr": "Relique des Titans (quête)",
@@ -1003,7 +1048,9 @@
               "note_fr": "Deux identifiants Forever (270865 et 270866) existent pour la relique ; faction et variante non vérifiées.",
               "note_en": "Two Forever item IDs (270865, 270866) exist for the relic; faction-to-ID mapping is not verified.",
               "id": 270865,
-              "itemUrl": "https://www.wowhead.com/forever/item=270865"
+              "itemUrl": "https://www.wowhead.com/forever/item=270865",
+              "itemLevel": 1,
+              "statsSource": "https://www.wowhead.com/forever/item=270865"
             }
           ],
           "note": {
@@ -1083,7 +1130,11 @@
               "itemUrl": "https://www.wowhead.com/forever/item=273036",
               "identification_source": "https://www.wowhead.com/forever/item=273036",
               "name_fr_status": "community_translation_unverified",
-              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran",
+              "itemLevel": 31,
+              "requiredLevel": 26,
+              "quality": "rare",
+              "statsSource": "https://foreverchanges.pro/fr/item/273036"
             },
             {
               "fr": "Chevalière de lieur-d’os",
@@ -1096,7 +1147,11 @@
               "itemUrl": "https://www.wowhead.com/forever/item=273032",
               "identification_source": "https://www.wowhead.com/forever/item=273032",
               "name_fr_status": "community_translation_unverified",
-              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran",
+              "itemLevel": 31,
+              "requiredLevel": 25,
+              "quality": "rare",
+              "statsSource": "https://foreverchanges.pro/fr/item/273032"
             },
             {
               "fr": "Arbalète à répétition pointetombe",
@@ -1109,7 +1164,11 @@
               "itemUrl": "https://www.wowhead.com/forever/item=273033",
               "identification_source": "https://www.wowhead.com/forever/item=273033",
               "name_fr_status": "community_translation_unverified",
-              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran",
+              "itemLevel": 31,
+              "requiredLevel": 26,
+              "quality": "rare",
+              "statsSource": "https://foreverchanges.pro/fr/item/273033"
             }
           ],
           "note": {
@@ -1137,7 +1196,11 @@
               "itemUrl": "https://www.wowhead.com/forever/item=273054",
               "identification_source": "https://www.wowhead.com/forever/item=273054",
               "name_fr_status": "community_translation_unverified",
-              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran",
+              "itemLevel": 33,
+              "requiredLevel": 28,
+              "quality": "rare",
+              "statsSource": "https://foreverchanges.pro/item/273054"
             },
             {
               "fr": "Dague écorche-tendons",
@@ -1150,7 +1213,11 @@
               "itemUrl": "https://www.wowhead.com/forever/item=273053",
               "identification_source": "https://www.wowhead.com/forever/item=273053",
               "name_fr_status": "community_translation_unverified",
-              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran",
+              "itemLevel": 33,
+              "requiredLevel": 28,
+              "quality": "rare",
+              "statsSource": "https://foreverchanges.pro/item/273053"
             },
             {
               "fr": "Oculaire de pile d’os",
@@ -1163,7 +1230,11 @@
               "itemUrl": "https://www.wowhead.com/forever/item=273055",
               "identification_source": "https://www.wowhead.com/forever/item=273055",
               "name_fr_status": "community_translation_unverified",
-              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran",
+              "itemLevel": 33,
+              "requiredLevel": 28,
+              "quality": "rare",
+              "statsSource": "https://foreverchanges.pro/fr/item/273055"
             }
           ],
           "note": {
@@ -1191,7 +1262,8 @@
               "quality": "rare",
               "itemLevel": 32,
               "requiredLevel": 27,
-              "itemUrl": "https://www.wowhead.com/forever/item=273031"
+              "itemUrl": "https://www.wowhead.com/forever/item=273031",
+              "statsSource": "https://foreverchanges.pro/item/273031"
             },
             {
               "fr": "Poignes éphémères",
@@ -1204,7 +1276,8 @@
               "quality": "rare",
               "itemLevel": 32,
               "requiredLevel": 27,
-              "itemUrl": "https://www.wowhead.com/forever/item=273034"
+              "itemUrl": "https://www.wowhead.com/forever/item=273034",
+              "statsSource": "https://foreverchanges.pro/item/273034"
             },
             {
               "fr": "Cotte d’anneaux déformée par le mana",
@@ -1217,7 +1290,11 @@
               "itemUrl": "https://www.wowhead.com/forever/item=273035",
               "identification_source": "https://www.wowhead.com/forever/item=273035",
               "name_fr_status": "community_translation_unverified",
-              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran",
+              "itemLevel": 32,
+              "requiredLevel": 27,
+              "quality": "rare",
+              "statsSource": "https://foreverchanges.pro/item/273035"
             }
           ],
           "note": {
@@ -1245,7 +1322,11 @@
               "itemUrl": "https://www.wowhead.com/forever/item=273045",
               "identification_source": "https://www.wowhead.com/forever/item=273045",
               "name_fr_status": "community_translation_unverified",
-              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran",
+              "itemLevel": 32,
+              "requiredLevel": 27,
+              "quality": "rare",
+              "statsSource": "https://foreverchanges.pro/item/273045"
             },
             {
               "fr": "Robe de sorcier pourpre",
@@ -1258,7 +1339,11 @@
               "itemUrl": "https://www.wowhead.com/forever/item=273044",
               "identification_source": "https://www.wowhead.com/forever/item=273044",
               "name_fr_status": "community_translation_unverified",
-              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran",
+              "itemLevel": 32,
+              "requiredLevel": 27,
+              "quality": "rare",
+              "statsSource": "https://foreverchanges.pro/item/273044"
             },
             {
               "fr": "Baguette de concentration de mana",
@@ -1271,7 +1356,11 @@
               "itemUrl": "https://www.wowhead.com/forever/item=273043",
               "identification_source": "https://www.wowhead.com/forever/item=273043",
               "name_fr_status": "community_translation_unverified",
-              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran",
+              "itemLevel": 32,
+              "requiredLevel": 27,
+              "quality": "rare",
+              "statsSource": "https://foreverchanges.pro/item/273043"
             }
           ],
           "note": {
@@ -1299,7 +1388,11 @@
               "itemUrl": "https://www.wowhead.com/forever/item=273046",
               "identification_source": "https://www.wowhead.com/forever/item=273046",
               "name_fr_status": "community_translation_unverified",
-              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran",
+              "itemLevel": 33,
+              "requiredLevel": 28,
+              "quality": "rare",
+              "statsSource": "https://foreverchanges.pro/item/273046"
             },
             {
               "fr": "Gardécaille réfractaire",
@@ -1312,7 +1405,11 @@
               "itemUrl": "https://www.wowhead.com/forever/item=273048",
               "identification_source": "https://www.wowhead.com/forever/item=273048",
               "name_fr_status": "community_translation_unverified",
-              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran",
+              "itemLevel": 33,
+              "requiredLevel": 28,
+              "quality": "rare",
+              "statsSource": "https://foreverchanges.pro/item/273048"
             },
             {
               "fr": "Protège-épaules cristallins instables",
@@ -1325,7 +1422,11 @@
               "itemUrl": "https://www.wowhead.com/forever/item=273047",
               "identification_source": "https://www.wowhead.com/forever/item=273047",
               "name_fr_status": "community_translation_unverified",
-              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran",
+              "itemLevel": 33,
+              "requiredLevel": 28,
+              "quality": "rare",
+              "statsSource": "https://foreverchanges.pro/item/273047"
             },
             {
               "fr": "Plan : rouet",
@@ -1338,7 +1439,9 @@
               "itemUrl": "https://www.wowhead.com/forever/item=273099",
               "identification_source": "https://www.wowhead.com/forever/item=273099",
               "name_fr_status": "community_translation_unverified",
-              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran",
+              "itemLevel": 25,
+              "statsSource": "https://foreverchanges.pro/item/273099"
             }
           ],
           "note": {
@@ -1366,7 +1469,11 @@
               "itemUrl": "https://www.wowhead.com/forever/item=273040",
               "identification_source": "https://www.wowhead.com/forever/item=273040",
               "name_fr_status": "community_translation_unverified",
-              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran",
+              "itemLevel": 33,
+              "requiredLevel": 28,
+              "quality": "rare",
+              "statsSource": "https://foreverchanges.pro/item/273040"
             },
             {
               "fr": "Bottines en écaille-de-mana",
@@ -1379,7 +1486,11 @@
               "itemUrl": "https://www.wowhead.com/forever/item=273042",
               "identification_source": "https://www.wowhead.com/forever/item=273042",
               "name_fr_status": "community_translation_unverified",
-              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran",
+              "itemLevel": 33,
+              "requiredLevel": 28,
+              "quality": "rare",
+              "statsSource": "https://foreverchanges.pro/item/273042"
             },
             {
               "fr": "Ceinturon en ondule-bandes",
@@ -1392,7 +1503,11 @@
               "itemUrl": "https://www.wowhead.com/forever/item=273041",
               "identification_source": "https://www.wowhead.com/forever/item=273041",
               "name_fr_status": "community_translation_unverified",
-              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran",
+              "itemLevel": 33,
+              "requiredLevel": 28,
+              "quality": "rare",
+              "statsSource": "https://foreverchanges.pro/item/273041"
             }
           ],
           "note": {
@@ -1420,7 +1535,11 @@
               "itemUrl": "https://www.wowhead.com/forever/item=273039",
               "identification_source": "https://www.wowhead.com/forever/item=273039",
               "name_fr_status": "community_translation_unverified",
-              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran",
+              "itemLevel": 34,
+              "requiredLevel": 29,
+              "quality": "rare",
+              "statsSource": "https://foreverchanges.pro/item/273039"
             },
             {
               "fr": "Atours du déchu Gangrécorce",
@@ -1433,7 +1552,11 @@
               "itemUrl": "https://www.wowhead.com/forever/item=273038",
               "identification_source": "https://www.wowhead.com/forever/item=273038",
               "name_fr_status": "community_translation_unverified",
-              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran",
+              "itemLevel": 34,
+              "requiredLevel": 29,
+              "quality": "rare",
+              "statsSource": "https://foreverchanges.pro/item/273038"
             },
             {
               "fr": "Bras de gangrebranche",
@@ -1446,7 +1569,11 @@
               "itemUrl": "https://www.wowhead.com/forever/item=273037",
               "identification_source": "https://www.wowhead.com/forever/item=273037",
               "name_fr_status": "community_translation_unverified",
-              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran",
+              "itemLevel": 34,
+              "requiredLevel": 29,
+              "quality": "rare",
+              "statsSource": "https://foreverchanges.pro/item/273037"
             }
           ],
           "note": {
@@ -1474,7 +1601,11 @@
               "itemUrl": "https://www.wowhead.com/forever/item=273052",
               "identification_source": "https://www.wowhead.com/forever/item=273052",
               "name_fr_status": "community_translation_unverified",
-              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran",
+              "itemLevel": 35,
+              "requiredLevel": 30,
+              "quality": "rare",
+              "statsSource": "https://foreverchanges.pro/item/273052"
             },
             {
               "fr": "Mantelet de sorcier pourpre",
@@ -1487,7 +1618,11 @@
               "itemUrl": "https://www.wowhead.com/forever/item=273051",
               "identification_source": "https://www.wowhead.com/forever/item=273051",
               "name_fr_status": "community_translation_unverified",
-              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran",
+              "itemLevel": 35,
+              "requiredLevel": 30,
+              "quality": "rare",
+              "statsSource": "https://foreverchanges.pro/item/273051"
             },
             {
               "fr": "Pendentif à facettes d’archimagistère",
@@ -1500,7 +1635,8 @@
               "quality": "rare",
               "itemLevel": 35,
               "requiredLevel": 30,
-              "itemUrl": "https://www.wowhead.com/forever/item=273049"
+              "itemUrl": "https://www.wowhead.com/forever/item=273049",
+              "statsSource": "https://foreverchanges.pro/item/273049"
             },
             {
               "fr": "Plan : récupérateur arcanique",
@@ -1514,7 +1650,9 @@
               "identification_source": "https://www.wowhead.com/forever/item=273103",
               "name_fr_status": "community_translation_unverified",
               "boss_association_status": "guide_only_unconfirmed",
-              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran",
+              "itemLevel": 25,
+              "statsSource": "https://foreverchanges.pro/item/273103"
             }
           ],
           "note": {
@@ -1755,7 +1893,10 @@
               "source_status": "forever_beta_cache",
               "iconFileId": 135531,
               "icon_source": "https://www.icy-veins.com/wow-forever/ragefire-chasm-guide",
-              "itemUrl": "https://www.wowhead.com/forever/item=272999"
+              "itemUrl": "https://www.wowhead.com/forever/item=272999",
+              "itemLevel": 18,
+              "requiredLevel": 13,
+              "statsSource": "https://foreverchanges.pro/item/272999"
             },
             {
               "en": "Trogg Scepter",
@@ -1766,7 +1907,8 @@
               "source_status": "forever_beta_cache",
               "iconFileId": 133727,
               "icon_source": "https://www.icy-veins.com/wow-forever/ragefire-chasm-guide",
-              "itemUrl": "https://www.wowhead.com/forever/item=272996"
+              "itemUrl": "https://www.wowhead.com/forever/item=272996",
+              "statsSource": "https://foreverchanges.pro/item/272996"
             },
             {
               "en": "Bone Knuckles",
@@ -1777,7 +1919,10 @@
               "source_status": "forever_beta_cache",
               "iconFileId": 132369,
               "icon_source": "https://www.icy-veins.com/wow-forever/ragefire-chasm-guide",
-              "itemUrl": "https://www.wowhead.com/forever/item=272998"
+              "itemUrl": "https://www.wowhead.com/forever/item=272998",
+              "itemLevel": 18,
+              "requiredLevel": 13,
+              "statsSource": "https://foreverchanges.pro/item/272998"
             }
           ],
           "rare": false,
@@ -1924,7 +2069,8 @@
               "source_status": "forever_beta_cache",
               "iconFileId": 135639,
               "icon_source": "https://www.icy-veins.com/wow-forever/ragefire-chasm-guide",
-              "itemUrl": "https://www.wowhead.com/forever/item=273003"
+              "itemUrl": "https://www.wowhead.com/forever/item=273003",
+              "statsSource": "https://foreverchanges.pro/item/273003"
             },
             {
               "en": "Satyrskin Cloak",
@@ -1935,7 +2081,10 @@
               "source_status": "forever_beta_cache",
               "iconFileId": 133770,
               "icon_source": "https://www.icy-veins.com/wow-forever/ragefire-chasm-guide",
-              "itemUrl": "https://www.wowhead.com/forever/item=273005"
+              "itemUrl": "https://www.wowhead.com/forever/item=273005",
+              "itemLevel": 18,
+              "requiredLevel": 13,
+              "statsSource": "https://foreverchanges.pro/item/273005"
             },
             {
               "en": "Chasm Walkers",
@@ -1948,7 +2097,10 @@
               "id": 273007,
               "itemUrl": "https://www.wowhead.com/forever/item=273007",
               "id_reference_status": "forever_item_page_verified",
-              "forever_loot_confirmed": null
+              "forever_loot_confirmed": null,
+              "itemLevel": 18,
+              "requiredLevel": 13,
+              "statsSource": "https://foreverchanges.pro/item/273007"
             }
           ],
           "rare": false,
@@ -2104,7 +2256,10 @@
               "source_status": "forever_beta_cache",
               "iconFileId": 133884,
               "icon_source": "https://www.icy-veins.com/wow-forever/wailing-caverns-guide",
-              "itemUrl": "https://www.wowhead.com/forever/item=273088"
+              "itemUrl": "https://www.wowhead.com/forever/item=273088",
+              "itemLevel": 22,
+              "requiredLevel": 17,
+              "statsSource": "https://foreverchanges.pro/item/273088"
             }
           ],
           "rare": false,
@@ -3754,7 +3909,8 @@
               ],
               "itemUrl": "https://www.wowhead.com/forever/item=273805",
               "iconFileId": 132719,
-              "icon_source": "https://www.icy-veins.com/wow-forever/the-stockade-guide"
+              "icon_source": "https://www.icy-veins.com/wow-forever/the-stockade-guide",
+              "statsSource": "https://foreverchanges.pro/item/273805"
             },
             {
               "en": "Executioner Mantle",
@@ -3767,7 +3923,10 @@
               "id": 273804,
               "itemUrl": "https://www.wowhead.com/forever/item=273804",
               "id_reference_status": "forever_item_page_verified",
-              "forever_loot_confirmed": null
+              "forever_loot_confirmed": null,
+              "itemLevel": 26,
+              "requiredLevel": 21,
+              "statsSource": "https://foreverchanges.pro/item/273804"
             }
           ],
           "rare": false,
@@ -3804,7 +3963,10 @@
               "source_status": "forever_beta_cache",
               "iconFileId": 132513,
               "icon_source": "https://www.icy-veins.com/wow-forever/the-stockade-guide",
-              "itemUrl": "https://www.wowhead.com/forever/item=273807"
+              "itemUrl": "https://www.wowhead.com/forever/item=273807",
+              "itemLevel": 29,
+              "requiredLevel": 24,
+              "statsSource": "https://wowsrc.com/loot/the-stockade/"
             }
           ],
           "rare": false,
@@ -3828,7 +3990,8 @@
               "source_status": "forever_beta_cache",
               "iconFileId": 132392,
               "icon_source": "https://www.icy-veins.com/wow-forever/the-stockade-guide",
-              "itemUrl": "https://www.wowhead.com/forever/item=273809"
+              "itemUrl": "https://www.wowhead.com/forever/item=273809",
+              "statsSource": "https://foreverchanges.pro/item/273809"
             }
           ],
           "rare": false,
@@ -4140,7 +4303,8 @@
                 "Equip: +10 Attack Power.",
                 "Requires Level 29"
               ],
-              "itemUrl": "https://www.wowhead.com/forever/item=274068"
+              "itemUrl": "https://www.wowhead.com/forever/item=274068",
+              "statsSource": "https://www.60.tools/items/274068-thermaplugg-medal-of-honor"
             },
             {
               "en": "Schematic: 9-60 Battery Pack",
@@ -4151,7 +4315,9 @@
               "id": 274049,
               "itemUrl": "https://www.wowhead.com/forever/item=274049",
               "id_reference_status": "forever_item_page_verified",
-              "forever_loot_confirmed": null
+              "forever_loot_confirmed": null,
+              "itemLevel": 34,
+              "statsSource": "https://foreverchanges.pro/item/274049"
             }
           ],
           "rare": false,
@@ -4320,7 +4486,8 @@
               "id": 274158,
               "itemUrl": "https://www.wowhead.com/forever/item=274158",
               "id_reference_status": "forever_item_page_verified",
-              "forever_loot_confirmed": null
+              "forever_loot_confirmed": null,
+              "statsSource": "https://foreverchanges.pro/item/274158"
             },
             {
               "en": "Thorncursed Grips",
@@ -4331,7 +4498,10 @@
               "id": 274159,
               "itemUrl": "https://www.wowhead.com/forever/item=274159",
               "id_reference_status": "forever_item_page_verified",
-              "forever_loot_confirmed": null
+              "forever_loot_confirmed": null,
+              "itemLevel": 33,
+              "requiredLevel": 27,
+              "statsSource": "https://wowsrc.com/loot/razorfen-kraul/"
             },
             {
               "en": "Brawler's Leather Helm",
@@ -4353,7 +4523,8 @@
                 "+13 Stamina",
                 "Requires Level 25"
               ],
-              "itemUrl": "https://www.wowhead.com/forever/item=252512"
+              "itemUrl": "https://www.wowhead.com/forever/item=252512",
+              "statsSource": "https://www.60.tools/items/252512-brawlers-leather-helm"
             }
           ],
           "rare": false,
@@ -4434,7 +4605,10 @@
               "id": 274155,
               "itemUrl": "https://www.wowhead.com/forever/item=274155",
               "id_reference_status": "forever_item_page_verified",
-              "forever_loot_confirmed": null
+              "forever_loot_confirmed": null,
+              "itemLevel": 30,
+              "requiredLevel": 25,
+              "statsSource": "https://wowsrc.com/loot/razorfen-kraul/"
             },
             {
               "en": "Thornweaver Drape",
@@ -4443,7 +4617,10 @@
               "slot": "Dos",
               "isNew": true,
               "source_status": "forever_beta_cache",
-              "itemUrl": "https://www.wowhead.com/forever/item=274149"
+              "itemUrl": "https://www.wowhead.com/forever/item=274149",
+              "itemLevel": 30,
+              "requiredLevel": 25,
+              "statsSource": "https://foreverchanges.pro/item/274149"
             }
           ],
           "rare": false,
@@ -4495,7 +4672,10 @@
               "id": 274161,
               "itemUrl": "https://www.wowhead.com/forever/item=274161",
               "id_reference_status": "forever_item_page_verified",
-              "forever_loot_confirmed": null
+              "forever_loot_confirmed": null,
+              "itemLevel": 34,
+              "requiredLevel": 29,
+              "statsSource": "https://foreverchanges.pro/item/274161"
             }
           ],
           "rare": false,
@@ -4746,7 +4926,10 @@
               "slot": "Bouclier",
               "isNew": true,
               "source_status": "forever_beta_cache",
-              "itemUrl": "https://www.wowhead.com/forever/item=274290"
+              "itemUrl": "https://www.wowhead.com/forever/item=274290",
+              "itemLevel": 34,
+              "requiredLevel": 29,
+              "statsSource": "https://wowsrc.com/loot/scarlet-monastery-graveyard/"
             },
             {
               "en": "Defender's Leather Helm",
@@ -4755,7 +4938,10 @@
               "slot": "Tête / Cuir",
               "isNew": true,
               "source_status": "forever_beta_cache",
-              "itemUrl": "https://www.wowhead.com/forever/item=252455"
+              "itemUrl": "https://www.wowhead.com/forever/item=252455",
+              "itemLevel": 30,
+              "requiredLevel": 25,
+              "statsSource": "https://foreverchanges.pro/item/252455"
             }
           ],
           "rare": false,
@@ -4804,7 +4990,10 @@
               "id": 274291,
               "itemUrl": "https://www.wowhead.com/forever/item=274291",
               "id_reference_status": "forever_item_page_verified",
-              "forever_loot_confirmed": null
+              "forever_loot_confirmed": null,
+              "itemLevel": 36,
+              "requiredLevel": 31,
+              "statsSource": "https://foreverchanges.pro/item/274291"
             }
           ],
           "rare": false,
@@ -4866,7 +5055,8 @@
                 "+13 Stamina",
                 "Requires Level 25"
               ],
-              "itemUrl": "https://www.wowhead.com/forever/item=252512"
+              "itemUrl": "https://www.wowhead.com/forever/item=252512",
+              "statsSource": "https://www.60.tools/items/252512-brawlers-leather-helm"
             }
           ],
           "rare": true,

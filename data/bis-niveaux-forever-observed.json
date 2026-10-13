@@ -952,7 +952,7 @@
       "name": "Bonebinder's Signet",
       "name_en": "Bonebinder's Signet",
       "slot": "finger1",
-      "requiredLevel": 26,
+      "requiredLevel": 25,
       "itemLevel": 31,
       "quality": "rare",
       "armorType": null,
@@ -974,7 +974,13 @@
       "tooltip": [
         "Bonebinder's Signet",
         "Item Level 31",
-        "Requires Level 26"
+        "Binds when picked up",
+        "Unique-Equipped",
+        "Finger",
+        "+6 Spirit",
+        "+5 Strength",
+        "+40 Bonus Armor",
+        "Requires Level 25"
       ],
       "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
     },
