@@ -77,6 +77,13 @@
       const stageIndex = Math.max(0, insertAt + number(extra.order, 0));
       extra.waypoints.forEach(p => addPoint(p, stageIndex, extra.zone, number(extra.level)));
     }
+    // Metadata-only quests may be prerequisites not present in the original Classic guide.
+    // Keep them editable in the manual journal instead of silently blocking their successors.
+    for (const [rawKey, patch] of Object.entries(overlays)) {
+      const id = Number(String(rawKey).replace(/^id:/, ""));
+      if (Number.isSafeInteger(id) && id > 0 && patch && !quests["id:" + id])
+        ensure({id, name:patch.name_en || patch.name_fr || String(id)});
+    }
     for (const quest of Object.values(quests)) {
       const patch = overlays[String(quest.id)] || overlays[quest.key] || {};
       if (patch.name_fr) quest.fr = String(patch.name_fr);
