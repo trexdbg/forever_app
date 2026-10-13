@@ -154,12 +154,12 @@ function renderTimeline(){
   b.type="button";b.setAttribute("aria-current",step.index===view.stageIndex?"step":"false");
   const n=dom("span","stage-number",String(i+1).padStart(2,"0"));
   const title=dom("span","stage-description");
-  title.append(dom("strong",null,zoneName(step.zone)),dom("small",null,Math.floor(step.expected)+" · "+step.points.length+" "+T("steps")));
+  title.append(dom("strong",null,step.name?step.name[view.lang]:zoneName(step.zone)),dom("small",null,Math.floor(step.expected)+" · "+step.points.length+" "+T("steps")));
   b.append(n,title);b.addEventListener("click",()=>selectStage(step.index));list.append(b);
  });
 }
 function renderHeading(){
- $("stage-title").textContent=stage?zoneName(stage.zone):T("stageTitle");
+ $("stage-title").textContent=stage?(stage.name?stage.name[view.lang]:zoneName(stage.zone)):T("stageTitle");
  $("stage-subtitle").textContent=stage?
   (T("stage")+" "+Math.floor(stage.expected)+" · "+stage.points.length+" "+T("steps")+" · "+(view.mode==="solo"?T("solo"):T("essentials"))):
   T("stageSubtitle");
@@ -367,7 +367,7 @@ function bind(){
   const p=canvasPoint(ev),moved=pointer.moved;pointer=null;
   if(moved||!stage)return;
   const near=stage.points.map((item,index)=>({index,distance:Math.hypot(projected(item.x,item.y).x-p.x,projected(item.x,item.y).y-p.y)})).sort((a,b)=>a.distance-b.distance)[0];
-  if(near?.distance<=28){view.focusPoint=near.index;drawMap();renderStops();}
+  if(near?.distance<=28){view.focusPoint=near.index;drawMap();renderStops();document.querySelector(".stop.selected")?.scrollIntoView({behavior:"smooth",block:"nearest"});}
  });
  canvas.addEventListener("pointercancel",()=>pointer=null);
 }
