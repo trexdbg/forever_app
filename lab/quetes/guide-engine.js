@@ -54,7 +54,7 @@
    }
    return result;
  }
- function build({data,manifest,levels={},curation={},profile,level=5,mode="solo"}){
+ function build({data,manifest,levels={},curation={},xpData={},profile,level=5,mode="solo"}){
    if(!data||!data.routes?.[profile]||!Array.isArray(data.routes.shared))throw Error("Unknown guide profile");
    if(!["solo","essentials"].includes(mode))throw Error("Unknown guide variant");
    if(curation.schema_version!==1)throw Error("Invalid curation");
@@ -94,7 +94,8 @@
            excludedDungeons++;continue;
          }
          if(q.level!==null&&q.level>playerLevel){excludedOverLevel++;continue;}
-         actions.push({...q,kind});
+         const reward=xpData.quest_rewards?.[String(q.id)];
+       actions.push({...q,kind,rewardXp:Number.isFinite(reward?.xp)?reward.xp:null,rewardXpSource:reward?.source||null});
        }
        const notes=Array.isArray(wp.special)?wp.special.map(v=>Array.isArray(v)?str(v[0]):str(v)).filter(Boolean):[];
        const xy=wp.coords||{},x=num(xy.x),y=num(xy.y);
@@ -178,7 +179,8 @@
          if(q.level!==null&&q.level>playerLevel)continue;
          // A waypoint inside this dungeon can carry an unmarked acquisition step
          // (e.g. the Unsent Letter at Deadmines); it still belongs to this visit.
-         actions.push({...q,kind});
+         const reward=xpData.quest_rewards?.[String(q.id)];
+         actions.push({...q,kind,rewardXp:Number.isFinite(reward?.xp)?reward.xp:null,rewardXpSource:reward?.source||null});
        }
        if(!actions.length)continue;
        candidates.push({sourceStage,wp,actions});
@@ -199,7 +201,20 @@
        name:dungeon.name});
    }
    planned.sort((a,b)=>a.expected-b.expected||a.index-b.index);
+   for(const segment of planned){
+     const rewards=new Map(),unknown=new Set();
+     for(const point of segment.points)for(const action of point.actions){
+       if(action.kind!=="turnin"&&action.kind!=="instant")continue;
+       if(action.rewardXp!==null && action.id!==null)rewards.set(action.id,action.rewardXp);
+       else unknown.add(action.key);
+     }
+     segment.rewardXpKnown=[...rewards.values()].reduce((sum,x)=>sum+x,0);
+     segment.rewardXpKnownCount=rewards.size;
+     segment.rewardXpUnknownCount=unknown.size;
+   }
+   const xpToNext=Number(xpData?.xp_to_next?.[String(playerLevel)]);
    return {profile,faction,level:playerLevel,mode,stages:planned,preparations,dungeons,
+     xpToNext:Number.isFinite(xpToNext)&&xpToNext>0?xpToNext:null,xpEdition:xpData?.edition==="classic"?"classic":null,
      excludedOverLevel,excludedDungeons,source:data.source_commit,mapBase:manifest.map_base||"",
      zones:manifest.zones||{},strict:true};
  }

@@ -52,6 +52,23 @@ Références éditoriales des besoins vérifiés :
 
 Référence pour la sélection des instances : https://www.wowhead.com/classic/guide/dungeon-quests-wow-classic
 
+## Expérience Classic : données sourcées vs estimations
+
+Pour éviter un guide irréaliste, le laboratoire possède une **table des XP nécessaires pour chaque niveau Classic (1–59)** et un **premier catalogue vérifié de 17 récompenses de quêtes de Teldrassil** (\`xp-classic.json\`, IDs et liens vers les fiches sources). Aucun XP de quête Forever n'est inféré.
+
+Le nombre affiché sur chaque quête est une **récompense de référence Classic à la validation**, non l'XP déjà obtenue lors de la prise de quête. Les sous-totaux de secteur ne comptent que les actions **rendre** et **prendre et rendre** avec XP documentés ; une même quête n'y est comptée qu'une fois. Le sous-total reste **incomplet** dès qu'un rendu ne figure pas dans le catalogue, et les XP des monstres ne sont jamais inventés.
+
+Le guide ne connaît pas l'XP actuellement accumulée par le personnage à l'intérieur du niveau indiqué. Par exemple, un niveau 5 nécessite 2 800 XP pour passer au niveau 6, **pas obligatoirement 2 800 XP supplémentaires depuis sa position réelle**. L'XP des monstres peut varier avec leur niveau, le repos, le groupe et les réglages du serveur. Les récompenses de quêtes peuvent être réduites si le joueur les rend en étant trop haut niveau.
+
+Les divergences de source sont conservées explicitement : pour la quête 919, WCLBox affiche **800 XP** et Wowhead Classic **790 XP** ; pour la quête 932, ClassicDB indique **625 XP** (niveau 7), tandis qu’une fiche WCLBox plus récente affiche **700 XP** (niveau 8). Nous présentons des valeurs propres aux sources identifiées, sans prétendre résoudre ces écarts sans validation en jeu.
+
+**Sources :**
+- Tableau de niveau Classic : https://wowpedia.fandom.com/wiki/Experience_to_level
+- Récompenses par quête : https://wowforever.wclbox.com/en/renwu/488, https://wowforever.wclbox.com/en/renwu/918, https://wowforever.wclbox.com/en/renwu/929 (et liens propres à chaque ID dans le JSON).
+- Contre-vérification de la quête 919 : https://www.wowhead.com/classic/quest=919/timberling-sprouts
+
+**Prochaine validation en jeu :** relever l'XP affichée avant/après chaque rendu, les kills effectivement nécessaires pour chaque quête et l'XP de combat, puis comparer cette somme à la progression de niveau. Ne pas utiliser les chiffres fractionnaires \`experience\` de VanillaQuesting comme des récompenses XP vérifiées.
+
 ## Vérifications
 
 Lancer sans dépendances, sans minute GitHub Actions :
