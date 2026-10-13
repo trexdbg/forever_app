@@ -176,7 +176,16 @@ test("nelf pairs sylvains and avoids repeating the dangerous den",()=>{
  const dens=result.stages.filter(s=>s.name?.en?.includes("Barrow Den"));
  assert.equal(dens.length,1);
  for(const id of [483,2541,2561])assert(dens[0].points.some(p=>p.actions.some(a=>a.id===id)));
+ assert.equal(dens[0].points.length,1); // no six overlaid map pins at the same cave entrance
+ assert.equal(dens[0].points[0].actions.length,7);
  assert(!build(alliance,"nelf",9,"solo").stages.some(s=>s.points.some(p=>p.actions.some(a=>a.id===2561))));
+});
+test("night elf Dolanaar profession purchase is optional, never a quest material",()=>{
+ const prep=build(alliance,"nelf",5,"solo").preparations.find(p=>p.id==="nelf-skinning-knife-optional");
+ assert(prep);
+ assert.equal(prep.kind,"guide");
+ assert(!prep.quest_id);
+ assert(!build(horde,"trorc",5,"solo").preparations.some(p=>p.id===prep.id));
 });
 test("nelf prerequisites are checked and quest 12 is never recommended at player level 8",()=>{
  assert.equal(playbook.requirements["489"].previous_id,488);
