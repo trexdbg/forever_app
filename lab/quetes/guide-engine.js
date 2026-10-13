@@ -124,6 +124,43 @@
    const preparations=(curation.preparations||[]).filter(p=>
      p.faction===faction&&(!p.profile||p.profile===profile)&&
      playerLevel>=p.during[0]&&playerLevel<=p.during[1]).sort((a,b)=>a.level-b.level);
+   // Preserve purchase/save hints from the original walkthrough without implying that
+   // they are verified quest requirements. Discover them a little before the future stop.
+   const seenNotes=new Set();
+   const alreadyCurated=(note)=>{
+     const key=normalize(note).replace(/^buy\s+/,"").replace(/^save\s+/,"").replace(/^\d+x\s+/,"")
+       .replace(/^(?:a|an)\s+/,"");
+     return (curation.preparations||[]).some(p=>{
+       const target=normalize(p.name?.en);
+       return target.includes(key)||key.includes(target) ||
+         (key.includes("flask of oil")&&p.id==="flask-oil") ||
+         (key.includes("skinning knife")&&p.id==="skinning-knife");
+     });
+   };
+   for(const st of stages){
+     const when=Math.floor(num(st.experience)??0);
+     if(when<playerLevel||when>playerLevel+2)continue;
+     for(const wp of st.waypoints||[])for(const raw of wp.special||[]){
+       const note=str(Array.isArray(raw)?raw[0]:raw).trim();
+       if(!/^(?:buy\b|save\s+\d+x\b)/i.test(note) || /buy (?:greens for selling|any remaining manual pages)/i.test(note))continue;
+       const normalized=normalize(note);
+       if(seenNotes.has(normalized)||alreadyCurated(note))continue;
+       seenNotes.add(normalized);
+       const kind=/^save\b/i.test(note)?"gather":"guide";
+       preparations.push({
+         id:"route-note:"+normalized,kind,fromGuideAuto:true,rawNote:note,level:when,
+         quantity:1,faction,source:"guide",
+         name:{fr:note,en:note},
+         reason:{
+           fr:"Note communautaire relevée vers "+(manifest.zones?.[st.zone]||st.zone)+" ; achat ou conservation à confirmer en jeu.",
+           en:"Original route note near "+st.zone+"; purchase or item saving not independently verified."
+         }
+       });
+       if(preparations.filter(p=>p.fromGuideAuto).length>=4)break;
+     }
+     if(preparations.filter(p=>p.fromGuideAuto).length>=4)break;
+   }
+   preparations.sort((a,b)=>a.level-b.level);
    const dungeons=mode==="essentials"?(curation.dungeons||[]).filter(d=>
      d.faction===faction&&playerLevel>=d.level&&playerLevel<=d.level+d.window
    ):[];
