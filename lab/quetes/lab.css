@@ -3,3 +3,8 @@
 /* XP evidence is deliberately quieter than the actionable route. */
 .xp-summary{font-size:11px;color:#afd8c7;line-height:1.6;margin:7px 0 0;max-width:760px}
 .quest-xp{display:block;color:#a1d7ae;font-size:11px;font-variant-numeric:tabular-nums;margin-top:3px}
+
+/* Hand-authored playthrough details remain readable without crowding the map. */
+.played-advice{font-size:12px;line-height:1.55;color:#c5dcd4;margin:8px 0 2px;max-width:820px}
+.played-tip{color:#dddbbd;font-size:12px;margin:8px 0 2px;line-height:1.45;border-left:2px solid #98c4ae;padding-left:9px}
+.quest-prereq{font-size:10px;color:#aec6d0;margin-top:2px}
