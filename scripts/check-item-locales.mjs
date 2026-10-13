@@ -145,7 +145,7 @@ let knownDungeonIds=0,missingDungeonIds=0,canonicalMatches=0;
 // These recipes have vendor sources; boss attribution requires independent confirmation.
 const unverifiedBossRecipes=new Set([252820,252822]);
 const checkedDungeons=new Set(["ragefire-chasm","wailing-caverns","the-deadmines","shadowfang-keep","blackfathom-deeps","the-stockade","gnomeregan","razorfen-kraul","scarlet-monastery-graveyard","city-of-dalaran"]);
-const unresolvedForeverNames=new Set(["Plans: Arcane Recycler","Titan Relic (quest)"]);
+const unresolvedForeverNames=new Set(["Plans: Arcane Recycler"]);
 for(const dungeon of dungeonData.dungeons||[]){
  for(const boss of dungeon.bosses||[]){
   for(const drop of boss.loot||[]){
@@ -178,7 +178,7 @@ for(const dungeon of dungeonData.dungeons||[]){
   }
  }
 }
-assert.equal(missingDungeonIds,2,"Unexpected unresolved dungeon reference count");
+assert.equal(missingDungeonIds,1,"Unexpected unresolved dungeon reference count (2026-10-13 baseline)");
 assert.ok(knownDungeonIds>=204,"Documented dungeon coverage regressed");
 assert.ok(canonicalMatches>=15,"Not enough canonical ID/name comparisons");
 // Source-checked Classic item name (Wowhead Classic item 3188), shared by rares and equipment.

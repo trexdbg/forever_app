@@ -24,15 +24,20 @@ const scopeLabels=en?{
  beyondNote:"Beta records beyond level 30 or with unknown required level. In-game availability is unconfirmed.",
  classicNote:"Classic-only references: presence on Forever unverified. Missing beta data does not mean removed.",
  allNote:"Beta records and unverified Classic references are mixed here. Check the source of each item.",
- betaBadge:"Beta · client",observedBadge:"Beta · reported loot",classicBadge:"Classic · unverified"
+ betaBadge:"Beta · client",observedBadge:"Beta · reported loot",questBadge:"Beta · reported quest reward",classicBadge:"Classic · unverified"
 }:{
  scope:"Catalogue",beta30:"Forever bêta · niveaux 1–30",betaOther:"Autres données bêta",classicOnly:"Références Classic",allSources:"Toutes les sources",
  betaNote:"Présent dans les données bêta ≠ obtenable en jeu. Filtre sur le niveau requis ; les niveaux inconnus figurent dans « Autres données bêta ».",
  beyondNote:"Données bêta au-delà du niveau 30 ou niveau requis inconnu. Disponibilité en jeu non confirmée.",
  classicNote:"Références Classic non vérifiées sur Forever. Absence des données bêta ≠ objet supprimé.",
  allNote:"Les données bêta et les références Classic non vérifiées sont réunies ici. Vérifiez la provenance de chaque objet.",
- betaBadge:"Bêta · client",observedBadge:"Bêta · butin signalé",classicBadge:"Classic · non vérifié"
+ betaBadge:"Bêta · client",observedBadge:"Bêta · butin signalé",questBadge:"Bêta · récompense de quête signalée",classicBadge:"Classic · non vérifié"
 };
+function provenanceBadge(item){
+ if(sourceType(item)!=="forever")return scopeLabels.classicBadge;
+ if(item.source_status!=="forever_beta_observed")return scopeLabels.betaBadge;
+ return item.acquisition?.kind==="quest"?scopeLabels.questBadge:scopeLabels.observedBadge;
+}
 function betaLevel30(item){
  const n=item.requiredLevel??item.required_level;
  if(n===0||n==="0")return true;
@@ -136,7 +141,7 @@ function render(){
  const display=document.createElement("span");display.className="item-v2-label";display.style.setProperty("--rarity",colors[i.quality]||"#d7d7d7");
  const href=(typeof i.url==="string"&&(i.url.startsWith("https://www.wowhead.com/forever/")||i.url.startsWith("https://wowdb.assemblee-defias.fr/")||i.url.startsWith("https://www.60.tools/items/")))?i.url:null;
  const anchor=document.createElement(href?"a":"span");if(href){anchor.href=href;anchor.target="_blank";anchor.rel="noopener noreferrer"}anchor.textContent=i.name;display.append(anchor);name.append(display);
- const tag=document.createElement("span");tag.className="item-v3-provenance "+(sourceType(i)==="forever"?"forever":"classic");tag.textContent=sourceType(i)==="forever"?(i.source_status==="forever_beta_observed"?scopeLabels.observedBadge:scopeLabels.betaBadge):scopeLabels.classicBadge;name.append(tag);
+ const tag=document.createElement("span");tag.className="item-v3-provenance "+(sourceType(i)==="forever"?"forever":"classic");tag.textContent=provenanceBadge(i);name.append(tag);
  const detail=document.createElement("button");detail.type="button";detail.className="bis-v2-info-button item-v2-info";detail.textContent="ⓘ";detail.setAttribute("aria-label",tr.tooltip+" "+i.name);detail.addEventListener("click",()=>window.ForeverItemTooltip?.pin(i));name.append(detail);
  rowText(row,slotLabels[i.slot]||i.slot);
  rowText(row,numericLevel(i,"itemLevel")??"—").className="item-catalogue-numeric";

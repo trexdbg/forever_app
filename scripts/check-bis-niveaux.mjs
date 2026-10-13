@@ -60,4 +60,46 @@ for(const [name,html] of [["fr",fr],["en",en]]){
 }
 assert.ok(js.includes('renderFarm();')&&js.includes('renderSets();'));
 assert.ok(js.includes('futureBox')&&js.includes('activeFilters'),"optional filters and future brackets should be preserved");
+
+/* Agent 02 (levels 1–30): reviewed Forever source assertions and unknown requirements. */
+const betaArchive=load("data/items-forever-cache.json");
+const observedByID=new Map(observed.items.map(i=>[i.id,i]));
+const cacheByID=new Map(betaArchive.items.map(i=>[i.id,i]));
+for(const [id,expected,armor] of [
+ [271096,["+30 Armor","Equip: +3 Spell Power"],"15 Armor"],
+ [271097,["+3 Agility","+4 Spirit"],"17 Armor"],
+ [279865,["+3 Stamina","+3 Strength"],"18 Armor"]
+]){
+ const item=observedByID.get(id);
+ assert.ok(item,"Missing reviewed Forever item "+id);
+ for(const line of [...expected,armor])assert.ok(item.tooltip.includes(line),id+" missing documented stat "+line);
+ assert.equal(item.evidence_level,"documented_forever");
+ assert.equal(item.source_url,"https://foreverchanges.pro/item/"+id);
+ assert.equal(item.evidence_url,item.source_url);
+ assert.equal(item.evidence_kind,"forever_community_page");
+ assert.equal(item.observed_at,"2026-10-13");
+ assert.ok(item.observed_build&&item.evidence_note);
+ if(id!==271096){
+  const archived=cacheByID.get(id);
+  assert.ok(archived,"Missing cached item "+id);
+  for(const line of [...expected,armor])assert.ok(archived.tooltip.includes(line),id+" stale archive "+line);
+  assert.equal(archived.evidence_level,"documented_forever");
+  assert.equal(archived.evidence_url,item.evidence_url);
+  assert.equal(archived.evidence_kind,"forever_community_page");
+  assert.ok(archived.observed_at&&archived.observed_build&&archived.evidence_note);
+ }
+}
+assert.ok(!cacheByID.get(271097).tooltip.includes("+4 Agility"),"Stale agility bonus");
+assert.ok(!cacheByID.get(279865).tooltip.includes("+5 Stamina"),"Stale stamina bonus");
+const uncertainQuestRewards=observed.items.filter(i=>i.acquisition?.kind==="quest"&&i.requiredLevel===null);
+assert.equal(uncertainQuestRewards.length,11,"Missing explicitly unknown equip-level quest rewards");
+assert.ok(uncertainQuestRewards.every(i=>!i.tooltip.some(t=>/^Requires Level \d+$/.test(t))),
+ "Quest level must not be mistaken for item requirement");
+assert.ok(js.includes("const req=required(i),max=levels[band][1]"),
+ "Automatic BiS candidates must require an explicit equipment level");
+assert.ok(!js.includes("const req=progressionLevel(i),max=levels[band][1]"),
+ "Quest level cannot substitute for equipment requirement in recommendations");
+for(const [needle] of [["Reported in beta · not independently verified"],["Signalé en bêta · non vérifié directement"]])
+ assert.ok(js.includes(needle),"FR/EN beta provenance label must be cautious");
+
 console.log("BiS par niveau OK: "+levels.length+" brackets, "+db.classes.length+" classes, "+classic.items.length+" Classic + "+observed.items.length+" beta-reported references, "+guide.sources.length+" dungeon guides, FR/EN pages.");

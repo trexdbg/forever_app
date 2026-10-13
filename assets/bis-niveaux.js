@@ -35,7 +35,7 @@ function getKind(i){
  if(/vendor|marchand|merchant|vendeur|boutique/i.test(origin))return "vendor";
  return "world";
 }
-const sourceDetails=en?{drop:"Observed beta drop",observed:"Seen in beta",client:"Beta client reference · unverified acquisition",classic:"Classic reference · availability unverified",obtained:"How to obtain",boss:"Boss",level30:"Level 30 · beta cap"}:{drop:"Butin observé en bêta",observed:"Vu en bêta",client:"Référence du client bêta · obtention à confirmer",classic:"Référence Classic · disponibilité non vérifiée",obtained:"Où l’obtenir",boss:"Boss",level30:"Niveau 30 · plafond bêta"};
+const sourceDetails=en?{drop:"Community-reported beta drop",observed:"Reported in beta · not independently verified",client:"Beta client reference · unverified acquisition",classic:"Classic reference · availability unverified",obtained:"How to obtain",boss:"Boss",level30:"Level 30 · beta cap"}:{drop:"Butin signalé par la communauté",observed:"Signalé en bêta · non vérifié directement",client:"Référence du client bêta · obtention à confirmer",classic:"Référence Classic · disponibilité non vérifiée",obtained:"Où l’obtenir",boss:"Boss",level30:"Niveau 30 · plafond bêta"};
 
 
 /* Localization is source-aware: the Classic API publishes French names only.
@@ -166,7 +166,8 @@ function weaponAllowed(i,chosenSlot=normSlot(i)){
  return true;
 }
 function eligible(i){
- const req=progressionLevel(i),max=levels[band][1],rules=window.ForeverEquipmentRules;
+ // Quest level is NOT an equip requirement: do not auto-recommend unknown-level quest rewards.
+ const req=required(i),max=levels[band][1],rules=window.ForeverEquipmentRules;
  if(!Number.isInteger(i.id)||!i.name||i.quality==="poor"||req===null||req>max||req<1)return false;
  if(Number.isFinite(i.itemLevel)&&i.itemLevel>max+(max===60?18:11))return false;
  if(origin==="forever"&&!isForever(i)||origin==="classic"&&isForever(i))return false;
@@ -513,7 +514,7 @@ function renderPicker(){
  const matches=(blocked?[]:list).filter(it=>(!selectedQualities.size||selectedQualities.has(it.quality))&&(!term||((window.ForeverItemLocale?.aliases(it)||localizedName(it))+" "+localizedOrigin(it)+" "+it.id).toLocaleLowerCase().includes(term))).sort((a,b)=>Number(b.id===i?.id)-Number(a.id===i?.id));
  $("level-picker-count").textContent=matches.length+" "+u.candidates;
  const results=$("level-candidates");results.replaceChildren();
- if(!matches.length){results.append(mk("p","bis-v2-empty",blocked?u.twohand:u.none));return}
+ if(!matches.length)results.append(mk("p","bis-v2-empty",blocked?u.twohand:u.none));
  for(const candidate of matches.slice(0,visibleLimit)){
   const wrap=mk("div","bis-v2-candidate-wrap"),b=mk("button","bis-v2-candidate"+(i?.id===candidate.id?" selected":""));
   b.type="button";b.dataset.quality=candidate.quality||"common";
@@ -530,7 +531,39 @@ function renderPicker(){
   wrap.append(b,detail);results.append(wrap);
  }
  if(matches.length>visibleLimit){const more=mk("button","bis-v2-more",u.more+" ("+(matches.length-visibleLimit)+")");more.type="button";more.addEventListener("click",()=>{visibleLimit+=8;renderPicker()});results.append(more)}
+
+ const pending=uncertainReferences(id);
+ if(pending.length){
+  const refs=mk("details","bis-v2-source-details");
+  const summary=mk("summary","",(en?"Other quest references · equip level unknown":"Autres objets de quête · niveau d’équipement inconnu")+" ("+pending.length+")");
+  const note=mk("p","bis-v2-empty",en
+   ?"Not recommended or validated for this class. Quest level is not an equip requirement. View these items in the catalogue."
+   :"Non recommandés ni validés pour cette classe. Le niveau de quête n’est pas un niveau requis pour s’équiper. Consultez ces objets dans le catalogue.");
+  refs.append(summary,note);
+  for(const item of pending){
+   const link=mk("a","bis-v2-candidate",localizedName(item)+" · "+requirementText(item));
+   link.href=uncertainCatalogueLink(item);
+   link.setAttribute("aria-label",(en?"Unverified item details":"Fiche de l’objet non vérifié")+" : "+localizedName(item));
+   refs.append(link);
+  }
+  results.append(refs);
+ }
+
 }
+
+/* Uncertain quest rewards remain references, never equipped targets. */
+function uncertainReferences(slot){
+ if(origin==="classic"||(sourceKind!=="all"&&sourceKind!=="quest"))return [];
+ const max=levels[band][1],term=pickerQuery.toLocaleLowerCase();
+ return all.filter(i=>isForever(i)&&i.acquisition?.kind==="quest"
+  &&required(i)===null&&Number.isInteger(i.questLevel)&&i.questLevel<=max
+  &&window.ForeverGearData.compatible(normSlot(i),slot)
+  &&(!selectedQualities.size||selectedQualities.has(i.quality))
+  &&(!term||(String(i.id)+" "+(window.ForeverItemLocale?.aliases(i)||localizedName(i))+" "+localizedOrigin(i)).toLocaleLowerCase().includes(term)))
+  .sort((a,b)=>a.questLevel-b.questLevel||a.id-b.id);
+}
+const uncertainCatalogueLink=i=>(en?"/en/equipements/?q=":"/equipements/?q=")+encodeURIComponent(i.id);
+
 function renderSlots(){
  if(!db)return;
  currentPlan=plan();
