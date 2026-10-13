@@ -60,7 +60,7 @@
         "dungeon": "Hall of Thanes",
         "dungeon_fr": "Hall of Thanes",
         "boss": "Faldrim Anvilmar",
-        "verification": "observed_beta_2026-10"
+        "verification": "community_report_2026-10"
       },
       "source_status": "forever_beta_observed",
       "source_url": "https://foreverchanges.pro/item/271096",
@@ -75,7 +75,7 @@
         "Equip: +3 Spell Power",
         "Requires Level 13"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "reference": "Forever beta · community-reported dungeon loot (gameplay not independently verified, 2026-10)",
       "evidence_level": "documented_forever",
       "evidence_url": "https://foreverchanges.pro/item/271096",
       "observed_at": "2026-10-13",
@@ -101,7 +101,7 @@
         "dungeon": "Hall of Thanes",
         "dungeon_fr": "Hall of Thanes",
         "boss": "Faldrim Anvilmar",
-        "verification": "observed_beta_2026-10"
+        "verification": "community_report_2026-10"
       },
       "source_status": "forever_beta_observed",
       "source_url": "https://foreverchanges.pro/item/271097",
@@ -116,7 +116,7 @@
         "+4 Spirit",
         "Requires Level 13"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "reference": "Forever beta · community-reported dungeon loot (gameplay not independently verified, 2026-10)",
       "evidence_level": "documented_forever",
       "evidence_url": "https://foreverchanges.pro/item/271097",
       "observed_at": "2026-10-13",
@@ -2406,7 +2406,7 @@
         "questLevel": 21,
         "questMinLevel": 16,
         "faction": "both",
-        "verification": "observed_beta_2026-10"
+        "verification": "community_report_2026-10"
       },
       "source_status": "forever_beta_observed",
       "source_url": "https://foreverchanges.pro/item/279865",
