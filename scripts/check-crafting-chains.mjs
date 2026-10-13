@@ -55,20 +55,35 @@ export function auditCraftingChains(catalogue,npcs,professions) {
   if(!validProf.has(r.profession_id))error("CRAFT_PROFESSION_UNKNOWN",p+".profession_id","Unknown profession");
   if(r.skill_required!==null&&(!Number.isSafeInteger(r.skill_required)||r.skill_required<1))error("CRAFT_SKILL_INVALID",p+".skill_required","Invalid learnable requirement");
   if(r.skill_yellow!==null&&(!Number.isSafeInteger(r.skill_yellow)||r.skill_yellow<1))error("CRAFT_SKILL_YELLOW",p+".skill_yellow","Invalid color threshold");
+  if(positive(r.skill_yellow)&&(!url(r.skill_yellow_source_url)||!word(r.skill_yellow_observed_at)||
+      !word(r.skill_yellow_observed_build)||r.skill_yellow_evidence_kind!=="forever_community_page"||
+      !word(r.skill_yellow_evidence_note)))
+   error("CRAFT_SKILL_YELLOW_PROVENANCE",p+".skill_yellow_source_url","Yellow threshold needs an explicit Forever index, observed build/date and scope note");
+  if(r.skill_required_source_url!==undefined){
+   if(!url(r.skill_required_source_url)||r.skill_required_evidence_level!=="documented_forever"||
+      r.skill_required_evidence_kind!=="forever_community_page"||!word(r.skill_required_observed_at)||
+      !word(r.skill_required_observed_build)||!word(r.skill_required_evidence_note))
+    error("CRAFT_SKILL_REQUIRED_PROVENANCE",p+".skill_required_source_url","Documented trainer skill needs separate claim-scoped evidence");
+  }
   if(positive(r.skill_required)&&positive(r.skill_yellow)&&r.skill_yellow<r.skill_required)error("CRAFT_SKILL_ORDER",p,"Yellow threshold before required skill");
   if(!object(r.learning)||!["trainer","profession"].includes(r.learning.method))error("CRAFT_LEARNING_INVALID",p+".learning","Unknown acquisition of spell");
   if(r.learning?.available_in_game!==null)error("CRAFT_AVAILABILITY_UNPROVEN",p+".learning.available_in_game","Do not assert live trainer access");
   if(r.output_quantity!==null){
    if(!positive(r.output_quantity))error("CRAFT_OUTPUT_QUANTITY",p+".output_quantity","Invalid positive output");
    if(r.output_quantity_status==="conflicting_sources")error("CRAFT_OUTPUT_CONFLICT_HIDDEN",p,"Must not choose a disputed output count");
+   if(r.output_quantity_status!=="documented_forever")error("CRAFT_OUTPUT_RESOLUTION_INVALID",p+".output_quantity_status","Documented resolution must be separately sourced");
+   if(!url(r.output_quantity_source_url)||!word(r.output_quantity_evidence_note))
+    error("CRAFT_OUTPUT_RESOLUTION_UNSOURCED",p,"Resolved output requires a specific source and explanation, not a guess");
   }else if(r.output_quantity_status!=="conflicting_sources"&&r.output_quantity_status!=="unknown")
    error("CRAFT_OUTPUT_UNKNOWN_STATUS",p+".output_quantity_status","Explain unknown count");
   if(r.output_quantity_status==="conflicting_sources"){
-   if(!Array.isArray(r.output_quantity_candidates)||new Set(r.output_quantity_candidates.filter(object).map(x=>x.quantity)).size<2)
-    error("CRAFT_OUTPUT_CONFLICT_UNSUPPORTED",p+".output_quantity_candidates","Conflicting reports need distinct quantities");
+   if(!Array.isArray(r.output_quantity_candidates)||
+      new Set(r.output_quantity_candidates.filter(object).map(x=>x.quantity)).size<2||
+      new Set(r.output_quantity_candidates.filter(object).map(x=>x.source_url)).size<2)
+    error("CRAFT_OUTPUT_CONFLICT_UNSUPPORTED",p+".output_quantity_candidates","Conflicts require at least two distinct yields from two distinct sources");
   }
   if(Array.isArray(r.output_quantity_candidates))for(const [j,q] of r.output_quantity_candidates.entries()){
-   if(!object(q)||!positive(q.quantity)||!url(q.source_url))error("CRAFT_OUTPUT_CANDIDATE_INVALID",p+".output_quantity_candidates["+j+"]","Positive yield and HTTPS source required");
+   if(!object(q)||!positive(q.quantity)||!url(q.source_url)||!word(q.evidence_note))error("CRAFT_OUTPUT_CANDIDATE_INVALID",p+".output_quantity_candidates["+j+"]","Positive yield, HTTPS source and precise evidence note required");
   }
   if(!Array.isArray(r.ingredients)||!r.ingredients.length){error("CRAFT_INGREDIENTS_INVALID",p+".ingredients","No ingredients");continue;}
   const unique=new Set();
