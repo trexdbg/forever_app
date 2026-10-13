@@ -103,7 +103,7 @@ for (const [lang, path] of [
 ]) {
   const html = read(path);
   for (const item of atrexis.loot) {
-    assert.ok(html.includes(item[lang]) && html.includes("/item/" + item.id),
+    assert.ok((html.includes(item[lang]) || html.includes(item[lang].replaceAll("'", "&#39;"))) && html.includes("/item/" + item.id),
       "Atrexis guide has missing/incorrect " + lang + " item " + item.id);
     assert.ok(html.includes(String(item.requiredLevel)), "Missing documented equip level " + item.id);
   }
