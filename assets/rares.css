@@ -1,7 +1,7 @@
 /* Rare atlas — compact, responsive ForEveroth styling */
 .rare-hero{padding-block:22px 8px}.rare-hero p{font-size:12px;margin:0;color:#a9b3a8}
 .rare-app{padding:16px}.rare-title{display:flex;align-items:center;gap:15px;margin-bottom:12px}.rare-title h1{font:500 27px Georgia,serif;color:#ecd6ad;margin:0}.rare-title .status-pill{margin-left:auto}
-.rare-filters{display:grid;grid-template-columns:minmax(160px,2fr) repeat(3,minmax(105px,1fr));gap:9px}
+.rare-filters{display:grid;grid-template-columns:minmax(165px,2fr) repeat(4,minmax(110px,1fr));gap:9px}
 .rare-field{display:flex;flex-direction:column;gap:4px;color:#aebaaa;font-size:11px}.rare-field input,.rare-field select{width:100%;min-width:0;height:37px;font-size:12px;padding:6px 9px;color:#e8e8dc;border:1px solid #4b5648;background:#0c1610}
 .rare-checks{display:flex;gap:17px;flex-wrap:wrap;margin:10px 0 15px}.rare-checks label{display:flex;align-items:center;gap:7px;font-size:12px;cursor:pointer}.rare-checks input{width:16px;height:16px;margin:0}
 .rare-grid{display:grid;grid-template-columns:minmax(235px,315px) minmax(0,1fr);gap:12px;align-items:start}
