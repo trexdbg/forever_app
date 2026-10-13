@@ -93,7 +93,7 @@ assert.ok(!cacheByID.get(271097).tooltip.includes("+4 Agility"),"Stale agility b
 assert.ok(!cacheByID.get(279865).tooltip.includes("+5 Stamina"),"Stale stamina bonus");
 const uncertainQuestRewards=observed.items.filter(i=>i.acquisition?.kind==="quest"&&i.requiredLevel===null);
 assert.equal(uncertainQuestRewards.length,11,"Missing explicitly unknown equip-level quest rewards");
-assert.ok(uncertainQuestRewards.every(i=>!i.tooltip.some(t=>/^Requires Level \\d+$/.test(t))),
+assert.ok(uncertainQuestRewards.every(i=>!i.tooltip.some(t=>/^Requires Level \d+$/.test(t))),
  "Quest level must not be mistaken for item requirement");
 assert.ok(js.includes("const req=required(i),max=levels[band][1]"),
  "Automatic BiS candidates must require an explicit equipment level");
