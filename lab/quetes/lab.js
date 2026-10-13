@@ -237,6 +237,7 @@ function renderDungeons(){
   item.append(dom("span","prep-tag dungeon-tag",T("questLevel")+" "+d.level+"+"));
   item.append(dom("strong","prep-name",d.name[view.lang]));
   item.append(dom("p","prep-info",d.reason[view.lang]));
+  if(d.checklist?.[view.lang])item.append(dom("p","prep-checklist",d.checklist[view.lang]));
   if(safeUrl(d.source))item.append(external(d.source,T("dungeonMore")+" ↗"));
   el.append(item);
  });
