@@ -1083,7 +1083,11 @@
               "itemUrl": "https://www.wowhead.com/forever/item=273036",
               "identification_source": "https://www.wowhead.com/forever/item=273036",
               "name_fr_status": "community_translation_unverified",
-              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran",
+              "itemLevel": 31,
+              "requiredLevel": 26,
+              "quality": "rare",
+              "statsSource": "https://foreverchanges.pro/fr/item/273036"
             },
             {
               "fr": "Chevalière de lieur-d’os",
@@ -1096,7 +1100,11 @@
               "itemUrl": "https://www.wowhead.com/forever/item=273032",
               "identification_source": "https://www.wowhead.com/forever/item=273032",
               "name_fr_status": "community_translation_unverified",
-              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran",
+              "itemLevel": 31,
+              "requiredLevel": 25,
+              "quality": "rare",
+              "statsSource": "https://foreverchanges.pro/fr/item/273032"
             },
             {
               "fr": "Arbalète à répétition pointetombe",
@@ -1109,7 +1117,11 @@
               "itemUrl": "https://www.wowhead.com/forever/item=273033",
               "identification_source": "https://www.wowhead.com/forever/item=273033",
               "name_fr_status": "community_translation_unverified",
-              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran"
+              "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran",
+              "itemLevel": 31,
+              "requiredLevel": 26,
+              "quality": "rare",
+              "statsSource": "https://foreverchanges.pro/fr/item/273033"
             }
           ],
           "note": {
