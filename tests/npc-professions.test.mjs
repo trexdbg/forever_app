@@ -1,6 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import {readFileSync} from "node:fs";
+import {runInNewContext} from "node:vm";
 import {resolve, dirname} from "node:path";
 import {fileURLToPath} from "node:url";
 import {auditNpcProfessions} from "../scripts/check-npc-professions.mjs";
@@ -100,4 +101,91 @@ test("unknown vendor stock is null, never invented as zero",()=>{
  assert.equal(check({items:{"4371":item({vendor_stock:null,vendor_price_copper:800})}}).errorCount,0);
  const r=check({items:{"4371":item({vendor_stock:-2})}});
  assert.ok(codes(r).includes("ITEM_STOCK_INVALID"));
+});
+
+test("Aza'bek and Nina Surefire have ten exact, documented vendor-item sales",()=>{
+ const data=load("data/npcs.json");
+ const expected=[
+  {vendor:"Aza'bek",id:249885,name:"Recipe: Venomous Smoothie",cost:30},
+  {vendor:"Aza'bek",id:249886,name:"Recipe: Slimy Smoothie",cost:30},
+  {vendor:"Aza'bek",id:249887,name:"Recipe: Mrrggl Smrrthle",cost:30},
+  {vendor:"Aza'bek",id:249888,name:"Recipe: Calcified Smoothie",cost:60,rank:"Friendly",faction:"Durotar Supply and Logistics"},
+  {vendor:"Aza'bek",id:249889,name:"Recipe: Spicy Smoothie",cost:60,rank:"Friendly",faction:"Durotar Supply and Logistics"},
+  {vendor:"Aza'bek",id:249890,name:"Recipe: Wicked Smoothie",cost:90,rank:"Honored",faction:"Durotar Supply and Logistics"},
+  {vendor:"Nina Surefire",id:250381,name:"Recipe: Elixir of Lesser Spirit",cost:45},
+  {vendor:"Nina Surefire",id:250376,name:"Recipe: Lesser Mageblood Elixir",cost:45},
+  {vendor:"Nina Surefire",id:250388,name:"Recipe: Elixir of Lesser Intellect",cost:45},
+  {vendor:"Nina Surefire",id:250990,name:"Recipe: Mender's Potion",cost:45}
+ ];
+ const urls={"Aza'bek":"https://www.wow-professions.com/forever/npc/azabek",
+             "Nina Surefire":"https://www.wow-professions.com/forever/npc/nina-surefire"};
+ for(const e of expected){
+  const merchant=data.npcs.find(n=>n.name===e.vendor);
+  assert.ok(merchant,"Missing NPC "+e.vendor);
+  assert.ok(merchant.offers.includes(String(e.id)),e.vendor+" does not offer "+e.id);
+  const item=data.items[String(e.id)],offer=merchant.offer_details?.[e.id];
+  assert.equal(item?.id,e.id);
+  assert.equal(item?.name?.en,e.name,e.vendor+" item "+e.id);
+  assert.equal(offer?.verification_status,"forever_documented");
+  assert.deepEqual(offer?.price,{amount:e.cost,currency:"merchants_favor"});
+  assert.equal(offer?.reputation?.rank??null,e.rank??null);
+  assert.equal(offer?.reputation?.faction??null,e.faction??null);
+  assert.equal(offer?.evidence_level,"documented_forever");
+  assert.equal(offer?.source_url,urls[e.vendor]);
+  assert.equal(offer?.evidence_url,urls[e.vendor]);
+  assert.equal(offer?.evidence_kind,"forever_community_page");
+  assert.equal(offer?.observed_at,"2026-10-13");
+  assert.equal(offer?.observed_build,"unknown");
+  assert.match(offer.evidence_note,/ni stock actuel ni capture directe en jeu confirmés/);
+ }
+ const actual=data.npcs.flatMap(n=>Object.values(n.offer_details||{})).filter(o=>o.evidence_level==="documented_forever");
+ assert.equal(actual.length,expected.length,"Unexpected documented associations not individually pinned");
+});
+test("sale URL prioritizes precise evidence with safe legacy fallback; FR and EN labels",()=>{
+ const code=readFileSync(resolve(root,"assets/npcs.js"),"utf8");
+ const source=code.match(/^const offerSourceUrl=.*;$/m)?.[0];
+ const label=code.match(/^const offerSourceLabel=.*;$/m)?.[0];
+ assert.ok(source&&label,"Actual frontend must retain testable sale-link helpers");
+ const {offerSourceUrl,offerSourceLabel}=runInNewContext(
+  source+"\n"+label+"\n({offerSourceUrl,offerSourceLabel})",
+  {});
+ const full={evidence_url:"https://example.org/direct-evidence",source_url:"https://example.org/source",source:"https://example.org/legacy"};
+ assert.equal(offerSourceUrl(full),"https://example.org/direct-evidence");
+ assert.equal(offerSourceUrl({...full,evidence_url:"not-a-valid-url"}),"https://example.org/source");
+ assert.equal(offerSourceUrl({source:"https://www.wowhead.com/classic/guide/legacy"}),"https://www.wowhead.com/classic/guide/legacy");
+ assert.equal(offerSourceUrl({source:"javascript:alert(1)"}),null);
+ assert.equal(offerSourceUrl(null),null);
+ assert.equal(offerSourceLabel(false),"Source de cette vente ↗");
+ assert.equal(offerSourceLabel(true),"Source for this sale ↗");
+ assert.ok(code.includes("const saleProof=offerSourceUrl(purchase);"),"Frontend must actually use the helper");
+ assert.ok(code.includes("link(cite,offerSourceLabel(en),saleProof)"),"Rendered link must use bilingual label and prioritized href");
+});
+test("malformed item / profession root records are reported without crashing",()=>{
+ const r=check({items:{"4371":null,"999":false},npcs:[npc()]},{professions:[null,42]});
+ for(const code of ["ITEM_RECORD_INVALID","PROFESSION_RECORD_INVALID"])assert.ok(codes(r).includes(code),code);
+ assert.ok(r.errorCount>0);
+});
+test("malformed masters, recipes, components and historical evidence are errors, not exceptions",()=>{
+ const r=check({
+  npcs:[npc({offers:["4371"],offer_details:{"4371":null}})],
+  evidence:[null,"bad report",{
+   vendor_name:"Example merchant",item:"4371",url:"https://example.org/notes",
+   min_minutes:12,max_minutes:15
+  }]
+ },{
+  professions:[profession({trainers:[null,"bad trainer"],recipes:[
+    null,42,{id:23,name:{fr:"Recette",en:"Recipe"},output_item_id:3,
+     output_quantity:1,components:[null,"broken",{id:2,quantity:1}]}
+  ]})]
+ });
+ for(const code of ["OFFER_DETAIL_INVALID","WAIT_RECORD_INVALID","TRAINER_RECORD_INVALID",
+                     "RECIPE_RECORD_INVALID","RECIPE_COMPONENT_INVALID"])
+  assert.ok(codes(r).includes(code),code);
+ assert.ok(r.errorCount>0);
+});
+test("null root catalogues yield structural error reports, not runtime exceptions",()=>{
+ const r=auditNpcProfessions(null,null);
+ for(const code of ["ITEMS_NOT_OBJECT","NPCS_NOT_ARRAY","PROFESSIONS_NOT_ARRAY"])
+  assert.ok(codes(r).includes(code),code);
+ assert.equal(r.errorCount,3);
 });
