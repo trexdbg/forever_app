@@ -95,7 +95,7 @@ const questTitle=q=>session.lang==="en"?q.en:q.fr||q.en;
 const zoneName=zone=>session.lang==="en"?(zone.replace(/-/g," ").replace(/\b\w/g,c=>c.toUpperCase())):(catalog?.zones?.[zone]||zone);
 const waypointName=p=>{
  const Q=window.ForeverQuestLocale;
- return session.lang==="fr" && Q?.header ? Q.header(p.header)||p.header : (p.header||zoneName(p.zone)).replace(/\b[a-z]/g,c=>c.toUpperCase());
+ return session.lang==="fr" && Q?.header ? Q.header(p.header)||p.header : (p.header||zoneName(p.zone)).replace(/(^|\s)([a-z])/g,(_,space,c)=>space+c.toUpperCase());
 };
 const $make=(tag,cls,value)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(value!==undefined)e.textContent=value;return e;};
 const setLabel=(id,key)=>{const el=$(id);if(el)el.textContent=text(key);};
@@ -117,6 +117,7 @@ function initProfile(){
  renderControls();
  save();
  renderAll();
+ loadMap();
 }
 function renderLabels(){
  document.documentElement.lang=session.lang;
