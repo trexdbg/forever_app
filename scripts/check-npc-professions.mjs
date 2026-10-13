@@ -29,8 +29,8 @@ export function auditNpcProfessions(npcData,professionData) {
   if(!/^\d+$/.test(key)||!positive(item?.id)||String(item.id)!==key)error("ITEM_ID_MISMATCH",p,"Key must match positive item ID");
   if(!names(item?.name))error("ITEM_LOCALE_MISSING",p+".name","French and English names required");
   if(!Number.isFinite(item?.skill)||item.skill<0)error("ITEM_SKILL_INVALID",p+".skill","Invalid skill number");
-  if(item.vendor_stock!==undefined&&(!Number.isInteger(item.vendor_stock)||item.vendor_stock<0))error("ITEM_STOCK_INVALID",p+".vendor_stock","Invalid stock");
-  if(item.vendor_price_copper!==undefined&&(!Number.isInteger(item.vendor_price_copper)||item.vendor_price_copper<0))error("ITEM_PRICE_INVALID",p+".vendor_price_copper","Invalid price");
+  if(item.vendor_stock!=null&&(!Number.isInteger(item.vendor_stock)||item.vendor_stock<0))error("ITEM_STOCK_INVALID",p+".vendor_stock","Invalid stock");
+  if(item.vendor_price_copper!=null&&(!Number.isInteger(item.vendor_price_copper)||item.vendor_price_copper<0))error("ITEM_PRICE_INVALID",p+".vendor_price_copper","Invalid price");
   checkExplicitProvenance(item,p,report);
  }
 
