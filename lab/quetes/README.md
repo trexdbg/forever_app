@@ -60,7 +60,7 @@ Le nombre affiché sur chaque quête est une **récompense de référence Classi
 
 Le guide ne connaît pas l'XP actuellement accumulée par le personnage à l'intérieur du niveau indiqué. Par exemple, un niveau 5 nécessite 2 800 XP pour passer au niveau 6, **pas obligatoirement 2 800 XP supplémentaires depuis sa position réelle**. L'XP des monstres peut varier avec leur niveau, le repos, le groupe et les réglages du serveur. Les récompenses de quêtes peuvent être réduites si le joueur les rend en étant trop haut niveau.
 
-Une incertitude de source est conservée explicitement : pour la quête 919, la fiche Classic WCLBox indique **800 XP**, alors que Wowhead Classic affiche **790 XP**. Nous présentons la valeur de notre source de référence et ne prétendons pas résoudre cet écart sans validation en jeu.
+Les divergences de source sont conservées explicitement : pour la quête 919, WCLBox affiche **800 XP** et Wowhead Classic **790 XP** ; pour la quête 932, ClassicDB indique **625 XP** (niveau 7), tandis qu’une fiche WCLBox plus récente affiche **700 XP** (niveau 8). Nous présentons des valeurs propres aux sources identifiées, sans prétendre résoudre ces écarts sans validation en jeu.
 
 **Sources :**
 - Tableau de niveau Classic : https://wowpedia.fandom.com/wiki/Experience_to_level
