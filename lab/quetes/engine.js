@@ -7,7 +7,7 @@
   "use strict";
   const STATUSES = ["available", "active", "ready", "done", "skipped"];
   const ACTIONS = ["starts", "objectives", "ends", "completed"];
-  const valid = n => Number.isFinite(Number(n));
+  const valid = n => n !== null && n !== "" && n !== undefined && Number.isFinite(Number(n));
   const number = (n, fallback = null) => valid(n) && n !== "" && n !== null ? Number(n) : fallback;
   const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
   const unique = arr => Array.from(new Set(arr));
