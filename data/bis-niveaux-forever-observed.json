@@ -70,11 +70,18 @@
         "Aetherwisp Bracers",
         "Item Level 18",
         "Wrist Cloth",
+        "15 Armor",
         "+30 Armor",
         "Equip: +3 Spell Power",
         "Requires Level 13"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "evidence_level": "documented_forever",
+      "evidence_url": "https://foreverchanges.pro/item/271096",
+      "observed_at": "2026-10-13",
+      "observed_build": "unknown",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "Fiche communautaire Forever : 15 points d'armure de base, bonus +30 armure, +3 puissance des sorts ; niveau requis 13. Aucun journal/capture attribuable vérifié par ForEveroth, disponibilité et taux de butin non confirmés directement."
     },
     {
       "id": 271097,
@@ -104,11 +111,18 @@
         "Spiritwraith Drape",
         "Item Level 18",
         "Back Cloth",
+        "17 Armor",
         "+3 Agility",
         "+4 Spirit",
         "Requires Level 13"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "evidence_level": "documented_forever",
+      "evidence_url": "https://foreverchanges.pro/item/271097",
+      "observed_at": "2026-10-13",
+      "observed_build": "unknown",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "Fiche communautaire Forever : 17 points d'armure, +3 agilité et +4 esprit ; niveau requis 13. Ne prouve pas indépendamment l'obtention ni un taux de butin."
     },
     {
       "id": 270230,
@@ -2402,12 +2416,19 @@
         "Grave Shroud",
         "Item Level 23",
         "Back Cloth",
+        "18 Armor",
         "+3 Stamina",
         "+3 Strength",
         "Quest Level 21",
         "Quest available from Level 16"
       ],
-      "reference": "Forever beta · quest reward observed in-game; no minimum EQUIP level recorded"
+      "reference": "Forever beta · quest reward observed in-game; no minimum EQUIP level recorded",
+      "evidence_level": "documented_forever",
+      "evidence_url": "https://foreverchanges.pro/item/279865",
+      "observed_at": "2026-10-13",
+      "observed_build": "1.60.1.70338",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "Fiche communautaire Forever de la bêta 1.60.1.70338 : 18 points d'armure, +3 endurance et +3 force ; récompense de quête, sans niveau requis d'équipement spécifié. Disponibilité en jeu non vérifiée indépendamment."
     },
     {
       "id": 279867,

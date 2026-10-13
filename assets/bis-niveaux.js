@@ -35,7 +35,7 @@ function getKind(i){
  if(/vendor|marchand|merchant|vendeur|boutique/i.test(origin))return "vendor";
  return "world";
 }
-const sourceDetails=en?{drop:"Observed beta drop",observed:"Seen in beta",client:"Beta client reference · unverified acquisition",classic:"Classic reference · availability unverified",obtained:"How to obtain",boss:"Boss",level30:"Level 30 · beta cap"}:{drop:"Butin observé en bêta",observed:"Vu en bêta",client:"Référence du client bêta · obtention à confirmer",classic:"Référence Classic · disponibilité non vérifiée",obtained:"Où l’obtenir",boss:"Boss",level30:"Niveau 30 · plafond bêta"};
+const sourceDetails=en?{drop:"Community-reported beta drop",observed:"Reported in beta · not independently verified",client:"Beta client reference · unverified acquisition",classic:"Classic reference · availability unverified",obtained:"How to obtain",boss:"Boss",level30:"Level 30 · beta cap"}:{drop:"Butin signalé par la communauté",observed:"Signalé en bêta · non vérifié directement",client:"Référence du client bêta · obtention à confirmer",classic:"Référence Classic · disponibilité non vérifiée",obtained:"Où l’obtenir",boss:"Boss",level30:"Niveau 30 · plafond bêta"};
 
 
 /* Localization is source-aware: the Classic API publishes French names only.
@@ -166,7 +166,8 @@ function weaponAllowed(i,chosenSlot=normSlot(i)){
  return true;
 }
 function eligible(i){
- const req=progressionLevel(i),max=levels[band][1],rules=window.ForeverEquipmentRules;
+ // Quest level is NOT an equip requirement: do not auto-recommend unknown-level quest rewards.
+ const req=required(i),max=levels[band][1],rules=window.ForeverEquipmentRules;
  if(!Number.isInteger(i.id)||!i.name||i.quality==="poor"||req===null||req>max||req<1)return false;
  if(Number.isFinite(i.itemLevel)&&i.itemLevel>max+(max===60?18:11))return false;
  if(origin==="forever"&&!isForever(i)||origin==="classic"&&isForever(i))return false;
