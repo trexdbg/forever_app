@@ -133,8 +133,8 @@
      return (curation.preparations||[]).some(p=>{
        const target=normalize(p.name?.en);
        return target.includes(key)||key.includes(target) ||
-         (key.includes("flask of oil")&&p.id==="flask-oil") ||
-         (key.includes("skinning knife")&&p.id==="skinning-knife");
+         (p.id==="dry-times"&&["moonshine","merlot","sweet rum"].some(item=>key.includes(item))) ||
+         (key.includes("flask of oil")&&p.id==="flask-oil");
      });
    };
    for(const st of stages){
@@ -142,7 +142,7 @@
      if(when<playerLevel||when>playerLevel+2)continue;
      for(const wp of st.waypoints||[])for(const raw of wp.special||[]){
        const note=str(Array.isArray(raw)?raw[0]:raw).trim();
-       if(!/^(?:buy\b|save\s+\d+x\b)/i.test(note) || /buy (?:greens for selling|any remaining manual pages)/i.test(note))continue;
+       if(!/^(?:buy\b|save\s+\d+x\b)/i.test(note) || /buy (?:greens for selling|any remaining manual pages|the remaining ones|any remaining ones)/i.test(note))continue;
        const normalized=normalize(note);
        if(seenNotes.has(normalized)||alreadyCurated(note))continue;
        seenNotes.add(normalized);
