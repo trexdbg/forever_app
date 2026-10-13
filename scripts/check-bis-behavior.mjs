@@ -79,4 +79,31 @@ const catalogue=read("assets/items-v3.js");
 assert.match(catalogue,/get\("q"\)/,"Catalogue must support ?q= ID links");
 assert.match(catalogue,/if\(linkedQuery\)\{status="all"/,"Catalogue must show linked unknown-level items");
 assert.match(source,/results\.append\(refs\)/,"Read-only references must be rendered in BiS picker");
+
+/* The live catalogue badge must distinguish beta quest rewards from dungeon loot.
+ * Evaluate the actual production helper with the same Forever records as the BiS page.
+ */
+const badgeStart=catalogue.indexOf("function sourceType(item)");
+const badgeEnd=catalogue.indexOf("function betaLevel30(item)",badgeStart);
+assert.ok(badgeStart>=0&&badgeEnd>badgeStart,"Catalogue badge helper not found");
+assert.match(catalogue,/tag\.textContent=provenanceBadge\(i\)/,
+ "Visible catalogue badge must use the checked helper");
+const badgeCode=catalogue.slice(badgeStart,badgeEnd);
+for(const lang of ["fr","en"]){
+ const label=item=>vm.runInNewContext(badgeCode+"\nprovenanceBadge(item);",
+  {en:lang==="en",item},{filename:"assets/items-v3.js"});
+ const expectedQuest=lang==="en"?"Beta · reported quest reward":"Bêta · récompense de quête signalée";
+ const expectedLoot=lang==="en"?"Beta · reported loot":"Bêta · butin signalé";
+ const expectedClassic=lang==="en"?"Classic · unverified":"Classic · non vérifié";
+ const expectedClient=lang==="en"?"Beta · client":"Bêta · client";
+ for(const item of observed.filter(i=>i.acquisition?.kind==="quest")){
+  assert.equal(label(item),expectedQuest,lang+": beta quest reward "+item.id+" must not be labelled loot");
+ }
+ assert.equal(label(dungeon),expectedLoot,lang+": dungeon drop keeps reported-loot badge");
+ assert.equal(label({id:5191,source_status:"classic_curated_leveling"}),expectedClassic,
+  lang+": Classic provenance must be unchanged");
+ assert.equal(label({id:249234,source_status:"forever_beta_60tools"}),expectedClient,
+  lang+": datamined Forever reference keeps beta-client badge");
+}
+
 console.log("BiS behavior OK: quest excluded, documented dungeon selected, 11 uncertain references linked in FR/EN.");
