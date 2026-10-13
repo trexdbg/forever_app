@@ -95,3 +95,9 @@ test("Classic records with unknown IDs/positions remain inspectable warnings",()
  assert.equal(r.summary.classicOrUnverifiedOffers,1);
  assert.ok(r.issues.some(i=>i.code==="NPC_ID_UNKNOWN"));
 });
+
+test("unknown vendor stock is null, never invented as zero",()=>{
+ assert.equal(check({items:{"4371":item({vendor_stock:null,vendor_price_copper:800})}}).errorCount,0);
+ const r=check({items:{"4371":item({vendor_stock:-2})}});
+ assert.ok(codes(r).includes("ITEM_STOCK_INVALID"));
+});
