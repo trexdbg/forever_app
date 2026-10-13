@@ -103,8 +103,7 @@
           "tip": {
             "fr": "Tuer sabres-de-nuit, chouettes et araignées qui sont sur ta route. Pas besoin de changer de région pour chaque espèce.",
             "en": "Kill nearby nightsabers, owls and spiders along your path; no separate long detours."
-          },
-          "clustered": true
+          }
         },
         {
           "header": "Abords de Dolanaar",
@@ -599,8 +598,7 @@
           "tip": {
             "fr": "Tuer 7 Mystiques pin-tordu, puis récupérer le bijou sur le collier manquant.",
             "en": "Kill 7 Gnarlpine Mystics and recover the missing jewel from the necklace."
-          },
-          "clustered": true
+          }
         },
         {
           "header": "Tallonkai Swiftroot, Dolanaar",
