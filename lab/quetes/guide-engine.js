@@ -54,12 +54,78 @@
    }
    return result;
  }
- function build({data,manifest,levels={},curation={},xpData={},profile,level=5,mode="solo"}){
+
+ function buildPlaybook({data,manifest,levels,curation,xpData,profile,level,mode,playbook}){
+   if(profile!=="nelf"||data.faction!=="alliance"||playbook.schema_version!==1 || playbook.edition!=="classic")
+     throw Error("Unsupported Classic playbook");
+   const byId=new Map();
+   for(const [name,value] of Object.entries(data.quest_ids||{})){
+     (Array.isArray(value)?value:[value]).forEach((id,index)=>{
+       if(Number.isInteger(Number(id))&&Number(id)>0)
+         byId.set(Number(id),refDetails(Array.isArray(value)?[name,"p"+(index+1)]:name,data,levels));
+     });
+   }
+   const stages=[];
+   let excludedOverLevel=0;
+   for(const [index,chapter] of playbook.chapters.entries()){
+     if(chapter.level>level||chapter.level<5)continue;
+     const points=[];
+     for(const [number,entry] of chapter.steps.entries()){
+       const coords=entry.coords||{},x=num(coords.x),y=num(coords.y);
+       if(x===null||y===null||x<0||x>100||y<0||y>100)throw Error("Invalid playbook coordinates");
+       const actions=[];
+       for(const action of entry.actions||[]){
+         const q=byId.get(Number(action.id));
+         if(!q)throw Error("Unknown Classic quest ID in playbook: "+action.id);
+         const rule=playbook.requirements?.[String(q.id)] || {};
+         if(q.level!==null&&q.level>level){excludedOverLevel++;continue;}
+         if(action.kind==="accept"&&rule.min_level!==null&&rule.min_level!==undefined&&rule.min_level>level){
+           excludedOverLevel++;continue;
+         }
+         const reward=xpData.quest_rewards?.[String(q.id)];
+         actions.push({...q,kind:action.kind,requiredLevel:rule.min_level??null,previousId:rule.previous_id??null,
+           rewardXp:Number.isFinite(reward?.xp)?reward.xp:null,rewardXpSource:reward?.source||null});
+       }
+       if(!actions.length)continue;
+       points.push({key:"played-"+index+"-"+number,header:entry.header||chapter.zone,
+         x,y,zone:chapter.zone,kind:"quest",notes:[],tip:entry.tip||null,
+         actions,clustered:entry.clustered===true,actionable:true,optional:chapter.optional===true,
+         dungeonId:null,members:[{x,y,header:entry.header||chapter.zone}]});
+     }
+     if(!points.length)continue;
+     const rewards=new Map(),unknown=new Set();
+     for(const point of points)for(const action of point.actions){
+       if(action.kind!=="turnin"&&action.kind!=="instant")continue;
+       if(action.rewardXp!==null&&action.id!==null)rewards.set(action.id,action.rewardXp);
+       else unknown.add(action.key);
+     }
+     stages.push({
+       index:2000+index,level:chapter.level,expected:chapter.level,zone:chapter.zone,
+       name:chapter.title,intro:chapter.intro,optional:chapter.optional===true,
+       points,hints:[],played:true,rewardXpKnown:[...rewards.values()].reduce((sum,x)=>sum+x,0),
+       rewardXpKnownCount:rewards.size,rewardXpUnknownCount:unknown.size
+     });
+   }
+   const preparations=(curation.preparations||[]).filter(p=>
+     p.faction==="alliance"&&(!p.profile||p.profile==="nelf")&&
+     level>=p.during[0]&&level<=p.during[1]).sort((a,b)=>a.level-b.level);
+   const xpToNext=num(xpData?.xp_to_next?.[String(level)]);
+   return {
+     profile,faction:"alliance",level,mode,stages,preparations,dungeons:[],
+     xpToNext:xpToNext>0?xpToNext:null,xpEdition:"classic",excludedOverLevel,excludedDungeons:0,
+     source:data.source_commit,mapBase:manifest.map_base||"",zones:manifest.zones||{},strict:true,
+     curatedRange:"nelf-5-10",playbook:true
+   };
+ }
+
+ function build({data,manifest,levels={},curation={},xpData={},playbook=null,profile,level=5,mode="solo"}){
    if(!data||!data.routes?.[profile]||!Array.isArray(data.routes.shared))throw Error("Unknown guide profile");
    if(!["solo","essentials"].includes(mode))throw Error("Unknown guide variant");
    if(curation.schema_version!==1)throw Error("Invalid curation");
    const faction=data.faction;
    const playerLevel=clamp(num(level)??5,5,60);
+   if(data.faction==="alliance"&&profile==="nelf"&&playerLevel<=10&&playbook?.schema_version===1)
+     return buildPlaybook({data,manifest,levels,curation,xpData,profile,level:playerLevel,mode,playbook});
    const stages=[...data.routes[profile],...data.routes.shared].map((stage,index)=>({...stage,index}));
    // Dungeon quests are identified by their source 'd' marker, preserving separate quest-chain phases.
    const dungeonIds=new Set();
