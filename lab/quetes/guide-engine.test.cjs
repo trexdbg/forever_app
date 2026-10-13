@@ -9,12 +9,13 @@ const read=p=>JSON.parse(fs.readFileSync(path.join(base,p),"utf8"));
 const manifest=read("data/quests/manifest.json");
 const curation=read("lab/quetes/curation.json");
 const levels=read("data/quests/levels.json").levels;
+const xpData=read("lab/quetes/xp-classic.json");
 const alliance=read("data/quests/alliance.json");
 const horde=read("data/quests/horde.json");
 const profiles=[["alliance","human",alliance],["alliance","gnorf",alliance],["alliance","nelf",alliance],
  ["horde","trorc",horde],["horde","undead",horde],["horde","tauren",horde]];
 let checks=0,groupCount=0,filtered=0;
-const build=(data,profile,level,mode)=>guide.build({data,manifest,levels,curation,profile,level,mode});
+const build=(data,profile,level,mode)=>guide.build({data,manifest,levels,curation,xpData,profile,level,mode});
 function test(name,fn){fn();checks++;console.log("✓ "+name);}
 test("curation schema and source constraints",()=>{
  assert.equal(curation.schema_version,1);
@@ -91,6 +92,33 @@ test("nearby cluster preserves individual objective positions",()=>{
 test("unknown profiles/modes are not silently accepted",()=>{
  assert.throws(()=>build(alliance,"wrong",8,"solo"),/profile/i);
  assert.throws(()=>build(alliance,"nelf",8,"other"),/variant/i);
+});
+test("XP table is Classic-only and level 5 to 6 takes 2800 XP",()=>{
+ assert.equal(xpData.edition,"classic");
+ assert.equal(build(alliance,"nelf",5,"solo").xpToNext,2800);
+ assert.equal(build(alliance,"nelf",6,"solo").xpToNext,3600);
+ assert.equal(build(alliance,"nelf",60,"solo").xpToNext,null);
+});
+test("sourced reward XP is attached to specific classic quests",()=>{
+ const result=build(alliance,"nelf",7,"solo");
+ const actions=result.stages.flatMap(s=>s.points.flatMap(p=>p.actions));
+ const quest=actions.find(a=>a.id===918);
+ assert(quest);
+ assert.equal(quest.rewardXp,625);
+ assert.equal(quest.rewardXpSource,"https://wowforever.wclbox.com/en/renwu/918");
+ assert.equal(xpData.quest_rewards["919"].xp,800);
+ assert(!xpData.quest_rewards["2159"]); // never invent a missing value
+});
+test("stage XP subtotal only counts turn-ins and avoids double counting repeated ID",()=>{
+ const result=build(alliance,"nelf",7,"solo");
+ for(const stage of result.stages){
+  const found=new Map();
+  for(const point of stage.points)for(const action of point.actions)
+   if((action.kind==="turnin"||action.kind==="instant")&&action.rewardXp!==null)
+    found.set(action.id,action.rewardXp);
+  assert.equal(stage.rewardXpKnown,[...found.values()].reduce((total,x)=>total+x,0));
+  assert.equal(stage.rewardXpKnownCount,found.size);
+ }
 });
 console.log("\n"+checks+" guide invariants passed; "+
  filtered+" over-level actions excluded across the matrix, "+
