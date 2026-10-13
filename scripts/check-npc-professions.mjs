@@ -26,7 +26,8 @@ export function auditNpcProfessions(npcData,professionData) {
 
  for(const [key,item] of Object.entries(items)) {
   const p="data/npcs.json.items."+key;
-  if(!/^\d+$/.test(key)||!positive(item?.id)||String(item.id)!==key)error("ITEM_ID_MISMATCH",p,"Key must match positive item ID");
+  if(!obj(item)){error("ITEM_RECORD_INVALID",p,"Expected item object");continue;}
+  if(!/^\d+$/.test(key)||!positive(item.id)||String(item.id)!==key)error("ITEM_ID_MISMATCH",p,"Key must match positive item ID");
   if(!names(item?.name))error("ITEM_LOCALE_MISSING",p+".name","French and English names required");
   if(!Number.isFinite(item?.skill)||item.skill<0)error("ITEM_SKILL_INVALID",p+".skill","Invalid skill number");
   if(item.vendor_stock!=null&&(!Number.isInteger(item.vendor_stock)||item.vendor_stock<0))error("ITEM_STOCK_INVALID",p+".vendor_stock","Invalid stock");
@@ -53,7 +54,7 @@ export function auditNpcProfessions(npcData,professionData) {
   const offered=new Set();
   for(const raw of npc.offers) {
    sales++;
-   const id=String(raw),q=p+".offers["+id+"]",entry=npc.offer_details?.[id];
+   const id=String(raw),q=p+".offers["+id+"]",entry=obj(npc.offer_details)?npc.offer_details[id]:undefined;
    if(!/^\d+$/.test(id)||!positive(Number(id)))error("OFFER_ID_INVALID",q,npc.name);
    if(offered.has(id))error("OFFER_DUPLICATE",q,npc.name);
    offered.add(id);
@@ -81,10 +82,11 @@ export function auditNpcProfessions(npcData,professionData) {
    if(!offered.has(id))error("ORPHAN_OFFER_DETAIL",p+".offer_details."+id,npc.name);
  }
 
- for(const [i,e] of (Array.isArray(npcData.evidence)?npcData.evidence:[]).entries()) {
+ for(const [i,e] of (Array.isArray(npcData?.evidence)?npcData.evidence:[]).entries()) {
   const p="data/npcs.json.evidence["+i+"]";
+  if(!obj(e)){error("WAIT_RECORD_INVALID",p,"Expected wait report object");continue;}
   if(!word(e.vendor_name)||!/^\d+$/.test(String(e.item)))error("WAIT_LINK_INVALID",p,"Missing vendor or item");
-  else if(!npcs.some(n=>n.name===e.vendor_name&&n.offers.map(String).includes(String(e.item))))
+  else if(!npcs.some(n=>obj(n)&&n.name===e.vendor_name&&Array.isArray(n.offers)&&n.offers.map(String).includes(String(e.item))))
    error("WAIT_LINK_BROKEN",p,"Report not linked to a vendor offer");
   if(e.min_minutes!==undefined||e.max_minutes!==undefined)
    if(!Number.isFinite(e.min_minutes)||!Number.isFinite(e.max_minutes)||e.min_minutes<0||e.min_minutes>e.max_minutes)
@@ -96,6 +98,7 @@ export function auditNpcProfessions(npcData,professionData) {
  let trainers=0,recipes=0;
  for(const [i,prof] of professions.entries()) {
   const p="data/professions.json.professions["+i+"]";
+  if(!obj(prof)){error("PROFESSION_RECORD_INVALID",p,"Expected profession object");continue;}
   if(!positive(prof.id)||profIds.has(prof.id))error("PROFESSION_ID_INVALID",p+".id","Duplicate or missing profession ID");
   profIds.add(prof.id);
   if(!word(prof.slug)||!names(prof.name))error("PROFESSION_LOCALE_MISSING",p+".name","FR/EN names and slug required");
@@ -103,6 +106,7 @@ export function auditNpcProfessions(npcData,professionData) {
   if(!Array.isArray(prof.trainers))error("TRAINERS_NOT_ARRAY",p+".trainers","Expected trainers array");
   for(const [j,trainer] of (Array.isArray(prof.trainers)?prof.trainers:[]).entries()) {
    trainers++;
+   if(!obj(trainer)){error("TRAINER_RECORD_INVALID",p+".trainers["+j+"]","Expected trainer object");continue;}
    if(!word(trainer.name)||!names(trainer.zone)||!word(trainer.tier)||!word(trainer.faction))
     error("TRAINER_INVALID",p+".trainers["+j+"]","Trainer name, bilingual zone, tier and faction required");
   }
@@ -111,21 +115,22 @@ export function auditNpcProfessions(npcData,professionData) {
   for(const [j,recipe] of (Array.isArray(prof.recipes)?prof.recipes:[]).entries()) {
    recipes++;
    const q=p+".recipes["+j+"]";
+   if(!obj(recipe)){error("RECIPE_RECORD_INVALID",q,"Expected recipe object");continue;}
    if(!positive(recipe.id)||!names(recipe.name))error("RECIPE_INVALID",q,"Recipe ID and FR/EN names needed");
    if(!positive(recipe.output_item_id)||!Number.isInteger(recipe.output_quantity)||recipe.output_quantity<=0)
     error("RECIPE_OUTPUT_INVALID",q,"Produced item and positive output quantity required");
    if(!Array.isArray(recipe.components))error("RECIPE_COMPONENTS_INVALID",q+".components","Expected components list");
    for(const [k,c] of (Array.isArray(recipe.components)?recipe.components:[]).entries())
-    if(!positive(c.id)||!Number.isInteger(c.quantity)||c.quantity<=0)
+    if(!obj(c)||!positive(c.id)||!Number.isInteger(c.quantity)||c.quantity<=0)
      error("RECIPE_COMPONENT_INVALID",q+".components["+k+"]","Positive component ID and quantity required");
    checkExplicitProvenance(recipe,q,report);
   }
  }
  return {issues,errorCount:issues.filter(x=>x.severity==="error").length,warningCount:issues.filter(x=>x.severity==="warning").length,
-  summary:{npcs:npcs.length,knownNpcIds:ids.size,positionedNpcs:npcs.filter(n=>n.coordinates!=null).length,
+  summary:{npcs:npcs.length,knownNpcIds:ids.size,positionedNpcs:npcs.filter(n=>obj(n)&&n.coordinates!=null).length,
    merchantOffers:sales,foreverDocumentedOffers:foreverSales,classicOrUnverifiedOffers:classicSales,
-   distinctItems:Object.keys(items).length,recipeItems:Object.values(items).filter(x=>x.kind==="recipe").length,
-   componentItems:Object.values(items).filter(x=>x.kind==="component").length,
+   distinctItems:Object.keys(items).length,recipeItems:Object.values(items).filter(x=>x?.kind==="recipe").length,
+   componentItems:Object.values(items).filter(x=>x?.kind==="component").length,
    professions:professions.length,trainerDirectoryRows:trainers,detailedRecipes:recipes}};
 }
 if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url)) {
