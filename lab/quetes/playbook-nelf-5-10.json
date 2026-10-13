@@ -1,0 +1,1179 @@
+{
+  "schema_version": 1,
+  "edition": "classic",
+  "profile": "nelf",
+  "level_range": [
+    5,
+    10
+  ],
+  "source_route": "data/quests/alliance.json — routes.nelf",
+  "source_quest_metadata": "TyrsDev/WoW-Classic-Quests quests.json (Classic req/prev/objective); verify against live Classic",
+  "note": "Hand-curated low-level playthrough, not automatic quest availability. All IDs from existing Classic route; prior level 1-4 quests must already be done.",
+  "chapters": [
+    {
+      "level": 5,
+      "key": "sortie-sombrevallon",
+      "title": {
+        "fr": "Quitter Sombrevallon",
+        "en": "Leave Shadowglen"
+      },
+      "intro": {
+        "fr": "Avant de partir, vérifie que la chaîne de la Couronne de la Terre a été avancée à Sombrevallon (quête précédente 921). Ne traverse pas la carte pour une quête non acceptée.",
+        "en": "Before leaving, make sure the Crown of the Earth chain was advanced in Shadowglen (previous quest 921). Don't cross the zone for a quest you never picked up."
+      },
+      "steps": [
+        {
+          "header": "Tenaron Stormgrip",
+          "coords": {
+            "x": 59,
+            "y": 39
+          },
+          "actions": [
+            {
+              "id": 928,
+              "kind": "accept"
+            }
+          ],
+          "tip": {
+            "fr": "Suite de la Couronne de la Terre, seulement si l'étape précédente est terminée.",
+            "en": "Crown of the Earth chain, only after completing its previous stage."
+          }
+        },
+        {
+          "header": "Porthannius",
+          "coords": {
+            "x": 61,
+            "y": 48
+          },
+          "actions": [
+            {
+              "id": 2159,
+              "kind": "accept"
+            }
+          ],
+          "tip": {
+            "fr": "Prendre la livraison sur la route, sans détour.",
+            "en": "Pick up the delivery along the road."
+          }
+        }
+      ]
+    },
+    {
+      "level": 5,
+      "key": "zenn-dolanaar",
+      "title": {
+        "fr": "Zenn puis Dolanaar",
+        "en": "Zenn, then Dolanaar"
+      },
+      "intro": {
+        "fr": "Prendre la quête de Zenn en passant, tuer les ennemis rencontrés et réunir les trois types de butin avant de rendre. Puis entrer dans Dolanaar une seule fois.",
+        "en": "Take Zenn's quest on the way, defeat encountered mobs and gather all three item types before turning in. Then enter Dolanaar once."
+      },
+      "steps": [
+        {
+          "header": "Zenn Foulhoof",
+          "coords": {
+            "x": 61,
+            "y": 56
+          },
+          "actions": [
+            {
+              "id": 488,
+              "kind": "accept"
+            }
+          ],
+          "tip": {
+            "fr": "Prévoir 3 crocs de sabre-de-nuit, 3 plumes de chouette et 3 soies d'araignée.",
+            "en": "Collect 3 nightsaber fangs, 3 owl feathers and 3 spider silks."
+          }
+        },
+        {
+          "header": "Faune des abords de Dolanaar",
+          "coords": {
+            "x": 58,
+            "y": 56
+          },
+          "actions": [
+            {
+              "id": 488,
+              "kind": "objective"
+            }
+          ],
+          "tip": {
+            "fr": "Tuer sabres-de-nuit, chouettes et araignées qui sont sur ta route. Pas besoin de changer de région pour chaque espèce.",
+            "en": "Kill nearby nightsabers, owls and spiders along your path; no separate long detours."
+          },
+          "clustered": true
+        },
+        {
+          "header": "Abords de Dolanaar",
+          "coords": {
+            "x": 60,
+            "y": 60
+          },
+          "actions": [
+            {
+              "id": 488,
+              "kind": "objective"
+            }
+          ],
+          "tip": {
+            "fr": "Finir les trois composants avant de repartir.",
+            "en": "Finish the three components before leaving."
+          }
+        },
+        {
+          "header": "Zenn Foulhoof",
+          "coords": {
+            "x": 61,
+            "y": 56
+          },
+          "actions": [
+            {
+              "id": 488,
+              "kind": "turnin"
+            }
+          ],
+          "tip": {
+            "fr": "Rendre dès que les neuf objets sont réunis. La suite de Zenn sera traitée au niveau 7.",
+            "en": "Turn in once all nine items are collected; Zenn's follow-up comes at level 7."
+          }
+        },
+        {
+          "header": "Dolanaar, auberge",
+          "coords": {
+            "x": 56,
+            "y": 60
+          },
+          "actions": [
+            {
+              "id": 2159,
+              "kind": "turnin"
+            },
+            {
+              "id": 928,
+              "kind": "turnin"
+            },
+            {
+              "id": 929,
+              "kind": "accept"
+            }
+          ],
+          "tip": {
+            "fr": "Rendre la livraison et la Couronne (928) AVANT de prendre la suite 929. Fixer la pierre de foyer ici.",
+            "en": "Hand in the delivery and Crown (928) BEFORE accepting 929. Set your hearthstone here."
+          }
+        },
+        {
+          "header": "Syral Bladeleaf / Dolanaar",
+          "coords": {
+            "x": 55,
+            "y": 57
+          },
+          "actions": [
+            {
+              "id": 997,
+              "kind": "accept"
+            }
+          ],
+          "tip": {
+            "fr": "Prendre le colis de terre destiné à Denalan.",
+            "en": "Pick up Denalan's soil delivery."
+          }
+        }
+      ]
+    },
+    {
+      "level": 5,
+      "key": "puits-lac",
+      "title": {
+        "fr": "Puits de lune et lac Al'Ameth",
+        "en": "Moonwell and Lake Al'Ameth"
+      },
+      "intro": {
+        "fr": "Profiter du trajet vers Denalan pour remplir la fiole de la Couronne, puis revenir à Dolanaar. Si tu n'es pas niveau 6, gagner l'XP manquante sur les créatures de ton niveau sans ajouter de quête lointaine.",
+        "en": "Fill the Crown phial on the way to Denalan, then return to Dolanaar. If not level 6 yet, earn the missing XP on nearby level-appropriate creatures."
+      },
+      "steps": [
+        {
+          "header": "Puits de lune près de Dolanaar",
+          "coords": {
+            "x": 63,
+            "y": 58
+          },
+          "actions": [
+            {
+              "id": 929,
+              "kind": "objective"
+            }
+          ],
+          "tip": {
+            "fr": "Remplir la fiole de jade de la Couronne de la Terre.",
+            "en": "Fill the Jade Phial for Crown of the Earth."
+          }
+        },
+        {
+          "header": "Denalan, lac Al'Ameth",
+          "coords": {
+            "x": 61,
+            "y": 69
+          },
+          "actions": [
+            {
+              "id": 997,
+              "kind": "turnin"
+            }
+          ],
+          "tip": {
+            "fr": "Ne pas encore accepter les quêtes des sylvains de niveau 7 si tu suis la règle stricte.",
+            "en": "Do not accept the level-7 timberling quests yet if following the strict-level route."
+          }
+        },
+        {
+          "header": "Dolanaar / Corithras Moonrage",
+          "coords": {
+            "x": 56,
+            "y": 60
+          },
+          "actions": [
+            {
+              "id": 929,
+              "kind": "turnin"
+            }
+          ],
+          "tip": {
+            "fr": "Rendre la Couronne 929. Sa suite de niveau 9 attendra.",
+            "en": "Turn in Crown 929. Its level-9 follow-up can wait."
+          }
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "key": "village-brise-etoile",
+      "title": {
+        "fr": "Village de Brise-étoile",
+        "en": "Starbreeze Village"
+      },
+      "intro": {
+        "fr": "Boucle courte vers l'est : deux quêtes racontent le même secteur, donc on ne fait qu'un voyage. Prévoir de combattre les furbolgs rencontrés plutôt que de traverser plusieurs fois le village.",
+        "en": "Short eastern loop: two quests lead to the same area, so visit it once. Fight encountered furbolgs rather than traversing the village repeatedly."
+      },
+      "steps": [
+        {
+          "header": "Tour de Dolanaar",
+          "coords": {
+            "x": 55,
+            "y": 57
+          },
+          "actions": [
+            {
+              "id": 475,
+              "kind": "accept"
+            },
+            {
+              "id": 2438,
+              "kind": "accept"
+            }
+          ],
+          "tip": {
+            "fr": "Prendre les deux quêtes avant de partir vers l'est.",
+            "en": "Pick up both quests before heading east."
+          }
+        },
+        {
+          "header": "Gaerolas Talvethren / Brise-étoile",
+          "coords": {
+            "x": 66,
+            "y": 59
+          },
+          "actions": [
+            {
+              "id": 475,
+              "kind": "turnin"
+            },
+            {
+              "id": 476,
+              "kind": "accept"
+            }
+          ],
+          "tip": {
+            "fr": "Parler à Gaerolas, puis prendre immédiatement son rapport de retour.",
+            "en": "Speak to Gaerolas, then immediately accept the return report."
+          }
+        },
+        {
+          "header": "Commode de Tallonkai",
+          "coords": {
+            "x": 68,
+            "y": 60
+          },
+          "actions": [
+            {
+              "id": 2438,
+              "kind": "objective"
+            }
+          ],
+          "tip": {
+            "fr": "Récupérer le capteur de rêves : il se trouve dans le même secteur.",
+            "en": "Loot the dreamcatcher: it is in the same local area."
+          }
+        },
+        {
+          "header": "Tour de Dolanaar",
+          "coords": {
+            "x": 55,
+            "y": 57
+          },
+          "actions": [
+            {
+              "id": 476,
+              "kind": "turnin"
+            },
+            {
+              "id": 2438,
+              "kind": "turnin"
+            }
+          ],
+          "tip": {
+            "fr": "Rendre les deux quêtes lors d'un seul retour. La suite de Tallonkai sera utile au niveau 8.",
+            "en": "Turn in both quests on a single return trip. Tallonkai's follow-up is for level 8."
+          }
+        }
+      ]
+    },
+    {
+      "level": 7,
+      "key": "sylvains-lac",
+      "title": {
+        "fr": "Les sylvains : tout d'un coup",
+        "en": "Timberlings: one farming loop"
+      },
+      "intro": {
+        "fr": "Denalan donne les graines et les pousses. Les mêmes sylvains permettent de travailler les deux objectifs : garder les deux quêtes actives, puis tout rendre au même PNJ.",
+        "en": "Denalan gives the seeds and sprouts. Farm both objectives on the same timberlings, then turn everything in together."
+      },
+      "steps": [
+        {
+          "header": "Denalan / lac Al'Ameth",
+          "coords": {
+            "x": 61,
+            "y": 69
+          },
+          "actions": [
+            {
+              "id": 918,
+              "kind": "accept"
+            },
+            {
+              "id": 919,
+              "kind": "accept"
+            }
+          ],
+          "tip": {
+            "fr": "Prendre LES DEUX quêtes avant de tuer des sylvains.",
+            "en": "Accept BOTH quests before killing timberlings."
+          }
+        },
+        {
+          "header": "Sylvains au nord du lac",
+          "coords": {
+            "x": 60,
+            "y": 65
+          },
+          "actions": [
+            {
+              "id": 918,
+              "kind": "objective"
+            },
+            {
+              "id": 919,
+              "kind": "objective"
+            }
+          ],
+          "tip": {
+            "fr": "Collecter 8 graines et 12 pousses en combattant les mêmes sylvains.",
+            "en": "Collect 8 seeds and 12 sprouts while fighting the same timberlings."
+          },
+          "clustered": true
+        },
+        {
+          "header": "Sylvains à l'ouest du lac",
+          "coords": {
+            "x": 56,
+            "y": 66
+          },
+          "actions": [
+            {
+              "id": 918,
+              "kind": "objective"
+            },
+            {
+              "id": 919,
+              "kind": "objective"
+            }
+          ],
+          "tip": {
+            "fr": "Finir les composants manquants ici, sans retourner deux fois voir Denalan.",
+            "en": "Finish remaining drops here, without going back twice."
+          },
+          "clustered": true
+        },
+        {
+          "header": "Denalan / lac Al'Ameth",
+          "coords": {
+            "x": 61,
+            "y": 69
+          },
+          "actions": [
+            {
+              "id": 918,
+              "kind": "turnin"
+            },
+            {
+              "id": 919,
+              "kind": "turnin"
+            },
+            {
+              "id": 922,
+              "kind": "accept"
+            }
+          ],
+          "tip": {
+            "fr": "Rendre les deux quêtes, puis prendre le message pour Rellian. Garder ce message jusqu'à la visite de Darnassus au niveau 9.",
+            "en": "Hand in both quests, then take the letter for Rellian. Carry it until the Darnassus trip at level 9."
+          }
+        }
+      ]
+    },
+    {
+      "level": 7,
+      "key": "fel-rock-zenn",
+      "title": {
+        "fr": "Fel Rock et retour chez Zenn",
+        "en": "Fel Rock and Zenn"
+      },
+      "intro": {
+        "fr": "Avant de partir, accepter les quêtes à Dolanaar. Ramasser les cônes gangrenés dans la même sortie que le passage à Fel Rock. Lord Melenas peut être difficile en solo : ne pas forcer si le combat coûte trop de temps.",
+        "en": "Accept the Dolanaar quests before heading out. Collect fel cones on the same outing as Fel Rock. Lord Melenas can be rough solo; do not force a long corpse run."
+      },
+      "steps": [
+        {
+          "header": "Syral Bladeleaf, Dolanaar",
+          "coords": {
+            "x": 55,
+            "y": 57
+          },
+          "actions": [
+            {
+              "id": 489,
+              "kind": "accept"
+            },
+            {
+              "id": 932,
+              "kind": "accept"
+            }
+          ],
+          "tip": {
+            "fr": "La Rédemption exige d'avoir rendu les Ordres de Zenn (488).",
+            "en": "Seek Redemption requires Zenn's Bidding (488) to have been turned in."
+          }
+        },
+        {
+          "header": "Fel Rock",
+          "coords": {
+            "x": 54,
+            "y": 52
+          },
+          "actions": [
+            {
+              "id": 932,
+              "kind": "objective"
+            }
+          ],
+          "tip": {
+            "fr": "Vaincre Lord Melenas et ramasser sa tête. Si le secteur est surpeuplé, reprendre au niveau suivant.",
+            "en": "Defeat Lord Melenas and loot his head. Return later if the area is too dangerous."
+          }
+        },
+        {
+          "header": "Cônes gangrenés, sud de Dolanaar",
+          "coords": {
+            "x": 59,
+            "y": 63
+          },
+          "actions": [
+            {
+              "id": 489,
+              "kind": "objective"
+            }
+          ],
+          "tip": {
+            "fr": "Ramasser 3 cônes gangrenés en revenant vers Zenn.",
+            "en": "Collect 3 fel cones on the way back to Zenn."
+          }
+        },
+        {
+          "header": "Zenn Foulhoof",
+          "coords": {
+            "x": 61,
+            "y": 56
+          },
+          "actions": [
+            {
+              "id": 489,
+              "kind": "turnin"
+            }
+          ],
+          "tip": {
+            "fr": "Rendre la quête des cônes.",
+            "en": "Turn in the fel-cone quest."
+          }
+        },
+        {
+          "header": "Dolanaar, tour",
+          "coords": {
+            "x": 55,
+            "y": 57
+          },
+          "actions": [
+            {
+              "id": 932,
+              "kind": "turnin"
+            }
+          ],
+          "tip": {
+            "fr": "Rendre la tête de Melenas si le combat a été réussi ; sinon poursuivre la route.",
+            "en": "Turn in Melenas's head if completed; otherwise continue leveling."
+          }
+        }
+      ]
+    },
+    {
+      "level": 8,
+      "key": "furbolgs-est",
+      "title": {
+        "fr": "Furbolgs de l'est et bijou perdu",
+        "en": "Eastern furbolgs and missing jewel"
+      },
+      "intro": {
+        "fr": "Les quêtes de Brise-étoile terminées ouvrent la suite de Tallonkai. Les Mystiques et le bijou se font pendant la même visite, puis retour à Dolanaar.",
+        "en": "After completing Starbreeze quests, Tallonkai's follow-up opens. Kill the mystics and find the jewel during one eastern visit, then return to Dolanaar."
+      },
+      "steps": [
+        {
+          "header": "Tallonkai Swiftroot, Dolanaar",
+          "coords": {
+            "x": 55,
+            "y": 57
+          },
+          "actions": [
+            {
+              "id": 2459,
+              "kind": "accept"
+            }
+          ],
+          "tip": {
+            "fr": "Disponible après avoir rendu le Capteur de rêves émeraude (2438).",
+            "en": "Available after turning in The Emerald Dreamcatcher (2438)."
+          }
+        },
+        {
+          "header": "Camp des Mystiques, à l'est",
+          "coords": {
+            "x": 69,
+            "y": 53
+          },
+          "actions": [
+            {
+              "id": 2459,
+              "kind": "objective"
+            }
+          ],
+          "tip": {
+            "fr": "Tuer 7 Mystiques pin-tordu, puis récupérer le bijou sur le collier manquant.",
+            "en": "Kill 7 Gnarlpine Mystics and recover the missing jewel from the necklace."
+          },
+          "clustered": true
+        },
+        {
+          "header": "Tallonkai Swiftroot, Dolanaar",
+          "coords": {
+            "x": 55,
+            "y": 57
+          },
+          "actions": [
+            {
+              "id": 2459,
+              "kind": "turnin"
+            }
+          ],
+          "tip": {
+            "fr": "Rendre tous les objectifs ensemble.",
+            "en": "Turn in both objectives in a single visit."
+          }
+        }
+      ]
+    },
+    {
+      "level": 8,
+      "key": "embusques-ouest",
+      "title": {
+        "fr": "Embusqués vers l'ouest",
+        "en": "Ambushers on the western road"
+      },
+      "intro": {
+        "fr": "Une boucle indépendante, à faire seulement après avoir récupéré la quête de la prêtresse. Ne pas descendre jusqu'au Terrier de Ban'ethil trop tôt.",
+        "en": "A separate loop, after accepting the priestess's quest. Don't descend into Ban'ethil Barrow Den too early."
+      },
+      "steps": [
+        {
+          "header": "Moon Priestess Amara",
+          "coords": {
+            "x": 51,
+            "y": 56
+          },
+          "actions": [
+            {
+              "id": 487,
+              "kind": "accept"
+            }
+          ],
+          "tip": {
+            "fr": "Prendre La route de Darnassus avant de combattre les embusqués.",
+            "en": "Pick up The Road to Darnassus before fighting ambushers."
+          }
+        },
+        {
+          "header": "Chemin de Ban'ethil",
+          "coords": {
+            "x": 46,
+            "y": 53
+          },
+          "actions": [
+            {
+              "id": 487,
+              "kind": "objective"
+            }
+          ],
+          "tip": {
+            "fr": "Tuer 6 Embusqués pin-tordu. Attention à ne pas aggro trop de furbolgs à la fois.",
+            "en": "Kill 6 Gnarlpine Ambushers, avoiding large packs."
+          }
+        },
+        {
+          "header": "Moon Priestess Amara",
+          "coords": {
+            "x": 51,
+            "y": 56
+          },
+          "actions": [
+            {
+              "id": 487,
+              "kind": "turnin"
+            }
+          ],
+          "tip": {
+            "fr": "Rendre ici, sans aller à Darnassus : la quête se termine chez la prêtresse.",
+            "en": "Turn in here, not in Darnassus: the quest ends at the priestess."
+          }
+        }
+      ]
+    },
+    {
+      "level": 9,
+      "key": "reliques-preparation",
+      "title": {
+        "fr": "Préparer les Reliques d'éveil",
+        "en": "Prepare the Relics of Wakening"
+      },
+      "intro": {
+        "fr": "Après le rapport de Gaerolas, Athridas propose les Reliques. Prendre la quête AVANT de partir vers les terriers. Le groupe de monstres dans la grotte est souvent plus dangereux que les objectifs extérieurs.",
+        "en": "After Gaerolas's report, Athridas offers the Relics. Pick it up BEFORE heading toward the dens. The cave mobs can be more dangerous than outdoor objectives."
+      },
+      "steps": [
+        {
+          "header": "Athridas Bearmantle, Dolanaar",
+          "coords": {
+            "x": 55,
+            "y": 57
+          },
+          "actions": [
+            {
+              "id": 483,
+              "kind": "accept"
+            }
+          ],
+          "tip": {
+            "fr": "Les Reliques demandent d'avoir terminé Corruption des Pin-tordu (476).",
+            "en": "The Relics require completion of Gnarlpine Corruption (476)."
+          }
+        },
+        {
+          "header": "Corithras Moonrage, Dolanaar",
+          "coords": {
+            "x": 56,
+            "y": 60
+          },
+          "actions": [
+            {
+              "id": 933,
+              "kind": "accept"
+            }
+          ],
+          "tip": {
+            "fr": "Débloquée après la Couronne 929. Ne pas prendre la suite 934 de niveau 11.",
+            "en": "Unlocked after Crown 929. Do not accept the level-11 follow-up 934."
+          }
+        },
+        {
+          "header": "Puits de lune du sud-ouest",
+          "coords": {
+            "x": 42,
+            "y": 67
+          },
+          "actions": [
+            {
+              "id": 933,
+              "kind": "objective"
+            }
+          ],
+          "tip": {
+            "fr": "Remplir la fiole de tourmaline sur la route des terriers de Ban'ethil.",
+            "en": "Fill the Tourmaline Phial on the way to the Ban'ethil dens."
+          }
+        }
+      ]
+    },
+    {
+      "level": 9,
+      "key": "terrier-banethil",
+      "title": {
+        "fr": "Terrier de Ban'ethil : une visite",
+        "en": "Ban'ethil Barrow Den: one visit"
+      },
+      "intro": {
+        "fr": "La grotte est dense : faire les quatre reliques dans une même descente. La quête du druide endormi peut être récupérée sur place. Si la grotte est dangereuse, revenir avec un niveau ou un allié plutôt que de mourir en boucle.",
+        "en": "The den is crowded: collect all four relics in one descent. Pick up the sleeping druid quest inside. If it's too dangerous, return after leveling or with a companion."
+      },
+      "steps": [
+        {
+          "header": "Entrée des terriers",
+          "coords": {
+            "x": 43,
+            "y": 58
+          },
+          "actions": [
+            {
+              "id": 483,
+              "kind": "objective"
+            }
+          ],
+          "tip": {
+            "fr": "Récupérer les quatre reliques d'éveil dans la grotte (griffe, plume, saphir, rune).",
+            "en": "Collect all four relics inside (claw, quill, sapphire and rune)."
+          }
+        },
+        {
+          "header": "Oben Rageclaw / terriers",
+          "coords": {
+            "x": 43,
+            "y": 58
+          },
+          "actions": [
+            {
+              "id": 2541,
+              "kind": "accept"
+            }
+          ],
+          "tip": {
+            "fr": "Parler à Oben puis récupérer le charme vaudou sur les chamans de la grotte.",
+            "en": "Speak to Oben, then loot the voodoo charm from shamans in the den."
+          }
+        },
+        {
+          "header": "Chaman pin-tordu / terriers",
+          "coords": {
+            "x": 43,
+            "y": 58
+          },
+          "actions": [
+            {
+              "id": 2541,
+              "kind": "objective"
+            }
+          ],
+          "tip": {
+            "fr": "Tuer les chamans à proximité jusqu'à avoir le charme. Ne pas prendre Le druide de la Griffe avant le niveau 10.",
+            "en": "Farm nearby shamans for the charm. Wait until level 10 for Druid of the Claw."
+          }
+        },
+        {
+          "header": "Oben Rageclaw / terriers",
+          "coords": {
+            "x": 43,
+            "y": 58
+          },
+          "actions": [
+            {
+              "id": 2541,
+              "kind": "turnin"
+            }
+          ],
+          "tip": {
+            "fr": "Rendre Le druide endormi sur place.",
+            "en": "Turn in The Sleeping Druid here."
+          }
+        }
+      ]
+    },
+    {
+      "level": 9,
+      "key": "retour-dolanaar",
+      "title": {
+        "fr": "Rendu groupé à Dolanaar",
+        "en": "Turn in together in Dolanaar"
+      },
+      "intro": {
+        "fr": "Ne multiplie pas les allers-retours : profite d'un retour unique après le puits et la grotte. Ensuite seulement, pars à Darnassus porter le message de Denalan.",
+        "en": "Avoid backtracking: turn in the phial and relics on one trip after the moonwell and den. Only then head to Darnassus with Denalan's letter."
+      },
+      "steps": [
+        {
+          "header": "Corithras Moonrage / Dolanaar",
+          "coords": {
+            "x": 56,
+            "y": 60
+          },
+          "actions": [
+            {
+              "id": 933,
+              "kind": "turnin"
+            }
+          ],
+          "tip": {
+            "fr": "La prochaine Couronne est de niveau 11 : elle attendra.",
+            "en": "The next Crown is level 11 and can wait."
+          }
+        },
+        {
+          "header": "Athridas Bearmantle / Dolanaar",
+          "coords": {
+            "x": 55,
+            "y": 57
+          },
+          "actions": [
+            {
+              "id": 483,
+              "kind": "turnin"
+            }
+          ],
+          "tip": {
+            "fr": "Rendre les quatre reliques ensemble.",
+            "en": "Turn in all four relics together."
+          }
+        }
+      ]
+    },
+    {
+      "level": 9,
+      "key": "darnassus-rellian",
+      "title": {
+        "fr": "Darnassus : message et tumeurs",
+        "en": "Darnassus: letter and tumors"
+      },
+      "intro": {
+        "fr": "Premier passage à Darnassus : rendre le message de Denalan et accepter les tumeurs avant de revenir au nord-ouest. Attention : on ne peut pas récolter les tumeurs de quête avant de l'avoir prise.",
+        "en": "First Darnassus trip: deliver Denalan's letter and accept Tumors before going northwest. Quest tumors cannot be collected before accepting the quest."
+      },
+      "steps": [
+        {
+          "header": "Rellian Greenspyre / Darnassus",
+          "coords": {
+            "x": 38,
+            "y": 21
+          },
+          "actions": [
+            {
+              "id": 922,
+              "kind": "turnin"
+            },
+            {
+              "id": 923,
+              "kind": "accept"
+            }
+          ],
+          "tip": {
+            "fr": "Rendre Rellian puis prendre Tumeurs. Le niveau de quête est 9.",
+            "en": "Turn in Rellian, then accept Tumors (quest level 9)."
+          }
+        }
+      ]
+    },
+    {
+      "level": 9,
+      "key": "riviere-wellspring",
+      "title": {
+        "fr": "Les tumeurs de la rivière",
+        "en": "Wellspring River tumors"
+      },
+      "intro": {
+        "fr": "Regrouper les tumeurs autour de la rivière, sans aller à l'Oracle Glade pour les quêtes de niveau 11. Prévoir le retour à Darnassus.",
+        "en": "Gather tumors by the river. Skip the level-11 Oracle Glade quest objectives for now, then return to Darnassus."
+      },
+      "steps": [
+        {
+          "header": "Rivière Wellspring",
+          "coords": {
+            "x": 43,
+            "y": 35
+          },
+          "actions": [
+            {
+              "id": 923,
+              "kind": "objective"
+            }
+          ],
+          "tip": {
+            "fr": "Ramasser 5 tumeurs moussues sur les sylvains contaminés.",
+            "en": "Collect 5 Mossy Tumors from corrupted timberlings."
+          }
+        }
+      ]
+    },
+    {
+      "level": 9,
+      "key": "darnassus-rendu",
+      "title": {
+        "fr": "Retour à Rellian",
+        "en": "Back to Rellian"
+      },
+      "intro": {
+        "fr": "Finir la quête avant de partir vers les étapes de niveau 10. Ne pas acheter d'objets de niveau supérieur par simple anticipation non sourcée.",
+        "en": "Complete Tumors before proceeding to level 10. Don't buy expensive higher-level items without a sourced reason."
+      },
+      "steps": [
+        {
+          "header": "Rellian Greenspyre / Darnassus",
+          "coords": {
+            "x": 38,
+            "y": 21
+          },
+          "actions": [
+            {
+              "id": 923,
+              "kind": "turnin"
+            }
+          ],
+          "tip": {
+            "fr": "Rendre Tumeurs et faire le point sur ton expérience avant de passer au niveau 10.",
+            "en": "Turn in Tumors and check your XP before level 10."
+          }
+        }
+      ]
+    },
+    {
+      "level": 10,
+      "key": "druide-griffe",
+      "title": {
+        "fr": "Retour court au Terrier : druide de la Griffe",
+        "en": "Back to the den: Druid of the Claw"
+      },
+      "intro": {
+        "fr": "Le druide de la Griffe exige Le druide endormi. En arrivant niveau 10, on peut finir cette chaîne sans refaire toute la grotte si le trajet est sûr.",
+        "en": "Druid of the Claw requires The Sleeping Druid. At level 10 you can finish the chain without a complete second cave clear if travel is safe."
+      },
+      "steps": [
+        {
+          "header": "Oben Rageclaw / terriers",
+          "coords": {
+            "x": 43,
+            "y": 58
+          },
+          "actions": [
+            {
+              "id": 2561,
+              "kind": "accept"
+            }
+          ],
+          "tip": {
+            "fr": "Seulement après avoir rendu Le druide endormi (2541).",
+            "en": "Only after turning in The Sleeping Druid (2541)."
+          }
+        },
+        {
+          "header": "Rageclaw / terriers",
+          "coords": {
+            "x": 43,
+            "y": 58
+          },
+          "actions": [
+            {
+              "id": 2561,
+              "kind": "objective"
+            }
+          ],
+          "tip": {
+            "fr": "Tuer la forme possédée de Rageclaw et utiliser le charme vaudou.",
+            "en": "Defeat Rageclaw's soulless body and use the Voodoo Charm."
+          }
+        },
+        {
+          "header": "Oben Rageclaw / terriers",
+          "coords": {
+            "x": 43,
+            "y": 58
+          },
+          "actions": [
+            {
+              "id": 2561,
+              "kind": "turnin"
+            }
+          ],
+          "tip": {
+            "fr": "Rendre sur place. Si tu n'es pas préparé, repousser cette grotte est raisonnable.",
+            "en": "Turn in inside. If underprepared, postponing this den is reasonable."
+          }
+        }
+      ],
+      "optional": true
+    },
+    {
+      "level": 10,
+      "key": "temple-lune",
+      "title": {
+        "fr": "Darnassus : visite du temple",
+        "en": "Darnassus: Temple visit"
+      },
+      "intro": {
+        "fr": "Le Temple de la Lune se fait sans combat. La suite Les larmes de la lune est niveau 12 : ne pas la démarrer dans notre parcours 5–10.",
+        "en": "The Temple of the Moon step needs no combat. Its follow-up Tears of the Moon is level 12: don't start it in our 5–10 route."
+      },
+      "steps": [
+        {
+          "header": "Sister Aquinne / Darnassus",
+          "coords": {
+            "x": 29,
+            "y": 46
+          },
+          "actions": [
+            {
+              "id": 2519,
+              "kind": "accept"
+            }
+          ],
+          "tip": {
+            "fr": "Prendre la quête de livraison au Temple de la Lune.",
+            "en": "Accept the delivery quest for the Temple of the Moon."
+          }
+        },
+        {
+          "header": "Priestess A'moora / temple",
+          "coords": {
+            "x": 37,
+            "y": 86
+          },
+          "actions": [
+            {
+              "id": 2519,
+              "kind": "turnin"
+            }
+          ],
+          "tip": {
+            "fr": "Rendre la quête ; garder sa suite pour plus tard.",
+            "en": "Turn in the quest; save the follow-up for later."
+          }
+        }
+      ]
+    },
+    {
+      "level": 10,
+      "key": "vol-sombrivage",
+      "title": {
+        "fr": "Préparer la sortie vers Sombrivage",
+        "en": "Optional transfer to Darkshore"
+      },
+      "intro": {
+        "fr": "Facultatif : si tu termines ton palier 10 et veux rejoindre Sombrivage, prendre la chaîne de Nessa dans Darnassus avant d'aller à Rut'theran. Sinon rester sur Teldrassil pour terminer les objectifs sans danger.",
+        "en": "Optional: if you're done at level 10 and want to reach Darkshore, pick up Nessa's chain in Darnassus before Rut'theran. Otherwise stay in Teldrassil for safe unfinished objectives."
+      },
+      "steps": [
+        {
+          "header": "Mydrannul / Darnassus",
+          "coords": {
+            "x": 71,
+            "y": 45
+          },
+          "actions": [
+            {
+              "id": 6344,
+              "kind": "accept"
+            }
+          ],
+          "tip": {
+            "fr": "Ne pas partir directement à la côte : prendre d'abord le message de Nessa.",
+            "en": "Don't run straight to the coast; take Nessa's letter first."
+          }
+        }
+      ],
+      "optional": true
+    },
+    {
+      "level": 10,
+      "key": "ruttheran",
+      "title": {
+        "fr": "Rut'theran : vol gratuit",
+        "en": "Rut'theran: free flight"
+      },
+      "intro": {
+        "fr": "Cette transition est facultative au niveau 10 : faire 6344 → 6341 → 6342 dans cet ordre, puis voler vers Auberdine. Le voyage prépare la suite 10–12, pas une quête Forever.",
+        "en": "This transfer is optional at 10: complete 6344 → 6341 → 6342 in order, then fly to Auberdine. This prepares the next 10–12 levels, not a Forever quest."
+      },
+      "steps": [
+        {
+          "header": "Nessa Shadowsong / Rut'theran",
+          "coords": {
+            "x": 56,
+            "y": 92
+          },
+          "actions": [
+            {
+              "id": 6344,
+              "kind": "turnin"
+            },
+            {
+              "id": 6341,
+              "kind": "accept"
+            }
+          ],
+          "tip": {
+            "fr": "Rendre le message, prendre La prime de Teldrassil.",
+            "en": "Turn in the message, accept The Bounty of Teldrassil."
+          }
+        },
+        {
+          "header": "Vesprystus / hippogryphe",
+          "coords": {
+            "x": 58,
+            "y": 94
+          },
+          "actions": [
+            {
+              "id": 6341,
+              "kind": "turnin"
+            },
+            {
+              "id": 6342,
+              "kind": "accept"
+            }
+          ],
+          "tip": {
+            "fr": "Rendre le colis et prendre Vol vers Auberdine avant de monter.",
+            "en": "Hand in the parcel and accept Flight to Auberdine before boarding."
+          }
+        }
+      ],
+      "optional": true
+    }
+  ]
+}
