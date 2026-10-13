@@ -1,0 +1,380 @@
+{
+  "schema_version": 1,
+  "game": "classic",
+  "guide_source": "data/quests/{faction}.json — VanillaQuesting; source notes are community guidance rather than confirmed live-game requirements",
+  "policies": {
+    "max_quest_level_delta": 0,
+    "nearby_objective_radius": 9,
+    "show_previous_level_stages": true,
+    "guide_min_level": 5
+  },
+  "dungeons": [
+    {
+      "id": "ragefire",
+      "faction": "horde",
+      "pattern": "ragefire chasm",
+      "level": 17,
+      "window": 2,
+      "zone": "orgrimmar",
+      "name": {
+        "fr": "Gouffre de Ragefeu",
+        "en": "Ragefire Chasm"
+      },
+      "reason": {
+        "fr": "Court, proche d'Orgrimmar et plusieurs quêtes à regrouper avant la visite.",
+        "en": "Short, near Orgrimmar, with several quests to gather before entering."
+      },
+      "source": "https://www.wowhead.com/classic/guide/dungeon-quests-wow-classic",
+      "checklist": {
+        "fr": "Avant d'entrer : récupérer les quêtes à Orgrimmar, Fossoyeuse et aux Pitons-du-Tonnerre ; « Ennemis cachés » débute par une chaîne auprès de Thrall.",
+        "en": "Before entering: gather quests in Orgrimmar, Undercity and Thunder Bluff; Hidden Enemies starts with Thrall's quest chain."
+      }
+    },
+    {
+      "id": "deadmines",
+      "faction": "alliance",
+      "pattern": "deadmines",
+      "level": 22,
+      "window": 2,
+      "zone": "westfall",
+      "name": {
+        "fr": "Les Mortemines",
+        "en": "The Deadmines"
+      },
+      "reason": {
+        "fr": "À privilégier autour du niveau 22 : enchaînement des Défias et plusieurs quêtes du même donjon réunies en une visite.",
+        "en": "Best around level 22: Defias chain plus several dungeon quests batched into one run."
+      },
+      "source": "https://www.wowhead.com/classic/guide/dungeon-quests-wow-classic",
+      "checklist": {
+        "fr": "Avant d'entrer : avancer la chaîne de la Confrérie défias, prendre « Foulards de soie rouge », « Assaut souterrain » et les quêtes disponibles autour de la Marche de l'Ouest.",
+        "en": "Before entering: progress the Defias Brotherhood chain and pick up Red Silk Bandanas, Underground Assault and nearby Westfall quests."
+      }
+    },
+    {
+      "id": "wailing",
+      "faction": "horde",
+      "pattern": "wailing caverns",
+      "level": 23,
+      "window": 3,
+      "zone": "barrens",
+      "name": {
+        "fr": "Cavernes des Lamentations",
+        "en": "Wailing Caverns"
+      },
+      "reason": {
+        "fr": "Plusieurs objectifs et quêtes au même endroit ; privilégier une visite préparée.",
+        "en": "Several nearby quests and objectives; best visited after preparation."
+      },
+      "source": "https://www.wowhead.com/classic/guide/dungeon-quests-wow-classic",
+      "checklist": {
+        "fr": "Avant d'entrer : compléter les prérequis de « Chefs des crocs » (chaîne des oasis des Tarides) et réunir les quêtes de la caverne.",
+        "en": "Before entering: finish Leaders of the Fang prerequisites (The Barrens Oases chain) and gather the cave quests."
+      }
+    },
+    {
+      "id": "shadowfang",
+      "faction": "horde",
+      "pattern": "shadowfang keep",
+      "level": 27,
+      "window": 2,
+      "zone": "silverpine",
+      "name": {
+        "fr": "Donjon d'Ombrecroc",
+        "en": "Shadowfang Keep"
+      },
+      "reason": {
+        "fr": "À viser autour du niveau 27 pour combiner les trois quêtes Classic, dont « Arugal doit mourir » et sa récompense.",
+        "en": "Aim for around level 27 to combine all three Classic quests, including Arugal Must Die and its reward."
+      },
+      "source": "https://www.wowhead.com/classic/guide/dungeon-quests-wow-classic",
+      "checklist": {
+        "fr": "Avant d'entrer : « Le Livre d'Ur » se prend à Fossoyeuse, « Arugal doit mourir » et les Traqueurs noirs au Sépulcre.",
+        "en": "Before entering: collect The Book of Ur in Undercity, and Arugal Must Die plus Deathstalkers in Shadowfang at the Sepulcher."
+      }
+    },
+    {
+      "id": "blackfathom",
+      "faction": "horde",
+      "pattern": "blackfathom",
+      "level": 28,
+      "window": 3,
+      "zone": "ashenvale",
+      "name": {
+        "fr": "Profondeurs de Brassenoire",
+        "en": "Blackfathom Deeps"
+      },
+      "reason": {
+        "fr": "Intéressant autour du niveau 28 si les quêtes sont déjà réunies ; trajet à anticiper.",
+        "en": "Worth considering around level 28 if you have gathered the quests; account for travel."
+      },
+      "source": "https://www.wowhead.com/classic/guide/dungeon-quests-wow-classic",
+      "checklist": {
+        "fr": "Avant d'entrer : terminer l'étape extérieure d'« Allégeance aux dieux très anciens » et regrouper les quêtes d'Orneval.",
+        "en": "Before entering: finish the outdoor step of Allegiance to the Old Gods and gather Ashenvale quests."
+      }
+    }
+  ],
+  "preparations": [
+    {
+      "id": "thunder-ale",
+      "faction": "alliance",
+      "profile": "gnorf",
+      "level": 7,
+      "during": [
+        6,
+        8
+      ],
+      "quantity": 1,
+      "kind": "guide",
+      "name": {
+        "fr": "Tonnelet de bière du tonnerre",
+        "en": "Thunder Ale"
+      },
+      "reason": {
+        "fr": "Le parcours recommande d'en acheter à Kharanos, à l'étape de « Rivaux amers ».",
+        "en": "The source route recommends buying it in Kharanos around Bitter Rivals."
+      },
+      "source": "guide"
+    },
+    {
+      "id": "coarse-thread",
+      "faction": "horde",
+      "level": 10,
+      "during": [
+        9,
+        11
+      ],
+      "quantity": 1,
+      "kind": "guide",
+      "name": {
+        "fr": "Fil grossier",
+        "en": "Coarse Thread"
+      },
+      "reason": {
+        "fr": "Achat mentionné à Brill par le guide d'origine : vérifie l'utilité dans ton journal.",
+        "en": "Source route mentions buying this at Brill; verify its use in your quest log."
+      },
+      "source": "guide"
+    },
+    {
+      "id": "bronze-tube",
+      "faction": "alliance",
+      "level": 24,
+      "during": [
+        21,
+        25
+      ],
+      "quantity": 1,
+      "kind": "quest",
+      "quest_id": 174,
+      "name": {
+        "fr": "Tube en bronze",
+        "en": "Bronze Tube"
+      },
+      "reason": {
+        "fr": "Pour la quête « Les étoiles » (ID 174) : à fabriquer par un ingénieur, ou à acheter à un marchand spécialisé (stock limité) ou à l'hôtel des ventes avant Sombre-comté.",
+        "en": "Prepare ahead for Look To The Stars: Engineering, limited-stock vendor, or auction house. The route also mentions Stormwind."
+      },
+      "source": "https://warcraft.wiki.gg/wiki/Look_To_The_Stars_%28Classic%29"
+    },
+    {
+      "id": "seasoning-herbs",
+      "faction": "alliance",
+      "level": 24,
+      "during": [
+        22,
+        25
+      ],
+      "quantity": 1,
+      "kind": "quest",
+      "quest_id": 90,
+      "name": {
+        "fr": "Herbes aromatiques de Hurlevent",
+        "en": "Stormwind Seasoning Herbs"
+      },
+      "reason": {
+        "fr": "Pour « Brochettes de loup assaisonnées » (quête 90) : Felicia Gump, quartier des canaux de Hurlevent. Profiter d'un passage en ville.",
+        "en": "For Seasoned Wolf Kabobs (quest 90): buy from Felicia Gump in Stormwind's canal district during a city visit."
+      },
+      "source": "https://warcraft.wiki.gg/wiki/Seasoned_Wolf_Kabobs_%28Classic%29"
+    },
+    {
+      "id": "dry-times",
+      "faction": "alliance",
+      "level": 19,
+      "during": [
+        15,
+        19
+      ],
+      "quantity": 4,
+      "kind": "quest",
+      "name": {
+        "fr": "Boissons du « Régime sec » (4 éléments)",
+        "en": "Dry Times drinks (four items)"
+      },
+      "reason": {
+        "fr": "Acheter 1 merlot à Hurlevent, 1 moonshine à Sombre-comté et 1 rhum doux à Comté-de-l'Or ; garder 5 houblons des moissonneurs de la Marche de l'Ouest pour obtenir la quatrième boisson (bière du tonnerre) auprès de Grimbooze.",
+        "en": "Buy 1 Merlot in Stormwind, 1 Moonshine in Darkshire and 1 Sweet Rum in Goldshire; keep 5 Hops from Westfall harvesters to obtain the fourth drink (Thunderbrew Lager) from Grimbooze."
+      },
+      "source": "https://www.wowhead.com/classic/quest=116/dry-times",
+      "quest_id": 116
+    },
+    {
+      "id": "flagon-mead",
+      "faction": "alliance",
+      "level": 27,
+      "during": [
+        25,
+        28
+      ],
+      "quantity": 1,
+      "kind": "guide",
+      "name": {
+        "fr": "Flacon d'hydromel",
+        "en": "Flagon of Mead"
+      },
+      "reason": {
+        "fr": "Achat recommandé par le guide à Menethil ; prévoir lors de la visite.",
+        "en": "Buy during the guide's Menethil visit."
+      },
+      "source": "guide"
+    },
+    {
+      "id": "silk-cloth",
+      "faction": "alliance",
+      "level": 29,
+      "during": [
+        27,
+        30
+      ],
+      "quantity": 3,
+      "kind": "guide",
+      "name": {
+        "fr": "Étoffes de soie",
+        "en": "Silk Cloth"
+      },
+      "reason": {
+        "fr": "Le guide conseille d'en acheter trois à l'hôtel des ventes de Hurlevent ; usage à vérifier en jeu.",
+        "en": "Source route suggests buying three at Stormwind's auction house; confirm the intended quest in game."
+      },
+      "source": "guide"
+    },
+    {
+      "id": "deadly-blunderbuss",
+      "faction": "horde",
+      "level": 28,
+      "during": [
+        25,
+        29
+      ],
+      "quantity": 1,
+      "kind": "quest",
+      "quest_id": 6581,
+      "name": {
+        "fr": "Tromblon mortel",
+        "en": "Deadly Blunderbuss"
+      },
+      "reason": {
+        "fr": "À fournir pour « Lames de scie du clan Chanteguerre ». Ingénieur ou hôtel des ventes ; anticiper pendant le passage aux Pitons-du-Tonnerre.",
+        "en": "Required for Warsong Saw Blades. Crafted by an engineer or bought at the auction house; prepare during the Thunder Bluff stop."
+      },
+      "source": "https://www.wowhead.com/tbc/quest=6571/warsong-supplies"
+    },
+    {
+      "id": "swift-potion",
+      "faction": "alliance",
+      "level": 27,
+      "during": [
+        26,
+        28
+      ],
+      "quantity": 1,
+      "kind": "route",
+      "name": {
+        "fr": "Potion de rapidité",
+        "en": "Swiftness Potion"
+      },
+      "reason": {
+        "fr": "Conseil de déplacement du parcours (pont de Thandol), pas un objet obligatoire pour une quête.",
+        "en": "Travel trick suggested by the guide (Thandol Span), not a mandatory quest item."
+      },
+      "source": "guide"
+    },
+    {
+      "id": "westfall-save",
+      "faction": "alliance",
+      "level": 17,
+      "during": [
+        15,
+        18
+      ],
+      "quantity": 5,
+      "kind": "gather",
+      "name": {
+        "fr": "Houblons de la Marche de l'Ouest",
+        "en": "Hops in Westfall"
+      },
+      "reason": {
+        "fr": "Les moissonneurs mécaniques lâchent le houblon. En garder 5 pour le tonnelet de la quête « Régime sec », au lieu de revenir farmer.",
+        "en": "Harvest golems drop Hops. Keep five for the Dry Times keg instead of backtracking later."
+      },
+      "source": "https://www.wowhead.com/classic/quest=116/dry-times"
+    },
+    {
+      "id": "flask-oil",
+      "faction": "alliance",
+      "level": 17,
+      "during": [
+        16,
+        19
+      ],
+      "quantity": 5,
+      "kind": "guide",
+      "name": {
+        "fr": "Fioles d'huile (à conserver)",
+        "en": "Flasks of Oil (keep)"
+      },
+      "reason": {
+        "fr": "Le guide communautaire recommande de garder 5 fioles d'huile pendant les quêtes de la Marche de l'Ouest ; usage exact à vérifier.",
+        "en": "Community route recommends keeping five Flasks of Oil during Westfall questing; check their later use."
+      },
+      "source": "guide"
+    }
+  ],
+  "grouped_examples": [
+    {
+      "zone": "teldrassil",
+      "quests": [
+        "timberling seeds",
+        "timberling sprouts"
+      ],
+      "note": {
+        "fr": "Récolter les graines et pousses sur les mêmes sylvains avant de repartir.",
+        "en": "Gather seeds and sprouts from the same timberlings before leaving."
+      }
+    },
+    {
+      "zone": "westfall",
+      "quests": [
+        "westfall stew",
+        "goretusk liver pie"
+      ],
+      "note": {
+        "fr": "Regrouper les sangliers pour les ingrédients des deux quêtes, quand elles sont toutes les deux accessibles.",
+        "en": "Combine boar farming for both quests when they are each accessible."
+      }
+    },
+    {
+      "zone": "duskwood",
+      "quests": [
+        "seasoned wolf kabobs",
+        "wolves at our heels"
+      ],
+      "note": {
+        "fr": "Combiner les loups lorsque les deux quêtes sont accessibles et acceptées.",
+        "en": "Combine wolf kills when both quests are accessible and accepted."
+      }
+    }
+  ]
+}

@@ -1,71 +1,57 @@
 <!doctype html>
-<html lang="fr">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="fr"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<meta name="theme-color" content="#10191b">
-<title>Laboratoire de quêtes · Classic Beta | ForEveroth</title>
+<meta name="theme-color" content="#101a20"><title>Guide Classic optimisé · Bêta | ForEveroth</title>
 <link rel="icon" href="/assets/foreveroth-favicon.png" type="image/png">
-<link rel="stylesheet" href="./lab.css?v=1">
+<link rel="stylesheet" href="./lab.css?v=2">
 <script defer src="/assets/quest-locale.js?v=20261009-7"></script>
-<script defer src="./engine.js?v=1"></script>
-<script defer src="./lab.js?v=1"></script>
+<script defer src="./guide-engine.js?v=2"></script>
+<script defer src="./lab.js?v=2"></script>
 </head>
 <body>
-<a class="skip" href="#lab-main">Aller au contenu</a>
-<header class="lab-header">
- <div class="brand"><a href="/" aria-label="ForEveroth"><img src="/assets/foreveroth-logo.png" alt="ForEveroth" width="200" height="37"></a><span class="lab-separator"></span><span id="lab-heading">Laboratoire de quêtes</span><span class="beta-pill">CLASSIC · BETA</span></div>
- <div class="header-actions"><button id="language" type="button" class="quiet" aria-label="Switch to English">EN</button><span id="data-status" role="status">Chargement…</span></div>
-</header>
-<main id="lab-main" class="page" aria-busy="true">
- <div class="intro"><div><span class="eyebrow">FOR EVEROTH / EXPÉRIMENTATION</span><h1 id="headline">Votre itinéraire, <em>recalculé.</em></h1><p id="description">Vous indiquez l'état réel de vos quêtes. Le parcours évolue immédiatement, sans modifier le guide public.</p></div><p class="warning" id="source-warning">Classic uniquement : guide communautaire à partir du niveau ~5. Niveaux conseillés ≠ prérequis vérifiés. Aucun accès automatique au journal du jeu.</p></div>
- <div class="layout">
-  <aside class="controls">
-   <section class="panel">
-    <div class="panel-head"><h2 id="character-title">Personnage</h2><span class="live-mark">● BETA</span></div>
-    <div class="form-grid">
-     <label><span id="faction-title">Faction</span><select id="faction"><option value="alliance">Alliance</option><option value="horde">Horde</option></select></label>
-     <label><span id="race-title">Race</span><select id="race"></select></label>
-     <label><span id="level-title">Niveau actuel</span><input id="level" type="number" min="1" max="60" value="5" inputmode="numeric"></label>
-     <label><span id="zone-title">Zone actuelle</span><select id="zone"></select></label>
-     <label><span id="x-title">Position X (%)</span><input id="pos-x" type="number" min="0" max="100" step=".1" placeholder="—"></label>
-     <label><span id="y-title">Position Y (%)</span><input id="pos-y" type="number" min="0" max="100" step=".1" placeholder="—"></label>
-    </div>
-    <p class="subtle" id="position-tip">Cliquez sur la carte pour placer votre position. Les coordonnées sont saisies manuellement.</p>
-   </section>
-   <section class="panel journal">
-    <div class="panel-head"><h2 id="journal-title">Journal de quêtes</h2><span id="journal-count" class="mono">0 en cours</span></div>
-    <label class="search-label" for="quest-search" id="search-label">Ajouter ou modifier une quête</label>
-    <input type="search" id="quest-search" placeholder="Nom ou ID de quête…" autocomplete="off">
-    <div class="journal-filters" id="journal-filters"><button type="button" data-filter="progress" class="selected" aria-pressed="true">En cours</button><button type="button" data-filter="all" aria-pressed="false">Toutes</button><button type="button" data-filter="done" aria-pressed="false">Terminées</button></div>
-    <div id="quest-browser" class="quest-browser" aria-live="polite"></div>
-    <p id="journal-hint" class="subtle">Sélectionnez « Acceptée », « Objectifs faits » ou « Rendue » selon votre journal en jeu.</p>
-   </section>
-   <section class="panel tools">
-    <div class="panel-head"><h2 id="tool-title">Session de test</h2></div>
-    <div class="tool-buttons"><button id="export-session" type="button">Exporter JSON</button><label class="file-button" for="import-session" id="import-label">Importer JSON</label><input id="import-session" type="file" accept=".json,application/json" hidden></div>
-    <button id="reset-session" class="reset" type="button">Réinitialiser cette session</button>
-    <p class="subtle" id="save-hint">État conservé localement dans ce navigateur. Aucun compte ni synchronisation avec WoW.</p>
-   </section>
-  </aside>
-  <div class="workspace">
-   <section class="summary panel" aria-live="polite">
-    <div><span class="eyebrow" id="summary-kicker">ITINÉRAIRE ADAPTATIF</span><h2 id="next-title">Vos prochains déplacements</h2><p id="summary-line">Calcul du parcours…</p></div>
-    <div class="stats"><div><strong id="stat-active">0</strong><span id="active-label">acceptées</span></div><div><strong id="stat-ready">0</strong><span id="ready-label">à rendre</span></div><div><strong id="stat-done">0</strong><span id="done-label">rendues</span></div></div>
-   </section>
-   <section class="map-area panel">
-    <div class="map-head"><div><span class="eyebrow" id="map-kicker">LOCALISATION</span><h2 id="map-title">Carte de la zone</h2></div><div class="map-actions"><select id="map-zone" aria-label="Zone affichée"></select><button type="button" id="map-reset">⤢</button></div></div>
-    <div class="map-frame"><canvas id="map-canvas" width="1100" height="680" role="img" aria-label="Carte des étapes recommandées. Cliquez pour définir votre position.">Carte des quêtes</canvas><div id="map-attribution">Fond cartographique Classic communautaire</div><div class="map-legend"><span><i class="dot player"></i><span id="map-legend-player">Position saisie</span></span><span><i class="dot route"></i><span id="map-legend-route">Étapes proposées</span></span></div></div>
-    <p class="subtle map-tip" id="map-tip">Molette : zoom · Glisser : déplacer · Cliquer : définir X/Y</p>
-   </section>
-   <section class="panel suggestions">
-    <div class="panel-head route-head"><div><span class="eyebrow" id="route-kicker">PARCOURS EN DIRECT</span><h2 id="route-title">Étapes proposées</h2></div><span id="route-count" class="mono">0 étapes</span></div>
-    <div id="route-list" class="route-list"></div>
-    <div id="empty-hint" class="empty-hint" hidden></div>
-    <p class="subtle" id="algorithm-note">Ordre indicatif basé sur les positions, les niveaux et l'état déclaré. Les prérequis non documentés restent à vérifier en jeu.</p>
-   </section>
-  </div>
+<a class="skip" href="#main">Aller au guide</a>
+<header class="header"><div class="brand"><a href="/" aria-label="ForEveroth"><img src="/assets/foreveroth-logo.png" alt="ForEveroth" width="200" height="37"></a><span class="brand-divider"></span><span class="brand-description" id="brand-description">Guide optimisé</span><span class="beta">BETA · CLASSIC</span></div><div class="header-side"><button class="lang" id="lang" type="button">EN</button><span id="status" role="status">Chargement…</span></div></header>
+<main class="wrap" id="main" aria-busy="true">
+<section class="intro">
+ <div><span class="eyebrow" id="eyebrow">ITINÉRAIRES CLASSIC · LABORATOIRE</span><h1 id="headline">Un chemin <em>plus logique.</em></h1><p id="intro-text">Les quêtes au bon niveau, les objectifs voisins regroupés, les achats préparés à l'avance.</p></div>
+ <p class="scope" id="scope">Guide communautaire Classic à partir d'environ niveau 5. Les prérequis et l'accessibilité restent à confirmer en jeu. Aucun parcours Forever n'est encore activé.</p>
+</section>
+<section class="picker panel" aria-label="Paramètres du guide">
+ <div class="picker-grid">
+  <label><span id="label-faction">Faction</span><select id="faction"><option value="alliance">Alliance</option><option value="horde">Horde</option></select></label>
+  <label><span id="label-race">Race</span><select id="race"></select></label>
+  <label class="level-field"><span id="label-level">Ton niveau</span><div class="level-control"><button id="level-minus" type="button" aria-label="Niveau précédent">−</button><input id="level" type="number" min="5" max="60" value="8" inputmode="numeric"><button id="level-plus" type="button" aria-label="Niveau suivant">+</button></div></label>
+  <fieldset class="versions"><legend id="label-version">Version du guide</legend><div class="version-options">
+   <button data-mode="solo" id="mode-solo" class="selected" type="button" aria-pressed="true"><span class="version-symbol" aria-hidden="true">◈</span><strong id="mode-solo-title">Sans donjons</strong><small id="mode-solo-sub">Parcours extérieur</small></button>
+   <button data-mode="essentials" id="mode-essentials" type="button" aria-pressed="false"><span class="version-symbol" aria-hidden="true">⚔</span><strong id="mode-essentials-title">Donjons utiles</strong><small id="mode-essentials-sub">Quelques instances choisies</small></button>
+  </div></fieldset>
  </div>
+ <div class="guide-rule"><span class="rule-icon">✓</span><span id="guide-rule">Une quête de niveau supérieur au tien n'est pas proposée, même si l'ancien itinéraire l'indiquait plus tôt.</span></div>
+</section>
+<div class="layout">
+ <aside class="sidebar panel" aria-labelledby="timeline-title">
+   <div class="sidebar-head"><span class="eyebrow" id="timeline-kicker">TON PARCOURS</span><h2 id="timeline-title">Étapes par secteur</h2><p id="timeline-description">Choisis un secteur puis suis les objectifs de la carte.</p></div>
+   <div id="stage-list" class="stage-list" role="list"></div>
+   <p id="empty-stage" class="empty-stage" hidden></p>
+ </aside>
+ <div class="content">
+   <section class="stage-heading panel">
+     <div class="stage-intro"><span class="eyebrow" id="stage-kicker">ÉTAPE ACTUELLE</span><h2 id="stage-title">Carte du secteur</h2><p id="stage-subtitle">Chargement du parcours…</p></div>
+     <div class="stage-switch"><button type="button" id="prev" aria-label="Étape précédente">←</button><span id="stage-counter">—</span><button type="button" id="next" aria-label="Étape suivante">→</button></div>
+   </section>
+   <section class="map panel">
+     <div class="map-bar"><div><span id="map-heading">CARTE DE ZONE</span><strong id="map-name">—</strong></div><div><button type="button" id="map-reset" title="Réinitialiser le zoom">⤢</button></div></div>
+     <div class="map-frame"><canvas id="route-map" width="1100" height="645" role="img" aria-label="Carte des points du parcours; sélectionnez un marqueur pour voir l'étape.">Carte des étapes</canvas><span id="map-credits">Carte Classic communautaire</span><div class="legend"><span><i class="accept"></i><span id="legend-accept">Prendre</span></span><span><i class="objectives"></i><span id="legend-objectives">Objectifs</span></span><span><i class="turnin"></i><span id="legend-turnin">Rendre</span></span></div></div>
+     <p class="map-tip" id="map-tip">Molette : zoom · glisser : déplacer · cliquer sur un repère : détails</p>
+   </section>
+   <section class="instructions panel"><div class="section-head"><div><span class="eyebrow" id="actions-kicker">FAIRE DANS CET ORDRE</span><h2 id="actions-title">Dans ce secteur</h2></div><span class="small-counter" id="actions-counter">—</span></div><div id="stops" class="stops"></div><p class="fineprint" id="level-notice"></p></section>
+   <div class="lower">
+     <section class="preps panel"><div class="section-head"><div><span class="eyebrow" id="prep-kicker">ANTICIPATION</span><h2 id="prep-title">À prévoir bientôt</h2></div><span class="counter-icon">◈</span></div><div id="preparation-list"></div><p class="fineprint" id="prep-footnote">Un conseil d'achat n'indique pas que tu dois accepter une quête de plus haut niveau.</p></section>
+     <section class="dungeons panel"><div class="section-head"><div><span class="eyebrow" id="dungeon-kicker">OPTION FACULTATIVE</span><h2 id="dungeon-title">Donjons intéressants</h2></div><span class="counter-icon">⚔</span></div><div id="dungeon-list"></div><p class="fineprint" id="dungeon-footnote">Une instance n'apparaît que dans la version « Donjons utiles » et au niveau conseillé pour notre itinéraire.</p></section>
+   </div>
+ </div>
+</div>
+<footer class="footer" id="footer"><p>ForEveroth Quest Lab · Itinéraires communautaires Classic (VanillaQuesting) · <a href="https://github.com/lexicongaming/vanilla-questing-old" target="_blank" rel="noopener noreferrer">Source MIT</a>. Parcours expérimental, distinct du guide public.</p></footer>
 </main>
-</body>
-</html>
+</body></html>
