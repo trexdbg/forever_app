@@ -93,19 +93,39 @@ for (const item of observed.items) {
   }
 }
 
-// A live-search landing page must use the same names/IDs as the actual dungeon dataset.
-const atrexis = dungeons.dungeons.find(x => x.id === "city-of-dalaran")?.bosses
-  .find(x => x.name.en === "Atrexis the Grave Knight");
-assert.equal(atrexis?.loot.length, 3, "Atrexis source roster changed; re-audit the landing pages");
-for (const [lang, path] of [
-  ["en", "en/guides/forever-boss-city-of-dalaran-atrexis-the-grave-knight/index.html"],
-  ["fr", "guides/boss-forever-city-of-dalaran-atrexis-the-grave-knight/index.html"],
-]) {
-  const html = read(path);
-  for (const item of atrexis.loot) {
-    assert.ok((html.includes(item[lang]) || html.includes(item[lang].replaceAll("'", "&#39;"))) && html.includes("/item/" + item.id),
-      "Atrexis guide has missing/incorrect " + lang + " item " + item.id);
-    assert.ok(html.includes(String(item.requiredLevel)), "Missing documented equip level " + item.id);
+// Protect landing pages against stale/fabricated names after the underlying data changes.
+const guideBosses = [
+  ["city-of-dalaran", "atrexis-the-grave-knight", "Atrexis the Grave Knight"],
+  ["city-of-dalaran", "arcane-anomaly", "Arcane Anomaly"],
+  ["city-of-dalaran", "archmage-s-shade", "Archmage's Shade"],
+  ["city-of-dalaran", "lyn-the-unheeded", "Lyn the Unheeded"],
+  ["ruins-of-lordaeron", "bjork", "Bjork"],
+  ["ruins-of-lordaeron", "rath-mael", "Rath'mael"],
+  ["ruins-of-lordaeron", "the-baron", "The Baron"],
+];
+for (const [dungeonId, slug, bossName] of guideBosses) {
+  const boss = dungeons.dungeons.find(x => x.id === dungeonId)?.bosses
+    .find(x => x.name.en === bossName);
+  assert.ok(boss && boss.loot.length, "Missing boss in beta dataset: " + bossName);
+  for (const [lang, path] of [
+    ["en", "en/guides/forever-boss-" + dungeonId + "-" + slug + "/index.html"],
+    ["fr", "guides/boss-forever-" + dungeonId + "-" + slug + "/index.html"],
+  ]) {
+    const html = read(path);
+    const body = html.match(/<table class="geo-table">[\s\S]*?<tbody>([\s\S]*?)<\/tbody>/)?.[1];
+    assert.ok(body, "Missing loot table in " + path);
+    assert.equal((body.match(/<tr>/g) || []).length, boss.loot.length,
+      "SEO guide roster differs from the dungeon: " + path);
+    for (const item of boss.loot) {
+      const name = item[lang];
+      assert.ok(body.includes(name) || body.includes(name.replaceAll("'", "&#39;")),
+        "Incorrect beta loot name in " + path + ": " + name);
+      if (item.id) assert.ok(body.includes(String(item.id)),
+        "SEO guide is missing verified item ID " + item.id + " in " + path);
+      if (item.requiredLevel != null)
+        assert.ok(body.includes(String(item.requiredLevel)),
+          "SEO guide missing documented required level " + item.id + " in " + path);
+    }
   }
 }
 for (const path of ["rare/index.html", "en/rare/index.html"])
