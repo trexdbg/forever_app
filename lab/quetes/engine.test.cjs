@@ -91,6 +91,22 @@ test("cursor: leveling advances beyond an old saved step",()=>{
  const stale=engine.calculate(c,{level:16,zone:"westfall",cursor:0});
  assert.equal(fresh.anchor,stale.anchor);
 });
+test("metadata-only prerequisites are exposed to manual state editing",()=>{
+ const c=catalog("alliance","nelf",{schema_version:1,quests:{"999990":{name_fr:"Prerequis fictif",requires:[]}}});
+ assert(c.quests["id:999990"]);
+ assert.equal(c.quests["id:999990"].fr,"Prerequis fictif");
+ assert(!c.points.some(p=>p.actions.some(a=>a.questKey==="id:999990")));
+});
+test("itinerary does not repeat the same acceptance/turn-in action",()=>{
+ const c=catalog("alliance","nelf");
+ const route=engine.calculate(c,{level:8,zone:"teldrassil"});
+ const seen=new Set();
+ for(const p of route.itinerary)for(const a of p.actions){
+  if(a.kind==="objective")continue;
+  assert(!seen.has(a.questKey));
+  seen.add(a.questKey);
+ }
+});
 test("invalid overlay versions are rejected",()=>{
  assert.throws(()=>catalog("alliance","nelf",{schema_version:2}),/incompatible/i);
 });
