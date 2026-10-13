@@ -750,105 +750,7 @@
             "fr": "Remplir la fiole de tourmaline sur la route des terriers de Ban'ethil.",
             "en": "Fill the Tourmaline Phial on the way to the Ban'ethil dens."
           }
-        }
-      ],
-      "zone": "teldrassil"
-    },
-    {
-      "level": 9,
-      "key": "terrier-banethil",
-      "title": {
-        "fr": "Terrier de Ban'ethil : une visite",
-        "en": "Ban'ethil Barrow Den: one visit"
-      },
-      "intro": {
-        "fr": "La grotte est dense : faire les quatre reliques dans une même descente. La quête du druide endormi peut être récupérée sur place. Si la grotte est dangereuse, revenir avec un niveau ou un allié plutôt que de mourir en boucle.",
-        "en": "The den is crowded: collect all four relics in one descent. Pick up the sleeping druid quest inside. If it's too dangerous, return after leveling or with a companion."
-      },
-      "steps": [
-        {
-          "header": "Entrée des terriers",
-          "coords": {
-            "x": 43,
-            "y": 58
-          },
-          "actions": [
-            {
-              "id": 483,
-              "kind": "objective"
-            }
-          ],
-          "tip": {
-            "fr": "Récupérer les quatre reliques d'éveil dans la grotte (griffe, plume, saphir, rune).",
-            "en": "Collect all four relics inside (claw, quill, sapphire and rune)."
-          }
         },
-        {
-          "header": "Oben Rageclaw / terriers",
-          "coords": {
-            "x": 43,
-            "y": 58
-          },
-          "actions": [
-            {
-              "id": 2541,
-              "kind": "accept"
-            }
-          ],
-          "tip": {
-            "fr": "Parler à Oben puis récupérer le charme vaudou sur les chamans de la grotte.",
-            "en": "Speak to Oben, then loot the voodoo charm from shamans in the den."
-          }
-        },
-        {
-          "header": "Chaman pin-tordu / terriers",
-          "coords": {
-            "x": 43,
-            "y": 58
-          },
-          "actions": [
-            {
-              "id": 2541,
-              "kind": "objective"
-            }
-          ],
-          "tip": {
-            "fr": "Tuer les chamans à proximité jusqu'à avoir le charme. Ne pas prendre Le druide de la Griffe avant le niveau 10.",
-            "en": "Farm nearby shamans for the charm. Wait until level 10 for Druid of the Claw."
-          }
-        },
-        {
-          "header": "Oben Rageclaw / terriers",
-          "coords": {
-            "x": 43,
-            "y": 58
-          },
-          "actions": [
-            {
-              "id": 2541,
-              "kind": "turnin"
-            }
-          ],
-          "tip": {
-            "fr": "Rendre Le druide endormi sur place.",
-            "en": "Turn in The Sleeping Druid here."
-          }
-        }
-      ],
-      "zone": "teldrassil"
-    },
-    {
-      "level": 9,
-      "key": "retour-dolanaar",
-      "title": {
-        "fr": "Rendu groupé à Dolanaar",
-        "en": "Turn in together in Dolanaar"
-      },
-      "intro": {
-        "fr": "Ne multiplie pas les allers-retours : profite d'un retour unique après le puits et la grotte. Ensuite seulement, pars à Darnassus porter le message de Denalan.",
-        "en": "Avoid backtracking: turn in the phial and relics on one trip after the moonwell and den. Only then head to Darnassus with Denalan's letter."
-      },
-      "steps": [
         {
           "header": "Corithras Moonrage / Dolanaar",
           "coords": {
@@ -862,25 +764,8 @@
             }
           ],
           "tip": {
-            "fr": "La prochaine Couronne est de niveau 11 : elle attendra.",
-            "en": "The next Crown is level 11 and can wait."
-          }
-        },
-        {
-          "header": "Athridas Bearmantle / Dolanaar",
-          "coords": {
-            "x": 55,
-            "y": 57
-          },
-          "actions": [
-            {
-              "id": 483,
-              "kind": "turnin"
-            }
-          ],
-          "tip": {
-            "fr": "Rendre les quatre reliques ensemble.",
-            "en": "Turn in all four relics together."
+            "fr": "Rendre la Couronne 933 pour ses XP avant de partir à Darnassus. La suite 934 attend le niveau 11.",
+            "en": "Turn in Crown 933 for XP before Darnassus. The level-11 follow-up 934 can wait."
           }
         }
       ],
@@ -988,16 +873,84 @@
     },
     {
       "level": 10,
-      "key": "druide-griffe",
+      "key": "terrier-banethil",
       "title": {
-        "fr": "Retour court au Terrier : druide de la Griffe",
-        "en": "Back to the den: Druid of the Claw"
+        "fr": "Terrier de Ban’ethil : une seule descente",
+        "en": "Ban'ethil Barrow Den: single descent"
       },
       "intro": {
-        "fr": "Le druide de la Griffe exige Le druide endormi. En arrivant niveau 10, on peut finir cette chaîne sans refaire toute la grotte si le trajet est sûr.",
-        "en": "Druid of the Claw requires The Sleeping Druid. At level 10 you can finish the chain without a complete second cave clear if travel is safe."
+        "fr": "Attendre le niveau 10 évite deux incursions dangereuses. Faire les quatre reliques, Le druide endormi puis Le druide de la Griffe pendant la MÊME visite. Si tu manques de niveaux ou joues une classe fragile, grouper ou repousser.",
+        "en": "Waiting until level 10 avoids two dangerous cave trips. Complete all four relics, The Sleeping Druid and Druid of the Claw in ONE visit. Group up or postpone if underleveled."
       },
       "steps": [
+        {
+          "header": "Entrée des terriers",
+          "coords": {
+            "x": 43,
+            "y": 58
+          },
+          "actions": [
+            {
+              "id": 483,
+              "kind": "objective"
+            }
+          ],
+          "tip": {
+            "fr": "Récupérer les quatre reliques d'éveil dans la grotte (griffe, plume, saphir, rune).",
+            "en": "Collect all four relics inside (claw, quill, sapphire and rune)."
+          }
+        },
+        {
+          "header": "Oben Rageclaw / terriers",
+          "coords": {
+            "x": 43,
+            "y": 58
+          },
+          "actions": [
+            {
+              "id": 2541,
+              "kind": "accept"
+            }
+          ],
+          "tip": {
+            "fr": "Parler à Oben puis récupérer le charme vaudou sur les chamans de la grotte.",
+            "en": "Speak to Oben, then loot the voodoo charm from shamans in the den."
+          }
+        },
+        {
+          "header": "Chaman pin-tordu / terriers",
+          "coords": {
+            "x": 43,
+            "y": 58
+          },
+          "actions": [
+            {
+              "id": 2541,
+              "kind": "objective"
+            }
+          ],
+          "tip": {
+            "fr": "Récupérer le charme vaudou sur les chamans, puis retourner aussitôt voir Oben avant de prendre la suite.",
+            "en": "Recover the voodoo charm from shamans, then return to Oben before accepting the follow-up."
+          }
+        },
+        {
+          "header": "Oben Rageclaw / terriers",
+          "coords": {
+            "x": 43,
+            "y": 58
+          },
+          "actions": [
+            {
+              "id": 2541,
+              "kind": "turnin"
+            }
+          ],
+          "tip": {
+            "fr": "Rendre Le druide endormi, puis accepter immédiatement Le druide de la Griffe (niveau 10). Ne ressors pas de la grotte.",
+            "en": "Turn in The Sleeping Druid and immediately accept Druid of the Claw (level 10). Stay inside the den."
+          }
+        },
         {
           "header": "Oben Rageclaw / terriers",
           "coords": {
@@ -1011,8 +964,8 @@
             }
           ],
           "tip": {
-            "fr": "Seulement après avoir rendu Le druide endormi (2541).",
-            "en": "Only after turning in The Sleeping Druid (2541)."
+            "fr": "À prendre juste après Le druide endormi, auprès d’Oben.",
+            "en": "Accept immediately after turning in The Sleeping Druid to Oben."
           }
         },
         {
@@ -1028,8 +981,8 @@
             }
           ],
           "tip": {
-            "fr": "Tuer la forme possédée de Rageclaw et utiliser le charme vaudou.",
-            "en": "Defeat Rageclaw's soulless body and use the Voodoo Charm."
+            "fr": "Vaincre Rageclaw puis utiliser le charme vaudou. Ne fais pas une deuxième descente juste pour cela.",
+            "en": "Defeat Rageclaw and use the voodoo charm; don't make a second cave trip."
           }
         },
         {
@@ -1045,12 +998,43 @@
             }
           ],
           "tip": {
-            "fr": "Rendre sur place. Si tu n'es pas préparé, repousser cette grotte est raisonnable.",
-            "en": "Turn in inside. If underprepared, postponing this den is reasonable."
+            "fr": "Rendre sur place, puis sortir du terrier.",
+            "en": "Turn in here and then exit the den."
           }
         }
       ],
-      "optional": true,
+      "zone": "teldrassil"
+    },
+    {
+      "level": 10,
+      "key": "retour-dolanaar",
+      "title": {
+        "fr": "Un seul retour à Dolanaar",
+        "en": "One Dolanaar return trip"
+      },
+      "intro": {
+        "fr": "Après le terrier, rendre les Reliques. La Couronne 933 peut se rendre dès le niveau 9 pour récupérer l’XP nécessaire avant la grotte ; inutile de l’attendre jusqu’au niveau 10.",
+        "en": "After the den, hand in the Relics. Crown 933 can be turned in at level 9 to gain XP before the cave; don't needlessly hold it until level 10."
+      },
+      "steps": [
+        {
+          "header": "Athridas Bearmantle / Dolanaar",
+          "coords": {
+            "x": 55,
+            "y": 57
+          },
+          "actions": [
+            {
+              "id": 483,
+              "kind": "turnin"
+            }
+          ],
+          "tip": {
+            "fr": "Rendre les quatre reliques ensemble.",
+            "en": "Turn in all four relics together."
+          }
+        }
+      ],
       "zone": "teldrassil"
     },
     {
