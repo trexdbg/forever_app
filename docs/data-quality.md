@@ -45,3 +45,17 @@ The PR-only workflow uses minutes only on QA-related changes; no scheduled job a
 `data/quests/manifest.json` points to `trexdbg/vanilla-questing` (Classic MIT routes). The datasets and public Classic quest journey **must remain intact**. No Forever quest route or UI activation. Testing the provenance manifest must never rewrite it.
 
 Owner acceptance required before merging to `main`, deploying, enabling any new module, bulk migration, or mass deletion.
+
+## Audit initial constaté le 13 octobre 2026
+
+Exécution du contrôle hors ligne sur la PR fondatrice, sans édition des sources : **11/11 jeux de données**, **0 erreur structurelle** et **721 avertissements**. Répartition :
+- `NPC_ID_UNKNOWN`: 329 (sur 357 PNJ).
+- `RARE_LOCATION_UNKNOWN`: 159 (sur 354 rares).
+- `LOOT_SOURCE_INDIRECT`: 96 (un lien de catalogue ou de guide ne prouve pas le butin du boss).
+- `CLASSIC_WITH_FOREVER_CATALOG_LINK`: 82 (un lien /forever/ n'établit pas la disponibilité en jeu des références Classic).
+- `NPC_LOCATION_UNKNOWN`: 54.
+- `LOOT_ITEM_ID_UNKNOWN`: 1.
+
+Les avertissements sont des **lacunes de provenance ou de complétude**, pas 721 erreurs factuelles démontrées. Les corrections nécessitent une source précise et parfois une observation en jeu. Prioriser d'abord les ambiguïtés sur l'identité Classic/Forever et les attributions de butin. Ne pas supprimer les références de quêtes Classic.
+
+Risque producteur externe à ce contrôle : `trexdbg/forever_agent/scripts/sync_forever_items.py` contient sur `main` un `\\n` littéral causant un `SyntaxError` et bloquant la suite de tests complète du dépôt agent ; sa correction est hors du périmètre de cette PR documentation/validation. Les scripts de publication directe sur `forever_app/main` doivent aussi être revus dans une mission distincte.
