@@ -15396,14 +15396,14 @@
     }
   ],
   "verification_audit": {
-    "updated_at": "2026-10-09",
+    "updated_at": "2026-10-11",
     "method": "Manually cross-checked exact named item and named vendor in Wowhead Forever guide or Wowhead Forever Sold by tables; Classic-only associations never automatically promoted.",
     "status_legend": {
       "forever_documented": "Named vendor-item relation published by a Forever beta source; availability at the live NPC and final game may vary",
       "classic_reference": "Based on Classic guide; not checked on Forever server"
     },
     "legacy_default": "classic_reference",
-    "forever_sale_count": 46,
+    "forever_sale_count": 54,
     "verified_existing_sales": [
       "Shandrina:16072",
       "Wulan:16072",
