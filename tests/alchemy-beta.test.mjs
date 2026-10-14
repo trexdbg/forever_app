@@ -179,3 +179,24 @@ test("homepage search indexes six documented potions via valid direct URLs",()=>
  for(const id of ALLOWED)for(const p of ["/metiers/","/en/metiers/"])
  assert.equal(new URL(p+"?alchemy="+id,"https://foreveroth.com").searchParams.get("alchemy"),String(id));
 });
+
+test("actual homepage search consumer opens the correct FR/EN alchemy deep link",async()=>{
+ for(const [lang,path,name] of [
+  ["fr","/metiers/","Potion de soins décolorée inférieure"],
+  ["en","/en/metiers/","Lesser Discolored Healing Potion"]
+ ]){
+  const ids=["global-search","global-search-input","global-search-panel","global-search-status","global-search-results","global-search-filters","global-search-more"];
+  const els=Object.fromEntries(ids.map(id=>[id,new Element(id)]));
+  els["global-search-input"].value=name;
+  const home="https://foreveroth.com"+(lang==="fr"?"/":"/en/");
+  runInNewContext(searchJs,{document:{documentElement:{lang},getElementById:id=>els[id]||null,createElement:tag=>new Element(tag),addEventListener(){}},
+   location:{origin:"https://foreveroth.com",href:home},URL,
+   fetch:async path=>({ok:true,json:async()=>path==="/data/alchemy-chains-beta.json"?data:{}}),
+   console:{warn(){}},window:{addEventListener(){}}});
+  els["global-search-input"].fire("focus");await settle();
+  const found=els["global-search-results"].children.filter(x=>x.tag==="a"&&x.href.includes("alchemy=247239"));
+  assert.ok(found.length>=1,lang+" must find an indexed alchemy potion");
+  assert.equal(found[0].href,path+"?alchemy=247239");
+  assert.ok(found[0].textContent.includes(lang==="fr"?"Alchimie documentée":"Documented alchemy"));
+ }
+});
