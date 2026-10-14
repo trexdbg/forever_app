@@ -51,6 +51,12 @@ export function auditRareLocations(db) {
     if(!validDate(review.reviewed_at))add("INVALID_REVIEW_DATE",path,"Review date required");
     if(review.identity_status==="classic_numeric_id_reference_only"&&(!Number.isInteger(review.classic_numeric_id_reference)||review.classic_numeric_id_reference<=0||!https(review.identity_reference_url)))
       add("UNPROVEN_NUMERIC_ID",path,"Numeric reference needs ID and original source");
+    if(review.identity_status==="classic_numeric_id_reference_only"){
+      const match=String(review.identity_reference_url||"").match(/(?:\/rare\/|\/npc(?:=|%3D))(\d+)/i);
+      if(match&&Number(match[1])!==review.classic_numeric_id_reference)add("NUMERIC_REFERENCE_URL_MISMATCH",path,"Numeric reference must agree with the linked source URL");
+      if(/^\d+$/.test(String(r.id))&&Number(r.id)!==review.classic_numeric_id_reference)add("NUMERIC_RARE_ID_MISMATCH",path,"Catalog ID contradicts linked Classic numeric ID");
+    }
+    if(!review.faction_status)add("MISSING_FACTION_REVIEW",path,"Faction must remain explicitly unknown or individually sourced");
     if(review.location_status!==r.coordinate_status)add("LOCATION_STATUS_MISMATCH",path,"Review and rare coordinate status disagree");
     if(!Array.isArray(r.point_evidence)||r.point_evidence.length!==r.points.length) {
       add("MISSING_POINT_PROVENANCE",path+".point_evidence","One evidence entry per exact coordinate, including legacy Classic");
@@ -107,6 +113,8 @@ export function auditRareLocations(db) {
         add("PROMOTED_WITHOUT_GAMEPLAY",path,"Seen Forever or source URL alone is not in-game coordinate proof");
     }
     if(review.conflict&&!Array.isArray(review.conflict_sources))add("UNRESOLVED_CONFLICT_MISSING_SOURCES",path,"Conflicting zones/points must retain both sources");
+    if(review.conflict&&(!review.conflict_note?.fr||!review.conflict_note?.en))add("MISSING_CONFLICT_TRANSLATION",path,"Conflicting locations need French and English explanations");
+    if(review.conflict&&r.points.length&&!review.conflict_resolution)add("UNRESOLVED_CONFLICT_WITH_PIN",path,"Resolve the zone conflict with evidence before placing a point");
   }
   return {issues,counts:count,errorCount:issues.length};
 }
