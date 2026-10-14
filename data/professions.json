@@ -424,8 +424,8 @@
         {
           "name": "Hgarth",
           "zone": {
-            "fr": "Orneval",
-            "en": "Ashenvale"
+            "fr": "Serres-Rocheuses",
+            "en": "Stonetalon Mountains"
           },
           "faction": "horde",
           "tier": "expert"
@@ -517,8 +517,8 @@
         {
           "name": "Finbus Geargrind",
           "zone": {
-            "fr": "Forêt d'Elwynn",
-            "en": "Elwynn Forest"
+            "fr": "Bois de la Pénombre",
+            "en": "Duskwood"
           },
           "faction": "alliance",
           "tier": "journeyman"

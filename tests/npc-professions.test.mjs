@@ -36,7 +36,7 @@ test("current vendor and profession datasets remain structurally valid",()=>{
  assert.deepEqual(codes(r),[]);
  assert.equal(r.summary.npcs,357);
  assert.equal(r.summary.knownNpcIds,28);
- assert.equal(r.summary.positionedNpcs,303);
+ assert.equal(r.summary.positionedNpcs,350); // 303 original mapped NPCs + 47 Forever guide waypoints (#51)
  assert.equal(r.summary.merchantOffers,631);
  assert.equal(r.summary.foreverDocumentedOffers,54);
  assert.equal(r.summary.classicOrUnverifiedOffers,577);
