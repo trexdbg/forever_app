@@ -159,6 +159,22 @@ function craftingRows(db){
    [...pair(i.name),String(r.output_item_id),String(r.spell_id)],10);
  }
 }
+function alchemyRows(db){
+ // Isolated six-item documentary preview; never index a Classic recipe automatically.
+ const p=db?.scope?.preview,ids=p?.recipe_item_ids;
+ if(db?.scope?.status!=="research_only_not_published"||p?.status!=="opt_in_documentary_preview"||
+    !Array.isArray(ids)||ids.length!==6||!Array.isArray(db.recipes)||db.recipes.length!==6||
+    !Array.isArray(db.acquisitions)||db.acquisitions.length!==0)return;
+ for(const r of db.recipes){
+  const i=db.items?.[String(r?.output_item_id)];
+  if(!ids.includes(r?.output_item_id)||r.profession_id!==171||!i?.name?.fr||!i?.name?.en||
+   r.available_in_game!==null||r.verified_for_forever!==false||![118,858].every(id=>id!==r.output_item_id))continue;
+  add("professions",label(i.name),
+   T("Alchimie documentée · bêta (non confirmée en jeu)","Documented alchemy · beta (not confirmed in game)"),
+   url("metiers/",{alchemy:r.output_item_id}),
+   [...pair(i.name),String(r.output_item_id),String(r.spell_id)],10);
+ }
+}
 function talentRows(db){
  for(const [cls,data] of Object.entries(db?.classes||{})){
   const meta=classes[cls];if(!meta)continue;
@@ -240,7 +256,7 @@ const jobs=[
  ["data/rares.json",rareRows],["data/items.json",itemRows],["data/items-forever.json",itemRows],
  ["data/items-classic-cache.json",itemRows],["data/items-forever-cache.json",itemRows],
  ["data/bis-niveaux-forever-observed.json",itemRows],["data/bis-niveaux-classic.json",itemRows],
- ["data/professions.json",professionsRows],["data/crafting-chains-beta.json",craftingRows],["data/talents.json",talentRows],
+ ["data/professions.json",professionsRows],["data/crafting-chains-beta.json",craftingRows],["data/alchemy-chains-beta.json",alchemyRows],["data/talents.json",talentRows],
  ["data/bis.json",db=>{bisRows(db);itemRows(db);}],
  ["data/mining-points.json",miningRows],
  ["data/quests/alliance.json",questRows],["data/quests/horde.json",questRows]

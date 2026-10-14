@@ -38,12 +38,12 @@ async function connect(bin){
  chrome=spawn(bin,["--headless=new","--no-sandbox","--disable-gpu","--disable-dev-shm-usage",
   "--remote-allow-origins=*","--remote-debugging-port=0","--user-data-dir="+profile,"about:blank"],{stdio:"ignore"});
  let port=0;
- for(let i=0;i<100;i++){
+ for(let i=0;i<300;i++){
   if(chrome.exitCode!==null)throw Error("Chrome process exited");
   try{port=Number((await readFile(resolve(profile,"DevToolsActivePort"),"utf8")).split("\n")[0]);if(port)break}catch{}
   await delay(100);
  }
- assert(port,"Chrome debug port missing");
+ assert(port,"Chrome debug port missing after extended startup window");
  let version;
  for(let i=0;i<30;i++){
   try{const response=await fetch("http://127.0.0.1:"+port+"/json/version");if(response.ok){version=await response.json();break}}catch{}
@@ -115,7 +115,19 @@ async function caseRun(send,base,lang,width,height){
   await evaluate('document.querySelector("#npc-map-canvas").scrollIntoView({behavior:"instant",block:"center"});');await delay(300);
   const mapCapture=await cmd("Page.captureScreenshot",{format:"png",captureBeyondViewport:false});
   await writeFile(resolve(output,prefix+"-map.png"),Buffer.from(mapCapture.data,"base64"));
-  console.log(JSON.stringify({lang,width,height,selected:item,recipes:state.count,layout,filteredReopen:reopened,map:true,landing,chain:chain.map(x=>x[0]),captures:[prefix+"-craft.png",prefix+"-detail.png",prefix+"-sources.png",prefix+"-map.png"]}));
+  const aId=lang==="fr"?4596:247239;
+  const alchemy=await evaluate('(async()=>{const section=document.querySelector("#alchemy-beta");if(!section)return {missing:true};section.open=true;await new Promise(r=>setTimeout(r,320));const count=document.querySelectorAll("#alchemy-list .craft-result").length;const target=[...document.querySelectorAll("#alchemy-list .craft-result")].find(x=>x.dataset.alchemy==="'+aId+'");if(!target)return {count,missingTarget:true};target.click();await new Promise(r=>setTimeout(r,120));const detail=document.querySelector("#alchemy-detail");const box=document.querySelector("#alchemy-beta").getBoundingClientRect();const field=document.querySelector("#alchemy-search");field.focus();return {count,selected:new URLSearchParams(location.search).get("alchemy"),detail:detail.textContent,excluded:[...document.querySelectorAll("#alchemy-list [data-alchemy]")].some(x=>["118","858"].includes(x.dataset.alchemy)),right:box.right,width:innerWidth,focus:document.activeElement===field,oldCraft:new URLSearchParams(location.search).get("craft")}})()');
+  assert(alchemy.count===6&&!alchemy.excluded&&alchemy.selected===String(aId)&&alchemy.oldCraft===String(chain.at(-1)[0])&&alchemy.focus&&alchemy.right<=width+2,
+   lang+" "+width+" alchemy preview/browser integrity failed "+JSON.stringify(alchemy));
+  assert(alchemy.detail.includes(lang==="fr"?"Potion de soins décolorée mineure":"Lesser Discolored Healing Potion"),
+   lang+" "+width+" alchemy direct item selection failed");
+  await evaluate('document.querySelector("#alchemy-beta").scrollIntoView({behavior:"instant",block:"start"});');await delay(190);
+  const alchemyCapture=await cmd("Page.captureScreenshot",{format:"png",captureBeyondViewport:false});
+  await writeFile(resolve(output,prefix+"-alchemy.png"),Buffer.from(alchemyCapture.data,"base64"));
+  await evaluate('document.querySelector("#alchemy-detail").scrollIntoView({behavior:"instant",block:"start"});');await delay(160);
+  const potionCapture=await cmd("Page.captureScreenshot",{format:"png",captureBeyondViewport:false});
+  await writeFile(resolve(output,prefix+"-alchemy-detail.png"),Buffer.from(potionCapture.data,"base64"));
+  console.log(JSON.stringify({lang,width,height,selected:item,recipes:state.count,layout,filteredReopen:reopened,map:true,landing,chain:chain.map(x=>x[0]),alchemy:{count:alchemy.count,selected:alchemy.selected,excluded:alchemy.excluded,focus:alchemy.focus},captures:[prefix+"-craft.png",prefix+"-detail.png",prefix+"-sources.png",prefix+"-map.png",prefix+"-alchemy.png",prefix+"-alchemy-detail.png"]}));
  }finally{await send("Target.closeTarget",{targetId:target.targetId}).catch(()=>{})}
 }
 try{
@@ -126,7 +138,7 @@ try{
  for(const lang of ["fr","en"])for(const width of [1440,375]){
   await caseRun(send,base,lang,width,width===375?812:900);
  }
- console.log("PASS: 4 real-browser FR/EN × desktop/mobile runs and 16 screenshot files.");
+ console.log("PASS: 4 real-browser FR/EN × desktop/mobile runs and 24 screenshot files.");
 }catch(err){console.error("FAIL: crafting preview browser smoke:",err);process.exitCode=1}
 finally{
  try{socket?.close()}catch{}

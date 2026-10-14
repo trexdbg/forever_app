@@ -8,6 +8,11 @@ on:
       - assets/crafting-beta.js
       - assets/crafting-beta.css
       - assets/global-search.js
+      - assets/alchemy-beta.js
+      - assets/alchemy-beta.css
+      - data/alchemy-chains-beta.json
+      - scripts/check-alchemy-beta.mjs
+      - tests/alchemy-beta.test.mjs
       - tests/crafting-beta-ui.test.mjs
       - scripts/check-crafting-visual.mjs
       - docs/crafting-beta-ui-issue43.md
@@ -38,6 +43,9 @@ jobs:
           node --check scripts/check-crafting-chains.mjs
           node --check assets/crafting-beta.js
           node --check assets/global-search.js
+          node --check assets/alchemy-beta.js
+          node --check scripts/check-alchemy-beta.mjs
+          node --check tests/alchemy-beta.test.mjs
           node --check tests/crafting-beta-ui.test.mjs
           node --check scripts/check-crafting-visual.mjs
           node --check tests/crafting-chains.test.mjs
@@ -57,6 +65,10 @@ jobs:
         run: node --test tests/crafting-chains.test.mjs
       - name: Agent 03 crafting beta UI smoke and language tests
         run: node --test tests/crafting-beta-ui.test.mjs
+      - name: Agent 03 alchemy beta provenance and First Aid exclusions
+        run: node scripts/check-alchemy-beta.mjs
+      - name: Agent 03 alchemy beta interface smoke and bilingual fixtures
+        run: node --test tests/alchemy-beta.test.mjs
       - name: Local Chromium FR/EN responsive screenshots and browser smoke
         run: node scripts/check-crafting-visual.mjs
       - name: Attach visual review screenshots (no deployment)
