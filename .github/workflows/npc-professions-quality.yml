@@ -89,7 +89,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: agent03-crafting-beta-browser
-          path: artifacts/crafting-beta-visual/*.png
           path: |
             artifacts/crafting-beta-visual/*.png
             artifacts/trainer-locations/*.png
