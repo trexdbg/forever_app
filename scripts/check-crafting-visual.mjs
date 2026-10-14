@@ -117,7 +117,20 @@ try{
 }catch(err){console.error("FAIL: crafting preview browser smoke:",err);process.exitCode=1}
 finally{
  try{socket?.close()}catch{}
- if(chrome&&!chrome.killed)chrome.kill("SIGTERM");
+ if(chrome&&chrome.exitCode===null){
+  await new Promise(done=>{
+   let finished=false;
+   const settle=()=>{if(!finished){finished=true;done()}};
+   chrome.once("close",settle);
+   chrome.kill("SIGTERM");
+   setTimeout(settle,3500);
+  });
+ }
  if(server)await new Promise(done=>server.close(done));
- if(profile)await rm(profile,{recursive:true,force:true});
+ // Chrome may still write its profile after SIGTERM. Cleanup is best effort:
+ // a profile-rmdir race must not turn four passing browser checks into a red CI.
+ if(profile){
+  try{await rm(profile,{recursive:true,force:true,maxRetries:8,retryDelay:250})}
+  catch(e){console.warn("Temporary Chrome profile cleanup skipped:",e.code)}
+ }
 }
