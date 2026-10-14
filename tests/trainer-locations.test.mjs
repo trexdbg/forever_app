@@ -130,3 +130,20 @@ test("all merchant offers, recipes and unrelated rare records stay out of this v
  assert.ok(!Object.keys(db).includes("rares"));
  assert.equal(audit(db).summary.total,153);
 });
+
+test("119 profession directory references keep correct trainer zones and factions",()=>{
+ const directory=JSON.parse(readFileSync(resolve(root,"data/professions.json"),"utf8"));
+ const byName=new Map(db.npcs.filter(n=>n.role==="trainer").map(n=>[n.name,n]));
+ let checked=0;
+ for(const profession of directory.professions)for(const row of profession.trainers){
+   const record=byName.get(row.name);
+   assert.ok(record,"Unknown trainer in profession directory: "+row.name);
+   assert.equal(record.faction,row.faction,row.name+" faction mismatch");
+   const normalized=s=>s==="Stormwind City"?"Stormwind":s;
+   assert.equal(normalized(row.zone.en),normalized(record.zone.en),row.name+" actual zone mismatch");
+   checked++;
+ }
+ assert.equal(checked,119);
+ assert.equal(byName.get("Hgarth").zone.id,"stonetalon");
+ assert.equal(byName.get("Finbus Geargrind").zone.id,"duskwood");
+});
