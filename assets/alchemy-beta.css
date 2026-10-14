@@ -9,3 +9,13 @@
 .alchemy-preview .craft-id{margin-top:5px}
 .alchemy-preview .craft-beta-content{margin-top:8px}
 @media(max-width:720px){.alchemy-preview .craft-beta-content{display:grid;grid-template-columns:minmax(0,1fr)}}
+
+/* Mission 06: compact evidence sections. Keep links keyboard-visible and long URLs inside 375px. */
+.alchemy-preview .alchemy-acquisitions{min-width:0;margin:12px 0 5px;padding:10px 12px;border:1px solid rgba(177,205,167,.24);border-radius:9px}
+.alchemy-preview .alchemy-acquisitions h5{margin:0 0 9px}
+.alchemy-preview .alchemy-acquisitions h6{margin:12px 0 6px;color:#d8e4ca;font-size:.9rem}
+.alchemy-preview .alchemy-acquisitions p{max-width:100%;overflow-wrap:anywhere;margin:5px 0}
+.alchemy-preview .alchemy-evidence{display:block;color:#b7d9ac;font-size:.83rem}
+.alchemy-preview .alchemy-acquisitions a{max-width:100%;overflow-wrap:anywhere}
+.alchemy-preview .alchemy-acquisitions a:focus-visible{outline:2px solid #d7e6c8;outline-offset:3px}
+@media(max-width:375px){.alchemy-preview .alchemy-acquisitions{padding:9px;min-width:0}}
