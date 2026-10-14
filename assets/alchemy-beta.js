@@ -32,7 +32,7 @@ function validate(d){
   if(a.evidence_level==="unverified"){
    if(a.method!=="unverified")return false;
   }else if(!["documented_forever","confirmed_in_game","datamined","classic_reference"].includes(a.evidence_level)||
-   !safe(a.evidence_url)||!safe(a.source_url)||!/^\\d{4}-\\d{2}-\\d{2}$/.test(a.observed_at)||
+   !safe(a.evidence_url)||!safe(a.source_url)||!/^\d{4}-\d{2}-\d{2}$/.test(a.observed_at)||
    !a.observed_build||!a.evidence_kind)return false;
   if(a.method==="vendor"&&(a.scope!=="supplier_category"||a.vendor_id!==null||
     !a.supplier_types?.fr||!a.supplier_types?.en||a.price!==null||a.stock!==null||
