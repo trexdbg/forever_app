@@ -8,6 +8,7 @@ const find=id=>document.getElementById(id),input=find("craft-beta-search"),list=
 const validId=x=>/^[1-9]\d*$/.test(String(x??""))&&Number.isSafeInteger(Number(x));
 const safeUrl=x=>{try{const u=new URL(x);return u.protocol==="https:"&&!u.username&&!u.password?u.href:null}catch{return null}};
 const fold=x=>String(x??"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLocaleLowerCase().trim();
+const narrow=()=>typeof window.matchMedia==="function"&&window.matchMedia("(max-width: 720px)").matches;
 const make=(tag,text,cls)=>{const node=document.createElement(tag);if(text!==undefined&&text!==null)node.textContent=String(text);if(cls)node.className=cls;return node};
 const put=(parent,tag,text,cls)=>{const n=make(tag,text,cls);parent.append(n);return n};
 function proof(parent,caption,href){
@@ -157,7 +158,9 @@ function select(id,push){
   const u=new URL(location.href);u.searchParams.set("craft",String(id));
   history.pushState(null,"",u.pathname+u.search+u.hash);
  }
- root.open=true;renderList();displaySelected();return true;
+ root.open=true;renderList();displaySelected();
+ if(push&&narrow()&&typeof detail.scrollIntoView==="function")detail.scrollIntoView({behavior:"smooth",block:"start"});
+ return true;
 }
 async function load(){
  if(state.data)return state.data;
@@ -182,7 +185,9 @@ async function openFromUrl(scroll=false){
  if(await load()){
   if(!select(Number(id),false)){
    notice.textContent=T("Objet absent de ce lot documentaire.","Item not included in this documentary subset.");
-  }else if(scroll&&typeof root.scrollIntoView==="function")root.scrollIntoView({block:"start"});
+  }else if(scroll){const target=narrow()?detail:root;
+    if(typeof target.scrollIntoView==="function")target.scrollIntoView({behavior:"instant",block:"start"});
+   }
  }
 }
 root.addEventListener("toggle",()=>{if(root.open){void load()}else{state.query="";input.value="";if(state.data)renderList();}});
