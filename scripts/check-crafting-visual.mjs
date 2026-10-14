@@ -132,7 +132,9 @@ async function caseRun(send,base,lang,width,height){
   const acquisitionCases=[
    [3371,lang==="fr"?"Vendeur précis non vérifié":"Individual vendor unverified"],
    [785,lang==="fr"?"Zones indicatives":"Indicative zones"],
-   [730,lang==="fr"?"Butin / source d'obtention":"Loot / acquisition source"]
+   [730,lang==="fr"?"Butin / source d'obtention":"Loot / acquisition source"],
+   [2447,lang==="fr"?"Pacifique fanée":"Wilted Peacebloom"],
+   [3820,lang==="fr"?"pousse sous l’eau":"grows underwater"]
   ];
   for(const [id,needle] of acquisitionCases){
    const evidence=await evaluate('(async()=>{const u=new URL(location.href);u.searchParams.set("alchemy","'+id+'");history.pushState(null,"",u);dispatchEvent(new PopStateEvent("popstate"));await new Promise(r=>setTimeout(r,175));const d=document.querySelector("#alchemy-detail"),s=document.querySelector(".alchemy-acquisitions");return {selected:new URLSearchParams(location.search).get("alchemy"),craft:new URLSearchParams(location.search).get("craft"),text:d?.textContent||"",overflow:d.scrollWidth-d.clientWidth,sectionRight:s?.getBoundingClientRect().right,links:[...s.querySelectorAll("a")].map(a=>({href:a.href,rel:a.rel})),focusable:!!d.querySelector(".craft-back")}})()');
@@ -146,6 +148,20 @@ async function caseRun(send,base,lang,width,height){
    const png=await cmd("Page.captureScreenshot",{format:"png",captureBeyondViewport:false});
    await writeFile(resolve(output,prefix+"-acquisition-"+id+".png"),Buffer.from(png.data,"base64"));
   }
+  // Exercise direct URL navigation from a fresh page load, not only history/popstate.
+  for(const [id,needle] of [[2447,lang==="fr"?"Pacifique fanée":"Wilted Peacebloom"],
+                            [3820,lang==="fr"?"pousse sous l’eau":"grows underwater"]]){
+   await cmd("Page.navigate",{url:base+path+"?craft="+item+"&alchemy="+id});
+   let deep={};
+   for(let attempt=0;attempt<50;attempt++){
+    deep=await evaluate('(()=>{const e=document.querySelector("#alchemy-detail"),box=document.querySelector(".alchemy-acquisitions");return {open:document.querySelector("#alchemy-beta")?.open,selected:new URLSearchParams(location.search).get("alchemy"),craft:new URLSearchParams(location.search).get("craft"),text:e?.textContent||"",right:box?.getBoundingClientRect().right,overflow:e?e.scrollWidth-e.clientWidth:null}})()');
+    if(deep.open&&deep.selected===String(id)&&deep.text.includes(needle))break;
+    await delay(120);
+   }
+   assert(deep.open&&deep.selected===String(id)&&deep.craft===String(item)&&
+     deep.text.includes(needle)&&deep.overflow<=2&&deep.right<=width+2,
+     lang+" "+width+" direct acquisition link "+id+" failed "+JSON.stringify(deep));
+  }
   console.log(JSON.stringify({lang,width,height,selected:item,recipes:state.count,layout,filteredReopen:reopened,map:true,landing,chain:chain.map(x=>x[0]),alchemy:{count:alchemy.count,selected:alchemy.selected,excluded:alchemy.excluded,focus:alchemy.focus},captures:[prefix+"-craft.png",prefix+"-detail.png",prefix+"-sources.png",prefix+"-map.png",prefix+"-alchemy.png",prefix+"-alchemy-detail.png"]}));
  }finally{await send("Target.closeTarget",{targetId:target.targetId}).catch(()=>{})}
 }
@@ -157,7 +173,7 @@ try{
  for(const lang of ["fr","en"])for(const width of [1440,375]){
   await caseRun(send,base,lang,width,width===375?812:900);
  }
- console.log("PASS: 4 real-browser FR/EN × desktop/mobile runs and 36 screenshot files.");
+ console.log("PASS: 4 real-browser FR/EN × desktop/mobile runs and 44 screenshot files.");
 }catch(err){console.error("FAIL: crafting preview browser smoke:",err);process.exitCode=1}
 finally{
  try{socket?.close()}catch{}
