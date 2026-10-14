@@ -17,7 +17,7 @@
 .craft-result[aria-pressed=true]{background:#2b3d2c;border-color:#d3b47c}
 .craft-result strong,.craft-component strong{font-size:12px;display:block;overflow-wrap:anywhere}
 .craft-result small,.craft-component small{font-size:10px;display:block;color:#afc3a5;margin-top:4px}
-.craft-beta-detail{border:1px solid #43573f;background:#101a13;padding:13px;min-height:100px;min-width:0}
+.craft-beta-detail{border:1px solid #43573f;background:#101a13;padding:13px;min-height:100px;min-width:0;scroll-margin-top:76px}
 .craft-detail-head{display:flex;gap:10px;align-items:center;min-width:0}
 .craft-detail-head img{border:1px solid #657b58;background:#223027;border-radius:4px;width:46px;height:46px;object-fit:cover}
 .craft-detail-head h4{font:500 20px Georgia,serif;color:#f1ddb5;margin:0 0 3px;overflow-wrap:anywhere}
