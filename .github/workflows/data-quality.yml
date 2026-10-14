@@ -8,6 +8,9 @@ on:
       - 'tests/data-quality.test.mjs'
       - '.github/workflows/data-quality.yml'
       - 'data/**'
+      - 'assets/rares.js'
+      - 'scripts/validate-rare-locations.mjs'
+      - 'tests/rare-locations.test.mjs'
   workflow_dispatch:
 permissions:
   contents: read
@@ -24,3 +27,7 @@ jobs:
         run: node --test tests/data-quality.test.mjs
       - name: Full JSON reliability scan (errors block; warnings reviewed)
         run: node scripts/check-data-quality.mjs
+      - name: Rare location evidence fixtures
+        run: node --test tests/rare-locations.test.mjs
+      - name: Rare location provenance gate
+        run: node scripts/validate-rare-locations.mjs
