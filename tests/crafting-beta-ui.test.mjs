@@ -126,3 +126,30 @@ test("global search results point only to marked documented recipes on true FR/E
   assert.equal(new URL(path,"https://foreveroth.com").searchParams.get("craft"),String(id));
  }
 });
+
+test("item icons use the known HTTPS WoW icon path, not missing local filenames",async()=>{
+ const b=app("fr","/metiers/?craft=4371");await wait();
+ const icon=b.detail().find(e=>e.tag==="img");
+ assert.ok(icon);
+ assert.equal(icon.src,"https://wow.zamimg.com/images/wow/icons/medium/inv_gizmo_pipe_01.jpg");
+ icon.fire("error");assert.equal(icon.hidden,true);
+});
+test("actual global search consumer resolves FR/EN recipe results to selected item deep links",async()=>{
+ for(const [locale,route,target] of [["fr","/metiers/","Gyrochronatome"],["en","/en/metiers/","Gyrochronatom"]]){
+  const ids=["global-search","global-search-input","global-search-panel","global-search-status",
+   "global-search-results","global-search-filters","global-search-more"];
+  const els=Object.fromEntries(ids.map(id=>[id,new Element(id)]));
+  els["global-search-input"].value=target;
+  let loc=new URL("https://foreveroth.com"+(locale==="fr"?"/":"/en/"));
+  const doc={documentElement:{lang:locale},getElementById:id=>els[id]||null,
+   createElement:tag=>new Element(tag),addEventListener(){}};
+  const fetch=async u=>({ok:true,json:async()=>u==="/data/crafting-chains-beta.json"?data:{}});
+  runInNewContext(search,{document:doc,location:{origin:loc.origin,href:loc.href},URL,fetch,console:{warn(){}},
+   window:{addEventListener(){}}});
+  els["global-search-input"].fire("focus");await wait();
+  const hits=els["global-search-results"].children.filter(x=>x.tag==="a"&&x.href.includes("craft=4389"));
+  assert.ok(hits.length>=1,locale+" must find the exact documented Gyrochronatom recipe");
+  assert.equal(hits[0].href,route+"?craft=4389");
+  assert.ok(hits[0].textContent.includes(locale==="fr"?"Fabrication documentée":"Documented crafting"));
+ }
+});
