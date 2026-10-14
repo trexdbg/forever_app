@@ -144,6 +144,21 @@ function professionsRows(db){
   }
  }
 }
+function craftingRows(db){
+ // Research-only opt-in preview: do not index anything without its explicit exposure contract.
+ const preview=db?.scope?.preview;
+ if(db?.scope?.status!=="research_only_not_published"||preview?.status!=="opt_in_documentary_preview"||
+  !Array.isArray(preview.recipe_item_ids)||preview.recipe_item_ids.length!==8||
+  !Array.isArray(db.recipes)||db.recipes.length!==8)return;
+ for(const r of db.recipes){
+  const i=db.items?.[String(r?.output_item_id)];
+  if(!preview.recipe_item_ids.includes(r?.output_item_id)||!i?.name?.fr||!i?.name?.en||!r?.spell_id)continue;
+  add("professions",label(i.name),
+   T("Fabrication documentée · bêta (non confirmée en jeu)","Documented crafting · beta (not confirmed in game)"),
+   url("metiers/",{craft:r.output_item_id}),
+   [...pair(i.name),String(r.output_item_id),String(r.spell_id)],10);
+ }
+}
 function talentRows(db){
  for(const [cls,data] of Object.entries(db?.classes||{})){
   const meta=classes[cls];if(!meta)continue;
@@ -225,7 +240,7 @@ const jobs=[
  ["data/rares.json",rareRows],["data/items.json",itemRows],["data/items-forever.json",itemRows],
  ["data/items-classic-cache.json",itemRows],["data/items-forever-cache.json",itemRows],
  ["data/bis-niveaux-forever-observed.json",itemRows],["data/bis-niveaux-classic.json",itemRows],
- ["data/professions.json",professionsRows],["data/talents.json",talentRows],
+ ["data/professions.json",professionsRows],["data/crafting-chains-beta.json",craftingRows],["data/talents.json",talentRows],
  ["data/bis.json",db=>{bisRows(db);itemRows(db);}],
  ["data/mining-points.json",miningRows],
  ["data/quests/alliance.json",questRows],["data/quests/horde.json",questRows]

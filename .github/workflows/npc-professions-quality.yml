@@ -3,6 +3,14 @@ on:
   pull_request:
     paths:
       - data/npcs.json
+      - metiers/index.html
+      - en/metiers/index.html
+      - assets/crafting-beta.js
+      - assets/crafting-beta.css
+      - assets/global-search.js
+      - tests/crafting-beta-ui.test.mjs
+      - scripts/check-crafting-visual.mjs
+      - docs/crafting-beta-ui-issue43.md
       - data/crafting-chains-beta.json
       - scripts/check-crafting-chains.mjs
       - tests/crafting-chains.test.mjs
@@ -28,6 +36,10 @@ jobs:
         run: |
           node --check scripts/check-npc-professions.mjs
           node --check scripts/check-crafting-chains.mjs
+          node --check assets/crafting-beta.js
+          node --check assets/global-search.js
+          node --check tests/crafting-beta-ui.test.mjs
+          node --check scripts/check-crafting-visual.mjs
           node --check tests/crafting-chains.test.mjs
           node --check assets/npcs.js
           node --check tests/npc-professions.test.mjs
@@ -43,3 +55,15 @@ jobs:
         run: node scripts/check-crafting-chains.mjs
       - name: Agent 03 crafting-chain fixtures
         run: node --test tests/crafting-chains.test.mjs
+      - name: Agent 03 crafting beta UI smoke and language tests
+        run: node --test tests/crafting-beta-ui.test.mjs
+      - name: Local Chromium FR/EN responsive screenshots and browser smoke
+        run: node scripts/check-crafting-visual.mjs
+      - name: Attach visual review screenshots (no deployment)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: agent03-crafting-beta-browser
+          path: artifacts/crafting-beta-visual/*.png
+          if-no-files-found: warn
+          retention-days: 7

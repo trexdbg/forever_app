@@ -8,11 +8,28 @@
       30
     ],
     "status": "research_only_not_published",
-    "reference_build": "1.60.1.70291"
+    "reference_build": "1.60.1.70291",
+    "preview": {
+      "status": "opt_in_documentary_preview",
+      "recipe_item_ids": [
+        4357,
+        4361,
+        4364,
+        4371,
+        4375,
+        10558,
+        4387,
+        4389
+      ],
+      "route_fr": "/metiers/?craft=4371",
+      "route_en": "/en/metiers/?craft=4389",
+      "exposure": "Only the eight provenance-scoped engineering recipes and their sixteen documented item records; no broader archive, vendor guarantee or live-game availability assertion.",
+      "maintained_research_status": "research_only_not_published"
+    }
   },
   "note": {
-    "fr": "Catalogue de recherche, non affiché au public. Fiches et recettes Forever ≠ disponibilité en jeu. Les rendements contradictoires sont inconnus; les ventes existantes sont des références Classic.",
-    "en": "Research-only catalogue. Forever pages do not prove live acquisition. Conflicting craft outputs are unknown; existing merchant offers are Classic references."
+    "fr": "Catalogue de recherche : seul le lot de 8 recettes d’ingénierie est exposé en prévisualisation documentaire facultative dans Métiers. Documentation Forever ≠ disponibilité en jeu. Rendements inconnus et ventes des marchands héritées de Classic, non vérifiées.",
+    "en": "Research-only catalogue: only eight engineering recipes are exposed in the optional documentary preview under Professions. Forever documentation does not prove in-game acquisition. Yields unknown; existing merchant leads remain unverified Classic references."
   },
   "items": {
     "2592": {
