@@ -2773,7 +2773,39 @@
           40.5
         ]
       ],
-      "loot": [],
+      "loot": [
+        {
+          "name": {
+            "en": "Serrated Shadowclaw",
+            "fr": "Serrated Shadowclaw"
+          },
+          "name_fr_status": "unverified_fallback_english",
+          "item_id": 284174,
+          "source_version": "forever_beta",
+          "item_id_status": "forever_beta_wowhead_or_client_reference",
+          "source_url": "https://www.wowhead.com/forever/item=284174",
+          "item_source_url": "https://www.wowhead.com/forever/item=284174",
+          "drop_evidence": "forever_item_database_documented_drop_unconfirmed",
+          "chance_classic_percent": null,
+          "chance_forever_observed_percent": null,
+          "item_level": 15,
+          "required_level": 10,
+          "slot": {
+            "fr": "Dague à une main",
+            "en": "One-Hand Dagger"
+          },
+          "stats": {
+            "fr": "+1 Agilité",
+            "en": "+1 Agility"
+          },
+          "evidence_level": "documented_forever",
+          "evidence_url": "https://www.wowhead.com/forever/item=284174",
+          "observed_at": "2026-10-14",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Wowhead Forever item 284174 explicitly lists Shadowclaw under Dropped by. Preserve its Classic position evidence; this loot link does not prove a Forever spawn."
+        }
+      ],
       "source": "https://foreverdb.net/rares",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
@@ -2783,7 +2815,7 @@
       },
       "name_fr_status": "community_translation_check_needed",
       "beta_level30_in_scope": true,
-      "loot_coverage": "not_documented",
+      "loot_coverage": "notable_only_not_complete",
       "coordinate_status": "classic_reference",
       "location_review": {
         "reviewed_at": "2026-10-14",
@@ -6209,7 +6241,39 @@
           9.6
         ]
       ],
-      "loot": [],
+      "loot": [
+        {
+          "name": {
+            "en": "Felweaver's Staff",
+            "fr": "Felweaver's Staff"
+          },
+          "name_fr_status": "unverified_fallback_english",
+          "item_id": 284287,
+          "source_version": "forever_beta",
+          "item_id_status": "forever_beta_wowhead_or_client_reference",
+          "source_url": "https://www.wowhead.com/forever/item=284287",
+          "item_source_url": "https://www.wowhead.com/forever/item=284287",
+          "drop_evidence": "forever_item_database_documented_drop_unconfirmed",
+          "chance_classic_percent": null,
+          "chance_forever_observed_percent": null,
+          "item_level": 13,
+          "required_level": 8,
+          "slot": {
+            "fr": "Bâton à deux mains",
+            "en": "Two-Hand Staff"
+          },
+          "stats": {
+            "fr": "+3 Intelligence · +6 dégâts et soins des sorts",
+            "en": "+3 Intellect · up to +6 Spell Damage and Healing"
+          },
+          "evidence_level": "documented_forever",
+          "evidence_url": "https://www.wowhead.com/forever/item=284287",
+          "observed_at": "2026-10-14",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Wowhead Forever item 284287 lists Felweaver Scornn as its source; a beta reference, not an in-game verified looting event."
+        }
+      ],
       "source": "https://foreverdb.net/rare/5822",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
@@ -6220,7 +6284,7 @@
       "coordinate_status": "classic_reference",
       "name_fr_status": "community_translation_check_needed",
       "beta_level30_in_scope": true,
-      "loot_coverage": "not_documented",
+      "loot_coverage": "notable_only_not_complete",
       "location_review": {
         "reviewed_at": "2026-10-14",
         "initially_without_point": false,
@@ -6293,7 +6357,39 @@
           35.9
         ]
       ],
-      "loot": [],
+      "loot": [
+        {
+          "name": {
+            "en": "Cheetah Hide Grips",
+            "fr": "Cheetah Hide Grips"
+          },
+          "name_fr_status": "unverified_fallback_english",
+          "item_id": 286533,
+          "source_version": "forever_beta",
+          "item_id_status": "forever_beta_wowhead_or_client_reference",
+          "source_url": "https://www.wowhead.com/forever/item=286533",
+          "item_source_url": "https://www.wowhead.com/forever/item=286533",
+          "drop_evidence": "forever_item_database_documented_drop_unconfirmed",
+          "chance_classic_percent": null,
+          "chance_forever_observed_percent": null,
+          "item_level": 15,
+          "required_level": 10,
+          "slot": {
+            "fr": "Mains · Cuir",
+            "en": "Hands · Leather"
+          },
+          "stats": {
+            "fr": "43 armure · +3 Agilité",
+            "en": "43 Armor · +3 Agility"
+          },
+          "evidence_level": "documented_forever",
+          "evidence_url": "https://www.wowhead.com/forever/item=286533",
+          "observed_at": "2026-10-14",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Wowhead Forever item 286533 lists Dishu under Dropped by in the beta database. This does not establish an observed drop chance or live Forever location."
+        }
+      ],
       "source": "https://foreverdb.net/rare/5865",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
@@ -6303,7 +6399,7 @@
       },
       "coordinate_status": "classic_reference",
       "beta_level30_in_scope": true,
-      "loot_coverage": "not_documented",
+      "loot_coverage": "notable_only_not_complete",
       "location_review": {
         "reviewed_at": "2026-10-14",
         "initially_without_point": false,
@@ -9938,7 +10034,39 @@
           80
         ]
       ],
-      "loot": [],
+      "loot": [
+        {
+          "name": {
+            "en": "Alliance Outrunner Healing Rod",
+            "fr": "Alliance Outrunner Healing Rod"
+          },
+          "name_fr_status": "unverified_fallback_english",
+          "item_id": 285348,
+          "source_version": "forever_beta",
+          "item_id_status": "forever_beta_wowhead_or_client_reference",
+          "source_url": "https://warcraft.wiki.gg/wiki/Alliance_Outrunner_Healing_Rod",
+          "item_source_url": "https://www.wowhead.com/forever/item=285348",
+          "drop_evidence": "forever_item_database_documented_drop_unconfirmed",
+          "chance_classic_percent": null,
+          "chance_forever_observed_percent": null,
+          "item_level": 26,
+          "required_level": 21,
+          "slot": {
+            "fr": "Tenu en main gauche",
+            "en": "Held in off hand"
+          },
+          "stats": {
+            "fr": "+12 soins · +4 dégâts des sorts · +8 points de vie / 5 s",
+            "en": "+12 Healing · +4 Spell Damage · +8 Health per 5 sec"
+          },
+          "evidence_level": "documented_forever",
+          "evidence_url": "https://warcraft.wiki.gg/wiki/Alliance_Outrunner_Healing_Rod",
+          "observed_at": "2026-10-14",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Forever-exclusive item 285348 is explicitly attributed to Hannah Bladeleaf in the Warcraft Wiki and a Forever rare guide; no first-hand drop capture verified."
+        }
+      ],
       "source": "https://foreverdb.net/rares",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
@@ -9948,7 +10076,7 @@
       },
       "coordinate_status": "classic_reference",
       "beta_level30_in_scope": true,
-      "loot_coverage": "not_documented",
+      "loot_coverage": "notable_only_not_complete",
       "coordinate_source": "https://foreverdb.net/rare/5799",
       "location_review": {
         "reviewed_at": "2026-10-14",
@@ -10074,7 +10202,39 @@
           80
         ]
       ],
-      "loot": [],
+      "loot": [
+        {
+          "name": {
+            "en": "Alliance Outrunner Staff",
+            "fr": "Alliance Outrunner Staff"
+          },
+          "name_fr_status": "unverified_fallback_english",
+          "item_id": 285350,
+          "source_version": "forever_beta",
+          "item_id_status": "forever_beta_wowhead_or_client_reference",
+          "source_url": "https://www.wowhead.com/forever/item=285350",
+          "item_source_url": "https://www.wowhead.com/forever/item=285350",
+          "drop_evidence": "forever_item_database_documented_drop_unconfirmed",
+          "chance_classic_percent": null,
+          "chance_forever_observed_percent": null,
+          "item_level": 26,
+          "required_level": 21,
+          "slot": {
+            "fr": "Bâton à deux mains",
+            "en": "Two-Hand Staff"
+          },
+          "stats": {
+            "fr": "+9 Endurance · +9 Esprit · +28 dégâts et soins des sorts",
+            "en": "+9 Stamina · +9 Spirit · up to +28 Spell Damage and Healing"
+          },
+          "evidence_level": "documented_forever",
+          "evidence_url": "https://www.wowhead.com/forever/item=285350",
+          "observed_at": "2026-10-14",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Wowhead Forever item 285350 explicitly lists Marcus Bel in its Dropped by field; a beta loot database association, not an in-game capture."
+        }
+      ],
       "source": "https://foreverdb.net/rares",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
@@ -10084,7 +10244,7 @@
       },
       "coordinate_status": "classic_reference",
       "beta_level30_in_scope": true,
-      "loot_coverage": "not_documented",
+      "loot_coverage": "notable_only_not_complete",
       "coordinate_source": "https://foreverdb.net/rare/5800",
       "location_review": {
         "reviewed_at": "2026-10-14",
@@ -10143,7 +10303,39 @@
           70.1
         ]
       ],
-      "loot": [],
+      "loot": [
+        {
+          "name": {
+            "en": "Silithid Piercer",
+            "fr": "Silithid Piercer"
+          },
+          "name_fr_status": "unverified_fallback_english",
+          "item_id": 286534,
+          "source_version": "forever_beta",
+          "item_id_status": "forever_beta_wowhead_or_client_reference",
+          "source_url": "https://www.wowhead.com/forever/item=286534",
+          "item_source_url": "https://www.wowhead.com/forever/item=286534",
+          "drop_evidence": "forever_item_database_documented_drop_unconfirmed",
+          "chance_classic_percent": null,
+          "chance_forever_observed_percent": null,
+          "item_level": 26,
+          "required_level": 21,
+          "slot": {
+            "fr": "Dague à une main",
+            "en": "One-Hand Dagger"
+          },
+          "stats": {
+            "fr": "+3 Agilité · +5 puissance d'attaque contre les bêtes",
+            "en": "+3 Agility · +5 Attack Power vs Beasts"
+          },
+          "evidence_level": "documented_forever",
+          "evidence_url": "https://www.wowhead.com/forever/item=286534",
+          "observed_at": "2026-10-14",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Wowhead Forever item 286534 lists Silithid Harvester as a reported drop. No independently verified in-game capture or guaranteed spawn."
+        }
+      ],
       "source": "https://foreverdb.net/rare/3253",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
@@ -10156,7 +10348,7 @@
       "source_reviewed_at": "2026-10-10",
       "name_fr_status": "community_translation_check_needed",
       "beta_level30_in_scope": true,
-      "loot_coverage": "not_documented",
+      "loot_coverage": "notable_only_not_complete",
       "location_review": {
         "reviewed_at": "2026-10-14",
         "initially_without_point": false,
@@ -10205,7 +10397,39 @@
           79.8
         ]
       ],
-      "loot": [],
+      "loot": [
+        {
+          "name": {
+            "en": "Thunderstomp's Horn",
+            "fr": "Thunderstomp's Horn"
+          },
+          "name_fr_status": "unverified_fallback_english",
+          "item_id": 286537,
+          "source_version": "forever_beta",
+          "item_id_status": "forever_beta_wowhead_or_client_reference",
+          "source_url": "https://www.wowhead.com/forever/item=286537",
+          "item_source_url": "https://www.wowhead.com/forever/item=286537",
+          "drop_evidence": "forever_item_database_documented_drop_unconfirmed",
+          "chance_classic_percent": null,
+          "chance_forever_observed_percent": null,
+          "item_level": 26,
+          "required_level": 21,
+          "slot": {
+            "fr": "Masse à une main",
+            "en": "One-Hand Mace"
+          },
+          "stats": {
+            "fr": "19–37 dégâts · Proc : 23 dégâts de Nature aux ennemis proches",
+            "en": "19–37 Damage · Chance on hit: 23 Nature damage to nearby enemies"
+          },
+          "evidence_level": "documented_forever",
+          "evidence_url": "https://www.wowhead.com/forever/item=286537",
+          "observed_at": "2026-10-14",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Wowhead Forever item 286537 lists Thunderstomp under Dropped by. Documented beta association only; no chance or spawn timer certified."
+        }
+      ],
       "source": "https://foreverdb.net/rare/5832",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
@@ -10218,7 +10442,7 @@
       "source_reviewed_at": "2026-10-10",
       "name_fr_status": "community_translation_check_needed",
       "beta_level30_in_scope": true,
-      "loot_coverage": "not_documented",
+      "loot_coverage": "notable_only_not_complete",
       "location_review": {
         "reviewed_at": "2026-10-14",
         "initially_without_point": false,
@@ -10267,7 +10491,40 @@
           80
         ]
       ],
-      "loot": [],
+      "loot": [
+        {
+          "name": {
+            "en": "Alliance Outrunner Bow",
+            "fr": "Alliance Outrunner Bow"
+          },
+          "name_fr_status": "unverified_fallback_english",
+          "item_id": 285347,
+          "source_version": "forever_beta",
+          "item_id_status": "forever_beta_wowhead_or_client_reference",
+          "source_url": "https://www.wowhead.com/forever/item=285347",
+          "item_source_url": "https://www.wowhead.com/forever/item=285347",
+          "drop_evidence": "forever_item_database_documented_drop_unconfirmed",
+          "chance_classic_percent": null,
+          "chance_forever_observed_percent": null,
+          "item_level": 27,
+          "required_level": 22,
+          "slot": {
+            "fr": "Arc à distance",
+            "en": "Ranged Bow"
+          },
+          "stats": {
+            "fr": "+4 Agilité · +3 Esprit",
+            "en": "+4 Agility · +3 Spirit"
+          },
+          "evidence_level": "documented_forever",
+          "evidence_url": "https://www.wowhead.com/forever/item=285347",
+          "observed_at": "2026-10-14",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Wowhead Forever item 285347 explicitly lists Aean Swiftriver under Dropped by; a catalogued beta source, not a firsthand attributed in-game loot capture.",
+          "icon": "inv_weapon_bow_05"
+        }
+      ],
       "source": "https://foreverdb.net/rares",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
@@ -10277,7 +10534,7 @@
       },
       "coordinate_status": "classic_reference",
       "beta_level30_in_scope": true,
-      "loot_coverage": "not_documented",
+      "loot_coverage": "notable_only_not_complete",
       "coordinate_source": "https://foreverdb.net/rare/5797",
       "location_review": {
         "reviewed_at": "2026-10-14",
@@ -10403,7 +10660,39 @@
           80
         ]
       ],
-      "loot": [],
+      "loot": [
+        {
+          "name": {
+            "en": "Alliance Outrunner's Sword",
+            "fr": "Alliance Outrunner's Sword"
+          },
+          "name_fr_status": "unverified_fallback_english",
+          "item_id": 285346,
+          "source_version": "forever_beta",
+          "item_id_status": "forever_beta_wowhead_or_client_reference",
+          "source_url": "https://www.wowhead.com/forever/item=285346",
+          "item_source_url": "https://www.wowhead.com/forever/item=285346",
+          "drop_evidence": "forever_item_database_documented_drop_unconfirmed",
+          "chance_classic_percent": null,
+          "chance_forever_observed_percent": null,
+          "item_level": 27,
+          "required_level": 22,
+          "slot": {
+            "fr": "Épée à une main",
+            "en": "One-Hand Sword"
+          },
+          "stats": {
+            "fr": "+5 Agilité · +6 puissance d'attaque",
+            "en": "+5 Agility · Equip: +6 Attack Power"
+          },
+          "evidence_level": "documented_forever",
+          "evidence_url": "https://www.wowhead.com/forever/item=285346",
+          "observed_at": "2026-10-14",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Wowhead Forever item 285346 directly associates the new sword with Thora Feathermoon. Item table and player comment corroborate; no firsthand owner gameplay evidence."
+        }
+      ],
       "source": "https://foreverdb.net/rares",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
@@ -10413,7 +10702,7 @@
       },
       "coordinate_status": "classic_reference",
       "beta_level30_in_scope": true,
-      "loot_coverage": "not_documented",
+      "loot_coverage": "notable_only_not_complete",
       "coordinate_source": "https://foreverdb.net/rare/5798",
       "location_review": {
         "reviewed_at": "2026-10-14",
@@ -10480,7 +10769,39 @@
           78.8
         ]
       ],
-      "loot": [],
+      "loot": [
+        {
+          "name": {
+            "en": "Taurenbane's Family Cleaver",
+            "fr": "Taurenbane's Family Cleaver"
+          },
+          "name_fr_status": "unverified_fallback_english",
+          "item_id": 285328,
+          "source_version": "forever_beta",
+          "item_id_status": "forever_beta_wowhead_or_client_reference",
+          "source_url": "https://www.wowhead.com/forever/item=285328",
+          "item_source_url": "https://www.wowhead.com/forever/item=285328",
+          "drop_evidence": "forever_item_database_documented_drop_unconfirmed",
+          "chance_classic_percent": null,
+          "chance_forever_observed_percent": null,
+          "item_level": 28,
+          "required_level": 23,
+          "slot": {
+            "fr": "Hache à deux mains",
+            "en": "Two-Hand Axe"
+          },
+          "stats": {
+            "fr": "+9 Endurance · +32 puissance d'attaque contre les humanoïdes",
+            "en": "+9 Stamina · +32 Attack Power vs Humanoids"
+          },
+          "evidence_level": "documented_forever",
+          "evidence_url": "https://www.wowhead.com/forever/item=285328",
+          "observed_at": "2026-10-14",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Wowhead Forever item 285328 lists Hagg Taurenbane as the source in its beta loot table; no direct in-game proof."
+        }
+      ],
       "source": "https://foreverdb.net/rare/5859",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
@@ -10493,7 +10814,7 @@
       "source_reviewed_at": "2026-10-10",
       "name_fr_status": "community_translation_check_needed",
       "beta_level30_in_scope": true,
-      "loot_coverage": "not_documented",
+      "loot_coverage": "notable_only_not_complete",
       "location_review": {
         "reviewed_at": "2026-10-14",
         "initially_without_point": false,
@@ -12931,7 +13252,39 @@
           55.8
         ]
       ],
-      "loot": [],
+      "loot": [
+        {
+          "name": {
+            "en": "Whipfang's Skinsearer",
+            "fr": "Whipfang's Skinsearer"
+          },
+          "name_fr_status": "unverified_fallback_english",
+          "item_id": 284386,
+          "source_version": "forever_beta",
+          "item_id_status": "forever_beta_wowhead_or_client_reference",
+          "source_url": "https://www.wowhead.com/forever/item=284386",
+          "item_source_url": "https://www.wowhead.com/forever/item=284386",
+          "drop_evidence": "forever_item_database_documented_drop_unconfirmed",
+          "chance_classic_percent": null,
+          "chance_forever_observed_percent": null,
+          "item_level": 24,
+          "required_level": 19,
+          "slot": {
+            "fr": "Dague à une main",
+            "en": "One-Hand Dagger"
+          },
+          "stats": {
+            "fr": "18–35 dégâts · Proc : 67–101 dégâts de Feu",
+            "en": "18–35 Damage · Chance on hit: 67–101 Fire damage"
+          },
+          "evidence_level": "documented_forever",
+          "evidence_url": "https://www.wowhead.com/forever/item=284386",
+          "observed_at": "2026-10-14",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Wowhead Forever item 284386 lists Taskmaster Whipfang as its drop, also reported by community. No personally observed kill/loot or robust probability proof."
+        }
+      ],
       "source": "https://foreverdb.net/rares",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
@@ -12942,7 +13295,7 @@
       "coordinate_status": "documented_forever",
       "name_fr_status": "community_translation_check_needed",
       "beta_level30_in_scope": true,
-      "loot_coverage": "not_documented",
+      "loot_coverage": "notable_only_not_complete",
       "coordinate_source": "https://www.stillsixty.com/rare/taskmaster-whipfang-stonetalon-mountains",
       "location_review": {
         "reviewed_at": "2026-10-14",
@@ -13062,7 +13415,39 @@
           51.4
         ]
       ],
-      "loot": [],
+      "loot": [
+        {
+          "name": {
+            "en": "Foreman's Helm",
+            "fr": "Foreman's Helm"
+          },
+          "name_fr_status": "unverified_fallback_english",
+          "item_id": 284400,
+          "source_version": "forever_beta",
+          "item_id_status": "forever_beta_wowhead_or_client_reference",
+          "source_url": "https://www.stillsixty.com/rare/foreman-rigger-stonetalon-mountains",
+          "item_source_url": "https://www.60.tools/items/284400-foremans-helm",
+          "drop_evidence": "forever_community_report_unconfirmed",
+          "chance_classic_percent": null,
+          "chance_forever_observed_percent": null,
+          "item_level": 26,
+          "required_level": 21,
+          "slot": {
+            "fr": "Tête · Mailles",
+            "en": "Head · Mail"
+          },
+          "stats": {
+            "fr": "166 armure · +8 Force · +9 Endurance · +5 compétence Minage",
+            "en": "166 Armor · +8 Strength · +9 Stamina · +5 Mining Skill"
+          },
+          "evidence_level": "documented_forever",
+          "evidence_url": "https://www.stillsixty.com/rare/foreman-rigger-stonetalon-mountains",
+          "observed_at": "2026-10-14",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Foreman Rigger → Foreman's Helm is an attributed Forever community report, not a confirmed gameplay capture; Wowhead's drop list does not independently substantiate this relationship. Item stats come separately from Forever client documentation."
+        }
+      ],
       "source": "https://foreverdb.net/rares",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
@@ -13073,7 +13458,7 @@
       "coordinate_status": "documented_forever",
       "name_fr_status": "community_translation_check_needed",
       "beta_level30_in_scope": true,
-      "loot_coverage": "not_documented",
+      "loot_coverage": "notable_only_not_complete",
       "coordinate_source": "https://www.stillsixty.com/rare/foreman-rigger-stonetalon-mountains",
       "location_review": {
         "reviewed_at": "2026-10-14",
