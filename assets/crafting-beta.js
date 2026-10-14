@@ -185,7 +185,7 @@ async function openFromUrl(scroll=false){
   }else if(scroll&&typeof root.scrollIntoView==="function")root.scrollIntoView({block:"start"});
  }
 }
-root.addEventListener("toggle",()=>{if(root.open){void load()}else{state.query="";input.value="";}});
+root.addEventListener("toggle",()=>{if(root.open){void load()}else{state.query="";input.value="";if(state.data)renderList();}});
 input.addEventListener("input",()=>{state.query=fold(input.value);renderList()});
 window.addEventListener("popstate",()=>{const id=new URLSearchParams(location.search).get("craft");
  if(validId(id)){void openFromUrl()}else{state.selected=null;detail.replaceChildren();renderList()}});
