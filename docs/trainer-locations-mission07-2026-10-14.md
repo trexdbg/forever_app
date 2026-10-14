@@ -50,6 +50,15 @@ Guides consultés (sources de position) :
 
 Les guides disponibles étaient actualisés entre le 9 et le 11 octobre 2026. **La date `observed_at` est celle de notre consultation**, pas une visite dans le client ni la date d'apparition du PNJ.
 
+### Correction de cohérence de l'annuaire Métiers (119 lignes)
+
+Le contrôle croisé, limité à la structure des 119 entrées de `data/professions.json`, a identifié **2 erreurs effectives de zone** et **11 différences d'alias purement linguistiques** (`Stormwind City` dans l'annuaire vs `Stormwind` dans les PNJ). **119/119 entrées correspondent à un maître connu, la même faction et, après correction, à la même zone normalisée.** Les coordonnées ne sont pas recopiées dans le catalogue des professions.
+
+- **Hgarth — Enchantement** : `Orneval / Ashenvale` → **`Serres-Rocheuses / Stonetalon Mountains`**, zone explicitement mentionnée dans le [guide Forever Enchantement](https://www.wow-professions.com/forever/enchanting-trainers). L'ancien point PNJ `49.2 / 57.2` reste une référence historique non confirmée en jeu.
+- **Finbus Geargrind — Ingénierie** : `Forêt d'Elwynn / Elwynn Forest` → **`Bois de la Pénombre / Duskwood`**, zone directement documentée dans le [guide Forever Ingénierie](https://www.wow-professions.com/forever/engineering-trainers) et les [coordonnées de référence Icy Veins](https://www.icy-veins.com/wow-forever/engineering). Ancien point `77.4 / 48.4` conservé, sans promotion de fiabilité.
+
+Ces changements concernent **uniquement la zone FR/EN** des deux entrées de maître. Ni noms, ni rangs, ni ID, ni programmes d'apprentissage ne sont modifiés.
+
 ## Les 47 lignes initialement inconnues — traitement individuel
 
 Toutes ces lignes restent classées **documented_forever** avec les limites ci-dessus. Les zones et positions sont données en pourcentage ; le `uiMapID` associé est conservé dans chaque enregistrement.
@@ -233,4 +242,4 @@ Toutes ces lignes restent classées **documented_forever** avec les limites ci-d
 - Rendu FR/EN : le panneau des maîtres affiche déjà l'étiquette **« Point cité dans un guide Forever, non confirmé en jeu »** / **« Waypoint from a Forever guide, not verified in-game »** pour les nouveaux points. `coordinate_source` renvoie directement vers le guide correspondant ; `/mappin` n'est disponible qu'avec une coordonnée et un `uiMapID`.
 - Contrôle navigateur / capture en jeu **à confirmer**, si aucun navigateur instrumenté n'est utilisé en CI ; ne pas décrire comme vérifié ce qui ne l'a pas été.
 
-**Rollback** : annuler exclusivement cette PR / ses commits. Aucune modification de `data/rares.json`, des cartes rares, des quêtes, des marchands, des données d'objets ou des pipelines de publication. **Aucune fusion et aucun déploiement sans validation du propriétaire.**
+**Rollback** : annuler exclusivement cette PR / ses commits. Aucune modification de `data/rares.json`, des cartes rares, des quêtes, des marchands ou des données d'objets ; seule l'intégration de contrôles de PR et deux zones du répertoire Métiers sont également comprises dans cette mission. **Aucune fusion et aucun déploiement sans validation du propriétaire.**
