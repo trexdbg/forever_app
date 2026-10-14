@@ -23,13 +23,13 @@
       ],
       "route_fr": "/metiers/?craft=4371",
       "route_en": "/en/metiers/?craft=4389",
-      "exposure": "Only the eight provenance-scoped engineering recipes and their sixteen documented item records; no broader archive, vendor guarantee or live-game availability assertion.",
+      "exposure": "Exactly 8 existing engineering recipe outputs and their linked documented ingredient sources (including 5 smelts and 6 mining-vein claims); research-only, not confirmed in-game, no seller claim promoted.",
       "maintained_research_status": "research_only_not_published"
     }
   },
   "note": {
-    "fr": "Catalogue de recherche : seul le lot de 8 recettes d’ingénierie est exposé en prévisualisation documentaire facultative dans Métiers. Documentation Forever ≠ disponibilité en jeu. Rendements inconnus et ventes des marchands héritées de Classic, non vérifiées.",
-    "en": "Research-only catalogue: only eight engineering recipes are exposed in the optional documentary preview under Professions. Forever documentation does not prove in-game acquisition. Yields unknown; existing merchant leads remain unverified Classic references."
+    "fr": "Prévisualisation documentaire facultative : 8 recettes d’ingénierie, 5 fontes documentées pour Forever et 6 liens minerais/pierres vers des filons décrits dans le guide Forever. Rendements contradictoires conservés inconnus ; vendeurs issus de Classic non confirmés sur Forever. Aucune acquisition n'est confirmée en jeu.",
+    "en": "Optional documentary preview: 8 engineering recipes, 5 Forever-documented smelting routes, 6 guide-sourced ore/stone vein claims. Conflicting yields remain unknown, Classic seller leads unconfirmed; no acquisition independently confirmed in game."
   },
   "items": {
     "2592": {
@@ -48,6 +48,74 @@
       "observed_build": "unknown",
       "evidence_kind": "forever_community_page",
       "evidence_note": "Forever-specific recipe or component page identifies item/name; French translation is a reference label, not independently checked in client."
+    },
+    "2770": {
+      "id": 2770,
+      "name": {
+        "fr": "Minerai de cuivre",
+        "en": "Copper Ore"
+      },
+      "name_verification": "translation_reference_only",
+      "role": "material",
+      "icon": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://forevercompass.com/items/2770",
+      "evidence_url": "https://forevercompass.com/items/2770",
+      "observed_at": "2026-10-14",
+      "observed_build": "unknown",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "Forever-specific item page identifies Copper Ore item 2770; French label follows source localization/reference and is not asserted verified on the user's beta client. Identity alone does not certify acquisition."
+    },
+    "2771": {
+      "id": 2771,
+      "name": {
+        "fr": "Minerai d'étain",
+        "en": "Tin Ore"
+      },
+      "name_verification": "translation_reference_only",
+      "role": "material",
+      "icon": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://www.wowhead.com/forever/item=2771/tin-ore",
+      "evidence_url": "https://www.wowhead.com/forever/item=2771/tin-ore",
+      "observed_at": "2026-10-14",
+      "observed_build": "unknown",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "Forever-specific item page identifies Tin Ore item 2771; French label follows source localization/reference and is not asserted verified on the user's beta client. Identity alone does not certify acquisition."
+    },
+    "2772": {
+      "id": 2772,
+      "name": {
+        "fr": "Minerai de fer",
+        "en": "Iron Ore"
+      },
+      "name_verification": "translation_reference_only",
+      "role": "material",
+      "icon": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://www.wowhead.com/forever/fr/item=2772/minerai-de-fer",
+      "evidence_url": "https://www.wowhead.com/forever/fr/item=2772/minerai-de-fer",
+      "observed_at": "2026-10-14",
+      "observed_build": "unknown",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "Forever-specific item page identifies Iron Ore item 2772; French label follows source localization/reference and is not asserted verified on the user's beta client. Identity alone does not certify acquisition."
+    },
+    "2776": {
+      "id": 2776,
+      "name": {
+        "fr": "Minerai d'or",
+        "en": "Gold Ore"
+      },
+      "name_verification": "translation_reference_only",
+      "role": "material",
+      "icon": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://www.wowhead.com/forever/item=2776/gold-ore",
+      "evidence_url": "https://www.wowhead.com/forever/item=2776/gold-ore",
+      "observed_at": "2026-10-14",
+      "observed_build": "unknown",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "Forever-specific item page identifies Gold Ore item 2776; French label follows source localization/reference and is not asserted verified on the user's beta client. Identity alone does not certify acquisition."
     },
     "2835": {
       "id": 2835,
@@ -150,6 +218,23 @@
       "observed_build": "unknown",
       "evidence_kind": "forever_community_page",
       "evidence_note": "Forever-specific recipe or component page identifies item/name; French translation is a reference label, not independently checked in client."
+    },
+    "3576": {
+      "id": 3576,
+      "name": {
+        "fr": "Barre d'étain",
+        "en": "Tin Bar"
+      },
+      "name_verification": "translation_reference_only",
+      "role": "material",
+      "icon": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://www.wowhead.com/forever/item=3576/tin-bar",
+      "evidence_url": "https://www.wowhead.com/forever/item=3576/tin-bar",
+      "observed_at": "2026-10-14",
+      "observed_build": "unknown",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "Forever-specific item page identifies Tin Bar item 3576; French label follows source localization/reference and is not asserted verified on the user's beta client. Identity alone does not certify acquisition."
     },
     "3577": {
       "id": 3577,
@@ -746,39 +831,395 @@
     },
     {
       "item_id": 2840,
-      "method": "smelting_candidate",
-      "spell_id": null,
-      "ingredients": null,
+      "method": "smelting",
+      "spell_id": 2657,
+      "recipe_item_id": null,
+      "profession_id": 186,
+      "ingredients": [
+        {
+          "item_id": 2770,
+          "quantity": 1
+        }
+      ],
+      "skill_required": 1,
+      "skill_required_status": "known_from_start",
+      "skill_yellow": 25,
+      "skill_yellow_source_url": "https://wowforevertalents.com/professions/mining/",
+      "forge_required": true,
+      "output_quantity": null,
+      "output_quantity_status": "conflicting_sources",
+      "output_quantity_candidates": [
+        {
+          "quantity": 1,
+          "source_url": "https://wowforevertalents.com/professions/mining/",
+          "evidence_note": "Forever Talents build 1.60.1.70338 recipe index shows Makes 1 for Smelt Copper; no actual live craft witnessed."
+        },
+        {
+          "quantity": 2,
+          "source_url": "https://www.wowhead.com/forever/spell=2657",
+          "evidence_note": "Wowhead Forever English spell page for 2657 displays output (2) for Smelt Copper; page header may conflict with description; no actual craft witnessed."
+        }
+      ],
+      "trainer_npc_id": null,
+      "available_in_game": null,
       "verified_for_forever": false,
-      "evidence_level": "unverified",
-      "evidence_note": "Smelting chain is a candidate only. Recipe, input quantities, skill, mining node and in-game access not independently verified for Forever."
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/mining/",
+      "evidence_url": "https://wowforevertalents.com/professions/mining/",
+      "observed_at": "2026-10-14",
+      "observed_build": "1.60.1.70338",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "Client-indexed Forever Smelt Copper, spell 2657, reagent IDs & counts, yellow threshold 25; requires a forge. Trainer requirement not extracted from client for trainer recipes. Output reports differ between Forever-labelled sources; keep null. No in-game access certified."
     },
     {
       "item_id": 2841,
-      "method": "smelting_candidate",
-      "spell_id": null,
-      "ingredients": null,
+      "method": "smelting",
+      "spell_id": 2659,
+      "recipe_item_id": null,
+      "profession_id": 186,
+      "ingredients": [
+        {
+          "item_id": 2840,
+          "quantity": 1
+        },
+        {
+          "item_id": 3576,
+          "quantity": 1
+        }
+      ],
+      "skill_required": null,
+      "skill_required_status": "trainer_requirement_not_in_client",
+      "skill_yellow": 65,
+      "skill_yellow_source_url": "https://wowforevertalents.com/professions/mining/",
+      "forge_required": true,
+      "output_quantity": null,
+      "output_quantity_status": "conflicting_sources",
+      "output_quantity_candidates": [
+        {
+          "quantity": 2,
+          "source_url": "https://wowforevertalents.com/professions/mining/",
+          "evidence_note": "Forever Talents build 1.60.1.70338 recipe index shows Makes 2 for Smelt Bronze; no actual live craft witnessed."
+        },
+        {
+          "quantity": 3,
+          "source_url": "https://www.wowhead.com/forever/spell=2659",
+          "evidence_note": "Wowhead Forever English spell page for 2659 displays output (3) for Smelt Bronze; page header may conflict with description; no actual craft witnessed."
+        }
+      ],
+      "trainer_npc_id": null,
+      "available_in_game": null,
       "verified_for_forever": false,
-      "evidence_level": "unverified",
-      "evidence_note": "Smelting chain is a candidate only. Recipe, input quantities, skill, mining node and in-game access not independently verified for Forever."
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/mining/",
+      "evidence_url": "https://wowforevertalents.com/professions/mining/",
+      "observed_at": "2026-10-14",
+      "observed_build": "1.60.1.70338",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "Client-indexed Forever Smelt Bronze, spell 2659, reagent IDs & counts, yellow threshold 65; requires a forge. Trainer requirement not extracted from client for trainer recipes. Output reports differ between Forever-labelled sources; keep null. No in-game access certified."
     },
     {
       "item_id": 3575,
-      "method": "smelting_candidate",
-      "spell_id": null,
-      "ingredients": null,
+      "method": "smelting",
+      "spell_id": 3307,
+      "recipe_item_id": null,
+      "profession_id": 186,
+      "ingredients": [
+        {
+          "item_id": 2772,
+          "quantity": 1
+        }
+      ],
+      "skill_required": null,
+      "skill_required_status": "trainer_requirement_not_in_client",
+      "skill_yellow": 130,
+      "skill_yellow_source_url": "https://wowforevertalents.com/professions/mining/",
+      "forge_required": true,
+      "output_quantity": null,
+      "output_quantity_status": "conflicting_sources",
+      "output_quantity_candidates": [
+        {
+          "quantity": 1,
+          "source_url": "https://wowforevertalents.com/professions/mining/",
+          "evidence_note": "Forever Talents build 1.60.1.70338 recipe index shows Makes 1 for Smelt Iron; no actual live craft witnessed."
+        },
+        {
+          "quantity": 2,
+          "source_url": "https://www.wowhead.com/forever/spell=3307",
+          "evidence_note": "Wowhead Forever English spell page for 3307 displays output (2) for Smelt Iron; page header may conflict with description; no actual craft witnessed."
+        }
+      ],
+      "trainer_npc_id": null,
+      "available_in_game": null,
       "verified_for_forever": false,
-      "evidence_level": "unverified",
-      "evidence_note": "Smelting chain is a candidate only. Recipe, input quantities, skill, mining node and in-game access not independently verified for Forever."
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/mining/",
+      "evidence_url": "https://wowforevertalents.com/professions/mining/",
+      "observed_at": "2026-10-14",
+      "observed_build": "1.60.1.70338",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "Client-indexed Forever Smelt Iron, spell 3307, reagent IDs & counts, yellow threshold 130; requires a forge. Trainer requirement not extracted from client for trainer recipes. Output reports differ between Forever-labelled sources; keep null. No in-game access certified."
     },
     {
       "item_id": 3577,
-      "method": "smelting_candidate",
-      "spell_id": null,
-      "ingredients": null,
+      "method": "smelting",
+      "spell_id": 3308,
+      "recipe_item_id": null,
+      "profession_id": 186,
+      "ingredients": [
+        {
+          "item_id": 2776,
+          "quantity": 1
+        }
+      ],
+      "skill_required": null,
+      "skill_required_status": "trainer_requirement_not_in_client",
+      "skill_yellow": 170,
+      "skill_yellow_source_url": "https://wowforevertalents.com/professions/mining/",
+      "forge_required": true,
+      "output_quantity": null,
+      "output_quantity_status": "conflicting_sources",
+      "output_quantity_candidates": [
+        {
+          "quantity": 1,
+          "source_url": "https://wowforevertalents.com/professions/mining/",
+          "evidence_note": "Forever Talents build 1.60.1.70338 recipe index shows Makes 1 for Smelt Gold; no actual live craft witnessed."
+        },
+        {
+          "quantity": 2,
+          "source_url": "https://www.wowhead.com/forever/spell=3308",
+          "evidence_note": "Wowhead Forever English spell page for 3308 displays output (2) for Smelt Gold; page header may conflict with description; no actual craft witnessed."
+        }
+      ],
+      "trainer_npc_id": null,
+      "available_in_game": null,
       "verified_for_forever": false,
-      "evidence_level": "unverified",
-      "evidence_note": "Smelting chain is a candidate only. Recipe, input quantities, skill, mining node and in-game access not independently verified for Forever."
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/mining/",
+      "evidence_url": "https://wowforevertalents.com/professions/mining/",
+      "observed_at": "2026-10-14",
+      "observed_build": "1.60.1.70338",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "Client-indexed Forever Smelt Gold, spell 3308, reagent IDs & counts, yellow threshold 170; requires a forge. Trainer requirement not extracted from client for trainer recipes. Output reports differ between Forever-labelled sources; keep null. No in-game access certified."
+    },
+    {
+      "item_id": 3576,
+      "method": "smelting",
+      "spell_id": 3304,
+      "recipe_item_id": null,
+      "profession_id": 186,
+      "ingredients": [
+        {
+          "item_id": 2771,
+          "quantity": 1
+        }
+      ],
+      "skill_required": null,
+      "skill_required_status": "trainer_requirement_not_in_client",
+      "skill_yellow": 50,
+      "skill_yellow_source_url": "https://wowforevertalents.com/professions/mining/",
+      "forge_required": true,
+      "output_quantity": null,
+      "output_quantity_status": "conflicting_sources",
+      "output_quantity_candidates": [
+        {
+          "quantity": 1,
+          "source_url": "https://wowforevertalents.com/professions/mining/",
+          "evidence_note": "Forever Talents build 1.60.1.70338 recipe index shows Makes 1 for Smelt Tin; no actual live craft witnessed."
+        },
+        {
+          "quantity": 2,
+          "source_url": "https://www.wowhead.com/forever/spell=3304",
+          "evidence_note": "Wowhead Forever English spell page for 3304 displays output (2) for Smelt Tin; page header may conflict with description; no actual craft witnessed."
+        }
+      ],
+      "trainer_npc_id": null,
+      "available_in_game": null,
+      "verified_for_forever": false,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/mining/",
+      "evidence_url": "https://wowforevertalents.com/professions/mining/",
+      "observed_at": "2026-10-14",
+      "observed_build": "1.60.1.70338",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "Client-indexed Forever Smelt Tin, spell 3304, reagent IDs & counts, yellow threshold 50; requires a forge. Trainer requirement not extracted from client for trainer recipes. Output reports differ between Forever-labelled sources; keep null. No in-game access certified."
+    },
+    {
+      "item_id": 2770,
+      "method": "mining_node",
+      "node": {
+        "fr": "Filon de cuivre",
+        "en": "Copper Vein"
+      },
+      "node_id": null,
+      "mining_skill": 1,
+      "zones_documented": [
+        "Dun Morogh",
+        "Elwynn Forest",
+        "Durotar"
+      ],
+      "coordinates": null,
+      "drop_quantity": null,
+      "drop_rate": null,
+      "available_in_game": null,
+      "verified_for_forever": false,
+      "evidence_level": "documented_forever",
+      "source_url": "https://www.wowhead.com/forever/guide/professions/mining/overview-leveling",
+      "evidence_url": "https://www.wowhead.com/forever/guide/professions/mining/overview-leveling",
+      "observed_at": "2026-10-14",
+      "observed_build": "1.60.1",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "The Forever mining overview (updated 2026-10-09) lists Copper Vein as a source of Copper Ore, skill 1, plus the named example zones. This is guide documentation; specific spawn coordinates, harvest outcomes and drop probabilities were not independently observed."
+    },
+    {
+      "item_id": 2835,
+      "method": "mining_node",
+      "node": {
+        "fr": "Filon de cuivre",
+        "en": "Copper Vein"
+      },
+      "node_id": null,
+      "mining_skill": 1,
+      "zones_documented": [
+        "Dun Morogh",
+        "Elwynn Forest",
+        "Durotar"
+      ],
+      "coordinates": null,
+      "drop_quantity": null,
+      "drop_rate": null,
+      "available_in_game": null,
+      "verified_for_forever": false,
+      "evidence_level": "documented_forever",
+      "source_url": "https://www.wowhead.com/forever/guide/professions/mining/overview-leveling",
+      "evidence_url": "https://www.wowhead.com/forever/guide/professions/mining/overview-leveling",
+      "observed_at": "2026-10-14",
+      "observed_build": "1.60.1",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "The Forever mining overview (updated 2026-10-09) lists Copper Vein as a source of Rough Stone, skill 1, plus the named example zones. This is guide documentation; specific spawn coordinates, harvest outcomes and drop probabilities were not independently observed."
+    },
+    {
+      "item_id": 2771,
+      "method": "mining_node",
+      "node": {
+        "fr": "Filon d'étain",
+        "en": "Tin Vein"
+      },
+      "node_id": null,
+      "mining_skill": 65,
+      "zones_documented": [
+        "Loch Modan",
+        "Ashenvale",
+        "Westfall"
+      ],
+      "coordinates": null,
+      "drop_quantity": null,
+      "drop_rate": null,
+      "available_in_game": null,
+      "verified_for_forever": false,
+      "evidence_level": "documented_forever",
+      "source_url": "https://www.wowhead.com/forever/guide/professions/mining/overview-leveling",
+      "evidence_url": "https://www.wowhead.com/forever/guide/professions/mining/overview-leveling",
+      "observed_at": "2026-10-14",
+      "observed_build": "1.60.1",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "The Forever mining overview (updated 2026-10-09) lists Tin Vein as a source of Tin Ore, skill 65, plus the named example zones. This is guide documentation; specific spawn coordinates, harvest outcomes and drop probabilities were not independently observed."
+    },
+    {
+      "item_id": 2836,
+      "method": "mining_node",
+      "node": {
+        "fr": "Filon d'étain",
+        "en": "Tin Vein"
+      },
+      "node_id": null,
+      "mining_skill": 65,
+      "zones_documented": [
+        "Loch Modan",
+        "Ashenvale",
+        "Westfall"
+      ],
+      "coordinates": null,
+      "drop_quantity": null,
+      "drop_rate": null,
+      "available_in_game": null,
+      "verified_for_forever": false,
+      "evidence_level": "documented_forever",
+      "source_url": "https://www.wowhead.com/forever/guide/professions/mining/overview-leveling",
+      "evidence_url": "https://www.wowhead.com/forever/guide/professions/mining/overview-leveling",
+      "observed_at": "2026-10-14",
+      "observed_build": "1.60.1",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "The Forever mining overview (updated 2026-10-09) lists Tin Vein as a source of Coarse Stone, skill 65, plus the named example zones. This is guide documentation; specific spawn coordinates, harvest outcomes and drop probabilities were not independently observed."
+    },
+    {
+      "item_id": 2772,
+      "method": "mining_node",
+      "node": {
+        "fr": "Gisement de fer",
+        "en": "Iron Deposit"
+      },
+      "node_id": null,
+      "mining_skill": 125,
+      "zones_documented": [
+        "Arathi Highlands",
+        "Desolace",
+        "Stranglethorn Vale"
+      ],
+      "coordinates": null,
+      "drop_quantity": null,
+      "drop_rate": null,
+      "available_in_game": null,
+      "verified_for_forever": false,
+      "evidence_level": "documented_forever",
+      "source_url": "https://www.wowhead.com/forever/guide/professions/mining/overview-leveling",
+      "evidence_url": "https://www.wowhead.com/forever/guide/professions/mining/overview-leveling",
+      "observed_at": "2026-10-14",
+      "observed_build": "1.60.1",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "The Forever mining overview (updated 2026-10-09) lists Iron Deposit as a source of Iron Ore, skill 125, plus the named example zones. This is guide documentation; specific spawn coordinates, harvest outcomes and drop probabilities were not independently observed."
+    },
+    {
+      "item_id": 2776,
+      "method": "mining_node",
+      "node": {
+        "fr": "Filon d'or",
+        "en": "Gold Vein"
+      },
+      "node_id": null,
+      "mining_skill": 155,
+      "zones_documented": [
+        "Arathi Highlands",
+        "Desolace",
+        "Stranglethorn Vale"
+      ],
+      "coordinates": null,
+      "drop_quantity": null,
+      "drop_rate": null,
+      "available_in_game": null,
+      "verified_for_forever": false,
+      "evidence_level": "documented_forever",
+      "source_url": "https://www.wowhead.com/forever/guide/professions/mining/overview-leveling",
+      "evidence_url": "https://www.wowhead.com/forever/guide/professions/mining/overview-leveling",
+      "observed_at": "2026-10-14",
+      "observed_build": "1.60.1",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "The Forever mining overview (updated 2026-10-09) lists Gold Vein as a source of Gold Ore, skill 155, plus the named example zones. This is guide documentation; specific spawn coordinates, harvest outcomes and drop probabilities were not independently observed."
+    },
+    {
+      "item_id": 2592,
+      "method": "classic_loot_reference",
+      "creature_id": null,
+      "drop_rate": null,
+      "coordinates": null,
+      "available_in_game": null,
+      "verified_for_forever": false,
+      "evidence_level": "classic_reference",
+      "source_url": "https://www.wowhead.com/classic/guide/classic-cloth-farming-linen-wool",
+      "evidence_url": "https://www.wowhead.com/classic/guide/classic-cloth-farming-linen-wool",
+      "observed_at": "2026-10-14",
+      "observed_build": "Classic Era",
+      "evidence_kind": "classic_guide",
+      "evidence_note": "Classic cloth guide says wool may drop from level 16-30 humanoids. No specific WoW Forever mob, loot rate or live drop verified."
     }
   ]
 }
