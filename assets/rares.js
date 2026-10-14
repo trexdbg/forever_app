@@ -108,6 +108,7 @@ for(const item of r.loot){
  if(item.item_id&&!isForeverLoot(item)&&window.ForeverItemTooltip)window.ForeverItemTooltip.bind(a,{id:item.item_id,name:item.name.en,name_en:item.name.en,name_fr:item.name.fr,source_status:"classic_reference",source:"Classic"});loots.append(a)
 }out.append(loots);
 if(r.notes?.[en?"en":"fr"])out.append(m("p",r.notes[en?"en":"fr"],"rare-note"));
+if(r.location_review?.conflict){out.append(chip(T("Conflit de zone · position inconnue","Zone conflict · location unknown"),"rare-pending"));out.append(m("p",r.location_review.conflict_note?.[en?"en":"fr"]||T("Sources contradictoires ; position Forever non établie.","Conflicting sources; Forever position not established."),"rare-note"));}
 const foot=m("div",null,"rare-detail-foot"),a=m("a",T("Voir la source ↗","View source ↗"));a.href=r.source||db.sources.timers_and_loot;a.target="_blank";a.rel="noopener noreferrer";foot.append(a);
 if(Number.isSafeInteger(Number(r.id))&&Number(r.id)>0){const l=m("a",T("Table de butin Forever ↗","Forever loot table ↗"));l.href="https://www.wowhead.com/forever/"+(en?"":"fr/")+"npc="+encodeURIComponent(r.id);l.target="_blank";l.rel="noopener noreferrer";foot.append(l)}
 if(r.coordinate_source&&r.coordinate_source!==r.source){const p=m("a",T("Source des positions ↗","Spawn position source ↗"));p.href=r.coordinate_source;p.target="_blank";p.rel="noopener noreferrer";foot.append(p)}
