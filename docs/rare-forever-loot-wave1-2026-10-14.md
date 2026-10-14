@@ -29,6 +29,8 @@ Revue documentaire : 14/10/2026
 ## Degré de certitude
 Chaque nouvelle liaison est `source_version=forever_beta`, `evidence_level=documented_forever`, `observed_build=unknown`, `evidence_kind=forever_community_page`, avec URL de l'affirmation spécifique, date et note de limites.
 
+**Conflit de sources :** Wowhead Forever et stillsixty associent Alliance Outrunner Staff (285350) à Marcus Bel, tandis que [Forevercraft](https://www.forevercraft.app/items/285350) attribue l'objet à Aean Swiftriver. L'association à Marcus est conservée comme *documentaire contestée* et doit être vérifiée en jeu. Ce conflit ne modifie pas la relation Aean → Bow établie séparément.
+
 **Point de vigilance :** Foreman Rigger → Foreman's Helm est un **signalement communautaire** ; une autre analyse rappelle que la table Wowhead de ce PNJ ne prouve pas cette association. L'objet 284400 existe dans les fiches du client Forever, mais sa provenance reste **non confirmée en jeu**. Aucun de ces enregistrements ne constitue une capture de loot in-game attribuée à un build.
 
 Autres corroborations par guide communautaire Forever (non considérées comme preuves de gameplay individuelles) :
