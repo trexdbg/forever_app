@@ -40,7 +40,7 @@ Les 292 anciens points ne sont **pas** considérés comme factuellement validés
 | Aean Swiftriver | Aean Swiftriver | barrens | 5797 | 49, 80 | Indicatif Classic | [Fiche](https://foreverdb.net/rare/5797) |
 | Malgin Barleybrew | Malgin Barleybrew | barrens | 5848 | 50, 84 | Indicatif Classic | [Fiche](https://foreverdb.net/rare/5848) |
 | Thora Feathermoon | Thora Feathermoon | barrens | 5798 | 49, 80 | Indicatif Classic | [Fiche](https://foreverdb.net/rare/5798) |
-| Sister Rathtalon | Sœur Rancune-serre | stonetalon | — | — | Zone seule · position inconnue | — |
+| Sister Rathtalon | Sœur Rancune-serre | stonetalon | 5830 | — | Zone seule · position inconnue | [Fiche](https://foreverdb.net/rare/5830) |
 | Taskmaster Whipfang | Sous-chef Fouet-croc | stonetalon | 5932 | 63, 53 ; 61.4, 50 ; 64.2, 57 ; 61.2, 55.8 | Documenté Forever (communautaire) | [Fiche](https://www.stillsixty.com/rare/taskmaster-whipfang-stonetalon-mountains) |
 | Foreman Rigger | Contremaître Rigger | stonetalon | 5931 | 65.2, 52.8 ; 65, 46.8 ; 67.6, 45.2 ; 68.2, 51.4 | Documenté Forever (communautaire) | [Fiche](https://www.stillsixty.com/rare/foreman-rigger-stonetalon-mountains) |
 | Sentinel Amarassan | Sentinelle Amarassan | stonetalon | 5916 | 35, 15 | Indicatif Classic | [Fiche](https://foreverdb.net/rare/5916) |
@@ -49,7 +49,7 @@ Les 292 anciens points ne sont **pas** considérés comme factuellement validés
 | Nal'taszar | Nal'taszar | stonetalon | 4066 | 26, 12 | Indicatif Classic | [Fiche](https://foreverdb.net/rare/4066) |
 | Deviate Faerie Dragon | Dragon féerique déviant | wailing-caverns | 5912 | — | Carte d’instance nécessaire | — |
 | Rorgish Jowl | Rorgish Jowl | ashenvale | 10639 | 36, 37 | Indicatif Classic | [Fiche](https://foreverdb.net/rare/10639) |
-| Akkrilus | Akkrilus | ashenvale | — | — | Zone seule · position inconnue | — |
+| Akkrilus | Akkrilus | ashenvale | 3773 | — | Zone seule · position inconnue | [Fiche](https://www.wowhead.com/classic/npc=3773/akkrilus) |
 | Eck'alom | Eck'alom | ashenvale | 10642 | 53, 70 | Indicatif Classic | [Fiche](https://foreverdb.net/rare/10642) |
 | Oakpaw | Patte-de-chêne | ashenvale | 10640 | 56, 63 | Indicatif Classic | [Fiche](https://foreverdb.net/rare/10640) |
 | Rot Hide Bruiser | Cogneur Poil-putride | alterac | 1944 | 2, 26 | Indicatif Classic | [Fiche](https://foreverdb.net/rare/1944) |
@@ -66,7 +66,7 @@ Les 292 anciens points ne sont **pas** considérés comme factuellement validés
 
 ## Inventaire individuel des 150 entrées
 
-La colonne « qualité du point » concerne **la coordonnée uniquement**. La table ne prouve ni l'identité en jeu, ni le niveau actuel, la faction, les drops, ni les repops de Forever. `uiMapID` doit correspondre au référentiel local du catalogue ; l'ID `instance` indique absence de carte extérieure. Le champ `location_review` explicite la raison historique d'inclusion, le statut d'identité et de présence, la nature de la carte et les conflits ; `point_evidence[]` donne l'attestation par couple (créature, point).
+La colonne « qualité du point » concerne **la coordonnée uniquement**. La table ne prouve ni l'identité en jeu, ni le niveau actuel, la faction, les drops, ni les repops de Forever. `uiMapID` doit correspondre au référentiel local du catalogue ; l'ID `instance` indique absence de carte extérieure. Le champ `location_review` explicite la raison historique d'inclusion, le statut d'identité, de faction (inconnue par défaut, sauf attribution historique sourcée des Outrunners) et de présence, la nature de la carte et les conflits ; `point_evidence[]` donne l'attestation par couple (créature, point).
 
 | ID du catalogue | Nom EN | Nom FR | Zone | uiMapID | Niv. Classic | Pins | État | Qualité du point | ID Classic |
 | --- | --- | --- | --- | ---: | ---: | ---: | --- | --- | --- |
@@ -79,7 +79,7 @@ La colonne « qualité du point » concerne **la coordonnée uniquement**. La ta
 | 10643 | Mugglefin | Mugglefin | ashenvale | 1440 | 23 | 1 | Indicatif Classic | Classic hérité, preuve directe manquante | 10643 |
 | ashenvale-branch-snapper | Branch Snapper | Brise-branche | ashenvale | 1440 | 25 | 1 | Indicatif Classic | Classic hérité, preuve directe manquante | ID numérique à rechercher |
 | classic-ashenvale-rorgish-jowl | Rorgish Jowl | Rorgish Jowl | ashenvale | 1440 | 25 | 1 | Indicatif Classic | Classic sourcé | 10639 |
-| classic-ashenvale-akkrilus | Akkrilus | Akkrilus | ashenvale | 1440 | 26 | 0 | Zone seule · position inconnue | Classic hérité, preuve directe manquante | ID numérique à rechercher |
+| classic-ashenvale-akkrilus | Akkrilus | Akkrilus | ashenvale | 1440 | 26 | 0 | Zone seule · position inconnue | Classic hérité, preuve directe manquante | 3773 |
 | classic-ashenvale-eck-alom | Eck'alom | Eck'alom | ashenvale | 1440 | 27 | 1 | Indicatif Classic | Classic sourcé | 10642 |
 | classic-ashenvale-oakpaw | Oakpaw | Patte-de-chêne | ashenvale | 1440 | 27 | 1 | Indicatif Classic | Classic sourcé | 10640 |
 | 3270 | Elder Mystic Razorsnout | Ancien mystique Tranchegroin | barrens | 1413 | 15 | 1 | Indicatif Classic | Classic hérité, preuve directe manquante | 3270 |
@@ -176,7 +176,7 @@ La colonne « qualité du point » concerne **la coordonnée uniquement**. La ta
 | 1920 | Dalaran Spellscribe | Copiste de Dalaran | silverpine | 1421 | 21 | 1 | Indicatif Classic | Classic hérité, preuve directe manquante | 1920 |
 | 2283 | Ravenclaw Regent | Régent Ravenclaw | silverpine | 1421 | 22 | 1 | Indicatif Classic | Classic hérité, preuve directe manquante | 2283 |
 | 1720 | Bruegal Ironknuckle | Bruegal Poing-de-fer | stockade | instance | 26 | 0 | Carte d’instance nécessaire | Classic hérité, preuve directe manquante | 1720 |
-| classic-stonetalon-sister-rathtalon | Sister Rathtalon | Sœur Rancune-serre | stonetalon | 1442 | 19 | 0 | Zone seule · position inconnue | Classic hérité, preuve directe manquante | ID numérique à rechercher |
+| classic-stonetalon-sister-rathtalon | Sister Rathtalon | Sœur Rancune-serre | stonetalon | 1442 | 19 | 0 | Zone seule · position inconnue | Classic hérité, preuve directe manquante | 5830 |
 | classic-stonetalon-taskmaster-whipfang | Taskmaster Whipfang | Sous-chef Fouet-croc | stonetalon | 1442 | 22 | 4 | Documenté Forever (communautaire) | Forever (source communautaire) | 5932 |
 | classic-stonetalon-foreman-rigger | Foreman Rigger | Contremaître Rigger | stonetalon | 1442 | 24 | 4 | Documenté Forever (communautaire) | Forever (source communautaire) | 5931 |
 | stonetalon-pridewing-patriarch | Pridewing Patriarch | Patriarche Aile-fière | stonetalon | 1442 | 25 | 1 | Indicatif Classic | Classic hérité, preuve directe manquante | ID numérique à rechercher |
@@ -243,6 +243,6 @@ Contrôle visuel demandé (non simulé, à réaliser en navigateur desktop et mo
 - Sister Rathtalon : absence de point, conflit accessible et pas de `/way`.
 - Bruegal Ironknuckle : statut d'instance et **aucune** carte extérieure.
 
-**Risques :** anciennes références Classic éventuellement mal placées, conflit Sister/Akkrilus, mouvements de patrouille non représentés par des pins uniques, statut de présence non corroboré par capture, dates/builds de Forever non documentés, 55 noms de type slug dans le catalogue initial sans ID numérique établi. Les taux de drop et timers n'ont volontairement pas été retouchés.
+**Risques :** anciennes références Classic éventuellement mal placées, conflit Sister/Akkrilus, mouvements de patrouille non représentés par des pins uniques, statut de présence non corroboré par capture, dates/builds de Forever non documentés, 34 noms-slugs dont l’ID numérique reste non établi (21 des 55 noms-slugs ont maintenant une référence d’ID Classic, pas Forever). Les taux de drop et timers n'ont volontairement pas été retouchés.
 
 **Rollback :** annuler le commit de `data/rares.json` pour retirer le nouvel audit et les 25 points ajoutés, le petit correctif `assets/rares.js`, ainsi que le validateur, les tests et l'étape CI. Aucune synchronisation ni déploiement n'a été effectué. Ne pas fusionner sans revue du directeur technique.
