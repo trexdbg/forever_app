@@ -164,7 +164,8 @@ function alchemyRows(db){
  const p=db?.scope?.preview,ids=p?.recipe_item_ids;
  if(db?.scope?.status!=="research_only_not_published"||p?.status!=="opt_in_documentary_preview"||
     !Array.isArray(ids)||ids.length!==6||!Array.isArray(db.recipes)||db.recipes.length!==6||
-    !Array.isArray(db.acquisitions)||db.acquisitions.length!==0)return;
+    !Array.isArray(db.acquisitions)||db.acquisitions.length<8||
+    db.acquisitions.some(a=>!a||db.items?.[String(a.item_id)]?.kind!=="component"))return;
  for(const r of db.recipes){
   const i=db.items?.[String(r?.output_item_id)];
   if(!ids.includes(r?.output_item_id)||r.profession_id!==171||!i?.name?.fr||!i?.name?.en||
