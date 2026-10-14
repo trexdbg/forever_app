@@ -37,6 +37,8 @@ jobs:
           node --version
           node --check assets/bis-niveaux.js
           node --check assets/item-locale.js
+          node --check assets/items-v3.js
+          node --check scripts/build-item-acquisition-index.mjs
           node scripts/check-bis-niveaux.mjs
           node scripts/check-item-locales.mjs
           node scripts/check-bis-behavior.mjs
