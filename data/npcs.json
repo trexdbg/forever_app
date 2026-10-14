@@ -9385,13 +9385,29 @@
         "fr": "Orgrimmar",
         "en": "Orgrimmar"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 55.6,
+        "y": 39.6
+      },
       "faction": "horde",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/herbalism-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/herbalism/overview-leveling",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/guide/professions/herbalism/overview-leveling",
+        "evidence_url": "https://www.wowhead.com/forever/guide/professions/herbalism/overview-leveling",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Jandi in Orgrimmar at /way 55.6 39.6; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "orgrimmar",
+        "ui_map_id": 1454
+      }
     },
     {
       "id": null,
@@ -9405,13 +9421,29 @@
         "fr": "Les Pitons-du-Tonnerre",
         "en": "Thunder Bluff"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 49.8,
+        "y": 39.8
+      },
       "faction": "horde",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/herbalism-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/herbalism/overview-leveling",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/guide/professions/herbalism/overview-leveling",
+        "evidence_url": "https://www.wowhead.com/forever/guide/professions/herbalism/overview-leveling",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Komin Winterhoof in Thunder Bluff at /way 49.8 39.8; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "thunder-bluff",
+        "ui_map_id": 1456
+      }
     },
     {
       "id": null,
@@ -9425,13 +9457,29 @@
         "fr": "Fossoyeuse",
         "en": "Undercity"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 54.8,
+        "y": 50.2
+      },
       "faction": "horde",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/herbalism-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/herbalism/overview-leveling",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/guide/professions/herbalism/overview-leveling",
+        "evidence_url": "https://www.wowhead.com/forever/guide/professions/herbalism/overview-leveling",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Martha Alliestar in Undercity at /way 54.8 50.2; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "undercity",
+        "ui_map_id": 1458
+      }
     },
     {
       "id": null,
@@ -9445,13 +9493,29 @@
         "fr": "Durotar",
         "en": "Durotar"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 55.4,
+        "y": 75
+      },
       "faction": "horde",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/herbalism-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/herbalism/overview-leveling",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/guide/professions/herbalism/overview-leveling",
+        "evidence_url": "https://www.wowhead.com/forever/guide/professions/herbalism/overview-leveling",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Mishiki in Durotar at /way 55.4 75; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "durotar",
+        "ui_map_id": 1411
+      }
     },
     {
       "id": null,
@@ -9465,13 +9529,29 @@
         "fr": "Féralas",
         "en": "Feralas"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 76,
+        "y": 43.4
+      },
       "faction": "horde",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/herbalism-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/herbalism/overview-leveling",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/guide/professions/herbalism/overview-leveling",
+        "evidence_url": "https://www.wowhead.com/forever/guide/professions/herbalism/overview-leveling",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Ruw in Feralas at /way 76 43.4; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "feralas",
+        "ui_map_id": 1444
+      }
     },
     {
       "id": null,
@@ -9485,13 +9565,29 @@
         "fr": "Durotar",
         "en": "Durotar"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 42.6,
+        "y": 67.4
+      },
       "faction": "horde",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/herbalism-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/herbalism/overview-leveling",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/guide/professions/herbalism/overview-leveling",
+        "evidence_url": "https://www.wowhead.com/forever/guide/professions/herbalism/overview-leveling",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Zor'la in Durotar at /way 42.6 67.4; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "durotar",
+        "ui_map_id": 1411
+      }
     },
     {
       "id": null,
@@ -9865,13 +9961,29 @@
         "fr": "Orgrimmar",
         "en": "Orgrimmar"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 73,
+        "y": 26.4
+      },
       "faction": "horde",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/mining-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/mining/overview-leveling",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/guide/professions/mining/overview-leveling",
+        "evidence_url": "https://www.wowhead.com/forever/guide/professions/mining/overview-leveling",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Makaru in Orgrimmar at /way 73 26.4; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "orgrimmar",
+        "ui_map_id": 1454
+      }
     },
     {
       "id": null,
@@ -9885,13 +9997,29 @@
         "fr": "Les Pitons-du-Tonnerre",
         "en": "Thunder Bluff"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 34.6,
+        "y": 57.6
+      },
       "faction": "horde",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/mining-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/mining/overview-leveling",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/guide/professions/mining/overview-leveling",
+        "evidence_url": "https://www.wowhead.com/forever/guide/professions/mining/overview-leveling",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Brek Stonehoof in Thunder Bluff at /way 34.6 57.6; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "thunder-bluff",
+        "ui_map_id": 1456
+      }
     },
     {
       "id": null,
@@ -9905,13 +10033,29 @@
         "fr": "Fossoyeuse",
         "en": "Undercity"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 56,
+        "y": 37
+      },
       "faction": "horde",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/mining-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/mining/overview-leveling",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/guide/professions/mining/overview-leveling",
+        "evidence_url": "https://www.wowhead.com/forever/guide/professions/mining/overview-leveling",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Brom Killian in Undercity at /way 56 37; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "undercity",
+        "ui_map_id": 1458
+      }
     },
     {
       "id": null,
@@ -9925,13 +10069,29 @@
         "fr": "Durotar",
         "en": "Durotar"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 51.8,
+        "y": 40.8
+      },
       "faction": "horde",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/mining-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/mining/overview-leveling",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/guide/professions/mining/overview-leveling",
+        "evidence_url": "https://www.wowhead.com/forever/guide/professions/mining/overview-leveling",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Krunn in Durotar at /way 51.8 40.8; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "durotar",
+        "ui_map_id": 1411
+      }
     },
     {
       "id": null,
@@ -9945,13 +10105,29 @@
         "fr": "Durotar",
         "en": "Durotar"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 40.6,
+        "y": 68
+      },
       "faction": "horde",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/mining-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/mining/overview-leveling",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/guide/professions/mining/overview-leveling",
+        "evidence_url": "https://www.wowhead.com/forever/guide/professions/mining/overview-leveling",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Norzsh in Durotar at /way 40.6 68; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "durotar",
+        "ui_map_id": 1411
+      }
     },
     {
       "id": null,
@@ -9965,13 +10141,29 @@
         "fr": "Orgrimmar",
         "en": "Orgrimmar"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 63.2,
+        "y": 45.2
+      },
       "faction": "horde",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/skinning-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/skinning/overview-leveling",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/guide/professions/skinning/overview-leveling",
+        "evidence_url": "https://www.wowhead.com/forever/guide/professions/skinning/overview-leveling",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Thuwd in Orgrimmar at /way 63.2 45.2; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "orgrimmar",
+        "ui_map_id": 1454
+      }
     },
     {
       "id": null,
@@ -9985,13 +10177,29 @@
         "fr": "Les Pitons-du-Tonnerre",
         "en": "Thunder Bluff"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 45.2,
+        "y": 43.6
+      },
       "faction": "horde",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/skinning-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/skinning/overview-leveling",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/guide/professions/skinning/overview-leveling",
+        "evidence_url": "https://www.wowhead.com/forever/guide/professions/skinning/overview-leveling",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Mooranta in Thunder Bluff at /way 45.2 43.6; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "thunder-bluff",
+        "ui_map_id": 1456
+      }
     },
     {
       "id": null,
@@ -10005,13 +10213,29 @@
         "fr": "Fossoyeuse",
         "en": "Undercity"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 71,
+        "y": 59.4
+      },
       "faction": "horde",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/skinning-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/skinning/overview-leveling",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/guide/professions/skinning/overview-leveling",
+        "evidence_url": "https://www.wowhead.com/forever/guide/professions/skinning/overview-leveling",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Killian Hagey in Undercity at /way 71 59.4; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "undercity",
+        "ui_map_id": 1458
+      }
     },
     {
       "id": null,
@@ -10025,13 +10249,29 @@
         "fr": "Désolace",
         "en": "Desolace"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 23.2,
+        "y": 69.8
+      },
       "faction": "horde",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/skinning-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/skinning/overview-leveling",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/guide/professions/skinning/overview-leveling",
+        "evidence_url": "https://www.wowhead.com/forever/guide/professions/skinning/overview-leveling",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Malux in Desolace at /way 23.2 69.8; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "desolace",
+        "ui_map_id": 1443
+      }
     },
     {
       "id": null,
@@ -10045,13 +10285,29 @@
         "fr": "Darnassus",
         "en": "Darnassus"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 64.2,
+        "y": 21.8
+      },
       "faction": "alliance",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/skinning-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/skinning/overview-leveling",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/guide/professions/skinning/overview-leveling",
+        "evidence_url": "https://www.wowhead.com/forever/guide/professions/skinning/overview-leveling",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Eladriel in Darnassus at /way 64.2 21.8; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "darnassus",
+        "ui_map_id": 1457
+      }
     },
     {
       "id": null,
@@ -10065,13 +10321,29 @@
         "fr": "Forgefer",
         "en": "Ironforge"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 39.8,
+        "y": 33
+      },
       "faction": "alliance",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/skinning-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/skinning/overview-leveling",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/guide/professions/skinning/overview-leveling",
+        "evidence_url": "https://www.wowhead.com/forever/guide/professions/skinning/overview-leveling",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Balthus Stoneflayer in Ironforge at /way 39.8 33; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "ironforge",
+        "ui_map_id": 1455
+      }
     },
     {
       "id": null,
@@ -10085,13 +10357,29 @@
         "fr": "Hurlevent",
         "en": "Stormwind City"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 67.8,
+        "y": 49
+      },
       "faction": "alliance",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/skinning-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/skinning/overview-leveling",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/guide/professions/skinning/overview-leveling",
+        "evidence_url": "https://www.wowhead.com/forever/guide/professions/skinning/overview-leveling",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Maris Granger in Stormwind City at /way 67.8 49; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "stormwind",
+        "ui_map_id": 1453
+      }
     },
     {
       "id": null,
@@ -10105,13 +10393,29 @@
         "fr": "Orneval",
         "en": "Ashenvale"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 50,
+        "y": 67.2
+      },
       "faction": "alliance",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/skinning-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/skinning/overview-leveling",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/guide/professions/skinning/overview-leveling",
+        "evidence_url": "https://www.wowhead.com/forever/guide/professions/skinning/overview-leveling",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Jayla in Ashenvale at /way 50 67.2; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "ashenvale",
+        "ui_map_id": 1440
+      }
     },
     {
       "id": null,
@@ -10341,13 +10645,29 @@
         "fr": "Orgrimmar",
         "en": "Orgrimmar"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 57.6,
+        "y": 53.6
+      },
       "faction": "horde",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/cooking-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
+        "evidence_url": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Zamja in Orgrimmar at /way 57.6 53.6; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "orgrimmar",
+        "ui_map_id": 1454
+      }
     },
     {
       "id": null,
@@ -10361,13 +10681,29 @@
         "fr": "Les Pitons-du-Tonnerre",
         "en": "Thunder Bluff"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 51,
+        "y": 52.8
+      },
       "faction": "horde",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/cooking-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
+        "evidence_url": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Aska Mistrunner in Thunder Bluff at /way 51 52.8; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "thunder-bluff",
+        "ui_map_id": 1456
+      }
     },
     {
       "id": null,
@@ -10381,13 +10717,29 @@
         "fr": "Fossoyeuse",
         "en": "Undercity"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 62.6,
+        "y": 44.6
+      },
       "faction": "horde",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/cooking-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
+        "evidence_url": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Eunice Burch in Undercity at /way 62.6 44.6; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "undercity",
+        "ui_map_id": 1458
+      }
     },
     {
       "id": null,
@@ -10401,13 +10753,29 @@
         "fr": "Hurlevent",
         "en": "Stormwind City"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 78.2,
+        "y": 53
+      },
       "faction": "alliance",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/cooking-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
+        "evidence_url": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Stephen Ryback in Stormwind City at /way 78.2 53; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "stormwind",
+        "ui_map_id": 1453
+      }
     },
     {
       "id": null,
@@ -10421,13 +10789,29 @@
         "fr": "Forgefer",
         "en": "Ironforge"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 60.4,
+        "y": 38
+      },
       "faction": "alliance",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/cooking-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
+        "evidence_url": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Daryl Riknussun in Ironforge at /way 60.4 38; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "ironforge",
+        "ui_map_id": 1455
+      }
     },
     {
       "id": null,
@@ -10441,13 +10825,29 @@
         "fr": "Darnassus",
         "en": "Darnassus"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 49.8,
+        "y": 21
+      },
       "faction": "alliance",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/cooking-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
+        "evidence_url": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Alegorn in Darnassus at /way 49.8 21; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "darnassus",
+        "ui_map_id": 1457
+      }
     },
     {
       "id": null,
@@ -10461,13 +10861,29 @@
         "fr": "Durotar",
         "en": "Durotar"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 51.2,
+        "y": 42.6
+      },
       "faction": "horde",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/cooking-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.icy-veins.com/wow-forever/cooking",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.icy-veins.com/wow-forever/cooking",
+        "evidence_url": "https://www.icy-veins.com/wow-forever/cooking",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Cook Torka in Durotar at /way 51.2 42.6; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "durotar",
+        "ui_map_id": 1411
+      }
     },
     {
       "id": null,
@@ -10481,13 +10897,29 @@
         "fr": "Mulgore",
         "en": "Mulgore"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 45,
+        "y": 61.6
+      },
       "faction": "horde",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/cooking-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
+        "evidence_url": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Pyall Silentstride in Mulgore at /way 45 61.6; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "mulgore",
+        "ui_map_id": 1412
+      }
     },
     {
       "id": null,
@@ -10501,13 +10933,29 @@
         "fr": "Forêt d'Elwynn",
         "en": "Elwynn Forest"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 44.2,
+        "y": 66
+      },
       "faction": "alliance",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/cooking-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
+        "evidence_url": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Tomas in Elwynn Forest at /way 44.2 66; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "elwynn",
+        "ui_map_id": 1429
+      }
     },
     {
       "id": null,
@@ -10544,13 +10992,29 @@
         "fr": "Orgrimmar",
         "en": "Orgrimmar"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 69.8,
+        "y": 29.6
+      },
       "faction": "horde",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/fishing-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/fishing/overview-leveling",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/guide/professions/fishing/overview-leveling",
+        "evidence_url": "https://www.wowhead.com/forever/guide/professions/fishing/overview-leveling",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Lumak in Orgrimmar at /way 69.8 29.6; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "orgrimmar",
+        "ui_map_id": 1454
+      }
     },
     {
       "id": null,
@@ -10564,13 +11028,29 @@
         "fr": "Les Pitons-du-Tonnerre",
         "en": "Thunder Bluff"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 56,
+        "y": 46.8
+      },
       "faction": "horde",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/fishing-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/fishing/overview-leveling",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/guide/professions/fishing/overview-leveling",
+        "evidence_url": "https://www.wowhead.com/forever/guide/professions/fishing/overview-leveling",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Kah Mistrunner in Thunder Bluff at /way 56 46.8; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "thunder-bluff",
+        "ui_map_id": 1456
+      }
     },
     {
       "id": null,
@@ -10584,13 +11064,29 @@
         "fr": "Fossoyeuse",
         "en": "Undercity"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 80.8,
+        "y": 31.2
+      },
       "faction": "horde",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/fishing-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/fishing/overview-leveling",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/guide/professions/fishing/overview-leveling",
+        "evidence_url": "https://www.wowhead.com/forever/guide/professions/fishing/overview-leveling",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Armand Cromwell in Undercity at /way 80.8 31.2; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "undercity",
+        "ui_map_id": 1458
+      }
     },
     {
       "id": null,
@@ -10604,13 +11100,29 @@
         "fr": "Hurlevent",
         "en": "Stormwind City"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 55,
+        "y": 69.6
+      },
       "faction": "alliance",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/fishing-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/fishing/overview-leveling",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/guide/professions/fishing/overview-leveling",
+        "evidence_url": "https://www.wowhead.com/forever/guide/professions/fishing/overview-leveling",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Arnold Leland in Stormwind City at /way 55 69.6; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "stormwind",
+        "ui_map_id": 1453
+      }
     },
     {
       "id": null,
@@ -10624,13 +11136,29 @@
         "fr": "Forgefer",
         "en": "Ironforge"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 48.4,
+        "y": 6.4
+      },
       "faction": "alliance",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/fishing-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/fishing/overview-leveling",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/guide/professions/fishing/overview-leveling",
+        "evidence_url": "https://www.wowhead.com/forever/guide/professions/fishing/overview-leveling",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Grimnur Stonebrand in Ironforge at /way 48.4 6.4; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "ironforge",
+        "ui_map_id": 1455
+      }
     },
     {
       "id": null,
@@ -10644,13 +11172,29 @@
         "fr": "Darnassus",
         "en": "Darnassus"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 47.6,
+        "y": 56.6
+      },
       "faction": "alliance",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/fishing-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/fishing/overview-leveling",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/guide/professions/fishing/overview-leveling",
+        "evidence_url": "https://www.wowhead.com/forever/guide/professions/fishing/overview-leveling",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Astaia in Darnassus at /way 47.6 56.6; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "darnassus",
+        "ui_map_id": 1457
+      }
     },
     {
       "id": null,
@@ -10710,13 +11254,29 @@
         "fr": "Durotar",
         "en": "Durotar"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 53.2,
+        "y": 81.6
+      },
       "faction": "horde",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/fishing-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/fishing/overview-leveling",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/guide/professions/fishing/overview-leveling",
+        "evidence_url": "https://www.wowhead.com/forever/guide/professions/fishing/overview-leveling",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Lau'Tiki in Durotar at /way 53.2 81.6; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "durotar",
+        "ui_map_id": 1411
+      }
     },
     {
       "id": null,
@@ -10730,13 +11290,29 @@
         "fr": "Mulgore",
         "en": "Mulgore"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 44.6,
+        "y": 60.6
+      },
       "faction": "horde",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/fishing-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/fishing/overview-leveling",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/guide/professions/fishing/overview-leveling",
+        "evidence_url": "https://www.wowhead.com/forever/guide/professions/fishing/overview-leveling",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Uthan Stillwater in Mulgore at /way 44.6 60.6; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "mulgore",
+        "ui_map_id": 1412
+      }
     },
     {
       "id": null,
@@ -10750,13 +11326,29 @@
         "fr": "Clairières de Tirisfal",
         "en": "Tirisfal Glades"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 67.2,
+        "y": 51
+      },
       "faction": "horde",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/fishing-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/fishing/overview-leveling",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/guide/professions/fishing/overview-leveling",
+        "evidence_url": "https://www.wowhead.com/forever/guide/professions/fishing/overview-leveling",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Clyde Kellen in Tirisfal Glades at /way 67.2 51; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "tirisfal",
+        "ui_map_id": 1420
+      }
     },
     {
       "id": null,
@@ -10770,13 +11362,29 @@
         "fr": "Forêt d'Elwynn",
         "en": "Elwynn Forest"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 47.6,
+        "y": 62.2
+      },
       "faction": "alliance",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/fishing-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/fishing/overview-leveling",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/guide/professions/fishing/overview-leveling",
+        "evidence_url": "https://www.wowhead.com/forever/guide/professions/fishing/overview-leveling",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Lee Brown in Elwynn Forest at /way 47.6 62.2; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "elwynn",
+        "ui_map_id": 1429
+      }
     },
     {
       "id": null,
@@ -10790,13 +11398,29 @@
         "fr": "Les Hinterlands",
         "en": "The Hinterlands"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 80.2,
+        "y": 81.4
+      },
       "faction": "horde",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/fishing-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/fishing/overview-leveling",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/guide/professions/fishing/overview-leveling",
+        "evidence_url": "https://www.wowhead.com/forever/guide/professions/fishing/overview-leveling",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Katoom the Angler in The Hinterlands at /way 80.2 81.4; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "hinterlands",
+        "ui_map_id": 1425
+      }
     },
     {
       "id": null,
@@ -10810,13 +11434,29 @@
         "fr": "Féralas",
         "en": "Feralas"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 32.2,
+        "y": 41.6
+      },
       "faction": "alliance",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/fishing-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/fishing/overview-leveling",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/guide/professions/fishing/overview-leveling",
+        "evidence_url": "https://www.wowhead.com/forever/guide/professions/fishing/overview-leveling",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Brannock in Feralas at /way 32.2 41.6; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "feralas",
+        "ui_map_id": 1444
+      }
     },
     {
       "id": null,
@@ -10830,13 +11470,29 @@
         "fr": "Fossoyeuse",
         "en": "Undercity"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 73.6,
+        "y": 55.6
+      },
       "faction": "horde",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/first-aid-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/first-aid/overview",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/guide/professions/first-aid/overview",
+        "evidence_url": "https://www.wowhead.com/forever/guide/professions/first-aid/overview",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Mary Edras in Undercity at /way 73.6 55.6; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "undercity",
+        "ui_map_id": 1458
+      }
     },
     {
       "id": null,
@@ -10850,13 +11506,29 @@
         "fr": "Les Pitons-du-Tonnerre",
         "en": "Thunder Bluff"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 29.6,
+        "y": 21.4
+      },
       "faction": "horde",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/first-aid-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/first-aid/overview",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/guide/professions/first-aid/overview",
+        "evidence_url": "https://www.wowhead.com/forever/guide/professions/first-aid/overview",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Pand Stonebinder in Thunder Bluff at /way 29.6 21.4; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "thunder-bluff",
+        "ui_map_id": 1456
+      }
     },
     {
       "id": null,
@@ -10870,13 +11542,29 @@
         "fr": "Forgefer",
         "en": "Ironforge"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 54.8,
+        "y": 58.6
+      },
       "faction": "alliance",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/first-aid-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/first-aid/overview",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/guide/professions/first-aid/overview",
+        "evidence_url": "https://www.wowhead.com/forever/guide/professions/first-aid/overview",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Nissa Firestone in Ironforge at /way 54.8 58.6; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "ironforge",
+        "ui_map_id": 1455
+      }
     },
     {
       "id": null,
@@ -10890,13 +11578,29 @@
         "fr": "Darnassus",
         "en": "Darnassus"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 51.6,
+        "y": 12.6
+      },
       "faction": "alliance",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/first-aid-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/first-aid/overview",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/guide/professions/first-aid/overview",
+        "evidence_url": "https://www.wowhead.com/forever/guide/professions/first-aid/overview",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Dannelor in Darnassus at /way 51.6 12.6; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "darnassus",
+        "ui_map_id": 1457
+      }
     },
     {
       "id": null,
@@ -10910,13 +11614,29 @@
         "fr": "Durotar",
         "en": "Durotar"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 54,
+        "y": 42
+      },
       "faction": "horde",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/first-aid-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/first-aid/overview",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/guide/professions/first-aid/overview",
+        "evidence_url": "https://www.wowhead.com/forever/guide/professions/first-aid/overview",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Rawrk in Durotar at /way 54 42; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "durotar",
+        "ui_map_id": 1411
+      }
     },
     {
       "id": null,
@@ -10930,13 +11650,29 @@
         "fr": "Mulgore",
         "en": "Mulgore"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 46.8,
+        "y": 60.8
+      },
       "faction": "horde",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/first-aid-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/first-aid/overview",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/guide/professions/first-aid/overview",
+        "evidence_url": "https://www.wowhead.com/forever/guide/professions/first-aid/overview",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Vira Younghoof in Mulgore at /way 46.8 60.8; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "mulgore",
+        "ui_map_id": 1412
+      }
     },
     {
       "id": null,
@@ -10950,13 +11686,29 @@
         "fr": "Clairières de Tirisfal",
         "en": "Tirisfal Glades"
       },
-      "coordinates": null,
+      "coordinates": {
+        "x": 61.8,
+        "y": 52.8
+      },
       "faction": "horde",
       "offers": [],
       "source": "https://www.wow-professions.com/forever/first-aid-trainers",
       "note": "",
       "note_en": "",
-      "coordinate_status": "forever_profession_guide_zone_only"
+      "coordinate_status": "forever_guide_waypoint",
+      "coordinate_source": "https://www.wowhead.com/forever/guide/professions/first-aid/overview",
+      "location_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/guide/professions/first-aid/overview",
+        "evidence_url": "https://www.wowhead.com/forever/guide/professions/first-aid/overview",
+        "observed_at": "2026-10-14",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Forever-oriented profession guide lists named trainer Nurse Neela in Tirisfal Glades at /way 61.8 52.8; guide does not establish a first-hand in-game observation, precise client build or continued availability. Coordinates are source-reported, not gameplay-confirmed.",
+        "coordinate_system": "zone_percent_0_100",
+        "zone_id": "tirisfal",
+        "ui_map_id": 1420
+      }
     },
     {
       "id": null,
