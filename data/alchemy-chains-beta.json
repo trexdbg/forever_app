@@ -221,7 +221,7 @@
     "3820": {
       "id": 3820,
       "name": {
-        "fr": "Étangétrangle",
+        "fr": "Étouffante",
         "en": "Stranglekelp"
       },
       "kind": "component",
@@ -235,7 +235,9 @@
       "observed_build": "1.60.1.70338",
       "evidence_level": "documented_forever",
       "evidence_kind": "forever_client_index",
-      "evidence_note": "Listed by ID in a Forever-indexed alchemy recipe as reagent only. An actual Forever node, loot source or seller has not been confirmed."
+      "evidence_note": "Listed by ID in a Forever-indexed alchemy recipe as reagent only. An actual Forever node, loot source or seller has not been confirmed.",
+      "name_source_url": "https://www.wowhead.com/forever/fr/item=3820/etouffante",
+      "name_evidence_note": "Forever localized Wowhead item 3820 is titled Etouffante. Prior Étangétrangle was an unverified reference translation; the client French string remains unconfirmed."
     },
     "4596": {
       "id": 4596,
@@ -717,7 +719,7 @@
       "scope": "guide_named_herb",
       "node_id": null,
       "node_name": {
-        "fr": "Étangétrangle",
+        "fr": "Étouffante",
         "en": "Stranglekelp"
       },
       "skill_required": null,
