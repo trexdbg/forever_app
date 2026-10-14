@@ -226,7 +226,7 @@ test("unverified Weak Flux vendors and wool loot remain Classic, no fabricated s
  for(const [id,needle] of [[2880,"Vendor index labeled Classic"],[2592,"Possible Classic-reference loot"]]){
   const a=app("en","/en/metiers/?craft="+id);await wait();
   assert.ok(a.els["craft-beta-detail"].textContent.includes(needle),id);
-  assert.ok(!a.els["craft-beta-detail"].textContent.includes("confirmed in game"));
+  assert.ok(a.els["craft-beta-detail"].textContent.includes("not confirmed in game"),"Only negative availability qualifiers are rendered");
  }
  for(const [id,text] of [[4371,"16 Classic-reference candidate vendors"],[4389,"16 Classic-reference candidate vendors"]]){
   const a=app("en","/en/metiers/?craft="+id);await wait();
