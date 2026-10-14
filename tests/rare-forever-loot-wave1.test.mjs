@@ -53,6 +53,14 @@ test("every new item association is explicitly source-backed and non-guaranteed"
   assert.equal(rare.reference,"classic_cmangos_not_forever_verified","Do not promote old Classic position");
  }
 });
+test("conflicting Marcus Bel attribution remains transparent and non-certifying",()=>{
+ const r=scoped.find(x=>x.id==="classic-barrens-marcus-bel");
+ const d=r.loot.find(x=>x.item_id===285350);
+ assert.equal(d.drop_evidence,"forever_database_documented_drop_conflicting_sources");
+ assert.equal(d.conflicting_source_url,"https://www.forevercraft.app/items/285350");
+ assert.match(d.evidence_note,/Conflicting Forevercraft/);
+ assert.equal(d.chance_forever_observed_percent,null);
+});
 test("Foreman Rigger is a community report rather than a verified gameplay drop",()=>{
  const r=scoped.find(x=>x.id==="classic-stonetalon-foreman-rigger");
  const d=r.loot.find(x=>x.item_id===284400);
