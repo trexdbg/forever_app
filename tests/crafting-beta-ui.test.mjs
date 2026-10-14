@@ -17,10 +17,10 @@ class Element {
  addEventListener(ev,cb){this.events[ev]=cb}
  fire(ev){this.events[ev]?.({target:this,preventDefault(){}})}
  setAttribute(k,v){this.attributes[k]=String(v)}
- scrollIntoView(){}
+ scrollIntoView(options){this.lastScroll=options}
 }
 const wait=async()=>{await new Promise(setImmediate);await new Promise(setImmediate)};
-function app(lang="fr",url="/metiers/"){
+function app(lang="fr",url="/metiers/",narrow=false){
  const ids=["craft-beta","craft-beta-search","craft-beta-list","craft-beta-detail","craft-beta-status","craft-beta-count"];
  const els=Object.fromEntries(ids.map(x=>[x,new Element(x==="craft-beta"?"details":"div")]));
  let loc=new URL(url,"https://foreveroth.com");
@@ -29,7 +29,7 @@ function app(lang="fr",url="/metiers/"){
  const events={},calls=[];
  let reply=async()=>({ok:true,json:async()=>data});
  runInNewContext(script,{document:{documentElement:{lang},getElementById:id=>els[id]||null,createElement:tag=>new Element(tag)},
-  location,history,URL,URLSearchParams,window:{addEventListener:(k,f)=>events[k]=f},
+  location,history,URL,URLSearchParams,window:{addEventListener:(k,f)=>events[k]=f,matchMedia:()=>({matches:narrow})},
   fetch:async url=>{calls.push(url);return reply(url)},console:{warn(){}}});
  const flatten=n=>[n,...n.children.flatMap(flatten)];
  return {els,location,events,calls,setReply:f=>reply=f,list:()=>flatten(els["craft-beta-list"]),detail:()=>flatten(els["craft-beta-detail"])};
@@ -172,5 +172,20 @@ test("filter, close, reopen resets list and count in French and English without 
   assert.equal(a.list().filter(x=>x.className==="craft-result").length,8,locale);
   assert.equal(a.els["craft-beta-count"].textContent,expected,locale);
   assert.deepEqual(a.calls,["/data/crafting-chains-beta.json"],"Cache the already loaded eight recipes");
+ }
+});
+
+test("mobile deep links and component clicks scroll to the selected card in both locales",async()=>{
+ for(const [lang,path,id] of [["fr","/metiers/",4371],["en","/en/metiers/",4389]]){
+  const a=app(lang,path+"?craft="+id,true);
+  await wait();
+  assert.equal(a.els["craft-beta-detail"].lastScroll?.behavior,"instant");
+  assert.equal(a.els["craft-beta-detail"].lastScroll?.block,"start");
+  const component=a.detail().find(x=>x.className==="craft-component");
+  assert.ok(component,lang+" should have an ingredient");
+  component.fire("click");
+  assert.equal(a.els["craft-beta-detail"].lastScroll?.behavior,"smooth");
+  assert.equal(a.els["craft-beta-detail"].lastScroll?.block,"start");
+  assert.equal(new URLSearchParams(a.location.search).get("craft"),lang==="en"?"3575":"2841");
  }
 });
