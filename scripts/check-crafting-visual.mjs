@@ -38,12 +38,12 @@ async function connect(bin){
  chrome=spawn(bin,["--headless=new","--no-sandbox","--disable-gpu","--disable-dev-shm-usage",
   "--remote-allow-origins=*","--remote-debugging-port=0","--user-data-dir="+profile,"about:blank"],{stdio:"ignore"});
  let port=0;
- for(let i=0;i<100;i++){
+ for(let i=0;i<300;i++){
   if(chrome.exitCode!==null)throw Error("Chrome process exited");
   try{port=Number((await readFile(resolve(profile,"DevToolsActivePort"),"utf8")).split("\n")[0]);if(port)break}catch{}
   await delay(100);
  }
- assert(port,"Chrome debug port missing");
+ assert(port,"Chrome debug port missing after extended startup window");
  let version;
  for(let i=0;i<30;i++){
   try{const response=await fetch("http://127.0.0.1:"+port+"/json/version");if(response.ok){version=await response.json();break}}catch{}
