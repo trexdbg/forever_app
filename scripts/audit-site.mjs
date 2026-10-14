@@ -28,6 +28,11 @@ if(redirect){
  if(locSet.has(url))issue("warning","REDIRECT_IN_SITEMAP",path,url);
  continue;
 }
+// Experimental Classic quest lab is explicitly noindex and excluded from the public sitemap.
+if(path==="lab/quetes/index.html"&&s.includes('name="robots" content="noindex,nofollow,noarchive,nosnippet"')){
+  if(locSet.has(url))issue("error","NOINDEX_IN_SITEMAP",path,url);
+  continue;
+}
 const actualLang=first(s,/<html\b[^>]*\blang=["']([^"']+)/i);
 if(actualLang!==lang)issue("error","WRONG_LANGUAGE",path,actualLang||"missing");
 const canonical=first(s,/<link\b[^>]*\brel=["']canonical["'][^>]*\bhref=["']([^"']+)/i);
