@@ -89,6 +89,8 @@ async function caseRun(send,base,lang,width,height){
   }
   assert(state.open&&state.count===8&&state.text.includes("#"+item),lang+" "+width+" deep link or recipe list did not load "+JSON.stringify(state));
   assert(state.map,lang+" "+width+" original trainers map is missing");
+  const landing=await evaluate('(()=>{const box=document.querySelector("#craft-beta-detail").getBoundingClientRect();return {top:box.top,bottom:box.bottom}})()');
+  if(width===375)assert(landing.top>=0&&landing.top<height,lang+" mobile deep-link detail is not visible at landing: "+JSON.stringify(landing));
   const layout=await evaluate('(()=>{const panel=document.querySelector("#craft-beta"),content=document.querySelector(".craft-beta-content"),detail=document.querySelector("#craft-beta-detail"),canvas=document.querySelector("#npc-map-canvas"),search=document.querySelector("#craft-beta-search");search.focus();return {width:innerWidth,panelRight:panel.getBoundingClientRect().right,contentRight:content.getBoundingClientRect().right,detailOverflow:detail.scrollWidth-detail.clientWidth,focus:document.activeElement===search,mapFocusable:canvas.tabIndex===0,mapContext:!!canvas.getContext("2d")}})()');
   assert(layout.panelRight<=layout.width+2&&layout.contentRight<=layout.width+2&&layout.detailOverflow<=2,lang+" "+width+" horizontal overflow: "+JSON.stringify(layout));
   assert(layout.focus,lang+" "+width+" search is not keyboard-focusable");
@@ -96,13 +98,16 @@ async function caseRun(send,base,lang,width,height){
   const reopened=await evaluate('(async()=>{const d=document.querySelector("#craft-beta"),field=document.querySelector("#craft-beta-search");field.value="4389";field.dispatchEvent(new Event("input",{bubbles:true}));const filtered=document.querySelectorAll("#craft-beta-list .craft-result").length;d.open=false;await new Promise(r=>setTimeout(r,120));d.open=true;await new Promise(r=>setTimeout(r,120));return {filtered,input:field.value,results:document.querySelectorAll("#craft-beta-list .craft-result").length,counter:document.querySelector("#craft-beta-count").textContent}})()');
   assert(reopened.filtered===1&&reopened.input===""&&reopened.results===8&&reopened.counter.startsWith("8 / 8"),lang+" "+width+" close/reopen defect persists: "+JSON.stringify(reopened));
   const prefix=lang+"-"+width;
-  await evaluate('document.querySelector("#craft-beta").scrollIntoView({block:"start"});');await delay(150);
+  await evaluate('document.querySelector("#craft-beta").scrollIntoView({behavior:"instant",block:"start"});');await delay(250);
   const capture=await cmd("Page.captureScreenshot",{format:"png",captureBeyondViewport:false});
   await writeFile(resolve(output,prefix+"-craft.png"),Buffer.from(capture.data,"base64"));
-  await evaluate('document.querySelector("#npc-map-canvas").scrollIntoView({block:"center"});');await delay(150);
+  await evaluate('document.querySelector("#craft-beta-detail").scrollIntoView({behavior:"instant",block:"start"});');await delay(220);
+  const selected=await cmd("Page.captureScreenshot",{format:"png",captureBeyondViewport:false});
+  await writeFile(resolve(output,prefix+"-detail.png"),Buffer.from(selected.data,"base64"));
+  await evaluate('document.querySelector("#npc-map-canvas").scrollIntoView({behavior:"instant",block:"center"});');await delay(300);
   const mapCapture=await cmd("Page.captureScreenshot",{format:"png",captureBeyondViewport:false});
   await writeFile(resolve(output,prefix+"-map.png"),Buffer.from(mapCapture.data,"base64"));
-  console.log(JSON.stringify({lang,width,height,selected:item,recipes:state.count,layout,filteredReopen:reopened,map:true,captures:[prefix+"-craft.png",prefix+"-map.png"]}));
+  console.log(JSON.stringify({lang,width,height,selected:item,recipes:state.count,layout,filteredReopen:reopened,map:true,landing,captures:[prefix+"-craft.png",prefix+"-detail.png",prefix+"-map.png"]}));
  }finally{await send("Target.closeTarget",{targetId:target.targetId}).catch(()=>{})}
 }
 try{
@@ -113,7 +118,7 @@ try{
  for(const lang of ["fr","en"])for(const width of [1440,375]){
   await caseRun(send,base,lang,width,width===375?812:900);
  }
- console.log("PASS: 4 real-browser FR/EN × desktop/mobile runs and 8 screenshot files.");
+ console.log("PASS: 4 real-browser FR/EN × desktop/mobile runs and 12 screenshot files.");
 }catch(err){console.error("FAIL: crafting preview browser smoke:",err);process.exitCode=1}
 finally{
  try{socket?.close()}catch{}
