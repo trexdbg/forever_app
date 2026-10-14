@@ -1068,7 +1068,7 @@
       "observed_at": "2026-10-14",
       "observed_build": "1.60.1",
       "evidence_kind": "forever_community_page",
-      "evidence_note": "The Forever mining overview (updated 2026-10-09) lists Copper Vein as a source of Copper Ore, skill 1, plus the named example zones. This is guide documentation; specific spawn coordinates, harvest outcomes and drop probabilities were not independently observed."
+      "evidence_note": "The Forever mining overview (last updated 2026-10-11) lists Copper Vein as a source of Copper Ore, skill 1, plus the named example zones. This is guide documentation; specific spawn coordinates, harvest outcomes and drop probabilities were not independently observed."
     },
     {
       "item_id": 2835,
@@ -1095,7 +1095,7 @@
       "observed_at": "2026-10-14",
       "observed_build": "1.60.1",
       "evidence_kind": "forever_community_page",
-      "evidence_note": "The Forever mining overview (updated 2026-10-09) lists Copper Vein as a source of Rough Stone, skill 1, plus the named example zones. This is guide documentation; specific spawn coordinates, harvest outcomes and drop probabilities were not independently observed."
+      "evidence_note": "The Forever mining overview (last updated 2026-10-11) lists Copper Vein as a source of Rough Stone, skill 1, plus the named example zones. This is guide documentation; specific spawn coordinates, harvest outcomes and drop probabilities were not independently observed."
     },
     {
       "item_id": 2771,
@@ -1122,7 +1122,7 @@
       "observed_at": "2026-10-14",
       "observed_build": "1.60.1",
       "evidence_kind": "forever_community_page",
-      "evidence_note": "The Forever mining overview (updated 2026-10-09) lists Tin Vein as a source of Tin Ore, skill 65, plus the named example zones. This is guide documentation; specific spawn coordinates, harvest outcomes and drop probabilities were not independently observed."
+      "evidence_note": "The Forever mining overview (last updated 2026-10-11) lists Tin Vein as a source of Tin Ore, skill 65, plus the named example zones. This is guide documentation; specific spawn coordinates, harvest outcomes and drop probabilities were not independently observed."
     },
     {
       "item_id": 2836,
@@ -1149,7 +1149,7 @@
       "observed_at": "2026-10-14",
       "observed_build": "1.60.1",
       "evidence_kind": "forever_community_page",
-      "evidence_note": "The Forever mining overview (updated 2026-10-09) lists Tin Vein as a source of Coarse Stone, skill 65, plus the named example zones. This is guide documentation; specific spawn coordinates, harvest outcomes and drop probabilities were not independently observed."
+      "evidence_note": "The Forever mining overview (last updated 2026-10-11) lists Tin Vein as a source of Coarse Stone, skill 65, plus the named example zones. This is guide documentation; specific spawn coordinates, harvest outcomes and drop probabilities were not independently observed."
     },
     {
       "item_id": 2772,
@@ -1176,7 +1176,7 @@
       "observed_at": "2026-10-14",
       "observed_build": "1.60.1",
       "evidence_kind": "forever_community_page",
-      "evidence_note": "The Forever mining overview (updated 2026-10-09) lists Iron Deposit as a source of Iron Ore, skill 125, plus the named example zones. This is guide documentation; specific spawn coordinates, harvest outcomes and drop probabilities were not independently observed."
+      "evidence_note": "The Forever mining overview (last updated 2026-10-11) lists Iron Deposit as a source of Iron Ore, skill 125, plus the named example zones. This is guide documentation; specific spawn coordinates, harvest outcomes and drop probabilities were not independently observed."
     },
     {
       "item_id": 2776,
@@ -1203,7 +1203,7 @@
       "observed_at": "2026-10-14",
       "observed_build": "1.60.1",
       "evidence_kind": "forever_community_page",
-      "evidence_note": "The Forever mining overview (updated 2026-10-09) lists Gold Vein as a source of Gold Ore, skill 155, plus the named example zones. This is guide documentation; specific spawn coordinates, harvest outcomes and drop probabilities were not independently observed."
+      "evidence_note": "The Forever mining overview (last updated 2026-10-11) lists Gold Vein as a source of Gold Ore, skill 155, plus the named example zones. This is guide documentation; specific spawn coordinates, harvest outcomes and drop probabilities were not independently observed."
     },
     {
       "item_id": 2592,
