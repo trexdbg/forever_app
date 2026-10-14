@@ -244,7 +244,7 @@ test("source claims are independent and cannot invent smelt yields, skills, vend
   [c=>{c.acquisitions.find(a=>a.method==="smelting"&&a.item_id===3577).trainer_npc_id=5},"CRAFT_SMELT_FALSE_AVAILABILITY"],
   [c=>{c.acquisitions.find(a=>a.method==="mining_node"&&a.item_id===2770).coordinates={x:32,y:43}},"CRAFT_MINING_PROOF"],
   [c=>{c.acquisitions.find(a=>a.method==="mining_node"&&a.item_id===2770).drop_rate=1},"CRAFT_MINING_PROOF"],
-  [c=>{c.acquisitions.find(a=>a.method==="mining_node"&&a.item_id===2770).source_url="http://classic.example.com"},"PROVENANCE_URL_INVALID"],
+  [c=>{c.acquisitions.find(a=>a.method==="mining_node"&&a.item_id===2770).source_url="http://classic.example.com"},"PROVENANCE_INVALID_URL"],
   [c=>{c.acquisitions.find(a=>a.item_id===2880).evidence_level="documented_forever"},"CRAFT_VENDOR_NOT_CLASSIC"]
  ];
  for(const [mutate,code] of changes){const c=clone();mutate(c);assert.ok(codes(run(c)).includes(code),code)}
