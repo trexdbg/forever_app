@@ -1,0 +1,11 @@
+/* Agent 03 — limited alchemy research preview; existing crafting design remains intact. */
+.alchemy-preview{margin-bottom:10px}
+.alchemy-preview summary{color:#cde4ca}
+.alchemy-preview .craft-result[aria-pressed="true"]{border-color:#96bd92}
+.alchemy-preview .craft-detail-head h4{color:#d7e6c8}
+.alchemy-preview .craft-caution{color:#e2cfac}
+.alchemy-preview .craft-component{min-height:52px}
+.alchemy-preview .craft-proof{display:inline-block;margin:7px 0}
+.alchemy-preview .craft-id{margin-top:5px}
+.alchemy-preview .craft-beta-content{margin-top:8px}
+@media(max-width:720px){.alchemy-preview .craft-beta-content{display:grid;grid-template-columns:minmax(0,1fr)}}
