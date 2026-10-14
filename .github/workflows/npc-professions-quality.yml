@@ -23,6 +23,9 @@ on:
       - assets/npcs.js
       - data/professions.json
       - scripts/check-npc-professions.mjs
+      - scripts/check-trainer-locations.mjs
+      - tests/trainer-locations.test.mjs
+      - docs/trainer-locations-mission07-2026-10-14.md
       - tests/npc-professions.test.mjs
       - docs/npc-professions-audit-2026-10-13.md
       - .github/workflows/npc-professions-quality.yml
@@ -40,6 +43,8 @@ jobs:
       - name: JavaScript syntax
         run: |
           node --check scripts/check-npc-professions.mjs
+          node --check scripts/check-trainer-locations.mjs
+          node --check tests/trainer-locations.test.mjs
           node --check scripts/check-crafting-chains.mjs
           node --check assets/crafting-beta.js
           node --check assets/global-search.js
@@ -59,6 +64,10 @@ jobs:
         run: node scripts/check-npc-professions.mjs
       - name: Agent 03 regression tests
         run: node --test tests/npc-professions.test.mjs
+      - name: Trainer location evidence and map consistency (#51)
+        run: node scripts/check-trainer-locations.mjs
+      - name: Trainer location fixtures and legacy map safeguards (#51)
+        run: node --test tests/trainer-locations.test.mjs
       - name: Agent 03 crafting-chain provenance and graph integrity
         run: node scripts/check-crafting-chains.mjs
       - name: Agent 03 crafting-chain fixtures
