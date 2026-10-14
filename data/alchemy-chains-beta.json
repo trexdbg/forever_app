@@ -1,0 +1,562 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-14",
+  "scope": {
+    "game": "WoW Forever beta",
+    "level_focus": [
+      1,
+      30
+    ],
+    "status": "research_only_not_published",
+    "reference_build": "1.60.1.70338",
+    "preview": {
+      "status": "opt_in_documentary_preview",
+      "recipe_item_ids": [
+        4596,
+        2455,
+        2456,
+        247239,
+        247240,
+        3385
+      ],
+      "route_fr": "/metiers/?alchemy=4596",
+      "route_en": "/en/metiers/?alchemy=247239",
+      "note": "Exactly six audited recovery-potion formulas; no promotion of additional Classic recipes or in-game vendor/loot availability."
+    }
+  },
+  "sources": {
+    "client_page": "https://wowforevertalents.com/professions/alchemy/recovery-potions/",
+    "removed_alchemy": "https://wowforevertalents.com/professions/alchemy/not-in-forever/",
+    "first_aid": "https://wowforevertalents.com/professions/first-aid/",
+    "source_guide": "https://www.wowhead.com/forever/guide/professions/alchemy-overview-trainer-locations-recipes"
+  },
+  "items": {
+    "730": {
+      "id": 730,
+      "name": {
+        "fr": "Œil de murloc",
+        "en": "Murloc Eye"
+      },
+      "kind": "component",
+      "category": "loot",
+      "item_level": null,
+      "player_level_required": null,
+      "name_verification": "translation_reference_only",
+      "source_url": "https://wowforevertalents.com/professions/alchemy/recovery-potions/",
+      "evidence_url": "https://wowforevertalents.com/professions/alchemy/recovery-potions/",
+      "observed_at": "2026-10-14",
+      "observed_build": "1.60.1.70338",
+      "evidence_level": "documented_forever",
+      "evidence_kind": "forever_client_index",
+      "evidence_note": "Listed by ID in a Forever-indexed alchemy recipe as reagent only. An actual Forever node, loot source or seller has not been confirmed."
+    },
+    "785": {
+      "id": 785,
+      "name": {
+        "fr": "Mage royal",
+        "en": "Mageroyal"
+      },
+      "kind": "component",
+      "category": "herb",
+      "item_level": null,
+      "player_level_required": null,
+      "name_verification": "translation_reference_only",
+      "source_url": "https://wowforevertalents.com/professions/alchemy/recovery-potions/",
+      "evidence_url": "https://wowforevertalents.com/professions/alchemy/recovery-potions/",
+      "observed_at": "2026-10-14",
+      "observed_build": "1.60.1.70338",
+      "evidence_level": "documented_forever",
+      "evidence_kind": "forever_client_index",
+      "evidence_note": "Listed by ID in a Forever-indexed alchemy recipe as reagent only. An actual Forever node, loot source or seller has not been confirmed."
+    },
+    "2447": {
+      "id": 2447,
+      "name": {
+        "fr": "Pacifique",
+        "en": "Peacebloom"
+      },
+      "kind": "component",
+      "category": "herb",
+      "item_level": null,
+      "player_level_required": null,
+      "name_verification": "translation_reference_only",
+      "source_url": "https://wowforevertalents.com/professions/alchemy/recovery-potions/",
+      "evidence_url": "https://wowforevertalents.com/professions/alchemy/recovery-potions/",
+      "observed_at": "2026-10-14",
+      "observed_build": "1.60.1.70338",
+      "evidence_level": "documented_forever",
+      "evidence_kind": "forever_client_index",
+      "evidence_note": "Listed by ID in a Forever-indexed alchemy recipe as reagent only. An actual Forever node, loot source or seller has not been confirmed."
+    },
+    "2450": {
+      "id": 2450,
+      "name": {
+        "fr": "Églantine",
+        "en": "Briarthorn"
+      },
+      "kind": "component",
+      "category": "herb",
+      "item_level": null,
+      "player_level_required": null,
+      "name_verification": "translation_reference_only",
+      "source_url": "https://wowforevertalents.com/professions/alchemy/recovery-potions/",
+      "evidence_url": "https://wowforevertalents.com/professions/alchemy/recovery-potions/",
+      "observed_at": "2026-10-14",
+      "observed_build": "1.60.1.70338",
+      "evidence_level": "documented_forever",
+      "evidence_kind": "forever_client_index",
+      "evidence_note": "Listed by ID in a Forever-indexed alchemy recipe as reagent only. An actual Forever node, loot source or seller has not been confirmed."
+    },
+    "2453": {
+      "id": 2453,
+      "name": {
+        "fr": "Doulourante",
+        "en": "Bruiseweed"
+      },
+      "kind": "component",
+      "category": "herb",
+      "item_level": null,
+      "player_level_required": null,
+      "name_verification": "translation_reference_only",
+      "source_url": "https://wowforevertalents.com/professions/alchemy/recovery-potions/",
+      "evidence_url": "https://wowforevertalents.com/professions/alchemy/recovery-potions/",
+      "observed_at": "2026-10-14",
+      "observed_build": "1.60.1.70338",
+      "evidence_level": "documented_forever",
+      "evidence_kind": "forever_client_index",
+      "evidence_note": "Listed by ID in a Forever-indexed alchemy recipe as reagent only. An actual Forever node, loot source or seller has not been confirmed."
+    },
+    "2455": {
+      "id": 2455,
+      "name": {
+        "fr": "Potion de mana mineure",
+        "en": "Minor Mana Potion"
+      },
+      "kind": "potion",
+      "item_level": 15,
+      "player_level_required": null,
+      "name_verification": "translation_reference_only",
+      "source_url": "https://www.wowhead.com/forever/spell=2331",
+      "evidence_url": "https://www.wowhead.com/forever/spell=2331",
+      "observed_at": "2026-10-14",
+      "observed_build": "1.60.1.70338",
+      "evidence_level": "documented_forever",
+      "evidence_kind": "forever_client_index",
+      "evidence_note": "Forever spell index identifies the crafted potion output. Item level is not an observed player equip/use requirement; French label has not been checked in the beta client."
+    },
+    "2456": {
+      "id": 2456,
+      "name": {
+        "fr": "Potion de régénération mineure",
+        "en": "Minor Rejuvenation Potion"
+      },
+      "kind": "potion",
+      "item_level": 15,
+      "player_level_required": null,
+      "name_verification": "translation_reference_only",
+      "source_url": "https://www.wowhead.com/forever/spell=2332/minor-rejuvenation-potion",
+      "evidence_url": "https://www.wowhead.com/forever/spell=2332/minor-rejuvenation-potion",
+      "observed_at": "2026-10-14",
+      "observed_build": "1.60.1.70338",
+      "evidence_level": "documented_forever",
+      "evidence_kind": "forever_client_index",
+      "evidence_note": "Forever spell index identifies the crafted potion output. Item level is not an observed player equip/use requirement; French label has not been checked in the beta client."
+    },
+    "3371": {
+      "id": 3371,
+      "name": {
+        "fr": "Fiole vide",
+        "en": "Empty Vial"
+      },
+      "kind": "component",
+      "category": "vial",
+      "item_level": null,
+      "player_level_required": null,
+      "name_verification": "translation_reference_only",
+      "source_url": "https://wowforevertalents.com/professions/alchemy/recovery-potions/",
+      "evidence_url": "https://wowforevertalents.com/professions/alchemy/recovery-potions/",
+      "observed_at": "2026-10-14",
+      "observed_build": "1.60.1.70338",
+      "evidence_level": "documented_forever",
+      "evidence_kind": "forever_client_index",
+      "evidence_note": "Listed by ID in a Forever-indexed alchemy recipe as reagent only. An actual Forever node, loot source or seller has not been confirmed."
+    },
+    "3372": {
+      "id": 3372,
+      "name": {
+        "fr": "Fiole plombée",
+        "en": "Leaded Vial"
+      },
+      "kind": "component",
+      "category": "vial",
+      "item_level": null,
+      "player_level_required": null,
+      "name_verification": "translation_reference_only",
+      "source_url": "https://wowforevertalents.com/professions/alchemy/recovery-potions/",
+      "evidence_url": "https://wowforevertalents.com/professions/alchemy/recovery-potions/",
+      "observed_at": "2026-10-14",
+      "observed_build": "1.60.1.70338",
+      "evidence_level": "documented_forever",
+      "evidence_kind": "forever_client_index",
+      "evidence_note": "Listed by ID in a Forever-indexed alchemy recipe as reagent only. An actual Forever node, loot source or seller has not been confirmed."
+    },
+    "3385": {
+      "id": 3385,
+      "name": {
+        "fr": "Potion de mana inférieure",
+        "en": "Lesser Mana Potion"
+      },
+      "kind": "potion",
+      "item_level": 24,
+      "player_level_required": null,
+      "name_verification": "translation_reference_only",
+      "source_url": "https://www.wowhead.com/forever/spell=3173",
+      "evidence_url": "https://www.wowhead.com/forever/spell=3173",
+      "observed_at": "2026-10-14",
+      "observed_build": "1.60.1.70338",
+      "evidence_level": "documented_forever",
+      "evidence_kind": "forever_client_index",
+      "evidence_note": "Forever spell index identifies the crafted potion output. Item level is not an observed player equip/use requirement; French label has not been checked in the beta client."
+    },
+    "3820": {
+      "id": 3820,
+      "name": {
+        "fr": "Étangétrangle",
+        "en": "Stranglekelp"
+      },
+      "kind": "component",
+      "category": "herb",
+      "item_level": null,
+      "player_level_required": null,
+      "name_verification": "translation_reference_only",
+      "source_url": "https://wowforevertalents.com/professions/alchemy/recovery-potions/",
+      "evidence_url": "https://wowforevertalents.com/professions/alchemy/recovery-potions/",
+      "observed_at": "2026-10-14",
+      "observed_build": "1.60.1.70338",
+      "evidence_level": "documented_forever",
+      "evidence_kind": "forever_client_index",
+      "evidence_note": "Listed by ID in a Forever-indexed alchemy recipe as reagent only. An actual Forever node, loot source or seller has not been confirmed."
+    },
+    "4596": {
+      "id": 4596,
+      "name": {
+        "fr": "Potion de soins décolorée mineure",
+        "en": "Minor Discolored Healing Potion"
+      },
+      "kind": "potion",
+      "item_level": 15,
+      "player_level_required": null,
+      "name_verification": "translation_reference_only",
+      "source_url": "https://www.wowhead.com/forever/spell=4508/minor-discolored-healing-potion",
+      "evidence_url": "https://www.wowhead.com/forever/spell=4508/minor-discolored-healing-potion",
+      "observed_at": "2026-10-14",
+      "observed_build": "1.60.1.70338",
+      "evidence_level": "documented_forever",
+      "evidence_kind": "forever_client_index",
+      "evidence_note": "Forever spell index identifies the crafted potion output. Item level is not an observed player equip/use requirement; French label has not been checked in the beta client."
+    },
+    "247239": {
+      "id": 247239,
+      "name": {
+        "fr": "Potion de soins décolorée inférieure",
+        "en": "Lesser Discolored Healing Potion"
+      },
+      "kind": "potion",
+      "item_level": 13,
+      "player_level_required": null,
+      "name_verification": "translation_reference_only",
+      "source_url": "https://www.wowhead.com/forever/spell=1244645/lesser-discolored-healing-potion",
+      "evidence_url": "https://www.wowhead.com/forever/spell=1244645/lesser-discolored-healing-potion",
+      "observed_at": "2026-10-14",
+      "observed_build": "1.60.1.70338",
+      "evidence_level": "documented_forever",
+      "evidence_kind": "forever_client_index",
+      "evidence_note": "Forever spell index identifies the crafted potion output. Item level is not an observed player equip/use requirement; French label has not been checked in the beta client."
+    },
+    "247240": {
+      "id": 247240,
+      "name": {
+        "fr": "Potion de soins décolorée",
+        "en": "Discolored Healing Potion"
+      },
+      "kind": "potion",
+      "item_level": 22,
+      "player_level_required": null,
+      "name_verification": "translation_reference_only",
+      "source_url": "https://www.wowhead.com/forever/spell=1244646/discolored-healing-potion",
+      "evidence_url": "https://www.wowhead.com/forever/spell=1244646/discolored-healing-potion",
+      "observed_at": "2026-10-14",
+      "observed_build": "1.60.1.70338",
+      "evidence_level": "documented_forever",
+      "evidence_kind": "forever_client_index",
+      "evidence_note": "Forever spell index identifies the crafted potion output. Item level is not an observed player equip/use requirement; French label has not been checked in the beta client."
+    }
+  },
+  "recipes": [
+    {
+      "spell_id": 4508,
+      "output_item_id": 4596,
+      "profession_id": 171,
+      "recipe_item_id": 4597,
+      "learning_method": "recipe_item",
+      "skill_required": 50,
+      "skill_required_status": "client_recipe_item_level",
+      "skill_yellow": 55,
+      "skill_yellow_source_url": "https://wowforevertalents.com/professions/alchemy/recovery-potions/",
+      "item_level": 15,
+      "player_level_required": null,
+      "change_status": "changed",
+      "ingredients": [
+        {
+          "item_id": 3371,
+          "quantity": 1
+        },
+        {
+          "item_id": 2447,
+          "quantity": 1
+        },
+        {
+          "item_id": 730,
+          "quantity": 1
+        }
+      ],
+      "output_quantity": null,
+      "output_quantity_status": "unverified_live_yield",
+      "reported_client_yield": 1,
+      "reported_client_yield_source_url": "https://wowforevertalents.com/professions/alchemy/recovery-potions/",
+      "available_in_game": null,
+      "verified_for_forever": false,
+      "source_url": "https://wowforevertalents.com/professions/alchemy/recovery-potions/",
+      "evidence_url": "https://www.wowhead.com/forever/spell=4508/minor-discolored-healing-potion",
+      "observed_at": "2026-10-14",
+      "observed_build": "1.60.1.70338",
+      "evidence_level": "documented_forever",
+      "evidence_kind": "forever_client_index",
+      "evidence_note": "Forever client-derived alchemy recovery-potentials page identifies spell, item, inputs, learning category and yellow color. Reported Makes 1 is source documentation, not a witnessed craft. Trainer access and player-level requirement not confirmed."
+    },
+    {
+      "spell_id": 2331,
+      "output_item_id": 2455,
+      "profession_id": 171,
+      "recipe_item_id": null,
+      "learning_method": "trainer",
+      "skill_required": null,
+      "skill_required_status": "trainer_requirement_not_in_client",
+      "skill_yellow": 65,
+      "skill_yellow_source_url": "https://wowforevertalents.com/professions/alchemy/recovery-potions/",
+      "item_level": 15,
+      "player_level_required": null,
+      "change_status": "changed",
+      "ingredients": [
+        {
+          "item_id": 785,
+          "quantity": 1
+        },
+        {
+          "item_id": 2447,
+          "quantity": 1
+        },
+        {
+          "item_id": 3371,
+          "quantity": 1
+        }
+      ],
+      "output_quantity": null,
+      "output_quantity_status": "unverified_live_yield",
+      "reported_client_yield": 1,
+      "reported_client_yield_source_url": "https://wowforevertalents.com/professions/alchemy/recovery-potions/",
+      "available_in_game": null,
+      "verified_for_forever": false,
+      "source_url": "https://wowforevertalents.com/professions/alchemy/recovery-potions/",
+      "evidence_url": "https://www.wowhead.com/forever/spell=2331",
+      "observed_at": "2026-10-14",
+      "observed_build": "1.60.1.70338",
+      "evidence_level": "documented_forever",
+      "evidence_kind": "forever_client_index",
+      "evidence_note": "Forever client-derived alchemy recovery-potentials page identifies spell, item, inputs, learning category and yellow color. Reported Makes 1 is source documentation, not a witnessed craft. Trainer access and player-level requirement not confirmed."
+    },
+    {
+      "spell_id": 2332,
+      "output_item_id": 2456,
+      "profession_id": 171,
+      "recipe_item_id": null,
+      "learning_method": "trainer",
+      "skill_required": 40,
+      "skill_required_status": "trainer_requirement_not_in_client",
+      "skill_yellow": 70,
+      "skill_yellow_source_url": "https://wowforevertalents.com/professions/alchemy/recovery-potions/",
+      "item_level": 15,
+      "player_level_required": null,
+      "change_status": "unchanged",
+      "ingredients": [
+        {
+          "item_id": 785,
+          "quantity": 2
+        },
+        {
+          "item_id": 2447,
+          "quantity": 1
+        },
+        {
+          "item_id": 3371,
+          "quantity": 1
+        }
+      ],
+      "output_quantity": null,
+      "output_quantity_status": "unverified_live_yield",
+      "reported_client_yield": 1,
+      "reported_client_yield_source_url": "https://wowforevertalents.com/professions/alchemy/recovery-potions/",
+      "available_in_game": null,
+      "verified_for_forever": false,
+      "source_url": "https://wowforevertalents.com/professions/alchemy/recovery-potions/",
+      "evidence_url": "https://www.wowhead.com/forever/spell=2332/minor-rejuvenation-potion",
+      "observed_at": "2026-10-14",
+      "observed_build": "1.60.1.70338",
+      "evidence_level": "documented_forever",
+      "evidence_kind": "forever_client_index",
+      "evidence_note": "Forever client-derived alchemy recovery-potentials page identifies spell, item, inputs, learning category and yellow color. Reported Makes 1 is source documentation, not a witnessed craft. Trainer access and player-level requirement not confirmed."
+    },
+    {
+      "spell_id": 1244645,
+      "output_item_id": 247239,
+      "profession_id": 171,
+      "recipe_item_id": null,
+      "learning_method": "trainer",
+      "skill_required": null,
+      "skill_required_status": "trainer_requirement_not_in_client",
+      "skill_yellow": 85,
+      "skill_yellow_source_url": "https://wowforevertalents.com/professions/alchemy/recovery-potions/",
+      "item_level": 13,
+      "player_level_required": null,
+      "change_status": "new",
+      "ingredients": [
+        {
+          "item_id": 3371,
+          "quantity": 1
+        },
+        {
+          "item_id": 2450,
+          "quantity": 1
+        },
+        {
+          "item_id": 730,
+          "quantity": 1
+        }
+      ],
+      "output_quantity": null,
+      "output_quantity_status": "unverified_live_yield",
+      "reported_client_yield": 1,
+      "reported_client_yield_source_url": "https://wowforevertalents.com/professions/alchemy/recovery-potions/",
+      "available_in_game": null,
+      "verified_for_forever": false,
+      "source_url": "https://wowforevertalents.com/professions/alchemy/recovery-potions/",
+      "evidence_url": "https://www.wowhead.com/forever/spell=1244645/lesser-discolored-healing-potion",
+      "observed_at": "2026-10-14",
+      "observed_build": "1.60.1.70338",
+      "evidence_level": "documented_forever",
+      "evidence_kind": "forever_client_index",
+      "evidence_note": "Forever client-derived alchemy recovery-potentials page identifies spell, item, inputs, learning category and yellow color. Reported Makes 1 is source documentation, not a witnessed craft. Trainer access and player-level requirement not confirmed."
+    },
+    {
+      "spell_id": 1244646,
+      "output_item_id": 247240,
+      "profession_id": 171,
+      "recipe_item_id": null,
+      "learning_method": "trainer",
+      "skill_required": null,
+      "skill_required_status": "trainer_requirement_not_in_client",
+      "skill_yellow": 135,
+      "skill_yellow_source_url": "https://wowforevertalents.com/professions/alchemy/recovery-potions/",
+      "item_level": 22,
+      "player_level_required": null,
+      "change_status": "new",
+      "ingredients": [
+        {
+          "item_id": 3372,
+          "quantity": 1
+        },
+        {
+          "item_id": 2453,
+          "quantity": 1
+        },
+        {
+          "item_id": 730,
+          "quantity": 1
+        }
+      ],
+      "output_quantity": null,
+      "output_quantity_status": "unverified_live_yield",
+      "reported_client_yield": 1,
+      "reported_client_yield_source_url": "https://wowforevertalents.com/professions/alchemy/recovery-potions/",
+      "available_in_game": null,
+      "verified_for_forever": false,
+      "source_url": "https://wowforevertalents.com/professions/alchemy/recovery-potions/",
+      "evidence_url": "https://www.wowhead.com/forever/spell=1244646/discolored-healing-potion",
+      "observed_at": "2026-10-14",
+      "observed_build": "1.60.1.70338",
+      "evidence_level": "documented_forever",
+      "evidence_kind": "forever_client_index",
+      "evidence_note": "Forever client-derived alchemy recovery-potentials page identifies spell, item, inputs, learning category and yellow color. Reported Makes 1 is source documentation, not a witnessed craft. Trainer access and player-level requirement not confirmed."
+    },
+    {
+      "spell_id": 3173,
+      "output_item_id": 3385,
+      "profession_id": 171,
+      "recipe_item_id": null,
+      "learning_method": "trainer",
+      "skill_required": null,
+      "skill_required_status": "trainer_requirement_not_in_client",
+      "skill_yellow": 145,
+      "skill_yellow_source_url": "https://wowforevertalents.com/professions/alchemy/recovery-potions/",
+      "item_level": 24,
+      "player_level_required": null,
+      "change_status": "unchanged",
+      "ingredients": [
+        {
+          "item_id": 785,
+          "quantity": 1
+        },
+        {
+          "item_id": 3820,
+          "quantity": 1
+        },
+        {
+          "item_id": 3371,
+          "quantity": 1
+        }
+      ],
+      "output_quantity": null,
+      "output_quantity_status": "unverified_live_yield",
+      "reported_client_yield": 1,
+      "reported_client_yield_source_url": "https://wowforevertalents.com/professions/alchemy/recovery-potions/",
+      "available_in_game": null,
+      "verified_for_forever": false,
+      "source_url": "https://wowforevertalents.com/professions/alchemy/recovery-potions/",
+      "evidence_url": "https://www.wowhead.com/forever/spell=3173",
+      "observed_at": "2026-10-14",
+      "observed_build": "1.60.1.70338",
+      "evidence_level": "documented_forever",
+      "evidence_kind": "forever_client_index",
+      "evidence_note": "Forever client-derived alchemy recovery-potentials page identifies spell, item, inputs, learning category and yellow color. Reported Makes 1 is source documentation, not a witnessed craft. Trainer access and player-level requirement not confirmed."
+    }
+  ],
+  "acquisitions": [],
+  "excluded_alchemy": [
+    {
+      "item_id": 118,
+      "name": "Minor Healing Potion",
+      "reason": "moved_to_first_aid",
+      "source_url": "https://wowforevertalents.com/professions/alchemy/not-in-forever/"
+    },
+    {
+      "item_id": 858,
+      "name": "Lesser Healing Potion",
+      "reason": "moved_to_first_aid",
+      "source_url": "https://wowforevertalents.com/professions/alchemy/not-in-forever/"
+    }
+  ],
+  "disclaimer": {
+    "fr": "Prévisualisation documentaire : les recettes du client ne prouvent pas l'accès aux maîtres, vendeurs ou butins dans la bêta. Aucun rendement constaté en jeu.",
+    "en": "Documentary preview: client recipe entries do not prove trainer, vendor or loot availability in beta. No in-game yields observed."
+  }
+}
