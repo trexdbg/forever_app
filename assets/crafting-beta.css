@@ -40,3 +40,12 @@
 .craft-back{font-size:11px}
 @media(max-width:720px){.craft-beta-content{grid-template-columns:minmax(0,1fr)}.craft-beta-results{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.craft-metrics{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:440px){.craft-beta-results{grid-template-columns:minmax(0,1fr)}.craft-beta summary{font-size:16px}}
+
+/* Source-specific mining and smelting facts (documentary only). */
+.craft-method{padding:10px 0;border-top:1px solid #384c3e;min-width:0;overflow-wrap:anywhere}
+.craft-method:first-of-type{border-top:0}
+.craft-method-title{display:block;color:#e8d2aa;font-size:12px;font-weight:600;margin:3px 0 6px}
+.craft-method .craft-component-list{margin:8px 0;grid-template-columns:repeat(auto-fit,minmax(146px,1fr))}
+.craft-method .craft-footnote{margin:5px 0 7px;line-height:1.65}
+.craft-method .craft-proof{display:inline-block;margin:3px 0}
+@media(max-width:440px){.craft-method .craft-component-list{grid-template-columns:minmax(0,1fr)}}
