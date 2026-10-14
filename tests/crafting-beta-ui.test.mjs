@@ -79,7 +79,7 @@ test("direct FR/EN URLs reload correctly, selection updates query and preserves 
 });
 test("4389 -> 10558 -> 3577 -> 2776 navigates across engineering, smelting and mineral node",async()=>{
  const a=app("fr","/metiers/?craft=4389");await wait();
- for(const [id,word] of [[10558,"12584"],[3577,"Fonte documentée"],[2776,"Filon d’or"]]){
+ for(const [id,word] of [[10558,"12584"],[3577,"Fonte documentée"],[2776,"Filon d\'or"]]){
   const button=a.detail().find(x=>x.className==="craft-component"&&x.textContent.includes("#"+id));
   assert.ok(button,"Must reach "+id);
   button.fire("click");
@@ -191,7 +191,7 @@ test("mobile deep links and component clicks scroll to the selected card in both
 
 test("Bronze Tube 4371 leads to Smelt Bronze 2659, Smelt Tin 3304 and mined Tin Ore",async()=>{
  const a=app("fr","/metiers/?craft=4371");await wait();
- for(const [id,needle] of [[2841,"2659"],[3576,"3304"],[2771,"Filon d’étain"]]){
+ for(const [id,needle] of [[2841,"2659"],[3576,"3304"],[2771,"Filon d\'étain"]]){
   const next=a.detail().find(x=>x.className==="craft-component"&&x.textContent.includes("#"+id));
   assert.ok(next,"Expected ingredient "+id);
   next.fire("click");
