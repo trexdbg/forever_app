@@ -3,6 +3,7 @@ on:
   workflow_dispatch:
   pull_request:
     paths:
+      - 'scripts/audit-site.mjs'
       - 'scripts/check-seo-gsc-pages.mjs'
       - '.github/workflows/site-geo-audit.yml'
       - 'guides/boss-forever-city-of-dalaran-*/index.html'
