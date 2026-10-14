@@ -1,0 +1,767 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-13",
+  "scope": {
+    "game": "WoW Forever beta",
+    "level_focus": [
+      1,
+      30
+    ],
+    "status": "research_only_not_published",
+    "reference_build": "1.60.1.70291"
+  },
+  "note": {
+    "fr": "Catalogue de recherche, non affiché au public. Fiches et recettes Forever ≠ disponibilité en jeu. Les rendements contradictoires sont inconnus; les ventes existantes sont des références Classic.",
+    "en": "Research-only catalogue. Forever pages do not prove live acquisition. Conflicting craft outputs are unknown; existing merchant offers are Classic references."
+  },
+  "items": {
+    "2592": {
+      "id": 2592,
+      "name": {
+        "fr": "Étoffe de laine",
+        "en": "Wool Cloth"
+      },
+      "name_verification": "translation_reference_only",
+      "role": "material",
+      "icon": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://www.wowhead.com/forever/spell=3942/whirring-bronze-gizmo",
+      "evidence_url": "https://www.wowhead.com/forever/spell=3942/whirring-bronze-gizmo",
+      "observed_at": "2026-10-13",
+      "observed_build": "unknown",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "Forever-specific recipe or component page identifies item/name; French translation is a reference label, not independently checked in client."
+    },
+    "2835": {
+      "id": 2835,
+      "name": {
+        "fr": "Pierre brute",
+        "en": "Rough Stone"
+      },
+      "name_verification": "translation_reference_only",
+      "role": "material",
+      "icon": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/engineering/parts/",
+      "evidence_url": "https://wowforevertalents.com/professions/engineering/parts/",
+      "observed_at": "2026-10-13",
+      "observed_build": "unknown",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "Forever-specific recipe or component page identifies item/name; French translation is a reference label, not independently checked in client."
+    },
+    "2836": {
+      "id": 2836,
+      "name": {
+        "fr": "Pierre grossière",
+        "en": "Coarse Stone"
+      },
+      "name_verification": "translation_reference_only",
+      "role": "material",
+      "icon": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/engineering/parts/",
+      "evidence_url": "https://wowforevertalents.com/professions/engineering/parts/",
+      "observed_at": "2026-10-13",
+      "observed_build": "unknown",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "Forever-specific recipe or component page identifies item/name; French translation is a reference label, not independently checked in client."
+    },
+    "2840": {
+      "id": 2840,
+      "name": {
+        "fr": "Barre de cuivre",
+        "en": "Copper Bar"
+      },
+      "name_verification": "translation_reference_only",
+      "role": "material",
+      "icon": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://www.wowhead.com/forever/spell=3924/copper-tube",
+      "evidence_url": "https://www.wowhead.com/forever/spell=3924/copper-tube",
+      "observed_at": "2026-10-13",
+      "observed_build": "unknown",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "Forever-specific recipe or component page identifies item/name; French translation is a reference label, not independently checked in client."
+    },
+    "2841": {
+      "id": 2841,
+      "name": {
+        "fr": "Barre de bronze",
+        "en": "Bronze Bar"
+      },
+      "name_verification": "translation_reference_only",
+      "role": "material",
+      "icon": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://forevercompass.com/items/4371",
+      "evidence_url": "https://forevercompass.com/items/4371",
+      "observed_at": "2026-10-13",
+      "observed_build": "unknown",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "Forever-specific recipe or component page identifies item/name; French translation is a reference label, not independently checked in client."
+    },
+    "2880": {
+      "id": 2880,
+      "name": {
+        "fr": "Catalyseur léger",
+        "en": "Weak Flux"
+      },
+      "name_verification": "translation_reference_only",
+      "role": "material",
+      "icon": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowseer.gg/items/Weak_Flux_2880",
+      "evidence_url": "https://wowseer.gg/items/Weak_Flux_2880",
+      "observed_at": "2026-10-13",
+      "observed_build": "unknown",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "Forever-specific recipe or component page identifies item/name; French translation is a reference label, not independently checked in client."
+    },
+    "3575": {
+      "id": 3575,
+      "name": {
+        "fr": "Barre de fer",
+        "en": "Iron Bar"
+      },
+      "name_verification": "translation_reference_only",
+      "role": "material",
+      "icon": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://forevercompass.com/items/4389",
+      "evidence_url": "https://forevercompass.com/items/4389",
+      "observed_at": "2026-10-13",
+      "observed_build": "unknown",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "Forever-specific recipe or component page identifies item/name; French translation is a reference label, not independently checked in client."
+    },
+    "3577": {
+      "id": 3577,
+      "name": {
+        "fr": "Barre d'or",
+        "en": "Gold Bar"
+      },
+      "name_verification": "translation_reference_only",
+      "role": "material",
+      "icon": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowseer.gg/items/Gold_Power_Core_10558",
+      "evidence_url": "https://wowseer.gg/items/Gold_Power_Core_10558",
+      "observed_at": "2026-10-13",
+      "observed_build": "unknown",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "Forever-specific recipe or component page identifies item/name; French translation is a reference label, not independently checked in client."
+    },
+    "4357": {
+      "id": 4357,
+      "name": {
+        "fr": "Poudre d'explosion basique",
+        "en": "Rough Blasting Powder"
+      },
+      "name_verification": "translation_reference_only",
+      "role": "crafted",
+      "icon": "inv_misc_dust_01",
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowseer.gg/recipe/engineering-3918",
+      "evidence_url": "https://wowseer.gg/recipe/engineering-3918",
+      "observed_at": "2026-10-13",
+      "observed_build": "unknown",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "Forever-specific recipe or component page identifies item/name; French translation is a reference label, not independently checked in client."
+    },
+    "4361": {
+      "id": 4361,
+      "name": {
+        "fr": "Tube en cuivre",
+        "en": "Copper Tube"
+      },
+      "name_verification": "translation_reference_only",
+      "role": "crafted",
+      "icon": "inv_gizmo_pipe_02",
+      "evidence_level": "documented_forever",
+      "source_url": "https://www.wowhead.com/forever/spell=3924/copper-tube",
+      "evidence_url": "https://www.wowhead.com/forever/spell=3924/copper-tube",
+      "observed_at": "2026-10-13",
+      "observed_build": "unknown",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "Forever-specific recipe or component page identifies item/name; French translation is a reference label, not independently checked in client."
+    },
+    "4364": {
+      "id": 4364,
+      "name": {
+        "fr": "Poudre d'explosion grossière",
+        "en": "Coarse Blasting Powder"
+      },
+      "name_verification": "translation_reference_only",
+      "role": "crafted",
+      "icon": "inv_misc_dust_02",
+      "evidence_level": "documented_forever",
+      "source_url": "https://www.wowhead.com/forever/spell=3929/coarse-blasting-powder",
+      "evidence_url": "https://www.wowhead.com/forever/spell=3929/coarse-blasting-powder",
+      "observed_at": "2026-10-13",
+      "observed_build": "unknown",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "Forever-specific recipe or component page identifies item/name; French translation is a reference label, not independently checked in client."
+    },
+    "4371": {
+      "id": 4371,
+      "name": {
+        "fr": "Tube en bronze",
+        "en": "Bronze Tube"
+      },
+      "name_verification": "translation_reference_only",
+      "role": "crafted",
+      "icon": "inv_gizmo_pipe_01",
+      "evidence_level": "datamined",
+      "source_url": "https://forevercompass.com/items/4371",
+      "evidence_url": "https://forevercompass.com/items/4371",
+      "observed_at": "2026-10-13",
+      "observed_build": "1.60.1.70291",
+      "evidence_kind": "client_db2",
+      "evidence_note": "Client comparison claims item ID and tooltip match Forever beta 1.60.1.70291, not in-game accessibility; French name not asserted as an official localized string."
+    },
+    "4375": {
+      "id": 4375,
+      "name": {
+        "fr": "Bidule bourdonnant en bronze",
+        "en": "Whirring Bronze Gizmo"
+      },
+      "name_verification": "translation_reference_only",
+      "role": "crafted",
+      "icon": "inv_gizmo_02",
+      "evidence_level": "documented_forever",
+      "source_url": "https://www.wowhead.com/forever/spell=3942/whirring-bronze-gizmo",
+      "evidence_url": "https://www.wowhead.com/forever/spell=3942/whirring-bronze-gizmo",
+      "observed_at": "2026-10-13",
+      "observed_build": "unknown",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "Forever-specific recipe or component page identifies item/name; French translation is a reference label, not independently checked in client."
+    },
+    "4387": {
+      "id": 4387,
+      "name": {
+        "fr": "Contrefiche en fer",
+        "en": "Iron Strut"
+      },
+      "name_verification": "translation_reference_only",
+      "role": "crafted",
+      "icon": "inv_spear_05",
+      "evidence_level": "documented_forever",
+      "source_url": "https://www.wowhead.com/forever/spell=3958/iron-strut",
+      "evidence_url": "https://www.wowhead.com/forever/spell=3958/iron-strut",
+      "observed_at": "2026-10-13",
+      "observed_build": "unknown",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "Forever-specific recipe or component page identifies item/name; French translation is a reference label, not independently checked in client."
+    },
+    "4389": {
+      "id": 4389,
+      "name": {
+        "fr": "Gyrochronatome",
+        "en": "Gyrochronatom"
+      },
+      "name_verification": "translation_reference_only",
+      "role": "crafted",
+      "icon": "inv_misc_pocketwatch_02",
+      "evidence_level": "datamined",
+      "source_url": "https://forevercompass.com/items/4389",
+      "evidence_url": "https://forevercompass.com/items/4389",
+      "observed_at": "2026-10-13",
+      "observed_build": "1.60.1.70291",
+      "evidence_kind": "client_db2",
+      "evidence_note": "Client comparison claims item ID and tooltip match Forever beta 1.60.1.70291, not in-game accessibility; French name not asserted as an official localized string."
+    },
+    "10558": {
+      "id": 10558,
+      "name": {
+        "fr": "Batterie en or",
+        "en": "Gold Power Core"
+      },
+      "name_verification": "translation_reference_only",
+      "role": "crafted",
+      "icon": "inv_battery_02",
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowseer.gg/items/Gold_Power_Core_10558",
+      "evidence_url": "https://wowseer.gg/items/Gold_Power_Core_10558",
+      "observed_at": "2026-10-13",
+      "observed_build": "unknown",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "Forever-specific recipe or component page identifies item/name; French translation is a reference label, not independently checked in client."
+    }
+  },
+  "recipes": [
+    {
+      "spell_id": 3918,
+      "recipe_item_id": null,
+      "output_item_id": 4357,
+      "output_quantity": null,
+      "output_quantity_status": "unknown",
+      "output_quantity_candidates": [
+        {
+          "quantity": 1,
+          "source_url": "https://wowforevertalents.com/professions/engineering/parts/",
+          "evidence_note": "WoW Forever Talents Parts index displays 'Makes 1'; no distinct source with a verifiable contradictory output was established. This is not a gameplay capture."
+        }
+      ],
+      "profession_id": 202,
+      "skill_required": 1,
+      "skill_yellow": 20,
+      "skill_note": "Trainer requirement according to a Forever-labeled spell listing; skill_yellow is the recipe colour threshold, not proof of live trainer accessibility.",
+      "learning": {
+        "method": "profession",
+        "trainer_npc_id": null,
+        "recipe_item_status": "no_recipe_item_documented",
+        "available_in_game": null
+      },
+      "ingredients": [
+        {
+          "item_id": 2835,
+          "quantity": 1
+        }
+      ],
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowseer.gg/recipe/engineering-3918",
+      "evidence_url": "https://wowseer.gg/recipe/engineering-3918",
+      "observed_at": "2026-10-13",
+      "observed_build": "unknown",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "Forever-labelled spell recipe for Rough Blasting Powder: identified spell 3918, reagents and engineering skill. The Forever recipe index reports a yield, but no verified comparison or live craft outcome establishes the exact output.",
+      "corroborating_url": "https://wowforevertalents.com/professions/engineering/parts/",
+      "skill_yellow_source_url": "https://wowforevertalents.com/professions/engineering/parts/",
+      "skill_yellow_observed_at": "2026-10-13",
+      "skill_yellow_observed_build": "1.60.1.70338",
+      "skill_yellow_evidence_kind": "forever_community_page",
+      "skill_yellow_evidence_note": "WoW Forever Talents Engineering Parts labels Yellow 20 for recipe spell 3918, from a client-derived colour threshold. This is NOT the minimum skill required to learn from a trainer."
+    },
+    {
+      "spell_id": 3924,
+      "recipe_item_id": null,
+      "output_item_id": 4361,
+      "output_quantity": null,
+      "output_quantity_status": "conflicting_sources",
+      "output_quantity_candidates": [
+        {
+          "quantity": 1,
+          "source_url": "https://wowforevertalents.com/professions/engineering/parts/",
+          "evidence_note": "WoW Forever Talents Parts index explicitly displays 'Makes 1' (Forever client-derived page, not direct crafting)."
+        },
+        {
+          "quantity": 2,
+          "source_url": "https://www.wowhead.com/forever/spell=3924/copper-tube",
+          "evidence_note": "Wowhead Forever spell 3924 shows 2 items generated by the spell (not an observed in-game craft)."
+        }
+      ],
+      "profession_id": 202,
+      "skill_required": 50,
+      "skill_yellow": 80,
+      "skill_note": "Required engineering skill 50 is a Forever-specific community guide claim (source and limits listed in skill_required fields), not directly confirmed in-game; yellow 80 is an independently sourced client-derived colour threshold, green 95.",
+      "learning": {
+        "method": "trainer",
+        "trainer_npc_id": null,
+        "recipe_item_status": "no_recipe_item_documented",
+        "available_in_game": null
+      },
+      "ingredients": [
+        {
+          "item_id": 2840,
+          "quantity": 2
+        },
+        {
+          "item_id": 2880,
+          "quantity": 1
+        }
+      ],
+      "evidence_level": "documented_forever",
+      "source_url": "https://www.wowhead.com/forever/spell=3924/copper-tube",
+      "evidence_url": "https://www.wowhead.com/forever/spell=3924/copper-tube",
+      "observed_at": "2026-10-13",
+      "observed_build": "unknown",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "Forever-labelled spell recipe for Copper Tube: identified spell 3924, reagents and engineering skill. The Forever index and Wowhead Forever spell pages disagree on output yield; live trainer availability and exact production count unverified.",
+      "corroborating_url": "https://wowforevertalents.com/professions/engineering/parts/",
+      "skill_yellow_source_url": "https://wowforevertalents.com/professions/engineering/parts/",
+      "skill_yellow_observed_at": "2026-10-13",
+      "skill_yellow_observed_build": "1.60.1.70338",
+      "skill_yellow_evidence_kind": "forever_community_page",
+      "skill_yellow_evidence_note": "WoW Forever Talents Engineering Parts labels Yellow 80 for recipe spell 3924, from a client-derived colour threshold. This is NOT the minimum skill required to learn from a trainer.",
+      "skill_required_source_url": "https://wowtbc.gg/warcraftforever/professions/engineering/",
+      "skill_required_evidence_level": "documented_forever",
+      "skill_required_evidence_kind": "forever_community_page",
+      "skill_required_observed_at": "2026-10-13",
+      "skill_required_observed_build": "unknown",
+      "skill_required_evidence_note": "The Forever-specific wowtbc.gg Engineering guide lists Copper Tube learned at 50 and separate thresholds 80 yellow/95 green/110 grey. WoW Forever Talents states that the required trainer skill is not available in client tables; this remains a community guide assertion, not a gameplay capture."
+    },
+    {
+      "spell_id": 3929,
+      "recipe_item_id": null,
+      "output_item_id": 4364,
+      "output_quantity": null,
+      "output_quantity_status": "unknown",
+      "output_quantity_candidates": [
+        {
+          "quantity": 1,
+          "source_url": "https://wowforevertalents.com/professions/engineering/parts/",
+          "evidence_note": "WoW Forever Talents Parts index displays 'Makes 1'; no distinct source with a verifiable contradictory output was established. This is not a gameplay capture."
+        }
+      ],
+      "profession_id": 202,
+      "skill_required": 75,
+      "skill_yellow": 85,
+      "skill_note": "Trainer requirement according to a Forever-labeled spell listing; skill_yellow is the recipe colour threshold, not proof of live trainer accessibility.",
+      "learning": {
+        "method": "trainer",
+        "trainer_npc_id": null,
+        "recipe_item_status": "no_recipe_item_documented",
+        "available_in_game": null
+      },
+      "ingredients": [
+        {
+          "item_id": 2836,
+          "quantity": 1
+        }
+      ],
+      "evidence_level": "documented_forever",
+      "source_url": "https://www.wowhead.com/forever/spell=3929/coarse-blasting-powder",
+      "evidence_url": "https://www.wowhead.com/forever/spell=3929/coarse-blasting-powder",
+      "observed_at": "2026-10-13",
+      "observed_build": "unknown",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "Forever-labelled spell recipe for Coarse Blasting Powder: identified spell 3929, reagents and engineering skill. The Forever recipe index reports a yield, but no verified comparison or live craft outcome establishes the exact output.",
+      "corroborating_url": "https://wowforevertalents.com/professions/engineering/parts/",
+      "skill_yellow_source_url": "https://wowforevertalents.com/professions/engineering/parts/",
+      "skill_yellow_observed_at": "2026-10-13",
+      "skill_yellow_observed_build": "1.60.1.70338",
+      "skill_yellow_evidence_kind": "forever_community_page",
+      "skill_yellow_evidence_note": "WoW Forever Talents Engineering Parts labels Yellow 85 for recipe spell 3929, from a client-derived colour threshold. This is NOT the minimum skill required to learn from a trainer."
+    },
+    {
+      "spell_id": 3938,
+      "recipe_item_id": null,
+      "output_item_id": 4371,
+      "output_quantity": null,
+      "output_quantity_status": "conflicting_sources",
+      "output_quantity_candidates": [
+        {
+          "quantity": 1,
+          "source_url": "https://wowforevertalents.com/professions/engineering/parts/",
+          "evidence_note": "WoW Forever Talents Parts index explicitly displays 'Makes 1' (Forever client-derived page, not direct crafting)."
+        },
+        {
+          "quantity": 2,
+          "source_url": "https://www.wowhead.com/forever/spell=3938/bronze-tube",
+          "evidence_note": "Wowhead Forever spell 3938 shows 2 items generated by the spell (not an observed in-game craft)."
+        }
+      ],
+      "profession_id": 202,
+      "skill_required": 105,
+      "skill_yellow": 105,
+      "skill_note": "Trainer requirement according to a Forever-labeled spell listing; skill_yellow is the recipe colour threshold, not proof of live trainer accessibility.",
+      "learning": {
+        "method": "trainer",
+        "trainer_npc_id": null,
+        "recipe_item_status": "no_recipe_item_documented",
+        "available_in_game": null
+      },
+      "ingredients": [
+        {
+          "item_id": 2841,
+          "quantity": 2
+        },
+        {
+          "item_id": 2880,
+          "quantity": 1
+        }
+      ],
+      "evidence_level": "documented_forever",
+      "source_url": "https://www.wowhead.com/forever/spell=3938/bronze-tube",
+      "evidence_url": "https://www.wowhead.com/forever/spell=3938/bronze-tube",
+      "observed_at": "2026-10-13",
+      "observed_build": "unknown",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "Forever-labelled spell recipe for Bronze Tube: identified spell 3938, reagents and engineering skill. The Forever index and Wowhead Forever spell pages disagree on output yield; live trainer availability and exact production count unverified.",
+      "corroborating_url": "https://forevercompass.com/items/4371",
+      "skill_yellow_source_url": "https://wowforevertalents.com/professions/engineering/parts/",
+      "skill_yellow_observed_at": "2026-10-13",
+      "skill_yellow_observed_build": "1.60.1.70338",
+      "skill_yellow_evidence_kind": "forever_community_page",
+      "skill_yellow_evidence_note": "WoW Forever Talents Engineering Parts labels Yellow 105 for recipe spell 3938, from a client-derived colour threshold. This is NOT the minimum skill required to learn from a trainer."
+    },
+    {
+      "spell_id": 3942,
+      "recipe_item_id": null,
+      "output_item_id": 4375,
+      "output_quantity": null,
+      "output_quantity_status": "unknown",
+      "output_quantity_candidates": [
+        {
+          "quantity": 1,
+          "source_url": "https://wowforevertalents.com/professions/engineering/parts/",
+          "evidence_note": "WoW Forever Talents Parts index displays 'Makes 1'; no distinct source with a verifiable contradictory output was established. This is not a gameplay capture."
+        }
+      ],
+      "profession_id": 202,
+      "skill_required": 125,
+      "skill_yellow": 125,
+      "skill_note": "Trainer requirement according to a Forever-labeled spell listing; skill_yellow is the recipe colour threshold, not proof of live trainer accessibility.",
+      "learning": {
+        "method": "trainer",
+        "trainer_npc_id": null,
+        "recipe_item_status": "no_recipe_item_documented",
+        "available_in_game": null
+      },
+      "ingredients": [
+        {
+          "item_id": 2841,
+          "quantity": 2
+        },
+        {
+          "item_id": 2592,
+          "quantity": 1
+        }
+      ],
+      "evidence_level": "documented_forever",
+      "source_url": "https://www.wowhead.com/forever/spell=3942/whirring-bronze-gizmo",
+      "evidence_url": "https://www.wowhead.com/forever/spell=3942/whirring-bronze-gizmo",
+      "observed_at": "2026-10-13",
+      "observed_build": "unknown",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "Forever-labelled spell recipe for Whirring Bronze Gizmo: identified spell 3942, reagents and engineering skill. The Forever recipe index reports a yield, but no verified comparison or live craft outcome establishes the exact output.",
+      "corroborating_url": "https://wowforevertalents.com/professions/engineering/parts/",
+      "skill_yellow_source_url": "https://wowforevertalents.com/professions/engineering/parts/",
+      "skill_yellow_observed_at": "2026-10-13",
+      "skill_yellow_observed_build": "1.60.1.70338",
+      "skill_yellow_evidence_kind": "forever_community_page",
+      "skill_yellow_evidence_note": "WoW Forever Talents Engineering Parts labels Yellow 125 for recipe spell 3942, from a client-derived colour threshold. This is NOT the minimum skill required to learn from a trainer."
+    },
+    {
+      "spell_id": 12584,
+      "recipe_item_id": null,
+      "output_item_id": 10558,
+      "output_quantity": null,
+      "output_quantity_status": "conflicting_sources",
+      "output_quantity_candidates": [
+        {
+          "quantity": 3,
+          "source_url": "https://wowforevertalents.com/professions/engineering/parts/",
+          "evidence_note": "WoW Forever Talents Parts index explicitly displays 'Makes 3' (Forever client-derived page, not direct crafting)."
+        },
+        {
+          "quantity": 4,
+          "source_url": "https://www.wowhead.com/forever/spell=12584/gold-power-core",
+          "evidence_note": "Wowhead Forever spell 12584 shows 4 items generated by the spell (not an observed in-game craft)."
+        }
+      ],
+      "profession_id": 202,
+      "skill_required": 150,
+      "skill_yellow": 150,
+      "skill_note": "Trainer requirement according to a Forever-labeled spell listing; skill_yellow is the recipe colour threshold, not proof of live trainer accessibility.",
+      "learning": {
+        "method": "trainer",
+        "trainer_npc_id": null,
+        "recipe_item_status": "no_recipe_item_documented",
+        "available_in_game": null
+      },
+      "ingredients": [
+        {
+          "item_id": 3577,
+          "quantity": 1
+        }
+      ],
+      "evidence_level": "documented_forever",
+      "source_url": "https://www.wowhead.com/forever/spell=12584/gold-power-core",
+      "evidence_url": "https://www.wowhead.com/forever/spell=12584/gold-power-core",
+      "observed_at": "2026-10-13",
+      "observed_build": "unknown",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "Forever-labelled spell recipe for Gold Power Core: identified spell 12584, reagents and engineering skill. The Forever index and Wowhead Forever spell pages disagree on output yield; live trainer availability and exact production count unverified.",
+      "corroborating_url": "https://wowforevertalents.com/professions/engineering/parts/",
+      "skill_yellow_source_url": "https://wowforevertalents.com/professions/engineering/parts/",
+      "skill_yellow_observed_at": "2026-10-13",
+      "skill_yellow_observed_build": "1.60.1.70338",
+      "skill_yellow_evidence_kind": "forever_community_page",
+      "skill_yellow_evidence_note": "WoW Forever Talents Engineering Parts labels Yellow 150 for recipe spell 12584, from a client-derived colour threshold. This is NOT the minimum skill required to learn from a trainer."
+    },
+    {
+      "spell_id": 3958,
+      "recipe_item_id": null,
+      "output_item_id": 4387,
+      "output_quantity": null,
+      "output_quantity_status": "unknown",
+      "output_quantity_candidates": [
+        {
+          "quantity": 1,
+          "source_url": "https://wowforevertalents.com/professions/engineering/parts/",
+          "evidence_note": "WoW Forever Talents Parts index displays 'Makes 1'; no distinct source with a verifiable contradictory output was established. This is not a gameplay capture."
+        }
+      ],
+      "profession_id": 202,
+      "skill_required": 160,
+      "skill_yellow": 160,
+      "skill_note": "Trainer requirement according to a Forever-labeled spell listing; skill_yellow is the recipe colour threshold, not proof of live trainer accessibility.",
+      "learning": {
+        "method": "trainer",
+        "trainer_npc_id": null,
+        "recipe_item_status": "no_recipe_item_documented",
+        "available_in_game": null
+      },
+      "ingredients": [
+        {
+          "item_id": 3575,
+          "quantity": 2
+        }
+      ],
+      "evidence_level": "documented_forever",
+      "source_url": "https://www.wowhead.com/forever/spell=3958/iron-strut",
+      "evidence_url": "https://www.wowhead.com/forever/spell=3958/iron-strut",
+      "observed_at": "2026-10-13",
+      "observed_build": "unknown",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "Forever-labelled spell recipe for Iron Strut: identified spell 3958, reagents and engineering skill. The Forever recipe index reports a yield, but no verified comparison or live craft outcome establishes the exact output.",
+      "corroborating_url": "https://wowforevertalents.com/professions/engineering/parts/",
+      "skill_yellow_source_url": "https://wowforevertalents.com/professions/engineering/parts/",
+      "skill_yellow_observed_at": "2026-10-13",
+      "skill_yellow_observed_build": "1.60.1.70338",
+      "skill_yellow_evidence_kind": "forever_community_page",
+      "skill_yellow_evidence_note": "WoW Forever Talents Engineering Parts labels Yellow 160 for recipe spell 3958, from a client-derived colour threshold. This is NOT the minimum skill required to learn from a trainer."
+    },
+    {
+      "spell_id": 3961,
+      "recipe_item_id": null,
+      "output_item_id": 4389,
+      "output_quantity": null,
+      "output_quantity_status": "conflicting_sources",
+      "output_quantity_candidates": [
+        {
+          "quantity": 1,
+          "source_url": "https://wowforevertalents.com/professions/engineering/parts/",
+          "evidence_note": "WoW Forever Talents Parts index explicitly displays 'Makes 1' (Forever client-derived page, not direct crafting)."
+        },
+        {
+          "quantity": 2,
+          "source_url": "https://www.wowhead.com/forever/spell=3961/gyrochronatom",
+          "evidence_note": "Wowhead Forever spell 3961 shows 2 items generated by the spell (not an observed in-game craft)."
+        }
+      ],
+      "profession_id": 202,
+      "skill_required": 170,
+      "skill_yellow": 170,
+      "skill_note": "Trainer requirement according to a Forever-labeled spell listing; skill_yellow is the recipe colour threshold, not proof of live trainer accessibility.",
+      "learning": {
+        "method": "trainer",
+        "trainer_npc_id": null,
+        "recipe_item_status": "no_recipe_item_documented",
+        "available_in_game": null
+      },
+      "ingredients": [
+        {
+          "item_id": 3575,
+          "quantity": 1
+        },
+        {
+          "item_id": 10558,
+          "quantity": 1
+        }
+      ],
+      "evidence_level": "documented_forever",
+      "source_url": "https://www.wowhead.com/forever/spell=3961/gyrochronatom",
+      "evidence_url": "https://www.wowhead.com/forever/spell=3961/gyrochronatom",
+      "observed_at": "2026-10-13",
+      "observed_build": "unknown",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "Forever-labelled spell recipe for Gyrochronatom: identified spell 3961, reagents and engineering skill. The Forever index and Wowhead Forever spell pages disagree on output yield; live trainer availability and exact production count unverified.",
+      "corroborating_url": "https://forevercompass.com/items/4389",
+      "skill_yellow_source_url": "https://wowforevertalents.com/professions/engineering/parts/",
+      "skill_yellow_observed_at": "2026-10-13",
+      "skill_yellow_observed_build": "1.60.1.70338",
+      "skill_yellow_evidence_kind": "forever_community_page",
+      "skill_yellow_evidence_note": "WoW Forever Talents Engineering Parts labels Yellow 170 for recipe spell 3961, from a client-derived colour threshold. This is NOT the minimum skill required to learn from a trainer."
+    }
+  ],
+  "acquisitions": [
+    {
+      "item_id": 4371,
+      "method": "legacy_vendor_catalogue",
+      "vendor_catalogue": "data/npcs.json",
+      "candidate_sellers": 16,
+      "price_copper": 800,
+      "stock_quantity": 2,
+      "restock_minutes": null,
+      "verified_for_forever": false,
+      "evidence_level": "classic_reference",
+      "source_url": "https://www.wowhead.com/classic/item=4371",
+      "evidence_url": "https://www.wowhead.com/classic/item=4371",
+      "observed_at": "2026-10-13",
+      "observed_build": "Classic Era",
+      "evidence_kind": "classic_database",
+      "evidence_note": "Existing merchant catalogue lists 16 Classic-reference vendors. Numeric price and stock are legacy values, not checked on Forever; no usable Forever sale location is certified."
+    },
+    {
+      "item_id": 4389,
+      "method": "legacy_vendor_catalogue",
+      "vendor_catalogue": "data/npcs.json",
+      "candidate_sellers": 16,
+      "price_copper": 3000,
+      "stock_quantity": 1,
+      "restock_minutes": null,
+      "verified_for_forever": false,
+      "evidence_level": "classic_reference",
+      "source_url": "https://www.wowhead.com/classic/item=4389",
+      "evidence_url": "https://www.wowhead.com/classic/item=4389",
+      "observed_at": "2026-10-13",
+      "observed_build": "Classic Era",
+      "evidence_kind": "classic_database",
+      "evidence_note": "Existing merchant catalogue lists 16 Classic-reference vendors. Numeric price and stock are legacy values, not checked on Forever; no usable Forever sale location is certified."
+    },
+    {
+      "item_id": 2880,
+      "method": "vendor_index",
+      "vendor_npc_id": null,
+      "price_copper": null,
+      "stock_quantity": null,
+      "restock_minutes": null,
+      "verified_for_forever": false,
+      "evidence_level": "classic_reference",
+      "source_url": "https://wowseer.gg/items/Weak_Flux_2880",
+      "evidence_url": "https://wowseer.gg/items/Weak_Flux_2880",
+      "observed_at": "2026-10-13",
+      "observed_build": "Classic reference",
+      "evidence_kind": "classic_database",
+      "evidence_note": "Forever-oriented page lists vendors in a table labeled Classic. No individual seller, price, stock or coordinate is verified on Forever."
+    },
+    {
+      "item_id": 2840,
+      "method": "smelting_candidate",
+      "spell_id": null,
+      "ingredients": null,
+      "verified_for_forever": false,
+      "evidence_level": "unverified",
+      "evidence_note": "Smelting chain is a candidate only. Recipe, input quantities, skill, mining node and in-game access not independently verified for Forever."
+    },
+    {
+      "item_id": 2841,
+      "method": "smelting_candidate",
+      "spell_id": null,
+      "ingredients": null,
+      "verified_for_forever": false,
+      "evidence_level": "unverified",
+      "evidence_note": "Smelting chain is a candidate only. Recipe, input quantities, skill, mining node and in-game access not independently verified for Forever."
+    },
+    {
+      "item_id": 3575,
+      "method": "smelting_candidate",
+      "spell_id": null,
+      "ingredients": null,
+      "verified_for_forever": false,
+      "evidence_level": "unverified",
+      "evidence_note": "Smelting chain is a candidate only. Recipe, input quantities, skill, mining node and in-game access not independently verified for Forever."
+    },
+    {
+      "item_id": 3577,
+      "method": "smelting_candidate",
+      "spell_id": null,
+      "ingredients": null,
+      "verified_for_forever": false,
+      "evidence_level": "unverified",
+      "evidence_note": "Smelting chain is a candidate only. Recipe, input quantities, skill, mining node and in-game access not independently verified for Forever."
+    }
+  ]
+}
