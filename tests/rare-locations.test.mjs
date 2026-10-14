@@ -36,6 +36,7 @@ test("all representative states remain distinct",()=>{
 });
 test("mismatched numeric rare ID is rejected",()=>{
   assert.ok(edited("Foreman Rigger",r=>{r.location_review.classic_numeric_id_reference=-1}).includes("UNPROVEN_NUMERIC_ID"));
+  assert.ok(edited("Foreman Rigger",r=>{r.location_review.classic_numeric_id_reference=99999}).includes("NUMERIC_REFERENCE_URL_MISMATCH"));
 });
 test("unknown zone or contradictory uiMapID is rejected",()=>{
   assert.ok(edited("Foreman Rigger",r=>{r.zone="unknown"}).includes("UNKNOWN_RARE_ZONE"));
@@ -81,6 +82,8 @@ test("source conflict cannot quietly produce a Forever pin",()=>{
   data.rares[0].location_review.conflict_sources=[];
   assert.ok(edited("Sister Rathtalon",r=>{r.location_review.conflict_sources=null}).includes("UNRESOLVED_CONFLICT_MISSING_SOURCES"));
   assert.equal(waypointFor(data.rares[0]),null);
+  assert.ok(edited("Sister Rathtalon",r=>{r.points=[[96,75]];r.point_evidence=[{coordinates:[96,75]}]}).includes("UNRESOLVED_CONFLICT_WITH_PIN"));
+  assert.ok(edited("Akkrilus",r=>{delete r.location_review.conflict_note.fr}).includes("MISSING_CONFLICT_TRANSLATION"));
 });
 test("instance rares cannot be put on outdoor maps",()=>{
   assert.ok(edited("Bruegal Ironknuckle",r=>{r.points=[[55,50]];r.point_evidence=[{coordinates:[55,50]}]}).includes("INSTANCE_OUTDOOR_PIN"));
