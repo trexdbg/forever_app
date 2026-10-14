@@ -58,7 +58,7 @@ Sources indépendantes [Forever Talents](https://wowforevertalents.com/professio
 | 2592 Étoffe de laine | Indice de butin sur des humanoïdes dans le [guide Classic](https://www.wowhead.com/classic/guide/classic-cloth-farming-linen-wool) | **`classic_reference`**, aucune créature ni loot Forever prouvés |
 | 2880 Weak Flux / Catalyseur léger | [Fiche Forever de l'objet](https://forevercompass.com/items/2880), [index marchands WowSeer](https://wowseer.gg/items/Weak_Flux_2880) | L'objet/le sort utilisent 2880, mais la table de vendeurs est héritée de Classic. Aucun vendeur particulier, aucune transaction/prix/stock/location en jeu prouvés sur Forever |
 
-Le [guide de minage Forever publié le 9 octobre](https://www.wowhead.com/forever/guide/professions/mining/overview-leveling) fournit des **exemples de zones** : cuivre (Dun Morogh, Elwynn Forest, Durotar), étain (Loch Modan, Ashenvale, Westfall), fer et or (Arathi Highlands, Desolace, Stranglethorn Vale). Les zones sont des indices documentaires de prospection, **pas des coordonnées ni des spawns individuellement vérifiés**. On ne modifie ni les cartes ni le catalogue Minage des autres agents.
+Le [guide de minage Forever, mis à jour le 11 octobre 2026](https://www.wowhead.com/forever/guide/professions/mining/overview-leveling) fournit des **exemples de zones** : cuivre (Dun Morogh, Elwynn Forest, Durotar), étain (Loch Modan, Ashenvale, Westfall), fer et or (Arathi Highlands, Desolace, Stranglethorn Vale). Les zones sont des indices documentaires de prospection, **pas des coordonnées ni des spawns individuellement vérifiés**. On ne modifie ni les cartes ni le catalogue Minage des autres agents.
 
 ## Provenance et séparation des assertions
 
