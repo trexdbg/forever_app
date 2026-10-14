@@ -99,7 +99,7 @@ body[data-page="items"] #item-source{font-size:12px}
 
 /* Source-aware acquisition drill-down (documentary Forever vs Classic). */
 body[data-page="items"] .item-acquisition-toggle{
- margin:5px 0 0 6px;padding:3px 7px;font:700 10px/1.4 inherit;
+ margin:5px 0 0 6px;padding:3px 7px;font:700 10px/1.4 system-ui,sans-serif;
  color:#dceac9;background:#193029;border:1px solid #4e7661;border-radius:5px;
  cursor:pointer;vertical-align:middle;white-space:nowrap
 }
