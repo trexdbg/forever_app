@@ -382,7 +382,7 @@
       "recipe_item_id": null,
       "learning_method": "trainer",
       "skill_required": 40,
-      "skill_required_status": "trainer_requirement_not_in_client",
+      "skill_required_status": "client_known_required_skill",
       "skill_yellow": 70,
       "skill_yellow_source_url": "https://wowforevertalents.com/professions/alchemy/recovery-potions/",
       "item_level": 15,
