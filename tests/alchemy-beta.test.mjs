@@ -288,3 +288,46 @@ test("malicious acquisition notes cannot become executable HTML",async()=>{
  assert.ok(!appJs.includes("insertAdjacentHTML"));
  assert.ok(a.detail().every(n=>n.tag!=="img"));
 });
+
+
+test("issue #49 review: underwater Stranglekelp and shared itinerary warning on FR/EN deep links",async()=>{
+ for(const [lang,path,underwater,warning] of [
+  ["fr","/metiers/","pousse sous l’eau","ne sont pas des localisations attestées"],
+  ["en","/en/metiers/","grows underwater","are not verified Stranglekelp locations"]
+ ]){
+  const app=ui(lang,path+"?craft=4389&alchemy=3820#prof-trainers",true);await settle();
+  const shown=app.els["alchemy-detail"].textContent;
+  assert.equal(app.els["alchemy-beta"].open,true);
+  assert.match(shown,/3820/);
+  assert.ok(shown.includes(underwater),lang+" underwater context must be visible");
+  assert.ok(shown.includes(warning),lang+" shared itinerary must not be misread as a confirmed spawn");
+  assert.ok(shown.includes("Loch Modan"));
+  assert.equal(new URLSearchParams(app.location.search).get("alchemy"),"3820");
+  assert.equal(new URLSearchParams(app.location.search).get("craft"),"4389");
+  assert.equal(app.location.hash,"#prof-trainers");
+  const evidence=app.detail().filter(x=>x.tag==="a"&&x.textContent.includes(lang==="fr"?"Voir la preuve":"View evidence"));
+  assert.ok(evidence.some(x=>x.href==="https://www.wowhead.com/forever/guide/professions/herbalism/overview-leveling"),lang+" source is linked");
+ }
+ const acq=data.acquisitions.find(x=>x.item_id===3820);
+ assert.equal(acq.coordinates,null);assert.equal(acq.node_id,null);
+});
+test("issue #49 review: Wilted Peacebloom stays separate from item 2447 in both languages",async()=>{
+ for(const [lang,path,wilted,distinct] of [
+  ["fr","/metiers/","Pacifique fanée","ne prouvent ni son obtention"],
+  ["en","/en/metiers/","Wilted Peacebloom","do not prove it is gathered there"]
+ ]){
+  const app=ui(lang,path+"?craft=4389&alchemy=2447",true);await settle();
+  const rendered=app.els["alchemy-detail"].textContent;
+  assert.equal(app.els["alchemy-beta"].open,true);
+  assert.ok(rendered.includes(wilted),lang+" wilted variant must be visible");
+  assert.ok(rendered.includes(distinct),lang+" wilted node cannot prove item 2447 loot");
+  assert.ok(rendered.includes("#2447"),lang+" standalone item ID must be shown");
+  assert.equal(new URLSearchParams(app.location.search).get("alchemy"),"2447");
+  assert.equal(new URLSearchParams(app.location.search).get("craft"),"4389");
+  assert.ok(!rendered.includes(lang==="fr"?"pousse sous l’eau":"grows underwater"));
+  const links=app.detail().filter(x=>x.tag==="a");
+  assert.ok(links.every(x=>x.href.startsWith("https://")&&x.rel==="noopener noreferrer"));
+ }
+ const a=data.acquisitions.find(x=>x.item_id===2447);
+ assert.equal(a.node_id,null);assert.equal(a.coordinates,null);assert.equal(a.quantity,null);
+});
