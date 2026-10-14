@@ -21,7 +21,7 @@ const kinds={
  classic_reference:["classic_database","classic_guide"],
  unverified:["unknown",null,undefined]
 };
-const date=x=>typeof x==="string"&&/^\\d{4}-\\d{2}-\\d{2}$/.test(x)&&!Number.isNaN(Date.parse(x+"T00:00:00Z"))&&
+const date=x=>typeof x==="string"&&/^\d{4}-\d{2}-\d{2}$/.test(x)&&!Number.isNaN(Date.parse(x+"T00:00:00Z"))&&
  new Date(x+"T00:00:00Z").toISOString().slice(0,10)===x;
 const nil=x=>x===null;
 const emptyFields=(a,fields)=>fields.every(k=>nil(a[k]));
