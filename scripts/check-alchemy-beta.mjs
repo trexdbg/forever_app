@@ -47,7 +47,9 @@ export function checkAlchemy(data){
   if(r.skill_required!==null&&(!pos(r.skill_required)||r.skill_required>r.skill_yellow))
    fail("SKILL_REQUIRED",path);
   if(!pos(r.skill_yellow)||!goodUrl(r.skill_yellow_source_url))fail("YELLOW_PROVENANCE",path);
-  if(r.skill_required_status==="trainer_requirement_not_in_client"&&r.skill_required!==null)
+  if(!["trainer_requirement_not_in_client","client_known_required_skill","client_recipe_item_level"].includes(r.skill_required_status)||
+    (r.skill_required_status==="trainer_requirement_not_in_client"&&r.skill_required!==null)||
+    (r.skill_required_status!=="trainer_requirement_not_in_client"&&!pos(r.skill_required)))
    fail("TRAINER_LEVEL_INVENTED",path);
   if(!pos(r.item_level)||r.player_level_required!==null)fail("LEVEL_CONFLATION",path);
   if(r.output_quantity!==null||r.output_quantity_status!=="unverified_live_yield"||
