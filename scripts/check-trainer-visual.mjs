@@ -74,7 +74,7 @@ async function scenario(send,base,lang,width){
   await cmd("Page.navigate",{url:base+(lang==="fr"?"/metiers/":"/en/metiers/")+"?q=Jandi"});
   let state={};
   for(let i=0;i<100;i++){
-   state=await evaluate('(()=>{const c=document.querySelector(".npc-trainer-detail-xy"),d=document.querySelector("#npc-detail"),s=d?.querySelector(".npc-source a");return {name:d?.textContent||"",coords:c?.textContent||"",source:s?.href||"",pointText:d?.querySelector(".npc-datacaveat")?.textContent||"",pins:document.querySelector("#npc-map-canvas")?.getContext("2d")!=null,mapCopy:!!document.querySelector("#npc-map-copy-way"),right:d?.getBoundingClientRect().right,scrollWidth:document.documentElement.scrollWidth,width:innerWidth}})()');
+   state=await evaluate('(()=>{const c=document.querySelector(".npc-trainer-detail-xy"),d=document.querySelector("#npc-detail"),s=d?.querySelector(".npc-source a");return {name:d?.textContent||"",coords:c?.textContent||"",source:s?.href||"",pointText:d?.querySelector(".npc-datacaveat")?.textContent||"",pins:document.querySelector("#npc-map-canvas")?.getContext("2d")!=null,mapCopy:!!document.querySelector("#npc-map-copy-way"),right:d?.getBoundingClientRect().right,scrollWidth:document.documentElement?.scrollWidth||0,width:innerWidth}})()');
    if(state.name.includes("Jandi")&&state.coords&&(state.source||"").includes("herbalism"))break;
    await delay(150);
   }
