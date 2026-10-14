@@ -96,7 +96,7 @@ function displaySelected(){
  const item=itemFor(state.selected);if(!item){put(detail,"p",T("Objet non documenté dans ce lot.","Item not documented in this subset."),"craft-muted");return}
  const r=recipeFor(state.selected),head=put(detail,"div",null,"craft-detail-head");
  if(typeof item.icon==="string"&&/^[a-z0-9_]+$/.test(item.icon)){
-  const icon=make("img");icon.src="/assets/icons/"+item.icon+".jpg";icon.alt="";icon.loading="lazy";
+  const icon=make("img");icon.src="https://wow.zamimg.com/images/wow/icons/medium/"+item.icon+".jpg";icon.alt="";icon.loading="lazy";
   icon.width=46;icon.height=46;icon.addEventListener("error",()=>{icon.hidden=true});head.append(icon);
  }
  const names=put(head,"div");
