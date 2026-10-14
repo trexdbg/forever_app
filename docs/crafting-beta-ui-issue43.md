@@ -32,7 +32,7 @@ Le lien direct ouvre `<details>`, charge les huit recettes, sélectionne l'ID **
 - Marchands : pour 4371 et 4389, « 16 marchands candidats issus de Classic » / « 16 Classic-reference candidate vendors », sans tarif, quantité en stock, localisation ou timer présentés comme Forever.
 - Les libellés français sont toujours indiqués comme des traductions de référence, **sans certification de localisation officielle**.
 
-Les éléments du DOM utilisent `document.createElement`, `textContent` et des URLs validées HTTPS (pas d'`innerHTML`). L'icône utilise uniquement une clé locale `[a-z0-9_]+` et se masque si introuvable ; les références URL malformées ou non-HTTPS ne créent pas de lien. Le chargement refuse les données incorrectes, affiche un message localisé et autorise une nouvelle tentative à la prochaine ouverture. Le graphe de crafting reste contrôlé contre les cycles par le validateur existant ; l'interface n'emploie aucune récursion de rendu.
+Les éléments du DOM utilisent `document.createElement`, `textContent` et des URLs validées HTTPS (pas d'`innerHTML`). L'icône utilise uniquement une clé validée `[a-z0-9_]+` dans l'URL HTTPS d'icônes Wowhead déjà utilisée sur ForEveroth (`wow.zamimg.com/images/wow/icons/medium/`) ; elle se masque si la ressource est absente (les noms du lot n'existent pas dans `assets/icons/`) ; les références URL malformées ou non-HTTPS ne créent pas de lien. Le chargement refuse les données incorrectes, affiche un message localisé et autorise une nouvelle tentative à la prochaine ouverture. Le graphe de crafting reste contrôlé contre les cycles par le validateur existant ; l'interface n'emploie aucune récursion de rendu.
 
 ## Recherche globale
 
