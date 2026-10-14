@@ -456,7 +456,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -730,7 +731,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -840,7 +842,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -973,7 +976,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -1066,7 +1070,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -1159,7 +1164,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -1218,7 +1224,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "reported_without_independent_location_proof",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -1293,7 +1300,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -1364,7 +1372,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -1436,7 +1445,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -1508,7 +1518,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -1591,7 +1602,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -1649,7 +1661,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -1707,7 +1720,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -1766,7 +1780,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -1825,7 +1840,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -1884,7 +1900,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -1943,7 +1960,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -2002,7 +2020,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -2061,7 +2080,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -2119,7 +2139,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -2178,7 +2199,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -2236,7 +2258,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -2320,7 +2343,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -2414,7 +2438,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -2473,7 +2498,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -2532,7 +2558,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -2591,7 +2618,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -2650,7 +2678,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -2708,7 +2737,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -2767,7 +2797,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -2825,7 +2856,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -2884,7 +2916,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -2943,7 +2976,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -3002,7 +3036,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -3061,7 +3096,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -3120,7 +3156,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -3179,7 +3216,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -3588,7 +3626,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -3647,7 +3686,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -3706,7 +3746,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -3765,7 +3806,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -3927,7 +3969,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -4213,7 +4256,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -4272,7 +4316,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -5493,7 +5538,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "instance_map_required",
-        "evidence_note": "Requires an instance floor map and separate evidence; an outdoor zone percentage is not meaningful."
+        "evidence_note": "Requires an instance floor map and separate evidence; an outdoor zone percentage is not meaningful.",
+        "faction_status": "unverified"
       },
       "point_evidence": []
     },
@@ -5607,7 +5653,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -5673,7 +5720,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "reported_without_independent_location_proof",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -5755,7 +5803,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -5828,7 +5877,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -5887,7 +5937,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -5954,7 +6005,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -6041,7 +6093,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -6112,7 +6165,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -6179,7 +6233,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -6261,7 +6316,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -6328,7 +6384,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -6477,7 +6534,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -6668,7 +6726,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -6727,7 +6786,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -6809,7 +6869,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -6890,7 +6951,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -6972,7 +7034,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -7031,7 +7094,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -7102,7 +7166,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -7183,7 +7248,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -7302,7 +7368,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -7513,7 +7580,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -7596,7 +7664,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -7841,7 +7910,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -7902,7 +7972,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -7961,7 +8032,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -8052,7 +8124,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -8185,7 +8258,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -8252,7 +8326,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -8358,7 +8433,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -8421,7 +8497,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -8494,7 +8571,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -8565,7 +8643,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -8640,7 +8719,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -8701,7 +8781,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -8807,7 +8888,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -9018,7 +9100,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -9113,7 +9196,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -9197,7 +9281,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -9260,7 +9345,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -9337,7 +9423,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -9408,7 +9495,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -9492,7 +9580,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -9553,7 +9642,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -9614,7 +9704,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -9675,7 +9766,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -9736,7 +9828,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -9809,7 +9902,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -9870,7 +9964,10 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified",
+        "classic_faction_reference": "Alliance Outrunner",
+        "faction_reference_url": "https://foreverdb.net/rare/5799"
       },
       "point_evidence": [
         {
@@ -9936,7 +10033,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -10002,7 +10100,10 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified",
+        "classic_faction_reference": "Alliance Outrunner",
+        "faction_reference_url": "https://foreverdb.net/rare/5800"
       },
       "point_evidence": [
         {
@@ -10068,7 +10169,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -10129,7 +10231,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -10190,7 +10293,10 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified",
+        "classic_faction_reference": "Alliance Outrunner",
+        "faction_reference_url": "https://foreverdb.net/rare/5797"
       },
       "point_evidence": [
         {
@@ -10256,7 +10362,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -10322,7 +10429,10 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified",
+        "classic_faction_reference": "Alliance Outrunner",
+        "faction_reference_url": "https://foreverdb.net/rare/5798"
       },
       "point_evidence": [
         {
@@ -10396,7 +10506,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -10480,7 +10591,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -10541,7 +10653,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -10602,7 +10715,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -10723,7 +10837,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -10784,7 +10899,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -10868,7 +10984,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -10952,7 +11069,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -11040,7 +11158,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -11136,7 +11255,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -11224,7 +11344,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -11316,7 +11437,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -11445,7 +11567,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -11726,7 +11849,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -12079,7 +12203,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -12296,7 +12421,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -12428,7 +12554,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -12667,7 +12794,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -12749,7 +12877,7 @@
         "reviewed_at": "2026-10-14",
         "initially_without_point": true,
         "scope_reason": "Legacy Classic rare catalogue level within 1–30; beta level eligibility only, not evidence of Forever availability",
-        "identity_status": "numeric_id_unresolved",
+        "identity_status": "classic_numeric_id_reference_only",
         "zone": "stonetalon",
         "uiMapID": 1442,
         "coordinate_system": "zone_percent_0_100_not_gps",
@@ -12762,7 +12890,14 @@
           "https://foreverdb.net/rare/5830",
           "https://www.wowhead.com/classic/npc=5830/sister-rathtalon"
         ],
-        "evidence_note": "Zone-only historical reference; position and game availability remain unknown."
+        "evidence_note": "Zone-only historical reference; position and game availability remain unknown.",
+        "faction_status": "unverified",
+        "classic_numeric_id_reference": 5830,
+        "identity_reference_url": "https://foreverdb.net/rare/5830",
+        "conflict_note": {
+          "fr": "Sources contradictoires : ForeverDB place ce rare aux Serres-Rocheuses, alors que Wowhead Classic indique les Tarides. Aucune position Forever vérifiée : aucun repère ajouté.",
+          "en": "Conflicting sources: ForeverDB places this rare in Stonetalon, while Wowhead Classic lists the Barrens. No verified Forever location: no pin added."
+        }
       },
       "point_evidence": []
     },
@@ -12823,7 +12958,8 @@
         "zone_evidence_level": "documented_forever",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "documented_forever",
-        "evidence_note": "Forever community documents exact point(s); no screenshot attributed to an individual, so not confirmed in game."
+        "evidence_note": "Forever community documents exact point(s); no screenshot attributed to an individual, so not confirmed in game.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -12953,7 +13089,8 @@
         "zone_evidence_level": "documented_forever",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "documented_forever",
-        "evidence_note": "Forever community documents exact point(s); no screenshot attributed to an individual, so not confirmed in game."
+        "evidence_note": "Forever community documents exact point(s); no screenshot attributed to an individual, so not confirmed in game.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -13071,7 +13208,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -13138,7 +13276,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -13205,7 +13344,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -13271,7 +13411,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -13332,7 +13473,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -13414,7 +13556,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "instance_map_required",
-        "evidence_note": "Requires an instance floor map and separate evidence; an outdoor zone percentage is not meaningful."
+        "evidence_note": "Requires an instance floor map and separate evidence; an outdoor zone percentage is not meaningful.",
+        "faction_status": "unverified"
       },
       "point_evidence": []
     },
@@ -13463,7 +13606,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -13513,7 +13657,7 @@
         "reviewed_at": "2026-10-14",
         "initially_without_point": true,
         "scope_reason": "Legacy Classic rare catalogue level within 1–30; beta level eligibility only, not evidence of Forever availability",
-        "identity_status": "numeric_id_unresolved",
+        "identity_status": "classic_numeric_id_reference_only",
         "zone": "ashenvale",
         "uiMapID": 1440,
         "coordinate_system": "zone_percent_0_100_not_gps",
@@ -13526,7 +13670,14 @@
           "https://www.wowhead.com/forever/fr/npc=3773/akkrilus",
           "https://theforeverera.com/en/rares/3773/"
         ],
-        "evidence_note": "Zone-only historical reference; position and game availability remain unknown."
+        "evidence_note": "Zone-only historical reference; position and game availability remain unknown.",
+        "faction_status": "unverified",
+        "classic_numeric_id_reference": 3773,
+        "identity_reference_url": "https://www.wowhead.com/classic/npc=3773/akkrilus",
+        "conflict_note": {
+          "fr": "Sources historiques contradictoires entre Orneval et les Serres-Rocheuses. La zone et les coordonnées Forever restent inconnues : aucun repère ajouté.",
+          "en": "Conflicting historical references between Ashenvale and Stonetalon. Forever zone and coordinates remain unknown: no pin added."
+        }
       },
       "point_evidence": []
     },
@@ -13574,7 +13725,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -13641,7 +13793,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -13780,7 +13933,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -13847,7 +14001,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -13914,7 +14069,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -14075,7 +14231,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -14147,7 +14304,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -14243,7 +14401,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -14322,7 +14481,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -14442,7 +14602,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -14502,7 +14663,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -14562,7 +14724,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -14652,7 +14815,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -14732,7 +14896,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -14840,7 +15005,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "instance_map_required",
-        "evidence_note": "Requires an instance floor map and separate evidence; an outdoor zone percentage is not meaningful."
+        "evidence_note": "Requires an instance floor map and separate evidence; an outdoor zone percentage is not meaningful.",
+        "faction_status": "unverified"
       },
       "point_evidence": []
     },
@@ -14887,7 +15053,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -15141,7 +15308,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
@@ -15332,7 +15500,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "instance_map_required",
-        "evidence_note": "Requires an instance floor map and separate evidence; an outdoor zone percentage is not meaningful."
+        "evidence_note": "Requires an instance floor map and separate evidence; an outdoor zone percentage is not meaningful.",
+        "faction_status": "unverified"
       },
       "point_evidence": []
     },
@@ -18304,7 +18473,8 @@
         "zone_evidence_level": "classic_reference",
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
-        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof."
+        "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
+        "faction_status": "unverified"
       },
       "point_evidence": [
         {
