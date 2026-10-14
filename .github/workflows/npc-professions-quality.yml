@@ -24,6 +24,7 @@ on:
       - data/professions.json
       - scripts/check-npc-professions.mjs
       - scripts/check-trainer-locations.mjs
+      - scripts/check-trainer-visual.mjs
       - tests/trainer-locations.test.mjs
       - docs/trainer-locations-mission07-2026-10-14.md
       - tests/npc-professions.test.mjs
@@ -44,6 +45,7 @@ jobs:
         run: |
           node --check scripts/check-npc-professions.mjs
           node --check scripts/check-trainer-locations.mjs
+          node --check scripts/check-trainer-visual.mjs
           node --check tests/trainer-locations.test.mjs
           node --check scripts/check-crafting-chains.mjs
           node --check assets/crafting-beta.js
@@ -80,11 +82,16 @@ jobs:
         run: node --test tests/alchemy-beta.test.mjs
       - name: Local Chromium FR/EN responsive screenshots and browser smoke
         run: node scripts/check-crafting-visual.mjs
+      - name: Agent 03 named trainer waypoints in Chrome FR/EN desktop and mobile
+        run: node scripts/check-trainer-visual.mjs
       - name: Attach visual review screenshots (no deployment)
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: agent03-crafting-beta-browser
           path: artifacts/crafting-beta-visual/*.png
+          path: |
+            artifacts/crafting-beta-visual/*.png
+            artifacts/trainer-locations/*.png
           if-no-files-found: warn
           retention-days: 7
