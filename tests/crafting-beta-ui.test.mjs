@@ -153,3 +153,24 @@ test("actual global search consumer resolves FR/EN recipe results to selected it
   assert.ok(hits[0].textContent.includes(locale==="fr"?"Fabrication documentée":"Documented crafting"));
  }
 });
+
+test("filter, close, reopen resets list and count in French and English without a second fetch",async()=>{
+ for(const [locale,url,expected] of [
+  ["fr","/metiers/","8 / 8 fabrications documentées"],
+  ["en","/en/metiers/","8 / 8 documented crafts"]
+ ]){
+  const a=app(locale,url),section=a.els["craft-beta"],input=a.els["craft-beta-search"];
+  section.open=true;section.fire("toggle");await wait();
+  assert.equal(a.list().filter(x=>x.className==="craft-result").length,8);
+  input.value="4389";input.fire("input");
+  assert.equal(a.list().filter(x=>x.className==="craft-result").length,1);
+  assert.ok(a.els["craft-beta-count"].textContent.startsWith("1 / 8"));
+  section.open=false;section.fire("toggle");
+  assert.equal(input.value,"");
+  section.open=true;section.fire("toggle");await wait();
+  assert.equal(input.value,"");
+  assert.equal(a.list().filter(x=>x.className==="craft-result").length,8,locale);
+  assert.equal(a.els["craft-beta-count"].textContent,expected,locale);
+  assert.deepEqual(a.calls,["/data/crafting-chains-beta.json"],"Cache the already loaded eight recipes");
+ }
+});
