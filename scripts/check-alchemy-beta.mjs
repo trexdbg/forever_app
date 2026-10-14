@@ -39,13 +39,14 @@ export function checkAcquisition(a,items){
  }
  if(!["confirmed_in_game","documented_forever","datamined","classic_reference"].includes(a.evidence_level)||
     ![a.source_url,a.evidence_url].every(goodUrl)||!date(a.observed_at)||
-    !txt(a.observed_build)||!txt(a.evidence_note))bad("ACQUISITION_PROVENANCE");
+    !txt(a.observed_build)||!txt(a.evidence_note)||a.observed_at>new Date().toISOString().slice(0,10))bad("ACQUISITION_PROVENANCE");
  if(a.evidence_level==="confirmed_in_game"&&(a.observed_build==="unknown"||!a.evidence_url))
   bad("ACQUISITION_GAMEPLAY_PROOF");
  if(a.evidence_level==="datamined"&&a.observed_build==="unknown")bad("ACQUISITION_CLIENT_BUILD");
  if(a.guide_updated_at!==undefined&&(!date(a.guide_updated_at)||!date(a.observed_at)||a.guide_updated_at>a.observed_at))
   bad("ACQUISITION_GUIDE_DATE");
  if(a.method==="vendor"){
+  if(items[String(a.item_id)]?.category!=="vial")bad("ACQUISITION_CATEGORY");
   if(a.scope==="supplier_category"){
    if(a.evidence_level!=="documented_forever"||!txt(a.supplier_types?.fr)||
       !txt(a.supplier_types?.en)||!emptyFields(a,["vendor_id","vendor_name","price","stock","restock_minutes","coordinates","faction","zone"]))
@@ -56,6 +57,10 @@ export function checkAcquisition(a,items){
       !emptyFields(a,["price","stock","restock_minutes","coordinates"]))bad("ACQUISITION_VENDOR_PROOF");
   }else bad("ACQUISITION_VENDOR_PROOF");
  }else if(a.method==="herbalism_node"){
+  if(items[String(a.item_id)]?.category!=="herb"||
+     a.node_name?.en!==items[String(a.item_id)]?.name?.en||
+     a.node_name?.fr!==items[String(a.item_id)]?.name?.fr)
+    bad("ACQUISITION_CATEGORY_OR_NODE_IDENTITY");
   if(a.scope!=="guide_named_herb"||a.evidence_level!=="documented_forever"||
      !txt(a.node_name?.fr)||!txt(a.node_name?.en)||a.node_id!==null||
      a.skill_required!==null||a.coordinates!==null||a.zone_scope!=="shared_guide_itinerary"||
@@ -66,6 +71,7 @@ export function checkAcquisition(a,items){
      !a.suggested_zones.fr.every(txt)||!a.suggested_zones.en.every(txt))
     bad("ACQUISITION_NODE_PROOF");
  }else if(a.method==="loot"){
+  if(items[String(a.item_id)]?.category!=="loot")bad("ACQUISITION_CATEGORY");
   if(a.scope!=="mob_item_drop"||!pos(a.mob_id)||!txt(a.mob_name?.fr)||!txt(a.mob_name?.en)||
      !["documented_forever","confirmed_in_game"].includes(a.evidence_level)||
      !emptyFields(a,["drop_rate","respawn_minutes","coordinates"]))bad("ACQUISITION_LOOT_PROOF");
