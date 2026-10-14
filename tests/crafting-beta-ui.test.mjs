@@ -43,10 +43,10 @@ test("both public profession routes mount the opt-in panel without changing the 
   assert.ok(html.includes('/assets/npcs.js')&&!html.includes('/assets/professions.js'));
  }
 });
-test("research status and exactly eight opt-in recipes with sixteen items are preserved",()=>{
+test("research status and exactly eight opt-in recipes with 21 researched objects are preserved",()=>{
  assert.equal(data.scope.status,"research_only_not_published");
  assert.equal(data.scope.preview.status,"opt_in_documentary_preview");
- assert.equal(data.recipes.length,8);assert.equal(Object.keys(data.items).length,16);
+ assert.equal(data.recipes.length,8);assert.equal(Object.keys(data.items).length,21);
  assert.deepEqual(data.scope.preview.recipe_item_ids,data.recipes.map(r=>r.output_item_id));
 });
 test("deferred load, bilingual list and accent-insensitive name or ID search",async()=>{
@@ -77,16 +77,15 @@ test("direct FR/EN URLs reload correctly, selection updates query and preserves 
   assert.ok(a.els["craft-beta-detail"].textContent.includes(data.items[other.dataset.craft].name[lang]));
  }
 });
-test("4389 -> 10558 -> 3577 navigates a sub-recipe and ends at a leaf",async()=>{
+test("4389 -> 10558 -> 3577 -> 2776 navigates across engineering, smelting and mineral node",async()=>{
  const a=app("fr","/metiers/?craft=4389");await wait();
- let button=a.detail().find(x=>x.className==="craft-component"&&x.textContent.includes("#10558"));
- assert.ok(button);button.fire("click");
- assert.equal(new URLSearchParams(a.location.search).get("craft"),"10558");
- assert.ok(a.els["craft-beta-detail"].textContent.includes("12584"));
- button=a.detail().find(x=>x.className==="craft-component"&&x.textContent.includes("#3577"));
- assert.ok(button);button.fire("click");
- assert.equal(new URLSearchParams(a.location.search).get("craft"),"3577");
- assert.ok(a.els["craft-beta-detail"].textContent.includes("Aucune sous-recette vérifiée"));
+ for(const [id,word] of [[10558,"12584"],[3577,"Fonte documentée"],[2776,"Filon d\'or"]]){
+  const button=a.detail().find(x=>x.className==="craft-component"&&x.textContent.includes("#"+id));
+  assert.ok(button,"Must reach "+id);
+  button.fire("click");
+  assert.equal(new URLSearchParams(a.location.search).get("craft"),String(id));
+  assert.ok(a.els["craft-beta-detail"].textContent.includes(word),word);
+ }
  assert.equal(a.detail().filter(x=>x.className==="craft-component").length,0);
 });
 test("claim-level HTTPS links, yellow vs skill, null yields and Classic sellers remain explicit",async()=>{
@@ -187,5 +186,50 @@ test("mobile deep links and component clicks scroll to the selected card in both
   assert.equal(a.els["craft-beta-detail"].lastScroll?.behavior,"smooth");
   assert.equal(a.els["craft-beta-detail"].lastScroll?.block,"start");
   assert.equal(new URLSearchParams(a.location.search).get("craft"),lang==="en"?"3575":"2841");
+ }
+});
+
+test("Bronze Tube 4371 leads to Smelt Bronze 2659, Smelt Tin 3304 and mined Tin Ore",async()=>{
+ const a=app("fr","/metiers/?craft=4371");await wait();
+ for(const [id,needle] of [[2841,"2659"],[3576,"3304"],[2771,"Filon d\'étain"]]){
+  const next=a.detail().find(x=>x.className==="craft-component"&&x.textContent.includes("#"+id));
+  assert.ok(next,"Expected ingredient "+id);
+  next.fire("click");
+  assert.equal(new URLSearchParams(a.location.search).get("craft"),String(id));
+  assert.ok(a.els["craft-beta-detail"].textContent.includes(needle));
+ }
+ const detail=a.els["craft-beta-detail"].textContent;
+ assert.ok(detail.includes("Guide Minage Forever"));
+ assert.ok(detail.includes("Emplacement exact"));
+});
+test("mining guides and smelting render in both languages with HTTPS proof and no invented totals",async()=>{
+ for(const [lang,route,words] of [
+  ["fr","/metiers/?craft=3575",["Fonte documentée","3307","Seuil jaune : 130","Compétence d’apprentissage inconnue","Rendement de fonte inconnu"]],
+  ["en","/en/metiers/?craft=3575",["Documented Forever smelting","3307","Yellow threshold: 130","Trainer learning requirement unknown","Smelting yield unknown"]]
+ ]){
+  const a=app(lang,route);await wait();
+  const t=a.els["craft-beta-detail"].textContent;
+  for(const word of words)assert.ok(t.includes(word),lang+" "+word);
+  const links=a.detail().filter(x=>x.tag==="a");
+  assert.ok(links.some(x=>x.href.startsWith("https://wowforevertalents.com/professions/mining/")));
+  assert.ok(links.some(x=>x.href.startsWith("https://www.wowhead.com/forever/spell=3307")));
+  assert.ok(links.every(x=>x.href.startsWith("https://")));
+ }
+ for(const id of [2770,2835,2771,2836,2772,2776]){
+  const a=app("en","/en/metiers/?craft="+id);await wait();
+  const t=a.els["craft-beta-detail"].textContent;
+  assert.ok(t.includes("Forever Mining guide"),id);
+  assert.ok(t.includes("Exact node coordinates"),id);
+ }
+});
+test("unverified Weak Flux vendors and wool loot remain Classic, no fabricated seller details",async()=>{
+ for(const [id,needle] of [[2880,"Vendor index labeled Classic"],[2592,"Possible Classic-reference loot"]]){
+  const a=app("en","/en/metiers/?craft="+id);await wait();
+  assert.ok(a.els["craft-beta-detail"].textContent.includes(needle),id);
+  assert.ok(a.els["craft-beta-detail"].textContent.includes("not confirmed in game"),"Only negative availability qualifiers are rendered");
+ }
+ for(const [id,text] of [[4371,"16 Classic-reference candidate vendors"],[4389,"16 Classic-reference candidate vendors"]]){
+  const a=app("en","/en/metiers/?craft="+id);await wait();
+  assert.ok(a.els["craft-beta-detail"].textContent.includes(text));
  }
 });

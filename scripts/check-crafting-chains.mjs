@@ -112,11 +112,12 @@ export function auditCraftingChains(catalogue,npcs,professions) {
   active.delete(id);done.add(id);
  }
  for(const id of outputToRecipe.keys())walk(id,[]);
+ const smeltSpells=new Set(),smeltOutputs=new Map();
  for(const [i,a] of claims.entries()){
   const p="acquisitions["+i+"]";
   if(!object(a)){error("CRAFT_ACQUISITION_INVALID",p,"Expected record");continue;}
   if(!positive(a.item_id)||!known.has(String(a.item_id)))error("CRAFT_ACQUISITION_ITEM_MISSING",p,"Unknown item");
-  if(!["legacy_vendor_catalogue","vendor_index","smelting_candidate"].includes(a.method))error("CRAFT_ACQUISITION_METHOD",p,"Invalid acquisition method");
+  if(!["legacy_vendor_catalogue","vendor_index","smelting_candidate","smelting","mining_node","classic_loot_reference"].includes(a.method))error("CRAFT_ACQUISITION_METHOD",p,"Invalid acquisition method");
   if(a.verified_for_forever!==false)error("CRAFT_VENDOR_PROMOTION",p,"These leads are not proven obtainable on Forever");
   if(a.evidence_level==="confirmed_in_game"||a.evidence_level==="datamined")error("CRAFT_ACQUISITION_FALSE_PROOF",p,"A client row cannot verify a purchase");
   checkExplicitProvenance(a,p,report);
@@ -129,7 +130,75 @@ export function auditCraftingChains(catalogue,npcs,professions) {
    if(a.evidence_level!=="classic_reference")error("CRAFT_VENDOR_NOT_CLASSIC",p,"Historical vendor lead is Classic only");
   }
   if(a.restock_minutes!==undefined&&a.restock_minutes!==null)error("CRAFT_RESTOCK_UNVERIFIED",p,"Live timer not proven");
+  if(a.method==="vendor_index"&&a.evidence_level!=="classic_reference")
+   error("CRAFT_VENDOR_NOT_CLASSIC",p,"Unverified legacy vendor index must remain Classic");
+  if(a.method==="classic_loot_reference"&&
+     (a.evidence_level!=="classic_reference"||a.creature_id!==null||a.drop_rate!==null))
+   error("CRAFT_LOOT_UNPROVEN",p,"Classic loot is only an open lead, never a supported Forever mob/drop rate");
+  if(a.method==="smelting"){
+   if(!positive(a.spell_id)||smeltSpells.has(a.spell_id)||recipes.some(r=>object(r)&&r.spell_id===a.spell_id))
+    error("CRAFT_SMELT_SPELL_ID",p+".spell_id","Smelting spell must be unique across all crafts");
+   smeltSpells.add(a.spell_id);
+   if(smeltOutputs.has(a.item_id))error("CRAFT_SMELT_DUPLICATE",p+".item_id","Duplicate smelting output");
+   else smeltOutputs.set(a.item_id,a);
+   if(a.profession_id!==186||!validProf.has(a.profession_id)||a.forge_required!==true)
+    error("CRAFT_SMELT_PROFESSION",p,"Mining profession and forge required");
+   if(!["known_from_start","trainer_requirement_not_in_client"].includes(a.skill_required_status)||
+      (a.skill_required_status==="trainer_requirement_not_in_client"&&a.skill_required!==null)||
+      (a.skill_required_status==="known_from_start"&&!positive(a.skill_required))||
+      (a.skill_required!==null&&(!positive(a.skill_required)||a.skill_required>a.skill_yellow)))
+    error("CRAFT_SMELT_SKILL_REQUIRED",p,"Learning requirement separate from yellow threshold; preserve unknowns");
+   if(!positive(a.skill_yellow)||!url(a.skill_yellow_source_url))
+    error("CRAFT_SMELT_SKILL_YELLOW",p,"Forever client color threshold with own HTTPS evidence required");
+   if(!Array.isArray(a.ingredients)||a.ingredients.length===0)
+    error("CRAFT_SMELT_INGREDIENTS",p,"Smelting ingredients required");
+   const ingredients=new Set();
+   for(const [j,c] of (Array.isArray(a.ingredients)?a.ingredients:[]).entries()){
+    if(!object(c)||!positive(c.item_id)||!known.has(String(c.item_id)))
+     error("CRAFT_SMELT_COMPONENT_MISSING",p+".ingredients["+j+"]","Component ID missing in item catalogue");
+    if(!object(c)||!positive(c.quantity))
+     error("CRAFT_SMELT_COMPONENT_QUANTITY",p+".ingredients["+j+"]","Positive source-backed input quantity required");
+    if(ingredients.has(c?.item_id))error("CRAFT_SMELT_COMPONENT_DUPLICATE",p+".ingredients["+j+"]","Duplicate ingredient");
+    ingredients.add(c?.item_id);
+   }
+   if(a.output_quantity!==null||a.output_quantity_status!=="conflicting_sources"||
+       !Array.isArray(a.output_quantity_candidates)||
+       new Set(a.output_quantity_candidates?.map(x=>x?.quantity)).size<2||
+       new Set(a.output_quantity_candidates?.map(x=>x?.source_url)).size<2||
+       a.output_quantity_candidates?.some(x=>!object(x)||!positive(x.quantity)||!url(x.source_url)||!word(x.evidence_note)))
+    error("CRAFT_SMELT_YIELD_UNVERIFIED",p,"Conflicting smelting yields must stay unknown with independent sources");
+   if(a.trainer_npc_id!==null||a.available_in_game!==null||a.evidence_level!=="documented_forever")
+    error("CRAFT_SMELT_FALSE_AVAILABILITY",p,"Smelting documentation does not prove a trainer or live access");
+  }
+  if(a.method==="mining_node"){
+   if(!labels(a.node)||a.node_id!==null||!positive(a.mining_skill)||
+      !Array.isArray(a.zones_documented)||a.zones_documented.length===0||
+      a.zones_documented.some(z=>!word(z))||a.coordinates!==null||
+      a.drop_rate!==null||a.drop_quantity!==null||a.available_in_game!==null||
+      a.evidence_level!=="documented_forever")
+    error("CRAFT_MINING_PROOF",p,"Only source-backed node type and guide zones; no fabricated spawn positions or drop rates");
+   if(![2770,2771,2772,2776,2835,2836].includes(a.item_id))
+    error("CRAFT_MINING_NOT_AUDITED",p,"Node outcome must be an audited ore or stone");
+  }
+
  }
+
+ // Separate acquisition routes share the same craft graph; detect loops across both
+ // engineering recipes and smelting, without recursing through mining/loot leaves.
+ const graph=new Map();
+ for(const r of recipes)if(object(r)&&positive(r.output_item_id))
+  graph.set(r.output_item_id,Array.isArray(r.ingredients)?r.ingredients.map(x=>x?.item_id).filter(positive):[]);
+ for(const [id,a] of smeltOutputs)
+  graph.set(id,Array.isArray(a.ingredients)?a.ingredients.map(x=>x?.item_id).filter(positive):[]);
+ const visiting=new Set(),complete=new Set();
+ const visit=(id,path)=>{
+  if(visiting.has(id)){error("CRAFT_ACQUISITION_CYCLE","acquisitions",path.concat(id).join(" -> "));return}
+  if(complete.has(id))return;
+  visiting.add(id);
+  for(const next of graph.get(id)||[])if(graph.has(next))visit(next,path.concat(id));
+  visiting.delete(id);complete.add(id);
+ };
+ for(const id of graph.keys())visit(id,[]);
  return result();
 }
 if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url)){

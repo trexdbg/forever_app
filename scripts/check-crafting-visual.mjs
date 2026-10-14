@@ -104,10 +104,18 @@ async function caseRun(send,base,lang,width,height){
   await evaluate('document.querySelector("#craft-beta-detail").scrollIntoView({behavior:"instant",block:"start"});');await delay(220);
   const selected=await cmd("Page.captureScreenshot",{format:"png",captureBeyondViewport:false});
   await writeFile(resolve(output,prefix+"-detail.png"),Buffer.from(selected.data,"base64"));
+  const chain=lang==="fr"?[[2841,"2659"],[3576,"3304"],[2771,"Filon"]]:[[10558,"12584"],[3577,"3308"],[2776,"Gold Vein"]];
+  for(const [id,proof] of chain){
+   const result=await evaluate('(()=>{const button=[...document.querySelectorAll("#craft-beta-detail .craft-component")].find(x=>x.textContent.includes("#'+id+'"));if(!button)return {found:false};button.click();return {found:true,selected:new URLSearchParams(location.search).get("craft"),text:document.querySelector("#craft-beta-detail").textContent}})()');
+   assert(result.found&&result.selected===String(id)&&result.text.includes(proof),lang+" "+width+" nested source path failed at "+id+": "+JSON.stringify(result));
+  }
+  await evaluate('document.querySelector("#craft-beta-detail").scrollIntoView({behavior:"instant",block:"start"});');await delay(260);
+  const materials=await cmd("Page.captureScreenshot",{format:"png",captureBeyondViewport:false});
+  await writeFile(resolve(output,prefix+"-sources.png"),Buffer.from(materials.data,"base64"));
   await evaluate('document.querySelector("#npc-map-canvas").scrollIntoView({behavior:"instant",block:"center"});');await delay(300);
   const mapCapture=await cmd("Page.captureScreenshot",{format:"png",captureBeyondViewport:false});
   await writeFile(resolve(output,prefix+"-map.png"),Buffer.from(mapCapture.data,"base64"));
-  console.log(JSON.stringify({lang,width,height,selected:item,recipes:state.count,layout,filteredReopen:reopened,map:true,landing,captures:[prefix+"-craft.png",prefix+"-detail.png",prefix+"-map.png"]}));
+  console.log(JSON.stringify({lang,width,height,selected:item,recipes:state.count,layout,filteredReopen:reopened,map:true,landing,chain:chain.map(x=>x[0]),captures:[prefix+"-craft.png",prefix+"-detail.png",prefix+"-sources.png",prefix+"-map.png"]}));
  }finally{await send("Target.closeTarget",{targetId:target.targetId}).catch(()=>{})}
 }
 try{
@@ -118,7 +126,7 @@ try{
  for(const lang of ["fr","en"])for(const width of [1440,375]){
   await caseRun(send,base,lang,width,width===375?812:900);
  }
- console.log("PASS: 4 real-browser FR/EN × desktop/mobile runs and 12 screenshot files.");
+ console.log("PASS: 4 real-browser FR/EN × desktop/mobile runs and 16 screenshot files.");
 }catch(err){console.error("FAIL: crafting preview browser smoke:",err);process.exitCode=1}
 finally{
  try{socket?.close()}catch{}
