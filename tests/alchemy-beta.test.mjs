@@ -4,7 +4,7 @@ import {readFileSync} from "node:fs";
 import {resolve,dirname} from "node:path";
 import {fileURLToPath} from "node:url";
 import {runInNewContext} from "node:vm";
-import {ALLOWED,EXCLUDED,checkAlchemy} from "../scripts/check-alchemy-beta.mjs";
+import {ALLOWED,EXCLUDED,REAGENTS,checkAlchemy,checkAcquisition} from "../scripts/check-alchemy-beta.mjs";
 const root=resolve(dirname(fileURLToPath(import.meta.url)),"..");
 const read=p=>readFileSync(resolve(root,p),"utf8");
 const data=JSON.parse(read("data/alchemy-chains-beta.json"));
@@ -44,7 +44,7 @@ test("six distinct audited potions and eight components have a separate research
  assert.equal(data.scope.status,"research_only_not_published");
  assert.equal(data.scope.preview.status,"opt_in_documentary_preview");
  assert.equal(Object.keys(data.items).length,14);
- assert.equal(data.acquisitions.length,0);
+ assert.equal(data.acquisitions.length,8);
 });
 test("removed Classic alchemy potions are flagged as moved to First Aid, never listed",()=>{
  for(const id of EXCLUDED){assert.ok(data.excluded_alchemy.some(e=>e.item_id===id&&e.reason==="moved_to_first_aid"));assert.ok(!data.recipes.some(r=>r.output_item_id===id))}
@@ -88,8 +88,8 @@ test("reject duplicate recipe IDs, missing components and unverified sources",()
 });
 test("allowlist, language labels and Classic exclusions are mandatory",()=>{
  const x=copy();x.scope.preview.recipe_item_ids.push(118);x.items["3371"].name.fr="";
- x.excluded_alchemy=[];x.acquisitions=[{method:"vendor",verified_for_forever:true}];
- for(const code of ["ALLOWLIST_INVALID","ITEM_INVALID","FIRST_AID_EXCLUSION","UNVERIFIED_SOURCES_EXPOSED"])
+ x.excluded_alchemy=[];x.acquisitions.push({item_id:999,method:"vendor",verified_for_forever:true});
+ for(const code of ["ALLOWLIST_INVALID","ITEM_INVALID","FIRST_AID_EXCLUSION","ACQUISITION_METHOD_OR_ITEM"])
  assert.ok(codes(x).includes(code),code);
 });
 test("both real profession pages mount a second, collapsed panel without changing engineering",()=>{
@@ -138,7 +138,7 @@ test("ingredients are clickable leaves, with no invented supplier or drop rate",
  assert.ok(button);button.fire("click");
  assert.equal(new URLSearchParams(a.location.search).get("alchemy"),"730");
  const rendered=a.els["alchemy-detail"].textContent;
- assert.ok(rendered.includes("Forever creature and drop rate unverified."));
+ assert.ok(rendered.includes("Loot / acquisition source unverified on Forever."));
  const links=a.detail().filter(x=>x.tag==="a");
  assert.ok(links.every(x=>x.href.startsWith("https://")&&x.rel==="noopener noreferrer"));
 });
@@ -199,4 +199,135 @@ test("actual homepage search consumer opens the correct FR/EN alchemy deep link"
   assert.equal(found[0].href,path+"?alchemy=247239");
   assert.ok(found[0].textContent.includes(lang==="fr"?"Alchimie documentée":"Documented alchemy"));
  }
+});
+
+
+test("mission 06 investigates precisely eight reagents with conservative evidence per method",()=>{
+ const found=new Set(data.acquisitions.map(a=>a.item_id));
+ assert.deepEqual([...found].sort((a,b)=>a-b),[...REAGENTS].sort((a,b)=>a-b));
+ assert.equal(data.acquisitions.filter(a=>a.method==="vendor").length,2);
+ assert.equal(data.acquisitions.filter(a=>a.method==="herbalism_node").length,5);
+ assert.equal(data.acquisitions.filter(a=>a.method==="loot").length,0);
+ const missing=data.acquisitions.find(a=>a.item_id===730);
+ assert.equal(missing.evidence_level,"unverified");
+ assert.equal(missing.mob_id,null);assert.equal(missing.drop_rate,null);
+ for(const a of data.acquisitions){assert.equal(a.verified_for_forever,false);assert.equal(a.quantity,null);}
+});
+test("a supplier type is proven, but individual Forever NPC, price and stocking are not",()=>{
+ for(const id of [3371,3372]){
+  const v=data.acquisitions.find(a=>a.item_id===id);
+  assert.equal(v.scope,"supplier_category");
+  assert.equal(v.vendor_id,null);assert.equal(v.vendor_name,null);
+  for(const k of ["coordinates","price","stock","restock_minutes","zone","faction"])assert.equal(v[k],null);
+  assert.equal(v.evidence_url,"https://www.wowhead.com/forever/guide/professions/alchemy-overview-trainer-locations-recipes");
+ }
+ const x=copy();x.acquisitions.find(a=>a.item_id===3371).vendor_id=999;
+ assert.ok(codes(x).includes("ACQUISITION_VENDOR_PROOF"));
+ const y=copy();y.acquisitions.find(a=>a.item_id===3372).stock=20;
+ assert.ok(codes(y).includes("ACQUISITION_VENDOR_PROOF"));
+});
+test("herbalism guides give advice bands, not required skill or exact spawn",()=>{
+ for(const id of [2447,785,2450,2453,3820]){
+  const h=data.acquisitions.find(a=>a.item_id===id);
+  assert.equal(h.method,"herbalism_node");
+  assert.equal(h.node_id,null);assert.equal(h.coordinates,null);assert.equal(h.skill_required,null);
+  assert.equal(h.skill_band_kind,"suggested_leveling_route");
+  assert.equal(h.node_name.en,data.items[String(id)].name.en);
+  assert.equal(h.node_name.fr,data.items[String(id)].name.fr);
+  assert.ok(h.suggested_zones.fr.length>=1);
+  assert.ok(h.suggested_zones.en.length>=1);
+ }
+ const x=copy();x.acquisitions.find(a=>a.item_id===785).skill_required=50;
+ assert.ok(codes(x).includes("ACQUISITION_NODE_PROOF"));
+ const y=copy();y.acquisitions.find(a=>a.item_id===2447).coordinates=[45,64];
+ assert.ok(codes(y).includes("ACQUISITION_NODE_PROOF"));
+ const z=copy();z.acquisitions.find(a=>a.item_id===3820).node_name.fr="Made-up";
+ assert.ok(codes(z).includes("ACQUISITION_CATEGORY_OR_NODE_IDENTITY"));
+});
+test("proof schema rejects Classic promotion, dates, fabricated drop rates and unsupported NPC claims",()=>{
+ const invalids=[
+  x=>{const a=x.acquisitions[0];a.evidence_level="classic_reference";a.evidence_kind="classic_guide"},
+  x=>{x.acquisitions[0].observed_at="2099-11-11"},
+  x=>{x.acquisitions[0].guide_updated_at="2026-10-15"},
+  x=>{x.acquisitions[0].source_url="http://example.test"},
+  x=>{x.acquisitions[0].evidence_url=null},
+  x=>{x.acquisitions[0].evidence_kind="gameplay_capture"},
+  x=>{x.acquisitions.find(a=>a.item_id===730).drop_rate=50},
+  x=>{x.acquisitions.find(a=>a.item_id===730).mob_name="Murloc Tidehunter"},
+  x=>{x.acquisitions[0].quantity=5},
+  x=>{x.acquisitions[0].item_id=4596},
+ ];
+ for(const change of invalids){const x=copy();change(x);assert.ok(codes(x).length>0,change.toString())}
+ const bogus={...data.acquisitions[0],item_id:730,method:"loot",scope:"mob_item_drop",
+  mob_id:123,mob_name:{fr:"Faux",en:"Fake"},drop_rate:43,respawn_minutes:null};
+ assert.ok(checkAcquisition(bogus,data.items).includes("ACQUISITION_LOOT_PROOF"));
+});
+test("FR/EN component panels label guide-backed claims and uncertain Murloc loot",async()=>{
+ for(const [lang,prefix] of [["fr","/metiers/"],["en","/en/metiers/"]]){
+  for(const [id,expected] of [
+   [3371,lang==="fr"?"Achat marchand":"Vendor purchase"],
+   [785,lang==="fr"?"Herboristerie":"Herbalism"],
+   [730,lang==="fr"?"Butin / source d'obtention":"Loot / acquisition source"]
+  ]){
+   const a=ui(lang,prefix+"?alchemy="+id);await settle();
+   const txt=a.els["alchemy-detail"].textContent;
+   assert.ok(txt.includes(expected),lang+" "+id);
+   if(id===3371)assert.ok(txt.includes(lang==="fr"?"Vendeur précis non vérifié":"Individual vendor unverified"));
+   if(id===785)assert.ok(txt.includes(lang==="fr"?"Zones indicatives":"Indicative zones"));
+   const links=a.detail().filter(x=>x.tag==="a");
+   assert.ok(links.every(x=>x.href.startsWith("https://")&&x.rel==="noopener noreferrer"));
+  }
+ }
+});
+test("malicious acquisition notes cannot become executable HTML",async()=>{
+ const x=copy();x.acquisitions[0].supplier_types.en='<img src=x onerror=alert(1)>';
+ const a=ui("en","/en/metiers/?alchemy=3371");
+ a.setReply(async()=>({ok:true,json:async()=>x})); // direct load begins at creation with original fixture
+ await settle();
+ assert.ok(!appJs.includes(".innerHTML"));
+ assert.ok(!appJs.includes("insertAdjacentHTML"));
+ assert.ok(a.detail().every(n=>n.tag!=="img"));
+});
+
+
+test("issue #49 review: underwater Stranglekelp and shared itinerary warning on FR/EN deep links",async()=>{
+ for(const [lang,path,underwater,warning] of [
+  ["fr","/metiers/","pousse sous l’eau","ne sont pas des localisations attestées"],
+  ["en","/en/metiers/","grows underwater","are not verified Stranglekelp locations"]
+ ]){
+  const app=ui(lang,path+"?craft=4389&alchemy=3820#prof-trainers",true);await settle();
+  const shown=app.els["alchemy-detail"].textContent;
+  assert.equal(app.els["alchemy-beta"].open,true);
+  assert.match(shown,/3820/);
+  assert.ok(shown.includes(underwater),lang+" underwater context must be visible");
+  assert.ok(shown.includes(warning),lang+" shared itinerary must not be misread as a confirmed spawn");
+  assert.ok(shown.includes("Loch Modan"));
+  assert.equal(new URLSearchParams(app.location.search).get("alchemy"),"3820");
+  assert.equal(new URLSearchParams(app.location.search).get("craft"),"4389");
+  assert.equal(app.location.hash,"#prof-trainers");
+  const evidence=app.detail().filter(x=>x.tag==="a"&&x.textContent.includes(lang==="fr"?"Voir la preuve":"View evidence"));
+  assert.ok(evidence.some(x=>x.href==="https://www.wowhead.com/forever/guide/professions/herbalism/overview-leveling"),lang+" source is linked");
+ }
+ const acq=data.acquisitions.find(x=>x.item_id===3820);
+ assert.equal(acq.coordinates,null);assert.equal(acq.node_id,null);
+});
+test("issue #49 review: Wilted Peacebloom stays separate from item 2447 in both languages",async()=>{
+ for(const [lang,path,wilted,distinct] of [
+  ["fr","/metiers/","Pacifique fanée","ne prouvent ni son obtention"],
+  ["en","/en/metiers/","Wilted Peacebloom","do not prove it is gathered there"]
+ ]){
+  const app=ui(lang,path+"?craft=4389&alchemy=2447",true);await settle();
+  const rendered=app.els["alchemy-detail"].textContent;
+  assert.equal(app.els["alchemy-beta"].open,true);
+  assert.ok(rendered.includes(wilted),lang+" wilted variant must be visible");
+  assert.ok(rendered.includes(distinct),lang+" wilted node cannot prove item 2447 loot");
+  assert.ok(rendered.includes("#2447"),lang+" standalone item ID must be shown");
+  assert.equal(new URLSearchParams(app.location.search).get("alchemy"),"2447");
+  assert.equal(new URLSearchParams(app.location.search).get("craft"),"4389");
+  assert.ok(!rendered.includes(lang==="fr"?"pousse sous l’eau":"grows underwater"));
+  const links=app.detail().filter(x=>x.tag==="a");
+  assert.ok(links.every(x=>x.href.startsWith("https://")&&x.rel==="noopener noreferrer"));
+ }
+ const a=data.acquisitions.find(x=>x.item_id===2447);
+ assert.equal(a.node_id,null);assert.equal(a.coordinates,null);assert.equal(a.quantity,null);
 });

@@ -1,4 +1,4 @@
-/* Agent 03 mission 05: separate, opt-in Forever alchemy research preview. */
+/* Agent 03 mission 06: evidence-scoped, opt-in Forever alchemy research preview. */
 (()=>{"use strict";
 const root=document.getElementById("alchemy-beta");if(!root)return;
 const en=document.documentElement.lang==="en",T=(fr,eng)=>en?eng:fr,$=id=>document.getElementById(id);
@@ -19,7 +19,31 @@ function validate(d){
  if(d?.schema_version!==1||d?.scope?.status!=="research_only_not_published"||
  d?.scope?.preview?.status!=="opt_in_documentary_preview"||!Array.isArray(ids)||
  ids.length!==6||new Set(ids).size!==6||!d.items||!Array.isArray(d.recipes)||d.recipes.length!==6||
- !Array.isArray(d.acquisitions)||d.acquisitions.length!==0)return false;
+ !Array.isArray(d.acquisitions)||d.acquisitions.length<8||
+ ![4596,2455,2456,247239,247240,3385].every(id=>ids.includes(id)))return false;
+ const reagentIds=[3371,3372,2447,785,2450,2453,3820,730];
+ const reviewed=new Set();
+ for(const a of d.acquisitions){
+  if(!a||!reagentIds.includes(a.item_id)||d.items[String(a.item_id)]?.kind!=="component"||
+    a.verified_for_forever!==false||a.quantity!==null||
+    !["vendor","herbalism_node","loot","classic_reference","unverified"].includes(a.method)||
+    typeof a.evidence_note!=="string"||!a.evidence_note.trim())return false;
+  reviewed.add(a.item_id);
+  if(a.evidence_level==="unverified"){
+   if(a.method!=="unverified")return false;
+  }else if(!["documented_forever","confirmed_in_game","datamined","classic_reference"].includes(a.evidence_level)||
+   !safe(a.evidence_url)||!safe(a.source_url)||!/^\d{4}-\d{2}-\d{2}$/.test(a.observed_at)||
+   !a.observed_build||!a.evidence_kind)return false;
+  if(a.method==="vendor"&&(a.scope!=="supplier_category"||a.vendor_id!==null||
+    !a.supplier_types?.fr||!a.supplier_types?.en||a.price!==null||a.stock!==null||
+    a.restock_minutes!==null||a.coordinates!==null))return false;
+  if(a.method==="herbalism_node"&&(a.scope!=="guide_named_herb"||
+    !a.node_name?.fr||!a.node_name?.en||a.node_id!==null||a.skill_required!==null||
+    a.coordinates!==null||!Array.isArray(a.skill_band)||a.skill_band.length!==2||
+    !Array.isArray(a.suggested_zones?.fr)||!Array.isArray(a.suggested_zones?.en)))return false;
+  if(a.method==="loot"&&(!integer(a.mob_id)||a.drop_rate!==null||a.coordinates!==null))return false;
+ }
+ if(reagentIds.some(id=>!reviewed.has(id)))return false;
  for(const r of d.recipes){
   if(!integer(r.output_item_id)||!integer(r.spell_id)||!ids.includes(r.output_item_id)||
    r.profession_id!==171||!Array.isArray(r.ingredients)||!safe(r.evidence_url)||
@@ -51,6 +75,67 @@ function chooseIngredient(p,c){
  add(b,"strong",c.quantity+" × "+title(i));add(b,"small","#"+c.item_id+" · "+T("Source à vérifier →","Source to verify →"));
  b.addEventListener("click",()=>select(c.item_id,true));
 }
+
+const localized=x=>x?.[en?"en":"fr"]||x?.en||"";
+const forItem=id=>(state.data?.acquisitions||[]).filter(a=>a.item_id===id);
+const trust=a=>a.evidence_level==="confirmed_in_game"?
+ T("Confirmé en jeu (preuve directe)","Confirmed in game (direct evidence)"):
+ a.evidence_level==="documented_forever"?
+ T("Documenté Forever — non confirmé en jeu","Forever documented — not confirmed in game"):
+ a.evidence_level==="classic_reference"?
+ T("Référence Classic uniquement — pas une preuve Forever","Classic reference only — not Forever evidence"):
+ T("Non vérifié sur Forever","Unverified on Forever");
+function sourceRender(i){
+ const rows=forItem(i.id),section=add(detail,"section",null,"alchemy-acquisitions");
+ add(section,"h5",T("Comment obtenir ce composant ?","How to obtain this material"));
+ if(i.category==="vial"){
+  add(section,"h6",T("Achat marchand","Vendor purchase"));
+  const vendors=rows.filter(a=>a.method==="vendor"&&a.evidence_level==="documented_forever");
+  for(const a of vendors){
+   add(section,"p",localized(a.supplier_types),"craft-meta");
+   add(section,"small",trust(a),"alchemy-evidence");
+   link(section,T("Voir la preuve","View evidence"),a.evidence_url);
+  }
+  add(section,"p",T("Vendeur précis non vérifié sur Forever : ni PNJ identifié, ni prix, ni stock.",
+  "Individual vendor unverified on Forever: no identified NPC, price or stock."),"craft-caution");
+ }
+ if(i.category==="herb"){
+  add(section,"h6",T("Herboristerie","Herbalism"));
+  const herbs=rows.filter(a=>a.method==="herbalism_node"&&a.evidence_level==="documented_forever");
+  if(!herbs.length)add(section,"p",T("Plante récoltable non vérifiée sur Forever.","Harvestable herb unverified on Forever."),"craft-caution");
+  for(const a of herbs){
+   add(section,"p",T("Plante indiquée : ","Guide herb: ")+localized(a.node_name),"craft-meta");
+   add(section,"p",T("Progression conseillée : ","Suggested progression: ")+a.skill_band.join("–")+
+   T(" (pas un niveau minimum prouvé)"," (not a verified minimum requirement)"),"craft-meta");
+   add(section,"p",T("Zones conseillées pour le groupe de plantes : ","Zones suggested for the herb group: ")+
+     (a.suggested_zones?.[en?"en":"fr"]||[]).join(", "),"craft-meta");
+   // Guide statements apply to distinct nodes and routes; never imply a proven item drop or spawn.
+   if(i.id===3820)add(section,"p",T(
+    "L’Étouffante pousse sous l’eau (guide Forever). Les zones de l’itinéraire commun, notamment le Loch Modan, ne sont pas des localisations attestées pour l’Étouffante.",
+    "Stranglekelp grows underwater (Forever guide). Shared itinerary zones, including Loch Modan, are not verified Stranglekelp locations."),"craft-caution");
+   if(i.id===2447)add(section,"p",T(
+    "Le guide cite la « Pacifique fanée » (Wilted Peacebloom) dans les zones de départ. Ces nœuds sont distincts de l’objet #2447 « Pacifique » : ils ne prouvent ni son obtention ni une équivalence d’ID.",
+    "The guide lists “Wilted Peacebloom” in starting zones. Those nodes are distinct from item #2447 “Peacebloom”: they do not prove it is gathered there or that node and item IDs are equivalent."),"craft-caution");
+   add(section,"small",trust(a),"alchemy-evidence");
+   add(section,"p",T("Zones indicatives ; position, ID du nœud et quantité récoltée non vérifiés.",
+    "Indicative zones; exact position, node ID and gathered quantity unverified."),"craft-caution");
+   link(section,T("Voir la preuve","View evidence"),a.evidence_url);
+  }
+ }
+ if(i.category==="loot"){
+  add(section,"h6",T("Butin","Loot"));
+  const drops=rows.filter(a=>a.method==="loot"&&a.mob_id&&
+    ["documented_forever","confirmed_in_game"].includes(a.evidence_level));
+  if(!drops.length)add(section,"p",T("Butin / source d'obtention non vérifié(e) sur Forever. Aucun monstre ni taux prouvé.",
+    "Loot / acquisition source unverified on Forever. No creature or drop rate proven."),"craft-caution");
+  for(const a of drops){add(section,"p",localized(a.mob_name),"craft-meta");add(section,"small",trust(a),"alchemy-evidence");
+   link(section,T("Voir la preuve","View evidence"),a.evidence_url);}
+ }
+ if(rows.some(a=>a.evidence_level==="classic_reference"))
+  add(section,"p",T("Pistes Classic isolées : ne prouvent aucune obtention sur Forever.",
+    "Classic-only leads are separate and do not prove Forever acquisition."),"craft-footnote");
+}
+
 function detailRender(){
  detail.replaceChildren();if(!state.data||!integer(state.selected))return;
  const i=item(state.selected);if(!i){add(detail,"p",T("Objet hors de ce lot.","Item outside this preview."),"craft-muted");return}
@@ -76,10 +161,7 @@ function detailRender(){
   const comps=add(detail,"div",null,"craft-component-list");
   for(const c of r.ingredients)if(item(c.item_id))chooseIngredient(comps,c);
  }else{
-  add(detail,"p",T("Aucun vendeur, filon ou monstre précis confirmé sur Forever dans ce lot.","No specific seller, herb node or creature confirmed on Forever in this subset."),"craft-muted");
-  if(i.category==="vial")add(detail,"p",T("Fiole : vérifier une vente auprès d'un fournisseur Forever, sans reprendre les prix Classic.","Vial: verify a Forever supplier sale; Classic prices are not evidence."),"craft-footnote");
-  if(i.category==="herb")add(detail,"p",T("Plante : l'existence d'un filon d'herbes et ses coordonnées restent à confirmer.","Herb: actual gathering nodes and coordinates remain unverified."),"craft-footnote");
-  if(i.category==="loot")add(detail,"p",T("Butin : monstre et taux de butin Forever non vérifiés.","Loot: Forever creature and drop rate unverified."),"craft-footnote");
+  sourceRender(i);
   link(detail,T("Référence d'utilisation dans la recette Forever","Forever recipe ingredient reference"),i.evidence_url);
  }
  const foot=add(detail,"div",null,"craft-actions");

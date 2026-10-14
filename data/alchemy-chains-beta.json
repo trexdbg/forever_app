@@ -221,7 +221,7 @@
     "3820": {
       "id": 3820,
       "name": {
-        "fr": "Étangétrangle",
+        "fr": "Étouffante",
         "en": "Stranglekelp"
       },
       "kind": "component",
@@ -235,7 +235,9 @@
       "observed_build": "1.60.1.70338",
       "evidence_level": "documented_forever",
       "evidence_kind": "forever_client_index",
-      "evidence_note": "Listed by ID in a Forever-indexed alchemy recipe as reagent only. An actual Forever node, loot source or seller has not been confirmed."
+      "evidence_note": "Listed by ID in a Forever-indexed alchemy recipe as reagent only. An actual Forever node, loot source or seller has not been confirmed.",
+      "name_source_url": "https://www.wowhead.com/forever/fr/item=3820/etouffante",
+      "name_evidence_note": "Forever localized Wowhead item 3820 is titled Etouffante. Prior Étangétrangle was an unverified reference translation; the client French string remains unconfirmed."
     },
     "4596": {
       "id": 4596,
@@ -540,7 +542,272 @@
       "evidence_note": "Forever client-derived alchemy recovery-potentials page identifies spell, item, inputs, learning category and yellow color. Reported Makes 1 is source documentation, not a witnessed craft. Trainer access and player-level requirement not confirmed."
     }
   ],
-  "acquisitions": [],
+  "acquisitions": [
+    {
+      "item_id": 3371,
+      "method": "vendor",
+      "scope": "supplier_category",
+      "vendor_id": null,
+      "vendor_name": null,
+      "supplier_types": {
+        "fr": "Fournitures générales, alchimie et herboristerie",
+        "en": "General trade, alchemy and herbalism suppliers"
+      },
+      "faction": null,
+      "zone": null,
+      "coordinates": null,
+      "price": null,
+      "stock": null,
+      "restock_minutes": null,
+      "quantity": null,
+      "source_url": "https://www.wowhead.com/forever/guide/professions/alchemy-overview-trainer-locations-recipes",
+      "evidence_url": "https://www.wowhead.com/forever/guide/professions/alchemy-overview-trainer-locations-recipes",
+      "guide_updated_at": "2026-10-12",
+      "observed_at": "2026-10-14",
+      "observed_build": "unknown",
+      "evidence_level": "documented_forever",
+      "evidence_kind": "forever_community_page",
+      "verified_for_forever": false,
+      "evidence_note": "Forever Alchemy overview explicitly says Empty/Leaded Vials are sold by general trade, Alchemy and Herbalism suppliers. It does NOT identify a specific NPC-item sale, a vendor ID, price, stock or position."
+    },
+    {
+      "item_id": 3372,
+      "method": "vendor",
+      "scope": "supplier_category",
+      "vendor_id": null,
+      "vendor_name": null,
+      "supplier_types": {
+        "fr": "Fournitures générales, alchimie et herboristerie",
+        "en": "General trade, alchemy and herbalism suppliers"
+      },
+      "faction": null,
+      "zone": null,
+      "coordinates": null,
+      "price": null,
+      "stock": null,
+      "restock_minutes": null,
+      "quantity": null,
+      "source_url": "https://www.wowhead.com/forever/guide/professions/alchemy-overview-trainer-locations-recipes",
+      "evidence_url": "https://www.wowhead.com/forever/guide/professions/alchemy-overview-trainer-locations-recipes",
+      "guide_updated_at": "2026-10-12",
+      "observed_at": "2026-10-14",
+      "observed_build": "unknown",
+      "evidence_level": "documented_forever",
+      "evidence_kind": "forever_community_page",
+      "verified_for_forever": false,
+      "evidence_note": "Forever Alchemy overview explicitly says Empty/Leaded Vials are sold by general trade, Alchemy and Herbalism suppliers. It does NOT identify a specific NPC-item sale, a vendor ID, price, stock or position."
+    },
+    {
+      "item_id": 2447,
+      "method": "herbalism_node",
+      "scope": "guide_named_herb",
+      "node_id": null,
+      "node_name": {
+        "fr": "Pacifique",
+        "en": "Peacebloom"
+      },
+      "skill_required": null,
+      "skill_band": [
+        1,
+        70
+      ],
+      "skill_band_kind": "suggested_leveling_route",
+      "suggested_zones": {
+        "fr": [
+          "Zones de départ (conseil général)"
+        ],
+        "en": [
+          "Starting zones (general guidance)"
+        ]
+      },
+      "zone_scope": "shared_guide_itinerary",
+      "coordinates": null,
+      "quantity": null,
+      "source_url": "https://www.wowhead.com/forever/guide/professions/herbalism/overview-leveling",
+      "evidence_url": "https://www.wowhead.com/forever/guide/professions/herbalism/overview-leveling",
+      "guide_updated_at": "2026-10-11",
+      "observed_at": "2026-10-14",
+      "observed_build": "unknown",
+      "evidence_level": "documented_forever",
+      "evidence_kind": "forever_community_page",
+      "verified_for_forever": false,
+      "evidence_note": "Forever Herbalism guide lists Peacebloom in a progression bracket and a shared zone group, as a gathering target. Node ID, precise herb→item loot quantity, character location and actual minimum skill are not proven. Starting zones include separately named Wilted Peacebloom nodes; the guide does not establish that these yield item 2447 or share its node ID."
+    },
+    {
+      "item_id": 785,
+      "method": "herbalism_node",
+      "scope": "guide_named_herb",
+      "node_id": null,
+      "node_name": {
+        "fr": "Mage royal",
+        "en": "Mageroyal"
+      },
+      "skill_required": null,
+      "skill_band": [
+        70,
+        115
+      ],
+      "skill_band_kind": "suggested_leveling_route",
+      "suggested_zones": {
+        "fr": [
+          "Sombrivage",
+          "Loch Modan",
+          "Forêt des Pins argentés"
+        ],
+        "en": [
+          "Darkshore",
+          "Loch Modan",
+          "Silverpine Forest"
+        ]
+      },
+      "zone_scope": "shared_guide_itinerary",
+      "coordinates": null,
+      "quantity": null,
+      "source_url": "https://www.wowhead.com/forever/guide/professions/herbalism/overview-leveling",
+      "evidence_url": "https://www.wowhead.com/forever/guide/professions/herbalism/overview-leveling",
+      "guide_updated_at": "2026-10-11",
+      "observed_at": "2026-10-14",
+      "observed_build": "unknown",
+      "evidence_level": "documented_forever",
+      "evidence_kind": "forever_community_page",
+      "verified_for_forever": false,
+      "evidence_note": "Forever Herbalism guide lists Mageroyal in a progression bracket and a shared zone group, as a gathering target. Node ID, precise herb→item loot quantity, character location and actual minimum skill are not proven. The guide recommends a shared 70-115 itinerary; none of its individual zones guarantees this particular herb."
+    },
+    {
+      "item_id": 2450,
+      "method": "herbalism_node",
+      "scope": "guide_named_herb",
+      "node_id": null,
+      "node_name": {
+        "fr": "Églantine",
+        "en": "Briarthorn"
+      },
+      "skill_required": null,
+      "skill_band": [
+        70,
+        115
+      ],
+      "skill_band_kind": "suggested_leveling_route",
+      "suggested_zones": {
+        "fr": [
+          "Sombrivage",
+          "Loch Modan",
+          "Forêt des Pins argentés"
+        ],
+        "en": [
+          "Darkshore",
+          "Loch Modan",
+          "Silverpine Forest"
+        ]
+      },
+      "zone_scope": "shared_guide_itinerary",
+      "coordinates": null,
+      "quantity": null,
+      "source_url": "https://www.wowhead.com/forever/guide/professions/herbalism/overview-leveling",
+      "evidence_url": "https://www.wowhead.com/forever/guide/professions/herbalism/overview-leveling",
+      "guide_updated_at": "2026-10-11",
+      "observed_at": "2026-10-14",
+      "observed_build": "unknown",
+      "evidence_level": "documented_forever",
+      "evidence_kind": "forever_community_page",
+      "verified_for_forever": false,
+      "evidence_note": "Forever Herbalism guide lists Briarthorn in a progression bracket and a shared zone group, as a gathering target. Node ID, precise herb→item loot quantity, character location and actual minimum skill are not proven. The guide recommends a shared 70-115 itinerary; none of its individual zones guarantees this particular herb."
+    },
+    {
+      "item_id": 3820,
+      "method": "herbalism_node",
+      "scope": "guide_named_herb",
+      "node_id": null,
+      "node_name": {
+        "fr": "Étouffante",
+        "en": "Stranglekelp"
+      },
+      "skill_required": null,
+      "skill_band": [
+        70,
+        115
+      ],
+      "skill_band_kind": "suggested_leveling_route",
+      "suggested_zones": {
+        "fr": [
+          "Sombrivage",
+          "Loch Modan",
+          "Forêt des Pins argentés"
+        ],
+        "en": [
+          "Darkshore",
+          "Loch Modan",
+          "Silverpine Forest"
+        ]
+      },
+      "zone_scope": "shared_guide_itinerary",
+      "coordinates": null,
+      "quantity": null,
+      "source_url": "https://www.wowhead.com/forever/guide/professions/herbalism/overview-leveling",
+      "evidence_url": "https://www.wowhead.com/forever/guide/professions/herbalism/overview-leveling",
+      "guide_updated_at": "2026-10-11",
+      "observed_at": "2026-10-14",
+      "observed_build": "unknown",
+      "evidence_level": "documented_forever",
+      "evidence_kind": "forever_community_page",
+      "verified_for_forever": false,
+      "evidence_note": "Forever Herbalism guide lists Stranglekelp in a progression bracket and a shared zone group, as a gathering target. Node ID, precise herb→item loot quantity, character location and actual minimum skill are not proven. The guide says Stranglekelp is underwater and also lists it in 115-170. Zone suggestions are a group itinerary, not a proven coastal node position."
+    },
+    {
+      "item_id": 2453,
+      "method": "herbalism_node",
+      "scope": "guide_named_herb",
+      "node_id": null,
+      "node_name": {
+        "fr": "Doulourante",
+        "en": "Bruiseweed"
+      },
+      "skill_required": null,
+      "skill_band": [
+        115,
+        170
+      ],
+      "skill_band_kind": "suggested_leveling_route",
+      "suggested_zones": {
+        "fr": [
+          "Contreforts de Hautebrande",
+          "Les Paluns",
+          "Serres-Rocheuses"
+        ],
+        "en": [
+          "Hillsbrad Foothills",
+          "Wetlands",
+          "Stonetalon Mountains"
+        ]
+      },
+      "zone_scope": "shared_guide_itinerary",
+      "coordinates": null,
+      "quantity": null,
+      "source_url": "https://www.wowhead.com/forever/guide/professions/herbalism/overview-leveling",
+      "evidence_url": "https://www.wowhead.com/forever/guide/professions/herbalism/overview-leveling",
+      "guide_updated_at": "2026-10-11",
+      "observed_at": "2026-10-14",
+      "observed_build": "unknown",
+      "evidence_level": "documented_forever",
+      "evidence_kind": "forever_community_page",
+      "verified_for_forever": false,
+      "evidence_note": "Forever Herbalism guide lists Bruiseweed in a progression bracket and a shared zone group, as a gathering target. Node ID, precise herb→item loot quantity, character location and actual minimum skill are not proven. The guide recommends a shared 115-170 itinerary; it does not prove exact herb locations or required minimum skill."
+    },
+    {
+      "item_id": 730,
+      "method": "unverified",
+      "scope": "loot",
+      "mob_id": null,
+      "mob_name": null,
+      "drop_rate": null,
+      "respawn_minutes": null,
+      "coordinates": null,
+      "quantity": null,
+      "evidence_level": "unverified",
+      "verified_for_forever": false,
+      "evidence_note": "Murloc Eye appears in indexed Forever potion reagents; no Forever creature ID→item 730 loot observation found. Classic Murloc Eye loot lists are not proof for Forever."
+    }
+  ],
   "excluded_alchemy": [
     {
       "item_id": 118,
@@ -558,5 +825,9 @@
   "disclaimer": {
     "fr": "Prévisualisation documentaire : les recettes du client ne prouvent pas l'accès aux maîtres, vendeurs ou butins dans la bêta. Aucun rendement constaté en jeu.",
     "en": "Documentary preview: client recipe entries do not prove trainer, vendor or loot availability in beta. No in-game yields observed."
+  },
+  "acquisition_scope": {
+    "status": "documentary_not_confirmed_in_game",
+    "note": "Acquisition records attach to eight known reagents only. Vendor category and guide herb routes are documentary; all numeric location/loot/vendor claims stay unknown."
   }
 }
