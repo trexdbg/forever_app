@@ -33,7 +33,7 @@ export function checkAcquisition(a,items){
  if(!txt(a.evidence_note)||!kinds[a.evidence_level]?.includes(a.evidence_kind))bad("ACQUISITION_EVIDENCE_LEVEL");
  if(a.evidence_level==="unverified"){
   if(a.method!=="unverified"||!["vendor","herbalism_node","loot"].includes(a.scope)||
-     !emptyFields(a,["mob_id","mob_name","drop_rate","respawn_minutes","coordinates","price","stock","restock_minutes"]))
+     !["mob_id","mob_name","drop_rate","respawn_minutes","coordinates","price","stock","restock_minutes"].every(k=>a[k]==null))
      bad("ACQUISITION_UNVERIFIED_PROMOTION");
   return issues;
  }
