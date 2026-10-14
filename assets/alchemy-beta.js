@@ -109,6 +109,13 @@ function sourceRender(i){
    T(" (pas un niveau minimum prouvé)"," (not a verified minimum requirement)"),"craft-meta");
    add(section,"p",T("Zones conseillées pour le groupe de plantes : ","Zones suggested for the herb group: ")+
      (a.suggested_zones?.[en?"en":"fr"]||[]).join(", "),"craft-meta");
+   // Guide statements apply to distinct nodes and routes; never imply a proven item drop or spawn.
+   if(i.id===3820)add(section,"p",T(
+    "L’Étouffante pousse sous l’eau (guide Forever). Les zones de l’itinéraire commun, notamment le Loch Modan, ne sont pas des localisations attestées pour l’Étouffante.",
+    "Stranglekelp grows underwater (Forever guide). Shared itinerary zones, including Loch Modan, are not verified Stranglekelp locations."),"craft-caution");
+   if(i.id===2447)add(section,"p",T(
+    "Le guide cite la « Pacifique fanée » (Wilted Peacebloom) dans les zones de départ. Ces nœuds sont distincts de l’objet #2447 « Pacifique » : ils ne prouvent ni son obtention ni une équivalence d’ID.",
+    "The guide lists “Wilted Peacebloom” in starting zones. Those nodes are distinct from item #2447 “Peacebloom”: they do not prove it is gathered there or that node and item IDs are equivalent."),"craft-caution");
    add(section,"small",trust(a),"alchemy-evidence");
    add(section,"p",T("Zones indicatives ; position, ID du nœud et quantité récoltée non vérifiés.",
     "Indicative zones; exact position, node ID and gathered quantity unverified."),"craft-caution");
