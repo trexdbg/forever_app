@@ -15,7 +15,10 @@ test("public acquisition index matches its reproducible input-catalogue build",(
  assert.equal(published.totals.unique_items,published.items.length);
  assert.equal(published.totals.relations,all.length);
  assert.ok(published.items.length>=500,"Insufficient useful linked item coverage");
- assert.ok(all.length>=900,"Unexpected loss of existing catalogue relations");
+ assert.ok(all.length>=950,"Unexpected loss of existing catalogue relations");
+ assert.equal(published.totals.relations,951);
+ assert.equal(published.totals.unique_items,552);
+ assert.equal(published.totals.by_evidence.documented_forever,187);
 });
 test("IDs, source paths, categories and evidence statuses are valid",()=>{
  const ids=new Set();
@@ -44,8 +47,17 @@ test("Forever documentary links are never promoted to confirmed gameplay",()=>{
   "No live game proof was established by this navigational cross-index");
  assert.equal(all.filter(s=>s.kind==="merchant").length,631);
  assert.equal(all.filter(s=>s.kind==="boss").length,205);
- assert.equal(all.filter(s=>s.kind==="rare").length,81);
+ assert.equal(all.filter(s=>s.kind==="rare").length,101);
  assert.equal(all.filter(s=>s.kind==="recipe").length,14);
+});
+test("all twenty merged Forever rare additions appear in the cross-catalogue lookup",()=>{
+ const mustInclude=[285347,285346,285348,285350,284386,284400,286533,286534,286537,284287,285328,284174,285269,263015,247862,277213,255007,286746,286749,286750];
+ assert.equal(mustInclude.length,20);
+ for(const id of mustInclude){
+  const item=published.items.find(i=>i.id===id);
+  assert.ok(item,"Missing source-linked Forever item "+id);
+  assert.ok(item.sources.some(s=>s.kind==="rare"&&s.evidence_level==="documented_forever"),"Forever rare provenance lost for "+id);
+ }
 });
 test("an engineering item keeps both its Forever recipe and Classic merchant leads",()=>{
  const item=published.items.find(row=>row.id===4357);
