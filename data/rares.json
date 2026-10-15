@@ -937,8 +937,8 @@
           "chance_classic_percent": null,
           "source_version": "forever_beta",
           "source_url": "https://www.wowhead.com/forever/item=285331",
-          "drop_evidence": "forever_wowhead_loot_and_player_report",
-          "chance_forever_observed_percent": 1.23,
+          "drop_evidence": "forever_wowhead_loot_and_player_report_source_reviewed_not_gameplay_confirmed",
+          "chance_forever_observed_percent": null,
           "item_level": 25,
           "required_level": 20,
           "stats": {
@@ -953,8 +953,18 @@
           },
           "set_bonus_threshold": 2,
           "set_source_url": "https://www.wowhead.com/news/open-world-rare-spawn-item-sets-make-rares-more-valuable-in-forever-383053",
-          "observed_rate_reviewed_at": "2026-10-11",
-          "observed_rate_source_url": "https://www.wowhead.com/forever/item=285331"
+          "evidence_level": "documented_forever",
+          "evidence_url": "https://www.wowhead.com/forever/item=285331/mark-of-the-pack-leader",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Wowhead Forever item Mark of the Pack Leader #285331 explicitly lists Humar the Pridelord as a drop source, and the Forever rare-set announcement independently names the three rare/set-piece associations. This is a community database report, not a timestamped capture confirming spawn, loot, stable rate or current release build.",
+          "historical_drop_sample": {
+            "percent": 1.23,
+            "reviewed_at": "2026-10-11",
+            "source_url": "https://www.wowhead.com/forever/item=285331",
+            "interpretation": "Old community database sample, not a stable or guaranteed Forever drop probability"
+          }
         }
       ],
       "source": "https://foreverdb.net/rare/5828",
@@ -1031,8 +1041,8 @@
           "chance_classic_percent": null,
           "source_version": "forever_beta",
           "source_url": "https://www.wowhead.com/forever/item=285329",
-          "drop_evidence": "forever_wowhead_loot_and_player_report",
-          "chance_forever_observed_percent": 4.09,
+          "drop_evidence": "forever_wowhead_loot_and_player_report_source_reviewed_not_gameplay_confirmed",
+          "chance_forever_observed_percent": null,
           "item_level": 21,
           "required_level": 16,
           "stats": {
@@ -1047,8 +1057,18 @@
           },
           "set_bonus_threshold": 2,
           "set_source_url": "https://www.wowhead.com/news/open-world-rare-spawn-item-sets-make-rares-more-valuable-in-forever-383053",
-          "observed_rate_reviewed_at": "2026-10-11",
-          "observed_rate_source_url": "https://www.wowhead.com/forever/item=285329"
+          "evidence_level": "documented_forever",
+          "evidence_url": "https://www.wowhead.com/forever/item=285329/raptor-hide-cloak",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Wowhead Forever item Raptor Hide Cloak #285329 lists Takk the Leaper as its source, with player commentary specific to WoW Forever. The set announcement corroborates the assignment, but this is not first-hand build-attributed proof of loot or stable probability.",
+          "historical_drop_sample": {
+            "percent": 4.09,
+            "reviewed_at": "2026-10-11",
+            "source_url": "https://www.wowhead.com/forever/item=285329",
+            "interpretation": "Old community database sample, not a stable or guaranteed Forever drop probability"
+          }
         }
       ],
       "source": "https://foreverdb.net/rare/5842",
@@ -1125,8 +1145,8 @@
           "chance_classic_percent": null,
           "source_version": "forever_beta",
           "source_url": "https://www.wowhead.com/forever/item=285330",
-          "drop_evidence": "forever_wowhead_loot_and_player_report",
-          "chance_forever_observed_percent": 4.68,
+          "drop_evidence": "forever_wowhead_loot_and_player_report_source_reviewed_not_gameplay_confirmed",
+          "chance_forever_observed_percent": null,
           "item_level": 23,
           "required_level": 18,
           "stats": {
@@ -1141,8 +1161,18 @@
           },
           "set_bonus_threshold": 2,
           "set_source_url": "https://www.wowhead.com/news/open-world-rare-spawn-item-sets-make-rares-more-valuable-in-forever-383053",
-          "observed_rate_reviewed_at": "2026-10-11",
-          "observed_rate_source_url": "https://www.wowhead.com/forever/item=285330"
+          "evidence_level": "documented_forever",
+          "evidence_url": "https://www.wowhead.com/forever/item=285330/signet-of-the-zhevra",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Wowhead Forever item Signet of the Zhevra #285330 names Swiftmane as the drop source, and the official Forever rare-set coverage associates the same item/rare. Current page statistics differ from the 11 October catalogue snapshot; keep the prior sample as historical, not a guaranteed drop probability.",
+          "historical_drop_sample": {
+            "percent": 4.68,
+            "reviewed_at": "2026-10-11",
+            "source_url": "https://www.wowhead.com/forever/item=285330",
+            "interpretation": "Old community database sample, not a stable or guaranteed Forever drop probability"
+          }
         }
       ],
       "source": "https://foreverdb.net/rare/5831",
@@ -1573,8 +1603,8 @@
           "chance_classic_percent": null,
           "source_version": "forever_beta",
           "source_url": "https://www.wowhead.com/forever/npc=14430",
-          "drop_evidence": "forever_wowhead_npc_drops_5_of_591",
-          "chance_forever_observed_percent": 0.85,
+          "drop_evidence": "forever_wowhead_npc_drops_5_of_591_source_reviewed_not_gameplay_confirmed",
+          "chance_forever_observed_percent": null,
           "item_level": 11,
           "required_level": 6,
           "stats": {
@@ -1583,7 +1613,19 @@
           },
           "collection_status": "forever_database_observed",
           "item_id_status": "forever_beta_wowhead_verified",
-          "item_source_url": "https://www.wowhead.com/forever/item=284165"
+          "item_source_url": "https://www.wowhead.com/forever/item=284165",
+          "evidence_level": "documented_forever",
+          "evidence_url": "https://warcraft.wiki.gg/wiki/Duskstalker",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Warcraft Wiki's Duskstalker article explicitly marks Duskstalker's Hide as a Forever-specific drop, and the preexisting Wowhead Forever Duskstalker NPC page was the original lead. Neither source is a dated in-game capture establishing loot rate, coordinates or current availability.",
+          "historical_drop_sample": {
+            "percent": 0.85,
+            "reviewed_at": "unknown",
+            "source_url": "https://www.wowhead.com/forever/npc=14430",
+            "interpretation": "Old community database sample, not a stable or guaranteed Forever drop probability"
+          }
         }
       ],
       "source": "https://www.wowhead.com/forever/npc=14430",
