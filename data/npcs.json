@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-12",
+  "updated_at": "2026-10-15",
   "status": "classic_reference_not_forever_verified",
   "coordinate_system": "zone_percent_0_100_classic_reference",
   "stock_status": "classic_reference_not_live",
@@ -3438,6 +3438,158 @@
       "currency": "merchants_favor",
       "price_amount": 45
     },
+    "249478": {
+      "id": 249478,
+      "name": {
+        "en": "Formula: Polished Driftwood Icon",
+        "fr": "Formula: Polished Driftwood Icon"
+      },
+      "name_fr_status": "unverified_fallback_english",
+      "profession": "Enchantement",
+      "skill": 130,
+      "skill_semantics": "vendor_guide_profession_value_not_proof_of_game_learning_level",
+      "kind": "recipe",
+      "supply": "unknown_in_forever",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/forever/item=249478",
+      "source_status": "forever_beta_documented_item",
+      "reference_status": "forever_item_and_vendor_documented",
+      "source_guide": "https://www.wow-professions.com/forever/npc/alynsia"
+    },
+    "249479": {
+      "id": 249479,
+      "name": {
+        "en": "Formula: Enchant Weapon - Insight",
+        "fr": "Formula: Enchant Weapon - Insight"
+      },
+      "name_fr_status": "unverified_fallback_english",
+      "profession": "Enchantement",
+      "skill": 140,
+      "skill_semantics": "vendor_guide_profession_value_not_proof_of_game_learning_level",
+      "kind": "recipe",
+      "supply": "unknown_in_forever",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/forever/item=249479",
+      "source_status": "forever_beta_documented_item",
+      "reference_status": "forever_item_and_vendor_documented",
+      "source_guide": "https://www.wow-professions.com/forever/npc/alynsia"
+    },
+    "249480": {
+      "id": 249480,
+      "name": {
+        "en": "Formula: Enchant Weapon - Recovery",
+        "fr": "Formula: Enchant Weapon - Recovery"
+      },
+      "name_fr_status": "unverified_fallback_english",
+      "profession": "Enchantement",
+      "skill": 140,
+      "skill_semantics": "vendor_guide_profession_value_not_proof_of_game_learning_level",
+      "kind": "recipe",
+      "supply": "unknown_in_forever",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/forever/item=249480",
+      "source_status": "forever_beta_documented_item",
+      "reference_status": "forever_item_and_vendor_documented",
+      "source_guide": "https://www.wow-professions.com/forever/npc/alynsia"
+    },
+    "249481": {
+      "id": 249481,
+      "name": {
+        "en": "Formula: Enchant Weapon - Revelation",
+        "fr": "Formula: Enchant Weapon - Revelation"
+      },
+      "name_fr_status": "unverified_fallback_english",
+      "profession": "Enchantement",
+      "skill": 140,
+      "skill_semantics": "vendor_guide_profession_value_not_proof_of_game_learning_level",
+      "kind": "recipe",
+      "supply": "unknown_in_forever",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/forever/item=249481",
+      "source_status": "forever_beta_documented_item",
+      "reference_status": "forever_item_and_vendor_documented",
+      "source_guide": "https://www.wow-professions.com/forever/npc/alynsia"
+    },
+    "249482": {
+      "id": 249482,
+      "name": {
+        "en": "Formula: Glimmering Staff",
+        "fr": "Formula: Glimmering Staff"
+      },
+      "name_fr_status": "unverified_fallback_english",
+      "profession": "Enchantement",
+      "skill": 140,
+      "skill_semantics": "vendor_guide_profession_value_not_proof_of_game_learning_level",
+      "kind": "recipe",
+      "supply": "unknown_in_forever",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/forever/item=249482",
+      "source_status": "forever_beta_documented_item",
+      "reference_status": "forever_item_and_vendor_documented",
+      "source_guide": "https://www.wow-professions.com/forever/npc/alynsia"
+    },
+    "249483": {
+      "id": 249483,
+      "name": {
+        "en": "Formula: Soulstaff",
+        "fr": "Formula: Soulstaff"
+      },
+      "name_fr_status": "unverified_fallback_english",
+      "profession": "Enchantement",
+      "skill": 140,
+      "skill_semantics": "vendor_guide_profession_value_not_proof_of_game_learning_level",
+      "kind": "recipe",
+      "supply": "unknown_in_forever",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/forever/item=249483",
+      "source_status": "forever_beta_documented_item",
+      "reference_status": "forever_item_and_vendor_documented",
+      "source_guide": "https://www.wow-professions.com/forever/npc/alynsia"
+    },
+    "249484": {
+      "id": 249484,
+      "name": {
+        "en": "Formula: Orb of Mystic Insight",
+        "fr": "Formula: Orb of Mystic Insight"
+      },
+      "name_fr_status": "unverified_fallback_english",
+      "profession": "Enchantement",
+      "skill": 140,
+      "skill_semantics": "vendor_guide_profession_value_not_proof_of_game_learning_level",
+      "kind": "recipe",
+      "supply": "unknown_in_forever",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/forever/item=249484",
+      "source_status": "forever_beta_documented_item",
+      "reference_status": "forever_item_and_vendor_documented",
+      "source_guide": "https://www.wow-professions.com/forever/npc/alynsia"
+    },
+    "249485": {
+      "id": 249485,
+      "name": {
+        "en": "Formula: Orb of Souls",
+        "fr": "Formula: Orb of Souls"
+      },
+      "name_fr_status": "unverified_fallback_english",
+      "profession": "Enchantement",
+      "skill": 140,
+      "skill_semantics": "vendor_guide_profession_value_not_proof_of_game_learning_level",
+      "kind": "recipe",
+      "supply": "unknown_in_forever",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/forever/item=249485",
+      "source_status": "forever_beta_documented_item",
+      "reference_status": "forever_item_and_vendor_documented",
+      "source_guide": "https://www.wow-professions.com/forever/npc/alynsia"
+    },
     "249885": {
       "id": 249885,
       "name": {
@@ -3594,6 +3746,25 @@
         "rank": "Honored"
       }
     },
+    "250367": {
+      "id": 250367,
+      "name": {
+        "en": "Recipe: Lesser Cleric's Elixir",
+        "fr": "Recipe: Lesser Cleric's Elixir"
+      },
+      "name_fr_status": "unverified_fallback_english",
+      "profession": "Alchimie",
+      "skill": 95,
+      "skill_semantics": "vendor_guide_profession_value_not_proof_of_game_learning_level",
+      "kind": "recipe",
+      "supply": "unknown_in_forever",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/forever/item=250367",
+      "source_status": "forever_beta_documented_item",
+      "reference_status": "forever_item_and_vendor_documented",
+      "source_guide": "https://www.wow-professions.com/forever/npc/nina-surefire"
+    },
     "250376": {
       "id": 250376,
       "name": {
@@ -3613,6 +3784,25 @@
       "bind": "pickup",
       "currency": "merchants_favor",
       "price_amount": 45
+    },
+    "250378": {
+      "id": 250378,
+      "name": {
+        "en": "Recipe: Lesser Arcane Elixir",
+        "fr": "Recipe: Lesser Arcane Elixir"
+      },
+      "name_fr_status": "unverified_fallback_english",
+      "profession": "Alchimie",
+      "skill": 120,
+      "skill_semantics": "vendor_guide_profession_value_not_proof_of_game_learning_level",
+      "kind": "recipe",
+      "supply": "unknown_in_forever",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/forever/item=250378",
+      "source_status": "forever_beta_documented_item",
+      "reference_status": "forever_item_and_vendor_documented",
+      "source_guide": "https://www.wow-professions.com/forever/npc/nina-surefire"
     },
     "250381": {
       "id": 250381,
@@ -3677,6 +3867,44 @@
       "source_guide": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
       "currency": "merchants_favor",
       "price_amount": 45
+    },
+    "250978": {
+      "id": 250978,
+      "name": {
+        "en": "Recipe: Spellblasting Potion",
+        "fr": "Recipe: Spellblasting Potion"
+      },
+      "name_fr_status": "unverified_fallback_english",
+      "profession": "Alchimie",
+      "skill": 135,
+      "skill_semantics": "vendor_guide_profession_value_not_proof_of_game_learning_level",
+      "kind": "recipe",
+      "supply": "unknown_in_forever",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/forever/item=250978",
+      "source_status": "forever_beta_documented_item",
+      "reference_status": "forever_item_and_vendor_documented",
+      "source_guide": "https://www.wow-professions.com/forever/npc/nina-surefire"
+    },
+    "250984": {
+      "id": 250984,
+      "name": {
+        "en": "Recipe: Frenzy Potion",
+        "fr": "Recipe: Frenzy Potion"
+      },
+      "name_fr_status": "unverified_fallback_english",
+      "profession": "Alchimie",
+      "skill": 140,
+      "skill_semantics": "vendor_guide_profession_value_not_proof_of_game_learning_level",
+      "kind": "recipe",
+      "supply": "unknown_in_forever",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/forever/item=250984",
+      "source_status": "forever_beta_documented_item",
+      "reference_status": "forever_item_and_vendor_documented",
+      "source_guide": "https://www.wow-professions.com/forever/npc/nina-surefire"
     },
     "250990": {
       "id": 250990,
@@ -3798,6 +4026,63 @@
       "source_guide": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
       "currency": "merchants_favor",
       "price_amount": 45
+    },
+    "264204": {
+      "id": 264204,
+      "name": {
+        "en": "Schematic: EZ-Thro Wrap",
+        "fr": "Schematic: EZ-Thro Wrap"
+      },
+      "name_fr_status": "unverified_fallback_english",
+      "profession": "Ingénierie",
+      "skill": 100,
+      "skill_semantics": "vendor_guide_profession_value_not_proof_of_game_learning_level",
+      "kind": "recipe",
+      "supply": "unknown_in_forever",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/forever/item=264204",
+      "source_status": "forever_beta_documented_item",
+      "reference_status": "forever_item_and_vendor_documented",
+      "source_guide": "https://www.wow-professions.com/forever/npc/fritz-fizzle"
+    },
+    "264205": {
+      "id": 264205,
+      "name": {
+        "en": "Schematic: EZ-Thro Copper Bomb XL",
+        "fr": "Schematic: EZ-Thro Copper Bomb XL"
+      },
+      "name_fr_status": "unverified_fallback_english",
+      "profession": "Ingénierie",
+      "skill": 130,
+      "skill_semantics": "vendor_guide_profession_value_not_proof_of_game_learning_level",
+      "kind": "recipe",
+      "supply": "unknown_in_forever",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/forever/item=264205",
+      "source_status": "forever_beta_documented_item",
+      "reference_status": "forever_item_and_vendor_documented",
+      "source_guide": "https://www.wow-professions.com/forever/npc/fritz-fizzle"
+    },
+    "264206": {
+      "id": 264206,
+      "name": {
+        "en": "Schematic: No Slip SAF-T Padding",
+        "fr": "Schematic: No Slip SAF-T Padding"
+      },
+      "name_fr_status": "unverified_fallback_english",
+      "profession": "Ingénierie",
+      "skill": 145,
+      "skill_semantics": "vendor_guide_profession_value_not_proof_of_game_learning_level",
+      "kind": "recipe",
+      "supply": "unknown_in_forever",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/forever/item=264206",
+      "source_status": "forever_beta_documented_item",
+      "reference_status": "forever_item_and_vendor_documented",
+      "source_guide": "https://www.wow-professions.com/forever/npc/fritz-fizzle"
     },
     "271621": {
       "id": 271621,
@@ -3959,6 +4244,25 @@
       },
       "currency": "merchants_favor",
       "price_amount": 180
+    },
+    "285285": {
+      "id": 285285,
+      "name": {
+        "en": "Schematic: Satchel of Copper Bombs",
+        "fr": "Schematic: Satchel of Copper Bombs"
+      },
+      "name_fr_status": "unverified_fallback_english",
+      "profession": "Ingénierie",
+      "skill": 85,
+      "skill_semantics": "vendor_guide_profession_value_not_proof_of_game_learning_level",
+      "kind": "recipe",
+      "supply": "unknown_in_forever",
+      "icon": "inv_scroll_07",
+      "icon_status": "category_fallback",
+      "source": "https://www.wowhead.com/forever/item=285285",
+      "source_status": "forever_beta_documented_item",
+      "reference_status": "forever_item_and_vendor_documented",
+      "source_guide": "https://www.wow-professions.com/forever/npc/fritz-fizzle"
     }
   },
   "npcs": [
@@ -14731,9 +15035,41 @@
         "249887",
         "249888",
         "249889",
-        "249890"
+        "249890",
+        "21099",
+        "21219"
       ],
       "offer_details": {
+        "21099": {
+          "source": "https://www.wow-professions.com/forever/npc/azabek",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-15",
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/azabek",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/azabek",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Aza'bek selling Recipe: Smoked Sagefish (item #21099) with a coin cost shown without an independently validated currency denomination. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
+          "item_source_url": "https://www.wowhead.com/forever/item=21099",
+          "price_status": "listed_coins_units_not_independently_validated"
+        },
+        "21219": {
+          "source": "https://www.wow-professions.com/forever/npc/azabek",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-15",
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/azabek",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/azabek",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Aza'bek selling Recipe: Sagefish Delight (item #21219) with a coin cost shown without an independently validated currency denomination. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
+          "item_source_url": "https://www.wowhead.com/forever/item=21219",
+          "price_status": "listed_coins_units_not_independently_validated"
+        },
         "249885": {
           "source": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
           "source_kind": "forever_guide_named_vendor",
@@ -14883,7 +15219,11 @@
         "250388",
         "250990",
         "250383",
-        "250365"
+        "250365",
+        "250367",
+        "250378",
+        "250978",
+        "250984"
       ],
       "offer_details": {
         "250365": {
@@ -14900,6 +15240,25 @@
             "amount": 180,
             "currency": "merchants_favor"
           },
+          "bind": "pickup"
+        },
+        "250367": {
+          "source": "https://www.wow-professions.com/forever/npc/nina-surefire",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-15",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/nina-surefire",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/nina-surefire",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Nina Surefire selling Recipe: Lesser Cleric's Elixir (item #250367) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
+          "item_source_url": "https://www.wowhead.com/forever/item=250367",
           "bind": "pickup"
         },
         "250376": {
@@ -14919,6 +15278,25 @@
           "observed_build": "unknown",
           "evidence_kind": "forever_community_page",
           "evidence_note": "Le guide Forever consulté répertorie Nina Surefire vendant Recipe: Lesser Mageblood Elixir (objet 250376) pour 45 Merchant's Favor. Vente et conditions citées par le guide bêta, ni stock actuel ni capture directe en jeu confirmés."
+        },
+        "250378": {
+          "source": "https://www.wow-professions.com/forever/npc/nina-surefire",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-15",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/nina-surefire",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/nina-surefire",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Nina Surefire selling Recipe: Lesser Arcane Elixir (item #250378) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
+          "item_source_url": "https://www.wowhead.com/forever/item=250378",
+          "bind": "pickup"
         },
         "250381": {
           "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
@@ -14972,6 +15350,44 @@
           "observed_build": "unknown",
           "evidence_kind": "forever_community_page",
           "evidence_note": "Le guide Forever consulté répertorie Nina Surefire vendant Recipe: Elixir of Lesser Intellect (objet 250388) pour 45 Merchant's Favor. Vente et conditions citées par le guide bêta, ni stock actuel ni capture directe en jeu confirmés."
+        },
+        "250978": {
+          "source": "https://www.wow-professions.com/forever/npc/nina-surefire",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-15",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/nina-surefire",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/nina-surefire",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Nina Surefire selling Recipe: Spellblasting Potion (item #250978) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
+          "item_source_url": "https://www.wowhead.com/forever/item=250978",
+          "bind": "pickup"
+        },
+        "250984": {
+          "source": "https://www.wow-professions.com/forever/npc/nina-surefire",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-15",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/nina-surefire",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/nina-surefire",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Nina Surefire selling Recipe: Frenzy Potion (item #250984) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
+          "item_source_url": "https://www.wowhead.com/forever/item=250984",
+          "bind": "pickup"
         },
         "250990": {
           "source": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
@@ -15042,7 +15458,13 @@
         "250388",
         "250990",
         "250383",
-        "250365"
+        "250365",
+        "250381",
+        "250376",
+        "250367",
+        "250378",
+        "250978",
+        "250984"
       ],
       "offer_details": {
         "250365": {
@@ -15059,6 +15481,82 @@
             "amount": 180,
             "currency": "merchants_favor"
           },
+          "bind": "pickup"
+        },
+        "250367": {
+          "source": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-15",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+          "evidence_url": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Apothecary Durelle selling Recipe: Lesser Cleric's Elixir (item #250367) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
+          "item_source_url": "https://www.wowhead.com/forever/item=250367",
+          "bind": "pickup"
+        },
+        "250376": {
+          "source": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-15",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+          "evidence_url": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Apothecary Durelle selling Recipe: Lesser Mageblood Elixir (item #250376) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
+          "item_source_url": "https://www.wowhead.com/forever/item=250376",
+          "bind": "pickup"
+        },
+        "250378": {
+          "source": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-15",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+          "evidence_url": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Apothecary Durelle selling Recipe: Lesser Arcane Elixir (item #250378) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
+          "item_source_url": "https://www.wowhead.com/forever/item=250378",
+          "bind": "pickup"
+        },
+        "250381": {
+          "source": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-15",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+          "evidence_url": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Apothecary Durelle selling Recipe: Elixir of Lesser Spirit (item #250381) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
+          "item_source_url": "https://www.wowhead.com/forever/item=250381",
           "bind": "pickup"
         },
         "250383": {
@@ -15087,6 +15585,44 @@
             "amount": 45,
             "currency": "merchants_favor"
           },
+          "bind": "pickup"
+        },
+        "250978": {
+          "source": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-15",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+          "evidence_url": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Apothecary Durelle selling Recipe: Spellblasting Potion (item #250978) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
+          "item_source_url": "https://www.wowhead.com/forever/item=250978",
+          "bind": "pickup"
+        },
+        "250984": {
+          "source": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-15",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+          "evidence_url": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Apothecary Durelle selling Recipe: Frenzy Potion (item #250984) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
+          "item_source_url": "https://www.wowhead.com/forever/item=250984",
           "bind": "pickup"
         },
         "250990": {
@@ -15153,7 +15689,11 @@
         "264202",
         "264203",
         "280323",
-        "271625"
+        "271625",
+        "285285",
+        "264204",
+        "264205",
+        "264206"
       ],
       "offer_details": {
         "264201": {
@@ -15189,6 +15729,63 @@
           },
           "bind": "pickup"
         },
+        "264204": {
+          "source": "https://www.wow-professions.com/forever/npc/fritz-fizzle",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-15",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/fritz-fizzle",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/fritz-fizzle",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Fritz Fizzle selling Schematic: EZ-Thro Wrap (item #264204) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
+          "item_source_url": "https://www.wowhead.com/forever/item=264204",
+          "bind": "pickup"
+        },
+        "264205": {
+          "source": "https://www.wow-professions.com/forever/npc/fritz-fizzle",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-15",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/fritz-fizzle",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/fritz-fizzle",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Fritz Fizzle selling Schematic: EZ-Thro Copper Bomb XL (item #264205) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
+          "item_source_url": "https://www.wowhead.com/forever/item=264205",
+          "bind": "pickup"
+        },
+        "264206": {
+          "source": "https://www.wow-professions.com/forever/npc/fritz-fizzle",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-15",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/fritz-fizzle",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/fritz-fizzle",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Fritz Fizzle selling Schematic: No Slip SAF-T Padding (item #264206) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
+          "item_source_url": "https://www.wowhead.com/forever/item=264206",
+          "bind": "pickup"
+        },
         "271625": {
           "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
           "source_kind": "forever_guide_named_vendor",
@@ -15214,6 +15811,25 @@
             "rank": "Friendly"
           },
           "bind": "pickup"
+        },
+        "285285": {
+          "source": "https://www.wow-professions.com/forever/npc/fritz-fizzle",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-15",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/fritz-fizzle",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/fritz-fizzle",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Fritz Fizzle selling Schematic: Satchel of Copper Bombs (item #285285) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
+          "item_source_url": "https://www.wowhead.com/forever/item=285285",
+          "bind": "pickup"
         }
       },
       "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
@@ -15234,9 +15850,130 @@
       "coordinate_status": "forever_zone_only",
       "faction": "horde",
       "offers": [
-        "280323"
+        "280323",
+        "264202",
+        "264201",
+        "264203",
+        "285285",
+        "264204",
+        "264205",
+        "264206"
       ],
       "offer_details": {
+        "264201": {
+          "source": "https://www.wow-professions.com/forever/npc/fizzlefuse",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-15",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/fizzlefuse",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/fizzlefuse",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Fizzlefuse selling Schematic: SAF-T Tabs (item #264201) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
+          "item_source_url": "https://www.wowhead.com/forever/item=264201",
+          "bind": "pickup"
+        },
+        "264202": {
+          "source": "https://www.wow-professions.com/forever/npc/fizzlefuse",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-15",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/fizzlefuse",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/fizzlefuse",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Fizzlefuse selling Schematic: SAF-T Dynamite (item #264202) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
+          "item_source_url": "https://www.wowhead.com/forever/item=264202",
+          "bind": "pickup"
+        },
+        "264203": {
+          "source": "https://www.wow-professions.com/forever/npc/fizzlefuse",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-15",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/fizzlefuse",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/fizzlefuse",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Fizzlefuse selling Schematic: SAF-T Copper Bomb (item #264203) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
+          "item_source_url": "https://www.wowhead.com/forever/item=264203",
+          "bind": "pickup"
+        },
+        "264204": {
+          "source": "https://www.wow-professions.com/forever/npc/fizzlefuse",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-15",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/fizzlefuse",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/fizzlefuse",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Fizzlefuse selling Schematic: EZ-Thro Wrap (item #264204) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
+          "item_source_url": "https://www.wowhead.com/forever/item=264204",
+          "bind": "pickup"
+        },
+        "264205": {
+          "source": "https://www.wow-professions.com/forever/npc/fizzlefuse",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-15",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/fizzlefuse",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/fizzlefuse",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Fizzlefuse selling Schematic: EZ-Thro Copper Bomb XL (item #264205) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
+          "item_source_url": "https://www.wowhead.com/forever/item=264205",
+          "bind": "pickup"
+        },
+        "264206": {
+          "source": "https://www.wow-professions.com/forever/npc/fizzlefuse",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-15",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/fizzlefuse",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/fizzlefuse",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Fizzlefuse selling Schematic: No Slip SAF-T Padding (item #264206) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
+          "item_source_url": "https://www.wowhead.com/forever/item=264206",
+          "bind": "pickup"
+        },
         "280323": {
           "source": "https://www.wowhead.com/forever/item=280323",
           "source_kind": "forever_guide_named_vendor",
@@ -15250,6 +15987,25 @@
             "faction": "Durotar Supply and Logistics",
             "rank": "Friendly"
           },
+          "bind": "pickup"
+        },
+        "285285": {
+          "source": "https://www.wow-professions.com/forever/npc/fizzlefuse",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-15",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/fizzlefuse",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/fizzlefuse",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Fizzlefuse selling Schematic: Satchel of Copper Bombs (item #285285) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
+          "item_source_url": "https://www.wowhead.com/forever/item=285285",
           "bind": "pickup"
         }
       },
@@ -15276,7 +16032,15 @@
       "offers": [
         "249476",
         "249477",
-        "271624"
+        "271624",
+        "249478",
+        "249479",
+        "249480",
+        "249481",
+        "249482",
+        "249484",
+        "249485",
+        "249483"
       ],
       "offer_details": {
         "249476": {
@@ -15299,6 +16063,158 @@
             "amount": 45,
             "currency": "merchants_favor"
           },
+          "bind": "pickup"
+        },
+        "249478": {
+          "source": "https://www.wow-professions.com/forever/npc/alynsia",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-15",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/alynsia",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/alynsia",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Alynsia selling Formula: Polished Driftwood Icon (item #249478) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
+          "item_source_url": "https://www.wowhead.com/forever/item=249478",
+          "bind": "pickup"
+        },
+        "249479": {
+          "source": "https://www.wow-professions.com/forever/npc/alynsia",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-15",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/alynsia",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/alynsia",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Alynsia selling Formula: Enchant Weapon - Insight (item #249479) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
+          "item_source_url": "https://www.wowhead.com/forever/item=249479",
+          "bind": "pickup"
+        },
+        "249480": {
+          "source": "https://www.wow-professions.com/forever/npc/alynsia",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-15",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/alynsia",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/alynsia",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Alynsia selling Formula: Enchant Weapon - Recovery (item #249480) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
+          "item_source_url": "https://www.wowhead.com/forever/item=249480",
+          "bind": "pickup"
+        },
+        "249481": {
+          "source": "https://www.wow-professions.com/forever/npc/alynsia",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-15",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/alynsia",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/alynsia",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Alynsia selling Formula: Enchant Weapon - Revelation (item #249481) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
+          "item_source_url": "https://www.wowhead.com/forever/item=249481",
+          "bind": "pickup"
+        },
+        "249482": {
+          "source": "https://www.wow-professions.com/forever/npc/alynsia",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-15",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/alynsia",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/alynsia",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Alynsia selling Formula: Glimmering Staff (item #249482) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
+          "item_source_url": "https://www.wowhead.com/forever/item=249482",
+          "bind": "pickup"
+        },
+        "249483": {
+          "source": "https://www.wow-professions.com/forever/npc/alynsia",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-15",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/alynsia",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/alynsia",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Alynsia selling Formula: Soulstaff (item #249483) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
+          "item_source_url": "https://www.wowhead.com/forever/item=249483",
+          "bind": "pickup"
+        },
+        "249484": {
+          "source": "https://www.wow-professions.com/forever/npc/alynsia",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-15",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/alynsia",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/alynsia",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Alynsia selling Formula: Orb of Mystic Insight (item #249484) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
+          "item_source_url": "https://www.wowhead.com/forever/item=249484",
+          "bind": "pickup"
+        },
+        "249485": {
+          "source": "https://www.wow-professions.com/forever/npc/alynsia",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-15",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/alynsia",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/alynsia",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Alynsia selling Formula: Orb of Souls (item #249485) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
+          "item_source_url": "https://www.wowhead.com/forever/item=249485",
           "bind": "pickup"
         },
         "271624": {
@@ -15331,9 +16247,209 @@
       "coordinate_status": "forever_zone_only",
       "faction": "horde",
       "offers": [
-        "271624"
+        "271624",
+        "249476",
+        "249478",
+        "249477",
+        "249479",
+        "249480",
+        "249481",
+        "249482",
+        "249484",
+        "249485",
+        "249483"
       ],
       "offer_details": {
+        "249476": {
+          "source": "https://www.wow-professions.com/forever/npc/beneris",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-15",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/beneris",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/beneris",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Beneris selling Formula: Mystic Mushroom (item #249476) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
+          "item_source_url": "https://www.wowhead.com/forever/item=249476",
+          "bind": "pickup"
+        },
+        "249477": {
+          "source": "https://www.wow-professions.com/forever/npc/beneris",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-15",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/beneris",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/beneris",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Beneris selling Formula: Tenets of the Silver Hand (item #249477) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
+          "item_source_url": "https://www.wowhead.com/forever/item=249477",
+          "bind": "pickup"
+        },
+        "249478": {
+          "source": "https://www.wow-professions.com/forever/npc/beneris",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-15",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/beneris",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/beneris",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Beneris selling Formula: Polished Driftwood Icon (item #249478) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
+          "item_source_url": "https://www.wowhead.com/forever/item=249478",
+          "bind": "pickup"
+        },
+        "249479": {
+          "source": "https://www.wow-professions.com/forever/npc/beneris",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-15",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/beneris",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/beneris",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Beneris selling Formula: Enchant Weapon - Insight (item #249479) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
+          "item_source_url": "https://www.wowhead.com/forever/item=249479",
+          "bind": "pickup"
+        },
+        "249480": {
+          "source": "https://www.wow-professions.com/forever/npc/beneris",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-15",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/beneris",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/beneris",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Beneris selling Formula: Enchant Weapon - Recovery (item #249480) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
+          "item_source_url": "https://www.wowhead.com/forever/item=249480",
+          "bind": "pickup"
+        },
+        "249481": {
+          "source": "https://www.wow-professions.com/forever/npc/beneris",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-15",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/beneris",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/beneris",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Beneris selling Formula: Enchant Weapon - Revelation (item #249481) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
+          "item_source_url": "https://www.wowhead.com/forever/item=249481",
+          "bind": "pickup"
+        },
+        "249482": {
+          "source": "https://www.wow-professions.com/forever/npc/beneris",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-15",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/beneris",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/beneris",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Beneris selling Formula: Glimmering Staff (item #249482) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
+          "item_source_url": "https://www.wowhead.com/forever/item=249482",
+          "bind": "pickup"
+        },
+        "249483": {
+          "source": "https://www.wow-professions.com/forever/npc/beneris",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-15",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/beneris",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/beneris",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Beneris selling Formula: Soulstaff (item #249483) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
+          "item_source_url": "https://www.wowhead.com/forever/item=249483",
+          "bind": "pickup"
+        },
+        "249484": {
+          "source": "https://www.wow-professions.com/forever/npc/beneris",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-15",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/beneris",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/beneris",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Beneris selling Formula: Orb of Mystic Insight (item #249484) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
+          "item_source_url": "https://www.wowhead.com/forever/item=249484",
+          "bind": "pickup"
+        },
+        "249485": {
+          "source": "https://www.wow-professions.com/forever/npc/beneris",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-15",
+          "price": {
+            "amount": 45,
+            "currency": "merchants_favor"
+          },
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/beneris",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/beneris",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Beneris selling Formula: Orb of Souls (item #249485) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
+          "item_source_url": "https://www.wowhead.com/forever/item=249485",
+          "bind": "pickup"
+        },
         "271624": {
           "source": "https://www.wowhead.com/forever/item=271624",
           "source_kind": "forever_guide_named_vendor",
