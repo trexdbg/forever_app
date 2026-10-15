@@ -4,16 +4,16 @@
   "scope": "Read-only relations inherited from ForEveroth merchant, rare, dungeon and opt-in beta recipe catalogues. Source links may identify only an item or guide, not prove sale, drop, availability, rates or live crafting.",
   "provenance_policy": "Forever documented relations are labelled documentary only; all Classic relations stay Classic. Each relationship preserves its originating status. The links are navigation aids, not new source audits.",
   "totals": {
-    "unique_items": 649,
-    "relations": 1103,
+    "unique_items": 685,
+    "relations": 1175,
     "by_kind": {
-      "merchant": 779,
+      "merchant": 851,
       "boss": 205,
       "rare": 105,
       "recipe": 14
     },
     "by_evidence": {
-      "documented_forever": 339,
+      "documented_forever": 411,
       "classic_reference": 764
     }
   },
@@ -10789,6 +10789,834 @@
           "evidence_level": "documented_forever",
           "source_status": "forever_beta_community",
           "reference_url": "https://www.60.tools/items/252512-brawlers-leather-helm"
+        }
+      ]
+    },
+    {
+      "id": 252765,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Daniel Stitchsong",
+          "name_en": "Daniel Stitchsong",
+          "href": "/marchands/?q=Daniel%20Stitchsong",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/daniel-stitchsong"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Pawani",
+          "name_en": "Pawani",
+          "href": "/marchands/?q=Pawani",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/pawani"
+        }
+      ]
+    },
+    {
+      "id": 252766,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Daniel Stitchsong",
+          "name_en": "Daniel Stitchsong",
+          "href": "/marchands/?q=Daniel%20Stitchsong",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/daniel-stitchsong"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Pawani",
+          "name_en": "Pawani",
+          "href": "/marchands/?q=Pawani",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/pawani"
+        }
+      ]
+    },
+    {
+      "id": 252767,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Daniel Stitchsong",
+          "name_en": "Daniel Stitchsong",
+          "href": "/marchands/?q=Daniel%20Stitchsong",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/daniel-stitchsong"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Pawani",
+          "name_en": "Pawani",
+          "href": "/marchands/?q=Pawani",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/pawani"
+        }
+      ]
+    },
+    {
+      "id": 252768,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Daniel Stitchsong",
+          "name_en": "Daniel Stitchsong",
+          "href": "/marchands/?q=Daniel%20Stitchsong",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/daniel-stitchsong"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Pawani",
+          "name_en": "Pawani",
+          "href": "/marchands/?q=Pawani",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/pawani"
+        }
+      ]
+    },
+    {
+      "id": 252769,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Daniel Stitchsong",
+          "name_en": "Daniel Stitchsong",
+          "href": "/marchands/?q=Daniel%20Stitchsong",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/daniel-stitchsong"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Pawani",
+          "name_en": "Pawani",
+          "href": "/marchands/?q=Pawani",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/pawani"
+        }
+      ]
+    },
+    {
+      "id": 252770,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Daniel Stitchsong",
+          "name_en": "Daniel Stitchsong",
+          "href": "/marchands/?q=Daniel%20Stitchsong",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/daniel-stitchsong"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Pawani",
+          "name_en": "Pawani",
+          "href": "/marchands/?q=Pawani",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/pawani"
+        }
+      ]
+    },
+    {
+      "id": 252777,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Daniel Stitchsong",
+          "name_en": "Daniel Stitchsong",
+          "href": "/marchands/?q=Daniel%20Stitchsong",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/daniel-stitchsong"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Pawani",
+          "name_en": "Pawani",
+          "href": "/marchands/?q=Pawani",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/pawani"
+        }
+      ]
+    },
+    {
+      "id": 252778,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Daniel Stitchsong",
+          "name_en": "Daniel Stitchsong",
+          "href": "/marchands/?q=Daniel%20Stitchsong",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/daniel-stitchsong"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Pawani",
+          "name_en": "Pawani",
+          "href": "/marchands/?q=Pawani",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/pawani"
+        }
+      ]
+    },
+    {
+      "id": 252779,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Daniel Stitchsong",
+          "name_en": "Daniel Stitchsong",
+          "href": "/marchands/?q=Daniel%20Stitchsong",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/daniel-stitchsong"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Pawani",
+          "name_en": "Pawani",
+          "href": "/marchands/?q=Pawani",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/pawani"
+        }
+      ]
+    },
+    {
+      "id": 252780,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Daniel Stitchsong",
+          "name_en": "Daniel Stitchsong",
+          "href": "/marchands/?q=Daniel%20Stitchsong",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/daniel-stitchsong"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Pawani",
+          "name_en": "Pawani",
+          "href": "/marchands/?q=Pawani",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/pawani"
+        }
+      ]
+    },
+    {
+      "id": 252781,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Daniel Stitchsong",
+          "name_en": "Daniel Stitchsong",
+          "href": "/marchands/?q=Daniel%20Stitchsong",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/daniel-stitchsong"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Pawani",
+          "name_en": "Pawani",
+          "href": "/marchands/?q=Pawani",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/pawani"
+        }
+      ]
+    },
+    {
+      "id": 252782,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Daniel Stitchsong",
+          "name_en": "Daniel Stitchsong",
+          "href": "/marchands/?q=Daniel%20Stitchsong",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/daniel-stitchsong"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Pawani",
+          "name_en": "Pawani",
+          "href": "/marchands/?q=Pawani",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/pawani"
+        }
+      ]
+    },
+    {
+      "id": 252786,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Daniel Stitchsong",
+          "name_en": "Daniel Stitchsong",
+          "href": "/marchands/?q=Daniel%20Stitchsong",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/daniel-stitchsong"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Pawani",
+          "name_en": "Pawani",
+          "href": "/marchands/?q=Pawani",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/pawani"
+        }
+      ]
+    },
+    {
+      "id": 252787,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Daniel Stitchsong",
+          "name_en": "Daniel Stitchsong",
+          "href": "/marchands/?q=Daniel%20Stitchsong",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/daniel-stitchsong"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Pawani",
+          "name_en": "Pawani",
+          "href": "/marchands/?q=Pawani",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/pawani"
+        }
+      ]
+    },
+    {
+      "id": 252788,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Daniel Stitchsong",
+          "name_en": "Daniel Stitchsong",
+          "href": "/marchands/?q=Daniel%20Stitchsong",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/daniel-stitchsong"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Pawani",
+          "name_en": "Pawani",
+          "href": "/marchands/?q=Pawani",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/pawani"
+        }
+      ]
+    },
+    {
+      "id": 252789,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Daniel Stitchsong",
+          "name_en": "Daniel Stitchsong",
+          "href": "/marchands/?q=Daniel%20Stitchsong",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/daniel-stitchsong"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Pawani",
+          "name_en": "Pawani",
+          "href": "/marchands/?q=Pawani",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/pawani"
+        }
+      ]
+    },
+    {
+      "id": 252790,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Daniel Stitchsong",
+          "name_en": "Daniel Stitchsong",
+          "href": "/marchands/?q=Daniel%20Stitchsong",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/daniel-stitchsong"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Pawani",
+          "name_en": "Pawani",
+          "href": "/marchands/?q=Pawani",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/pawani"
+        }
+      ]
+    },
+    {
+      "id": 252791,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Daniel Stitchsong",
+          "name_en": "Daniel Stitchsong",
+          "href": "/marchands/?q=Daniel%20Stitchsong",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/daniel-stitchsong"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Pawani",
+          "name_en": "Pawani",
+          "href": "/marchands/?q=Pawani",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/pawani"
+        }
+      ]
+    },
+    {
+      "id": 252798,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Daniel Stitchsong",
+          "name_en": "Daniel Stitchsong",
+          "href": "/marchands/?q=Daniel%20Stitchsong",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/daniel-stitchsong"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Pawani",
+          "name_en": "Pawani",
+          "href": "/marchands/?q=Pawani",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/pawani"
+        }
+      ]
+    },
+    {
+      "id": 252799,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Daniel Stitchsong",
+          "name_en": "Daniel Stitchsong",
+          "href": "/marchands/?q=Daniel%20Stitchsong",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/daniel-stitchsong"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Pawani",
+          "name_en": "Pawani",
+          "href": "/marchands/?q=Pawani",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/pawani"
+        }
+      ]
+    },
+    {
+      "id": 252800,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Daniel Stitchsong",
+          "name_en": "Daniel Stitchsong",
+          "href": "/marchands/?q=Daniel%20Stitchsong",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/daniel-stitchsong"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Pawani",
+          "name_en": "Pawani",
+          "href": "/marchands/?q=Pawani",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/pawani"
+        }
+      ]
+    },
+    {
+      "id": 252801,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Daniel Stitchsong",
+          "name_en": "Daniel Stitchsong",
+          "href": "/marchands/?q=Daniel%20Stitchsong",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/daniel-stitchsong"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Pawani",
+          "name_en": "Pawani",
+          "href": "/marchands/?q=Pawani",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/pawani"
+        }
+      ]
+    },
+    {
+      "id": 252802,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Daniel Stitchsong",
+          "name_en": "Daniel Stitchsong",
+          "href": "/marchands/?q=Daniel%20Stitchsong",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/daniel-stitchsong"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Pawani",
+          "name_en": "Pawani",
+          "href": "/marchands/?q=Pawani",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/pawani"
+        }
+      ]
+    },
+    {
+      "id": 252803,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Daniel Stitchsong",
+          "name_en": "Daniel Stitchsong",
+          "href": "/marchands/?q=Daniel%20Stitchsong",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/daniel-stitchsong"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Pawani",
+          "name_en": "Pawani",
+          "href": "/marchands/?q=Pawani",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/pawani"
+        }
+      ]
+    },
+    {
+      "id": 252805,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Daniel Stitchsong",
+          "name_en": "Daniel Stitchsong",
+          "href": "/marchands/?q=Daniel%20Stitchsong",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/daniel-stitchsong"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Pawani",
+          "name_en": "Pawani",
+          "href": "/marchands/?q=Pawani",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/pawani"
+        }
+      ]
+    },
+    {
+      "id": 252806,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Daniel Stitchsong",
+          "name_en": "Daniel Stitchsong",
+          "href": "/marchands/?q=Daniel%20Stitchsong",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/daniel-stitchsong"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Pawani",
+          "name_en": "Pawani",
+          "href": "/marchands/?q=Pawani",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/pawani"
+        }
+      ]
+    },
+    {
+      "id": 252807,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Daniel Stitchsong",
+          "name_en": "Daniel Stitchsong",
+          "href": "/marchands/?q=Daniel%20Stitchsong",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/daniel-stitchsong"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Pawani",
+          "name_en": "Pawani",
+          "href": "/marchands/?q=Pawani",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/pawani"
+        }
+      ]
+    },
+    {
+      "id": 252808,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Daniel Stitchsong",
+          "name_en": "Daniel Stitchsong",
+          "href": "/marchands/?q=Daniel%20Stitchsong",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/daniel-stitchsong"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Pawani",
+          "name_en": "Pawani",
+          "href": "/marchands/?q=Pawani",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/pawani"
+        }
+      ]
+    },
+    {
+      "id": 252809,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Daniel Stitchsong",
+          "name_en": "Daniel Stitchsong",
+          "href": "/marchands/?q=Daniel%20Stitchsong",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/daniel-stitchsong"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Pawani",
+          "name_en": "Pawani",
+          "href": "/marchands/?q=Pawani",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/pawani"
+        }
+      ]
+    },
+    {
+      "id": 252810,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Daniel Stitchsong",
+          "name_en": "Daniel Stitchsong",
+          "href": "/marchands/?q=Daniel%20Stitchsong",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/daniel-stitchsong"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Pawani",
+          "name_en": "Pawani",
+          "href": "/marchands/?q=Pawani",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/pawani"
+        }
+      ]
+    },
+    {
+      "id": 252820,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Daniel Stitchsong",
+          "name_en": "Daniel Stitchsong",
+          "href": "/marchands/?q=Daniel%20Stitchsong",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/daniel-stitchsong"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Pawani",
+          "name_en": "Pawani",
+          "href": "/marchands/?q=Pawani",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/pawani"
+        }
+      ]
+    },
+    {
+      "id": 252821,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Daniel Stitchsong",
+          "name_en": "Daniel Stitchsong",
+          "href": "/marchands/?q=Daniel%20Stitchsong",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/daniel-stitchsong"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Pawani",
+          "name_en": "Pawani",
+          "href": "/marchands/?q=Pawani",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/pawani"
+        }
+      ]
+    },
+    {
+      "id": 252822,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Daniel Stitchsong",
+          "name_en": "Daniel Stitchsong",
+          "href": "/marchands/?q=Daniel%20Stitchsong",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/daniel-stitchsong"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Pawani",
+          "name_en": "Pawani",
+          "href": "/marchands/?q=Pawani",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/pawani"
+        }
+      ]
+    },
+    {
+      "id": 252823,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Daniel Stitchsong",
+          "name_en": "Daniel Stitchsong",
+          "href": "/marchands/?q=Daniel%20Stitchsong",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/daniel-stitchsong"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Pawani",
+          "name_en": "Pawani",
+          "href": "/marchands/?q=Pawani",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/pawani"
+        }
+      ]
+    },
+    {
+      "id": 252824,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Daniel Stitchsong",
+          "name_en": "Daniel Stitchsong",
+          "href": "/marchands/?q=Daniel%20Stitchsong",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/daniel-stitchsong"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Pawani",
+          "name_en": "Pawani",
+          "href": "/marchands/?q=Pawani",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/pawani"
+        }
+      ]
+    },
+    {
+      "id": 252825,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Daniel Stitchsong",
+          "name_en": "Daniel Stitchsong",
+          "href": "/marchands/?q=Daniel%20Stitchsong",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/daniel-stitchsong"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Pawani",
+          "name_en": "Pawani",
+          "href": "/marchands/?q=Pawani",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/pawani"
         }
       ]
     },

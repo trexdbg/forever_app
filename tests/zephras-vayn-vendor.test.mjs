@@ -92,16 +92,16 @@ test("resolved pattern #276964 is linked, original Vayn wave history and Classic
  assert.equal(db.verification_audit.vayn_zephras_wave.unresolved_item,null);
  assert.equal(db.verification_audit.vayn_zephras_wave.resolved_followup.item_id,276964);
  assert.equal(db.verification_audit.vayn_zephras_wave.new_links,47);
- assert.equal(db.audit.total_vendor_offers,779);
- assert.equal(db.audit.forever_documented_offers,202);
+ assert.equal(db.audit.total_vendor_offers,851);
+ assert.equal(db.audit.forever_documented_offers,274);
  assert.equal(db.audit.classic_unverified_offers,577);
- assert.equal(db.audit.forever_documented_items,128);
- assert.equal(Object.keys(db.items).length,337);
+ assert.equal(db.audit.forever_documented_items,164);
+ assert.equal(Object.keys(db.items).length,373);
  assert.deepEqual(index,buildFromFiles(),"Object-to-vendor lookup must remain reproducible");
- assert.equal(index.totals.unique_items,649);
- assert.equal(index.totals.relations,1103);
- assert.equal(index.totals.by_kind.merchant,779);
- assert.equal(index.totals.by_evidence.documented_forever,339);
+ assert.equal(index.totals.unique_items,685);
+ assert.equal(index.totals.relations,1175);
+ assert.equal(index.totals.by_kind.merchant,851);
+ assert.equal(index.totals.by_evidence.documented_forever,411);
  assert.equal(index.totals.by_evidence.classic_reference,764);
 });
 test("mixed-profession vendor label is bilingual without fabricating recipe translations",()=>{
