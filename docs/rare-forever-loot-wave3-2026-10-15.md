@@ -34,6 +34,8 @@ Ces quatre éléments étaient **déjà comptés** dans l'index ; leur clarifica
 
 L'index `data/item-acquisition-index.json` est aligné sur les quatre nouvelles relations : 552 → **556** IDs, 951 → **955** liens, dont 101 → **105** relations avec des rares ; **191 documentaires Forever**, **764 références Classic**. Il reste un **index de navigation**, pas une preuve supplémentaire. La construction reproductible reste `node scripts/build-item-acquisition-index.mjs --check`.
 
+Le générateur de l'index exige désormais pour les butins rares une **preuve individuelle** (`evidence_level`, URLs, date, build, type et note de preuve) avant l'étiquette `documented_forever`. Une association estampillée `source_version=forever_beta` mais sans preuve spécifique demeure `unverified`, et n'est pas transformée en Classic fictif. Les 28 relations déjà documentées sont conservées ; les 77 liens Classic restent des références Classic.
+
 ## Validation / retour arrière
 
 - Test dédié ajouté `tests/rare-forever-loot-wave3.test.mjs` : sources item/rares, ID et niveaux, champs de preuve, statuts des anciens lieux, taux inconnus, catégories de traduction et couverture.
