@@ -63,15 +63,15 @@ test("Stondry and Gor'mak document the same starter plans without inventing rep 
 });
 test("the 57 new sales extend the existing source index without promoting Classic fallback",()=>{
  assert.equal(db.npcs.filter(n=>n.role==="merchant").length,205);
- assert.equal(Object.keys(db.items).length,337);
- assert.equal(db.audit.total_vendor_offers,779);
- assert.equal(db.audit.forever_documented_offers,202);
- assert.equal(db.audit.forever_documented_items,128);
+ assert.equal(Object.keys(db.items).length,373);
+ assert.equal(db.audit.total_vendor_offers,851);
+ assert.equal(db.audit.forever_documented_offers,274);
+ assert.equal(db.audit.forever_documented_items,164);
  assert.equal(db.audit.classic_unverified_offers,577);
  assert.deepEqual(idx,buildFromFiles());
- assert.equal(idx.totals.unique_items,649);
- assert.equal(idx.totals.relations,1103);
- assert.equal(idx.totals.by_kind.merchant,779);
- assert.equal(idx.totals.by_evidence.documented_forever,339);
+ assert.equal(idx.totals.unique_items,685);
+ assert.equal(idx.totals.relations,1175);
+ assert.equal(idx.totals.by_kind.merchant,851);
+ assert.equal(idx.totals.by_evidence.documented_forever,411);
  assert.equal(idx.totals.by_evidence.classic_reference,764);
 });
