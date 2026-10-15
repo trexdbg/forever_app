@@ -8,11 +8,12 @@ const index=read("item-acquisition-index.json");
 const expected=[
  {id:"forever-tirisfal-the-condemned-one",itemId:286755,itemLevel:11,requiredLevel:6,zone:"tirisfal"},
  {id:"classic-stonetalon-sister-rathtalon",itemId:285345,itemLevel:21,requiredLevel:16,zone:"stonetalon"},
- {id:"hillsbrad-scargil",itemId:282716,itemLevel:32,requiredLevel:27,zone:"hillsbrad"}
+ {id:"hillsbrad-scargil",itemId:282716,itemLevel:32,requiredLevel:27,zone:"hillsbrad"},
+ {id:"ashenvale-mist-howler",itemId:284666,itemLevel:24,requiredLevel:19,zone:"ashenvale"}
 ];
 
-test("vague 3: three distinct Forever item-to-rare claims, not invented game evidence",()=>{
- assert.equal(new Set(expected.map(x=>x.itemId)).size,3);
+test("vague 3: four distinct Forever item-to-rare claims, not invented game evidence",()=>{
+ assert.equal(new Set(expected.map(x=>x.itemId)).size,4);
  for(const e of expected){
   const rare=db.rares.find(r=>r.id===e.id);
   assert.ok(rare,"Unknown rare "+e.id);
@@ -51,11 +52,11 @@ test("Sister Rathtalon's map conflict is still unresolved: loot source does not 
  assert.equal(r.reference,"classic_cmangos_not_forever_verified");
 });
 
-test("three Forever rare relations are traversable through the item acquisition index",()=>{
- assert.equal(index.totals.unique_items,555);
- assert.equal(index.totals.relations,954);
- assert.equal(index.totals.by_kind.rare,104);
- assert.equal(index.totals.by_evidence.documented_forever,190);
+test("four Forever rare relations are traversable through the item acquisition index",()=>{
+ assert.equal(index.totals.unique_items,556);
+ assert.equal(index.totals.relations,955);
+ assert.equal(index.totals.by_kind.rare,105);
+ assert.equal(index.totals.by_evidence.documented_forever,191);
  for(const e of expected){
   const row=index.items.find(i=>i.id===e.itemId);
   assert.ok(row,"Unindexed item "+e.itemId);
@@ -74,7 +75,7 @@ test("count cumulative additions without rewriting the historic 150 rare baselin
  const legacy=scoped.filter(r=>r.reference!=="new_forever_community_documented_not_gameplay_confirmed");
  assert.equal(scoped.length,161);
  assert.equal(legacy.length,150);
- assert.equal(legacy.filter(r=>r.loot.length).length,61);
- assert.equal(scoped.filter(r=>r.loot.length).length,67);
- assert.equal(scoped.filter(r=>!r.loot.length).length,94);
+ assert.equal(legacy.filter(r=>r.loot.length).length,62);
+ assert.equal(scoped.filter(r=>r.loot.length).length,68);
+ assert.equal(scoped.filter(r=>!r.loot.length).length,93);
 });
