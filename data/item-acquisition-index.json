@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-14",
+  "updated_at": "2026-10-15",
   "scope": "Read-only relations inherited from ForEveroth merchant, rare, dungeon and opt-in beta recipe catalogues. Source links may identify only an item or guide, not prove sale, drop, availability, rates or live crafting.",
   "provenance_policy": "Forever documented relations are labelled documentary only; all Classic relations stay Classic. Each relationship preserves its originating status. The links are navigation aids, not new source audits.",
   "totals": {
-    "unique_items": 532,
-    "relations": 931,
+    "unique_items": 552,
+    "relations": 951,
     "by_kind": {
       "merchant": 631,
       "boss": 205,
-      "rare": 81,
+      "rare": 101,
       "recipe": 14
     },
     "by_evidence": {
-      "documented_forever": 167,
+      "documented_forever": 187,
       "classic_reference": 764
     }
   },
@@ -9407,6 +9407,20 @@
       ]
     },
     {
+      "id": 247862,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Elmpaw",
+          "name_en": "Elmpaw",
+          "href": "/rare/?zone=elwynn&q=Elmpaw&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://www.wowhead.com/forever/item=247862/elmpaws-head"
+        }
+      ]
+    },
+    {
       "id": 249476,
       "sources": [
         {
@@ -9769,6 +9783,34 @@
           "evidence_level": "documented_forever",
           "source_status": "forever_beta_community",
           "reference_url": "https://www.60.tools/items/252512-brawlers-leather-helm"
+        }
+      ]
+    },
+    {
+      "id": 255007,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Decrepit Harvester",
+          "name_en": "Decrepit Harvester",
+          "href": "/rare/?zone=tirisfal&q=Decrepit%20Harvester&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://wowseer.gg/guides/rare-spawns"
+        }
+      ]
+    },
+    {
+      "id": 263015,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Tel'daeor the Stormspeaker",
+          "name_en": "Tel'daeor the Stormspeaker",
+          "href": "/rare/?zone=zephras-isle&q=Tel'daeor%20the%20Stormspeaker&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://www.wowhead.com/forever/item=263015/skyseers-pants"
         }
       ]
     },
@@ -11389,6 +11431,20 @@
       ]
     },
     {
+      "id": 277213,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Dro'zem the Blasphemous",
+          "name_en": "Dro'zem the Blasphemous",
+          "href": "/rare/?zone=redridge&q=Dro'zem%20the%20Blasphemous&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://www.wowhead.com/forever/item=277213/drozems-tunic"
+        }
+      ]
+    },
+    {
       "id": 280323,
       "sources": [
         {
@@ -11422,6 +11478,90 @@
           "evidence_level": "documented_forever",
           "source_status": "forever_beta_rare_loot",
           "reference_url": "https://www.wowhead.com/forever/npc=14430"
+        }
+      ]
+    },
+    {
+      "id": 284174,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Griffe-de-l'ombre",
+          "name_en": "Shadowclaw",
+          "href": "/rare/?zone=darkshore&q=Shadowclaw&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://www.wowhead.com/forever/item=284174"
+        }
+      ]
+    },
+    {
+      "id": 284287,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Scornn Tisse-corruption",
+          "name_en": "Felweaver Scornn",
+          "href": "/rare/?zone=durotar&q=Felweaver%20Scornn&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://www.wowhead.com/forever/item=284287"
+        }
+      ]
+    },
+    {
+      "id": 284386,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Sous-chef Fouet-croc",
+          "name_en": "Taskmaster Whipfang",
+          "href": "/rare/?zone=stonetalon&q=Taskmaster%20Whipfang&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://www.wowhead.com/forever/item=284386"
+        }
+      ]
+    },
+    {
+      "id": 284400,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Contremaître Rigger",
+          "name_en": "Foreman Rigger",
+          "href": "/rare/?zone=stonetalon&q=Foreman%20Rigger&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://www.stillsixty.com/rare/foreman-rigger-stonetalon-mountains"
+        }
+      ]
+    },
+    {
+      "id": 285269,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Snapbeak the Quick",
+          "name_en": "Snapbeak the Quick",
+          "href": "/rare/?zone=zephras-isle&q=Snapbeak%20the%20Quick&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://www.wowhead.com/forever/item=285269/thendal-watchers-boots"
+        }
+      ]
+    },
+    {
+      "id": 285328,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Hagg Fléau-des-taurens",
+          "name_en": "Hagg Taurenbane",
+          "href": "/rare/?zone=barrens&q=Hagg%20Taurenbane&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://www.wowhead.com/forever/item=285328"
         }
       ]
     },
@@ -11464,6 +11604,146 @@
           "evidence_level": "documented_forever",
           "source_status": "forever_beta_rare_loot",
           "reference_url": "https://www.wowhead.com/forever/item=285331"
+        }
+      ]
+    },
+    {
+      "id": 285346,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Thora Feathermoon",
+          "name_en": "Thora Feathermoon",
+          "href": "/rare/?zone=barrens&q=Thora%20Feathermoon&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://www.wowhead.com/forever/item=285346"
+        }
+      ]
+    },
+    {
+      "id": 285347,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Aean Swiftriver",
+          "name_en": "Aean Swiftriver",
+          "href": "/rare/?zone=barrens&q=Aean%20Swiftriver&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://www.wowhead.com/forever/item=285347"
+        }
+      ]
+    },
+    {
+      "id": 285348,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Hannah Bladeleaf",
+          "name_en": "Hannah Bladeleaf",
+          "href": "/rare/?zone=barrens&q=Hannah%20Bladeleaf&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://warcraft.wiki.gg/wiki/Alliance_Outrunner_Healing_Rod"
+        }
+      ]
+    },
+    {
+      "id": 285350,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Marcus Bel",
+          "name_en": "Marcus Bel",
+          "href": "/rare/?zone=barrens&q=Marcus%20Bel&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://www.wowhead.com/forever/item=285350"
+        }
+      ]
+    },
+    {
+      "id": 286533,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Dishu",
+          "name_en": "Dishu",
+          "href": "/rare/?zone=durotar&q=Dishu&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://www.wowhead.com/forever/item=286533"
+        }
+      ]
+    },
+    {
+      "id": 286534,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Moissonneur silithide",
+          "name_en": "Silithid Harvester",
+          "href": "/rare/?zone=barrens&q=Silithid%20Harvester&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://www.wowhead.com/forever/item=286534"
+        }
+      ]
+    },
+    {
+      "id": 286537,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Piétine-tonnerre",
+          "name_en": "Thunderstomp",
+          "href": "/rare/?zone=barrens&q=Thunderstomp&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://www.wowhead.com/forever/item=286537"
+        }
+      ]
+    },
+    {
+      "id": 286746,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Shal'ma",
+          "name_en": "Shal'ma",
+          "href": "/rare/?zone=durotar&q=Shal'ma&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://www.wowhead.com/forever/item=286746/shalmas-shawl"
+        }
+      ]
+    },
+    {
+      "id": 286749,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Wrathvine",
+          "name_en": "Wrathvine",
+          "href": "/rare/?zone=teldrassil&q=Wrathvine&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://www.wowhead.com/forever/item=286749/wrathroot"
+        }
+      ]
+    },
+    {
+      "id": 286750,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Nightscreech",
+          "name_en": "Nightscreech",
+          "href": "/rare/?zone=teldrassil&q=Nightscreech&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://www.wowhead.com/forever/item=286750/wisesight-wand"
         }
       ]
     }
