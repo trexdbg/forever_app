@@ -13,14 +13,14 @@ const pick=name=>{
 const codes=data=>auditRareLocations(data).issues.map(x=>x.code);
 const edited=(name,fn)=>{const data=pick(name);fn(data.rares[0],data);return codes(data)};
 
-test("entire level 1–30 audit has 150 rares and 317 individually classified points",()=>{
+test("legacy 150 rares retain provenance; 8 newly evidenced exact-level Forever rares expand numeric scope",()=>{
   const report=auditRareLocations(db);
   assert.deepEqual(report.issues,[]);
-  assert.equal(report.counts.scoped,150);
-  assert.equal(report.counts.points,317);
+  assert.equal(report.counts.scoped,158);
+  assert.equal(report.counts.points,337);
   assert.equal(report.counts.classic_indicative,309);
   assert.equal(report.counts.classic_sourced,17);
-  assert.equal(report.counts.forever_documented,8);
+  assert.equal(report.counts.forever_documented,28);
   assert.equal(report.counts.forever_confirmed,0);
   assert.equal(report.counts.without_points,6);
   assert.equal(report.counts.instance_without_points,4);
