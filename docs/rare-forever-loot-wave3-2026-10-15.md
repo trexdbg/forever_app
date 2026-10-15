@@ -17,6 +17,19 @@ Revue documentaire : 15 octobre 2026. Périmètre : niveaux 1–30, sans observa
 - Le niveau 32 de l'objet **Imbued Scaled Cuffs** est un *niveau d'objet*, pas le niveau du monstre ni un niveau minimum de personnage : son niveau requis est **27**.
 - Aucun timer, faction, spawn, position, `seen_forever` ou autre butin existant n'est modifié ; `loot_coverage=notable_only_not_complete` ne prétend pas à une table exhaustive.
 
+## Fiabilisation de quatre relations déjà publiées (sans nouveau lien)
+ 
+Les **quatre** butins spécifiques Forever historiquement présents mais dépourvus de preuve individualisée ont été revus et complétés le 15/10/2026 :
+ 
+- Humar the Pridelord → **Mark of the Pack Leader** (#285331) : [fiche Forever](https://www.wowhead.com/forever/item=285331/mark-of-the-pack-leader) et [annonce du set](https://www.wowhead.com/forever/news/open-world-rare-spawn-item-sets-make-rares-more-valuable-in-forever-383053).
+- Takk the Leaper → **Raptor Hide Cloak** (#285329) : [fiche Forever et témoignages](https://www.wowhead.com/forever/item=285329/raptor-hide-cloak).
+- Swiftmane → **Signet of the Zhevra** (#285330) : [fiche Forever](https://www.wowhead.com/forever/item=285330/signet-of-the-zhevra).
+- Duskstalker → **Duskstalker's Hide** (#284165) : [section « Drops » spécifique Forever](https://warcraft.wiki.gg/wiki/Duskstalker) et [fiche PNJ Forever](https://www.wowhead.com/forever/npc=14430/duskstalker).
+
+Pour chacun : `evidence_level=documented_forever`, URL de preuve spécifique, date de notre revue, build inconnu, nature et limites de la preuve. Les anciens pourcentages (1,23 %, 4,09 %, 4,68 % et 0,85 %) sont **archivés** dans `historical_drop_sample` ; ils ne sont plus annoncés comme taux actuels dans l'interface. Les trois premiers échantillons avaient été relevés le 11/10 ; **date du quatrième échantillon inconnue**, conservée `unknown`. Les positions et respawns restent historiques Classic.
+
+Ces quatre éléments étaient **déjà comptés** dans l'index ; leur clarification documentaire ne doit pas augmenter artificiellement les totaux d'objets et de relations ci-dessous.
+
 ## Mise à jour de la recherche « Où l'obtenir »
 
 L'index `data/item-acquisition-index.json` est aligné sur les quatre nouvelles relations : 552 → **556** IDs, 951 → **955** liens, dont 101 → **105** relations avec des rares ; **191 documentaires Forever**, **764 références Classic**. Il reste un **index de navigation**, pas une preuve supplémentaire. La construction reproductible reste `node scripts/build-item-acquisition-index.mjs --check`.
