@@ -43,12 +43,12 @@ export function buildAcquisitionIndex({npcs,rares,dungeons,crafting,alchemy}) {
  }
  for(const rare of rares.rares||[]){
   for(const loot of rare.loot||[]){
-   const documented=loot.source_version==="forever_beta";
+   const documented=loot.source_version==="forever_beta" && loot.evidence_level==="documented_forever" && validSource(loot.evidence_url) && validSource(loot.source_url) && nonempty(loot.observed_at) && nonempty(loot.observed_build) && nonempty(loot.evidence_kind) && nonempty(loot.evidence_note);
    add(loot.item_id||loot.id,{
     kind:"rare",name_fr:label(rare.name,"fr"),name_en:label(rare.name,"en"),
     href:link("/rare/",{zone:rare.zone,q:label(rare.name,"en"),level:"all"}),
-    evidence_level:documented?"documented_forever":"classic_reference",
-    source_status:documented?"forever_beta_rare_loot":"classic_rare_loot_reference",
+    evidence_level:documented?"documented_forever":(loot.source_version==="classic_reference"?"classic_reference":"unverified"),
+    source_status:documented?"forever_beta_rare_loot":(loot.source_version==="classic_reference"?"classic_rare_loot_reference":"rare_loot_without_individual_forever_proof"),
     reference_url:validSource(loot.source_url)?loot.source_url:(validSource(rare.source)?rare.source:null)
    });
   }
