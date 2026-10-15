@@ -14,13 +14,13 @@ const byName=new Map(db.npcs.filter(n=>n.role==="merchant").map(n=>[n.name,n]));
 test("41 new Forever-source vendor relationships retained alongside the 631 historical offers",()=>{
  assert.equal(db.npcs.filter(n=>n.role==="merchant").length,205);
  assert.equal(db.npcs.filter(n=>n.role==="trainer").length,153);
- assert.equal(Object.keys(db.items).length,307);
- assert.equal(db.npcs.filter(n=>n.role==="merchant").reduce((sum,n)=>sum+n.offers.length,0),719);
+ assert.equal(Object.keys(db.items).length,335);
+ assert.equal(db.npcs.filter(n=>n.role==="merchant").reduce((sum,n)=>sum+n.offers.length,0),776);
  assert.deepEqual(index,buildFromFiles(),"The object acquisition index must remain derivable from the authoritative catalogues");
- assert.equal(index.totals.unique_items,619);
- assert.equal(index.totals.relations,1043);
- assert.equal(index.totals.by_kind.merchant,719);
- assert.equal(index.totals.by_evidence.documented_forever,279);
+ assert.equal(index.totals.unique_items,647);
+ assert.equal(index.totals.relations,1100);
+ assert.equal(index.totals.by_kind.merchant,776);
+ assert.equal(index.totals.by_evidence.documented_forever,336);
 });
 test("each target camp merchant has the exact catalogued recipe IDs and proof of each seller-item relationship",()=>{
  let sales=0;
