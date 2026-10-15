@@ -139,7 +139,7 @@ test("Aza'bek and Nina Surefire have ten exact, documented vendor-item sales",()
   assert.match(offer.evidence_note,/ni stock actuel ni capture directe en jeu confirmés/);
  }
  const actual=data.npcs.flatMap(n=>Object.values(n.offer_details||{})).filter(o=>o.evidence_level==="documented_forever");
- assert.equal(actual.length,expected.length,"Unexpected documented associations not individually pinned");
+ assert.equal(actual.length,expected.length+41,"Original documented associations remain individually pinned, plus 41 new relations validated in the vendor wave-2 test");
 });
 test("sale URL prioritizes precise evidence with safe legacy fallback; FR and EN labels",()=>{
  const code=readFileSync(resolve(root,"assets/npcs.js"),"utf8");
