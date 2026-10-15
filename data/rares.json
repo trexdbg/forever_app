@@ -3172,7 +3172,39 @@
           36.9
         ]
       ],
-      "loot": [],
+      "loot": [
+        {
+          "name": {
+            "en": "Wolf Whistle",
+            "fr": "Wolf Whistle"
+          },
+          "name_fr_status": "unverified_fallback_english",
+          "item_id": 284666,
+          "source_version": "forever_beta",
+          "item_id_status": "forever_beta_wowhead_or_client_reference",
+          "source_url": "https://www.wowhead.com/forever/item=284666/wolf-whistle",
+          "item_source_url": "https://www.wowhead.com/forever/item=284666/wolf-whistle",
+          "drop_evidence": "forever_item_database_documented_drop_unconfirmed",
+          "chance_classic_percent": null,
+          "chance_forever_observed_percent": null,
+          "item_level": 24,
+          "required_level": 19,
+          "slot": {
+            "en": "Consumable · Unique",
+            "fr": "Consommable · Unique"
+          },
+          "stats": {
+            "en": "5 charges · Summons a protective wolf for 10 min (30 min cooldown)",
+            "fr": "5 charges · Invoque un loup protecteur pendant 10 min (30 min de recharge)"
+          },
+          "evidence_level": "documented_forever",
+          "evidence_url": "https://www.wowhead.com/forever/item=284666/wolf-whistle",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The Wowhead Forever item page for Wolf Whistle (284666) explicitly lists Mist Howler (Ashenvale) under Dropped by and identifies the use effect. This is a database/community report rather than a dated verified gameplay loot capture; drop chance is unknown as a stable rate, and historical Classic waypoint/timer are untouched."
+        }
+      ],
       "source": "https://foreverdb.net/rares",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
@@ -3182,7 +3214,7 @@
       },
       "name_fr_status": "community_translation_check_needed",
       "beta_level30_in_scope": true,
-      "loot_coverage": "not_documented",
+      "loot_coverage": "notable_only_not_complete",
       "coordinate_status": "classic_reference",
       "location_review": {
         "reviewed_at": "2026-10-14",
