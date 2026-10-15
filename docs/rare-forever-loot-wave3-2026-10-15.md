@@ -36,6 +36,8 @@ L'index `data/item-acquisition-index.json` est aligné sur les quatre nouvelles 
 
 Le générateur de l'index exige désormais pour les butins rares une **preuve individuelle** (`evidence_level`, URLs, date, build, type et note de preuve) avant l'étiquette `documented_forever`. Une association estampillée `source_version=forever_beta` mais sans preuve spécifique demeure `unverified`, et n'est pas transformée en Classic fictif. Les 28 relations déjà documentées sont conservées ; les 77 liens Classic restent des références Classic.
 
+L'interface Rares FR/EN affiche maintenant **« Forever · documenté »**, **« Forever · à vérifier »**, **« Classic · indicatif »** (ou « confirmé en jeu » uniquement si une preuve directe apparaît un jour), au lieu de confondre toutes les pièces Forever dans une étiquette générique. Le changement concerne l'étiquette du **butin**, indépendante de la provenance de la **position**.
+
 ## Validation / retour arrière
 
 - Test dédié ajouté `tests/rare-forever-loot-wave3.test.mjs` : sources item/rares, ID et niveaux, champs de preuve, statuts des anciens lieux, taux inconnus, catégories de traduction et couverture.
