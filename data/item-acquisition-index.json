@@ -4,16 +4,16 @@
   "scope": "Read-only relations inherited from ForEveroth merchant, rare, dungeon and opt-in beta recipe catalogues. Source links may identify only an item or guide, not prove sale, drop, availability, rates or live crafting.",
   "provenance_policy": "Forever documented relations are labelled documentary only; all Classic relations stay Classic. Each relationship preserves its originating status. The links are navigation aids, not new source audits.",
   "totals": {
-    "unique_items": 555,
-    "relations": 954,
+    "unique_items": 556,
+    "relations": 955,
     "by_kind": {
       "merchant": 631,
       "boss": 205,
-      "rare": 104,
+      "rare": 105,
       "recipe": 14
     },
     "by_evidence": {
-      "documented_forever": 190,
+      "documented_forever": 191,
       "classic_reference": 764
     }
   },
@@ -11548,6 +11548,20 @@
           "evidence_level": "documented_forever",
           "source_status": "forever_beta_rare_loot",
           "reference_url": "https://www.stillsixty.com/rare/foreman-rigger-stonetalon-mountains"
+        }
+      ]
+    },
+    {
+      "id": 284666,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Hurlebrume",
+          "name_en": "Mist Howler",
+          "href": "/rare/?zone=ashenvale&q=Mist%20Howler&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://www.wowhead.com/forever/item=284666/wolf-whistle"
         }
       ]
     },
