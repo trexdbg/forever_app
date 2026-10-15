@@ -69,11 +69,11 @@ test("three documented sales from named Forever merchants are not invented purch
 });
 
 test("provenance follows each relation, preserves historic wave sizes and Classic fallback",()=>{
- assert.equal(db.audit.total_vendor_offers,851);
- assert.equal(db.audit.forever_documented_offers,274);
- assert.equal(db.audit.forever_documented_items,164);
+ assert.equal(db.audit.total_vendor_offers,923);
+ assert.equal(db.audit.forever_documented_offers,346);
+ assert.equal(db.audit.forever_documented_items,200);
  assert.equal(db.audit.classic_unverified_offers,577);
- assert.equal(db.verification_audit.forever_sale_count,274);
+ assert.equal(db.verification_audit.forever_sale_count,346);
  assert.equal(db.verification_audit.resolved_vendor_recipe_id_followup.new_vendor_offers,3);
  assert.equal(db.verification_audit.resolved_vendor_recipe_id_followup.confirmed_in_game,0);
  assert.equal(db.verification_audit.blacksmith_lowlevel_camps_wave.added_vendor_links,57);
@@ -83,9 +83,9 @@ test("provenance follows each relation, preserves historic wave sizes and Classi
  assert.equal(db.verification_audit.blacksmith_lowlevel_camps_wave.unknown_item,null);
  assert.equal(db.verification_audit.vayn_zephras_wave.unresolved_item,null);
  assert.deepEqual(index,buildFromFiles(),"Published index must be reproducible without source promotion");
- assert.equal(index.totals.unique_items,685);
- assert.equal(index.totals.relations,1175);
- assert.equal(index.totals.by_kind.merchant,851);
- assert.equal(index.totals.by_evidence.documented_forever,411);
+ assert.equal(index.totals.unique_items,721);
+ assert.equal(index.totals.relations,1247);
+ assert.equal(index.totals.by_kind.merchant,923);
+ assert.equal(index.totals.by_evidence.documented_forever,483);
  assert.equal(index.totals.by_evidence.classic_reference,764);
 });
