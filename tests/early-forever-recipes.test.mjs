@@ -125,3 +125,14 @@ test("archive is opt-in, loads lazily and both localized professions pages link 
   assert.match(html,/id="early-recipe-results"/);
  }
 });
+
+test("initial recipe selection is reflected in aria-pressed before buttons render",()=>{
+ const js=load("assets/recipes-early.js");
+ const select=js.indexOf("if(!selected&&hits.length)selected=hits[0]");
+ const rows=js.indexOf("for(const r of visible)");
+ const aria=js.indexOf('b.setAttribute("aria-pressed"');
+ assert.ok(select>=0&&rows>=0&&aria>=0);
+ assert.ok(select<rows&&rows<aria,
+  "The default selected recipe must be picked before aria-pressed values are assigned");
+ assert.match(js,/if\(selected&&!hits\.some\(r=>r\.spell_id===selected\.spell_id\)\)selected=null/);
+});
