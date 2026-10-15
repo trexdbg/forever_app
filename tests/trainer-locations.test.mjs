@@ -126,7 +126,7 @@ test("location classified as documented Forever cannot claim certainty through l
  assert.ok(errors(caseData).includes("LOCATION_STATUS_OVERRATED"));
 });
 test("all merchant offers, recipes and unrelated rare records stay out of this validator",()=>{
- assert.equal(db.npcs.filter(n=>n.role==="merchant").length,205);
+ assert.equal(db.npcs.filter(n=>n.role==="merchant").length,206);
  assert.ok(!Object.keys(db).includes("rares"));
  assert.equal(audit(db).summary.total,153);
 });

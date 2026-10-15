@@ -33,6 +33,7 @@ on:
       - tests/forever-blacksmith-camp.test.mjs
       - tests/forever-resolved-vendor-plans.test.mjs
       - tests/forever-leatherworking-camps.test.mjs
+      - tests/forever-tailoring-faction-camps.test.mjs
       - docs/npc-professions-audit-2026-10-13.md
       - .github/workflows/npc-professions-quality.yml
 permissions:
@@ -81,6 +82,8 @@ jobs:
         run: node --test tests/forever-resolved-vendor-plans.test.mjs
       - name: Daniel Stitchsong and Pawani — 36 Forever patterns and 72 seller links
         run: node --test tests/forever-leatherworking-camps.test.mjs
+      - name: Forever Tailoring vendor catalogue — 36 IDs, 72 sales and Jim'bek map evidence
+        run: node --test tests/forever-tailoring-faction-camps.test.mjs
       - name: Trainer location evidence and map consistency (#51)
         run: node scripts/check-trainer-locations.mjs
       - name: Trainer location fixtures and legacy map safeguards (#51)
