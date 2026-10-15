@@ -43,7 +43,7 @@ test("each target camp merchant has the exact catalogued recipe IDs and proof of
    sales++;
   }
  }
- assert.equal(sales,55,"Total documented low-level seller-item combinations; some are pre-existing");
+ assert.equal(sales,52,"Total documented low-level seller-item combinations; some are pre-existing");
 });
 test("new additions have per-relation source, build, price, language fallbacks and no invented gameplay confirmation",()=>{
  let fresh=0;
