@@ -32,6 +32,7 @@ on:
       - tests/zephras-vayn-vendor.test.mjs
       - tests/forever-blacksmith-camp.test.mjs
       - tests/forever-resolved-vendor-plans.test.mjs
+      - tests/forever-leatherworking-camps.test.mjs
       - docs/npc-professions-audit-2026-10-13.md
       - .github/workflows/npc-professions-quality.yml
 permissions:
@@ -78,6 +79,8 @@ jobs:
         run: node --test tests/forever-blacksmith-camp.test.mjs
       - name: Two resolved Forever vendor recipe IDs and French names (#58)
         run: node --test tests/forever-resolved-vendor-plans.test.mjs
+      - name: Daniel Stitchsong and Pawani — 36 Forever patterns and 72 seller links
+        run: node --test tests/forever-leatherworking-camps.test.mjs
       - name: Trainer location evidence and map consistency (#51)
         run: node scripts/check-trainer-locations.mjs
       - name: Trainer location fixtures and legacy map safeguards (#51)
