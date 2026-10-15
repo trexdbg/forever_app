@@ -90,7 +90,7 @@ export function buildAcquisitionIndex({npcs,rares,dungeons,crafting,alchemy}) {
   by_evidence[s.evidence_level]=(by_evidence[s.evidence_level]||0)+1;
  }
  return {
-  schema_version:1,updated_at:"2026-10-14",
+  schema_version:1,updated_at:"2026-10-15",
   scope:"Read-only relations inherited from ForEveroth merchant, rare, dungeon and opt-in beta recipe catalogues. Source links may identify only an item or guide, not prove sale, drop, availability, rates or live crafting.",
   provenance_policy:"Forever documented relations are labelled documentary only; all Classic relations stay Classic. Each relationship preserves its originating status. The links are navigation aids, not new source audits.",
   totals:{unique_items:items.length,relations:items.reduce((n,row)=>n+row.sources.length,0),by_kind,by_evidence},
