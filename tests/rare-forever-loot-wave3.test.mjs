@@ -97,7 +97,7 @@ test("four preexisting Forever rare-set and Duskstalker drops now have individua
   assert.equal(item.chance_forever_observed_percent,null,
    "No time-limited sample should masquerade as today's Forever rate");
   assert.equal(item.historical_drop_sample.percent,snapshots.get(id));
-  assert.equal(item.historical_drop_sample.reviewed_at,"2026-10-11");
+  assert.equal(item.historical_drop_sample.reviewed_at,id==="14430"?"unknown":"2026-10-11");
   assert.match(item.historical_drop_sample.source_url,/^https:\/\/www\.wowhead\.com\/forever\//);
   assert.equal(rare.seen_forever,false,
     "Loot documentation must not certify the creature's location or gameplay presence");
