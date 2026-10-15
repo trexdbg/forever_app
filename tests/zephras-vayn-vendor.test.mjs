@@ -40,9 +40,9 @@ test("one new exact Forever NPC on Zephras Isle, with documented but not confirm
  assert.equal(v.location_evidence.observed_build,"unknown");
  assert.equal(v.location_evidence.ui_map_id,2521);
  assert.match(v.location_evidence.evidence_note,/no timestamped gameplay capture/);
- assert.equal(db.npcs.filter(n=>n.role==="merchant").length,205);
+ assert.equal(db.npcs.filter(n=>n.role==="merchant").length,206);
  assert.equal(db.npcs.filter(n=>n.role==="trainer").length,153);
- assert.equal(db.npcs.length,358);
+ assert.equal(db.npcs.length,359);
 });
 test("48 named, exact-item-ID and profession-skill-verified Vayn recipe sales",()=>{
  assert.equal(all.length,48);
@@ -92,16 +92,16 @@ test("resolved pattern #276964 is linked, original Vayn wave history and Classic
  assert.equal(db.verification_audit.vayn_zephras_wave.unresolved_item,null);
  assert.equal(db.verification_audit.vayn_zephras_wave.resolved_followup.item_id,276964);
  assert.equal(db.verification_audit.vayn_zephras_wave.new_links,47);
- assert.equal(db.audit.total_vendor_offers,851);
- assert.equal(db.audit.forever_documented_offers,274);
+ assert.equal(db.audit.total_vendor_offers,923);
+ assert.equal(db.audit.forever_documented_offers,346);
  assert.equal(db.audit.classic_unverified_offers,577);
- assert.equal(db.audit.forever_documented_items,164);
- assert.equal(Object.keys(db.items).length,373);
+ assert.equal(db.audit.forever_documented_items,200);
+ assert.equal(Object.keys(db.items).length,409);
  assert.deepEqual(index,buildFromFiles(),"Object-to-vendor lookup must remain reproducible");
- assert.equal(index.totals.unique_items,685);
- assert.equal(index.totals.relations,1175);
- assert.equal(index.totals.by_kind.merchant,851);
- assert.equal(index.totals.by_evidence.documented_forever,411);
+ assert.equal(index.totals.unique_items,721);
+ assert.equal(index.totals.relations,1247);
+ assert.equal(index.totals.by_kind.merchant,923);
+ assert.equal(index.totals.by_evidence.documented_forever,483);
  assert.equal(index.totals.by_evidence.classic_reference,764);
 });
 test("mixed-profession vendor label is bilingual without fabricating recipe translations",()=>{
