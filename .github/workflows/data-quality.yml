@@ -12,6 +12,7 @@ on:
       - 'scripts/validate-rare-locations.mjs'
       - 'tests/rare-locations.test.mjs'
       - 'tests/rare-forever-loot-wave1.test.mjs'
+      - 'tests/rare-forever-loot-wave3.test.mjs'
       - 'tests/rare-forever-new-wave2.test.mjs'
       - 'scripts/check-forever-evidence.mjs'
   workflow_dispatch:
@@ -34,6 +35,8 @@ jobs:
         run: node --test tests/rare-locations.test.mjs
       - name: Forever 1-30 notable rare loot regression
         run: node --test tests/rare-forever-loot-wave1.test.mjs
+      - name: Three new Forever rare loot links and item acquisition regression
+        run: node --test tests/rare-forever-loot-wave3.test.mjs
       - name: Rare module JavaScript syntax
         run: node --check assets/rares.js
       - name: Forever new starter-zone rare discovery regression

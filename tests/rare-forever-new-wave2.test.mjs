@@ -29,7 +29,7 @@ test("new Forever rare discoveries are additive, deduplicated and do not rewrite
  assert.equal(changed.filter(r=>r.beta_level30_in_scope).length,11);
  assert.equal(changed.filter(r=>r.level===null).length,13);
  assert.equal(changed.reduce((n,r)=>n+r.points.length,0),44);
- assert.equal(changed.reduce((n,r)=>n+r.loot.length,0),8);
+ assert.equal(changed.filter(r=>r.id!=="forever-tirisfal-the-condemned-one").reduce((n,r)=>n+r.loot.length,0),8);
 });
 test("all new waypoints have their own community Forever evidence without invented gameplay proof",()=>{
  for(const r of changed){
