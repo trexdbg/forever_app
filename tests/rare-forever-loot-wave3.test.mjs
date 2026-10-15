@@ -75,6 +75,6 @@ test("count cumulative additions without rewriting the historic 150 rare baselin
  assert.equal(scoped.length,161);
  assert.equal(legacy.length,150);
  assert.equal(legacy.filter(r=>r.loot.length).length,61);
- assert.equal(scoped.filter(r=>r.loot.length).length,64);
- assert.equal(scoped.filter(r=>!r.loot.length).length,97);
+ assert.equal(scoped.filter(r=>r.loot.length).length,67);
+ assert.equal(scoped.filter(r=>!r.loot.length).length,94);
 });
