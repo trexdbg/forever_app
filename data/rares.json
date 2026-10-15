@@ -19254,7 +19254,7 @@
       "level": 12,
       "level_status": "documented_forever",
       "level_context": null,
-      "level_source_url": "https://www.wowhead.com/forever/item=247862/elmpaws-head",
+      "level_source_url": "https://foreverchanges.pro/rares",
       "classification": "elite",
       "classification_evidence_url": "https://www.wowhead.com/forever/item=247862/elmpaws-head",
       "tameable": true,
@@ -19377,7 +19377,7 @@
       "level": 23,
       "level_status": "documented_forever",
       "level_context": null,
-      "level_source_url": "https://www.wowhead.com/forever/item=277213/drozems-tunic",
+      "level_source_url": "https://foreverchanges.pro/rares",
       "classification": "rare_elite",
       "classification_evidence_url": "https://www.wowhead.com/forever/item=277213/drozems-tunic",
       "tameable": false,
@@ -19521,7 +19521,7 @@
       "level": 10,
       "level_status": "documented_forever",
       "level_context": null,
-      "level_source_url": "https://wowseer.gg/guides/rare-spawns",
+      "level_source_url": "https://www.wowhead.com/forever/npcs/min-level:5/max-level:30",
       "classification": "rare",
       "classification_evidence_url": "https://wowseer.gg/guides/rare-spawns",
       "tameable": true,
@@ -19747,7 +19747,7 @@
       "level": 9,
       "level_status": "documented_forever",
       "level_context": null,
-      "level_source_url": "https://wowseer.gg/guides/rare-spawns",
+      "level_source_url": "https://www.wowhead.com/forever/npc=276198/shalma",
       "classification": "rare",
       "classification_evidence_url": "https://wowseer.gg/guides/rare-spawns",
       "tameable": true,
@@ -19767,7 +19767,38 @@
           70.6
         ]
       ],
-      "loot": [],
+      "loot": [
+        {
+          "name": {
+            "fr": "Shal'ma's Shawl",
+            "en": "Shal'ma's Shawl"
+          },
+          "name_fr_status": "unverified_fallback_english",
+          "item_id": 286746,
+          "item_level": 9,
+          "required_level": 4,
+          "slot": {
+            "fr": "Dos",
+            "en": "Back"
+          },
+          "stats": {
+            "fr": "8 armure · Cape",
+            "en": "8 Armor · Cloak"
+          },
+          "source_version": "forever_beta",
+          "source_url": "https://www.wowhead.com/forever/item=286746/shalmas-shawl",
+          "item_source_url": "https://www.wowhead.com/forever/item=286746/shalmas-shawl",
+          "evidence_level": "documented_forever",
+          "evidence_url": "https://www.wowhead.com/forever/item=286746/shalmas-shawl",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Wowhead Forever item 286746 explicitly lists Shal'ma as a reported drop. Player-reported database association, not a guaranteed live item drop or fixed probability.",
+          "drop_evidence": "forever_beta_item_database_documented_drop",
+          "chance_classic_percent": null,
+          "chance_forever_observed_percent": null
+        }
+      ],
       "source": "https://wowseer.gg/guides/rare-spawns",
       "reference": "new_forever_community_documented_not_gameplay_confirmed",
       "seen_forever": false,
@@ -19778,7 +19809,7 @@
       "coordinate_status": "documented_forever",
       "beta_level30_in_scope": true,
       "beta_scope_evidence": "forever_documented_exact_level",
-      "loot_coverage": "not_documented",
+      "loot_coverage": "notable_only_not_complete",
       "location_review": {
         "reviewed_at": "2026-10-15",
         "initially_without_point": false,
@@ -19952,7 +19983,7 @@
       "level": 10,
       "level_status": "documented_forever",
       "level_context": null,
-      "level_source_url": "https://wowseer.gg/guides/rare-spawns",
+      "level_source_url": "https://www.wowhead.com/forever/npcs/beasts/bear",
       "classification": "rare",
       "classification_evidence_url": "https://wowseer.gg/guides/rare-spawns",
       "tameable": true,
@@ -20275,10 +20306,10 @@
       },
       "name_fr_status": "unverified_fallback_english",
       "zone": "teldrassil",
-      "level": null,
-      "level_status": "unknown",
-      "level_context": "starter_zone",
-      "level_source_url": null,
+      "level": 10,
+      "level_status": "documented_forever",
+      "level_context": null,
+      "level_source_url": "https://www.wowhead.com/forever/npcs/min-level:5/max-level:30",
       "classification": "rare",
       "classification_evidence_url": "https://wowseer.gg/guides/rare-spawns",
       "tameable": true,
@@ -20294,22 +20325,53 @@
           55.6
         ]
       ],
-      "loot": [],
+      "loot": [
+        {
+          "name": {
+            "fr": "Wisesight Wand",
+            "en": "Wisesight Wand"
+          },
+          "name_fr_status": "unverified_fallback_english",
+          "item_id": 286750,
+          "item_level": 10,
+          "required_level": 5,
+          "slot": {
+            "fr": "Baguette à distance",
+            "en": "Ranged Wand"
+          },
+          "stats": {
+            "fr": "8–16 dégâts des Arcanes · +1 Intelligence",
+            "en": "8–16 Arcane Damage · +1 Intellect"
+          },
+          "source_version": "forever_beta",
+          "source_url": "https://www.wowhead.com/forever/item=286750/wisesight-wand",
+          "item_source_url": "https://www.wowhead.com/forever/item=286750/wisesight-wand",
+          "evidence_level": "documented_forever",
+          "evidence_url": "https://www.wowhead.com/forever/item=286750/wisesight-wand",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Wowhead Forever item 286750 explicitly lists Nightscreech as a reported drop. Player-reported database association, not a guaranteed live item drop or fixed probability.",
+          "drop_evidence": "forever_beta_item_database_documented_drop",
+          "chance_classic_percent": null,
+          "chance_forever_observed_percent": null
+        }
+      ],
       "source": "https://wowseer.gg/guides/rare-spawns",
       "reference": "new_forever_community_documented_not_gameplay_confirmed",
       "seen_forever": false,
       "notes": {
-        "fr": "Nouveau monstre rapporté sur WoW Forever. Positions issues de guides communautaires, apparitions et temps de repop non confirmés en jeu. Le niveau exact est inconnu.",
-        "en": "New encounter reported for WoW Forever. Locations come from community guides; spawns and respawn timers are not verified in-game. Exact level unknown."
+        "fr": "Nouveau monstre rapporté sur WoW Forever. Positions issues de guides communautaires, apparitions et temps de repop non confirmés en jeu. Le niveau exact est documenté.",
+        "en": "New encounter reported for WoW Forever. Locations come from community guides; spawns and respawn timers are not verified in-game. Exact level documented."
       },
       "coordinate_status": "documented_forever",
-      "beta_level30_in_scope": false,
-      "beta_scope_evidence": "starter_zone_only_exact_level_unknown",
-      "loot_coverage": "not_documented",
+      "beta_level30_in_scope": true,
+      "beta_scope_evidence": "forever_documented_exact_level",
+      "loot_coverage": "notable_only_not_complete",
       "location_review": {
         "reviewed_at": "2026-10-15",
         "initially_without_point": false,
-        "scope_reason": "Forever starter-zone rare; exact individual level missing, so excluded from numeric 1–30 count until documented.",
+        "scope_reason": "Forever rare with exact level 1–30 independently documented in a Forever-specific database; current in-game spawn still not directly verified.",
         "identity_status": "forever_name_zone_documented_numeric_id_unverified",
         "identity_reference_url": "https://wowseer.gg/guides/rare-spawns",
         "zone": "teldrassil",
@@ -20367,10 +20429,10 @@
       },
       "name_fr_status": "unverified_fallback_english",
       "zone": "teldrassil",
-      "level": null,
-      "level_status": "unknown",
-      "level_context": "starter_zone",
-      "level_source_url": null,
+      "level": 8,
+      "level_status": "documented_forever",
+      "level_context": null,
+      "level_source_url": "https://www.wowhead.com/forever/item=286749/wrathroot",
       "classification": "rare",
       "classification_evidence_url": "https://wowseer.gg/guides/rare-spawns",
       "tameable": false,
@@ -20386,22 +20448,53 @@
           67.6
         ]
       ],
-      "loot": [],
+      "loot": [
+        {
+          "name": {
+            "fr": "Wrathroot",
+            "en": "Wrathroot"
+          },
+          "name_fr_status": "unverified_fallback_english",
+          "item_id": 286749,
+          "item_level": 8,
+          "required_level": 3,
+          "slot": {
+            "fr": "Bâton",
+            "en": "Staff"
+          },
+          "stats": {
+            "fr": "Bâton à deux mains · 10–19 dégâts",
+            "en": "Two-Hand Staff · 10–19 Damage"
+          },
+          "source_version": "forever_beta",
+          "source_url": "https://www.wowhead.com/forever/item=286749/wrathroot",
+          "item_source_url": "https://www.wowhead.com/forever/item=286749/wrathroot",
+          "evidence_level": "documented_forever",
+          "evidence_url": "https://www.wowhead.com/forever/item=286749/wrathroot",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Wowhead Forever item 286749 explicitly lists Wrathvine as a reported drop. Player-reported database association, not a guaranteed live item drop or fixed probability.",
+          "drop_evidence": "forever_beta_item_database_documented_drop",
+          "chance_classic_percent": null,
+          "chance_forever_observed_percent": null
+        }
+      ],
       "source": "https://wowseer.gg/guides/rare-spawns",
       "reference": "new_forever_community_documented_not_gameplay_confirmed",
       "seen_forever": false,
       "notes": {
-        "fr": "Nouveau monstre rapporté sur WoW Forever. Positions issues de guides communautaires, apparitions et temps de repop non confirmés en jeu. Le niveau exact est inconnu.",
-        "en": "New encounter reported for WoW Forever. Locations come from community guides; spawns and respawn timers are not verified in-game. Exact level unknown."
+        "fr": "Nouveau monstre rapporté sur WoW Forever. Positions issues de guides communautaires, apparitions et temps de repop non confirmés en jeu. Le niveau exact est documenté.",
+        "en": "New encounter reported for WoW Forever. Locations come from community guides; spawns and respawn timers are not verified in-game. Exact level documented."
       },
       "coordinate_status": "documented_forever",
-      "beta_level30_in_scope": false,
-      "beta_scope_evidence": "starter_zone_only_exact_level_unknown",
-      "loot_coverage": "not_documented",
+      "beta_level30_in_scope": true,
+      "beta_scope_evidence": "forever_documented_exact_level",
+      "loot_coverage": "notable_only_not_complete",
       "location_review": {
         "reviewed_at": "2026-10-15",
         "initially_without_point": false,
-        "scope_reason": "Forever starter-zone rare; exact individual level missing, so excluded from numeric 1–30 count until documented.",
+        "scope_reason": "Forever rare with exact level 1–30 independently documented in a Forever-specific database; current in-game spawn still not directly verified.",
         "identity_status": "forever_name_zone_documented_numeric_id_unverified",
         "identity_reference_url": "https://wowseer.gg/guides/rare-spawns",
         "zone": "teldrassil",
@@ -20462,7 +20555,7 @@
       "level": 10,
       "level_status": "documented_forever",
       "level_context": null,
-      "level_source_url": "https://wowseer.gg/guides/rare-spawns",
+      "level_source_url": "https://www.wowhead.com/forever/npcs/beasts/dragonhawk",
       "classification": "rare",
       "classification_evidence_url": "https://wowseer.gg/guides/rare-spawns",
       "tameable": false,
@@ -20724,10 +20817,10 @@
       },
       "name_fr_status": "unverified_fallback_english",
       "zone": "tirisfal",
-      "level": null,
-      "level_status": "unknown",
-      "level_context": "starter_zone",
-      "level_source_url": null,
+      "level": 11,
+      "level_status": "documented_forever",
+      "level_context": null,
+      "level_source_url": "https://www.wowhead.com/forever/npcs/undead/min-level:9/max-level:51",
       "classification": "rare",
       "classification_evidence_url": "https://wowseer.gg/guides/rare-spawns",
       "tameable": false,
@@ -20756,17 +20849,17 @@
       "reference": "new_forever_community_documented_not_gameplay_confirmed",
       "seen_forever": false,
       "notes": {
-        "fr": "Nouveau monstre rapporté sur WoW Forever. Positions issues de guides communautaires, apparitions et temps de repop non confirmés en jeu. Le niveau exact est inconnu.",
-        "en": "New encounter reported for WoW Forever. Locations come from community guides; spawns and respawn timers are not verified in-game. Exact level unknown."
+        "fr": "Nouveau monstre rapporté sur WoW Forever. Positions issues de guides communautaires, apparitions et temps de repop non confirmés en jeu. Le niveau exact est documenté.",
+        "en": "New encounter reported for WoW Forever. Locations come from community guides; spawns and respawn timers are not verified in-game. Exact level documented."
       },
       "coordinate_status": "documented_forever",
-      "beta_level30_in_scope": false,
-      "beta_scope_evidence": "starter_zone_only_exact_level_unknown",
+      "beta_level30_in_scope": true,
+      "beta_scope_evidence": "forever_documented_exact_level",
       "loot_coverage": "not_documented",
       "location_review": {
         "reviewed_at": "2026-10-15",
         "initially_without_point": false,
-        "scope_reason": "Forever starter-zone rare; exact individual level missing, so excluded from numeric 1–30 count until documented.",
+        "scope_reason": "Forever rare with exact level 1–30 independently documented in a Forever-specific database; current in-game spawn still not directly verified.",
         "identity_status": "forever_name_zone_documented_numeric_id_unverified",
         "identity_reference_url": "https://wowseer.gg/guides/rare-spawns",
         "zone": "tirisfal",
@@ -20947,10 +21040,11 @@
     "scope": "new Forever-specific rares documented by WowSeer / stillsixty and Wowhead Forever",
     "new_rares": 24,
     "waypoints": 44,
-    "level_exact_documented": 8,
-    "level_unknown": 16,
-    "with_forever_loot": 5,
+    "level_exact_documented": 11,
+    "level_unknown": 13,
+    "with_forever_loot": 8,
     "source_url": "https://wowseer.gg/guides/rare-spawns",
-    "level_policy": "Unknown individual level stays null; starter-zone rare candidates do not count as confirmed numeric level 1–30."
+    "level_policy": "Unknown individual level stays null; starter-zone rare candidates do not count as confirmed numeric level 1–30.",
+    "new_loot_links": 8
   }
 }
