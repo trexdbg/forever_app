@@ -4,16 +4,16 @@
   "scope": "Read-only relations inherited from ForEveroth merchant, rare, dungeon and opt-in beta recipe catalogues. Source links may identify only an item or guide, not prove sale, drop, availability, rates or live crafting.",
   "provenance_policy": "Forever documented relations are labelled documentary only; all Classic relations stay Classic. Each relationship preserves its originating status. The links are navigation aids, not new source audits.",
   "totals": {
-    "unique_items": 721,
-    "relations": 1247,
+    "unique_items": 724,
+    "relations": 1250,
     "by_kind": {
       "merchant": 923,
       "boss": 205,
-      "rare": 105,
+      "rare": 108,
       "recipe": 14
     },
     "by_evidence": {
-      "documented_forever": 483,
+      "documented_forever": 486,
       "classic_reference": 764
     }
   },
@@ -2797,6 +2797,20 @@
       ]
     },
     {
+      "id": 4854,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Hurlement fantôme",
+          "name_en": "Ghost Howl",
+          "href": "/rare/?zone=mulgore&q=Ghost%20Howl&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://www.wowhead.com/forever/item=4854/demon-scarred-cloak"
+        }
+      ]
+    },
+    {
       "id": 4861,
       "sources": [
         {
@@ -2835,6 +2849,20 @@
           "evidence_level": "classic_reference",
           "source_status": "classic_rare_loot_reference",
           "reference_url": "https://foreverdb.net/rare/3470"
+        }
+      ]
+    },
+    {
+      "id": 5179,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Moussenoire le Fétide",
+          "name_en": "Blackmoss the Fetid",
+          "href": "/rare/?zone=teldrassil&q=Blackmoss%20the%20Fetid&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://www.wowhead.com/forever/item=5179/moss-twined-heart"
         }
       ]
     },
@@ -9435,6 +9463,20 @@
           "evidence_level": "documented_forever",
           "source_status": "forever_beta_rare_loot",
           "reference_url": "https://www.wowhead.com/forever/item=247862/elmpaws-head"
+        }
+      ]
+    },
+    {
+      "id": 248004,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Mère Croc",
+          "name_en": "Mother Fang",
+          "href": "/rare/?zone=elwynn&q=Mother%20Fang&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://www.wowhead.com/forever/item=248004/arcane-explainer-magical-stuff-in-simple-words"
         }
       ]
     },
