@@ -12,6 +12,11 @@ const search=$("rare-search"),zone=$("rare-zone"),type=$("rare-rank"),level=$("r
 const zname=id=>db?.zones?.[id]?.[en?"en":"fr"]||id;
 const npcName=r=>r.name[en?"en":"fr"]||r.name.en;
 const hasForeverLocation=r=>(r.point_evidence||[]).some(p=>p.evidence_level==="documented_forever"||p.evidence_level==="confirmed_in_game");
+const exactLevel=r=>Number.isInteger(r.level)&&r.level>0;
+const starterLevelUnknown=r=>r.level===null&&r.level_status==="unknown"&&r.level_context==="starter_zone";
+const visibleAtBetaLevel=r=>exactLevel(r)?r.level<=30:starterLevelUnknown(r);
+const displayLevel=r=>exactLevel(r)?String(r.level):T("?","?");
+const rankLabel=r=>r.classification==="rare_elite"?T("Rare élite","Rare elite"):r.classification==="elite"?T("Élite (rencontre spéciale)","Elite (special encounter)"):T("Rare","Rare");
 const isForeverLoot=item=>item.source_version==="forever_beta";
 const lootName=item=>{
  const localized=window.ForeverItemLocale?.name({
@@ -33,16 +38,16 @@ const button=(label,cls)=>{const n=m("button",label,cls);n.type="button";return 
 function results(){
 const q=norm(search.value.trim());
 return rows.filter(r=>(zone.value==="all"||r.zone===zone.value)&&(type.value==="all"||r.classification===type.value)&&
-(level.value==="all"||(level.value==="low"?r.level<=30:r.level>30))&&(verification.value==="all"||(verification.value==="forever"?(!!r.seen_forever||hasForeverLocation(r)):(!r.seen_forever&&!hasForeverLocation(r))))&&(!loot.checked||r.loot.length)&&(!tame.checked||r.tameable)&&(!mapped.checked||r.points.length)&&
+(level.value==="all"||(level.value==="low"?visibleAtBetaLevel(r):(exactLevel(r)&&r.level>30)))&&(verification.value==="all"||(verification.value==="forever"?(!!r.seen_forever||hasForeverLocation(r)):(!r.seen_forever&&!hasForeverLocation(r))))&&(!loot.checked||r.loot.length)&&(!tame.checked||r.tameable)&&(!mapped.checked||r.points.length)&&
 (!q||norm([r.name.fr,r.name.en,zname(r.zone),...r.loot.map(i=>lootName(i)),...r.loot.map(i=>i.name.fr),...r.loot.map(i=>i.name.en),r.notes?.fr||"",r.notes?.en||""].join(" ")).includes(q)))
-.sort((a,b)=>Number(!!b.loot.length)-Number(!!a.loot.length)||a.level-b.level||a.name.en.localeCompare(b.name.en));
+.sort((a,b)=>Number(!!b.loot.length)-Number(!!a.loot.length)||(exactLevel(a)?a.level:999)-(exactLevel(b)?b.level:999)||a.name.en.localeCompare(b.name.en));
 }
 function showList(){
 const box=$("rare-results"),lastScroll=box.scrollTop;box.replaceChildren();$("rare-count").textContent=filtered.length+" / "+rows.length;
 if(!filtered.length)box.append(m("p",T("Aucun résultat.","No results."),"rare-empty"));
 for(const r of filtered){
  const b=button(null,"rare-row"+(selected?.id===r.id?" active":""));b.setAttribute("role","option");b.setAttribute("aria-selected",String(r.id===selected?.id));
- const a=m("div",null,"rare-row-name");const dot=m("i",null,"rare-color-dot");dot.style.backgroundColor=markerColor(r);dot.title=T("Couleur de ce monstre sur la carte","Creature color on the map");a.append(dot);a.append(m("strong",npcName(r)));a.append(m("b",r.level,"rare-lvl"));b.append(a);
+ const a=m("div",null,"rare-row-name");const dot=m("i",null,"rare-color-dot");dot.style.backgroundColor=markerColor(r);dot.title=T("Couleur de ce monstre sur la carte","Creature color on the map");a.append(dot);a.append(m("strong",npcName(r)));a.append(m("b",displayLevel(r),"rare-lvl"));b.append(a);
  b.append(m("span",zname(r.zone),"rare-zone-name"));
  const meta=m("span",null,"rare-row-meta");meta.append(m("span",T("Repop Classic : ","Classic respawn: ")+respawn(r)));meta.append(chip(r.seen_forever?T("Signalé Forever","Reported on Forever"):T("Présence Classic à vérifier","Classic spawn unverified"),r.seen_forever?"green":"gold"));
  if(r.loot.length){const f=r.loot.filter(isForeverLoot).length;meta.append(chip(r.loot.length+" "+T("butin(s) notable(s)","notable drops"),"purple"));if(f)meta.append(chip(f+" Forever","green"))}
@@ -54,8 +59,8 @@ box.scrollTop=lastScroll;paintLegend();
 function detail(){
 const out=$("rare-detail");out.replaceChildren();if(!selected){out.append(m("p",T("Aucun rare sélectionné","No rare selected")));return}
 const r=selected,top=m("div",null,"rare-detail-top");const dot=m("i",null,"rare-color-dot rare-color-large");dot.style.backgroundColor=markerColor(r);top.append(dot);top.append(m("h3",npcName(r)));
-top.append(chip(r.classification==="rare_elite"?T("Rare élite","Rare elite"):T("Rare","Rare"),"purple"));out.append(top);
-const tags=m("div",null,"rare-tags");tags.append(chip(zname(r.zone)));tags.append(chip(T("Niveau ","Level ")+r.level));if(r.level>30)tags.append(chip(T("Hors bêta 30","Beyond beta cap 30"),"gold"));
+top.append(chip(rankLabel(r),"purple"));out.append(top);
+const tags=m("div",null,"rare-tags");tags.append(chip(zname(r.zone)));tags.append(chip(exactLevel(r)?T("Niveau ","Level ")+r.level:T("Niveau inconnu · zone de départ","Level unknown · starter zone")));if(exactLevel(r)&&r.level>30)tags.append(chip(T("Hors bêta 30","Beyond beta cap 30"),"gold"));
 tags.append(chip(T("Repop Classic : ","Classic respawn: ")+respawn(r),"gold"));if(r.tameable)tags.append(chip(T("Apprivoisable","Tameable"),"green"));
 tags.append(chip(r.seen_forever?T("Signalé sur Forever","Seen on Forever"):T("Apparition Classic · non vérifiée","Classic spawn · unverified"),r.seen_forever?"green":"gold"));if(!en&&r.name_fr_status==="community_translation_check_needed")tags.append(chip("Nom FR à confirmer","rare-pending"));out.append(tags);
 const spot=m("div",null,"rare-spots");spot.append(m("strong",hasForeverLocation(r)?T("Positions documentées Forever · source communautaire, non confirmées en jeu","Forever positions documented by community · not confirmed in game"):T("Positions Classic indicatives · à vérifier sur Forever","Indicative Classic spawn points · not verified on Forever"),"rare-caption"));
@@ -100,7 +105,7 @@ if(!r.loot.length)loots.append(m("p",T("Aucun butin notable documenté dans nos 
 if(r.loot.length){const foreverCount=r.loot.filter(isForeverLoot).length;if(foreverCount)loots.append(chip(T("Objets ajoutés dans Forever","Forever-specific items"),"green"));if(foreverCount!==r.loot.length)loots.append(chip(T("Autres objets : références Classic","Other items: Classic references"),"gold"))}
 for(const item of r.loot){
  const a=m("a",null,"rare-loot"+(isForeverLoot(item)?" rare-loot-forever":""));const href=isForeverLoot(item)?(item.item_source_url||(item.item_id?"https://www.wowhead.com/forever/item="+item.item_id:item.source_url||r.source)):(item.item_id?"https://foreverdb.net/item/"+item.item_id:(item.source_url||r.source));a.href=href;a.target="_blank";a.rel="noopener noreferrer";
- const icon=m("img");icon.src="https://wow.zamimg.com/images/wow/icons/medium/"+encodeURIComponent(item.icon||"inv_misc_questionmark")+".jpg";icon.alt="";icon.width=38;icon.height=38;icon.loading="lazy";icon.onerror=()=>{icon.onerror=null;icon.src="/assets/icons/inv_scroll_07.jpg"};a.append(icon);
+ const icon=m("img");icon.src="https://wow.zamimg.com/images/wow/icons/medium/"+encodeURIComponent(item.icon||"inv_misc_questionmark")+".jpg";icon.alt="";icon.width=38;icon.height=38;icon.loading="lazy";icon.onerror=()=>icon.remove();a.append(icon);
  const txt=m("span",null,"rare-loot-text");txt.append(m("strong",lootName(item)));
  const rate=isForeverLoot(item)?(item.chance_forever_observed_percent==null?T("Forever · taux à vérifier","Forever · rate not established"):T("Forever · taux observé ", "Forever · observed rate ")+fmt(item.chance_forever_observed_percent)+" %"):(item.chance_classic_percent==null?T("Classic · taux inconnu","Classic · unknown rate"):T("Classic · ", "Classic · ")+fmt(item.chance_classic_percent)+" %");txt.append(m("small",rate));
  if(item.item_level||item.required_level||item.stats){const stat=m("small",null,"rare-loot-stats");stat.textContent=[item.item_level?T("Objet niv. ","Item level ")+item.item_level:null,item.required_level?T("Requis ","Requires ")+item.required_level:null,item.stats?.[en?"en":"fr"]].filter(Boolean).join(" · ");txt.append(stat)}
@@ -162,12 +167,12 @@ canvas.addEventListener("pointerup",e=>{const moved=drag?.moved;drag=null;if(mov
 canvas.addEventListener("pointercancel",()=>drag=null);canvas.addEventListener("pointerleave",()=>{hover=null;draw()});
 canvas.addEventListener("keydown",e=>{if(e.key==="+"||e.key==="="){e.preventDefault();zoomTo(zoom*1.25)}else if(e.key==="-"){e.preventDefault();zoomTo(zoom/1.25)}else if(["ArrowLeft","ArrowRight","ArrowUp","ArrowDown"].includes(e.key)){e.preventDefault();center[0]+=(e.key==="ArrowLeft"?-8:e.key==="ArrowRight"?8:0)/zoom;center[1]+=(e.key==="ArrowUp"?-8:e.key==="ArrowDown"?8:0)/zoom;clampCenter();draw()}});
 for(const e of [search,zone,type,level,verification,loot,tame,mapped])e.addEventListener(e===search?"input":"change",update);
-fetch("/data/rares.json?v=20261011-rare-locale7",{cache:"no-cache"}).then(r=>{if(!r.ok)throw Error("HTTP "+r.status);return r.json()}).then(data=>{
+fetch("/data/rares.json?v=20261015-foreverwave2",{cache:"no-cache"}).then(r=>{if(!r.ok)throw Error("HTTP "+r.status);return r.json()}).then(data=>{
 if(!Array.isArray(data.rares)||!data.zones)throw Error("Invalid JSON");db=data;rows=data.rares.filter(r=>r.zone&&db.zones[r.zone]&&Array.isArray(r.points)&&Array.isArray(r.loot));
 for(const key of [...new Set(rows.map(r=>r.zone))].sort((a,b)=>zname(a).localeCompare(zname(b),en?"en":"fr"))){const opt=m("option",zname(key));opt.value=key;zone.append(opt)}
 const qs=new URLSearchParams(location.search);if(db.zones[qs.get("zone")])zone.value=qs.get("zone");if(qs.get("q"))search.value=qs.get("q");level.value=qs.get("level")==="all"?"all":qs.get("level")==="high"?"high":"low";verification.value=["forever","classic"].includes(qs.get("verification"))?qs.get("verification"):"all";
 filtered=results();buildColors();selected=filtered.find(r=>r.id==="2779")||filtered[0]||null;zoneId=selected?.zone||"";
-$("rare-status").textContent=rows.filter(r=>r.level<=30).length+" "+T("rares niv. 1–30 · Classic / Forever documenté","level 1–30 rares · Classic / documented Forever");
+$("rare-status").textContent=rows.filter(r=>exactLevel(r)&&r.level<=30).length+" "+T("rencontres niv. 1–30 documentées","documented level 1–30 encounters")+" · "+rows.filter(starterLevelUnknown).length+" "+T("niveaux encore inconnus","levels still unknown");
 $("rare-map-title").textContent=zname(zoneId);$("rare-disclaimer").textContent=db.disclaimer[en?"en":"fr"];
 showList();detail();image()
 }).catch(()=>{$("rare-status").textContent=T("Données indisponibles","Data unavailable");$("rare-results").textContent=T("Erreur de chargement.","Failed to load.")});

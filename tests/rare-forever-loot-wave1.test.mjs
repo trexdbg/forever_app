@@ -13,7 +13,7 @@ const expected=new Map([
  ["5859",285328],["darkshore-shadowclaw",284174]
 ]);
 const https=x=>typeof x==="string"&&/^https:\/\/[^\s/]+\//.test(x);
-const scoped=catalog.rares.filter(x=>x.beta_level30_in_scope);
+const scoped=catalog.rares.filter(x=>x.beta_level30_in_scope&&x.reference!=="new_forever_community_documented_not_gameplay_confirmed");
 test("maintains the exact 150 rare beta-level catalogue and 12 specific Forever additions",()=>{
  assert.equal(scoped.length,150);
  const withLoot=scoped.filter(x=>x.loot.length);
@@ -83,7 +83,8 @@ test("stale Classic timers and map coordinates remain unpromoted",()=>{
 test("unrelated rare records and drop source categories are preserved",()=>{
  const newItems=[...expected.values()];
  assert.equal(new Set(newItems).size,newItems.length);
- assert.equal(catalog.rares.filter(x=>x.beta_level30_in_scope===true).length,150);
+ assert.equal(catalog.rares.filter(x=>x.beta_level30_in_scope===true).length,161);
+ assert.equal(catalog.rares.filter(x=>x.beta_level30_in_scope&&x.reference==="new_forever_community_documented_not_gameplay_confirmed").length,11);
  assert.ok(catalog.rares.some(x=>x.id==="5828"&&x.loot.some(y=>y.item_id===285331)));
  const newLinks=scoped.flatMap(r=>r.loot.filter(l=>newItems.includes(l.item_id))).length;
  assert.equal(newLinks,12);

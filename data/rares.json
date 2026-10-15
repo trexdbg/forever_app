@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-14",
+  "updated_at": "2026-10-15",
   "scope": "Classic/Vanilla references for WoW Forever. No alternative private-server datasets.",
   "coordinate_system": "zone_percent_0_100_not_gps",
   "data_status": "classic_reference_not_forever_verified",
@@ -293,6 +293,14 @@
       "en": "Swamp of Sorrows",
       "uiMapID": 1435,
       "instance": false
+    },
+    "zephras-isle": {
+      "fr": "Île de Zéphras",
+      "en": "Zephras Isle",
+      "uiMapID": 2521,
+      "instance": false,
+      "map_source_url": "https://warcraftforever.games/maps/zephras-isle",
+      "map_source_build": "1.60.1.69893"
     }
   },
   "rares": [
@@ -18948,6 +18956,2378 @@
           "evidence_note": "Historical coordinate in the pre-audit Classic/CMaNGOS catalogue. Source for this individual coordinate was not independently traceable; this is only an indicative Classic point, never verified on Forever."
         }
       ]
+    },
+    {
+      "id": "259394",
+      "name": {
+        "fr": "Snapbeak the Quick",
+        "en": "Snapbeak the Quick"
+      },
+      "name_fr_status": "unverified_fallback_english",
+      "zone": "zephras-isle",
+      "level": null,
+      "level_status": "unknown",
+      "level_context": "starter_zone",
+      "level_source_url": null,
+      "classification": "rare_elite",
+      "classification_evidence_url": "https://www.wowhead.com/forever/npc=259394/snapbeak-the-quick",
+      "tameable": false,
+      "respawn_min_hours": null,
+      "respawn_max_hours": null,
+      "points": [
+        [
+          36,
+          58
+        ]
+      ],
+      "loot": [
+        {
+          "name": {
+            "fr": "Thendal Watcher's Boots",
+            "en": "Thendal Watcher's Boots"
+          },
+          "name_fr_status": "unverified_fallback_english",
+          "item_id": 285269,
+          "item_level": 10,
+          "required_level": 5,
+          "slot": {
+            "fr": "Pieds · Mailles",
+            "en": "Feet · Mail"
+          },
+          "stats": {
+            "fr": "74 armure · +1 Endurance",
+            "en": "74 Armor · +1 Stamina"
+          },
+          "source_version": "forever_beta",
+          "source_url": "https://www.wowhead.com/forever/item=285269/thendal-watchers-boots",
+          "item_source_url": "https://www.wowhead.com/forever/item=285269/thendal-watchers-boots",
+          "evidence_level": "documented_forever",
+          "evidence_url": "https://www.wowhead.com/forever/item=285269/thendal-watchers-boots",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "WoW Forever item page identifies Snapbeak the Quick as a reported source for item 285269; community loot table, not a verified gameplay capture.",
+          "drop_evidence": "forever_beta_item_database_documented_drop",
+          "chance_classic_percent": null,
+          "chance_forever_observed_percent": null
+        }
+      ],
+      "source": "https://www.wowhead.com/forever/npc=259394/snapbeak-the-quick",
+      "reference": "new_forever_community_documented_not_gameplay_confirmed",
+      "seen_forever": false,
+      "notes": {
+        "fr": "Nouveau monstre rapporté sur WoW Forever. Positions issues de guides communautaires, apparitions et temps de repop non confirmés en jeu. Le niveau exact est inconnu.",
+        "en": "New encounter reported for WoW Forever. Locations come from community guides; spawns and respawn timers are not verified in-game. Exact level unknown."
+      },
+      "coordinate_status": "documented_forever",
+      "beta_level30_in_scope": false,
+      "beta_scope_evidence": "starter_zone_only_exact_level_unknown",
+      "loot_coverage": "notable_only_not_complete",
+      "location_review": {
+        "reviewed_at": "2026-10-15",
+        "initially_without_point": false,
+        "scope_reason": "Forever starter-zone rare; exact individual level missing, so excluded from numeric 1–30 count until documented.",
+        "identity_status": "forever_name_zone_documented_numeric_id_unverified",
+        "identity_reference_url": "https://www.wowhead.com/forever/npc=259394/snapbeak-the-quick",
+        "zone": "zephras-isle",
+        "uiMapID": 2521,
+        "coordinate_system": "zone_percent_0_100_not_gps",
+        "map_kind": "outdoor",
+        "zone_evidence_level": "documented_forever",
+        "forever_presence": "community_report_not_firsthand_gameplay_confirmed",
+        "location_status": "documented_forever",
+        "evidence_note": "The WoW Forever rare-spawns guide gives this named Snapbeak the Quick search waypoint in zephras-isle; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture.",
+        "faction_status": "unverified"
+      },
+      "point_evidence": [
+        {
+          "coordinates": [
+            36,
+            58
+          ],
+          "zone": "zephras-isle",
+          "uiMapID": 2521,
+          "coordinate_system": "zone_percent_0_100_not_gps",
+          "origin": "forever_community_report",
+          "evidence_level": "documented_forever",
+          "source_url": "https://wowseer.gg/guides/rare-spawns",
+          "evidence_url": "https://wowseer.gg/guides/rare-spawns",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever rare-spawns guide gives this named Snapbeak the Quick search waypoint in zephras-isle; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture."
+        }
+      ]
+    },
+    {
+      "id": "forever-zephras-dendralass",
+      "name": {
+        "fr": "Den'dralass",
+        "en": "Den'dralass"
+      },
+      "name_fr_status": "unverified_fallback_english",
+      "zone": "zephras-isle",
+      "level": null,
+      "level_status": "unknown",
+      "level_context": "starter_zone",
+      "level_source_url": null,
+      "classification": "rare",
+      "classification_evidence_url": "https://www.stillsixty.com/rare/dendralass-zephras-isle",
+      "tameable": false,
+      "respawn_min_hours": null,
+      "respawn_max_hours": null,
+      "points": [
+        [
+          61.2,
+          37.2
+        ],
+        [
+          56.3,
+          31.7
+        ]
+      ],
+      "loot": [],
+      "source": "https://www.stillsixty.com/rare/dendralass-zephras-isle",
+      "reference": "new_forever_community_documented_not_gameplay_confirmed",
+      "seen_forever": false,
+      "notes": {
+        "fr": "Nouveau monstre rapporté sur WoW Forever. Positions issues de guides communautaires, apparitions et temps de repop non confirmés en jeu. Le niveau exact est inconnu.",
+        "en": "New encounter reported for WoW Forever. Locations come from community guides; spawns and respawn timers are not verified in-game. Exact level unknown."
+      },
+      "coordinate_status": "documented_forever",
+      "beta_level30_in_scope": false,
+      "beta_scope_evidence": "starter_zone_only_exact_level_unknown",
+      "loot_coverage": "not_documented",
+      "location_review": {
+        "reviewed_at": "2026-10-15",
+        "initially_without_point": false,
+        "scope_reason": "Forever starter-zone rare; exact individual level missing, so excluded from numeric 1–30 count until documented.",
+        "identity_status": "forever_name_zone_documented_numeric_id_unverified",
+        "identity_reference_url": "https://www.stillsixty.com/rare/dendralass-zephras-isle",
+        "zone": "zephras-isle",
+        "uiMapID": 2521,
+        "coordinate_system": "zone_percent_0_100_not_gps",
+        "map_kind": "outdoor",
+        "zone_evidence_level": "documented_forever",
+        "forever_presence": "community_report_not_firsthand_gameplay_confirmed",
+        "location_status": "documented_forever",
+        "evidence_note": "The WoW Forever rare-spawns guide gives this named Den'dralass search waypoint in zephras-isle; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture.",
+        "faction_status": "unverified"
+      },
+      "point_evidence": [
+        {
+          "coordinates": [
+            61.2,
+            37.2
+          ],
+          "zone": "zephras-isle",
+          "uiMapID": 2521,
+          "coordinate_system": "zone_percent_0_100_not_gps",
+          "origin": "forever_community_report",
+          "evidence_level": "documented_forever",
+          "source_url": "https://wowseer.gg/guides/rare-spawns",
+          "evidence_url": "https://wowseer.gg/guides/rare-spawns",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever rare-spawns guide gives this named Den'dralass search waypoint in zephras-isle; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture."
+        },
+        {
+          "coordinates": [
+            56.3,
+            31.7
+          ],
+          "zone": "zephras-isle",
+          "uiMapID": 2521,
+          "coordinate_system": "zone_percent_0_100_not_gps",
+          "origin": "forever_community_report",
+          "evidence_level": "documented_forever",
+          "source_url": "https://wowseer.gg/guides/rare-spawns",
+          "evidence_url": "https://wowseer.gg/guides/rare-spawns",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever rare-spawns guide gives this named Den'dralass search waypoint in zephras-isle; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture."
+        }
+      ]
+    },
+    {
+      "id": "256492",
+      "name": {
+        "fr": "Fernfeather",
+        "en": "Fernfeather"
+      },
+      "name_fr_status": "unverified_fallback_english",
+      "zone": "zephras-isle",
+      "level": 10,
+      "level_status": "documented_forever",
+      "level_context": null,
+      "level_source_url": "https://www.wowhead.com/forever/npc=256492/fernfeather",
+      "classification": "rare",
+      "classification_evidence_url": "https://www.wowhead.com/forever/npc=256492/fernfeather",
+      "tameable": true,
+      "respawn_min_hours": null,
+      "respawn_max_hours": null,
+      "points": [
+        [
+          48,
+          85.4
+        ],
+        [
+          53.8,
+          78.8
+        ]
+      ],
+      "loot": [],
+      "source": "https://www.wowhead.com/forever/npc=256492/fernfeather",
+      "reference": "new_forever_community_documented_not_gameplay_confirmed",
+      "seen_forever": false,
+      "notes": {
+        "fr": "Nouveau monstre rapporté sur WoW Forever. Positions issues de guides communautaires, apparitions et temps de repop non confirmés en jeu. Le niveau exact est documenté.",
+        "en": "New encounter reported for WoW Forever. Locations come from community guides; spawns and respawn timers are not verified in-game. Exact level documented."
+      },
+      "coordinate_status": "documented_forever",
+      "beta_level30_in_scope": true,
+      "beta_scope_evidence": "forever_documented_exact_level",
+      "loot_coverage": "not_documented",
+      "location_review": {
+        "reviewed_at": "2026-10-15",
+        "initially_without_point": false,
+        "scope_reason": "Forever rare named with exact 1–30 level from an identified Forever source; game availability is still unverified.",
+        "identity_status": "forever_name_zone_documented_numeric_id_unverified",
+        "identity_reference_url": "https://www.wowhead.com/forever/npc=256492/fernfeather",
+        "zone": "zephras-isle",
+        "uiMapID": 2521,
+        "coordinate_system": "zone_percent_0_100_not_gps",
+        "map_kind": "outdoor",
+        "zone_evidence_level": "documented_forever",
+        "forever_presence": "community_report_not_firsthand_gameplay_confirmed",
+        "location_status": "documented_forever",
+        "evidence_note": "The WoW Forever rare-spawns guide gives this named Fernfeather search waypoint in zephras-isle; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture.",
+        "faction_status": "unverified"
+      },
+      "point_evidence": [
+        {
+          "coordinates": [
+            48,
+            85.4
+          ],
+          "zone": "zephras-isle",
+          "uiMapID": 2521,
+          "coordinate_system": "zone_percent_0_100_not_gps",
+          "origin": "forever_community_report",
+          "evidence_level": "documented_forever",
+          "source_url": "https://wowseer.gg/guides/rare-spawns",
+          "evidence_url": "https://wowseer.gg/guides/rare-spawns",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever rare-spawns guide gives this named Fernfeather search waypoint in zephras-isle; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture."
+        },
+        {
+          "coordinates": [
+            53.8,
+            78.8
+          ],
+          "zone": "zephras-isle",
+          "uiMapID": 2521,
+          "coordinate_system": "zone_percent_0_100_not_gps",
+          "origin": "forever_community_report",
+          "evidence_level": "documented_forever",
+          "source_url": "https://wowseer.gg/guides/rare-spawns",
+          "evidence_url": "https://wowseer.gg/guides/rare-spawns",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever rare-spawns guide gives this named Fernfeather search waypoint in zephras-isle; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture."
+        }
+      ]
+    },
+    {
+      "id": "forever-zephras-galemender-delanea",
+      "name": {
+        "fr": "Galemender Delanea",
+        "en": "Galemender Delanea"
+      },
+      "name_fr_status": "unverified_fallback_english",
+      "zone": "zephras-isle",
+      "level": null,
+      "level_status": "unknown",
+      "level_context": "starter_zone",
+      "level_source_url": null,
+      "classification": "rare",
+      "classification_evidence_url": "https://www.stillsixty.com/rare/galemender-delanea-zephras-isle",
+      "tameable": false,
+      "respawn_min_hours": null,
+      "respawn_max_hours": null,
+      "points": [
+        [
+          62.4,
+          62
+        ]
+      ],
+      "loot": [],
+      "source": "https://www.stillsixty.com/rare/galemender-delanea-zephras-isle",
+      "reference": "new_forever_community_documented_not_gameplay_confirmed",
+      "seen_forever": false,
+      "notes": {
+        "fr": "Nouveau monstre rapporté sur WoW Forever. Positions issues de guides communautaires, apparitions et temps de repop non confirmés en jeu. Le niveau exact est inconnu.",
+        "en": "New encounter reported for WoW Forever. Locations come from community guides; spawns and respawn timers are not verified in-game. Exact level unknown."
+      },
+      "coordinate_status": "documented_forever",
+      "beta_level30_in_scope": false,
+      "beta_scope_evidence": "starter_zone_only_exact_level_unknown",
+      "loot_coverage": "not_documented",
+      "location_review": {
+        "reviewed_at": "2026-10-15",
+        "initially_without_point": false,
+        "scope_reason": "Forever starter-zone rare; exact individual level missing, so excluded from numeric 1–30 count until documented.",
+        "identity_status": "forever_name_zone_documented_numeric_id_unverified",
+        "identity_reference_url": "https://www.stillsixty.com/rare/galemender-delanea-zephras-isle",
+        "zone": "zephras-isle",
+        "uiMapID": 2521,
+        "coordinate_system": "zone_percent_0_100_not_gps",
+        "map_kind": "outdoor",
+        "zone_evidence_level": "documented_forever",
+        "forever_presence": "community_report_not_firsthand_gameplay_confirmed",
+        "location_status": "documented_forever",
+        "evidence_note": "The WoW Forever rare-spawns guide gives this named Galemender Delanea search waypoint in zephras-isle; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture.",
+        "faction_status": "unverified"
+      },
+      "point_evidence": [
+        {
+          "coordinates": [
+            62.4,
+            62
+          ],
+          "zone": "zephras-isle",
+          "uiMapID": 2521,
+          "coordinate_system": "zone_percent_0_100_not_gps",
+          "origin": "forever_community_report",
+          "evidence_level": "documented_forever",
+          "source_url": "https://wowseer.gg/guides/rare-spawns",
+          "evidence_url": "https://wowseer.gg/guides/rare-spawns",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever rare-spawns guide gives this named Galemender Delanea search waypoint in zephras-isle; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture."
+        }
+      ]
+    },
+    {
+      "id": "259388",
+      "name": {
+        "fr": "Mystmane",
+        "en": "Mystmane"
+      },
+      "name_fr_status": "unverified_fallback_english",
+      "zone": "zephras-isle",
+      "level": 13,
+      "level_status": "documented_forever",
+      "level_context": null,
+      "level_source_url": "https://www.wowhead.com/forever/npc=259388/mystmane",
+      "classification": "rare",
+      "classification_evidence_url": "https://www.wowhead.com/forever/npc=259388/mystmane",
+      "tameable": true,
+      "respawn_min_hours": null,
+      "respawn_max_hours": null,
+      "points": [
+        [
+          60.2,
+          34.6
+        ]
+      ],
+      "loot": [],
+      "source": "https://www.wowhead.com/forever/npc=259388/mystmane",
+      "reference": "new_forever_community_documented_not_gameplay_confirmed",
+      "seen_forever": false,
+      "notes": {
+        "fr": "Nouveau monstre rapporté sur WoW Forever. Positions issues de guides communautaires, apparitions et temps de repop non confirmés en jeu. Le niveau exact est documenté.",
+        "en": "New encounter reported for WoW Forever. Locations come from community guides; spawns and respawn timers are not verified in-game. Exact level documented."
+      },
+      "coordinate_status": "documented_forever",
+      "beta_level30_in_scope": true,
+      "beta_scope_evidence": "forever_documented_exact_level",
+      "loot_coverage": "not_documented",
+      "location_review": {
+        "reviewed_at": "2026-10-15",
+        "initially_without_point": false,
+        "scope_reason": "Forever rare named with exact 1–30 level from an identified Forever source; game availability is still unverified.",
+        "identity_status": "forever_name_zone_documented_numeric_id_unverified",
+        "identity_reference_url": "https://www.wowhead.com/forever/npc=259388/mystmane",
+        "zone": "zephras-isle",
+        "uiMapID": 2521,
+        "coordinate_system": "zone_percent_0_100_not_gps",
+        "map_kind": "outdoor",
+        "zone_evidence_level": "documented_forever",
+        "forever_presence": "community_report_not_firsthand_gameplay_confirmed",
+        "location_status": "documented_forever",
+        "evidence_note": "The WoW Forever rare-spawns guide gives this named Mystmane search waypoint in zephras-isle; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture.",
+        "faction_status": "unverified"
+      },
+      "point_evidence": [
+        {
+          "coordinates": [
+            60.2,
+            34.6
+          ],
+          "zone": "zephras-isle",
+          "uiMapID": 2521,
+          "coordinate_system": "zone_percent_0_100_not_gps",
+          "origin": "forever_community_report",
+          "evidence_level": "documented_forever",
+          "source_url": "https://wowseer.gg/guides/rare-spawns",
+          "evidence_url": "https://wowseer.gg/guides/rare-spawns",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever rare-spawns guide gives this named Mystmane search waypoint in zephras-isle; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture."
+        }
+      ]
+    },
+    {
+      "id": "forever-zephras-slydris",
+      "name": {
+        "fr": "Slydris",
+        "en": "Slydris"
+      },
+      "name_fr_status": "unverified_fallback_english",
+      "zone": "zephras-isle",
+      "level": null,
+      "level_status": "unknown",
+      "level_context": "starter_zone",
+      "level_source_url": null,
+      "classification": "rare_elite",
+      "classification_evidence_url": "https://www.stillsixty.com/rares",
+      "tameable": true,
+      "respawn_min_hours": null,
+      "respawn_max_hours": null,
+      "points": [
+        [
+          50.2,
+          51
+        ]
+      ],
+      "loot": [],
+      "source": "https://www.stillsixty.com/rares",
+      "reference": "new_forever_community_documented_not_gameplay_confirmed",
+      "seen_forever": false,
+      "notes": {
+        "fr": "Nouveau monstre rapporté sur WoW Forever. Positions issues de guides communautaires, apparitions et temps de repop non confirmés en jeu. Le niveau exact est inconnu.",
+        "en": "New encounter reported for WoW Forever. Locations come from community guides; spawns and respawn timers are not verified in-game. Exact level unknown."
+      },
+      "coordinate_status": "documented_forever",
+      "beta_level30_in_scope": false,
+      "beta_scope_evidence": "starter_zone_only_exact_level_unknown",
+      "loot_coverage": "not_documented",
+      "location_review": {
+        "reviewed_at": "2026-10-15",
+        "initially_without_point": false,
+        "scope_reason": "Forever starter-zone rare; exact individual level missing, so excluded from numeric 1–30 count until documented.",
+        "identity_status": "forever_name_zone_documented_numeric_id_unverified",
+        "identity_reference_url": "https://www.stillsixty.com/rares",
+        "zone": "zephras-isle",
+        "uiMapID": 2521,
+        "coordinate_system": "zone_percent_0_100_not_gps",
+        "map_kind": "outdoor",
+        "zone_evidence_level": "documented_forever",
+        "forever_presence": "community_report_not_firsthand_gameplay_confirmed",
+        "location_status": "documented_forever",
+        "evidence_note": "The WoW Forever rare-spawns guide gives this named Slydris search waypoint in zephras-isle; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture.",
+        "faction_status": "unverified"
+      },
+      "point_evidence": [
+        {
+          "coordinates": [
+            50.2,
+            51
+          ],
+          "zone": "zephras-isle",
+          "uiMapID": 2521,
+          "coordinate_system": "zone_percent_0_100_not_gps",
+          "origin": "forever_community_report",
+          "evidence_level": "documented_forever",
+          "source_url": "https://wowseer.gg/guides/rare-spawns",
+          "evidence_url": "https://wowseer.gg/guides/rare-spawns",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever rare-spawns guide gives this named Slydris search waypoint in zephras-isle; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture."
+        }
+      ]
+    },
+    {
+      "id": "forever-zephras-teldaeor",
+      "name": {
+        "fr": "Tel'daeor the Stormspeaker",
+        "en": "Tel'daeor the Stormspeaker"
+      },
+      "name_fr_status": "unverified_fallback_english",
+      "zone": "zephras-isle",
+      "level": null,
+      "level_status": "unknown",
+      "level_context": "starter_zone",
+      "level_source_url": null,
+      "classification": "rare",
+      "classification_evidence_url": "https://www.stillsixty.com/rare/teldaeor-the-stormspeaker-zephras-isle",
+      "tameable": false,
+      "respawn_min_hours": null,
+      "respawn_max_hours": null,
+      "points": [
+        [
+          66,
+          53.8
+        ]
+      ],
+      "loot": [
+        {
+          "name": {
+            "fr": "Skyseer's Pants",
+            "en": "Skyseer's Pants"
+          },
+          "name_fr_status": "unverified_fallback_english",
+          "item_id": 263015,
+          "item_level": 14,
+          "required_level": 9,
+          "slot": {
+            "fr": "Jambes · Tissu",
+            "en": "Legs · Cloth"
+          },
+          "stats": {
+            "fr": "23 armure · +3 Esprit",
+            "en": "23 Armor · +3 Spirit"
+          },
+          "source_version": "forever_beta",
+          "source_url": "https://www.wowhead.com/forever/item=263015/skyseers-pants",
+          "item_source_url": "https://www.wowhead.com/forever/item=263015/skyseers-pants",
+          "evidence_level": "documented_forever",
+          "evidence_url": "https://www.wowhead.com/forever/item=263015/skyseers-pants",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "WoW Forever item page identifies Tel'daeor the Stormspeaker as a reported source for item 263015; community loot table, not a verified gameplay capture.",
+          "drop_evidence": "forever_beta_item_database_documented_drop",
+          "chance_classic_percent": null,
+          "chance_forever_observed_percent": null
+        }
+      ],
+      "source": "https://www.stillsixty.com/rare/teldaeor-the-stormspeaker-zephras-isle",
+      "reference": "new_forever_community_documented_not_gameplay_confirmed",
+      "seen_forever": false,
+      "notes": {
+        "fr": "Nouveau monstre rapporté sur WoW Forever. Positions issues de guides communautaires, apparitions et temps de repop non confirmés en jeu. Le niveau exact est inconnu.",
+        "en": "New encounter reported for WoW Forever. Locations come from community guides; spawns and respawn timers are not verified in-game. Exact level unknown."
+      },
+      "coordinate_status": "documented_forever",
+      "beta_level30_in_scope": false,
+      "beta_scope_evidence": "starter_zone_only_exact_level_unknown",
+      "loot_coverage": "notable_only_not_complete",
+      "location_review": {
+        "reviewed_at": "2026-10-15",
+        "initially_without_point": false,
+        "scope_reason": "Forever starter-zone rare; exact individual level missing, so excluded from numeric 1–30 count until documented.",
+        "identity_status": "forever_name_zone_documented_numeric_id_unverified",
+        "identity_reference_url": "https://www.stillsixty.com/rare/teldaeor-the-stormspeaker-zephras-isle",
+        "zone": "zephras-isle",
+        "uiMapID": 2521,
+        "coordinate_system": "zone_percent_0_100_not_gps",
+        "map_kind": "outdoor",
+        "zone_evidence_level": "documented_forever",
+        "forever_presence": "community_report_not_firsthand_gameplay_confirmed",
+        "location_status": "documented_forever",
+        "evidence_note": "The WoW Forever rare-spawns guide gives this named Tel'daeor the Stormspeaker search waypoint in zephras-isle; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture.",
+        "faction_status": "unverified"
+      },
+      "point_evidence": [
+        {
+          "coordinates": [
+            66,
+            53.8
+          ],
+          "zone": "zephras-isle",
+          "uiMapID": 2521,
+          "coordinate_system": "zone_percent_0_100_not_gps",
+          "origin": "forever_community_report",
+          "evidence_level": "documented_forever",
+          "source_url": "https://wowseer.gg/guides/rare-spawns",
+          "evidence_url": "https://wowseer.gg/guides/rare-spawns",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever rare-spawns guide gives this named Tel'daeor the Stormspeaker search waypoint in zephras-isle; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture."
+        }
+      ]
+    },
+    {
+      "id": "forever-zephras-the-lost-one",
+      "name": {
+        "fr": "The Lost One",
+        "en": "The Lost One"
+      },
+      "name_fr_status": "unverified_fallback_english",
+      "zone": "zephras-isle",
+      "level": null,
+      "level_status": "unknown",
+      "level_context": "starter_zone",
+      "level_source_url": null,
+      "classification": "rare_elite",
+      "classification_evidence_url": "https://www.stillsixty.com/rare/the-lost-one-zephras-isle",
+      "tameable": false,
+      "respawn_min_hours": null,
+      "respawn_max_hours": null,
+      "points": [
+        [
+          52,
+          46.4
+        ]
+      ],
+      "loot": [],
+      "source": "https://www.stillsixty.com/rare/the-lost-one-zephras-isle",
+      "reference": "new_forever_community_documented_not_gameplay_confirmed",
+      "seen_forever": false,
+      "notes": {
+        "fr": "Nouveau monstre rapporté sur WoW Forever. Positions issues de guides communautaires, apparitions et temps de repop non confirmés en jeu. Le niveau exact est inconnu.",
+        "en": "New encounter reported for WoW Forever. Locations come from community guides; spawns and respawn timers are not verified in-game. Exact level unknown."
+      },
+      "coordinate_status": "documented_forever",
+      "beta_level30_in_scope": false,
+      "beta_scope_evidence": "starter_zone_only_exact_level_unknown",
+      "loot_coverage": "not_documented",
+      "location_review": {
+        "reviewed_at": "2026-10-15",
+        "initially_without_point": false,
+        "scope_reason": "Forever starter-zone rare; exact individual level missing, so excluded from numeric 1–30 count until documented.",
+        "identity_status": "forever_name_zone_documented_numeric_id_unverified",
+        "identity_reference_url": "https://www.stillsixty.com/rare/the-lost-one-zephras-isle",
+        "zone": "zephras-isle",
+        "uiMapID": 2521,
+        "coordinate_system": "zone_percent_0_100_not_gps",
+        "map_kind": "outdoor",
+        "zone_evidence_level": "documented_forever",
+        "forever_presence": "community_report_not_firsthand_gameplay_confirmed",
+        "location_status": "documented_forever",
+        "evidence_note": "The WoW Forever rare-spawns guide gives this named The Lost One search waypoint in zephras-isle; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture.",
+        "faction_status": "unverified"
+      },
+      "point_evidence": [
+        {
+          "coordinates": [
+            52,
+            46.4
+          ],
+          "zone": "zephras-isle",
+          "uiMapID": 2521,
+          "coordinate_system": "zone_percent_0_100_not_gps",
+          "origin": "forever_community_report",
+          "evidence_level": "documented_forever",
+          "source_url": "https://wowseer.gg/guides/rare-spawns",
+          "evidence_url": "https://wowseer.gg/guides/rare-spawns",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever rare-spawns guide gives this named The Lost One search waypoint in zephras-isle; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture."
+        }
+      ]
+    },
+    {
+      "id": "forever-elwynn-elmpaw",
+      "name": {
+        "fr": "Elmpaw",
+        "en": "Elmpaw"
+      },
+      "name_fr_status": "unverified_fallback_english",
+      "zone": "elwynn",
+      "level": 12,
+      "level_status": "documented_forever",
+      "level_context": null,
+      "level_source_url": "https://foreverchanges.pro/rares",
+      "classification": "elite",
+      "classification_evidence_url": "https://www.wowhead.com/forever/item=247862/elmpaws-head",
+      "tameable": true,
+      "respawn_min_hours": null,
+      "respawn_max_hours": null,
+      "points": [
+        [
+          81.6,
+          85.4
+        ],
+        [
+          75,
+          38.4
+        ]
+      ],
+      "loot": [
+        {
+          "name": {
+            "fr": "Elmpaw's Head",
+            "en": "Elmpaw's Head"
+          },
+          "name_fr_status": "unverified_fallback_english",
+          "item_id": 247862,
+          "item_level": 1,
+          "required_level": 7,
+          "slot": {
+            "fr": "Objet de quête",
+            "en": "Quest item"
+          },
+          "stats": {
+            "fr": "Objet déclenchant une quête (Alliance)",
+            "en": "Quest-starting item (Alliance)"
+          },
+          "source_version": "forever_beta",
+          "source_url": "https://www.wowhead.com/forever/item=247862/elmpaws-head",
+          "item_source_url": "https://www.wowhead.com/forever/item=247862/elmpaws-head",
+          "evidence_level": "documented_forever",
+          "evidence_url": "https://www.wowhead.com/forever/item=247862/elmpaws-head",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "WoW Forever item page identifies Elmpaw as a reported source for item 247862; community loot table, not a verified gameplay capture.",
+          "drop_evidence": "forever_beta_item_database_documented_drop",
+          "chance_classic_percent": null,
+          "chance_forever_observed_percent": null
+        }
+      ],
+      "source": "https://www.wowhead.com/forever/item=247862/elmpaws-head",
+      "reference": "new_forever_community_documented_not_gameplay_confirmed",
+      "seen_forever": false,
+      "notes": {
+        "fr": "Nouveau monstre rapporté sur WoW Forever. Positions issues de guides communautaires, apparitions et temps de repop non confirmés en jeu. Le niveau exact est documenté.",
+        "en": "New encounter reported for WoW Forever. Locations come from community guides; spawns and respawn timers are not verified in-game. Exact level documented."
+      },
+      "coordinate_status": "documented_forever",
+      "beta_level30_in_scope": true,
+      "beta_scope_evidence": "forever_documented_exact_level",
+      "loot_coverage": "notable_only_not_complete",
+      "location_review": {
+        "reviewed_at": "2026-10-15",
+        "initially_without_point": false,
+        "scope_reason": "Forever rare named with exact 1–30 level from an identified Forever source; game availability is still unverified.",
+        "identity_status": "forever_name_zone_documented_numeric_id_unverified",
+        "identity_reference_url": "https://www.wowhead.com/forever/item=247862/elmpaws-head",
+        "zone": "elwynn",
+        "uiMapID": 1429,
+        "coordinate_system": "zone_percent_0_100_not_gps",
+        "map_kind": "outdoor",
+        "zone_evidence_level": "documented_forever",
+        "forever_presence": "community_report_not_firsthand_gameplay_confirmed",
+        "location_status": "documented_forever",
+        "evidence_note": "The WoW Forever rare-spawns guide gives this named Elmpaw search waypoint in elwynn; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture.",
+        "faction_status": "unverified"
+      },
+      "point_evidence": [
+        {
+          "coordinates": [
+            81.6,
+            85.4
+          ],
+          "zone": "elwynn",
+          "uiMapID": 1429,
+          "coordinate_system": "zone_percent_0_100_not_gps",
+          "origin": "forever_community_report",
+          "evidence_level": "documented_forever",
+          "source_url": "https://wowseer.gg/guides/rare-spawns",
+          "evidence_url": "https://wowseer.gg/guides/rare-spawns",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever rare-spawns guide gives this named Elmpaw search waypoint in elwynn; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture."
+        },
+        {
+          "coordinates": [
+            75,
+            38.4
+          ],
+          "zone": "elwynn",
+          "uiMapID": 1429,
+          "coordinate_system": "zone_percent_0_100_not_gps",
+          "origin": "forever_community_report",
+          "evidence_level": "documented_forever",
+          "source_url": "https://wowseer.gg/guides/rare-spawns",
+          "evidence_url": "https://wowseer.gg/guides/rare-spawns",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever rare-spawns guide gives this named Elmpaw search waypoint in elwynn; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture."
+        }
+      ]
+    },
+    {
+      "id": "forever-redridge-drozem",
+      "name": {
+        "fr": "Dro'zem the Blasphemous",
+        "en": "Dro'zem the Blasphemous"
+      },
+      "name_fr_status": "unverified_fallback_english",
+      "zone": "redridge",
+      "level": 23,
+      "level_status": "documented_forever",
+      "level_context": null,
+      "level_source_url": "https://foreverchanges.pro/rares",
+      "classification": "rare_elite",
+      "classification_evidence_url": "https://www.wowhead.com/forever/item=277213/drozems-tunic",
+      "tameable": false,
+      "respawn_min_hours": null,
+      "respawn_max_hours": null,
+      "points": [
+        [
+          74.4,
+          82.2
+        ],
+        [
+          63,
+          43
+        ],
+        [
+          36.2,
+          9.2
+        ]
+      ],
+      "loot": [
+        {
+          "name": {
+            "fr": "Dro'zem's Tunic",
+            "en": "Dro'zem's Tunic"
+          },
+          "name_fr_status": "unverified_fallback_english",
+          "item_id": 277213,
+          "item_level": 25,
+          "required_level": 20,
+          "slot": {
+            "fr": "Torse · Tissu",
+            "en": "Chest · Cloth"
+          },
+          "stats": {
+            "fr": "43 armure · +9 Intelligence · +11 puissance des sorts",
+            "en": "43 Armor · +9 Intellect · +11 Spell Power"
+          },
+          "source_version": "forever_beta",
+          "source_url": "https://www.wowhead.com/forever/item=277213/drozems-tunic",
+          "item_source_url": "https://www.wowhead.com/forever/item=277213/drozems-tunic",
+          "evidence_level": "documented_forever",
+          "evidence_url": "https://www.wowhead.com/forever/item=277213/drozems-tunic",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "WoW Forever item page identifies Dro'zem the Blasphemous as a reported source for item 277213; community loot table, not a verified gameplay capture.",
+          "drop_evidence": "forever_beta_item_database_documented_drop",
+          "chance_classic_percent": null,
+          "chance_forever_observed_percent": null
+        }
+      ],
+      "source": "https://www.wowhead.com/forever/item=277213/drozems-tunic",
+      "reference": "new_forever_community_documented_not_gameplay_confirmed",
+      "seen_forever": false,
+      "notes": {
+        "fr": "Nouveau monstre rapporté sur WoW Forever. Positions issues de guides communautaires, apparitions et temps de repop non confirmés en jeu. Le niveau exact est documenté.",
+        "en": "New encounter reported for WoW Forever. Locations come from community guides; spawns and respawn timers are not verified in-game. Exact level documented."
+      },
+      "coordinate_status": "documented_forever",
+      "beta_level30_in_scope": true,
+      "beta_scope_evidence": "forever_documented_exact_level",
+      "loot_coverage": "notable_only_not_complete",
+      "location_review": {
+        "reviewed_at": "2026-10-15",
+        "initially_without_point": false,
+        "scope_reason": "Forever rare named with exact 1–30 level from an identified Forever source; game availability is still unverified.",
+        "identity_status": "forever_name_zone_documented_numeric_id_unverified",
+        "identity_reference_url": "https://www.wowhead.com/forever/item=277213/drozems-tunic",
+        "zone": "redridge",
+        "uiMapID": 1433,
+        "coordinate_system": "zone_percent_0_100_not_gps",
+        "map_kind": "outdoor",
+        "zone_evidence_level": "documented_forever",
+        "forever_presence": "community_report_not_firsthand_gameplay_confirmed",
+        "location_status": "documented_forever",
+        "evidence_note": "The WoW Forever rare-spawns guide gives this named Dro'zem the Blasphemous search waypoint in redridge; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture.",
+        "faction_status": "unverified"
+      },
+      "point_evidence": [
+        {
+          "coordinates": [
+            74.4,
+            82.2
+          ],
+          "zone": "redridge",
+          "uiMapID": 1433,
+          "coordinate_system": "zone_percent_0_100_not_gps",
+          "origin": "forever_community_report",
+          "evidence_level": "documented_forever",
+          "source_url": "https://wowseer.gg/guides/rare-spawns",
+          "evidence_url": "https://wowseer.gg/guides/rare-spawns",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever rare-spawns guide gives this named Dro'zem the Blasphemous search waypoint in redridge; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture."
+        },
+        {
+          "coordinates": [
+            63,
+            43
+          ],
+          "zone": "redridge",
+          "uiMapID": 1433,
+          "coordinate_system": "zone_percent_0_100_not_gps",
+          "origin": "forever_community_report",
+          "evidence_level": "documented_forever",
+          "source_url": "https://wowseer.gg/guides/rare-spawns",
+          "evidence_url": "https://wowseer.gg/guides/rare-spawns",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever rare-spawns guide gives this named Dro'zem the Blasphemous search waypoint in redridge; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture."
+        },
+        {
+          "coordinates": [
+            36.2,
+            9.2
+          ],
+          "zone": "redridge",
+          "uiMapID": 1433,
+          "coordinate_system": "zone_percent_0_100_not_gps",
+          "origin": "forever_community_report",
+          "evidence_level": "documented_forever",
+          "source_url": "https://wowseer.gg/guides/rare-spawns",
+          "evidence_url": "https://wowseer.gg/guides/rare-spawns",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever rare-spawns guide gives this named Dro'zem the Blasphemous search waypoint in redridge; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture."
+        }
+      ]
+    },
+    {
+      "id": "forever-dun-morogh-ghostfang",
+      "name": {
+        "fr": "Ghostfang",
+        "en": "Ghostfang"
+      },
+      "name_fr_status": "unverified_fallback_english",
+      "zone": "dun-morogh",
+      "level": 10,
+      "level_status": "documented_forever",
+      "level_context": null,
+      "level_source_url": "https://www.wowhead.com/forever/npcs/min-level:5/max-level:30",
+      "classification": "rare",
+      "classification_evidence_url": "https://wowseer.gg/guides/rare-spawns",
+      "tameable": true,
+      "respawn_min_hours": null,
+      "respawn_max_hours": null,
+      "points": [
+        [
+          74.2,
+          63.2
+        ],
+        [
+          79.4,
+          42.8
+        ],
+        [
+          80.4,
+          47
+        ],
+        [
+          81.6,
+          55.4
+        ]
+      ],
+      "loot": [],
+      "source": "https://wowseer.gg/guides/rare-spawns",
+      "reference": "new_forever_community_documented_not_gameplay_confirmed",
+      "seen_forever": false,
+      "notes": {
+        "fr": "Nouveau monstre rapporté sur WoW Forever. Positions issues de guides communautaires, apparitions et temps de repop non confirmés en jeu. Le niveau exact est documenté.",
+        "en": "New encounter reported for WoW Forever. Locations come from community guides; spawns and respawn timers are not verified in-game. Exact level documented."
+      },
+      "coordinate_status": "documented_forever",
+      "beta_level30_in_scope": true,
+      "beta_scope_evidence": "forever_documented_exact_level",
+      "loot_coverage": "not_documented",
+      "location_review": {
+        "reviewed_at": "2026-10-15",
+        "initially_without_point": false,
+        "scope_reason": "Forever rare named with exact 1–30 level from an identified Forever source; game availability is still unverified.",
+        "identity_status": "forever_name_zone_documented_numeric_id_unverified",
+        "identity_reference_url": "https://wowseer.gg/guides/rare-spawns",
+        "zone": "dun-morogh",
+        "uiMapID": 1426,
+        "coordinate_system": "zone_percent_0_100_not_gps",
+        "map_kind": "outdoor",
+        "zone_evidence_level": "documented_forever",
+        "forever_presence": "community_report_not_firsthand_gameplay_confirmed",
+        "location_status": "documented_forever",
+        "evidence_note": "The WoW Forever rare-spawns guide gives this named Ghostfang search waypoint in dun-morogh; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture.",
+        "faction_status": "unverified"
+      },
+      "point_evidence": [
+        {
+          "coordinates": [
+            74.2,
+            63.2
+          ],
+          "zone": "dun-morogh",
+          "uiMapID": 1426,
+          "coordinate_system": "zone_percent_0_100_not_gps",
+          "origin": "forever_community_report",
+          "evidence_level": "documented_forever",
+          "source_url": "https://wowseer.gg/guides/rare-spawns",
+          "evidence_url": "https://wowseer.gg/guides/rare-spawns",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever rare-spawns guide gives this named Ghostfang search waypoint in dun-morogh; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture."
+        },
+        {
+          "coordinates": [
+            79.4,
+            42.8
+          ],
+          "zone": "dun-morogh",
+          "uiMapID": 1426,
+          "coordinate_system": "zone_percent_0_100_not_gps",
+          "origin": "forever_community_report",
+          "evidence_level": "documented_forever",
+          "source_url": "https://wowseer.gg/guides/rare-spawns",
+          "evidence_url": "https://wowseer.gg/guides/rare-spawns",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever rare-spawns guide gives this named Ghostfang search waypoint in dun-morogh; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture."
+        },
+        {
+          "coordinates": [
+            80.4,
+            47
+          ],
+          "zone": "dun-morogh",
+          "uiMapID": 1426,
+          "coordinate_system": "zone_percent_0_100_not_gps",
+          "origin": "forever_community_report",
+          "evidence_level": "documented_forever",
+          "source_url": "https://wowseer.gg/guides/rare-spawns",
+          "evidence_url": "https://wowseer.gg/guides/rare-spawns",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever rare-spawns guide gives this named Ghostfang search waypoint in dun-morogh; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture."
+        },
+        {
+          "coordinates": [
+            81.6,
+            55.4
+          ],
+          "zone": "dun-morogh",
+          "uiMapID": 1426,
+          "coordinate_system": "zone_percent_0_100_not_gps",
+          "origin": "forever_community_report",
+          "evidence_level": "documented_forever",
+          "source_url": "https://wowseer.gg/guides/rare-spawns",
+          "evidence_url": "https://wowseer.gg/guides/rare-spawns",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever rare-spawns guide gives this named Ghostfang search waypoint in dun-morogh; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture."
+        }
+      ]
+    },
+    {
+      "id": "forever-durotar-dustwind-eggtender",
+      "name": {
+        "fr": "Dustwind Eggtender",
+        "en": "Dustwind Eggtender"
+      },
+      "name_fr_status": "unverified_fallback_english",
+      "zone": "durotar",
+      "level": null,
+      "level_status": "unknown",
+      "level_context": "starter_zone",
+      "level_source_url": null,
+      "classification": "rare",
+      "classification_evidence_url": "https://wowseer.gg/guides/rare-spawns",
+      "tameable": false,
+      "respawn_min_hours": null,
+      "respawn_max_hours": null,
+      "points": [
+        [
+          51.2,
+          20.6
+        ],
+        [
+          52.2,
+          24
+        ]
+      ],
+      "loot": [],
+      "source": "https://wowseer.gg/guides/rare-spawns",
+      "reference": "new_forever_community_documented_not_gameplay_confirmed",
+      "seen_forever": false,
+      "notes": {
+        "fr": "Nouveau monstre rapporté sur WoW Forever. Positions issues de guides communautaires, apparitions et temps de repop non confirmés en jeu. Le niveau exact est inconnu.",
+        "en": "New encounter reported for WoW Forever. Locations come from community guides; spawns and respawn timers are not verified in-game. Exact level unknown."
+      },
+      "coordinate_status": "documented_forever",
+      "beta_level30_in_scope": false,
+      "beta_scope_evidence": "starter_zone_only_exact_level_unknown",
+      "loot_coverage": "not_documented",
+      "location_review": {
+        "reviewed_at": "2026-10-15",
+        "initially_without_point": false,
+        "scope_reason": "Forever starter-zone rare; exact individual level missing, so excluded from numeric 1–30 count until documented.",
+        "identity_status": "forever_name_zone_documented_numeric_id_unverified",
+        "identity_reference_url": "https://wowseer.gg/guides/rare-spawns",
+        "zone": "durotar",
+        "uiMapID": 1411,
+        "coordinate_system": "zone_percent_0_100_not_gps",
+        "map_kind": "outdoor",
+        "zone_evidence_level": "documented_forever",
+        "forever_presence": "community_report_not_firsthand_gameplay_confirmed",
+        "location_status": "documented_forever",
+        "evidence_note": "The WoW Forever rare-spawns guide gives this named Dustwind Eggtender search waypoint in durotar; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture.",
+        "faction_status": "unverified"
+      },
+      "point_evidence": [
+        {
+          "coordinates": [
+            51.2,
+            20.6
+          ],
+          "zone": "durotar",
+          "uiMapID": 1411,
+          "coordinate_system": "zone_percent_0_100_not_gps",
+          "origin": "forever_community_report",
+          "evidence_level": "documented_forever",
+          "source_url": "https://wowseer.gg/guides/rare-spawns",
+          "evidence_url": "https://wowseer.gg/guides/rare-spawns",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever rare-spawns guide gives this named Dustwind Eggtender search waypoint in durotar; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture."
+        },
+        {
+          "coordinates": [
+            52.2,
+            24
+          ],
+          "zone": "durotar",
+          "uiMapID": 1411,
+          "coordinate_system": "zone_percent_0_100_not_gps",
+          "origin": "forever_community_report",
+          "evidence_level": "documented_forever",
+          "source_url": "https://wowseer.gg/guides/rare-spawns",
+          "evidence_url": "https://wowseer.gg/guides/rare-spawns",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever rare-spawns guide gives this named Dustwind Eggtender search waypoint in durotar; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture."
+        }
+      ]
+    },
+    {
+      "id": "forever-durotar-shalma",
+      "name": {
+        "fr": "Shal'ma",
+        "en": "Shal'ma"
+      },
+      "name_fr_status": "unverified_fallback_english",
+      "zone": "durotar",
+      "level": 9,
+      "level_status": "documented_forever",
+      "level_context": null,
+      "level_source_url": "https://www.wowhead.com/forever/npc=276198/shalma",
+      "classification": "rare",
+      "classification_evidence_url": "https://wowseer.gg/guides/rare-spawns",
+      "tameable": true,
+      "respawn_min_hours": null,
+      "respawn_max_hours": null,
+      "points": [
+        [
+          59.8,
+          91
+        ],
+        [
+          62.8,
+          96.8
+        ],
+        [
+          68.6,
+          70.6
+        ]
+      ],
+      "loot": [
+        {
+          "name": {
+            "fr": "Shal'ma's Shawl",
+            "en": "Shal'ma's Shawl"
+          },
+          "name_fr_status": "unverified_fallback_english",
+          "item_id": 286746,
+          "item_level": 9,
+          "required_level": 4,
+          "slot": {
+            "fr": "Dos",
+            "en": "Back"
+          },
+          "stats": {
+            "fr": "8 armure · Cape",
+            "en": "8 Armor · Cloak"
+          },
+          "source_version": "forever_beta",
+          "source_url": "https://www.wowhead.com/forever/item=286746/shalmas-shawl",
+          "item_source_url": "https://www.wowhead.com/forever/item=286746/shalmas-shawl",
+          "evidence_level": "documented_forever",
+          "evidence_url": "https://www.wowhead.com/forever/item=286746/shalmas-shawl",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Wowhead Forever item 286746 explicitly lists Shal'ma as a reported drop. Player-reported database association, not a guaranteed live item drop or fixed probability.",
+          "drop_evidence": "forever_beta_item_database_documented_drop",
+          "chance_classic_percent": null,
+          "chance_forever_observed_percent": null
+        }
+      ],
+      "source": "https://wowseer.gg/guides/rare-spawns",
+      "reference": "new_forever_community_documented_not_gameplay_confirmed",
+      "seen_forever": false,
+      "notes": {
+        "fr": "Nouveau monstre rapporté sur WoW Forever. Positions issues de guides communautaires, apparitions et temps de repop non confirmés en jeu. Le niveau exact est documenté.",
+        "en": "New encounter reported for WoW Forever. Locations come from community guides; spawns and respawn timers are not verified in-game. Exact level documented."
+      },
+      "coordinate_status": "documented_forever",
+      "beta_level30_in_scope": true,
+      "beta_scope_evidence": "forever_documented_exact_level",
+      "loot_coverage": "notable_only_not_complete",
+      "location_review": {
+        "reviewed_at": "2026-10-15",
+        "initially_without_point": false,
+        "scope_reason": "Forever rare named with exact 1–30 level from an identified Forever source; game availability is still unverified.",
+        "identity_status": "forever_name_zone_documented_numeric_id_unverified",
+        "identity_reference_url": "https://wowseer.gg/guides/rare-spawns",
+        "zone": "durotar",
+        "uiMapID": 1411,
+        "coordinate_system": "zone_percent_0_100_not_gps",
+        "map_kind": "outdoor",
+        "zone_evidence_level": "documented_forever",
+        "forever_presence": "community_report_not_firsthand_gameplay_confirmed",
+        "location_status": "documented_forever",
+        "evidence_note": "The WoW Forever rare-spawns guide gives this named Shal'ma search waypoint in durotar; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture.",
+        "faction_status": "unverified"
+      },
+      "point_evidence": [
+        {
+          "coordinates": [
+            59.8,
+            91
+          ],
+          "zone": "durotar",
+          "uiMapID": 1411,
+          "coordinate_system": "zone_percent_0_100_not_gps",
+          "origin": "forever_community_report",
+          "evidence_level": "documented_forever",
+          "source_url": "https://wowseer.gg/guides/rare-spawns",
+          "evidence_url": "https://wowseer.gg/guides/rare-spawns",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever rare-spawns guide gives this named Shal'ma search waypoint in durotar; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture."
+        },
+        {
+          "coordinates": [
+            62.8,
+            96.8
+          ],
+          "zone": "durotar",
+          "uiMapID": 1411,
+          "coordinate_system": "zone_percent_0_100_not_gps",
+          "origin": "forever_community_report",
+          "evidence_level": "documented_forever",
+          "source_url": "https://wowseer.gg/guides/rare-spawns",
+          "evidence_url": "https://wowseer.gg/guides/rare-spawns",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever rare-spawns guide gives this named Shal'ma search waypoint in durotar; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture."
+        },
+        {
+          "coordinates": [
+            68.6,
+            70.6
+          ],
+          "zone": "durotar",
+          "uiMapID": 1411,
+          "coordinate_system": "zone_percent_0_100_not_gps",
+          "origin": "forever_community_report",
+          "evidence_level": "documented_forever",
+          "source_url": "https://wowseer.gg/guides/rare-spawns",
+          "evidence_url": "https://wowseer.gg/guides/rare-spawns",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever rare-spawns guide gives this named Shal'ma search waypoint in durotar; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture."
+        }
+      ]
+    },
+    {
+      "id": "forever-elwynn-elder-finseer",
+      "name": {
+        "fr": "Elder Finseer",
+        "en": "Elder Finseer"
+      },
+      "name_fr_status": "unverified_fallback_english",
+      "zone": "elwynn",
+      "level": null,
+      "level_status": "unknown",
+      "level_context": "starter_zone",
+      "level_source_url": null,
+      "classification": "rare",
+      "classification_evidence_url": "https://wowseer.gg/guides/rare-spawns",
+      "tameable": false,
+      "respawn_min_hours": null,
+      "respawn_max_hours": null,
+      "points": [
+        [
+          78.6,
+          56.2
+        ],
+        [
+          79.6,
+          46.8
+        ]
+      ],
+      "loot": [],
+      "source": "https://wowseer.gg/guides/rare-spawns",
+      "reference": "new_forever_community_documented_not_gameplay_confirmed",
+      "seen_forever": false,
+      "notes": {
+        "fr": "Nouveau monstre rapporté sur WoW Forever. Positions issues de guides communautaires, apparitions et temps de repop non confirmés en jeu. Le niveau exact est inconnu.",
+        "en": "New encounter reported for WoW Forever. Locations come from community guides; spawns and respawn timers are not verified in-game. Exact level unknown."
+      },
+      "coordinate_status": "documented_forever",
+      "beta_level30_in_scope": false,
+      "beta_scope_evidence": "starter_zone_only_exact_level_unknown",
+      "loot_coverage": "not_documented",
+      "location_review": {
+        "reviewed_at": "2026-10-15",
+        "initially_without_point": false,
+        "scope_reason": "Forever starter-zone rare; exact individual level missing, so excluded from numeric 1–30 count until documented.",
+        "identity_status": "forever_name_zone_documented_numeric_id_unverified",
+        "identity_reference_url": "https://wowseer.gg/guides/rare-spawns",
+        "zone": "elwynn",
+        "uiMapID": 1429,
+        "coordinate_system": "zone_percent_0_100_not_gps",
+        "map_kind": "outdoor",
+        "zone_evidence_level": "documented_forever",
+        "forever_presence": "community_report_not_firsthand_gameplay_confirmed",
+        "location_status": "documented_forever",
+        "evidence_note": "The WoW Forever rare-spawns guide gives this named Elder Finseer search waypoint in elwynn; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture.",
+        "faction_status": "unverified"
+      },
+      "point_evidence": [
+        {
+          "coordinates": [
+            78.6,
+            56.2
+          ],
+          "zone": "elwynn",
+          "uiMapID": 1429,
+          "coordinate_system": "zone_percent_0_100_not_gps",
+          "origin": "forever_community_report",
+          "evidence_level": "documented_forever",
+          "source_url": "https://wowseer.gg/guides/rare-spawns",
+          "evidence_url": "https://wowseer.gg/guides/rare-spawns",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever rare-spawns guide gives this named Elder Finseer search waypoint in elwynn; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture."
+        },
+        {
+          "coordinates": [
+            79.6,
+            46.8
+          ],
+          "zone": "elwynn",
+          "uiMapID": 1429,
+          "coordinate_system": "zone_percent_0_100_not_gps",
+          "origin": "forever_community_report",
+          "evidence_level": "documented_forever",
+          "source_url": "https://wowseer.gg/guides/rare-spawns",
+          "evidence_url": "https://wowseer.gg/guides/rare-spawns",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever rare-spawns guide gives this named Elder Finseer search waypoint in elwynn; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture."
+        }
+      ]
+    },
+    {
+      "id": "forever-elwynn-matriarch-bristlefur",
+      "name": {
+        "fr": "Matriarch Bristlefur",
+        "en": "Matriarch Bristlefur"
+      },
+      "name_fr_status": "unverified_fallback_english",
+      "zone": "elwynn",
+      "level": 10,
+      "level_status": "documented_forever",
+      "level_context": null,
+      "level_source_url": "https://www.wowhead.com/forever/npcs/beasts/bear",
+      "classification": "rare",
+      "classification_evidence_url": "https://wowseer.gg/guides/rare-spawns",
+      "tameable": true,
+      "respawn_min_hours": null,
+      "respawn_max_hours": null,
+      "points": [
+        [
+          64.4,
+          77
+        ],
+        [
+          59,
+          80.6
+        ],
+        [
+          51.8,
+          79.2
+        ]
+      ],
+      "loot": [],
+      "source": "https://wowseer.gg/guides/rare-spawns",
+      "reference": "new_forever_community_documented_not_gameplay_confirmed",
+      "seen_forever": false,
+      "notes": {
+        "fr": "Nouveau monstre rapporté sur WoW Forever. Positions issues de guides communautaires, apparitions et temps de repop non confirmés en jeu. Le niveau exact est documenté.",
+        "en": "New encounter reported for WoW Forever. Locations come from community guides; spawns and respawn timers are not verified in-game. Exact level documented."
+      },
+      "coordinate_status": "documented_forever",
+      "beta_level30_in_scope": true,
+      "beta_scope_evidence": "forever_documented_exact_level",
+      "loot_coverage": "not_documented",
+      "location_review": {
+        "reviewed_at": "2026-10-15",
+        "initially_without_point": false,
+        "scope_reason": "Forever rare named with exact 1–30 level from an identified Forever source; game availability is still unverified.",
+        "identity_status": "forever_name_zone_documented_numeric_id_unverified",
+        "identity_reference_url": "https://wowseer.gg/guides/rare-spawns",
+        "zone": "elwynn",
+        "uiMapID": 1429,
+        "coordinate_system": "zone_percent_0_100_not_gps",
+        "map_kind": "outdoor",
+        "zone_evidence_level": "documented_forever",
+        "forever_presence": "community_report_not_firsthand_gameplay_confirmed",
+        "location_status": "documented_forever",
+        "evidence_note": "The WoW Forever rare-spawns guide gives this named Matriarch Bristlefur search waypoint in elwynn; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture.",
+        "faction_status": "unverified"
+      },
+      "point_evidence": [
+        {
+          "coordinates": [
+            64.4,
+            77
+          ],
+          "zone": "elwynn",
+          "uiMapID": 1429,
+          "coordinate_system": "zone_percent_0_100_not_gps",
+          "origin": "forever_community_report",
+          "evidence_level": "documented_forever",
+          "source_url": "https://wowseer.gg/guides/rare-spawns",
+          "evidence_url": "https://wowseer.gg/guides/rare-spawns",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever rare-spawns guide gives this named Matriarch Bristlefur search waypoint in elwynn; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture."
+        },
+        {
+          "coordinates": [
+            59,
+            80.6
+          ],
+          "zone": "elwynn",
+          "uiMapID": 1429,
+          "coordinate_system": "zone_percent_0_100_not_gps",
+          "origin": "forever_community_report",
+          "evidence_level": "documented_forever",
+          "source_url": "https://wowseer.gg/guides/rare-spawns",
+          "evidence_url": "https://wowseer.gg/guides/rare-spawns",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever rare-spawns guide gives this named Matriarch Bristlefur search waypoint in elwynn; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture."
+        },
+        {
+          "coordinates": [
+            51.8,
+            79.2
+          ],
+          "zone": "elwynn",
+          "uiMapID": 1429,
+          "coordinate_system": "zone_percent_0_100_not_gps",
+          "origin": "forever_community_report",
+          "evidence_level": "documented_forever",
+          "source_url": "https://wowseer.gg/guides/rare-spawns",
+          "evidence_url": "https://wowseer.gg/guides/rare-spawns",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever rare-spawns guide gives this named Matriarch Bristlefur search waypoint in elwynn; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture."
+        }
+      ]
+    },
+    {
+      "id": "forever-mulgore-snarlsnout",
+      "name": {
+        "fr": "Snarlsnout",
+        "en": "Snarlsnout"
+      },
+      "name_fr_status": "unverified_fallback_english",
+      "zone": "mulgore",
+      "level": null,
+      "level_status": "unknown",
+      "level_context": "starter_zone",
+      "level_source_url": null,
+      "classification": "rare",
+      "classification_evidence_url": "https://wowseer.gg/guides/rare-spawns",
+      "tameable": false,
+      "respawn_min_hours": null,
+      "respawn_max_hours": null,
+      "points": [
+        [
+          32.8,
+          65.4
+        ]
+      ],
+      "loot": [],
+      "source": "https://wowseer.gg/guides/rare-spawns",
+      "reference": "new_forever_community_documented_not_gameplay_confirmed",
+      "seen_forever": false,
+      "notes": {
+        "fr": "Nouveau monstre rapporté sur WoW Forever. Positions issues de guides communautaires, apparitions et temps de repop non confirmés en jeu. Le niveau exact est inconnu.",
+        "en": "New encounter reported for WoW Forever. Locations come from community guides; spawns and respawn timers are not verified in-game. Exact level unknown."
+      },
+      "coordinate_status": "documented_forever",
+      "beta_level30_in_scope": false,
+      "beta_scope_evidence": "starter_zone_only_exact_level_unknown",
+      "loot_coverage": "not_documented",
+      "location_review": {
+        "reviewed_at": "2026-10-15",
+        "initially_without_point": false,
+        "scope_reason": "Forever starter-zone rare; exact individual level missing, so excluded from numeric 1–30 count until documented.",
+        "identity_status": "forever_name_zone_documented_numeric_id_unverified",
+        "identity_reference_url": "https://wowseer.gg/guides/rare-spawns",
+        "zone": "mulgore",
+        "uiMapID": 1412,
+        "coordinate_system": "zone_percent_0_100_not_gps",
+        "map_kind": "outdoor",
+        "zone_evidence_level": "documented_forever",
+        "forever_presence": "community_report_not_firsthand_gameplay_confirmed",
+        "location_status": "documented_forever",
+        "evidence_note": "The WoW Forever rare-spawns guide gives this named Snarlsnout search waypoint in mulgore; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture.",
+        "faction_status": "unverified"
+      },
+      "point_evidence": [
+        {
+          "coordinates": [
+            32.8,
+            65.4
+          ],
+          "zone": "mulgore",
+          "uiMapID": 1412,
+          "coordinate_system": "zone_percent_0_100_not_gps",
+          "origin": "forever_community_report",
+          "evidence_level": "documented_forever",
+          "source_url": "https://wowseer.gg/guides/rare-spawns",
+          "evidence_url": "https://wowseer.gg/guides/rare-spawns",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever rare-spawns guide gives this named Snarlsnout search waypoint in mulgore; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture."
+        }
+      ]
+    },
+    {
+      "id": "forever-mulgore-stormherald-ukta",
+      "name": {
+        "fr": "Stormherald Ukta",
+        "en": "Stormherald Ukta"
+      },
+      "name_fr_status": "unverified_fallback_english",
+      "zone": "mulgore",
+      "level": null,
+      "level_status": "unknown",
+      "level_context": "starter_zone",
+      "level_source_url": null,
+      "classification": "rare",
+      "classification_evidence_url": "https://wowseer.gg/guides/rare-spawns",
+      "tameable": false,
+      "respawn_min_hours": null,
+      "respawn_max_hours": null,
+      "points": [
+        [
+          60.2,
+          58.2
+        ]
+      ],
+      "loot": [],
+      "source": "https://wowseer.gg/guides/rare-spawns",
+      "reference": "new_forever_community_documented_not_gameplay_confirmed",
+      "seen_forever": false,
+      "notes": {
+        "fr": "Nouveau monstre rapporté sur WoW Forever. Positions issues de guides communautaires, apparitions et temps de repop non confirmés en jeu. Le niveau exact est inconnu.",
+        "en": "New encounter reported for WoW Forever. Locations come from community guides; spawns and respawn timers are not verified in-game. Exact level unknown."
+      },
+      "coordinate_status": "documented_forever",
+      "beta_level30_in_scope": false,
+      "beta_scope_evidence": "starter_zone_only_exact_level_unknown",
+      "loot_coverage": "not_documented",
+      "location_review": {
+        "reviewed_at": "2026-10-15",
+        "initially_without_point": false,
+        "scope_reason": "Forever starter-zone rare; exact individual level missing, so excluded from numeric 1–30 count until documented.",
+        "identity_status": "forever_name_zone_documented_numeric_id_unverified",
+        "identity_reference_url": "https://wowseer.gg/guides/rare-spawns",
+        "zone": "mulgore",
+        "uiMapID": 1412,
+        "coordinate_system": "zone_percent_0_100_not_gps",
+        "map_kind": "outdoor",
+        "zone_evidence_level": "documented_forever",
+        "forever_presence": "community_report_not_firsthand_gameplay_confirmed",
+        "location_status": "documented_forever",
+        "evidence_note": "The WoW Forever rare-spawns guide gives this named Stormherald Ukta search waypoint in mulgore; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture.",
+        "faction_status": "unverified"
+      },
+      "point_evidence": [
+        {
+          "coordinates": [
+            60.2,
+            58.2
+          ],
+          "zone": "mulgore",
+          "uiMapID": 1412,
+          "coordinate_system": "zone_percent_0_100_not_gps",
+          "origin": "forever_community_report",
+          "evidence_level": "documented_forever",
+          "source_url": "https://wowseer.gg/guides/rare-spawns",
+          "evidence_url": "https://wowseer.gg/guides/rare-spawns",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever rare-spawns guide gives this named Stormherald Ukta search waypoint in mulgore; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture."
+        }
+      ]
+    },
+    {
+      "id": "forever-mulgore-thornstarter-igleg",
+      "name": {
+        "fr": "Thornstarter Igleg",
+        "en": "Thornstarter Igleg"
+      },
+      "name_fr_status": "unverified_fallback_english",
+      "zone": "mulgore",
+      "level": null,
+      "level_status": "unknown",
+      "level_context": "starter_zone",
+      "level_source_url": null,
+      "classification": "rare",
+      "classification_evidence_url": "https://wowseer.gg/guides/rare-spawns",
+      "tameable": false,
+      "respawn_min_hours": null,
+      "respawn_max_hours": null,
+      "points": [
+        [
+          59,
+          31.6
+        ]
+      ],
+      "loot": [],
+      "source": "https://wowseer.gg/guides/rare-spawns",
+      "reference": "new_forever_community_documented_not_gameplay_confirmed",
+      "seen_forever": false,
+      "notes": {
+        "fr": "Nouveau monstre rapporté sur WoW Forever. Positions issues de guides communautaires, apparitions et temps de repop non confirmés en jeu. Le niveau exact est inconnu.",
+        "en": "New encounter reported for WoW Forever. Locations come from community guides; spawns and respawn timers are not verified in-game. Exact level unknown."
+      },
+      "coordinate_status": "documented_forever",
+      "beta_level30_in_scope": false,
+      "beta_scope_evidence": "starter_zone_only_exact_level_unknown",
+      "loot_coverage": "not_documented",
+      "location_review": {
+        "reviewed_at": "2026-10-15",
+        "initially_without_point": false,
+        "scope_reason": "Forever starter-zone rare; exact individual level missing, so excluded from numeric 1–30 count until documented.",
+        "identity_status": "forever_name_zone_documented_numeric_id_unverified",
+        "identity_reference_url": "https://wowseer.gg/guides/rare-spawns",
+        "zone": "mulgore",
+        "uiMapID": 1412,
+        "coordinate_system": "zone_percent_0_100_not_gps",
+        "map_kind": "outdoor",
+        "zone_evidence_level": "documented_forever",
+        "forever_presence": "community_report_not_firsthand_gameplay_confirmed",
+        "location_status": "documented_forever",
+        "evidence_note": "The WoW Forever rare-spawns guide gives this named Thornstarter Igleg search waypoint in mulgore; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture.",
+        "faction_status": "unverified"
+      },
+      "point_evidence": [
+        {
+          "coordinates": [
+            59,
+            31.6
+          ],
+          "zone": "mulgore",
+          "uiMapID": 1412,
+          "coordinate_system": "zone_percent_0_100_not_gps",
+          "origin": "forever_community_report",
+          "evidence_level": "documented_forever",
+          "source_url": "https://wowseer.gg/guides/rare-spawns",
+          "evidence_url": "https://wowseer.gg/guides/rare-spawns",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever rare-spawns guide gives this named Thornstarter Igleg search waypoint in mulgore; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture."
+        }
+      ]
+    },
+    {
+      "id": "forever-teldrassil-nightscreech",
+      "name": {
+        "fr": "Nightscreech",
+        "en": "Nightscreech"
+      },
+      "name_fr_status": "unverified_fallback_english",
+      "zone": "teldrassil",
+      "level": 10,
+      "level_status": "documented_forever",
+      "level_context": null,
+      "level_source_url": "https://www.wowhead.com/forever/npcs/min-level:5/max-level:30",
+      "classification": "rare",
+      "classification_evidence_url": "https://wowseer.gg/guides/rare-spawns",
+      "tameable": true,
+      "respawn_min_hours": null,
+      "respawn_max_hours": null,
+      "points": [
+        [
+          46.4,
+          33.6
+        ],
+        [
+          40,
+          55.6
+        ]
+      ],
+      "loot": [
+        {
+          "name": {
+            "fr": "Wisesight Wand",
+            "en": "Wisesight Wand"
+          },
+          "name_fr_status": "unverified_fallback_english",
+          "item_id": 286750,
+          "item_level": 10,
+          "required_level": 5,
+          "slot": {
+            "fr": "Baguette à distance",
+            "en": "Ranged Wand"
+          },
+          "stats": {
+            "fr": "8–16 dégâts des Arcanes · +1 Intelligence",
+            "en": "8–16 Arcane Damage · +1 Intellect"
+          },
+          "source_version": "forever_beta",
+          "source_url": "https://www.wowhead.com/forever/item=286750/wisesight-wand",
+          "item_source_url": "https://www.wowhead.com/forever/item=286750/wisesight-wand",
+          "evidence_level": "documented_forever",
+          "evidence_url": "https://www.wowhead.com/forever/item=286750/wisesight-wand",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Wowhead Forever item 286750 explicitly lists Nightscreech as a reported drop. Player-reported database association, not a guaranteed live item drop or fixed probability.",
+          "drop_evidence": "forever_beta_item_database_documented_drop",
+          "chance_classic_percent": null,
+          "chance_forever_observed_percent": null
+        }
+      ],
+      "source": "https://wowseer.gg/guides/rare-spawns",
+      "reference": "new_forever_community_documented_not_gameplay_confirmed",
+      "seen_forever": false,
+      "notes": {
+        "fr": "Nouveau monstre rapporté sur WoW Forever. Positions issues de guides communautaires, apparitions et temps de repop non confirmés en jeu. Le niveau exact est documenté.",
+        "en": "New encounter reported for WoW Forever. Locations come from community guides; spawns and respawn timers are not verified in-game. Exact level documented."
+      },
+      "coordinate_status": "documented_forever",
+      "beta_level30_in_scope": true,
+      "beta_scope_evidence": "forever_documented_exact_level",
+      "loot_coverage": "notable_only_not_complete",
+      "location_review": {
+        "reviewed_at": "2026-10-15",
+        "initially_without_point": false,
+        "scope_reason": "Forever rare with exact level 1–30 independently documented in a Forever-specific database; current in-game spawn still not directly verified.",
+        "identity_status": "forever_name_zone_documented_numeric_id_unverified",
+        "identity_reference_url": "https://wowseer.gg/guides/rare-spawns",
+        "zone": "teldrassil",
+        "uiMapID": 1438,
+        "coordinate_system": "zone_percent_0_100_not_gps",
+        "map_kind": "outdoor",
+        "zone_evidence_level": "documented_forever",
+        "forever_presence": "community_report_not_firsthand_gameplay_confirmed",
+        "location_status": "documented_forever",
+        "evidence_note": "The WoW Forever rare-spawns guide gives this named Nightscreech search waypoint in teldrassil; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture.",
+        "faction_status": "unverified"
+      },
+      "point_evidence": [
+        {
+          "coordinates": [
+            46.4,
+            33.6
+          ],
+          "zone": "teldrassil",
+          "uiMapID": 1438,
+          "coordinate_system": "zone_percent_0_100_not_gps",
+          "origin": "forever_community_report",
+          "evidence_level": "documented_forever",
+          "source_url": "https://wowseer.gg/guides/rare-spawns",
+          "evidence_url": "https://wowseer.gg/guides/rare-spawns",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever rare-spawns guide gives this named Nightscreech search waypoint in teldrassil; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture."
+        },
+        {
+          "coordinates": [
+            40,
+            55.6
+          ],
+          "zone": "teldrassil",
+          "uiMapID": 1438,
+          "coordinate_system": "zone_percent_0_100_not_gps",
+          "origin": "forever_community_report",
+          "evidence_level": "documented_forever",
+          "source_url": "https://wowseer.gg/guides/rare-spawns",
+          "evidence_url": "https://wowseer.gg/guides/rare-spawns",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever rare-spawns guide gives this named Nightscreech search waypoint in teldrassil; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture."
+        }
+      ]
+    },
+    {
+      "id": "forever-teldrassil-wrathvine",
+      "name": {
+        "fr": "Wrathvine",
+        "en": "Wrathvine"
+      },
+      "name_fr_status": "unverified_fallback_english",
+      "zone": "teldrassil",
+      "level": 8,
+      "level_status": "documented_forever",
+      "level_context": null,
+      "level_source_url": "https://www.wowhead.com/forever/item=286749/wrathroot",
+      "classification": "rare",
+      "classification_evidence_url": "https://wowseer.gg/guides/rare-spawns",
+      "tameable": false,
+      "respawn_min_hours": null,
+      "respawn_max_hours": null,
+      "points": [
+        [
+          53.4,
+          70.4
+        ],
+        [
+          56.4,
+          67.6
+        ]
+      ],
+      "loot": [
+        {
+          "name": {
+            "fr": "Wrathroot",
+            "en": "Wrathroot"
+          },
+          "name_fr_status": "unverified_fallback_english",
+          "item_id": 286749,
+          "item_level": 8,
+          "required_level": 3,
+          "slot": {
+            "fr": "Bâton",
+            "en": "Staff"
+          },
+          "stats": {
+            "fr": "Bâton à deux mains · 10–19 dégâts",
+            "en": "Two-Hand Staff · 10–19 Damage"
+          },
+          "source_version": "forever_beta",
+          "source_url": "https://www.wowhead.com/forever/item=286749/wrathroot",
+          "item_source_url": "https://www.wowhead.com/forever/item=286749/wrathroot",
+          "evidence_level": "documented_forever",
+          "evidence_url": "https://www.wowhead.com/forever/item=286749/wrathroot",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Wowhead Forever item 286749 explicitly lists Wrathvine as a reported drop. Player-reported database association, not a guaranteed live item drop or fixed probability.",
+          "drop_evidence": "forever_beta_item_database_documented_drop",
+          "chance_classic_percent": null,
+          "chance_forever_observed_percent": null
+        }
+      ],
+      "source": "https://wowseer.gg/guides/rare-spawns",
+      "reference": "new_forever_community_documented_not_gameplay_confirmed",
+      "seen_forever": false,
+      "notes": {
+        "fr": "Nouveau monstre rapporté sur WoW Forever. Positions issues de guides communautaires, apparitions et temps de repop non confirmés en jeu. Le niveau exact est documenté.",
+        "en": "New encounter reported for WoW Forever. Locations come from community guides; spawns and respawn timers are not verified in-game. Exact level documented."
+      },
+      "coordinate_status": "documented_forever",
+      "beta_level30_in_scope": true,
+      "beta_scope_evidence": "forever_documented_exact_level",
+      "loot_coverage": "notable_only_not_complete",
+      "location_review": {
+        "reviewed_at": "2026-10-15",
+        "initially_without_point": false,
+        "scope_reason": "Forever rare with exact level 1–30 independently documented in a Forever-specific database; current in-game spawn still not directly verified.",
+        "identity_status": "forever_name_zone_documented_numeric_id_unverified",
+        "identity_reference_url": "https://wowseer.gg/guides/rare-spawns",
+        "zone": "teldrassil",
+        "uiMapID": 1438,
+        "coordinate_system": "zone_percent_0_100_not_gps",
+        "map_kind": "outdoor",
+        "zone_evidence_level": "documented_forever",
+        "forever_presence": "community_report_not_firsthand_gameplay_confirmed",
+        "location_status": "documented_forever",
+        "evidence_note": "The WoW Forever rare-spawns guide gives this named Wrathvine search waypoint in teldrassil; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture.",
+        "faction_status": "unverified"
+      },
+      "point_evidence": [
+        {
+          "coordinates": [
+            53.4,
+            70.4
+          ],
+          "zone": "teldrassil",
+          "uiMapID": 1438,
+          "coordinate_system": "zone_percent_0_100_not_gps",
+          "origin": "forever_community_report",
+          "evidence_level": "documented_forever",
+          "source_url": "https://wowseer.gg/guides/rare-spawns",
+          "evidence_url": "https://wowseer.gg/guides/rare-spawns",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever rare-spawns guide gives this named Wrathvine search waypoint in teldrassil; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture."
+        },
+        {
+          "coordinates": [
+            56.4,
+            67.6
+          ],
+          "zone": "teldrassil",
+          "uiMapID": 1438,
+          "coordinate_system": "zone_percent_0_100_not_gps",
+          "origin": "forever_community_report",
+          "evidence_level": "documented_forever",
+          "source_url": "https://wowseer.gg/guides/rare-spawns",
+          "evidence_url": "https://wowseer.gg/guides/rare-spawns",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever rare-spawns guide gives this named Wrathvine search waypoint in teldrassil; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture."
+        }
+      ]
+    },
+    {
+      "id": "forever-tirisfal-blightsculler",
+      "name": {
+        "fr": "Blightsculler",
+        "en": "Blightsculler"
+      },
+      "name_fr_status": "unverified_fallback_english",
+      "zone": "tirisfal",
+      "level": 10,
+      "level_status": "documented_forever",
+      "level_context": null,
+      "level_source_url": "https://www.wowhead.com/forever/npcs/beasts/dragonhawk",
+      "classification": "rare",
+      "classification_evidence_url": "https://wowseer.gg/guides/rare-spawns",
+      "tameable": false,
+      "respawn_min_hours": null,
+      "respawn_max_hours": null,
+      "points": [
+        [
+          17.2,
+          53.8
+        ],
+        [
+          16.8,
+          57.8
+        ]
+      ],
+      "loot": [],
+      "source": "https://wowseer.gg/guides/rare-spawns",
+      "reference": "new_forever_community_documented_not_gameplay_confirmed",
+      "seen_forever": false,
+      "notes": {
+        "fr": "Nouveau monstre rapporté sur WoW Forever. Positions issues de guides communautaires, apparitions et temps de repop non confirmés en jeu. Le niveau exact est documenté.",
+        "en": "New encounter reported for WoW Forever. Locations come from community guides; spawns and respawn timers are not verified in-game. Exact level documented."
+      },
+      "coordinate_status": "documented_forever",
+      "beta_level30_in_scope": true,
+      "beta_scope_evidence": "forever_documented_exact_level",
+      "loot_coverage": "not_documented",
+      "location_review": {
+        "reviewed_at": "2026-10-15",
+        "initially_without_point": false,
+        "scope_reason": "Forever rare named with exact 1–30 level from an identified Forever source; game availability is still unverified.",
+        "identity_status": "forever_name_zone_documented_numeric_id_unverified",
+        "identity_reference_url": "https://wowseer.gg/guides/rare-spawns",
+        "zone": "tirisfal",
+        "uiMapID": 1420,
+        "coordinate_system": "zone_percent_0_100_not_gps",
+        "map_kind": "outdoor",
+        "zone_evidence_level": "documented_forever",
+        "forever_presence": "community_report_not_firsthand_gameplay_confirmed",
+        "location_status": "documented_forever",
+        "evidence_note": "The WoW Forever rare-spawns guide gives this named Blightsculler search waypoint in tirisfal; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture.",
+        "faction_status": "unverified"
+      },
+      "point_evidence": [
+        {
+          "coordinates": [
+            17.2,
+            53.8
+          ],
+          "zone": "tirisfal",
+          "uiMapID": 1420,
+          "coordinate_system": "zone_percent_0_100_not_gps",
+          "origin": "forever_community_report",
+          "evidence_level": "documented_forever",
+          "source_url": "https://wowseer.gg/guides/rare-spawns",
+          "evidence_url": "https://wowseer.gg/guides/rare-spawns",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever rare-spawns guide gives this named Blightsculler search waypoint in tirisfal; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture."
+        },
+        {
+          "coordinates": [
+            16.8,
+            57.8
+          ],
+          "zone": "tirisfal",
+          "uiMapID": 1420,
+          "coordinate_system": "zone_percent_0_100_not_gps",
+          "origin": "forever_community_report",
+          "evidence_level": "documented_forever",
+          "source_url": "https://wowseer.gg/guides/rare-spawns",
+          "evidence_url": "https://wowseer.gg/guides/rare-spawns",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever rare-spawns guide gives this named Blightsculler search waypoint in tirisfal; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture."
+        }
+      ]
+    },
+    {
+      "id": "forever-tirisfal-coldrasp",
+      "name": {
+        "fr": "Coldrasp",
+        "en": "Coldrasp"
+      },
+      "name_fr_status": "unverified_fallback_english",
+      "zone": "tirisfal",
+      "level": null,
+      "level_status": "unknown",
+      "level_context": "starter_zone",
+      "level_source_url": null,
+      "classification": "rare",
+      "classification_evidence_url": "https://wowseer.gg/guides/rare-spawns",
+      "tameable": true,
+      "respawn_min_hours": null,
+      "respawn_max_hours": null,
+      "points": [
+        [
+          19.7,
+          65.6
+        ]
+      ],
+      "loot": [],
+      "source": "https://wowseer.gg/guides/rare-spawns",
+      "reference": "new_forever_community_documented_not_gameplay_confirmed",
+      "seen_forever": false,
+      "notes": {
+        "fr": "Nouveau monstre rapporté sur WoW Forever. Positions issues de guides communautaires, apparitions et temps de repop non confirmés en jeu. Le niveau exact est inconnu.",
+        "en": "New encounter reported for WoW Forever. Locations come from community guides; spawns and respawn timers are not verified in-game. Exact level unknown."
+      },
+      "coordinate_status": "documented_forever",
+      "beta_level30_in_scope": false,
+      "beta_scope_evidence": "starter_zone_only_exact_level_unknown",
+      "loot_coverage": "not_documented",
+      "location_review": {
+        "reviewed_at": "2026-10-15",
+        "initially_without_point": false,
+        "scope_reason": "Forever starter-zone rare; exact individual level missing, so excluded from numeric 1–30 count until documented.",
+        "identity_status": "forever_name_zone_documented_numeric_id_unverified",
+        "identity_reference_url": "https://wowseer.gg/guides/rare-spawns",
+        "zone": "tirisfal",
+        "uiMapID": 1420,
+        "coordinate_system": "zone_percent_0_100_not_gps",
+        "map_kind": "outdoor",
+        "zone_evidence_level": "documented_forever",
+        "forever_presence": "community_report_not_firsthand_gameplay_confirmed",
+        "location_status": "documented_forever",
+        "evidence_note": "The WoW Forever rare-spawns guide gives this named Coldrasp search waypoint in tirisfal; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture.",
+        "faction_status": "unverified"
+      },
+      "point_evidence": [
+        {
+          "coordinates": [
+            19.7,
+            65.6
+          ],
+          "zone": "tirisfal",
+          "uiMapID": 1420,
+          "coordinate_system": "zone_percent_0_100_not_gps",
+          "origin": "forever_community_report",
+          "evidence_level": "documented_forever",
+          "source_url": "https://wowseer.gg/guides/rare-spawns",
+          "evidence_url": "https://wowseer.gg/guides/rare-spawns",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever rare-spawns guide gives this named Coldrasp search waypoint in tirisfal; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture."
+        }
+      ]
+    },
+    {
+      "id": "forever-tirisfal-decrepit-harvester",
+      "name": {
+        "fr": "Decrepit Harvester",
+        "en": "Decrepit Harvester"
+      },
+      "name_fr_status": "unverified_fallback_english",
+      "zone": "tirisfal",
+      "level": null,
+      "level_status": "unknown",
+      "level_context": "starter_zone",
+      "level_source_url": null,
+      "classification": "rare",
+      "classification_evidence_url": "https://wowseer.gg/guides/rare-spawns",
+      "tameable": false,
+      "respawn_min_hours": null,
+      "respawn_max_hours": null,
+      "points": [
+        [
+          52.2,
+          55.6
+        ]
+      ],
+      "loot": [
+        {
+          "name": {
+            "fr": "Golem Isospring",
+            "en": "Golem Isospring"
+          },
+          "name_fr_status": "unverified_fallback_english",
+          "item_id": 255007,
+          "item_level": 1,
+          "required_level": null,
+          "slot": {
+            "fr": "Composant",
+            "en": "Reagent"
+          },
+          "stats": {
+            "fr": "Composant d'artisanat",
+            "en": "Crafting reagent"
+          },
+          "source_version": "forever_beta",
+          "source_url": "https://wowseer.gg/guides/rare-spawns",
+          "item_source_url": "https://www.wowhead.com/forever/item=255007/golem-isospring",
+          "evidence_level": "documented_forever",
+          "evidence_url": "https://wowseer.gg/guides/rare-spawns",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Forever rare guide reports that Decrepit Harvester can drop the Golem Isospring reagent; individual item source establishes the item ID, not a guaranteed drop.",
+          "drop_evidence": "forever_community_possible_drop",
+          "chance_classic_percent": null,
+          "chance_forever_observed_percent": null
+        }
+      ],
+      "source": "https://wowseer.gg/guides/rare-spawns",
+      "reference": "new_forever_community_documented_not_gameplay_confirmed",
+      "seen_forever": false,
+      "notes": {
+        "fr": "Nouveau monstre rapporté sur WoW Forever. Positions issues de guides communautaires, apparitions et temps de repop non confirmés en jeu. Le niveau exact est inconnu.",
+        "en": "New encounter reported for WoW Forever. Locations come from community guides; spawns and respawn timers are not verified in-game. Exact level unknown."
+      },
+      "coordinate_status": "documented_forever",
+      "beta_level30_in_scope": false,
+      "beta_scope_evidence": "starter_zone_only_exact_level_unknown",
+      "loot_coverage": "notable_only_not_complete",
+      "location_review": {
+        "reviewed_at": "2026-10-15",
+        "initially_without_point": false,
+        "scope_reason": "Forever starter-zone rare; exact individual level missing, so excluded from numeric 1–30 count until documented.",
+        "identity_status": "forever_name_zone_documented_numeric_id_unverified",
+        "identity_reference_url": "https://wowseer.gg/guides/rare-spawns",
+        "zone": "tirisfal",
+        "uiMapID": 1420,
+        "coordinate_system": "zone_percent_0_100_not_gps",
+        "map_kind": "outdoor",
+        "zone_evidence_level": "documented_forever",
+        "forever_presence": "community_report_not_firsthand_gameplay_confirmed",
+        "location_status": "documented_forever",
+        "evidence_note": "The WoW Forever rare-spawns guide gives this named Decrepit Harvester search waypoint in tirisfal; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture.",
+        "faction_status": "unverified"
+      },
+      "point_evidence": [
+        {
+          "coordinates": [
+            52.2,
+            55.6
+          ],
+          "zone": "tirisfal",
+          "uiMapID": 1420,
+          "coordinate_system": "zone_percent_0_100_not_gps",
+          "origin": "forever_community_report",
+          "evidence_level": "documented_forever",
+          "source_url": "https://wowseer.gg/guides/rare-spawns",
+          "evidence_url": "https://wowseer.gg/guides/rare-spawns",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever rare-spawns guide gives this named Decrepit Harvester search waypoint in tirisfal; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture."
+        }
+      ]
+    },
+    {
+      "id": "forever-tirisfal-the-condemned-one",
+      "name": {
+        "fr": "The Condemned One",
+        "en": "The Condemned One"
+      },
+      "name_fr_status": "unverified_fallback_english",
+      "zone": "tirisfal",
+      "level": 11,
+      "level_status": "documented_forever",
+      "level_context": null,
+      "level_source_url": "https://www.wowhead.com/forever/npcs/undead/min-level:9/max-level:51",
+      "classification": "rare",
+      "classification_evidence_url": "https://wowseer.gg/guides/rare-spawns",
+      "tameable": false,
+      "respawn_min_hours": null,
+      "respawn_max_hours": null,
+      "points": [
+        [
+          67,
+          43
+        ],
+        [
+          66,
+          46.8
+        ],
+        [
+          71,
+          39.4
+        ],
+        [
+          70.2,
+          44.2
+        ]
+      ],
+      "loot": [],
+      "source": "https://wowseer.gg/guides/rare-spawns",
+      "reference": "new_forever_community_documented_not_gameplay_confirmed",
+      "seen_forever": false,
+      "notes": {
+        "fr": "Nouveau monstre rapporté sur WoW Forever. Positions issues de guides communautaires, apparitions et temps de repop non confirmés en jeu. Le niveau exact est documenté.",
+        "en": "New encounter reported for WoW Forever. Locations come from community guides; spawns and respawn timers are not verified in-game. Exact level documented."
+      },
+      "coordinate_status": "documented_forever",
+      "beta_level30_in_scope": true,
+      "beta_scope_evidence": "forever_documented_exact_level",
+      "loot_coverage": "not_documented",
+      "location_review": {
+        "reviewed_at": "2026-10-15",
+        "initially_without_point": false,
+        "scope_reason": "Forever rare with exact level 1–30 independently documented in a Forever-specific database; current in-game spawn still not directly verified.",
+        "identity_status": "forever_name_zone_documented_numeric_id_unverified",
+        "identity_reference_url": "https://wowseer.gg/guides/rare-spawns",
+        "zone": "tirisfal",
+        "uiMapID": 1420,
+        "coordinate_system": "zone_percent_0_100_not_gps",
+        "map_kind": "outdoor",
+        "zone_evidence_level": "documented_forever",
+        "forever_presence": "community_report_not_firsthand_gameplay_confirmed",
+        "location_status": "documented_forever",
+        "evidence_note": "The WoW Forever rare-spawns guide gives this named The Condemned One search waypoint in tirisfal; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture.",
+        "faction_status": "unverified"
+      },
+      "point_evidence": [
+        {
+          "coordinates": [
+            67,
+            43
+          ],
+          "zone": "tirisfal",
+          "uiMapID": 1420,
+          "coordinate_system": "zone_percent_0_100_not_gps",
+          "origin": "forever_community_report",
+          "evidence_level": "documented_forever",
+          "source_url": "https://wowseer.gg/guides/rare-spawns",
+          "evidence_url": "https://wowseer.gg/guides/rare-spawns",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever rare-spawns guide gives this named The Condemned One search waypoint in tirisfal; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture."
+        },
+        {
+          "coordinates": [
+            66,
+            46.8
+          ],
+          "zone": "tirisfal",
+          "uiMapID": 1420,
+          "coordinate_system": "zone_percent_0_100_not_gps",
+          "origin": "forever_community_report",
+          "evidence_level": "documented_forever",
+          "source_url": "https://wowseer.gg/guides/rare-spawns",
+          "evidence_url": "https://wowseer.gg/guides/rare-spawns",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever rare-spawns guide gives this named The Condemned One search waypoint in tirisfal; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture."
+        },
+        {
+          "coordinates": [
+            71,
+            39.4
+          ],
+          "zone": "tirisfal",
+          "uiMapID": 1420,
+          "coordinate_system": "zone_percent_0_100_not_gps",
+          "origin": "forever_community_report",
+          "evidence_level": "documented_forever",
+          "source_url": "https://wowseer.gg/guides/rare-spawns",
+          "evidence_url": "https://wowseer.gg/guides/rare-spawns",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever rare-spawns guide gives this named The Condemned One search waypoint in tirisfal; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture."
+        },
+        {
+          "coordinates": [
+            70.2,
+            44.2
+          ],
+          "zone": "tirisfal",
+          "uiMapID": 1420,
+          "coordinate_system": "zone_percent_0_100_not_gps",
+          "origin": "forever_community_report",
+          "evidence_level": "documented_forever",
+          "source_url": "https://wowseer.gg/guides/rare-spawns",
+          "evidence_url": "https://wowseer.gg/guides/rare-spawns",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The WoW Forever rare-spawns guide gives this named The Condemned One search waypoint in tirisfal; these are community-reported zone percentages, not a guaranteed live spawn or gameplay capture."
+        }
+      ]
     }
   ],
   "sources": {
@@ -19040,5 +21420,17 @@
       },
       "reviewed_at": "2026-10-11"
     }
+  },
+  "discovery_wave": {
+    "date": "2026-10-15",
+    "scope": "new Forever-specific rares documented by WowSeer / stillsixty and Wowhead Forever",
+    "new_rares": 24,
+    "waypoints": 44,
+    "level_exact_documented": 11,
+    "level_unknown": 13,
+    "with_forever_loot": 8,
+    "source_url": "https://wowseer.gg/guides/rare-spawns",
+    "level_policy": "Unknown individual level stays null; starter-zone rare candidates do not count as confirmed numeric level 1–30.",
+    "new_loot_links": 8
   }
 }

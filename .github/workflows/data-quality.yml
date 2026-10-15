@@ -12,6 +12,8 @@ on:
       - 'scripts/validate-rare-locations.mjs'
       - 'tests/rare-locations.test.mjs'
       - 'tests/rare-forever-loot-wave1.test.mjs'
+      - 'tests/rare-forever-new-wave2.test.mjs'
+      - 'scripts/check-forever-evidence.mjs'
   workflow_dispatch:
 permissions:
   contents: read
@@ -32,5 +34,11 @@ jobs:
         run: node --test tests/rare-locations.test.mjs
       - name: Forever 1-30 notable rare loot regression
         run: node --test tests/rare-forever-loot-wave1.test.mjs
+      - name: Rare module JavaScript syntax
+        run: node --check assets/rares.js
+      - name: Forever new starter-zone rare discovery regression
+        run: node --test tests/rare-forever-new-wave2.test.mjs
+      - name: Cross-catalogue Forever source audit
+        run: node scripts/check-forever-evidence.mjs
       - name: Rare location provenance gate
         run: node scripts/validate-rare-locations.mjs

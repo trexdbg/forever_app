@@ -20,8 +20,23 @@ for (const rare of rares.rares) {
   assert.ok(rare.id && !rareIds.has(rare.id), "Missing/duplicate rare ID " + rare.id);
   rareIds.add(rare.id);
   assert.ok(rares.zones[rare.zone], "Unknown rare zone: " + rare.zone);
-  assert.equal(rare.reference, "classic_cmangos_not_forever_verified",
-    "Classic-origin rare must not be called Forever-verified: " + rare.id);
+  if (rare.reference === "new_forever_community_documented_not_gameplay_confirmed") {
+    assert.equal(rare.seen_forever, false,
+      "Forever documentation is not direct game observation: " + rare.id);
+    assert.ok(validUrl(rare.source) && rare.coordinate_status === "documented_forever",
+      "New Forever rare must have a named documentary source: " + rare.id);
+    assert.ok(rare.point_evidence?.length === rare.points.length,
+      "Every new Forever point requires an individually attributed source: " + rare.id);
+    for (const point of rare.point_evidence) {
+      assert.equal(point.evidence_level, "documented_forever");
+      assert.equal(point.evidence_kind, "forever_community_page");
+      assert.ok(validUrl(point.evidence_url) && validUrl(point.source_url),
+        "Documentary rare point needs a concrete evidence link: " + rare.id);
+    }
+  } else {
+    assert.equal(rare.reference, "classic_cmangos_not_forever_verified",
+      "Classic-origin rare must not be called Forever-verified: " + rare.id);
+  }
   assert.ok(Array.isArray(rare.points) && Array.isArray(rare.loot));
   for (const p of rare.points) {
     assert.ok(Array.isArray(p) && p.length === 2 && p.every(n => Number.isFinite(n) && n >= 0 && n <= 100),
