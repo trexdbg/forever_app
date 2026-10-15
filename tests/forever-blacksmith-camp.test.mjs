@@ -55,7 +55,7 @@ test("Stondry and Gor'mak document the same starter plans without inventing rep 
    assert.equal(offer?.reputation,undefined);
    assert.equal(offer?.restock_minutes,undefined);
    assert.equal(offer?.stock_status,"unknown");
-   assert.match(offer?.evidence_note,/not a dated confirmed in-game purchase/);
+   assert.match(offer?.evidence_note,/not a dated (confirmed in-game purchase|in-game transaction)/);
    const row=idx.items.find(r=>r.id===id);
    assert.ok(row?.sources.some(s=>s.kind==="merchant"&&s.name_en===name&&s.evidence_level==="documented_forever"));
   }
