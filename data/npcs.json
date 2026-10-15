@@ -15746,7 +15746,7 @@
           "evidence_kind": "forever_community_page",
           "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Fritz Fizzle selling Schematic: EZ-Thro Wrap (item #264204) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
           "item_source_url": "https://www.wowhead.com/forever/item=264204",
-          "bind": "pickup"
+          "bind_status": "not_proven_for_this_specific_schematic"
         },
         "264205": {
           "source": "https://www.wow-professions.com/forever/npc/fritz-fizzle",
@@ -15765,7 +15765,7 @@
           "evidence_kind": "forever_community_page",
           "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Fritz Fizzle selling Schematic: EZ-Thro Copper Bomb XL (item #264205) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
           "item_source_url": "https://www.wowhead.com/forever/item=264205",
-          "bind": "pickup"
+          "bind_status": "not_proven_for_this_specific_schematic"
         },
         "264206": {
           "source": "https://www.wow-professions.com/forever/npc/fritz-fizzle",
@@ -15784,7 +15784,7 @@
           "evidence_kind": "forever_community_page",
           "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Fritz Fizzle selling Schematic: No Slip SAF-T Padding (item #264206) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
           "item_source_url": "https://www.wowhead.com/forever/item=264206",
-          "bind": "pickup"
+          "bind_status": "not_proven_for_this_specific_schematic"
         },
         "271625": {
           "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
@@ -15877,7 +15877,7 @@
           "evidence_kind": "forever_community_page",
           "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Fizzlefuse selling Schematic: SAF-T Tabs (item #264201) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
           "item_source_url": "https://www.wowhead.com/forever/item=264201",
-          "bind": "pickup"
+          "bind_status": "not_proven_for_this_specific_schematic"
         },
         "264202": {
           "source": "https://www.wow-professions.com/forever/npc/fizzlefuse",
@@ -15896,7 +15896,7 @@
           "evidence_kind": "forever_community_page",
           "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Fizzlefuse selling Schematic: SAF-T Dynamite (item #264202) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
           "item_source_url": "https://www.wowhead.com/forever/item=264202",
-          "bind": "pickup"
+          "bind_status": "not_proven_for_this_specific_schematic"
         },
         "264203": {
           "source": "https://www.wow-professions.com/forever/npc/fizzlefuse",
@@ -15915,7 +15915,7 @@
           "evidence_kind": "forever_community_page",
           "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Fizzlefuse selling Schematic: SAF-T Copper Bomb (item #264203) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
           "item_source_url": "https://www.wowhead.com/forever/item=264203",
-          "bind": "pickup"
+          "bind_status": "not_proven_for_this_specific_schematic"
         },
         "264204": {
           "source": "https://www.wow-professions.com/forever/npc/fizzlefuse",
@@ -15934,7 +15934,7 @@
           "evidence_kind": "forever_community_page",
           "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Fizzlefuse selling Schematic: EZ-Thro Wrap (item #264204) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
           "item_source_url": "https://www.wowhead.com/forever/item=264204",
-          "bind": "pickup"
+          "bind_status": "not_proven_for_this_specific_schematic"
         },
         "264205": {
           "source": "https://www.wow-professions.com/forever/npc/fizzlefuse",
@@ -15953,7 +15953,7 @@
           "evidence_kind": "forever_community_page",
           "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Fizzlefuse selling Schematic: EZ-Thro Copper Bomb XL (item #264205) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
           "item_source_url": "https://www.wowhead.com/forever/item=264205",
-          "bind": "pickup"
+          "bind_status": "not_proven_for_this_specific_schematic"
         },
         "264206": {
           "source": "https://www.wow-professions.com/forever/npc/fizzlefuse",
@@ -15972,7 +15972,7 @@
           "evidence_kind": "forever_community_page",
           "evidence_note": "The WoW Forever specific merchant catalogue explicitly lists Fizzlefuse selling Schematic: No Slip SAF-T Padding (item #264206) for 45 Merchant's Favor. The recipe item ID is separately identified on Wowhead Forever. This is community beta documentation, not a dated in-game purchase or proof of current stock or restock.",
           "item_source_url": "https://www.wowhead.com/forever/item=264206",
-          "bind": "pickup"
+          "bind_status": "not_proven_for_this_specific_schematic"
         },
         "280323": {
           "source": "https://www.wowhead.com/forever/item=280323",
