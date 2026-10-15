@@ -11,7 +11,10 @@ const expectedLoot=new Map([
  ["forever-zephras-teldaeor",263015],
  ["forever-elwynn-elmpaw",247862],
  ["forever-redridge-drozem",277213],
- ["forever-tirisfal-decrepit-harvester",255007]
+ ["forever-tirisfal-decrepit-harvester",255007],
+ ["forever-durotar-shalma",286746],
+ ["forever-teldrassil-wrathvine",286749],
+ ["forever-teldrassil-nightscreech",286750]
 ]);
 const verifiedSource=value=>typeof value==="string"&&/^https:\/\/[^\s/]+\//.test(value);
 test("new Forever rare discoveries are additive, deduplicated and do not rewrite the legacy 150",()=>{
@@ -22,11 +25,11 @@ test("new Forever rare discoveries are additive, deduplicated and do not rewrite
  assert.equal(db.zones["zephras-isle"].uiMapID,2521);
  assert.ok(verifiedSource(db.zones["zephras-isle"].map_source_url));
  const scope=db.rares.filter(r=>r.beta_level30_in_scope);
- assert.equal(scope.length,158);
- assert.equal(changed.filter(r=>r.beta_level30_in_scope).length,8);
- assert.equal(changed.filter(r=>r.level===null).length,16);
+ assert.equal(scope.length,161);
+ assert.equal(changed.filter(r=>r.beta_level30_in_scope).length,11);
+ assert.equal(changed.filter(r=>r.level===null).length,13);
  assert.equal(changed.reduce((n,r)=>n+r.points.length,0),44);
- assert.equal(changed.reduce((n,r)=>n+r.loot.length,0),5);
+ assert.equal(changed.reduce((n,r)=>n+r.loot.length,0),8);
 });
 test("all new waypoints have their own community Forever evidence without invented gameplay proof",()=>{
  for(const r of changed){
@@ -66,7 +69,7 @@ test("all new waypoints have their own community Forever evidence without invent
   }
  }
 });
-test("five new distinct Forever item rewards have exact IDs and no invented drop rates",()=>{
+test("eight new distinct Forever item rewards have exact IDs and no invented drop rates",()=>{
  for(const [id,itemID] of expectedLoot){
   const r=changed.find(x=>x.id===id);
   assert.ok(r);
@@ -96,8 +99,8 @@ test("all scoped points pass the original strict map validator",()=>{
  const report=auditRareLocations(db);
  assert.deepEqual(report.issues,[]);
  assert.equal(report.counts.forever_confirmed,0);
- assert.equal(report.counts.scoped,158);
- assert.equal(report.counts.forever_documented,28);
+ assert.equal(report.counts.scoped,161);
+ assert.equal(report.counts.forever_documented,36);
  assert.equal(report.counts.classic_indicative,309);
 });
 test("FR/EN browser code does not present unknown levels as zero and loads the Zephras map",()=>{
