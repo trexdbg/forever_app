@@ -91,3 +91,27 @@ test("the equipment catalogue exposes expandable source panels in French and Eng
  }
  assert.ok(material().length>10000);
 });
+
+test("Forever rare acquisition status requires proof of the exact claim, not just source_version",()=>{
+ const mk=(item_id,fields)=>({
+   id:"sample-rare",name:{fr:"Rare test",en:"Test rare"},zone:"elwynn",
+   loot:[{item_id,source_version:"forever_beta",source_url:"https://www.wowhead.com/forever/item="+item_id,...fields}]
+ });
+ const run=rare=>buildAcquisitionIndex({npcs:{npcs:[]},rares:{rares:[rare]},
+   dungeons:{dungeons:[]},crafting:{recipes:[]},alchemy:{recipes:[]}}).items[0].sources[0];
+ const loose=run(mk(999001,{}));
+ assert.equal(loose.evidence_level,"unverified");
+ assert.equal(loose.source_status,"rare_loot_without_individual_forever_proof");
+ const unsupported=run(mk(999002,{
+   evidence_level:"documented_forever",evidence_url:"https://example.org/claims",
+   observed_at:"2026-10-15",observed_build:"unknown",evidence_kind:"classic_database",
+   evidence_note:"Item exists, but the claim does not have Forever evidence"
+ }));
+ assert.equal(unsupported.evidence_level,"unverified");
+ const documented=run(mk(999003,{
+   evidence_level:"documented_forever",evidence_url:"https://www.wowhead.com/forever/item=999003",
+   observed_at:"2026-10-15",observed_build:"unknown",evidence_kind:"forever_community_page",
+   evidence_note:"Item-to-creature association directly listed on a Forever item page"
+ }));
+ assert.equal(documented.evidence_level,"documented_forever");
+});
