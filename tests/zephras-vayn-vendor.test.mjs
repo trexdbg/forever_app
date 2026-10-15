@@ -14,7 +14,7 @@ const recipes={
  "Travail du cuir":{
  50:[276961,276959,276965,276967,276937,276935,276941,276943],
  55:[276963,276960,276969,276966,276939,276936,276945,276942],
- 60:[276958,276962,276968,276934,276938,276940,276944]
+ 60:[276958,276962,276964,276968,276934,276938,276940,276944]
  },
  "Couture":{
  50:[276973,276971,276949,276947],
@@ -44,11 +44,11 @@ test("one new exact Forever NPC on Zephras Isle, with documented but not confirm
  assert.equal(db.npcs.filter(n=>n.role==="trainer").length,153);
  assert.equal(db.npcs.length,358);
 });
-test("47 named, exact-item-ID and profession-skill-verified Vayn recipe sales",()=>{
- assert.equal(all.length,47);
- assert.equal(new Set(all.map(x=>x.id)).size,47);
- assert.equal(v.offers.length,47);
- assert.equal(new Set(v.offers).size,47);
+test("48 named, exact-item-ID and profession-skill-verified Vayn recipe sales",()=>{
+ assert.equal(all.length,48);
+ assert.equal(new Set(all.map(x=>x.id)).size,48);
+ assert.equal(v.offers.length,48);
+ assert.equal(new Set(v.offers).size,48);
  for(const {id,profession,skill} of all){
   assert.ok(v.offers.includes(String(id)),"Missing Vayn item "+id);
   const item=db.items[String(id)],sale=v.offer_details[String(id)];
@@ -57,11 +57,14 @@ test("47 named, exact-item-ID and profession-skill-verified Vayn recipe sales",(
   assert.equal(item?.skill,skill);
   assert.equal(item?.skill_semantics,"source_profession_requirement_not_live_learning_threshold");
   assert.ok(/^(Plans|Pattern): /.test(item?.name.en));
-  assert.equal(item?.name.fr,item?.name.en);
-  assert.equal(item?.name_fr_status,"unverified_fallback_english");
+  if(id===276964){
+   assert.equal(item?.name.fr,"Patron : pourpoint mêle-vent azur");
+   assert.equal(item?.name_fr_status,"forever_wowhead_localized");
+  }else assert.equal(item?.name.fr,item?.name.en);
+  if(id!==276964)assert.equal(item?.name_fr_status,"unverified_fallback_english");
   assert.equal(item?.kind,"recipe");
   assert.equal(item?.supply,"unknown_in_forever");
-  assert.equal(item?.source,"https://www.wowhead.com/forever/item="+id);
+  assert.ok(item?.source.startsWith("https://www.wowhead.com/forever/item="+id));
   assert.equal(sale.source,url);
   assert.equal(sale.source_url,url);
   assert.equal(sale.evidence_url,url);
@@ -76,7 +79,7 @@ test("47 named, exact-item-ID and profession-skill-verified Vayn recipe sales",(
   assert.equal(sale.price_status,"coin_price_conflict_or_not_comparable_between_guides");
   assert.equal(sale.restock_minutes,undefined);
   assert.equal(sale.stock_status,"unknown");
-  assert.equal(sale.bind,undefined);
+  assert.equal(sale.bind,id===276964?"pickup":undefined);
   assert.ok(sale.evidence_note.includes(item.name.en));
   assert.ok(sale.evidence_note.includes("item "+id));
   const linked=index.items.find(row=>row.id===id);
@@ -84,20 +87,21 @@ test("47 named, exact-item-ID and profession-skill-verified Vayn recipe sales",(
   assert.ok(linked.sources.some(s=>s.kind==="merchant"&&s.name_en===v.name&&s.evidence_level==="documented_forever"&&s.reference_url===url));
  }
 });
-test("one unverified item is not assigned a fabricated ID; totals and classic fallback are preserved",()=>{
- assert.ok(!v.offers.some(id=>db.items[id].name.en==="Pattern: Azure Windraveled Jerkin"));
- assert.equal(db.verification_audit.vayn_zephras_wave.unresolved_item,"Pattern: Azure Windraveled Jerkin");
+test("resolved pattern #276964 is linked, original Vayn wave history and Classic fallback are preserved",()=>{
+ assert.ok(v.offers.includes("276964"));
+ assert.equal(db.verification_audit.vayn_zephras_wave.unresolved_item,null);
+ assert.equal(db.verification_audit.vayn_zephras_wave.resolved_followup.item_id,276964);
  assert.equal(db.verification_audit.vayn_zephras_wave.new_links,47);
- assert.equal(db.audit.total_vendor_offers,776);
- assert.equal(db.audit.forever_documented_offers,199);
+ assert.equal(db.audit.total_vendor_offers,779);
+ assert.equal(db.audit.forever_documented_offers,202);
  assert.equal(db.audit.classic_unverified_offers,577);
- assert.equal(db.audit.forever_documented_items,126);
- assert.equal(Object.keys(db.items).length,335);
+ assert.equal(db.audit.forever_documented_items,128);
+ assert.equal(Object.keys(db.items).length,337);
  assert.deepEqual(index,buildFromFiles(),"Object-to-vendor lookup must remain reproducible");
- assert.equal(index.totals.unique_items,647);
- assert.equal(index.totals.relations,1100);
- assert.equal(index.totals.by_kind.merchant,776);
- assert.equal(index.totals.by_evidence.documented_forever,336);
+ assert.equal(index.totals.unique_items,649);
+ assert.equal(index.totals.relations,1103);
+ assert.equal(index.totals.by_kind.merchant,779);
+ assert.equal(index.totals.by_evidence.documented_forever,339);
  assert.equal(index.totals.by_evidence.classic_reference,764);
 });
 test("mixed-profession vendor label is bilingual without fabricating recipe translations",()=>{
