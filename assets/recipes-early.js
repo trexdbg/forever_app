@@ -11,6 +11,13 @@ const PAGE=45;
 const node=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined&&text!==null)n.textContent=String(text);if(cls)n.className=cls;return n};
 const place=(where,tag,text,cls)=>{const n=node(tag,text,cls);where.append(n);return n};
 const fold=value=>String(value??"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
+const professionsFr={
+ "Alchemy":"Alchimie","Blacksmithing":"Forge","Cooking":"Cuisine","Enchanting":"Enchantement",
+ "Engineering":"Ingénierie","First Aid":"Secourisme","Fishing":"Pêche","Herbalism":"Herboristerie",
+ "Leatherworking":"Travail du cuir","Mining":"Minage","Skinning":"Dépeçage","Tailoring":"Couture"
+};
+const profLabel=s=>en?s:(professionsFr[s]||s);
+
 const safeLink=(parent,url,caption,cls="")=>{if(typeof url!=="string"||!/^https:\/\/[^\s/]+\//.test(url))return;
  const a=place(parent,"a",caption,cls);a.href=url;a.rel="noopener noreferrer";a.target="_blank";return a};
 const itemName=x=>{
@@ -24,7 +31,7 @@ function match(r){
  if(profession.value!=="all"&&String(r.profession_id)!==profession.value)return false;
  if(change.value!=="all"&&r.forever_archive_status!==change.value)return false;
  if(!q)return true;
- const values=[r.name_en,r.profession_en,r.spell_id,...r.outputs.flatMap(o=>[o.name_en,o.item_id]),...r.ingredients.flatMap(i=>[i.name_en,i.item_id]),...r.vendor_references.map(v=>v.name_en)];
+ const values=[r.name_en,r.profession_en,profLabel(r.profession_en),r.spell_id,...r.outputs.flatMap(o=>[o.name_en,o.item_id]),...r.ingredients.flatMap(i=>[i.name_en,i.item_id]),...r.vendor_references.map(v=>v.name_en)];
  return values.some(v=>fold(v).includes(q));
 }
 const sort=(a,b)=>a.skill_yellow_archive-b.skill_yellow_archive||
@@ -40,7 +47,7 @@ function render(){
  for(const r of visible){
   const b=place(list,"button",null,"early-recipe-row");b.type="button";b.setAttribute("aria-pressed",String(r.spell_id===selected?.spell_id));
   place(b,"strong",r.name_en);
-  place(b,"small",r.profession_en+" · "+T("Seuil jaune ","Yellow threshold ")+r.skill_yellow_archive+" · "+kindLabel(r.forever_archive_status));
+  place(b,"small","profLabel(r.profession_en)+" · "+T("Seuil jaune ","Yellow threshold ")+r.skill_yellow_archive+" · "+kindLabel(r.forever_archive_status));
   b.addEventListener("click",()=>select(r));
  }
  if(!hits.length)place(list,"p",T("Aucune recette trouvée.","No matching recipe."),"early-muted");
@@ -54,7 +61,7 @@ function renderDetail(){
  detail.replaceChildren();
  const r=selected;if(!r){place(detail,"p",T("Choisissez une recette.","Choose a recipe."),"early-muted");return;}
  place(detail,"h3",r.name_en);
- const meta=place(detail,"p",r.profession_en+" · "+T("sort ","spell ")+r.spell_id+" · "+kindLabel(r.forever_archive_status),"early-meta");
+ const meta=place(detail,"p","profLabel(r.profession_en)+" · "+T("sort ","spell ")+r.spell_id+" · "+kindLabel(r.forever_archive_status),"early-meta");
  meta.dataset.source="historical_forever_archive";
  place(detail,"p",T("Client Forever archivé : ce sort et ses composants figuraient dans le build 1.60.1.69876. Disponibilité actuelle, apprentissage en jeu et traduction française non certifiés.",
   "Archived Forever client: this spell and its reagents appeared in build 1.60.1.69876. Current availability, live training and French localization are unverified."),"early-warning");
@@ -119,7 +126,7 @@ async function load(){
   if(db.schema_version!==1||db.status!=="historical_client_archive_not_in_game_verified"||db.source_build!=="1.60.1.69876"||!Array.isArray(db.recipes)||db.recipes.length<600)throw Error("Incorrect archive");
   records=db.recipes;
   const options=[...new Set(records.map(r=>r.profession_id+"|"+r.profession_en))].sort((a,b)=>a.localeCompare(b));
-  for(const option of options){const [id,name]=option.split("|");const o=place(profession,"option",name);o.value=id}
+  for(const option of options){const [id,name]=option.split("|");const o=place(profession,"option",profLabel(name));o.value=id}
   render();
  }).catch(()=>{loading=null;count.textContent=T("Archive indisponible ; les aperçus ciblés restent accessibles.","Archive unavailable; targeted previews remain accessible.")});
  return loading;
