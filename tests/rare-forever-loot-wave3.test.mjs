@@ -53,10 +53,10 @@ test("Sister Rathtalon's map conflict is still unresolved: loot source does not 
 });
 
 test("four Forever rare relations are traversable through the item acquisition index",()=>{
- assert.equal(index.totals.unique_items,619);
- assert.equal(index.totals.relations,1043);
+ assert.equal(index.totals.unique_items,647);
+ assert.equal(index.totals.relations,1100);
  assert.equal(index.totals.by_kind.rare,105);
- assert.equal(index.totals.by_evidence.documented_forever,279);
+ assert.equal(index.totals.by_evidence.documented_forever,336);
  for(const e of expected){
   const row=index.items.find(i=>i.id===e.itemId);
   assert.ok(row,"Unindexed item "+e.itemId);
