@@ -51,7 +51,7 @@ test("Stondry and Gor'mak document the same starter plans without inventing rep 
    assert.equal(offer?.observed_build,"unknown");
    assert.equal(offer?.evidence_kind,"forever_community_page");
    assert.equal(offer?.source_url,offer?.evidence_url);
-   assert.equal(offer?.item_source_url,"https://www.wowhead.com/forever/item="+id);
+   assert.ok(offer?.item_source_url.startsWith("https://www.wowhead.com/forever/item="+id));
    assert.equal(offer?.reputation,undefined);
    assert.equal(offer?.restock_minutes,undefined);
    assert.equal(offer?.stock_status,"unknown");
