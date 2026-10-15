@@ -4,16 +4,16 @@
   "scope": "Read-only relations inherited from ForEveroth merchant, rare, dungeon and opt-in beta recipe catalogues. Source links may identify only an item or guide, not prove sale, drop, availability, rates or live crafting.",
   "provenance_policy": "Forever documented relations are labelled documentary only; all Classic relations stay Classic. Each relationship preserves its originating status. The links are navigation aids, not new source audits.",
   "totals": {
-    "unique_items": 552,
-    "relations": 951,
+    "unique_items": 555,
+    "relations": 954,
     "by_kind": {
       "merchant": 631,
       "boss": 205,
-      "rare": 101,
+      "rare": 104,
       "recipe": 14
     },
     "by_evidence": {
-      "documented_forever": 187,
+      "documented_forever": 190,
       "classic_reference": 764
     }
   },
@@ -11468,6 +11468,20 @@
       ]
     },
     {
+      "id": 282716,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Scargil",
+          "name_en": "Scargil",
+          "href": "/rare/?zone=hillsbrad&q=Scargil&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://www.wowhead.com/forever/item=282716/imbued-scaled-cuffs"
+        }
+      ]
+    },
+    {
       "id": 284165,
       "sources": [
         {
@@ -11608,6 +11622,20 @@
       ]
     },
     {
+      "id": 285345,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Sœur Rancune-serre",
+          "name_en": "Sister Rathtalon",
+          "href": "/rare/?zone=stonetalon&q=Sister%20Rathtalon&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://www.wowhead.com/forever/item=285345/feather-padded-treads"
+        }
+      ]
+    },
+    {
       "id": 285346,
       "sources": [
         {
@@ -11744,6 +11772,20 @@
           "evidence_level": "documented_forever",
           "source_status": "forever_beta_rare_loot",
           "reference_url": "https://www.wowhead.com/forever/item=286750/wisesight-wand"
+        }
+      ]
+    },
+    {
+      "id": 286755,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "The Condemned One",
+          "name_en": "The Condemned One",
+          "href": "/rare/?zone=tirisfal&q=The%20Condemned%20One&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://www.wowhead.com/forever/item=286755/helm-splitter"
         }
       ]
     }
