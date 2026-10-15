@@ -4,16 +4,16 @@
   "scope": "Read-only relations inherited from ForEveroth merchant, rare, dungeon and opt-in beta recipe catalogues. Source links may identify only an item or guide, not prove sale, drop, availability, rates or live crafting.",
   "provenance_policy": "Forever documented relations are labelled documentary only; all Classic relations stay Classic. Each relationship preserves its originating status. The links are navigation aids, not new source audits.",
   "totals": {
-    "unique_items": 647,
-    "relations": 1100,
+    "unique_items": 649,
+    "relations": 1103,
     "by_kind": {
-      "merchant": 776,
+      "merchant": 779,
       "boss": 205,
       "rare": 105,
       "recipe": 14
     },
     "by_evidence": {
-      "documented_forever": 336,
+      "documented_forever": 339,
       "classic_reference": 764
     }
   },
@@ -10106,6 +10106,29 @@
       ]
     },
     {
+      "id": 251357,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Stondry Darkhammer",
+          "name_en": "Stondry Darkhammer",
+          "href": "/marchands/?q=Stondry%20Darkhammer",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/stondry-darkhammer"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Gor'mak",
+          "name_en": "Gor'mak",
+          "href": "/marchands/?q=Gor'mak",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce"
+        }
+      ]
+    },
+    {
       "id": 251358,
       "sources": [
         {
@@ -13001,6 +13024,20 @@
     },
     {
       "id": 276963,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Vayn Moongaze",
+          "name_en": "Vayn Moongaze",
+          "href": "/marchands/?q=Vayn%20Moongaze",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/vayn-moongaze"
+        }
+      ]
+    },
+    {
+      "id": 276964,
       "sources": [
         {
           "kind": "merchant",
