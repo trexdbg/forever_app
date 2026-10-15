@@ -3990,6 +3990,28 @@
       "reference_status": "forever_item_and_vendor_documented",
       "source_guide": "https://www.wow-professions.com/forever/npc/stondry-darkhammer"
     },
+    "251357": {
+      "id": 251357,
+      "name": {
+        "en": "Plans: Protector's Boots",
+        "fr": "Plans : bottes de protecteur"
+      },
+      "name_fr_status": "forever_client_localized",
+      "name_fr_source_url": "https://foreverchanges.pro/fr/item/251357",
+      "profession": "Forge",
+      "skill": 85,
+      "skill_semantics": "documented_profession_requirement_not_proof_of_live_learning_or_yellow_threshold",
+      "kind": "recipe",
+      "supply": "unknown_in_forever",
+      "bind": "pickup",
+      "icon": "inv_scroll_06",
+      "icon_status": "forever_item_page_icon_documented",
+      "source": "https://www.wowhead.com/forever/item=251357/plans-protectors-boots",
+      "source_status": "forever_beta_documented_item",
+      "reference_status": "forever_item_and_vendor_documented",
+      "source_guide": "https://www.wow-professions.com/forever/npc/stondry-darkhammer",
+      "item_source_url": "https://www.wowhead.com/forever/item=251357/plans-protectors-boots"
+    },
     "251358": {
       "id": 251358,
       "name": {
@@ -5465,6 +5487,28 @@
       "source_status": "forever_beta_documented_item",
       "reference_status": "forever_item_and_vendor_documented",
       "source_guide": "https://www.wow-professions.com/forever/npc/vayn-moongaze"
+    },
+    "276964": {
+      "id": 276964,
+      "name": {
+        "en": "Pattern: Azure Windraveled Jerkin",
+        "fr": "Patron : pourpoint mêle-vent azur"
+      },
+      "name_fr_status": "forever_wowhead_localized",
+      "name_fr_source_url": "https://www.wowhead.com/forever/fr/item=276964/patron-pourpoint-m%C3%AAle-vent-azur",
+      "profession": "Travail du cuir",
+      "skill": 60,
+      "skill_semantics": "source_profession_requirement_not_live_learning_threshold",
+      "kind": "recipe",
+      "supply": "unknown_in_forever",
+      "bind": "pickup",
+      "icon": "inv_scroll_06",
+      "icon_status": "forever_item_page_icon_documented",
+      "source": "https://www.wowhead.com/forever/item=276964/pattern-azure-windraveled-jerkin",
+      "source_status": "forever_beta_documented_item",
+      "reference_status": "forever_item_and_vendor_documented",
+      "source_guide": "https://www.wow-professions.com/forever/npc/vayn-moongaze",
+      "item_source_url": "https://www.wowhead.com/forever/item=276964/pattern-azure-windraveled-jerkin"
     },
     "276965": {
       "id": 276965,
@@ -17965,7 +18009,8 @@
         "251379",
         "251376",
         "251377",
-        "251375"
+        "251375",
+        "251357"
       ],
       "offer_details": {
         "251355": {
@@ -18009,6 +18054,27 @@
           "item_source_url": "https://www.wowhead.com/forever/item=251356",
           "stock_status": "unknown",
           "restock_status": "unknown"
+        },
+        "251357": {
+          "source": "https://www.wow-professions.com/forever/npc/stondry-darkhammer",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-15",
+          "bind": "pickup",
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/stondry-darkhammer",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/stondry-darkhammer",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The named WoW Forever vendor catalogue associates Plans: Protector's Boots (item 251357) with Stondry Darkhammer; the exact item ID, Forge skill 85, and binds-on-pickup requirement are independently listed by the Wowhead Forever item page https://www.wowhead.com/forever/item=251357/plans-protectors-boots. This is a documentary vendor-item relation, not a dated in-game transaction or proof of current availability, restock, or stock quantity.",
+          "item_source_url": "https://www.wowhead.com/forever/item=251357/plans-protectors-boots",
+          "stock_status": "unknown",
+          "restock_status": "unknown",
+          "price": {
+            "amount": 30,
+            "currency": "merchants_favor"
+          }
         },
         "251358": {
           "source": "https://www.wow-professions.com/forever/npc/stondry-darkhammer",
@@ -18626,7 +18692,8 @@
         "251379",
         "251376",
         "251377",
-        "251375"
+        "251375",
+        "251357"
       ],
       "offer_details": {
         "251355": {
@@ -18670,6 +18737,27 @@
           "item_source_url": "https://www.wowhead.com/forever/item=251356",
           "stock_status": "unknown",
           "restock_status": "unknown"
+        },
+        "251357": {
+          "source": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-15",
+          "bind": "pickup",
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+          "evidence_url": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The named WoW Forever vendor catalogue associates Plans: Protector's Boots (item 251357) with Gor'mak; the exact item ID, Forge skill 85, and binds-on-pickup requirement are independently listed by the Wowhead Forever item page https://www.wowhead.com/forever/item=251357/plans-protectors-boots. This is a documentary vendor-item relation, not a dated in-game transaction or proof of current availability, restock, or stock quantity.",
+          "item_source_url": "https://www.wowhead.com/forever/item=251357/plans-protectors-boots",
+          "stock_status": "unknown",
+          "restock_status": "unknown",
+          "price": {
+            "amount": 30,
+            "currency": "merchants_favor"
+          }
         },
         "251358": {
           "source": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
@@ -19473,7 +19561,8 @@
         "276974",
         "276970",
         "276950",
-        "276946"
+        "276946",
+        "276964"
       ],
       "offer_details": {
         "276928": {
@@ -20267,6 +20356,28 @@
           "stock_status": "unknown",
           "restock_status": "unknown",
           "bind_status": "not_asserted"
+        },
+        "276964": {
+          "source": "https://www.wow-professions.com/forever/npc/vayn-moongaze",
+          "source_kind": "forever_guide_named_vendor",
+          "verification_status": "forever_documented",
+          "verified_date": "2026-10-15",
+          "bind": "pickup",
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.wow-professions.com/forever/npc/vayn-moongaze",
+          "evidence_url": "https://www.wow-professions.com/forever/npc/vayn-moongaze",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "The named WoW Forever vendor catalogue associates Pattern: Azure Windraveled Jerkin (item 276964) with Vayn Moongaze; the exact item ID, Travail du cuir skill 60, and binds-on-pickup requirement are independently listed by the Wowhead Forever item page https://www.wowhead.com/forever/item=276964/pattern-azure-windraveled-jerkin. This is a documentary vendor-item relation, not a dated in-game transaction or proof of current availability, restock, or stock quantity.",
+          "item_source_url": "https://www.wowhead.com/forever/item=276964/pattern-azure-windraveled-jerkin",
+          "stock_status": "unknown",
+          "restock_status": "unknown",
+          "price_status": "coin_price_conflict_or_not_comparable_between_guides",
+          "reputation": {
+            "faction": "Nightclaw Druids",
+            "rank": "Honored"
+          }
         },
         "276965": {
           "source": "https://www.wow-professions.com/forever/npc/vayn-moongaze",
@@ -21172,7 +21283,7 @@
       "classic_reference": "Based on Classic guide; not checked on Forever server"
     },
     "legacy_default": "classic_reference",
-    "forever_sale_count": 199,
+    "forever_sale_count": 202,
     "verified_existing_sales": [
       "Shandrina:16072",
       "Wulan:16072",
@@ -21268,8 +21379,17 @@
       "coordinate_source": "https://www.60.tools/quests/93459-more-alaketh-ears",
       "status": "documented_forever_not_ingame_confirmed",
       "price_status": "unknown_conflicting_documentary",
-      "unresolved_item": "Pattern: Azure Windraveled Jerkin",
-      "unresolved_reason": "Vendor source lists it but exact Forever item ID could not be independently resolved; intentionally not linked"
+      "unresolved_item": null,
+      "unresolved_reason": null,
+      "previous_unresolved_item": "Pattern: Azure Windraveled Jerkin",
+      "resolved_followup": {
+        "resolved_at": "2026-10-15",
+        "item_id": 276964,
+        "item_name_en": "Pattern: Azure Windraveled Jerkin",
+        "source_url": "https://www.wowhead.com/forever/item=276964/pattern-azure-windraveled-jerkin",
+        "evidence_level": "documented_forever",
+        "note": "Exact item ID resolved from the Forever item page; new seller links stored separately. Original wave counts remain historical."
+      }
     },
     "blacksmith_lowlevel_camps_wave": {
       "added_vendor_links": 57,
@@ -21278,20 +21398,41 @@
       "source_alliance": "https://www.wow-professions.com/forever/npc/stondry-darkhammer",
       "source_two_camps": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
       "verified_id_count": 29,
-      "unknown_item": "Plans: Protector's Boots",
-      "unknown_reason": "Vendor catalogue lists it but the ID link could not be retrieved with confidence; omitted rather than assuming the numeric gap."
+      "unknown_item": null,
+      "unknown_reason": null,
+      "previous_unresolved_item": "Plans: Protector's Boots",
+      "resolved_followup": {
+        "resolved_at": "2026-10-15",
+        "item_id": 251357,
+        "item_name_en": "Plans: Protector's Boots",
+        "source_url": "https://www.wowhead.com/forever/item=251357/plans-protectors-boots",
+        "evidence_level": "documented_forever",
+        "note": "Exact item ID resolved from the Forever item page; new seller links stored separately. Original wave counts remain historical."
+      }
+    },
+    "resolved_vendor_recipe_id_followup": {
+      "date": "2026-10-15",
+      "new_vendor_offers": 3,
+      "new_items": 2,
+      "confirmed_in_game": 0,
+      "documented_forever": 3,
+      "source_urls": [
+        "https://www.wowhead.com/forever/item=251357/plans-protectors-boots",
+        "https://www.wowhead.com/forever/item=276964/pattern-azure-windraveled-jerkin"
+      ],
+      "scope": "Two previously unresolved recipe IDs, individually verified in the Forever item catalogue."
     }
   },
   "audit": {
     "date": "2026-10-15",
     "scope": "Named vendor-to-item Forever documentary sales and Classic/unverified fallback, with per-offer provenance; not confirmation of stock in live gameplay",
-    "forever_vendor_offers": 199,
+    "forever_vendor_offers": 202,
     "classic_unverified_offers": 577,
     "source": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
-    "forever_documented_offers": 199,
-    "forever_documented_items": 126,
+    "forever_documented_offers": 202,
+    "forever_documented_items": 128,
     "classic_offer_policy": "Any pair without verification_status=forever_documented is only a Classic or unverified source; never claim server inventory.",
-    "total_vendor_offers": 776,
+    "total_vendor_offers": 779,
     "source_urls": [
       "https://www.wow-professions.com/forever/npc/fritz-fizzle",
       "https://www.wow-professions.com/forever/npc/fizzlefuse",
