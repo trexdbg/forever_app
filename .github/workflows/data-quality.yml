@@ -30,6 +30,8 @@ jobs:
         run: node scripts/check-data-quality.mjs
       - name: Rare location evidence fixtures
         run: node --test tests/rare-locations.test.mjs
+      - name: Rare module JavaScript syntax
+        run: node --check assets/rares.js
       - name: Forever new starter-zone rare discovery regression
         run: node --test tests/rare-forever-new-wave2.test.mjs
       - name: Rare location provenance gate
