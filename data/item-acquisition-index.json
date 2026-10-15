@@ -4,16 +4,16 @@
   "scope": "Read-only relations inherited from ForEveroth merchant, rare, dungeon and opt-in beta recipe catalogues. Source links may identify only an item or guide, not prove sale, drop, availability, rates or live crafting.",
   "provenance_policy": "Forever documented relations are labelled documentary only; all Classic relations stay Classic. Each relationship preserves its originating status. The links are navigation aids, not new source audits.",
   "totals": {
-    "unique_items": 685,
-    "relations": 1175,
+    "unique_items": 721,
+    "relations": 1247,
     "by_kind": {
-      "merchant": 851,
+      "merchant": 923,
       "boss": 205,
       "rare": 105,
       "recipe": 14
     },
     "by_evidence": {
-      "documented_forever": 411,
+      "documented_forever": 483,
       "classic_reference": 764
     }
   },
@@ -11617,6 +11617,834 @@
           "evidence_level": "documented_forever",
           "source_status": "forever_documented_offer",
           "reference_url": "https://www.wow-professions.com/forever/npc/pawani"
+        }
+      ]
+    },
+    {
+      "id": 253890,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Jim'bek",
+          "name_en": "Jim'bek",
+          "href": "/marchands/?q=Jim'bek",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/jimbek"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Mivin Shadowweave",
+          "name_en": "Mivin Shadowweave",
+          "href": "/marchands/?q=Mivin%20Shadowweave",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/mivin-shadowweave"
+        }
+      ]
+    },
+    {
+      "id": 253892,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Jim'bek",
+          "name_en": "Jim'bek",
+          "href": "/marchands/?q=Jim'bek",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/jimbek"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Mivin Shadowweave",
+          "name_en": "Mivin Shadowweave",
+          "href": "/marchands/?q=Mivin%20Shadowweave",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/mivin-shadowweave"
+        }
+      ]
+    },
+    {
+      "id": 253894,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Jim'bek",
+          "name_en": "Jim'bek",
+          "href": "/marchands/?q=Jim'bek",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/jimbek"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Mivin Shadowweave",
+          "name_en": "Mivin Shadowweave",
+          "href": "/marchands/?q=Mivin%20Shadowweave",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/mivin-shadowweave"
+        }
+      ]
+    },
+    {
+      "id": 253896,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Jim'bek",
+          "name_en": "Jim'bek",
+          "href": "/marchands/?q=Jim'bek",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/jimbek"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Mivin Shadowweave",
+          "name_en": "Mivin Shadowweave",
+          "href": "/marchands/?q=Mivin%20Shadowweave",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/mivin-shadowweave"
+        }
+      ]
+    },
+    {
+      "id": 253898,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Jim'bek",
+          "name_en": "Jim'bek",
+          "href": "/marchands/?q=Jim'bek",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/jimbek"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Mivin Shadowweave",
+          "name_en": "Mivin Shadowweave",
+          "href": "/marchands/?q=Mivin%20Shadowweave",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/mivin-shadowweave"
+        }
+      ]
+    },
+    {
+      "id": 253900,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Jim'bek",
+          "name_en": "Jim'bek",
+          "href": "/marchands/?q=Jim'bek",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/jimbek"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Mivin Shadowweave",
+          "name_en": "Mivin Shadowweave",
+          "href": "/marchands/?q=Mivin%20Shadowweave",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/mivin-shadowweave"
+        }
+      ]
+    },
+    {
+      "id": 253914,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Jim'bek",
+          "name_en": "Jim'bek",
+          "href": "/marchands/?q=Jim'bek",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/jimbek"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Mivin Shadowweave",
+          "name_en": "Mivin Shadowweave",
+          "href": "/marchands/?q=Mivin%20Shadowweave",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/mivin-shadowweave"
+        }
+      ]
+    },
+    {
+      "id": 253916,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Jim'bek",
+          "name_en": "Jim'bek",
+          "href": "/marchands/?q=Jim'bek",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/jimbek"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Mivin Shadowweave",
+          "name_en": "Mivin Shadowweave",
+          "href": "/marchands/?q=Mivin%20Shadowweave",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/mivin-shadowweave"
+        }
+      ]
+    },
+    {
+      "id": 253918,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Jim'bek",
+          "name_en": "Jim'bek",
+          "href": "/marchands/?q=Jim'bek",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/jimbek"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Mivin Shadowweave",
+          "name_en": "Mivin Shadowweave",
+          "href": "/marchands/?q=Mivin%20Shadowweave",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/mivin-shadowweave"
+        }
+      ]
+    },
+    {
+      "id": 253920,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Jim'bek",
+          "name_en": "Jim'bek",
+          "href": "/marchands/?q=Jim'bek",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/jimbek"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Mivin Shadowweave",
+          "name_en": "Mivin Shadowweave",
+          "href": "/marchands/?q=Mivin%20Shadowweave",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/mivin-shadowweave"
+        }
+      ]
+    },
+    {
+      "id": 253922,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Jim'bek",
+          "name_en": "Jim'bek",
+          "href": "/marchands/?q=Jim'bek",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/jimbek"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Mivin Shadowweave",
+          "name_en": "Mivin Shadowweave",
+          "href": "/marchands/?q=Mivin%20Shadowweave",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/mivin-shadowweave"
+        }
+      ]
+    },
+    {
+      "id": 253924,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Jim'bek",
+          "name_en": "Jim'bek",
+          "href": "/marchands/?q=Jim'bek",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/jimbek"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Mivin Shadowweave",
+          "name_en": "Mivin Shadowweave",
+          "href": "/marchands/?q=Mivin%20Shadowweave",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/mivin-shadowweave"
+        }
+      ]
+    },
+    {
+      "id": 253926,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Jim'bek",
+          "name_en": "Jim'bek",
+          "href": "/marchands/?q=Jim'bek",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/jimbek"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Mivin Shadowweave",
+          "name_en": "Mivin Shadowweave",
+          "href": "/marchands/?q=Mivin%20Shadowweave",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/mivin-shadowweave"
+        }
+      ]
+    },
+    {
+      "id": 253928,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Jim'bek",
+          "name_en": "Jim'bek",
+          "href": "/marchands/?q=Jim'bek",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/jimbek"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Mivin Shadowweave",
+          "name_en": "Mivin Shadowweave",
+          "href": "/marchands/?q=Mivin%20Shadowweave",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/mivin-shadowweave"
+        }
+      ]
+    },
+    {
+      "id": 253930,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Jim'bek",
+          "name_en": "Jim'bek",
+          "href": "/marchands/?q=Jim'bek",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/jimbek"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Mivin Shadowweave",
+          "name_en": "Mivin Shadowweave",
+          "href": "/marchands/?q=Mivin%20Shadowweave",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/mivin-shadowweave"
+        }
+      ]
+    },
+    {
+      "id": 253932,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Jim'bek",
+          "name_en": "Jim'bek",
+          "href": "/marchands/?q=Jim'bek",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/jimbek"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Mivin Shadowweave",
+          "name_en": "Mivin Shadowweave",
+          "href": "/marchands/?q=Mivin%20Shadowweave",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/mivin-shadowweave"
+        }
+      ]
+    },
+    {
+      "id": 253934,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Jim'bek",
+          "name_en": "Jim'bek",
+          "href": "/marchands/?q=Jim'bek",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/jimbek"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Mivin Shadowweave",
+          "name_en": "Mivin Shadowweave",
+          "href": "/marchands/?q=Mivin%20Shadowweave",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/mivin-shadowweave"
+        }
+      ]
+    },
+    {
+      "id": 253936,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Jim'bek",
+          "name_en": "Jim'bek",
+          "href": "/marchands/?q=Jim'bek",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/jimbek"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Mivin Shadowweave",
+          "name_en": "Mivin Shadowweave",
+          "href": "/marchands/?q=Mivin%20Shadowweave",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/mivin-shadowweave"
+        }
+      ]
+    },
+    {
+      "id": 253950,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Jim'bek",
+          "name_en": "Jim'bek",
+          "href": "/marchands/?q=Jim'bek",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/jimbek"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Mivin Shadowweave",
+          "name_en": "Mivin Shadowweave",
+          "href": "/marchands/?q=Mivin%20Shadowweave",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/mivin-shadowweave"
+        }
+      ]
+    },
+    {
+      "id": 253952,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Jim'bek",
+          "name_en": "Jim'bek",
+          "href": "/marchands/?q=Jim'bek",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/jimbek"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Mivin Shadowweave",
+          "name_en": "Mivin Shadowweave",
+          "href": "/marchands/?q=Mivin%20Shadowweave",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/mivin-shadowweave"
+        }
+      ]
+    },
+    {
+      "id": 253954,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Jim'bek",
+          "name_en": "Jim'bek",
+          "href": "/marchands/?q=Jim'bek",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/jimbek"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Mivin Shadowweave",
+          "name_en": "Mivin Shadowweave",
+          "href": "/marchands/?q=Mivin%20Shadowweave",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/mivin-shadowweave"
+        }
+      ]
+    },
+    {
+      "id": 253956,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Jim'bek",
+          "name_en": "Jim'bek",
+          "href": "/marchands/?q=Jim'bek",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/jimbek"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Mivin Shadowweave",
+          "name_en": "Mivin Shadowweave",
+          "href": "/marchands/?q=Mivin%20Shadowweave",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/mivin-shadowweave"
+        }
+      ]
+    },
+    {
+      "id": 253958,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Jim'bek",
+          "name_en": "Jim'bek",
+          "href": "/marchands/?q=Jim'bek",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/jimbek"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Mivin Shadowweave",
+          "name_en": "Mivin Shadowweave",
+          "href": "/marchands/?q=Mivin%20Shadowweave",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/mivin-shadowweave"
+        }
+      ]
+    },
+    {
+      "id": 253960,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Jim'bek",
+          "name_en": "Jim'bek",
+          "href": "/marchands/?q=Jim'bek",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/jimbek"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Mivin Shadowweave",
+          "name_en": "Mivin Shadowweave",
+          "href": "/marchands/?q=Mivin%20Shadowweave",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/mivin-shadowweave"
+        }
+      ]
+    },
+    {
+      "id": 253962,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Jim'bek",
+          "name_en": "Jim'bek",
+          "href": "/marchands/?q=Jim'bek",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/jimbek"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Mivin Shadowweave",
+          "name_en": "Mivin Shadowweave",
+          "href": "/marchands/?q=Mivin%20Shadowweave",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/mivin-shadowweave"
+        }
+      ]
+    },
+    {
+      "id": 253964,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Jim'bek",
+          "name_en": "Jim'bek",
+          "href": "/marchands/?q=Jim'bek",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/jimbek"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Mivin Shadowweave",
+          "name_en": "Mivin Shadowweave",
+          "href": "/marchands/?q=Mivin%20Shadowweave",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/mivin-shadowweave"
+        }
+      ]
+    },
+    {
+      "id": 253966,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Jim'bek",
+          "name_en": "Jim'bek",
+          "href": "/marchands/?q=Jim'bek",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/jimbek"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Mivin Shadowweave",
+          "name_en": "Mivin Shadowweave",
+          "href": "/marchands/?q=Mivin%20Shadowweave",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/mivin-shadowweave"
+        }
+      ]
+    },
+    {
+      "id": 253968,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Jim'bek",
+          "name_en": "Jim'bek",
+          "href": "/marchands/?q=Jim'bek",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/jimbek"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Mivin Shadowweave",
+          "name_en": "Mivin Shadowweave",
+          "href": "/marchands/?q=Mivin%20Shadowweave",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/mivin-shadowweave"
+        }
+      ]
+    },
+    {
+      "id": 253970,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Jim'bek",
+          "name_en": "Jim'bek",
+          "href": "/marchands/?q=Jim'bek",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/jimbek"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Mivin Shadowweave",
+          "name_en": "Mivin Shadowweave",
+          "href": "/marchands/?q=Mivin%20Shadowweave",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/mivin-shadowweave"
+        }
+      ]
+    },
+    {
+      "id": 253972,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Jim'bek",
+          "name_en": "Jim'bek",
+          "href": "/marchands/?q=Jim'bek",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/jimbek"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Mivin Shadowweave",
+          "name_en": "Mivin Shadowweave",
+          "href": "/marchands/?q=Mivin%20Shadowweave",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/mivin-shadowweave"
+        }
+      ]
+    },
+    {
+      "id": 253988,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Jim'bek",
+          "name_en": "Jim'bek",
+          "href": "/marchands/?q=Jim'bek",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/jimbek"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Mivin Shadowweave",
+          "name_en": "Mivin Shadowweave",
+          "href": "/marchands/?q=Mivin%20Shadowweave",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/mivin-shadowweave"
+        }
+      ]
+    },
+    {
+      "id": 253990,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Jim'bek",
+          "name_en": "Jim'bek",
+          "href": "/marchands/?q=Jim'bek",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/jimbek"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Mivin Shadowweave",
+          "name_en": "Mivin Shadowweave",
+          "href": "/marchands/?q=Mivin%20Shadowweave",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/mivin-shadowweave"
+        }
+      ]
+    },
+    {
+      "id": 253992,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Jim'bek",
+          "name_en": "Jim'bek",
+          "href": "/marchands/?q=Jim'bek",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/jimbek"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Mivin Shadowweave",
+          "name_en": "Mivin Shadowweave",
+          "href": "/marchands/?q=Mivin%20Shadowweave",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/mivin-shadowweave"
+        }
+      ]
+    },
+    {
+      "id": 253994,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Jim'bek",
+          "name_en": "Jim'bek",
+          "href": "/marchands/?q=Jim'bek",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/jimbek"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Mivin Shadowweave",
+          "name_en": "Mivin Shadowweave",
+          "href": "/marchands/?q=Mivin%20Shadowweave",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/mivin-shadowweave"
+        }
+      ]
+    },
+    {
+      "id": 253996,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Jim'bek",
+          "name_en": "Jim'bek",
+          "href": "/marchands/?q=Jim'bek",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/jimbek"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Mivin Shadowweave",
+          "name_en": "Mivin Shadowweave",
+          "href": "/marchands/?q=Mivin%20Shadowweave",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/mivin-shadowweave"
+        }
+      ]
+    },
+    {
+      "id": 253998,
+      "sources": [
+        {
+          "kind": "merchant",
+          "name_fr": "Jim'bek",
+          "name_en": "Jim'bek",
+          "href": "/marchands/?q=Jim'bek",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/jimbek"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Mivin Shadowweave",
+          "name_en": "Mivin Shadowweave",
+          "href": "/marchands/?q=Mivin%20Shadowweave",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/mivin-shadowweave"
         }
       ]
     },
