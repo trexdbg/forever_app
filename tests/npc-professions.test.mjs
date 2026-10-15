@@ -37,11 +37,11 @@ test("current vendor and profession datasets remain structurally valid",()=>{
  assert.equal(r.summary.npcs,358);
  assert.equal(r.summary.knownNpcIds,29);
  assert.equal(r.summary.positionedNpcs,351); // previous 350 mapped points + documentary Vayn Moongaze point
- assert.equal(r.summary.merchantOffers,776);
- assert.equal(r.summary.foreverDocumentedOffers,199);
+ assert.equal(r.summary.merchantOffers,779);
+ assert.equal(r.summary.foreverDocumentedOffers,202);
  assert.equal(r.summary.classicOrUnverifiedOffers,577);
- assert.equal(r.summary.distinctItems,335);
- assert.equal(r.summary.recipeItems,319);
+ assert.equal(r.summary.distinctItems,337);
+ assert.equal(r.summary.recipeItems,321);
  assert.equal(r.summary.componentItems,10);
  assert.equal(r.summary.professions,12);
  assert.equal(r.summary.detailedRecipes,0); // no invented ingredient-level recipe coverage
@@ -139,7 +139,7 @@ test("Aza'bek and Nina Surefire have ten exact, documented vendor-item sales",()
   assert.match(offer.evidence_note,/ni stock actuel ni capture directe en jeu confirmés/);
  }
  const actual=data.npcs.flatMap(n=>Object.values(n.offer_details||{})).filter(o=>o.evidence_level==="documented_forever");
- assert.equal(actual.length,expected.length+41+47+57,"Original documented associations remain individually pinned, plus 41 low-level offers, 47 Vayn offers and 57 camp-forge offers in dedicated tests");
+ assert.equal(actual.length,expected.length+41+47+57+3,"Original documented associations remain individually pinned, plus 41 low-level offers, 47 Vayn offers and 57 camp-forge offers in dedicated tests");
 });
 test("sale URL prioritizes precise evidence with safe legacy fallback; FR and EN labels",()=>{
  const code=readFileSync(resolve(root,"assets/npcs.js"),"utf8");
