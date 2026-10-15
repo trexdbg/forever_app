@@ -1,0 +1,29 @@
+name: Archived Forever early professions regression
+on:
+  pull_request:
+    paths:
+      - 'data/recipes-forever-early-archive.json'
+      - 'assets/recipes-early.js'
+      - 'assets/recipes-early.css'
+      - 'metiers/index.html'
+      - 'en/metiers/index.html'
+      - 'tests/early-forever-recipes.test.mjs'
+      - '.github/workflows/early-forever-recipes.yml'
+permissions:
+  contents: read
+jobs:
+  archive-recipes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Read-only archive provenance, seller and UX checks
+        run: |
+          node --check assets/recipes-early.js
+          node --test tests/early-forever-recipes.test.mjs
+          node scripts/check-data-quality.mjs
+          node scripts/check-npc-professions.mjs
+          node scripts/check-forever-evidence.mjs
