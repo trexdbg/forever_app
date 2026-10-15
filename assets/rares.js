@@ -18,6 +18,14 @@ const visibleAtBetaLevel=r=>exactLevel(r)?r.level<=30:starterLevelUnknown(r);
 const displayLevel=r=>exactLevel(r)?String(r.level):T("?","?");
 const rankLabel=r=>r.classification==="rare_elite"?T("Rare élite","Rare elite"):r.classification==="elite"?T("Élite (rencontre spéciale)","Elite (special encounter)"):T("Rare","Rare");
 const isForeverLoot=item=>item.source_version==="forever_beta";
+const lootTrustLabel=item=>item.evidence_level==="confirmed_in_game"
+ ?T("Forever · confirmé en jeu","Forever · verified in-game")
+ :item.evidence_level==="documented_forever"
+ ?T("Forever · documenté","Forever · documented")
+ :isForeverLoot(item)
+ ?T("Forever · à vérifier","Forever · unverified")
+ :T("Classic · indicatif","Classic · indicative");
+
 const lootName=item=>{
  const localized=window.ForeverItemLocale?.name({
   id:item.item_id||0,name:item.name.en,
@@ -109,7 +117,7 @@ for(const item of r.loot){
  const txt=m("span",null,"rare-loot-text");txt.append(m("strong",lootName(item)));
  const rate=isForeverLoot(item)?(item.chance_forever_observed_percent==null?T("Forever · taux à vérifier","Forever · rate not established"):T("Forever · taux observé ", "Forever · observed rate ")+fmt(item.chance_forever_observed_percent)+" %"):(item.chance_classic_percent==null?T("Classic · taux inconnu","Classic · unknown rate"):T("Classic · ", "Classic · ")+fmt(item.chance_classic_percent)+" %");txt.append(m("small",rate));
  if(item.item_level||item.required_level||item.stats){const stat=m("small",null,"rare-loot-stats");stat.textContent=[item.item_level?T("Objet niv. ","Item level ")+item.item_level:null,item.required_level?T("Requis ","Requires ")+item.required_level:null,item.stats?.[en?"en":"fr"]].filter(Boolean).join(" · ");txt.append(stat)}
- a.append(txt);a.append(chip(isForeverLoot(item)?"Forever":"Classic",isForeverLoot(item)?"green":"gold"));
+ a.append(txt);a.append(chip(lootTrustLabel(item),["documented_forever","confirmed_in_game"].includes(item.evidence_level)?"green":"gold"));
  if(item.item_id&&!isForeverLoot(item)&&window.ForeverItemTooltip)window.ForeverItemTooltip.bind(a,{id:item.item_id,name:item.name.en,name_en:item.name.en,name_fr:item.name.fr,source_status:"classic_reference",source:"Classic"});loots.append(a)
 }out.append(loots);
 if(r.notes?.[en?"en":"fr"])out.append(m("p",r.notes[en?"en":"fr"],"rare-note"));
