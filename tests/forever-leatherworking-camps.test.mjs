@@ -79,19 +79,19 @@ test("both Horde and Alliance named sellers expose 36 low-level recipes with ind
  }
 });
 test("72 named Forever sales are new; legacy Classic source count is unchanged and derived index reproducible",()=>{
- assert.equal(db.npcs.filter(n=>n.role==="merchant").length,205);
- assert.equal(Object.keys(db.items).length,373);
- assert.equal(db.audit.total_vendor_offers,851);
- assert.equal(db.audit.forever_documented_offers,274);
- assert.equal(db.audit.forever_documented_items,164);
+ assert.equal(db.npcs.filter(n=>n.role==="merchant").length,206);
+ assert.equal(Object.keys(db.items).length,409);
+ assert.equal(db.audit.total_vendor_offers,923);
+ assert.equal(db.audit.forever_documented_offers,346);
+ assert.equal(db.audit.forever_documented_items,200);
  assert.equal(db.audit.classic_unverified_offers,577);
  assert.equal(db.verification_audit.leatherworking_early_faction_camps_20261015.new_items,36);
  assert.equal(db.verification_audit.leatherworking_early_faction_camps_20261015.new_seller_item_links,72);
  assert.equal(db.verification_audit.leatherworking_early_faction_camps_20261015.confirmed_in_game,0);
  assert.deepEqual(index,buildFromFiles(),"Published index must equal an offline rebuild");
- assert.equal(index.totals.unique_items,685);
- assert.equal(index.totals.relations,1175);
- assert.equal(index.totals.by_kind.merchant,851);
- assert.equal(index.totals.by_evidence.documented_forever,411);
+ assert.equal(index.totals.unique_items,721);
+ assert.equal(index.totals.relations,1247);
+ assert.equal(index.totals.by_kind.merchant,923);
+ assert.equal(index.totals.by_evidence.documented_forever,483);
  assert.equal(index.totals.by_evidence.classic_reference,764);
 });
