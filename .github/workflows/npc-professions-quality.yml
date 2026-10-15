@@ -31,6 +31,7 @@ on:
       - tests/forever-vendors-wave2.test.mjs
       - tests/zephras-vayn-vendor.test.mjs
       - tests/forever-blacksmith-camp.test.mjs
+      - tests/forever-resolved-vendor-plans.test.mjs
       - docs/npc-professions-audit-2026-10-13.md
       - .github/workflows/npc-professions-quality.yml
 permissions:
@@ -75,6 +76,8 @@ jobs:
         run: node --test tests/zephras-vayn-vendor.test.mjs
       - name: Documented early Forge camp plan and 57 sales regression
         run: node --test tests/forever-blacksmith-camp.test.mjs
+      - name: Two resolved Forever vendor recipe IDs and French names (#58)
+        run: node --test tests/forever-resolved-vendor-plans.test.mjs
       - name: Trainer location evidence and map consistency (#51)
         run: node scripts/check-trainer-locations.mjs
       - name: Trainer location fixtures and legacy map safeguards (#51)
