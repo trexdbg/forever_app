@@ -79,3 +79,28 @@ test("count cumulative additions without rewriting the historic 150 rare baselin
  assert.equal(scoped.filter(r=>r.loot.length).length,68);
  assert.equal(scoped.filter(r=>!r.loot.length).length,93);
 });
+
+test("four preexisting Forever rare-set and Duskstalker drops now have individualized evidence",()=>{
+ const historical=new Map([["5828",285331],["5842",285329],["5831",285330],["14430",284165]]);
+ const snapshots=new Map([["5828",1.23],["5842",4.09],["5831",4.68],["14430",0.85]]);
+ for(const [id,itemId] of historical){
+  const rare=db.rares.find(r=>r.id===id);
+  assert.ok(rare);
+  const item=rare.loot.find(l=>l.item_id===itemId);
+  assert.ok(item);
+  assert.equal(item.evidence_level,"documented_forever");
+  assert.equal(item.evidence_kind,"forever_community_page");
+  assert.equal(item.observed_at,"2026-10-15");
+  assert.equal(item.observed_build,"unknown");
+  assert.match(item.evidence_url,/^https:\/\//);
+  assert.ok(item.evidence_note.length>90);
+  assert.equal(item.chance_forever_observed_percent,null,
+   "No time-limited sample should masquerade as today's Forever rate");
+  assert.equal(item.historical_drop_sample.percent,snapshots.get(id));
+  assert.equal(item.historical_drop_sample.reviewed_at,"2026-10-11");
+  assert.match(item.historical_drop_sample.source_url,/^https:\/\/www\.wowhead\.com\/forever\//);
+  assert.equal(rare.seen_forever,false,
+    "Loot documentation must not certify the creature's location or gameplay presence");
+  assert.equal(rare.location_review.location_status,"classic_reference");
+ }
+});
