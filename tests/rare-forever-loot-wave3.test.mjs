@@ -104,3 +104,14 @@ test("four preexisting Forever rare-set and Duskstalker drops now have individua
   assert.equal(rare.location_review.location_status,"classic_reference");
  }
 });
+
+test("FR/EN Rare loot chips show evidence levels, not a generic Forever certainty",()=>{
+ const src=readFileSync(new URL("../assets/rares.js",import.meta.url),"utf8");
+ assert.match(src,/const lootTrustLabel=item=>/);
+ assert.match(src,/Forever · documenté/);
+ assert.match(src,/Forever · documented/);
+ assert.match(src,/Forever · à vérifier/);
+ assert.match(src,/Classic · indicatif/);
+ assert.match(src,/lootTrustLabel\(item\)/);
+ assert.doesNotMatch(src,/chip\(isForeverLoot\(item\)\?"Forever":"Classic"/);
+});
