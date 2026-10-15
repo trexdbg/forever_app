@@ -88,16 +88,16 @@ test("one unverified item is not assigned a fabricated ID; totals and classic fa
  assert.ok(!v.offers.some(id=>db.items[id].name.en==="Pattern: Azure Windraveled Jerkin"));
  assert.equal(db.verification_audit.vayn_zephras_wave.unresolved_item,"Pattern: Azure Windraveled Jerkin");
  assert.equal(db.verification_audit.vayn_zephras_wave.new_links,47);
- assert.equal(db.audit.total_vendor_offers,719);
- assert.equal(db.audit.forever_documented_offers,142);
+ assert.equal(db.audit.total_vendor_offers,776);
+ assert.equal(db.audit.forever_documented_offers,199);
  assert.equal(db.audit.classic_unverified_offers,577);
- assert.equal(db.audit.forever_documented_items,98);
- assert.equal(Object.keys(db.items).length,307);
+ assert.equal(db.audit.forever_documented_items,126);
+ assert.equal(Object.keys(db.items).length,335);
  assert.deepEqual(index,buildFromFiles(),"Object-to-vendor lookup must remain reproducible");
- assert.equal(index.totals.unique_items,619);
- assert.equal(index.totals.relations,1043);
- assert.equal(index.totals.by_kind.merchant,719);
- assert.equal(index.totals.by_evidence.documented_forever,279);
+ assert.equal(index.totals.unique_items,647);
+ assert.equal(index.totals.relations,1100);
+ assert.equal(index.totals.by_kind.merchant,776);
+ assert.equal(index.totals.by_evidence.documented_forever,336);
  assert.equal(index.totals.by_evidence.classic_reference,764);
 });
 test("mixed-profession vendor label is bilingual without fabricating recipe translations",()=>{
