@@ -10110,21 +10110,21 @@
       "sources": [
         {
           "kind": "merchant",
-          "name_fr": "Stondry Darkhammer",
-          "name_en": "Stondry Darkhammer",
-          "href": "/marchands/?q=Stondry%20Darkhammer",
-          "evidence_level": "documented_forever",
-          "source_status": "forever_documented_offer",
-          "reference_url": "https://www.wow-professions.com/forever/npc/stondry-darkhammer"
-        },
-        {
-          "kind": "merchant",
           "name_fr": "Gor'mak",
           "name_en": "Gor'mak",
           "href": "/marchands/?q=Gor'mak",
           "evidence_level": "documented_forever",
           "source_status": "forever_documented_offer",
           "reference_url": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce"
+        },
+        {
+          "kind": "merchant",
+          "name_fr": "Stondry Darkhammer",
+          "name_en": "Stondry Darkhammer",
+          "href": "/marchands/?q=Stondry%20Darkhammer",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_offer",
+          "reference_url": "https://www.wow-professions.com/forever/npc/stondry-darkhammer"
         }
       ]
     },
