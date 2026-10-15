@@ -37,11 +37,11 @@ test("current vendor and profession datasets remain structurally valid",()=>{
  assert.equal(r.summary.npcs,357);
  assert.equal(r.summary.knownNpcIds,28);
  assert.equal(r.summary.positionedNpcs,350); // 303 original mapped NPCs + 47 Forever guide waypoints (#51)
- assert.equal(r.summary.merchantOffers,631);
- assert.equal(r.summary.foreverDocumentedOffers,54);
+ assert.equal(r.summary.merchantOffers,672);
+ assert.equal(r.summary.foreverDocumentedOffers,95);
  assert.equal(r.summary.classicOrUnverifiedOffers,577);
- assert.equal(r.summary.distinctItems,244);
- assert.equal(r.summary.recipeItems,228);
+ assert.equal(r.summary.distinctItems,260);
+ assert.equal(r.summary.recipeItems,244);
  assert.equal(r.summary.componentItems,10);
  assert.equal(r.summary.professions,12);
  assert.equal(r.summary.detailedRecipes,0); // no invented ingredient-level recipe coverage
