@@ -67,7 +67,7 @@ test("three source links are discoverable and the derived index stays reproducib
     assert.equal(source.evidence_level,"documented_forever");
     assert.equal(source.source_status,"forever_beta_rare_loot");
     assert.equal(source.reference_url,rare.loot[0].source_url);
-    assert.match(source.href,/^\\/rare\\/\\?zone=/);
+    assert.ok(source.href.startsWith("/rare/?zone="),"Source must navigate to the rare catalogue");
   }
 });
 test("no unrelated rare records were erased by the evidence-only change",()=>{
