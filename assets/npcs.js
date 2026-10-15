@@ -353,6 +353,18 @@ function renderList(){
 }
 function sectionText(parent,head,body){append(parent,"h4",head);append(parent,"p",body,"npc-subtitle")}
 
+/* Coordinate provenance is independent from the existence of the trainer or the guide.
+ * A Forever guide that reused Classic data is NOT documentary proof of a Forever position. */
+function trainerWaypointCaveat(n){
+ if(!hasCoords(n))return S("Zone seulement : aucune position prouvée, aucun repère inventé.","Zone only: no proven coordinates or fabricated waypoint.");
+ if(n.coordinate_status==="forever_guide_waypoint")
+  return S("Documenté dans un guide Forever · point non confirmé en jeu.","Documented in a Forever guide · waypoint not verified in-game.");
+ if(n.coordinate_status==="forever_guides_classic_waypoint_not_ingame_verified")
+  return S("Référence Classic reprise dans un guide Forever · position indicative, non confirmée en jeu.","Classic reference repeated by a Forever guide · indicative, not verified in-game.");
+ if(n.coordinate_status==="classic_reference_unverified")
+  return S("Référence Classic uniquement · position indicative, non confirmée en jeu.","Classic reference only · indicative, not verified in-game.");
+ return S("Provenance du point inconnue · position non confirmée en jeu.","Waypoint provenance unknown · location not verified in-game.");
+}
 function renderTrainerDetail(n){
  detail.replaceChildren();
  const heading=append(detail,"div",null,"npc-trainer-detail-heading");
@@ -390,7 +402,7 @@ function renderTrainerDetail(n){
   });
  }
  append(detail,"p",S("PNJ : ","NPC: ")+n.name,"npc-trainer-person-detail");
- append(detail,"p",!hasCoords(n)?S("Le guide indique uniquement la zone : aucune position inventée.","Only the zone is documented; no guessed waypoint."):n.coordinate_status==="forever_guide_waypoint"?S("Point cité dans un guide Forever, non confirmé en jeu.","Waypoint from a Forever guide, not verified in-game."):S("Coordonnées de référence Classic ou de guides Forever : à vérifier en jeu.","Classic or Forever-guide reference coordinates; verify in-game."),"npc-datacaveat");
+ append(detail,"p",trainerWaypointCaveat(n),"npc-datacaveat");
  const source=append(detail,"p",null,"npc-source");
  link(source,S("Source de la position ↗","Waypoint source ↗"),n.coordinate_source||n.source);
  window.ForeverNpcMap?.show(n,store.db,npcName=>{

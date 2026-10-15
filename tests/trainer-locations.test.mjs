@@ -147,3 +147,23 @@ test("119 profession directory references keep correct trainer zones and faction
  assert.equal(byName.get("Hgarth").zone.id,"stonetalon");
  assert.equal(byName.get("Finbus Geargrind").zone.id,"duskwood");
 });
+
+test("trainer UI distinguishes 72 Forever-guide and 81 Classic-only/imported waypoints without changing pins",()=>{
+ const trainers=db.npcs.filter(n=>n.role==="trainer");
+ const count=status=>trainers.filter(n=>n.coordinate_status===status).length;
+ assert.equal(count("forever_guide_waypoint"),72);
+ assert.equal(count("forever_guides_classic_waypoint_not_ingame_verified"),70);
+ assert.equal(count("classic_reference_unverified"),11);
+ assert.equal(trainers.filter(n=>n.location_evidence?.evidence_level==="confirmed_in_game").length,0);
+ const js=readFileSync(resolve(root,"assets/npcs.js"),"utf8");
+ assert.match(js,/function trainerWaypointCaveat\(n\)/);
+ assert.match(js,/trainerWaypointCaveat\(n\),"npc-datacaveat"/);
+ assert.match(js,/n\.coordinate_status==="forever_guide_waypoint"/);
+ assert.match(js,/n\.coordinate_status==="forever_guides_classic_waypoint_not_ingame_verified"/);
+ assert.match(js,/n\.coordinate_status==="classic_reference_unverified"/);
+ assert.match(js,/Documenté dans un guide Forever/);
+ assert.match(js,/Référence Classic reprise dans un guide Forever/);
+ assert.match(js,/Référence Classic uniquement/);
+ assert.match(js,/not verified in-game/);
+ assert.ok(js.includes("if(hasCoords(n)&&mapId)"),"No /mappin without an exact point");
+});
