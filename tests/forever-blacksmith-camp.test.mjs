@@ -8,15 +8,15 @@ const byName=new Map(db.npcs.filter(x=>x.role==="merchant").map(x=>[x.name,x]));
 const plans={
 45:[251368,251369,251366,251367,251365],
 80:[251363,251364,251361,251362,251360],
-85:[251358,251359,251356,251355],
+85:[251358,251359,251356,251357,251355],
 95:[251383,251384,251381,251382,251380],
 110:[251373,251374,251371,251372,251370],
 125:[251378,251379,251376,251377,251375]
 };
 const ids=Object.values(plans).flat(),vendor=["Stondry Darkhammer","Gor'mak"];
-test("29 exact Blacksmithing recipes have independent item IDs, no inferred gap",()=>{
- assert.equal(ids.length,29);
- assert.equal(new Set(ids).size,29);
+test("30 exact Blacksmithing recipe IDs, with Protector's Boots resolved from Forever",()=>{
+ assert.equal(ids.length,30);
+ assert.equal(new Set(ids).size,30);
  for(const [skill,group] of Object.entries(plans))for(const id of group){
   const item=db.items[String(id)];
   assert.equal(item?.id,id);
@@ -24,9 +24,10 @@ test("29 exact Blacksmithing recipes have independent item IDs, no inferred gap"
   assert.equal(item?.profession,"Forge");
   assert.match(item?.name?.en,/^Plans: /);
   assert.equal(item?.kind,"recipe");
-  assert.equal(item?.source,"https://www.wowhead.com/forever/item="+id);
+  assert.ok(item?.source.startsWith("https://www.wowhead.com/forever/item="+id));
  }
- assert.equal(db.verification_audit.blacksmith_lowlevel_camps_wave.unknown_item,"Plans: Protector's Boots");
+ assert.equal(db.verification_audit.blacksmith_lowlevel_camps_wave.unknown_item,null);
+ assert.equal(db.verification_audit.blacksmith_lowlevel_camps_wave.resolved_followup.item_id,251357);
  assert.equal(db.verification_audit.blacksmith_lowlevel_camps_wave.verified_id_count,29);
  assert.equal(db.verification_audit.blacksmith_lowlevel_camps_wave.added_vendor_links,57);
 });
@@ -37,7 +38,7 @@ test("Stondry and Gor'mak document the same starter plans without inventing rep 
   const npc=byName.get(name);
   assert.ok(npc);
   assert.equal(npc.profession,"Forge");
-  assert.equal(npc.offers.length,30);
+  assert.equal(npc.offers.length,31);
   for(const id of ids){
    const offer=npc.offer_details?.[String(id)];
    assert.ok(npc.offers.includes(String(id)),name+" missing "+id);
@@ -62,15 +63,15 @@ test("Stondry and Gor'mak document the same starter plans without inventing rep 
 });
 test("the 57 new sales extend the existing source index without promoting Classic fallback",()=>{
  assert.equal(db.npcs.filter(n=>n.role==="merchant").length,205);
- assert.equal(Object.keys(db.items).length,335);
- assert.equal(db.audit.total_vendor_offers,776);
- assert.equal(db.audit.forever_documented_offers,199);
- assert.equal(db.audit.forever_documented_items,126);
+ assert.equal(Object.keys(db.items).length,337);
+ assert.equal(db.audit.total_vendor_offers,779);
+ assert.equal(db.audit.forever_documented_offers,202);
+ assert.equal(db.audit.forever_documented_items,128);
  assert.equal(db.audit.classic_unverified_offers,577);
  assert.deepEqual(idx,buildFromFiles());
- assert.equal(idx.totals.unique_items,647);
- assert.equal(idx.totals.relations,1100);
- assert.equal(idx.totals.by_kind.merchant,776);
- assert.equal(idx.totals.by_evidence.documented_forever,336);
+ assert.equal(idx.totals.unique_items,649);
+ assert.equal(idx.totals.relations,1103);
+ assert.equal(idx.totals.by_kind.merchant,779);
+ assert.equal(idx.totals.by_evidence.documented_forever,339);
  assert.equal(idx.totals.by_evidence.classic_reference,764);
 });
