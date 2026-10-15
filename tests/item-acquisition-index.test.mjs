@@ -16,9 +16,9 @@ test("public acquisition index matches its reproducible input-catalogue build",(
  assert.equal(published.totals.relations,all.length);
  assert.ok(published.items.length>=500,"Insufficient useful linked item coverage");
  assert.ok(all.length>=950,"Unexpected loss of existing catalogue relations");
- assert.equal(published.totals.relations,1103);
- assert.equal(published.totals.unique_items,649);
- assert.equal(published.totals.by_evidence.documented_forever,339);
+ assert.equal(published.totals.relations,1175);
+ assert.equal(published.totals.unique_items,685);
+ assert.equal(published.totals.by_evidence.documented_forever,411);
 });
 test("IDs, source paths, categories and evidence statuses are valid",()=>{
  const ids=new Set();
@@ -45,7 +45,7 @@ test("Forever documentary links are never promoted to confirmed gameplay",()=>{
  assert.ok(all.some(s=>s.evidence_level==="classic_reference"));
  assert.ok(!all.some(s=>s.evidence_level==="confirmed_in_game"),
   "No live game proof was established by this navigational cross-index");
- assert.equal(all.filter(s=>s.kind==="merchant").length,779);
+ assert.equal(all.filter(s=>s.kind==="merchant").length,851);
  assert.equal(all.filter(s=>s.kind==="boss").length,205);
  assert.equal(all.filter(s=>s.kind==="rare").length,105);
  assert.equal(all.filter(s=>s.kind==="recipe").length,14);
