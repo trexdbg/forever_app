@@ -14,12 +14,12 @@ const expected=new Map([
 ]);
 const https=x=>typeof x==="string"&&/^https:\/\/[^\s/]+\//.test(x);
 const scoped=catalog.rares.filter(x=>x.beta_level30_in_scope&&x.reference!=="new_forever_community_documented_not_gameplay_confirmed");
-test("maintains the exact 150 rare beta-level catalogue and 12 specific Forever additions",()=>{
+test("maintains the exact 150 legacy rare catalogue and 12 first-wave Forever additions",()=>{
  assert.equal(scoped.length,150);
  const withLoot=scoped.filter(x=>x.loot.length);
  const withoutLoot=scoped.filter(x=>!x.loot.length);
- assert.equal(withLoot.length,59);
- assert.equal(withoutLoot.length,91);
+ assert.equal(withLoot.length,61);
+ assert.equal(withoutLoot.length,89);
  assert.equal(expected.size,12);
  for(const [id,itemId] of expected){
   const rare=scoped.find(x=>x.id===id);
