@@ -95,3 +95,45 @@ body[data-page="items"] .item-catalogue-evidence-note{font-size:11.5px;line-heig
 body[data-page="items"] .item-v3-provenance.classic{color:#b7c4d2;background:#40546920;border-color:#596a79}
 body[data-page="items"] .item-v3-provenance.forever{color:#ecd39b;background:#9a784a25;border-color:#937b4a}
 body[data-page="items"] #item-source{font-size:12px}
+
+
+/* Source-aware acquisition drill-down (documentary Forever vs Classic). */
+body[data-page="items"] .item-acquisition-toggle{
+ margin:5px 0 0 6px;padding:3px 7px;font:700 10px/1.4 system-ui,sans-serif;
+ color:#dceac9;background:#193029;border:1px solid #4e7661;border-radius:5px;
+ cursor:pointer;vertical-align:middle;white-space:nowrap
+}
+body[data-page="items"] .item-acquisition-toggle:hover,
+body[data-page="items"] .item-acquisition-toggle:focus-visible{
+ color:#fff;border-color:#c7d7a5;outline-offset:2px
+}
+body[data-page="items"] .item-acquisition-toggle[aria-expanded="true"]{background:#2b4230;border-color:#d5c18b}
+body[data-page="items"] .item-acquisition-row td{padding:0 12px 12px!important;background:#13221d!important}
+body[data-page="items"] .item-acquisition-panel{
+ padding:12px 15px;border:1px solid #536e5c;border-radius:7px;
+ background:#102018;color:#e8eee4
+}
+body[data-page="items"] .item-acquisition-warning{margin:0 0 9px;color:#b4bfaf;font-size:11px;line-height:1.5}
+body[data-page="items"] .item-acquisition-links{
+ display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));
+ gap:8px 16px;list-style:none;margin:0;padding:0
+}
+body[data-page="items"] .item-acquisition-links li{
+ display:flex;flex-wrap:wrap;align-items:center;gap:5px 10px;
+ padding:7px 9px;border:1px solid #345043;border-radius:5px;
+ min-width:0;background:#172a20;font-size:12px
+}
+body[data-page="items"] .item-acquisition-links a{color:#e6d49e;overflow-wrap:anywhere}
+body[data-page="items"] .item-acquisition-links a:hover{text-decoration:underline}
+body[data-page="items"] .item-acquisition-status{
+ font-size:10px;padding:2px 6px;border:1px solid #5a7482;
+ border-radius:4px;color:#bbcad5;background:#32444a
+}
+body[data-page="items"] .item-acquisition-status[data-evidence="documented_forever"]{
+ border-color:#579075;color:#bde7c6;background:#193e2b
+}
+body[data-page="items"] .item-acquisition-reference{font-size:10px;color:#b5c6d2!important}
+@media(max-width:540px){
+ body[data-page="items"] .item-acquisition-links{grid-template-columns:minmax(0,1fr)}
+ body[data-page="items"] .item-acquisition-panel{padding:10px}
+}

@@ -224,12 +224,18 @@ for(const [id,english,french] of [[6180,"Slarkskin","Peau de Slark"],[3018,"Hide
 }
 const coralRare=rareCatalog.rares.flatMap(row=>row.loot||[]).find(item=>Number(item.item_id)===3188);
 assert.equal(coralRare?.name?.fr,"Claymore des coraux","Rare loot French name must match Classic item 3188");
+// Forever client references can use /items/ID-slug, not only Wowhead item=ID.
+for(const [url,id] of [["https://www.60.tools/items/284400-foremans-helm",284400],
+  ["https://www.wowhead.com/forever/item=285347",285347]]){
+ const m=/(?:item=|\/items?\/)(\d+)/.exec(url);
+ assert.ok(m && Number(m[1])===id,"Rare source URL must resolve the intended exact item ID");
+}
 for(const rare of rareCatalog.rares||[]){
  for(const drop of rare.loot||[]){
   assert.ok(Number.isSafeInteger(Number(drop.item_id))&&Number(drop.item_id)>0,"Rare loot is missing an item ID: "+rare.name.en);
   const known=canonical.get(Number(drop.item_id));
   if(known)assert.equal(drop.name.en,known,"Rare item ID / English-name mismatch: "+drop.item_id);
-  if(drop.item_source_url){const m=/(?:item=|\/item\/)(\d+)/.exec(drop.item_source_url);assert.ok(m,"Invalid rare item link: "+drop.item_source_url);assert.equal(Number(m[1]),Number(drop.item_id),"Rare item link does not match its ID: "+drop.item_id);}
+  if(drop.item_source_url){const m=/(?:item=|\/items?\/)(\d+)/.exec(drop.item_source_url);assert.ok(m,"Invalid rare item link: "+drop.item_source_url);assert.equal(Number(m[1]),Number(drop.item_id),"Rare item link does not match its ID: "+drop.item_id);}
  }
 }
 let rareIconMatches=0;

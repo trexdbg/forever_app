@@ -9,6 +9,17 @@ on:
       - 'assets/items-v3.js'
       - 'data/bis*.json'
       - 'data/items*.json'
+      - 'data/item-acquisition-index.json'
+      - 'data/npcs.json'
+      - 'data/rares.json'
+      - 'data/dungeons-forever.json'
+      - 'data/crafting-chains-beta.json'
+      - 'data/alchemy-chains-beta.json'
+      - 'scripts/build-item-acquisition-index.mjs'
+      - 'tests/item-acquisition-index.test.mjs'
+      - 'equipements/index.html'
+      - 'en/equipements/index.html'
+      - 'assets/item-catalogue.css'
       - 'scripts/check-bis-niveaux.mjs'
       - 'scripts/check-item-locales.mjs'
       - 'scripts/check-bis-behavior.mjs'
@@ -26,6 +37,10 @@ jobs:
           node --version
           node --check assets/bis-niveaux.js
           node --check assets/item-locale.js
+          node --check assets/items-v3.js
+          node --check scripts/build-item-acquisition-index.mjs
           node scripts/check-bis-niveaux.mjs
           node scripts/check-item-locales.mjs
           node scripts/check-bis-behavior.mjs
+          node scripts/build-item-acquisition-index.mjs --check
+          node --test tests/item-acquisition-index.test.mjs

@@ -16,6 +16,77 @@ const colors={poor:"#9d9d9d",common:"#efeee9",uncommon:"#43bf66",rare:"#4c9df1",
 const slotLabels=en?{head:"Head",neck:"Neck",shoulders:"Shoulders",back:"Back",chest:"Chest",wrist:"Wrists",hands:"Hands",waist:"Waist",legs:"Legs",feet:"Feet",finger1:"Rings",trinket1:"Trinkets",mainhand:"Weapons",offhand:"Off hand",ranged:"Ranged / relic"}:{head:"Tête",neck:"Cou",shoulders:"Épaules",back:"Dos",chest:"Torse",wrist:"Poignets",hands:"Mains",waist:"Taille",legs:"Jambes",feet:"Pieds",finger1:"Anneaux",trinket1:"Bijoux",mainhand:"Armes",offhand:"Main gauche",ranged:"Distance / relique"};
 let classic=[],local=[],forever=[],observed=[],selection=new Set(),status="beta30",key="",cursor=null,more=false,loading=false,error="",total=null,visibleLimit=200,sortKey="itemLevel",sortDirection="desc";
 const rowText=(row,value)=>{const cell=document.createElement("td");cell.textContent=String(value??"—");row.append(cell);return cell};
+
+/* On-demand item acquisition links: documentary Forever first, Classic fallback.
+   An indexed relation is not proof of in-game sale, drop, or craft. */
+let sourcePromise=null,expandedRow=null,expandedButton=null;
+const acquisitionLabels=en?{
+ button:"Where to find",loading:"Loading acquisition references…",
+ empty:"No indexed seller, boss, rare or recipe for this item. This does not mean it is unobtainable.",
+ failure:"Acquisition references unavailable.",warning:"Catalogue cross-references only; Forever beta drops/sales and Classic leads are not independently verified here.",
+ reference:"Reference ↗",close:"Hide sources",kind:{merchant:"Vendor",rare:"Rare",boss:"Boss",recipe:"Recipe"},
+ levels:{documented_forever:"Forever · documented",datamined:"Forever · client",confirmed_in_game:"Forever · in-game",classic_reference:"Classic · indicative",unverified:"Unverified"}
+}:{
+ button:"Où l'obtenir",loading:"Chargement des références d’obtention…",
+ empty:"Aucun marchand, boss, rare ou recette indexé pour cet objet. Cela ne signifie pas qu'il est introuvable.",
+ failure:"Références d’obtention indisponibles.",warning:"Liens issus des catalogues : les ventes et butins bêta Forever ou les pistes Classic ne sont pas vérifiés indépendamment ici.",
+ reference:"Référence ↗",close:"Masquer les sources",kind:{merchant:"Marchand",rare:"Rare",boss:"Boss",recipe:"Recette"},
+ levels:{documented_forever:"Forever · documenté",datamined:"Forever · client",confirmed_in_game:"Forever · en jeu",classic_reference:"Classic · indicatif",unverified:"Non vérifié"}
+};
+function loadAcquisitionIndex(){
+ if(!sourcePromise)sourcePromise=fetch("/data/item-acquisition-index.json?v=20261014-1",{credentials:"omit"})
+  .then(r=>{if(!r.ok)throw Error("Acquisition HTTP "+r.status);return r.json()})
+  .then(db=>{
+   if(db.schema_version!==1||!Array.isArray(db.items))throw Error("Invalid acquisition index");
+   return new Map(db.items.map(x=>[x.id,Array.isArray(x.sources)?x.sources:[]]));
+  }).catch(e=>{sourcePromise=null;throw e});
+ return sourcePromise;
+}
+function clearAcquisitionRow(){
+ if(expandedRow){expandedRow.remove();expandedRow=null}
+ if(expandedButton){expandedButton.setAttribute("aria-expanded","false");expandedButton=null}
+}
+async function toggleAcquisition(item,row,button){
+ if(expandedButton===button){clearAcquisitionRow();button.focus();return}
+ clearAcquisitionRow();
+ const detailRow=document.createElement("tr");detailRow.className="item-acquisition-row";
+ detailRow.id="item-acquisition-"+item.id;
+ const cell=document.createElement("td");cell.colSpan=5;detailRow.append(cell);
+ const region=document.createElement("div");region.className="item-acquisition-panel";cell.append(region);
+ const statusNode=document.createElement("p");statusNode.textContent=acquisitionLabels.loading;statusNode.setAttribute("role","status");region.append(statusNode);
+ row.after(detailRow);expandedRow=detailRow;expandedButton=button;
+ button.setAttribute("aria-expanded","true");
+ button.setAttribute("aria-controls",detailRow.id);
+ try{
+  const lookup=await loadAcquisitionIndex();
+  if(!detailRow.isConnected||expandedRow!==detailRow)return;
+  const matches=lookup.get(item.id)||[];
+  region.replaceChildren();
+  const intro=document.createElement("p");intro.className="item-acquisition-warning";intro.textContent=acquisitionLabels.warning;region.append(intro);
+  if(!matches.length){
+   const empty=document.createElement("p");empty.textContent=acquisitionLabels.empty;region.append(empty);
+   return;
+  }
+  const list=document.createElement("ul");list.className="item-acquisition-links";
+  for(const s of matches){
+   if(!/^\/(marchands|rare|donjons|metiers)\//.test(s.href||""))continue;
+   const entry=document.createElement("li"),primary=document.createElement("a");
+   primary.href=s.href;primary.textContent=(acquisitionLabels.kind[s.kind]||s.kind)+" · "+(en?s.name_en:s.name_fr||s.name_en)+(s.context_en?" · "+(en?s.context_en:s.context_fr||s.context_en):"");
+   entry.append(primary);
+   const status=document.createElement("span");status.className="item-acquisition-status";status.dataset.evidence=s.evidence_level;
+   status.textContent=acquisitionLabels.levels[s.evidence_level]||acquisitionLabels.levels.unverified;entry.append(status);
+   if(typeof s.reference_url==="string"&&/^https:\/\/[^\s/]+\//.test(s.reference_url)){
+    const ref=document.createElement("a");ref.className="item-acquisition-reference";ref.href=s.reference_url;
+    ref.target="_blank";ref.rel="noopener noreferrer";ref.textContent=acquisitionLabels.reference;entry.append(ref);
+   }
+   list.append(entry);
+  }
+  region.append(list);
+ }catch{
+  if(detailRow.isConnected&&expandedRow===detailRow)statusNode.textContent=acquisitionLabels.failure;
+ }
+}
+
 function normalizeLocal(i){const x={...i,slot:service.LABELS[i.slot]||i.slot,source_status:i.source_status||"classic_reference"};return window.ForeverItemLocale?.record(x)||x}
 function sourceType(item){return typeof item.source_status==="string"&&item.source_status.startsWith("forever_beta_")?"forever":"classic"}
 const scopeLabels=en?{
@@ -129,6 +200,7 @@ function updateSortHeaders(){
  });
 }
 function render(){
+ clearAcquisitionRow();
  const items=catalogItems();
  drawQuality();
  const rows=items.filter(matches).sort(compareItems);
@@ -143,6 +215,11 @@ function render(){
  const anchor=document.createElement(href?"a":"span");if(href){anchor.href=href;anchor.target="_blank";anchor.rel="noopener noreferrer"}anchor.textContent=i.name;display.append(anchor);name.append(display);
  const tag=document.createElement("span");tag.className="item-v3-provenance "+(sourceType(i)==="forever"?"forever":"classic");tag.textContent=provenanceBadge(i);name.append(tag);
  const detail=document.createElement("button");detail.type="button";detail.className="bis-v2-info-button item-v2-info";detail.textContent="ⓘ";detail.setAttribute("aria-label",tr.tooltip+" "+i.name);detail.addEventListener("click",()=>window.ForeverItemTooltip?.pin(i));name.append(detail);
+ const acquire=document.createElement("button");acquire.type="button";acquire.className="item-acquisition-toggle";
+ acquire.textContent=acquisitionLabels.button;
+ acquire.setAttribute("aria-label",acquisitionLabels.button+" : "+i.name);
+ acquire.setAttribute("aria-expanded","false");
+ acquire.addEventListener("click",()=>toggleAcquisition(i,row,acquire));name.append(acquire);
  rowText(row,slotLabels[i.slot]||i.slot);
  rowText(row,numericLevel(i,"itemLevel")??"—").className="item-catalogue-numeric";
  rowText(row,numericLevel(i,"requiredLevel")??"—").className="item-catalogue-numeric";
