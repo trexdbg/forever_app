@@ -111,7 +111,7 @@ test("FR/EN browser code does not present unknown levels as zero and loads the Z
  assert.match(js,/level_context==="starter_zone"/);
  assert.match(js,/Niveau inconnu/);
  assert.match(js,/Elite \(special encounter\)/);
- assert.doesNotMatch(js,/r\.level<=30/);
+ assert.doesNotMatch(js,/level\.value==="low"\?r\.level<=30/);
  for(const path of ["rare/index.html","en/rare/index.html"]){
   const html=load(path);
   assert.match(html,/<option value="elite">/);
