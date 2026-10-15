@@ -3642,7 +3642,39 @@
           73.6
         ]
       ],
-      "loot": [],
+      "loot": [
+        {
+          "name": {
+            "en": "Imbued Scaled Cuffs",
+            "fr": "Imbued Scaled Cuffs"
+          },
+          "name_fr_status": "unverified_fallback_english",
+          "item_id": 282716,
+          "source_version": "forever_beta",
+          "item_id_status": "forever_beta_wowhead_or_client_reference",
+          "source_url": "https://www.wowhead.com/forever/item=282716/imbued-scaled-cuffs",
+          "item_source_url": "https://www.wowhead.com/forever/item=282716/imbued-scaled-cuffs",
+          "drop_evidence": "forever_item_database_documented_drop_unconfirmed",
+          "chance_classic_percent": null,
+          "chance_forever_observed_percent": null,
+          "item_level": 32,
+          "required_level": 27,
+          "slot": {
+            "en": "Wrist · Mail",
+            "fr": "Poignets · Mailles"
+          },
+          "stats": {
+            "en": "89 Armor · +5 Strength · Equip: up to +5 spell damage and healing",
+            "fr": "89 armure · +5 Force · Équipé : jusqu’à +5 dégâts et soins des sorts"
+          },
+          "evidence_level": "documented_forever",
+          "evidence_url": "https://www.wowhead.com/forever/item=282716/imbued-scaled-cuffs",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Wowhead Forever and the independent Warcraft Wiki Forever item entry explicitly name Scargil in Hillsbrad Foothills as the drop source for item 282716. This is a Forever-specific documentary association, not a first-hand proof of current spawn, guaranteed drop, or fixed rate."
+        }
+      ],
       "source": "https://foreverdb.net/rares",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
@@ -3652,7 +3684,7 @@
       },
       "name_fr_status": "community_translation_check_needed",
       "beta_level30_in_scope": true,
-      "loot_coverage": "not_documented",
+      "loot_coverage": "notable_only_not_complete",
       "coordinate_status": "classic_reference",
       "location_review": {
         "reviewed_at": "2026-10-14",
@@ -13191,7 +13223,39 @@
       "respawn_min_hours": 5,
       "respawn_max_hours": 8,
       "points": [],
-      "loot": [],
+      "loot": [
+        {
+          "name": {
+            "en": "Feather Padded Treads",
+            "fr": "Feather Padded Treads"
+          },
+          "name_fr_status": "unverified_fallback_english",
+          "item_id": 285345,
+          "source_version": "forever_beta",
+          "item_id_status": "forever_beta_wowhead_or_client_reference",
+          "source_url": "https://www.wowhead.com/forever/item=285345/feather-padded-treads",
+          "item_source_url": "https://www.wowhead.com/forever/item=285345/feather-padded-treads",
+          "drop_evidence": "forever_item_database_documented_drop_unconfirmed",
+          "chance_classic_percent": null,
+          "chance_forever_observed_percent": null,
+          "item_level": 21,
+          "required_level": 16,
+          "slot": {
+            "en": "Feet · Cloth",
+            "fr": "Pieds · Tissu"
+          },
+          "stats": {
+            "en": "26 Armor · +6 Stamina · Equip: up to +5 spell damage and healing",
+            "fr": "26 armure · +6 Endurance · Équipé : jusqu’à +5 dégâts et soins des sorts"
+          },
+          "evidence_level": "documented_forever",
+          "evidence_url": "https://www.wowhead.com/forever/item=285345/feather-padded-treads",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Wowhead Forever directly lists Sister Rathtalon as the source of item 285345. This establishes only a documentary item-to-NPC association. The catalogue's unresolved Stonetalon versus Barrens location conflict remains untouched, and the community drop sample is not a stable or guaranteed probability."
+        }
+      ],
       "source": "https://foreverdb.net/rares",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
@@ -13202,7 +13266,7 @@
       "coordinate_status": "zone_only_unverified",
       "name_fr_status": "community_translation_check_needed",
       "beta_level30_in_scope": true,
-      "loot_coverage": "not_documented",
+      "loot_coverage": "notable_only_not_complete",
       "location_review": {
         "reviewed_at": "2026-10-14",
         "initially_without_point": true,
@@ -21230,7 +21294,39 @@
           44.2
         ]
       ],
-      "loot": [],
+      "loot": [
+        {
+          "name": {
+            "en": "Helm Splitter",
+            "fr": "Helm Splitter"
+          },
+          "name_fr_status": "unverified_fallback_english",
+          "item_id": 286755,
+          "source_version": "forever_beta",
+          "item_id_status": "forever_beta_wowhead_or_client_reference",
+          "source_url": "https://www.wowhead.com/forever/item=286755/helm-splitter",
+          "item_source_url": "https://www.wowhead.com/forever/item=286755/helm-splitter",
+          "drop_evidence": "forever_item_database_documented_drop_unconfirmed",
+          "chance_classic_percent": null,
+          "chance_forever_observed_percent": null,
+          "item_level": 11,
+          "required_level": 6,
+          "slot": {
+            "en": "One-Hand Sword",
+            "fr": "Épée à une main"
+          },
+          "stats": {
+            "en": "10–19 Damage · Speed 2.40 · +1 Strength",
+            "fr": "10–19 dégâts · Vitesse 2,40 · +1 Force"
+          },
+          "evidence_level": "documented_forever",
+          "evidence_url": "https://www.wowhead.com/forever/item=286755/helm-splitter",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Wowhead Forever's item page lists The Condemned One as the drop source for item 286755, with item level 11 and required level 6; Warcraft Wiki provides a separate Forever-specific attribution. This is a database report, not a dated gameplay loot capture or guaranteed drop probability."
+        }
+      ],
       "source": "https://wowseer.gg/guides/rare-spawns",
       "reference": "new_forever_community_documented_not_gameplay_confirmed",
       "seen_forever": false,
@@ -21241,7 +21337,7 @@
       "coordinate_status": "documented_forever",
       "beta_level30_in_scope": true,
       "beta_scope_evidence": "forever_documented_exact_level",
-      "loot_coverage": "not_documented",
+      "loot_coverage": "notable_only_not_complete",
       "location_review": {
         "reviewed_at": "2026-10-15",
         "initially_without_point": false,
