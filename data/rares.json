@@ -1866,7 +1866,40 @@
           30.2
         ]
       ],
-      "loot": [],
+      "loot": [
+        {
+          "name": {
+            "en": "Moss-twined Heart",
+            "fr": "Moss-twined Heart"
+          },
+          "name_fr_status": "unverified_fallback_english",
+          "item_id": 5179,
+          "source_version": "forever_beta",
+          "item_id_status": "forever_beta_wowhead_or_client_reference",
+          "source_url": "https://www.wowhead.com/forever/item=5179/moss-twined-heart",
+          "item_source_url": "https://www.wowhead.com/forever/item=5179/moss-twined-heart",
+          "drop_evidence": "forever_item_database_documented_drop_unconfirmed",
+          "chance_classic_percent": null,
+          "chance_forever_observed_percent": null,
+          "item_level": 5,
+          "required_level": 5,
+          "slot": {
+            "en": "Quest-starting item",
+            "fr": "Objet déclenchant une quête"
+          },
+          "stats": {
+            "en": "Unique · Begins a quest",
+            "fr": "Unique · Lance une quête"
+          },
+          "evidence_level": "documented_forever",
+          "evidence_url": "https://www.wowhead.com/forever/item=5179/moss-twined-heart",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Wowhead Forever item 5179 lists Blackmoss the Fetid as the sole listed creature dropping this item; the Forever entry identifies a level-5 quest-starting item. This is a community database relation, not a dated in-game loot capture or proof that the Classic quest path works on Forever.",
+          "icon": "inv_misc_organ_02"
+        }
+      ],
       "source": "https://foreverdb.net/rares",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
@@ -1876,7 +1909,7 @@
       },
       "name_fr_status": "community_translation_check_needed",
       "beta_level30_in_scope": true,
-      "loot_coverage": "not_documented",
+      "loot_coverage": "notable_only_not_complete",
       "coordinate_status": "classic_reference",
       "location_review": {
         "reviewed_at": "2026-10-14",
@@ -1906,7 +1939,8 @@
           "evidence_level": "unverified",
           "evidence_note": "Historical coordinate in the pre-audit Classic/CMaNGOS catalogue. Source for this individual coordinate was not independently traceable; this is only an indicative Classic point, never verified on Forever."
         }
-      ]
+      ],
+      "loot_reviewed_at": "2026-10-15"
     },
     {
       "id": "tirisfal-lost-soul",
@@ -2584,7 +2618,40 @@
           48.1
         ]
       ],
-      "loot": [],
+      "loot": [
+        {
+          "name": {
+            "en": "Arcane Explainer: Magical Stuff in Simple Words",
+            "fr": "Arcane Explainer: Magical Stuff in Simple Words"
+          },
+          "name_fr_status": "unverified_fallback_english",
+          "item_id": 248004,
+          "source_version": "forever_beta",
+          "item_id_status": "forever_beta_wowhead_or_client_reference",
+          "source_url": "https://www.wowhead.com/forever/item=248004/arcane-explainer-magical-stuff-in-simple-words",
+          "item_source_url": "https://www.wowhead.com/forever/item=248004/arcane-explainer-magical-stuff-in-simple-words",
+          "drop_evidence": "forever_item_database_documented_drop_unconfirmed",
+          "chance_classic_percent": null,
+          "chance_forever_observed_percent": null,
+          "item_level": 1,
+          "required_level": null,
+          "slot": {
+            "en": "Quest Item",
+            "fr": "Objet de quête"
+          },
+          "stats": {
+            "en": "Unique quest item",
+            "fr": "Objet de quête unique"
+          },
+          "evidence_level": "documented_forever",
+          "evidence_url": "https://www.wowhead.com/forever/item=248004/arcane-explainer-magical-stuff-in-simple-words",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Wowhead Forever explicitly identifies item 248004 as NEW in Forever, a quest item dropped by Mother Fang in Elwynn Forest. This is a named Forever database item-to-creature relation; it does not establish current game availability, the quest route, quantity, or a stable drop rate.",
+          "icon": "inv_misc_book_10"
+        }
+      ],
       "source": "https://foreverdb.net/rares",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
@@ -2594,7 +2661,7 @@
       },
       "name_fr_status": "community_translation_check_needed",
       "beta_level30_in_scope": true,
-      "loot_coverage": "not_documented",
+      "loot_coverage": "notable_only_not_complete",
       "coordinate_status": "classic_reference",
       "location_review": {
         "reviewed_at": "2026-10-14",
@@ -2624,7 +2691,8 @@
           "evidence_level": "unverified",
           "evidence_note": "Historical coordinate in the pre-audit Classic/CMaNGOS catalogue. Source for this individual coordinate was not independently traceable; this is only an indicative Classic point, never verified on Forever."
         }
-      ]
+      ],
+      "loot_reviewed_at": "2026-10-15"
     },
     {
       "id": "elwynn-narg-the-taskmaster",
@@ -6570,7 +6638,39 @@
           25.5
         ]
       ],
-      "loot": [],
+      "loot": [
+        {
+          "name": {
+            "en": "Demon Scarred Cloak",
+            "fr": "Demon Scarred Cloak"
+          },
+          "name_fr_status": "unverified_fallback_english",
+          "item_id": 4854,
+          "source_version": "forever_beta",
+          "item_id_status": "forever_beta_wowhead_or_client_reference",
+          "source_url": "https://www.wowhead.com/forever/item=4854/demon-scarred-cloak",
+          "item_source_url": "https://www.wowhead.com/forever/item=4854/demon-scarred-cloak",
+          "drop_evidence": "forever_item_database_documented_drop_unconfirmed",
+          "chance_classic_percent": null,
+          "chance_forever_observed_percent": null,
+          "item_level": 11,
+          "required_level": 6,
+          "slot": {
+            "en": "Back · Cloak",
+            "fr": "Dos · Cape"
+          },
+          "stats": {
+            "en": "10 Armor · Begins a quest",
+            "fr": "10 armure · Lance une quête"
+          },
+          "evidence_level": "documented_forever",
+          "evidence_url": "https://www.wowhead.com/forever/item=4854/demon-scarred-cloak",
+          "observed_at": "2026-10-15",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Wowhead Forever item 4854 names Ghost Howl as its drop source and lists a level-11 unique quest-starting back item with 10 armor, requiring level 6. The association remains a Forever database report, not direct gameplay verification; no current drop probability or Classic respawn time is inferred."
+        }
+      ],
       "source": "https://foreverdb.net/rare/3056",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
@@ -6581,7 +6681,7 @@
       "coordinate_status": "classic_reference",
       "name_fr_status": "community_translation_check_needed",
       "beta_level30_in_scope": true,
-      "loot_coverage": "not_documented",
+      "loot_coverage": "notable_only_not_complete",
       "location_review": {
         "reviewed_at": "2026-10-14",
         "initially_without_point": false,
@@ -6634,7 +6734,8 @@
           "evidence_level": "unverified",
           "evidence_note": "Historical coordinate in the pre-audit Classic/CMaNGOS catalogue. Source for this individual coordinate was not independently traceable; this is only an indicative Classic point, never verified on Forever."
         }
-      ]
+      ],
+      "loot_reviewed_at": "2026-10-15"
     },
     {
       "id": "521",
