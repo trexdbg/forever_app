@@ -41,6 +41,8 @@ const sort=(a,b)=>a.skill_yellow_archive-b.skill_yellow_archive||
 function render(){
  if(!records.length)return;
  const hits=records.filter(match).sort(sort),visible=hits.slice(0,(page+1)*PAGE);
+ if(selected&&!hits.some(r=>r.spell_id===selected.spell_id))selected=null;
+ if(!selected&&hits.length)selected=hits[0];
  count.textContent=T(hits.length+" recettes de l'archive Forever",""+hits.length+" recipes in Forever archive")+
   T(" · build 1.60.1.69876 (historique)"," · build 1.60.1.69876 (historic)");
  list.replaceChildren();
@@ -52,8 +54,6 @@ function render(){
  }
  if(!hits.length)place(list,"p",T("Aucune recette trouvée.","No matching recipe."),"early-muted");
  more.hidden=visible.length>=hits.length;more.textContent=T("Afficher davantage ("+visible.length+"/"+hits.length+")","Show more ("+visible.length+"/"+hits.length+")");
- if(selected&&!hits.some(r=>r.spell_id===selected.spell_id))selected=null;
- if(!selected&&hits.length)selected=hits[0];
  renderDetail();
 }
 function select(r){selected=r;render();detail.scrollIntoView({block:"nearest",behavior:"smooth"})}
