@@ -47,7 +47,7 @@ function render(){
  for(const r of visible){
   const b=place(list,"button",null,"early-recipe-row");b.type="button";b.setAttribute("aria-pressed",String(r.spell_id===selected?.spell_id));
   place(b,"strong",r.name_en);
-  place(b,"small","profLabel(r.profession_en)+" · "+T("Seuil jaune ","Yellow threshold ")+r.skill_yellow_archive+" · "+kindLabel(r.forever_archive_status));
+  place(b,"small",profLabel(r.profession_en)+" · "+T("Seuil jaune ","Yellow threshold ")+r.skill_yellow_archive+" · "+kindLabel(r.forever_archive_status));
   b.addEventListener("click",()=>select(r));
  }
  if(!hits.length)place(list,"p",T("Aucune recette trouvée.","No matching recipe."),"early-muted");
@@ -61,7 +61,7 @@ function renderDetail(){
  detail.replaceChildren();
  const r=selected;if(!r){place(detail,"p",T("Choisissez une recette.","Choose a recipe."),"early-muted");return;}
  place(detail,"h3",r.name_en);
- const meta=place(detail,"p","profLabel(r.profession_en)+" · "+T("sort ","spell ")+r.spell_id+" · "+kindLabel(r.forever_archive_status),"early-meta");
+ const meta=place(detail,"p",profLabel(r.profession_en)+" · "+T("sort ","spell ")+r.spell_id+" · "+kindLabel(r.forever_archive_status),"early-meta");
  meta.dataset.source="historical_forever_archive";
  place(detail,"p",T("Client Forever archivé : ce sort et ses composants figuraient dans le build 1.60.1.69876. Disponibilité actuelle, apprentissage en jeu et traduction française non certifiés.",
   "Archived Forever client: this spell and its reagents appeared in build 1.60.1.69876. Current availability, live training and French localization are unverified."),"early-warning");
