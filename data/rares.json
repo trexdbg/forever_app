@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-15",
+  "updated_at": "2026-10-16",
   "scope": "Classic/Vanilla references for WoW Forever. No alternative private-server datasets.",
   "coordinate_system": "zone_percent_0_100_not_gps",
   "data_status": "classic_reference_not_forever_verified",
@@ -1851,7 +1851,7 @@
     {
       "id": "teldrassil-blackmoss-the-fetid",
       "name": {
-        "fr": "Moussenoire le Fétide",
+        "fr": "Noiremousse le Fétide",
         "en": "Blackmoss the Fetid"
       },
       "zone": "teldrassil",
@@ -1870,9 +1870,9 @@
         {
           "name": {
             "en": "Moss-twined Heart",
-            "fr": "Moss-twined Heart"
+            "fr": "Cœur moussu"
           },
-          "name_fr_status": "unverified_fallback_english",
+          "name_fr_status": "classic_reference",
           "item_id": 5179,
           "source_version": "forever_beta",
           "item_id_status": "forever_beta_wowhead_or_client_reference",
@@ -1897,7 +1897,9 @@
           "observed_build": "unknown",
           "evidence_kind": "forever_community_page",
           "evidence_note": "Wowhead Forever item 5179 lists Blackmoss the Fetid as the sole listed creature dropping this item; the Forever entry identifies a level-5 quest-starting item. This is a community database relation, not a dated in-game loot capture or proof that the Classic quest path works on Forever.",
-          "icon": "inv_misc_organ_02"
+          "icon": "inv_misc_organ_02",
+          "name_fr_source_url": "https://www.wowhead.com/classic/fr/item=5179/coeur-moussu",
+          "name_fr_evidence_note": "Localized frFR name verified on Wowhead Classic, not an attested separate Forever translation; the item's Forever loot association has independent evidence."
         }
       ],
       "source": "https://foreverdb.net/rares",
@@ -1907,7 +1909,7 @@
         "fr": "",
         "en": ""
       },
-      "name_fr_status": "community_translation_check_needed",
+      "name_fr_status": "classic_reference",
       "beta_level30_in_scope": true,
       "loot_coverage": "notable_only_not_complete",
       "coordinate_status": "classic_reference",
@@ -1940,7 +1942,9 @@
           "evidence_note": "Historical coordinate in the pre-audit Classic/CMaNGOS catalogue. Source for this individual coordinate was not independently traceable; this is only an indicative Classic point, never verified on Forever."
         }
       ],
-      "loot_reviewed_at": "2026-10-15"
+      "loot_reviewed_at": "2026-10-15",
+      "name_fr_source_url": "https://www.wowhead.com/classic/fr/npc=3535/noiremousse-le-fetide",
+      "name_fr_evidence_note": "French NPC localization from Wowhead Classic frFR; not verified against the WoW Forever client. Creature and location remain independently classified."
     },
     {
       "id": "tirisfal-lost-soul",
@@ -2304,7 +2308,7 @@
     {
       "id": "dun-morogh-timber",
       "name": {
-        "fr": "Timber",
+        "fr": "Grumeux",
         "en": "Timber"
       },
       "zone": "dun-morogh",
@@ -2358,7 +2362,10 @@
           "evidence_level": "unverified",
           "evidence_note": "Historical coordinate in the pre-audit Classic/CMaNGOS catalogue. Source for this individual coordinate was not independently traceable; this is only an indicative Classic point, never verified on Forever."
         }
-      ]
+      ],
+      "name_fr_status": "classic_reference",
+      "name_fr_source_url": "https://www.wowhead.com/classic/fr/npc=1132/grumeux",
+      "name_fr_evidence_note": "French NPC localization from Wowhead Classic frFR; not verified against the WoW Forever client. Creature and location remain independently classified."
     },
     {
       "id": "1130",
@@ -6615,7 +6622,7 @@
     {
       "id": "3056",
       "name": {
-        "fr": "Hurlement fantôme",
+        "fr": "Hurleur fantomatique",
         "en": "Ghost Howl"
       },
       "zone": "mulgore",
@@ -6642,9 +6649,9 @@
         {
           "name": {
             "en": "Demon Scarred Cloak",
-            "fr": "Demon Scarred Cloak"
+            "fr": "Cape griffée par les démons"
           },
-          "name_fr_status": "unverified_fallback_english",
+          "name_fr_status": "classic_reference",
           "item_id": 4854,
           "source_version": "forever_beta",
           "item_id_status": "forever_beta_wowhead_or_client_reference",
@@ -6668,7 +6675,9 @@
           "observed_at": "2026-10-15",
           "observed_build": "unknown",
           "evidence_kind": "forever_community_page",
-          "evidence_note": "Wowhead Forever item 4854 names Ghost Howl as its drop source and lists a level-11 unique quest-starting back item with 10 armor, requiring level 6. The association remains a Forever database report, not direct gameplay verification; no current drop probability or Classic respawn time is inferred."
+          "evidence_note": "Wowhead Forever item 4854 names Ghost Howl as its drop source and lists a level-11 unique quest-starting back item with 10 armor, requiring level 6. The association remains a Forever database report, not direct gameplay verification; no current drop probability or Classic respawn time is inferred.",
+          "name_fr_source_url": "https://www.wowhead.com/classic/fr/item=4854/cape-griffee-par-les-demons",
+          "name_fr_evidence_note": "Localized frFR name verified on Wowhead Classic, not an attested separate Forever translation; the item's Forever loot association has independent evidence."
         }
       ],
       "source": "https://foreverdb.net/rare/3056",
@@ -6679,7 +6688,7 @@
         "en": ""
       },
       "coordinate_status": "classic_reference",
-      "name_fr_status": "community_translation_check_needed",
+      "name_fr_status": "classic_reference",
       "beta_level30_in_scope": true,
       "loot_coverage": "notable_only_not_complete",
       "location_review": {
@@ -6735,7 +6744,9 @@
           "evidence_note": "Historical coordinate in the pre-audit Classic/CMaNGOS catalogue. Source for this individual coordinate was not independently traceable; this is only an indicative Classic point, never verified on Forever."
         }
       ],
-      "loot_reviewed_at": "2026-10-15"
+      "loot_reviewed_at": "2026-10-15",
+      "name_fr_source_url": "https://www.wowhead.com/classic/fr/npc=3056/hurleur-fantomatique",
+      "name_fr_evidence_note": "French NPC localization from Wowhead Classic frFR; not verified against the WoW Forever client. Creature and location remain independently classified."
     },
     {
       "id": "521",

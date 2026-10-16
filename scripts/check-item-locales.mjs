@@ -190,6 +190,20 @@ assert.equal(fr.name({id:6318,name:"Odo's Ley Staff",name_fr:"Bâton tellurique 
 assert.equal(fr.name({id:6324,name:"Robes of Arugal",source_status:"classic_reference"}),"Robe d'Arugal");
 assert.equal(fr.name({id:6909,name:"Strike of the Hydra",source_status:"classic_reference"}),"Frappe de l'Hydre");
 assert.equal(en.name({id:6909,name:"Strike of the Hydra",source_status:"classic_reference"}),"Strike of the Hydra");
+// Official Classic frFR translations for quest-starting rare loot, distinct from Forever gameplay proof.
+for(const [id,english,french] of [
+  [4854,"Demon Scarred Cloak","Cape griffée par les démons"],
+  [5179,"Moss-twined Heart","Cœur moussu"]
+]){
+  const classic={id,name:english,source_status:"classic_reference"};
+  assert.equal(fr.name(classic),french,"Classic frFR localization missing for "+id);
+  assert.equal(en.name(classic),english);
+  assert.equal(fr.resolved(classic).verified,true);
+  const forever={id,name:english,source_status:"forever_beta_community",name_fr:french};
+  assert.equal(fr.name(forever),french,"Documented Forever item should retain separately sourced Classic localization");
+  assert.equal(en.name(forever),english);
+  assert.equal(fr.resolved(forever).verified,false,"Classic translation does not verify Forever gameplay/localization");
+}
 const unresolvedRare=(JSON.parse(readFileSync(resolve(root,"data/rares.json"),"utf8")).rares||[])
  .flatMap(row=>row.loot||[]).filter(i=>!i.item_id);
 assert.equal(unresolvedRare.length,0,"All rare drops must have item IDs");
