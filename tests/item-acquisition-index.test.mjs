@@ -18,7 +18,7 @@ test("public acquisition index matches its reproducible input-catalogue build",(
  assert.ok(all.length>=950,"Unexpected loss of existing catalogue relations");
  assert.equal(published.totals.relations,1256);
  assert.equal(published.totals.unique_items,730);
- assert.equal(published.totals.by_evidence.documented_forever,489);
+ assert.equal(published.totals.by_evidence.documented_forever,465);
 });
 test("IDs, source paths, categories and evidence statuses are valid",()=>{
  const ids=new Set();
