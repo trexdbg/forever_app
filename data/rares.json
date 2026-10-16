@@ -1786,7 +1786,41 @@
           59.4
         ]
       ],
-      "loot": [],
+      "loot": [
+        {
+          "name": {
+            "en": "Gnarlpine Leggings",
+            "fr": "Jambières de Pin-tordu"
+          },
+          "name_fr_status": "classic_reference",
+          "item_id": 18611,
+          "source_version": "classic_reference",
+          "item_id_status": "classic_reference_verified",
+          "source_url": "https://www.wowhead.com/classic/item=18611/gnarlpine-leggings",
+          "item_source_url": "https://www.wowhead.com/classic/item=18611/gnarlpine-leggings",
+          "drop_evidence": "classic_item_database_documented_drop_not_forever_verified",
+          "evidence_level": "classic_reference",
+          "evidence_url": "https://www.wowhead.com/classic/item=18611/gnarlpine-leggings",
+          "observed_at": "2026-10-16",
+          "observed_build": "classic_era",
+          "evidence_kind": "classic_database",
+          "evidence_note": "Wowhead Classic attributes item 18611 (Gnarlpine Leggings) to Uruson. This is a historical Classic creature-to-loot relationship only; presence on the current Forever server, actual drop rates, item eligibility and current loot-table association are not established. Forever item stats, when independently sourced, are a separate claim and do not upgrade this drop.",
+          "chance_classic_percent": null,
+          "item_level": 7,
+          "required_level": 2,
+          "slot": {
+            "en": "Legs · Leather",
+            "fr": "Jambes · Cuir"
+          },
+          "stats": {
+            "en": "36 Armor",
+            "fr": "36 armure"
+          },
+          "stats_version": "classic_reference",
+          "name_fr_source_url": "https://www.wowhead.com/classic/fr/item=18611/jambi%C3%A8res-de-pin-tordu",
+          "name_fr_evidence_note": "French item name from Classic-era French item catalogue, not separately confirmed in the Forever client."
+        }
+      ],
       "source": "https://foreverdb.net/rares",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
@@ -1795,7 +1829,7 @@
         "en": ""
       },
       "beta_level30_in_scope": true,
-      "loot_coverage": "not_documented",
+      "loot_coverage": "classic_reference_only_not_complete",
       "coordinate_status": "classic_reference",
       "location_review": {
         "reviewed_at": "2026-10-14",
@@ -1825,7 +1859,8 @@
           "evidence_level": "unverified",
           "evidence_note": "Historical coordinate in the pre-audit Classic/CMaNGOS catalogue. Source for this individual coordinate was not independently traceable; this is only an indicative Classic point, never verified on Forever."
         }
-      ]
+      ],
+      "loot_reviewed_at": "2026-10-16"
     },
     {
       "id": "teldrassil-fury-shelda",
@@ -2608,7 +2643,7 @@
     {
       "id": "dun-morogh-gibblewilt",
       "name": {
-        "fr": "Gibblewilt",
+        "fr": "Margouilleur",
         "en": "Gibblewilt"
       },
       "zone": "dun-morogh",
@@ -2623,7 +2658,60 @@
           36.2
         ]
       ],
-      "loot": [],
+      "loot": [
+        {
+          "name": {
+            "en": "Foreman Vest",
+            "fr": "Gilet de contremaître"
+          },
+          "name_fr_status": "classic_reference",
+          "item_id": 10553,
+          "source_version": "classic_reference",
+          "item_id_status": "classic_reference_verified",
+          "source_url": "https://www.wowhead.com/classic/item=10553/foreman-vest",
+          "item_source_url": "https://www.wowhead.com/classic/item=10553/foreman-vest",
+          "drop_evidence": "classic_item_database_documented_drop_not_forever_verified",
+          "evidence_level": "classic_reference",
+          "evidence_url": "https://www.wowhead.com/classic/item=10553/foreman-vest",
+          "observed_at": "2026-10-16",
+          "observed_build": "classic_era",
+          "evidence_kind": "classic_database",
+          "evidence_note": "Wowhead Classic attributes item 10553 (Foreman Vest) to Gibblewilt. This is a historical Classic creature-to-loot relationship only; presence on the current Forever server, actual drop rates, item eligibility and current loot-table association are not established. Forever item stats, when independently sourced, are a separate claim and do not upgrade this drop.",
+          "chance_classic_percent": null,
+          "item_level": 11,
+          "required_level": 6,
+          "slot": {
+            "en": "Chest · Cloth",
+            "fr": "Torse · Tissu"
+          },
+          "stats": {
+            "en": "21 Armor · +2 Strength",
+            "fr": "21 armure · +2 Force"
+          },
+          "stats_version": "classic_reference",
+          "name_fr_source_url": "https://www.wowhead.com/wotlk/fr/item=10553/gilet-de-contrema%C3%AEtre",
+          "name_fr_evidence_note": "French item name from Classic-era French item catalogue, not separately confirmed in the Forever client.",
+          "forever_item_snapshot": {
+            "item_level": 13,
+            "required_level": 8,
+            "slot": {
+              "en": "Chest · Cloth",
+              "fr": "Torse · Tissu"
+            },
+            "stats": {
+              "en": "25 Armor · +3 Strength",
+              "fr": "25 armure · +3 Force"
+            },
+            "source_url": "https://www.wowhead.com/forever/item=10553/foreman-vest",
+            "evidence_level": "documented_forever",
+            "observed_at": "2026-10-16",
+            "observed_build": "unknown",
+            "evidence_kind": "forever_community_page",
+            "evidence_url": "https://www.wowhead.com/forever/item=10553/foreman-vest",
+            "evidence_note": "Wowhead Forever item 10553 displays these item attributes. The page is not an attribution of this item to Gibblewilt in current gameplay, and does not establish any loot or spawn rate."
+          }
+        }
+      ],
       "source": "https://foreverdb.net/rares",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
@@ -2632,7 +2720,7 @@
         "en": ""
       },
       "beta_level30_in_scope": true,
-      "loot_coverage": "not_documented",
+      "loot_coverage": "classic_reference_only_not_complete",
       "coordinate_status": "classic_reference",
       "location_review": {
         "reviewed_at": "2026-10-14",
@@ -2662,7 +2750,11 @@
           "evidence_level": "unverified",
           "evidence_note": "Historical coordinate in the pre-audit Classic/CMaNGOS catalogue. Source for this individual coordinate was not independently traceable; this is only an indicative Classic point, never verified on Forever."
         }
-      ]
+      ],
+      "loot_reviewed_at": "2026-10-16",
+      "name_fr_status": "classic_reference",
+      "name_fr_source_url": "https://www.wowhead.com/mop-classic/fr/npc=8503/margouilleur",
+      "name_fr_evidence_note": "French NPC name from WoW Classic-era localized page; current Forever localization and appearance are unverified."
     },
     {
       "id": "elwynn-morgaine-the-sly",
@@ -2836,7 +2928,58 @@
           77.5
         ]
       ],
-      "loot": [],
+      "loot": [
+        {
+          "name": {
+            "en": "Studded Blackjack",
+            "fr": "Studded Blackjack"
+          },
+          "name_fr_status": "unverified_fallback_english",
+          "item_id": 1913,
+          "source_version": "classic_reference",
+          "item_id_status": "classic_reference_verified",
+          "source_url": "https://www.wowhead.com/classic/item=1913/studded-blackjack",
+          "item_source_url": "https://www.wowhead.com/classic/item=1913/studded-blackjack",
+          "drop_evidence": "classic_item_database_documented_drop_not_forever_verified",
+          "evidence_level": "classic_reference",
+          "evidence_url": "https://www.wowhead.com/classic/item=1913/studded-blackjack",
+          "observed_at": "2026-10-16",
+          "observed_build": "classic_era",
+          "evidence_kind": "classic_database",
+          "evidence_note": "Wowhead Classic attributes item 1913 (Studded Blackjack) to Narg the Taskmaster. This is a historical Classic creature-to-loot relationship only; presence on the current Forever server, actual drop rates, item eligibility and current loot-table association are not established. Forever item stats, when independently sourced, are a separate claim and do not upgrade this drop.",
+          "chance_classic_percent": null,
+          "item_level": 10,
+          "required_level": 5,
+          "slot": {
+            "en": "Main Hand · Mace",
+            "fr": "Main droite · Masse"
+          },
+          "stats": {
+            "en": "5–10 Damage · Speed 1.80",
+            "fr": "5–10 dégâts · Vitesse 1,80"
+          },
+          "stats_version": "classic_reference",
+          "forever_item_snapshot": {
+            "item_level": 12,
+            "required_level": 7,
+            "slot": {
+              "en": "Main Hand · Mace",
+              "fr": "Main droite · Masse"
+            },
+            "stats": {
+              "en": "10–19 Damage · Speed 2.20 · +1 Strength",
+              "fr": "10–19 dégâts · Vitesse 2,20 · +1 Force"
+            },
+            "source_url": "https://www.wowhead.com/forever/item=1913/studded-blackjack",
+            "evidence_level": "documented_forever",
+            "observed_at": "2026-10-16",
+            "observed_build": "unknown",
+            "evidence_kind": "forever_community_page",
+            "evidence_url": "https://www.wowhead.com/forever/item=1913/studded-blackjack",
+            "evidence_note": "Wowhead Forever item 1913 displays these item attributes. The page is not an attribution of this item to Narg the Taskmaster in current gameplay, and does not establish any loot or spawn rate."
+          }
+        }
+      ],
       "source": "https://foreverdb.net/rares",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
@@ -2846,7 +2989,7 @@
       },
       "name_fr_status": "community_translation_check_needed",
       "beta_level30_in_scope": true,
-      "loot_coverage": "not_documented",
+      "loot_coverage": "classic_reference_only_not_complete",
       "coordinate_status": "classic_reference",
       "location_review": {
         "reviewed_at": "2026-10-14",
@@ -2876,7 +3019,8 @@
           "evidence_level": "unverified",
           "evidence_note": "Historical coordinate in the pre-audit Classic/CMaNGOS catalogue. Source for this individual coordinate was not independently traceable; this is only an indicative Classic point, never verified on Forever."
         }
-      ]
+      ],
+      "loot_reviewed_at": "2026-10-16"
     },
     {
       "id": "elwynn-thuros-lightfingers",

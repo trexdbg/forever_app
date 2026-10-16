@@ -64,15 +64,15 @@ test("the UI does not mistake all Forever-referenced drops for new items or offi
  assert.ok(js.includes("Nom FR · référence Classic"));
  for(const path of ["rare/index.html","en/rare/index.html"]){
   const html=read(path);
-  assert.ok(html.includes("/assets/item-locale.js?v=20261016-rare-fr"),path);
-  assert.ok(html.includes("/assets/rares.js?v=20261016-rare-fr"),path);
+  assert.ok(html.includes("/assets/item-locale.js?v=20261016-rare-fallback"),path);
+  assert.ok(html.includes("/assets/rares.js?v=20261016-rare-fallback"),path);
  }
 });
 test("Classic quests stay online, new Forever quest module stays inactive and all 161 scoped rares remain",()=>{
  const inScope=rares.rares.filter(x=>x.beta_level30_in_scope);
  assert.equal(inScope.length,161);
- assert.equal(inScope.filter(r=>r.loot.length).length,74);
- assert.equal(inScope.filter(r=>!r.loot.length).length,87);
- assert.equal(idx.totals.relations,1253);
+ assert.equal(inScope.filter(r=>r.loot.length).length,77);
+ assert.equal(inScope.filter(r=>!r.loot.length).length,84);
+ assert.equal(idx.totals.relations,1256);
  for(const path of ["quetes/index.html","en/quetes/index.html"])assert.ok(read(path).length>1000);
 });

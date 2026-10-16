@@ -16,8 +16,8 @@ test("public acquisition index matches its reproducible input-catalogue build",(
  assert.equal(published.totals.relations,all.length);
  assert.ok(published.items.length>=500,"Insufficient useful linked item coverage");
  assert.ok(all.length>=950,"Unexpected loss of existing catalogue relations");
- assert.equal(published.totals.relations,1253);
- assert.equal(published.totals.unique_items,727);
+ assert.equal(published.totals.relations,1256);
+ assert.equal(published.totals.unique_items,730);
  assert.equal(published.totals.by_evidence.documented_forever,489);
 });
 test("IDs, source paths, categories and evidence statuses are valid",()=>{
@@ -47,7 +47,7 @@ test("Forever documentary links are never promoted to confirmed gameplay",()=>{
   "No live game proof was established by this navigational cross-index");
  assert.equal(all.filter(s=>s.kind==="merchant").length,923);
  assert.equal(all.filter(s=>s.kind==="boss").length,205);
- assert.equal(all.filter(s=>s.kind==="rare").length,111);
+ assert.equal(all.filter(s=>s.kind==="rare").length,114);
  assert.equal(all.filter(s=>s.kind==="recipe").length,14);
 });
 test("all twenty-four documented Forever rare additions appear in the cross-catalogue lookup",()=>{

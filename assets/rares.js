@@ -117,6 +117,16 @@ for(const item of r.loot){
  const txt=m("span",null,"rare-loot-text");txt.append(m("strong",lootName(item)));if(!en&&item.name_fr_status==="classic_reference")txt.append(m("small","Nom FR · référence Classic"));
  const rate=isForeverLoot(item)?(item.chance_forever_observed_percent==null?T("Forever · taux à vérifier","Forever · rate not established"):T("Forever · taux observé ", "Forever · observed rate ")+fmt(item.chance_forever_observed_percent)+" %"):(item.chance_classic_percent==null?T("Classic · taux inconnu","Classic · unknown rate"):T("Classic · ", "Classic · ")+fmt(item.chance_classic_percent)+" %");txt.append(m("small",rate));
  if(item.item_level||item.required_level||item.stats){const stat=m("small",null,"rare-loot-stats");stat.textContent=[item.item_level?T("Objet niv. ","Item level ")+item.item_level:null,item.required_level?T("Requis ","Requires ")+item.required_level:null,item.stats?.[en?"en":"fr"]].filter(Boolean).join(" · ");txt.append(stat)}
+ if(item.forever_item_snapshot){
+   const snap=item.forever_item_snapshot;
+   const stat=m("small",null,"rare-loot-stats");
+   stat.textContent=T("Objet dans Forever (butin non confirmé) : ","Item in Forever (drop unverified): ")+[
+     Number.isInteger(snap.item_level)?T("Niv. objet ","Item level ")+snap.item_level:null,
+     Number.isInteger(snap.required_level)?T("Requis ","Requires ")+snap.required_level:null,
+     snap.stats?.[en?"en":"fr"]
+   ].filter(Boolean).join(" · ");
+   txt.append(stat);
+ }
  a.append(txt);a.append(chip(lootTrustLabel(item),["documented_forever","confirmed_in_game"].includes(item.evidence_level)?"green":"gold"));
  if(item.item_id&&!isForeverLoot(item)&&window.ForeverItemTooltip)window.ForeverItemTooltip.bind(a,{id:item.item_id,name:item.name.en,name_en:item.name.en,name_fr:item.name.fr,source_status:"classic_reference",source:"Classic"});loots.append(a)
 }out.append(loots);
