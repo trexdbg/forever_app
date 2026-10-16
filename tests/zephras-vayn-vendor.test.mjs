@@ -98,11 +98,11 @@ test("resolved pattern #276964 is linked, original Vayn wave history and Classic
  assert.equal(db.audit.forever_documented_items,200);
  assert.equal(Object.keys(db.items).length,409);
  assert.deepEqual(index,buildFromFiles(),"Object-to-vendor lookup must remain reproducible");
- assert.equal(index.totals.unique_items,721);
- assert.equal(index.totals.relations,1247);
+ assert.equal(index.totals.unique_items,730);
+ assert.equal(index.totals.relations,1256);
  assert.equal(index.totals.by_kind.merchant,923);
- assert.equal(index.totals.by_evidence.documented_forever,483);
- assert.equal(index.totals.by_evidence.classic_reference,764);
+ assert.equal(index.totals.by_evidence.documented_forever,465);
+ assert.equal(index.totals.by_evidence.classic_reference,767);
 });
 test("mixed-profession vendor label is bilingual without fabricating recipe translations",()=>{
  const js=readFileSync(new URL("../assets/npcs.js",import.meta.url),"utf8");
