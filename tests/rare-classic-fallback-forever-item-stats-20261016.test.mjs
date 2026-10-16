@@ -84,7 +84,7 @@ test("index navigation remains reproducible with three Classic fallback links on
  assert.equal(idx.totals.unique_items,730);
  assert.equal(idx.totals.relations,1256);
  assert.equal(idx.totals.by_kind.rare,114);
- assert.equal(idx.totals.by_evidence.documented_forever,489);
+ assert.equal(idx.totals.by_evidence.documented_forever,465);
  assert.equal(idx.totals.by_evidence.classic_reference,767);
  for(const c of expected){
   const rare=db.rares.find(r=>r.id===c.rare);

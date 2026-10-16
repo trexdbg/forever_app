@@ -54,7 +54,15 @@
               "itemUrl": "https://www.wowhead.com/forever/item=270227",
               "source_status": "forever_beta_community",
               "icon_source": "woweternity_forever_hall_of_thanes",
-              "statsSource": "https://foreverchanges.pro/item/270227"
+              "statsSource": "https://foreverchanges.pro/item/270227",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/hall-of-thanes/",
+              "evidence_url": "https://wowsrc.com/loot/hall-of-thanes/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Ephemeral Choker (item 270227) under Faldrim Anvilmar in Hall of Thanes. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "fr": "Brassards brindecieux",
@@ -74,7 +82,15 @@
               "itemUrl": "https://www.wowhead.com/forever/item=271096",
               "source_status": "forever_beta_community",
               "icon_source": "woweternity_forever_hall_of_thanes",
-              "statsSource": "https://foreverchanges.pro/item/271096"
+              "statsSource": "https://foreverchanges.pro/item/271096",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/hall-of-thanes/",
+              "evidence_url": "https://wowsrc.com/loot/hall-of-thanes/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Aetherwisp Bracers (item 271096) under Faldrim Anvilmar in Hall of Thanes. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "fr": "Drapé spectresprit",
@@ -88,7 +104,15 @@
               "itemUrl": "https://www.wowhead.com/forever/item=271097",
               "icon": "inv_misc_cape_12",
               "icon_source": "woweternity_forever_hall_of_thanes",
-              "statsSource": "https://foreverchanges.pro/item/271097"
+              "statsSource": "https://foreverchanges.pro/item/271097",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/hall-of-thanes/",
+              "evidence_url": "https://wowsrc.com/loot/hall-of-thanes/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Spiritwraith Drape (item 271097) under Faldrim Anvilmar in Hall of Thanes. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             }
           ],
           "note": {
@@ -120,7 +144,15 @@
               "itemUrl": "https://www.wowhead.com/forever/item=270230",
               "icon": "inv_belt_20",
               "icon_source": "woweternity_forever_hall_of_thanes",
-              "statsSource": "https://foreverchanges.pro/item/270230"
+              "statsSource": "https://foreverchanges.pro/item/270230",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/hall-of-thanes/",
+              "evidence_url": "https://wowsrc.com/loot/hall-of-thanes/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Kindlegem Girdle (item 270230) under Magmatus in Hall of Thanes. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "fr": "Poignes poing-de-flammes",
@@ -134,7 +166,15 @@
               "itemUrl": "https://www.wowhead.com/forever/item=270231",
               "icon": "inv_gauntlets_25",
               "icon_source": "woweternity_forever_hall_of_thanes",
-              "statsSource": "https://foreverchanges.pro/item/270231"
+              "statsSource": "https://foreverchanges.pro/item/270231",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/hall-of-thanes/",
+              "evidence_url": "https://wowsrc.com/loot/hall-of-thanes/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Flamefist Grips (item 270231) under Magmatus in Hall of Thanes. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "fr": "Croc de Magmatus",
@@ -148,7 +188,15 @@
               "itemUrl": "https://www.wowhead.com/forever/item=271095",
               "icon": "inv_misc_bone_06",
               "icon_source": "woweternity_forever_hall_of_thanes",
-              "statsSource": "https://foreverchanges.pro/item/271095"
+              "statsSource": "https://foreverchanges.pro/item/271095",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/hall-of-thanes/",
+              "evidence_url": "https://wowsrc.com/loot/hall-of-thanes/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Fang of Magmatus (item 271095) under Magmatus in Hall of Thanes. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             }
           ],
           "note": {
@@ -180,7 +228,15 @@
               "itemUrl": "https://www.wowhead.com/forever/item=270228",
               "icon": "inv_wand_11",
               "icon_source": "woweternity_forever_hall_of_thanes",
-              "statsSource": "https://foreverchanges.pro/item/270228"
+              "statsSource": "https://foreverchanges.pro/item/270228",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/hall-of-thanes/",
+              "evidence_url": "https://wowsrc.com/loot/hall-of-thanes/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Golemheart Stave (item 270228) under Plunder in Hall of Thanes. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "fr": "Bottines du golem protecteur",
@@ -194,7 +250,15 @@
               "itemUrl": "https://www.wowhead.com/forever/item=270229",
               "icon": "inv_boots_01",
               "icon_source": "woweternity_forever_hall_of_thanes",
-              "statsSource": "https://foreverchanges.pro/item/270229"
+              "statsSource": "https://foreverchanges.pro/item/270229",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/hall-of-thanes/",
+              "evidence_url": "https://wowsrc.com/loot/hall-of-thanes/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Treads of the Protector Golem (item 270229) under Plunder in Hall of Thanes. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "fr": "Plastron de garde golem",
@@ -208,7 +272,15 @@
               "itemUrl": "https://www.wowhead.com/forever/item=271098",
               "icon": "inv_chest_chain",
               "icon_source": "woweternity_forever_hall_of_thanes",
-              "statsSource": "https://foreverchanges.pro/item/271098"
+              "statsSource": "https://foreverchanges.pro/item/271098",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/hall-of-thanes/",
+              "evidence_url": "https://wowsrc.com/loot/hall-of-thanes/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Golemguard Chest (item 271098) under Plunder in Hall of Thanes. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             }
           ],
           "note": {
@@ -240,7 +312,15 @@
               "itemUrl": "https://www.wowhead.com/forever/item=270256",
               "icon": "inv_axe_18",
               "icon_source": "woweternity_forever_hall_of_thanes",
-              "statsSource": "https://foreverchanges.pro/item/270256"
+              "statsSource": "https://foreverchanges.pro/item/270256",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/hall-of-thanes/",
+              "evidence_url": "https://wowsrc.com/loot/hall-of-thanes/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Durgen's Crescent Axe (item 270256) under Durgen Dirgehammer in Hall of Thanes. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "fr": "Jambières de Dirgehammer",
@@ -254,7 +334,15 @@
               "itemUrl": "https://www.wowhead.com/forever/item=270260",
               "icon": "inv_pants_06",
               "icon_source": "woweternity_forever_hall_of_thanes",
-              "statsSource": "https://foreverchanges.pro/item/270260"
+              "statsSource": "https://foreverchanges.pro/item/270260",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/hall-of-thanes/",
+              "evidence_url": "https://wowsrc.com/loot/hall-of-thanes/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Direhammer Leggings (item 270260) under Durgen Dirgehammer in Hall of Thanes. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "fr": "Robe de thane déshonoré",
@@ -268,7 +356,15 @@
               "itemUrl": "https://www.wowhead.com/forever/item=270261",
               "icon": "inv_chest_cloth_09",
               "icon_source": "woweternity_forever_hall_of_thanes",
-              "statsSource": "https://foreverchanges.pro/item/270261"
+              "statsSource": "https://foreverchanges.pro/item/270261",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/hall-of-thanes/",
+              "evidence_url": "https://wowsrc.com/loot/hall-of-thanes/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Robes of the Disgraced Thane (item 270261) under Durgen Dirgehammer in Hall of Thanes. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             }
           ],
           "note": {
@@ -360,7 +456,15 @@
               "requiredLevel": 15,
               "icon": "inv_misc_monsterfang_01",
               "icon_source": "woweternity_forever_ruins_of_lordaeron",
-              "statsSource": "https://foreverchanges.pro/item/271204"
+              "statsSource": "https://foreverchanges.pro/item/271204",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/ruins-of-lordaeron/",
+              "evidence_url": "https://wowsrc.com/loot/ruins-of-lordaeron/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Meathook Slicer (item 271204) under The Baron in Ruins of Lordaeron. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "fr": "Os d’abomination",
@@ -374,7 +478,15 @@
               "requiredLevel": 15,
               "icon": "inv_chest_chain_15",
               "icon_source": "woweternity_forever_ruins_of_lordaeron",
-              "statsSource": "https://foreverchanges.pro/item/271205"
+              "statsSource": "https://foreverchanges.pro/item/271205",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/ruins-of-lordaeron/",
+              "evidence_url": "https://wowsrc.com/loot/ruins-of-lordaeron/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Abomination Bones (item 271205) under The Baron in Ruins of Lordaeron. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "fr": "Restes de peau d’abomination",
@@ -388,7 +500,15 @@
               "requiredLevel": 15,
               "icon": "inv_chest_cloth_46",
               "icon_source": "woweternity_forever_ruins_of_lordaeron",
-              "statsSource": "https://foreverchanges.pro/item/271206"
+              "statsSource": "https://foreverchanges.pro/item/271206",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/ruins-of-lordaeron/",
+              "evidence_url": "https://wowsrc.com/loot/ruins-of-lordaeron/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Leftover Abomination Skin (item 271206) under The Baron in Ruins of Lordaeron. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             }
           ],
           "note": {
@@ -417,7 +537,15 @@
               "itemUrl": "https://www.wowhead.com/forever/item=271201",
               "icon": "inv_belt_21",
               "icon_source": "woweternity_forever_ruins_of_lordaeron",
-              "statsSource": "https://foreverchanges.pro/item/271201"
+              "statsSource": "https://foreverchanges.pro/item/271201",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/ruins-of-lordaeron/",
+              "evidence_url": "https://wowsrc.com/loot/ruins-of-lordaeron/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Atrophic Girdle (item 271201) under Witherfang in Ruins of Lordaeron. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "fr": "Brassards de flétrimorsure",
@@ -431,7 +559,15 @@
               "itemUrl": "https://www.wowhead.com/forever/item=271202",
               "icon": "inv_bracer_07",
               "icon_source": "woweternity_forever_ruins_of_lordaeron",
-              "statsSource": "https://foreverchanges.pro/item/271202"
+              "statsSource": "https://foreverchanges.pro/item/271202",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/ruins-of-lordaeron/",
+              "evidence_url": "https://wowsrc.com/loot/ruins-of-lordaeron/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Witherbite Bracers (item 271202) under Witherfang in Ruins of Lordaeron. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "fr": "Patte d’araignée segmentée",
@@ -445,7 +581,15 @@
               "itemUrl": "https://www.wowhead.com/forever/item=271203",
               "icon": "inv_staff_09",
               "icon_source": "woweternity_forever_ruins_of_lordaeron",
-              "statsSource": "https://foreverchanges.pro/item/271203"
+              "statsSource": "https://foreverchanges.pro/item/271203",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/ruins-of-lordaeron/",
+              "evidence_url": "https://wowsrc.com/loot/ruins-of-lordaeron/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Segmented Spider Leg (item 271203) under Witherfang in Ruins of Lordaeron. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             }
           ],
           "note": {
@@ -474,7 +618,10 @@
               "itemUrl": "https://www.wowhead.com/forever/item=271207",
               "icon": "inv_pants_cloth_05",
               "icon_source": "woweternity_forever_ruins_of_lordaeron",
-              "statsSource": "https://foreverchanges.pro/item/271207"
+              "statsSource": "https://foreverchanges.pro/item/271207",
+              "evidence_level": "unverified",
+              "evidence_note": "The exact The Forsaken → Rotmender's Leggings boss-to-item relation is not independently established by the reviewed WoW Source Forever boss lists on 2026-10-16. The existing item sheet, cache or secondary guide does not by itself establish this boss drop; retain for follow-up, not as Forever-documented acquisition.",
+              "loot_attribution_status": "boss_item_pair_needs_independent_evidence"
             },
             {
               "fr": "Poigne de la peur",
@@ -488,7 +635,10 @@
               "itemUrl": "https://www.wowhead.com/forever/item=271208",
               "icon": "inv_gauntlets_04",
               "icon_source": "woweternity_forever_ruins_of_lordaeron",
-              "statsSource": "https://foreverchanges.pro/item/271208"
+              "statsSource": "https://foreverchanges.pro/item/271208",
+              "evidence_level": "unverified",
+              "evidence_note": "The exact The Forsaken → Grip of Fear boss-to-item relation is not independently established by the reviewed WoW Source Forever boss lists on 2026-10-16. The existing item sheet, cache or secondary guide does not by itself establish this boss drop; retain for follow-up, not as Forever-documented acquisition.",
+              "loot_attribution_status": "boss_item_pair_needs_independent_evidence"
             },
             {
               "fr": "Sceptre de l’Abandonné",
@@ -502,7 +652,10 @@
               "itemUrl": "https://www.wowhead.com/forever/item=271216",
               "icon": "inv_misc_bone_dwarfskull_01",
               "icon_source": "woweternity_forever_ruins_of_lordaeron",
-              "statsSource": "https://foreverchanges.pro/item/271216"
+              "statsSource": "https://foreverchanges.pro/item/271216",
+              "evidence_level": "unverified",
+              "evidence_note": "The exact The Forsaken → Scepter of the Abandoned boss-to-item relation is not independently established by the reviewed WoW Source Forever boss lists on 2026-10-16. The existing item sheet, cache or secondary guide does not by itself establish this boss drop; retain for follow-up, not as Forever-documented acquisition.",
+              "loot_attribution_status": "boss_item_pair_needs_independent_evidence"
             }
           ],
           "note": {
@@ -537,7 +690,15 @@
               "itemUrl": "https://www.wowhead.com/forever/item=271209",
               "source_status": "forever_beta_community",
               "icon_source": "woweternity_forever_ruins_of_lordaeron",
-              "statsSource": "https://foreverchanges.pro/item/271209"
+              "statsSource": "https://foreverchanges.pro/item/271209",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/ruins-of-lordaeron/",
+              "evidence_url": "https://wowsrc.com/loot/ruins-of-lordaeron/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Bonerust Leggings (item 271209) under Bjork in Ruins of Lordaeron. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "fr": "Ceinture en brochebande",
@@ -551,7 +712,15 @@
               "itemUrl": "https://www.wowhead.com/forever/item=271210",
               "icon": "inv_belt_26",
               "icon_source": "woweternity_forever_ruins_of_lordaeron",
-              "statsSource": "https://foreverchanges.pro/item/271210"
+              "statsSource": "https://foreverchanges.pro/item/271210",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/ruins-of-lordaeron/",
+              "evidence_url": "https://wowsrc.com/loot/ruins-of-lordaeron/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Tuskwrap Belt (item 271210) under Bjork in Ruins of Lordaeron. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "fr": "Coupe-cadavre",
@@ -565,7 +734,15 @@
               "itemUrl": "https://www.wowhead.com/forever/item=271217",
               "icon": "inv_axe_09",
               "icon_source": "woweternity_forever_ruins_of_lordaeron",
-              "statsSource": "https://foreverchanges.pro/item/271217"
+              "statsSource": "https://foreverchanges.pro/item/271217",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/ruins-of-lordaeron/",
+              "evidence_url": "https://wowsrc.com/loot/ruins-of-lordaeron/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Corpse Chopper (item 271217) under Bjork in Ruins of Lordaeron. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             }
           ],
           "note": {
@@ -594,7 +771,15 @@
               "itemUrl": "https://www.wowhead.com/forever/item=271213",
               "icon": "inv_shield_02",
               "icon_source": "woweternity_forever_ruins_of_lordaeron",
-              "statsSource": "https://foreverchanges.pro/item/271213"
+              "statsSource": "https://foreverchanges.pro/item/271213",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/ruins-of-lordaeron/",
+              "evidence_url": "https://wowsrc.com/loot/ruins-of-lordaeron/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Mirror of Rath'mael (item 271213) under Rath'mael in Ruins of Lordaeron. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "fr": "Bottines de soigneur de pourriture",
@@ -608,7 +793,15 @@
               "itemUrl": "https://www.wowhead.com/forever/item=271214",
               "icon": "inv_boots_05",
               "icon_source": "woweternity_forever_ruins_of_lordaeron",
-              "statsSource": "https://foreverchanges.pro/item/271214"
+              "statsSource": "https://foreverchanges.pro/item/271214",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/ruins-of-lordaeron/",
+              "evidence_url": "https://wowsrc.com/loot/ruins-of-lordaeron/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Rotmender's Treads (item 271214) under Rath'mael in Ruins of Lordaeron. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "fr": "Bâton flèchefroide",
@@ -622,7 +815,15 @@
               "itemUrl": "https://www.wowhead.com/forever/item=271215",
               "icon": "inv_staff_07",
               "icon_source": "woweternity_forever_ruins_of_lordaeron",
-              "statsSource": "https://foreverchanges.pro/item/271215"
+              "statsSource": "https://foreverchanges.pro/item/271215",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/ruins-of-lordaeron/",
+              "evidence_url": "https://wowsrc.com/loot/ruins-of-lordaeron/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Coldspire Staff (item 271215) under Rath'mael in Ruins of Lordaeron. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "fr": "Plan : fermenteur",
@@ -634,14 +835,20 @@
               "id_reference_status": "forever_item_page_verified",
               "name_fr_status": "wowhead_forever_frFR_to_verify",
               "itemLevel": 25,
-              "statsSource": "https://foreverchanges.pro/item/273085"
+              "statsSource": "https://foreverchanges.pro/item/273085",
+              "evidence_level": "unverified",
+              "evidence_note": "The exact Rath'mael → Blueprint: Fermenter boss-to-item relation is not independently established by the reviewed WoW Source Forever boss lists on 2026-10-16. The existing item sheet, cache or secondary guide does not by itself establish this boss drop; retain for follow-up, not as Forever-documented acquisition.",
+              "loot_attribution_status": "boss_item_pair_needs_independent_evidence"
             },
             {
               "fr": "Plan : récupérateur arcanique",
               "en": "Plans: Arcane Recycler",
               "slot": "Recette / Recipe",
               "source_status": "forever_beta_community",
-              "item_id_status": "not_confirmed"
+              "item_id_status": "not_confirmed",
+              "evidence_level": "unverified",
+              "evidence_note": "The exact Rath'mael → Plans: Arcane Recycler boss-to-item relation is not independently established by the reviewed WoW Source Forever boss lists on 2026-10-16. The existing item sheet, cache or secondary guide does not by itself establish this boss drop; retain for follow-up, not as Forever-documented acquisition.",
+              "loot_attribution_status": "boss_item_pair_needs_independent_evidence"
             }
           ],
           "note": {
@@ -670,7 +877,15 @@
               "itemUrl": "https://www.wowhead.com/forever/item=271211",
               "icon": "inv_boots_chain_08",
               "icon_source": "woweternity_forever_ruins_of_lordaeron",
-              "statsSource": "https://foreverchanges.pro/item/271211"
+              "statsSource": "https://foreverchanges.pro/item/271211",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/ruins-of-lordaeron/",
+              "evidence_url": "https://wowsrc.com/loot/ruins-of-lordaeron/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Vilewalkers (item 271211) under Viktor the Vile in Ruins of Lordaeron. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "fr": "Protège-torse ensanglanté",
@@ -684,7 +899,15 @@
               "itemUrl": "https://www.wowhead.com/forever/item=271212",
               "icon": "inv_misc_bandage_14",
               "icon_source": "woweternity_forever_ruins_of_lordaeron",
-              "statsSource": "https://foreverchanges.pro/item/271212"
+              "statsSource": "https://foreverchanges.pro/item/271212",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/ruins-of-lordaeron/",
+              "evidence_url": "https://wowsrc.com/loot/ruins-of-lordaeron/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Bloodied Chestwraps (item 271212) under Viktor the Vile in Ruins of Lordaeron. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "fr": "Cimeterre vilsang",
@@ -698,7 +921,15 @@
               "itemUrl": "https://www.wowhead.com/forever/item=271218",
               "icon": "inv_sword_16",
               "icon_source": "woweternity_forever_ruins_of_lordaeron",
-              "statsSource": "https://foreverchanges.pro/item/271218"
+              "statsSource": "https://foreverchanges.pro/item/271218",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/ruins-of-lordaeron/",
+              "evidence_url": "https://wowsrc.com/loot/ruins-of-lordaeron/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Vileblood Scimitar (item 271218) under Viktor the Vile in Ruins of Lordaeron. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             }
           ],
           "note": {
@@ -727,7 +958,10 @@
               "itemUrl": "https://www.wowhead.com/forever/item=6641",
               "icon": "inv_sword_17",
               "icon_source": "woweternity_forever_ruins_of_lordaeron",
-              "statsSource": "https://foreverchanges.pro/item/6641"
+              "statsSource": "https://foreverchanges.pro/item/6641",
+              "evidence_level": "unverified",
+              "evidence_note": "The exact Lordaeron Captain → Haunting Blade boss-to-item relation is not independently established by the reviewed WoW Source Forever boss lists on 2026-10-16. The existing item sheet, cache or secondary guide does not by itself establish this boss drop; retain for follow-up, not as Forever-documented acquisition.",
+              "loot_attribution_status": "boss_item_pair_needs_independent_evidence"
             },
             {
               "fr": "Armure fantôme",
@@ -741,7 +975,10 @@
               "itemUrl": "https://www.wowhead.com/forever/item=6642",
               "icon": "inv_chest_chain_05",
               "icon_source": "woweternity_forever_ruins_of_lordaeron",
-              "statsSource": "https://foreverchanges.pro/item/6642"
+              "statsSource": "https://foreverchanges.pro/item/6642",
+              "evidence_level": "unverified",
+              "evidence_note": "The exact Lordaeron Captain → Phantom Armor boss-to-item relation is not independently established by the reviewed WoW Source Forever boss lists on 2026-10-16. The existing item sheet, cache or secondary guide does not by itself establish this boss drop; retain for follow-up, not as Forever-documented acquisition.",
+              "loot_attribution_status": "boss_item_pair_needs_independent_evidence"
             }
           ],
           "note": {
@@ -846,7 +1083,15 @@
               "itemUrl": "https://www.wowhead.com/forever/item=273024",
               "iconFileId": 132539,
               "icon_source": "https://www.icy-veins.com/wow-forever/excavation-site-wetlands-guide",
-              "statsSource": "https://foreverchanges.pro/item/273024"
+              "statsSource": "https://foreverchanges.pro/item/273024",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/excavation-site-wetlands/",
+              "evidence_url": "https://wowsrc.com/loot/excavation-site-wetlands/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Glinteye Slippers (item 273024) under Saltspine in Excavation Site: Wetlands. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "fr": "Ceinturon écaille-sel",
@@ -870,7 +1115,15 @@
               "source_status": "forever_beta_community",
               "iconFileId": 132510,
               "icon_source": "https://www.icy-veins.com/wow-forever/excavation-site-wetlands-guide",
-              "statsSource": "https://foreverchanges.pro/item/273023"
+              "statsSource": "https://foreverchanges.pro/item/273023",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/excavation-site-wetlands/",
+              "evidence_url": "https://wowsrc.com/loot/excavation-site-wetlands/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Saltscale Girdle (item 273023) under Saltspine in Excavation Site: Wetlands. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "fr": "Jambières souples en cuir ventral",
@@ -884,7 +1137,15 @@
               "itemUrl": "https://www.wowhead.com/forever/item=273022",
               "iconFileId": 134591,
               "icon_source": "https://www.icy-veins.com/wow-forever/excavation-site-wetlands-guide",
-              "statsSource": "https://foreverchanges.pro/item/273022"
+              "statsSource": "https://foreverchanges.pro/item/273022",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/excavation-site-wetlands/",
+              "evidence_url": "https://wowsrc.com/loot/excavation-site-wetlands/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Supple Bellyskin Leggings (item 273022) under Saltspine in Excavation Site: Wetlands. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             }
           ],
           "note": {
@@ -912,7 +1173,15 @@
               "itemUrl": "https://www.wowhead.com/forever/item=273025",
               "iconFileId": 132551,
               "icon_source": "https://www.icy-veins.com/wow-forever/excavation-site-wetlands-guide",
-              "statsSource": "https://foreverchanges.pro/item/273025"
+              "statsSource": "https://foreverchanges.pro/item/273025",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/excavation-site-wetlands/",
+              "evidence_url": "https://wowsrc.com/loot/excavation-site-wetlands/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Raptorclaw Greaves (item 273025) under Shadetooth in Excavation Site: Wetlands. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "fr": "Regard du raptor",
@@ -926,7 +1195,15 @@
               "itemUrl": "https://www.wowhead.com/forever/item=273027",
               "iconFileId": 136017,
               "icon_source": "https://www.icy-veins.com/wow-forever/excavation-site-wetlands-guide",
-              "statsSource": "https://foreverchanges.pro/item/273027"
+              "statsSource": "https://foreverchanges.pro/item/273027",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/excavation-site-wetlands/",
+              "evidence_url": "https://wowsrc.com/loot/excavation-site-wetlands/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Raptor's Gaze (item 273027) under Shadetooth in Excavation Site: Wetlands. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "en": "Garb of Florid Feathers",
@@ -940,7 +1217,15 @@
               "itemUrl": "https://www.wowhead.com/forever/item=273026",
               "iconFileId": 133684,
               "icon_source": "https://www.icy-veins.com/wow-forever/excavation-site-wetlands-guide",
-              "statsSource": "https://foreverchanges.pro/item/273026"
+              "statsSource": "https://foreverchanges.pro/item/273026",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/excavation-site-wetlands/",
+              "evidence_url": "https://wowsrc.com/loot/excavation-site-wetlands/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Garb of Florid Feathers (item 273026) under Shadetooth in Excavation Site: Wetlands. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "en": "Blueprint: Greenhouse",
@@ -954,7 +1239,10 @@
               "id_reference_status": "forever_item_page_verified",
               "name_fr_status": "wowhead_forever_frFR_verified",
               "itemLevel": 25,
-              "statsSource": "https://foreverchanges.pro/item/273106"
+              "statsSource": "https://foreverchanges.pro/item/273106",
+              "evidence_level": "unverified",
+              "evidence_note": "The exact Shadetooth → Blueprint: Greenhouse boss-to-item relation is not independently established by the reviewed WoW Source Forever boss lists on 2026-10-16. The existing item sheet, cache or secondary guide does not by itself establish this boss drop; retain for follow-up, not as Forever-documented acquisition.",
+              "loot_attribution_status": "boss_item_pair_needs_independent_evidence"
             }
           ],
           "note": {
@@ -995,7 +1283,15 @@
               "itemUrl": "https://www.wowhead.com/forever/item=273030",
               "iconFileId": 133370,
               "icon_source": "https://www.icy-veins.com/wow-forever/excavation-site-wetlands-guide",
-              "statsSource": "https://foreverchanges.pro/item/273030"
+              "statsSource": "https://foreverchanges.pro/item/273030",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/excavation-site-wetlands/",
+              "evidence_url": "https://wowsrc.com/loot/excavation-site-wetlands/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Ring of Power Regulation (item 273030) under Relic Guardian in Excavation Site: Wetlands. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "fr": "Long fusil de vision-golem",
@@ -1009,7 +1305,15 @@
               "itemUrl": "https://www.wowhead.com/forever/item=273029",
               "iconFileId": 134536,
               "icon_source": "https://www.icy-veins.com/wow-forever/excavation-site-wetlands-guide",
-              "statsSource": "https://foreverchanges.pro/item/273029"
+              "statsSource": "https://foreverchanges.pro/item/273029",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/excavation-site-wetlands/",
+              "evidence_url": "https://wowsrc.com/loot/excavation-site-wetlands/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Golemsight Long Gun (item 273029) under Relic Guardian in Excavation Site: Wetlands. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "fr": "Mantelet du reliquaire",
@@ -1033,7 +1337,15 @@
               "source_status": "forever_beta_community",
               "iconFileId": 135058,
               "icon_source": "https://www.icy-veins.com/wow-forever/excavation-site-wetlands-guide",
-              "statsSource": "https://foreverchanges.pro/item/273028"
+              "statsSource": "https://foreverchanges.pro/item/273028",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/excavation-site-wetlands/",
+              "evidence_url": "https://wowsrc.com/loot/excavation-site-wetlands/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Reliquary Mantle (item 273028) under Relic Guardian in Excavation Site: Wetlands. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "fr": "Relique des Titans (quête)",
@@ -1050,7 +1362,10 @@
               "id": 270865,
               "itemUrl": "https://www.wowhead.com/forever/item=270865",
               "itemLevel": 1,
-              "statsSource": "https://www.wowhead.com/forever/item=270865"
+              "statsSource": "https://www.wowhead.com/forever/item=270865",
+              "evidence_level": "unverified",
+              "evidence_note": "The exact Relic Guardian → Titan Relic (quest) boss-to-item relation is not independently established by the reviewed WoW Source Forever boss lists on 2026-10-16. The existing item sheet, cache or secondary guide does not by itself establish this boss drop; retain for follow-up, not as Forever-documented acquisition.",
+              "loot_attribution_status": "boss_item_pair_needs_independent_evidence"
             }
           ],
           "note": {
@@ -1134,7 +1449,15 @@
               "itemLevel": 31,
               "requiredLevel": 26,
               "quality": "rare",
-              "statsSource": "https://foreverchanges.pro/fr/item/273036"
+              "statsSource": "https://foreverchanges.pro/fr/item/273036",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/city-of-dalaran/",
+              "evidence_url": "https://wowsrc.com/loot/city-of-dalaran/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Graveweave Bindings (item 273036) under Atrexis the Grave Knight in City of Dalaran. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "fr": "Chevalière de lieur-d’os",
@@ -1151,7 +1474,15 @@
               "itemLevel": 31,
               "requiredLevel": 25,
               "quality": "rare",
-              "statsSource": "https://foreverchanges.pro/fr/item/273032"
+              "statsSource": "https://foreverchanges.pro/fr/item/273032",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/city-of-dalaran/",
+              "evidence_url": "https://wowsrc.com/loot/city-of-dalaran/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Bonebinder's Signet (item 273032) under Atrexis the Grave Knight in City of Dalaran. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "fr": "Arbalète à répétition pointetombe",
@@ -1168,7 +1499,15 @@
               "itemLevel": 31,
               "requiredLevel": 26,
               "quality": "rare",
-              "statsSource": "https://foreverchanges.pro/fr/item/273033"
+              "statsSource": "https://foreverchanges.pro/fr/item/273033",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/city-of-dalaran/",
+              "evidence_url": "https://wowsrc.com/loot/city-of-dalaran/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Gravespike Repeater (item 273033) under Atrexis the Grave Knight in City of Dalaran. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             }
           ],
           "note": {
@@ -1200,7 +1539,10 @@
               "itemLevel": 33,
               "requiredLevel": 28,
               "quality": "rare",
-              "statsSource": "https://foreverchanges.pro/item/273054"
+              "statsSource": "https://foreverchanges.pro/item/273054",
+              "evidence_level": "unverified",
+              "evidence_note": "The exact Lyn the Unheeded → Cartilage Shapers boss-to-item relation is not independently established by the reviewed WoW Source Forever boss lists on 2026-10-16. The existing item sheet, cache or secondary guide does not by itself establish this boss drop; retain for follow-up, not as Forever-documented acquisition.",
+              "loot_attribution_status": "boss_item_pair_needs_independent_evidence"
             },
             {
               "fr": "Dague écorche-tendons",
@@ -1217,7 +1559,10 @@
               "itemLevel": 33,
               "requiredLevel": 28,
               "quality": "rare",
-              "statsSource": "https://foreverchanges.pro/item/273053"
+              "statsSource": "https://foreverchanges.pro/item/273053",
+              "evidence_level": "unverified",
+              "evidence_note": "The exact Lyn the Unheeded → Tendonscraper Dagger boss-to-item relation is not independently established by the reviewed WoW Source Forever boss lists on 2026-10-16. The existing item sheet, cache or secondary guide does not by itself establish this boss drop; retain for follow-up, not as Forever-documented acquisition.",
+              "loot_attribution_status": "boss_item_pair_needs_independent_evidence"
             },
             {
               "fr": "Oculaire de pile d’os",
@@ -1234,7 +1579,10 @@
               "itemLevel": 33,
               "requiredLevel": 28,
               "quality": "rare",
-              "statsSource": "https://foreverchanges.pro/fr/item/273055"
+              "statsSource": "https://foreverchanges.pro/fr/item/273055",
+              "evidence_level": "unverified",
+              "evidence_note": "The exact Lyn the Unheeded → Bonepile Gaze boss-to-item relation is not independently established by the reviewed WoW Source Forever boss lists on 2026-10-16. The existing item sheet, cache or secondary guide does not by itself establish this boss drop; retain for follow-up, not as Forever-documented acquisition.",
+              "loot_attribution_status": "boss_item_pair_needs_independent_evidence"
             }
           ],
           "note": {
@@ -1263,7 +1611,15 @@
               "itemLevel": 32,
               "requiredLevel": 27,
               "itemUrl": "https://www.wowhead.com/forever/item=273031",
-              "statsSource": "https://foreverchanges.pro/item/273031"
+              "statsSource": "https://foreverchanges.pro/item/273031",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/city-of-dalaran/",
+              "evidence_url": "https://wowsrc.com/loot/city-of-dalaran/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Runemender's Seal (item 273031) under Arcane Anomaly in City of Dalaran. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "fr": "Poignes éphémères",
@@ -1277,7 +1633,15 @@
               "itemLevel": 32,
               "requiredLevel": 27,
               "itemUrl": "https://www.wowhead.com/forever/item=273034",
-              "statsSource": "https://foreverchanges.pro/item/273034"
+              "statsSource": "https://foreverchanges.pro/item/273034",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/city-of-dalaran/",
+              "evidence_url": "https://wowsrc.com/loot/city-of-dalaran/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Ephemeral Grips (item 273034) under Arcane Anomaly in City of Dalaran. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "fr": "Cotte d’anneaux déformée par le mana",
@@ -1294,7 +1658,15 @@
               "itemLevel": 32,
               "requiredLevel": 27,
               "quality": "rare",
-              "statsSource": "https://foreverchanges.pro/item/273035"
+              "statsSource": "https://foreverchanges.pro/item/273035",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/city-of-dalaran/",
+              "evidence_url": "https://wowsrc.com/loot/city-of-dalaran/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Mana-Warped Chain Shirt (item 273035) under Arcane Anomaly in City of Dalaran. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             }
           ],
           "note": {
@@ -1326,7 +1698,15 @@
               "itemLevel": 32,
               "requiredLevel": 27,
               "quality": "rare",
-              "statsSource": "https://foreverchanges.pro/item/273045"
+              "statsSource": "https://foreverchanges.pro/item/273045",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/city-of-dalaran/",
+              "evidence_url": "https://wowsrc.com/loot/city-of-dalaran/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Drape of Shifting Energy (item 273045) under Arcanic Enigma in City of Dalaran. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "fr": "Robe de sorcier pourpre",
@@ -1343,7 +1723,15 @@
               "itemLevel": 32,
               "requiredLevel": 27,
               "quality": "rare",
-              "statsSource": "https://foreverchanges.pro/item/273044"
+              "statsSource": "https://foreverchanges.pro/item/273044",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/city-of-dalaran/",
+              "evidence_url": "https://wowsrc.com/loot/city-of-dalaran/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Violet Sorcerer's Robes (item 273044) under Arcanic Enigma in City of Dalaran. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "fr": "Baguette de concentration de mana",
@@ -1360,7 +1748,15 @@
               "itemLevel": 32,
               "requiredLevel": 27,
               "quality": "rare",
-              "statsSource": "https://foreverchanges.pro/item/273043"
+              "statsSource": "https://foreverchanges.pro/item/273043",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/city-of-dalaran/",
+              "evidence_url": "https://wowsrc.com/loot/city-of-dalaran/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Wand of Mana Concentration (item 273043) under Arcanic Enigma in City of Dalaran. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             }
           ],
           "note": {
@@ -1392,7 +1788,15 @@
               "itemLevel": 33,
               "requiredLevel": 28,
               "quality": "rare",
-              "statsSource": "https://foreverchanges.pro/item/273046"
+              "statsSource": "https://foreverchanges.pro/item/273046",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/city-of-dalaran/",
+              "evidence_url": "https://wowsrc.com/loot/city-of-dalaran/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Guardian's Dualblade (item 273046) under Unstable Sentinel in City of Dalaran. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "fr": "Gardécaille réfractaire",
@@ -1409,7 +1813,15 @@
               "itemLevel": 33,
               "requiredLevel": 28,
               "quality": "rare",
-              "statsSource": "https://foreverchanges.pro/item/273048"
+              "statsSource": "https://foreverchanges.pro/item/273048",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/city-of-dalaran/",
+              "evidence_url": "https://wowsrc.com/loot/city-of-dalaran/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Refractory Scaleguards (item 273048) under Unstable Sentinel in City of Dalaran. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "fr": "Protège-épaules cristallins instables",
@@ -1426,7 +1838,15 @@
               "itemLevel": 33,
               "requiredLevel": 28,
               "quality": "rare",
-              "statsSource": "https://foreverchanges.pro/item/273047"
+              "statsSource": "https://foreverchanges.pro/item/273047",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/city-of-dalaran/",
+              "evidence_url": "https://wowsrc.com/loot/city-of-dalaran/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Unstable Crystalline Shoulderpads (item 273047) under Unstable Sentinel in City of Dalaran. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "fr": "Plan : rouet",
@@ -1441,7 +1861,10 @@
               "name_fr_status": "community_translation_unverified",
               "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran",
               "itemLevel": 25,
-              "statsSource": "https://foreverchanges.pro/item/273099"
+              "statsSource": "https://foreverchanges.pro/item/273099",
+              "evidence_level": "unverified",
+              "evidence_note": "The exact Unstable Sentinel → Blueprint: Spinning Wheel boss-to-item relation is not independently established by the reviewed WoW Source Forever boss lists on 2026-10-16. The existing item sheet, cache or secondary guide does not by itself establish this boss drop; retain for follow-up, not as Forever-documented acquisition.",
+              "loot_attribution_status": "boss_item_pair_needs_independent_evidence"
             }
           ],
           "note": {
@@ -1473,7 +1896,15 @@
               "itemLevel": 33,
               "requiredLevel": 28,
               "quality": "rare",
-              "statsSource": "https://foreverchanges.pro/item/273040"
+              "statsSource": "https://foreverchanges.pro/item/273040",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/city-of-dalaran/",
+              "evidence_url": "https://wowsrc.com/loot/city-of-dalaran/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Spine of the Devourer (item 273040) under Mana Devourer in City of Dalaran. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "fr": "Bottines en écaille-de-mana",
@@ -1490,7 +1921,15 @@
               "itemLevel": 33,
               "requiredLevel": 28,
               "quality": "rare",
-              "statsSource": "https://foreverchanges.pro/item/273042"
+              "statsSource": "https://foreverchanges.pro/item/273042",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/city-of-dalaran/",
+              "evidence_url": "https://wowsrc.com/loot/city-of-dalaran/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Manascale Treads (item 273042) under Mana Devourer in City of Dalaran. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "fr": "Ceinturon en ondule-bandes",
@@ -1507,7 +1946,15 @@
               "itemLevel": 33,
               "requiredLevel": 28,
               "quality": "rare",
-              "statsSource": "https://foreverchanges.pro/item/273041"
+              "statsSource": "https://foreverchanges.pro/item/273041",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/city-of-dalaran/",
+              "evidence_url": "https://wowsrc.com/loot/city-of-dalaran/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Slitherwrap Girdle (item 273041) under Mana Devourer in City of Dalaran. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             }
           ],
           "note": {
@@ -1539,7 +1986,10 @@
               "itemLevel": 34,
               "requiredLevel": 29,
               "quality": "rare",
-              "statsSource": "https://foreverchanges.pro/item/273039"
+              "statsSource": "https://foreverchanges.pro/item/273039",
+              "evidence_level": "unverified",
+              "evidence_note": "The exact Fel-Touched Ancient → Blightleaf Rope boss-to-item relation is not independently established by the reviewed WoW Source Forever boss lists on 2026-10-16. The existing item sheet, cache or secondary guide does not by itself establish this boss drop; retain for follow-up, not as Forever-documented acquisition.",
+              "loot_attribution_status": "boss_item_pair_needs_independent_evidence"
             },
             {
               "fr": "Atours du déchu Gangrécorce",
@@ -1556,7 +2006,10 @@
               "itemLevel": 34,
               "requiredLevel": 29,
               "quality": "rare",
-              "statsSource": "https://foreverchanges.pro/item/273038"
+              "statsSource": "https://foreverchanges.pro/item/273038",
+              "evidence_level": "unverified",
+              "evidence_note": "The exact Fel-Touched Ancient → Garb of Fallen Felbark boss-to-item relation is not independently established by the reviewed WoW Source Forever boss lists on 2026-10-16. The existing item sheet, cache or secondary guide does not by itself establish this boss drop; retain for follow-up, not as Forever-documented acquisition.",
+              "loot_attribution_status": "boss_item_pair_needs_independent_evidence"
             },
             {
               "fr": "Bras de gangrebranche",
@@ -1573,7 +2026,10 @@
               "itemLevel": 34,
               "requiredLevel": 29,
               "quality": "rare",
-              "statsSource": "https://foreverchanges.pro/item/273037"
+              "statsSource": "https://foreverchanges.pro/item/273037",
+              "evidence_level": "unverified",
+              "evidence_note": "The exact Fel-Touched Ancient → Felbough Arm boss-to-item relation is not independently established by the reviewed WoW Source Forever boss lists on 2026-10-16. The existing item sheet, cache or secondary guide does not by itself establish this boss drop; retain for follow-up, not as Forever-documented acquisition.",
+              "loot_attribution_status": "boss_item_pair_needs_independent_evidence"
             }
           ],
           "note": {
@@ -1605,7 +2061,10 @@
               "itemLevel": 35,
               "requiredLevel": 30,
               "quality": "rare",
-              "statsSource": "https://foreverchanges.pro/item/273052"
+              "statsSource": "https://foreverchanges.pro/item/273052",
+              "evidence_level": "unverified",
+              "evidence_note": "The exact Archmage's Shade → Ponderous Orb boss-to-item relation is not independently established by the reviewed WoW Source Forever boss lists on 2026-10-16. The existing item sheet, cache or secondary guide does not by itself establish this boss drop; retain for follow-up, not as Forever-documented acquisition.",
+              "loot_attribution_status": "boss_item_pair_needs_independent_evidence"
             },
             {
               "fr": "Mantelet de sorcier pourpre",
@@ -1622,7 +2081,10 @@
               "itemLevel": 35,
               "requiredLevel": 30,
               "quality": "rare",
-              "statsSource": "https://foreverchanges.pro/item/273051"
+              "statsSource": "https://foreverchanges.pro/item/273051",
+              "evidence_level": "unverified",
+              "evidence_note": "The exact Archmage's Shade → Violet Sorcerer's Mantle boss-to-item relation is not independently established by the reviewed WoW Source Forever boss lists on 2026-10-16. The existing item sheet, cache or secondary guide does not by itself establish this boss drop; retain for follow-up, not as Forever-documented acquisition.",
+              "loot_attribution_status": "boss_item_pair_needs_independent_evidence"
             },
             {
               "fr": "Pendentif à facettes d’archimagistère",
@@ -1636,7 +2098,10 @@
               "itemLevel": 35,
               "requiredLevel": 30,
               "itemUrl": "https://www.wowhead.com/forever/item=273049",
-              "statsSource": "https://foreverchanges.pro/item/273049"
+              "statsSource": "https://foreverchanges.pro/item/273049",
+              "evidence_level": "unverified",
+              "evidence_note": "The exact Archmage's Shade → Archmagister's Faceted Pendant boss-to-item relation is not independently established by the reviewed WoW Source Forever boss lists on 2026-10-16. The existing item sheet, cache or secondary guide does not by itself establish this boss drop; retain for follow-up, not as Forever-documented acquisition.",
+              "loot_attribution_status": "boss_item_pair_needs_independent_evidence"
             },
             {
               "fr": "Plan : récupérateur arcanique",
@@ -1652,7 +2117,10 @@
               "boss_association_status": "guide_only_unconfirmed",
               "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran",
               "itemLevel": 25,
-              "statsSource": "https://foreverchanges.pro/item/273103"
+              "statsSource": "https://foreverchanges.pro/item/273103",
+              "evidence_level": "unverified",
+              "evidence_note": "The exact Archmage's Shade → Blueprint: Arcane Salvager boss-to-item relation is not independently established by the reviewed WoW Source Forever boss lists on 2026-10-16. The existing item sheet, cache or secondary guide does not by itself establish this boss drop; retain for follow-up, not as Forever-documented acquisition.",
+              "loot_attribution_status": "boss_item_pair_needs_independent_evidence"
             }
           ],
           "note": {
@@ -1896,7 +2364,15 @@
               "itemUrl": "https://www.wowhead.com/forever/item=272999",
               "itemLevel": 18,
               "requiredLevel": 13,
-              "statsSource": "https://foreverchanges.pro/item/272999"
+              "statsSource": "https://foreverchanges.pro/item/272999",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/ragefire-chasm/",
+              "evidence_url": "https://wowsrc.com/loot/ragefire-chasm/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Barbaric Crossbow (item 272999) under Oggleflint in Ragefire Chasm. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "en": "Trogg Scepter",
@@ -1908,7 +2384,15 @@
               "iconFileId": 133727,
               "icon_source": "https://www.icy-veins.com/wow-forever/ragefire-chasm-guide",
               "itemUrl": "https://www.wowhead.com/forever/item=272996",
-              "statsSource": "https://foreverchanges.pro/item/272996"
+              "statsSource": "https://foreverchanges.pro/item/272996",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/ragefire-chasm/",
+              "evidence_url": "https://wowsrc.com/loot/ragefire-chasm/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Trogg Scepter (item 272996) under Oggleflint in Ragefire Chasm. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "en": "Bone Knuckles",
@@ -1922,7 +2406,15 @@
               "itemUrl": "https://www.wowhead.com/forever/item=272998",
               "itemLevel": 18,
               "requiredLevel": 13,
-              "statsSource": "https://foreverchanges.pro/item/272998"
+              "statsSource": "https://foreverchanges.pro/item/272998",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/ragefire-chasm/",
+              "evidence_url": "https://wowsrc.com/loot/ragefire-chasm/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Bone Knuckles (item 272998) under Oggleflint in Ragefire Chasm. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             }
           ],
           "rare": false,
@@ -2070,7 +2562,15 @@
               "iconFileId": 135639,
               "icon_source": "https://www.icy-veins.com/wow-forever/ragefire-chasm-guide",
               "itemUrl": "https://www.wowhead.com/forever/item=273003",
-              "statsSource": "https://foreverchanges.pro/item/273003"
+              "statsSource": "https://foreverchanges.pro/item/273003",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/ragefire-chasm/",
+              "evidence_url": "https://wowsrc.com/loot/ragefire-chasm/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Searing Dagger (item 273003) under Bazzalan in Ragefire Chasm. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "en": "Satyrskin Cloak",
@@ -2084,7 +2584,15 @@
               "itemUrl": "https://www.wowhead.com/forever/item=273005",
               "itemLevel": 18,
               "requiredLevel": 13,
-              "statsSource": "https://foreverchanges.pro/item/273005"
+              "statsSource": "https://foreverchanges.pro/item/273005",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/ragefire-chasm/",
+              "evidence_url": "https://wowsrc.com/loot/ragefire-chasm/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Satyrskin Cloak (item 273005) under Bazzalan in Ragefire Chasm. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "en": "Chasm Walkers",
@@ -2100,7 +2608,15 @@
               "forever_loot_confirmed": null,
               "itemLevel": 18,
               "requiredLevel": 13,
-              "statsSource": "https://foreverchanges.pro/item/273007"
+              "statsSource": "https://foreverchanges.pro/item/273007",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/ragefire-chasm/",
+              "evidence_url": "https://wowsrc.com/loot/ragefire-chasm/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Chasm Walkers (item 273007) under Bazzalan in Ragefire Chasm. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             }
           ],
           "rare": false,
@@ -2259,7 +2775,15 @@
               "itemUrl": "https://www.wowhead.com/forever/item=273088",
               "itemLevel": 22,
               "requiredLevel": 17,
-              "statsSource": "https://foreverchanges.pro/item/273088"
+              "statsSource": "https://foreverchanges.pro/item/273088",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/wailing-caverns/",
+              "evidence_url": "https://wowsrc.com/loot/wailing-caverns/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Snake Eye Kaleidoscope (item 273088) under Lady Anacondra in Wailing Caverns. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             }
           ],
           "rare": false,
@@ -3910,7 +4434,15 @@
               "itemUrl": "https://www.wowhead.com/forever/item=273805",
               "iconFileId": 132719,
               "icon_source": "https://www.icy-veins.com/wow-forever/the-stockade-guide",
-              "statsSource": "https://foreverchanges.pro/item/273805"
+              "statsSource": "https://foreverchanges.pro/item/273805",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/the-stockade/",
+              "evidence_url": "https://wowsrc.com/loot/the-stockade/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Blackrock Harness (item 273805) under Targorr the Dread in The Stockade. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "en": "Executioner Mantle",
@@ -3926,7 +4458,15 @@
               "forever_loot_confirmed": null,
               "itemLevel": 26,
               "requiredLevel": 21,
-              "statsSource": "https://foreverchanges.pro/item/273804"
+              "statsSource": "https://foreverchanges.pro/item/273804",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/the-stockade/",
+              "evidence_url": "https://wowsrc.com/loot/the-stockade/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Executioner Mantle (item 273804) under Targorr the Dread in The Stockade. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             }
           ],
           "rare": false,
@@ -3966,7 +4506,15 @@
               "itemUrl": "https://www.wowhead.com/forever/item=273807",
               "itemLevel": 29,
               "requiredLevel": 24,
-              "statsSource": "https://wowsrc.com/loot/the-stockade/"
+              "statsSource": "https://wowsrc.com/loot/the-stockade/",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/the-stockade/",
+              "evidence_url": "https://wowsrc.com/loot/the-stockade/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Demolition Girdle (item 273807) under Kam Deepfury in The Stockade. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             }
           ],
           "rare": false,
@@ -3991,7 +4539,15 @@
               "iconFileId": 132392,
               "icon_source": "https://www.icy-veins.com/wow-forever/the-stockade-guide",
               "itemUrl": "https://www.wowhead.com/forever/item=273809",
-              "statsSource": "https://foreverchanges.pro/item/273809"
+              "statsSource": "https://foreverchanges.pro/item/273809",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/the-stockade/",
+              "evidence_url": "https://wowsrc.com/loot/the-stockade/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Hamhock's Cleaver (item 273809) under Hamhock in The Stockade. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             }
           ],
           "rare": false,
@@ -4139,7 +4695,15 @@
               "slot": "Bouclier",
               "isNew": true,
               "source_status": "forever_beta_cache",
-              "itemUrl": "https://www.wowhead.com/forever/item=274043"
+              "itemUrl": "https://www.wowhead.com/forever/item=274043",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/gnomeregan/",
+              "evidence_url": "https://wowsrc.com/loot/gnomeregan/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Irradiated Shield (item 274043) under Grubbis in Gnomeregan. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "en": "Skullduggery Belt",
@@ -4150,7 +4714,10 @@
               "id": 274042,
               "itemUrl": "https://www.wowhead.com/forever/item=274042",
               "id_reference_status": "forever_item_page_verified",
-              "forever_loot_confirmed": null
+              "forever_loot_confirmed": null,
+              "evidence_level": "unverified",
+              "evidence_note": "The exact Grubbis → Skullduggery Belt boss-to-item relation is not independently established by the reviewed WoW Source Forever boss lists on 2026-10-16. The existing item sheet, cache or secondary guide does not by itself establish this boss drop; retain for follow-up, not as Forever-documented acquisition.",
+              "loot_attribution_status": "boss_item_pair_needs_independent_evidence"
             }
           ],
           "rare": false,
@@ -4304,7 +4871,15 @@
                 "Requires Level 29"
               ],
               "itemUrl": "https://www.wowhead.com/forever/item=274068",
-              "statsSource": "https://www.60.tools/items/274068-thermaplugg-medal-of-honor"
+              "statsSource": "https://www.60.tools/items/274068-thermaplugg-medal-of-honor",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/gnomeregan/",
+              "evidence_url": "https://wowsrc.com/loot/gnomeregan/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Thermaplugg Medal of Honor (item 274068) under Crowd Pummeler 9-60 in Gnomeregan. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "en": "Schematic: 9-60 Battery Pack",
@@ -4317,7 +4892,10 @@
               "id_reference_status": "forever_item_page_verified",
               "forever_loot_confirmed": null,
               "itemLevel": 34,
-              "statsSource": "https://foreverchanges.pro/item/274049"
+              "statsSource": "https://foreverchanges.pro/item/274049",
+              "evidence_level": "unverified",
+              "evidence_note": "The exact Crowd Pummeler 9-60 → Schematic: 9-60 Battery Pack boss-to-item relation is not independently established by the reviewed WoW Source Forever boss lists on 2026-10-16. The existing item sheet, cache or secondary guide does not by itself establish this boss drop; retain for follow-up, not as Forever-documented acquisition.",
+              "loot_attribution_status": "boss_item_pair_needs_independent_evidence"
             }
           ],
           "rare": false,
@@ -4487,7 +5065,15 @@
               "itemUrl": "https://www.wowhead.com/forever/item=274158",
               "id_reference_status": "forever_item_page_verified",
               "forever_loot_confirmed": null,
-              "statsSource": "https://foreverchanges.pro/item/274158"
+              "statsSource": "https://foreverchanges.pro/item/274158",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/razorfen-kraul/",
+              "evidence_url": "https://wowsrc.com/loot/razorfen-kraul/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Death Prophet Spine (item 274158) under Aggem Thorncurse in Razorfen Kraul. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "en": "Thorncursed Grips",
@@ -4501,7 +5087,15 @@
               "forever_loot_confirmed": null,
               "itemLevel": 33,
               "requiredLevel": 27,
-              "statsSource": "https://wowsrc.com/loot/razorfen-kraul/"
+              "statsSource": "https://wowsrc.com/loot/razorfen-kraul/",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/razorfen-kraul/",
+              "evidence_url": "https://wowsrc.com/loot/razorfen-kraul/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Thorncursed Grips (item 274159) under Aggem Thorncurse in Razorfen Kraul. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "en": "Brawler's Leather Helm",
@@ -4524,7 +5118,10 @@
                 "Requires Level 25"
               ],
               "itemUrl": "https://www.wowhead.com/forever/item=252512",
-              "statsSource": "https://www.60.tools/items/252512-brawlers-leather-helm"
+              "statsSource": "https://www.60.tools/items/252512-brawlers-leather-helm",
+              "evidence_level": "unverified",
+              "evidence_note": "The exact Aggem Thorncurse → Brawler's Leather Helm boss-to-item relation is not independently established by the reviewed WoW Source Forever boss lists on 2026-10-16. The existing item sheet, cache or secondary guide does not by itself establish this boss drop; retain for follow-up, not as Forever-documented acquisition.",
+              "loot_attribution_status": "boss_item_pair_needs_independent_evidence"
             }
           ],
           "rare": false,
@@ -4608,7 +5205,15 @@
               "forever_loot_confirmed": null,
               "itemLevel": 30,
               "requiredLevel": 25,
-              "statsSource": "https://wowsrc.com/loot/razorfen-kraul/"
+              "statsSource": "https://wowsrc.com/loot/razorfen-kraul/",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/razorfen-kraul/",
+              "evidence_url": "https://wowsrc.com/loot/razorfen-kraul/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Geomancer Headdress (item 274155) under Roogug in Razorfen Kraul. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "en": "Thornweaver Drape",
@@ -4620,7 +5225,15 @@
               "itemUrl": "https://www.wowhead.com/forever/item=274149",
               "itemLevel": 30,
               "requiredLevel": 25,
-              "statsSource": "https://foreverchanges.pro/item/274149"
+              "statsSource": "https://foreverchanges.pro/item/274149",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/razorfen-kraul/",
+              "evidence_url": "https://wowsrc.com/loot/razorfen-kraul/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Thornweaver Drape (item 274149) under Roogug in Razorfen Kraul. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             }
           ],
           "rare": false,
@@ -4675,7 +5288,15 @@
               "forever_loot_confirmed": null,
               "itemLevel": 34,
               "requiredLevel": 29,
-              "statsSource": "https://foreverchanges.pro/item/274161"
+              "statsSource": "https://foreverchanges.pro/item/274161",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/razorfen-kraul/",
+              "evidence_url": "https://wowsrc.com/loot/razorfen-kraul/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Quillord Mail Leggings (item 274161) under Overlord Ramtusk in Razorfen Kraul. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             }
           ],
           "rare": false,
@@ -4929,7 +5550,15 @@
               "itemUrl": "https://www.wowhead.com/forever/item=274290",
               "itemLevel": 34,
               "requiredLevel": 29,
-              "statsSource": "https://wowsrc.com/loot/scarlet-monastery-graveyard/"
+              "statsSource": "https://wowsrc.com/loot/scarlet-monastery-graveyard/",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/scarlet-monastery-graveyard/",
+              "evidence_url": "https://wowsrc.com/loot/scarlet-monastery-graveyard/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Painwalker Buckler (item 274290) under Interrogator Vishas in Scarlet Monastery: Graveyard. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             },
             {
               "en": "Defender's Leather Helm",
@@ -4941,7 +5570,10 @@
               "itemUrl": "https://www.wowhead.com/forever/item=252455",
               "itemLevel": 30,
               "requiredLevel": 25,
-              "statsSource": "https://foreverchanges.pro/item/252455"
+              "statsSource": "https://foreverchanges.pro/item/252455",
+              "evidence_level": "unverified",
+              "evidence_note": "The exact Interrogator Vishas → Defender's Leather Helm boss-to-item relation is not independently established by the reviewed WoW Source Forever boss lists on 2026-10-16. The existing item sheet, cache or secondary guide does not by itself establish this boss drop; retain for follow-up, not as Forever-documented acquisition.",
+              "loot_attribution_status": "boss_item_pair_needs_independent_evidence"
             }
           ],
           "rare": false,
@@ -4993,7 +5625,15 @@
               "forever_loot_confirmed": null,
               "itemLevel": 36,
               "requiredLevel": 31,
-              "statsSource": "https://foreverchanges.pro/item/274291"
+              "statsSource": "https://foreverchanges.pro/item/274291",
+              "evidence_level": "documented_forever",
+              "source_url": "https://wowsrc.com/loot/scarlet-monastery-graveyard/",
+              "evidence_url": "https://wowsrc.com/loot/scarlet-monastery-graveyard/",
+              "observed_at": "2026-10-16",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page",
+              "evidence_note": "WoW Source's WoW Forever dungeon loot table explicitly lists Polished Skullcap (item 274291) under Bloodmage Thalnos in Scarlet Monastery: Graveyard. This is independent community documentation of the boss-to-item relationship, not a verified personal drop capture, live server assurance or drop rate. Item pages alone are insufficient.",
+              "loot_attribution_status": "boss_item_pair_documented_forever"
             }
           ],
           "rare": false,
@@ -5056,7 +5696,10 @@
                 "Requires Level 25"
               ],
               "itemUrl": "https://www.wowhead.com/forever/item=252512",
-              "statsSource": "https://www.60.tools/items/252512-brawlers-leather-helm"
+              "statsSource": "https://www.60.tools/items/252512-brawlers-leather-helm",
+              "evidence_level": "unverified",
+              "evidence_note": "The exact Azshir the Sleepless → Brawler's Leather Helm boss-to-item relation is not independently established by the reviewed WoW Source Forever boss lists on 2026-10-16. The existing item sheet, cache or secondary guide does not by itself establish this boss drop; retain for follow-up, not as Forever-documented acquisition.",
+              "loot_attribution_status": "boss_item_pair_needs_independent_evidence"
             }
           ],
           "rare": true,
@@ -7446,5 +8089,6 @@
       252822
     ],
     "notes": "The leatherworking patterns are vendor-sold (Wowhead Forever), not confirmed dungeon boss loot. Their earlier placement under bosses was removed; source provenance retained here."
-  }
+  },
+  "updated_at": "2026-10-16"
 }

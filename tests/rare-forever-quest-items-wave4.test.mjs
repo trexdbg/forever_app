@@ -65,7 +65,7 @@ test("three source links are discoverable and the derived index stays reproducib
   assert.equal(idx.totals.unique_items,730);
   assert.equal(idx.totals.relations,1256);
   assert.equal(idx.totals.by_kind.rare,114);
-  assert.equal(idx.totals.by_evidence.documented_forever,489);
+  assert.equal(idx.totals.by_evidence.documented_forever,465);
   for(const c of cases){
     const rare=db.rares.find(r=>r.id===c.rare);
     const source=idx.items.find(i=>i.id===c.id)?.sources.find(s=>s.kind==="rare");

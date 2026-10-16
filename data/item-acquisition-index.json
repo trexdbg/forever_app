@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-15",
+  "updated_at": "2026-10-16",
   "scope": "Read-only relations inherited from ForEveroth merchant, rare, dungeon and opt-in beta recipe catalogues. Source links may identify only an item or guide, not prove sale, drop, availability, rates or live crafting.",
   "provenance_policy": "Forever documented relations are labelled documentary only; all Classic relations stay Classic. Each relationship preserves its originating status. The links are navigation aids, not new source audits.",
   "totals": {
@@ -13,8 +13,9 @@
       "recipe": 14
     },
     "by_evidence": {
-      "documented_forever": 489,
-      "classic_reference": 767
+      "documented_forever": 465,
+      "classic_reference": 767,
+      "unverified": 24
     }
   },
   "items": [
@@ -5133,8 +5134,8 @@
           "context_fr": "Ruines de Lordaeron",
           "context_en": "Ruins of Lordaeron",
           "href": "/donjons/?donjon=ruins-of-lordaeron&boss=7",
-          "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
+          "evidence_level": "unverified",
+          "source_status": "forever_boss_loot_without_direct_source",
           "reference_url": "https://foreverchanges.pro/item/6641"
         }
       ]
@@ -5149,8 +5150,8 @@
           "context_fr": "Ruines de Lordaeron",
           "context_en": "Ruins of Lordaeron",
           "href": "/donjons/?donjon=ruins-of-lordaeron&boss=7",
-          "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
+          "evidence_level": "unverified",
+          "source_status": "forever_boss_loot_without_direct_source",
           "reference_url": "https://foreverchanges.pro/item/6642"
         }
       ]
@@ -10885,8 +10886,8 @@
           "context_fr": "Monastère écarlate : cimetière",
           "context_en": "Scarlet Monastery: Graveyard",
           "href": "/donjons/?donjon=scarlet-monastery-graveyard&boss=1",
-          "evidence_level": "documented_forever",
-          "source_status": "forever_beta_cache",
+          "evidence_level": "unverified",
+          "source_status": "forever_boss_loot_without_direct_source",
           "reference_url": "https://foreverchanges.pro/item/252455"
         }
       ]
@@ -10901,8 +10902,8 @@
           "context_fr": "Kraal de Tranchebauge",
           "context_en": "Razorfen Kraul",
           "href": "/donjons/?donjon=razorfen-kraul&boss=1",
-          "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
+          "evidence_level": "unverified",
+          "source_status": "forever_boss_loot_without_direct_source",
           "reference_url": "https://www.60.tools/items/252512-brawlers-leather-helm"
         },
         {
@@ -10912,8 +10913,8 @@
           "context_fr": "Monastère écarlate : cimetière",
           "context_en": "Scarlet Monastery: Graveyard",
           "href": "/donjons/?donjon=scarlet-monastery-graveyard&boss=3",
-          "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
+          "evidence_level": "unverified",
+          "source_status": "forever_boss_loot_without_direct_source",
           "reference_url": "https://www.60.tools/items/252512-brawlers-leather-helm"
         }
       ]
@@ -12751,8 +12752,8 @@
           "context_en": "Hall of Thanes",
           "href": "/donjons/?donjon=hall-of-thanes&boss=1",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/270227"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/hall-of-thanes/"
         }
       ]
     },
@@ -12767,8 +12768,8 @@
           "context_en": "Hall of Thanes",
           "href": "/donjons/?donjon=hall-of-thanes&boss=3",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/270228"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/hall-of-thanes/"
         }
       ]
     },
@@ -12783,8 +12784,8 @@
           "context_en": "Hall of Thanes",
           "href": "/donjons/?donjon=hall-of-thanes&boss=3",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/270229"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/hall-of-thanes/"
         }
       ]
     },
@@ -12799,8 +12800,8 @@
           "context_en": "Hall of Thanes",
           "href": "/donjons/?donjon=hall-of-thanes&boss=2",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/270230"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/hall-of-thanes/"
         }
       ]
     },
@@ -12815,8 +12816,8 @@
           "context_en": "Hall of Thanes",
           "href": "/donjons/?donjon=hall-of-thanes&boss=2",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/270231"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/hall-of-thanes/"
         }
       ]
     },
@@ -12831,8 +12832,8 @@
           "context_en": "Hall of Thanes",
           "href": "/donjons/?donjon=hall-of-thanes&boss=4",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/270256"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/hall-of-thanes/"
         }
       ]
     },
@@ -12847,8 +12848,8 @@
           "context_en": "Hall of Thanes",
           "href": "/donjons/?donjon=hall-of-thanes&boss=4",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/270260"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/hall-of-thanes/"
         }
       ]
     },
@@ -12863,8 +12864,8 @@
           "context_en": "Hall of Thanes",
           "href": "/donjons/?donjon=hall-of-thanes&boss=4",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/270261"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/hall-of-thanes/"
         }
       ]
     },
@@ -12878,8 +12879,8 @@
           "context_fr": "Excavations : les Paluns",
           "context_en": "Excavation Site: Wetlands",
           "href": "/donjons/?donjon=excavation-site-wetlands&boss=4",
-          "evidence_level": "documented_forever",
-          "source_status": "forever_beta_wowhead",
+          "evidence_level": "unverified",
+          "source_status": "forever_boss_loot_without_direct_source",
           "reference_url": "https://www.wowhead.com/forever/item=270865"
         }
       ]
@@ -12895,8 +12896,8 @@
           "context_en": "Hall of Thanes",
           "href": "/donjons/?donjon=hall-of-thanes&boss=2",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/271095"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/hall-of-thanes/"
         }
       ]
     },
@@ -12911,8 +12912,8 @@
           "context_en": "Hall of Thanes",
           "href": "/donjons/?donjon=hall-of-thanes&boss=1",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/271096"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/hall-of-thanes/"
         }
       ]
     },
@@ -12927,8 +12928,8 @@
           "context_en": "Hall of Thanes",
           "href": "/donjons/?donjon=hall-of-thanes&boss=1",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/271097"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/hall-of-thanes/"
         }
       ]
     },
@@ -12943,8 +12944,8 @@
           "context_en": "Hall of Thanes",
           "href": "/donjons/?donjon=hall-of-thanes&boss=3",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/271098"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/hall-of-thanes/"
         }
       ]
     },
@@ -12959,8 +12960,8 @@
           "context_en": "Ruins of Lordaeron",
           "href": "/donjons/?donjon=ruins-of-lordaeron&boss=2",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/271201"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/ruins-of-lordaeron/"
         }
       ]
     },
@@ -12975,8 +12976,8 @@
           "context_en": "Ruins of Lordaeron",
           "href": "/donjons/?donjon=ruins-of-lordaeron&boss=2",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/271202"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/ruins-of-lordaeron/"
         }
       ]
     },
@@ -12991,8 +12992,8 @@
           "context_en": "Ruins of Lordaeron",
           "href": "/donjons/?donjon=ruins-of-lordaeron&boss=2",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/271203"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/ruins-of-lordaeron/"
         }
       ]
     },
@@ -13007,8 +13008,8 @@
           "context_en": "Ruins of Lordaeron",
           "href": "/donjons/?donjon=ruins-of-lordaeron&boss=1",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/271204"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/ruins-of-lordaeron/"
         }
       ]
     },
@@ -13023,8 +13024,8 @@
           "context_en": "Ruins of Lordaeron",
           "href": "/donjons/?donjon=ruins-of-lordaeron&boss=1",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/271205"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/ruins-of-lordaeron/"
         }
       ]
     },
@@ -13039,8 +13040,8 @@
           "context_en": "Ruins of Lordaeron",
           "href": "/donjons/?donjon=ruins-of-lordaeron&boss=1",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/271206"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/ruins-of-lordaeron/"
         }
       ]
     },
@@ -13054,8 +13055,8 @@
           "context_fr": "Ruines de Lordaeron",
           "context_en": "Ruins of Lordaeron",
           "href": "/donjons/?donjon=ruins-of-lordaeron&boss=3",
-          "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
+          "evidence_level": "unverified",
+          "source_status": "forever_boss_loot_without_direct_source",
           "reference_url": "https://foreverchanges.pro/item/271207"
         }
       ]
@@ -13070,8 +13071,8 @@
           "context_fr": "Ruines de Lordaeron",
           "context_en": "Ruins of Lordaeron",
           "href": "/donjons/?donjon=ruins-of-lordaeron&boss=3",
-          "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
+          "evidence_level": "unverified",
+          "source_status": "forever_boss_loot_without_direct_source",
           "reference_url": "https://foreverchanges.pro/item/271208"
         }
       ]
@@ -13087,8 +13088,8 @@
           "context_en": "Ruins of Lordaeron",
           "href": "/donjons/?donjon=ruins-of-lordaeron&boss=4",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/271209"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/ruins-of-lordaeron/"
         }
       ]
     },
@@ -13103,8 +13104,8 @@
           "context_en": "Ruins of Lordaeron",
           "href": "/donjons/?donjon=ruins-of-lordaeron&boss=4",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/271210"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/ruins-of-lordaeron/"
         }
       ]
     },
@@ -13119,8 +13120,8 @@
           "context_en": "Ruins of Lordaeron",
           "href": "/donjons/?donjon=ruins-of-lordaeron&boss=6",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/271211"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/ruins-of-lordaeron/"
         }
       ]
     },
@@ -13135,8 +13136,8 @@
           "context_en": "Ruins of Lordaeron",
           "href": "/donjons/?donjon=ruins-of-lordaeron&boss=6",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/271212"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/ruins-of-lordaeron/"
         }
       ]
     },
@@ -13151,8 +13152,8 @@
           "context_en": "Ruins of Lordaeron",
           "href": "/donjons/?donjon=ruins-of-lordaeron&boss=5",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/271213"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/ruins-of-lordaeron/"
         }
       ]
     },
@@ -13167,8 +13168,8 @@
           "context_en": "Ruins of Lordaeron",
           "href": "/donjons/?donjon=ruins-of-lordaeron&boss=5",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/271214"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/ruins-of-lordaeron/"
         }
       ]
     },
@@ -13183,8 +13184,8 @@
           "context_en": "Ruins of Lordaeron",
           "href": "/donjons/?donjon=ruins-of-lordaeron&boss=5",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/271215"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/ruins-of-lordaeron/"
         }
       ]
     },
@@ -13198,8 +13199,8 @@
           "context_fr": "Ruines de Lordaeron",
           "context_en": "Ruins of Lordaeron",
           "href": "/donjons/?donjon=ruins-of-lordaeron&boss=3",
-          "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
+          "evidence_level": "unverified",
+          "source_status": "forever_boss_loot_without_direct_source",
           "reference_url": "https://foreverchanges.pro/item/271216"
         }
       ]
@@ -13215,8 +13216,8 @@
           "context_en": "Ruins of Lordaeron",
           "href": "/donjons/?donjon=ruins-of-lordaeron&boss=4",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/271217"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/ruins-of-lordaeron/"
         }
       ]
     },
@@ -13231,8 +13232,8 @@
           "context_en": "Ruins of Lordaeron",
           "href": "/donjons/?donjon=ruins-of-lordaeron&boss=6",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/271218"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/ruins-of-lordaeron/"
         }
       ]
     },
@@ -13367,8 +13368,8 @@
           "context_en": "Ragefire Chasm",
           "href": "/donjons/?donjon=ragefire-chasm&boss=1",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_cache",
-          "reference_url": "https://foreverchanges.pro/item/272996"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/ragefire-chasm/"
         }
       ]
     },
@@ -13383,8 +13384,8 @@
           "context_en": "Ragefire Chasm",
           "href": "/donjons/?donjon=ragefire-chasm&boss=1",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_cache",
-          "reference_url": "https://foreverchanges.pro/item/272998"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/ragefire-chasm/"
         }
       ]
     },
@@ -13399,8 +13400,8 @@
           "context_en": "Ragefire Chasm",
           "href": "/donjons/?donjon=ragefire-chasm&boss=1",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_cache",
-          "reference_url": "https://foreverchanges.pro/item/272999"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/ragefire-chasm/"
         }
       ]
     },
@@ -13415,8 +13416,8 @@
           "context_en": "Ragefire Chasm",
           "href": "/donjons/?donjon=ragefire-chasm&boss=4",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_cache",
-          "reference_url": "https://foreverchanges.pro/item/273003"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/ragefire-chasm/"
         }
       ]
     },
@@ -13431,8 +13432,8 @@
           "context_en": "Ragefire Chasm",
           "href": "/donjons/?donjon=ragefire-chasm&boss=4",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_cache",
-          "reference_url": "https://foreverchanges.pro/item/273005"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/ragefire-chasm/"
         }
       ]
     },
@@ -13447,8 +13448,8 @@
           "context_en": "Ragefire Chasm",
           "href": "/donjons/?donjon=ragefire-chasm&boss=4",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_wowhead",
-          "reference_url": "https://foreverchanges.pro/item/273007"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/ragefire-chasm/"
         }
       ]
     },
@@ -13463,8 +13464,8 @@
           "context_en": "Excavation Site: Wetlands",
           "href": "/donjons/?donjon=excavation-site-wetlands&boss=1",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/273022"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/excavation-site-wetlands/"
         }
       ]
     },
@@ -13479,8 +13480,8 @@
           "context_en": "Excavation Site: Wetlands",
           "href": "/donjons/?donjon=excavation-site-wetlands&boss=1",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/273023"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/excavation-site-wetlands/"
         }
       ]
     },
@@ -13495,8 +13496,8 @@
           "context_en": "Excavation Site: Wetlands",
           "href": "/donjons/?donjon=excavation-site-wetlands&boss=1",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/273024"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/excavation-site-wetlands/"
         }
       ]
     },
@@ -13511,8 +13512,8 @@
           "context_en": "Excavation Site: Wetlands",
           "href": "/donjons/?donjon=excavation-site-wetlands&boss=2",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/273025"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/excavation-site-wetlands/"
         }
       ]
     },
@@ -13527,8 +13528,8 @@
           "context_en": "Excavation Site: Wetlands",
           "href": "/donjons/?donjon=excavation-site-wetlands&boss=2",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/273026"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/excavation-site-wetlands/"
         }
       ]
     },
@@ -13543,8 +13544,8 @@
           "context_en": "Excavation Site: Wetlands",
           "href": "/donjons/?donjon=excavation-site-wetlands&boss=2",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/273027"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/excavation-site-wetlands/"
         }
       ]
     },
@@ -13559,8 +13560,8 @@
           "context_en": "Excavation Site: Wetlands",
           "href": "/donjons/?donjon=excavation-site-wetlands&boss=4",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/273028"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/excavation-site-wetlands/"
         }
       ]
     },
@@ -13575,8 +13576,8 @@
           "context_en": "Excavation Site: Wetlands",
           "href": "/donjons/?donjon=excavation-site-wetlands&boss=4",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/273029"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/excavation-site-wetlands/"
         }
       ]
     },
@@ -13591,8 +13592,8 @@
           "context_en": "Excavation Site: Wetlands",
           "href": "/donjons/?donjon=excavation-site-wetlands&boss=4",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/273030"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/excavation-site-wetlands/"
         }
       ]
     },
@@ -13607,8 +13608,8 @@
           "context_en": "City of Dalaran",
           "href": "/donjons/?donjon=city-of-dalaran&boss=3",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/273031"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/city-of-dalaran/"
         }
       ]
     },
@@ -13623,8 +13624,8 @@
           "context_en": "City of Dalaran",
           "href": "/donjons/?donjon=city-of-dalaran&boss=1",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/fr/item/273032"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/city-of-dalaran/"
         }
       ]
     },
@@ -13639,8 +13640,8 @@
           "context_en": "City of Dalaran",
           "href": "/donjons/?donjon=city-of-dalaran&boss=1",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/fr/item/273033"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/city-of-dalaran/"
         }
       ]
     },
@@ -13655,8 +13656,8 @@
           "context_en": "City of Dalaran",
           "href": "/donjons/?donjon=city-of-dalaran&boss=3",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/273034"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/city-of-dalaran/"
         }
       ]
     },
@@ -13671,8 +13672,8 @@
           "context_en": "City of Dalaran",
           "href": "/donjons/?donjon=city-of-dalaran&boss=3",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/273035"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/city-of-dalaran/"
         }
       ]
     },
@@ -13687,8 +13688,8 @@
           "context_en": "City of Dalaran",
           "href": "/donjons/?donjon=city-of-dalaran&boss=1",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/fr/item/273036"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/city-of-dalaran/"
         }
       ]
     },
@@ -13702,8 +13703,8 @@
           "context_fr": "Cité de Dalaran",
           "context_en": "City of Dalaran",
           "href": "/donjons/?donjon=city-of-dalaran&boss=7",
-          "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
+          "evidence_level": "unverified",
+          "source_status": "forever_boss_loot_without_direct_source",
           "reference_url": "https://foreverchanges.pro/item/273037"
         }
       ]
@@ -13718,8 +13719,8 @@
           "context_fr": "Cité de Dalaran",
           "context_en": "City of Dalaran",
           "href": "/donjons/?donjon=city-of-dalaran&boss=7",
-          "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
+          "evidence_level": "unverified",
+          "source_status": "forever_boss_loot_without_direct_source",
           "reference_url": "https://foreverchanges.pro/item/273038"
         }
       ]
@@ -13734,8 +13735,8 @@
           "context_fr": "Cité de Dalaran",
           "context_en": "City of Dalaran",
           "href": "/donjons/?donjon=city-of-dalaran&boss=7",
-          "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
+          "evidence_level": "unverified",
+          "source_status": "forever_boss_loot_without_direct_source",
           "reference_url": "https://foreverchanges.pro/item/273039"
         }
       ]
@@ -13751,8 +13752,8 @@
           "context_en": "City of Dalaran",
           "href": "/donjons/?donjon=city-of-dalaran&boss=6",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/273040"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/city-of-dalaran/"
         }
       ]
     },
@@ -13767,8 +13768,8 @@
           "context_en": "City of Dalaran",
           "href": "/donjons/?donjon=city-of-dalaran&boss=6",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/273041"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/city-of-dalaran/"
         }
       ]
     },
@@ -13783,8 +13784,8 @@
           "context_en": "City of Dalaran",
           "href": "/donjons/?donjon=city-of-dalaran&boss=6",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/273042"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/city-of-dalaran/"
         }
       ]
     },
@@ -13799,8 +13800,8 @@
           "context_en": "City of Dalaran",
           "href": "/donjons/?donjon=city-of-dalaran&boss=4",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/273043"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/city-of-dalaran/"
         }
       ]
     },
@@ -13815,8 +13816,8 @@
           "context_en": "City of Dalaran",
           "href": "/donjons/?donjon=city-of-dalaran&boss=4",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/273044"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/city-of-dalaran/"
         }
       ]
     },
@@ -13831,8 +13832,8 @@
           "context_en": "City of Dalaran",
           "href": "/donjons/?donjon=city-of-dalaran&boss=4",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/273045"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/city-of-dalaran/"
         }
       ]
     },
@@ -13847,8 +13848,8 @@
           "context_en": "City of Dalaran",
           "href": "/donjons/?donjon=city-of-dalaran&boss=5",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/273046"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/city-of-dalaran/"
         }
       ]
     },
@@ -13863,8 +13864,8 @@
           "context_en": "City of Dalaran",
           "href": "/donjons/?donjon=city-of-dalaran&boss=5",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/273047"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/city-of-dalaran/"
         }
       ]
     },
@@ -13879,8 +13880,8 @@
           "context_en": "City of Dalaran",
           "href": "/donjons/?donjon=city-of-dalaran&boss=5",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/273048"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/city-of-dalaran/"
         }
       ]
     },
@@ -13894,8 +13895,8 @@
           "context_fr": "Cité de Dalaran",
           "context_en": "City of Dalaran",
           "href": "/donjons/?donjon=city-of-dalaran&boss=8",
-          "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
+          "evidence_level": "unverified",
+          "source_status": "forever_boss_loot_without_direct_source",
           "reference_url": "https://foreverchanges.pro/item/273049"
         }
       ]
@@ -13910,8 +13911,8 @@
           "context_fr": "Cité de Dalaran",
           "context_en": "City of Dalaran",
           "href": "/donjons/?donjon=city-of-dalaran&boss=8",
-          "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
+          "evidence_level": "unverified",
+          "source_status": "forever_boss_loot_without_direct_source",
           "reference_url": "https://foreverchanges.pro/item/273051"
         }
       ]
@@ -13926,8 +13927,8 @@
           "context_fr": "Cité de Dalaran",
           "context_en": "City of Dalaran",
           "href": "/donjons/?donjon=city-of-dalaran&boss=8",
-          "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
+          "evidence_level": "unverified",
+          "source_status": "forever_boss_loot_without_direct_source",
           "reference_url": "https://foreverchanges.pro/item/273052"
         }
       ]
@@ -13942,8 +13943,8 @@
           "context_fr": "Cité de Dalaran",
           "context_en": "City of Dalaran",
           "href": "/donjons/?donjon=city-of-dalaran&boss=2",
-          "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
+          "evidence_level": "unverified",
+          "source_status": "forever_boss_loot_without_direct_source",
           "reference_url": "https://foreverchanges.pro/item/273053"
         }
       ]
@@ -13958,8 +13959,8 @@
           "context_fr": "Cité de Dalaran",
           "context_en": "City of Dalaran",
           "href": "/donjons/?donjon=city-of-dalaran&boss=2",
-          "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
+          "evidence_level": "unverified",
+          "source_status": "forever_boss_loot_without_direct_source",
           "reference_url": "https://foreverchanges.pro/item/273054"
         }
       ]
@@ -13974,8 +13975,8 @@
           "context_fr": "Cité de Dalaran",
           "context_en": "City of Dalaran",
           "href": "/donjons/?donjon=city-of-dalaran&boss=2",
-          "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
+          "evidence_level": "unverified",
+          "source_status": "forever_boss_loot_without_direct_source",
           "reference_url": "https://foreverchanges.pro/fr/item/273055"
         }
       ]
@@ -13990,8 +13991,8 @@
           "context_fr": "Ruines de Lordaeron",
           "context_en": "Ruins of Lordaeron",
           "href": "/donjons/?donjon=ruins-of-lordaeron&boss=5",
-          "evidence_level": "documented_forever",
-          "source_status": "forever_beta_wowhead",
+          "evidence_level": "unverified",
+          "source_status": "forever_boss_loot_without_direct_source",
           "reference_url": "https://foreverchanges.pro/item/273085"
         }
       ]
@@ -14007,8 +14008,8 @@
           "context_en": "Wailing Caverns",
           "href": "/donjons/?donjon=wailing-caverns&boss=2",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_cache",
-          "reference_url": "https://foreverchanges.pro/item/273088"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/wailing-caverns/"
         }
       ]
     },
@@ -14022,8 +14023,8 @@
           "context_fr": "Cité de Dalaran",
           "context_en": "City of Dalaran",
           "href": "/donjons/?donjon=city-of-dalaran&boss=5",
-          "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
+          "evidence_level": "unverified",
+          "source_status": "forever_boss_loot_without_direct_source",
           "reference_url": "https://foreverchanges.pro/item/273099"
         }
       ]
@@ -14038,8 +14039,8 @@
           "context_fr": "Cité de Dalaran",
           "context_en": "City of Dalaran",
           "href": "/donjons/?donjon=city-of-dalaran&boss=8",
-          "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
+          "evidence_level": "unverified",
+          "source_status": "forever_boss_loot_without_direct_source",
           "reference_url": "https://foreverchanges.pro/item/273103"
         }
       ]
@@ -14054,8 +14055,8 @@
           "context_fr": "Excavations : les Paluns",
           "context_en": "Excavation Site: Wetlands",
           "href": "/donjons/?donjon=excavation-site-wetlands&boss=2",
-          "evidence_level": "documented_forever",
-          "source_status": "forever_beta_wowhead",
+          "evidence_level": "unverified",
+          "source_status": "forever_boss_loot_without_direct_source",
           "reference_url": "https://foreverchanges.pro/item/273106"
         }
       ]
@@ -14071,8 +14072,8 @@
           "context_en": "The Stockade",
           "href": "/donjons/?donjon=the-stockade&boss=1",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_wowhead",
-          "reference_url": "https://foreverchanges.pro/item/273804"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/the-stockade/"
         }
       ]
     },
@@ -14087,8 +14088,8 @@
           "context_en": "The Stockade",
           "href": "/donjons/?donjon=the-stockade&boss=1",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://foreverchanges.pro/item/273805"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/the-stockade/"
         }
       ]
     },
@@ -14103,7 +14104,7 @@
           "context_en": "The Stockade",
           "href": "/donjons/?donjon=the-stockade&boss=2",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_cache",
+          "source_status": "forever_documented_boss_loot",
           "reference_url": "https://wowsrc.com/loot/the-stockade/"
         }
       ]
@@ -14119,8 +14120,8 @@
           "context_en": "The Stockade",
           "href": "/donjons/?donjon=the-stockade&boss=3",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_cache",
-          "reference_url": "https://foreverchanges.pro/item/273809"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/the-stockade/"
         }
       ]
     },
@@ -14134,8 +14135,8 @@
           "context_fr": "Gnomeregan",
           "context_en": "Gnomeregan",
           "href": "/donjons/?donjon=gnomeregan&boss=2",
-          "evidence_level": "documented_forever",
-          "source_status": "forever_beta_wowhead",
+          "evidence_level": "unverified",
+          "source_status": "forever_boss_loot_without_direct_source",
           "reference_url": "https://www.wowhead.com/forever/item=274042"
         }
       ]
@@ -14151,8 +14152,8 @@
           "context_en": "Gnomeregan",
           "href": "/donjons/?donjon=gnomeregan&boss=2",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_cache",
-          "reference_url": "https://www.wowhead.com/forever/item=274043"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/gnomeregan/"
         }
       ]
     },
@@ -14166,8 +14167,8 @@
           "context_fr": "Gnomeregan",
           "context_en": "Gnomeregan",
           "href": "/donjons/?donjon=gnomeregan&boss=5",
-          "evidence_level": "documented_forever",
-          "source_status": "forever_beta_wowhead",
+          "evidence_level": "unverified",
+          "source_status": "forever_boss_loot_without_direct_source",
           "reference_url": "https://foreverchanges.pro/item/274049"
         }
       ]
@@ -14183,8 +14184,8 @@
           "context_en": "Gnomeregan",
           "href": "/donjons/?donjon=gnomeregan&boss=5",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_community",
-          "reference_url": "https://www.60.tools/items/274068-thermaplugg-medal-of-honor"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/gnomeregan/"
         }
       ]
     },
@@ -14199,8 +14200,8 @@
           "context_en": "Razorfen Kraul",
           "href": "/donjons/?donjon=razorfen-kraul&boss=3",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_cache",
-          "reference_url": "https://foreverchanges.pro/item/274149"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/razorfen-kraul/"
         }
       ]
     },
@@ -14215,7 +14216,7 @@
           "context_en": "Razorfen Kraul",
           "href": "/donjons/?donjon=razorfen-kraul&boss=3",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_wowhead",
+          "source_status": "forever_documented_boss_loot",
           "reference_url": "https://wowsrc.com/loot/razorfen-kraul/"
         }
       ]
@@ -14231,8 +14232,8 @@
           "context_en": "Razorfen Kraul",
           "href": "/donjons/?donjon=razorfen-kraul&boss=1",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_wowhead",
-          "reference_url": "https://foreverchanges.pro/item/274158"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/razorfen-kraul/"
         }
       ]
     },
@@ -14247,7 +14248,7 @@
           "context_en": "Razorfen Kraul",
           "href": "/donjons/?donjon=razorfen-kraul&boss=1",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_wowhead",
+          "source_status": "forever_documented_boss_loot",
           "reference_url": "https://wowsrc.com/loot/razorfen-kraul/"
         }
       ]
@@ -14263,8 +14264,8 @@
           "context_en": "Razorfen Kraul",
           "href": "/donjons/?donjon=razorfen-kraul&boss=4",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_wowhead",
-          "reference_url": "https://foreverchanges.pro/item/274161"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/razorfen-kraul/"
         }
       ]
     },
@@ -14279,7 +14280,7 @@
           "context_en": "Scarlet Monastery: Graveyard",
           "href": "/donjons/?donjon=scarlet-monastery-graveyard&boss=1",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_cache",
+          "source_status": "forever_documented_boss_loot",
           "reference_url": "https://wowsrc.com/loot/scarlet-monastery-graveyard/"
         }
       ]
@@ -14295,8 +14296,8 @@
           "context_en": "Scarlet Monastery: Graveyard",
           "href": "/donjons/?donjon=scarlet-monastery-graveyard&boss=2",
           "evidence_level": "documented_forever",
-          "source_status": "forever_beta_wowhead",
-          "reference_url": "https://foreverchanges.pro/item/274291"
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/scarlet-monastery-graveyard/"
         }
       ]
     },

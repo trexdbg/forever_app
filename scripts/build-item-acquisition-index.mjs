@@ -16,6 +16,18 @@ const word=v=>typeof v==="string"?v:(v?.en||v?.fr||"");
 const label=(v,lang)=>typeof v==="string"?v:(v?.[lang]||v?.en||v?.fr||"");
 const link=(base,params)=>base+"?"+Object.entries(params).map(([key,value])=>encodeURIComponent(key)+"="+encodeURIComponent(String(value))).join("&");
 const ORDER={documented_forever:0,datamined:1,classic_reference:2,unverified:3};
+const validBossEvidence=(drop,boss)=>{
+ const bossName=label(boss.name,"en");
+ return drop.evidence_level==="documented_forever"
+  && ["forever_community_page","forever_official_page"].includes(drop.evidence_kind)
+  && validSource(drop.source_url)&&validSource(drop.evidence_url)
+  && !/(?:\/item[=/]|\/items\/\d+)/i.test(drop.evidence_url)
+  && /^\d{4}-\d{2}-\d{2}$/.test(drop.observed_at||"")
+  && nonempty(drop.observed_build)&&nonempty(drop.evidence_note)
+  && nonempty(bossName)&&nonempty(drop.en)
+  && drop.evidence_note.includes(bossName)&&drop.evidence_note.includes(drop.en);
+};
+
 
 export function buildAcquisitionIndex({npcs,rares,dungeons,crafting,alchemy}) {
  const byId=new Map(),seen=new Set();
@@ -57,13 +69,17 @@ export function buildAcquisitionIndex({npcs,rares,dungeons,crafting,alchemy}) {
   (dungeon.bosses||[]).forEach((boss,index)=>{
    for(const loot of boss.loot||[]){
     const classic=loot.source_status==="classic_loot_reference";
+    // A Forever item page proves item identity, not a boss-to-drop relation.
+    // Documentary ranking requires a distinct, boss+item-specific source.
+    const documented=!classic&&validBossEvidence(loot,boss);
     add(loot.id,{
      kind:"boss",name_fr:label(boss.name,"fr"),name_en:label(boss.name,"en"),
      context_fr:label(dungeon.name,"fr"),context_en:label(dungeon.name,"en"),
      href:link("/donjons/",{donjon:dungeon.id,boss:index+1}),
-     evidence_level:classic?"classic_reference":"documented_forever",
-     source_status:loot.source_status||"unverified",
-     reference_url:validSource(loot.statsSource)?loot.statsSource:(validSource(loot.itemUrl)?loot.itemUrl:(validSource(dungeon.source)?dungeon.source:null))
+     evidence_level:classic?"classic_reference":documented?"documented_forever":"unverified",
+     source_status:classic?"classic_loot_reference":documented?"forever_documented_boss_loot":"forever_boss_loot_without_direct_source",
+     reference_url:documented?loot.evidence_url:
+       (validSource(loot.statsSource)?loot.statsSource:(validSource(loot.itemUrl)?loot.itemUrl:(validSource(dungeon.source)?dungeon.source:null)))
     });
    }
   });
@@ -90,7 +106,7 @@ export function buildAcquisitionIndex({npcs,rares,dungeons,crafting,alchemy}) {
   by_evidence[s.evidence_level]=(by_evidence[s.evidence_level]||0)+1;
  }
  return {
-  schema_version:1,updated_at:"2026-10-15",
+  schema_version:1,updated_at:"2026-10-16",
   scope:"Read-only relations inherited from ForEveroth merchant, rare, dungeon and opt-in beta recipe catalogues. Source links may identify only an item or guide, not prove sale, drop, availability, rates or live crafting.",
   provenance_policy:"Forever documented relations are labelled documentary only; all Classic relations stay Classic. Each relationship preserves its originating status. The links are navigation aids, not new source audits.",
   totals:{unique_items:items.length,relations:items.reduce((n,row)=>n+row.sources.length,0),by_kind,by_evidence},

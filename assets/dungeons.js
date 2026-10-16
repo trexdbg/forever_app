@@ -2,7 +2,7 @@
 (()=>{"use strict";
 const root=document.getElementById("dungeon-app");if(!root)return;
 const en=document.documentElement.lang==="en",t=(fr,eng)=>en?eng:fr,$=s=>document.getElementById(s);
-const endpoint="/data/dungeons-forever.json?v=20261011-catalog7";
+const endpoint="/data/dungeons-forever.json?v=20261016-loot-provenance";
 const detailsEndpoint="/data/dungeon-loot-details.json?v=20261011-allloot1",q=new URLSearchParams(location.search);
 const cvs=$("dg-map"),ctx=cvs.getContext("2d"),W=1002,H=620;
 const modes={route:"route",world:"world"};
@@ -12,6 +12,7 @@ const routeButton=$("dg-route"),worldButton=$("dg-world"),search=$("dg-search"),
 const m=(tag,txt,cls)=>{const n=document.createElement(tag);if(txt!==undefined&&txt!==null)n.textContent=String(txt);if(cls)n.className=cls;return n};
 const str=v=>typeof v==="string"?v:"";
 const name=obj=>str(obj?.[en?"en":"fr"]||obj?.en||obj?.fr);
+const dropProof=item=>item.source_status==="classic_loot_reference"?"classic":item.evidence_level==="documented_forever"?"documented":"unverified";
 const itemName=item=>window.ForeverItemLocale?.name({
  id:item.id||0,name:item.en,
  name_fr:item.fr&&item.fr!==item.en?item.fr:undefined,
@@ -120,13 +121,16 @@ function makeLootCard(item,boss){const card=m("div",null,"dg-drop");card.tabInde
  }
  if(Number.isFinite(item.chanceReported))text.append(m("small",t("Taux indicatif du guide : ","Guide-reported chance: ")+String(item.chanceReported).replace(".",",")+" %"));
  if(item.isNew)text.append(m("small",t("Changement Forever signalé","Reported Forever change")));if(item.itemLevel)text.append(m("small",t("Niveau d’objet ","Item level ")+item.itemLevel+(item.requiredLevel?" · "+t("Niveau requis ","Required level ")+item.requiredLevel:"")));
- if(item.source_status==="classic_loot_reference")text.append(m("small",t("Référence Classic — données à vérifier","Classic reference — verify on Forever"),"dg-loot-provenance"));card.append(text);
+ const proof=dropProof(item);
+ text.append(m("small",proof==="classic"?t("Butin Classic indicatif · non vérifié sur Forever","Classic indicative loot · not verified on Forever"):proof==="documented"?t("Butin Forever documenté · non confirmé en jeu","Forever documented loot · not confirmed in-game"):t("Attribution au boss à vérifier","Boss-drop attribution unverified"),"dg-loot-provenance"));
+ card.append(text);
+ if(proof==="documented"&&item.evidence_url){const evidence=m("a",t("Source du butin ↗","Drop source ↗"),"dg-item-page");evidence.href=item.evidence_url;evidence.target="_blank";evidence.rel="noopener noreferrer";evidence.title=t("Table de butin Forever par boss","Forever boss-specific loot table");card.append(evidence)}
  if(item.itemUrl){const link=m("a","↗","dg-item-page");link.href=item.itemUrl;link.target="_blank";link.rel="noopener noreferrer";link.title=t("Ouvrir la fiche de l’objet","Open item details");link.setAttribute("aria-label",t("Fiche d’objet : ","Item page: ")+itemName(item));card.append(link)}
 
  const show=e=>{tooltip.replaceChildren();tooltip.append(m("strong",itemName(item)),m("span",(item.source_status==="classic_loot_reference"?t("Butin Classic de référence : ","Classic reference drop: "):t("Butin signalé : ","Reported drop: "))+name(boss.name)),m("span",item.slot));
  if(item.tooltip?.length)item.tooltip.forEach(line=>tooltip.append(m("span",line)));
  if(Number.isFinite(item.chanceReported))tooltip.append(m("span",t("Taux mentionné par le guide : ","Guide-reported chance: ")+item.chanceReported+" %"));
- tooltip.append(m("small",item.source_status==="classic_loot_reference"?t("Provenance du butin : Classic · NON confirmée pour Forever. Statistiques du client bêta possibles.","Loot source: Classic · NOT confirmed on Forever. Client beta item stats may be available."):t("Relevé de bêta communautaire · taux non garanti.","Community beta report · drop chance not guaranteed.")));tooltip.dataset.quality=qualityOf(item);tooltip.hidden=false;const x=Math.max(8,Math.min(window.innerWidth-355,Math.max(8,(e.clientX||card.getBoundingClientRect().left)+12)));const y=Math.max(8,Math.min(window.innerHeight-185,Math.max(8,(e.clientY||card.getBoundingClientRect().top)+12)));tooltip.style.left=x+"px";tooltip.style.top=y+"px"};
+ tooltip.append(m("small",proof==="classic"?t("Attribution issue de Classic, NON vérifiée sur Forever.","Classic boss-drop source, NOT verified on Forever."):proof==="documented"?t("Relation boss–objet documentée dans Forever, pas de capture de drop en jeu.","Boss-to-item relation documented for Forever, not an in-game drop capture."):t("Objet référencé dans Forever, mais attribution à ce boss NON établie.","Item referenced in Forever, but its drop from this boss is NOT established.")));tooltip.dataset.quality=qualityOf(item);tooltip.hidden=false;const x=Math.max(8,Math.min(window.innerWidth-355,Math.max(8,(e.clientX||card.getBoundingClientRect().left)+12)));const y=Math.max(8,Math.min(window.innerHeight-185,Math.max(8,(e.clientY||card.getBoundingClientRect().top)+12)));tooltip.style.left=x+"px";tooltip.style.top=y+"px"};
  if(window.ForeverItemTooltip){
  const tipItem={id:item.id,name:itemName(item),name_en:item.en,name_fr:item.fr,quality:qualityOf(item)==="unknown"?"common":qualityOf(item),source_status:item.source_status==="classic_loot_reference"?"classic_reference":item.source_status||"forever_beta_community",slot:item.slot,slotLabel:item.slot,itemLevel:item.itemLevel,requiredLevel:item.requiredLevel,tooltip:item.tooltip||[],icon:item.icon,origin:name(selected?.name||{})+" · "+name(boss.name),source_url:item.statsSource||item.itemUrl,url:item.itemUrl||selected?.source,details_status:item.detailsStatus||"missing",fetch_classic_details:item.source_status==="classic_loot_reference"};
  window.ForeverItemTooltip.bind(card,tipItem);
