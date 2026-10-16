@@ -35,7 +35,7 @@ test("three starter-zone rares gain one uniquely identified, documentary Forever
   assert.equal(item.item_source_url,item.source_url);
   assert.equal(item.evidence_url,item.source_url);
   assert.ok(item.source_url.startsWith("https://www.wowhead.com/forever/item="+c.id));
-  assert.match(item.evidence_note,/not a stable drop probability/);
+  assert.match(item.evidence_note,/or a stable drop probability/);
   assert.equal(r.seen_forever,false);
   assert.equal(r.reference,"classic_cmangos_not_forever_verified");
   assert.equal(r.location_review.location_status,"classic_reference");
