@@ -65,7 +65,7 @@ test("the UI does not mistake all Forever-referenced drops for new items or offi
  for(const path of ["rare/index.html","en/rare/index.html"]){
   const html=read(path);
   assert.ok(html.includes("/assets/item-locale.js?v=20261016-rare-fallback"),path);
-  assert.ok(html.includes("/assets/rares.js?v=20261016-rare-fallback"),path);
+  assert.ok(html.includes("/assets/rares.js?v=20261016-point-evidence"),path);
  }
 });
 test("Classic quests stay online, new Forever quest module stays inactive and all 161 scoped rares remain",()=>{

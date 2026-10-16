@@ -108,7 +108,7 @@ test("rare interface makes Forever item metadata visible but does not falsely ve
  assert.ok(js.includes("Item in Forever (drop unverified)"));
  assert.ok(js.includes("Classic · indicatif"));
  for(const path of ["rare/index.html","en/rare/index.html"]){
-  assert.ok(read(path).includes("/assets/rares.js?v=20261016-rare-fallback"),path);
+  assert.ok(read(path).includes("/assets/rares.js?v=20261016-point-evidence"),path);
   assert.ok(read(path).includes("/assets/item-locale.js?v=20261016-rare-fallback"),path);
  }
  const scope=db.rares.filter(r=>r.beta_level30_in_scope);
