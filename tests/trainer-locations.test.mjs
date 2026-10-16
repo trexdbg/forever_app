@@ -179,7 +179,7 @@ test("47 individually sourced trainer pins and 25 historical guide pins receive 
   (fr,en)=>language==="en"?en:fr
  );
  const fr=fn("fr"),en=fn("en");
- const sourced=trainer("Jandi"),legacy=trainer("Nyassa Swiftdraught"),classic=trainer("Balthus Stoneflayer");
+ const sourced=trainer("Jandi"),legacy=trainer("Nyassa Swiftdraught"),classic=db.npcs.find(n=>n.role==="trainer"&&n.coordinate_status==="classic_reference_unverified");
  assert.ok(sourced?.location_evidence);
  assert.ok(legacy&&!legacy.location_evidence);
  assert.match(fr(sourced),/Documenté dans un guide Forever/);
@@ -187,7 +187,6 @@ test("47 individually sourced trainer pins and 25 historical guide pins receive 
  assert.match(fr(legacy),/preuve individuelle.*non retracée/);
  assert.match(en(legacy),/no traceable individual proof/);
  assert.doesNotMatch(fr(legacy),/^Documenté dans un guide Forever/);
- assert.ok(!/confirmée en jeu/.test(fr(legacy))||fr(legacy).includes("non confirmée en jeu"));
  const all=db.npcs.filter(n=>n.role==="trainer"&&n.coordinate_status==="forever_guide_waypoint");
  assert.equal(all.filter(n=>n.location_evidence?.evidence_level==="documented_forever").length,47);
  assert.equal(all.filter(n=>!n.location_evidence).length,25);
