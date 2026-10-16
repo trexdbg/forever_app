@@ -71,8 +71,8 @@ test("the UI does not mistake all Forever-referenced drops for new items or offi
 test("Classic quests stay online, new Forever quest module stays inactive and all 161 scoped rares remain",()=>{
  const inScope=rares.rares.filter(x=>x.beta_level30_in_scope);
  assert.equal(inScope.length,161);
- assert.equal(inScope.filter(r=>r.loot.length).length,74);
- assert.equal(inScope.filter(r=>!r.loot.length).length,87);
- assert.equal(idx.totals.relations,1253);
+ assert.equal(inScope.filter(r=>r.loot.length).length,77);
+ assert.equal(inScope.filter(r=>!r.loot.length).length,84);
+ assert.equal(idx.totals.relations,1256);
  for(const path of ["quetes/index.html","en/quetes/index.html"])assert.ok(read(path).length>1000);
 });
