@@ -4,16 +4,16 @@
   "scope": "Read-only relations inherited from ForEveroth merchant, rare, dungeon and opt-in beta recipe catalogues. Source links may identify only an item or guide, not prove sale, drop, availability, rates or live crafting.",
   "provenance_policy": "Forever documented relations are labelled documentary only; all Classic relations stay Classic. Each relationship preserves its originating status. The links are navigation aids, not new source audits.",
   "totals": {
-    "unique_items": 724,
-    "relations": 1250,
+    "unique_items": 727,
+    "relations": 1253,
     "by_kind": {
       "merchant": 923,
       "boss": 205,
-      "rare": 108,
+      "rare": 111,
       "recipe": 14
     },
     "by_evidence": {
-      "documented_forever": 486,
+      "documented_forever": 489,
       "classic_reference": 764
     }
   },
@@ -279,6 +279,20 @@
           "evidence_level": "classic_reference",
           "source_status": "classic_rare_loot_reference",
           "reference_url": "https://foreverdb.net/rare/1398"
+        }
+      ]
+    },
+    {
+      "id": 1965,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Grumeux",
+          "name_en": "Timber",
+          "href": "/rare/?zone=dun-morogh&q=Timber&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://www.wowhead.com/forever/item=1965/white-wolf-gloves"
         }
       ]
     },
@@ -8361,6 +8375,34 @@
           "evidence_level": "classic_reference",
           "source_status": "classic_catalogue_offer",
           "reference_url": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic"
+        }
+      ]
+    },
+    {
+      "id": 18610,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Threggil",
+          "name_en": "Threggil",
+          "href": "/rare/?zone=teldrassil&q=Threggil&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://www.wowhead.com/forever/item=18610/keen-machete"
+        }
+      ]
+    },
+    {
+      "id": 18612,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Shelda la Furieuse",
+          "name_en": "Fury Shelda",
+          "href": "/rare/?zone=teldrassil&q=Fury%20Shelda&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://www.wowhead.com/forever/item=18612/bloody-chain-boots"
         }
       ]
     },
