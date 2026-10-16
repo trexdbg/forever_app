@@ -73,7 +73,7 @@ for(const [frPath,enPath] of pairs){
     if(path.includes("bis-forever")||path.includes("bis-gear")){
       assert.ok(html.includes('archmage-s-shade/')&&html.includes('atrexis-the-grave-knight/'),path+": missing related boss links");
     }
-    assert.ok(/unconfirm|non confirm|non certifi|not verified|non vérifi|non garanti|Classic/i.test(html),path+": lacks source uncertainty");
+    assert.ok(/unconfirm|non confirm|non certifi|not verified|non vérifi|non garanti|Classic|unverified|à vérifier|pas des captures de drop en jeu|not first-hand/i.test(html),path+": lacks source uncertainty");
     checked++;
   }
 }
