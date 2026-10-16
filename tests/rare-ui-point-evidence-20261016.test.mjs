@@ -75,6 +75,7 @@ test("selected coordinate drives /way and source; both languages load the same e
  assert.match(source,/const chosenEvidence=pointEvidence\(r,pointIndex\)/);
  assert.match(source,/b\.setAttribute\("aria-pressed",String\(i===pointIndex\)\)/);
  assert.match(source,/const selectedPin=selected\?\.points\?\.\[pointIndex\]/);
+ assert.match(source,/if\(hit\)choose\(hit\.r,hit\.index\)/);
  assert.doesNotMatch(source,/const p=r\.points\[0\],str="\/way "/);
  for(const path of ["rare/index.html","en/rare/index.html"]){
   const html=read(path);
