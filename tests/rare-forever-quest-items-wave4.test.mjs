@@ -23,8 +23,15 @@ test("three previously empty rare loot entries have one independent Forever item
     assert.equal(item.item_level,c.level);
     assert.equal(item.required_level,c.req);
     assert.equal(item.slot.en,c.quest);
-    assert.equal(item.name_fr_status,"unverified_fallback_english");
-    assert.equal(item.name.fr,item.name.en);
+    const classicFrNames={4854:"Cape griffée par les démons",5179:"Cœur moussu"};
+    if(Object.hasOwn(classicFrNames,c.id)){
+      assert.equal(item.name_fr_status,"classic_reference");
+      assert.equal(item.name.fr,classicFrNames[c.id]);
+      assert.match(item.name_fr_source_url,new RegExp("/classic/fr/item="+c.id+"(?:/|$)"));
+    }else{
+      assert.equal(item.name_fr_status,"unverified_fallback_english");
+      assert.equal(item.name.fr,item.name.en);
+    }
     assert.equal(item.source_version,"forever_beta");
     assert.equal(item.evidence_level,"documented_forever");
     assert.equal(item.evidence_kind,"forever_community_page");
