@@ -32,6 +32,7 @@ const pointSummary=r=>{
  const levels=(r.points||[]).map((_,i)=>pointLevel(r,i));
  const forever=levels.filter(v=>v==="documented_forever"||v==="confirmed_in_game").length;
  if(forever&&forever<levels.length)return T("Repères Forever documentés et Classic indicatifs · vérifier chaque point","Documented Forever and indicative Classic pins · check each point");
+ if(levels.includes("confirmed_in_game")&&levels.some(v=>v!=="confirmed_in_game"))return T("Repères Forever confirmés et autres points documentaires · consulter chacun","Verified Forever pins and other documentary pins · check each one");
  if(levels.includes("confirmed_in_game"))return T("Positions confirmées en jeu · consulter la preuve de chaque point","In-game verified positions · review each pin evidence");
  if(forever)return T("Positions documentées dans des guides Forever · non confirmées en jeu","Locations in Forever guides · not confirmed in-game");
  return T("Positions Classic indicatives · à vérifier sur Forever","Indicative Classic spawn points · not verified on Forever");
