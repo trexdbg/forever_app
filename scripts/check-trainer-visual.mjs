@@ -99,7 +99,8 @@ async function scenario(send,base,lang,width){
    await delay(150);
   }
   assert(zephras.text.includes("Nyassa")&&zephras.source.includes("zephras-isle-zone-overview")&&
-     zephras.caveat.includes(lang==="fr"?"non confirmé en jeu":"not verified in-game"),
+     zephras.caveat.includes(lang==="fr"?"non confirmée en jeu":"not verified in-game")&&
+     zephras.caveat.includes(lang==="fr"?"preuve individuelle":"individual proof"),
      lang+"/"+width+": Zephras regression "+JSON.stringify(zephras));
   console.log("PASS trainer waypoint Chromium",lang,width,"Jandi source and caution, Zephras preserved");
  }finally{await send("Target.closeTarget",{targetId:target.targetId}).catch(()=>{})}

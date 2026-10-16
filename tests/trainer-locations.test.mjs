@@ -167,3 +167,31 @@ test("trainer UI distinguishes 72 Forever-guide and 81 Classic-only/imported way
  assert.match(js,/not verified in-game/);
  assert.ok(js.includes("if(hasCoords(n)&&mapId)"),"No /mappin without an exact point");
 });
+
+
+test("47 individually sourced trainer pins and 25 historical guide pins receive distinct FR/EN caveats",()=>{
+ const ui=readFileSync(resolve(root,"assets/npcs.js"),"utf8");
+ const from=ui.indexOf("function trainerWaypointCaveat(n){");
+ const to=ui.indexOf("function renderTrainerDetail(n){",from);
+ assert.ok(from>=0&&to>from);
+ const fn=language=>new Function("hasCoords","S",ui.slice(from,to)+";return trainerWaypointCaveat;")(
+  n=>n.coordinates&&Number.isFinite(n.coordinates.x)&&Number.isFinite(n.coordinates.y),
+  (fr,en)=>language==="en"?en:fr
+ );
+ const fr=fn("fr"),en=fn("en");
+ const sourced=trainer("Jandi"),legacy=trainer("Nyassa Swiftdraught"),classic=db.npcs.find(n=>n.role==="trainer"&&n.coordinate_status==="classic_reference_unverified");
+ assert.ok(sourced?.location_evidence);
+ assert.ok(legacy&&!legacy.location_evidence);
+ assert.match(fr(sourced),/Documenté dans un guide Forever/);
+ assert.match(en(sourced),/Documented in a Forever guide/);
+ assert.match(fr(legacy),/preuve individuelle.*non retracée/);
+ assert.match(en(legacy),/no traceable individual proof/);
+ assert.doesNotMatch(fr(legacy),/^Documenté dans un guide Forever/);
+ const all=db.npcs.filter(n=>n.role==="trainer"&&n.coordinate_status==="forever_guide_waypoint");
+ assert.equal(all.filter(n=>n.location_evidence?.evidence_level==="documented_forever").length,47);
+ assert.equal(all.filter(n=>!n.location_evidence).length,25);
+ const mismatched=structuredClone(sourced);
+ mismatched.location_evidence.source_url="https://example.org/unrelated";
+ assert.match(fr(mismatched),/preuve individuelle.*non retracée/);
+ assert.match(fr(classic),/Référence Classic/);
+});

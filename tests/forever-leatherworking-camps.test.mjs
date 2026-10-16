@@ -89,9 +89,9 @@ test("72 named Forever sales are new; legacy Classic source count is unchanged a
  assert.equal(db.verification_audit.leatherworking_early_faction_camps_20261015.new_seller_item_links,72);
  assert.equal(db.verification_audit.leatherworking_early_faction_camps_20261015.confirmed_in_game,0);
  assert.deepEqual(index,buildFromFiles(),"Published index must equal an offline rebuild");
- assert.equal(index.totals.unique_items,721);
- assert.equal(index.totals.relations,1247);
+ assert.equal(index.totals.unique_items,730);
+ assert.equal(index.totals.relations,1256);
  assert.equal(index.totals.by_kind.merchant,923);
- assert.equal(index.totals.by_evidence.documented_forever,483);
- assert.equal(index.totals.by_evidence.classic_reference,764);
+ assert.equal(index.totals.by_evidence.documented_forever,465);
+ assert.equal(index.totals.by_evidence.classic_reference,767);
 });

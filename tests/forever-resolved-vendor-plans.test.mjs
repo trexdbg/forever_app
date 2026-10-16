@@ -83,9 +83,9 @@ test("provenance follows each relation, preserves historic wave sizes and Classi
  assert.equal(db.verification_audit.blacksmith_lowlevel_camps_wave.unknown_item,null);
  assert.equal(db.verification_audit.vayn_zephras_wave.unresolved_item,null);
  assert.deepEqual(index,buildFromFiles(),"Published index must be reproducible without source promotion");
- assert.equal(index.totals.unique_items,721);
- assert.equal(index.totals.relations,1247);
+ assert.equal(index.totals.unique_items,730);
+ assert.equal(index.totals.relations,1256);
  assert.equal(index.totals.by_kind.merchant,923);
- assert.equal(index.totals.by_evidence.documented_forever,483);
- assert.equal(index.totals.by_evidence.classic_reference,764);
+ assert.equal(index.totals.by_evidence.documented_forever,465);
+ assert.equal(index.totals.by_evidence.classic_reference,767);
 });

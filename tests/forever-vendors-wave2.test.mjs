@@ -17,10 +17,11 @@ test("41 new Forever-source vendor relationships retained alongside the 631 hist
  assert.equal(Object.keys(db.items).length,409);
  assert.equal(db.npcs.filter(n=>n.role==="merchant").reduce((sum,n)=>sum+n.offers.length,0),923);
  assert.deepEqual(index,buildFromFiles(),"The object acquisition index must remain derivable from the authoritative catalogues");
- assert.equal(index.totals.unique_items,721);
- assert.equal(index.totals.relations,1247);
+ // Rolling index totals include later rare/dungeon work; seller offers in this test are unchanged.
+ assert.equal(index.totals.unique_items,730);
+ assert.equal(index.totals.relations,1256);
  assert.equal(index.totals.by_kind.merchant,923);
- assert.equal(index.totals.by_evidence.documented_forever,483);
+ assert.equal(index.totals.by_evidence.documented_forever,465);
 });
 test("each target camp merchant has the exact catalogued recipe IDs and proof of each seller-item relationship",()=>{
  let sales=0;
