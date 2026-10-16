@@ -1688,7 +1688,45 @@
           50.5
         ]
       ],
-      "loot": [],
+      "loot": [
+        {
+          "name": {
+            "en": "Keen Machete",
+            "fr": "Machette effilée"
+          },
+          "name_fr_status": "classic_reference",
+          "name_fr_source_url": "https://www.wowhead.com/classic/fr/item=18610",
+          "name_fr_evidence_note": "Classic frFR item ID-localization separately sourced, not a verified Forever client translation.",
+          "item_id": 18610,
+          "source_version": "forever_beta",
+          "item_id_status": "forever_beta_wowhead_or_client_reference",
+          "source_url": "https://www.wowhead.com/forever/item=18610/keen-machete",
+          "item_source_url": "https://www.wowhead.com/forever/item=18610/keen-machete",
+          "drop_evidence": "forever_item_database_documented_drop_unconfirmed",
+          "chance_classic_percent": null,
+          "chance_forever_observed_percent": null,
+          "item_level": 10,
+          "required_level": 5,
+          "slot": {
+            "en": "Main Hand · Sword",
+            "fr": "Main droite · Épée"
+          },
+          "stats": {
+            "en": "5–10 Damage · Speed 1.80 · +1 Stamina",
+            "fr": "5–10 dégâts · Vitesse 1,80 · +1 Endurance"
+          },
+          "stats_source_url": "https://foreverchanges.pro/fr/item/18610",
+          "stats_evidence_level": "documented_forever",
+          "stats_observed_build": "1.60.1.70425",
+          "stats_evidence_note": "Client/cache comparison at build 1.60.1.70425: Classic item level 6, 3-6 damage, no required level; Forever item level 10, 5-10 damage, +1 Stamina, requires level 5. This is a dated community client/cache item comparison, not evidence of a drop.",
+          "evidence_level": "documented_forever",
+          "evidence_url": "https://www.wowhead.com/forever/item=18610/keen-machete",
+          "observed_at": "2026-10-16",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Wowhead Forever item 18610 (Keen Machete) names Threggil as its drop source. Client/cache comparison at build 1.60.1.70425: Classic item level 6, 3-6 damage, no required level; Forever item level 10, 5-10 damage, +1 Stamina, requires level 5. The item stats and the creature-to-drop relation have independent documentary sources. Neither is a timestamped first-hand loot capture, proof of the rare's live spawn or a stable drop probability; no current-game availability is asserted."
+        }
+      ],
       "source": "https://foreverdb.net/rares",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
@@ -1697,7 +1735,7 @@
         "en": ""
       },
       "beta_level30_in_scope": true,
-      "loot_coverage": "not_documented",
+      "loot_coverage": "notable_only_not_complete",
       "coordinate_status": "classic_reference",
       "location_review": {
         "reviewed_at": "2026-10-14",
@@ -1727,7 +1765,8 @@
           "evidence_level": "unverified",
           "evidence_note": "Historical coordinate in the pre-audit Classic/CMaNGOS catalogue. Source for this individual coordinate was not independently traceable; this is only an indicative Classic point, never verified on Forever."
         }
-      ]
+      ],
+      "loot_reviewed_at": "2026-10-16"
     },
     {
       "id": "teldrassil-uruson",
@@ -1806,7 +1845,45 @@
           35.4
         ]
       ],
-      "loot": [],
+      "loot": [
+        {
+          "name": {
+            "en": "Bloody Chain Boots",
+            "fr": "Bottes en mailles sanglantes"
+          },
+          "name_fr_status": "classic_reference",
+          "name_fr_source_url": "https://www.wowhead.com/classic/fr/item=18612",
+          "name_fr_evidence_note": "Classic frFR item ID-localization separately sourced, not a verified Forever client translation.",
+          "item_id": 18612,
+          "source_version": "forever_beta",
+          "item_id_status": "forever_beta_wowhead_or_client_reference",
+          "source_url": "https://www.wowhead.com/forever/item=18612/bloody-chain-boots",
+          "item_source_url": "https://www.wowhead.com/forever/item=18612/bloody-chain-boots",
+          "drop_evidence": "forever_item_database_documented_drop_unconfirmed",
+          "chance_classic_percent": null,
+          "chance_forever_observed_percent": null,
+          "item_level": 10,
+          "required_level": 5,
+          "slot": {
+            "en": "Feet · Mail",
+            "fr": "Pieds · Mailles"
+          },
+          "stats": {
+            "en": "74 Armor · +1 Stamina",
+            "fr": "74 armure · +1 Endurance"
+          },
+          "stats_source_url": "https://foreverchanges.pro/fr/item/18612",
+          "stats_evidence_level": "documented_forever",
+          "stats_observed_build": "1.60.1.70425",
+          "stats_evidence_note": "Client/cache comparison at build 1.60.1.70425: Classic item level 8, 61 armor, level 3; Forever item level 10, 74 armor, +1 Stamina, requires level 5. This is a dated community client/cache item comparison, not evidence of a drop.",
+          "evidence_level": "documented_forever",
+          "evidence_url": "https://www.wowhead.com/forever/item=18612/bloody-chain-boots",
+          "observed_at": "2026-10-16",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Wowhead Forever item 18612 (Bloody Chain Boots) names Fury Shelda as its drop source. Client/cache comparison at build 1.60.1.70425: Classic item level 8, 61 armor, level 3; Forever item level 10, 74 armor, +1 Stamina, requires level 5. The item stats and the creature-to-drop relation have independent documentary sources. Neither is a timestamped first-hand loot capture, proof of the rare's live spawn or a stable drop probability; no current-game availability is asserted."
+        }
+      ],
       "source": "https://foreverdb.net/rares",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
@@ -1816,7 +1893,7 @@
       },
       "name_fr_status": "community_translation_check_needed",
       "beta_level30_in_scope": true,
-      "loot_coverage": "not_documented",
+      "loot_coverage": "notable_only_not_complete",
       "coordinate_status": "classic_reference",
       "location_review": {
         "reviewed_at": "2026-10-14",
@@ -1846,7 +1923,8 @@
           "evidence_level": "unverified",
           "evidence_note": "Historical coordinate in the pre-audit Classic/CMaNGOS catalogue. Source for this individual coordinate was not independently traceable; this is only an indicative Classic point, never verified on Forever."
         }
-      ]
+      ],
+      "loot_reviewed_at": "2026-10-16"
     },
     {
       "id": "teldrassil-blackmoss-the-fetid",
@@ -2323,7 +2401,45 @@
           41.8
         ]
       ],
-      "loot": [],
+      "loot": [
+        {
+          "name": {
+            "en": "White Wolf Gloves",
+            "fr": "Gants du loup blanc"
+          },
+          "name_fr_status": "classic_reference",
+          "name_fr_source_url": "https://www.wowhead.com/classic/fr/item=1965",
+          "name_fr_evidence_note": "Classic frFR item ID-localization separately sourced, not a verified Forever client translation.",
+          "item_id": 1965,
+          "source_version": "forever_beta",
+          "item_id_status": "forever_beta_wowhead_or_client_reference",
+          "source_url": "https://www.wowhead.com/forever/item=1965/white-wolf-gloves",
+          "item_source_url": "https://www.wowhead.com/forever/item=1965/white-wolf-gloves",
+          "drop_evidence": "forever_item_database_documented_drop_unconfirmed",
+          "chance_classic_percent": null,
+          "chance_forever_observed_percent": null,
+          "item_level": 12,
+          "required_level": 7,
+          "slot": {
+            "en": "Hands · Leather",
+            "fr": "Mains · Cuir"
+          },
+          "stats": {
+            "en": "39 Armor · +2 Agility",
+            "fr": "39 armure · +2 Agilité"
+          },
+          "stats_source_url": "https://foreverchanges.pro/fr/item/1965",
+          "stats_evidence_level": "documented_forever",
+          "stats_observed_build": "1.60.1.70009",
+          "stats_evidence_note": "Archived beta client 1.60.1.70009 comparison: Classic item level 10, 33 armor, level 5; Forever item level 12, 39 armor, +2 Agility, requires level 7. Current build not independently checked. This is a dated community client/cache item comparison, not evidence of a drop.",
+          "evidence_level": "documented_forever",
+          "evidence_url": "https://www.wowhead.com/forever/item=1965/white-wolf-gloves",
+          "observed_at": "2026-10-16",
+          "observed_build": "unknown",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Wowhead Forever item 1965 (White Wolf Gloves) names Timber as its drop source. Archived beta client 1.60.1.70009 comparison: Classic item level 10, 33 armor, level 5; Forever item level 12, 39 armor, +2 Agility, requires level 7. Current build not independently checked. The item stats and the creature-to-drop relation have independent documentary sources. Neither is a timestamped first-hand loot capture, proof of the rare's live spawn or a stable drop probability; no current-game availability is asserted."
+        }
+      ],
       "source": "https://foreverdb.net/rares",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
@@ -2332,7 +2448,7 @@
         "en": ""
       },
       "beta_level30_in_scope": true,
-      "loot_coverage": "not_documented",
+      "loot_coverage": "notable_only_not_complete",
       "coordinate_status": "classic_reference",
       "location_review": {
         "reviewed_at": "2026-10-14",
@@ -2365,7 +2481,8 @@
       ],
       "name_fr_status": "classic_reference",
       "name_fr_source_url": "https://www.wowhead.com/classic/fr/npc=1132/grumeux",
-      "name_fr_evidence_note": "French NPC localization from Wowhead Classic frFR; not verified against the WoW Forever client. Creature and location remain independently classified."
+      "name_fr_evidence_note": "French NPC localization from Wowhead Classic frFR; not verified against the WoW Forever client. Creature and location remain independently classified.",
+      "loot_reviewed_at": "2026-10-16"
     },
     {
       "id": "1130",
