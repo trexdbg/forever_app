@@ -204,6 +204,21 @@ for(const [id,english,french] of [
   assert.equal(en.name(forever),english);
   assert.equal(fr.resolved(forever).verified,false,"Classic translation does not verify Forever gameplay/localization");
 }
+// Forever item stats may differ from Classic. French item names are ID-based Classic frFR only.
+for(const [id,english,french] of [
+ [18610,"Keen Machete","Machette effilée"],
+ [18612,"Bloody Chain Boots","Bottes en mailles sanglantes"],
+ [1965,"White Wolf Gloves","Gants du loup blanc"]
+]){
+ const classic={id,name:english,source_status:"classic_reference"};
+ assert.equal(fr.name(classic),french,"Classic frFR translation mismatch "+id);
+ assert.equal(en.name(classic),english,"Classic English name mismatch "+id);
+ assert.equal(fr.resolved(classic).verified,true);
+ const forever={id,name:english,name_fr:french,source_status:"forever_beta_community"};
+ assert.equal(fr.name(forever),french,"Forever referenced item should retain Classic FR localization "+id);
+ assert.equal(en.name(forever),english);
+ assert.equal(fr.resolved(forever).verified,false,"Classic translation alone must not verify Forever "+id);
+}
 const unresolvedRare=(JSON.parse(readFileSync(resolve(root,"data/rares.json"),"utf8")).rares||[])
  .flatMap(row=>row.loot||[]).filter(i=>!i.item_id);
 assert.equal(unresolvedRare.length,0,"All rare drops must have item IDs");
