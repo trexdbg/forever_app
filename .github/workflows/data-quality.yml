@@ -9,6 +9,10 @@ on:
       - '.github/workflows/data-quality.yml'
       - 'data/**'
       - 'assets/rares.js'
+      - 'assets/dungeons.js'
+      - 'scripts/build-item-acquisition-index.mjs'
+      - 'tests/item-acquisition-index.test.mjs'
+      - 'tests/dungeon-boss-loot-provenance-20261016.test.mjs'
       - 'scripts/validate-rare-locations.mjs'
       - 'tests/rare-locations.test.mjs'
       - 'tests/rare-forever-loot-wave1.test.mjs'
@@ -49,8 +53,16 @@ jobs:
         run: node --test tests/rare-forever-gear-wave5-20261016.test.mjs
       - name: Three Classic rare loot fallbacks with two separate Forever item stat snapshots
         run: node --test tests/rare-classic-fallback-forever-item-stats-20261016.test.mjs
-      - name: Rare module JavaScript syntax
-        run: node --check assets/rares.js
+      - name: Rare and dungeon module JavaScript syntax
+        run: |
+          node --check assets/rares.js
+          node --check assets/dungeons.js
+      - name: Dungeon boss-drop source proof and acquisition index regression
+        run: node --test tests/dungeon-boss-loot-provenance-20261016.test.mjs
+      - name: Deterministic acquisition index source and link tests
+        run: node --test tests/item-acquisition-index.test.mjs
+      - name: Cross-catalogue acquisition index is fully reproducible
+        run: node scripts/build-item-acquisition-index.mjs --check
       - name: Forever new starter-zone rare discovery regression
         run: node --test tests/rare-forever-new-wave2.test.mjs
       - name: Cross-catalogue Forever source audit
