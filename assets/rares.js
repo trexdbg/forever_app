@@ -32,7 +32,7 @@ const pointSummary=r=>{
  const levels=(r.points||[]).map((_,i)=>pointLevel(r,i));
  const forever=levels.filter(v=>v==="documented_forever"||v==="confirmed_in_game").length;
  if(forever&&forever<levels.length)return T("Repères Forever documentés et Classic indicatifs · vérifier chaque point","Documented Forever and indicative Classic pins · check each point");
- if(levels.includes("confirmed_in_game"))return T("Repères de niveaux de preuve différents · consulter chaque point","Pins have different evidence levels · check each point");
+ if(levels.includes("confirmed_in_game"))return T("Positions confirmées en jeu · consulter la preuve de chaque point","In-game verified positions · review each pin evidence");
  if(forever)return T("Positions documentées dans des guides Forever · non confirmées en jeu","Locations in Forever guides · not confirmed in-game");
  return T("Positions Classic indicatives · à vérifier sur Forever","Indicative Classic spawn points · not verified on Forever");
 };
@@ -200,12 +200,12 @@ for(const r of filtered.filter(r=>r.zone===zoneId))for(const p of r.points){cons
 const active=r.id===selected?.id;ctx.beginPath();ctx.arc(x,y,active?13:10,0,2*Math.PI);
 ctx.fillStyle=markerColor(r);ctx.fill();ctx.strokeStyle=active?"#fff4d6":"#0b1a14";ctx.lineWidth=active?5:2.5;ctx.stroke();
 ctx.beginPath();ctx.arc(x,y,3,0,2*Math.PI);ctx.fillStyle="#1a291d";ctx.fill();pins.push({r,p,x,y})}
-const focus=hover||(selected?.points?.length&&selected.zone===zoneId?{r:selected,p:selected.points[0],x:pos(selected.points[0])[0],y:pos(selected.points[0])[1]}:null);
+const selectedPin=selected?.points?.[pointIndex]||selected?.points?.[0];const focus=hover||(selectedPin&&selected.zone===zoneId?{r:selected,p:selectedPin,x:pos(selectedPin)[0],y:pos(selectedPin)[1]}:null);
 if(focus){const title=npcName(focus.r);ctx.font="bold 19px sans-serif";const w=ctx.measureText(title).width+22,x=clamp(focus.x-w/2,5,W-w-5),y=focus.y<45?focus.y+30:focus.y-28;
 ctx.fillStyle="#0f1b14ed";ctx.fillRect(x,y-21,w,29);ctx.strokeStyle="#c9af77";ctx.lineWidth=1;ctx.strokeRect(x,y-21,w,29);ctx.fillStyle="#fff0d0";ctx.fillText(title,x+11,y)}
 $("rare-zoom-reset").textContent=Math.round(zoom*100)+" %";
 $("rare-map-count").textContent=filtered.filter(r=>r.zone===zoneId).reduce((n,r)=>n+r.points.length,0)+" "+T("repères","pins");
-const p=hover?.p||selected?.points?.[0];$("rare-map-hover").textContent=p?(hover?.r&&npcName(hover.r)||selected&&npcName(selected))+" · "+fmt(p[0])+" / "+fmt(p[1]):""
+const p=hover?.p||selectedPin;$("rare-map-hover").textContent=p?(hover?.r&&npcName(hover.r)||selected&&npcName(selected))+" · "+fmt(p[0])+" / "+fmt(p[1]):""
 }
 function zoomTo(value,p=[W/2,H/2]){const before=unpos(p);zoom=clamp(value,1,5);center=[before[0]-(p[0]/W-.5)*100/zoom,before[1]-(p[1]/H-.5)*100/zoom];clampCenter();draw()}
 $("rare-zoom-in").addEventListener("click",()=>zoomTo(zoom*1.25));$("rare-zoom-out").addEventListener("click",()=>zoomTo(zoom/1.25));$("rare-zoom-reset").addEventListener("click",()=>{zoom=1;center=[50,50];draw()});
