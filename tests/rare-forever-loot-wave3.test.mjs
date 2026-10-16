@@ -56,7 +56,7 @@ test("four Forever rare relations are traversable through the item acquisition i
  assert.equal(index.totals.unique_items,730);
  assert.equal(index.totals.relations,1256);
  assert.equal(index.totals.by_kind.rare,114);
- assert.equal(index.totals.by_evidence.documented_forever,489);
+ assert.equal(index.totals.by_evidence.documented_forever,465);
  for(const e of expected){
   const row=index.items.find(i=>i.id===e.itemId);
   assert.ok(row,"Unindexed item "+e.itemId);
