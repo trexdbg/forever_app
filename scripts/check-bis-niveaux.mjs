@@ -60,6 +60,17 @@ for(const [name,html] of [["fr",fr],["en",en]]){
 }
 assert.ok(js.includes('renderFarm();')&&js.includes('renderSets();'));
 assert.ok(js.includes('futureBox')&&js.includes('activeFilters'),"optional filters and future brackets should be preserved");
+/* Cross-module locale regression: the dungeon catalogue is the French naming authority.
+ * A beta object-origin label must not regress to the English dungeon title. */
+const dungeonList=load("data/dungeons-forever.json").dungeons;
+const hall=dungeonList.find(x=>x.id==="hall-of-thanes");
+assert.deepEqual(hall.name,{fr:"La salle des Thanes",en:"Hall of Thanes"});
+const hallItems=observed.items.filter(x=>x.origin_fr?.includes("Hall of Thanes"));
+assert.equal(hallItems.length,12,"Expected scope of affected Forever items changed");
+assert.ok(js.includes('"Hall of Thanes":"La salle des Thanes"'),"BiS French origin must use the same dungeon name as Donjons");
+assert.ok(fr.includes("/assets/bis-niveaux.js?v=20261016-dungeon-origin-fr"));
+assert.ok(en.includes("/assets/bis-niveaux.js?v=20261016-dungeon-origin-fr"));
+
 
 /* Agent 02 (levels 1–30): reviewed Forever source assertions and unknown requirements. */
 const betaArchive=load("data/items-forever-cache.json");
