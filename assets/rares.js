@@ -171,7 +171,7 @@ if(typeof locationSource==="string"&&/^https:\/\//.test(locationSource)){const p
 if(r.points.length){const b=button(T("Copier /way du point choisi · ","Copy selected /way · ")+pointLabel(r,pointIndex),"rare-copy");b.addEventListener("click",async()=>{const p=r.points[pointIndex],str="/way "+p[0]+" "+p[1];try{await navigator.clipboard.writeText(str);b.textContent=T("Copié ✓","Copied ✓")}catch{b.textContent=str}});foot.append(b)}
 out.append(foot);
 }
-function choose(r){if(selected?.id!==r.id)pointIndex=0;selected=r;const change=r.zone!==zoneId;zoneId=r.zone;$("rare-map-title").textContent=zname(zoneId);if(change){zoom=1;center=[50,50];image()}showList();detail();draw()}
+function choose(r,index=0){pointIndex=Number.isInteger(index)&&index>=0&&index<r.points.length?index:0;selected=r;const change=r.zone!==zoneId;zoneId=r.zone;$("rare-map-title").textContent=zname(zoneId);if(change){zoom=1;center=[50,50];image()}showList();detail();draw()}
 function update(){filtered=results();if(!filtered.includes(selected)){selected=filtered[0]||null;pointIndex=0;}if(selected){const change=zoneId!==selected.zone;zoneId=selected.zone;$("rare-map-title").textContent=zname(zoneId);if(change){zoom=1;center=[50,50];image()}}showList();detail();draw()}
 const clamp=(v,a,b)=>Math.min(b,Math.max(a,v));
 function clampCenter(){const h=50/zoom;center=[clamp(center[0],h,100-h),clamp(center[1],h,100-h)]}
@@ -196,10 +196,10 @@ if(y>=0&&y<=H){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(W,y);ctx.stroke();ctx.
 }
 function draw(){
 if(!db)return;background();pins=[];
-for(const r of filtered.filter(r=>r.zone===zoneId))for(const p of r.points){const [x,y]=pos(p);if(x<-20||x>W+20||y<-20||y>H+20)continue;
+for(const r of filtered.filter(r=>r.zone===zoneId))for(const [index,p] of r.points.entries()){const [x,y]=pos(p);if(x<-20||x>W+20||y<-20||y>H+20)continue;
 const active=r.id===selected?.id;ctx.beginPath();ctx.arc(x,y,active?13:10,0,2*Math.PI);
 ctx.fillStyle=markerColor(r);ctx.fill();ctx.strokeStyle=active?"#fff4d6":"#0b1a14";ctx.lineWidth=active?5:2.5;ctx.stroke();
-ctx.beginPath();ctx.arc(x,y,3,0,2*Math.PI);ctx.fillStyle="#1a291d";ctx.fill();pins.push({r,p,x,y})}
+ctx.beginPath();ctx.arc(x,y,3,0,2*Math.PI);ctx.fillStyle="#1a291d";ctx.fill();pins.push({r,p,index,x,y})}
 const selectedPin=selected?.points?.[pointIndex]||selected?.points?.[0];const focus=hover||(selectedPin&&selected.zone===zoneId?{r:selected,p:selectedPin,x:pos(selectedPin)[0],y:pos(selectedPin)[1]}:null);
 if(focus){const title=npcName(focus.r);ctx.font="bold 19px sans-serif";const w=ctx.measureText(title).width+22,x=clamp(focus.x-w/2,5,W-w-5),y=focus.y<45?focus.y+30:focus.y-28;
 ctx.fillStyle="#0f1b14ed";ctx.fillRect(x,y-21,w,29);ctx.strokeStyle="#c9af77";ctx.lineWidth=1;ctx.strokeRect(x,y-21,w,29);ctx.fillStyle="#fff0d0";ctx.fillText(title,x+11,y)}
@@ -214,7 +214,7 @@ canvas.addEventListener("pointerdown",e=>{if(e.button!==0)return;canvas.setPoint
 canvas.addEventListener("pointermove",e=>{if(drag){const r=canvas.getBoundingClientRect(),dx=e.clientX-drag.x,dy=e.clientY-drag.y;if(Math.hypot(dx,dy)>5)drag.moved=true;center=[drag.c[0]-dx/r.width*100/zoom,drag.c[1]-dy/r.height*100/zoom];clampCenter();draw();return}
 const p=mouse(e),hit=pins.map(x=>({...x,d:Math.hypot(x.x-p[0],x.y-p[1])})).filter(x=>x.d<23).sort((a,b)=>a.d-b.d)[0];
 if(hit?.r.id!==hover?.r.id||hit?.p!==hover?.p){hover=hit||null;canvas.style.cursor=hover?"pointer":"grab";draw()}});
-canvas.addEventListener("pointerup",e=>{const moved=drag?.moved;drag=null;if(moved)return;const p=mouse(e),hit=pins.map(x=>({...x,d:Math.hypot(x.x-p[0],x.y-p[1])})).filter(x=>x.d<25).sort((a,b)=>a.d-b.d)[0];if(hit)choose(hit.r)});
+canvas.addEventListener("pointerup",e=>{const moved=drag?.moved;drag=null;if(moved)return;const p=mouse(e),hit=pins.map(x=>({...x,d:Math.hypot(x.x-p[0],x.y-p[1])})).filter(x=>x.d<25).sort((a,b)=>a.d-b.d)[0];if(hit)choose(hit.r,hit.index)});
 canvas.addEventListener("pointercancel",()=>drag=null);canvas.addEventListener("pointerleave",()=>{hover=null;draw()});
 canvas.addEventListener("keydown",e=>{if(e.key==="+"||e.key==="="){e.preventDefault();zoomTo(zoom*1.25)}else if(e.key==="-"){e.preventDefault();zoomTo(zoom/1.25)}else if(["ArrowLeft","ArrowRight","ArrowUp","ArrowDown"].includes(e.key)){e.preventDefault();center[0]+=(e.key==="ArrowLeft"?-8:e.key==="ArrowRight"?8:0)/zoom;center[1]+=(e.key==="ArrowUp"?-8:e.key==="ArrowDown"?8:0)/zoom;clampCenter();draw()}});
 for(const e of [search,zone,type,level,verification,loot,tame,mapped])e.addEventListener(e===search?"input":"change",update);
