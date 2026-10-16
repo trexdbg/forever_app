@@ -14,6 +14,7 @@ on:
       - 'tests/rare-forever-loot-wave1.test.mjs'
       - 'tests/rare-forever-loot-wave3.test.mjs'
       - 'tests/rare-forever-quest-items-wave4.test.mjs'
+      - 'tests/rare-classic-fr-localization-20261016.test.mjs'
       - 'tests/rare-forever-new-wave2.test.mjs'
       - 'scripts/check-forever-evidence.mjs'
   workflow_dispatch:
@@ -40,6 +41,8 @@ jobs:
         run: node --test tests/rare-forever-loot-wave3.test.mjs
       - name: Three Forever quest-linked rare items, evidence and acquisition safeguards
         run: node --test tests/rare-forever-quest-items-wave4.test.mjs
+      - name: Source-reviewed Classic French rare NPC and quest-item localization
+        run: node --test tests/rare-classic-fr-localization-20261016.test.mjs
       - name: Rare module JavaScript syntax
         run: node --check assets/rares.js
       - name: Forever new starter-zone rare discovery regression
