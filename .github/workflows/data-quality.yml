@@ -16,6 +16,7 @@ on:
       - 'tests/rare-forever-quest-items-wave4.test.mjs'
       - 'tests/rare-classic-fr-localization-20261016.test.mjs'
       - 'tests/rare-forever-gear-wave5-20261016.test.mjs'
+      - 'tests/rare-classic-fallback-forever-item-stats-20261016.test.mjs'
       - 'tests/rare-forever-new-wave2.test.mjs'
       - 'scripts/check-forever-evidence.mjs'
   workflow_dispatch:
@@ -46,6 +47,8 @@ jobs:
         run: node --test tests/rare-classic-fr-localization-20261016.test.mjs
       - name: Source-reviewed Forever 1-30 gear loot, versioned stats and French provenance
         run: node --test tests/rare-forever-gear-wave5-20261016.test.mjs
+      - name: Three Classic rare loot fallbacks with two separate Forever item stat snapshots
+        run: node --test tests/rare-classic-fallback-forever-item-stats-20261016.test.mjs
       - name: Rare module JavaScript syntax
         run: node --check assets/rares.js
       - name: Forever new starter-zone rare discovery regression
