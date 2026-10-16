@@ -357,8 +357,12 @@ function sectionText(parent,head,body){append(parent,"h4",head);append(parent,"p
  * A Forever guide that reused Classic data is NOT documentary proof of a Forever position. */
 function trainerWaypointCaveat(n){
  if(!hasCoords(n))return S("Zone seulement : aucune position prouvée, aucun repère inventé.","Zone only: no proven coordinates or fabricated waypoint.");
- if(n.coordinate_status==="forever_guide_waypoint")
-  return S("Documenté dans un guide Forever · point non confirmé en jeu.","Documented in a Forever guide · waypoint not verified in-game.");
+ if(n.coordinate_status==="forever_guide_waypoint"){
+  const e=n.location_evidence;
+  if(e?.evidence_level==="documented_forever"&&e.source_url===n.coordinate_source&&typeof e.evidence_url==="string"&&e.evidence_url.startsWith("https://"))
+   return S("Documenté dans un guide Forever · point non confirmé en jeu.","Documented in a Forever guide · waypoint not verified in-game.");
+  return S("Guide Forever cité · preuve individuelle de ce point non retracée ; position indicative, non confirmée en jeu.","Forever guide cited · no traceable individual proof for this pin; indicative, not verified in-game.");
+ }
  if(n.coordinate_status==="forever_guides_classic_waypoint_not_ingame_verified")
   return S("Référence Classic reprise dans un guide Forever · position indicative, non confirmée en jeu.","Classic reference repeated by a Forever guide · indicative, not verified in-game.");
  if(n.coordinate_status==="classic_reference_unverified")
