@@ -62,7 +62,7 @@ test("new items reach source lookup, with deterministic cross-index and unchange
  assert.equal(idx.totals.relations,1256);
  assert.equal(idx.totals.by_kind.rare,114);
  assert.equal(idx.totals.by_evidence.documented_forever,489);
- assert.equal(idx.totals.by_evidence.classic_reference,764);
+ assert.equal(idx.totals.by_evidence.classic_reference,767);
  for(const c of cases){
   const r=db.rares.find(x=>x.id===c.rare);
   const item=idx.items.find(x=>x.id===c.id);
