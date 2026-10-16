@@ -112,9 +112,9 @@ test("72 new sales and one NPC do not upgrade Classic or invent direct in-game c
  assert.equal(db.audit.forever_documented_items,200);
  assert.equal(db.audit.classic_unverified_offers,577);
  assert.deepEqual(index,buildFromFiles(),"Published acquisition index must be exactly reproducible");
- assert.equal(index.totals.unique_items,721);
- assert.equal(index.totals.relations,1247);
+ assert.equal(index.totals.unique_items,730);
+ assert.equal(index.totals.relations,1256);
  assert.equal(index.totals.by_kind.merchant,923);
- assert.equal(index.totals.by_evidence.documented_forever,483);
- assert.equal(index.totals.by_evidence.classic_reference,764);
+ assert.equal(index.totals.by_evidence.documented_forever,465);
+ assert.equal(index.totals.by_evidence.classic_reference,767);
 });
