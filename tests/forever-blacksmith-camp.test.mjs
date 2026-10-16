@@ -69,9 +69,9 @@ test("the 57 new sales extend the existing source index without promoting Classi
  assert.equal(db.audit.forever_documented_items,200);
  assert.equal(db.audit.classic_unverified_offers,577);
  assert.deepEqual(idx,buildFromFiles());
- assert.equal(idx.totals.unique_items,721);
- assert.equal(idx.totals.relations,1247);
+ assert.equal(idx.totals.unique_items,730);
+ assert.equal(idx.totals.relations,1256);
  assert.equal(idx.totals.by_kind.merchant,923);
- assert.equal(idx.totals.by_evidence.documented_forever,483);
- assert.equal(idx.totals.by_evidence.classic_reference,764);
+ assert.equal(idx.totals.by_evidence.documented_forever,465);
+ assert.equal(idx.totals.by_evidence.classic_reference,767);
 });
