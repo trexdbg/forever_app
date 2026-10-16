@@ -9,6 +9,10 @@ on:
       - '.github/workflows/data-quality.yml'
       - 'data/**'
       - 'assets/rares.js'
+      - 'assets/rares.css'
+      - 'rare/index.html'
+      - 'en/rare/index.html'
+      - 'tests/rare-ui-point-evidence-20261016.test.mjs'
       - 'assets/dungeons.js'
       - 'scripts/build-item-acquisition-index.mjs'
       - 'tests/item-acquisition-index.test.mjs'
@@ -41,6 +45,8 @@ jobs:
         run: node scripts/check-data-quality.mjs
       - name: Rare location evidence fixtures
         run: node --test tests/rare-locations.test.mjs
+      - name: Rare map per-pin bilingual provenance and selected waypoint regression
+        run: node --test tests/rare-ui-point-evidence-20261016.test.mjs
       - name: Forever 1-30 notable rare loot regression
         run: node --test tests/rare-forever-loot-wave1.test.mjs
       - name: Three new Forever rare loot links and item acquisition regression
