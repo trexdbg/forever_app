@@ -219,6 +219,20 @@ for(const [id,english,french] of [
  assert.equal(en.name(forever),english);
  assert.equal(fr.resolved(forever).verified,false,"Classic translation alone must not verify Forever "+id);
 }
+// Cross-module Classic names are evidence of localization only, not current Forever drops.
+for(const [id,english,french] of [
+ [18611,"Gnarlpine Leggings","Jambières de Pin-tordu"],
+ [10553,"Foreman Vest","Gilet de contremaître"]
+]){
+ const classic={id,name:english,source_status:"classic_reference"};
+ assert.equal(fr.name(classic),french,"Classic frFR item-name regression "+id);
+ assert.equal(en.name(classic),english);
+ assert.equal(fr.resolved(classic).verified,true);
+ const forever={id,name:english,name_fr:french,source_status:"forever_beta_community"};
+ assert.equal(fr.name(forever),french);
+ assert.equal(en.name(forever),english);
+ assert.equal(fr.resolved(forever).verified,false,"Classic FR string is not an official Forever localization "+id);
+}
 const unresolvedRare=(JSON.parse(readFileSync(resolve(root,"data/rares.json"),"utf8")).rares||[])
  .flatMap(row=>row.loot||[]).filter(i=>!i.item_id);
 assert.equal(unresolvedRare.length,0,"All rare drops must have item IDs");
