@@ -7,11 +7,35 @@ const norm=x=>String(x??"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLo
 const fmt=x=>Number(x).toLocaleString(en?"en-US":"fr-FR",{maximumFractionDigits:1});
 const canvas=$("rare-canvas"),ctx=canvas.getContext("2d"),W=1002,H=668;
 const local=new Set(["azshara","blasted-lands","burning-steppes","epl","searing-gorge","silithus","swamp-of-sorrows","ungoro","winterspring","wpl"]);
-let db,rows=[],filtered=[],selected=null,zoneId="",img=null,token=0,zoom=1,center=[50,50],pins=[],hover=null,drag=null;
+let db,rows=[],filtered=[],selected=null,zoneId="",img=null,token=0,zoom=1,center=[50,50],pins=[],hover=null,drag=null,pointIndex=0;
 const search=$("rare-search"),zone=$("rare-zone"),type=$("rare-rank"),level=$("rare-level"),verification=$("rare-verification"),loot=$("rare-loot"),tame=$("rare-tame"),mapped=$("rare-mapped");
 const zname=id=>db?.zones?.[id]?.[en?"en":"fr"]||id;
 const npcName=r=>r.name[en?"en":"fr"]||r.name.en;
-const hasForeverLocation=r=>(r.point_evidence||[]).some(p=>p.evidence_level==="documented_forever"||p.evidence_level==="confirmed_in_game");
+/* Evidence belongs to an exact coordinate. Never promote the other pins of a rare. */
+const pointEvidence=(r,i)=>{
+ const point=r.points?.[i],evidence=r.point_evidence?.[i];
+ return point&&Array.isArray(evidence?.coordinates)&&evidence.coordinates.length===2&&evidence.coordinates[0]===point[0]&&evidence.coordinates[1]===point[1]?evidence:null;
+};
+const pointLevel=(r,i)=>pointEvidence(r,i)?.evidence_level||"unverified";
+const pointLabel=(r,i)=>pointLevel(r,i)==="confirmed_in_game"
+ ?T("Forever · confirmé en jeu","Forever · verified in-game")
+ :pointLevel(r,i)==="documented_forever"
+ ?T("Forever · guide, non confirmé en jeu","Forever · guide, not verified in-game")
+ :pointLevel(r,i)==="classic_reference"
+ ?T("Classic · référencé","Classic · sourced reference")
+ :T("Classic · indicatif, non vérifié","Classic · indicative, unverified");
+const hasForeverLocation=r=>(r.points||[]).some((_,i)=>["documented_forever","confirmed_in_game"].includes(pointLevel(r,i)));
+const presenceLabel=r=>r.seen_forever?T("Signalé sur Forever","Reported on Forever")
+ :r.reference==="new_forever_community_documented_not_gameplay_confirmed"?T("Documenté pour Forever · présence non confirmée en jeu","Documented for Forever · in-game presence unverified")
+ :T("Apparition Classic · non vérifiée","Classic spawn · unverified");
+const pointSummary=r=>{
+ const levels=(r.points||[]).map((_,i)=>pointLevel(r,i));
+ const forever=levels.filter(v=>v==="documented_forever"||v==="confirmed_in_game").length;
+ if(forever&&forever<levels.length)return T("Repères Forever documentés et Classic indicatifs · vérifier chaque point","Documented Forever and indicative Classic pins · check each point");
+ if(levels.includes("confirmed_in_game"))return T("Repères de niveaux de preuve différents · consulter chaque point","Pins have different evidence levels · check each point");
+ if(forever)return T("Positions documentées dans des guides Forever · non confirmées en jeu","Locations in Forever guides · not confirmed in-game");
+ return T("Positions Classic indicatives · à vérifier sur Forever","Indicative Classic spawn points · not verified on Forever");
+};
 const exactLevel=r=>Number.isInteger(r.level)&&r.level>0;
 const starterLevelUnknown=r=>r.level===null&&r.level_status==="unknown"&&r.level_context==="starter_zone";
 const visibleAtBetaLevel=r=>exactLevel(r)?r.level<=30:starterLevelUnknown(r);
@@ -57,7 +81,7 @@ for(const r of filtered){
  const b=button(null,"rare-row"+(selected?.id===r.id?" active":""));b.setAttribute("role","option");b.setAttribute("aria-selected",String(r.id===selected?.id));
  const a=m("div",null,"rare-row-name");const dot=m("i",null,"rare-color-dot");dot.style.backgroundColor=markerColor(r);dot.title=T("Couleur de ce monstre sur la carte","Creature color on the map");a.append(dot);a.append(m("strong",npcName(r)));a.append(m("b",displayLevel(r),"rare-lvl"));b.append(a);
  b.append(m("span",zname(r.zone),"rare-zone-name"));
- const meta=m("span",null,"rare-row-meta");meta.append(m("span",T("Repop Classic : ","Classic respawn: ")+respawn(r)));meta.append(chip(r.seen_forever?T("Signalé Forever","Reported on Forever"):T("Présence Classic à vérifier","Classic spawn unverified"),r.seen_forever?"green":"gold"));
+ const meta=m("span",null,"rare-row-meta");meta.append(m("span",T("Repop Classic : ","Classic respawn: ")+respawn(r)));meta.append(chip(presenceLabel(r),r.seen_forever?"green":"gold"));
  if(r.loot.length){const f=r.loot.filter(isForeverLoot).length;meta.append(chip(r.loot.length+" "+T("butin(s) notable(s)","notable drops"),"purple"));if(f)meta.append(chip(f+" Forever","green"))}
  if(hasForeverLocation(r))meta.append(chip(T("Position documentée Forever","Forever location documented"),"green"));if(r.tameable)meta.append(chip(T("Apprivoisable","Tameable"),"green"));if(!r.points.length&&!db.zones[r.zone]?.instance)meta.append(chip(T("Position à documenter","No position yet"),"rare-pending"));b.append(meta);
  b.addEventListener("click",()=>choose(r));box.append(b);
@@ -70,11 +94,18 @@ const r=selected,top=m("div",null,"rare-detail-top");const dot=m("i",null,"rare-
 top.append(chip(rankLabel(r),"purple"));out.append(top);
 const tags=m("div",null,"rare-tags");tags.append(chip(zname(r.zone)));tags.append(chip(exactLevel(r)?T("Niveau ","Level ")+r.level:T("Niveau inconnu · zone de départ","Level unknown · starter zone")));if(exactLevel(r)&&r.level>30)tags.append(chip(T("Hors bêta 30","Beyond beta cap 30"),"gold"));
 tags.append(chip(T("Repop Classic : ","Classic respawn: ")+respawn(r),"gold"));if(r.tameable)tags.append(chip(T("Apprivoisable","Tameable"),"green"));
-tags.append(chip(r.seen_forever?T("Signalé sur Forever","Seen on Forever"):T("Apparition Classic · non vérifiée","Classic spawn · unverified"),r.seen_forever?"green":"gold"));if(!en&&r.name_fr_status==="community_translation_check_needed")tags.append(chip("Nom FR à confirmer","rare-pending"));if(!en&&r.name_fr_status==="classic_reference")tags.append(chip("Nom FR · référence Classic","gold"));out.append(tags);
-const spot=m("div",null,"rare-spots");spot.append(m("strong",hasForeverLocation(r)?T("Positions documentées Forever · source communautaire, non confirmées en jeu","Forever positions documented by community · not confirmed in game"):T("Positions Classic indicatives · à vérifier sur Forever","Indicative Classic spawn points · not verified on Forever"),"rare-caption"));
+tags.append(chip(presenceLabel(r),r.seen_forever?"green":"gold"));if(!en&&r.name_fr_status==="community_translation_check_needed")tags.append(chip("Nom FR à confirmer","rare-pending"));if(!en&&r.name_fr_status==="classic_reference")tags.append(chip("Nom FR · référence Classic","gold"));out.append(tags);
+const spot=m("div",null,"rare-spots");spot.append(m("strong",pointSummary(r),"rare-caption"));
 const coords=m("div",null,"rare-coords");
 if(!r.points.length)coords.append(m("span",db.zones[r.zone]?.instance?T("Rare d’instance · pas de coordonnées de zone","Instance rare · no outdoor coordinates"):T("Coordonnées non encore documentées · aucun repère inventé","Coordinates not yet documented · no fabricated marker"),"rare-muted"));
-for(const p of r.points){const b=button(fmt(p[0])+" / "+fmt(p[1]),"rare-coord");b.title=T("Centrer la carte","Center map");b.addEventListener("click",()=>{zoom=Math.max(zoom,1.8);center=[p[0],p[1]];clampCenter();draw()});coords.append(b)}spot.append(coords);out.append(spot);
+for(const [i,p] of r.points.entries()){
+ const b=button(fmt(p[0])+" / "+fmt(p[1]),"rare-coord"+(i===pointIndex?" is-active":"")+(["documented_forever","confirmed_in_game"].includes(pointLevel(r,i))?" is-forever":""));
+ b.append(m("small",pointLabel(r,i),"rare-coord-status"));
+ b.title=T("Centrer et sélectionner le point","Center and select pin")+" · "+pointLabel(r,i);
+ b.setAttribute("aria-pressed",String(i===pointIndex));
+ b.addEventListener("click",()=>{pointIndex=i;zoom=Math.max(zoom,1.8);center=[p[0],p[1]];clampCenter();detail();draw()});
+ coords.append(b);
+}spot.append(coords);out.append(spot);
 const setIds=[...new Set((r.loot||[]).map(item=>item.set_id).filter(Boolean))];
 for(const id of setIds){
  const set=db.rare_sets?.[id];if(!set)continue;
@@ -134,12 +165,14 @@ if(r.notes?.[en?"en":"fr"])out.append(m("p",r.notes[en?"en":"fr"],"rare-note"));
 if(r.location_review?.conflict){out.append(chip(T("Conflit de zone · position inconnue","Zone conflict · location unknown"),"rare-pending"));out.append(m("p",r.location_review.conflict_note?.[en?"en":"fr"]||T("Sources contradictoires ; position Forever non établie.","Conflicting sources; Forever position not established."),"rare-note"));}
 const foot=m("div",null,"rare-detail-foot"),a=m("a",T("Voir la source ↗","View source ↗"));a.href=r.source||db.sources.timers_and_loot;a.target="_blank";a.rel="noopener noreferrer";foot.append(a);
 if(Number.isSafeInteger(Number(r.id))&&Number(r.id)>0){const l=m("a",T("Table de butin Forever ↗","Forever loot table ↗"));l.href="https://www.wowhead.com/forever/"+(en?"":"fr/")+"npc="+encodeURIComponent(r.id);l.target="_blank";l.rel="noopener noreferrer";foot.append(l)}
-if(r.coordinate_source&&r.coordinate_source!==r.source){const p=m("a",hasForeverLocation(r)?T("Source des positions Forever documentées ↗","Documented Forever pin source ↗"):T("Référence des repères Classic indicatifs ↗","Indicative Classic pin reference ↗"));p.href=r.coordinate_source;p.target="_blank";p.rel="noopener noreferrer";foot.append(p)}
-if(r.points.length){const b=button(hasForeverLocation(r)?T("Copier /way · Forever documenté","Copy /way · Forever documented"):T("Copier /way · Classic indicatif","Copy /way · indicative Classic"),"rare-copy");b.addEventListener("click",async()=>{const p=r.points[0],str="/way "+p[0]+" "+p[1];try{await navigator.clipboard.writeText(str);b.textContent=T("Copié ✓","Copied ✓")}catch{b.textContent=str}});foot.append(b)}
+const chosenEvidence=pointEvidence(r,pointIndex);
+const locationSource=chosenEvidence?.evidence_url||chosenEvidence?.source_url||(!hasForeverLocation(r)?r.coordinate_source:null);
+if(typeof locationSource==="string"&&/^https:\/\//.test(locationSource)){const p=m("a",T("Source du point sélectionné ↗","Selected pin source ↗"));p.href=locationSource;p.target="_blank";p.rel="noopener noreferrer";foot.append(p)}
+if(r.points.length){const b=button(T("Copier /way du point choisi · ","Copy selected /way · ")+pointLabel(r,pointIndex),"rare-copy");b.addEventListener("click",async()=>{const p=r.points[pointIndex],str="/way "+p[0]+" "+p[1];try{await navigator.clipboard.writeText(str);b.textContent=T("Copié ✓","Copied ✓")}catch{b.textContent=str}});foot.append(b)}
 out.append(foot);
 }
-function choose(r){selected=r;const change=r.zone!==zoneId;zoneId=r.zone;$("rare-map-title").textContent=zname(zoneId);if(change){zoom=1;center=[50,50];image()}showList();detail();draw()}
-function update(){filtered=results();if(!filtered.includes(selected))selected=filtered[0]||null;if(selected){const change=zoneId!==selected.zone;zoneId=selected.zone;$("rare-map-title").textContent=zname(zoneId);if(change){zoom=1;center=[50,50];image()}}showList();detail();draw()}
+function choose(r){if(selected?.id!==r.id)pointIndex=0;selected=r;const change=r.zone!==zoneId;zoneId=r.zone;$("rare-map-title").textContent=zname(zoneId);if(change){zoom=1;center=[50,50];image()}showList();detail();draw()}
+function update(){filtered=results();if(!filtered.includes(selected)){selected=filtered[0]||null;pointIndex=0;}if(selected){const change=zoneId!==selected.zone;zoneId=selected.zone;$("rare-map-title").textContent=zname(zoneId);if(change){zoom=1;center=[50,50];image()}}showList();detail();draw()}
 const clamp=(v,a,b)=>Math.min(b,Math.max(a,v));
 function clampCenter(){const h=50/zoom;center=[clamp(center[0],h,100-h),clamp(center[1],h,100-h)]}
 const pos=p=>[W/2+(p[0]-center[0])*W*zoom/100,H/2+(p[1]-center[1])*H*zoom/100];
@@ -185,7 +218,7 @@ canvas.addEventListener("pointerup",e=>{const moved=drag?.moved;drag=null;if(mov
 canvas.addEventListener("pointercancel",()=>drag=null);canvas.addEventListener("pointerleave",()=>{hover=null;draw()});
 canvas.addEventListener("keydown",e=>{if(e.key==="+"||e.key==="="){e.preventDefault();zoomTo(zoom*1.25)}else if(e.key==="-"){e.preventDefault();zoomTo(zoom/1.25)}else if(["ArrowLeft","ArrowRight","ArrowUp","ArrowDown"].includes(e.key)){e.preventDefault();center[0]+=(e.key==="ArrowLeft"?-8:e.key==="ArrowRight"?8:0)/zoom;center[1]+=(e.key==="ArrowUp"?-8:e.key==="ArrowDown"?8:0)/zoom;clampCenter();draw()}});
 for(const e of [search,zone,type,level,verification,loot,tame,mapped])e.addEventListener(e===search?"input":"change",update);
-fetch("/data/rares.json?v=20261015-foreverwave2",{cache:"no-cache"}).then(r=>{if(!r.ok)throw Error("HTTP "+r.status);return r.json()}).then(data=>{
+fetch("/data/rares.json?v=20261016-point-evidence",{cache:"no-cache"}).then(r=>{if(!r.ok)throw Error("HTTP "+r.status);return r.json()}).then(data=>{
 if(!Array.isArray(data.rares)||!data.zones)throw Error("Invalid JSON");db=data;rows=data.rares.filter(r=>r.zone&&db.zones[r.zone]&&Array.isArray(r.points)&&Array.isArray(r.loot));
 for(const key of [...new Set(rows.map(r=>r.zone))].sort((a,b)=>zname(a).localeCompare(zname(b),en?"en":"fr"))){const opt=m("option",zname(key));opt.value=key;zone.append(opt)}
 const qs=new URLSearchParams(location.search);if(db.zones[qs.get("zone")])zone.value=qs.get("zone");if(qs.get("q"))search.value=qs.get("q");level.value=qs.get("level")==="all"?"all":qs.get("level")==="high"?"high":"low";verification.value=["forever","classic"].includes(qs.get("verification"))?qs.get("verification"):"all";
