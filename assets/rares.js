@@ -29,6 +29,35 @@ const rankLabel=r=>r.classification==="rare_elite"?T("Rare élite","Rare elite")
 const isForeverLoot=item=>item.source_version==="forever_beta";
 const lootTrustLabel=item=>["confirmed_in_game","documented_forever"].includes(item.evidence_level)?"Forever":"Classic";
 
+/* Display-only item icon names, checked against Wowhead item Quick Facts
+ * (Forever where available; Classic for unchanged historical items).
+ * This does not upgrade a loot/source claim. Keep rare data separate from PR #82. */
+const rareLootIconNames=Object.freeze({
+ 18610:"inv_sword_16",18611:"inv_pants_02",18612:"inv_boots_01",
+ 1913:"inv_mace_01",4854:"inv_misc_pelt_bear_ruin_03",
+ 284666:"ability_hunter_beastcall",286534:"inv_misc_monsterclaw_10",
+ 286537:"inv_hammer_12",286746:"inv_helmet_48",
+ 286749:"inv_staff_02",286750:"inv_wand_01",286755:"inv_sword_04"
+});
+const rareLootIconName=item=>{
+ const candidate=item.icon||rareLootIconNames[item.item_id];
+ return typeof candidate==="string"&&/^[a-z0-9_]{3,80}$/.test(candidate)?candidate:null;
+};
+function rareLootImage(item){
+ const frame=m("span",null,"rare-loot-icon");
+ const placeholder=()=>{frame.classList.add("rare-loot-icon-unavailable");frame.title=T("Visuel non documenté","Item icon not documented");frame.replaceChildren(m("span","◇","rare-loot-icon-placeholder"))};
+ const name=rareLootIconName(item);
+ if(!name){placeholder();return frame}
+ const img=m("img");
+ img.alt="";img.width=38;img.height=38;img.loading="lazy";
+ const remote="https://wow.zamimg.com/images/wow/icons/medium/"+name+".jpg";
+ const local=["inv_wand_01","inv_boots_01","inv_sword_04"].includes(name);
+ let triedRemote=!local;
+ img.onerror=()=>{if(!triedRemote){triedRemote=true;img.src=remote}else placeholder()};
+ img.src=local?"/assets/icons/"+name+".jpg":remote;
+ frame.append(img);return frame;
+}
+
 const lootName=item=>{
  const localized=window.ForeverItemLocale?.name({
   id:item.item_id||0,name:item.name.en,
@@ -122,7 +151,7 @@ const loots=m("div",null,"rare-loots");
 if(!r.loot.length)loots.append(m("p",T("Aucun butin renseigné.","No loot listed."),"rare-empty"));
 for(const item of r.loot.filter(item=>item.evidence_level!=="unverified")){
  const a=m("a",null,"rare-loot"+(isForeverLoot(item)?" rare-loot-forever":""));const href=isForeverLoot(item)?(item.item_source_url||(item.item_id?"https://www.wowhead.com/forever/item="+item.item_id:item.source_url||r.source)):(item.item_id?"https://foreverdb.net/item/"+item.item_id:(item.source_url||r.source));a.href=href;a.target="_blank";a.rel="noopener noreferrer";
- const icon=m("img");icon.src="https://wow.zamimg.com/images/wow/icons/medium/"+encodeURIComponent(item.icon||"inv_misc_questionmark")+".jpg";icon.alt="";icon.width=38;icon.height=38;icon.loading="lazy";icon.onerror=()=>icon.remove();a.append(icon);
+ a.append(rareLootImage(item));
  const txt=m("span",null,"rare-loot-text");txt.append(m("strong",lootName(item)));
  const rate=isForeverLoot(item)?item.chance_forever_observed_percent:item.chance_classic_percent;
  if(Number.isFinite(rate))txt.append(m("small",fmt(rate)+" %"));
