@@ -21,14 +21,16 @@ test('citation commit must contain exactly the working catalogue before any writ
   assert.throws(()=>verifyCatalogueRevision('0'.repeat(40),raw,cwd),/unavailable/);
 });
 
-test('NPC-only changes run the cross-catalogue gate and both localized pages bust the data loader cache', () => {
-  const read=path=>readFileSync(new URL('../'+path,import.meta.url),'utf8');
-  assert.match(read('.github/workflows/early-forever-recipes.yml'),/'data\/npcs.json'/);
-  assert.match(read('assets/recipes-early.js'),/recipes-forever-early-archive\.json\?v=20261017-vendors-1/);
-  const versions=['metiers/index.html','en/metiers/index.html'].map(path=>read(path).match(/recipes-early\.js\?v=([^\"]+)/)?.[1]);
-  assert.ok(versions[0]);assert.equal(versions[0],versions[1]);assert.notEqual(versions[0],'20261015-1');
+test('NPC-only changes retain catalogue checks without displaying archived recipe panels', () => {
+ const read=path=>readFileSync(new URL('../'+path,import.meta.url),'utf8');
+ assert.match(read('.github/workflows/early-forever-recipes.yml'),/"data\\/npcs.json"/);
+ assert.match(read('assets/recipes-early.js'),/recipes-forever-early-archive\\.json\\?v=20261017-vendors-1/);
+ for(const path of ['metiers/index.html','en/metiers/index.html']){
+  const html=read(path);
+  assert.match(html,/id="prof-trainers"/);
+  assert.doesNotMatch(html,/id="early-recipes"|recipes-early\\.(?:js|css)/);
+ }
 });
-
 test('275 new exact book/vendor links enrich 166 recipes across seven professions', () => {
   assert.equal(added.length,275);
   assert.equal(new Set(added.map(({r}) => r.spell_id)).size,166);
