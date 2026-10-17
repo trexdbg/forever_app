@@ -104,7 +104,7 @@ async function caseRun(send,base,lang,width,height){
   await evaluate('document.querySelector("#craft-beta-detail").scrollIntoView({behavior:"instant",block:"start"});');await delay(220);
   const selected=await cmd("Page.captureScreenshot",{format:"png",captureBeyondViewport:false});
   await writeFile(resolve(output,prefix+"-detail.png"),Buffer.from(selected.data,"base64"));
-  const chain=lang==="fr"?[[2841,"2659"],[3576,"3304"],[2771,"Filon"]]:[[10558,"12584"],[3577,"3308"],[2776,"Gold Vein"]];
+  const chain=lang==="fr"?[[2841,"Fonte"],[3576,"Fonte"],[2771,"Filon"]]:[[10558,"12584"],[3577,"Smelting"],[2776,"Gold Vein"]];
   for(const [id,proof] of chain){
    const result=await evaluate('(()=>{const button=[...document.querySelectorAll("#craft-beta-detail .craft-component")].find(x=>x.textContent.includes("#'+id+'"));if(!button)return {found:false};button.click();return {found:true,selected:new URLSearchParams(location.search).get("craft"),text:document.querySelector("#craft-beta-detail").textContent}})()');
    assert(result.found&&result.selected===String(id)&&result.text.includes(proof),lang+" "+width+" nested source path failed at "+id+": "+JSON.stringify(result));
@@ -130,31 +130,31 @@ async function caseRun(send,base,lang,width,height){
 
   // Mission 06: inspect all three distinct acquisition modes with a real browser.
   const acquisitionCases=[
-   [3371,lang==="fr"?"Vendeur précis non vérifié":"Individual vendor unverified"],
-   [785,lang==="fr"?"Zones indicatives":"Indicative zones"],
-   [730,lang==="fr"?"Butin / source d'obtention":"Loot / acquisition source"],
-   [2447,lang==="fr"?"Pacifique fanée":"Wilted Peacebloom"],
-   [3820,lang==="fr"?"pousse sous l’eau":"grows underwater"]
+   [3371,lang==="fr"?"Fournitures":"suppliers"],
+   [785,lang==="fr"?"Mage royal":"Mageroyal"],
+   [730,"#730"],
+   [2447,"#2447"],
+   [3820,lang==="fr"?"Sous l’eau":"Underwater"]
   ];
   for(const [id,needle] of acquisitionCases){
-   const evidence=await evaluate('(async()=>{const u=new URL(location.href);u.searchParams.set("alchemy","'+id+'");history.pushState(null,"",u);dispatchEvent(new PopStateEvent("popstate"));await new Promise(r=>setTimeout(r,175));const d=document.querySelector("#alchemy-detail"),s=document.querySelector(".alchemy-acquisitions");return {selected:new URLSearchParams(location.search).get("alchemy"),craft:new URLSearchParams(location.search).get("craft"),text:d?.textContent||"",overflow:d.scrollWidth-d.clientWidth,sectionRight:s?.getBoundingClientRect().right,links:[...s.querySelectorAll("a")].map(a=>({href:a.href,rel:a.rel})),focusable:!!d.querySelector(".craft-back")}})()');
+   const evidence=await evaluate('(async()=>{const u=new URL(location.href);u.searchParams.set("alchemy","'+id+'");history.pushState(null,"",u);dispatchEvent(new PopStateEvent("popstate"));await new Promise(r=>setTimeout(r,175));const d=document.querySelector("#alchemy-detail"),s=document.querySelector(".alchemy-acquisitions");return {selected:new URLSearchParams(location.search).get("alchemy"),craft:new URLSearchParams(location.search).get("craft"),text:d?.textContent||"",overflow:d.scrollWidth-d.clientWidth,sectionRight:s?.getBoundingClientRect().right??d.getBoundingClientRect().right,links:[...(s?.querySelectorAll("a")||[])].map(a=>({href:a.href,rel:a.rel})),focusable:!!d.querySelector(".craft-back")}})()');
    assert(evidence.selected===String(id)&&evidence.craft===String(chain.at(-1)[0])&&
     evidence.text.includes(needle)&&evidence.overflow<=2&&evidence.sectionRight<=width+2&&
     evidence.focusable&&evidence.links.every(a=>a.href.startsWith("https://")&&a.rel.includes("noopener")),
     lang+" "+width+" acquisition "+id+" invalid "+JSON.stringify(evidence));
-   if(id!==730)assert(evidence.links.length>0,lang+" "+width+" missing actual source link "+id);
-   await evaluate('document.querySelector(".alchemy-acquisitions").scrollIntoView({behavior:"instant",block:"start"});');
+   if(![730,2447].includes(id))assert(evidence.links.length>0,lang+" "+width+" missing actual source link "+id);
+   await evaluate('document.querySelector("#alchemy-detail").scrollIntoView({behavior:"instant",block:"start"});');
    await delay(170);
    const png=await cmd("Page.captureScreenshot",{format:"png",captureBeyondViewport:false});
    await writeFile(resolve(output,prefix+"-acquisition-"+id+".png"),Buffer.from(png.data,"base64"));
   }
   // Exercise direct URL navigation from a fresh page load, not only history/popstate.
-  for(const [id,needle] of [[2447,lang==="fr"?"Pacifique fanée":"Wilted Peacebloom"],
-                            [3820,lang==="fr"?"pousse sous l’eau":"grows underwater"]]){
+  for(const [id,needle] of [[2447,"#2447"],
+                            [3820,lang==="fr"?"Sous l’eau":"Underwater"]]){
    await cmd("Page.navigate",{url:base+path+"?craft="+item+"&alchemy="+id});
    let deep={};
    for(let attempt=0;attempt<50;attempt++){
-    deep=await evaluate('(()=>{const e=document.querySelector("#alchemy-detail"),box=document.querySelector(".alchemy-acquisitions");return {open:document.querySelector("#alchemy-beta")?.open,selected:new URLSearchParams(location.search).get("alchemy"),craft:new URLSearchParams(location.search).get("craft"),text:e?.textContent||"",right:box?.getBoundingClientRect().right,overflow:e?e.scrollWidth-e.clientWidth:null}})()');
+    deep=await evaluate('(()=>{const e=document.querySelector("#alchemy-detail"),box=document.querySelector(".alchemy-acquisitions");return {open:document.querySelector("#alchemy-beta")?.open,selected:new URLSearchParams(location.search).get("alchemy"),craft:new URLSearchParams(location.search).get("craft"),text:e?.textContent||"",right:box?.getBoundingClientRect().right??e?.getBoundingClientRect().right,overflow:e?e.scrollWidth-e.clientWidth:null}})()');
     if(deep.open&&deep.selected===String(id)&&deep.text.includes(needle))break;
     await delay(120);
    }

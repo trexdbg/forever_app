@@ -108,19 +108,19 @@ test("archive is opt-in, loads lazily and both localized professions pages link 
  assert.match(js,/root\.addEventListener\("toggle"/);
  assert.match(js,/if\(root\.open\)load\(\)/);
  assert.match(js,/historical_client_archive_not_in_game_verified/);
- assert.match(js,/not a witnessed craft/);
- assert.match(js,/Classic · indicatif/);
+ assert.match(js,/function recipeView/);
+ assert.match(js,/edition:/);
  assert.match(js,/"Engineering":"Ingénierie"/);
  assert.match(js,/"Cooking":"Cuisine"/);
  assert.match(js,/"First Aid":"Secourisme"/);
  assert.match(js,/profLabel\(r\.profession_en\)/);
  assert.match(js,/profLabel\(name\)/);
- assert.match(js,/Niveau|Compétence d'apprentissage/);
+ assert.match(js,/Compétence requise/);
  for(const p of ["metiers/index.html","en/metiers/index.html"]){
   const html=load(p);
   assert.match(html,/id="early-recipes"/);
   assert.match(html,/id="early-recipe-change"/);
-  assert.match(html,/recipes-early\.js\?v=20261017-vendors-1/);
+  assert.match(html,/recipes-early\.js\?v=20261017-clean-1/);
   assert.match(html,/recipes-early\.css\?v=20261015-1/);
   assert.match(html,/id="early-recipe-results"/);
  }

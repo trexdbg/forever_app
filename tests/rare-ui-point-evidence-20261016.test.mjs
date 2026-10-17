@@ -24,14 +24,14 @@ test("a coordinate borrows neither a neighbour's Forever proof nor mismatched ev
   ],
   reference:"classic_cmangos_not_forever_verified",seen_forever:false
  };
- assert.equal(french.pointLabel(rare,0),"Classic · indicatif, non vérifié");
- assert.match(french.pointLabel(rare,1),/^Forever · guide/);
- assert.match(english.pointLabel(rare,1),/not verified in-game/);
+ assert.equal(french.pointLabel(rare,0),"Classic");
+ assert.match(french.pointLabel(rare,1),/^Forever$/);
+ assert.match(english.pointLabel(rare,1),/^Forever$/);
  assert.equal(french.hasForeverLocation(rare),true);
- assert.match(french.pointSummary(rare),/Classic indicatifs/);
+ assert.match(french.pointSummary(rare),/Emplacements/);
  assert.equal(french.pointEvidence({...rare,point_evidence:[rare.point_evidence[1],rare.point_evidence[0]]},0),null);
  assert.equal(english.pointLevel({...rare,point_evidence:[]},0),"unverified");
- assert.equal(french.pointLabel({...rare,point_evidence:[{coordinates:[10,20],evidence_level:"confirmed_in_game"}]},0),"Forever · confirmé en jeu");
+ assert.equal(french.pointLabel({...rare,point_evidence:[{coordinates:[10,20],evidence_level:"confirmed_in_game"}]},0),"Forever");
 });
 
 test("community-documented new Forever rares do not get a false Classic-only or gameplay-confirmed label",()=>{
@@ -41,8 +41,8 @@ test("community-documented new Forever rares do not get a false Classic-only or 
  assert.equal(newForever.length,11);
  for(const rare of newForever){
   assert.equal(rare.seen_forever,false,rare.id);
-  assert.match(french.presenceLabel(rare),/Documenté pour Forever.*non confirmée/);
-  assert.match(english.presenceLabel(rare),/Documented for Forever.*unverified/);
+  assert.match(french.presenceLabel(rare),/^Forever$/);
+  assert.match(english.presenceLabel(rare),/^Forever$/);
  }
  const classic=scoped.find(r=>r.id==="462");
  assert.match(french.presenceLabel(classic),/Classic/);
@@ -71,7 +71,7 @@ test("all 345 scoped coordinates are labeled only from their matching individual
 
 test("selected coordinate drives /way and source; both languages load the same evidence-aware asset",()=>{
  assert.match(source,/const p=r\.points\[pointIndex\],str="\/way "/);
- assert.match(source,/pointLabel\(r,pointIndex\),"rare-copy"/);
+ assert.match(source,/T\("Copier \/way","Copy \/way"\),"rare-copy"/);
  assert.match(source,/const chosenEvidence=pointEvidence\(r,pointIndex\)/);
  assert.match(source,/b\.setAttribute\("aria-pressed",String\(i===pointIndex\)\)/);
  assert.match(source,/const selectedPin=selected\?\.points\?\.\[pointIndex\]/);
@@ -79,7 +79,7 @@ test("selected coordinate drives /way and source; both languages load the same e
  assert.doesNotMatch(source,/const p=r\.points\[0\],str="\/way "/);
  for(const path of ["rare/index.html","en/rare/index.html"]){
   const html=read(path);
-  assert.ok(html.includes("/assets/rares.js?v=20261016-point-evidence"),path);
+  assert.ok(html.includes("/assets/rares.js?v=20261017-clean-1"),path);
   assert.ok(html.includes("/assets/rares.css?v=20261016-point-evidence"),path);
  }
 });

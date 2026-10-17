@@ -154,7 +154,7 @@ function craftingRows(db){
   const i=db.items?.[String(r?.output_item_id)];
   if(!preview.recipe_item_ids.includes(r?.output_item_id)||!i?.name?.fr||!i?.name?.en||!r?.spell_id)continue;
   add("professions",label(i.name),
-   T("Fabrication documentée · bêta (non confirmée en jeu)","Documented crafting · beta (not confirmed in game)"),
+   T("Fabrication","Crafting"),
    url("metiers/",{craft:r.output_item_id}),
    [...pair(i.name),String(r.output_item_id),String(r.spell_id)],10);
  }
@@ -171,7 +171,7 @@ function alchemyRows(db){
   if(!ids.includes(r?.output_item_id)||r.profession_id!==171||!i?.name?.fr||!i?.name?.en||
    r.available_in_game!==null||r.verified_for_forever!==false||![118,858].every(id=>id!==r.output_item_id))continue;
   add("professions",label(i.name),
-   T("Alchimie documentée · bêta (non confirmée en jeu)","Documented alchemy · beta (not confirmed in game)"),
+   T("Alchimie","Alchemy"),
    url("metiers/",{alchemy:r.output_item_id}),
    [...pair(i.name),String(r.output_item_id),String(r.spell_id)],10);
  }

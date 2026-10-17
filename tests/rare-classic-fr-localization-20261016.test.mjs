@@ -56,16 +56,16 @@ test("two Forever-documented quest drops use localized Classic FR names with sep
 });
 test("the UI does not mistake all Forever-referenced drops for new items or official translations",()=>{
  const js=read("assets/rares.js");
- assert.ok(js.includes('T("Butins référencés dans Forever","Loot listed for Forever")'));
+ assert.ok(js.includes('T("Butins","Loot")'));
  assert.ok(!js.includes("Objets ajoutés dans Forever"));
  assert.ok(!js.includes("Forever-specific items"));
- assert.ok(js.includes('item.name_fr_status==="classic_reference"'));
- assert.ok(js.includes('r.name_fr_status==="classic_reference"'));
- assert.ok(js.includes("Nom FR · référence Classic"));
+ assert.ok(js.includes("const lootName=item=>"));
+ assert.ok(js.includes("window.ForeverItemLocale?.name"));
+ assert.ok(!js.includes("Nom FR · référence Classic"));
  for(const path of ["rare/index.html","en/rare/index.html"]){
   const html=read(path);
   assert.ok(html.includes("/assets/item-locale.js?v=20261016-rare-fallback"),path);
-  assert.ok(html.includes("/assets/rares.js?v=20261016-point-evidence"),path);
+  assert.ok(html.includes("/assets/rares.js?v=20261017-clean-1"),path);
  }
 });
 test("Classic quests stay online, new Forever quest module stays inactive and all 161 scoped rares remain",()=>{

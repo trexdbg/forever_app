@@ -3,8 +3,8 @@
 const en=document.documentElement.lang==="en",$=id=>document.getElementById(id),host=$("level-bis");
 if(!host)return;
 const T=en?{
- classes:"Classes",level:"Level",required:"Requires level",itemLevel:"Item level",from:"Source",forever:"Forever beta",classic:"Classic",all:"All references",none:"No level-verified candidate for this slot.",unverified:"Provisional candidates · not confirmed BiS",other:"Other candidates",hide:"Hide candidates",more:"Show other candidates",detail:"Item details",levelCap:"Beta level cap: 30. Higher brackets are preparatory references only.",empty:"No suitable candidate with a documented required level. We do not guess.",total:"eligible references",slots:"covered slots",missing:"Not documented",notice:"Suggestions are ranked using item level and available stats, not game testing. Item acquisition, optimization and drop sources have not been verified in Forever.",loading:"Loading item references…",error:"Unable to load equipment references.",source:"Source filter",sourceforever:"Forever beta",sourceclassic:"Classic",classLabel:"Choose class",specLabel:"Role / build",bandLabel:"Level bracket",tooltip:"View details",compare:"Explore the catalogue",confirmed:"Required level documented",tip:"Click or hover an item to inspect its properties.",reference:"Reference",notverified:"Availability unverified",name:"Name"}:{
- classes:"Classes",level:"Niveau",required:"Niveau requis",itemLevel:"Niveau d’objet",from:"Origine",forever:"Forever bêta",classic:"Classic",all:"Toutes les références",none:"Aucun candidat avec niveau requis vérifié pour cet emplacement.",unverified:"Candidats provisoires · BiS non confirmés",other:"Autres candidats",hide:"Masquer les candidats",more:"Voir les autres candidats",detail:"Fiche de l’objet",levelCap:"Bêta limitée au niveau 30. Les tranches supérieures sont des repères préparatoires.",empty:"Aucun candidat adapté avec niveau requis documenté. Aucun BiS inventé.",total:"références éligibles",slots:"emplacements couverts",missing:"Non documenté",notice:"Classement indicatif par niveau d’objet et caractéristiques connues, sans tests en jeu. Obtention, optimisation et butins ne sont pas vérifiés sur Forever.",loading:"Chargement des références…",error:"Impossible de charger les références.",source:"Filtre de provenance",sourceforever:"Forever bêta",sourceclassic:"Classic",classLabel:"Choisir une classe",specLabel:"Rôle / profil",bandLabel:"Tranche de niveau",tooltip:"Voir les détails",compare:"Explorer le catalogue",confirmed:"Niveau requis documenté",tip:"Survolez ou cliquez pour afficher les propriétés.",reference:"Référence",notverified:"Disponibilité non vérifiée",name:"Nom"};
+ classes:"Classes",level:"Level",required:"Requires level",itemLevel:"Item level",from:"Source",forever:"Forever beta",classic:"Classic",all:"All references",none:"No item for this slot.",unverified:"Other items",other:"Other candidates",hide:"Hide candidates",more:"Show other candidates",detail:"Item details",levelCap:"Beta level cap: 30. Higher brackets are preparatory references only.",empty:"No suitable item.",total:"eligible references",slots:"covered slots",missing:"Not documented",notice:"Suggestions are ranked using item level and available stats, not game testing. Item acquisition, optimization and drop sources have not been verified in Forever.",loading:"Loading item references…",error:"Unable to load equipment references.",source:"Source filter",sourceforever:"Forever beta",sourceclassic:"Classic",classLabel:"Choose class",specLabel:"Role / build",bandLabel:"Level bracket",tooltip:"View details",compare:"Explore the catalogue",confirmed:"Required level",tip:"Click or hover an item to inspect its properties.",reference:"Reference",notverified:"",name:"Name"}:{
+ classes:"Classes",level:"Niveau",required:"Niveau requis",itemLevel:"Niveau d’objet",from:"Origine",forever:"Forever bêta",classic:"Classic",all:"Toutes les références",none:"Aucun objet pour cet emplacement.",unverified:"Autres objets",other:"Autres candidats",hide:"Masquer les candidats",more:"Voir les autres candidats",detail:"Fiche de l’objet",levelCap:"Bêta limitée au niveau 30. Les tranches supérieures sont des repères préparatoires.",empty:"Aucun objet adapté.",total:"références éligibles",slots:"emplacements couverts",missing:"Non documenté",notice:"Classement indicatif par niveau d’objet et caractéristiques connues, sans tests en jeu. Obtention, optimisation et butins ne sont pas vérifiés sur Forever.",loading:"Chargement des références…",error:"Impossible de charger les références.",source:"Filtre de provenance",sourceforever:"Forever bêta",sourceclassic:"Classic",classLabel:"Choisir une classe",specLabel:"Rôle / profil",bandLabel:"Tranche de niveau",tooltip:"Voir les détails",compare:"Explorer le catalogue",confirmed:"Niveau requis",tip:"Survolez ou cliquez pour afficher les propriétés.",reference:"Référence",notverified:"",name:"Nom"};
 const classesEN={guerrier:"Warrior",paladin:"Paladin",chasseur:"Hunter",voleur:"Rogue",pretre:"Priest",chaman:"Shaman",mage:"Mage",demoniste:"Warlock",druide:"Druid"};
 const specsEN={"Fury":"Fury","Tank":"Tank","Soins":"Healer","DPS distance":"Ranged DPS","DPS magique":"Spell DPS","Combat épées":"Combat swords","Combat dagues":"Combat daggers","Ombre":"Shadow","Amélioration":"Enhancement","Farouche":"Feral"};
 const slotsEN={head:"Head",neck:"Neck",shoulders:"Shoulders",back:"Back",chest:"Chest",wrist:"Wrist",hands:"Hands",waist:"Waist",legs:"Legs",feet:"Feet",finger1:"Ring 1",finger2:"Ring 2",trinket1:"Trinket 1",trinket2:"Trinket 2",mainhand:"Main hand",offhand:"Off hand",ranged:"Ranged / relic"};
@@ -35,7 +35,7 @@ function getKind(i){
  if(/vendor|marchand|merchant|vendeur|boutique/i.test(origin))return "vendor";
  return "world";
 }
-const sourceDetails=en?{drop:"Community-reported beta drop",observed:"Reported in beta · not independently verified",client:"Beta client reference · unverified acquisition",classic:"Classic reference · availability unverified",obtained:"How to obtain",boss:"Boss",level30:"Level 30 · beta cap"}:{drop:"Butin signalé par la communauté",observed:"Signalé en bêta · non vérifié directement",client:"Référence du client bêta · obtention à confirmer",classic:"Référence Classic · disponibilité non vérifiée",obtained:"Où l’obtenir",boss:"Boss",level30:"Niveau 30 · plafond bêta"};
+const sourceDetails=en?{drop:"Forever",observed:"Forever",client:"Forever",classic:"Classic",obtained:"How to obtain",boss:"Boss",level30:"Level 30 · beta cap"}:{drop:"Forever",observed:"Forever",client:"Forever",classic:"Classic",obtained:"Où l’obtenir",boss:"Boss",level30:"Niveau 30 · plafond bêta"};
 
 
 /* Localization is source-aware: the Classic API publishes French names only.
@@ -331,7 +331,7 @@ function renderFilters(){
  if(future&&levels[band][0]>30)future.open=true;
  const countLabel=$("level-filter-count");
  if(countLabel){countLabel.hidden=activeFilters===0;countLabel.textContent=String(activeFilters);}
- 
+
  if(aBox){aBox.replaceChildren();for(const [kind,label] of Object.entries(kindLabel)){
   const button=mk("button","level-bis-chip level-bis-kind"+(sourceKind===kind?" active":""),label);
   button.type="button";button.setAttribute("aria-pressed",String(sourceKind===kind));
@@ -470,7 +470,7 @@ function renderPicker(){
  const slot=db.slots.find(s=>s.id===activeSlot),id=slot.id,i=currentPlan.selected.get(id);
  const blocked=currentPlan.blocked.has(id),manual=currentPlan.manual.has(id);
  $("level-picker-slot").textContent=labelSlot(slot);
- 
+
  const selected=$("level-picked");selected.replaceChildren();
  if(!i)selected.append(mk("p","bis-v2-blank",blocked?u.twohand:u.missing));
  else{
@@ -543,7 +543,7 @@ function renderPicker(){
   for(const item of pending){
    const link=mk("a","bis-v2-candidate",localizedName(item)+" · "+requirementText(item));
    link.href=uncertainCatalogueLink(item);
-   link.setAttribute("aria-label",(en?"Unverified item details":"Fiche de l’objet non vérifié")+" : "+localizedName(item));
+   link.setAttribute("aria-label",(en?"Item details":"Fiche de l’objet")+" : "+localizedName(item));
    refs.append(link);
   }
   results.append(refs);

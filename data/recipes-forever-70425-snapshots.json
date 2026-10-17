@@ -1,0 +1,2050 @@
+{
+  "schema_version": 1,
+  "observed_build": "1.60.1.70425",
+  "observed_at": "2026-10-17",
+  "scope": "Three reviewed profession pages, yellow skill threshold 1..150; no proof of character-level-30 availability. Independent documentary snapshots; historic archive retained.",
+  "sources": [
+    {
+      "source_url": "https://wowforevertalents.com/professions/engineering/parts/",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "html_sha256": "261e86e252b6eba4e5e09c8ae2b10893544859fb3ea457644ecd6475d696f85f",
+      "selected_recipes": 16
+    },
+    {
+      "source_url": "https://wowforevertalents.com/professions/engineering/explosives/",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "html_sha256": "b6f4dfb611fca61f49c7cbbef81e9312abc599a92b85721ef5bea0ae4dc92fe9",
+      "selected_recipes": 14
+    },
+    {
+      "source_url": "https://wowforevertalents.com/professions/first-aid/",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "html_sha256": "bdba4a00bc370ebd1420acfcbd69be41c97d64f3423c13590362049966a01252",
+      "selected_recipes": 14
+    }
+  ],
+  "counts": {
+    "recipes": 44,
+    "ingredient_edges": 99
+  },
+  "recipes": [
+    {
+      "spell_id": 3275,
+      "profession_id": 129,
+      "profession_en": "First Aid",
+      "name_en": "Linen Bandage",
+      "name_fr": null,
+      "source_classic_comparison_status": "unchanged",
+      "output": {
+        "item_id": 1251,
+        "name_en": "Linen Bandage",
+        "item_level_reported": 1,
+        "quantity_reported": 1,
+        "player_level_required": null,
+        "verified_live_yield": null
+      },
+      "ingredients": [
+        {
+          "item_id": 2589,
+          "name_en": "Linen Cloth",
+          "quantity": 1
+        }
+      ],
+      "book_item_ids": [],
+      "learning_method_reported": "trainer",
+      "learning_skill_reported": 1,
+      "learning_skill_status": "client_requirement_reported_by_source",
+      "skill_yellow_reported": 30,
+      "skill_green_reported": 45,
+      "skill_grey_reported": 60,
+      "green_threshold_status": "source_calculated_midpoint_not_independently_extracted",
+      "availability_in_game": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/first-aid/",
+      "evidence_url": "https://wowforevertalents.com/professions/first-aid/#r-3275",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "WoW Forever Talents publishes this exact spell, output, ingredients, colour thresholds and linked recipe items for build 1.60.1.70425. This is a community presentation of client data, not an independently decoded DB2 export or an observed craft. The source calculates green as the rounded midpoint of yellow/grey; unknown server trainer requirements, live yield, vendors and availability are not inferred."
+    },
+    {
+      "spell_id": 3276,
+      "profession_id": 129,
+      "profession_en": "First Aid",
+      "name_en": "Heavy Linen Bandage",
+      "name_fr": null,
+      "source_classic_comparison_status": "unchanged",
+      "output": {
+        "item_id": 2581,
+        "name_en": "Heavy Linen Bandage",
+        "item_level_reported": 1,
+        "quantity_reported": 1,
+        "player_level_required": null,
+        "verified_live_yield": null
+      },
+      "ingredients": [
+        {
+          "item_id": 2589,
+          "name_en": "Linen Cloth",
+          "quantity": 2
+        }
+      ],
+      "book_item_ids": [],
+      "learning_method_reported": "trainer",
+      "learning_skill_reported": null,
+      "learning_skill_status": "trainer_requirement_not_in_source_client",
+      "skill_yellow_reported": 50,
+      "skill_green_reported": 75,
+      "skill_grey_reported": 100,
+      "green_threshold_status": "source_calculated_midpoint_not_independently_extracted",
+      "availability_in_game": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/first-aid/",
+      "evidence_url": "https://wowforevertalents.com/professions/first-aid/#r-3276",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "WoW Forever Talents publishes this exact spell, output, ingredients, colour thresholds and linked recipe items for build 1.60.1.70425. This is a community presentation of client data, not an independently decoded DB2 export or an observed craft. The source calculates green as the rounded midpoint of yellow/grey; unknown server trainer requirements, live yield, vendors and availability are not inferred."
+    },
+    {
+      "spell_id": 3277,
+      "profession_id": 129,
+      "profession_en": "First Aid",
+      "name_en": "Wool Bandage",
+      "name_fr": null,
+      "source_classic_comparison_status": "unchanged",
+      "output": {
+        "item_id": 3530,
+        "name_en": "Wool Bandage",
+        "item_level_reported": 1,
+        "quantity_reported": 1,
+        "player_level_required": null,
+        "verified_live_yield": null
+      },
+      "ingredients": [
+        {
+          "item_id": 2592,
+          "name_en": "Wool Cloth",
+          "quantity": 1
+        }
+      ],
+      "book_item_ids": [],
+      "learning_method_reported": "trainer",
+      "learning_skill_reported": null,
+      "learning_skill_status": "trainer_requirement_not_in_source_client",
+      "skill_yellow_reported": 80,
+      "skill_green_reported": 115,
+      "skill_grey_reported": 150,
+      "green_threshold_status": "source_calculated_midpoint_not_independently_extracted",
+      "availability_in_game": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/first-aid/",
+      "evidence_url": "https://wowforevertalents.com/professions/first-aid/#r-3277",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "WoW Forever Talents publishes this exact spell, output, ingredients, colour thresholds and linked recipe items for build 1.60.1.70425. This is a community presentation of client data, not an independently decoded DB2 export or an observed craft. The source calculates green as the rounded midpoint of yellow/grey; unknown server trainer requirements, live yield, vendors and availability are not inferred."
+    },
+    {
+      "spell_id": 3278,
+      "profession_id": 129,
+      "profession_en": "First Aid",
+      "name_en": "Heavy Wool Bandage",
+      "name_fr": null,
+      "source_classic_comparison_status": "unchanged",
+      "output": {
+        "item_id": 3531,
+        "name_en": "Heavy Wool Bandage",
+        "item_level_reported": 1,
+        "quantity_reported": 1,
+        "player_level_required": null,
+        "verified_live_yield": null
+      },
+      "ingredients": [
+        {
+          "item_id": 2592,
+          "name_en": "Wool Cloth",
+          "quantity": 2
+        }
+      ],
+      "book_item_ids": [],
+      "learning_method_reported": "trainer",
+      "learning_skill_reported": null,
+      "learning_skill_status": "trainer_requirement_not_in_source_client",
+      "skill_yellow_reported": 115,
+      "skill_green_reported": 150,
+      "skill_grey_reported": 185,
+      "green_threshold_status": "source_calculated_midpoint_not_independently_extracted",
+      "availability_in_game": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/first-aid/",
+      "evidence_url": "https://wowforevertalents.com/professions/first-aid/#r-3278",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "WoW Forever Talents publishes this exact spell, output, ingredients, colour thresholds and linked recipe items for build 1.60.1.70425. This is a community presentation of client data, not an independently decoded DB2 export or an observed craft. The source calculates green as the rounded midpoint of yellow/grey; unknown server trainer requirements, live yield, vendors and availability are not inferred."
+    },
+    {
+      "spell_id": 7928,
+      "profession_id": 129,
+      "profession_en": "First Aid",
+      "name_en": "Silk Bandage",
+      "name_fr": null,
+      "source_classic_comparison_status": "unchanged",
+      "output": {
+        "item_id": 6450,
+        "name_en": "Silk Bandage",
+        "item_level_reported": 1,
+        "quantity_reported": 1,
+        "player_level_required": null,
+        "verified_live_yield": null
+      },
+      "ingredients": [
+        {
+          "item_id": 4306,
+          "name_en": "Silk Cloth",
+          "quantity": 1
+        }
+      ],
+      "book_item_ids": [],
+      "learning_method_reported": "trainer",
+      "learning_skill_reported": null,
+      "learning_skill_status": "trainer_requirement_not_in_source_client",
+      "skill_yellow_reported": 150,
+      "skill_green_reported": 180,
+      "skill_grey_reported": 210,
+      "green_threshold_status": "source_calculated_midpoint_not_independently_extracted",
+      "availability_in_game": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/first-aid/",
+      "evidence_url": "https://wowforevertalents.com/professions/first-aid/#r-7928",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "WoW Forever Talents publishes this exact spell, output, ingredients, colour thresholds and linked recipe items for build 1.60.1.70425. This is a community presentation of client data, not an independently decoded DB2 export or an observed craft. The source calculates green as the rounded midpoint of yellow/grey; unknown server trainer requirements, live yield, vendors and availability are not inferred."
+    },
+    {
+      "spell_id": 7934,
+      "profession_id": 129,
+      "profession_en": "First Aid",
+      "name_en": "Anti-Venom",
+      "name_fr": null,
+      "source_classic_comparison_status": "changed",
+      "output": {
+        "item_id": 6452,
+        "name_en": "Anti-Venom",
+        "item_level_reported": 16,
+        "quantity_reported": 3,
+        "player_level_required": null,
+        "verified_live_yield": null
+      },
+      "ingredients": [
+        {
+          "item_id": 1475,
+          "name_en": "Small Venom Sac",
+          "quantity": 1
+        }
+      ],
+      "book_item_ids": [],
+      "learning_method_reported": "trainer",
+      "learning_skill_reported": null,
+      "learning_skill_status": "trainer_requirement_not_in_source_client",
+      "skill_yellow_reported": 80,
+      "skill_green_reported": 115,
+      "skill_grey_reported": 150,
+      "green_threshold_status": "source_calculated_midpoint_not_independently_extracted",
+      "availability_in_game": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/first-aid/",
+      "evidence_url": "https://wowforevertalents.com/professions/first-aid/#r-7934",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "WoW Forever Talents publishes this exact spell, output, ingredients, colour thresholds and linked recipe items for build 1.60.1.70425. This is a community presentation of client data, not an independently decoded DB2 export or an observed craft. The source calculates green as the rounded midpoint of yellow/grey; unknown server trainer requirements, live yield, vendors and availability are not inferred."
+    },
+    {
+      "spell_id": 7935,
+      "profession_id": 129,
+      "profession_en": "First Aid",
+      "name_en": "Strong Anti-Venom",
+      "name_fr": null,
+      "source_classic_comparison_status": "changed",
+      "output": {
+        "item_id": 6453,
+        "name_en": "Strong Anti-Venom",
+        "item_level_reported": 26,
+        "quantity_reported": 3,
+        "player_level_required": null,
+        "verified_live_yield": null
+      },
+      "ingredients": [
+        {
+          "item_id": 1288,
+          "name_en": "Large Venom Sac",
+          "quantity": 1
+        }
+      ],
+      "book_item_ids": [
+        6454
+      ],
+      "learning_method_reported": "item",
+      "learning_skill_reported": 130,
+      "learning_skill_status": "client_requirement_reported_by_source",
+      "skill_yellow_reported": 130,
+      "skill_green_reported": 165,
+      "skill_grey_reported": 200,
+      "green_threshold_status": "source_calculated_midpoint_not_independently_extracted",
+      "availability_in_game": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/first-aid/",
+      "evidence_url": "https://wowforevertalents.com/professions/first-aid/#r-7935",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "WoW Forever Talents publishes this exact spell, output, ingredients, colour thresholds and linked recipe items for build 1.60.1.70425. This is a community presentation of client data, not an independently decoded DB2 export or an observed craft. The source calculates green as the rounded midpoint of yellow/grey; unknown server trainer requirements, live yield, vendors and availability are not inferred."
+    },
+    {
+      "spell_id": 1230117,
+      "profession_id": 129,
+      "profession_en": "First Aid",
+      "name_en": "First Aid Kit",
+      "name_fr": null,
+      "source_classic_comparison_status": "new",
+      "output": {
+        "item_id": 279968,
+        "name_en": "First Aid Kit",
+        "item_level_reported": 4,
+        "quantity_reported": 1,
+        "player_level_required": null,
+        "verified_live_yield": null
+      },
+      "ingredients": [
+        {
+          "item_id": 1251,
+          "name_en": "Linen Bandage",
+          "quantity": 3
+        },
+        {
+          "item_id": 159,
+          "name_en": "Refreshing Spring Water",
+          "quantity": 1
+        }
+      ],
+      "book_item_ids": [],
+      "learning_method_reported": "trainer",
+      "learning_skill_reported": null,
+      "learning_skill_status": "trainer_requirement_not_in_source_client",
+      "skill_yellow_reported": 20,
+      "skill_green_reported": 23,
+      "skill_grey_reported": 25,
+      "green_threshold_status": "source_calculated_midpoint_not_independently_extracted",
+      "availability_in_game": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/first-aid/",
+      "evidence_url": "https://wowforevertalents.com/professions/first-aid/#r-1230117",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "WoW Forever Talents publishes this exact spell, output, ingredients, colour thresholds and linked recipe items for build 1.60.1.70425. This is a community presentation of client data, not an independently decoded DB2 export or an observed craft. The source calculates green as the rounded midpoint of yellow/grey; unknown server trainer requirements, live yield, vendors and availability are not inferred."
+    },
+    {
+      "spell_id": 1244431,
+      "profession_id": 129,
+      "profession_en": "First Aid",
+      "name_en": "Minor Healing Potion",
+      "name_fr": null,
+      "source_classic_comparison_status": "new",
+      "output": {
+        "item_id": 118,
+        "name_en": "Minor Healing Potion",
+        "item_level_reported": 5,
+        "quantity_reported": 1,
+        "player_level_required": null,
+        "verified_live_yield": null
+      },
+      "ingredients": [
+        {
+          "item_id": 3371,
+          "name_en": "Empty Vial",
+          "quantity": 1
+        },
+        {
+          "item_id": 2678,
+          "name_en": "Mild Spices",
+          "quantity": 1
+        },
+        {
+          "item_id": 2447,
+          "name_en": "Peacebloom",
+          "quantity": 1
+        }
+      ],
+      "book_item_ids": [],
+      "learning_method_reported": "trainer",
+      "learning_skill_reported": null,
+      "learning_skill_status": "trainer_requirement_not_in_source_client",
+      "skill_yellow_reported": 55,
+      "skill_green_reported": 75,
+      "skill_grey_reported": 95,
+      "green_threshold_status": "source_calculated_midpoint_not_independently_extracted",
+      "availability_in_game": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/first-aid/",
+      "evidence_url": "https://wowforevertalents.com/professions/first-aid/#r-1244431",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "WoW Forever Talents publishes this exact spell, output, ingredients, colour thresholds and linked recipe items for build 1.60.1.70425. This is a community presentation of client data, not an independently decoded DB2 export or an observed craft. The source calculates green as the rounded midpoint of yellow/grey; unknown server trainer requirements, live yield, vendors and availability are not inferred."
+    },
+    {
+      "spell_id": 1244432,
+      "profession_id": 129,
+      "profession_en": "First Aid",
+      "name_en": "Lesser Healing Potion",
+      "name_fr": null,
+      "source_classic_comparison_status": "new",
+      "output": {
+        "item_id": 858,
+        "name_en": "Lesser Healing Potion",
+        "item_level_reported": 13,
+        "quantity_reported": 1,
+        "player_level_required": null,
+        "verified_live_yield": null
+      },
+      "ingredients": [
+        {
+          "item_id": 3371,
+          "name_en": "Empty Vial",
+          "quantity": 1
+        },
+        {
+          "item_id": 2678,
+          "name_en": "Mild Spices",
+          "quantity": 2
+        },
+        {
+          "item_id": 2450,
+          "name_en": "Briarthorn",
+          "quantity": 1
+        }
+      ],
+      "book_item_ids": [],
+      "learning_method_reported": "trainer",
+      "learning_skill_reported": null,
+      "learning_skill_status": "trainer_requirement_not_in_source_client",
+      "skill_yellow_reported": 85,
+      "skill_green_reported": 105,
+      "skill_grey_reported": 125,
+      "green_threshold_status": "source_calculated_midpoint_not_independently_extracted",
+      "availability_in_game": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/first-aid/",
+      "evidence_url": "https://wowforevertalents.com/professions/first-aid/#r-1244432",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "WoW Forever Talents publishes this exact spell, output, ingredients, colour thresholds and linked recipe items for build 1.60.1.70425. This is a community presentation of client data, not an independently decoded DB2 export or an observed craft. The source calculates green as the rounded midpoint of yellow/grey; unknown server trainer requirements, live yield, vendors and availability are not inferred."
+    },
+    {
+      "spell_id": 1244433,
+      "profession_id": 129,
+      "profession_en": "First Aid",
+      "name_en": "Healing Potion",
+      "name_fr": null,
+      "source_classic_comparison_status": "new",
+      "output": {
+        "item_id": 929,
+        "name_en": "Healing Potion",
+        "item_level_reported": 22,
+        "quantity_reported": 1,
+        "player_level_required": null,
+        "verified_live_yield": null
+      },
+      "ingredients": [
+        {
+          "item_id": 3372,
+          "name_en": "Leaded Vial",
+          "quantity": 1
+        },
+        {
+          "item_id": 2692,
+          "name_en": "Hot Spices",
+          "quantity": 1
+        },
+        {
+          "item_id": 2453,
+          "name_en": "Bruiseweed",
+          "quantity": 1
+        }
+      ],
+      "book_item_ids": [],
+      "learning_method_reported": "trainer",
+      "learning_skill_reported": null,
+      "learning_skill_status": "trainer_requirement_not_in_source_client",
+      "skill_yellow_reported": 135,
+      "skill_green_reported": 155,
+      "skill_grey_reported": 175,
+      "green_threshold_status": "source_calculated_midpoint_not_independently_extracted",
+      "availability_in_game": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/first-aid/",
+      "evidence_url": "https://wowforevertalents.com/professions/first-aid/#r-1244433",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "WoW Forever Talents publishes this exact spell, output, ingredients, colour thresholds and linked recipe items for build 1.60.1.70425. This is a community presentation of client data, not an independently decoded DB2 export or an observed craft. The source calculates green as the rounded midpoint of yellow/grey; unknown server trainer requirements, live yield, vendors and availability are not inferred."
+    },
+    {
+      "spell_id": 1259342,
+      "profession_id": 129,
+      "profession_en": "First Aid",
+      "name_en": "Simple Poultice",
+      "name_fr": null,
+      "source_classic_comparison_status": "new",
+      "output": {
+        "item_id": 255716,
+        "name_en": "Simple Poultice",
+        "item_level_reported": 16,
+        "quantity_reported": 3,
+        "player_level_required": null,
+        "verified_live_yield": null
+      },
+      "ingredients": [
+        {
+          "item_id": 3174,
+          "name_en": "Spider Ichor",
+          "quantity": 1
+        },
+        {
+          "item_id": 2678,
+          "name_en": "Mild Spices",
+          "quantity": 1
+        },
+        {
+          "item_id": 2723,
+          "name_en": "Bottle of Dalaran Noir",
+          "quantity": 1
+        }
+      ],
+      "book_item_ids": [],
+      "learning_method_reported": "trainer",
+      "learning_skill_reported": null,
+      "learning_skill_status": "trainer_requirement_not_in_source_client",
+      "skill_yellow_reported": 90,
+      "skill_green_reported": 125,
+      "skill_grey_reported": 160,
+      "green_threshold_status": "source_calculated_midpoint_not_independently_extracted",
+      "availability_in_game": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/first-aid/",
+      "evidence_url": "https://wowforevertalents.com/professions/first-aid/#r-1259342",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "WoW Forever Talents publishes this exact spell, output, ingredients, colour thresholds and linked recipe items for build 1.60.1.70425. This is a community presentation of client data, not an independently decoded DB2 export or an observed craft. The source calculates green as the rounded midpoint of yellow/grey; unknown server trainer requirements, live yield, vendors and availability are not inferred."
+    },
+    {
+      "spell_id": 1259347,
+      "profession_id": 129,
+      "profession_en": "First Aid",
+      "name_en": "Woolen Tourniquet",
+      "name_fr": null,
+      "source_classic_comparison_status": "new",
+      "output": {
+        "item_id": 255720,
+        "name_en": "Woolen Tourniquet",
+        "item_level_reported": 21,
+        "quantity_reported": 1,
+        "player_level_required": null,
+        "verified_live_yield": null
+      },
+      "ingredients": [
+        {
+          "item_id": 2592,
+          "name_en": "Wool Cloth",
+          "quantity": 2
+        },
+        {
+          "item_id": 2321,
+          "name_en": "Fine Thread",
+          "quantity": 2
+        }
+      ],
+      "book_item_ids": [],
+      "learning_method_reported": "trainer",
+      "learning_skill_reported": null,
+      "learning_skill_status": "trainer_requirement_not_in_source_client",
+      "skill_yellow_reported": 120,
+      "skill_green_reported": 155,
+      "skill_grey_reported": 190,
+      "green_threshold_status": "source_calculated_midpoint_not_independently_extracted",
+      "availability_in_game": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/first-aid/",
+      "evidence_url": "https://wowforevertalents.com/professions/first-aid/#r-1259347",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "WoW Forever Talents publishes this exact spell, output, ingredients, colour thresholds and linked recipe items for build 1.60.1.70425. This is a community presentation of client data, not an independently decoded DB2 export or an observed craft. The source calculates green as the rounded midpoint of yellow/grey; unknown server trainer requirements, live yield, vendors and availability are not inferred."
+    },
+    {
+      "spell_id": 1262996,
+      "profession_id": 129,
+      "profession_en": "First Aid",
+      "name_en": "Toxin Study",
+      "name_fr": null,
+      "source_classic_comparison_status": "new",
+      "output": {
+        "item_id": 279940,
+        "name_en": "Toxin Study",
+        "item_level_reported": 28,
+        "quantity_reported": 1,
+        "player_level_required": null,
+        "verified_live_yield": null
+      },
+      "ingredients": [
+        {
+          "item_id": 6452,
+          "name_en": "Anti-Venom",
+          "quantity": 1
+        },
+        {
+          "item_id": 8544,
+          "name_en": "Mageweave Bandage",
+          "quantity": 2
+        },
+        {
+          "item_id": 4470,
+          "name_en": "Simple Wood",
+          "quantity": 2
+        }
+      ],
+      "book_item_ids": [
+        273105
+      ],
+      "learning_method_reported": "item",
+      "learning_skill_reported": 140,
+      "learning_skill_status": "client_requirement_reported_by_source",
+      "skill_yellow_reported": 140,
+      "skill_green_reported": 143,
+      "skill_grey_reported": 145,
+      "green_threshold_status": "source_calculated_midpoint_not_independently_extracted",
+      "availability_in_game": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/first-aid/",
+      "evidence_url": "https://wowforevertalents.com/professions/first-aid/#r-1262996",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "WoW Forever Talents publishes this exact spell, output, ingredients, colour thresholds and linked recipe items for build 1.60.1.70425. This is a community presentation of client data, not an independently decoded DB2 export or an observed craft. The source calculates green as the rounded midpoint of yellow/grey; unknown server trainer requirements, live yield, vendors and availability are not inferred."
+    },
+    {
+      "spell_id": 3918,
+      "profession_id": 202,
+      "profession_en": "Engineering",
+      "name_en": "Rough Blasting Powder",
+      "name_fr": null,
+      "source_classic_comparison_status": "unchanged",
+      "output": {
+        "item_id": 4357,
+        "name_en": "Rough Blasting Powder",
+        "item_level_reported": 5,
+        "quantity_reported": 1,
+        "player_level_required": null,
+        "verified_live_yield": null
+      },
+      "ingredients": [
+        {
+          "item_id": 2835,
+          "name_en": "Rough Stone",
+          "quantity": 1
+        }
+      ],
+      "book_item_ids": [],
+      "learning_method_reported": "trainer",
+      "learning_skill_reported": 1,
+      "learning_skill_status": "client_requirement_reported_by_source",
+      "skill_yellow_reported": 20,
+      "skill_green_reported": 30,
+      "skill_grey_reported": 40,
+      "green_threshold_status": "source_calculated_midpoint_not_independently_extracted",
+      "availability_in_game": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/engineering/parts/",
+      "evidence_url": "https://wowforevertalents.com/professions/engineering/parts/#r-3918",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "WoW Forever Talents publishes this exact spell, output, ingredients, colour thresholds and linked recipe items for build 1.60.1.70425. This is a community presentation of client data, not an independently decoded DB2 export or an observed craft. The source calculates green as the rounded midpoint of yellow/grey; unknown server trainer requirements, live yield, vendors and availability are not inferred."
+    },
+    {
+      "spell_id": 3919,
+      "profession_id": 202,
+      "profession_en": "Engineering",
+      "name_en": "Rough Dynamite",
+      "name_fr": null,
+      "source_classic_comparison_status": "changed",
+      "output": {
+        "item_id": 4358,
+        "name_en": "Rough Dynamite",
+        "item_level_reported": 10,
+        "quantity_reported": 2,
+        "player_level_required": null,
+        "verified_live_yield": null
+      },
+      "ingredients": [
+        {
+          "item_id": 4357,
+          "name_en": "Rough Blasting Powder",
+          "quantity": 1
+        },
+        {
+          "item_id": 2589,
+          "name_en": "Linen Cloth",
+          "quantity": 1
+        }
+      ],
+      "book_item_ids": [],
+      "learning_method_reported": "trainer",
+      "learning_skill_reported": 1,
+      "learning_skill_status": "client_requirement_reported_by_source",
+      "skill_yellow_reported": 30,
+      "skill_green_reported": 45,
+      "skill_grey_reported": 60,
+      "green_threshold_status": "source_calculated_midpoint_not_independently_extracted",
+      "availability_in_game": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/engineering/explosives/",
+      "evidence_url": "https://wowforevertalents.com/professions/engineering/explosives/#r-3919",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "WoW Forever Talents publishes this exact spell, output, ingredients, colour thresholds and linked recipe items for build 1.60.1.70425. This is a community presentation of client data, not an independently decoded DB2 export or an observed craft. The source calculates green as the rounded midpoint of yellow/grey; unknown server trainer requirements, live yield, vendors and availability are not inferred."
+    },
+    {
+      "spell_id": 3922,
+      "profession_id": 202,
+      "profession_en": "Engineering",
+      "name_en": "Handful of Copper Bolts",
+      "name_fr": null,
+      "source_classic_comparison_status": "unchanged",
+      "output": {
+        "item_id": 4359,
+        "name_en": "Handful of Copper Bolts",
+        "item_level_reported": 8,
+        "quantity_reported": 1,
+        "player_level_required": null,
+        "verified_live_yield": null
+      },
+      "ingredients": [
+        {
+          "item_id": 2840,
+          "name_en": "Copper Bar",
+          "quantity": 1
+        }
+      ],
+      "book_item_ids": [],
+      "learning_method_reported": "trainer",
+      "learning_skill_reported": null,
+      "learning_skill_status": "trainer_requirement_not_in_source_client",
+      "skill_yellow_reported": 45,
+      "skill_green_reported": 53,
+      "skill_grey_reported": 60,
+      "green_threshold_status": "source_calculated_midpoint_not_independently_extracted",
+      "availability_in_game": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/engineering/parts/",
+      "evidence_url": "https://wowforevertalents.com/professions/engineering/parts/#r-3922",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "WoW Forever Talents publishes this exact spell, output, ingredients, colour thresholds and linked recipe items for build 1.60.1.70425. This is a community presentation of client data, not an independently decoded DB2 export or an observed craft. The source calculates green as the rounded midpoint of yellow/grey; unknown server trainer requirements, live yield, vendors and availability are not inferred."
+    },
+    {
+      "spell_id": 3923,
+      "profession_id": 202,
+      "profession_en": "Engineering",
+      "name_en": "Rough Copper Bomb",
+      "name_fr": null,
+      "source_classic_comparison_status": "changed",
+      "output": {
+        "item_id": 4360,
+        "name_en": "Rough Copper Bomb",
+        "item_level_reported": 14,
+        "quantity_reported": 2,
+        "player_level_required": null,
+        "verified_live_yield": null
+      },
+      "ingredients": [
+        {
+          "item_id": 2840,
+          "name_en": "Copper Bar",
+          "quantity": 1
+        },
+        {
+          "item_id": 4359,
+          "name_en": "Handful of Copper Bolts",
+          "quantity": 1
+        },
+        {
+          "item_id": 4357,
+          "name_en": "Rough Blasting Powder",
+          "quantity": 2
+        },
+        {
+          "item_id": 2589,
+          "name_en": "Linen Cloth",
+          "quantity": 1
+        }
+      ],
+      "book_item_ids": [],
+      "learning_method_reported": "trainer",
+      "learning_skill_reported": null,
+      "learning_skill_status": "trainer_requirement_not_in_source_client",
+      "skill_yellow_reported": 60,
+      "skill_green_reported": 75,
+      "skill_grey_reported": 90,
+      "green_threshold_status": "source_calculated_midpoint_not_independently_extracted",
+      "availability_in_game": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/engineering/explosives/",
+      "evidence_url": "https://wowforevertalents.com/professions/engineering/explosives/#r-3923",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "WoW Forever Talents publishes this exact spell, output, ingredients, colour thresholds and linked recipe items for build 1.60.1.70425. This is a community presentation of client data, not an independently decoded DB2 export or an observed craft. The source calculates green as the rounded midpoint of yellow/grey; unknown server trainer requirements, live yield, vendors and availability are not inferred."
+    },
+    {
+      "spell_id": 3924,
+      "profession_id": 202,
+      "profession_en": "Engineering",
+      "name_en": "Copper Tube",
+      "name_fr": null,
+      "source_classic_comparison_status": "unchanged",
+      "output": {
+        "item_id": 4361,
+        "name_en": "Copper Tube",
+        "item_level_reported": 10,
+        "quantity_reported": 1,
+        "player_level_required": null,
+        "verified_live_yield": null
+      },
+      "ingredients": [
+        {
+          "item_id": 2840,
+          "name_en": "Copper Bar",
+          "quantity": 2
+        },
+        {
+          "item_id": 2880,
+          "name_en": "Weak Flux",
+          "quantity": 1
+        }
+      ],
+      "book_item_ids": [],
+      "learning_method_reported": "trainer",
+      "learning_skill_reported": null,
+      "learning_skill_status": "trainer_requirement_not_in_source_client",
+      "skill_yellow_reported": 80,
+      "skill_green_reported": 95,
+      "skill_grey_reported": 110,
+      "green_threshold_status": "source_calculated_midpoint_not_independently_extracted",
+      "availability_in_game": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/engineering/parts/",
+      "evidence_url": "https://wowforevertalents.com/professions/engineering/parts/#r-3924",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "WoW Forever Talents publishes this exact spell, output, ingredients, colour thresholds and linked recipe items for build 1.60.1.70425. This is a community presentation of client data, not an independently decoded DB2 export or an observed craft. The source calculates green as the rounded midpoint of yellow/grey; unknown server trainer requirements, live yield, vendors and availability are not inferred."
+    },
+    {
+      "spell_id": 3926,
+      "profession_id": 202,
+      "profession_en": "Engineering",
+      "name_en": "Copper Modulator",
+      "name_fr": null,
+      "source_classic_comparison_status": "unchanged",
+      "output": {
+        "item_id": 4363,
+        "name_en": "Copper Modulator",
+        "item_level_reported": 13,
+        "quantity_reported": 1,
+        "player_level_required": null,
+        "verified_live_yield": null
+      },
+      "ingredients": [
+        {
+          "item_id": 4359,
+          "name_en": "Handful of Copper Bolts",
+          "quantity": 2
+        },
+        {
+          "item_id": 2840,
+          "name_en": "Copper Bar",
+          "quantity": 1
+        },
+        {
+          "item_id": 2589,
+          "name_en": "Linen Cloth",
+          "quantity": 2
+        }
+      ],
+      "book_item_ids": [],
+      "learning_method_reported": "trainer",
+      "learning_skill_reported": null,
+      "learning_skill_status": "trainer_requirement_not_in_source_client",
+      "skill_yellow_reported": 95,
+      "skill_green_reported": 110,
+      "skill_grey_reported": 125,
+      "green_threshold_status": "source_calculated_midpoint_not_independently_extracted",
+      "availability_in_game": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/engineering/parts/",
+      "evidence_url": "https://wowforevertalents.com/professions/engineering/parts/#r-3926",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "WoW Forever Talents publishes this exact spell, output, ingredients, colour thresholds and linked recipe items for build 1.60.1.70425. This is a community presentation of client data, not an independently decoded DB2 export or an observed craft. The source calculates green as the rounded midpoint of yellow/grey; unknown server trainer requirements, live yield, vendors and availability are not inferred."
+    },
+    {
+      "spell_id": 3929,
+      "profession_id": 202,
+      "profession_en": "Engineering",
+      "name_en": "Coarse Blasting Powder",
+      "name_fr": null,
+      "source_classic_comparison_status": "unchanged",
+      "output": {
+        "item_id": 4364,
+        "name_en": "Coarse Blasting Powder",
+        "item_level_reported": 15,
+        "quantity_reported": 1,
+        "player_level_required": null,
+        "verified_live_yield": null
+      },
+      "ingredients": [
+        {
+          "item_id": 2836,
+          "name_en": "Coarse Stone",
+          "quantity": 1
+        }
+      ],
+      "book_item_ids": [],
+      "learning_method_reported": "trainer",
+      "learning_skill_reported": null,
+      "learning_skill_status": "trainer_requirement_not_in_source_client",
+      "skill_yellow_reported": 85,
+      "skill_green_reported": 90,
+      "skill_grey_reported": 95,
+      "green_threshold_status": "source_calculated_midpoint_not_independently_extracted",
+      "availability_in_game": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/engineering/parts/",
+      "evidence_url": "https://wowforevertalents.com/professions/engineering/parts/#r-3929",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "WoW Forever Talents publishes this exact spell, output, ingredients, colour thresholds and linked recipe items for build 1.60.1.70425. This is a community presentation of client data, not an independently decoded DB2 export or an observed craft. The source calculates green as the rounded midpoint of yellow/grey; unknown server trainer requirements, live yield, vendors and availability are not inferred."
+    },
+    {
+      "spell_id": 3931,
+      "profession_id": 202,
+      "profession_en": "Engineering",
+      "name_en": "Coarse Dynamite",
+      "name_fr": null,
+      "source_classic_comparison_status": "changed",
+      "output": {
+        "item_id": 4365,
+        "name_en": "Coarse Dynamite",
+        "item_level_reported": 20,
+        "quantity_reported": 2,
+        "player_level_required": null,
+        "verified_live_yield": null
+      },
+      "ingredients": [
+        {
+          "item_id": 4364,
+          "name_en": "Coarse Blasting Powder",
+          "quantity": 3
+        },
+        {
+          "item_id": 2589,
+          "name_en": "Linen Cloth",
+          "quantity": 1
+        }
+      ],
+      "book_item_ids": [],
+      "learning_method_reported": "trainer",
+      "learning_skill_reported": null,
+      "learning_skill_status": "trainer_requirement_not_in_source_client",
+      "skill_yellow_reported": 90,
+      "skill_green_reported": 98,
+      "skill_grey_reported": 105,
+      "green_threshold_status": "source_calculated_midpoint_not_independently_extracted",
+      "availability_in_game": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/engineering/explosives/",
+      "evidence_url": "https://wowforevertalents.com/professions/engineering/explosives/#r-3931",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "WoW Forever Talents publishes this exact spell, output, ingredients, colour thresholds and linked recipe items for build 1.60.1.70425. This is a community presentation of client data, not an independently decoded DB2 export or an observed craft. The source calculates green as the rounded midpoint of yellow/grey; unknown server trainer requirements, live yield, vendors and availability are not inferred."
+    },
+    {
+      "spell_id": 3933,
+      "profession_id": 202,
+      "profession_en": "Engineering",
+      "name_en": "Small Seaforium Charge",
+      "name_fr": null,
+      "source_classic_comparison_status": "unchanged",
+      "output": {
+        "item_id": 4367,
+        "name_en": "Small Seaforium Charge",
+        "item_level_reported": 20,
+        "quantity_reported": 1,
+        "player_level_required": null,
+        "verified_live_yield": null
+      },
+      "ingredients": [
+        {
+          "item_id": 4364,
+          "name_en": "Coarse Blasting Powder",
+          "quantity": 2
+        },
+        {
+          "item_id": 4363,
+          "name_en": "Copper Modulator",
+          "quantity": 1
+        },
+        {
+          "item_id": 2318,
+          "name_en": "Light Leather",
+          "quantity": 1
+        },
+        {
+          "item_id": 159,
+          "name_en": "Refreshing Spring Water",
+          "quantity": 1
+        }
+      ],
+      "book_item_ids": [
+        4409
+      ],
+      "learning_method_reported": "item",
+      "learning_skill_reported": 100,
+      "learning_skill_status": "client_requirement_reported_by_source",
+      "skill_yellow_reported": 130,
+      "skill_green_reported": 145,
+      "skill_grey_reported": 160,
+      "green_threshold_status": "source_calculated_midpoint_not_independently_extracted",
+      "availability_in_game": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/engineering/explosives/",
+      "evidence_url": "https://wowforevertalents.com/professions/engineering/explosives/#r-3933",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "WoW Forever Talents publishes this exact spell, output, ingredients, colour thresholds and linked recipe items for build 1.60.1.70425. This is a community presentation of client data, not an independently decoded DB2 export or an observed craft. The source calculates green as the rounded midpoint of yellow/grey; unknown server trainer requirements, live yield, vendors and availability are not inferred."
+    },
+    {
+      "spell_id": 3937,
+      "profession_id": 202,
+      "profession_en": "Engineering",
+      "name_en": "Large Copper Bomb",
+      "name_fr": null,
+      "source_classic_comparison_status": "changed",
+      "output": {
+        "item_id": 4370,
+        "name_en": "Large Copper Bomb",
+        "item_level_reported": 26,
+        "quantity_reported": 3,
+        "player_level_required": null,
+        "verified_live_yield": null
+      },
+      "ingredients": [
+        {
+          "item_id": 2840,
+          "name_en": "Copper Bar",
+          "quantity": 3
+        },
+        {
+          "item_id": 4364,
+          "name_en": "Coarse Blasting Powder",
+          "quantity": 4
+        },
+        {
+          "item_id": 4404,
+          "name_en": "Silver Contact",
+          "quantity": 1
+        }
+      ],
+      "book_item_ids": [],
+      "learning_method_reported": "trainer",
+      "learning_skill_reported": null,
+      "learning_skill_status": "trainer_requirement_not_in_source_client",
+      "skill_yellow_reported": 105,
+      "skill_green_reported": 130,
+      "skill_grey_reported": 155,
+      "green_threshold_status": "source_calculated_midpoint_not_independently_extracted",
+      "availability_in_game": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/engineering/explosives/",
+      "evidence_url": "https://wowforevertalents.com/professions/engineering/explosives/#r-3937",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "WoW Forever Talents publishes this exact spell, output, ingredients, colour thresholds and linked recipe items for build 1.60.1.70425. This is a community presentation of client data, not an independently decoded DB2 export or an observed craft. The source calculates green as the rounded midpoint of yellow/grey; unknown server trainer requirements, live yield, vendors and availability are not inferred."
+    },
+    {
+      "spell_id": 3938,
+      "profession_id": 202,
+      "profession_en": "Engineering",
+      "name_en": "Bronze Tube",
+      "name_fr": null,
+      "source_classic_comparison_status": "unchanged",
+      "output": {
+        "item_id": 4371,
+        "name_en": "Bronze Tube",
+        "item_level_reported": 21,
+        "quantity_reported": 1,
+        "player_level_required": null,
+        "verified_live_yield": null
+      },
+      "ingredients": [
+        {
+          "item_id": 2841,
+          "name_en": "Bronze Bar",
+          "quantity": 2
+        },
+        {
+          "item_id": 2880,
+          "name_en": "Weak Flux",
+          "quantity": 1
+        }
+      ],
+      "book_item_ids": [],
+      "learning_method_reported": "trainer",
+      "learning_skill_reported": null,
+      "learning_skill_status": "trainer_requirement_not_in_source_client",
+      "skill_yellow_reported": 105,
+      "skill_green_reported": 130,
+      "skill_grey_reported": 155,
+      "green_threshold_status": "source_calculated_midpoint_not_independently_extracted",
+      "availability_in_game": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/engineering/parts/",
+      "evidence_url": "https://wowforevertalents.com/professions/engineering/parts/#r-3938",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "WoW Forever Talents publishes this exact spell, output, ingredients, colour thresholds and linked recipe items for build 1.60.1.70425. This is a community presentation of client data, not an independently decoded DB2 export or an observed craft. The source calculates green as the rounded midpoint of yellow/grey; unknown server trainer requirements, live yield, vendors and availability are not inferred."
+    },
+    {
+      "spell_id": 3941,
+      "profession_id": 202,
+      "profession_en": "Engineering",
+      "name_en": "Small Bronze Bomb",
+      "name_fr": null,
+      "source_classic_comparison_status": "changed",
+      "output": {
+        "item_id": 4374,
+        "name_en": "Small Bronze Bomb",
+        "item_level_reported": 29,
+        "quantity_reported": 2,
+        "player_level_required": null,
+        "verified_live_yield": null
+      },
+      "ingredients": [
+        {
+          "item_id": 4364,
+          "name_en": "Coarse Blasting Powder",
+          "quantity": 4
+        },
+        {
+          "item_id": 2841,
+          "name_en": "Bronze Bar",
+          "quantity": 2
+        },
+        {
+          "item_id": 4404,
+          "name_en": "Silver Contact",
+          "quantity": 1
+        },
+        {
+          "item_id": 2592,
+          "name_en": "Wool Cloth",
+          "quantity": 1
+        }
+      ],
+      "book_item_ids": [],
+      "learning_method_reported": "trainer",
+      "learning_skill_reported": null,
+      "learning_skill_status": "trainer_requirement_not_in_source_client",
+      "skill_yellow_reported": 120,
+      "skill_green_reported": 145,
+      "skill_grey_reported": 170,
+      "green_threshold_status": "source_calculated_midpoint_not_independently_extracted",
+      "availability_in_game": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/engineering/explosives/",
+      "evidence_url": "https://wowforevertalents.com/professions/engineering/explosives/#r-3941",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "WoW Forever Talents publishes this exact spell, output, ingredients, colour thresholds and linked recipe items for build 1.60.1.70425. This is a community presentation of client data, not an independently decoded DB2 export or an observed craft. The source calculates green as the rounded midpoint of yellow/grey; unknown server trainer requirements, live yield, vendors and availability are not inferred."
+    },
+    {
+      "spell_id": 3942,
+      "profession_id": 202,
+      "profession_en": "Engineering",
+      "name_en": "Whirring Bronze Gizmo",
+      "name_fr": null,
+      "source_classic_comparison_status": "unchanged",
+      "output": {
+        "item_id": 4375,
+        "name_en": "Whirring Bronze Gizmo",
+        "item_level_reported": 25,
+        "quantity_reported": 1,
+        "player_level_required": null,
+        "verified_live_yield": null
+      },
+      "ingredients": [
+        {
+          "item_id": 2841,
+          "name_en": "Bronze Bar",
+          "quantity": 2
+        },
+        {
+          "item_id": 2592,
+          "name_en": "Wool Cloth",
+          "quantity": 1
+        }
+      ],
+      "book_item_ids": [],
+      "learning_method_reported": "trainer",
+      "learning_skill_reported": null,
+      "learning_skill_status": "trainer_requirement_not_in_source_client",
+      "skill_yellow_reported": 125,
+      "skill_green_reported": 150,
+      "skill_grey_reported": 175,
+      "green_threshold_status": "source_calculated_midpoint_not_independently_extracted",
+      "availability_in_game": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/engineering/parts/",
+      "evidence_url": "https://wowforevertalents.com/professions/engineering/parts/#r-3942",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "WoW Forever Talents publishes this exact spell, output, ingredients, colour thresholds and linked recipe items for build 1.60.1.70425. This is a community presentation of client data, not an independently decoded DB2 export or an observed craft. The source calculates green as the rounded midpoint of yellow/grey; unknown server trainer requirements, live yield, vendors and availability are not inferred."
+    },
+    {
+      "spell_id": 3945,
+      "profession_id": 202,
+      "profession_en": "Engineering",
+      "name_en": "Heavy Blasting Powder",
+      "name_fr": null,
+      "source_classic_comparison_status": "unchanged",
+      "output": {
+        "item_id": 4377,
+        "name_en": "Heavy Blasting Powder",
+        "item_level_reported": 25,
+        "quantity_reported": 1,
+        "player_level_required": null,
+        "verified_live_yield": null
+      },
+      "ingredients": [
+        {
+          "item_id": 2838,
+          "name_en": "Heavy Stone",
+          "quantity": 1
+        }
+      ],
+      "book_item_ids": [],
+      "learning_method_reported": "trainer",
+      "learning_skill_reported": null,
+      "learning_skill_status": "trainer_requirement_not_in_source_client",
+      "skill_yellow_reported": 125,
+      "skill_green_reported": 135,
+      "skill_grey_reported": 145,
+      "green_threshold_status": "source_calculated_midpoint_not_independently_extracted",
+      "availability_in_game": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/engineering/parts/",
+      "evidence_url": "https://wowforevertalents.com/professions/engineering/parts/#r-3945",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "WoW Forever Talents publishes this exact spell, output, ingredients, colour thresholds and linked recipe items for build 1.60.1.70425. This is a community presentation of client data, not an independently decoded DB2 export or an observed craft. The source calculates green as the rounded midpoint of yellow/grey; unknown server trainer requirements, live yield, vendors and availability are not inferred."
+    },
+    {
+      "spell_id": 3946,
+      "profession_id": 202,
+      "profession_en": "Engineering",
+      "name_en": "Heavy Dynamite",
+      "name_fr": null,
+      "source_classic_comparison_status": "changed",
+      "output": {
+        "item_id": 4378,
+        "name_en": "Heavy Dynamite",
+        "item_level_reported": 30,
+        "quantity_reported": 3,
+        "player_level_required": null,
+        "verified_live_yield": null
+      },
+      "ingredients": [
+        {
+          "item_id": 4377,
+          "name_en": "Heavy Blasting Powder",
+          "quantity": 2
+        },
+        {
+          "item_id": 2592,
+          "name_en": "Wool Cloth",
+          "quantity": 1
+        }
+      ],
+      "book_item_ids": [],
+      "learning_method_reported": "trainer",
+      "learning_skill_reported": null,
+      "learning_skill_status": "trainer_requirement_not_in_source_client",
+      "skill_yellow_reported": 125,
+      "skill_green_reported": 135,
+      "skill_grey_reported": 145,
+      "green_threshold_status": "source_calculated_midpoint_not_independently_extracted",
+      "availability_in_game": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/engineering/explosives/",
+      "evidence_url": "https://wowforevertalents.com/professions/engineering/explosives/#r-3946",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "WoW Forever Talents publishes this exact spell, output, ingredients, colour thresholds and linked recipe items for build 1.60.1.70425. This is a community presentation of client data, not an independently decoded DB2 export or an observed craft. The source calculates green as the rounded midpoint of yellow/grey; unknown server trainer requirements, live yield, vendors and availability are not inferred."
+    },
+    {
+      "spell_id": 3950,
+      "profession_id": 202,
+      "profession_en": "Engineering",
+      "name_en": "Big Bronze Bomb",
+      "name_fr": null,
+      "source_classic_comparison_status": "changed",
+      "output": {
+        "item_id": 4380,
+        "name_en": "Big Bronze Bomb",
+        "item_level_reported": 33,
+        "quantity_reported": 3,
+        "player_level_required": null,
+        "verified_live_yield": null
+      },
+      "ingredients": [
+        {
+          "item_id": 4377,
+          "name_en": "Heavy Blasting Powder",
+          "quantity": 2
+        },
+        {
+          "item_id": 2841,
+          "name_en": "Bronze Bar",
+          "quantity": 3
+        },
+        {
+          "item_id": 4404,
+          "name_en": "Silver Contact",
+          "quantity": 1
+        }
+      ],
+      "book_item_ids": [],
+      "learning_method_reported": "trainer",
+      "learning_skill_reported": null,
+      "learning_skill_status": "trainer_requirement_not_in_source_client",
+      "skill_yellow_reported": 140,
+      "skill_green_reported": 165,
+      "skill_grey_reported": 190,
+      "green_threshold_status": "source_calculated_midpoint_not_independently_extracted",
+      "availability_in_game": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/engineering/explosives/",
+      "evidence_url": "https://wowforevertalents.com/professions/engineering/explosives/#r-3950",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "WoW Forever Talents publishes this exact spell, output, ingredients, colour thresholds and linked recipe items for build 1.60.1.70425. This is a community presentation of client data, not an independently decoded DB2 export or an observed craft. The source calculates green as the rounded midpoint of yellow/grey; unknown server trainer requirements, live yield, vendors and availability are not inferred."
+    },
+    {
+      "spell_id": 3953,
+      "profession_id": 202,
+      "profession_en": "Engineering",
+      "name_en": "Bronze Framework",
+      "name_fr": null,
+      "source_classic_comparison_status": "unchanged",
+      "output": {
+        "item_id": 4382,
+        "name_en": "Bronze Framework",
+        "item_level_reported": 29,
+        "quantity_reported": 1,
+        "player_level_required": null,
+        "verified_live_yield": null
+      },
+      "ingredients": [
+        {
+          "item_id": 2841,
+          "name_en": "Bronze Bar",
+          "quantity": 2
+        },
+        {
+          "item_id": 2319,
+          "name_en": "Medium Leather",
+          "quantity": 1
+        },
+        {
+          "item_id": 2592,
+          "name_en": "Wool Cloth",
+          "quantity": 1
+        }
+      ],
+      "book_item_ids": [],
+      "learning_method_reported": "trainer",
+      "learning_skill_reported": null,
+      "learning_skill_status": "trainer_requirement_not_in_source_client",
+      "skill_yellow_reported": 145,
+      "skill_green_reported": 170,
+      "skill_grey_reported": 195,
+      "green_threshold_status": "source_calculated_midpoint_not_independently_extracted",
+      "availability_in_game": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/engineering/parts/",
+      "evidence_url": "https://wowforevertalents.com/professions/engineering/parts/#r-3953",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "WoW Forever Talents publishes this exact spell, output, ingredients, colour thresholds and linked recipe items for build 1.60.1.70425. This is a community presentation of client data, not an independently decoded DB2 export or an observed craft. The source calculates green as the rounded midpoint of yellow/grey; unknown server trainer requirements, live yield, vendors and availability are not inferred."
+    },
+    {
+      "spell_id": 3973,
+      "profession_id": 202,
+      "profession_en": "Engineering",
+      "name_en": "Silver Contact",
+      "name_fr": null,
+      "source_classic_comparison_status": "changed",
+      "output": {
+        "item_id": 4404,
+        "name_en": "Silver Contact",
+        "item_level_reported": 18,
+        "quantity_reported": 5,
+        "player_level_required": null,
+        "verified_live_yield": null
+      },
+      "ingredients": [
+        {
+          "item_id": 2842,
+          "name_en": "Silver Bar",
+          "quantity": 1
+        }
+      ],
+      "book_item_ids": [],
+      "learning_method_reported": "trainer",
+      "learning_skill_reported": null,
+      "learning_skill_status": "trainer_requirement_not_in_source_client",
+      "skill_yellow_reported": 110,
+      "skill_green_reported": 125,
+      "skill_grey_reported": 140,
+      "green_threshold_status": "source_calculated_midpoint_not_independently_extracted",
+      "availability_in_game": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/engineering/parts/",
+      "evidence_url": "https://wowforevertalents.com/professions/engineering/parts/#r-3973",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "WoW Forever Talents publishes this exact spell, output, ingredients, colour thresholds and linked recipe items for build 1.60.1.70425. This is a community presentation of client data, not an independently decoded DB2 export or an observed craft. The source calculates green as the rounded midpoint of yellow/grey; unknown server trainer requirements, live yield, vendors and availability are not inferred."
+    },
+    {
+      "spell_id": 7430,
+      "profession_id": 202,
+      "profession_en": "Engineering",
+      "name_en": "Arclight Spanner",
+      "name_fr": null,
+      "source_classic_comparison_status": "unchanged",
+      "output": {
+        "item_id": 6219,
+        "name_en": "Arclight Spanner",
+        "item_level_reported": 10,
+        "quantity_reported": 1,
+        "player_level_required": null,
+        "verified_live_yield": null
+      },
+      "ingredients": [
+        {
+          "item_id": 2840,
+          "name_en": "Copper Bar",
+          "quantity": 6
+        }
+      ],
+      "book_item_ids": [],
+      "learning_method_reported": "trainer",
+      "learning_skill_reported": null,
+      "learning_skill_status": "trainer_requirement_not_in_source_client",
+      "skill_yellow_reported": 70,
+      "skill_green_reported": 80,
+      "skill_grey_reported": 90,
+      "green_threshold_status": "source_calculated_midpoint_not_independently_extracted",
+      "availability_in_game": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/engineering/parts/",
+      "evidence_url": "https://wowforevertalents.com/professions/engineering/parts/#r-7430",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "WoW Forever Talents publishes this exact spell, output, ingredients, colour thresholds and linked recipe items for build 1.60.1.70425. This is a community presentation of client data, not an independently decoded DB2 export or an observed craft. The source calculates green as the rounded midpoint of yellow/grey; unknown server trainer requirements, live yield, vendors and availability are not inferred."
+    },
+    {
+      "spell_id": 8339,
+      "profession_id": 202,
+      "profession_en": "Engineering",
+      "name_en": "Ez-Thro Dynamite",
+      "name_fr": null,
+      "source_classic_comparison_status": "changed",
+      "output": {
+        "item_id": 6714,
+        "name_en": "Ez-Thro Dynamite",
+        "item_level_reported": 25,
+        "quantity_reported": 2,
+        "player_level_required": null,
+        "verified_live_yield": null
+      },
+      "ingredients": [
+        {
+          "item_id": 4364,
+          "name_en": "Coarse Blasting Powder",
+          "quantity": 3
+        },
+        {
+          "item_id": 2589,
+          "name_en": "Linen Cloth",
+          "quantity": 1
+        },
+        {
+          "item_id": 260794,
+          "name_en": "EZ-Thro Wrap",
+          "quantity": 1
+        }
+      ],
+      "book_item_ids": [
+        6716
+      ],
+      "learning_method_reported": "item",
+      "learning_skill_reported": 100,
+      "learning_skill_status": "client_requirement_reported_by_source",
+      "skill_yellow_reported": 115,
+      "skill_green_reported": 123,
+      "skill_grey_reported": 130,
+      "green_threshold_status": "source_calculated_midpoint_not_independently_extracted",
+      "availability_in_game": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/engineering/explosives/",
+      "evidence_url": "https://wowforevertalents.com/professions/engineering/explosives/#r-8339",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "WoW Forever Talents publishes this exact spell, output, ingredients, colour thresholds and linked recipe items for build 1.60.1.70425. This is a community presentation of client data, not an independently decoded DB2 export or an observed craft. The source calculates green as the rounded midpoint of yellow/grey; unknown server trainer requirements, live yield, vendors and availability are not inferred."
+    },
+    {
+      "spell_id": 12584,
+      "profession_id": 202,
+      "profession_en": "Engineering",
+      "name_en": "Gold Power Core",
+      "name_fr": null,
+      "source_classic_comparison_status": "changed",
+      "output": {
+        "item_id": 10558,
+        "name_en": "Gold Power Core",
+        "item_level_reported": 30,
+        "quantity_reported": 3,
+        "player_level_required": null,
+        "verified_live_yield": null
+      },
+      "ingredients": [
+        {
+          "item_id": 3577,
+          "name_en": "Gold Bar",
+          "quantity": 1
+        }
+      ],
+      "book_item_ids": [],
+      "learning_method_reported": "trainer",
+      "learning_skill_reported": null,
+      "learning_skill_status": "trainer_requirement_not_in_source_client",
+      "skill_yellow_reported": 150,
+      "skill_green_reported": 170,
+      "skill_grey_reported": 190,
+      "green_threshold_status": "source_calculated_midpoint_not_independently_extracted",
+      "availability_in_game": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/engineering/parts/",
+      "evidence_url": "https://wowforevertalents.com/professions/engineering/parts/#r-12584",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "WoW Forever Talents publishes this exact spell, output, ingredients, colour thresholds and linked recipe items for build 1.60.1.70425. This is a community presentation of client data, not an independently decoded DB2 export or an observed craft. The source calculates green as the rounded midpoint of yellow/grey; unknown server trainer requirements, live yield, vendors and availability are not inferred."
+    },
+    {
+      "spell_id": 1249634,
+      "profession_id": 202,
+      "profession_en": "Engineering",
+      "name_en": "Sandpaper",
+      "name_fr": null,
+      "source_classic_comparison_status": "new",
+      "output": {
+        "item_id": 249432,
+        "name_en": "Sandpaper",
+        "item_level_reported": 45,
+        "quantity_reported": 1,
+        "player_level_required": null,
+        "verified_live_yield": null
+      },
+      "ingredients": [
+        {
+          "item_id": 249425,
+          "name_en": "Bauxite",
+          "quantity": 2
+        },
+        {
+          "item_id": 2996,
+          "name_en": "Bolt of Linen Cloth",
+          "quantity": 1
+        }
+      ],
+      "book_item_ids": [],
+      "learning_method_reported": "trainer",
+      "learning_skill_reported": null,
+      "learning_skill_status": "trainer_requirement_not_in_source_client",
+      "skill_yellow_reported": 130,
+      "skill_green_reported": 143,
+      "skill_grey_reported": 155,
+      "green_threshold_status": "source_calculated_midpoint_not_independently_extracted",
+      "availability_in_game": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/engineering/parts/",
+      "evidence_url": "https://wowforevertalents.com/professions/engineering/parts/#r-1249634",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "WoW Forever Talents publishes this exact spell, output, ingredients, colour thresholds and linked recipe items for build 1.60.1.70425. This is a community presentation of client data, not an independently decoded DB2 export or an observed craft. The source calculates green as the rounded midpoint of yellow/grey; unknown server trainer requirements, live yield, vendors and availability are not inferred."
+    },
+    {
+      "spell_id": 1266893,
+      "profession_id": 202,
+      "profession_en": "Engineering",
+      "name_en": "SAF-T Tabs",
+      "name_fr": null,
+      "source_classic_comparison_status": "new",
+      "output": {
+        "item_id": 260784,
+        "name_en": "SAF-T Tabs",
+        "item_level_reported": 5,
+        "quantity_reported": 1,
+        "player_level_required": null,
+        "verified_live_yield": null
+      },
+      "ingredients": [
+        {
+          "item_id": 2570,
+          "name_en": "Linen Cloak",
+          "quantity": 1
+        },
+        {
+          "item_id": 249409,
+          "name_en": "Cerulean Dye",
+          "quantity": 1
+        }
+      ],
+      "book_item_ids": [
+        264201
+      ],
+      "learning_method_reported": "item",
+      "learning_skill_reported": 25,
+      "learning_skill_status": "client_requirement_reported_by_source",
+      "skill_yellow_reported": 25,
+      "skill_green_reported": 28,
+      "skill_grey_reported": 30,
+      "green_threshold_status": "source_calculated_midpoint_not_independently_extracted",
+      "availability_in_game": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/engineering/parts/",
+      "evidence_url": "https://wowforevertalents.com/professions/engineering/parts/#r-1266893",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "WoW Forever Talents publishes this exact spell, output, ingredients, colour thresholds and linked recipe items for build 1.60.1.70425. This is a community presentation of client data, not an independently decoded DB2 export or an observed craft. The source calculates green as the rounded midpoint of yellow/grey; unknown server trainer requirements, live yield, vendors and availability are not inferred."
+    },
+    {
+      "spell_id": 1266905,
+      "profession_id": 202,
+      "profession_en": "Engineering",
+      "name_en": "SAF-T Dynamite",
+      "name_fr": null,
+      "source_classic_comparison_status": "new",
+      "output": {
+        "item_id": 260792,
+        "name_en": "SAF-T Dynamite",
+        "item_level_reported": 25,
+        "quantity_reported": 1,
+        "player_level_required": null,
+        "verified_live_yield": null
+      },
+      "ingredients": [
+        {
+          "item_id": 4357,
+          "name_en": "Rough Blasting Powder",
+          "quantity": 2
+        },
+        {
+          "item_id": 2589,
+          "name_en": "Linen Cloth",
+          "quantity": 1
+        }
+      ],
+      "book_item_ids": [
+        264202
+      ],
+      "learning_method_reported": "item",
+      "learning_skill_reported": 25,
+      "learning_skill_status": "client_requirement_reported_by_source",
+      "skill_yellow_reported": 25,
+      "skill_green_reported": 30,
+      "skill_grey_reported": 35,
+      "green_threshold_status": "source_calculated_midpoint_not_independently_extracted",
+      "availability_in_game": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/engineering/explosives/",
+      "evidence_url": "https://wowforevertalents.com/professions/engineering/explosives/#r-1266905",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "WoW Forever Talents publishes this exact spell, output, ingredients, colour thresholds and linked recipe items for build 1.60.1.70425. This is a community presentation of client data, not an independently decoded DB2 export or an observed craft. The source calculates green as the rounded midpoint of yellow/grey; unknown server trainer requirements, live yield, vendors and availability are not inferred."
+    },
+    {
+      "spell_id": 1266906,
+      "profession_id": 202,
+      "profession_en": "Engineering",
+      "name_en": "SAF-T Copper Bomb",
+      "name_fr": null,
+      "source_classic_comparison_status": "new",
+      "output": {
+        "item_id": 260793,
+        "name_en": "SAF-T Copper Bomb",
+        "item_level_reported": 19,
+        "quantity_reported": 1,
+        "player_level_required": null,
+        "verified_live_yield": null
+      },
+      "ingredients": [
+        {
+          "item_id": 2840,
+          "name_en": "Copper Bar",
+          "quantity": 1
+        },
+        {
+          "item_id": 4359,
+          "name_en": "Handful of Copper Bolts",
+          "quantity": 1
+        },
+        {
+          "item_id": 4357,
+          "name_en": "Rough Blasting Powder",
+          "quantity": 2
+        },
+        {
+          "item_id": 2570,
+          "name_en": "Linen Cloak",
+          "quantity": 1
+        },
+        {
+          "item_id": 260784,
+          "name_en": "SAF-T Tabs",
+          "quantity": 2
+        }
+      ],
+      "book_item_ids": [
+        264203
+      ],
+      "learning_method_reported": "item",
+      "learning_skill_reported": 55,
+      "learning_skill_status": "client_requirement_reported_by_source",
+      "skill_yellow_reported": 55,
+      "skill_green_reported": 60,
+      "skill_grey_reported": 65,
+      "green_threshold_status": "source_calculated_midpoint_not_independently_extracted",
+      "availability_in_game": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/engineering/explosives/",
+      "evidence_url": "https://wowforevertalents.com/professions/engineering/explosives/#r-1266906",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "WoW Forever Talents publishes this exact spell, output, ingredients, colour thresholds and linked recipe items for build 1.60.1.70425. This is a community presentation of client data, not an independently decoded DB2 export or an observed craft. The source calculates green as the rounded midpoint of yellow/grey; unknown server trainer requirements, live yield, vendors and availability are not inferred."
+    },
+    {
+      "spell_id": 1266907,
+      "profession_id": 202,
+      "profession_en": "Engineering",
+      "name_en": "EZ-Thro Wrap",
+      "name_fr": null,
+      "source_classic_comparison_status": "new",
+      "output": {
+        "item_id": 260794,
+        "name_en": "EZ-Thro Wrap",
+        "item_level_reported": 15,
+        "quantity_reported": 1,
+        "player_level_required": null,
+        "verified_live_yield": null
+      },
+      "ingredients": [
+        {
+          "item_id": 2592,
+          "name_en": "Wool Cloth",
+          "quantity": 1
+        },
+        {
+          "item_id": 249410,
+          "name_en": "Sulfuric Acid",
+          "quantity": 1
+        }
+      ],
+      "book_item_ids": [
+        264204
+      ],
+      "learning_method_reported": "item",
+      "learning_skill_reported": 100,
+      "learning_skill_status": "client_requirement_reported_by_source",
+      "skill_yellow_reported": 100,
+      "skill_green_reported": 103,
+      "skill_grey_reported": 105,
+      "green_threshold_status": "source_calculated_midpoint_not_independently_extracted",
+      "availability_in_game": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/engineering/parts/",
+      "evidence_url": "https://wowforevertalents.com/professions/engineering/parts/#r-1266907",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "WoW Forever Talents publishes this exact spell, output, ingredients, colour thresholds and linked recipe items for build 1.60.1.70425. This is a community presentation of client data, not an independently decoded DB2 export or an observed craft. The source calculates green as the rounded midpoint of yellow/grey; unknown server trainer requirements, live yield, vendors and availability are not inferred."
+    },
+    {
+      "spell_id": 1266908,
+      "profession_id": 202,
+      "profession_en": "Engineering",
+      "name_en": "EZ-Thro Copper Bomb XL",
+      "name_fr": null,
+      "source_classic_comparison_status": "new",
+      "output": {
+        "item_id": 260795,
+        "name_en": "EZ-Thro Copper Bomb XL",
+        "item_level_reported": 31,
+        "quantity_reported": 1,
+        "player_level_required": null,
+        "verified_live_yield": null
+      },
+      "ingredients": [
+        {
+          "item_id": 2840,
+          "name_en": "Copper Bar",
+          "quantity": 3
+        },
+        {
+          "item_id": 4364,
+          "name_en": "Coarse Blasting Powder",
+          "quantity": 4
+        },
+        {
+          "item_id": 4404,
+          "name_en": "Silver Contact",
+          "quantity": 1
+        },
+        {
+          "item_id": 260794,
+          "name_en": "EZ-Thro Wrap",
+          "quantity": 1
+        }
+      ],
+      "book_item_ids": [
+        264205
+      ],
+      "learning_method_reported": "item",
+      "learning_skill_reported": 130,
+      "learning_skill_status": "client_requirement_reported_by_source",
+      "skill_yellow_reported": 130,
+      "skill_green_reported": 155,
+      "skill_grey_reported": 180,
+      "green_threshold_status": "source_calculated_midpoint_not_independently_extracted",
+      "availability_in_game": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/engineering/explosives/",
+      "evidence_url": "https://wowforevertalents.com/professions/engineering/explosives/#r-1266908",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "WoW Forever Talents publishes this exact spell, output, ingredients, colour thresholds and linked recipe items for build 1.60.1.70425. This is a community presentation of client data, not an independently decoded DB2 export or an observed craft. The source calculates green as the rounded midpoint of yellow/grey; unknown server trainer requirements, live yield, vendors and availability are not inferred."
+    },
+    {
+      "spell_id": 1266909,
+      "profession_id": 202,
+      "profession_en": "Engineering",
+      "name_en": "No Slip SAF-T Padding",
+      "name_fr": null,
+      "source_classic_comparison_status": "new",
+      "output": {
+        "item_id": 260796,
+        "name_en": "No Slip SAF-T Padding",
+        "item_level_reported": 29,
+        "quantity_reported": 1,
+        "player_level_required": null,
+        "verified_live_yield": null
+      },
+      "ingredients": [
+        {
+          "item_id": 4234,
+          "name_en": "Heavy Leather",
+          "quantity": 1
+        },
+        {
+          "item_id": 249430,
+          "name_en": "Magenta Dye",
+          "quantity": 1
+        }
+      ],
+      "book_item_ids": [
+        264206
+      ],
+      "learning_method_reported": "item",
+      "learning_skill_reported": 145,
+      "learning_skill_status": "client_requirement_reported_by_source",
+      "skill_yellow_reported": 145,
+      "skill_green_reported": 148,
+      "skill_grey_reported": 150,
+      "green_threshold_status": "source_calculated_midpoint_not_independently_extracted",
+      "availability_in_game": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/engineering/parts/",
+      "evidence_url": "https://wowforevertalents.com/professions/engineering/parts/#r-1266909",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "WoW Forever Talents publishes this exact spell, output, ingredients, colour thresholds and linked recipe items for build 1.60.1.70425. This is a community presentation of client data, not an independently decoded DB2 export or an observed craft. The source calculates green as the rounded midpoint of yellow/grey; unknown server trainer requirements, live yield, vendors and availability are not inferred."
+    },
+    {
+      "spell_id": 1266910,
+      "profession_id": 202,
+      "profession_en": "Engineering",
+      "name_en": "SAF-T Bronze Bomb",
+      "name_fr": null,
+      "source_classic_comparison_status": "new",
+      "output": {
+        "item_id": 260797,
+        "name_en": "SAF-T Bronze Bomb",
+        "item_level_reported": 34,
+        "quantity_reported": 1,
+        "player_level_required": null,
+        "verified_live_yield": null
+      },
+      "ingredients": [
+        {
+          "item_id": 4364,
+          "name_en": "Coarse Blasting Powder",
+          "quantity": 4
+        },
+        {
+          "item_id": 2841,
+          "name_en": "Bronze Bar",
+          "quantity": 2
+        },
+        {
+          "item_id": 4404,
+          "name_en": "Silver Contact",
+          "quantity": 1
+        },
+        {
+          "item_id": 2592,
+          "name_en": "Wool Cloth",
+          "quantity": 1
+        },
+        {
+          "item_id": 260796,
+          "name_en": "No Slip SAF-T Padding",
+          "quantity": 1
+        }
+      ],
+      "book_item_ids": [
+        264207
+      ],
+      "learning_method_reported": "item",
+      "learning_skill_reported": 145,
+      "learning_skill_status": "client_requirement_reported_by_source",
+      "skill_yellow_reported": 145,
+      "skill_green_reported": 170,
+      "skill_grey_reported": 195,
+      "green_threshold_status": "source_calculated_midpoint_not_independently_extracted",
+      "availability_in_game": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/engineering/explosives/",
+      "evidence_url": "https://wowforevertalents.com/professions/engineering/explosives/#r-1266910",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "WoW Forever Talents publishes this exact spell, output, ingredients, colour thresholds and linked recipe items for build 1.60.1.70425. This is a community presentation of client data, not an independently decoded DB2 export or an observed craft. The source calculates green as the rounded midpoint of yellow/grey; unknown server trainer requirements, live yield, vendors and availability are not inferred."
+    },
+    {
+      "spell_id": 1266911,
+      "profession_id": 202,
+      "profession_en": "Engineering",
+      "name_en": "SAF-T Jumbo Dynamite",
+      "name_fr": null,
+      "source_classic_comparison_status": "new",
+      "output": {
+        "item_id": 260798,
+        "name_en": "SAF-T Jumbo Dynamite",
+        "item_level_reported": 35,
+        "quantity_reported": 1,
+        "player_level_required": null,
+        "verified_live_yield": null
+      },
+      "ingredients": [
+        {
+          "item_id": 4377,
+          "name_en": "Heavy Blasting Powder",
+          "quantity": 2
+        },
+        {
+          "item_id": 2592,
+          "name_en": "Wool Cloth",
+          "quantity": 1
+        },
+        {
+          "item_id": 260796,
+          "name_en": "No Slip SAF-T Padding",
+          "quantity": 1
+        }
+      ],
+      "book_item_ids": [
+        264208
+      ],
+      "learning_method_reported": "item",
+      "learning_skill_reported": 150,
+      "learning_skill_status": "client_requirement_reported_by_source",
+      "skill_yellow_reported": 150,
+      "skill_green_reported": 160,
+      "skill_grey_reported": 170,
+      "green_threshold_status": "source_calculated_midpoint_not_independently_extracted",
+      "availability_in_game": null,
+      "evidence_level": "documented_forever",
+      "source_url": "https://wowforevertalents.com/professions/engineering/explosives/",
+      "evidence_url": "https://wowforevertalents.com/professions/engineering/explosives/#r-1266911",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70425",
+      "evidence_kind": "forever_community_page",
+      "evidence_note": "WoW Forever Talents publishes this exact spell, output, ingredients, colour thresholds and linked recipe items for build 1.60.1.70425. This is a community presentation of client data, not an independently decoded DB2 export or an observed craft. The source calculates green as the rounded midpoint of yellow/grey; unknown server trainer requirements, live yield, vendors and availability are not inferred."
+    }
+  ]
+}

@@ -7,6 +7,7 @@ const $=id=>document.getElementById(id);
 const search=$("early-recipe-search"),profession=$("early-recipe-profession"),change=$("early-recipe-change"),
  count=$("early-recipe-count"),list=$("early-recipe-results"),detail=$("early-recipe-detail"),more=$("early-recipe-more");
 let records=[],page=0,selected=null,loading=null;
+let recentSnapshots=new Map();
 const PAGE=45;
 const node=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined&&text!==null)n.textContent=String(text);if(cls)n.className=cls;return n};
 const place=(where,tag,text,cls)=>{const n=node(tag,text,cls);where.append(n);return n};
@@ -25,7 +26,7 @@ const itemName=x=>{
  return resolved||x.name_en;
 };
 const kindLabel=status=>({new:T("Nouveau Forever","New in Forever"),changed:T("Modifié vs Classic","Changed vs Classic"),
- unchanged:T("Identique dans l'archive","Same as Classic in archive"),inherited:T("Hérité","Inherited")})[status]||status;
+ unchanged:T("Classic","Classic"),inherited:T("Hérité","Inherited")})[status]||status;
 function match(r){
  const q=fold(search.value.trim());
  if(profession.value!=="all"&&String(r.profession_id)!==profession.value)return false;
@@ -43,13 +44,12 @@ function render(){
  const hits=records.filter(match).sort(sort),visible=hits.slice(0,(page+1)*PAGE);
  if(selected&&!hits.some(r=>r.spell_id===selected.spell_id))selected=null;
  if(!selected&&hits.length)selected=hits[0];
- count.textContent=T(hits.length+" recettes de l'archive Forever",""+hits.length+" recipes in Forever archive")+
-  T(" · build 1.60.1.69876 (historique)"," · build 1.60.1.69876 (historic)");
+ count.textContent=T(hits.length+" recettes",hits.length+" recipes");
  list.replaceChildren();
  for(const r of visible){
   const b=place(list,"button",null,"early-recipe-row");b.type="button";b.setAttribute("aria-pressed",String(r.spell_id===selected?.spell_id));
   place(b,"strong",r.name_en);
-  place(b,"small",profLabel(r.profession_en)+" · "+T("Seuil jaune ","Yellow threshold ")+r.skill_yellow_archive+" · "+kindLabel(r.forever_archive_status));
+  place(b,"small",profLabel(r.profession_en)+" · "+T("Seuil jaune ","Yellow threshold ")+r.skill_yellow_archive+" · "+recipeView(r).edition);
   b.addEventListener("click",()=>select(r));
  }
  if(!hits.length)place(list,"p",T("Aucune recette trouvée.","No matching recipe."),"early-muted");
@@ -57,69 +57,65 @@ function render(){
  renderDetail();
 }
 function select(r){selected=r;render();detail.scrollIntoView({block:"nearest",behavior:"smooth"})}
+// Resolve one display value per property; evidence remains in the JSON catalogues.
+function recipeView(r){
+ const candidate=recentSnapshots.get(r.spell_id);
+ const recent=candidate?.profession_id===r.profession_id?candidate:null;
+ return {
+  edition:recent||["new","changed"].includes(r.forever_archive_status)?"Forever":"Classic",
+  yellow:recent?.skill_yellow_reported??r.skill_yellow_archive,
+  green:recent?.skill_green_reported??r.skill_green_archive,
+  grey:recent?.skill_grey_reported??r.skill_grey_archive,
+  learning:recent?.learning_skill_reported??r.learning_skill_required,
+  outputs:recent?[{...recent.output,reported_client_output_quantity:recent.output.quantity_reported}]:r.outputs,
+  ingredients:recent?.ingredients??r.ingredients,
+  books:recent?.book_item_ids??r.book_item_ids,
+  source:recent?.evidence_url??r.sources.forever_spell_url
+ };
+}
 function renderDetail(){
  detail.replaceChildren();
  const r=selected;if(!r){place(detail,"p",T("Choisissez une recette.","Choose a recipe."),"early-muted");return;}
+ const view=recipeView(r);
  place(detail,"h3",r.name_en);
- const meta=place(detail,"p",profLabel(r.profession_en)+" · "+T("sort ","spell ")+r.spell_id+" · "+kindLabel(r.forever_archive_status),"early-meta");
- meta.dataset.source="historical_forever_archive";
- place(detail,"p",T("Client Forever archivé : ce sort et ses composants figuraient dans le build 1.60.1.69876. Disponibilité actuelle, apprentissage en jeu et traduction française non certifiés.",
-  "Archived Forever client: this spell and its reagents appeared in build 1.60.1.69876. Current availability, live training and French localization are unverified."),"early-warning");
+ place(detail,"p",profLabel(r.profession_en)+" · "+view.edition,"early-meta");
  const grid=place(detail,"div",null,"early-facts");
- for(const [name,v] of [
-  [T("Jaune (archive)","Yellow (archive)"),r.skill_yellow_archive],
-  [T("Gris (archive)","Grey (archive)"),r.skill_grey_archive??T("Inconnu","Unknown")],
-  [T("Vert","Green"),T("Inconnu","Unknown")],
-  [T("Compétence d'apprentissage","Learning skill"),T("Inconnue","Unknown")]
- ]){const el=place(grid,"span",null,"early-fact");place(el,"small",name);place(el,"strong",v);}
- place(detail,"h4",T("Objet fabriqué · rendement du client historique","Output · historical client-reported yield"));
- for(const o of r.outputs){
-  const line=place(detail,"div",null,"early-material");const link=safeLink(line,"https://www.wowhead.com/forever/item="+o.item_id,itemName(o)+" · #"+o.item_id);
-  if(!link)place(line,"span",o.name_en);
-  place(line,"span",o.reported_client_output_quantity===null?T("Quantité inconnue","Quantity unknown"):
-    "×"+o.reported_client_output_quantity+" "+T("(archive, pas de craft observé)","(archived, not a witnessed craft)"),"early-muted");
+ for(const [label,value] of [
+  [T("Compétence requise","Required skill"),view.learning],
+  [T("Jaune","Yellow"),view.yellow],
+  [T("Vert","Green"),view.green],
+  [T("Gris","Grey"),view.grey]
+ ]){if(value==null)continue;const fact=place(grid,"span",null,"early-fact");place(fact,"small",label);place(fact,"strong",value);}
+ place(detail,"h4",T("Objet fabriqué","Output"));
+ for(const o of view.outputs){
+  const line=place(detail,"div",null,"early-material");
+  safeLink(line,"https://www.wowhead.com/forever/item="+o.item_id,itemName(o));
+  if(o.reported_client_output_quantity!=null)place(line,"span","×"+o.reported_client_output_quantity,"early-muted");
  }
- place(detail,"h4",T("Composants (client Forever archivé)","Reagents (archived Forever client)"));
+ place(detail,"h4",T("Composants","Reagents"));
  const ingredients=place(detail,"ul",null,"early-reagent-list");
- for(const i of r.ingredients){const li=place(ingredients,"li");place(li,"b",i.quantity+" × ");
-  safeLink(li,"https://www.wowhead.com/forever/item="+i.item_id,itemName(i)+" · #"+i.item_id);
+ for(const i of view.ingredients){const li=place(ingredients,"li");place(li,"b",i.quantity+" × ");
+  safeLink(li,"https://www.wowhead.com/forever/item="+i.item_id,itemName(i));}
+ if(r.station_en||r.tools_en.length)place(detail,"p",[
+  r.station_en?T("Atelier : ","Station: ")+r.station_en:null,
+  r.tools_en.length?T("Outils : ","Tools: ")+r.tools_en.join(", "):null
+ ].filter(Boolean).join(" · "),"early-muted");
+ if(view.books.length){
+  place(detail,"h4",T("Plans et recettes","Recipe items"));
+  const books=place(detail,"ul",null,"early-reagent-list");
+  for(const id of view.books){const li=place(books,"li");safeLink(li,"https://www.wowhead.com/forever/item="+id,"#"+id);}
  }
- if(r.station_en||r.tools_en.length){
-  place(detail,"p",(r.station_en?T("Atelier : ","Station: ")+r.station_en+" · ":"")+
-   (r.tools_en.length?T("Outils : ","Tools: ")+r.tools_en.join(", "):""),"early-muted");
+ if(r.vendor_references.length){
+  place(detail,"h4",T("Marchands","Vendors"));
+  const sellers=place(detail,"ul",null,"early-vendor-list");
+  for(const v of r.vendor_references){const li=place(sellers,"li");const a=place(li,"a",v.name_en+" ↗");
+   a.href="/"+(en?"en/":"")+"marchands/?q="+encodeURIComponent(v.name_en);}
  }
- if(r.book_item_ids.length){
-  place(detail,"h4",T("Plans et recettes associés à l'apprentissage","Recipe items linked to learning"));
-  const book=place(detail,"ul",null,"early-reagent-list");
-  for(const id of r.book_item_ids){const li=place(book,"li");
-   safeLink(li,"https://www.wowhead.com/forever/item="+id,"#"+id);
-  }
-  if(r.vendor_references.length){
-   place(detail,"p",T("Pistes de marchands : une référence Classic reste indicative, même si le plan existe dans le client Forever.",
-    "Merchant leads: a Classic listing is still indicative even if the recipe exists in the Forever client."),"early-muted");
-   const sellers=place(detail,"ul",null,"early-vendor-list");
-   for(const v of r.vendor_references){
-    const li=place(sellers,"li");
-    const a=place(li,"a",v.name_en+" ↗");a.href="/"+(en?"en/":"")+"marchands/?q="+encodeURIComponent(v.name_en);
-    place(li,"span",v.evidence_level==="documented_forever"?T("Forever · documenté","Forever · documented"):
-      T("Classic · indicatif","Classic · indicative"),
-     "early-provenance "+(v.evidence_level==="documented_forever"?"forever":"classic"));
-    safeLink(li,v.evidence_url,T("Source","Source")+" ↗","early-small-link");
-   }
-  }else place(detail,"p",T("Vendeur du plan non identifié dans notre catalogue.","Recipe item seller not identified in our catalogue."),"early-muted");
- }else place(detail,"p",T("Aucun objet-recette identifié dans cette extraction ; cela ne garantit pas l'apprentissage auprès d'un maître.",
-  "No recipe item identified in this extract; trainer availability is not established."),"early-muted");
- if(r.classic_comparison?.differences?.length){
-  place(detail,"h4",T("Changements par rapport à Classic (archive)","Changes versus Classic (archive)"));
-  place(detail,"p",r.classic_comparison.differences.join(", "),"early-muted");
- }
- const sources=place(detail,"p",null,"early-sources");
- safeLink(sources,r.sources.forever_spell_url,T("Fiche du sort Forever ↗","Forever spell page ↗"));
- safeLink(sources,r.sources.archive_url,T("Extraction historique ↗","Historical archive ↗"));
+ const sources=place(detail,"p",null,"early-sources");safeLink(sources,view.source,"Source ↗");
 }
 async function load(){
  if(loading)return loading;
- count.textContent=T("Chargement de l'archive historique…","Loading historical archive…");
+ count.textContent=T("Chargement des recettes…","Loading recipes…");
  loading=fetch("/data/recipes-forever-early-archive.json?v=20261017-vendors-1",{credentials:"omit"})
  .then(r=>{if(!r.ok)throw Error("HTTP "+r.status);return r.json()})
  .then(db=>{
@@ -128,8 +124,28 @@ async function load(){
   const options=[...new Set(records.map(r=>r.profession_id+"|"+r.profession_en))].sort((a,b)=>a.localeCompare(b));
   for(const option of options){const [id,name]=option.split("|");const o=place(profession,"option",profLabel(name));o.value=id}
   render();
- }).catch(()=>{loading=null;count.textContent=T("Archive indisponible ; les aperçus ciblés restent accessibles.","Archive unavailable; targeted previews remain accessible.")});
+ loadRecentSnapshots();
+ }).catch(()=>{loading=null;count.textContent=T("Recettes indisponibles.","Recipes unavailable.")});
  return loading;
+}
+async function loadRecentSnapshots(){
+ try{
+  const response=await fetch("/data/recipes-forever-70425-snapshots.json?v=20261017-1",{credentials:"omit"});
+  if(!response.ok)return;
+  const db=await response.json();
+  if(db.schema_version!==1||db.observed_build!=="1.60.1.70425"||!Array.isArray(db.recipes))return;
+  const id=n=>Number.isSafeInteger(n)&&n>0;
+  const valid=s=>s&&id(s.spell_id)&&id(s.profession_id)&&s.evidence_level==="documented_forever"&&s.observed_build===db.observed_build&&
+   typeof s.name_en==="string"&&typeof s.observed_at==="string"&&/^https:\/\/[^\s/]+\//.test(s.evidence_url??"")&&
+   id(s.skill_yellow_reported)&&id(s.skill_green_reported)&&id(s.skill_grey_reported)&&
+   s.skill_yellow_reported<=s.skill_green_reported&&s.skill_green_reported<=s.skill_grey_reported&&
+   (s.learning_skill_reported===null||id(s.learning_skill_reported))&&
+   s.output&&id(s.output.item_id)&&id(s.output.quantity_reported)&&id(s.output.item_level_reported)&&
+   Array.isArray(s.ingredients)&&s.ingredients.length&&s.ingredients.every(i=>id(i.item_id)&&id(i.quantity)&&typeof i.name_en==="string")&&
+   Array.isArray(s.book_item_ids)&&s.book_item_ids.every(id);
+  recentSnapshots=new Map(db.recipes.filter(valid).map(s=>[s.spell_id,s]));
+  render();
+ }catch{/* Optional newer documentary evidence must never disable the historic archive. */}
 }
 root.addEventListener("toggle",()=>{if(root.open)load()});
 for(const x of [search,profession,change])x.addEventListener(x===search?"input":"change",()=>{page=0;selected=null;render()});
