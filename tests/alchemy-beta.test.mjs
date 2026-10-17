@@ -92,17 +92,13 @@ test("allowlist, language labels and Classic exclusions are mandatory",()=>{
  for(const code of ["ALLOWLIST_INVALID","ITEM_INVALID","FIRST_AID_EXCLUSION","ACQUISITION_METHOD_OR_ITEM"])
  assert.ok(codes(x).includes(code),code);
 });
-test("both real profession pages mount a second, collapsed panel without changing engineering",()=>{
+test("public profession pages keep the trainer map and omit retired alchemy/crafting previews",()=>{
  for(const path of ["metiers/index.html","en/metiers/index.html"]){
   const html=read(path);
-  assert.ok(html.includes('id="craft-beta"'));
-  assert.ok(html.includes('id="alchemy-beta"'));
-  assert.ok(html.includes('id="npcs-app"'));
-  assert.ok(html.includes('/assets/alchemy-beta.js'));
-  assert.ok(html.includes('/assets/alchemy-beta.css'));
-  assert.ok(html.includes('/assets/crafting-beta.js'));
-  assert.ok(html.indexOf('id="alchemy-beta"')<html.indexOf('id="prof-trainers"'));
-  assert.ok(!html.includes('/assets/professions.js'));
+  for(const id of ["npcs-app","prof-trainers","npc-results","npc-map-canvas"])assert.ok(html.includes('id="'+id+'"'),id);
+  for(const id of ["craft-beta","alchemy-beta","early-recipes"])assert.ok(!html.includes('id="'+id+'"'),id);
+  for(const name of ["alchemy-beta","crafting-beta"])assert.ok(!html.includes('/assets/'+name+'.js')&&!html.includes('/assets/'+name+'.css'));
+  assert.ok(html.includes('/assets/npcs.js'));
  }
 });
 test("load is opt-in, bilingual and search works for ID, spell and both names",async()=>{
