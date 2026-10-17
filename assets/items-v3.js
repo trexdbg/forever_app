@@ -22,13 +22,13 @@ const rowText=(row,value)=>{const cell=document.createElement("td");cell.textCon
 let sourcePromise=null,expandedRow=null,expandedButton=null;
 const acquisitionLabels=en?{
  button:"Where to find",loading:"Loading acquisition references…",
- empty:"No indexed seller, boss, rare or recipe for this item. This does not mean it is unobtainable.",
+ empty:"No indexed seller, boss, rare or recipe for this item. ",
  failure:"Acquisition references unavailable.",warning:"Catalogue cross-references only; Forever beta drops/sales and Classic leads are not independently verified here.",
  reference:"Reference ↗",close:"Hide sources",kind:{merchant:"Vendor",rare:"Rare",boss:"Boss",recipe:"Recipe"},
  levels:{documented_forever:"Forever · documented",datamined:"Forever · client",confirmed_in_game:"Forever · in-game",classic_reference:"Classic · indicative",unverified:"Unverified"}
 }:{
  button:"Où l'obtenir",loading:"Chargement des références d’obtention…",
- empty:"Aucun marchand, boss, rare ou recette indexé pour cet objet. Cela ne signifie pas qu'il est introuvable.",
+ empty:"Aucun marchand, boss, rare ou recette indexé pour cet objet. ",
  failure:"Références d’obtention indisponibles.",warning:"Liens issus des catalogues : les ventes et butins bêta Forever ou les pistes Classic ne sont pas vérifiés indépendamment ici.",
  reference:"Référence ↗",close:"Masquer les sources",kind:{merchant:"Marchand",rare:"Rare",boss:"Boss",recipe:"Recette"},
  levels:{documented_forever:"Forever · documenté",datamined:"Forever · client",confirmed_in_game:"Forever · en jeu",classic_reference:"Classic · indicatif",unverified:"Non vérifié"}
@@ -60,9 +60,8 @@ async function toggleAcquisition(item,row,button){
  try{
   const lookup=await loadAcquisitionIndex();
   if(!detailRow.isConnected||expandedRow!==detailRow)return;
-  const matches=lookup.get(item.id)||[];
+  const matches=(lookup.get(item.id)||[]).filter(s=>s.evidence_level!=="unverified");
   region.replaceChildren();
-  const intro=document.createElement("p");intro.className="item-acquisition-warning";intro.textContent=acquisitionLabels.warning;region.append(intro);
   if(!matches.length){
    const empty=document.createElement("p");empty.textContent=acquisitionLabels.empty;region.append(empty);
    return;
@@ -74,7 +73,7 @@ async function toggleAcquisition(item,row,button){
    primary.href=s.href;primary.textContent=(acquisitionLabels.kind[s.kind]||s.kind)+" · "+(en?s.name_en:s.name_fr||s.name_en)+(s.context_en?" · "+(en?s.context_en:s.context_fr||s.context_en):"");
    entry.append(primary);
    const status=document.createElement("span");status.className="item-acquisition-status";status.dataset.evidence=s.evidence_level;
-   status.textContent=acquisitionLabels.levels[s.evidence_level]||acquisitionLabels.levels.unverified;entry.append(status);
+   status.textContent=s.evidence_level==="classic_reference"?"Classic":"Forever";entry.append(status);
    if(typeof s.reference_url==="string"&&/^https:\/\/[^\s/]+\//.test(s.reference_url)){
     const ref=document.createElement("a");ref.className="item-acquisition-reference";ref.href=s.reference_url;
     ref.target="_blank";ref.rel="noopener noreferrer";ref.textContent=acquisitionLabels.reference;entry.append(ref);
@@ -90,25 +89,21 @@ async function toggleAcquisition(item,row,button){
 function normalizeLocal(i){const x={...i,slot:service.LABELS[i.slot]||i.slot,source_status:i.source_status||"classic_reference"};return window.ForeverItemLocale?.record(x)||x}
 function sourceType(item){return typeof item.source_status==="string"&&item.source_status.startsWith("forever_beta_")?"forever":"classic"}
 const scopeLabels=en?{
- scope:"Catalogue",beta30:"Forever beta · levels 1–30",betaOther:"Other beta records",classicOnly:"Classic references",allSources:"All sources",
+ scope:"Catalogue",beta30:"Levels 1–30",betaOther:"Other beta records",classicOnly:"Classic references",allSources:"All sources",
  betaNote:"Beta-client data is not proof an item is obtainable. Filtered by required level; unknown requirements appear under Other beta records.",
  beyondNote:"Beta records beyond level 30 or with unknown required level. In-game availability is unconfirmed.",
  classicNote:"Classic-only references: presence on Forever unverified. Missing beta data does not mean removed.",
  allNote:"Beta records and unverified Classic references are mixed here. Check the source of each item.",
  betaBadge:"Beta · client",observedBadge:"Beta · reported loot",questBadge:"Beta · reported quest reward",classicBadge:"Classic · unverified"
 }:{
- scope:"Catalogue",beta30:"Forever bêta · niveaux 1–30",betaOther:"Autres données bêta",classicOnly:"Références Classic",allSources:"Toutes les sources",
+ scope:"Catalogue",beta30:"Niveaux 1–30",betaOther:"Autres données bêta",classicOnly:"Références Classic",allSources:"Toutes les sources",
  betaNote:"Présent dans les données bêta ≠ obtenable en jeu. Filtre sur le niveau requis ; les niveaux inconnus figurent dans « Autres données bêta ».",
  beyondNote:"Données bêta au-delà du niveau 30 ou niveau requis inconnu. Disponibilité en jeu non confirmée.",
  classicNote:"Références Classic non vérifiées sur Forever. Absence des données bêta ≠ objet supprimé.",
  allNote:"Les données bêta et les références Classic non vérifiées sont réunies ici. Vérifiez la provenance de chaque objet.",
  betaBadge:"Bêta · client",observedBadge:"Bêta · butin signalé",questBadge:"Bêta · récompense de quête signalée",classicBadge:"Classic · non vérifié"
 };
-function provenanceBadge(item){
- if(sourceType(item)!=="forever")return scopeLabels.classicBadge;
- if(item.source_status!=="forever_beta_observed")return scopeLabels.betaBadge;
- return item.acquisition?.kind==="quest"?scopeLabels.questBadge:scopeLabels.observedBadge;
-}
+function provenanceBadge(item){return sourceType(item)==="forever"?"Forever":"Classic";}
 function betaLevel30(item){
  const n=item.requiredLevel??item.required_level;
  if(n===0||n==="0")return true;
@@ -136,8 +131,8 @@ function catalogItems(){
   if(!prev||precedence(i)>precedence(prev)){
    // Preserve an icon or armor classification from an earlier Forever source;
    // a reported boss drop often has richer acquisition data but no icon field.
-   const priorBeta=prev&&sourceType(prev)==="forever"?prev:null;
-   byID.set(i.id,priorBeta?{...priorBeta,...i,icon:i.icon||priorBeta.icon,armorType:i.armorType??priorBeta.armorType}:i);
+   const known=Object.fromEntries(Object.entries(i).filter(([,value])=>value!==null&&value!==undefined&&value!==""&&(!Array.isArray(value)||value.length)));
+   byID.set(i.id,{...prev,...known,icon:i.icon||prev?.icon,armorType:i.armorType??prev?.armorType});
   }
  }
  return [...byID.values()];
@@ -145,7 +140,7 @@ function catalogItems(){
 function matchesBase(item){
  if(item.quality==="poor")return false;
  const kind=sourceType(item);
- if(status==="beta30"&&(kind!=="forever"||!betaLevel30(item)))return false;
+ if(status==="beta30"&&!betaLevel30(item))return false;
  if(status==="betaOther"&&(kind!=="forever"||betaLevel30(item)))return false;
  if(status==="classic"&&kind!=="classic")return false;
  if(slot.value!=="all"&&!service.compatible(item.slot,slot.value))return false;
@@ -228,7 +223,6 @@ function render(){
  window.ForeverItemTooltip?.bind(row,i);
  }
  if(loading)notice.textContent=tr.loading;else if(error)notice.textContent=error;else notice.textContent=(Math.min(rows.length,visibleLimit)+" / "+rows.length+" "+tr.shown);
- scopeInfo.textContent=status==="beta30"?scopeLabels.betaNote:status==="betaOther"?scopeLabels.beyondNote:status==="classic"?scopeLabels.classicNote:scopeLabels.allNote;
  localMore.hidden=rows.length<=visibleLimit;localMore.textContent=tr.showMore;
  moreButton.hidden=!(status==="classic"||status==="all")||loading||(classic.length>0&&!more&&!error);moreButton.disabled=loading;moreButton.textContent=classic.length>0&&more?tr.load:tr.browse;
 }
@@ -264,8 +258,6 @@ const select=document.createElement("select");select.id="item-source";select.set
 for(const [value,label] of [["beta30",scopeLabels.beta30],["betaOther",scopeLabels.betaOther],["classic",scopeLabels.classicOnly],["all",scopeLabels.allSources]]){const opt=document.createElement("option");opt.value=value;opt.textContent=label;select.append(opt)}
 if(linkedQuery){status="all";select.value="all";}
 control.append(select);document.querySelector(".item-catalogue-filter-fields")?.append(control);
-const scopeInfo=document.createElement("p");scopeInfo.className="item-catalogue-evidence-note";scopeInfo.setAttribute("role","note");
-document.querySelector(".item-v2-quality-controls")?.after(scopeInfo);
 const notice=document.createElement("p");notice.className="item-v3-live-note";notice.setAttribute("aria-live","polite");
 const localMore=document.createElement("button");localMore.className="bis-v2-more item-v3-load";localMore.type="button";localMore.hidden=true;localMore.addEventListener("click",()=>{visibleLimit+=200;render()});
 const moreButton=document.createElement("button");moreButton.className="bis-v2-more item-v3-load";moreButton.type="button";moreButton.textContent=tr.load;

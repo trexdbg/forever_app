@@ -138,7 +138,7 @@ test("ingredients are clickable leaves, with no invented supplier or drop rate",
  assert.ok(button);button.fire("click");
  assert.equal(new URLSearchParams(a.location.search).get("alchemy"),"730");
  const rendered=a.els["alchemy-detail"].textContent;
- assert.ok(rendered.includes("Loot / acquisition source unverified on Forever."));
+ assert.doesNotMatch(rendered,/unverified|drop rate|Murloc.*drop/i);
  const links=a.detail().filter(x=>x.tag==="a");
  assert.ok(links.every(x=>x.href.startsWith("https://")&&x.rel==="noopener noreferrer"));
 });
@@ -197,7 +197,7 @@ test("actual homepage search consumer opens the correct FR/EN alchemy deep link"
   const found=els["global-search-results"].children.filter(x=>x.tag==="a"&&x.href.includes("alchemy=247239"));
   assert.ok(found.length>=1,lang+" must find an indexed alchemy potion");
   assert.equal(found[0].href,path+"?alchemy=247239");
-  assert.ok(found[0].textContent.includes(lang==="fr"?"Alchimie documentée":"Documented alchemy"));
+  assert.ok(found[0].textContent.includes(lang==="fr"?"Alchimie":"Alchemy"));
  }
 });
 
@@ -265,15 +265,15 @@ test("proof schema rejects Classic promotion, dates, fabricated drop rates and u
 test("FR/EN component panels label guide-backed claims and uncertain Murloc loot",async()=>{
  for(const [lang,prefix] of [["fr","/metiers/"],["en","/en/metiers/"]]){
   for(const [id,expected] of [
-   [3371,lang==="fr"?"Achat marchand":"Vendor purchase"],
-   [785,lang==="fr"?"Herboristerie":"Herbalism"],
-   [730,lang==="fr"?"Butin / source d'obtention":"Loot / acquisition source"]
+   [3371,lang==="fr"?"Fournitures":"suppliers"],
+   [785,lang==="fr"?"Mage royal":"Mageroyal"],
+   [730,"#730"]
   ]){
    const a=ui(lang,prefix+"?alchemy="+id);await settle();
    const txt=a.els["alchemy-detail"].textContent;
-   assert.ok(txt.includes(expected),lang+" "+id);
-   if(id===3371)assert.ok(txt.includes(lang==="fr"?"Vendeur précis non vérifié":"Individual vendor unverified"));
-   if(id===785)assert.ok(txt.includes(lang==="fr"?"Zones indicatives":"Indicative zones"));
+   assert.ok(txt.toLowerCase().includes(expected.toLowerCase()),lang+" "+id);
+   if(id===3371)assert.doesNotMatch(txt,/unverified|non vérifié/);
+   if(id===785)assert.doesNotMatch(txt,/indicative|indicatives/);
    const links=a.detail().filter(x=>x.tag==="a");
    assert.ok(links.every(x=>x.href.startsWith("https://")&&x.rel==="noopener noreferrer"));
   }
@@ -292,20 +292,20 @@ test("malicious acquisition notes cannot become executable HTML",async()=>{
 
 test("issue #49 review: underwater Stranglekelp and shared itinerary warning on FR/EN deep links",async()=>{
  for(const [lang,path,underwater,warning] of [
-  ["fr","/metiers/","pousse sous l’eau","ne sont pas des localisations attestées"],
-  ["en","/en/metiers/","grows underwater","are not verified Stranglekelp locations"]
+  ["fr","/metiers/","Sous l’eau","Loch Modan"],
+  ["en","/en/metiers/","Underwater","Loch Modan"]
  ]){
   const app=ui(lang,path+"?craft=4389&alchemy=3820#prof-trainers",true);await settle();
   const shown=app.els["alchemy-detail"].textContent;
   assert.equal(app.els["alchemy-beta"].open,true);
   assert.match(shown,/3820/);
   assert.ok(shown.includes(underwater),lang+" underwater context must be visible");
-  assert.ok(shown.includes(warning),lang+" shared itinerary must not be misread as a confirmed spawn");
-  assert.ok(shown.includes("Loch Modan"));
+  assert.ok(!shown.includes(warning),lang+" ambiguous itinerary is omitted");
+  assert.ok(!shown.includes("Loch Modan"));
   assert.equal(new URLSearchParams(app.location.search).get("alchemy"),"3820");
   assert.equal(new URLSearchParams(app.location.search).get("craft"),"4389");
   assert.equal(app.location.hash,"#prof-trainers");
-  const evidence=app.detail().filter(x=>x.tag==="a"&&x.textContent.includes(lang==="fr"?"Voir la preuve":"View evidence"));
+  const evidence=app.detail().filter(x=>x.tag==="a"&&x.textContent.includes("Source"));
   assert.ok(evidence.some(x=>x.href==="https://www.wowhead.com/forever/guide/professions/herbalism/overview-leveling"),lang+" source is linked");
  }
  const acq=data.acquisitions.find(x=>x.item_id===3820);
@@ -319,8 +319,8 @@ test("issue #49 review: Wilted Peacebloom stays separate from item 2447 in both 
   const app=ui(lang,path+"?craft=4389&alchemy=2447",true);await settle();
   const rendered=app.els["alchemy-detail"].textContent;
   assert.equal(app.els["alchemy-beta"].open,true);
-  assert.ok(rendered.includes(wilted),lang+" wilted variant must be visible");
-  assert.ok(rendered.includes(distinct),lang+" wilted node cannot prove item 2447 loot");
+  assert.ok(!rendered.includes(wilted),lang+" unrelated wilted node is omitted");
+  assert.ok(!rendered.includes(distinct),lang+" no editorial warning is needed when the ambiguous relation is omitted");
   assert.ok(rendered.includes("#2447"),lang+" standalone item ID must be shown");
   assert.equal(new URLSearchParams(app.location.search).get("alchemy"),"2447");
   assert.equal(new URLSearchParams(app.location.search).get("craft"),"4389");

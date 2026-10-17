@@ -168,8 +168,8 @@ const iconNode=(item)=>{const frame=mk("span",null,"npc-item-icon npc-image-icon
 const copperFmt=c=>{const g=Math.floor(c/10000),s=Math.floor(c%10000/100),b=c%100;return [g?g+" "+S("po","g"):"",s?s+" "+S("pa","s"):"",b?b+" "+S("pc","c"):""].filter(Boolean).join(" ")||"0 "+S("pc","c")};
 const foreverItem=item=>typeof item?.source_status==="string"&&item.source_status.startsWith("forever_beta_");
 const foreverOffer=(vendor,item)=>vendor?.offer_details?.[String(item?.id)]?.verification_status==="forever_documented";
-const statusWord=(vendor,item)=>foreverOffer(vendor,item)?S("Vente référencée Forever (bêta)","Forever beta vendor documented"):S("Vente Classic à vérifier","Classic vendor unverified");
-const stockWord=(item,vendor)=>foreverOffer(vendor,item)?S("Vente Forever bêta référencée · stock réel non vérifié","Forever beta sale documented · live stock unverified"):item.supply==="unlimited"?S("Stock illimité (référence Classic)","Unlimited stock (Classic reference)"):item.supply==="reputation"?S("Vente liée à la réputation Classic","Classic reputation sale"):S("Stock limité (référence Classic)","Limited stock (Classic reference)");
+const statusWord=(vendor,item)=>foreverOffer(vendor,item)?"Forever":"Classic";
+const stockWord=(item,vendor)=>foreverOffer(vendor,item)?"":item.supply==="unlimited"?S("Stock illimité","Unlimited stock"):item.supply==="reputation"?S("Réputation requise","Reputation required"):S("Stock limité","Limited stock");
 
 /* Share the actual Equipment tooltip with vendors; no fabricated Forever stats. */
 const merchantItemTooltip=(item,vendor=null,vendorCount=0)=>{
@@ -356,18 +356,9 @@ function sectionText(parent,head,body){append(parent,"h4",head);append(parent,"p
 /* Coordinate provenance is independent from the existence of the trainer or the guide.
  * A Forever guide that reused Classic data is NOT documentary proof of a Forever position. */
 function trainerWaypointCaveat(n){
- if(!hasCoords(n))return S("Zone seulement : aucune position prouvée, aucun repère inventé.","Zone only: no proven coordinates or fabricated waypoint.");
- if(n.coordinate_status==="forever_guide_waypoint"){
-  const e=n.location_evidence;
-  if(e?.evidence_level==="documented_forever"&&e.source_url===n.coordinate_source&&typeof e.evidence_url==="string"&&e.evidence_url.startsWith("https://"))
-   return S("Documenté dans un guide Forever · point non confirmé en jeu.","Documented in a Forever guide · waypoint not verified in-game.");
-  return S("Guide Forever cité · preuve individuelle de ce point non retracée ; position indicative, non confirmée en jeu.","Forever guide cited · no traceable individual proof for this pin; indicative, not verified in-game.");
- }
- if(n.coordinate_status==="forever_guides_classic_waypoint_not_ingame_verified")
-  return S("Référence Classic reprise dans un guide Forever · position indicative, non confirmée en jeu.","Classic reference repeated by a Forever guide · indicative, not verified in-game.");
- if(n.coordinate_status==="classic_reference_unverified")
-  return S("Référence Classic uniquement · position indicative, non confirmée en jeu.","Classic reference only · indicative, not verified in-game.");
- return S("Provenance du point inconnue · position non confirmée en jeu.","Waypoint provenance unknown · location not verified in-game.");
+ if(!hasCoords(n))return "";
+ const e=n.location_evidence;
+ return e?.evidence_level==="documented_forever"&&e.source_url===n.coordinate_source&&typeof e.evidence_url==="string"&&e.evidence_url.startsWith("https://")?"Forever":"Classic";
 }
 function renderTrainerDetail(n){
  detail.replaceChildren();
@@ -382,7 +373,7 @@ function renderTrainerDetail(n){
  append(place,"strong",side(n));
  const coords=append(metadata,"div");
  append(coords,"span",S("COORDONNÉES","COORDINATES"),"npc-mini-label");
- append(coords,"strong",hasCoords(n)?fmt(n.coordinates.x)+" / "+fmt(n.coordinates.y):S("À confirmer","Unconfirmed"),"npc-trainer-detail-xy");
+ append(coords,"strong",hasCoords(n)?fmt(n.coordinates.x)+" / "+fmt(n.coordinates.y):"—","npc-trainer-detail-xy");
  const tags=append(detail,"div",null,"npc-trainer-detail-tags");
  factionTag(tags,n);
  if(n.rank&&trainerType(n)==="profession")append(tags,"span",rankLabels[n.rank]||n.rank,"npc-chip gold");
@@ -406,9 +397,9 @@ function renderTrainerDetail(n){
   });
  }
  append(detail,"p",S("PNJ : ","NPC: ")+n.name,"npc-trainer-person-detail");
- append(detail,"p",trainerWaypointCaveat(n),"npc-datacaveat");
+ if(hasCoords(n))append(tags,"span",trainerWaypointCaveat(n),"npc-chip");
  const source=append(detail,"p",null,"npc-source");
- link(source,S("Source de la position ↗","Waypoint source ↗"),n.coordinate_source||n.source);
+ link(source,"Source ↗",n.coordinate_source||n.source);
  window.ForeverNpcMap?.show(n,store.db,npcName=>{
   const matched=store.records.find(r=>r.npc.name===npcName&&r.npc.role==="trainer");
   if(!matched)return;
@@ -474,11 +465,10 @@ function renderMerchantContext(item,n){
    btn.setAttribute("aria-pressed",String(vendor.name===n.name));
    append(btn,"strong",vendor.name);
    append(btn,"small",side(vendor)+" · "+(faction[vendor.faction]||vendor.faction));
-   append(btn,"span",foreverOffer(vendor,item)?S("Source Forever bêta","Forever beta source"):S("Référence Classic","Classic reference"));
+   append(btn,"span",foreverOffer(vendor,item)?"Forever":"Classic");
    btn.addEventListener("click",()=>merchantSwitch(vendor,item));
   }
  }
- append(panel,"p",foreverOffer(n,item)?S("Vente documentée pendant la bêta ; stock non garanti.","Documented in beta; live stock not guaranteed."):S("Vente et position Classic à vérifier dans Forever.","Classic vendor and waypoint to verify in Forever."));
 }
 function syncMerchantUX(){
  if(store.mode!=="merchant"||!store.db)return;
@@ -514,7 +504,7 @@ function renderDetail(){
  if(n.rank)append(chips,"span",en?({"Apprenti":"Apprentice","Compagnon":"Journeyman","Expert":"Expert","Artisan":"Artisan","Tous rangs":"All tiers"}[n.rank]||n.rank):n.rank,"npc-chip");
  const place=append(detail,"div",null,"npc-location"), p=append(place,"div");
  append(p,"strong",side(n));if(n.note&&(!en||n.note_en))append(p,"small",en?n.note_en:n.note);
- append(place,"span",hasCoords(n)?fmt(n.coordinates.x)+" / "+fmt(n.coordinates.y):S("Position à confirmer","Location unconfirmed"),"npc-coords");
+ append(place,"span",hasCoords(n)?fmt(n.coordinates.x)+" / "+fmt(n.coordinates.y):S("Position non renseignée","No location"),"npc-coords");
  const actions=append(detail,"div",null,"npc-actions"),mapId=store.db.zone_maps?.[n.zone.id]?.uiMapID,command=hasCoords(n)?"/way "+(mapId?"#"+mapId+" ":"")+n.coordinates.x+" "+n.coordinates.y:"";
  if(command){const btn=append(actions,"button",S("Copier /way","Copy /way"),"npc-copy");btn.type="button";
  btn.addEventListener("click",async()=>{try{await navigator.clipboard.writeText(command);btn.textContent=S("Commande copiée ✓","Copied ✓")}catch(_){btn.textContent=command}});}
@@ -524,24 +514,22 @@ function renderDetail(){
  info.addEventListener("click",()=>window.ForeverItemTooltip?.pin(merchantItemTooltip(i,n,store.db.npcs.filter(v=>v.role==="merchant"&&v.offers.includes(String(i.id))).length)));
  if(foreverItem(i))link(actions,S("Fiche Forever bêta ↗","Forever beta item ↗"),i.source);
  else{link(actions,S("Fiche Classic ↗","Classic item ↗"),"https://www.wowhead.com/classic/item="+i.id);
- link(actions,S("Vérifier Forever ↗","Check Forever ↗"),"https://www.wowhead.com/forever/item="+i.id)}}
+ }}
  if(n.id)link(actions,S("Fiche PNJ ↗","NPC details ↗"),"https://www.wowhead.com/classic/npc="+n.id);
 
  if(i){
  const panel=append(detail,"section",null,"npc-stock");
- append(panel,"span",foreverOffer(n,i)?S("Source de vente Forever bêta","Forever beta vendor source"):S("Disponibilité estimée · Classic","Estimated availability · Classic"),"npc-stock-label");
- append(panel,"div",stockWord(i,n),"npc-stock-value");
+ append(panel,"span",S("Achat","Purchase"),"npc-stock-label");
+ if(stockWord(i,n))append(panel,"div",stockWord(i,n),"npc-stock-value");
  if(Number.isInteger(i.vendor_price_copper)){append(panel,"p",S("Prix de référence : ","Reference vendor price: ")+copperFmt(i.vendor_price_copper));}
- if(Number.isInteger(i.vendor_stock)&&i.vendor_stock>0){append(panel,"p",S("Stock maximal indicatif (Classic) : ","Indicative maximum stock (Classic): ")+i.vendor_stock+" "+S("unité(s)","unit(s)")+".");}
+ if(Number.isInteger(i.vendor_stock)&&i.vendor_stock>0){append(panel,"p",S("Stock maximal : ","Maximum stock: ")+i.vendor_stock+" "+S("unité(s)","unit(s)")+".");}
  const report=evidence(n,i);
- if(report){
+ if(report&&!["low","contradictory"].includes(report.confidence)){
  const obs=append(panel,"div",null,"npc-evidence");
  append(obs,"strong",report.kind==="unlimited_report"?S("Source Classic : stock illimité","Classic source: unlimited stock"):report.kind==="observed_wait"&&Number.isFinite(report.min_minutes)&&Number.isFinite(report.max_minutes)?S("Attente observée : ","Observed wait: ")+time(report.min_minutes,report.max_minutes):S("Témoignage de stock","Stock report"));
- append(obs,"p",report[en?"en":"fr"]);
- append(obs,"p",report.confidence==="contradictory"?S("Confiance faible · Témoignages contradictoires","Low confidence · Conflicting reports"):report.confidence==="low"?S("Confiance faible · Peu de témoignages","Low confidence · Limited reports"):S("Témoignages communautaires","Community reports"));
+
  link(obs,S("Consulter la source ↗","View source ↗"),report.url);
- }else append(panel,"p",i.supply==="limited"?S("Délai de réapparition non documenté pour ce couple objet-vendeur.","No documented restock time for this item at this vendor."):S("Aucun délai fiable identifié dans les commentaires.","No reliable delay documented in comments."));
- append(panel,"p",S("Les durées indiquent des attentes rapportées, pas un minuteur exact ni le prochain réapprovisionnement.","These are reported waits, not exact timers or predictions of the next restock."));
+ }
  const others=store.db.npcs.filter(v=>v.role==="merchant"&&v.offers.includes(String(i.id)))
  .sort((a,b)=>{
   const av=a.faction===aff.value||a.faction==="neutral"||aff.value==="all",bv=b.faction===aff.value||b.faction==="neutral"||aff.value==="all";
@@ -551,7 +539,6 @@ function renderDetail(){
  });
  const group=append(detail,"details",null,"npc-alternatives");
  append(group,"summary",S("Voir tous les vendeurs ("+others.length+")","View all vendors ("+others.length+")"));
- append(group,"p",S("Vendeurs regroupés par objet · référence Classic, pas de stock en direct.","Vendors grouped by item · Classic references, no live inventory."),"npc-group-intro");
  const choices=append(group,"div",null,"npc-alternative-list");
  for(const seller of others){
   const b=append(choices,"button",null,"npc-seller-button");b.type="button";
@@ -565,14 +552,14 @@ function renderDetail(){
  const purchase=n.offer_details?.[String(i.id)]||{};
  if(purchase.price?.currency==="merchants_favor")append(panel,"p",S("Coût Forever : ","Forever cost: ")+purchase.price.amount+" "+S("Faveurs marchandes","Merchant’s Favor"),"npc-forever-cost");
  if(i.specialization||purchase.specialization){const s=purchase.specialization||i.specialization;
-  append(panel,"p",S("Spécialisation requise (référence Classic) : ","Required specialization (Classic): ")+s,"npc-requirement");
+  append(panel,"p",S("Spécialisation : ","Specialization: ")+s,"npc-requirement");
  }
  const reputation=purchase.reputation||i.reputation;
  if(reputation){const rank={Friendly:S("Amical","Friendly"),Honored:S("Honoré","Honored"),Revered:S("Révéré","Revered"),Exalted:S("Exalté","Exalted")}[reputation.rank]||reputation.rank;
  append(panel,"p",(foreverOffer(n,i)?S("Réputation Forever requise : ","Required Forever reputation: "):S("Réputation Classic requise : ","Required Classic reputation: "))+reputation.faction+" · "+rank,"npc-requirement");
  }
- if(i.seasonal||purchase.seasonal)append(panel,"p",S("Vente saisonnière Classic : Voile d'hiver (non vérifié sur Forever).","Classic seasonal sale: Winter Veil (not confirmed for Forever)."),"npc-requirement");
-  if(i.bind==="pickup"||purchase.bind==="pickup")append(panel,"p",S("Lié quand ramassé (référence Classic).","Bind on Pickup (Classic reference)."),"npc-requirement");
+ if(i.seasonal||purchase.seasonal)append(panel,"p",S("Voile d’hiver","Winter Veil"),"npc-requirement");
+  if(i.bind==="pickup"||purchase.bind==="pickup")append(panel,"p",S("Lié quand ramassé","Bind on Pickup"),"npc-requirement");
  if(purchase.shared_stock_group)append(panel,"p",S("Emplacement de stock partagé : une autre recette peut apparaître à la place.","Shared inventory slot: a different recipe may appear instead."),"npc-requirement");
  const saleProof=offerSourceUrl(purchase);
   if(saleProof){const cite=append(panel,"p",null,"npc-offer-source");link(cite,offerSourceLabel(en),saleProof)}
@@ -585,8 +572,7 @@ function renderDetail(){
  sectionText(detail,S("Formation","Training"),S("Rang référencé : ","Referenced tier: ")+(n.rank||S("non indiqué","unspecified")));
  append(detail,"p",S("Les maîtres de métiers apprennent des compétences ; ils ne vendent pas nécessairement les objets recherchés.","Trainers teach professions; they do not necessarily sell the items in this catalog."),"npc-subtitle")
  }
- append(detail,"p",!hasCoords(n)?S("Zone identifiée dans un guide Forever ; aucune coordonnée fiable à afficher. Aucun marqueur ni /way inventé.","Zone listed in a Forever guide; no reliable coordinates to show. No invented pin or /way."):n.coordinate_status==="forever_guide_waypoint"?S("Coordonnées publiées dans un guide de la bêta Forever. Présence effective à confirmer en jeu.","Waypoint from a Forever beta guide. Actual in-game presence is not confirmed."):S("Coordonnées de référence issues de guides Classic ou orientés Forever, à vérifier en jeu. Carte de zone en pourcentage (0–100).","Waypoints from Classic or Forever-oriented guides; not verified in-game. Zone coordinates are percentages (0–100)."),"npc-datacaveat");
- const s=append(detail,"p",null,"npc-source");s.append(document.createTextNode(S("Sources : ","Sources: ")));link(s,S("Guide de référence ↗","Reference guide ↗"),n.source);
+ const s=append(detail,"p",null,"npc-source");s.append(document.createTextNode(S("Sources : ","Sources: ")));link(s,"Source ↗",n.source);
  window.ForeverNpcMap?.show(n,store.db,npcName=>{
   const matched=store.filtered.find(r=>r.npc.name===npcName&&r.item?.id===store.active?.item?.id)||store.records.find(r=>r.npc.name===npcName&&r.item?.id===store.active?.item?.id)||store.filtered.find(r=>r.npc.name===npcName)||store.records.find(r=>r.npc.name===npcName);
   if(!matched)return;
@@ -600,7 +586,6 @@ function renderDetail(){
   if(weapon&&weapon.value!=="all"&&!(matched.npc.weapon_skills||[]).includes(weapon.value))weapon.value="all";
   selectRecord(matched);syncMerchantUX();
  },{type:type?.value||"all",profession:trade.value,weaponSkill:weapon?.value||"all",itemId:i?.id});
- append(detail,"p",store.mode==="merchant"?(foreverOffer(n,i)?S("Cette vente est référencée dans une source Forever bêta ; stock actuel, présence réelle et version finale non garantis.","This sale is documented in a Forever beta source; live stock, actual presence and final version unconfirmed."):S("Vente de référence Classic non vérifiée sur Forever ; disponibilité, stock et coordonnées à confirmer.","Classic sale not verified for Forever; availability, stock and coordinates remain uncertain.")):S("Certaines fiches proviennent des guides Forever ; les autres restent des références Classic. Les PNJ et leurs positions peuvent différer en jeu.","Some entries come from Forever guides; others are Classic references. NPC presence and locations may differ in-game."),"npc-datacaveat");
 }
 function refresh(){updateTrainerZones();syncTrainerFilters();store.filtered=filteredRecords();if(!store.filtered.some(r=>r.key===store.active?.key))store.active=store.filtered[0]||null;renderList();renderDetail();syncMerchantUX()}
 for(const e of [q,zone,trade,aff,kind,verification,rank,type,weapon].filter(Boolean))e.addEventListener(e===q?"input":"change",()=>{if(e===type){if(type.value==="weapon"){trade.value="all";if(rank)rank.value="all"}if(weapon)weapon.value="all"}if(e===trade&&trade.value!=="all"&&type){type.value="profession";if(weapon)weapon.value="all"}if(e===weapon&&weapon.value!=="all"&&type){type.value="weapon";trade.value="all";if(rank)rank.value="all"}updateFilterVisibility();refresh()});
