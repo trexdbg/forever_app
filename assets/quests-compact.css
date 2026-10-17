@@ -42,7 +42,7 @@ body[data-page="quests"] .quest-toolbar .tool-head{
  align-items:center;
  margin-bottom:9px;
 }
-body[data-page="quests"] .quest-toolbar .tool-head h2{
+body[data-page="quests"] .quest-toolbar .tool-head h1{
  font-size:17px;
  line-height:1.15;
  margin:0;
