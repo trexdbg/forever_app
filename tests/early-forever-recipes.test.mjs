@@ -66,8 +66,8 @@ test("all reagents are exact positive item IDs with nonzero archive quantities",
   }
  }
  assert.equal(count,1913);
- assert.equal(links,161);
- assert.equal(documented,25);
+ assert.equal(links,436);
+ assert.equal(documented,300);
  assert.equal(archive.counts.reagent_edges,count);
  assert.equal(archive.counts.vendor_reference_edges,links);
  assert.equal(archive.counts.documented_forever_vendor_edges,documented);
@@ -120,7 +120,7 @@ test("archive is opt-in, loads lazily and both localized professions pages link 
   const html=load(p);
   assert.match(html,/id="early-recipes"/);
   assert.match(html,/id="early-recipe-change"/);
-  assert.match(html,/recipes-early\.js\?v=20261015-1/);
+  assert.match(html,/recipes-early\.js\?v=20261017-vendors-1/);
   assert.match(html,/recipes-early\.css\?v=20261015-1/);
   assert.match(html,/id="early-recipe-results"/);
  }

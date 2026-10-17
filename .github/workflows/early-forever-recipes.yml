@@ -2,12 +2,15 @@ name: Archived Forever early professions regression
 on:
   pull_request:
     paths:
+      - 'data/npcs.json'
       - 'data/recipes-forever-early-archive.json'
       - 'assets/recipes-early.js'
       - 'assets/recipes-early.css'
       - 'metiers/index.html'
       - 'en/metiers/index.html'
       - 'tests/early-forever-recipes.test.mjs'
+      - 'tests/archived-recipe-vendors.test.mjs'
+      - 'scripts/link-archived-recipe-vendors.mjs'
       - '.github/workflows/early-forever-recipes.yml'
 permissions:
   contents: read
@@ -24,6 +27,7 @@ jobs:
         run: |
           node --check assets/recipes-early.js
           node --test tests/early-forever-recipes.test.mjs
+          node --test tests/archived-recipe-vendors.test.mjs
           node scripts/check-data-quality.mjs
           node scripts/check-npc-professions.mjs
           node scripts/check-forever-evidence.mjs
