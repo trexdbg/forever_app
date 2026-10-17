@@ -390,3 +390,27 @@
 
 /* A descriptive page heading remains accessible without reintroducing visible hero text. */
 .fo-visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+
+/* Weapon masters: portraits/identities lead, equipment icons no longer compete. */
+#prof-trainers .npc-weapon-master{min-height:88px}
+#prof-trainers .npc-weapon-master .npc-trainer-primary{font-size:14px;color:#f2e8d5}
+#prof-trainers .npc-trainer-skill-summary{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;font-size:11px;line-height:1.45;color:#bfcab9;margin-top:3px}
+#prof-trainers .npc-master-portrait{position:relative;isolation:isolate;display:block;overflow:hidden;background:linear-gradient(150deg,#314a36,#16251c 76%);border:1px solid #60755e;border-radius:8px}
+#prof-trainers .npc-master-initials{position:absolute;inset:0;display:grid;place-items:center;color:#c6d6c3;font:600 14px Georgia,serif;letter-spacing:.02em}
+#prof-trainers .npc-trainer-result>.npc-master-portrait img,
+#prof-trainers .npc-trainer-detail-heading>.npc-master-portrait img{position:absolute;left:-42.5%;top:0;width:185%;height:185%;max-width:none;object-fit:contain;object-position:center top;opacity:0}
+#prof-trainers .npc-master-portrait.has-portrait img{opacity:1}
+#prof-trainers .npc-master-portrait.has-portrait .npc-master-initials{display:none}
+#prof-trainers .npc-trainer-detail-heading>.npc-master-portrait{width:65px;height:65px;flex:none;border-color:#8c9270;border-radius:10px}
+#prof-trainers .npc-weapon-teaching{gap:6px}
+#prof-trainers .npc-weapon-teaching-skill{padding:5px 8px;border-color:#485846;background:#1b2a1e;color:#e0e6d6;font-size:11px}
+@media(max-width:700px){
+ #prof-trainers .npc-weapon-master{min-height:82px}
+ #prof-trainers .npc-trainer-detail-heading>.npc-master-portrait{width:56px;height:56px}
+}
+
+/* A visible, portrait-only source cue: Classic model, not a Forever screenshot. */
+#prof-trainers .npc-master-portrait-origin{display:none;position:absolute;z-index:2;left:0;right:0;bottom:0;padding:2px 0;background:#111d16e8;color:#efe9d9;font:600 8px/1 sans-serif;text-align:center;letter-spacing:.02em}
+#prof-trainers .npc-master-portrait.has-portrait .npc-master-portrait-origin{display:block}
+#prof-trainers .npc-master-portrait-credit{display:inline-block;color:#b6c4b0;font-size:10px;text-decoration:underline;text-underline-offset:2px;margin-top:5px}
+#prof-trainers .npc-master-portrait-credit:hover,#prof-trainers .npc-master-portrait-credit:focus-visible{color:#efdbaf}
