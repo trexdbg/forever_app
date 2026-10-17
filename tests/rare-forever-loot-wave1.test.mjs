@@ -18,8 +18,8 @@ test("maintains the exact 150 legacy rare catalogue and 12 first-wave Forever ad
  assert.equal(scoped.length,150);
  const withLoot=scoped.filter(x=>x.loot.length);
  const withoutLoot=scoped.filter(x=>!x.loot.length);
- assert.equal(withLoot.length,71);
- assert.equal(withoutLoot.length,79);
+ assert.equal(withLoot.length,72);
+ assert.equal(withoutLoot.length,78);
  assert.equal(expected.size,12);
  for(const [id,itemId] of expected){
   const rare=scoped.find(x=>x.id===id);

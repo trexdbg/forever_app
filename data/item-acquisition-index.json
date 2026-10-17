@@ -1,20 +1,20 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-16",
+  "updated_at": "2026-10-17",
   "scope": "Read-only relations inherited from ForEveroth merchant, rare, dungeon and opt-in beta recipe catalogues. Source links may identify only an item or guide, not prove sale, drop, availability, rates or live crafting.",
   "provenance_policy": "Forever documented relations are labelled documentary only; all Classic relations stay Classic. Each relationship preserves its originating status. The links are navigation aids, not new source audits.",
   "totals": {
-    "unique_items": 730,
-    "relations": 1256,
+    "unique_items": 731,
+    "relations": 1257,
     "by_kind": {
       "merchant": 923,
       "boss": 205,
-      "rare": 114,
+      "rare": 115,
       "recipe": 14
     },
     "by_evidence": {
       "documented_forever": 465,
-      "classic_reference": 767,
+      "classic_reference": 768,
       "unverified": 24
     }
   },
@@ -5673,6 +5673,20 @@
           "evidence_level": "classic_reference",
           "source_status": "classic_catalogue_offer",
           "reference_url": "https://www.wowhead.com/classic/guide/leatherworking-vendor-recipes-wow-classic"
+        }
+      ]
+    },
+    {
+      "id": 7559,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Brise-épieu",
+          "name_en": "Brokespear",
+          "href": "/rare/?zone=barrens&q=Brokespear&level=all",
+          "evidence_level": "classic_reference",
+          "source_status": "classic_rare_loot_reference",
+          "reference_url": "https://www.wowhead.com/classic/item=7559/runic-cane"
         }
       ]
     },
