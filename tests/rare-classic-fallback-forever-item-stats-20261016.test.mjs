@@ -113,8 +113,8 @@ test("rare interface makes Forever item metadata visible but does not falsely ve
  }
  const scope=db.rares.filter(r=>r.beta_level30_in_scope);
  assert.equal(scope.length,161);
- assert.equal(scope.filter(r=>r.loot.length).length,77);
- assert.equal(scope.filter(r=>!r.loot.length).length,84);
+ assert.equal(scope.filter(r=>r.loot.length).length,78);
+ assert.equal(scope.filter(r=>!r.loot.length).length,83);
  for(const path of ["quetes/index.html","en/quetes/index.html"])
   assert.ok(read(path).length>1000,"Classic quests remain available");
 });
