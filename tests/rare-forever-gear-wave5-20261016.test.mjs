@@ -58,11 +58,11 @@ test("actual documented Forever stats are separate from Classic item localizatio
 });
 test("new items reach source lookup, with deterministic cross-index and unchanged historical links",()=>{
  assert.deepEqual(idx,buildFromFiles());
- assert.equal(idx.totals.unique_items,730);
- assert.equal(idx.totals.relations,1256);
- assert.equal(idx.totals.by_kind.rare,114);
+ assert.equal(idx.totals.unique_items,731);
+ assert.equal(idx.totals.relations,1257);
+ assert.equal(idx.totals.by_kind.rare,115);
  assert.equal(idx.totals.by_evidence.documented_forever,465);
- assert.equal(idx.totals.by_evidence.classic_reference,767);
+ assert.equal(idx.totals.by_evidence.classic_reference,768);
  for(const c of cases){
   const r=db.rares.find(x=>x.id===c.rare);
   const item=idx.items.find(x=>x.id===c.id);
