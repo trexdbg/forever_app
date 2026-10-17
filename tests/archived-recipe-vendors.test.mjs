@@ -23,12 +23,12 @@ test('citation commit must contain exactly the working catalogue before any writ
 
 test('NPC-only changes retain catalogue checks without displaying archived recipe panels', () => {
  const read=path=>readFileSync(new URL('../'+path,import.meta.url),'utf8');
- assert.match(read('.github/workflows/early-forever-recipes.yml'),/"data\\/npcs.json"/);
- assert.match(read('assets/recipes-early.js'),/recipes-forever-early-archive\\.json\\?v=20261017-vendors-1/);
+ assert.ok(read('.github/workflows/early-forever-recipes.yml').includes('"data/npcs.json"'));
+ assert.ok(read('assets/recipes-early.js').includes('recipes-forever-early-archive.json?v=20261017-vendors-1'));
  for(const path of ['metiers/index.html','en/metiers/index.html']){
   const html=read(path);
-  assert.match(html,/id="prof-trainers"/);
-  assert.doesNotMatch(html,/id="early-recipes"|recipes-early\\.(?:js|css)/);
+  assert.ok(html.includes('id="prof-trainers"'));
+  for(const marker of ['id="early-recipes"','recipes-early.js','recipes-early.css'])assert.ok(!html.includes(marker));
  }
 });
 test('275 new exact book/vendor links enrich 166 recipes across seven professions', () => {
