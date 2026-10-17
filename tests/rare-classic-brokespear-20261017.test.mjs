@@ -29,7 +29,7 @@ test("Brokespear Classic identity, French translation and singular equipment dro
  assert.match(item.source_url,/wowhead\.com\/classic\/item=7559/);
  assert.match(item.name_fr_source_url,/wowhead\.com\/classic\/fr\/items/);
  assert.equal(item.chance_classic_percent,null);
- assert.equal(item.chance_forever_observed_percent,null);
+ assert.equal(item.chance_forever_observed_percent,undefined);
  assert.equal(rare.seen_forever,false);
  assert.equal(rare.location_review.location_status,"classic_reference");
 });

@@ -1406,7 +1406,6 @@
           "evidence_kind": "classic_database",
           "evidence_note": "Wowhead Classic item #7559 names Brokespear as its only listed drop source, and the Classic French NPC page identifies Brokespear as Brise-épieu #5838. The item level, required level and stats are Classic references only. No Forever spawn, loot, drop percentage or current item stats are claimed.",
           "chance_classic_percent": null,
-          "chance_forever_observed_percent": null,
           "drop_evidence": "classic_database_item_to_rare_reference_not_forever_verified",
           "item_level": 17,
           "required_level": 12,

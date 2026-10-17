@@ -8,7 +8,7 @@ Scope: rare catalogue and the read-only item acquisition index; no Forever quest
 - Classic French off-hand item list: https://www.wowhead.com/classic/fr/items/armor/off-hand-frills/min-req-level:1/max-req-level:20 — **Canne runique**, level 17 / required level 12.
 
 ## Scope and uncertainty
-This is **Classic reference only**. Neither the NPC location, the loot relationship, the stat line nor a drop probability is proven on WoW Forever. Both percentages remain null and the existing Classic map coordinate is untouched. Retail and other expansions display different item statistics and must not be substituted for Classic / Forever.
+This is **Classic reference only**. Neither the NPC location, the loot relationship, the stat line nor a drop probability is proven on WoW Forever. Classic percentage remains null; Forever percentage is omitted and the existing Classic map coordinate is untouched. Retail and other expansions display different item statistics and must not be substituted for Classic / Forever.
 
 ## Counts
 Before: 378 rare records; 161 in beta level-30 scope, 77 with loot, 84 without. Index: 730 unique item IDs, 1,256 relations, including 114 rare relations.
