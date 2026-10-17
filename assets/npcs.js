@@ -29,6 +29,9 @@ function weaponPortrait(n){
  frame.setAttribute("aria-hidden","true");
  const initials=n.name.split(" ").slice(0,2).map(part=>part[0]).join("").toUpperCase();
  frame.append(mk("span",initials,"npc-master-initials"));
+ const label=mk("span","Classic","npc-master-portrait-origin");
+ label.title=S("Portrait Classic","Classic portrait");
+ frame.append(label);
  const displayId=weaponPortraits[n.name];
  if(displayId){
   const img=mk("img");img.src="https://octowow.st/db/images/models/"+displayId+".png";
@@ -386,6 +389,11 @@ function renderTrainerDetail(n){
  const copy=append(heading,"div",null,"npc-trainer-detail-title");
  append(copy,"span",trainerType(n)==="weapon"?S("Maître d’armes","Weapon master"):S("Maître de métier","Profession trainer"),"npc-detail-kicker");
  append(copy,"h3",trainerTitle(n));
+ if(trainerType(n)==="weapon"&&weaponPortraits[n.name]){
+  const source=append(copy,"a",S("Portrait Classic · source ↗","Classic portrait · source ↗"),"npc-master-portrait-credit");
+  source.href="https://octowow.st/db/images/models/"+weaponPortraits[n.name]+".png";
+  source.target="_blank";source.rel="noopener noreferrer";
+ }
  const metadata=append(detail,"div",null,"npc-trainer-detail-location");
  const place=append(metadata,"div");
  append(place,"span",S("EMPLACEMENT","LOCATION"),"npc-mini-label");
