@@ -97,6 +97,10 @@ for(const mode of ['offline','invalid','wrong-profession'])test(`optional snapsh
  assert.ok(!walk(detail).some(el=>el.className==='early-current-snapshot'));
 });
 
-test('both language pages invalidate the modified renderer cache',()=>{
- for(const path of ['metiers/index.html','en/metiers/index.html'])assert.match(file(path),/recipes-early\.js\?v=20261017-clean-1/);
+test('both language pages omit the archived recipe renderer and preserve the trainer map',()=>{
+ assert.match(file('assets/recipes-early.js'),/recipes-forever-early-archive/);
+ for(const path of ['metiers/index.html','en/metiers/index.html']){
+  assert.match(file(path),/id="prof-trainers"/);
+  assert.doesNotMatch(file(path),/recipes-early\\.js|id="early-recipes"/);
+ }
 });
