@@ -28,7 +28,8 @@ test('main FR/EN pages have no repeated evidence panels and keep functional cont
    assert.doesNotMatch(html,/<(?:p|details)[^>]*class="(?:craft-beta-disclaimer|early-recipe-hint|atlas-detail|dg-sources)"/);
    assert.match(html,/20261017-clean-1/);
   }
-  assert.match(read(prefix+'metiers/index.html'),/id="early-recipes"/);
+  assert.match(read(prefix+'metiers/index.html'),/id="prof-trainers"/);
+  assert.doesNotMatch(read(prefix+'metiers/index.html'),/id="early-recipes"|id="craft-beta"|id="alchemy-beta"/);
   assert.match(read(prefix+'rare/index.html'),/id="rare-canvas"/);
   assert.match(read(prefix+'donjons/index.html'),/id="dg-map"/);
  }
