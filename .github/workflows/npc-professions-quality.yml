@@ -88,6 +88,8 @@ jobs:
         run: node scripts/check-trainer-locations.mjs
       - name: Trainer location fixtures and legacy map safeguards (#51)
         run: node --test tests/trainer-locations.test.mjs
+      - name: Weapon master portraits and Classic origin FR/EN regressions
+        run: node --test tests/weapon-master-portraits.test.mjs
       - name: Agent 03 crafting-chain provenance and graph integrity
         run: node scripts/check-crafting-chains.mjs
       - name: Agent 03 crafting-chain fixtures
