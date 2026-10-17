@@ -21,6 +21,9 @@ test("all eight named weapon masters have Classic model previews with safe fallb
  assert.match(script,/octowow\.st\/db\/images\/models\//);
  assert.match(script,/img\.addEventListener\("error",\(\)=>img\.remove\(\)\)/);
  assert.match(script,/npc-master-initials/);
+ assert.match(script,/npc-master-portrait-origin/,"visible Classic origin marker required");
+ assert.match(script,/Portrait Classic · source ↗/,"player-facing source required");
+ assert.match(css,/\.npc-master-portrait\.has-portrait \.npc-master-portrait-origin\{display:block\}/);
 });
 
 test("weapon master name comes before a compact label-only skill list",()=>{
