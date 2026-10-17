@@ -84,9 +84,9 @@ test("rare coverage rises without removing Classic-only entries or enabling Fore
  assert.equal(db.rares.length,378);
  assert.equal(all.length,161);
  assert.equal(legacy.length,150);
- assert.equal(legacy.filter(r=>r.loot.length).length,71);
- assert.equal(all.filter(r=>r.loot.length).length,77);
- assert.equal(all.filter(r=>!r.loot.length).length,84);
+ assert.equal(legacy.filter(r=>r.loot.length).length,72);
+ assert.equal(all.filter(r=>r.loot.length).length,78);
+ assert.equal(all.filter(r=>!r.loot.length).length,83);
  for(const path of ["quetes/index.html","en/quetes/index.html"]){
   const html=readFileSync(new URL("../"+path,import.meta.url),"utf8");
   assert.ok(html.length>1000,"Classic quest module stays publicly available");
