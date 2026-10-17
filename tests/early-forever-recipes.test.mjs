@@ -103,13 +103,14 @@ test("new Forever and changed-vs-Classic recipes are distinct from inherited old
   assert.ok(Array.isArray(x.classic_comparison?.classic_output_quantities));
  }
 });
-test("archive data and lazy renderer stay testable but public pages do not mount the archive",()=>{
+test("archive renderer remains testable but profession pages do not mount it",()=>{
  const js=load("assets/recipes-early.js");
- for(const marker of [/root\\.addEventListener\\("toggle"/,/if\\(root\\.open\\)load\\(\\)/,/historical_client_archive_not_in_game_verified/,/function recipeView/,/profLabel\\(r\\.profession_en\\)/,/Compétence requise/])
-  assert.match(js,marker);
+ for(const marker of ['root.addEventListener("toggle"','if(root.open)load()','historical_client_archive_not_in_game_verified','function recipeView','profLabel(r.profession_en)','Compétence requise'])
+  assert.ok(js.includes(marker),marker);
  for(const p of ["metiers/index.html","en/metiers/index.html"]){
-  const html=load(p);assert.match(html,/id="prof-trainers"/);
-  for(const marker of [/id="early-recipes"/,/id="early-recipe-change"/,/id="early-recipe-results"/,/recipes-early\\.(?:js|css)/])assert.doesNotMatch(html,marker);
+  const html=load(p);assert.ok(html.includes('id="prof-trainers"'));
+  for(const marker of ['id="early-recipes"','id="early-recipe-change"','id="early-recipe-results"','recipes-early.js','recipes-early.css'])
+   assert.ok(!html.includes(marker),marker);
  }
 });
 test("initial recipe selection is reflected in aria-pressed before buttons render",()=>{
