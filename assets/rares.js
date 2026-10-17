@@ -17,39 +17,17 @@ const pointEvidence=(r,i)=>{
  return point&&Array.isArray(evidence?.coordinates)&&evidence.coordinates.length===2&&evidence.coordinates[0]===point[0]&&evidence.coordinates[1]===point[1]?evidence:null;
 };
 const pointLevel=(r,i)=>pointEvidence(r,i)?.evidence_level||"unverified";
-const pointLabel=(r,i)=>pointLevel(r,i)==="confirmed_in_game"
- ?T("Forever · confirmé en jeu","Forever · verified in-game")
- :pointLevel(r,i)==="documented_forever"
- ?T("Forever · guide, non confirmé en jeu","Forever · guide, not verified in-game")
- :pointLevel(r,i)==="classic_reference"
- ?T("Classic · référencé","Classic · sourced reference")
- :T("Classic · indicatif, non vérifié","Classic · indicative, unverified");
+const pointLabel=(r,i)=>["confirmed_in_game","documented_forever"].includes(pointLevel(r,i))?"Forever":"Classic";
 const hasForeverLocation=r=>(r.points||[]).some((_,i)=>["documented_forever","confirmed_in_game"].includes(pointLevel(r,i)));
-const presenceLabel=r=>r.seen_forever?T("Signalé sur Forever","Reported on Forever")
- :r.reference==="new_forever_community_documented_not_gameplay_confirmed"?T("Documenté pour Forever · présence non confirmée en jeu","Documented for Forever · in-game presence unverified")
- :T("Apparition Classic · non vérifiée","Classic spawn · unverified");
-const pointSummary=r=>{
- const levels=(r.points||[]).map((_,i)=>pointLevel(r,i));
- const forever=levels.filter(v=>v==="documented_forever"||v==="confirmed_in_game").length;
- if(forever&&forever<levels.length)return T("Repères Forever documentés et Classic indicatifs · vérifier chaque point","Documented Forever and indicative Classic pins · check each point");
- if(levels.includes("confirmed_in_game")&&levels.some(v=>v!=="confirmed_in_game"))return T("Repères Forever confirmés et autres points documentaires · consulter chacun","Verified Forever pins and other documentary pins · check each one");
- if(levels.includes("confirmed_in_game"))return T("Positions confirmées en jeu · consulter la preuve de chaque point","In-game verified positions · review each pin evidence");
- if(forever)return T("Positions documentées dans des guides Forever · non confirmées en jeu","Locations in Forever guides · not confirmed in-game");
- return T("Positions Classic indicatives · à vérifier sur Forever","Indicative Classic spawn points · not verified on Forever");
-};
+const presenceLabel=r=>r.seen_forever||r.reference==="new_forever_community_documented_not_gameplay_confirmed"?"Forever":"Classic";
+const pointSummary=r=>T("Emplacements","Locations");
 const exactLevel=r=>Number.isInteger(r.level)&&r.level>0;
 const starterLevelUnknown=r=>r.level===null&&r.level_status==="unknown"&&r.level_context==="starter_zone";
 const visibleAtBetaLevel=r=>exactLevel(r)?r.level<=30:starterLevelUnknown(r);
 const displayLevel=r=>exactLevel(r)?String(r.level):T("?","?");
 const rankLabel=r=>r.classification==="rare_elite"?T("Rare élite","Rare elite"):r.classification==="elite"?T("Élite (rencontre spéciale)","Elite (special encounter)"):T("Rare","Rare");
 const isForeverLoot=item=>item.source_version==="forever_beta";
-const lootTrustLabel=item=>item.evidence_level==="confirmed_in_game"
- ?T("Forever · confirmé en jeu","Forever · verified in-game")
- :item.evidence_level==="documented_forever"
- ?T("Forever · documenté","Forever · documented")
- :isForeverLoot(item)
- ?T("Forever · à vérifier","Forever · unverified")
- :T("Classic · indicatif","Classic · indicative");
+const lootTrustLabel=item=>["confirmed_in_game","documented_forever"].includes(item.evidence_level)?"Forever":"Classic";
 
 const lootName=item=>{
  const localized=window.ForeverItemLocale?.name({
@@ -82,9 +60,9 @@ for(const r of filtered){
  const b=button(null,"rare-row"+(selected?.id===r.id?" active":""));b.setAttribute("role","option");b.setAttribute("aria-selected",String(r.id===selected?.id));
  const a=m("div",null,"rare-row-name");const dot=m("i",null,"rare-color-dot");dot.style.backgroundColor=markerColor(r);dot.title=T("Couleur de ce monstre sur la carte","Creature color on the map");a.append(dot);a.append(m("strong",npcName(r)));a.append(m("b",displayLevel(r),"rare-lvl"));b.append(a);
  b.append(m("span",zname(r.zone),"rare-zone-name"));
- const meta=m("span",null,"rare-row-meta");meta.append(m("span",T("Repop Classic : ","Classic respawn: ")+respawn(r)));meta.append(chip(presenceLabel(r),r.seen_forever?"green":"gold"));
+ const meta=m("span",null,"rare-row-meta");if(r.respawn_min_hours!=null)meta.append(m("span",T("Repop : ","Respawn: ")+respawn(r)));meta.append(chip(presenceLabel(r),r.seen_forever?"green":"gold"));
  if(r.loot.length){const f=r.loot.filter(isForeverLoot).length;meta.append(chip(r.loot.length+" "+T("butin(s) notable(s)","notable drops"),"purple"));if(f)meta.append(chip(f+" Forever","green"))}
- if(hasForeverLocation(r))meta.append(chip(T("Position documentée Forever","Forever location documented"),"green"));if(r.tameable)meta.append(chip(T("Apprivoisable","Tameable"),"green"));if(!r.points.length&&!db.zones[r.zone]?.instance)meta.append(chip(T("Position à documenter","No position yet"),"rare-pending"));b.append(meta);
+ if(r.tameable)meta.append(chip(T("Apprivoisable","Tameable"),"green"));if(!r.points.length&&!db.zones[r.zone]?.instance)meta.append(chip(T("Position à documenter","No position yet"),"rare-pending"));b.append(meta);
  b.addEventListener("click",()=>choose(r));box.append(b);
 }
 box.scrollTop=lastScroll;paintLegend();
@@ -94,11 +72,11 @@ const out=$("rare-detail");out.replaceChildren();if(!selected){out.append(m("p",
 const r=selected,top=m("div",null,"rare-detail-top");const dot=m("i",null,"rare-color-dot rare-color-large");dot.style.backgroundColor=markerColor(r);top.append(dot);top.append(m("h3",npcName(r)));
 top.append(chip(rankLabel(r),"purple"));out.append(top);
 const tags=m("div",null,"rare-tags");tags.append(chip(zname(r.zone)));tags.append(chip(exactLevel(r)?T("Niveau ","Level ")+r.level:T("Niveau inconnu · zone de départ","Level unknown · starter zone")));if(exactLevel(r)&&r.level>30)tags.append(chip(T("Hors bêta 30","Beyond beta cap 30"),"gold"));
-tags.append(chip(T("Repop Classic : ","Classic respawn: ")+respawn(r),"gold"));if(r.tameable)tags.append(chip(T("Apprivoisable","Tameable"),"green"));
-tags.append(chip(presenceLabel(r),r.seen_forever?"green":"gold"));if(!en&&r.name_fr_status==="community_translation_check_needed")tags.append(chip("Nom FR à confirmer","rare-pending"));if(!en&&r.name_fr_status==="classic_reference")tags.append(chip("Nom FR · référence Classic","gold"));out.append(tags);
+if(r.respawn_min_hours!=null)tags.append(chip(T("Repop : ","Respawn: ")+respawn(r),"gold"));if(r.tameable)tags.append(chip(T("Apprivoisable","Tameable"),"green"));
+tags.append(chip(presenceLabel(r),r.seen_forever?"green":"gold"));out.append(tags);
 const spot=m("div",null,"rare-spots");spot.append(m("strong",pointSummary(r),"rare-caption"));
 const coords=m("div",null,"rare-coords");
-if(!r.points.length)coords.append(m("span",db.zones[r.zone]?.instance?T("Rare d’instance · pas de coordonnées de zone","Instance rare · no outdoor coordinates"):T("Coordonnées non encore documentées · aucun repère inventé","Coordinates not yet documented · no fabricated marker"),"rare-muted"));
+if(!r.points.length)coords.append(m("span",db.zones[r.zone]?.instance?T("Rare d’instance · pas de coordonnées de zone","Instance rare · no outdoor coordinates"):T("Position non renseignée","No location"),"rare-muted"));
 for(const [i,p] of r.points.entries()){
  const b=button(fmt(p[0])+" / "+fmt(p[1]),"rare-coord"+(i===pointIndex?" is-active":"")+(["documented_forever","confirmed_in_game"].includes(pointLevel(r,i))?" is-forever":""));
  b.append(m("small",pointLabel(r,i),"rare-coord-status"));
@@ -139,37 +117,29 @@ for(const id of setIds){
  source.target="_blank";source.rel="noopener noreferrer";section.append(source);
  out.append(section);
 }
-out.append(m("h4",T("Butins notables · Forever et Classic","Notable loot · Forever and Classic"),"rare-loot-title"));
+out.append(m("h4",T("Butins","Loot"),"rare-loot-title"));
 const loots=m("div",null,"rare-loots");
-if(!r.loot.length)loots.append(m("p",T("Aucun butin notable documenté dans nos sources. La table Forever peut contenir de nouveaux objets.","No notable loot documented in our sources. The Forever loot table may contain new items."),"rare-empty"));
-if(r.loot.length){const foreverCount=r.loot.filter(isForeverLoot).length;if(foreverCount)loots.append(chip(T("Butins référencés dans Forever","Loot listed for Forever"),"green"));if(foreverCount!==r.loot.length)loots.append(chip(T("Autres objets : références Classic","Other items: Classic references"),"gold"))}
-for(const item of r.loot){
+if(!r.loot.length)loots.append(m("p",T("Aucun butin renseigné.","No loot listed."),"rare-empty"));
+for(const item of r.loot.filter(item=>item.evidence_level!=="unverified")){
  const a=m("a",null,"rare-loot"+(isForeverLoot(item)?" rare-loot-forever":""));const href=isForeverLoot(item)?(item.item_source_url||(item.item_id?"https://www.wowhead.com/forever/item="+item.item_id:item.source_url||r.source)):(item.item_id?"https://foreverdb.net/item/"+item.item_id:(item.source_url||r.source));a.href=href;a.target="_blank";a.rel="noopener noreferrer";
  const icon=m("img");icon.src="https://wow.zamimg.com/images/wow/icons/medium/"+encodeURIComponent(item.icon||"inv_misc_questionmark")+".jpg";icon.alt="";icon.width=38;icon.height=38;icon.loading="lazy";icon.onerror=()=>icon.remove();a.append(icon);
- const txt=m("span",null,"rare-loot-text");txt.append(m("strong",lootName(item)));if(!en&&item.name_fr_status==="classic_reference")txt.append(m("small","Nom FR · référence Classic"));
- const rate=isForeverLoot(item)?(item.chance_forever_observed_percent==null?T("Forever · taux à vérifier","Forever · rate not established"):T("Forever · taux observé ", "Forever · observed rate ")+fmt(item.chance_forever_observed_percent)+" %"):(item.chance_classic_percent==null?T("Classic · taux inconnu","Classic · unknown rate"):T("Classic · ", "Classic · ")+fmt(item.chance_classic_percent)+" %");txt.append(m("small",rate));
- if(item.item_level||item.required_level||item.stats){const stat=m("small",null,"rare-loot-stats");stat.textContent=[item.item_level?T("Objet niv. ","Item level ")+item.item_level:null,item.required_level?T("Requis ","Requires ")+item.required_level:null,item.stats?.[en?"en":"fr"]].filter(Boolean).join(" · ");txt.append(stat)}
- if(item.forever_item_snapshot){
-   const snap=item.forever_item_snapshot;
-   const stat=m("small",null,"rare-loot-stats");
-   stat.textContent=T("Objet dans Forever (butin non confirmé) : ","Item in Forever (drop unverified): ")+[
-     Number.isInteger(snap.item_level)?T("Niv. objet ","Item level ")+snap.item_level:null,
-     Number.isInteger(snap.required_level)?T("Requis ","Requires ")+snap.required_level:null,
-     snap.stats?.[en?"en":"fr"]
-   ].filter(Boolean).join(" · ");
-   txt.append(stat);
- }
+ const txt=m("span",null,"rare-loot-text");txt.append(m("strong",lootName(item)));
+ const rate=isForeverLoot(item)?item.chance_forever_observed_percent:item.chance_classic_percent;
+ if(Number.isFinite(rate))txt.append(m("small",fmt(rate)+" %"));
+ const snap=item.forever_item_snapshot;
+ const stats=snap&&["documented_forever","datamined","confirmed_in_game"].includes(snap.evidence_level)?{
+  item_level:snap.item_level??item.item_level,required_level:snap.required_level??item.required_level,stats:snap.stats??item.stats
+ }:item;
+ if(stats.item_level||stats.required_level||stats.stats){const stat=m("small",null,"rare-loot-stats");stat.textContent=[stats.item_level?T("Objet niv. ","Item level ")+stats.item_level:null,stats.required_level?T("Requis ","Requires ")+stats.required_level:null,stats.stats?.[en?"en":"fr"]].filter(Boolean).join(" · ");txt.append(stat)}
  a.append(txt);a.append(chip(lootTrustLabel(item),["documented_forever","confirmed_in_game"].includes(item.evidence_level)?"green":"gold"));
- if(item.item_id&&!isForeverLoot(item)&&window.ForeverItemTooltip)window.ForeverItemTooltip.bind(a,{id:item.item_id,name:item.name.en,name_en:item.name.en,name_fr:item.name.fr,source_status:"classic_reference",source:"Classic"});loots.append(a)
+ if(item.item_id&&!isForeverLoot(item)&&!item.forever_item_snapshot&&window.ForeverItemTooltip)window.ForeverItemTooltip.bind(a,{id:item.item_id,name:item.name.en,name_en:item.name.en,name_fr:item.name.fr,source_status:"classic_reference",source:"Classic"});loots.append(a)
 }out.append(loots);
-if(r.notes?.[en?"en":"fr"])out.append(m("p",r.notes[en?"en":"fr"],"rare-note"));
-if(r.location_review?.conflict){out.append(chip(T("Conflit de zone · position inconnue","Zone conflict · location unknown"),"rare-pending"));out.append(m("p",r.location_review.conflict_note?.[en?"en":"fr"]||T("Sources contradictoires ; position Forever non établie.","Conflicting sources; Forever position not established."),"rare-note"));}
 const foot=m("div",null,"rare-detail-foot"),a=m("a",T("Voir la source ↗","View source ↗"));a.href=r.source||db.sources.timers_and_loot;a.target="_blank";a.rel="noopener noreferrer";foot.append(a);
 if(Number.isSafeInteger(Number(r.id))&&Number(r.id)>0){const l=m("a",T("Table de butin Forever ↗","Forever loot table ↗"));l.href="https://www.wowhead.com/forever/"+(en?"":"fr/")+"npc="+encodeURIComponent(r.id);l.target="_blank";l.rel="noopener noreferrer";foot.append(l)}
 const chosenEvidence=pointEvidence(r,pointIndex);
 const locationSource=chosenEvidence?.evidence_url||chosenEvidence?.source_url||(!hasForeverLocation(r)?r.coordinate_source:null);
 if(typeof locationSource==="string"&&/^https:\/\//.test(locationSource)){const p=m("a",T("Source du point sélectionné ↗","Selected pin source ↗"));p.href=locationSource;p.target="_blank";p.rel="noopener noreferrer";foot.append(p)}
-if(r.points.length){const b=button(T("Copier /way du point choisi · ","Copy selected /way · ")+pointLabel(r,pointIndex),"rare-copy");b.addEventListener("click",async()=>{const p=r.points[pointIndex],str="/way "+p[0]+" "+p[1];try{await navigator.clipboard.writeText(str);b.textContent=T("Copié ✓","Copied ✓")}catch{b.textContent=str}});foot.append(b)}
+if(r.points.length){const b=button(T("Copier /way","Copy /way"),"rare-copy");b.addEventListener("click",async()=>{const p=r.points[pointIndex],str="/way "+p[0]+" "+p[1];try{await navigator.clipboard.writeText(str);b.textContent=T("Copié ✓","Copied ✓")}catch{b.textContent=str}});foot.append(b)}
 out.append(foot);
 }
 function choose(r,index=0){pointIndex=Number.isInteger(index)&&index>=0&&index<r.points.length?index:0;selected=r;const change=r.zone!==zoneId;zoneId=r.zone;$("rare-map-title").textContent=zname(zoneId);if(change){zoom=1;center=[50,50];image()}showList();detail();draw()}
@@ -224,8 +194,8 @@ if(!Array.isArray(data.rares)||!data.zones)throw Error("Invalid JSON");db=data;r
 for(const key of [...new Set(rows.map(r=>r.zone))].sort((a,b)=>zname(a).localeCompare(zname(b),en?"en":"fr"))){const opt=m("option",zname(key));opt.value=key;zone.append(opt)}
 const qs=new URLSearchParams(location.search);if(db.zones[qs.get("zone")])zone.value=qs.get("zone");if(qs.get("q"))search.value=qs.get("q");level.value=qs.get("level")==="all"?"all":qs.get("level")==="high"?"high":"low";verification.value=["forever","classic"].includes(qs.get("verification"))?qs.get("verification"):"all";
 filtered=results();buildColors();selected=filtered.find(r=>r.id==="2779")||filtered[0]||null;zoneId=selected?.zone||"";
-$("rare-status").textContent=rows.filter(r=>exactLevel(r)&&r.level<=30).length+" "+T("rencontres niv. 1–30 documentées","documented level 1–30 encounters")+" · "+rows.filter(starterLevelUnknown).length+" "+T("niveaux encore inconnus","levels still unknown");
-$("rare-map-title").textContent=zname(zoneId);$("rare-disclaimer").textContent=db.disclaimer[en?"en":"fr"];
+$("rare-status").textContent=rows.filter(r=>exactLevel(r)&&r.level<=30).length+" "+T("rencontres niv. 1–30","level 1–30 encounters")+" · "+rows.filter(starterLevelUnknown).length+" "+T("niveaux encore inconnus","levels still unknown");
+$("rare-map-title").textContent=zname(zoneId);
 showList();detail();image()
 }).catch(()=>{$("rare-status").textContent=T("Données indisponibles","Data unavailable");$("rare-results").textContent=T("Erreur de chargement.","Failed to load.")});
 })();

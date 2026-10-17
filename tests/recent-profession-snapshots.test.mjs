@@ -77,17 +77,18 @@ async function renderer(lang,mode='ok'){
  function walk(el){return [el,...el.children.flatMap(walk)];}
 }
 
-for(const lang of ['fr','en'])test(`${lang}: actual renderer exposes a separate recent snapshot and preserves historical unknowns`,async()=>{
+for(const lang of ['fr','en'])test(`${lang}: one recipe uses the newer value and keeps the source behind a single link`,async()=>{
  const {get,calls,walk}=await renderer(lang);
  assert.equal(calls.length,2);
  const search=get('early-recipe-search');search.value='3931';search.events.input();
- const detail=get('early-recipe-detail'),panel=walk(detail).find(el=>el.className==='early-current-snapshot');
- assert.ok(panel);assert.match(panel.textContent,/1\.60\.1\.70425/);assert.match(panel.textContent,/×2/);
- assert.ok(panel.textContent.includes(lang==='en'?'Green (source calculation)':'Vert (calcul de la source)'));
- assert.ok(walk(panel).some(el=>el.href===recent.find(r=>r.spell_id===3931).evidence_url));
- assert.ok(detail.textContent.includes(lang==='en'?'Quantity unknown':'Quantité inconnue'),'Historical quantity stays unknown below the recent panel');
- search.value='1266893';search.events.input();
- assert.match(get('early-recipe-detail').textContent,/25/);
+ const detail=get('early-recipe-detail');
+ assert.match(detail.textContent,/×2/);
+ assert.equal((detail.textContent.match(/×2/g)||[]).length,1);
+ assert.ok(!walk(detail).some(el=>el.className==='early-current-snapshot'));
+ assert.ok(walk(detail).some(el=>el.href===recent.find(r=>r.spell_id===3931).evidence_url));
+ assert.doesNotMatch(detail.textContent,/documentaire|documentary|confirm|archive|69876|70425|Quantity unknown|Quantité inconnue/i);
+ search.value='1266893';search.events.input();assert.match(get('early-recipe-detail').textContent,/25/);
+ assert.equal(old.get(3931).outputs[0].reported_client_output_quantity,null,'Internal historic data is retained');
 });
 
 for(const mode of ['offline','invalid','wrong-profession'])test(`optional snapshot ${mode} never disables the archive or attaches the wrong profession`,async()=>{
@@ -97,5 +98,5 @@ for(const mode of ['offline','invalid','wrong-profession'])test(`optional snapsh
 });
 
 test('both language pages invalidate the modified renderer cache',()=>{
- for(const path of ['metiers/index.html','en/metiers/index.html'])assert.match(file(path),/recipes-early\.js\?v=20261017-snapshots-1/);
+ for(const path of ['metiers/index.html','en/metiers/index.html'])assert.match(file(path),/recipes-early\.js\?v=20261017-clean-1/);
 });

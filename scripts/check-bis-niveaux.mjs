@@ -68,8 +68,8 @@ assert.deepEqual(hall.name,{fr:"La salle des Thanes",en:"Hall of Thanes"});
 const hallItems=observed.items.filter(x=>x.origin_fr?.includes("Hall of Thanes"));
 assert.equal(hallItems.length,12,"Expected scope of affected Forever items changed");
 assert.ok(js.includes('"Hall of Thanes":"La salle des Thanes"'),"BiS French origin must use the same dungeon name as Donjons");
-assert.ok(fr.includes("/assets/bis-niveaux.js?v=20261016-dungeon-origin-fr"));
-assert.ok(en.includes("/assets/bis-niveaux.js?v=20261016-dungeon-origin-fr"));
+assert.ok(fr.includes("/assets/bis-niveaux.js?v=20261017-clean-1"));
+assert.ok(en.includes("/assets/bis-niveaux.js?v=20261017-clean-1"));
 
 
 /* Agent 02 (levels 1–30): reviewed Forever source assertions and unknown requirements. */
@@ -110,7 +110,6 @@ assert.ok(js.includes("const req=required(i),max=levels[band][1]"),
  "Automatic BiS candidates must require an explicit equipment level");
 assert.ok(!js.includes("const req=progressionLevel(i),max=levels[band][1]"),
  "Quest level cannot substitute for equipment requirement in recommendations");
-for(const [needle] of [["Reported in beta · not independently verified"],["Signalé en bêta · non vérifié directement"]])
- assert.ok(js.includes(needle),"FR/EN beta provenance label must be cautious");
+assert.ok(js.includes('classic:"Classic"'),"Public source labels remain concise");
 
 console.log("BiS par niveau OK: "+levels.length+" brackets, "+db.classes.length+" classes, "+classic.items.length+" Classic + "+observed.items.length+" beta-reported references, "+guide.sources.length+" dungeon guides, FR/EN pages.");

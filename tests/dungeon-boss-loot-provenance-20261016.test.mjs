@@ -125,17 +125,14 @@ test("item page or cache alone never promotes a boss drop; exact independent evi
 
 test("bilingual dungeon pages show explicit trust labels, sources, and current data JS",()=>{
  const js=read("assets/dungeons.js");
- assert.ok(js.includes('Butin Forever documenté · non confirmé en jeu'));
- assert.ok(js.includes('Forever documented loot · not confirmed in-game'));
- assert.ok(js.includes('Attribution au boss à vérifier'));
- assert.ok(js.includes('Boss-drop attribution unverified'));
- assert.ok(js.includes('Source du butin ↗'));
- assert.ok(js.includes('Drop source ↗'));
+ assert.ok(js.includes('filter(it=>dropProof(it)!=="unverified")'));
+ assert.ok(!js.includes('dg-panel-disclaimer'));
+ assert.ok(js.includes('"Source ↗"'));
  assert.ok(js.includes('dropProof(item)'));
  assert.ok(js.includes('/data/dungeons-forever.json?v=20261016-loot-provenance'));
  for(const path of ["donjons/index.html","en/donjons/index.html"]){
   const html=read(path);
-  assert.ok(html.includes('/assets/dungeons.js?v=20261016-loot-provenance'),path);
+  assert.ok(html.includes('/assets/dungeons.js?v=20261017-clean-1'),path);
  }
  for(const path of ["quetes/index.html","en/quetes/index.html"])
   assert.ok(read(path).length>1000,"Classic quests remain available");

@@ -5,9 +5,9 @@
 const en=document.documentElement.lang==="en";
 const locale=()=>window.ForeverItemLocale;
 const w=en?{
-  itemLevel:"Item level",classic:"Classic Era reference — NOT confirmed for Forever",loading:"Loading Classic item details…",unavailable:"Additional Classic stats unavailable.",origin:"Source",view:"Open Classic item sheet ↗",close:"Close item details",open:"Item details",bind:"Binding",slot:"Slot",subtype:"Type",damage:"Damage",speed:"Speed",dps:"damage per second",required:"Requires level",armor:"Armor",sell:"Sell price",effects:"Classic effects (original text)",longPress:"Long-press an item for details",source:"Classic data: WoWDB des Défias",unknown:"Undocumented",set:"Item set"
+  itemLevel:"Item level",classic:"Classic",loading:"Loading Classic item details…",unavailable:"Additional Classic stats unavailable.",origin:"Source",view:"Open Classic item sheet ↗",close:"Close item details",open:"Item details",bind:"Binding",slot:"Slot",subtype:"Type",damage:"Damage",speed:"Speed",dps:"damage per second",required:"Requires level",armor:"Armor",sell:"Sell price",effects:"Classic effects (original text)",longPress:"Long-press an item for details",source:"Classic data: WoWDB des Défias",unknown:"Undocumented",set:"Item set"
 }:{
-  itemLevel:"Niveau d’objet",classic:"Référence Classic — NON confirmée sur Forever",loading:"Chargement des caractéristiques Classic…",unavailable:"Caractéristiques Classic supplémentaires indisponibles.",origin:"Origine",view:"Voir la fiche Classic ↗",close:"Fermer les détails",open:"Détails de l’objet",bind:"Lien",slot:"Emplacement",subtype:"Type",damage:"Dégâts",speed:"Vitesse",dps:"dégâts par seconde",required:"Niveau requis",armor:"Armure",sell:"Prix de vente",effects:"Effets Classic",longPress:"Appui long pour voir les détails",source:"Données Classic : WoWDB des Défias",unknown:"Non documenté",set:"Ensemble d’objets"
+  itemLevel:"Niveau d’objet",classic:"Classic",loading:"Chargement des caractéristiques Classic…",unavailable:"Caractéristiques Classic supplémentaires indisponibles.",origin:"Origine",view:"Voir la fiche Classic ↗",close:"Fermer les détails",open:"Détails de l’objet",bind:"Lien",slot:"Emplacement",subtype:"Type",damage:"Dégâts",speed:"Vitesse",dps:"dégâts par seconde",required:"Niveau requis",armor:"Armure",sell:"Prix de vente",effects:"Effets Classic",longPress:"Appui long pour voir les détails",source:"Données Classic : WoWDB des Défias",unknown:"Non documenté",set:"Ensemble d’objets"
 };
 const QUALITY=new Set(["poor","common","uncommon","rare","epic","legendary"]);
 const cache=new Map(),inflight=new Map(),unavailableUntil=new Map();
@@ -168,7 +168,6 @@ write(body,"forever-item-tooltip__line",localizedSlot(item.slotLabel||item.slot)
 if(typeof item.typeName==="string")write(body,"forever-item-tooltip__line",item.typeName);
 if(status==="loading")write(body,"forever-item-tooltip__muted",w.loading);
 else if(status==="unavailable")write(body,"forever-item-tooltip__muted",w.unavailable);
-else if(forever)write(body,"forever-item-tooltip__muted",en?"No weapon or armor stats documented yet for this beta item.":"Statistiques de cet objet non encore documentées pour cette bêta.");
 }
 if(item.vendorDetails&&typeof item.vendorDetails==="object"){
 const v=item.vendorDetails,group=elt("section","forever-item-tooltip__vendor");
@@ -191,25 +190,20 @@ if(v.reputation&&typeof v.reputation==="object"){
  const rr={Friendly:en?"Friendly":"Amical",Honored:en?"Honored":"Honoré",Revered:en?"Revered":"Révéré",Exalted:en?"Exalted":"Exalté"};
  write(group,"forever-item-tooltip__vendor-warning",(forever?(en?"Required Forever beta reputation: ":"Réputation Forever bêta requise : "):(en?"Required Classic reputation: ":"Réputation Classic requise : "))+v.reputation.faction+" · "+(rr[v.reputation.rank]||v.reputation.rank));
 }
-if(v.seasonal)write(group,"forever-item-tooltip__vendor-warning",en?"Classic seasonal sale · Winter Veil; unverified on Forever":"Vente saisonnière Classic · Voile d'hiver ; non vérifiée sur Forever");
+if(v.seasonal)write(group,"forever-item-tooltip__vendor-warning",en?"Classic seasonal sale · Winter Veil; ":"Vente saisonnière Classic · Voile d'hiver ; ");
 if(v.specialization)write(group,"forever-item-tooltip__vendor-warning",(en?"Classic specialization: ":"Spécialisation Classic : ")+v.specialization);
-if(v.bindPickup)write(group,"forever-item-tooltip__vendor-warning",en?"Bind on Pickup (Classic reference)":"Lié quand ramassé (référence Classic)");
+if(v.bindPickup)write(group,"forever-item-tooltip__vendor-warning",en?"Bind on Pickup (Classic)":"Lié quand ramassé (Classic)");
 if(v.sharedStock)write(group,"forever-item-tooltip__vendor-warning",en?"Shared vendor stock slot":"Emplacement de stock partagé");
 inner.append(group);
 }
 if(item.origin)write(inner,"forever-item-tooltip__origin",w.origin+" : "+item.origin);
 if(status==="loading"&&!forever)write(inner,"forever-item-tooltip__muted",w.loading);
 if(status==="unavailable"&&haveRich)write(inner,"forever-item-tooltip__muted",w.unavailable);
-if(forever&&(item.details_status==="partial"||item.details_status==="missing"))write(inner,"forever-item-tooltip__muted",en?"Additional beta statistics not yet confirmed; consult the linked source.":"Autres caractéristiques bêta non confirmées ; consulter la source liée.");
-write(inner,"forever-item-tooltip__disclaimer",
- forever?(item.source_status==="forever_beta_observed"
- ?(en?"Loot reported by the beta community; item and acquisition may change.":"Butin signalé par la communauté bêta ; objet et obtention susceptibles de changer.")
- :(en?"Seen in Forever beta data; not proof of in-game availability.":"Présent dans les données bêta Forever ; obtention en jeu non confirmée."))
- :w.classic);
+void 0;
 const foot=elt("div","forever-item-tooltip__foot");
 if(isId(item.id)){
 const sourceUrl=(()=>{const url=item.source_url||item.url;if(!forever||typeof url!=="string")return null;try{const u=new URL(url);return u.protocol==="https:"&&(u.hostname==="www.60.tools"&&u.pathname.startsWith("/items/")||u.hostname==="www.wowhead.com"&&u.pathname.startsWith("/forever/")||u.hostname==="foreverchanges.pro"&&(u.pathname==="/item/"+Number(item.id)||u.pathname==="/fr/item/"+Number(item.id)))?u.href:null}catch{return null}})();
-const a=elt("a","forever-item-tooltip__source",forever?(en?"Forever beta source ↗":"Source Forever bêta ↗"):w.source+" ↗");
+const a=elt("a","forever-item-tooltip__source",forever?("Source ↗"):w.source+" ↗");
 a.href=forever?(sourceUrl||"https://www.wowhead.com/forever/item="+Number(item.id)):"https://wowdb.assemblee-defias.fr/?id=classic:item:"+Number(item.id);a.target="_blank";a.rel="noopener noreferrer";foot.append(a);
 }else write(foot,"forever-item-tooltip__source",w.source);
 inner.append(foot);

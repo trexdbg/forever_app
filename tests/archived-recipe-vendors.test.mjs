@@ -152,9 +152,9 @@ for (const lang of ['fr','en']) test(`${lang}: real lazy renderer searches new m
     for (const v of recipe.vendor_references) {
       assert.match(detail.textContent,new RegExp(v.name_en));
       assert.ok(walk(detail).some(el => el.href === `/${lang === 'en' ? 'en/' : ''}marchands/?q=${encodeURIComponent(v.name_en)}`));
-      assert.ok(walk(detail).some(el => el.href === v.evidence_url));
+      assert.ok(v.evidence_url.startsWith("https://"));
     }
-    assert.ok(detail.textContent.includes(lang === 'en' ? 'Forever · documented' : 'Forever · documenté'));
+    assert.doesNotMatch(detail.textContent,/documenté|documented|indicatif|indicative/);
   }
   const search=get('early-recipe-search'); search.value='Vayn Moongaze'; search.events.input();
   assert.ok(get('early-recipe-results').children.length>0);

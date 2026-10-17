@@ -71,60 +71,29 @@ function renderList(){
   row.addEventListener("click",()=>select(r.output_item_id,true));
  }
  if(!hits)put(list,"p",T("Aucune fabrication correspondant à cette recherche.","No documented craft matches this search."),"craft-muted");
- summary.textContent=T(hits+" / 8 fabrications documentées",""+hits+" / 8 documented crafts");
+ summary.textContent=T(hits+" / 8 fabrications",""+hits+" / 8 crafts");
 }
 function renderSmelting(parent,a){
- put(parent,"strong",T("Fonte documentée pour Forever · sort ","Documented Forever smelting · spell ")+a.spell_id,"craft-method-title");
- put(parent,"p",T("Métier : Minage · forge nécessaire. ","Profession: Mining · forge required. ")+
-  (a.skill_required===null?T("Compétence d’apprentissage inconnue.","Trainer learning requirement unknown."):
-   T("Compétence de départ documentée : ","Documented starting skill: ")+a.skill_required)+
-  T(" Seuil jaune : "," Yellow threshold: ")+a.skill_yellow+".","craft-footnote");
- proof(parent,T("Recette et seuil jaune (client Forever)","Recipe and yellow threshold (Forever client)"),a.evidence_url);
+ put(parent,"strong",T("Fonte","Smelting"),"craft-method-title");
+ if(a.skill_required!=null)put(parent,"p",T("Compétence : ","Skill: ")+a.skill_required);
  const ingredients=put(parent,"div",null,"craft-component-list");
  for(const c of a.ingredients||[])if(c&&validId(c.item_id)&&itemFor(c.item_id))linkSelect(ingredients,c.item_id,c.quantity);
- put(parent,"p",T("Rendement de fonte inconnu : sources contradictoires. Ne pas calculer le nombre de fontes ni les besoins totaux.",
-  "Smelting yield unknown: conflicting sources. Do not calculate smelt count or total materials."),"craft-caution");
- if(Array.isArray(a.output_quantity_candidates)){
-  const sources=put(parent,"div",null,"craft-proof-row");
-  for(const c of a.output_quantity_candidates)if(c&&Number.isSafeInteger(c.quantity))
-   proof(sources,T("Source : "+c.quantity+" barre(s)","Source: "+c.quantity+" bar(s)"),c.source_url);
- }
- put(parent,"p",T("Accès au maître, fonte effective et quantité obtenue en jeu non confirmés.",
-  "Trainer access, actual smelt and in-game yield not confirmed."),"craft-footnote");
+ proof(parent,"Source ↗",a.evidence_url);
 }
 function renderMining(parent,a){
- put(parent,"strong",T("Minage : ","Mining: ")+(a.node?.[en?"en":"fr"]||T("filon documenté","documented node")),"craft-method-title");
- put(parent,"p",T("Compétence de minage du filon : ","Node mining skill: ")+a.mining_skill+". "+
-   T("Zones citées dans le guide : ","Guide-listed zones: ")+(a.zones_documented||[]).join(", ")+".","craft-footnote");
- proof(parent,T("Guide Minage Forever","Forever Mining guide"),a.evidence_url);
- put(parent,"p",T("Emplacement exact, rendement du filon et présence en jeu non vérifiés.",
-  "Exact node coordinates, gathering yield and actual spawn are not verified."),"craft-muted");
+ put(parent,"strong",T("Minage : ","Mining: ")+(a.node?.[en?"en":"fr"]||""),"craft-method-title");
+ if(a.mining_skill!=null)put(parent,"p",T("Compétence : ","Skill: ")+a.mining_skill);
+ if(a.zones_documented?.length)put(parent,"p",a.zones_documented.join(", "));
+ proof(parent,"Source ↗",a.evidence_url);
 }
 function displayAcquisition(parent,id){
- const entries=claimsFor(id);
- if(!entries.length){put(parent,"p",T("Source d’obtention non vérifiée sur Forever","Acquisition source unverified on Forever"),"craft-caution");return;}
- const block=put(parent,"div",null,"craft-acquisition");
- put(block,"h5",T("Modes d’obtention · preuves documentaires, non confirmés en jeu","Acquisition sources · documentary evidence, not confirmed in game"));
- for(const entry of entries){
-  const row=put(block,"div",null,"craft-method");
-  if(entry.method==="legacy_vendor_catalogue"){
-   row.textContent=T(
-    entry.candidate_sellers+" marchands candidats issus de Classic · disponibilité, prix, stock et réapprovisionnement Forever inconnus. ",
-    entry.candidate_sellers+" Classic-reference candidate vendors · Forever availability, prices, stock and restock unknown. ");
-   proof(row,T("Référence Classic","Classic reference"),entry.evidence_url);
-  }else if(entry.method==="vendor_index"){
-   row.textContent=T("Liste de vendeurs référencée Classic, non vérifiée sur Forever. ","Vendor index labeled Classic, not verified on Forever. ");
-   proof(row,T("Référence Classic","Classic reference"),entry.evidence_url);
-  }else if(entry.method==="smelting_candidate"){
-   row.textContent=T("Source d’obtention non vérifiée sur Forever.","Acquisition source unverified on Forever.");
-  }else if(entry.method==="smelting"){
-   renderSmelting(row,entry);
-  }else if(entry.method==="mining_node"){
-   renderMining(row,entry);
-  }else if(entry.method==="classic_loot_reference"){
-   put(row,"p",T("Butin possible dans les références Classic · aucune créature ni probabilité vérifiée sur Forever.","Possible Classic-reference loot · no creature or drop chance verified on Forever."),"craft-footnote");
-   proof(row,T("Référence Classic uniquement","Classic reference only"),entry.evidence_url);
-  }
+ const entries=claimsFor(id).filter(a=>["smelting","mining_node","legacy_vendor_catalogue","vendor_index"].includes(a.method));
+ if(!entries.length)return;
+ const block=put(parent,"div",null,"craft-acquisition");put(block,"h5",T("Obtenir ce composant","Obtain this material"));
+ for(const entry of entries){const row=put(block,"div",null,"craft-method");
+  if(entry.method==="smelting")renderSmelting(row,entry);
+  else if(entry.method==="mining_node")renderMining(row,entry);
+  else proof(row,T("Marchands Classic ↗","Classic vendors ↗"),entry.evidence_url);
  }
 }
 function displaySelected(){
@@ -139,51 +108,33 @@ function displaySelected(){
  const names=put(head,"div");
  put(names,"h4",title(item));
  put(names,"p","#"+item.id+" · "+(r?T("Ingénierie","Engineering"):smelt?T("Fonte · Minage","Smelting · Mining"):T("Composant","Material")),"craft-id");
- put(detail,"p",T("Nom français de référence : localisation officielle non certifiée.","French name is a reference translation; official localization is not certified."),"craft-caution");
  const claim=put(detail,"div",null,"craft-proof-row");
- put(claim,"span",r?T("Recette documentée pour Forever, non confirmée en jeu.","Recipe documented for Forever, not confirmed in game."):
-  T("Fiche documentaire : l'obtention en jeu reste inconnue.","Documentary item: in-game acquisition remains unknown."),"craft-caution");
  if(r){
-  proof(claim,T("Preuve de la recette","Recipe evidence"),r.evidence_url);
+  proof(claim,T("Source","Source"),r.evidence_url);
   put(detail,"p",T("Sort de fabrication ","Crafting spell ")+r.spell_id+" · "+
-   T("Apprentissage et disponibilité auprès d'un maître non confirmés.","Trainer learning and availability not confirmed."),"craft-meta");
+   T("",""),"craft-meta");
   const metrics=put(detail,"div",null,"craft-metrics");
-  const skill=put(metrics,"div");put(skill,"strong",T("Compétence requise (documentation)","Required skill (documentation)"));
-  put(skill,"span",Number.isSafeInteger(r.skill_required)?String(r.skill_required):T("Inconnue","Unknown"));
+  const skill=put(metrics,"div");put(skill,"strong",T("Compétence requise","Required skill"));
+  skill.hidden=!Number.isSafeInteger(r.skill_required);put(skill,"span",r.skill_required??"");
   if(r.skill_required_source_url){
    proof(skill,T("Source du niveau requis","Required-skill source"),r.skill_required_source_url);
-  }else{
-   put(skill,"small",T("Exigence d'apprentissage non démontrée séparément sur Forever.","Trainer requirement not independently established for Forever."),"craft-muted");
   }
   const yellow=put(metrics,"div");
-  put(yellow,"strong",T("Seuil jaune (pas le niveau requis)","Yellow threshold (not required skill)"));
+  put(yellow,"strong",T("Seuil jaune","Yellow threshold"));
   put(yellow,"span",Number.isSafeInteger(r.skill_yellow)?String(r.skill_yellow):T("Inconnu","Unknown"));
   proof(yellow,T("Source du seuil jaune","Yellow-threshold source"),r.skill_yellow_source_url);
-  const yieldBox=put(detail,"div",null,"craft-yield");
-  put(yieldBox,"strong",T("Quantité fabriquée : ","Produced quantity: ")+
-   (r.output_quantity===null?T("inconnue","unknown"):String(r.output_quantity)));
-  put(yieldBox,"span",r.output_quantity_status==="conflicting_sources"?
-   T("Sources contradictoires : aucun calcul de rendement ou coût unitaire.","Conflicting sources: no computed output or cost per unit."):
-   T("Rendement non confirmé en jeu ; pas de calcul de coût unitaire.","Yield not confirmed in game; no computed unit cost."),"craft-muted");
-  if(r.output_quantity===null&&Array.isArray(r.output_quantity_candidates)){
-   const candidates=put(yieldBox,"div",null,"craft-proof-row");
-   for(const c of r.output_quantity_candidates){
-    if(!c||!Number.isSafeInteger(c.quantity))continue;
-    proof(candidates,T("Source : "+c.quantity+" produit(s)","Source: "+c.quantity+" produced"),c.source_url);
-   }
-  }
-  put(detail,"h5",T("Composants par recette (quantités documentaires)","Ingredients per recipe (documentary amounts)"));
+  if(r.output_quantity!=null)put(detail,"p",T("Quantité : ","Quantity: ")+r.output_quantity);
+  put(detail,"h5",T("Composants","Ingredients"));
   const comps=put(detail,"div",null,"craft-component-list");
   for(const ingredient of r.ingredients||[]){
    if(ingredient&&validId(ingredient.item_id))linkSelect(comps,ingredient.item_id,ingredient.quantity);
   }
  }else{
   proof(claim,T("Fiche de référence de l'objet","Item reference"),item.evidence_url);
-  if(!smelt)put(detail,"p",T("Aucune sous-recette d’ingénierie documentée dans ce lot de huit fabrications.","No documented engineering sub-recipe in this eight-craft subset."),"craft-muted");
  }
  displayAcquisition(detail,item.id);
  const nav=put(detail,"div",null,"craft-actions");
- const back=put(nav,"button",T("Retour aux fabrications","Back to documented crafts"),"craft-back");
+ const back=put(nav,"button",T("Retour aux fabrications","Back to crafts"),"craft-back");
  back.type="button";back.addEventListener("click",()=>{state.selected=null;detail.replaceChildren();renderList();
   const u=new URL(location.href);u.searchParams.delete("craft");history.pushState(null,"",u.pathname+u.search+u.hash)});
 }
@@ -201,12 +152,12 @@ function select(id,push){
 async function load(){
  if(state.data)return state.data;
  if(state.pending)return state.pending;
- notice.textContent=T("Chargement du lot documentaire…","Loading the documentary subset…");
+ notice.textContent=T("Chargement…","Loading…");
  state.pending=(async()=>{
   const res=await fetch("/data/crafting-chains-beta.json",{cache:"default"});
   if(!res.ok)throw Error("Crafting data unavailable");
   const d=await res.json();if(!validate(d))throw Error("Unexpected crafting preview dataset");
-  state.data=d;notice.textContent=T("Prévisualisation documentaire : 8 recettes sur 8, aucun accès en jeu certifié.",
+  state.data=d;notice.textContent=T("8 recettes d’ingénierie.",
    "Documentary preview: 8 of 8 recipes, no in-game availability certified.");
   renderList();return d;
  })().catch(e=>{state.pending=null;notice.textContent=T(

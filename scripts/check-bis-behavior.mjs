@@ -92,10 +92,10 @@ const badgeCode=catalogue.slice(badgeStart,badgeEnd);
 for(const lang of ["fr","en"]){
  const label=item=>vm.runInNewContext(badgeCode+"\nprovenanceBadge(item);",
   {en:lang==="en",item},{filename:"assets/items-v3.js"});
- const expectedQuest=lang==="en"?"Beta · reported quest reward":"Bêta · récompense de quête signalée";
- const expectedLoot=lang==="en"?"Beta · reported loot":"Bêta · butin signalé";
- const expectedClassic=lang==="en"?"Classic · unverified":"Classic · non vérifié";
- const expectedClient=lang==="en"?"Beta · client":"Bêta · client";
+ const expectedQuest="Forever";
+ const expectedLoot="Forever";
+ const expectedClassic="Classic";
+ const expectedClient="Forever";
  for(const item of observed.filter(i=>i.acquisition?.kind==="quest")){
   assert.equal(label(item),expectedQuest,lang+": beta quest reward "+item.id+" must not be labelled loot");
  }

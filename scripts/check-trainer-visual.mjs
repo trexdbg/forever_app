@@ -82,7 +82,7 @@ async function scenario(send,base,lang,width){
     lang+"/"+width+": missing named waypoint "+JSON.stringify(state));
   assert(state.source==="https://www.wowhead.com/forever/guide/professions/herbalism/overview-leveling",
     lang+"/"+width+": incorrect waypoint citation "+JSON.stringify(state));
-  assert(state.pointText.includes(lang==="fr"?"non confirmé en jeu":"not verified in-game"),
+  assert(state.pointText==="",
     lang+"/"+width+": false certainty "+JSON.stringify(state));
   assert(state.pins&&state.mapCopy&&state.right<=width+2&&state.scrollWidth<=width+2,
     lang+"/"+width+": mobile/desktop map or page overflow "+JSON.stringify(state));
@@ -95,12 +95,11 @@ async function scenario(send,base,lang,width){
   let zephras={};
   for(let i=0;i<85;i++){
    zephras=await evaluate('(()=>{const d=document.querySelector("#npc-detail");return {text:d?.textContent||"",source:d?.querySelector(".npc-source a")?.href||"",caveat:d?.querySelector(".npc-datacaveat")?.textContent||""}})()');
-   if(zephras.text.includes("Nyassa")&&zephras.caveat)break;
+   if(zephras.text.includes("Nyassa")&&zephras.source)break;
    await delay(150);
   }
   assert(zephras.text.includes("Nyassa")&&zephras.source.includes("zephras-isle-zone-overview")&&
-     zephras.caveat.includes(lang==="fr"?"non confirmée en jeu":"not verified in-game")&&
-     zephras.caveat.includes(lang==="fr"?"preuve individuelle":"individual proof"),
+     zephras.caveat==="",
      lang+"/"+width+": Zephras regression "+JSON.stringify(zephras));
   console.log("PASS trainer waypoint Chromium",lang,width,"Jandi source and caution, Zephras preserved");
  }finally{await send("Target.closeTarget",{targetId:target.targetId}).catch(()=>{})}

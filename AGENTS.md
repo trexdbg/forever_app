@@ -23,3 +23,7 @@ No category may be automatically promoted to `confirmed_in_game`. Existing `sour
 
 ## Before a PR
 Run `node scripts/check-data-quality.mjs` and `node --test tests/data-quality.test.mjs`; check existing module-specific tests relevant to changed data. Include a before/after issue count and sample paths, evidence URL/build, impacted files, known gaps and rollback plan. Structural errors block; historical warnings require triage, not silent deletion. The PR workflow runs on selected documentation/validator/data paths only.
+
+## Public display policy — owner direction, 17 October 2026
+
+Show concise game information, using a substantiated Forever value when available and the Classic reference otherwise. Assume catalogued NPCs and professions exist; do not repeat doubts about their existence in the interface. Keep evidence, source dates/builds and validation in data and maintenance tools, not in player-facing warning paragraphs. Do not render two historical/current versions of the same fact. Omit unknown fields and unsupported relationships instead of adding an explanation about missing verification. A discreet Source link and short Classic/Forever labels are sufficient. This changes presentation, not the evidence classification: never invent facts or promote a record to confirmed gameplay without proof.
