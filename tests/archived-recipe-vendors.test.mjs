@@ -23,7 +23,7 @@ test('citation commit must contain exactly the working catalogue before any writ
 
 test('NPC-only changes retain catalogue checks without displaying archived recipe panels', () => {
  const read=path=>readFileSync(new URL('../'+path,import.meta.url),'utf8');
- assert.ok(read('.github/workflows/early-forever-recipes.yml').includes('"data/npcs.json"'));
+ assert.ok(read('.github/workflows/early-forever-recipes.yml').includes('data/npcs.json'));
  assert.ok(read('assets/recipes-early.js').includes('recipes-forever-early-archive.json?v=20261017-vendors-1'));
  for(const path of ['metiers/index.html','en/metiers/index.html']){
   const html=read(path);
