@@ -1416,6 +1416,28 @@
           "stats": {
             "fr": "+3 Endurance",
             "en": "+3 Stamina"
+          },
+          "stats_version": "classic_reference",
+          "item_source_url": "https://www.wowhead.com/classic/item=7559/runic-cane",
+          "forever_item_snapshot": {
+            "item_level": 19,
+            "required_level": 14,
+            "slot": {
+              "en": "Held In Off-hand",
+              "fr": "Main gauche"
+            },
+            "stats": {
+              "en": "+3 Stamina",
+              "fr": "+3 Endurance"
+            },
+            "source_url": "https://forever-codex.com/items/?id=7559",
+            "evidence_url": "https://forever-codex.com/items/?id=7559",
+            "corroboration_source_url": "https://theforeverera.com/en/items/7559/",
+            "evidence_level": "documented_forever",
+            "observed_at": "2026-10-17",
+            "observed_build": "1.60.1.70245",
+            "evidence_kind": "forever_community_page",
+            "evidence_note": "Forever Codex compares item #7559 against Classic and reports ilvl 19, required level 14, +3 Stamina; its changelog attributes this record to server-sent beta data at build 1.60.1.70245 (6 October 2026). The Forever Era separately reports a server-sent beta row at build 70058 (30 September 2026) with the same stats. Both sites explicitly use a Classic loot-table fallback for Brokespear, NOT an observed Forever creature drop, verified spawn or drop rate. Current playable-game availability and later builds remain unverified."
           }
         }
       ],

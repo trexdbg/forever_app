@@ -8,7 +8,7 @@ Scope: rare catalogue and the read-only item acquisition index; no Forever quest
 - Classic French off-hand item list: https://www.wowhead.com/classic/fr/items/armor/off-hand-frills/min-req-level:1/max-req-level:20 — **Canne runique**, level 17 / required level 12.
 
 ## Scope and uncertainty
-This is **Classic reference only**. Neither the NPC location, the loot relationship, the stat line nor a drop probability is proven on WoW Forever. Classic percentage remains null; Forever percentage is omitted and the existing Classic map coordinate is untouched. Retail and other expansions display different item statistics and must not be substituted for Classic / Forever.
+The Brokespear → Runic Cane loot attribution, Classic FR localization, map coordinate and historical item statistics are **Classic reference only**. A separate **Forever-documented server-sent item snapshot** (ilvl 19, required 14, +3 Stamina) comes from Forever Codex (beta build 1.60.1.70245; https://forever-codex.com/items/?id=7559) and is independently corroborated by The Forever Era (server beta build 70058, 30 September 2026; https://theforeverera.com/en/items/7559/). Neither source verifies the drop from Brokespear on Forever, the creature location or availability in current gameplay. Classic percentage remains null; Forever percentage is omitted and the Classic coordinate is untouched. Retail and other expansions display different item statistics and must not be substituted for Classic / Forever.
 
 ## Counts
 Before: 378 rare records; 161 in beta level-30 scope, 77 with loot, 84 without. Index: 730 unique item IDs, 1,256 relations, including 114 rare relations.
