@@ -2,6 +2,7 @@ name: Archived Forever early professions regression
 on:
   pull_request:
     paths:
+      - 'data/npcs.json'
       - 'data/recipes-forever-early-archive.json'
       - 'assets/recipes-early.js'
       - 'assets/recipes-early.css'

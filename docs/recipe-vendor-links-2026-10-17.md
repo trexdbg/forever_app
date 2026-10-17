@@ -102,7 +102,7 @@ node scripts/check-alchemy-beta.mjs
 
 Le mode par défaut vérifie sans écrire ; `--write` intègre les liens locaux. Il faut fournir le SHA réellement examiné du catalogue source et la date réelle de liaison. **Aucun accès réseau ni publication dans le script.**
 
-Résultats : **214 tests réussis**, zéro échec final ; contrôles ci-dessus réussis. Les 584 avertissements historiques sont identiques avant/après ; le contrôle PNJ indépendant conserve ses 336 avertissements. Nouveaux tests : intégrité de toutes les relations ajoutées, preuves et dates conservées, préservation des références Classic, idempotence, absence de doublons, cas négatifs d'ID et de preuve. Le script de rendu réel est exécuté dans un DOM simulé en FR/EN : recherche Vayn (48 recettes), plans #276964 et #253932, liens vers marchands et badges documentaires. Ce n'est pas une validation graphique mobile/navigateur ni un test en jeu.
+Résultats : **216 tests réussis**, zéro échec final ; contrôles ci-dessus réussis. Les 584 avertissements historiques sont identiques avant/après ; le contrôle PNJ indépendant conserve ses 336 avertissements. Nouveaux tests : intégrité de toutes les relations ajoutées, preuves et dates conservées, préservation des références Classic, idempotence, absence de doublons, cas négatifs d'ID et de preuve. Le script de rendu réel est exécuté dans un DOM simulé en FR/EN : recherche Vayn (48 recettes), plans #276964 et #253932, liens vers marchands et badges documentaires. Ce n'est pas une validation graphique mobile/navigateur ni un test en jeu.
 
 Fichiers : catalogue de recettes, générateur local, nouveau test, deux compteurs du test historique, documentation et workflow de régression PR existant. Seule la CI de PR hors ligne est étendue, sans nouvelle fréquence ni modification d'un pipeline de publication.
 
@@ -123,3 +123,7 @@ Trois priorités suivantes :
 3. Résoudre les 25 attributions boss–objet non vérifiées et les identités ambiguës, puis les 84 rares du palier sans butin, après coordination avec #82.
 
 Retour arrière : revert de cette PR. Aucun changement de `main`, fusion, déploiement, synchronisation de production, secret, Quêtes Classic ou activation de Quêtes Forever par cette mission. Les issues de programme restent ouvertes.
+
+## Corrections de revue #83
+
+Le CLI vérifie désormais avec `git show SHA:data/npcs.json` que le fichier lu correspond exactement au commit cité, avant toute écriture. Un commit indisponible ou différent est refusé. Le workflow se déclenche aussi pour `data/npcs.json`. Le jeton de cache du JSON et les deux références du script FR/EN sont actualisés. Deux tests de régression supplémentaires couvrent ces trois points.

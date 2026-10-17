@@ -120,7 +120,7 @@ function renderDetail(){
 async function load(){
  if(loading)return loading;
  count.textContent=T("Chargement de l'archive historique…","Loading historical archive…");
- loading=fetch("/data/recipes-forever-early-archive.json?v=20261015-1",{credentials:"omit"})
+ loading=fetch("/data/recipes-forever-early-archive.json?v=20261017-vendors-1",{credentials:"omit"})
  .then(r=>{if(!r.ok)throw Error("HTTP "+r.status);return r.json()})
  .then(db=>{
   if(db.schema_version!==1||db.status!=="historical_client_archive_not_in_game_verified"||db.source_build!=="1.60.1.69876"||!Array.isArray(db.recipes)||db.recipes.length<600)throw Error("Incorrect archive");

@@ -3,12 +3,30 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {runInNewContext} from 'node:vm';
-import {linkDocumentedVendors, missingDocumentedVendors} from '../scripts/link-archived-recipe-vendors.mjs';
+import {fileURLToPath} from 'node:url';
+import {execFileSync} from 'node:child_process';
+import {linkDocumentedVendors, missingDocumentedVendors, verifyCatalogueRevision} from '../scripts/link-archived-recipe-vendors.mjs';
 
 const read = name => JSON.parse(readFileSync(new URL('../data/' + name, import.meta.url), 'utf8'));
 const archive = read('recipes-forever-early-archive.json'), npcs = read('npcs.json');
 const options = {revision:'2d6579def2edde2ec865f57ec4ffc00a9150d606', linkedAt:'2026-10-17'};
 const added = archive.recipes.flatMap(r => r.vendor_references.filter(v => v.linked_at === options.linkedAt).map(v => ({r,v})));
+
+test('citation commit must contain exactly the working catalogue before any write', () => {
+  const cwd=fileURLToPath(new URL('..',import.meta.url));
+  const revision=execFileSync('git',['rev-parse','HEAD'],{cwd,encoding:'utf8'}).trim();
+  const raw=readFileSync(new URL('../data/npcs.json',import.meta.url),'utf8');
+  verifyCatalogueRevision(revision,raw,cwd);
+  assert.throws(()=>verifyCatalogueRevision(revision,raw+'\n',cwd),/differs/);
+  assert.throws(()=>verifyCatalogueRevision('0'.repeat(40),raw,cwd),/unavailable/);
+});
+
+test('NPC-only changes run the cross-catalogue gate and both localized pages bust the data loader cache', () => {
+  const read=path=>readFileSync(new URL('../'+path,import.meta.url),'utf8');
+  assert.match(read('.github/workflows/early-forever-recipes.yml'),/'data\/npcs.json'/);
+  assert.match(read('assets/recipes-early.js'),/recipes-forever-early-archive\.json\?v=20261017-vendors-1/);
+  for(const path of ['metiers/index.html','en/metiers/index.html'])assert.match(read(path),/recipes-early\.js\?v=20261017-vendors-1/);
+});
 
 test('275 new exact book/vendor links enrich 166 recipes across seven professions', () => {
   assert.equal(added.length,275);
