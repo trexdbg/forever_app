@@ -14,6 +14,8 @@ const profession={Alchimie:S("Alchimie","Alchemy"),Couture:S("Couture","Tailorin
 const weaponLabels={"Bows":S("Arcs","Bows"),"Daggers":S("Dagues","Daggers"),"Fist Weapons":S("Armes de pugilat","Fist weapons"),"Staves":S("Bâtons","Staves"),"Thrown":S("Armes de jet","Thrown"),"Crossbows":S("Arbalètes","Crossbows"),"Guns":S("Armes à feu","Guns"),"One-Handed Axes":S("Haches à une main","One-handed axes"),"One-Handed Maces":S("Masses à une main","One-handed maces"),"Two-Handed Axes":S("Haches à deux mains","Two-handed axes"),"Two-Handed Maces":S("Masses à deux mains","Two-handed maces"),"One-Handed Swords":S("Épées à une main","One-handed swords"),"Two-Handed Swords":S("Épées à deux mains","Two-handed swords"),"Polearms":S("Armes d’hast","Polearms")};
 const trainerIcons={"Alchimie":"trade_alchemy","Couture":"trade_tailoring","Ingénierie":"trade_engineering","Enchantement":"trade_engraving","Forge":"trade_blacksmithing","Travail du cuir":"trade_leatherworking","Secourisme":"spell_holy_sealofsacrifice","Cuisine":"inv_misc_food_15","Herboristerie":"trade_herbalism","Minage":"trade_mining","Dépeçage":"inv_misc_pelt_wolf_01","Pêche":"trade_fishing"};
 const weaponIcons={"Bows":"inv_weapon_bow_01","Daggers":"inv_weapon_shortblade_01","Fist Weapons":"inv_gauntlets_04","Staves":"inv_staff_01","Thrown":"inv_throwingknife_01","Crossbows":"inv_weapon_crossbow_01","Guns":"inv_weapon_rifle_01","One-Handed Axes":"inv_axe_01","One-Handed Maces":"inv_mace_01","Two-Handed Axes":"inv_axe_10","Two-Handed Maces":"inv_hammer_04","One-Handed Swords":"inv_sword_04","Two-Handed Swords":"inv_sword_06","Polearms":"inv_spear_05"};
+/* Classic NPC model previews from OctoWow; display IDs, not Forever screenshots. */
+const weaponPortraits={"Ilyenia Moonfire":11802,"Bixi Wobblebonk":12992,"Buliwyf Stonehand":11806,"Woo Ping":11804,"Hanashi":12989,"Sayoc":11801,"Ansekhwa":11803,"Archibald":11805};
 const rankLabels={"Apprenti":S("Apprenti","Apprentice"),"Compagnon":S("Compagnon","Journeyman"),"Expert":"Expert","Artisan":"Artisan","Tous rangs":S("Tous rangs","All tiers")};
 function wowIcon(key,cls="npc-trainer-icon"){
  const frame=mk("span",null,"npc-item-icon "+cls),img=mk("img");
@@ -22,9 +24,29 @@ function wowIcon(key,cls="npc-trainer-icon"){
  img.onerror=()=>{img.onerror=null;img.src=root+"assets/icons/inv_hammer_04.jpg"};
  frame.append(img);return frame;
 }
-const trainerIcon=n=>wowIcon(trainerType(n)==="weapon"?weaponIcons[(weapon?.value!=="all"&&weapon?.value)||n.weapon_skills?.[0]]:trainerIcons[n.profession]);
-const trainerTitle=n=>trainerType(n)!=="weapon"?(profession[n.profession]||n.profession):weapon&&weapon.value!=="all"?(weaponLabels[weapon.value]||weapon.value):(n.weapon_skills||[]).slice(0,2).map(k=>weaponLabels[k]||k).join(" · ")+(n.weapon_skills?.length>2?" +"+(n.weapon_skills.length-2):"");
+function weaponPortrait(n){
+ const frame=mk("span",null,"npc-item-icon npc-trainer-icon npc-master-portrait");
+ frame.setAttribute("aria-hidden","true");
+ const initials=n.name.split(" ").slice(0,2).map(part=>part[0]).join("").toUpperCase();
+ frame.append(mk("span",initials,"npc-master-initials"));
+ const displayId=weaponPortraits[n.name];
+ if(displayId){
+  const img=mk("img");img.src="https://octowow.st/db/images/models/"+displayId+".png";
+  img.alt="";img.width=96;img.height=96;img.loading="lazy";img.decoding="async";
+  img.addEventListener("load",()=>frame.classList.add("has-portrait"));
+  img.addEventListener("error",()=>img.remove());
+  frame.append(img);
+ }
+ return frame;
+}
+const trainerIcon=n=>trainerType(n)==="weapon"?weaponPortrait(n):wowIcon(trainerIcons[n.profession]);
+const trainerTitle=n=>trainerType(n)==="weapon"?n.name:(profession[n.profession]||n.profession);
 const trainerSkills=n=>(n.weapon_skills||[]).map(k=>weaponLabels[k]||k).join(" · ");
+function trainerSkillSummary(n){
+ const skills=n.weapon_skills||[],selected=weapon?.value;
+ const ordered=selected&&selected!=="all"&&skills.includes(selected)?[selected,...skills.filter(k=>k!==selected)]:skills;
+ return ordered.slice(0,3).map(k=>weaponLabels[k]||k).join(" · ")+(ordered.length>3?" · +"+(ordered.length-3):"");
+}
 function factionTag(parent,n){
  const chip=append(parent,"span",null,"npc-faction npc-faction-"+(n.faction||"neutral"));
  if(n.faction==="alliance"||n.faction==="horde"){const img=mk("img");img.alt="";img.width=14;img.height=14;img.src=root+"assets/quest-factions/"+n.faction+".svg";chip.append(img)}
@@ -322,24 +344,21 @@ function renderList(){
 
  list.replaceChildren();
  for(const r of store.filtered){
-  const n=r.npc,b=mk("button",null,"npc-result npc-trainer-result");
+  const n=r.npc,b=mk("button",null,"npc-result npc-trainer-result"+(trainerType(n)==="weapon"?" npc-weapon-master":""));
   b.type="button";b.setAttribute("role","option");
   b.setAttribute("aria-selected",String(store.active?.key===r.key));
-  b.setAttribute("aria-label",trainerTitle(n)+", "+side(n)+", "+(faction[n.faction]||"")+", "+n.name);
+  b.setAttribute("aria-label",trainerTitle(n)+", "+(trainerType(n)==="weapon"?trainerSkills(n)+", ":"")+side(n)+", "+(faction[n.faction]||""));
   b.append(trainerIcon(n));
   const copy=append(b,"span",null,"npc-result-copy");
   append(copy,"strong",trainerTitle(n),"npc-trainer-primary");
   if(trainerType(n)==="weapon"){
-   const skills=append(copy,"span",null,"npc-trainer-skills");
-   const keys=n.weapon_skills||[];
-   for(const key of keys.slice(0,4)){const chip=append(skills,"span",null,"npc-weapon-mini");chip.append(wowIcon(weaponIcons[key],"npc-mini-wow-icon"));append(chip,"span",weaponLabels[key]||key)}
-   if(keys.length>4)append(skills,"span","+"+(keys.length-4),"npc-more-skills");
+   append(copy,"span",trainerSkillSummary(n),"npc-trainer-skill-summary");
   }
   trainerMeta(copy,n);
   const bottom=append(copy,"span",null,"npc-trainer-bottom");
   factionTag(bottom,n);
   if(n.rank&&trainerType(n)==="profession")append(bottom,"span",rankLabels[n.rank]||n.rank,"npc-rank-label");
-  append(bottom,"span",n.name,"npc-trainer-person");
+  if(trainerType(n)!=="weapon")append(bottom,"span",n.name,"npc-trainer-person");
   append(b,"span","›","npc-arrow").setAttribute("aria-hidden","true");
   b.addEventListener("click",()=>{
    selectRecord(r);
@@ -381,9 +400,7 @@ function renderTrainerDetail(n){
   append(detail,"h4",S("Armes enseignées","Weapon types taught"));
   const skills=append(detail,"div",null,"npc-weapon-teaching");
   for(const skill of n.weapon_skills||[]){
-   const chip=append(skills,"span",null,"npc-weapon-teaching-skill");
-   chip.append(wowIcon(weaponIcons[skill],"npc-mini-wow-icon"));
-   append(chip,"span",weaponLabels[skill]||skill);
+   append(skills,"span",weaponLabels[skill]||skill,"npc-weapon-teaching-skill");
   }
  }
  const actions=append(detail,"div",null,"npc-actions");
@@ -396,7 +413,7 @@ function renderTrainerDetail(n){
    catch(_){btn.textContent=command}
   });
  }
- append(detail,"p",S("PNJ : ","NPC: ")+n.name,"npc-trainer-person-detail");
+ if(trainerType(n)!=="weapon")append(detail,"p",S("PNJ : ","NPC: ")+n.name,"npc-trainer-person-detail");
  if(hasCoords(n))append(tags,"span",trainerWaypointCaveat(n),"npc-chip");
  const source=append(detail,"p",null,"npc-source");
  link(source,"Source ↗",n.coordinate_source||n.source);
