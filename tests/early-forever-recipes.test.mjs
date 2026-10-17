@@ -120,7 +120,7 @@ test("archive is opt-in, loads lazily and both localized professions pages link 
   const html=load(p);
   assert.match(html,/id="early-recipes"/);
   assert.match(html,/id="early-recipe-change"/);
-  assert.match(html,/recipes-early\.js\?v=20261017-vendors-1/);
+  assert.match(html,/recipes-early\.js\?v=20261017-snapshots-1/);
   assert.match(html,/recipes-early\.css\?v=20261015-1/);
   assert.match(html,/id="early-recipe-results"/);
  }

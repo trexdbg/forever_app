@@ -1,0 +1,30 @@
+name: Recent profession documentary snapshots
+on:
+  pull_request:
+    paths:
+      - 'data/recipes-forever-70425-snapshots.json'
+      - 'assets/recipes-early.js'
+      - 'metiers/index.html'
+      - 'en/metiers/index.html'
+      - 'scripts/extract-recent-profession-snapshots.py'
+      - 'tests/recent-profession-snapshots.test.mjs'
+      - 'tests/test_recent_profession_extraction.py'
+      - '.github/workflows/recent-profession-snapshots.yml'
+permissions:
+  contents: read
+jobs:
+  snapshots:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Offline parser boundaries, documentary data and FR/EN renderer
+        run: |
+          python -m unittest discover -s tests -p test_recent_profession_extraction.py -v
+          node --check assets/recipes-early.js
+          node --test tests/*.test.mjs
+          node scripts/check-data-quality.mjs
+          node scripts/build-item-acquisition-index.mjs --check

@@ -7,6 +7,7 @@ const $=id=>document.getElementById(id);
 const search=$("early-recipe-search"),profession=$("early-recipe-profession"),change=$("early-recipe-change"),
  count=$("early-recipe-count"),list=$("early-recipe-results"),detail=$("early-recipe-detail"),more=$("early-recipe-more");
 let records=[],page=0,selected=null,loading=null;
+let recentSnapshots=new Map();
 const PAGE=45;
 const node=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined&&text!==null)n.textContent=String(text);if(cls)n.className=cls;return n};
 const place=(where,tag,text,cls)=>{const n=node(tag,text,cls);where.append(n);return n};
@@ -57,6 +58,39 @@ function render(){
  renderDetail();
 }
 function select(r){selected=r;render();detail.scrollIntoView({block:"nearest",behavior:"smooth"})}
+function renderRecentSnapshot(r){
+ const s=recentSnapshots.get(r.spell_id);
+ if(!s||s.profession_id!==r.profession_id)return;
+ const panel=place(detail,"details",null,"early-current-snapshot");
+ place(panel,"summary",T("Relevé documentaire récent · ","Recent documentary snapshot · ")+s.observed_build);
+ place(panel,"p",T("Publication communautaire de données client, consultée le ","Community presentation of client data, reviewed ")+s.observed_at+
+  T(". Aucun craft, apprentissage auprès d'un PNJ ou stock confirmé en jeu. L'archive de septembre reste séparée ci-dessous.",
+   ". No witnessed craft, named trainer teaching or live stock confirmation. The September archive remains separate below."),"early-warning");
+ const facts=place(panel,"div",null,"early-facts");
+ for(const [label,value] of [
+  [T("Jaune (source)","Yellow (source)"),s.skill_yellow_reported],
+  [T("Vert (calcul de la source)","Green (source calculation)"),s.skill_green_reported],
+  [T("Gris (source)","Grey (source)"),s.skill_grey_reported],
+  [T("Compétence indiquée (source)","Reported skill requirement"),s.learning_skill_reported??T("Inconnue","Unknown")]
+ ]){const fact=place(facts,"span",null,"early-fact");place(fact,"small",label);place(fact,"strong",value??T("Inconnu","Unknown"));}
+ place(panel,"p",T("Le seuil vert est calculé par la source entre jaune et gris ; il n'a pas été extrait indépendamment. Une compétence indiquée ne prouve pas l'apprentissage actuel auprès d'un maître.",
+  "The source calculates green between yellow and grey; it was not independently extracted. A reported requirement does not prove current training with an NPC."),"early-muted");
+ place(panel,"h4",T("Produit et quantité indiqués par la source","Source-reported output and quantity"));
+ const output=place(panel,"p");place(output,"b","×"+s.output.quantity_reported+" ");
+ safeLink(output,"https://www.wowhead.com/forever/item="+s.output.item_id,itemName(s.output)+" · #"+s.output.item_id);
+ place(panel,"p",T("Quantité documentaire, sans craft observé. Niveau d'objet : ","Documentary quantity, not a witnessed craft. Item level: ")+s.output.item_level_reported+
+  T(" ; niveau de personnage requis non établi par ce relevé.","; character level requirement not established by this snapshot."),"early-muted");
+ place(panel,"h4",T("Composants de ce relevé","Snapshot reagents"));
+ const ingredients=place(panel,"ul",null,"early-reagent-list");
+ for(const i of s.ingredients){const li=place(ingredients,"li");place(li,"b",i.quantity+" × ");
+  safeLink(li,"https://www.wowhead.com/forever/item="+i.item_id,itemName(i)+" · #"+i.item_id);}
+ if(s.book_item_ids.length){
+  place(panel,"h4",T("Plans associés par la source","Source-linked recipe items"));
+  const books=place(panel,"ul",null,"early-reagent-list");
+  for(const id of s.book_item_ids){const li=place(books,"li");safeLink(li,"https://www.wowhead.com/forever/item="+id,"#"+id);}
+ }
+ safeLink(panel,s.evidence_url,T("Source exacte du relevé ↗","Exact snapshot source ↗"));
+}
 function renderDetail(){
  detail.replaceChildren();
  const r=selected;if(!r){place(detail,"p",T("Choisissez une recette.","Choose a recipe."),"early-muted");return;}
@@ -65,6 +99,7 @@ function renderDetail(){
  meta.dataset.source="historical_forever_archive";
  place(detail,"p",T("Client Forever archivé : ce sort et ses composants figuraient dans le build 1.60.1.69876. Disponibilité actuelle, apprentissage en jeu et traduction française non certifiés.",
   "Archived Forever client: this spell and its reagents appeared in build 1.60.1.69876. Current availability, live training and French localization are unverified."),"early-warning");
+ renderRecentSnapshot(r);
  const grid=place(detail,"div",null,"early-facts");
  for(const [name,v] of [
   [T("Jaune (archive)","Yellow (archive)"),r.skill_yellow_archive],
@@ -128,8 +163,28 @@ async function load(){
   const options=[...new Set(records.map(r=>r.profession_id+"|"+r.profession_en))].sort((a,b)=>a.localeCompare(b));
   for(const option of options){const [id,name]=option.split("|");const o=place(profession,"option",profLabel(name));o.value=id}
   render();
+ loadRecentSnapshots();
  }).catch(()=>{loading=null;count.textContent=T("Archive indisponible ; les aperçus ciblés restent accessibles.","Archive unavailable; targeted previews remain accessible.")});
  return loading;
+}
+async function loadRecentSnapshots(){
+ try{
+  const response=await fetch("/data/recipes-forever-70425-snapshots.json?v=20261017-1",{credentials:"omit"});
+  if(!response.ok)return;
+  const db=await response.json();
+  if(db.schema_version!==1||db.observed_build!=="1.60.1.70425"||!Array.isArray(db.recipes))return;
+  const id=n=>Number.isSafeInteger(n)&&n>0;
+  const valid=s=>s&&id(s.spell_id)&&id(s.profession_id)&&s.evidence_level==="documented_forever"&&s.observed_build===db.observed_build&&
+   typeof s.name_en==="string"&&typeof s.observed_at==="string"&&/^https:\/\/[^\s/]+\//.test(s.evidence_url??"")&&
+   id(s.skill_yellow_reported)&&id(s.skill_green_reported)&&id(s.skill_grey_reported)&&
+   s.skill_yellow_reported<=s.skill_green_reported&&s.skill_green_reported<=s.skill_grey_reported&&
+   (s.learning_skill_reported===null||id(s.learning_skill_reported))&&
+   s.output&&id(s.output.item_id)&&id(s.output.quantity_reported)&&id(s.output.item_level_reported)&&
+   Array.isArray(s.ingredients)&&s.ingredients.length&&s.ingredients.every(i=>id(i.item_id)&&id(i.quantity)&&typeof i.name_en==="string")&&
+   Array.isArray(s.book_item_ids)&&s.book_item_ids.every(id);
+  recentSnapshots=new Map(db.recipes.filter(valid).map(s=>[s.spell_id,s]));
+  render();
+ }catch{/* Optional newer documentary evidence must never disable the historic archive. */}
 }
 root.addEventListener("toggle",()=>{if(root.open)load()});
 for(const x of [search,profession,change])x.addEventListener(x===search?"input":"change",()=>{page=0;selected=null;render()});

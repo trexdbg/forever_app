@@ -25,7 +25,8 @@ test('NPC-only changes run the cross-catalogue gate and both localized pages bus
   const read=path=>readFileSync(new URL('../'+path,import.meta.url),'utf8');
   assert.match(read('.github/workflows/early-forever-recipes.yml'),/'data\/npcs.json'/);
   assert.match(read('assets/recipes-early.js'),/recipes-forever-early-archive\.json\?v=20261017-vendors-1/);
-  for(const path of ['metiers/index.html','en/metiers/index.html'])assert.match(read(path),/recipes-early\.js\?v=20261017-vendors-1/);
+  const versions=['metiers/index.html','en/metiers/index.html'].map(path=>read(path).match(/recipes-early\.js\?v=([^\"]+)/)?.[1]);
+  assert.ok(versions[0]);assert.equal(versions[0],versions[1]);assert.notEqual(versions[0],'20261015-1');
 });
 
 test('275 new exact book/vendor links enrich 166 recipes across seven professions', () => {
