@@ -34,12 +34,12 @@ function app(lang="fr",url="/metiers/",narrow=false){
  const flatten=n=>[n,...n.children.flatMap(flatten)];
  return {els,location,events,calls,setReply:f=>reply=f,list:()=>flatten(els["craft-beta-list"]),detail:()=>flatten(els["craft-beta-detail"])};
 }
-test("both public profession routes mount the opt-in panel without changing the trainer map",()=>{
- for(const [p,heading] of [["metiers/index.html","Ingénierie"],["en/metiers/index.html","Engineering"]]){
-  const html=read(p);assert.ok(html.includes(heading));
-  for(const id of ["craft-beta","craft-beta-search","craft-beta-list","craft-beta-detail","prof-trainers","npcs-app"])
-   assert.ok(html.includes('id="'+id+'"'),id);
-  assert.ok(html.includes("/assets/crafting-beta.js")&&html.includes("/assets/crafting-beta.css"));
+test("both public profession routes prioritize the trainer atlas and omit previews",()=>{
+ for(const [p,heading] of [["metiers/index.html","Maîtres de métiers & d’armes"],["en/metiers/index.html","Profession trainers & weapon masters"]]){
+  const html=read(p);assert.ok(html.includes('<h1>'+heading+'</h1>'));
+  for(const id of ["prof-trainers","npcs-app","npc-map-canvas","npc-type","npc-profession"])assert.ok(html.includes('id="'+id+'"'),id);
+  for(const id of ["craft-beta","alchemy-beta","early-recipes"])assert.ok(!html.includes('id="'+id+'"'),id);
+  for(const name of ["crafting-beta","alchemy-beta","recipes-early"])assert.ok(!html.includes("/assets/"+name+".js")&&!html.includes("/assets/"+name+".css"));
   assert.ok(html.includes('/assets/npcs.js')&&!html.includes('/assets/professions.js'));
  }
 });
@@ -116,16 +116,12 @@ test("invalid schema or network failure stays safe, without HTML injection",asyn
  assert.ok(a.els["craft-beta-status"].textContent.includes("Data unavailable or invalid"));
  assert.ok(!script.includes(".innerHTML"));
 });
-test("global search results point only to marked documented recipes on true FR/EN routes",()=>{
- for(const term of ["function craftingRows(db)","opt_in_documentary_preview",'url("metiers/",{craft:r.output_item_id})',
-  '["data/crafting-chains-beta.json",craftingRows]',"Crafting"])
-  assert.ok(search.includes(term),term);
- for(const id of [4371,4389,10558])for(const locale of ["fr","en"]){
-  const path=(locale==="fr"?"/metiers/":"/en/metiers/")+"?craft="+id;
-  assert.equal(new URL(path,"https://foreveroth.com").searchParams.get("craft"),String(id));
- }
+test("global search does not index removed recipe panels or produce dead recipe links",()=>{
+ assert.ok(search.includes('["data/professions.json",professionsRows]'));
+ assert.ok(!search.includes('["data/crafting-chains-beta.json",craftingRows]'));
+ assert.ok(!search.includes('["data/alchemy-chains-beta.json",alchemyRows]'));
+ for(const p of ["index.html","en/index.html"])assert.ok(read(p).includes('/assets/global-search.js?v=20261017-trainers-only-1'));
 });
-
 test("item icons use the known HTTPS WoW icon path, not missing local filenames",async()=>{
  const b=app("fr","/metiers/?craft=4371");await wait();
  const icon=b.detail().find(e=>e.tag==="img");
@@ -133,26 +129,23 @@ test("item icons use the known HTTPS WoW icon path, not missing local filenames"
  assert.equal(icon.src,"https://wow.zamimg.com/images/wow/icons/medium/inv_gizmo_pipe_01.jpg");
  icon.fire("error");assert.equal(icon.hidden,true);
 });
-test("actual global search consumer resolves FR/EN recipe results to selected item deep links",async()=>{
- for(const [locale,route,target] of [["fr","/metiers/","Gyrochronatome"],["en","/en/metiers/","Gyrochronatom"]]){
-  const ids=["global-search","global-search-input","global-search-panel","global-search-status",
-   "global-search-results","global-search-filters","global-search-more"];
+test("homepage search excludes removed engineering and alchemy recipe results",async()=>{
+ for(const [locale,target] of [["fr","Gyrochronatome"],["en","Gyrochronatom"]]){
+  const ids=["global-search","global-search-input","global-search-panel","global-search-status","global-search-results","global-search-filters","global-search-more"];
   const els=Object.fromEntries(ids.map(id=>[id,new Element(id)]));
   els["global-search-input"].value=target;
-  let loc=new URL("https://foreveroth.com"+(locale==="fr"?"/":"/en/"));
-  const doc={documentElement:{lang:locale},getElementById:id=>els[id]||null,
-   createElement:tag=>new Element(tag),addEventListener(){}};
-  const fetch=async u=>({ok:true,json:async()=>u==="/data/crafting-chains-beta.json"?data:{}});
-  runInNewContext(search,{document:doc,location:{origin:loc.origin,href:loc.href},URL,fetch,console:{warn(){}},
-   window:{addEventListener(){}}});
+  const loc=new URL("https://foreveroth.com"+(locale==="fr"?"/":"/en/"));
+  const doc={documentElement:{lang:locale},getElementById:id=>els[id]||null,createElement:tag=>new Element(tag),addEventListener(){}};
+  const calls=[];
+  const fetch=async u=>{calls.push(u);return {ok:true,json:async()=>u==="/data/crafting-chains-beta.json"?data:{}};};
+  runInNewContext(search,{document:doc,location:{origin:loc.origin,href:loc.href},URL,fetch,console:{warn(){}},window:{addEventListener(){}}});
   els["global-search-input"].fire("focus");await wait();
-  const hits=els["global-search-results"].children.filter(x=>x.tag==="a"&&x.href.includes("craft=4389"));
-  assert.ok(hits.length>=1,locale+" must find the exact documented Gyrochronatom recipe");
-  assert.equal(hits[0].href,route+"?craft=4389");
-  assert.ok(hits[0].textContent.includes(locale==="fr"?"Fabrication":"Crafting"));
+  assert.ok(!calls.includes("/data/crafting-chains-beta.json"));
+  assert.ok(!calls.includes("/data/alchemy-chains-beta.json"));
+  const oldLinks=els["global-search-results"].children.filter(x=>x.tag==="a"&&/[?&](craft|alchemy)=/.test(x.href));
+  assert.equal(oldLinks.length,0,locale);
  }
 });
-
 test("filter, close, reopen resets list and count in French and English without a second fetch",async()=>{
  for(const [locale,url,expected] of [
   ["fr","/metiers/","8 / 8 fabrications"],

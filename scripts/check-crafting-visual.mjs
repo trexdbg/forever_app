@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/* Local Chromium/CDP screenshots and smoke tests of the actual FR/EN site routes.
+/* Local Chromium/CDP trainer-atlas smoke tests for the public FR/EN routes.
    No browser dependencies beyond Chrome/Chromium and Node 22. */
 import {createServer} from "node:http";
 import {readFile,writeFile,mkdir,mkdtemp,rm,access} from "node:fs/promises";
@@ -67,7 +67,7 @@ async function connect(bin){
  });
 }
 async function caseRun(send,base,lang,width,height){
- const path=lang==="fr"?"/metiers/":"/en/metiers/",item=lang==="fr"?4371:4389;
+ const path=lang==="fr"?"/metiers/":"/en/metiers/";
  const target=await send("Target.createTarget",{url:"about:blank"});
  const {sessionId}=await send("Target.attachToTarget",{targetId:target.targetId,flatten:true});
  const cmd=(method,params={})=>send(method,params,sessionId);
@@ -80,89 +80,35 @@ async function caseRun(send,base,lang,width,height){
   await cmd("Page.enable");
   await cmd("Runtime.enable");
   await cmd("Emulation.setDeviceMetricsOverride",{width,height,deviceScaleFactor:1,mobile:width===375});
-  await cmd("Page.navigate",{url:base+path+"?craft="+item});
+  await cmd("Page.navigate",{url:base+path});
   let state={};
   for(let i=0;i<100;i++){
-   state=await evaluate('(()=>({open:document.querySelector("#craft-beta")?.open,count:document.querySelectorAll("#craft-beta-list .craft-result").length,text:document.querySelector("#craft-beta-detail")?.textContent||"",map:!!document.querySelector("#npc-map-canvas")}))()');
-   if(state.open&&state.count===8&&state.text.includes("#"+item)&&state.map)break;
+   state=await evaluate('(()=>({results:document.querySelector("#npc-results")?.children.length||0,map:!!document.querySelector("#npc-map-canvas")?.getContext("2d"),title:document.querySelector("main h1")?.textContent||""}))()');
+   if(state.results>0&&state.map&&state.title)break;
    await delay(160);
   }
-  assert(state.open&&state.count===8&&state.text.includes("#"+item),lang+" "+width+" deep link or recipe list did not load "+JSON.stringify(state));
-  assert(state.map,lang+" "+width+" original trainers map is missing");
-  const landing=await evaluate('(()=>{const box=document.querySelector("#craft-beta-detail").getBoundingClientRect();return {top:box.top,bottom:box.bottom}})()');
-  if(width===375)assert(landing.top>=0&&landing.top<height,lang+" mobile deep-link detail is not visible at landing: "+JSON.stringify(landing));
-  const layout=await evaluate('(()=>{const panel=document.querySelector("#craft-beta"),content=document.querySelector(".craft-beta-content"),detail=document.querySelector("#craft-beta-detail"),canvas=document.querySelector("#npc-map-canvas"),search=document.querySelector("#craft-beta-search");search.focus();return {width:innerWidth,panelRight:panel.getBoundingClientRect().right,contentRight:content.getBoundingClientRect().right,detailOverflow:detail.scrollWidth-detail.clientWidth,focus:document.activeElement===search,mapFocusable:canvas.tabIndex===0,mapContext:!!canvas.getContext("2d")}})()');
-  assert(layout.panelRight<=layout.width+2&&layout.contentRight<=layout.width+2&&layout.detailOverflow<=2,lang+" "+width+" horizontal overflow: "+JSON.stringify(layout));
-  assert(layout.focus,lang+" "+width+" search is not keyboard-focusable");
-  assert(layout.mapFocusable&&layout.mapContext,lang+" "+width+" original map is not accessible");
-  const reopened=await evaluate('(async()=>{const d=document.querySelector("#craft-beta"),field=document.querySelector("#craft-beta-search");field.value="4389";field.dispatchEvent(new Event("input",{bubbles:true}));const filtered=document.querySelectorAll("#craft-beta-list .craft-result").length;d.open=false;await new Promise(r=>setTimeout(r,120));d.open=true;await new Promise(r=>setTimeout(r,120));return {filtered,input:field.value,results:document.querySelectorAll("#craft-beta-list .craft-result").length,counter:document.querySelector("#craft-beta-count").textContent}})()');
-  assert(reopened.filtered===1&&reopened.input===""&&reopened.results===8&&reopened.counter.startsWith("8 / 8"),lang+" "+width+" close/reopen defect persists: "+JSON.stringify(reopened));
+  assert(state.results>0&&state.map,lang+" "+width+" trainer list or interactive map not loaded "+JSON.stringify(state));
+  assert(state.title.includes(lang==="fr"?"Maîtres de métiers":"Profession trainers"),lang+" "+width+" heading absent");
+  const layout=await evaluate('(()=>{const main=document.querySelector("main"),panel=document.querySelector("#prof-trainers"),map=document.querySelector("#npc-map-canvas"),input=document.querySelector("#npc-search");const top=panel.getBoundingClientRect().top;input.focus();return {first:main.firstElementChild===panel,sections:main.querySelectorAll(":scope > section").length,legacy:[".page-hero","#craft-beta","#alchemy-beta","#early-recipes","#early-recipe-section","#alchemy-beta-section","#craft-beta-section"].some(x=>!!main.querySelector(x)),right:panel.getBoundingClientRect().right,windowWidth:innerWidth,top,focus:document.activeElement===input,canvasFocus:map.tabIndex===0,context:!!map.getContext("2d")}})()');
+  assert(layout.first&&layout.sections===1&&!layout.legacy,lang+" "+width+" page contains retired sections "+JSON.stringify(layout));
+  assert(layout.right<=layout.windowWidth+2&&layout.focus&&layout.canvasFocus&&layout.context,lang+" "+width+" trainer page layout or accessibility failed "+JSON.stringify(layout));
+  if(width===375)assert(layout.top>=0&&layout.top<260,lang+" mobile atlas starts too low "+layout.top);
   const prefix=lang+"-"+width;
-  await evaluate('document.querySelector("#craft-beta").scrollIntoView({behavior:"instant",block:"start"});');await delay(250);
   const capture=await cmd("Page.captureScreenshot",{format:"png",captureBeyondViewport:false});
-  await writeFile(resolve(output,prefix+"-craft.png"),Buffer.from(capture.data,"base64"));
-  await evaluate('document.querySelector("#craft-beta-detail").scrollIntoView({behavior:"instant",block:"start"});');await delay(220);
-  const selected=await cmd("Page.captureScreenshot",{format:"png",captureBeyondViewport:false});
-  await writeFile(resolve(output,prefix+"-detail.png"),Buffer.from(selected.data,"base64"));
-  const chain=lang==="fr"?[[2841,"Fonte"],[3576,"Fonte"],[2771,"Filon"]]:[[10558,"12584"],[3577,"Smelting"],[2776,"Gold Vein"]];
-  for(const [id,proof] of chain){
-   const result=await evaluate('(()=>{const button=[...document.querySelectorAll("#craft-beta-detail .craft-component")].find(x=>x.textContent.includes("#'+id+'"));if(!button)return {found:false};button.click();return {found:true,selected:new URLSearchParams(location.search).get("craft"),text:document.querySelector("#craft-beta-detail").textContent}})()');
-   assert(result.found&&result.selected===String(id)&&result.text.includes(proof),lang+" "+width+" nested source path failed at "+id+": "+JSON.stringify(result));
+  await writeFile(resolve(output,prefix+"-trainers.png"),Buffer.from(capture.data,"base64"));
+  const type=await evaluate('(()=>{const field=document.querySelector("#npc-type");field.value="weapon";field.dispatchEvent(new Event("change",{bubbles:true}));return field.value})()');
+  assert(type==="weapon",lang+" "+width+" weapon masters filter is not usable");
+  let weapon={};
+  for(let i=0;i<40;i++){
+   weapon=await evaluate('(()=>({results:document.querySelector("#npc-results")?.children.length||0,selected:document.querySelector("#npc-type")?.value,canvas:!!document.querySelector("#npc-map-canvas")}))()');
+   if(weapon.results>0&&weapon.selected==="weapon")break;
+   await delay(120);
   }
-  await evaluate('document.querySelector("#craft-beta-detail").scrollIntoView({behavior:"instant",block:"start"});');await delay(260);
-  const materials=await cmd("Page.captureScreenshot",{format:"png",captureBeyondViewport:false});
-  await writeFile(resolve(output,prefix+"-sources.png"),Buffer.from(materials.data,"base64"));
-  await evaluate('document.querySelector("#npc-map-canvas").scrollIntoView({behavior:"instant",block:"center"});');await delay(300);
-  const mapCapture=await cmd("Page.captureScreenshot",{format:"png",captureBeyondViewport:false});
-  await writeFile(resolve(output,prefix+"-map.png"),Buffer.from(mapCapture.data,"base64"));
-  const aId=lang==="fr"?4596:247239;
-  const alchemy=await evaluate('(async()=>{const section=document.querySelector("#alchemy-beta");if(!section)return {missing:true};section.open=true;await new Promise(r=>setTimeout(r,320));const count=document.querySelectorAll("#alchemy-list .craft-result").length;const target=[...document.querySelectorAll("#alchemy-list .craft-result")].find(x=>x.dataset.alchemy==="'+aId+'");if(!target)return {count,missingTarget:true};target.click();await new Promise(r=>setTimeout(r,120));const detail=document.querySelector("#alchemy-detail");const box=document.querySelector("#alchemy-beta").getBoundingClientRect();const field=document.querySelector("#alchemy-search");field.focus();return {count,selected:new URLSearchParams(location.search).get("alchemy"),detail:detail.textContent,excluded:[...document.querySelectorAll("#alchemy-list [data-alchemy]")].some(x=>["118","858"].includes(x.dataset.alchemy)),right:box.right,width:innerWidth,focus:document.activeElement===field,oldCraft:new URLSearchParams(location.search).get("craft")}})()');
-  assert(alchemy.count===6&&!alchemy.excluded&&alchemy.selected===String(aId)&&alchemy.oldCraft===String(chain.at(-1)[0])&&alchemy.focus&&alchemy.right<=width+2,
-   lang+" "+width+" alchemy preview/browser integrity failed "+JSON.stringify(alchemy));
-  assert(alchemy.detail.includes(lang==="fr"?"Potion de soins décolorée mineure":"Lesser Discolored Healing Potion"),
-   lang+" "+width+" alchemy direct item selection failed");
-  await evaluate('document.querySelector("#alchemy-beta").scrollIntoView({behavior:"instant",block:"start"});');await delay(190);
-  const alchemyCapture=await cmd("Page.captureScreenshot",{format:"png",captureBeyondViewport:false});
-  await writeFile(resolve(output,prefix+"-alchemy.png"),Buffer.from(alchemyCapture.data,"base64"));
-  await evaluate('document.querySelector("#alchemy-detail").scrollIntoView({behavior:"instant",block:"start"});');await delay(160);
-  const potionCapture=await cmd("Page.captureScreenshot",{format:"png",captureBeyondViewport:false});
-  await writeFile(resolve(output,prefix+"-alchemy-detail.png"),Buffer.from(potionCapture.data,"base64"));
-
-  // Mission 06: inspect all three distinct acquisition modes with a real browser.
-  const acquisitionCases=[
-   [3371,lang==="fr"?"Fournitures":"suppliers"],
-   [785,lang==="fr"?"Mage royal":"Mageroyal"],
-   [730,"#730"],
-   [2447,"#2447"],
-   [3820,lang==="fr"?"Sous l’eau":"Underwater"]
-  ];
-  for(const [id,needle] of acquisitionCases){
-   const evidence=await evaluate('(async()=>{const u=new URL(location.href);u.searchParams.set("alchemy","'+id+'");history.pushState(null,"",u);dispatchEvent(new PopStateEvent("popstate"));await new Promise(r=>setTimeout(r,175));const d=document.querySelector("#alchemy-detail"),s=document.querySelector(".alchemy-acquisitions");return {selected:new URLSearchParams(location.search).get("alchemy"),craft:new URLSearchParams(location.search).get("craft"),text:d?.textContent||"",overflow:d.scrollWidth-d.clientWidth,sectionRight:s?.getBoundingClientRect().right??d.getBoundingClientRect().right,links:[...(s?.querySelectorAll("a")||[])].map(a=>({href:a.href,rel:a.rel})),focusable:!!d.querySelector(".craft-back")}})()');
-   assert(evidence.selected===String(id)&&evidence.craft===String(chain.at(-1)[0])&&
-    evidence.text.includes(needle)&&evidence.overflow<=2&&evidence.sectionRight<=width+2&&
-    evidence.focusable&&evidence.links.every(a=>a.href.startsWith("https://")&&a.rel.includes("noopener")),
-    lang+" "+width+" acquisition "+id+" invalid "+JSON.stringify(evidence));
-   if(![730,2447].includes(id))assert(evidence.links.length>0,lang+" "+width+" missing actual source link "+id);
-   await evaluate('document.querySelector("#alchemy-detail").scrollIntoView({behavior:"instant",block:"start"});');
-   await delay(170);
-   const png=await cmd("Page.captureScreenshot",{format:"png",captureBeyondViewport:false});
-   await writeFile(resolve(output,prefix+"-acquisition-"+id+".png"),Buffer.from(png.data,"base64"));
-  }
-  // Exercise direct URL navigation from a fresh page load, not only history/popstate.
-  for(const [id,needle] of [[2447,"#2447"],
-                            [3820,lang==="fr"?"Sous l’eau":"Underwater"]]){
-   await cmd("Page.navigate",{url:base+path+"?craft="+item+"&alchemy="+id});
-   let deep={};
-   for(let attempt=0;attempt<50;attempt++){
-    deep=await evaluate('(()=>{const e=document.querySelector("#alchemy-detail"),box=document.querySelector(".alchemy-acquisitions");return {open:document.querySelector("#alchemy-beta")?.open,selected:new URLSearchParams(location.search).get("alchemy"),craft:new URLSearchParams(location.search).get("craft"),text:e?.textContent||"",right:box?.getBoundingClientRect().right??e?.getBoundingClientRect().right,overflow:e?e.scrollWidth-e.clientWidth:null}})()');
-    if(deep.open&&deep.selected===String(id)&&deep.text.includes(needle))break;
-    await delay(120);
-   }
-   assert(deep.open&&deep.selected===String(id)&&deep.craft===String(item)&&
-     deep.text.includes(needle)&&deep.overflow<=2&&deep.right<=width+2,
-     lang+" "+width+" direct acquisition link "+id+" failed "+JSON.stringify(deep));
-  }
-  console.log(JSON.stringify({lang,width,height,selected:item,recipes:state.count,layout,filteredReopen:reopened,map:true,landing,chain:chain.map(x=>x[0]),alchemy:{count:alchemy.count,selected:alchemy.selected,excluded:alchemy.excluded,focus:alchemy.focus},captures:[prefix+"-craft.png",prefix+"-detail.png",prefix+"-sources.png",prefix+"-map.png",prefix+"-alchemy.png",prefix+"-alchemy-detail.png"]}));
+  assert(weapon.results>0&&weapon.canvas,lang+" "+width+" weapon masters did not render "+JSON.stringify(weapon));
+  await evaluate('document.querySelector("#npc-map-canvas").scrollIntoView({behavior:"instant",block:"center"})');await delay(200);
+  const mapScreenshot=await cmd("Page.captureScreenshot",{format:"png",captureBeyondViewport:false});
+  await writeFile(resolve(output,prefix+"-weapons-map.png"),Buffer.from(mapScreenshot.data,"base64"));
+  console.log(JSON.stringify({lang,width,height,trainers:state.results,weaponResults:weapon.results,map:true,layout,captures:[prefix+"-trainers.png",prefix+"-weapons-map.png"]}));
  }finally{await send("Target.closeTarget",{targetId:target.targetId}).catch(()=>{})}
 }
 try{
@@ -173,8 +119,8 @@ try{
  for(const lang of ["fr","en"])for(const width of [1440,375]){
   await caseRun(send,base,lang,width,width===375?812:900);
  }
- console.log("PASS: 4 real-browser FR/EN × desktop/mobile runs and 44 screenshot files.");
-}catch(err){console.error("FAIL: crafting preview browser smoke:",err);process.exitCode=1}
+ console.log("PASS: 4 real-browser FR/EN × desktop/mobile trainer-atlas runs and 8 screenshots.");
+}catch(err){console.error("FAIL: trainer atlas browser smoke:",err);process.exitCode=1}
 finally{
  try{socket?.close()}catch{}
  if(chrome&&chrome.exitCode===null){

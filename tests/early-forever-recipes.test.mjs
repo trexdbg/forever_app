@@ -103,29 +103,16 @@ test("new Forever and changed-vs-Classic recipes are distinct from inherited old
   assert.ok(Array.isArray(x.classic_comparison?.classic_output_quantities));
  }
 });
-test("archive is opt-in, loads lazily and both localized professions pages link the same dataset",()=>{
+test("archive renderer remains testable but profession pages do not mount it",()=>{
  const js=load("assets/recipes-early.js");
- assert.match(js,/root\.addEventListener\("toggle"/);
- assert.match(js,/if\(root\.open\)load\(\)/);
- assert.match(js,/historical_client_archive_not_in_game_verified/);
- assert.match(js,/function recipeView/);
- assert.match(js,/edition:/);
- assert.match(js,/"Engineering":"Ingénierie"/);
- assert.match(js,/"Cooking":"Cuisine"/);
- assert.match(js,/"First Aid":"Secourisme"/);
- assert.match(js,/profLabel\(r\.profession_en\)/);
- assert.match(js,/profLabel\(name\)/);
- assert.match(js,/Compétence requise/);
+ for(const marker of ['root.addEventListener("toggle"','if(root.open)load()','historical_client_archive_not_in_game_verified','function recipeView','profLabel(r.profession_en)','Compétence requise'])
+  assert.ok(js.includes(marker),marker);
  for(const p of ["metiers/index.html","en/metiers/index.html"]){
-  const html=load(p);
-  assert.match(html,/id="early-recipes"/);
-  assert.match(html,/id="early-recipe-change"/);
-  assert.match(html,/recipes-early\.js\?v=20261017-clean-1/);
-  assert.match(html,/recipes-early\.css\?v=20261015-1/);
-  assert.match(html,/id="early-recipe-results"/);
+  const html=load(p);assert.ok(html.includes('id="prof-trainers"'));
+  for(const marker of ['id="early-recipes"','id="early-recipe-change"','id="early-recipe-results"','recipes-early.js','recipes-early.css'])
+   assert.ok(!html.includes(marker),marker);
  }
 });
-
 test("initial recipe selection is reflected in aria-pressed before buttons render",()=>{
  const js=load("assets/recipes-early.js");
  const select=js.indexOf("if(!selected&&hits.length)selected=hits[0]");

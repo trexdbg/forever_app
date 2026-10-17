@@ -92,17 +92,13 @@ test("allowlist, language labels and Classic exclusions are mandatory",()=>{
  for(const code of ["ALLOWLIST_INVALID","ITEM_INVALID","FIRST_AID_EXCLUSION","ACQUISITION_METHOD_OR_ITEM"])
  assert.ok(codes(x).includes(code),code);
 });
-test("both real profession pages mount a second, collapsed panel without changing engineering",()=>{
+test("public profession pages keep the trainer map and omit retired alchemy/crafting previews",()=>{
  for(const path of ["metiers/index.html","en/metiers/index.html"]){
   const html=read(path);
-  assert.ok(html.includes('id="craft-beta"'));
-  assert.ok(html.includes('id="alchemy-beta"'));
-  assert.ok(html.includes('id="npcs-app"'));
-  assert.ok(html.includes('/assets/alchemy-beta.js'));
-  assert.ok(html.includes('/assets/alchemy-beta.css'));
-  assert.ok(html.includes('/assets/crafting-beta.js'));
-  assert.ok(html.indexOf('id="alchemy-beta"')<html.indexOf('id="prof-trainers"'));
-  assert.ok(!html.includes('/assets/professions.js'));
+  for(const id of ["npcs-app","prof-trainers","npc-results","npc-map-canvas"])assert.ok(html.includes('id="'+id+'"'),id);
+  for(const id of ["craft-beta","alchemy-beta","early-recipes"])assert.ok(!html.includes('id="'+id+'"'),id);
+  for(const name of ["alchemy-beta","crafting-beta"])assert.ok(!html.includes('/assets/'+name+'.js')&&!html.includes('/assets/'+name+'.css'));
+  assert.ok(html.includes('/assets/npcs.js'));
  }
 });
 test("load is opt-in, bilingual and search works for ID, spell and both names",async()=>{
@@ -172,35 +168,29 @@ test("failed fetch and invalid schema do not display stale or uncontrolled recip
  assert.equal(a.list().filter(x=>x.className==="craft-result").length,0);
  assert.ok(!appJs.includes(".innerHTML"));
 });
-test("homepage search indexes six documented potions via valid direct URLs",()=>{
- assert.ok(searchJs.includes("function alchemyRows(db)"));
- assert.ok(searchJs.includes('["data/alchemy-chains-beta.json",alchemyRows]'));
- assert.ok(searchJs.includes('url("metiers/",{alchemy:r.output_item_id})'));
+test("homepage search excludes old alchemy recipes after removal of the preview",()=>{
+ assert.ok(searchJs.includes("function alchemyRows(db)"),"offline research remains available");
+ assert.ok(!searchJs.includes('["data/alchemy-chains-beta.json",alchemyRows]'));
  for(const id of ALLOWED)for(const p of ["/metiers/","/en/metiers/"])
- assert.equal(new URL(p+"?alchemy="+id,"https://foreveroth.com").searchParams.get("alchemy"),String(id));
+  assert.equal(new URL(p+"?alchemy="+id,"https://foreveroth.com").searchParams.get("alchemy"),String(id));
 });
-
-test("actual homepage search consumer opens the correct FR/EN alchemy deep link",async()=>{
- for(const [lang,path,name] of [
-  ["fr","/metiers/","Potion de soins décolorée inférieure"],
-  ["en","/en/metiers/","Lesser Discolored Healing Potion"]
- ]){
+test("real homepage search does not link to a removed alchemy panel",async()=>{
+ for(const [lang,name] of [["fr","Potion de soins décolorée inférieure"],["en","Lesser Discolored Healing Potion"]]){
   const ids=["global-search","global-search-input","global-search-panel","global-search-status","global-search-results","global-search-filters","global-search-more"];
   const els=Object.fromEntries(ids.map(id=>[id,new Element(id)]));
   els["global-search-input"].value=name;
   const home="https://foreveroth.com"+(lang==="fr"?"/":"/en/");
+  const calls=[];
   runInNewContext(searchJs,{document:{documentElement:{lang},getElementById:id=>els[id]||null,createElement:tag=>new Element(tag),addEventListener(){}},
    location:{origin:"https://foreveroth.com",href:home},URL,
-   fetch:async path=>({ok:true,json:async()=>path==="/data/alchemy-chains-beta.json"?data:{}}),
+   fetch:async path=>{calls.push(path);return {ok:true,json:async()=>path==="/data/alchemy-chains-beta.json"?data:{}};},
    console:{warn(){}},window:{addEventListener(){}}});
   els["global-search-input"].fire("focus");await settle();
-  const found=els["global-search-results"].children.filter(x=>x.tag==="a"&&x.href.includes("alchemy=247239"));
-  assert.ok(found.length>=1,lang+" must find an indexed alchemy potion");
-  assert.equal(found[0].href,path+"?alchemy=247239");
-  assert.ok(found[0].textContent.includes(lang==="fr"?"Alchimie":"Alchemy"));
+  assert.ok(!calls.includes("/data/alchemy-chains-beta.json"));
+  const found=els["global-search-results"].children.filter(x=>x.tag==="a"&&x.href.includes("alchemy="));
+  assert.equal(found.length,0,lang);
  }
 });
-
 
 test("mission 06 investigates precisely eight reagents with conservative evidence per method",()=>{
  const found=new Set(data.acquisitions.map(a=>a.item_id));

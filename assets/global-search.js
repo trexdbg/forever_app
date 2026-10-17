@@ -257,7 +257,7 @@ const jobs=[
  ["data/rares.json",rareRows],["data/items.json",itemRows],["data/items-forever.json",itemRows],
  ["data/items-classic-cache.json",itemRows],["data/items-forever-cache.json",itemRows],
  ["data/bis-niveaux-forever-observed.json",itemRows],["data/bis-niveaux-classic.json",itemRows],
- ["data/professions.json",professionsRows],["data/crafting-chains-beta.json",craftingRows],["data/alchemy-chains-beta.json",alchemyRows],["data/talents.json",talentRows],
+ ["data/professions.json",professionsRows],["data/talents.json",talentRows],
  ["data/bis.json",db=>{bisRows(db);itemRows(db);}],
  ["data/mining-points.json",miningRows],
  ["data/quests/alliance.json",questRows],["data/quests/horde.json",questRows]
