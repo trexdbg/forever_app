@@ -19,8 +19,8 @@
 .rare-detail{padding:15px}.rare-detail-top{display:flex;align-items:center;flex-wrap:wrap;gap:10px}.rare-detail-top h3{font:500 23px Georgia,serif;color:#f0dbb8;margin:0}.rare-tags{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 15px}
 .rare-caption{display:block;font-size:11px;color:#bda777;margin-bottom:7px}.rare-coords{display:flex;flex-wrap:wrap;gap:5px;max-height:115px;overflow:auto}.rare-spots{margin:12px 0 15px}.rare-coord{border:1px solid #506548;color:#cfdbbf;background:#263626;font-size:11px;padding:6px 8px;cursor:pointer}.rare-coord:hover{border-color:#d5b57d}.rare-coord{display:inline-flex;flex-direction:column;gap:3px;text-align:left}.rare-coord-status{font-size:10px;font-weight:500;color:#e7cfa1}.rare-coord.is-forever{border-color:#558265}.rare-coord.is-active{outline:2px solid #e7cfa1;outline-offset:1px}
 .rare-loot-title{font:500 17px Georgia,serif;color:#e8d1ac;margin:7px 0 10px;padding-bottom:7px;border-bottom:1px solid #344138}
-.rare-loots{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:7px}.rare-loot{display:flex;gap:9px;align-items:center;padding:8px 9px;border:1px solid #3e4d3d;background:#17251b;color:#c4a6e5;min-height:56px;text-decoration:none}.rare-loot:hover{border-color:#9c82b5}
-.rare-loot img{width:38px;height:38px;object-fit:cover;border:1px solid #716087;background:#161d19}.rare-loot-text{display:flex;flex-direction:column;min-width:0;gap:4px}.rare-loot-text strong{font-size:12px;line-height:1.2}.rare-loot-text small{font-size:10px;color:#afaf9b}
+.rare-loots{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,265px),1fr));gap:7px}.rare-loot{display:grid;grid-template-columns:38px minmax(0,1fr);column-gap:9px;row-gap:5px;align-items:center;padding:8px 9px;min-width:0;border:1px solid #3e4d3d;background:#17251b;color:#c4a6e5;min-height:56px;text-decoration:none}.rare-loot:hover{border-color:#9c82b5}
+.rare-loot-icon{display:grid;place-items:center;width:38px;height:38px;flex:0 0 38px;border:1px solid #716087;background:#161d19}.rare-loot-icon img{display:block;width:100%;height:100%;object-fit:cover}.rare-loot-icon-unavailable{border-color:#455248;background:#142018;color:#7f9482}.rare-loot-icon-placeholder{font-size:21px;line-height:1}.rare-loot-text{display:flex;flex-direction:column;min-width:0;gap:4px}.rare-loot-text strong{font-size:12px;line-height:1.2}.rare-loot-text small{font-size:10px;color:#afaf9b}
 .rare-note{color:#dac393;font-size:11px;border-left:2px solid #aa8f54;padding:8px 11px;background:#a5843418}.rare-detail-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-top:11px;border-top:1px solid #39473b;margin-top:14px}.rare-detail-foot a{color:#dbc087;font-size:12px}.rare-copy{background:#312b1e;color:#ebd3a5;font-size:11px;border:1px solid #70613c;padding:7px 10px;cursor:pointer}
 .rare-empty,.rare-muted{font-size:12px;color:#9dab9e;margin:5px 0;padding:7px}
 .rare-sources{font-size:11px;color:#9baf9e}.rare-sources a{color:#d4b17b}
@@ -42,7 +42,7 @@
 .rare-loot-forever{border-left:3px solid #69ab80!important;background:linear-gradient(90deg,#17322545,transparent 70%)}
 .rare-loot-stats{display:block;color:#c4d0bd;font-size:11px;line-height:1.5;margin-top:3px}
 .rare-loots>.rare-chip{margin:4px 7px 8px 0}
-.rare-loot>.rare-chip{white-space:nowrap;align-self:flex-start}
+.rare-loot>.rare-chip{grid-column:2;justify-self:start;white-space:nowrap;align-self:flex-start;padding:3px 5px}
 
 
 /* Forever-exclusive rare item set — compact comparison on each NPC sheet. */
