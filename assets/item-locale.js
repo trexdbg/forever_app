@@ -100,6 +100,6 @@ function origin(text,english=en()){
 }
 function name(item){const d=resolved(item);return en()?d.en:d.fr}
 function aliases(item){const d=resolved(item);const id=Number(item?.id||0);return [d.fr,d.en,d.original,FOREVER_BETA_FR[id],item?.name_fr,item?.name?.fr,item?.fr,String(id||"")].filter(Boolean).join(" ")}
-function record(item){const d=resolved(item);return {...item,name:en()?d.en:d.fr,name_en:d.en,name_fr:d.fr,original_name:d.original,translation_indicative:d.indicative,origin_en:origin(item.origin,true),origin_fr:origin(item.origin,false),origin:origin(item.origin)}}
+function record(item){const d=resolved(item);return {...item,name:en()?d.en:d.fr,name_en:d.en,name_fr:d.fr,original_name:d.original,translation_indicative:d.indicative,origin_en:typeof item.origin_en==="string"&&item.origin_en.trim()?item.origin_en:origin(item.origin,true),origin_fr:typeof item.origin_fr==="string"&&item.origin_fr.trim()?item.origin_fr:origin(item.origin,false),origin:origin(item.origin)}}
 window.ForeverItemLocale={name,aliases,record,resolved,translateEnglish,origin};
 })();

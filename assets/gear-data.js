@@ -48,7 +48,7 @@ function normalizedClassic(i,slot){
 }
 function loadForever(){
  if(!foreverPromise)foreverPromise=Promise.all([
- fetch(BASE+"data/items-forever.json?v=20261009-152",{credentials:"omit"}).then(r=>{if(!r.ok)throw Error("Forever HTTP "+r.status);return r.json()}).catch(()=>({items:[]})),
+ fetch(BASE+"data/items-forever.json?v=20261018-rare-gear-22",{credentials:"omit"}).then(r=>{if(!r.ok)throw Error("Forever HTTP "+r.status);return r.json()}).catch(()=>({items:[]})),
  fetch(BASE+"data/items-forever-client.json",{credentials:"omit"}).then(r=>{if(!r.ok)throw Error("Forever client HTTP "+r.status);return r.json()}).catch(()=>({items:[]})),
  fetch(BASE+"data/items-forever-cache.json?v=20261010-1",{credentials:"omit"}).then(r=>{if(!r.ok)throw Error("Forever cache HTTP "+r.status);return r.json()}).catch(()=>({items:[]}))
  ]).then(([manual,client,archive])=>{const merged=new Map();for(const i of [...(Array.isArray(archive.items)?archive.items:[]),...(Array.isArray(client.items)?client.items:[]),...(Array.isArray(manual.items)?manual.items:[])])if(valid(i))merged.set(i.id,localize({...i,reference:i.reference||"Forever beta client",source_status:i.source_status||"forever_beta_client",verified_forever:false}));return [...merged.values()]});
