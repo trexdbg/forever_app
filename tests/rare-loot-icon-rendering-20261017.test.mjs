@@ -37,10 +37,14 @@ test("Nightscreech Wisesight Wand displays its correct local icon in FR and EN",
 });
 
 test("curated icon names resolve; unknown and unsafe icons have a neutral placeholder",()=>{
- for(const id of [18610,18611,18612,1913,4854,284666,286534,286537,286746,286749,286750,286755]){
+ for(const id of [18610,18611,18612,1913,4854,1965,10553,284666,286534,286537,286746,286749,286750,286755]){
   assert.ok(item(id),"Missing loot item "+id);
   assert.match(fr.rareLootIconName(item(id)),/^[a-z0-9_]+$/);
  }
+ assert.equal(fr.rareLootIconName(item(1965)),"inv_gauntlets_05");
+ assert.equal(fr.rareLootIconName(item(10553)),"inv_shirt_05");
+ assert.equal(fr.rareLootImage(item(1965)).children[0].src,"https://wow.zamimg.com/images/wow/icons/medium/inv_gauntlets_05.jpg");
+ assert.equal(en.rareLootImage(item(10553)).children[0].src,"https://wow.zamimg.com/images/wow/icons/medium/inv_shirt_05.jpg");
  const noIcon=item(284174);
  assert.ok(noIcon);
  assert.equal(fr.rareLootIconName(noIcon),null);
@@ -64,7 +68,7 @@ test("failed icon requests retain the neutral icon slot",()=>{
 test("FR/EN pages use matching cache-busted versions",()=>{
  for(const path of ["rare/index.html","en/rare/index.html"]){
   const html=read(path);
-  assert.ok(html.includes("/assets/rares.js?v=20261017-loot-icons-1"),path);
+  assert.ok(html.includes("/assets/rares.js?v=20261018-loot-icons-2"),path);
   assert.ok(html.includes("/assets/rares.css?v=20261017-loot-icons-1"),path);
  }
 });
