@@ -282,7 +282,7 @@ t0Root.addEventListener("toggle",async()=>{
  t0Loading=true;
  t0Body.replaceChildren(t0Node("p","source-note",en?"Loading set bonuses…":"Chargement des bonus…"));
  try{
-  const response=await fetch("/data/t0-set-bonuses-forever.json?v=20261018-1",{credentials:"omit"});
+  const response=await fetch("/data/t0-set-bonuses-forever.json?v=20261018-piece-links",{credentials:"omit"});
   if(!response.ok)throw Error("T0 HTTP "+response.status);
   const data=await response.json();
   if(!Array.isArray(data.sets)||data.sets.length!==9)throw Error("Invalid T0 data");
@@ -303,7 +303,16 @@ t0Root.addEventListener("toggle",async()=>{
    card.append(bonuses);
    if(Array.isArray(set.pieces_en)&&set.pieces_en.length===8){
     const pieces=t0Node("p","item-t0-sets__pieces");
-    pieces.append(t0Node("b","",en?"8 pieces: ":"8 pièces : "),document.createTextNode(set.pieces_en.join(" · ")));
+    pieces.append(t0Node("b","",en?"8 pieces: ":"8 pièces : "));
+    set.pieces_en.forEach((name,i)=>{
+     if(i)pieces.append(document.createTextNode(" · "));
+     const record=Array.isArray(set.pieces)?set.pieces[i]:null;
+     if(record&&Number.isSafeInteger(record.id)&&record.name_en===name&&record.url==="https://foreverdb.net/item/"+record.id){
+      const link=t0Node("a","item-t0-sets__piece-link",name);
+      link.href=record.url;link.target="_blank";link.rel="noopener noreferrer";
+      pieces.append(link);
+     }else pieces.append(document.createTextNode(name));
+    });
     card.append(pieces);
    }
    const link=t0Node("a","item-t0-sets__source",en?"ForeverDB source ↗":"Source ForeverDB ↗");

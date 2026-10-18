@@ -55,7 +55,50 @@
       "observed_at": "2026-10-11",
       "observed_build": "1.60.1.70338",
       "evidence_kind": "forever_client_extract_via_foreverdb",
-      "evidence_note": "Set bonuses and piece names read from the referenced ForeverDB client extraction. Does not establish server-side availability, drops or completed gameplay."
+      "evidence_note": "Set bonuses and piece names read from the referenced ForeverDB client extraction. Does not establish server-side availability, drops or completed gameplay.",
+      "pieces": [
+        {
+          "id": 16685,
+          "name_en": "Magister's Belt",
+          "url": "https://foreverdb.net/item/16685"
+        },
+        {
+          "id": 16683,
+          "name_en": "Magister's Bindings",
+          "url": "https://foreverdb.net/item/16683"
+        },
+        {
+          "id": 16686,
+          "name_en": "Magister's Crown",
+          "url": "https://foreverdb.net/item/16686"
+        },
+        {
+          "id": 16684,
+          "name_en": "Magister's Gloves",
+          "url": "https://foreverdb.net/item/16684"
+        },
+        {
+          "id": 16687,
+          "name_en": "Magister's Leggings",
+          "url": "https://foreverdb.net/item/16687"
+        },
+        {
+          "id": 16689,
+          "name_en": "Magister's Mantle",
+          "url": "https://foreverdb.net/item/16689"
+        },
+        {
+          "id": 16688,
+          "name_en": "Magister's Robes",
+          "url": "https://foreverdb.net/item/16688"
+        },
+        {
+          "id": 16682,
+          "name_en": "Magister's Boots",
+          "url": "https://foreverdb.net/item/16682"
+        }
+      ],
+      "piece_links_reviewed_at": "2026-10-18"
     },
     {
       "id": 182,
@@ -108,7 +151,50 @@
       "observed_at": "2026-10-17",
       "observed_build": "1.60.1.70450",
       "evidence_kind": "forever_client_extract_via_foreverdb",
-      "evidence_note": "Set bonuses and piece names read from the referenced ForeverDB client extraction. Does not establish server-side availability, drops or completed gameplay."
+      "evidence_note": "Set bonuses and piece names read from the referenced ForeverDB client extraction. Does not establish server-side availability, drops or completed gameplay.",
+      "pieces": [
+        {
+          "id": 16696,
+          "name_en": "Devout Belt",
+          "url": "https://foreverdb.net/item/16696"
+        },
+        {
+          "id": 16691,
+          "name_en": "Devout Sandals",
+          "url": "https://foreverdb.net/item/16691"
+        },
+        {
+          "id": 16697,
+          "name_en": "Devout Bracers",
+          "url": "https://foreverdb.net/item/16697"
+        },
+        {
+          "id": 16693,
+          "name_en": "Devout Crown",
+          "url": "https://foreverdb.net/item/16693"
+        },
+        {
+          "id": 16692,
+          "name_en": "Devout Gloves",
+          "url": "https://foreverdb.net/item/16692"
+        },
+        {
+          "id": 16695,
+          "name_en": "Devout Mantle",
+          "url": "https://foreverdb.net/item/16695"
+        },
+        {
+          "id": 16694,
+          "name_en": "Devout Skirt",
+          "url": "https://foreverdb.net/item/16694"
+        },
+        {
+          "id": 16690,
+          "name_en": "Devout Robe",
+          "url": "https://foreverdb.net/item/16690"
+        }
+      ],
+      "piece_links_reviewed_at": "2026-10-18"
     },
     {
       "id": 183,
@@ -161,7 +247,50 @@
       "observed_at": "2026-10-16",
       "observed_build": "1.60.1.70450",
       "evidence_kind": "forever_client_extract_via_foreverdb",
-      "evidence_note": "Set bonuses and piece names read from the referenced ForeverDB client extraction. Does not establish server-side availability, drops or completed gameplay."
+      "evidence_note": "Set bonuses and piece names read from the referenced ForeverDB client extraction. Does not establish server-side availability, drops or completed gameplay.",
+      "pieces": [
+        {
+          "id": 16702,
+          "name_en": "Dreadmist Belt",
+          "url": "https://foreverdb.net/item/16702"
+        },
+        {
+          "id": 16703,
+          "name_en": "Dreadmist Bracers",
+          "url": "https://foreverdb.net/item/16703"
+        },
+        {
+          "id": 16699,
+          "name_en": "Dreadmist Leggings",
+          "url": "https://foreverdb.net/item/16699"
+        },
+        {
+          "id": 16701,
+          "name_en": "Dreadmist Mantle",
+          "url": "https://foreverdb.net/item/16701"
+        },
+        {
+          "id": 16700,
+          "name_en": "Dreadmist Robe",
+          "url": "https://foreverdb.net/item/16700"
+        },
+        {
+          "id": 16704,
+          "name_en": "Dreadmist Sandals",
+          "url": "https://foreverdb.net/item/16704"
+        },
+        {
+          "id": 16698,
+          "name_en": "Dreadmist Mask",
+          "url": "https://foreverdb.net/item/16698"
+        },
+        {
+          "id": 16705,
+          "name_en": "Dreadmist Wraps",
+          "url": "https://foreverdb.net/item/16705"
+        }
+      ],
+      "piece_links_reviewed_at": "2026-10-18"
     },
     {
       "id": 184,
@@ -214,7 +343,50 @@
       "observed_at": "2026-10-17",
       "observed_build": "1.60.1.70450",
       "evidence_kind": "forever_client_extract_via_foreverdb",
-      "evidence_note": "Set bonuses and piece names read from the referenced ForeverDB client extraction. Does not establish server-side availability, drops or completed gameplay."
+      "evidence_note": "Set bonuses and piece names read from the referenced ForeverDB client extraction. Does not establish server-side availability, drops or completed gameplay.",
+      "pieces": [
+        {
+          "id": 16713,
+          "name_en": "Shadowcraft Belt",
+          "url": "https://foreverdb.net/item/16713"
+        },
+        {
+          "id": 16711,
+          "name_en": "Shadowcraft Boots",
+          "url": "https://foreverdb.net/item/16711"
+        },
+        {
+          "id": 16710,
+          "name_en": "Shadowcraft Bracers",
+          "url": "https://foreverdb.net/item/16710"
+        },
+        {
+          "id": 16721,
+          "name_en": "Shadowcraft Tunic",
+          "url": "https://foreverdb.net/item/16721"
+        },
+        {
+          "id": 16708,
+          "name_en": "Shadowcraft Spaulders",
+          "url": "https://foreverdb.net/item/16708"
+        },
+        {
+          "id": 16709,
+          "name_en": "Shadowcraft Pants",
+          "url": "https://foreverdb.net/item/16709"
+        },
+        {
+          "id": 16712,
+          "name_en": "Shadowcraft Gloves",
+          "url": "https://foreverdb.net/item/16712"
+        },
+        {
+          "id": 16707,
+          "name_en": "Shadowcraft Cap",
+          "url": "https://foreverdb.net/item/16707"
+        }
+      ],
+      "piece_links_reviewed_at": "2026-10-18"
     },
     {
       "id": 185,
@@ -272,7 +444,50 @@
       "observed_at": "2026-10-08",
       "observed_build": "1.60.1.70291",
       "evidence_kind": "forever_client_extract_via_foreverdb",
-      "evidence_note": "Set bonuses and piece names read from the referenced ForeverDB client extraction. Does not establish server-side availability, drops or completed gameplay."
+      "evidence_note": "Set bonuses and piece names read from the referenced ForeverDB client extraction. Does not establish server-side availability, drops or completed gameplay.",
+      "pieces": [
+        {
+          "id": 16716,
+          "name_en": "Wildheart Belt",
+          "url": "https://foreverdb.net/item/16716"
+        },
+        {
+          "id": 16715,
+          "name_en": "Wildheart Boots",
+          "url": "https://foreverdb.net/item/16715"
+        },
+        {
+          "id": 16714,
+          "name_en": "Wildheart Bracers",
+          "url": "https://foreverdb.net/item/16714"
+        },
+        {
+          "id": 16720,
+          "name_en": "Wildheart Cowl",
+          "url": "https://foreverdb.net/item/16720"
+        },
+        {
+          "id": 16706,
+          "name_en": "Wildheart Vest",
+          "url": "https://foreverdb.net/item/16706"
+        },
+        {
+          "id": 16718,
+          "name_en": "Wildheart Spaulders",
+          "url": "https://foreverdb.net/item/16718"
+        },
+        {
+          "id": 16719,
+          "name_en": "Wildheart Kilt",
+          "url": "https://foreverdb.net/item/16719"
+        },
+        {
+          "id": 16717,
+          "name_en": "Wildheart Gloves",
+          "url": "https://foreverdb.net/item/16717"
+        }
+      ],
+      "piece_links_reviewed_at": "2026-10-18"
     },
     {
       "id": 186,
@@ -325,7 +540,50 @@
       "observed_at": "2026-10-17",
       "observed_build": "1.60.1.70450",
       "evidence_kind": "forever_client_extract_via_foreverdb",
-      "evidence_note": "Set bonuses and piece names read from the referenced ForeverDB client extraction. Does not establish server-side availability, drops or completed gameplay."
+      "evidence_note": "Set bonuses and piece names read from the referenced ForeverDB client extraction. Does not establish server-side availability, drops or completed gameplay.",
+      "pieces": [
+        {
+          "id": 16680,
+          "name_en": "Beaststalker's Belt",
+          "url": "https://foreverdb.net/item/16680"
+        },
+        {
+          "id": 16675,
+          "name_en": "Beaststalker's Boots",
+          "url": "https://foreverdb.net/item/16675"
+        },
+        {
+          "id": 16681,
+          "name_en": "Beaststalker's Bindings",
+          "url": "https://foreverdb.net/item/16681"
+        },
+        {
+          "id": 16677,
+          "name_en": "Beaststalker's Cap",
+          "url": "https://foreverdb.net/item/16677"
+        },
+        {
+          "id": 16674,
+          "name_en": "Beaststalker's Tunic",
+          "url": "https://foreverdb.net/item/16674"
+        },
+        {
+          "id": 16678,
+          "name_en": "Beaststalker's Pants",
+          "url": "https://foreverdb.net/item/16678"
+        },
+        {
+          "id": 16679,
+          "name_en": "Beaststalker's Mantle",
+          "url": "https://foreverdb.net/item/16679"
+        },
+        {
+          "id": 16676,
+          "name_en": "Beaststalker's Gloves",
+          "url": "https://foreverdb.net/item/16676"
+        }
+      ],
+      "piece_links_reviewed_at": "2026-10-18"
     },
     {
       "id": 187,
@@ -378,7 +636,50 @@
       "observed_at": "2026-10-17",
       "observed_build": "1.60.1.70450",
       "evidence_kind": "forever_client_extract_via_foreverdb",
-      "evidence_note": "Set bonuses and piece names read from the referenced ForeverDB client extraction. Does not establish server-side availability, drops or completed gameplay."
+      "evidence_note": "Set bonuses and piece names read from the referenced ForeverDB client extraction. Does not establish server-side availability, drops or completed gameplay.",
+      "pieces": [
+        {
+          "id": 16673,
+          "name_en": "Cord of Elements",
+          "url": "https://foreverdb.net/item/16673"
+        },
+        {
+          "id": 16670,
+          "name_en": "Boots of Elements",
+          "url": "https://foreverdb.net/item/16670"
+        },
+        {
+          "id": 16671,
+          "name_en": "Bindings of Elements",
+          "url": "https://foreverdb.net/item/16671"
+        },
+        {
+          "id": 16667,
+          "name_en": "Coif of Elements",
+          "url": "https://foreverdb.net/item/16667"
+        },
+        {
+          "id": 16672,
+          "name_en": "Gauntlets of Elements",
+          "url": "https://foreverdb.net/item/16672"
+        },
+        {
+          "id": 16668,
+          "name_en": "Kilt of Elements",
+          "url": "https://foreverdb.net/item/16668"
+        },
+        {
+          "id": 16669,
+          "name_en": "Pauldrons of Elements",
+          "url": "https://foreverdb.net/item/16669"
+        },
+        {
+          "id": 16666,
+          "name_en": "Vest of Elements",
+          "url": "https://foreverdb.net/item/16666"
+        }
+      ],
+      "piece_links_reviewed_at": "2026-10-18"
     },
     {
       "id": 188,
@@ -431,7 +732,50 @@
       "observed_at": "2026-10-17",
       "observed_build": "1.60.1.70450",
       "evidence_kind": "forever_client_extract_via_foreverdb",
-      "evidence_note": "Set bonuses and piece names read from the referenced ForeverDB client extraction. Does not establish server-side availability, drops or completed gameplay."
+      "evidence_note": "Set bonuses and piece names read from the referenced ForeverDB client extraction. Does not establish server-side availability, drops or completed gameplay.",
+      "pieces": [
+        {
+          "id": 16723,
+          "name_en": "Lightforge Belt",
+          "url": "https://foreverdb.net/item/16723"
+        },
+        {
+          "id": 16725,
+          "name_en": "Lightforge Boots",
+          "url": "https://foreverdb.net/item/16725"
+        },
+        {
+          "id": 16722,
+          "name_en": "Lightforge Bracers",
+          "url": "https://foreverdb.net/item/16722"
+        },
+        {
+          "id": 16726,
+          "name_en": "Lightforge Breastplate",
+          "url": "https://foreverdb.net/item/16726"
+        },
+        {
+          "id": 16724,
+          "name_en": "Lightforge Gauntlets",
+          "url": "https://foreverdb.net/item/16724"
+        },
+        {
+          "id": 16728,
+          "name_en": "Lightforge Legplates",
+          "url": "https://foreverdb.net/item/16728"
+        },
+        {
+          "id": 16729,
+          "name_en": "Lightforge Spaulders",
+          "url": "https://foreverdb.net/item/16729"
+        },
+        {
+          "id": 16727,
+          "name_en": "Lightforge Helm",
+          "url": "https://foreverdb.net/item/16727"
+        }
+      ],
+      "piece_links_reviewed_at": "2026-10-18"
     },
     {
       "id": 189,
@@ -484,7 +828,50 @@
       "observed_at": "2026-10-17",
       "observed_build": "1.60.1.70450",
       "evidence_kind": "forever_client_extract_via_foreverdb",
-      "evidence_note": "Set bonuses and piece names read from the referenced ForeverDB client extraction. Does not establish server-side availability, drops or completed gameplay."
+      "evidence_note": "Set bonuses and piece names read from the referenced ForeverDB client extraction. Does not establish server-side availability, drops or completed gameplay.",
+      "pieces": [
+        {
+          "id": 16736,
+          "name_en": "Belt of Valor",
+          "url": "https://foreverdb.net/item/16736"
+        },
+        {
+          "id": 16734,
+          "name_en": "Boots of Valor",
+          "url": "https://foreverdb.net/item/16734"
+        },
+        {
+          "id": 16735,
+          "name_en": "Bracers of Valor",
+          "url": "https://foreverdb.net/item/16735"
+        },
+        {
+          "id": 16730,
+          "name_en": "Breastplate of Valor",
+          "url": "https://foreverdb.net/item/16730"
+        },
+        {
+          "id": 16737,
+          "name_en": "Gauntlets of Valor",
+          "url": "https://foreverdb.net/item/16737"
+        },
+        {
+          "id": 16731,
+          "name_en": "Helm of Valor",
+          "url": "https://foreverdb.net/item/16731"
+        },
+        {
+          "id": 16732,
+          "name_en": "Legplates of Valor",
+          "url": "https://foreverdb.net/item/16732"
+        },
+        {
+          "id": 16733,
+          "name_en": "Spaulders of Valor",
+          "url": "https://foreverdb.net/item/16733"
+        }
+      ],
+      "piece_links_reviewed_at": "2026-10-18"
     }
   ]
 }

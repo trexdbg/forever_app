@@ -14,16 +14,18 @@ const cache=new Map(),inflight=new Map(),unavailableUntil=new Map();
 let t0Sets=null,t0Loading=null;
 function t0Candidate(item){
  const names=[item?.name,item?.name_en,item?.original_name].filter(x=>typeof x==="string");
- return names.some(name=>/(shadowcraft|wildheart|beaststalker|magister|devout|dreadmist|lightforge|of elements|of valor)/i.test(name));
+ return (Number.isInteger(item?.id)&&item.id>=16666&&item.id<=16737)
+  ||names.some(name=>/(shadowcraft|wildheart|beaststalker|magister|devout|dreadmist|lightforge|of elements|of valor)/i.test(name));
 }
 function t0For(item){
  if(!Array.isArray(t0Sets))return null;
  const names=[item?.name,item?.name_en,item?.original_name].filter(x=>typeof x==="string").map(x=>x.trim().toLowerCase());
- return t0Sets.find(set=>Array.isArray(set.pieces_en)&&set.pieces_en.some(name=>names.includes(name.toLowerCase())))||null;
+ return t0Sets.find(set=>(Array.isArray(set.pieces)&&set.pieces.some(piece=>piece.id===Number(item.id)))
+  ||(Array.isArray(set.pieces_en)&&set.pieces_en.some(name=>names.includes(name.toLowerCase()))))||null;
 }
 function queueT0(item,requestToken){
  if(!t0Candidate(item)||t0Sets)return;
- if(!t0Loading)t0Loading=fetch("/data/t0-set-bonuses-forever.json?v=20261018-1",{credentials:"omit"})
+ if(!t0Loading)t0Loading=fetch("/data/t0-set-bonuses-forever.json?v=20261018-piece-links",{credentials:"omit"})
   .then(r=>{if(!r.ok)throw Error("T0 "+r.status);return r.json()})
   .then(data=>{if(!Array.isArray(data.sets)||data.sets.length!==9)throw Error("Invalid T0 data");t0Sets=data.sets})
   .catch(()=>{t0Loading=null});

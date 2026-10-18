@@ -41,7 +41,7 @@ test("equipment search renders reported rare names in FR/EN and excludes non-equ
  for(const path of ["equipements/index.html","en/equipements/index.html"]){
   const html=read(path);
   assert.match(html,/gear-data\.js\?v=20261018-rare-gear-22/);
-  assert.match(html,/items-v3\.js\?v=20261018-rare-gear-22/);
+  assert.match(html,/items-v3\.js\?v=20261018-t0-piece-links/);
  }
  assert.equal(rares.rares.flatMap(r=>r.loot).length,114);
 });
