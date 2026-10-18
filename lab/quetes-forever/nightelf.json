@@ -22,7 +22,8 @@
             "zone": "teldrassil",
             "x": 59.9,
             "y": 42.5,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Melithar Staghelm"
           }
         ],
         "objectives": [],
@@ -31,7 +32,8 @@
             "zone": "teldrassil",
             "x": 57.8,
             "y": 45.2,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Tarindrella"
           }
         ]
       },
@@ -60,7 +62,8 @@
             "zone": "teldrassil",
             "x": 58.8,
             "y": 44.4,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Orenthil Whisperwind"
           }
         ]
       },
@@ -92,7 +95,8 @@
             "zone": "teldrassil",
             "x": 58.7,
             "y": 44.3,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Conservator Ilthalaine"
           }
         ],
         "objectives": [
@@ -100,49 +104,57 @@
             "zone": "teldrassil",
             "x": 63.3,
             "y": 42.1,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Young Nightsaber"
           },
           {
             "zone": "teldrassil",
             "x": 64.4,
             "y": 40.5,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Young Nightsaber"
           },
           {
             "zone": "teldrassil",
             "x": 61.5,
             "y": 39.3,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Young Nightsaber"
           },
           {
             "zone": "teldrassil",
             "x": 58.4,
             "y": 46.7,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Young Nightsaber"
           },
           {
             "zone": "teldrassil",
             "x": 56.7,
             "y": 42.2,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Young Thistle Boar"
           },
           {
             "zone": "teldrassil",
             "x": 55.6,
             "y": 41.9,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Young Thistle Boar"
           },
           {
             "zone": "teldrassil",
             "x": 63.2,
             "y": 42.2,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Young Thistle Boar"
           },
           {
             "zone": "teldrassil",
             "x": 62.1,
             "y": 41.2,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Young Thistle Boar"
           }
         ],
         "ends": [
@@ -150,7 +162,8 @@
             "zone": "teldrassil",
             "x": 58.7,
             "y": 44.3,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Conservator Ilthalaine"
           }
         ]
       },
@@ -162,25 +175,29 @@
               "zone": "teldrassil",
               "x": 63.3,
               "y": 42.1,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Young Nightsaber"
             },
             {
               "zone": "teldrassil",
               "x": 64.4,
               "y": 40.5,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Young Nightsaber"
             },
             {
               "zone": "teldrassil",
               "x": 61.5,
               "y": 39.3,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Young Nightsaber"
             },
             {
               "zone": "teldrassil",
               "x": 58.4,
               "y": 46.7,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Young Nightsaber"
             }
           ]
         },
@@ -191,25 +208,29 @@
               "zone": "teldrassil",
               "x": 56.7,
               "y": 42.2,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Young Thistle Boar"
             },
             {
               "zone": "teldrassil",
               "x": 55.6,
               "y": 41.9,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Young Thistle Boar"
             },
             {
               "zone": "teldrassil",
               "x": 63.2,
               "y": 42.2,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Young Thistle Boar"
             },
             {
               "zone": "teldrassil",
               "x": 62.1,
               "y": 41.2,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Young Thistle Boar"
             }
           ]
         }
@@ -238,7 +259,8 @@
             "zone": "teldrassil",
             "x": 58.7,
             "y": 44.3,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Conservator Ilthalaine"
           }
         ],
         "objectives": [
@@ -246,49 +268,57 @@
             "zone": "teldrassil",
             "x": 60.0,
             "y": 36.0,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Mangy Nightsaber"
           },
           {
             "zone": "teldrassil",
             "x": 63.4,
             "y": 38.8,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Mangy Nightsaber"
           },
           {
             "zone": "teldrassil",
             "x": 62.0,
             "y": 36.9,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Mangy Nightsaber"
           },
           {
             "zone": "teldrassil",
             "x": 61.2,
             "y": 39.1,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Mangy Nightsaber"
           },
           {
             "zone": "teldrassil",
             "x": 55.3,
             "y": 37.1,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Thistle Boar"
           },
           {
             "zone": "teldrassil",
             "x": 55.5,
             "y": 39.4,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Thistle Boar"
           },
           {
             "zone": "teldrassil",
             "x": 61.8,
             "y": 38.7,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Thistle Boar"
           },
           {
             "zone": "teldrassil",
             "x": 59.8,
             "y": 37.6,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Thistle Boar"
           },
           {
             "zone": "teldrassil",
@@ -302,7 +332,8 @@
             "zone": "teldrassil",
             "x": 58.7,
             "y": 44.3,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Conservator Ilthalaine"
           }
         ]
       },
@@ -314,25 +345,29 @@
               "zone": "teldrassil",
               "x": 60.0,
               "y": 36.0,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Mangy Nightsaber"
             },
             {
               "zone": "teldrassil",
               "x": 63.4,
               "y": 38.8,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Mangy Nightsaber"
             },
             {
               "zone": "teldrassil",
               "x": 62.0,
               "y": 36.9,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Mangy Nightsaber"
             },
             {
               "zone": "teldrassil",
               "x": 61.2,
               "y": 39.1,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Mangy Nightsaber"
             }
           ]
         },
@@ -343,25 +378,29 @@
               "zone": "teldrassil",
               "x": 55.3,
               "y": 37.1,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Thistle Boar"
             },
             {
               "zone": "teldrassil",
               "x": 55.5,
               "y": 39.4,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Thistle Boar"
             },
             {
               "zone": "teldrassil",
               "x": 61.8,
               "y": 38.7,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Thistle Boar"
             },
             {
               "zone": "teldrassil",
               "x": 59.8,
               "y": 37.6,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Thistle Boar"
             },
             {
               "zone": "teldrassil",
@@ -396,7 +435,8 @@
             "zone": "teldrassil",
             "x": 57.8,
             "y": 45.2,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Tarindrella"
           }
         ],
         "objectives": [
@@ -404,43 +444,50 @@
             "zone": "teldrassil",
             "x": 55.9,
             "y": 45.2,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Grell"
           },
           {
             "zone": "teldrassil",
             "x": 55.7,
             "y": 46.4,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Grell"
           },
           {
             "zone": "teldrassil",
             "x": 55.8,
             "y": 41.5,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Grell"
           },
           {
             "zone": "teldrassil",
             "x": 54.0,
             "y": 39.7,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Grellkin"
           },
           {
             "zone": "teldrassil",
             "x": 62.3,
             "y": 35.7,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Grellkin"
           },
           {
             "zone": "teldrassil",
             "x": 64.2,
             "y": 42.2,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Grellkin"
           },
           {
             "zone": "teldrassil",
             "x": 56.3,
             "y": 34.6,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Grellkin"
           }
         ],
         "ends": [
@@ -448,7 +495,8 @@
             "zone": "teldrassil",
             "x": 57.8,
             "y": 45.2,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Tarindrella"
           }
         ]
       },
@@ -460,43 +508,50 @@
               "zone": "teldrassil",
               "x": 55.9,
               "y": 45.2,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Grell"
             },
             {
               "zone": "teldrassil",
               "x": 55.7,
               "y": 46.4,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Grell"
             },
             {
               "zone": "teldrassil",
               "x": 55.8,
               "y": 41.5,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Grell"
             },
             {
               "zone": "teldrassil",
               "x": 54.0,
               "y": 39.7,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Grellkin"
             },
             {
               "zone": "teldrassil",
               "x": 62.3,
               "y": 35.7,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Grellkin"
             },
             {
               "zone": "teldrassil",
               "x": 64.2,
               "y": 42.2,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Grellkin"
             },
             {
               "zone": "teldrassil",
               "x": 56.3,
               "y": 34.6,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Grellkin"
             }
           ]
         }
@@ -525,7 +580,8 @@
             "zone": "teldrassil",
             "x": 54.6,
             "y": 33.0,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Iverron"
           }
         ],
         "objectives": [],
@@ -534,7 +590,8 @@
             "zone": "teldrassil",
             "x": 60.9,
             "y": 42.0,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Dirania Silvershine"
           }
         ]
       },
@@ -561,7 +618,8 @@
             "zone": "teldrassil",
             "x": 60.9,
             "y": 42.0,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Dirania Silvershine"
           }
         ],
         "objectives": [],
@@ -570,7 +628,8 @@
             "zone": "teldrassil",
             "x": 54.6,
             "y": 33.0,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Iverron"
           }
         ]
       },
@@ -599,7 +658,8 @@
             "zone": "teldrassil",
             "x": 60.9,
             "y": 42.0,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Dirania Silvershine"
           }
         ],
         "objectives": [
@@ -607,97 +667,113 @@
             "zone": "teldrassil",
             "x": 54.0,
             "y": 39.7,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Grellkin"
           },
           {
             "zone": "teldrassil",
             "x": 62.3,
             "y": 35.7,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Grellkin"
           },
           {
             "zone": "teldrassil",
             "x": 64.2,
             "y": 42.2,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Grellkin"
           },
           {
             "zone": "teldrassil",
             "x": 56.3,
             "y": 34.6,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Grellkin"
           },
           {
             "zone": "teldrassil",
             "x": 63.3,
             "y": 44.3,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Hyacinth Mushroom"
           },
           {
             "zone": "teldrassil",
             "x": 53.2,
             "y": 38.6,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Hyacinth Mushroom"
           },
           {
             "zone": "teldrassil",
             "x": 60.9,
             "y": 30.2,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Hyacinth Mushroom"
           },
           {
             "zone": "teldrassil",
             "x": 54.5,
             "y": 41.7,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Hyacinth Mushroom"
           },
           {
             "zone": "teldrassil",
             "x": 58.8,
             "y": 37.6,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Moonpetal Lily"
           },
           {
             "zone": "teldrassil",
             "x": 56.8,
             "y": 37.5,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Moonpetal Lily"
           },
           {
             "zone": "teldrassil",
             "x": 57.3,
             "y": 39.7,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Moonpetal Lily"
           },
           {
             "zone": "teldrassil",
             "x": 58.7,
             "y": 38.2,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Moonpetal Lily"
           },
           {
             "zone": "teldrassil",
             "x": 56.5,
             "y": 25.9,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Webwood Spider"
           },
           {
             "zone": "teldrassil",
             "x": 58.1,
             "y": 27.2,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Webwood Spider"
           },
           {
             "zone": "teldrassil",
             "x": 57.7,
             "y": 27.4,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Webwood Spider"
           },
           {
             "zone": "teldrassil",
             "x": 56.4,
             "y": 30.3,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Webwood Spider"
           }
         ],
         "ends": [
@@ -705,7 +781,8 @@
             "zone": "teldrassil",
             "x": 60.9,
             "y": 42.0,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Dirania Silvershine"
           }
         ]
       },
@@ -717,49 +794,57 @@
               "zone": "teldrassil",
               "x": 54.0,
               "y": 39.7,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Grellkin"
             },
             {
               "zone": "teldrassil",
               "x": 62.3,
               "y": 35.7,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Grellkin"
             },
             {
               "zone": "teldrassil",
               "x": 64.2,
               "y": 42.2,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Grellkin"
             },
             {
               "zone": "teldrassil",
               "x": 56.3,
               "y": 34.6,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Grellkin"
             },
             {
               "zone": "teldrassil",
               "x": 63.3,
               "y": 44.3,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Hyacinth Mushroom"
             },
             {
               "zone": "teldrassil",
               "x": 53.2,
               "y": 38.6,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Hyacinth Mushroom"
             },
             {
               "zone": "teldrassil",
               "x": 60.9,
               "y": 30.2,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Hyacinth Mushroom"
             },
             {
               "zone": "teldrassil",
               "x": 54.5,
               "y": 41.7,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Hyacinth Mushroom"
             }
           ]
         },
@@ -770,25 +855,29 @@
               "zone": "teldrassil",
               "x": 58.8,
               "y": 37.6,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Moonpetal Lily"
             },
             {
               "zone": "teldrassil",
               "x": 56.8,
               "y": 37.5,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Moonpetal Lily"
             },
             {
               "zone": "teldrassil",
               "x": 57.3,
               "y": 39.7,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Moonpetal Lily"
             },
             {
               "zone": "teldrassil",
               "x": 58.7,
               "y": 38.2,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Moonpetal Lily"
             }
           ]
         },
@@ -799,25 +888,29 @@
               "zone": "teldrassil",
               "x": 56.5,
               "y": 25.9,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Webwood Spider"
             },
             {
               "zone": "teldrassil",
               "x": 58.1,
               "y": 27.2,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Webwood Spider"
             },
             {
               "zone": "teldrassil",
               "x": 57.7,
               "y": 27.4,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Webwood Spider"
             },
             {
               "zone": "teldrassil",
               "x": 56.4,
               "y": 30.3,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Webwood Spider"
             }
           ]
         }
@@ -846,7 +939,8 @@
             "zone": "teldrassil",
             "x": 60.9,
             "y": 42.0,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Dirania Silvershine"
           }
         ],
         "objectives": [],
@@ -855,7 +949,8 @@
             "zone": "teldrassil",
             "x": 54.6,
             "y": 33.0,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Iverron"
           }
         ]
       },
@@ -887,7 +982,8 @@
             "zone": "teldrassil",
             "x": 57.8,
             "y": 41.7,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Gilshalan Windwalker"
           }
         ],
         "objectives": [
@@ -895,25 +991,29 @@
             "zone": "teldrassil",
             "x": 56.5,
             "y": 25.9,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Webwood Spider"
           },
           {
             "zone": "teldrassil",
             "x": 58.1,
             "y": 27.2,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Webwood Spider"
           },
           {
             "zone": "teldrassil",
             "x": 57.7,
             "y": 27.4,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Webwood Spider"
           },
           {
             "zone": "teldrassil",
             "x": 56.4,
             "y": 30.3,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Webwood Spider"
           }
         ],
         "ends": [
@@ -921,7 +1021,8 @@
             "zone": "teldrassil",
             "x": 57.8,
             "y": 41.7,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Gilshalan Windwalker"
           }
         ]
       },
@@ -933,25 +1034,29 @@
               "zone": "teldrassil",
               "x": 56.5,
               "y": 25.9,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Webwood Spider"
             },
             {
               "zone": "teldrassil",
               "x": 58.1,
               "y": 27.2,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Webwood Spider"
             },
             {
               "zone": "teldrassil",
               "x": 57.7,
               "y": 27.4,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Webwood Spider"
             },
             {
               "zone": "teldrassil",
               "x": 56.4,
               "y": 30.3,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Webwood Spider"
             }
           ]
         }
@@ -980,7 +1085,8 @@
             "zone": "teldrassil",
             "x": 59.1,
             "y": 39.4,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Tenaron Stormgrip"
           }
         ],
         "objectives": [
@@ -997,7 +1103,8 @@
             "zone": "teldrassil",
             "x": 59.1,
             "y": 39.4,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Tenaron Stormgrip"
           }
         ]
       },
@@ -1031,7 +1138,8 @@
             "zone": "teldrassil",
             "x": 59.1,
             "y": 39.4,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Tenaron Stormgrip"
           }
         ],
         "objectives": [],
@@ -1040,7 +1148,8 @@
             "zone": "teldrassil",
             "x": 56.1,
             "y": 61.7,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Corithras Moonrage"
           }
         ]
       },
@@ -1074,7 +1183,8 @@
             "zone": "teldrassil",
             "x": 56.1,
             "y": 61.7,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Corithras Moonrage"
           }
         ],
         "objectives": [
@@ -1090,7 +1200,8 @@
             "zone": "teldrassil",
             "x": 56.2,
             "y": 61.7,
-            "basis": "documented_forever"
+            "basis": "documented_forever",
+            "label": "Corithras Moonrage"
           }
         ]
       },
@@ -1129,7 +1240,8 @@
             "zone": "teldrassil",
             "x": 56.1,
             "y": 57.7,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Syral Bladeleaf"
           }
         ],
         "objectives": [],
@@ -1138,7 +1250,8 @@
             "zone": "teldrassil",
             "x": 60.9,
             "y": 68.5,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Denalan"
           }
         ]
       },
@@ -1170,7 +1283,8 @@
             "zone": "teldrassil",
             "x": 61.2,
             "y": 47.6,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Porthannius"
           }
         ],
         "objectives": [],
@@ -1179,7 +1293,8 @@
             "zone": "teldrassil",
             "x": 55.6,
             "y": 59.8,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Innkeeper Keldamyr"
           }
         ]
       },
@@ -1213,7 +1328,8 @@
             "zone": "teldrassil",
             "x": 57.8,
             "y": 41.7,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Gilshalan Windwalker"
           }
         ],
         "objectives": [],
@@ -1222,7 +1338,8 @@
             "zone": "teldrassil",
             "x": 59.1,
             "y": 39.4,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Tenaron Stormgrip"
           }
         ]
       },
@@ -1251,7 +1368,8 @@
             "zone": "teldrassil",
             "x": 57.8,
             "y": 41.7,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Gilshalan Windwalker"
           }
         ],
         "objectives": [
@@ -1259,7 +1377,8 @@
             "zone": "teldrassil",
             "x": 57.0,
             "y": 26.5,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Webwood Eggs"
           }
         ],
         "ends": [
@@ -1267,7 +1386,8 @@
             "zone": "teldrassil",
             "x": 57.8,
             "y": 41.7,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Gilshalan Windwalker"
           }
         ]
       },
@@ -1279,7 +1399,8 @@
               "zone": "teldrassil",
               "x": 57.0,
               "y": 26.5,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Webwood Eggs"
             }
           ]
         }
@@ -1306,7 +1427,8 @@
             "zone": "teldrassil",
             "x": 60.5,
             "y": 56.3,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Zenn Foulhoof"
           }
         ],
         "objectives": [
@@ -1314,259 +1436,302 @@
             "zone": "teldrassil",
             "x": 58.1,
             "y": 76.6,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Duskstalker"
           },
           {
             "zone": "teldrassil",
             "x": 45.2,
             "y": 42.6,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Elder Nightsaber"
           },
           {
             "zone": "teldrassil",
             "x": 39.8,
             "y": 44.5,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Elder Nightsaber"
           },
           {
             "zone": "teldrassil",
             "x": 45.7,
             "y": 41.0,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Elder Nightsaber"
           },
           {
             "zone": "teldrassil",
             "x": 45.1,
             "y": 36.7,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Elder Nightsaber"
           },
           {
             "zone": "teldrassil",
             "x": 40.7,
             "y": 27.4,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Feral Nightsaber"
           },
           {
             "zone": "teldrassil",
             "x": 41.3,
             "y": 25.1,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Feral Nightsaber"
           },
           {
             "zone": "teldrassil",
             "x": 37.4,
             "y": 24.8,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Feral Nightsaber"
           },
           {
             "zone": "teldrassil",
             "x": 67.3,
             "y": 51.2,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Nightsaber"
           },
           {
             "zone": "teldrassil",
             "x": 65.6,
             "y": 53.5,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Nightsaber"
           },
           {
             "zone": "teldrassil",
             "x": 49.7,
             "y": 52.4,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Nightsaber"
           },
           {
             "zone": "teldrassil",
             "x": 68.8,
             "y": 55.4,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Nightsaber"
           },
           {
             "zone": "teldrassil",
             "x": 38.9,
             "y": 58.1,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Nightsaber Stalker"
           },
           {
             "zone": "teldrassil",
             "x": 63.4,
             "y": 72.2,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Nightsaber Stalker"
           },
           {
             "zone": "teldrassil",
             "x": 46.6,
             "y": 71.3,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Nightsaber Stalker"
           },
           {
             "zone": "teldrassil",
             "x": 53.9,
             "y": 72.5,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Nightsaber Stalker"
           },
           {
             "zone": "teldrassil",
             "x": 40.8,
             "y": 45.0,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Strigid Hunter"
           },
           {
             "zone": "teldrassil",
             "x": 46.2,
             "y": 31.4,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Strigid Hunter"
           },
           {
             "zone": "teldrassil",
             "x": 45.6,
             "y": 40.6,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Strigid Hunter"
           },
           {
             "zone": "teldrassil",
             "x": 37.6,
             "y": 29.3,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Strigid Hunter"
           },
           {
             "zone": "teldrassil",
             "x": 52.0,
             "y": 56.4,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Strigid Owl"
           },
           {
             "zone": "teldrassil",
             "x": 64.7,
             "y": 51.5,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Strigid Owl"
           },
           {
             "zone": "teldrassil",
             "x": 68.7,
             "y": 62.4,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Strigid Owl"
           },
           {
             "zone": "teldrassil",
             "x": 53.5,
             "y": 59.4,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Strigid Owl"
           },
           {
             "zone": "teldrassil",
             "x": 58.1,
             "y": 76.2,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Strigid Screecher"
           },
           {
             "zone": "teldrassil",
             "x": 64.3,
             "y": 69.2,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Strigid Screecher"
           },
           {
             "zone": "teldrassil",
             "x": 39.5,
             "y": 54.5,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Strigid Screecher"
           },
           {
             "zone": "teldrassil",
             "x": 39.1,
             "y": 51.4,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Strigid Screecher"
           },
           {
             "zone": "teldrassil",
             "x": 45.7,
             "y": 27.5,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Giant Webwood Spider"
           },
           {
             "zone": "teldrassil",
             "x": 41.2,
             "y": 28.9,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Giant Webwood Spider"
           },
           {
             "zone": "teldrassil",
             "x": 40.2,
             "y": 25.4,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Giant Webwood Spider"
           },
           {
             "zone": "teldrassil",
             "x": 68.0,
             "y": 64.1,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Webwood Lurker"
           },
           {
             "zone": "teldrassil",
             "x": 69.5,
             "y": 60.3,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Webwood Lurker"
           },
           {
             "zone": "teldrassil",
             "x": 45.9,
             "y": 46.7,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Webwood Lurker"
           },
           {
             "zone": "teldrassil",
             "x": 69.5,
             "y": 57.2,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Webwood Lurker"
           },
           {
             "zone": "teldrassil",
             "x": 43.7,
             "y": 47.3,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Webwood Silkspinner"
           },
           {
             "zone": "teldrassil",
             "x": 43.2,
             "y": 45.5,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Webwood Silkspinner"
           },
           {
             "zone": "teldrassil",
             "x": 47.9,
             "y": 32.1,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Webwood Silkspinner"
           },
           {
             "zone": "teldrassil",
             "x": 34.6,
             "y": 32.6,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Webwood Silkspinner"
           },
           {
             "zone": "teldrassil",
             "x": 44.8,
             "y": 77.5,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Webwood Venomfang"
           },
           {
             "zone": "teldrassil",
             "x": 38.9,
             "y": 61.7,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Webwood Venomfang"
           },
           {
             "zone": "teldrassil",
             "x": 61.0,
             "y": 73.4,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Webwood Venomfang"
           },
           {
             "zone": "teldrassil",
             "x": 41.8,
             "y": 75.0,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Webwood Venomfang"
           }
         ],
         "ends": [
@@ -1574,7 +1739,8 @@
             "zone": "teldrassil",
             "x": 60.5,
             "y": 56.3,
-            "basis": "documented_forever"
+            "basis": "documented_forever",
+            "label": "Zenn Foulhoof"
           }
         ]
       },
@@ -1586,97 +1752,113 @@
               "zone": "teldrassil",
               "x": 58.1,
               "y": 76.6,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Duskstalker"
             },
             {
               "zone": "teldrassil",
               "x": 45.2,
               "y": 42.6,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Elder Nightsaber"
             },
             {
               "zone": "teldrassil",
               "x": 39.8,
               "y": 44.5,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Elder Nightsaber"
             },
             {
               "zone": "teldrassil",
               "x": 45.7,
               "y": 41.0,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Elder Nightsaber"
             },
             {
               "zone": "teldrassil",
               "x": 45.1,
               "y": 36.7,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Elder Nightsaber"
             },
             {
               "zone": "teldrassil",
               "x": 40.7,
               "y": 27.4,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Feral Nightsaber"
             },
             {
               "zone": "teldrassil",
               "x": 41.3,
               "y": 25.1,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Feral Nightsaber"
             },
             {
               "zone": "teldrassil",
               "x": 37.4,
               "y": 24.8,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Feral Nightsaber"
             },
             {
               "zone": "teldrassil",
               "x": 67.3,
               "y": 51.2,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Nightsaber"
             },
             {
               "zone": "teldrassil",
               "x": 65.6,
               "y": 53.5,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Nightsaber"
             },
             {
               "zone": "teldrassil",
               "x": 49.7,
               "y": 52.4,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Nightsaber"
             },
             {
               "zone": "teldrassil",
               "x": 68.8,
               "y": 55.4,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Nightsaber"
             },
             {
               "zone": "teldrassil",
               "x": 38.9,
               "y": 58.1,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Nightsaber Stalker"
             },
             {
               "zone": "teldrassil",
               "x": 63.4,
               "y": 72.2,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Nightsaber Stalker"
             },
             {
               "zone": "teldrassil",
               "x": 46.6,
               "y": 71.3,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Nightsaber Stalker"
             },
             {
               "zone": "teldrassil",
               "x": 53.9,
               "y": 72.5,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Nightsaber Stalker"
             }
           ]
         },
@@ -1687,73 +1869,85 @@
               "zone": "teldrassil",
               "x": 40.8,
               "y": 45.0,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Strigid Hunter"
             },
             {
               "zone": "teldrassil",
               "x": 46.2,
               "y": 31.4,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Strigid Hunter"
             },
             {
               "zone": "teldrassil",
               "x": 45.6,
               "y": 40.6,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Strigid Hunter"
             },
             {
               "zone": "teldrassil",
               "x": 37.6,
               "y": 29.3,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Strigid Hunter"
             },
             {
               "zone": "teldrassil",
               "x": 52.0,
               "y": 56.4,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Strigid Owl"
             },
             {
               "zone": "teldrassil",
               "x": 64.7,
               "y": 51.5,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Strigid Owl"
             },
             {
               "zone": "teldrassil",
               "x": 68.7,
               "y": 62.4,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Strigid Owl"
             },
             {
               "zone": "teldrassil",
               "x": 53.5,
               "y": 59.4,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Strigid Owl"
             },
             {
               "zone": "teldrassil",
               "x": 58.1,
               "y": 76.2,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Strigid Screecher"
             },
             {
               "zone": "teldrassil",
               "x": 64.3,
               "y": 69.2,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Strigid Screecher"
             },
             {
               "zone": "teldrassil",
               "x": 39.5,
               "y": 54.5,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Strigid Screecher"
             },
             {
               "zone": "teldrassil",
               "x": 39.1,
               "y": 51.4,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Strigid Screecher"
             }
           ]
         },
@@ -1764,91 +1958,106 @@
               "zone": "teldrassil",
               "x": 45.7,
               "y": 27.5,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Giant Webwood Spider"
             },
             {
               "zone": "teldrassil",
               "x": 41.2,
               "y": 28.9,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Giant Webwood Spider"
             },
             {
               "zone": "teldrassil",
               "x": 40.2,
               "y": 25.4,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Giant Webwood Spider"
             },
             {
               "zone": "teldrassil",
               "x": 68.0,
               "y": 64.1,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Webwood Lurker"
             },
             {
               "zone": "teldrassil",
               "x": 69.5,
               "y": 60.3,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Webwood Lurker"
             },
             {
               "zone": "teldrassil",
               "x": 45.9,
               "y": 46.7,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Webwood Lurker"
             },
             {
               "zone": "teldrassil",
               "x": 69.5,
               "y": 57.2,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Webwood Lurker"
             },
             {
               "zone": "teldrassil",
               "x": 43.7,
               "y": 47.3,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Webwood Silkspinner"
             },
             {
               "zone": "teldrassil",
               "x": 43.2,
               "y": 45.5,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Webwood Silkspinner"
             },
             {
               "zone": "teldrassil",
               "x": 47.9,
               "y": 32.1,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Webwood Silkspinner"
             },
             {
               "zone": "teldrassil",
               "x": 34.6,
               "y": 32.6,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Webwood Silkspinner"
             },
             {
               "zone": "teldrassil",
               "x": 44.8,
               "y": 77.5,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Webwood Venomfang"
             },
             {
               "zone": "teldrassil",
               "x": 38.9,
               "y": 61.7,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Webwood Venomfang"
             },
             {
               "zone": "teldrassil",
               "x": 61.0,
               "y": 73.4,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Webwood Venomfang"
             },
             {
               "zone": "teldrassil",
               "x": 41.8,
               "y": 75.0,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Webwood Venomfang"
             }
           ]
         }
@@ -1875,7 +2084,8 @@
             "zone": "teldrassil",
             "x": 56.0,
             "y": 57.3,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Athridas Bearmantle"
           }
         ],
         "objectives": [],
@@ -1884,7 +2094,8 @@
             "zone": "teldrassil",
             "x": 66.3,
             "y": 58.6,
-            "basis": "documented_forever"
+            "basis": "documented_forever",
+            "label": "Gaerolas Talvethren"
           }
         ]
       },
@@ -1913,7 +2124,8 @@
             "zone": "teldrassil",
             "x": 66.3,
             "y": 58.6,
-            "basis": "documented_forever"
+            "basis": "documented_forever",
+            "label": "Gaerolas Talvethren"
           }
         ],
         "objectives": [],
@@ -1922,7 +2134,8 @@
             "zone": "teldrassil",
             "x": 55.9,
             "y": 57.4,
-            "basis": "documented_forever"
+            "basis": "documented_forever",
+            "label": "Athridas Bearmantle"
           }
         ]
       },
@@ -1949,7 +2162,8 @@
             "zone": "teldrassil",
             "x": 55.6,
             "y": 56.9,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Tallonkai Swiftroot"
           }
         ],
         "objectives": [
@@ -1957,19 +2171,22 @@
             "zone": "teldrassil",
             "x": 68.0,
             "y": 59.7,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Tallonkai's Dresser"
           },
           {
             "zone": "teldrassil",
             "x": 68.0,
             "y": 59.6,
-            "basis": "documented_forever"
+            "basis": "documented_forever",
+            "label": "Tallonkai's Dresser"
           },
           {
             "zone": "teldrassil",
             "x": 68.0,
             "y": 59.6,
-            "basis": "documented_forever"
+            "basis": "documented_forever",
+            "label": "Tallonkai's Dresser"
           }
         ],
         "ends": [
@@ -1977,7 +2194,8 @@
             "zone": "teldrassil",
             "x": 55.5,
             "y": 56.9,
-            "basis": "documented_forever"
+            "basis": "documented_forever",
+            "label": "Tallonkai Swiftroot"
           }
         ]
       },
@@ -1989,19 +2207,22 @@
               "zone": "teldrassil",
               "x": 68.0,
               "y": 59.7,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Tallonkai's Dresser"
             },
             {
               "zone": "teldrassil",
               "x": 68.0,
               "y": 59.6,
-              "basis": "documented_forever"
+              "basis": "documented_forever",
+              "label": "Tallonkai's Dresser"
             },
             {
               "zone": "teldrassil",
               "x": 68.0,
               "y": 59.6,
-              "basis": "documented_forever"
+              "basis": "documented_forever",
+              "label": "Tallonkai's Dresser"
             }
           ]
         }
@@ -2030,7 +2251,8 @@
             "zone": "teldrassil",
             "x": 60.8,
             "y": 68.5,
-            "basis": "documented_forever"
+            "basis": "documented_forever",
+            "label": "Denalan"
           }
         ],
         "objectives": [
@@ -2038,109 +2260,127 @@
             "zone": "teldrassil",
             "x": 45.0,
             "y": 26.6,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Elder Timberling"
           },
           {
             "zone": "teldrassil",
             "x": 44.5,
             "y": 26.0,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Elder Timberling"
           },
           {
             "zone": "teldrassil",
             "x": 53.8,
             "y": 75.1,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Oakenscowl"
           },
           {
             "zone": "teldrassil",
             "x": 60.0,
             "y": 72.2,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Timberling"
           },
           {
             "zone": "teldrassil",
             "x": 61.5,
             "y": 69.3,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Timberling"
           },
           {
             "zone": "teldrassil",
             "x": 62.2,
             "y": 68.6,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Timberling"
           },
           {
             "zone": "teldrassil",
             "x": 59.7,
             "y": 64.3,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Timberling"
           },
           {
             "zone": "teldrassil",
             "x": 54.5,
             "y": 69.8,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Timberling Bark Ripper"
           },
           {
             "zone": "teldrassil",
             "x": 52.4,
             "y": 74.3,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Timberling Bark Ripper"
           },
           {
             "zone": "teldrassil",
             "x": 52.5,
             "y": 69.3,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Timberling Bark Ripper"
           },
           {
             "zone": "teldrassil",
             "x": 50.1,
             "y": 72.1,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Timberling Bark Ripper"
           },
           {
             "zone": "teldrassil",
             "x": 41.9,
             "y": 33.9,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Timberling Mire Beast"
           },
           {
             "zone": "teldrassil",
             "x": 43.9,
             "y": 34.9,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Timberling Mire Beast"
           },
           {
             "zone": "teldrassil",
             "x": 43.0,
             "y": 33.7,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Timberling Mire Beast"
           },
           {
             "zone": "teldrassil",
             "x": 41.8,
             "y": 37.9,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Timberling Trampler"
           },
           {
             "zone": "teldrassil",
             "x": 42.5,
             "y": 38.7,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Timberling Trampler"
           },
           {
             "zone": "teldrassil",
             "x": 42.5,
             "y": 42.7,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Timberling Trampler"
           },
           {
             "zone": "teldrassil",
             "x": 53.7,
             "y": 75.3,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Timberling Trampler"
           }
         ],
         "ends": [
@@ -2148,7 +2388,8 @@
             "zone": "darnassus",
             "x": 38.5,
             "y": 21.8,
-            "basis": "documented_forever"
+            "basis": "documented_forever",
+            "label": "Rellian Greenspyre"
           }
         ]
       },
@@ -2160,109 +2401,127 @@
               "zone": "teldrassil",
               "x": 45.0,
               "y": 26.6,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Elder Timberling"
             },
             {
               "zone": "teldrassil",
               "x": 44.5,
               "y": 26.0,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Elder Timberling"
             },
             {
               "zone": "teldrassil",
               "x": 53.8,
               "y": 75.1,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Oakenscowl"
             },
             {
               "zone": "teldrassil",
               "x": 60.0,
               "y": 72.2,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Timberling"
             },
             {
               "zone": "teldrassil",
               "x": 61.5,
               "y": 69.3,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Timberling"
             },
             {
               "zone": "teldrassil",
               "x": 62.2,
               "y": 68.6,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Timberling"
             },
             {
               "zone": "teldrassil",
               "x": 59.7,
               "y": 64.3,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Timberling"
             },
             {
               "zone": "teldrassil",
               "x": 54.5,
               "y": 69.8,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Timberling Bark Ripper"
             },
             {
               "zone": "teldrassil",
               "x": 52.4,
               "y": 74.3,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Timberling Bark Ripper"
             },
             {
               "zone": "teldrassil",
               "x": 52.5,
               "y": 69.3,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Timberling Bark Ripper"
             },
             {
               "zone": "teldrassil",
               "x": 50.1,
               "y": 72.1,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Timberling Bark Ripper"
             },
             {
               "zone": "teldrassil",
               "x": 41.9,
               "y": 33.9,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Timberling Mire Beast"
             },
             {
               "zone": "teldrassil",
               "x": 43.9,
               "y": 34.9,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Timberling Mire Beast"
             },
             {
               "zone": "teldrassil",
               "x": 43.0,
               "y": 33.7,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Timberling Mire Beast"
             },
             {
               "zone": "teldrassil",
               "x": 41.8,
               "y": 37.9,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Timberling Trampler"
             },
             {
               "zone": "teldrassil",
               "x": 42.5,
               "y": 38.7,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Timberling Trampler"
             },
             {
               "zone": "teldrassil",
               "x": 42.5,
               "y": 42.7,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Timberling Trampler"
             },
             {
               "zone": "teldrassil",
               "x": 53.7,
               "y": 75.3,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Timberling Trampler"
             }
           ]
         }
@@ -2291,7 +2550,8 @@
             "zone": "teldrassil",
             "x": 56.1,
             "y": 57.8,
-            "basis": "documented_forever"
+            "basis": "documented_forever",
+            "label": "Syral Bladeleaf"
           }
         ],
         "objectives": [
@@ -2299,25 +2559,29 @@
             "zone": "teldrassil",
             "x": 54.2,
             "y": 65.5,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Fel Cone"
           },
           {
             "zone": "teldrassil",
             "x": 49.9,
             "y": 68.2,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Fel Cone"
           },
           {
             "zone": "teldrassil",
             "x": 52.0,
             "y": 67.2,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Fel Cone"
           },
           {
             "zone": "teldrassil",
             "x": 52.3,
             "y": 61.3,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Fel Cone"
           },
           {
             "zone": "teldrassil",
@@ -2337,7 +2601,8 @@
             "zone": "teldrassil",
             "x": 60.4,
             "y": 56.3,
-            "basis": "documented_forever"
+            "basis": "documented_forever",
+            "label": "Zenn Foulhoof"
           }
         ]
       },
@@ -2349,25 +2614,29 @@
               "zone": "teldrassil",
               "x": 54.2,
               "y": 65.5,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Fel Cone"
             },
             {
               "zone": "teldrassil",
               "x": 49.9,
               "y": 68.2,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Fel Cone"
             },
             {
               "zone": "teldrassil",
               "x": 52.0,
               "y": 67.2,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Fel Cone"
             },
             {
               "zone": "teldrassil",
               "x": 52.3,
               "y": 61.3,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Fel Cone"
             },
             {
               "zone": "teldrassil",
@@ -2408,7 +2677,8 @@
             "zone": "teldrassil",
             "x": 55.4,
             "y": 57.2,
-            "basis": "documented_forever"
+            "basis": "documented_forever",
+            "label": "Aldia"
           }
         ]
       },
@@ -2442,7 +2712,8 @@
             "zone": "teldrassil",
             "x": 60.9,
             "y": 68.5,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Denalan"
           }
         ],
         "objectives": [
@@ -2450,109 +2721,127 @@
             "zone": "teldrassil",
             "x": 45.0,
             "y": 26.6,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Elder Timberling"
           },
           {
             "zone": "teldrassil",
             "x": 44.5,
             "y": 26.0,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Elder Timberling"
           },
           {
             "zone": "teldrassil",
             "x": 53.8,
             "y": 75.1,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Oakenscowl"
           },
           {
             "zone": "teldrassil",
             "x": 60.0,
             "y": 72.2,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Timberling"
           },
           {
             "zone": "teldrassil",
             "x": 61.5,
             "y": 69.3,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Timberling"
           },
           {
             "zone": "teldrassil",
             "x": 62.2,
             "y": 68.6,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Timberling"
           },
           {
             "zone": "teldrassil",
             "x": 59.7,
             "y": 64.3,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Timberling"
           },
           {
             "zone": "teldrassil",
             "x": 54.5,
             "y": 69.8,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Timberling Bark Ripper"
           },
           {
             "zone": "teldrassil",
             "x": 52.4,
             "y": 74.3,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Timberling Bark Ripper"
           },
           {
             "zone": "teldrassil",
             "x": 52.5,
             "y": 69.3,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Timberling Bark Ripper"
           },
           {
             "zone": "teldrassil",
             "x": 50.1,
             "y": 72.1,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Timberling Bark Ripper"
           },
           {
             "zone": "teldrassil",
             "x": 41.9,
             "y": 33.9,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Timberling Mire Beast"
           },
           {
             "zone": "teldrassil",
             "x": 43.9,
             "y": 34.9,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Timberling Mire Beast"
           },
           {
             "zone": "teldrassil",
             "x": 43.0,
             "y": 33.7,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Timberling Mire Beast"
           },
           {
             "zone": "teldrassil",
             "x": 41.8,
             "y": 37.9,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Timberling Trampler"
           },
           {
             "zone": "teldrassil",
             "x": 42.5,
             "y": 38.7,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Timberling Trampler"
           },
           {
             "zone": "teldrassil",
             "x": 42.5,
             "y": 42.7,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Timberling Trampler"
           },
           {
             "zone": "teldrassil",
             "x": 53.7,
             "y": 75.3,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Timberling Trampler"
           },
           {
             "zone": "teldrassil",
@@ -2566,7 +2855,8 @@
             "zone": "teldrassil",
             "x": 60.8,
             "y": 68.5,
-            "basis": "documented_forever"
+            "basis": "documented_forever",
+            "label": "Denalan"
           }
         ]
       },
@@ -2578,109 +2868,127 @@
               "zone": "teldrassil",
               "x": 45.0,
               "y": 26.6,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Elder Timberling"
             },
             {
               "zone": "teldrassil",
               "x": 44.5,
               "y": 26.0,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Elder Timberling"
             },
             {
               "zone": "teldrassil",
               "x": 53.8,
               "y": 75.1,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Oakenscowl"
             },
             {
               "zone": "teldrassil",
               "x": 60.0,
               "y": 72.2,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Timberling"
             },
             {
               "zone": "teldrassil",
               "x": 61.5,
               "y": 69.3,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Timberling"
             },
             {
               "zone": "teldrassil",
               "x": 62.2,
               "y": 68.6,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Timberling"
             },
             {
               "zone": "teldrassil",
               "x": 59.7,
               "y": 64.3,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Timberling"
             },
             {
               "zone": "teldrassil",
               "x": 54.5,
               "y": 69.8,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Timberling Bark Ripper"
             },
             {
               "zone": "teldrassil",
               "x": 52.4,
               "y": 74.3,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Timberling Bark Ripper"
             },
             {
               "zone": "teldrassil",
               "x": 52.5,
               "y": 69.3,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Timberling Bark Ripper"
             },
             {
               "zone": "teldrassil",
               "x": 50.1,
               "y": 72.1,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Timberling Bark Ripper"
             },
             {
               "zone": "teldrassil",
               "x": 41.9,
               "y": 33.9,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Timberling Mire Beast"
             },
             {
               "zone": "teldrassil",
               "x": 43.9,
               "y": 34.9,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Timberling Mire Beast"
             },
             {
               "zone": "teldrassil",
               "x": 43.0,
               "y": 33.7,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Timberling Mire Beast"
             },
             {
               "zone": "teldrassil",
               "x": 41.8,
               "y": 37.9,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Timberling Trampler"
             },
             {
               "zone": "teldrassil",
               "x": 42.5,
               "y": 38.7,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Timberling Trampler"
             },
             {
               "zone": "teldrassil",
               "x": 42.5,
               "y": 42.7,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Timberling Trampler"
             },
             {
               "zone": "teldrassil",
               "x": 53.7,
               "y": 75.3,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Timberling Trampler"
             },
             {
               "zone": "teldrassil",
@@ -2713,7 +3021,8 @@
             "zone": "teldrassil",
             "x": 60.9,
             "y": 68.5,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Denalan"
           }
         ],
         "objectives": [
@@ -2721,25 +3030,29 @@
             "zone": "teldrassil",
             "x": 60.1,
             "y": 70.5,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Timberling Sprout"
           },
           {
             "zone": "teldrassil",
             "x": 61.6,
             "y": 68.9,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Timberling Sprout"
           },
           {
             "zone": "teldrassil",
             "x": 50.1,
             "y": 72.0,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Timberling Sprout"
           },
           {
             "zone": "teldrassil",
             "x": 62.2,
             "y": 68.5,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Timberling Sprout"
           },
           {
             "zone": "teldrassil",
@@ -2753,7 +3066,8 @@
             "zone": "teldrassil",
             "x": 60.8,
             "y": 68.5,
-            "basis": "documented_forever"
+            "basis": "documented_forever",
+            "label": "Denalan"
           }
         ]
       },
@@ -2765,25 +3079,29 @@
               "zone": "teldrassil",
               "x": 60.1,
               "y": 70.5,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Timberling Sprout"
             },
             {
               "zone": "teldrassil",
               "x": 61.6,
               "y": 68.9,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Timberling Sprout"
             },
             {
               "zone": "teldrassil",
               "x": 50.1,
               "y": 72.0,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Timberling Sprout"
             },
             {
               "zone": "teldrassil",
               "x": 62.2,
               "y": 68.5,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Timberling Sprout"
             },
             {
               "zone": "teldrassil",
@@ -2816,7 +3134,8 @@
             "zone": "teldrassil",
             "x": 55.6,
             "y": 56.9,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Tallonkai Swiftroot"
           }
         ],
         "objectives": [
@@ -2824,13 +3143,15 @@
             "zone": "teldrassil",
             "x": 51.2,
             "y": 50.8,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Lord Melenas"
           },
           {
             "zone": "teldrassil",
             "x": 52.9,
             "y": 50.2,
-            "basis": "documented_forever"
+            "basis": "documented_forever",
+            "label": "Lord Melenas"
           },
           {
             "zone": "teldrassil",
@@ -2844,7 +3165,8 @@
             "zone": "teldrassil",
             "x": 55.5,
             "y": 56.9,
-            "basis": "documented_forever"
+            "basis": "documented_forever",
+            "label": "Tallonkai Swiftroot"
           }
         ]
       },
@@ -2856,13 +3178,15 @@
               "zone": "teldrassil",
               "x": 51.2,
               "y": 50.8,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Lord Melenas"
             },
             {
               "zone": "teldrassil",
               "x": 52.9,
               "y": 50.2,
-              "basis": "documented_forever"
+              "basis": "documented_forever",
+              "label": "Lord Melenas"
             },
             {
               "zone": "teldrassil",
@@ -2897,7 +3221,8 @@
             "zone": "teldrassil",
             "x": 55.5,
             "y": 56.9,
-            "basis": "documented_forever"
+            "basis": "documented_forever",
+            "label": "Tallonkai Swiftroot"
           }
         ],
         "objectives": [
@@ -2905,19 +3230,22 @@
             "zone": "teldrassil",
             "x": 68.6,
             "y": 52.3,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Gnarlpine Mystic"
           },
           {
             "zone": "teldrassil",
             "x": 69.6,
             "y": 55.3,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Gnarlpine Mystic"
           },
           {
             "zone": "teldrassil",
             "x": 68.1,
             "y": 51.4,
-            "basis": "documented_forever"
+            "basis": "documented_forever",
+            "label": "Gnarlpine Mystic"
           },
           {
             "zone": "teldrassil",
@@ -2931,7 +3259,8 @@
             "zone": "teldrassil",
             "x": 55.5,
             "y": 56.9,
-            "basis": "documented_forever"
+            "basis": "documented_forever",
+            "label": "Tallonkai Swiftroot"
           }
         ]
       },
@@ -2943,19 +3272,22 @@
               "zone": "teldrassil",
               "x": 68.6,
               "y": 52.3,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Gnarlpine Mystic"
             },
             {
               "zone": "teldrassil",
               "x": 69.6,
               "y": 55.3,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Gnarlpine Mystic"
             },
             {
               "zone": "teldrassil",
               "x": 68.1,
               "y": 51.4,
-              "basis": "documented_forever"
+              "basis": "documented_forever",
+              "label": "Gnarlpine Mystic"
             }
           ]
         },
@@ -2993,7 +3325,8 @@
             "zone": "teldrassil",
             "x": 55.0,
             "y": 58.5,
-            "basis": "documented_forever"
+            "basis": "documented_forever",
+            "label": "Moon Priestess Amara"
           }
         ],
         "objectives": [
@@ -3001,25 +3334,29 @@
             "zone": "teldrassil",
             "x": 46.2,
             "y": 51.1,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Gnarlpine Ambusher"
           },
           {
             "zone": "teldrassil",
             "x": 45.9,
             "y": 52.5,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Gnarlpine Ambusher"
           },
           {
             "zone": "teldrassil",
             "x": 45.9,
             "y": 54.5,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Gnarlpine Ambusher"
           },
           {
             "zone": "teldrassil",
             "x": 48.5,
             "y": 54.1,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Gnarlpine Ambusher"
           },
           {
             "zone": "teldrassil",
@@ -3033,7 +3370,8 @@
             "zone": "teldrassil",
             "x": 54.8,
             "y": 58.5,
-            "basis": "documented_forever"
+            "basis": "documented_forever",
+            "label": "Moon Priestess Amara"
           }
         ]
       },
@@ -3045,25 +3383,29 @@
               "zone": "teldrassil",
               "x": 46.2,
               "y": 51.1,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Gnarlpine Ambusher"
             },
             {
               "zone": "teldrassil",
               "x": 45.9,
               "y": 52.5,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Gnarlpine Ambusher"
             },
             {
               "zone": "teldrassil",
               "x": 45.9,
               "y": 54.5,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Gnarlpine Ambusher"
             },
             {
               "zone": "teldrassil",
               "x": 48.5,
               "y": 54.1,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Gnarlpine Ambusher"
             },
             {
               "zone": "teldrassil",
@@ -3096,7 +3438,8 @@
             "zone": "teldrassil",
             "x": 44.9,
             "y": 61.6,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Oben Rageclaw"
           }
         ],
         "objectives": [
@@ -3104,25 +3447,29 @@
             "zone": "darnassus",
             "x": 97.1,
             "y": 96.4,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Gnarlpine Shaman"
           },
           {
             "zone": "darnassus",
             "x": 99.6,
             "y": 92.6,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Gnarlpine Shaman"
           },
           {
             "zone": "teldrassil",
             "x": 49.5,
             "y": 66.8,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Gnarlpine Shaman"
           },
           {
             "zone": "teldrassil",
             "x": 56.8,
             "y": 76.5,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Gnarlpine Shaman"
           }
         ],
         "ends": [
@@ -3130,7 +3477,8 @@
             "zone": "teldrassil",
             "x": 44.9,
             "y": 61.6,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Oben Rageclaw"
           }
         ]
       },
@@ -3142,13 +3490,15 @@
               "zone": "teldrassil",
               "x": 49.5,
               "y": 66.8,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Gnarlpine Shaman"
             },
             {
               "zone": "teldrassil",
               "x": 56.8,
               "y": 76.5,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Gnarlpine Shaman"
             }
           ]
         }
@@ -3177,7 +3527,8 @@
             "zone": "teldrassil",
             "x": 56.2,
             "y": 61.6,
-            "basis": "documented_forever"
+            "basis": "documented_forever",
+            "label": "Corithras Moonrage"
           }
         ],
         "objectives": [
@@ -3193,7 +3544,8 @@
             "zone": "teldrassil",
             "x": 56.2,
             "y": 61.8,
-            "basis": "documented_forever"
+            "basis": "documented_forever",
+            "label": "Corithras Moonrage"
           }
         ]
       },
@@ -3234,7 +3586,8 @@
             "zone": "teldrassil",
             "x": 37.6,
             "y": 36.9,
-            "basis": "documented_forever"
+            "basis": "documented_forever",
+            "label": "Sentinel Eralya Leafshadow"
           }
         ],
         "objectives": [],
@@ -3243,7 +3596,8 @@
             "zone": "teldrassil",
             "x": 55.3,
             "y": 56.8,
-            "basis": "documented_forever"
+            "basis": "documented_forever",
+            "label": "Byancie"
           }
         ]
       },
@@ -3272,7 +3626,8 @@
             "zone": "teldrassil",
             "x": 60.9,
             "y": 68.5,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Denalan"
           }
         ],
         "objectives": [
@@ -3280,7 +3635,8 @@
             "zone": "teldrassil",
             "x": 53.8,
             "y": 75.1,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Oakenscowl"
           }
         ],
         "ends": [
@@ -3288,7 +3644,8 @@
             "zone": "teldrassil",
             "x": 60.9,
             "y": 68.5,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Denalan"
           }
         ]
       },
@@ -3300,7 +3657,8 @@
               "zone": "teldrassil",
               "x": 53.8,
               "y": 75.1,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Oakenscowl"
             }
           ]
         }
@@ -3329,7 +3687,8 @@
             "zone": "darnassus",
             "x": 38.4,
             "y": 21.2,
-            "basis": "documented_forever"
+            "basis": "documented_forever",
+            "label": "Rellian Greenspyre"
           }
         ],
         "objectives": [],
@@ -3338,7 +3697,8 @@
             "zone": "teldrassil",
             "x": 60.9,
             "y": 68.5,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Denalan"
           }
         ]
       },
@@ -3367,7 +3727,8 @@
             "zone": "teldrassil",
             "x": 37.6,
             "y": 36.9,
-            "basis": "documented_forever"
+            "basis": "documented_forever",
+            "label": "Sentinel Eralya Leafshadow"
           }
         ]
       },
@@ -3396,7 +3757,8 @@
             "zone": "teldrassil",
             "x": 55.9,
             "y": 57.4,
-            "basis": "documented_forever"
+            "basis": "documented_forever",
+            "label": "Athridas Bearmantle"
           }
         ],
         "objectives": [
@@ -3404,37 +3766,43 @@
             "zone": "teldrassil",
             "x": 45.7,
             "y": 57.4,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Chest of the Raven Claw"
           },
           {
             "zone": "teldrassil",
             "x": 43.7,
             "y": 61.2,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Chest of the Black Feather"
           },
           {
             "zone": "teldrassil",
             "x": 44.7,
             "y": 62.4,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Chest of the Sky"
           },
           {
             "zone": "teldrassil",
             "x": 44.4,
             "y": 60.7,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Chest of Nesting"
           },
           {
             "zone": "teldrassil",
             "x": 45.7,
             "y": 57.4,
-            "basis": "documented_forever"
+            "basis": "documented_forever",
+            "label": "Chest of the Raven Claw"
           },
           {
             "zone": "teldrassil",
             "x": 44.7,
             "y": 62.4,
-            "basis": "documented_forever"
+            "basis": "documented_forever",
+            "label": "Chest of the Sky"
           }
         ],
         "ends": [
@@ -3442,7 +3810,8 @@
             "zone": "teldrassil",
             "x": 56.0,
             "y": 57.3,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Athridas Bearmantle"
           }
         ]
       },
@@ -3454,7 +3823,8 @@
               "zone": "teldrassil",
               "x": 45.7,
               "y": 57.4,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Chest of the Raven Claw"
             }
           ]
         },
@@ -3465,7 +3835,8 @@
               "zone": "teldrassil",
               "x": 43.7,
               "y": 61.2,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Chest of the Black Feather"
             }
           ]
         },
@@ -3476,7 +3847,8 @@
               "zone": "teldrassil",
               "x": 44.7,
               "y": 62.4,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Chest of the Sky"
             }
           ]
         },
@@ -3487,19 +3859,22 @@
               "zone": "teldrassil",
               "x": 44.4,
               "y": 60.7,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Chest of Nesting"
             },
             {
               "zone": "teldrassil",
               "x": 45.7,
               "y": 57.4,
-              "basis": "documented_forever"
+              "basis": "documented_forever",
+              "label": "Chest of the Raven Claw"
             },
             {
               "zone": "teldrassil",
               "x": 44.7,
               "y": 62.4,
-              "basis": "documented_forever"
+              "basis": "documented_forever",
+              "label": "Chest of the Sky"
             }
           ]
         }
@@ -3528,7 +3903,8 @@
             "zone": "darnassus",
             "x": 38.5,
             "y": 21.8,
-            "basis": "documented_forever"
+            "basis": "documented_forever",
+            "label": "Rellian Greenspyre"
           }
         ],
         "objectives": [
@@ -3536,61 +3912,71 @@
             "zone": "teldrassil",
             "x": 45.0,
             "y": 26.6,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Elder Timberling"
           },
           {
             "zone": "teldrassil",
             "x": 44.5,
             "y": 26.0,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Elder Timberling"
           },
           {
             "zone": "teldrassil",
             "x": 41.9,
             "y": 33.9,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Timberling Mire Beast"
           },
           {
             "zone": "teldrassil",
             "x": 43.9,
             "y": 34.9,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Timberling Mire Beast"
           },
           {
             "zone": "teldrassil",
             "x": 43.0,
             "y": 33.7,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Timberling Mire Beast"
           },
           {
             "zone": "teldrassil",
             "x": 43.3,
             "y": 35.9,
-            "basis": "documented_forever"
+            "basis": "documented_forever",
+            "label": "Timberling Mire Beast"
           },
           {
             "zone": "teldrassil",
             "x": 41.8,
             "y": 37.9,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Timberling Trampler"
           },
           {
             "zone": "teldrassil",
             "x": 42.5,
             "y": 38.7,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Timberling Trampler"
           },
           {
             "zone": "teldrassil",
             "x": 42.5,
             "y": 42.7,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Timberling Trampler"
           },
           {
             "zone": "teldrassil",
             "x": 53.7,
             "y": 75.3,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Timberling Trampler"
           },
           {
             "zone": "teldrassil",
@@ -3604,7 +3990,8 @@
             "zone": "darnassus",
             "x": 38.4,
             "y": 21.2,
-            "basis": "documented_forever"
+            "basis": "documented_forever",
+            "label": "Rellian Greenspyre"
           }
         ]
       },
@@ -3616,61 +4003,71 @@
               "zone": "teldrassil",
               "x": 45.0,
               "y": 26.6,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Elder Timberling"
             },
             {
               "zone": "teldrassil",
               "x": 44.5,
               "y": 26.0,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Elder Timberling"
             },
             {
               "zone": "teldrassil",
               "x": 41.9,
               "y": 33.9,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Timberling Mire Beast"
             },
             {
               "zone": "teldrassil",
               "x": 43.9,
               "y": 34.9,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Timberling Mire Beast"
             },
             {
               "zone": "teldrassil",
               "x": 43.0,
               "y": 33.7,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Timberling Mire Beast"
             },
             {
               "zone": "teldrassil",
               "x": 43.3,
               "y": 35.9,
-              "basis": "documented_forever"
+              "basis": "documented_forever",
+              "label": "Timberling Mire Beast"
             },
             {
               "zone": "teldrassil",
               "x": 41.8,
               "y": 37.9,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Timberling Trampler"
             },
             {
               "zone": "teldrassil",
               "x": 42.5,
               "y": 38.7,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Timberling Trampler"
             },
             {
               "zone": "teldrassil",
               "x": 42.5,
               "y": 42.7,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Timberling Trampler"
             },
             {
               "zone": "teldrassil",
               "x": 53.7,
               "y": 75.3,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Timberling Trampler"
             },
             {
               "zone": "teldrassil",
@@ -3705,7 +4102,8 @@
             "zone": "teldrassil",
             "x": 44.9,
             "y": 61.6,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Oben Rageclaw"
           }
         ],
         "objectives": [
@@ -3713,7 +4111,8 @@
             "zone": "teldrassil",
             "x": 45.5,
             "y": 58.6,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Rageclaw"
           }
         ],
         "ends": [
@@ -3721,7 +4120,8 @@
             "zone": "teldrassil",
             "x": 44.9,
             "y": 61.6,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Oben Rageclaw"
           }
         ]
       },
@@ -3733,7 +4133,8 @@
               "zone": "teldrassil",
               "x": 45.5,
               "y": 58.6,
-              "basis": "classic_reference"
+              "basis": "classic_reference",
+              "label": "Rageclaw"
             }
           ]
         }
@@ -3760,7 +4161,8 @@
             "zone": "teldrassil",
             "x": 42.6,
             "y": 75.8,
-            "basis": "documented_forever"
+            "basis": "documented_forever",
+            "label": "Strange Fruited Plant"
           }
         ],
         "objectives": [],
@@ -3769,7 +4171,8 @@
             "zone": "teldrassil",
             "x": 60.9,
             "y": 68.5,
-            "basis": "documented_forever"
+            "basis": "documented_forever",
+            "label": "Denalan"
           }
         ]
       },
@@ -3803,7 +4206,8 @@
             "zone": "teldrassil",
             "x": 55.3,
             "y": 56.8,
-            "basis": "documented_forever"
+            "basis": "documented_forever",
+            "label": "Byancie"
           }
         ],
         "objectives": [
@@ -3829,13 +4233,15 @@
             "zone": "teldrassil",
             "x": 55.3,
             "y": 57.1,
-            "basis": "documented_forever"
+            "basis": "documented_forever",
+            "label": "Narret Shadowgrove"
           },
           {
             "zone": "teldrassil",
             "x": 55.3,
             "y": 57.1,
-            "basis": "documented_forever"
+            "basis": "documented_forever",
+            "label": "Narret Shadowgrove"
           },
           {
             "zone": "teldrassil",
@@ -3849,7 +4255,8 @@
             "zone": "teldrassil",
             "x": 55.3,
             "y": 56.8,
-            "basis": "documented_forever"
+            "basis": "documented_forever",
+            "label": "Byancie"
           }
         ]
       },
@@ -3884,7 +4291,8 @@
               "zone": "teldrassil",
               "x": 55.3,
               "y": 57.1,
-              "basis": "documented_forever"
+              "basis": "documented_forever",
+              "label": "Narret Shadowgrove"
             }
           ]
         },
@@ -3895,7 +4303,8 @@
               "zone": "teldrassil",
               "x": 55.3,
               "y": 57.1,
-              "basis": "documented_forever"
+              "basis": "documented_forever",
+              "label": "Narret Shadowgrove"
             },
             {
               "zone": "teldrassil",
@@ -3928,7 +4337,8 @@
             "zone": "teldrassil",
             "x": 34.7,
             "y": 29.1,
-            "basis": "documented_forever"
+            "basis": "documented_forever",
+            "label": "Strange Fronded Plant"
           }
         ],
         "objectives": [],
@@ -3937,7 +4347,8 @@
             "zone": "teldrassil",
             "x": 60.9,
             "y": 68.4,
-            "basis": "documented_forever"
+            "basis": "documented_forever",
+            "label": "Denalan"
           }
         ]
       },
@@ -3971,7 +4382,8 @@
             "zone": "teldrassil",
             "x": 60.7,
             "y": 68.6,
-            "basis": "classic_reference"
+            "basis": "classic_reference",
+            "label": "Sprouted Frond"
           }
         ],
         "objectives": [],
@@ -3980,7 +4392,8 @@
             "zone": "teldrassil",
             "x": 60.8,
             "y": 68.5,
-            "basis": "documented_forever"
+            "basis": "documented_forever",
+            "label": "Sprouted Frond"
           }
         ]
       },

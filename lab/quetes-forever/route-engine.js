@@ -35,7 +35,7 @@ function build(data,{variant='direct',done=[],active=[]}={}){
    if(!points.length)throw Error('Missing sourced location for '+q.id+' '+event.kind);
    const unique=new Map(points.map(p=>[p.zone+':'+p.x+':'+p.y,p]));
    for(const p of unique.values()){
-    const entry={coords:{x:p.x,y:p.y},zone:p.zone,type:event.kind==='objectives'?'objective':'quest',header:[q.en,q.fr],[event.kind]:['q'+q.id],special:notes,source:p.source_url||q.source_url,basis:p.basis,quest_id:q.id};
+    const entry={coords:{x:p.x,y:p.y},zone:p.zone,type:event.kind==='objectives'?'objective':'quest',header:p.label||[q.en,q.fr],[event.kind]:['q'+q.id],special:notes,source:p.source_url||q.source_url,basis:p.basis,quest_id:q.id};
     const last=waypoints[waypoints.length-1];
     // Merge only adjacent actions at the same location, never reorder a chain.
     if(last&&last.zone===entry.zone&&Math.hypot(last.coords.x-p.x,last.coords.y-p.y)<0.001){
