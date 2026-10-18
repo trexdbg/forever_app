@@ -154,4 +154,7 @@ body[data-page="items"] .item-t0-sets__bonuses{list-style:none;margin:1px 9px 10
 body[data-page="items"] .item-t0-sets__bonuses li{display:grid;grid-template-columns:25px minmax(0,1fr);gap:7px;font-size:11px;line-height:1.5}
 body[data-page="items"] .item-t0-sets__bonuses b{color:#e4c98f}
 body[data-page="items"] .item-t0-sets__pieces{margin:7px 9px;font-size:10px;line-height:1.55;color:#a5b6aa}
+body[data-page="items"] .item-t0-sets__piece-link{color:#c5d8c7;text-decoration:underline;text-underline-offset:2px}
+body[data-page="items"] .item-t0-sets__piece-link:hover{color:#e3c994}
+body[data-page="items"] .item-t0-sets__piece-link:focus-visible{outline:2px solid #d8c38c;outline-offset:2px}
 body[data-page="items"] .item-t0-sets__source{display:inline-block;margin:0 9px 11px;color:#e3c994;font-size:10px;text-decoration:underline}
