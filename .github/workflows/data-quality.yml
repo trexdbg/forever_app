@@ -9,6 +9,7 @@ on:
       - '.github/workflows/data-quality.yml'
       - 'data/**'
       - 'assets/rares.js'
+      - 'tests/rare-loot-icon-rendering-20261017.test.mjs'
       - 'assets/rares.css'
       - 'rare/index.html'
       - 'en/rare/index.html'
@@ -43,6 +44,8 @@ jobs:
         run: node --test tests/data-quality.test.mjs
       - name: Full JSON reliability scan (errors block; warnings reviewed)
         run: node scripts/check-data-quality.mjs
+      - name: Rare loot image fallback and FR/EN presentation fixtures
+        run: node --test tests/rare-loot-icon-rendering-20261017.test.mjs
       - name: Rare location evidence fixtures
         run: node --test tests/rare-locations.test.mjs
       - name: Rare map per-pin bilingual provenance and selected waypoint regression
