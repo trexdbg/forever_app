@@ -79,7 +79,7 @@ test("selected coordinate drives /way and source; both languages load the same e
  assert.doesNotMatch(source,/const p=r\.points\[0\],str="\/way "/);
  for(const path of ["rare/index.html","en/rare/index.html"]){
   const html=read(path);
-  assert.ok(html.includes("/assets/rares.js?v=20261017-loot-icons-1"),path);
+  assert.ok(html.includes("/assets/rares.js?v=20261018-loot-icons-2"),path);
   assert.ok(html.includes("/assets/rares.css?v=20261017-loot-icons-1"),path);
  }
 });
