@@ -1,0 +1,4966 @@
+{
+  "schema_version": 1,
+  "edition": "forever",
+  "range": [
+    1,
+    10
+  ],
+  "based_on_pr": 32,
+  "source_url": "https://foreverdb.net/quests/teldrassil",
+  "catalog": {
+    "458": {
+      "id": 458,
+      "en": "The Woodland Protector",
+      "fr": "La Protectrice sylvestre",
+      "level": 1,
+      "min_level": 1,
+      "requires": [],
+      "summary_en": "Seek out the dryad known as Tarindrella.",
+      "locations": {
+        "starts": [
+          {
+            "zone": "teldrassil",
+            "x": 59.9,
+            "y": 42.5,
+            "basis": "classic_reference",
+            "label": "Melithar Staghelm"
+          }
+        ],
+        "objectives": [],
+        "ends": [
+          {
+            "zone": "teldrassil",
+            "x": 57.8,
+            "y": 45.2,
+            "basis": "classic_reference",
+            "label": "Tarindrella"
+          }
+        ]
+      },
+      "targets": [],
+      "source_url": "https://foreverdb.net/quest/458-the-woodland-protector",
+      "evidence_url": "https://foreverdb.net/quest/458-the-woodland-protector",
+      "evidence_level": "documented_forever",
+      "observed_at": "2026-10-18",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "community_database",
+      "evidence_note": "ForeverDB reviewed 2026-10-18. Quest titles, objectives and locations retain Classic fallback unless individually marked seen by players. Community observations are not first-hand validation."
+    },
+    "5842": {
+      "id": 5842,
+      "en": "Welcome!",
+      "fr": "Welcome!",
+      "level": 1,
+      "min_level": 1,
+      "requires": [],
+      "summary_en": "Bring the Shadowglen Gift Voucher to Orenthil Whisperwind.",
+      "locations": {
+        "starts": [],
+        "objectives": [],
+        "ends": [
+          {
+            "zone": "teldrassil",
+            "x": 58.8,
+            "y": 44.4,
+            "basis": "classic_reference",
+            "label": "Orenthil Whisperwind"
+          }
+        ]
+      },
+      "targets": [
+        {
+          "label": "Shadowglen Gift Voucher × 1",
+          "locations": []
+        }
+      ],
+      "source_url": "https://foreverdb.net/quest/5842-welcome",
+      "evidence_url": "https://foreverdb.net/quest/5842-welcome",
+      "evidence_level": "documented_forever",
+      "observed_at": "2026-10-18",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "community_database",
+      "evidence_note": "ForeverDB reviewed 2026-10-18. Quest titles, objectives and locations retain Classic fallback unless individually marked seen by players. Community observations are not first-hand validation."
+    },
+    "456": {
+      "id": 456,
+      "en": "The Balance of Nature",
+      "fr": "L'équilibre de la nature",
+      "level": 2,
+      "min_level": 1,
+      "requires": [],
+      "summary_en": "Kill 7 Young Nightsabers and 4 Young Thistle Boars and return to Conservator Ilthalaine.",
+      "locations": {
+        "starts": [
+          {
+            "zone": "teldrassil",
+            "x": 58.7,
+            "y": 44.3,
+            "basis": "classic_reference",
+            "label": "Conservator Ilthalaine"
+          }
+        ],
+        "objectives": [
+          {
+            "zone": "teldrassil",
+            "x": 63.3,
+            "y": 42.1,
+            "basis": "classic_reference",
+            "label": "Young Nightsaber"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 64.4,
+            "y": 40.5,
+            "basis": "classic_reference",
+            "label": "Young Nightsaber"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 61.5,
+            "y": 39.3,
+            "basis": "classic_reference",
+            "label": "Young Nightsaber"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 58.4,
+            "y": 46.7,
+            "basis": "classic_reference",
+            "label": "Young Nightsaber"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 56.7,
+            "y": 42.2,
+            "basis": "classic_reference",
+            "label": "Young Thistle Boar"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 55.6,
+            "y": 41.9,
+            "basis": "classic_reference",
+            "label": "Young Thistle Boar"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 63.2,
+            "y": 42.2,
+            "basis": "classic_reference",
+            "label": "Young Thistle Boar"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 62.1,
+            "y": 41.2,
+            "basis": "classic_reference",
+            "label": "Young Thistle Boar"
+          }
+        ],
+        "ends": [
+          {
+            "zone": "teldrassil",
+            "x": 58.7,
+            "y": 44.3,
+            "basis": "classic_reference",
+            "label": "Conservator Ilthalaine"
+          }
+        ]
+      },
+      "targets": [
+        {
+          "label": "Young Nightsaber × 7",
+          "locations": [
+            {
+              "zone": "teldrassil",
+              "x": 63.3,
+              "y": 42.1,
+              "basis": "classic_reference",
+              "label": "Young Nightsaber"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 64.4,
+              "y": 40.5,
+              "basis": "classic_reference",
+              "label": "Young Nightsaber"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 61.5,
+              "y": 39.3,
+              "basis": "classic_reference",
+              "label": "Young Nightsaber"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 58.4,
+              "y": 46.7,
+              "basis": "classic_reference",
+              "label": "Young Nightsaber"
+            }
+          ]
+        },
+        {
+          "label": "Young Thistle Boar × 4",
+          "locations": [
+            {
+              "zone": "teldrassil",
+              "x": 56.7,
+              "y": 42.2,
+              "basis": "classic_reference",
+              "label": "Young Thistle Boar"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 55.6,
+              "y": 41.9,
+              "basis": "classic_reference",
+              "label": "Young Thistle Boar"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 63.2,
+              "y": 42.2,
+              "basis": "classic_reference",
+              "label": "Young Thistle Boar"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 62.1,
+              "y": 41.2,
+              "basis": "classic_reference",
+              "label": "Young Thistle Boar"
+            }
+          ]
+        }
+      ],
+      "source_url": "https://foreverdb.net/quest/456-the-balance-of-nature",
+      "evidence_url": "https://foreverdb.net/quest/456-the-balance-of-nature",
+      "evidence_level": "documented_forever",
+      "observed_at": "2026-10-18",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "community_database",
+      "evidence_note": "ForeverDB reviewed 2026-10-18. Quest titles, objectives and locations retain Classic fallback unless individually marked seen by players. Community observations are not first-hand validation."
+    },
+    "457": {
+      "id": 457,
+      "en": "The Balance of Nature",
+      "fr": "L'équilibre de la nature",
+      "level": 3,
+      "min_level": 1,
+      "requires": [
+        456
+      ],
+      "summary_en": "Conservator Ilthalaine needs you to kill 7 Mangy Nightsabers and 7 Thistle Boars.",
+      "locations": {
+        "starts": [
+          {
+            "zone": "teldrassil",
+            "x": 58.7,
+            "y": 44.3,
+            "basis": "classic_reference",
+            "label": "Conservator Ilthalaine"
+          }
+        ],
+        "objectives": [
+          {
+            "zone": "teldrassil",
+            "x": 60.0,
+            "y": 36.0,
+            "basis": "classic_reference",
+            "label": "Mangy Nightsaber"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 63.4,
+            "y": 38.8,
+            "basis": "classic_reference",
+            "label": "Mangy Nightsaber"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 62.0,
+            "y": 36.9,
+            "basis": "classic_reference",
+            "label": "Mangy Nightsaber"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 61.2,
+            "y": 39.1,
+            "basis": "classic_reference",
+            "label": "Mangy Nightsaber"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 55.3,
+            "y": 37.1,
+            "basis": "classic_reference",
+            "label": "Thistle Boar"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 55.5,
+            "y": 39.4,
+            "basis": "classic_reference",
+            "label": "Thistle Boar"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 61.8,
+            "y": 38.7,
+            "basis": "classic_reference",
+            "label": "Thistle Boar"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 59.8,
+            "y": 37.6,
+            "basis": "classic_reference",
+            "label": "Thistle Boar"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 61.0,
+            "y": 36.2,
+            "basis": "documented_forever"
+          }
+        ],
+        "ends": [
+          {
+            "zone": "teldrassil",
+            "x": 58.7,
+            "y": 44.3,
+            "basis": "classic_reference",
+            "label": "Conservator Ilthalaine"
+          }
+        ]
+      },
+      "targets": [
+        {
+          "label": "Mangy Nightsaber × 7",
+          "locations": [
+            {
+              "zone": "teldrassil",
+              "x": 60.0,
+              "y": 36.0,
+              "basis": "classic_reference",
+              "label": "Mangy Nightsaber"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 63.4,
+              "y": 38.8,
+              "basis": "classic_reference",
+              "label": "Mangy Nightsaber"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 62.0,
+              "y": 36.9,
+              "basis": "classic_reference",
+              "label": "Mangy Nightsaber"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 61.2,
+              "y": 39.1,
+              "basis": "classic_reference",
+              "label": "Mangy Nightsaber"
+            }
+          ]
+        },
+        {
+          "label": "Thistle Boar × 7",
+          "locations": [
+            {
+              "zone": "teldrassil",
+              "x": 55.3,
+              "y": 37.1,
+              "basis": "classic_reference",
+              "label": "Thistle Boar"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 55.5,
+              "y": 39.4,
+              "basis": "classic_reference",
+              "label": "Thistle Boar"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 61.8,
+              "y": 38.7,
+              "basis": "classic_reference",
+              "label": "Thistle Boar"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 59.8,
+              "y": 37.6,
+              "basis": "classic_reference",
+              "label": "Thistle Boar"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 61.0,
+              "y": 36.2,
+              "basis": "documented_forever"
+            }
+          ]
+        }
+      ],
+      "source_url": "https://foreverdb.net/quest/457-the-balance-of-nature",
+      "evidence_url": "https://foreverdb.net/quest/457-the-balance-of-nature",
+      "evidence_level": "documented_forever",
+      "observed_at": "2026-10-18",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "community_database",
+      "evidence_note": "ForeverDB reviewed 2026-10-18. Quest titles, objectives and locations retain Classic fallback unless individually marked seen by players. Community observations are not first-hand validation."
+    },
+    "459": {
+      "id": 459,
+      "en": "The Woodland Protector",
+      "fr": "La Protectrice sylvestre",
+      "level": 3,
+      "min_level": 1,
+      "requires": [
+        458
+      ],
+      "summary_en": "Collect 8 Fel Moss and bring them to Tarindrella.",
+      "locations": {
+        "starts": [
+          {
+            "zone": "teldrassil",
+            "x": 57.8,
+            "y": 45.2,
+            "basis": "classic_reference",
+            "label": "Tarindrella"
+          }
+        ],
+        "objectives": [
+          {
+            "zone": "teldrassil",
+            "x": 55.9,
+            "y": 45.2,
+            "basis": "classic_reference",
+            "label": "Grell"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 55.7,
+            "y": 46.4,
+            "basis": "classic_reference",
+            "label": "Grell"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 55.8,
+            "y": 41.5,
+            "basis": "classic_reference",
+            "label": "Grell"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 54.0,
+            "y": 39.7,
+            "basis": "classic_reference",
+            "label": "Grellkin"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 62.3,
+            "y": 35.7,
+            "basis": "classic_reference",
+            "label": "Grellkin"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 64.2,
+            "y": 42.2,
+            "basis": "classic_reference",
+            "label": "Grellkin"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 56.3,
+            "y": 34.6,
+            "basis": "classic_reference",
+            "label": "Grellkin"
+          }
+        ],
+        "ends": [
+          {
+            "zone": "teldrassil",
+            "x": 57.8,
+            "y": 45.2,
+            "basis": "classic_reference",
+            "label": "Tarindrella"
+          }
+        ]
+      },
+      "targets": [
+        {
+          "label": "Fel Moss × 8",
+          "locations": [
+            {
+              "zone": "teldrassil",
+              "x": 55.9,
+              "y": 45.2,
+              "basis": "classic_reference",
+              "label": "Grell"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 55.7,
+              "y": 46.4,
+              "basis": "classic_reference",
+              "label": "Grell"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 55.8,
+              "y": 41.5,
+              "basis": "classic_reference",
+              "label": "Grell"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 54.0,
+              "y": 39.7,
+              "basis": "classic_reference",
+              "label": "Grellkin"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 62.3,
+              "y": 35.7,
+              "basis": "classic_reference",
+              "label": "Grellkin"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 64.2,
+              "y": 42.2,
+              "basis": "classic_reference",
+              "label": "Grellkin"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 56.3,
+              "y": 34.6,
+              "basis": "classic_reference",
+              "label": "Grellkin"
+            }
+          ]
+        }
+      ],
+      "source_url": "https://foreverdb.net/quest/459-the-woodland-protector",
+      "evidence_url": "https://foreverdb.net/quest/459-the-woodland-protector",
+      "evidence_level": "documented_forever",
+      "observed_at": "2026-10-18",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "community_database",
+      "evidence_note": "ForeverDB reviewed 2026-10-18. Quest titles, objectives and locations retain Classic fallback unless individually marked seen by players. Community observations are not first-hand validation."
+    },
+    "3519": {
+      "id": 3519,
+      "en": "A Friend in Need",
+      "fr": "Un ami dans le besoin",
+      "level": 4,
+      "min_level": 2,
+      "requires": [
+        4495
+      ],
+      "summary_en": "Speak to Dirania Silvershine in Shadowglen.",
+      "locations": {
+        "starts": [
+          {
+            "zone": "teldrassil",
+            "x": 54.6,
+            "y": 33.0,
+            "basis": "classic_reference",
+            "label": "Iverron"
+          }
+        ],
+        "objectives": [],
+        "ends": [
+          {
+            "zone": "teldrassil",
+            "x": 60.9,
+            "y": 42.0,
+            "basis": "classic_reference",
+            "label": "Dirania Silvershine"
+          }
+        ]
+      },
+      "targets": [],
+      "source_url": "https://foreverdb.net/quest/3519-a-friend-in-need",
+      "evidence_url": "https://foreverdb.net/quest/3519-a-friend-in-need",
+      "evidence_level": "documented_forever",
+      "observed_at": "2026-10-18",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "community_database",
+      "evidence_note": "ForeverDB reviewed 2026-10-18. Quest titles, objectives and locations retain Classic fallback unless individually marked seen by players. Community observations are not first-hand validation."
+    },
+    "4495": {
+      "id": 4495,
+      "en": "A Good Friend",
+      "fr": "Un bon ami",
+      "level": 4,
+      "min_level": 2,
+      "requires": [],
+      "summary_en": "Find Iverron by the cave to the north.",
+      "locations": {
+        "starts": [
+          {
+            "zone": "teldrassil",
+            "x": 60.9,
+            "y": 42.0,
+            "basis": "classic_reference",
+            "label": "Dirania Silvershine"
+          }
+        ],
+        "objectives": [],
+        "ends": [
+          {
+            "zone": "teldrassil",
+            "x": 54.6,
+            "y": 33.0,
+            "basis": "classic_reference",
+            "label": "Iverron"
+          }
+        ]
+      },
+      "targets": [],
+      "source_url": "https://foreverdb.net/quest/4495-a-good-friend",
+      "evidence_url": "https://foreverdb.net/quest/4495-a-good-friend",
+      "evidence_level": "documented_forever",
+      "observed_at": "2026-10-18",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "community_database",
+      "evidence_note": "ForeverDB reviewed 2026-10-18. Quest titles, objectives and locations retain Classic fallback unless individually marked seen by players. Community observations are not first-hand validation."
+    },
+    "3521": {
+      "id": 3521,
+      "en": "Iverron's Antidote",
+      "fr": "L'antidote d'Iverron",
+      "level": 4,
+      "min_level": 2,
+      "requires": [
+        3519
+      ],
+      "summary_en": "Collect 7 Hyacinth Mushrooms, 4 Moonpetal Lilies, and 1 Webwood Ichor for Dirania Silveshine in Shadowglen.",
+      "locations": {
+        "starts": [
+          {
+            "zone": "teldrassil",
+            "x": 60.9,
+            "y": 42.0,
+            "basis": "classic_reference",
+            "label": "Dirania Silvershine"
+          }
+        ],
+        "objectives": [
+          {
+            "zone": "teldrassil",
+            "x": 54.0,
+            "y": 39.7,
+            "basis": "classic_reference",
+            "label": "Grellkin"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 62.3,
+            "y": 35.7,
+            "basis": "classic_reference",
+            "label": "Grellkin"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 64.2,
+            "y": 42.2,
+            "basis": "classic_reference",
+            "label": "Grellkin"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 56.3,
+            "y": 34.6,
+            "basis": "classic_reference",
+            "label": "Grellkin"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 63.3,
+            "y": 44.3,
+            "basis": "classic_reference",
+            "label": "Hyacinth Mushroom"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 53.2,
+            "y": 38.6,
+            "basis": "classic_reference",
+            "label": "Hyacinth Mushroom"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 60.9,
+            "y": 30.2,
+            "basis": "classic_reference",
+            "label": "Hyacinth Mushroom"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 54.5,
+            "y": 41.7,
+            "basis": "classic_reference",
+            "label": "Hyacinth Mushroom"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 58.8,
+            "y": 37.6,
+            "basis": "classic_reference",
+            "label": "Moonpetal Lily"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 56.8,
+            "y": 37.5,
+            "basis": "classic_reference",
+            "label": "Moonpetal Lily"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 57.3,
+            "y": 39.7,
+            "basis": "classic_reference",
+            "label": "Moonpetal Lily"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 58.7,
+            "y": 38.2,
+            "basis": "classic_reference",
+            "label": "Moonpetal Lily"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 56.5,
+            "y": 25.9,
+            "basis": "classic_reference",
+            "label": "Webwood Spider"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 58.1,
+            "y": 27.2,
+            "basis": "classic_reference",
+            "label": "Webwood Spider"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 57.7,
+            "y": 27.4,
+            "basis": "classic_reference",
+            "label": "Webwood Spider"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 56.4,
+            "y": 30.3,
+            "basis": "classic_reference",
+            "label": "Webwood Spider"
+          }
+        ],
+        "ends": [
+          {
+            "zone": "teldrassil",
+            "x": 60.9,
+            "y": 42.0,
+            "basis": "classic_reference",
+            "label": "Dirania Silvershine"
+          }
+        ]
+      },
+      "targets": [
+        {
+          "label": "Hyacinth Mushroom × 7",
+          "locations": [
+            {
+              "zone": "teldrassil",
+              "x": 54.0,
+              "y": 39.7,
+              "basis": "classic_reference",
+              "label": "Grellkin"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 62.3,
+              "y": 35.7,
+              "basis": "classic_reference",
+              "label": "Grellkin"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 64.2,
+              "y": 42.2,
+              "basis": "classic_reference",
+              "label": "Grellkin"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 56.3,
+              "y": 34.6,
+              "basis": "classic_reference",
+              "label": "Grellkin"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 63.3,
+              "y": 44.3,
+              "basis": "classic_reference",
+              "label": "Hyacinth Mushroom"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 53.2,
+              "y": 38.6,
+              "basis": "classic_reference",
+              "label": "Hyacinth Mushroom"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 60.9,
+              "y": 30.2,
+              "basis": "classic_reference",
+              "label": "Hyacinth Mushroom"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 54.5,
+              "y": 41.7,
+              "basis": "classic_reference",
+              "label": "Hyacinth Mushroom"
+            }
+          ]
+        },
+        {
+          "label": "Moonpetal Lily × 4",
+          "locations": [
+            {
+              "zone": "teldrassil",
+              "x": 58.8,
+              "y": 37.6,
+              "basis": "classic_reference",
+              "label": "Moonpetal Lily"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 56.8,
+              "y": 37.5,
+              "basis": "classic_reference",
+              "label": "Moonpetal Lily"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 57.3,
+              "y": 39.7,
+              "basis": "classic_reference",
+              "label": "Moonpetal Lily"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 58.7,
+              "y": 38.2,
+              "basis": "classic_reference",
+              "label": "Moonpetal Lily"
+            }
+          ]
+        },
+        {
+          "label": "Webwood Ichor × 1",
+          "locations": [
+            {
+              "zone": "teldrassil",
+              "x": 56.5,
+              "y": 25.9,
+              "basis": "classic_reference",
+              "label": "Webwood Spider"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 58.1,
+              "y": 27.2,
+              "basis": "classic_reference",
+              "label": "Webwood Spider"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 57.7,
+              "y": 27.4,
+              "basis": "classic_reference",
+              "label": "Webwood Spider"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 56.4,
+              "y": 30.3,
+              "basis": "classic_reference",
+              "label": "Webwood Spider"
+            }
+          ]
+        }
+      ],
+      "source_url": "https://foreverdb.net/quest/3521-iverrons-antidote",
+      "evidence_url": "https://foreverdb.net/quest/3521-iverrons-antidote",
+      "evidence_level": "documented_forever",
+      "observed_at": "2026-10-18",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "community_database",
+      "evidence_note": "ForeverDB reviewed 2026-10-18. Quest titles, objectives and locations retain Classic fallback unless individually marked seen by players. Community observations are not first-hand validation."
+    },
+    "3522": {
+      "id": 3522,
+      "en": "Iverron's Antidote",
+      "fr": "L'antidote d'Iverron",
+      "level": 4,
+      "min_level": 2,
+      "requires": [
+        3521
+      ],
+      "summary_en": "Bring Iverron's Antidote to Iverron before the time limit is up. Iverron can be found by the cave to the north.",
+      "locations": {
+        "starts": [
+          {
+            "zone": "teldrassil",
+            "x": 60.9,
+            "y": 42.0,
+            "basis": "classic_reference",
+            "label": "Dirania Silvershine"
+          }
+        ],
+        "objectives": [],
+        "ends": [
+          {
+            "zone": "teldrassil",
+            "x": 54.6,
+            "y": 33.0,
+            "basis": "classic_reference",
+            "label": "Iverron"
+          }
+        ]
+      },
+      "targets": [
+        {
+          "label": "Iverron's Antidote × 1",
+          "locations": []
+        }
+      ],
+      "source_url": "https://foreverdb.net/quest/3522-iverrons-antidote",
+      "evidence_url": "https://foreverdb.net/quest/3522-iverrons-antidote",
+      "evidence_level": "documented_forever",
+      "observed_at": "2026-10-18",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "community_database",
+      "evidence_note": "ForeverDB reviewed 2026-10-18. Quest titles, objectives and locations retain Classic fallback unless individually marked seen by players. Community observations are not first-hand validation."
+    },
+    "916": {
+      "id": 916,
+      "en": "Webwood Venom",
+      "fr": "Le venin des Tissebois",
+      "level": 4,
+      "min_level": 3,
+      "requires": [],
+      "summary_en": "Bring 10 Webwood Venom Sacs to Gilshalan Windwalker at Aldrassil.",
+      "locations": {
+        "starts": [
+          {
+            "zone": "teldrassil",
+            "x": 57.8,
+            "y": 41.7,
+            "basis": "classic_reference",
+            "label": "Gilshalan Windwalker"
+          }
+        ],
+        "objectives": [
+          {
+            "zone": "teldrassil",
+            "x": 56.5,
+            "y": 25.9,
+            "basis": "classic_reference",
+            "label": "Webwood Spider"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 58.1,
+            "y": 27.2,
+            "basis": "classic_reference",
+            "label": "Webwood Spider"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 57.7,
+            "y": 27.4,
+            "basis": "classic_reference",
+            "label": "Webwood Spider"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 56.4,
+            "y": 30.3,
+            "basis": "classic_reference",
+            "label": "Webwood Spider"
+          }
+        ],
+        "ends": [
+          {
+            "zone": "teldrassil",
+            "x": 57.8,
+            "y": 41.7,
+            "basis": "classic_reference",
+            "label": "Gilshalan Windwalker"
+          }
+        ]
+      },
+      "targets": [
+        {
+          "label": "Webwood Venom Sac × 10",
+          "locations": [
+            {
+              "zone": "teldrassil",
+              "x": 56.5,
+              "y": 25.9,
+              "basis": "classic_reference",
+              "label": "Webwood Spider"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 58.1,
+              "y": 27.2,
+              "basis": "classic_reference",
+              "label": "Webwood Spider"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 57.7,
+              "y": 27.4,
+              "basis": "classic_reference",
+              "label": "Webwood Spider"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 56.4,
+              "y": 30.3,
+              "basis": "classic_reference",
+              "label": "Webwood Spider"
+            }
+          ]
+        }
+      ],
+      "source_url": "https://foreverdb.net/quest/916-webwood-venom",
+      "evidence_url": "https://foreverdb.net/quest/916-webwood-venom",
+      "evidence_level": "documented_forever",
+      "observed_at": "2026-10-18",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "community_database",
+      "evidence_note": "ForeverDB reviewed 2026-10-18. Quest titles, objectives and locations retain Classic fallback unless individually marked seen by players. Community observations are not first-hand validation."
+    },
+    "921": {
+      "id": 921,
+      "en": "Crown of the Earth",
+      "fr": "Teldrassil : la couronne d'Azeroth",
+      "level": 5,
+      "min_level": 1,
+      "requires": [
+        920
+      ],
+      "summary_en": "Fill the Crystal Phial and bring it back to Tenaron Stormgrip atop Aldrassil.",
+      "locations": {
+        "starts": [
+          {
+            "zone": "teldrassil",
+            "x": 59.1,
+            "y": 39.4,
+            "basis": "classic_reference",
+            "label": "Tenaron Stormgrip"
+          }
+        ],
+        "objectives": [
+          {
+            "zone": "teldrassil",
+            "x": 60,
+            "y": 33,
+            "basis": "classic_reference",
+            "source_url": "https://www.joanasworld.com/alliance-1-12-teldrassil.php"
+          }
+        ],
+        "ends": [
+          {
+            "zone": "teldrassil",
+            "x": 59.1,
+            "y": 39.4,
+            "basis": "classic_reference",
+            "label": "Tenaron Stormgrip"
+          }
+        ]
+      },
+      "targets": [
+        {
+          "label": "Filled Crystal Phial × 1",
+          "locations": []
+        }
+      ],
+      "source_url": "https://foreverdb.net/quest/921-crown-of-the-earth",
+      "evidence_url": "https://foreverdb.net/quest/921-crown-of-the-earth",
+      "evidence_level": "documented_forever",
+      "observed_at": "2026-10-18",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "community_database",
+      "evidence_note": "ForeverDB reviewed 2026-10-18. Quest titles, objectives and locations retain Classic fallback unless individually marked seen by players. Community observations are not first-hand validation."
+    },
+    "928": {
+      "id": 928,
+      "en": "Crown of the Earth",
+      "fr": "Teldrassil : la couronne d'Azeroth",
+      "level": 5,
+      "min_level": 1,
+      "requires": [
+        921
+      ],
+      "summary_en": "Bring the Partially Filled Vessel to Corithras Moonrage in Dolanaar.",
+      "locations": {
+        "starts": [
+          {
+            "zone": "teldrassil",
+            "x": 59.1,
+            "y": 39.4,
+            "basis": "classic_reference",
+            "label": "Tenaron Stormgrip"
+          }
+        ],
+        "objectives": [],
+        "ends": [
+          {
+            "zone": "teldrassil",
+            "x": 56.1,
+            "y": 61.7,
+            "basis": "classic_reference",
+            "label": "Corithras Moonrage"
+          }
+        ]
+      },
+      "targets": [
+        {
+          "label": "Partially Filled Vessel × 1",
+          "locations": []
+        }
+      ],
+      "source_url": "https://foreverdb.net/quest/928-crown-of-the-earth",
+      "evidence_url": "https://foreverdb.net/quest/928-crown-of-the-earth",
+      "evidence_level": "documented_forever",
+      "observed_at": "2026-10-18",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "community_database",
+      "evidence_note": "ForeverDB reviewed 2026-10-18. Quest titles, objectives and locations retain Classic fallback unless individually marked seen by players. Community observations are not first-hand validation."
+    },
+    "929": {
+      "id": 929,
+      "en": "Crown of the Earth",
+      "fr": "Teldrassil : la couronne d'Azeroth",
+      "level": 5,
+      "min_level": 1,
+      "requires": [
+        928
+      ],
+      "summary_en": "Fill the Jade Phial and bring it back to Corithras Moonrage in Dolanaar.",
+      "locations": {
+        "starts": [
+          {
+            "zone": "teldrassil",
+            "x": 56.1,
+            "y": 61.7,
+            "basis": "classic_reference",
+            "label": "Corithras Moonrage"
+          }
+        ],
+        "objectives": [
+          {
+            "zone": "teldrassil",
+            "x": 64.1,
+            "y": 58.5,
+            "basis": "documented_forever"
+          }
+        ],
+        "ends": [
+          {
+            "zone": "teldrassil",
+            "x": 56.2,
+            "y": 61.7,
+            "basis": "documented_forever",
+            "label": "Corithras Moonrage"
+          }
+        ]
+      },
+      "targets": [
+        {
+          "label": "Filled Jade Phial × 1",
+          "locations": [
+            {
+              "zone": "teldrassil",
+              "x": 64.1,
+              "y": 58.5,
+              "basis": "documented_forever"
+            }
+          ]
+        }
+      ],
+      "source_url": "https://foreverdb.net/quest/929-crown-of-the-earth",
+      "evidence_url": "https://foreverdb.net/quest/929-crown-of-the-earth",
+      "evidence_level": "documented_forever",
+      "observed_at": "2026-10-18",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "community_database",
+      "evidence_note": "ForeverDB reviewed 2026-10-18. Quest titles, objectives and locations retain Classic fallback unless individually marked seen by players. Community observations are not first-hand validation."
+    },
+    "997": {
+      "id": 997,
+      "en": "Denalan's Earth",
+      "fr": "La terre de Denalan",
+      "level": 5,
+      "min_level": 4,
+      "requires": [],
+      "summary_en": "Bring the package of Rare Earth to Denalan at Lake Al'Ameth.",
+      "locations": {
+        "starts": [
+          {
+            "zone": "teldrassil",
+            "x": 56.1,
+            "y": 57.7,
+            "basis": "classic_reference",
+            "label": "Syral Bladeleaf"
+          }
+        ],
+        "objectives": [],
+        "ends": [
+          {
+            "zone": "teldrassil",
+            "x": 60.9,
+            "y": 68.5,
+            "basis": "classic_reference",
+            "label": "Denalan"
+          }
+        ]
+      },
+      "targets": [
+        {
+          "label": "Rare Earth × 1",
+          "locations": []
+        }
+      ],
+      "source_url": "https://foreverdb.net/quest/997-denalans-earth",
+      "evidence_url": "https://foreverdb.net/quest/997-denalans-earth",
+      "evidence_level": "documented_forever",
+      "observed_at": "2026-10-18",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "community_database",
+      "evidence_note": "ForeverDB reviewed 2026-10-18. Quest titles, objectives and locations retain Classic fallback unless individually marked seen by players. Community observations are not first-hand validation."
+    },
+    "2159": {
+      "id": 2159,
+      "en": "Dolanaar Delivery",
+      "fr": "Livraison de Dolanaar",
+      "level": 5,
+      "min_level": 1,
+      "requires": [],
+      "summary_en": "Bring the Dolanaar Delivery to Innkeeper Keldamyr.",
+      "locations": {
+        "starts": [
+          {
+            "zone": "teldrassil",
+            "x": 61.2,
+            "y": 47.6,
+            "basis": "classic_reference",
+            "label": "Porthannius"
+          }
+        ],
+        "objectives": [],
+        "ends": [
+          {
+            "zone": "teldrassil",
+            "x": 55.6,
+            "y": 59.8,
+            "basis": "classic_reference",
+            "label": "Innkeeper Keldamyr"
+          }
+        ]
+      },
+      "targets": [
+        {
+          "label": "Dolanaar Delivery × 1",
+          "locations": []
+        }
+      ],
+      "source_url": "https://foreverdb.net/quest/2159-dolanaar-delivery",
+      "evidence_url": "https://foreverdb.net/quest/2159-dolanaar-delivery",
+      "evidence_level": "documented_forever",
+      "observed_at": "2026-10-18",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "community_database",
+      "evidence_note": "ForeverDB reviewed 2026-10-18. Quest titles, objectives and locations retain Classic fallback unless individually marked seen by players. Community observations are not first-hand validation."
+    },
+    "920": {
+      "id": 920,
+      "en": "Tenaron's Summons",
+      "fr": "Les appels de Tenaron",
+      "level": 5,
+      "min_level": 1,
+      "requires": [
+        917
+      ],
+      "summary_en": "Speak with Tenaron Stormgrip atop Aldrassil in Shadowglen.",
+      "locations": {
+        "starts": [
+          {
+            "zone": "teldrassil",
+            "x": 57.8,
+            "y": 41.7,
+            "basis": "classic_reference",
+            "label": "Gilshalan Windwalker"
+          }
+        ],
+        "objectives": [],
+        "ends": [
+          {
+            "zone": "teldrassil",
+            "x": 59.1,
+            "y": 39.4,
+            "basis": "classic_reference",
+            "label": "Tenaron Stormgrip"
+          }
+        ]
+      },
+      "targets": [],
+      "source_url": "https://foreverdb.net/quest/920-tenarons-summons",
+      "evidence_url": "https://foreverdb.net/quest/920-tenarons-summons",
+      "evidence_level": "documented_forever",
+      "observed_at": "2026-10-18",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "community_database",
+      "evidence_note": "ForeverDB reviewed 2026-10-18. Quest titles, objectives and locations retain Classic fallback unless individually marked seen by players. Community observations are not first-hand validation."
+    },
+    "917": {
+      "id": 917,
+      "en": "Webwood Egg",
+      "fr": "L'œuf d'araignée Tissebois",
+      "level": 5,
+      "min_level": 1,
+      "requires": [
+        916
+      ],
+      "summary_en": "Bring a Webwood Egg to Gilshalan in Aldrassil.",
+      "locations": {
+        "starts": [
+          {
+            "zone": "teldrassil",
+            "x": 57.8,
+            "y": 41.7,
+            "basis": "classic_reference",
+            "label": "Gilshalan Windwalker"
+          }
+        ],
+        "objectives": [
+          {
+            "zone": "teldrassil",
+            "x": 57.0,
+            "y": 26.5,
+            "basis": "classic_reference",
+            "label": "Webwood Eggs"
+          }
+        ],
+        "ends": [
+          {
+            "zone": "teldrassil",
+            "x": 57.8,
+            "y": 41.7,
+            "basis": "classic_reference",
+            "label": "Gilshalan Windwalker"
+          }
+        ]
+      },
+      "targets": [
+        {
+          "label": "Webwood Egg × 1",
+          "locations": [
+            {
+              "zone": "teldrassil",
+              "x": 57.0,
+              "y": 26.5,
+              "basis": "classic_reference",
+              "label": "Webwood Eggs"
+            }
+          ]
+        }
+      ],
+      "source_url": "https://foreverdb.net/quest/917-webwood-egg",
+      "evidence_url": "https://foreverdb.net/quest/917-webwood-egg",
+      "evidence_level": "documented_forever",
+      "observed_at": "2026-10-18",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "community_database",
+      "evidence_note": "ForeverDB reviewed 2026-10-18. Quest titles, objectives and locations retain Classic fallback unless individually marked seen by players. Community observations are not first-hand validation."
+    },
+    "488": {
+      "id": 488,
+      "en": "Zenn's Bidding",
+      "fr": "Les commandements de Zenn",
+      "level": 5,
+      "min_level": 4,
+      "requires": [],
+      "summary_en": "Bring Zenn Foulhoof outside of Dolanaar 3 Nightsaber Fangs, 3 Strigid Owl Feathers and 3 swatches of Webwood Spider Silk.",
+      "locations": {
+        "starts": [
+          {
+            "zone": "teldrassil",
+            "x": 60.5,
+            "y": 56.3,
+            "basis": "classic_reference",
+            "label": "Zenn Foulhoof"
+          }
+        ],
+        "objectives": [
+          {
+            "zone": "teldrassil",
+            "x": 58.1,
+            "y": 76.6,
+            "basis": "classic_reference",
+            "label": "Duskstalker"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 45.2,
+            "y": 42.6,
+            "basis": "classic_reference",
+            "label": "Elder Nightsaber"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 39.8,
+            "y": 44.5,
+            "basis": "classic_reference",
+            "label": "Elder Nightsaber"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 45.7,
+            "y": 41.0,
+            "basis": "classic_reference",
+            "label": "Elder Nightsaber"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 45.1,
+            "y": 36.7,
+            "basis": "classic_reference",
+            "label": "Elder Nightsaber"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 40.7,
+            "y": 27.4,
+            "basis": "classic_reference",
+            "label": "Feral Nightsaber"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 41.3,
+            "y": 25.1,
+            "basis": "classic_reference",
+            "label": "Feral Nightsaber"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 37.4,
+            "y": 24.8,
+            "basis": "classic_reference",
+            "label": "Feral Nightsaber"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 67.3,
+            "y": 51.2,
+            "basis": "classic_reference",
+            "label": "Nightsaber"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 65.6,
+            "y": 53.5,
+            "basis": "classic_reference",
+            "label": "Nightsaber"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 49.7,
+            "y": 52.4,
+            "basis": "classic_reference",
+            "label": "Nightsaber"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 68.8,
+            "y": 55.4,
+            "basis": "classic_reference",
+            "label": "Nightsaber"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 38.9,
+            "y": 58.1,
+            "basis": "classic_reference",
+            "label": "Nightsaber Stalker"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 63.4,
+            "y": 72.2,
+            "basis": "classic_reference",
+            "label": "Nightsaber Stalker"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 46.6,
+            "y": 71.3,
+            "basis": "classic_reference",
+            "label": "Nightsaber Stalker"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 53.9,
+            "y": 72.5,
+            "basis": "classic_reference",
+            "label": "Nightsaber Stalker"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 40.8,
+            "y": 45.0,
+            "basis": "classic_reference",
+            "label": "Strigid Hunter"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 46.2,
+            "y": 31.4,
+            "basis": "classic_reference",
+            "label": "Strigid Hunter"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 45.6,
+            "y": 40.6,
+            "basis": "classic_reference",
+            "label": "Strigid Hunter"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 37.6,
+            "y": 29.3,
+            "basis": "classic_reference",
+            "label": "Strigid Hunter"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 52.0,
+            "y": 56.4,
+            "basis": "classic_reference",
+            "label": "Strigid Owl"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 64.7,
+            "y": 51.5,
+            "basis": "classic_reference",
+            "label": "Strigid Owl"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 68.7,
+            "y": 62.4,
+            "basis": "classic_reference",
+            "label": "Strigid Owl"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 53.5,
+            "y": 59.4,
+            "basis": "classic_reference",
+            "label": "Strigid Owl"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 58.1,
+            "y": 76.2,
+            "basis": "classic_reference",
+            "label": "Strigid Screecher"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 64.3,
+            "y": 69.2,
+            "basis": "classic_reference",
+            "label": "Strigid Screecher"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 39.5,
+            "y": 54.5,
+            "basis": "classic_reference",
+            "label": "Strigid Screecher"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 39.1,
+            "y": 51.4,
+            "basis": "classic_reference",
+            "label": "Strigid Screecher"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 45.7,
+            "y": 27.5,
+            "basis": "classic_reference",
+            "label": "Giant Webwood Spider"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 41.2,
+            "y": 28.9,
+            "basis": "classic_reference",
+            "label": "Giant Webwood Spider"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 40.2,
+            "y": 25.4,
+            "basis": "classic_reference",
+            "label": "Giant Webwood Spider"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 68.0,
+            "y": 64.1,
+            "basis": "classic_reference",
+            "label": "Webwood Lurker"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 69.5,
+            "y": 60.3,
+            "basis": "classic_reference",
+            "label": "Webwood Lurker"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 45.9,
+            "y": 46.7,
+            "basis": "classic_reference",
+            "label": "Webwood Lurker"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 69.5,
+            "y": 57.2,
+            "basis": "classic_reference",
+            "label": "Webwood Lurker"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 43.7,
+            "y": 47.3,
+            "basis": "classic_reference",
+            "label": "Webwood Silkspinner"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 43.2,
+            "y": 45.5,
+            "basis": "classic_reference",
+            "label": "Webwood Silkspinner"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 47.9,
+            "y": 32.1,
+            "basis": "classic_reference",
+            "label": "Webwood Silkspinner"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 34.6,
+            "y": 32.6,
+            "basis": "classic_reference",
+            "label": "Webwood Silkspinner"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 44.8,
+            "y": 77.5,
+            "basis": "classic_reference",
+            "label": "Webwood Venomfang"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 38.9,
+            "y": 61.7,
+            "basis": "classic_reference",
+            "label": "Webwood Venomfang"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 61.0,
+            "y": 73.4,
+            "basis": "classic_reference",
+            "label": "Webwood Venomfang"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 41.8,
+            "y": 75.0,
+            "basis": "classic_reference",
+            "label": "Webwood Venomfang"
+          }
+        ],
+        "ends": [
+          {
+            "zone": "teldrassil",
+            "x": 60.5,
+            "y": 56.3,
+            "basis": "documented_forever",
+            "label": "Zenn Foulhoof"
+          }
+        ]
+      },
+      "targets": [
+        {
+          "label": "Nightsaber Fang × 3",
+          "locations": [
+            {
+              "zone": "teldrassil",
+              "x": 58.1,
+              "y": 76.6,
+              "basis": "classic_reference",
+              "label": "Duskstalker"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 45.2,
+              "y": 42.6,
+              "basis": "classic_reference",
+              "label": "Elder Nightsaber"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 39.8,
+              "y": 44.5,
+              "basis": "classic_reference",
+              "label": "Elder Nightsaber"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 45.7,
+              "y": 41.0,
+              "basis": "classic_reference",
+              "label": "Elder Nightsaber"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 45.1,
+              "y": 36.7,
+              "basis": "classic_reference",
+              "label": "Elder Nightsaber"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 40.7,
+              "y": 27.4,
+              "basis": "classic_reference",
+              "label": "Feral Nightsaber"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 41.3,
+              "y": 25.1,
+              "basis": "classic_reference",
+              "label": "Feral Nightsaber"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 37.4,
+              "y": 24.8,
+              "basis": "classic_reference",
+              "label": "Feral Nightsaber"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 67.3,
+              "y": 51.2,
+              "basis": "classic_reference",
+              "label": "Nightsaber"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 65.6,
+              "y": 53.5,
+              "basis": "classic_reference",
+              "label": "Nightsaber"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 49.7,
+              "y": 52.4,
+              "basis": "classic_reference",
+              "label": "Nightsaber"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 68.8,
+              "y": 55.4,
+              "basis": "classic_reference",
+              "label": "Nightsaber"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 38.9,
+              "y": 58.1,
+              "basis": "classic_reference",
+              "label": "Nightsaber Stalker"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 63.4,
+              "y": 72.2,
+              "basis": "classic_reference",
+              "label": "Nightsaber Stalker"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 46.6,
+              "y": 71.3,
+              "basis": "classic_reference",
+              "label": "Nightsaber Stalker"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 53.9,
+              "y": 72.5,
+              "basis": "classic_reference",
+              "label": "Nightsaber Stalker"
+            }
+          ]
+        },
+        {
+          "label": "Strigid Owl Feather × 3",
+          "locations": [
+            {
+              "zone": "teldrassil",
+              "x": 40.8,
+              "y": 45.0,
+              "basis": "classic_reference",
+              "label": "Strigid Hunter"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 46.2,
+              "y": 31.4,
+              "basis": "classic_reference",
+              "label": "Strigid Hunter"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 45.6,
+              "y": 40.6,
+              "basis": "classic_reference",
+              "label": "Strigid Hunter"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 37.6,
+              "y": 29.3,
+              "basis": "classic_reference",
+              "label": "Strigid Hunter"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 52.0,
+              "y": 56.4,
+              "basis": "classic_reference",
+              "label": "Strigid Owl"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 64.7,
+              "y": 51.5,
+              "basis": "classic_reference",
+              "label": "Strigid Owl"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 68.7,
+              "y": 62.4,
+              "basis": "classic_reference",
+              "label": "Strigid Owl"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 53.5,
+              "y": 59.4,
+              "basis": "classic_reference",
+              "label": "Strigid Owl"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 58.1,
+              "y": 76.2,
+              "basis": "classic_reference",
+              "label": "Strigid Screecher"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 64.3,
+              "y": 69.2,
+              "basis": "classic_reference",
+              "label": "Strigid Screecher"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 39.5,
+              "y": 54.5,
+              "basis": "classic_reference",
+              "label": "Strigid Screecher"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 39.1,
+              "y": 51.4,
+              "basis": "classic_reference",
+              "label": "Strigid Screecher"
+            }
+          ]
+        },
+        {
+          "label": "Webwood Spider Silk × 3",
+          "locations": [
+            {
+              "zone": "teldrassil",
+              "x": 45.7,
+              "y": 27.5,
+              "basis": "classic_reference",
+              "label": "Giant Webwood Spider"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 41.2,
+              "y": 28.9,
+              "basis": "classic_reference",
+              "label": "Giant Webwood Spider"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 40.2,
+              "y": 25.4,
+              "basis": "classic_reference",
+              "label": "Giant Webwood Spider"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 68.0,
+              "y": 64.1,
+              "basis": "classic_reference",
+              "label": "Webwood Lurker"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 69.5,
+              "y": 60.3,
+              "basis": "classic_reference",
+              "label": "Webwood Lurker"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 45.9,
+              "y": 46.7,
+              "basis": "classic_reference",
+              "label": "Webwood Lurker"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 69.5,
+              "y": 57.2,
+              "basis": "classic_reference",
+              "label": "Webwood Lurker"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 43.7,
+              "y": 47.3,
+              "basis": "classic_reference",
+              "label": "Webwood Silkspinner"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 43.2,
+              "y": 45.5,
+              "basis": "classic_reference",
+              "label": "Webwood Silkspinner"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 47.9,
+              "y": 32.1,
+              "basis": "classic_reference",
+              "label": "Webwood Silkspinner"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 34.6,
+              "y": 32.6,
+              "basis": "classic_reference",
+              "label": "Webwood Silkspinner"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 44.8,
+              "y": 77.5,
+              "basis": "classic_reference",
+              "label": "Webwood Venomfang"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 38.9,
+              "y": 61.7,
+              "basis": "classic_reference",
+              "label": "Webwood Venomfang"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 61.0,
+              "y": 73.4,
+              "basis": "classic_reference",
+              "label": "Webwood Venomfang"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 41.8,
+              "y": 75.0,
+              "basis": "classic_reference",
+              "label": "Webwood Venomfang"
+            }
+          ]
+        }
+      ],
+      "source_url": "https://foreverdb.net/quest/488-zenns-bidding",
+      "evidence_url": "https://foreverdb.net/quest/488-zenns-bidding",
+      "evidence_level": "documented_forever",
+      "observed_at": "2026-10-18",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "community_database",
+      "evidence_note": "ForeverDB reviewed 2026-10-18. Quest titles, objectives and locations retain Classic fallback unless individually marked seen by players. Community observations are not first-hand validation."
+    },
+    "475": {
+      "id": 475,
+      "en": "A Troubling Breeze",
+      "fr": "Une brise étrange",
+      "level": 6,
+      "min_level": 4,
+      "requires": [],
+      "summary_en": "Seek out Gaerolas Talvethren in Starbreeze Village.",
+      "locations": {
+        "starts": [
+          {
+            "zone": "teldrassil",
+            "x": 56.0,
+            "y": 57.3,
+            "basis": "classic_reference",
+            "label": "Athridas Bearmantle"
+          }
+        ],
+        "objectives": [],
+        "ends": [
+          {
+            "zone": "teldrassil",
+            "x": 66.3,
+            "y": 58.6,
+            "basis": "documented_forever",
+            "label": "Gaerolas Talvethren"
+          }
+        ]
+      },
+      "targets": [],
+      "source_url": "https://foreverdb.net/quest/475-a-troubling-breeze",
+      "evidence_url": "https://foreverdb.net/quest/475-a-troubling-breeze",
+      "evidence_level": "documented_forever",
+      "observed_at": "2026-10-18",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "community_database",
+      "evidence_note": "ForeverDB reviewed 2026-10-18. Quest titles, objectives and locations retain Classic fallback unless individually marked seen by players. Community observations are not first-hand validation."
+    },
+    "476": {
+      "id": 476,
+      "en": "Gnarlpine Corruption",
+      "fr": "La corruption des Pins-tordus",
+      "level": 6,
+      "min_level": 4,
+      "requires": [
+        475
+      ],
+      "summary_en": "Return to Athridas Bearmantle in Dolanaar.",
+      "locations": {
+        "starts": [
+          {
+            "zone": "teldrassil",
+            "x": 66.3,
+            "y": 58.6,
+            "basis": "documented_forever",
+            "label": "Gaerolas Talvethren"
+          }
+        ],
+        "objectives": [],
+        "ends": [
+          {
+            "zone": "teldrassil",
+            "x": 55.9,
+            "y": 57.4,
+            "basis": "documented_forever",
+            "label": "Athridas Bearmantle"
+          }
+        ]
+      },
+      "targets": [],
+      "source_url": "https://foreverdb.net/quest/476-gnarlpine-corruption",
+      "evidence_url": "https://foreverdb.net/quest/476-gnarlpine-corruption",
+      "evidence_level": "documented_forever",
+      "observed_at": "2026-10-18",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "community_database",
+      "evidence_note": "ForeverDB reviewed 2026-10-18. Quest titles, objectives and locations retain Classic fallback unless individually marked seen by players. Community observations are not first-hand validation."
+    },
+    "2438": {
+      "id": 2438,
+      "en": "The Emerald Dreamcatcher",
+      "fr": "Le Capturêve d'émeraude",
+      "level": 6,
+      "min_level": 1,
+      "requires": [],
+      "summary_en": "Bring the Emerald Dreamcatcher to Tallonkai Swiftroot in Dolanaar.",
+      "locations": {
+        "starts": [
+          {
+            "zone": "teldrassil",
+            "x": 55.6,
+            "y": 56.9,
+            "basis": "classic_reference",
+            "label": "Tallonkai Swiftroot"
+          }
+        ],
+        "objectives": [
+          {
+            "zone": "teldrassil",
+            "x": 68.0,
+            "y": 59.7,
+            "basis": "classic_reference",
+            "label": "Tallonkai's Dresser"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 68.0,
+            "y": 59.6,
+            "basis": "documented_forever",
+            "label": "Tallonkai's Dresser"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 68.0,
+            "y": 59.6,
+            "basis": "documented_forever",
+            "label": "Tallonkai's Dresser"
+          }
+        ],
+        "ends": [
+          {
+            "zone": "teldrassil",
+            "x": 55.5,
+            "y": 56.9,
+            "basis": "documented_forever",
+            "label": "Tallonkai Swiftroot"
+          }
+        ]
+      },
+      "targets": [
+        {
+          "label": "Emerald Dreamcatcher × 1",
+          "locations": [
+            {
+              "zone": "teldrassil",
+              "x": 68.0,
+              "y": 59.7,
+              "basis": "classic_reference",
+              "label": "Tallonkai's Dresser"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 68.0,
+              "y": 59.6,
+              "basis": "documented_forever",
+              "label": "Tallonkai's Dresser"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 68.0,
+              "y": 59.6,
+              "basis": "documented_forever",
+              "label": "Tallonkai's Dresser"
+            }
+          ]
+        }
+      ],
+      "source_url": "https://foreverdb.net/quest/2438-the-emerald-dreamcatcher",
+      "evidence_url": "https://foreverdb.net/quest/2438-the-emerald-dreamcatcher",
+      "evidence_level": "documented_forever",
+      "observed_at": "2026-10-18",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "community_database",
+      "evidence_note": "ForeverDB reviewed 2026-10-18. Quest titles, objectives and locations retain Classic fallback unless individually marked seen by players. Community observations are not first-hand validation."
+    },
+    "922": {
+      "id": 922,
+      "en": "Rellian Greenspyre",
+      "fr": "Rellian Vertecime",
+      "level": 7,
+      "min_level": 4,
+      "requires": [
+        918
+      ],
+      "summary_en": "Bring a Timberling Seed to Rellian Greenspyre in Darnassus.",
+      "locations": {
+        "starts": [
+          {
+            "zone": "teldrassil",
+            "x": 60.8,
+            "y": 68.5,
+            "basis": "documented_forever",
+            "label": "Denalan"
+          }
+        ],
+        "objectives": [
+          {
+            "zone": "teldrassil",
+            "x": 45.0,
+            "y": 26.6,
+            "basis": "classic_reference",
+            "label": "Elder Timberling"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 44.5,
+            "y": 26.0,
+            "basis": "classic_reference",
+            "label": "Elder Timberling"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 53.8,
+            "y": 75.1,
+            "basis": "classic_reference",
+            "label": "Oakenscowl"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 60.0,
+            "y": 72.2,
+            "basis": "classic_reference",
+            "label": "Timberling"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 61.5,
+            "y": 69.3,
+            "basis": "classic_reference",
+            "label": "Timberling"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 62.2,
+            "y": 68.6,
+            "basis": "classic_reference",
+            "label": "Timberling"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 59.7,
+            "y": 64.3,
+            "basis": "classic_reference",
+            "label": "Timberling"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 54.5,
+            "y": 69.8,
+            "basis": "classic_reference",
+            "label": "Timberling Bark Ripper"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 52.4,
+            "y": 74.3,
+            "basis": "classic_reference",
+            "label": "Timberling Bark Ripper"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 52.5,
+            "y": 69.3,
+            "basis": "classic_reference",
+            "label": "Timberling Bark Ripper"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 50.1,
+            "y": 72.1,
+            "basis": "classic_reference",
+            "label": "Timberling Bark Ripper"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 41.9,
+            "y": 33.9,
+            "basis": "classic_reference",
+            "label": "Timberling Mire Beast"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 43.9,
+            "y": 34.9,
+            "basis": "classic_reference",
+            "label": "Timberling Mire Beast"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 43.0,
+            "y": 33.7,
+            "basis": "classic_reference",
+            "label": "Timberling Mire Beast"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 41.8,
+            "y": 37.9,
+            "basis": "classic_reference",
+            "label": "Timberling Trampler"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 42.5,
+            "y": 38.7,
+            "basis": "classic_reference",
+            "label": "Timberling Trampler"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 42.5,
+            "y": 42.7,
+            "basis": "classic_reference",
+            "label": "Timberling Trampler"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 53.7,
+            "y": 75.3,
+            "basis": "classic_reference",
+            "label": "Timberling Trampler"
+          }
+        ],
+        "ends": [
+          {
+            "zone": "darnassus",
+            "x": 38.5,
+            "y": 21.8,
+            "basis": "documented_forever",
+            "label": "Rellian Greenspyre"
+          }
+        ]
+      },
+      "targets": [
+        {
+          "label": "Timberling Seed × 1",
+          "locations": [
+            {
+              "zone": "teldrassil",
+              "x": 45.0,
+              "y": 26.6,
+              "basis": "classic_reference",
+              "label": "Elder Timberling"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 44.5,
+              "y": 26.0,
+              "basis": "classic_reference",
+              "label": "Elder Timberling"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 53.8,
+              "y": 75.1,
+              "basis": "classic_reference",
+              "label": "Oakenscowl"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 60.0,
+              "y": 72.2,
+              "basis": "classic_reference",
+              "label": "Timberling"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 61.5,
+              "y": 69.3,
+              "basis": "classic_reference",
+              "label": "Timberling"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 62.2,
+              "y": 68.6,
+              "basis": "classic_reference",
+              "label": "Timberling"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 59.7,
+              "y": 64.3,
+              "basis": "classic_reference",
+              "label": "Timberling"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 54.5,
+              "y": 69.8,
+              "basis": "classic_reference",
+              "label": "Timberling Bark Ripper"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 52.4,
+              "y": 74.3,
+              "basis": "classic_reference",
+              "label": "Timberling Bark Ripper"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 52.5,
+              "y": 69.3,
+              "basis": "classic_reference",
+              "label": "Timberling Bark Ripper"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 50.1,
+              "y": 72.1,
+              "basis": "classic_reference",
+              "label": "Timberling Bark Ripper"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 41.9,
+              "y": 33.9,
+              "basis": "classic_reference",
+              "label": "Timberling Mire Beast"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 43.9,
+              "y": 34.9,
+              "basis": "classic_reference",
+              "label": "Timberling Mire Beast"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 43.0,
+              "y": 33.7,
+              "basis": "classic_reference",
+              "label": "Timberling Mire Beast"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 41.8,
+              "y": 37.9,
+              "basis": "classic_reference",
+              "label": "Timberling Trampler"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 42.5,
+              "y": 38.7,
+              "basis": "classic_reference",
+              "label": "Timberling Trampler"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 42.5,
+              "y": 42.7,
+              "basis": "classic_reference",
+              "label": "Timberling Trampler"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 53.7,
+              "y": 75.3,
+              "basis": "classic_reference",
+              "label": "Timberling Trampler"
+            }
+          ]
+        }
+      ],
+      "source_url": "https://foreverdb.net/quest/922-rellian-greenspyre",
+      "evidence_url": "https://foreverdb.net/quest/922-rellian-greenspyre",
+      "evidence_level": "documented_forever",
+      "observed_at": "2026-10-18",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "community_database",
+      "evidence_note": "ForeverDB reviewed 2026-10-18. Quest titles, objectives and locations retain Classic fallback unless individually marked seen by players. Community observations are not first-hand validation."
+    },
+    "489": {
+      "id": 489,
+      "en": "Seek Redemption!",
+      "fr": "En quête de rédemption !",
+      "level": 7,
+      "min_level": 4,
+      "requires": [
+        488
+      ],
+      "summary_en": "Collect 3 Fel Cones and give them to Zenn Foulhoof outside of Dolanaar.",
+      "locations": {
+        "starts": [
+          {
+            "zone": "teldrassil",
+            "x": 56.1,
+            "y": 57.8,
+            "basis": "documented_forever",
+            "label": "Syral Bladeleaf"
+          }
+        ],
+        "objectives": [
+          {
+            "zone": "teldrassil",
+            "x": 54.2,
+            "y": 65.5,
+            "basis": "classic_reference",
+            "label": "Fel Cone"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 49.9,
+            "y": 68.2,
+            "basis": "classic_reference",
+            "label": "Fel Cone"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 52.0,
+            "y": 67.2,
+            "basis": "classic_reference",
+            "label": "Fel Cone"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 52.3,
+            "y": 61.3,
+            "basis": "classic_reference",
+            "label": "Fel Cone"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 58.7,
+            "y": 55.7,
+            "basis": "documented_forever"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 57.9,
+            "y": 66.6,
+            "basis": "documented_forever"
+          }
+        ],
+        "ends": [
+          {
+            "zone": "teldrassil",
+            "x": 60.4,
+            "y": 56.3,
+            "basis": "documented_forever",
+            "label": "Zenn Foulhoof"
+          }
+        ]
+      },
+      "targets": [
+        {
+          "label": "Fel Cone × 3",
+          "locations": [
+            {
+              "zone": "teldrassil",
+              "x": 54.2,
+              "y": 65.5,
+              "basis": "classic_reference",
+              "label": "Fel Cone"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 49.9,
+              "y": 68.2,
+              "basis": "classic_reference",
+              "label": "Fel Cone"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 52.0,
+              "y": 67.2,
+              "basis": "classic_reference",
+              "label": "Fel Cone"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 52.3,
+              "y": 61.3,
+              "basis": "classic_reference",
+              "label": "Fel Cone"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 58.7,
+              "y": 55.7,
+              "basis": "documented_forever"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 57.9,
+              "y": 66.6,
+              "basis": "documented_forever"
+            }
+          ]
+        }
+      ],
+      "source_url": "https://foreverdb.net/quest/489-seek-redemption",
+      "evidence_url": "https://foreverdb.net/quest/489-seek-redemption",
+      "evidence_level": "documented_forever",
+      "observed_at": "2026-10-18",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "community_database",
+      "evidence_note": "ForeverDB reviewed 2026-10-18. Quest titles, objectives and locations retain Classic fallback unless individually marked seen by players. Community observations are not first-hand validation."
+    },
+    "87288": {
+      "id": 87288,
+      "en": "Soft Saber Pelts",
+      "fr": "Peaux souples de sabre-de-nuit",
+      "level": 7,
+      "min_level": null,
+      "requires": [],
+      "summary_en": "",
+      "locations": {
+        "starts": [],
+        "objectives": [],
+        "ends": [
+          {
+            "zone": "teldrassil",
+            "x": 55.4,
+            "y": 57.2,
+            "basis": "documented_forever",
+            "label": "Aldia"
+          }
+        ]
+      },
+      "targets": [
+        {
+          "label": "Soft Nightsaber Pelt × 6",
+          "locations": []
+        }
+      ],
+      "source_url": "https://foreverdb.net/quest/87288-soft-saber-pelts",
+      "evidence_url": "https://foreverdb.net/quest/87288-soft-saber-pelts",
+      "evidence_level": "documented_forever",
+      "observed_at": "2026-10-18",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "community_database",
+      "evidence_note": "ForeverDB reviewed 2026-10-18. Quest titles, objectives and locations retain Classic fallback unless individually marked seen by players. Community observations are not first-hand validation."
+    },
+    "918": {
+      "id": 918,
+      "en": "Timberling Seeds",
+      "fr": "Les graines de sylvain",
+      "level": 7,
+      "min_level": 4,
+      "requires": [
+        997
+      ],
+      "summary_en": "Bring 8 Timberling Seeds to Denelan at Lake Al'Ameth.",
+      "locations": {
+        "starts": [
+          {
+            "zone": "teldrassil",
+            "x": 60.9,
+            "y": 68.5,
+            "basis": "classic_reference",
+            "label": "Denalan"
+          }
+        ],
+        "objectives": [
+          {
+            "zone": "teldrassil",
+            "x": 45.0,
+            "y": 26.6,
+            "basis": "classic_reference",
+            "label": "Elder Timberling"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 44.5,
+            "y": 26.0,
+            "basis": "classic_reference",
+            "label": "Elder Timberling"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 53.8,
+            "y": 75.1,
+            "basis": "classic_reference",
+            "label": "Oakenscowl"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 60.0,
+            "y": 72.2,
+            "basis": "classic_reference",
+            "label": "Timberling"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 61.5,
+            "y": 69.3,
+            "basis": "classic_reference",
+            "label": "Timberling"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 62.2,
+            "y": 68.6,
+            "basis": "classic_reference",
+            "label": "Timberling"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 59.7,
+            "y": 64.3,
+            "basis": "classic_reference",
+            "label": "Timberling"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 54.5,
+            "y": 69.8,
+            "basis": "classic_reference",
+            "label": "Timberling Bark Ripper"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 52.4,
+            "y": 74.3,
+            "basis": "classic_reference",
+            "label": "Timberling Bark Ripper"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 52.5,
+            "y": 69.3,
+            "basis": "classic_reference",
+            "label": "Timberling Bark Ripper"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 50.1,
+            "y": 72.1,
+            "basis": "classic_reference",
+            "label": "Timberling Bark Ripper"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 41.9,
+            "y": 33.9,
+            "basis": "classic_reference",
+            "label": "Timberling Mire Beast"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 43.9,
+            "y": 34.9,
+            "basis": "classic_reference",
+            "label": "Timberling Mire Beast"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 43.0,
+            "y": 33.7,
+            "basis": "classic_reference",
+            "label": "Timberling Mire Beast"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 41.8,
+            "y": 37.9,
+            "basis": "classic_reference",
+            "label": "Timberling Trampler"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 42.5,
+            "y": 38.7,
+            "basis": "classic_reference",
+            "label": "Timberling Trampler"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 42.5,
+            "y": 42.7,
+            "basis": "classic_reference",
+            "label": "Timberling Trampler"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 53.7,
+            "y": 75.3,
+            "basis": "classic_reference",
+            "label": "Timberling Trampler"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 58.1,
+            "y": 68.6,
+            "basis": "documented_forever"
+          }
+        ],
+        "ends": [
+          {
+            "zone": "teldrassil",
+            "x": 60.8,
+            "y": 68.5,
+            "basis": "documented_forever",
+            "label": "Denalan"
+          }
+        ]
+      },
+      "targets": [
+        {
+          "label": "Timberling Seed × 8",
+          "locations": [
+            {
+              "zone": "teldrassil",
+              "x": 45.0,
+              "y": 26.6,
+              "basis": "classic_reference",
+              "label": "Elder Timberling"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 44.5,
+              "y": 26.0,
+              "basis": "classic_reference",
+              "label": "Elder Timberling"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 53.8,
+              "y": 75.1,
+              "basis": "classic_reference",
+              "label": "Oakenscowl"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 60.0,
+              "y": 72.2,
+              "basis": "classic_reference",
+              "label": "Timberling"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 61.5,
+              "y": 69.3,
+              "basis": "classic_reference",
+              "label": "Timberling"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 62.2,
+              "y": 68.6,
+              "basis": "classic_reference",
+              "label": "Timberling"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 59.7,
+              "y": 64.3,
+              "basis": "classic_reference",
+              "label": "Timberling"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 54.5,
+              "y": 69.8,
+              "basis": "classic_reference",
+              "label": "Timberling Bark Ripper"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 52.4,
+              "y": 74.3,
+              "basis": "classic_reference",
+              "label": "Timberling Bark Ripper"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 52.5,
+              "y": 69.3,
+              "basis": "classic_reference",
+              "label": "Timberling Bark Ripper"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 50.1,
+              "y": 72.1,
+              "basis": "classic_reference",
+              "label": "Timberling Bark Ripper"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 41.9,
+              "y": 33.9,
+              "basis": "classic_reference",
+              "label": "Timberling Mire Beast"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 43.9,
+              "y": 34.9,
+              "basis": "classic_reference",
+              "label": "Timberling Mire Beast"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 43.0,
+              "y": 33.7,
+              "basis": "classic_reference",
+              "label": "Timberling Mire Beast"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 41.8,
+              "y": 37.9,
+              "basis": "classic_reference",
+              "label": "Timberling Trampler"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 42.5,
+              "y": 38.7,
+              "basis": "classic_reference",
+              "label": "Timberling Trampler"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 42.5,
+              "y": 42.7,
+              "basis": "classic_reference",
+              "label": "Timberling Trampler"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 53.7,
+              "y": 75.3,
+              "basis": "classic_reference",
+              "label": "Timberling Trampler"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 58.1,
+              "y": 68.6,
+              "basis": "documented_forever"
+            }
+          ]
+        }
+      ],
+      "source_url": "https://foreverdb.net/quest/918-timberling-seeds",
+      "evidence_url": "https://foreverdb.net/quest/918-timberling-seeds",
+      "evidence_level": "documented_forever",
+      "observed_at": "2026-10-18",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "community_database",
+      "evidence_note": "ForeverDB reviewed 2026-10-18. Quest titles, objectives and locations retain Classic fallback unless individually marked seen by players. Community observations are not first-hand validation."
+    },
+    "919": {
+      "id": 919,
+      "en": "Timberling Sprouts",
+      "fr": "Les pousses de sylvain",
+      "level": 7,
+      "min_level": 4,
+      "requires": [],
+      "summary_en": "Bring 12 Timberling Sprouts to Denalan at Lake Al'Ameth.",
+      "locations": {
+        "starts": [
+          {
+            "zone": "teldrassil",
+            "x": 60.9,
+            "y": 68.5,
+            "basis": "classic_reference",
+            "label": "Denalan"
+          }
+        ],
+        "objectives": [
+          {
+            "zone": "teldrassil",
+            "x": 60.1,
+            "y": 70.5,
+            "basis": "classic_reference",
+            "label": "Timberling Sprout"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 61.6,
+            "y": 68.9,
+            "basis": "classic_reference",
+            "label": "Timberling Sprout"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 50.1,
+            "y": 72.0,
+            "basis": "classic_reference",
+            "label": "Timberling Sprout"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 62.2,
+            "y": 68.5,
+            "basis": "classic_reference",
+            "label": "Timberling Sprout"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 56.6,
+            "y": 69.0,
+            "basis": "documented_forever"
+          }
+        ],
+        "ends": [
+          {
+            "zone": "teldrassil",
+            "x": 60.8,
+            "y": 68.5,
+            "basis": "documented_forever",
+            "label": "Denalan"
+          }
+        ]
+      },
+      "targets": [
+        {
+          "label": "Timberling Sprout × 12",
+          "locations": [
+            {
+              "zone": "teldrassil",
+              "x": 60.1,
+              "y": 70.5,
+              "basis": "classic_reference",
+              "label": "Timberling Sprout"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 61.6,
+              "y": 68.9,
+              "basis": "classic_reference",
+              "label": "Timberling Sprout"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 50.1,
+              "y": 72.0,
+              "basis": "classic_reference",
+              "label": "Timberling Sprout"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 62.2,
+              "y": 68.5,
+              "basis": "classic_reference",
+              "label": "Timberling Sprout"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 56.6,
+              "y": 69.0,
+              "basis": "documented_forever"
+            }
+          ]
+        }
+      ],
+      "source_url": "https://foreverdb.net/quest/919-timberling-sprouts",
+      "evidence_url": "https://foreverdb.net/quest/919-timberling-sprouts",
+      "evidence_level": "documented_forever",
+      "observed_at": "2026-10-18",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "community_database",
+      "evidence_note": "ForeverDB reviewed 2026-10-18. Quest titles, objectives and locations retain Classic fallback unless individually marked seen by players. Community observations are not first-hand validation."
+    },
+    "932": {
+      "id": 932,
+      "en": "Twisted Hatred",
+      "fr": "Haine folle",
+      "level": 8,
+      "min_level": 4,
+      "requires": [],
+      "summary_en": "Kill Lord Melenas and bring his head to Tallonkai Swiftroot in Dolanaar.",
+      "locations": {
+        "starts": [
+          {
+            "zone": "teldrassil",
+            "x": 55.6,
+            "y": 56.9,
+            "basis": "classic_reference",
+            "label": "Tallonkai Swiftroot"
+          }
+        ],
+        "objectives": [
+          {
+            "zone": "teldrassil",
+            "x": 51.2,
+            "y": 50.8,
+            "basis": "classic_reference",
+            "label": "Lord Melenas"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 52.9,
+            "y": 50.2,
+            "basis": "documented_forever",
+            "label": "Lord Melenas"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 51.9,
+            "y": 50.4,
+            "basis": "documented_forever"
+          }
+        ],
+        "ends": [
+          {
+            "zone": "teldrassil",
+            "x": 55.5,
+            "y": 56.9,
+            "basis": "documented_forever",
+            "label": "Tallonkai Swiftroot"
+          }
+        ]
+      },
+      "targets": [
+        {
+          "label": "Melenas' Head × 1",
+          "locations": [
+            {
+              "zone": "teldrassil",
+              "x": 51.2,
+              "y": 50.8,
+              "basis": "classic_reference",
+              "label": "Lord Melenas"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 52.9,
+              "y": 50.2,
+              "basis": "documented_forever",
+              "label": "Lord Melenas"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 51.9,
+              "y": 50.4,
+              "basis": "documented_forever"
+            }
+          ]
+        }
+      ],
+      "source_url": "https://foreverdb.net/quest/932-twisted-hatred",
+      "evidence_url": "https://foreverdb.net/quest/932-twisted-hatred",
+      "evidence_level": "documented_forever",
+      "observed_at": "2026-10-18",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "community_database",
+      "evidence_note": "ForeverDB reviewed 2026-10-18. Quest titles, objectives and locations retain Classic fallback unless individually marked seen by players. Community observations are not first-hand validation."
+    },
+    "2459": {
+      "id": 2459,
+      "en": "Ferocitas the Dream Eater",
+      "fr": "Ferocitas le Mangeur de rêves",
+      "level": 8,
+      "min_level": 1,
+      "requires": [
+        2438
+      ],
+      "summary_en": "Tallonkai Swiftroot in Dolanaar wants you to kill 7 Gnarlpine Mystics and find the Missing Jewel.",
+      "locations": {
+        "starts": [
+          {
+            "zone": "teldrassil",
+            "x": 55.5,
+            "y": 56.9,
+            "basis": "documented_forever",
+            "label": "Tallonkai Swiftroot"
+          }
+        ],
+        "objectives": [
+          {
+            "zone": "teldrassil",
+            "x": 68.6,
+            "y": 52.3,
+            "basis": "classic_reference",
+            "label": "Gnarlpine Mystic"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 69.6,
+            "y": 55.3,
+            "basis": "classic_reference",
+            "label": "Gnarlpine Mystic"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 68.1,
+            "y": 51.4,
+            "basis": "documented_forever",
+            "label": "Gnarlpine Mystic"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 69.3,
+            "y": 53.0,
+            "basis": "documented_forever"
+          }
+        ],
+        "ends": [
+          {
+            "zone": "teldrassil",
+            "x": 55.5,
+            "y": 56.9,
+            "basis": "documented_forever",
+            "label": "Tallonkai Swiftroot"
+          }
+        ]
+      },
+      "targets": [
+        {
+          "label": "Gnarlpine Mystic × 7",
+          "locations": [
+            {
+              "zone": "teldrassil",
+              "x": 68.6,
+              "y": 52.3,
+              "basis": "classic_reference",
+              "label": "Gnarlpine Mystic"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 69.6,
+              "y": 55.3,
+              "basis": "classic_reference",
+              "label": "Gnarlpine Mystic"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 68.1,
+              "y": 51.4,
+              "basis": "documented_forever",
+              "label": "Gnarlpine Mystic"
+            }
+          ]
+        },
+        {
+          "label": "Tallonkai's Jewel × 1",
+          "locations": [
+            {
+              "zone": "teldrassil",
+              "x": 69.3,
+              "y": 53.0,
+              "basis": "documented_forever"
+            }
+          ]
+        }
+      ],
+      "source_url": "https://foreverdb.net/quest/2459-ferocitas-the-dream-eater",
+      "evidence_url": "https://foreverdb.net/quest/2459-ferocitas-the-dream-eater",
+      "evidence_level": "documented_forever",
+      "observed_at": "2026-10-18",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "community_database",
+      "evidence_note": "ForeverDB reviewed 2026-10-18. Quest titles, objectives and locations retain Classic fallback unless individually marked seen by players. Community observations are not first-hand validation."
+    },
+    "487": {
+      "id": 487,
+      "en": "The Road to Darnassus",
+      "fr": "La route de Darnassus",
+      "level": 8,
+      "min_level": 5,
+      "requires": [],
+      "summary_en": "Slay 6 Gnarlpine Ambushers and return to Sentinel Amara Nightwalker outside of Dolanaar.",
+      "locations": {
+        "starts": [
+          {
+            "zone": "teldrassil",
+            "x": 55.0,
+            "y": 58.5,
+            "basis": "documented_forever",
+            "label": "Moon Priestess Amara"
+          }
+        ],
+        "objectives": [
+          {
+            "zone": "teldrassil",
+            "x": 46.2,
+            "y": 51.1,
+            "basis": "classic_reference",
+            "label": "Gnarlpine Ambusher"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 45.9,
+            "y": 52.5,
+            "basis": "classic_reference",
+            "label": "Gnarlpine Ambusher"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 45.9,
+            "y": 54.5,
+            "basis": "classic_reference",
+            "label": "Gnarlpine Ambusher"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 48.5,
+            "y": 54.1,
+            "basis": "classic_reference",
+            "label": "Gnarlpine Ambusher"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 46.9,
+            "y": 53.3,
+            "basis": "documented_forever"
+          }
+        ],
+        "ends": [
+          {
+            "zone": "teldrassil",
+            "x": 54.8,
+            "y": 58.5,
+            "basis": "documented_forever",
+            "label": "Moon Priestess Amara"
+          }
+        ]
+      },
+      "targets": [
+        {
+          "label": "Gnarlpine Ambusher × 6",
+          "locations": [
+            {
+              "zone": "teldrassil",
+              "x": 46.2,
+              "y": 51.1,
+              "basis": "classic_reference",
+              "label": "Gnarlpine Ambusher"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 45.9,
+              "y": 52.5,
+              "basis": "classic_reference",
+              "label": "Gnarlpine Ambusher"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 45.9,
+              "y": 54.5,
+              "basis": "classic_reference",
+              "label": "Gnarlpine Ambusher"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 48.5,
+              "y": 54.1,
+              "basis": "classic_reference",
+              "label": "Gnarlpine Ambusher"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 46.9,
+              "y": 53.3,
+              "basis": "documented_forever"
+            }
+          ]
+        }
+      ],
+      "source_url": "https://foreverdb.net/quest/487-the-road-to-darnassus",
+      "evidence_url": "https://foreverdb.net/quest/487-the-road-to-darnassus",
+      "evidence_level": "documented_forever",
+      "observed_at": "2026-10-18",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "community_database",
+      "evidence_note": "ForeverDB reviewed 2026-10-18. Quest titles, objectives and locations retain Classic fallback unless individually marked seen by players. Community observations are not first-hand validation."
+    },
+    "2541": {
+      "id": 2541,
+      "en": "The Sleeping Druid",
+      "fr": "Le druide dormant",
+      "level": 8,
+      "min_level": 3,
+      "requires": [],
+      "summary_en": "Bring a Shaman Voodoo Charm to Oben Rageclaw in the Ban'ethil Barrow Den.",
+      "locations": {
+        "starts": [
+          {
+            "zone": "teldrassil",
+            "x": 44.9,
+            "y": 61.6,
+            "basis": "classic_reference",
+            "label": "Oben Rageclaw"
+          }
+        ],
+        "objectives": [
+          {
+            "zone": "darnassus",
+            "x": 97.1,
+            "y": 96.4,
+            "basis": "classic_reference",
+            "label": "Gnarlpine Shaman"
+          },
+          {
+            "zone": "darnassus",
+            "x": 99.6,
+            "y": 92.6,
+            "basis": "classic_reference",
+            "label": "Gnarlpine Shaman"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 49.5,
+            "y": 66.8,
+            "basis": "classic_reference",
+            "label": "Gnarlpine Shaman"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 56.8,
+            "y": 76.5,
+            "basis": "classic_reference",
+            "label": "Gnarlpine Shaman"
+          }
+        ],
+        "ends": [
+          {
+            "zone": "teldrassil",
+            "x": 44.9,
+            "y": 61.6,
+            "basis": "classic_reference",
+            "label": "Oben Rageclaw"
+          }
+        ]
+      },
+      "targets": [
+        {
+          "label": "Shaman Voodoo Charm × 1",
+          "locations": [
+            {
+              "zone": "teldrassil",
+              "x": 49.5,
+              "y": 66.8,
+              "basis": "classic_reference",
+              "label": "Gnarlpine Shaman"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 56.8,
+              "y": 76.5,
+              "basis": "classic_reference",
+              "label": "Gnarlpine Shaman"
+            }
+          ]
+        }
+      ],
+      "source_url": "https://foreverdb.net/quest/2541-the-sleeping-druid",
+      "evidence_url": "https://foreverdb.net/quest/2541-the-sleeping-druid",
+      "evidence_level": "documented_forever",
+      "observed_at": "2026-10-18",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "community_database",
+      "evidence_note": "ForeverDB reviewed 2026-10-18. Quest titles, objectives and locations retain Classic fallback unless individually marked seen by players. Community observations are not first-hand validation."
+    },
+    "933": {
+      "id": 933,
+      "en": "Crown of the Earth",
+      "fr": "Teldrassil : la couronne d'Azeroth",
+      "level": 9,
+      "min_level": 1,
+      "requires": [
+        929
+      ],
+      "summary_en": "Fill the Tourmaline Phial and bring it back to Corithras Moonrage in Dolanaar.",
+      "locations": {
+        "starts": [
+          {
+            "zone": "teldrassil",
+            "x": 56.2,
+            "y": 61.6,
+            "basis": "documented_forever",
+            "label": "Corithras Moonrage"
+          }
+        ],
+        "objectives": [
+          {
+            "zone": "teldrassil",
+            "x": 42.6,
+            "y": 67.1,
+            "basis": "documented_forever"
+          }
+        ],
+        "ends": [
+          {
+            "zone": "teldrassil",
+            "x": 56.2,
+            "y": 61.8,
+            "basis": "documented_forever",
+            "label": "Corithras Moonrage"
+          }
+        ]
+      },
+      "targets": [
+        {
+          "label": "Filled Tourmaline Phial × 1",
+          "locations": [
+            {
+              "zone": "teldrassil",
+              "x": 42.6,
+              "y": 67.1,
+              "basis": "documented_forever"
+            }
+          ]
+        }
+      ],
+      "source_url": "https://foreverdb.net/quest/933-crown-of-the-earth",
+      "evidence_url": "https://foreverdb.net/quest/933-crown-of-the-earth",
+      "evidence_level": "documented_forever",
+      "observed_at": "2026-10-18",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "community_database",
+      "evidence_note": "ForeverDB reviewed 2026-10-18. Quest titles, objectives and locations retain Classic fallback unless individually marked seen by players. Community observations are not first-hand validation."
+    },
+    "99047": {
+      "id": 99047,
+      "en": "Not Dead Yet",
+      "fr": "Not Dead Yet",
+      "level": 9,
+      "min_level": null,
+      "requires": [
+        99046
+      ],
+      "summary_en": "Seek aid from Byancie in Dolanaar for Sentinel Eralya Leafshadow.",
+      "locations": {
+        "starts": [
+          {
+            "zone": "teldrassil",
+            "x": 37.6,
+            "y": 36.9,
+            "basis": "documented_forever",
+            "label": "Sentinel Eralya Leafshadow"
+          }
+        ],
+        "objectives": [],
+        "ends": [
+          {
+            "zone": "teldrassil",
+            "x": 55.3,
+            "y": 56.8,
+            "basis": "documented_forever",
+            "label": "Byancie"
+          }
+        ]
+      },
+      "targets": [],
+      "source_url": "https://foreverdb.net/quest/99047-not-dead-yet",
+      "evidence_url": "https://foreverdb.net/quest/99047-not-dead-yet",
+      "evidence_level": "documented_forever",
+      "observed_at": "2026-10-18",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "community_database",
+      "evidence_note": "ForeverDB reviewed 2026-10-18. Quest titles, objectives and locations retain Classic fallback unless individually marked seen by players. Community observations are not first-hand validation."
+    },
+    "2499": {
+      "id": 2499,
+      "en": "Oakenscowl",
+      "fr": "Oakenscowl",
+      "level": 9,
+      "min_level": 4,
+      "requires": [
+        2498
+      ],
+      "summary_en": "Denalan at Lake Al'Ameth wants you to collect the Gargantuan Tumor from Oakenscowl.",
+      "locations": {
+        "starts": [
+          {
+            "zone": "teldrassil",
+            "x": 60.9,
+            "y": 68.5,
+            "basis": "classic_reference",
+            "label": "Denalan"
+          }
+        ],
+        "objectives": [
+          {
+            "zone": "teldrassil",
+            "x": 53.8,
+            "y": 75.1,
+            "basis": "classic_reference",
+            "label": "Oakenscowl"
+          }
+        ],
+        "ends": [
+          {
+            "zone": "teldrassil",
+            "x": 60.9,
+            "y": 68.5,
+            "basis": "classic_reference",
+            "label": "Denalan"
+          }
+        ]
+      },
+      "targets": [
+        {
+          "label": "Gargantuan Tumor × 1",
+          "locations": [
+            {
+              "zone": "teldrassil",
+              "x": 53.8,
+              "y": 75.1,
+              "basis": "classic_reference",
+              "label": "Oakenscowl"
+            }
+          ]
+        }
+      ],
+      "source_url": "https://foreverdb.net/quest/2499-oakenscowl",
+      "evidence_url": "https://foreverdb.net/quest/2499-oakenscowl",
+      "evidence_level": "documented_forever",
+      "observed_at": "2026-10-18",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "community_database",
+      "evidence_note": "ForeverDB reviewed 2026-10-18. Quest titles, objectives and locations retain Classic fallback unless individually marked seen by players. Community observations are not first-hand validation."
+    },
+    "2498": {
+      "id": 2498,
+      "en": "Return to Denalan",
+      "fr": "Return to Denalan",
+      "level": 9,
+      "min_level": 4,
+      "requires": [
+        923
+      ],
+      "summary_en": "Rellian Greenspyre wants you to speak with Denalan at Lake Al'Ameth.",
+      "locations": {
+        "starts": [
+          {
+            "zone": "darnassus",
+            "x": 38.4,
+            "y": 21.2,
+            "basis": "documented_forever",
+            "label": "Rellian Greenspyre"
+          }
+        ],
+        "objectives": [],
+        "ends": [
+          {
+            "zone": "teldrassil",
+            "x": 60.9,
+            "y": 68.5,
+            "basis": "classic_reference",
+            "label": "Denalan"
+          }
+        ]
+      },
+      "targets": [],
+      "source_url": "https://foreverdb.net/quest/2498-return-to-denalan",
+      "evidence_url": "https://foreverdb.net/quest/2498-return-to-denalan",
+      "evidence_level": "documented_forever",
+      "observed_at": "2026-10-18",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "community_database",
+      "evidence_note": "ForeverDB reviewed 2026-10-18. Quest titles, objectives and locations retain Classic fallback unless individually marked seen by players. Community observations are not first-hand validation."
+    },
+    "99046": {
+      "id": 99046,
+      "en": "The Lost Runner",
+      "fr": "La messagère disparue",
+      "level": 9,
+      "min_level": null,
+      "requires": [],
+      "summary_en": "",
+      "locations": {
+        "starts": [],
+        "objectives": [],
+        "ends": [
+          {
+            "zone": "teldrassil",
+            "x": 37.6,
+            "y": 36.9,
+            "basis": "documented_forever",
+            "label": "Sentinel Eralya Leafshadow"
+          }
+        ]
+      },
+      "targets": [],
+      "source_url": "https://foreverdb.net/quest/99046-the-lost-runner",
+      "evidence_url": "https://foreverdb.net/quest/99046-the-lost-runner",
+      "evidence_level": "documented_forever",
+      "observed_at": "2026-10-18",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "community_database",
+      "evidence_note": "ForeverDB reviewed 2026-10-18. Quest titles, objectives and locations retain Classic fallback unless individually marked seen by players. Community observations are not first-hand validation."
+    },
+    "483": {
+      "id": 483,
+      "en": "The Relics of Wakening",
+      "fr": "Les reliques d'éveil",
+      "level": 9,
+      "min_level": 4,
+      "requires": [
+        476
+      ],
+      "summary_en": "Retrieve the Relics of Wakening and bring them to Athridas Bearmantle in Dolanaar.",
+      "locations": {
+        "starts": [
+          {
+            "zone": "teldrassil",
+            "x": 55.9,
+            "y": 57.4,
+            "basis": "documented_forever",
+            "label": "Athridas Bearmantle"
+          }
+        ],
+        "objectives": [
+          {
+            "zone": "teldrassil",
+            "x": 45.7,
+            "y": 57.4,
+            "basis": "classic_reference",
+            "label": "Chest of the Raven Claw"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 43.7,
+            "y": 61.2,
+            "basis": "classic_reference",
+            "label": "Chest of the Black Feather"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 44.7,
+            "y": 62.4,
+            "basis": "classic_reference",
+            "label": "Chest of the Sky"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 44.4,
+            "y": 60.7,
+            "basis": "classic_reference",
+            "label": "Chest of Nesting"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 45.7,
+            "y": 57.4,
+            "basis": "documented_forever",
+            "label": "Chest of the Raven Claw"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 44.7,
+            "y": 62.4,
+            "basis": "documented_forever",
+            "label": "Chest of the Sky"
+          }
+        ],
+        "ends": [
+          {
+            "zone": "teldrassil",
+            "x": 56.0,
+            "y": 57.3,
+            "basis": "classic_reference",
+            "label": "Athridas Bearmantle"
+          }
+        ]
+      },
+      "targets": [
+        {
+          "label": "Raven Claw Talisman × 1",
+          "locations": [
+            {
+              "zone": "teldrassil",
+              "x": 45.7,
+              "y": 57.4,
+              "basis": "classic_reference",
+              "label": "Chest of the Raven Claw"
+            }
+          ]
+        },
+        {
+          "label": "Black Feather Quill × 1",
+          "locations": [
+            {
+              "zone": "teldrassil",
+              "x": 43.7,
+              "y": 61.2,
+              "basis": "classic_reference",
+              "label": "Chest of the Black Feather"
+            }
+          ]
+        },
+        {
+          "label": "Sapphire of Sky × 1",
+          "locations": [
+            {
+              "zone": "teldrassil",
+              "x": 44.7,
+              "y": 62.4,
+              "basis": "classic_reference",
+              "label": "Chest of the Sky"
+            }
+          ]
+        },
+        {
+          "label": "Rune of Nesting × 1",
+          "locations": [
+            {
+              "zone": "teldrassil",
+              "x": 44.4,
+              "y": 60.7,
+              "basis": "classic_reference",
+              "label": "Chest of Nesting"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 45.7,
+              "y": 57.4,
+              "basis": "documented_forever",
+              "label": "Chest of the Raven Claw"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 44.7,
+              "y": 62.4,
+              "basis": "documented_forever",
+              "label": "Chest of the Sky"
+            }
+          ]
+        }
+      ],
+      "source_url": "https://foreverdb.net/quest/483-the-relics-of-wakening",
+      "evidence_url": "https://foreverdb.net/quest/483-the-relics-of-wakening",
+      "evidence_level": "documented_forever",
+      "observed_at": "2026-10-18",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "community_database",
+      "evidence_note": "ForeverDB reviewed 2026-10-18. Quest titles, objectives and locations retain Classic fallback unless individually marked seen by players. Community observations are not first-hand validation."
+    },
+    "923": {
+      "id": 923,
+      "en": "Tumors",
+      "fr": "Les tumeurs moussues",
+      "level": 9,
+      "min_level": 4,
+      "requires": [
+        922
+      ],
+      "summary_en": "Bring 5 Mossy Tumors to Rellian Greenspyre in Darnassus.",
+      "locations": {
+        "starts": [
+          {
+            "zone": "darnassus",
+            "x": 38.5,
+            "y": 21.8,
+            "basis": "documented_forever",
+            "label": "Rellian Greenspyre"
+          }
+        ],
+        "objectives": [
+          {
+            "zone": "teldrassil",
+            "x": 45.0,
+            "y": 26.6,
+            "basis": "classic_reference",
+            "label": "Elder Timberling"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 44.5,
+            "y": 26.0,
+            "basis": "classic_reference",
+            "label": "Elder Timberling"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 41.9,
+            "y": 33.9,
+            "basis": "classic_reference",
+            "label": "Timberling Mire Beast"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 43.9,
+            "y": 34.9,
+            "basis": "classic_reference",
+            "label": "Timberling Mire Beast"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 43.0,
+            "y": 33.7,
+            "basis": "classic_reference",
+            "label": "Timberling Mire Beast"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 43.3,
+            "y": 35.9,
+            "basis": "documented_forever",
+            "label": "Timberling Mire Beast"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 41.8,
+            "y": 37.9,
+            "basis": "classic_reference",
+            "label": "Timberling Trampler"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 42.5,
+            "y": 38.7,
+            "basis": "classic_reference",
+            "label": "Timberling Trampler"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 42.5,
+            "y": 42.7,
+            "basis": "classic_reference",
+            "label": "Timberling Trampler"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 53.7,
+            "y": 75.3,
+            "basis": "classic_reference",
+            "label": "Timberling Trampler"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 43.2,
+            "y": 32.7,
+            "basis": "documented_forever"
+          }
+        ],
+        "ends": [
+          {
+            "zone": "darnassus",
+            "x": 38.4,
+            "y": 21.2,
+            "basis": "documented_forever",
+            "label": "Rellian Greenspyre"
+          }
+        ]
+      },
+      "targets": [
+        {
+          "label": "Mossy Tumor × 5",
+          "locations": [
+            {
+              "zone": "teldrassil",
+              "x": 45.0,
+              "y": 26.6,
+              "basis": "classic_reference",
+              "label": "Elder Timberling"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 44.5,
+              "y": 26.0,
+              "basis": "classic_reference",
+              "label": "Elder Timberling"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 41.9,
+              "y": 33.9,
+              "basis": "classic_reference",
+              "label": "Timberling Mire Beast"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 43.9,
+              "y": 34.9,
+              "basis": "classic_reference",
+              "label": "Timberling Mire Beast"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 43.0,
+              "y": 33.7,
+              "basis": "classic_reference",
+              "label": "Timberling Mire Beast"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 43.3,
+              "y": 35.9,
+              "basis": "documented_forever",
+              "label": "Timberling Mire Beast"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 41.8,
+              "y": 37.9,
+              "basis": "classic_reference",
+              "label": "Timberling Trampler"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 42.5,
+              "y": 38.7,
+              "basis": "classic_reference",
+              "label": "Timberling Trampler"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 42.5,
+              "y": 42.7,
+              "basis": "classic_reference",
+              "label": "Timberling Trampler"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 53.7,
+              "y": 75.3,
+              "basis": "classic_reference",
+              "label": "Timberling Trampler"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 43.2,
+              "y": 32.7,
+              "basis": "documented_forever"
+            }
+          ]
+        }
+      ],
+      "source_url": "https://foreverdb.net/quest/923-tumors",
+      "evidence_url": "https://foreverdb.net/quest/923-tumors",
+      "evidence_level": "documented_forever",
+      "observed_at": "2026-10-18",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "community_database",
+      "evidence_note": "ForeverDB reviewed 2026-10-18. Quest titles, objectives and locations retain Classic fallback unless individually marked seen by players. Community observations are not first-hand validation."
+    },
+    "2561": {
+      "id": 2561,
+      "en": "Druid of the Claw",
+      "fr": "Druide de la Griffe",
+      "level": 10,
+      "min_level": 3,
+      "requires": [
+        2541
+      ],
+      "summary_en": "Oben Rageclaw wants you to kill his soulless body, and then use the Voodoo Charm.",
+      "locations": {
+        "starts": [
+          {
+            "zone": "teldrassil",
+            "x": 44.9,
+            "y": 61.6,
+            "basis": "classic_reference",
+            "label": "Oben Rageclaw"
+          }
+        ],
+        "objectives": [
+          {
+            "zone": "teldrassil",
+            "x": 45.5,
+            "y": 58.6,
+            "basis": "classic_reference",
+            "label": "Rageclaw"
+          }
+        ],
+        "ends": [
+          {
+            "zone": "teldrassil",
+            "x": 44.9,
+            "y": 61.6,
+            "basis": "classic_reference",
+            "label": "Oben Rageclaw"
+          }
+        ]
+      },
+      "targets": [
+        {
+          "label": "Rageclaw × 1",
+          "locations": [
+            {
+              "zone": "teldrassil",
+              "x": 45.5,
+              "y": 58.6,
+              "basis": "classic_reference",
+              "label": "Rageclaw"
+            }
+          ]
+        }
+      ],
+      "source_url": "https://foreverdb.net/quest/2561-druid-of-the-claw",
+      "evidence_url": "https://foreverdb.net/quest/2561-druid-of-the-claw",
+      "evidence_level": "documented_forever",
+      "observed_at": "2026-10-18",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "community_database",
+      "evidence_note": "ForeverDB reviewed 2026-10-18. Quest titles, objectives and locations retain Classic fallback unless individually marked seen by players. Community observations are not first-hand validation."
+    },
+    "930": {
+      "id": 930,
+      "en": "The Glowing Fruit",
+      "fr": "Le fruit luminescent",
+      "level": 10,
+      "min_level": 4,
+      "requires": [],
+      "summary_en": "Bring the glowing fruit to Denalan at Lake Al'Ameth.",
+      "locations": {
+        "starts": [
+          {
+            "zone": "teldrassil",
+            "x": 42.6,
+            "y": 75.8,
+            "basis": "documented_forever",
+            "label": "Strange Fruited Plant"
+          }
+        ],
+        "objectives": [],
+        "ends": [
+          {
+            "zone": "teldrassil",
+            "x": 60.9,
+            "y": 68.5,
+            "basis": "documented_forever",
+            "label": "Denalan"
+          }
+        ]
+      },
+      "targets": [
+        {
+          "label": "Glowing Fruit × 1",
+          "locations": []
+        }
+      ],
+      "source_url": "https://foreverdb.net/quest/930-the-glowing-fruit",
+      "evidence_url": "https://foreverdb.net/quest/930-the-glowing-fruit",
+      "evidence_level": "documented_forever",
+      "observed_at": "2026-10-18",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "community_database",
+      "evidence_note": "ForeverDB reviewed 2026-10-18. Quest titles, objectives and locations retain Classic fallback unless individually marked seen by players. Community observations are not first-hand validation."
+    },
+    "99050": {
+      "id": 99050,
+      "en": "The Great Tree Provides",
+      "fr": "The Great Tree Provides",
+      "level": 10,
+      "min_level": null,
+      "requires": [
+        99047
+      ],
+      "summary_en": "Collect 6 Dewy Lasher Fronds, an Empty Vial, and a Refreshing Spring Water for Byancie in Dolanaar.",
+      "locations": {
+        "starts": [
+          {
+            "zone": "teldrassil",
+            "x": 55.3,
+            "y": 56.8,
+            "basis": "documented_forever",
+            "label": "Byancie"
+          }
+        ],
+        "objectives": [
+          {
+            "zone": "teldrassil",
+            "x": 57.9,
+            "y": 70.9,
+            "basis": "documented_forever"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 53.0,
+            "y": 70.7,
+            "basis": "documented_forever"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 51.2,
+            "y": 73.8,
+            "basis": "documented_forever"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 55.3,
+            "y": 57.1,
+            "basis": "documented_forever",
+            "label": "Narret Shadowgrove"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 55.3,
+            "y": 57.1,
+            "basis": "documented_forever",
+            "label": "Narret Shadowgrove"
+          },
+          {
+            "zone": "teldrassil",
+            "x": 55.7,
+            "y": 70.1,
+            "basis": "documented_forever"
+          }
+        ],
+        "ends": [
+          {
+            "zone": "teldrassil",
+            "x": 55.3,
+            "y": 56.8,
+            "basis": "documented_forever",
+            "label": "Byancie"
+          }
+        ]
+      },
+      "targets": [
+        {
+          "label": "Dewy Lasher Frond × 6",
+          "locations": [
+            {
+              "zone": "teldrassil",
+              "x": 57.9,
+              "y": 70.9,
+              "basis": "documented_forever"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 53.0,
+              "y": 70.7,
+              "basis": "documented_forever"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 51.2,
+              "y": 73.8,
+              "basis": "documented_forever"
+            }
+          ]
+        },
+        {
+          "label": "Empty Vial × 1",
+          "locations": [
+            {
+              "zone": "teldrassil",
+              "x": 55.3,
+              "y": 57.1,
+              "basis": "documented_forever",
+              "label": "Narret Shadowgrove"
+            }
+          ]
+        },
+        {
+          "label": "Refreshing Spring Water × 1",
+          "locations": [
+            {
+              "zone": "teldrassil",
+              "x": 55.3,
+              "y": 57.1,
+              "basis": "documented_forever",
+              "label": "Narret Shadowgrove"
+            },
+            {
+              "zone": "teldrassil",
+              "x": 55.7,
+              "y": 70.1,
+              "basis": "documented_forever"
+            }
+          ]
+        }
+      ],
+      "source_url": "https://foreverdb.net/quest/99050-the-great-tree-provides",
+      "evidence_url": "https://foreverdb.net/quest/99050-the-great-tree-provides",
+      "evidence_level": "documented_forever",
+      "observed_at": "2026-10-18",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "community_database",
+      "evidence_note": "ForeverDB reviewed 2026-10-18. Quest titles, objectives and locations retain Classic fallback unless individually marked seen by players. Community observations are not first-hand validation."
+    },
+    "931": {
+      "id": 931,
+      "en": "The Shimmering Frond",
+      "fr": "Les racines chatoyantes",
+      "level": 10,
+      "min_level": 4,
+      "requires": [],
+      "summary_en": "Bring a Shimmering Frond to Denalan at Lake Al'Ameth",
+      "locations": {
+        "starts": [
+          {
+            "zone": "teldrassil",
+            "x": 34.7,
+            "y": 29.1,
+            "basis": "documented_forever",
+            "label": "Strange Fronded Plant"
+          }
+        ],
+        "objectives": [],
+        "ends": [
+          {
+            "zone": "teldrassil",
+            "x": 60.9,
+            "y": 68.4,
+            "basis": "documented_forever",
+            "label": "Denalan"
+          }
+        ]
+      },
+      "targets": [
+        {
+          "label": "Shimmering Frond × 1",
+          "locations": []
+        }
+      ],
+      "source_url": "https://foreverdb.net/quest/931-the-shimmering-frond",
+      "evidence_url": "https://foreverdb.net/quest/931-the-shimmering-frond",
+      "evidence_level": "documented_forever",
+      "observed_at": "2026-10-18",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "community_database",
+      "evidence_note": "ForeverDB reviewed 2026-10-18. Quest titles, objectives and locations retain Classic fallback unless individually marked seen by players. Community observations are not first-hand validation."
+    },
+    "2399": {
+      "id": 2399,
+      "en": "The Sprouted Fronds",
+      "fr": "The Sprouted Fronds",
+      "level": 10,
+      "min_level": 4,
+      "requires": [
+        931
+      ],
+      "summary_en": "",
+      "locations": {
+        "starts": [
+          {
+            "zone": "teldrassil",
+            "x": 60.7,
+            "y": 68.6,
+            "basis": "classic_reference",
+            "label": "Sprouted Frond"
+          }
+        ],
+        "objectives": [],
+        "ends": [
+          {
+            "zone": "teldrassil",
+            "x": 60.8,
+            "y": 68.5,
+            "basis": "documented_forever",
+            "label": "Sprouted Frond"
+          }
+        ]
+      },
+      "targets": [],
+      "source_url": "https://foreverdb.net/quest/2399-the-sprouted-fronds",
+      "evidence_url": "https://foreverdb.net/quest/2399-the-sprouted-fronds",
+      "evidence_level": "documented_forever",
+      "observed_at": "2026-10-18",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "community_database",
+      "evidence_note": "ForeverDB reviewed 2026-10-18. Quest titles, objectives and locations retain Classic fallback unless individually marked seen by players. Community observations are not first-hand validation."
+    }
+  },
+  "chapters": [
+    {
+      "level": 1,
+      "fr": "Sombrevallon : premières missions",
+      "en": "Shadowglen: first tasks",
+      "optional": false,
+      "events": [
+        {
+          "id": 456,
+          "kind": "starts"
+        },
+        {
+          "id": 458,
+          "kind": "starts"
+        },
+        {
+          "id": 458,
+          "kind": "ends"
+        },
+        {
+          "id": 459,
+          "kind": "starts"
+        },
+        {
+          "id": 456,
+          "kind": "objectives",
+          "anchor": [
+            60,
+            43
+          ]
+        },
+        {
+          "id": 459,
+          "kind": "objectives",
+          "anchor": [
+            56,
+            45
+          ]
+        },
+        {
+          "id": 459,
+          "kind": "ends"
+        },
+        {
+          "id": 456,
+          "kind": "ends"
+        },
+        {
+          "id": 457,
+          "kind": "starts"
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "fr": "Vers la grotte des Tissebois",
+      "en": "Towards Shadowthread Cave",
+      "optional": false,
+      "events": [
+        {
+          "id": 4495,
+          "kind": "starts"
+        },
+        {
+          "id": 916,
+          "kind": "starts"
+        },
+        {
+          "id": 457,
+          "kind": "objectives",
+          "anchor": [
+            58,
+            38
+          ]
+        },
+        {
+          "id": 4495,
+          "kind": "ends"
+        },
+        {
+          "id": 3519,
+          "kind": "starts"
+        },
+        {
+          "id": 916,
+          "kind": "objectives",
+          "anchor": [
+            56,
+            33
+          ]
+        },
+        {
+          "id": 3519,
+          "kind": "ends"
+        },
+        {
+          "id": 3521,
+          "kind": "starts"
+        },
+        {
+          "id": 457,
+          "kind": "ends"
+        },
+        {
+          "id": 916,
+          "kind": "ends"
+        },
+        {
+          "id": 917,
+          "kind": "starts"
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "fr": "Antidote et œuf : une seule boucle",
+      "en": "Antidote and egg: one loop",
+      "optional": false,
+      "events": [
+        {
+          "id": 3521,
+          "kind": "objectives",
+          "anchor": [
+            57,
+            38
+          ]
+        },
+        {
+          "id": 917,
+          "kind": "objectives",
+          "anchor": [
+            56,
+            26
+          ]
+        },
+        {
+          "id": 3521,
+          "kind": "ends"
+        },
+        {
+          "id": 3522,
+          "kind": "starts",
+          "note": [
+            "Timed delivery: go straight to Iverron.",
+            "Livraison chronométrée : aller directement à Iverron."
+          ]
+        },
+        {
+          "id": 3522,
+          "kind": "ends"
+        },
+        {
+          "id": 917,
+          "kind": "ends"
+        },
+        {
+          "id": 920,
+          "kind": "starts"
+        },
+        {
+          "id": 920,
+          "kind": "ends"
+        },
+        {
+          "id": 921,
+          "kind": "starts"
+        },
+        {
+          "id": 921,
+          "kind": "objectives"
+        },
+        {
+          "id": 921,
+          "kind": "ends"
+        },
+        {
+          "id": 928,
+          "kind": "starts"
+        },
+        {
+          "id": 2159,
+          "kind": "starts"
+        }
+      ]
+    },
+    {
+      "level": 5,
+      "fr": "Dolanaar et Zenn",
+      "en": "Dolanaar and Zenn",
+      "optional": false,
+      "events": [
+        {
+          "id": 488,
+          "kind": "starts"
+        },
+        {
+          "id": 488,
+          "kind": "objectives",
+          "anchor": [
+            59,
+            58
+          ]
+        },
+        {
+          "id": 488,
+          "kind": "ends"
+        },
+        {
+          "id": 2159,
+          "kind": "ends"
+        },
+        {
+          "id": 928,
+          "kind": "ends"
+        },
+        {
+          "id": 929,
+          "kind": "starts"
+        },
+        {
+          "id": 997,
+          "kind": "starts"
+        },
+        {
+          "id": 475,
+          "kind": "starts"
+        },
+        {
+          "id": 2438,
+          "kind": "starts"
+        },
+        {
+          "id": 932,
+          "kind": "starts"
+        },
+        {
+          "id": 489,
+          "kind": "starts"
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "fr": "Le lac Al’Ameth et Brise-Stellaire",
+      "en": "Lake Al'Ameth and Starbreeze",
+      "optional": false,
+      "events": [
+        {
+          "id": 997,
+          "kind": "ends"
+        },
+        {
+          "id": 918,
+          "kind": "starts"
+        },
+        {
+          "id": 919,
+          "kind": "starts"
+        },
+        {
+          "id": 918,
+          "kind": "objectives",
+          "anchor": [
+            60,
+            69
+          ]
+        },
+        {
+          "id": 919,
+          "kind": "objectives",
+          "anchor": [
+            60,
+            69
+          ]
+        },
+        {
+          "id": 918,
+          "kind": "ends"
+        },
+        {
+          "id": 919,
+          "kind": "ends"
+        },
+        {
+          "id": 475,
+          "kind": "ends"
+        },
+        {
+          "id": 476,
+          "kind": "starts"
+        },
+        {
+          "id": 2438,
+          "kind": "objectives"
+        },
+        {
+          "id": 929,
+          "kind": "objectives"
+        },
+        {
+          "id": 489,
+          "kind": "objectives",
+          "anchor": [
+            59,
+            57
+          ]
+        },
+        {
+          "id": 489,
+          "kind": "ends"
+        },
+        {
+          "id": 929,
+          "kind": "ends"
+        },
+        {
+          "id": 933,
+          "kind": "starts"
+        },
+        {
+          "id": 476,
+          "kind": "ends"
+        },
+        {
+          "id": 2438,
+          "kind": "ends"
+        },
+        {
+          "id": 2459,
+          "kind": "starts"
+        },
+        {
+          "id": 483,
+          "kind": "starts"
+        }
+      ]
+    },
+    {
+      "level": 7,
+      "fr": "Peaux souples : au passage",
+      "en": "Soft pelts: on the way",
+      "optional": false,
+      "events": [
+        {
+          "id": 87288,
+          "kind": "ends",
+          "note": [
+            "Bring 6 Soft Nightsaber Pelts to Aldia if this quest is already in your log.",
+            "Rapporter 6 peaux souples à Aldia si cette quête est déjà dans votre journal."
+          ],
+          "conditional": true
+        }
+      ]
+    },
+    {
+      "level": 8,
+      "fr": "Melenas et Ferocitas",
+      "en": "Melenas and Ferocitas",
+      "optional": false,
+      "events": [
+        {
+          "id": 932,
+          "kind": "objectives",
+          "anchor": [
+            52,
+            50
+          ]
+        },
+        {
+          "id": 2459,
+          "kind": "objectives",
+          "anchor": [
+            68,
+            53
+          ]
+        },
+        {
+          "id": 932,
+          "kind": "ends"
+        },
+        {
+          "id": 2459,
+          "kind": "ends"
+        },
+        {
+          "id": 487,
+          "kind": "starts"
+        },
+        {
+          "id": 487,
+          "kind": "objectives",
+          "anchor": [
+            47,
+            56
+          ]
+        },
+        {
+          "id": 487,
+          "kind": "ends"
+        }
+      ]
+    },
+    {
+      "level": 9,
+      "fr": "Ban’ethil : réunir les objectifs",
+      "en": "Ban’ethil: combine objectives",
+      "optional": true,
+      "events": [
+        {
+          "id": 483,
+          "kind": "objectives",
+          "anchor": [
+            45,
+            60
+          ]
+        },
+        {
+          "id": 2541,
+          "kind": "starts"
+        },
+        {
+          "id": 2541,
+          "kind": "objectives"
+        },
+        {
+          "id": 2541,
+          "kind": "ends"
+        },
+        {
+          "id": 2561,
+          "kind": "starts"
+        },
+        {
+          "id": 2561,
+          "kind": "objectives"
+        },
+        {
+          "id": 2561,
+          "kind": "ends"
+        },
+        {
+          "id": 483,
+          "kind": "ends"
+        },
+        {
+          "id": 933,
+          "kind": "objectives"
+        },
+        {
+          "id": 933,
+          "kind": "ends"
+        }
+      ]
+    },
+    {
+      "level": 9,
+      "fr": "Darnassus et les sylvains",
+      "en": "Darnassus and timberlings",
+      "optional": true,
+      "events": [
+        {
+          "id": 922,
+          "kind": "starts"
+        },
+        {
+          "id": 922,
+          "kind": "ends"
+        },
+        {
+          "id": 923,
+          "kind": "starts"
+        },
+        {
+          "id": 923,
+          "kind": "objectives",
+          "anchor": [
+            42,
+            37
+          ]
+        },
+        {
+          "id": 923,
+          "kind": "ends"
+        },
+        {
+          "id": 2498,
+          "kind": "starts"
+        },
+        {
+          "id": 2498,
+          "kind": "ends"
+        },
+        {
+          "id": 2499,
+          "kind": "starts"
+        },
+        {
+          "id": 2499,
+          "kind": "objectives"
+        },
+        {
+          "id": 2499,
+          "kind": "ends"
+        }
+      ]
+    },
+    {
+      "level": 9,
+      "fr": "La sentinelle : retour utile à Dolanaar",
+      "en": "The sentinel: useful return to Dolanaar",
+      "optional": true,
+      "events": [
+        {
+          "id": 99046,
+          "kind": "ends",
+          "conditional": true
+        },
+        {
+          "id": 99047,
+          "kind": "starts"
+        },
+        {
+          "id": 99047,
+          "kind": "ends"
+        },
+        {
+          "id": 99050,
+          "kind": "starts",
+          "note": [
+            "Keep 1 Empty Vial and 1 Refreshing Spring Water for this quest.",
+            "Prévoir 1 fiole vide et 1 eau de source pour cette quête."
+          ]
+        }
+      ]
+    },
+    {
+      "level": 10,
+      "fr": "Feuilles au lac et retour à Byancie",
+      "en": "Fronds by the lake and back to Byancie",
+      "optional": true,
+      "events": [
+        {
+          "id": 99050,
+          "kind": "objectives",
+          "anchor": [
+            55,
+            71
+          ]
+        },
+        {
+          "id": 99050,
+          "kind": "ends"
+        }
+      ]
+    }
+  ]
+}

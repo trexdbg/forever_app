@@ -1,0 +1,54 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Atelier Quêtes Forever · Elfe de la nuit 1–10</title><link rel="stylesheet" href="/assets/site.css"><link rel="stylesheet" href="/assets/quests.css"><link rel="stylesheet" href="/assets/quest-sidebar.css"><link rel="stylesheet" href="./route.css"><script defer src="/assets/quest-locale.js"></script><script defer src="./route-engine.js"></script><script defer src="./locale.js"></script><script defer src="./route.js"></script></head><body data-page="quests"><a class="skip" href="#contenu">Aller au contenu</a>
+<header class="header"><div class="wrap"><a href="/">ForEveroth</a> · Atelier Quêtes Forever <a href="?lang=fr" data-lab-lang="fr">FR</a> <a href="?lang=en" data-lab-lang="en">EN</a></div></header>
+<main id="contenu">
+
+<section class="section wrap slim-top" id="quest-app" aria-busy="true">
+<div class="quest-toolbar tool-panel"><div class="tool-head"><div><h1>Votre itinéraire</h1></div><div class="quest-search-field"><label for="quest-search">Rechercher une quête, un PNJ ou une zone</label><div class="quest-search-input"><span aria-hidden="true">⌕</span><input type="search" id="quest-search" placeholder="Nom de quête, ville, objectif…" autocomplete="off"></div></div>
+<span class="status-pill" id="quest-data-status" role="status">Chargement…</span></div>
+<p class="module-note"><strong>Forever · Elfe de la nuit · 1–10.</strong> Choisir une route, suivre les actions et cocher les quêtes rendues. Progression enregistrée sur cet appareil.</p><div class="quest-filters">
+<label>Parcours <select id="route-variant"><option value="direct">Direct</option><option value="complete">Avec détours : Ban’ethil et Darnassus</option></select></label>
+<label>Aller au niveau <select id="route-level"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select></label>
+<button type="button" id="route-reset">Réinitialiser les quêtes rendues</button>
+<details><summary>Quêtes Forever déjà dans mon journal</summary>
+<label><input type="checkbox" id="active-87288"> Soft Saber Pelts · 6 peaux → Aldia</label>
+<label><input type="checkbox" id="active-99046"> The Lost Runner · chaîne de la sentinelle</label>
+</details>
+<div id="quest-factions" hidden></div><div id="quest-races" hidden></div><p id="quest-race-hint" hidden></p>
+</div>
+<div id="quest-search-results" class="quest-search-results" aria-live="polite" hidden></div>
+</div>
+<section class="quest-timeline" aria-label="Navigation entre les étapes">
+<div class="quest-timeline-heading"><div class="quest-current-stage">
+<span class="quest-current-level" title="Niveau estimé du parcours, pas le niveau réel de votre personnage"><small>Niveau conseillé</small><strong id="quest-current-level">—</strong></span>
+<h2 id="quest-step-count">Étape —</h2>
+</div></div>
+<div class="quest-timeline-range-label"><label for="quest-range">Parcourir les étapes</label><output id="quest-range-output" for="quest-range">—</output></div>
+<div class="quest-timeline-track-scroll" aria-label="Frise des étapes et des niveaux">
+<div class="quest-timeline-track-inner">
+<input type="range" id="quest-range" class="quest-timeline-slider" min="1" max="1" value="1" step="1" aria-label="Aller à une étape du parcours">
+<div class="quest-timeline-milestones" id="quest-milestones" aria-label="Repères de niveau alignés sur les étapes du curseur"></div>
+</div>
+</div>
+<div class="quest-timeline-preview" id="quest-timeline-preview" aria-live="polite">Glissez le curseur ou utilisez les repères de niveau.</div>
+</section>
+<div class="quest-main">
+<aside class="quest-sidebar" aria-label="Quêtes et objectifs de l'étape">
+<div class="quest-side-heading"><h2>Actions de l’étape</h2><span id="quest-waypoint-count" class="quest-side-count" aria-live="polite"></span></div>
+<div class="quest-waypoints" id="quest-waypoints" aria-label="Liste des quêtes et actions de cette étape"></div>
+
+</aside>
+<div class="quest-content">
+<div class="quest-map-top"><div class="quest-map-heading"><strong id="quest-map-title">Carte de zone</strong><small id="quest-map-source">Molette : zoom · X / Y : 0 à 100</small></div>
+<div class="quest-map-controls" role="group" aria-label="Navigation des étapes et zoom de la carte">
+<button type="button" class="btn secondary" id="quest-prev" aria-label="Étape précédente">← Précédente</button>
+<button type="button" id="quest-zoom-reset" title="Réinitialiser le zoom et recentrer la carte" aria-label="Réinitialiser le zoom et recentrer la carte">100 %</button>
+<button type="button" class="btn primary" id="quest-next" aria-label="Étape suivante">Suivante →</button>
+</div></div>
+<div class="quest-map-frame"><canvas id="quest-canvas" width="960" height="640" tabindex="0" role="img" aria-label="Carte des étapes de quête : cliquez sur un marqueur numéroté ou sélectionnez une action dans le panneau de gauche"></canvas><span class="quest-map-overlay" id="quest-map-overlay">Chargement de la carte…</span></div>
+
+<div class="quest-selected" id="quest-selected" aria-live="polite"><p>Sélectionnez un point de passage sur la carte ou dans la liste.</p></div>
+
+</div></div>
+<details class="atlas-detail"><summary>Coordonnées des quêtes</summary><p>Chaque point est positionné sur sa carte de zone. Les coordonnées <strong>X / Y</strong> vont de 0 à 100 et ne représentent pas des coordonnées GPS. Les commandes <code>/way X Y</code> s’utilisent dans la zone concernée avec un addon compatible. Certaines quêtes peuvent varier sur WoW Forever.</p></details>
+</section></main>
+<footer class="footer"><div class="wrap footer-simple"><span>ForEveroth · Projet communautaire indépendant</span><nav aria-label="Liens utiles"><a href="https://talentsforever.com/" target="_blank" rel="noopener noreferrer">Données talents · CC BY 4.0 ↗</a></nav></div><div class="wrap legal">World of Warcraft © Blizzard Entertainment · Outil non officiel, sans affiliation. Les données bêta peuvent évoluer.</div></footer></body></html>
