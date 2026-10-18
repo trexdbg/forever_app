@@ -85,3 +85,9 @@
 #npcs-app[data-mode="merchant"] .npc-item-info-button{white-space:nowrap}
 
 .forever-item-tooltip__vendor-currency{font-size:12px;font-weight:700;color:#d7c181;padding-top:3px}
+
+/* Forever T0 set bonuses complement item-level Classic reference stats. */
+.forever-item-tooltip__t0{border-top:1px solid #344b3c;margin-top:9px;padding-top:8px;display:grid;gap:5px}
+.forever-item-tooltip__t0 .forever-item-tooltip__set{margin-top:0}
+.forever-item-tooltip__t0 .forever-item-tooltip__effect{line-height:1.48;font-size:11px}
+.forever-item-tooltip__t0 .forever-item-tooltip__source{margin-top:3px;display:inline-block}
