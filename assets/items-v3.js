@@ -218,7 +218,7 @@ function render(){
  rowText(row,slotLabels[i.slot]||i.slot);
  rowText(row,numericLevel(i,"itemLevel")??"—").className="item-catalogue-numeric";
  rowText(row,numericLevel(i,"requiredLevel")??"—").className="item-catalogue-numeric";
- rowText(row,displayOrigin(i.origin)|| (sourceType(i)==="forever"?tr.badgeForever:tr.badgeClassic));
+ rowText(row,(en&&i.origin_en?i.origin_en:displayOrigin(i.origin))|| (sourceType(i)==="forever"?tr.badgeForever:tr.badgeClassic));
  table.append(row);
  window.ForeverItemTooltip?.bind(row,i);
  }
