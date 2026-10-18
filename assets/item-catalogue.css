@@ -137,3 +137,21 @@ body[data-page="items"] .item-acquisition-reference{font-size:10px;color:#b5c6d2
  body[data-page="items"] .item-acquisition-links{grid-template-columns:minmax(0,1fr)}
  body[data-page="items"] .item-acquisition-panel{padding:10px}
 }
+
+/* T0 set bonuses: small native accordions, no extra module-wide heading. */
+body[data-page="items"] .item-t0-sets{margin:12px 0 18px;border:1px solid #445949;border-radius:8px;background:#14221b;color:#e8eee4}
+body[data-page="items"] .item-t0-sets>summary{cursor:pointer;padding:11px 14px;font-size:13px;font-weight:750;list-style-position:inside;color:#e8d5a9}
+body[data-page="items"] .item-t0-sets>summary:focus-visible,
+body[data-page="items"] .item-t0-sets__card>summary:focus-visible{outline:2px solid #d8c38c;outline-offset:2px}
+body[data-page="items"] .item-t0-sets__body{padding:0 12px 12px}
+body[data-page="items"] .item-t0-sets__intro{font-size:11px;color:#acbbaa;margin:2px 3px 10px}
+body[data-page="items"] .item-t0-sets__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:8px}
+body[data-page="items"] .item-t0-sets__card{min-width:0;border:1px solid #345043;border-radius:6px;background:#182920}
+body[data-page="items"] .item-t0-sets__card>summary{cursor:pointer;padding:9px 10px;font-size:12px;line-height:1.5}
+body[data-page="items"] .item-t0-sets__card>summary strong{font-weight:750}
+body[data-page="items"] .item-t0-sets__class{float:right;margin-left:7px;color:#b7c5b6;font-size:11px}
+body[data-page="items"] .item-t0-sets__bonuses{list-style:none;margin:1px 9px 10px;padding:0;display:grid;gap:7px}
+body[data-page="items"] .item-t0-sets__bonuses li{display:grid;grid-template-columns:25px minmax(0,1fr);gap:7px;font-size:11px;line-height:1.5}
+body[data-page="items"] .item-t0-sets__bonuses b{color:#e4c98f}
+body[data-page="items"] .item-t0-sets__pieces{margin:7px 9px;font-size:10px;line-height:1.55;color:#a5b6aa}
+body[data-page="items"] .item-t0-sets__source{display:inline-block;margin:0 9px 11px;color:#e3c994;font-size:10px;text-decoration:underline}

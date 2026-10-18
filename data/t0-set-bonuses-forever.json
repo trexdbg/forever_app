@@ -1,0 +1,490 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-18",
+  "scope": "T0 / dungeon set 1, intended for endgame at level 60; ForeverDB marks sets level 58",
+  "publication_status": "forever_client_datamined_not_in_game",
+  "sets": [
+    {
+      "id": 181,
+      "name_en": "Magister's Regalia",
+      "class_fr": "Mage",
+      "class_en": "Mage",
+      "armor_type": "cloth",
+      "item_count": 8,
+      "level": 58,
+      "pieces_en": [
+        "Magister's Belt",
+        "Magister's Bindings",
+        "Magister's Crown",
+        "Magister's Gloves",
+        "Magister's Leggings",
+        "Magister's Mantle",
+        "Magister's Robes",
+        "Magister's Boots"
+      ],
+      "bonuses": [
+        {
+          "pieces": 2,
+          "fr": "+8 à toutes les résistances.",
+          "en": "+8 to all resistances."
+        },
+        {
+          "pieces": 3,
+          "fr": "Jusqu’à +18 aux dégâts et soins des sorts.",
+          "en": "Up to +18 spell damage and healing."
+        },
+        {
+          "pieces": 4,
+          "fr": "2 % de chances, en étant touché, d’immobiliser l’attaquant par le givre pendant 3 s (recharge : 60 s).",
+          "en": "2% chance when struck to freeze the attacker for 3 sec (60 sec cooldown)."
+        },
+        {
+          "pieces": 5,
+          "fr": "5 % de chances de récupérer 200 mana lors d’un lancement de sort.",
+          "en": "5% chance to restore 200 mana when casting a spell."
+        },
+        {
+          "pieces": 6,
+          "fr": "Rend 8 mana toutes les 5 s.",
+          "en": "Restores 8 mana per 5 sec."
+        }
+      ],
+      "evidence_level": "datamined",
+      "source_url": "https://foreverdb.net/set/181",
+      "evidence_url": "https://foreverdb.net/set/181",
+      "observed_at": "2026-10-11",
+      "observed_build": "1.60.1.70338",
+      "evidence_kind": "forever_client_extract_via_foreverdb",
+      "evidence_note": "Set bonuses and piece names read from the referenced ForeverDB client extraction. Does not establish server-side availability, drops or completed gameplay."
+    },
+    {
+      "id": 182,
+      "name_en": "Vestments of the Devout",
+      "class_fr": "Prêtre",
+      "class_en": "Priest",
+      "armor_type": "cloth",
+      "item_count": 8,
+      "level": 58,
+      "pieces_en": [
+        "Devout Belt",
+        "Devout Sandals",
+        "Devout Bracers",
+        "Devout Crown",
+        "Devout Gloves",
+        "Devout Mantle",
+        "Devout Skirt",
+        "Devout Robe"
+      ],
+      "bonuses": [
+        {
+          "pieces": 2,
+          "fr": "+8 à toutes les résistances.",
+          "en": "+8 to all resistances."
+        },
+        {
+          "pieces": 3,
+          "fr": "Jusqu’à +18 aux dégâts et soins des sorts.",
+          "en": "Up to +18 spell damage and healing."
+        },
+        {
+          "pieces": 4,
+          "fr": "2 % de chances, en étant touché, de recevoir un bouclier absorbant 488 dégâts (recharge : 60 s).",
+          "en": "2% chance when struck to gain a shield absorbing 488 damage (60 sec cooldown)."
+        },
+        {
+          "pieces": 5,
+          "fr": "5 % de chances de récupérer 200 mana lors d’un lancement de sort.",
+          "en": "5% chance to restore 200 mana when casting a spell."
+        },
+        {
+          "pieces": 6,
+          "fr": "Rend 8 mana toutes les 5 s.",
+          "en": "Restores 8 mana per 5 sec."
+        }
+      ],
+      "evidence_level": "datamined",
+      "source_url": "https://foreverdb.net/set/182",
+      "evidence_url": "https://foreverdb.net/set/182",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "forever_client_extract_via_foreverdb",
+      "evidence_note": "Set bonuses and piece names read from the referenced ForeverDB client extraction. Does not establish server-side availability, drops or completed gameplay."
+    },
+    {
+      "id": 183,
+      "name_en": "Dreadmist Raiment",
+      "class_fr": "Démoniste",
+      "class_en": "Warlock",
+      "armor_type": "cloth",
+      "item_count": 8,
+      "level": 58,
+      "pieces_en": [
+        "Dreadmist Belt",
+        "Dreadmist Bracers",
+        "Dreadmist Leggings",
+        "Dreadmist Mantle",
+        "Dreadmist Robe",
+        "Dreadmist Sandals",
+        "Dreadmist Mask",
+        "Dreadmist Wraps"
+      ],
+      "bonuses": [
+        {
+          "pieces": 2,
+          "fr": "+8 à toutes les résistances.",
+          "en": "+8 to all resistances."
+        },
+        {
+          "pieces": 3,
+          "fr": "Jusqu’à +18 aux dégâts et soins des sorts.",
+          "en": "Up to +18 spell damage and healing."
+        },
+        {
+          "pieces": 4,
+          "fr": "2 % de chances, en étant touché, de faire fuir l’attaquant pendant 2 s (recharge : 60 s).",
+          "en": "2% chance when struck to make the attacker flee in fear for 2 sec (60 sec cooldown)."
+        },
+        {
+          "pieces": 5,
+          "fr": "5 % de chances de se soigner de 270 à 330 PV lors d’un lancement de sort.",
+          "en": "5% chance to heal yourself for 270–330 when casting a spell."
+        },
+        {
+          "pieces": 6,
+          "fr": "Rend 8 mana toutes les 5 s.",
+          "en": "Restores 8 mana per 5 sec."
+        }
+      ],
+      "evidence_level": "datamined",
+      "source_url": "https://foreverdb.net/set/183",
+      "evidence_url": "https://foreverdb.net/set/183",
+      "observed_at": "2026-10-16",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "forever_client_extract_via_foreverdb",
+      "evidence_note": "Set bonuses and piece names read from the referenced ForeverDB client extraction. Does not establish server-side availability, drops or completed gameplay."
+    },
+    {
+      "id": 184,
+      "name_en": "Shadowcraft Armor",
+      "class_fr": "Voleur",
+      "class_en": "Rogue",
+      "armor_type": "leather",
+      "item_count": 8,
+      "level": 58,
+      "pieces_en": [
+        "Shadowcraft Belt",
+        "Shadowcraft Boots",
+        "Shadowcraft Bracers",
+        "Shadowcraft Tunic",
+        "Shadowcraft Spaulders",
+        "Shadowcraft Pants",
+        "Shadowcraft Gloves",
+        "Shadowcraft Cap"
+      ],
+      "bonuses": [
+        {
+          "pieces": 2,
+          "fr": "+8 à toutes les résistances.",
+          "en": "+8 to all resistances."
+        },
+        {
+          "pieces": 3,
+          "fr": "+30 puissance d’attaque.",
+          "en": "+30 attack power."
+        },
+        {
+          "pieces": 4,
+          "fr": "5 % de chances, en étant touché, de supprimer un effet de ralentissement (recharge : 60 s).",
+          "en": "5% chance when struck to remove a snare effect (60 sec cooldown)."
+        },
+        {
+          "pieces": 5,
+          "fr": "Chance de récupérer 20 énergie lors d’une attaque de mêlée.",
+          "en": "Chance to restore 20 energy on a melee attack."
+        },
+        {
+          "pieces": 6,
+          "fr": "Rend 15 PV toutes les 5 s.",
+          "en": "Restores 15 health per 5 sec."
+        }
+      ],
+      "evidence_level": "datamined",
+      "source_url": "https://foreverdb.net/set/184",
+      "evidence_url": "https://foreverdb.net/set/184",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "forever_client_extract_via_foreverdb",
+      "evidence_note": "Set bonuses and piece names read from the referenced ForeverDB client extraction. Does not establish server-side availability, drops or completed gameplay."
+    },
+    {
+      "id": 185,
+      "name_en": "Wildheart Raiment",
+      "class_fr": "Druide",
+      "class_en": "Druid",
+      "armor_type": "leather",
+      "item_count": 8,
+      "level": 58,
+      "pieces_en": [
+        "Wildheart Belt",
+        "Wildheart Boots",
+        "Wildheart Bracers",
+        "Wildheart Cowl",
+        "Wildheart Vest",
+        "Wildheart Spaulders",
+        "Wildheart Kilt",
+        "Wildheart Gloves"
+      ],
+      "bonuses": [
+        {
+          "pieces": 2,
+          "fr": "+8 à toutes les résistances.",
+          "en": "+8 to all resistances."
+        },
+        {
+          "pieces": 3,
+          "fr": "+30 puissance d’attaque.",
+          "en": "+30 attack power."
+        },
+        {
+          "pieces": 3,
+          "fr": "Jusqu’à +18 aux dégâts et soins des sorts.",
+          "en": "Up to +18 spell damage and healing."
+        },
+        {
+          "pieces": 4,
+          "fr": "5 % de chances, en étant touché, d’augmenter la vitesse de déplacement de 10 % pendant 8 s (recharge : 60 s).",
+          "en": "5% chance when struck to gain 10% movement speed for 8 sec (60 sec cooldown)."
+        },
+        {
+          "pieces": 5,
+          "fr": "Chance de récupérer 200 mana en lançant un sort, 20 énergie en 5 s sur une attaque de mêlée, ou 10 rage en subissant une attaque de mêlée.",
+          "en": "Chance to restore 200 mana on spellcast, regenerate 20 energy over 5 sec on melee attack, or gain 10 rage when hit by a melee attack."
+        },
+        {
+          "pieces": 6,
+          "fr": "Rend 8 mana toutes les 5 s.",
+          "en": "Restores 8 mana per 5 sec."
+        }
+      ],
+      "evidence_level": "datamined",
+      "source_url": "https://foreverdb.net/set/185",
+      "evidence_url": "https://foreverdb.net/set/185",
+      "observed_at": "2026-10-08",
+      "observed_build": "1.60.1.70291",
+      "evidence_kind": "forever_client_extract_via_foreverdb",
+      "evidence_note": "Set bonuses and piece names read from the referenced ForeverDB client extraction. Does not establish server-side availability, drops or completed gameplay."
+    },
+    {
+      "id": 186,
+      "name_en": "Beaststalker Armor",
+      "class_fr": "Chasseur",
+      "class_en": "Hunter",
+      "armor_type": "mail",
+      "item_count": 8,
+      "level": 58,
+      "pieces_en": [
+        "Beaststalker's Belt",
+        "Beaststalker's Boots",
+        "Beaststalker's Bindings",
+        "Beaststalker's Cap",
+        "Beaststalker's Tunic",
+        "Beaststalker's Pants",
+        "Beaststalker's Mantle",
+        "Beaststalker's Gloves"
+      ],
+      "bonuses": [
+        {
+          "pieces": 2,
+          "fr": "+8 à toutes les résistances.",
+          "en": "+8 to all resistances."
+        },
+        {
+          "pieces": 3,
+          "fr": "+30 puissance d’attaque.",
+          "en": "+30 attack power."
+        },
+        {
+          "pieces": 4,
+          "fr": "8 % de chances, en étant touché, de dissiper un effet d’immobilisation (recharge : 60 s).",
+          "en": "8% chance when struck to remove a root effect (60 sec cooldown)."
+        },
+        {
+          "pieces": 5,
+          "fr": "5 % de chances de récupérer 200 mana sur les attaques automatiques de mêlée ou à distance.",
+          "en": "5% chance to restore 200 mana on melee or ranged autoattacks."
+        },
+        {
+          "pieces": 6,
+          "fr": "Rend 8 mana toutes les 5 s.",
+          "en": "Restores 8 mana per 5 sec."
+        }
+      ],
+      "evidence_level": "datamined",
+      "source_url": "https://foreverdb.net/set/186",
+      "evidence_url": "https://foreverdb.net/set/186",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "forever_client_extract_via_foreverdb",
+      "evidence_note": "Set bonuses and piece names read from the referenced ForeverDB client extraction. Does not establish server-side availability, drops or completed gameplay."
+    },
+    {
+      "id": 187,
+      "name_en": "The Elements",
+      "class_fr": "Chaman",
+      "class_en": "Shaman",
+      "armor_type": "mail",
+      "item_count": 8,
+      "level": 58,
+      "pieces_en": [
+        "Cord of Elements",
+        "Boots of Elements",
+        "Bindings of Elements",
+        "Coif of Elements",
+        "Gauntlets of Elements",
+        "Kilt of Elements",
+        "Pauldrons of Elements",
+        "Vest of Elements"
+      ],
+      "bonuses": [
+        {
+          "pieces": 2,
+          "fr": "+8 à toutes les résistances.",
+          "en": "+8 to all resistances."
+        },
+        {
+          "pieces": 3,
+          "fr": "Jusqu’à +18 aux dégâts et soins des sorts.",
+          "en": "Up to +18 spell damage and healing."
+        },
+        {
+          "pieces": 4,
+          "fr": "5 % de chances de désarmer pendant 4 s un attaquant qui vous frappe en mêlée (recharge : 60 s).",
+          "en": "5% chance to disarm a melee attacker for 4 sec when struck (60 sec cooldown)."
+        },
+        {
+          "pieces": 5,
+          "fr": "Chance, sur attaque automatique de mêlée ou lancement de sort, d’obtenir jusqu’à +65 dégâts et soins des sorts pendant 10 s.",
+          "en": "Chance on melee autoattack or spellcast to gain up to +65 spell damage and healing for 10 sec."
+        },
+        {
+          "pieces": 6,
+          "fr": "Rend 8 mana toutes les 5 s.",
+          "en": "Restores 8 mana per 5 sec."
+        }
+      ],
+      "evidence_level": "datamined",
+      "source_url": "https://foreverdb.net/set/187",
+      "evidence_url": "https://foreverdb.net/set/187",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "forever_client_extract_via_foreverdb",
+      "evidence_note": "Set bonuses and piece names read from the referenced ForeverDB client extraction. Does not establish server-side availability, drops or completed gameplay."
+    },
+    {
+      "id": 188,
+      "name_en": "Lightforge Armor",
+      "class_fr": "Paladin",
+      "class_en": "Paladin",
+      "armor_type": "plate",
+      "item_count": 8,
+      "level": 58,
+      "pieces_en": [
+        "Lightforge Belt",
+        "Lightforge Boots",
+        "Lightforge Bracers",
+        "Lightforge Breastplate",
+        "Lightforge Gauntlets",
+        "Lightforge Legplates",
+        "Lightforge Spaulders",
+        "Lightforge Helm"
+      ],
+      "bonuses": [
+        {
+          "pieces": 2,
+          "fr": "+8 à toutes les résistances.",
+          "en": "+8 to all resistances."
+        },
+        {
+          "pieces": 3,
+          "fr": "Jusqu’à +18 aux dégâts et soins des sorts.",
+          "en": "Up to +18 spell damage and healing."
+        },
+        {
+          "pieces": 4,
+          "fr": "7 % de chances de réduire au silence pendant 3 s le lanceur d’un sort hostile vous ayant touché (recharge : 60 s).",
+          "en": "7% chance when struck by a harmful spell to silence the caster for 3 sec (60 sec cooldown)."
+        },
+        {
+          "pieces": 5,
+          "fr": "Chance, sur attaque automatique de mêlée ou lancement de sort, d’obtenir jusqu’à +65 dégâts et soins des sorts pendant 10 s.",
+          "en": "Chance on melee autoattack or spellcast to gain up to +65 spell damage and healing for 10 sec."
+        },
+        {
+          "pieces": 6,
+          "fr": "Rend 8 mana toutes les 5 s.",
+          "en": "Restores 8 mana per 5 sec."
+        }
+      ],
+      "evidence_level": "datamined",
+      "source_url": "https://foreverdb.net/set/188",
+      "evidence_url": "https://foreverdb.net/set/188",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "forever_client_extract_via_foreverdb",
+      "evidence_note": "Set bonuses and piece names read from the referenced ForeverDB client extraction. Does not establish server-side availability, drops or completed gameplay."
+    },
+    {
+      "id": 189,
+      "name_en": "Battlegear of Valor",
+      "class_fr": "Guerrier",
+      "class_en": "Warrior",
+      "armor_type": "plate",
+      "item_count": 8,
+      "level": 58,
+      "pieces_en": [
+        "Belt of Valor",
+        "Boots of Valor",
+        "Bracers of Valor",
+        "Breastplate of Valor",
+        "Gauntlets of Valor",
+        "Helm of Valor",
+        "Legplates of Valor",
+        "Spaulders of Valor"
+      ],
+      "bonuses": [
+        {
+          "pieces": 2,
+          "fr": "+8 à toutes les résistances.",
+          "en": "+8 to all resistances."
+        },
+        {
+          "pieces": 3,
+          "fr": "+15 force.",
+          "en": "+15 strength."
+        },
+        {
+          "pieces": 4,
+          "fr": "10 % de chances, en étant touché, de supprimer un effet de désarmement (recharge : 60 s).",
+          "en": "10% chance when struck to remove a disarm effect (60 sec cooldown)."
+        },
+        {
+          "pieces": 5,
+          "fr": "Chance, sur attaque de mêlée, de récupérer 88 à 132 PV et de générer 10 rage.",
+          "en": "Chance on melee attack to heal for 88–132 and generate 10 rage."
+        },
+        {
+          "pieces": 6,
+          "fr": "Rend 15 PV toutes les 5 s.",
+          "en": "Restores 15 health per 5 sec."
+        }
+      ],
+      "evidence_level": "datamined",
+      "source_url": "https://foreverdb.net/set/189",
+      "evidence_url": "https://foreverdb.net/set/189",
+      "observed_at": "2026-10-17",
+      "observed_build": "1.60.1.70450",
+      "evidence_kind": "forever_client_extract_via_foreverdb",
+      "evidence_note": "Set bonuses and piece names read from the referenced ForeverDB client extraction. Does not establish server-side availability, drops or completed gameplay."
+    }
+  ]
+}
