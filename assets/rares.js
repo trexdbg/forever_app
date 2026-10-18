@@ -35,6 +35,8 @@ const lootTrustLabel=item=>["confirmed_in_game","documented_forever"].includes(i
 const rareLootIconNames=Object.freeze({
  18610:"inv_sword_16",18611:"inv_pants_02",18612:"inv_boots_01",
  1913:"inv_mace_01",4854:"inv_misc_pelt_bear_ruin_03",
+ // Classic visual references only; see docs/rare-loot-icon-evidence-2026-10-18.md.
+ 1965:"inv_gauntlets_05",10553:"inv_shirt_05",
  284666:"ability_hunter_beastcall",286534:"inv_misc_monsterclaw_10",
  286537:"inv_hammer_12",286746:"inv_helmet_48",
  286749:"inv_staff_02",286750:"inv_wand_01",286755:"inv_sword_04"
