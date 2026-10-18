@@ -29,7 +29,7 @@ function rebuild(){
  s.index=0;s.selected=0;s.center={x:50,y:50};s.zoom=1;renderMilestones();render();search();
  $("quest-data-status").textContent=done.length+QT(" quêtes rendues"," quests completed");
 }
-const waypointTitle=w=>Q.header(w.header);
+const waypointTitle=w=>Array.isArray(w.header)?QT(w.header[1],w.header[0]):Q.header(w.header);
 const syncUrl=()=>{const u=new URL(location.href);u.searchParams.set("faction",s.faction);u.searchParams.set("race",s.profile);u.searchParams.set("peuple",s.race);u.searchParams.set("step",String(s.index+1));u.searchParams.set("variant",variant);history.replaceState(null,"",u.pathname+u.search+u.hash)};
 const project=(x,y)=>({x:(50+(x-s.center.x)*s.zoom)*W/100,y:(50+(y-s.center.y)*s.zoom)*H/100});
 const clientPoint=e=>{const r=canvas.getBoundingClientRect();return{x:(e.clientX-r.left)*W/r.width,y:(e.clientY-r.top)*H/r.height}};
@@ -54,7 +54,9 @@ function draw(){
  if(x>=0&&x<=W){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,H);ctx.stroke();ctx.fillStyle="#07131fdc";ctx.fillRect(x+1,3,23,16);ctx.fillStyle="#fff";ctx.fillText(String(n),x+4,15)}
  if(y>=0&&y<=H){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(W,y);ctx.stroke();ctx.fillStyle="#07131fdc";ctx.fillRect(1,y-17,22,15);ctx.fillStyle="#fff";ctx.fillText(String(n),4,y-5)}}
  const pts=step.waypoints||[];
- if(pts.length>1){ctx.beginPath();pts.forEach((w,i)=>{const p=project(w.coords.x,w.coords.y);if(i===0)ctx.moveTo(p.x,p.y);else ctx.lineTo(p.x,p.y)});ctx.strokeStyle="#11182ce6";ctx.lineWidth=6;ctx.stroke();ctx.strokeStyle="#f8e3ad";ctx.lineWidth=2.5;ctx.setLineDash([8,6]);ctx.stroke();ctx.setLineDash([]);}
+ if(pts.length>1){ctx.beginPath();pts.forEach((w,i)=>{for(const member of w.members||[]){const p=project(member.coords.x,member.coords.y);ctx.beginPath();ctx.arc(p.x,p.y,s.selected===i?6:4,0,Math.PI*2);ctx.fillStyle="#b7eeee";ctx.fill();ctx.strokeStyle="#152d36";ctx.lineWidth=2;ctx.stroke();}});
+ pts.forEach((w,i)=>{const p=project(w.coords.x,w.coords.y);if(i===0)ctx.moveTo(p.x,p.y);else ctx.lineTo(p.x,p.y)});ctx.strokeStyle="#11182ce6";ctx.lineWidth=6;ctx.stroke();ctx.strokeStyle="#f8e3ad";ctx.lineWidth=2.5;ctx.setLineDash([8,6]);ctx.stroke();ctx.setLineDash([]);}
+ pts.forEach((w,i)=>{for(const member of w.members||[]){const p=project(member.coords.x,member.coords.y);ctx.beginPath();ctx.arc(p.x,p.y,s.selected===i?6:4,0,Math.PI*2);ctx.fillStyle="#b7eeee";ctx.fill();ctx.strokeStyle="#152d36";ctx.lineWidth=2;ctx.stroke();}});
  pts.forEach((w,i)=>{const p=project(w.coords.x,w.coords.y);if(p.x < -24||p.x>W+24||p.y < -24||p.y>H+24)return;
  const active=s.selected===i;ctx.beginPath();ctx.arc(p.x,p.y,active?17:14,0,Math.PI*2);ctx.fillStyle=classes[w.type]||"#ddb575";ctx.fill();ctx.lineWidth=active?4:2;ctx.strokeStyle=active?"#ffffff":"#122235";ctx.stroke();ctx.fillStyle="#071627";ctx.font="bold 13px system-ui";ctx.textAlign="center";ctx.textBaseline="middle";ctx.fillText(String(i+1),p.x,p.y+1);ctx.textAlign="start";ctx.textBaseline="alphabetic";});
  ctx.restore();
@@ -63,6 +65,13 @@ function renderSelection(){
  const box=$("quest-selected"),w=s.steps[s.index].waypoints[s.selected];box.replaceChildren();
  if(!w){box.append(element("p",QT("Sélectionnez un point sur la carte.","Select a waypoint on the map.")));return}
  box.append(element("strong",(s.selected+1)+". "+waypointTitle(w)),element("p","X : "+format(w.coords.x)+" % · Y : "+format(w.coords.y)+" %"));
+ if(w.members){
+  const list=element("div",undefined,"quest-sector-points");list.append(element("strong",QT("Points à couvrir dans ce secteur","Points to cover in this area")));
+  const seen=new Set();
+  for(const member of w.members){const key=member.coords.x+":"+member.coords.y+":"+waypointTitle(member);if(seen.has(key))continue;seen.add(key);
+   const line=element("p");line.append(element("span",waypointTitle(member)+" · "),element("code","/way "+tomtom(member.coords.x)+" "+tomtom(member.coords.y)));list.append(line);
+  }box.append(list);
+ }
  const cmd="/way "+tomtom(w.coords.x)+" "+tomtom(w.coords.y);
  box.append(element("code",cmd));
  const copy=element("button",QT("Copier /way","Copy /way"));copy.type="button";
@@ -236,7 +245,7 @@ canvas.addEventListener("pointerdown",e=>{const p=clientPoint(e);pointer={id:e.p
 canvas.addEventListener("pointermove",e=>{if(!pointer||e.pointerId!==pointer.id)return;const p=clientPoint(e);if(Math.hypot(p.x-pointer.start.x,p.y-pointer.start.y)>6)pointer.drag=true;
  if(pointer.drag){s.center.x=clamp(s.center.x-(p.x-pointer.prev.x)/W*100/s.zoom,50/s.zoom,100-50/s.zoom);s.center.y=clamp(s.center.y-(p.y-pointer.prev.y)/H*100/s.zoom,50/s.zoom,100-50/s.zoom);draw()}pointer.prev=p});
 canvas.addEventListener("pointerup",e=>{if(!pointer||e.pointerId!==pointer.id)return;const dragged=pointer.drag;pointer=null;if(dragged)return;const p=clientPoint(e),wps=s.steps[s.index]?.waypoints||[];let best=-1,min=24;
- wps.forEach((w,i)=>{const v=project(w.coords.x,w.coords.y),d=Math.hypot(v.x-p.x,v.y-p.y);if(d<min){min=d;best=i}});if(best>=0)selectWaypoint(best)});
+ wps.forEach((w,i)=>{for(const point of w.members||[w]){const v=project(point.coords.x,point.coords.y),d=Math.hypot(v.x-p.x,v.y-p.y);if(d<min){min=d;best=i}}});if(best>=0)selectWaypoint(best)});
 canvas.addEventListener("pointercancel",()=>pointer=null);
 canvas.addEventListener("wheel",e=>{
  e.preventDefault();
@@ -264,7 +273,7 @@ $("quest-search").addEventListener("input",search);
 $("quest-zoom-reset").addEventListener("click",()=>{s.center={x:50,y:50};setZoom(1)});
 (async()=>{
  try{
-  const responses=await Promise.all([fetch("/data/quests/manifest.json"),fetch("./nightelf.json")]);
+  const responses=await Promise.all([fetch("/data/quests/manifest.json"),fetch("./nightelf.json?v=20261018-sectors2")]);
   if(responses.some(r=>!r.ok))throw Error("Route unavailable");
   [s.meta,guide]=await Promise.all(responses.map(r=>r.json()));
   try{const saved=JSON.parse(localStorage.getItem("forever-nelf-route-v1")||"{}");done=Array.isArray(saved.done)?saved.done.filter(id=>guide.catalog[id]):[];active=Array.isArray(saved.active)?saved.active.filter(id=>[87288,99046].includes(id)):[];variant=saved.variant==="complete"?"complete":"direct";}catch(_){}
