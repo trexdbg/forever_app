@@ -40,5 +40,5 @@ Les icônes sont reprises uniquement quand l'ID dispose déjà d'une corresponda
 - Catalogue éditorial **152 → 174** ; cache de 1 318 inchangé.
 - Relations rare→objet inchangées (**114**), index d'obtention inchangé (**730** items / **1256** relations).
 - Test ciblé `tests/rare-gear-catalogue-20261018.test.mjs` ajouté à `equipment-bis-quality.yml` (validation des 22 IDs, preuves, absence de doublons, FR/EN et exclusions).
-- Cache front mis à jour : `20261018-rare-gear-22`. Pas de sync, aucune édition du module Quêtes.
+- Liens des scripts FR/EN mis à jour pour contourner les anciennes versions mises en cache. Cache front mis à jour : `20261018-rare-gear-22`. Pas de sync, aucune édition du module Quêtes.
 - Rollback : revert de cette PR.
