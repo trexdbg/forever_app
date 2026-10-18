@@ -55,3 +55,37 @@ test("compact catalogue and item tooltip expose the same curated set bonuses",()
  assert.match(tooltip,/forever-item-tooltip__t0/);
  assert.match(styles,/item-t0-sets__grid/);
 });
+
+test("all 72 T0 pieces link by Forever client ID to their exact ForeverDB item pages",()=>{
+ const ids=sets.flatMap(set=>{
+  assert.equal(set.piece_links_reviewed_at,"2026-10-18");
+  assert.equal(set.pieces?.length,8);
+  return set.pieces.map((piece,index)=>{
+   assert.equal(piece.name_en,set.pieces_en[index]);
+   assert.ok(Number.isSafeInteger(piece.id)&&piece.id>0);
+   assert.equal(piece.url,"https://foreverdb.net/item/"+piece.id);
+   return piece.id;
+  });
+ });
+ assert.equal(ids.length,72);
+ assert.equal(new Set(ids).size,72,"No T0 item may be assigned to multiple sets");
+ assert.deepEqual([...ids].sort((a,b)=>a-b),Array.from({length:72},(_,i)=>16666+i));
+ assert.equal(sets.find(s=>s.id===184).pieces[2].id,16710,"Shadowcraft Bracers confirmed on ForeverDB");
+ assert.equal(sets.find(s=>s.id===181).pieces[0].id,16685,"Magister's Belt confirmed on ForeverDB");
+ assert.equal(sets.find(s=>s.id===189).pieces[0].id,16736,"Belt of Valor confirmed on ForeverDB");
+});
+
+test("FR/EN equipment pages link T0 pieces without injecting unverified loot details",()=>{
+ const js=read("assets/items-v3.js"),tooltip=read("assets/item-tooltips.js"),css=read("assets/item-catalogue.css");
+ assert.match(js,/record\.url==="https:\/\/foreverdb\.net\/item\/"\+record\.id/);
+ assert.match(js,/record\.name_en===name/);
+ assert.match(js,/item-t0-sets__piece-link/);
+ assert.match(tooltip,/set\.pieces\.some\(piece=>piece\.id===Number\(item\.id\)\)/);
+ assert.match(css,/item-t0-sets__piece-link:focus-visible/);
+ for(const path of ["equipements/index.html","en/equipements/index.html"]){
+  const html=read(path);
+  for(const asset of ["item-catalogue.css","item-tooltips.js","items-v3.js"]){
+   assert.ok(html.includes(asset+"?v=20261018-t0-piece-links"),path+" "+asset);
+  }
+ }
+});
