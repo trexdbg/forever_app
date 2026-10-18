@@ -11,6 +11,30 @@ const w=en?{
 };
 const QUALITY=new Set(["poor","common","uncommon","rare","epic","legendary"]);
 const cache=new Map(),inflight=new Map(),unavailableUntil=new Map();
+let t0Sets=null,t0Loading=null;
+function t0Candidate(item){
+ const names=[item?.name,item?.name_en,item?.original_name].filter(x=>typeof x==="string");
+ return names.some(name=>/(shadowcraft|wildheart|beaststalker|magister|devout|dreadmist|lightforge|of elements|of valor)/i.test(name));
+}
+function t0For(item){
+ if(!Array.isArray(t0Sets))return null;
+ const names=[item?.name,item?.name_en,item?.original_name].filter(x=>typeof x==="string").map(x=>x.trim().toLowerCase());
+ return t0Sets.find(set=>Array.isArray(set.pieces_en)&&set.pieces_en.some(name=>names.includes(name.toLowerCase())))||null;
+}
+function queueT0(item,requestToken){
+ if(!t0Candidate(item)||t0Sets)return;
+ if(!t0Loading)t0Loading=fetch("/data/t0-set-bonuses-forever.json?v=20261018-1",{credentials:"omit"})
+  .then(r=>{if(!r.ok)throw Error("T0 "+r.status);return r.json()})
+  .then(data=>{if(!Array.isArray(data.sets)||data.sets.length!==9)throw Error("Invalid T0 data");t0Sets=data.sets})
+  .catch(()=>{t0Loading=null});
+ t0Loading.then(()=>{
+  if(active&&token===requestToken&&Number(active.item.id)===Number(item.id)){
+   render(item,cache.get(Number(item.id))||null,"complete");
+   if(!pinned)place(active.x,active.y);
+  }
+ });
+}
+
 let active=null,token=0,loadTimer=0,visible=false,pinned=false,suspendUntil=0;
 const panel=document.createElement("aside");
 panel.id="forever-item-tooltip";panel.className="forever-item-tooltip";
@@ -196,6 +220,18 @@ if(v.bindPickup)write(group,"forever-item-tooltip__vendor-warning",en?"Bind on P
 if(v.sharedStock)write(group,"forever-item-tooltip__vendor-warning",en?"Shared vendor stock slot":"Emplacement de stock partagé");
 inner.append(group);
 }
+const set=t0For(item);
+if(set){
+ const group=elt("section","forever-item-tooltip__t0");
+ write(group,"forever-item-tooltip__set",(en?"T0 set bonuses · Forever beta":"Bonus de set T0 · Forever bêta")+" — "+set.name_en);
+ for(const bonus of set.bonuses||[]){
+  if(!Number.isInteger(bonus.pieces))continue;
+  write(group,"forever-item-tooltip__effect","("+bonus.pieces+") "+(en?bonus.en:bonus.fr));
+ }
+ const link=elt("a","forever-item-tooltip__source",en?"ForeverDB set source ↗":"Source du set ForeverDB ↗");
+ link.href="https://foreverdb.net/set/"+set.id;link.target="_blank";link.rel="noopener noreferrer";
+ group.append(link);inner.append(group);
+}
 if(item.origin)write(inner,"forever-item-tooltip__origin",w.origin+" : "+item.origin);
 if(status==="loading"&&!forever)write(inner,"forever-item-tooltip__muted",w.loading);
 if(status==="unavailable"&&haveRich)write(inner,"forever-item-tooltip__muted",w.unavailable);
@@ -249,6 +285,7 @@ render(item,cache.get(Number(item.id))||null,isId(item.id)&&!cache.has(Number(it
 if(!pinned)place(x,y);
 else {panel.style.left="";panel.style.top="";}
 queueDetails(item,currentToken);
+ queueT0(item,currentToken);
 }
 function bind(node,item){
 if(!node||!item)return;
