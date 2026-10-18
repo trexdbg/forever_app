@@ -17,8 +17,8 @@ test("all nine Forever T0 dungeon sets are documented with build-pinned sources"
   assert.equal(set.evidence_level,"datamined");
   assert.equal(set.source_url,`https://foreverdb.net/set/${set.id}`);
   assert.equal(set.evidence_url,set.source_url);
-  assert.match(set.observed_at,/^2026-10-\\d{2}$/);
-  assert.match(set.observed_build,/^1\\.60\\.1\\.7\\d{4}$/);
+  assert.match(set.observed_at,new RegExp("^2026-10-[0-9]{2}$"));
+  assert.match(set.observed_build,new RegExp("^1[.]60[.]1[.]7[0-9]{4}$"));
   assert.ok(set.evidence_kind&&set.evidence_note);
   assert.equal(set.pieces_en.length,8);
   assert.equal(new Set(set.pieces_en).size,8);
@@ -46,14 +46,14 @@ test("compact catalogue and item tooltip expose the same curated set bonuses",()
  const catalogue=read("assets/items-v3.js");
  const tooltip=read("assets/item-tooltips.js");
  const styles=read("assets/item-catalogue.css");
- assert.match(catalogue,/item-t0-sets/);
- assert.match(catalogue,/t0Root.addEventListener\\("toggle"/);
- assert.match(catalogue,/t0-set-bonuses-forever\\.json/);
- assert.match(catalogue,/en\\?bonus\\.en:bonus\\.fr/);
- assert.match(tooltip,/function t0For\\(item\\)/);
- assert.match(tooltip,/queueT0\\(item,currentToken\\)/);
- assert.match(tooltip,/forever-item-tooltip__t0/);
- assert.match(styles,/item-t0-sets__grid/);
+ assert.ok(catalogue.includes("item-t0-sets"));
+ assert.ok(catalogue.includes('t0Root.addEventListener("toggle"'));
+ assert.ok(catalogue.includes("t0-set-bonuses-forever.json"));
+ assert.ok(catalogue.includes("en?bonus.en:bonus.fr"));
+ assert.ok(tooltip.includes("function t0For(item)"));
+ assert.ok(tooltip.includes("queueT0(item,currentToken)"));
+ assert.ok(tooltip.includes("forever-item-tooltip__t0"));
+ assert.ok(styles.includes("item-t0-sets__grid"));
 });
 
 test("all 72 T0 pieces link by Forever client ID to their exact ForeverDB item pages",()=>{
