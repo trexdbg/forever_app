@@ -44,3 +44,4 @@ jobs:
           node scripts/check-bis-behavior.mjs
           node scripts/build-item-acquisition-index.mjs --check
           node --test tests/item-acquisition-index.test.mjs
+          node --test tests/rare-gear-catalogue-20261018.test.mjs
