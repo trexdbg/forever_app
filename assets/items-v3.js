@@ -266,6 +266,56 @@ table.closest(".result-table-wrap")?.after(actions);
 moreButton.addEventListener("click",()=>{moreButton.disabled=true;queryClassic(key,classic.length>0&&more)});
 select.addEventListener("change",()=>{status=select.value;queue();render()});
 search.addEventListener("input",()=>{queue();render()});slot.addEventListener("change",()=>{queue();render()});armor.addEventListener("change",()=>{queue();render()});
+
+// T0 set bonuses are deliberately separate from Classic item tooltips:
+// the level-60 tab shows the Forever client data without replacing item stats.
+const t0Root=document.createElement("details");t0Root.className="item-t0-sets";
+const t0Summary=document.createElement("summary");
+t0Summary.textContent=en?"T0 sets · Level 60 · Forever bonuses":"Ensembles T0 · Niveau 60 · Bonus Forever";
+const t0Body=document.createElement("div");t0Body.className="item-t0-sets__body";
+t0Root.append(t0Summary,t0Body);
+document.querySelector(".tool-head")?.after(t0Root);
+let t0Loaded=false,t0Loading=false;
+const t0Node=(tag,cls,value)=>{const node=document.createElement(tag);if(cls)node.className=cls;if(value!==undefined)node.textContent=String(value);return node;};
+t0Root.addEventListener("toggle",async()=>{
+ if(!t0Root.open||t0Loaded||t0Loading)return;
+ t0Loading=true;
+ t0Body.replaceChildren(t0Node("p","source-note",en?"Loading set bonuses…":"Chargement des bonus…"));
+ try{
+  const response=await fetch("/data/t0-set-bonuses-forever.json?v=20261018-1",{credentials:"omit"});
+  if(!response.ok)throw Error("T0 HTTP "+response.status);
+  const data=await response.json();
+  if(!Array.isArray(data.sets)||data.sets.length!==9)throw Error("Invalid T0 data");
+  const group=t0Node("div","item-t0-sets__grid");
+  for(const set of data.sets){
+   if(!Number.isInteger(set.id)||!Array.isArray(set.bonuses)||!set.bonuses.length)continue;
+   const card=document.createElement("details");card.className="item-t0-sets__card";
+   const header=document.createElement("summary");
+   header.append(t0Node("strong","",set.name_en),t0Node("span","item-t0-sets__class",en?set.class_en:set.class_fr));
+   card.append(header);
+   const bonuses=t0Node("ul","item-t0-sets__bonuses");
+   for(const bonus of set.bonuses){
+    if(!Number.isInteger(bonus.pieces)||bonus.pieces<2||bonus.pieces>8)continue;
+    const entry=document.createElement("li");
+    entry.append(t0Node("b","",String(bonus.pieces)),t0Node("span","",en?bonus.en:bonus.fr));
+    bonuses.append(entry);
+   }
+   card.append(bonuses);
+   if(Array.isArray(set.pieces_en)&&set.pieces_en.length===8){
+    const pieces=t0Node("p","item-t0-sets__pieces");
+    pieces.append(t0Node("b","",en?"8 pieces: ":"8 pièces : "),document.createTextNode(set.pieces_en.join(" · ")));
+    card.append(pieces);
+   }
+   const link=t0Node("a","item-t0-sets__source",en?"ForeverDB source ↗":"Source ForeverDB ↗");
+   link.href="https://foreverdb.net/set/"+set.id;link.target="_blank";link.rel="noopener noreferrer";
+   card.append(link);group.append(card);
+  }
+  t0Body.replaceChildren(t0Node("p","item-t0-sets__intro",en?"Set bonuses extracted from the Forever beta client.":"Bonus issus des données du client bêta Forever."),group);
+  t0Loaded=true;
+ }catch(error){t0Body.replaceChildren(t0Node("p","source-note",en?"Set bonuses currently unavailable. Close and reopen to retry.":"Bonus momentanément indisponibles. Refermez et réouvrez pour réessayer."));}
+ finally{t0Loading=false;}
+});
+
 const options=[...slot.options];slot.replaceChildren(options[0]);
 for(const [id,label] of Object.entries(slotLabels)){const o=document.createElement("option");o.value=id;o.textContent=label;slot.append(o)}
 (async()=>{
