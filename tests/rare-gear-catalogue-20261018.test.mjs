@@ -1,6 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import {readFileSync} from "node:fs";
+import {runInNewContext} from "node:vm";
 const read=p=>readFileSync(new URL("../"+p,import.meta.url),"utf8");
 const db=JSON.parse(read("data/items-forever.json")),cache=JSON.parse(read("data/items-forever-cache.json")),rares=JSON.parse(read("data/rares.json"));
 const ids=[1965,4854,18610,18612,263015,277213,282716,284174,284287,284386,285269,285328,285345,285346,285350,286533,286534,286537,286746,286749,286750,286755];
@@ -43,4 +44,21 @@ test("equipment search renders reported rare names in FR/EN and excludes non-equ
   assert.match(html,/items-v3\.js\?v=20261018-rare-gear-22/);
  }
  assert.equal(rares.rares.flatMap(r=>r.loot).length,114);
+});
+test("localized English rare origin is preserved and typed armor is filterable",()=>{
+ const english={};
+ runInNewContext(read("assets/item-locale.js"),{window:english,document:{documentElement:{lang:"en"}}});
+ const item=items.get(1965);
+ const localized=english.ForeverItemLocale.record(item);
+ assert.equal(localized.origin_en,"Reported rare: Timber");
+ assert.equal(localized.origin_fr,"Rare signalé : Grumeux");
+ assert.equal(localized.origin,"Rare signalé : Grumeux");
+ const armor={18612:"mail",1965:"leather",282716:"mail",286533:"leather",285345:"cloth",285269:"mail",263015:"cloth",277213:"cloth"};
+ const rules={};
+ runInNewContext(read("assets/equipment-rules.js"),{window:rules});
+ for(const [id,material] of Object.entries(armor)){
+  const gear=items.get(Number(id));
+  assert.equal(gear.armorType,material,"Armor metadata on item "+id);
+  assert.equal(rules.ForeverEquipmentRules.armorType(gear),material,"Armor filter must select "+id);
+ }
 });
