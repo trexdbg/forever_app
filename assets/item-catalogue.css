@@ -164,3 +164,5 @@ body[data-page="items"] .item-t0-sets__source{display:inline-block;margin:0 9px 
 body[data-page="items"] .item-acquisition-inline{display:block;margin-top:3px;color:#c0d6c6;font-size:11px;line-height:1.4}
 body[data-page="items"] .item-acquisition-footnote{margin:8px 0 0;font-size:11px;line-height:1.5}
 body[data-page="items"] .item-acquisition-links li>span{overflow-wrap:anywhere;min-width:0}
+
+body[data-page="items"] .item-acquisition-extra{display:block;margin:3px 0 0;font-size:11px;line-height:1.45;color:#b4cbb9}

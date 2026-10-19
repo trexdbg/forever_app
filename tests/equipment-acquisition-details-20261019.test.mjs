@@ -7,19 +7,24 @@ const items=JSON.parse(read("data/items.json")).items;
 const byID=new Map(items.map(x=>[x.id,x]));
 const detailed=items.filter(x=>Array.isArray(x.acquisition_sources));
 const rows=detailed.flatMap(item=>item.acquisition_sources.map(s=>({id:item.id,item,s})));
+const legacyRows=rows.filter(({s})=>!s.source_url.startsWith("https://foreverchanges.pro/item/")
+ && !s.source_url.startsWith("https://wowclassicdatabase.com/item/")
+ && !s.source_url.includes("/sulfuras-hand-of-ragnaros")
+ && !s.source_url.includes("/Thunderfury%2C_Blessed_Blade_of_the_Windseeker"));
+const legacyDetailed=new Set(legacyRows.map(({id})=>id));
 
 test("45 distinct gear cards include 37 Classic table links and 11 Classic quest rewards",()=>{
  assert.equal(items.length,65);
- assert.equal(detailed.length,45);
- assert.equal(rows.filter(x=>x.s.kind!=="quest").length,37);
- assert.equal(rows.filter(x=>x.s.kind==="quest").length,11);
- assert.equal(rows.length,48);
- assert.equal(new Set(detailed.map(x=>x.id)).size,45);
- assert.equal(items.filter(x=>!x.acquisition_sources).length,20);
+ assert.equal(legacyDetailed.size,45);
+ assert.equal(legacyRows.filter(x=>x.s.kind!=="quest").length,37);
+ assert.equal(legacyRows.filter(x=>x.s.kind==="quest").length,11);
+ assert.equal(legacyRows.length,48);
+ assert.equal(new Set(legacyRows.map(x=>x.id)).size,45);
+ assert.equal(items.filter(x=>!x.acquisition_sources).length,0);
 });
 
 test("all added boss and quest statements have claim-level evidence, never Forever probability",()=>{
- for(const {id,item,s} of rows){
+ for(const {id,item,s} of legacyRows){
   assert.equal(s.evidence_level,"classic_reference","Evidence source must not become Forever for "+id);
   assert.equal(s.evidence_kind,"classic_guide");
   assert.match(s.source_url,/^https:\/\//);
@@ -80,7 +85,7 @@ test("FR/EN catalogue shows source near origin and expandable individually refer
  for(const path of ["equipements/index.html","en/equipements/index.html"]){
   const html=read(path);
   for(const asset of ["items-v3.js","item-catalogue.css"]){
-   assert.ok(html.includes(asset+"?v=20261019-acquisition"),path+" "+asset);
+   assert.ok(html.includes(asset+"?v=20261019-acquisition-wave2"),path+" "+asset);
   }
  }
 });
