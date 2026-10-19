@@ -8,12 +8,17 @@
     "original_generic_origin": 24,
     "amulets_updated": 2,
     "remaining_generic_origin": 0,
-    "records_with_fewer_than_five_tooltip_lines": 57,
+    "records_with_fewer_than_five_tooltip_lines": 38,
     "records_without_real_icon": 134,
-    "current_build_profiles_reviewed": 22,
+    "current_build_profiles_reviewed": 41,
     "documented_quest_associations": 2,
     "reported_patrol_associations": 1,
-    "acquisition_still_unknown": 19
+    "acquisition_still_unknown": 19,
+    "additional_lowlevel_profiles_reviewed": 19,
+    "additional_lowlevel_crafting_sources": 7,
+    "additional_lowlevel_boss_sources": 8,
+    "additional_lowlevel_quest_sources": 2,
+    "additional_lowlevel_unknown_sources": 2
   },
   "updated_item_ids": [
     272184,
@@ -1018,5 +1023,222 @@
       "stat_lines": 5,
       "unresolved": true
     }
-  ]
+  ],
+  "tooltip_followup_wave": {
+    "audited_at": "2026-10-19",
+    "observed_build": "1.60.1.70425",
+    "scope": "19 of the 57 previously sparse (<5-line) ID-verified Forever beta items, prioritized item levels 1–30.",
+    "policy": "Source item metadata and acquisition claims are separately identified; client/third-party records do not prove live drops. Craft skill levels are NOT player required levels. No unverified tooltip icons or loot odds were inferred.",
+    "items": [
+      {
+        "id": 277069,
+        "name_en": "Al'Aketh Armguards",
+        "item_level": 9,
+        "required_level": 4,
+        "tooltip_lines": 7,
+        "evidence_url": "https://www.60.tools/items/277069-alaketh-armguards",
+        "observed_build": "1.60.1.70425",
+        "acquisition_kind": "unknown",
+        "origin_en": "Acquisition unknown"
+      },
+      {
+        "id": 277017,
+        "name_en": "Azure Skyforged Wristguards",
+        "item_level": 10,
+        "required_level": 5,
+        "tooltip_lines": 7,
+        "evidence_url": "https://www.60.tools/items/277017-azure-skyforged-wristguards",
+        "observed_build": "1.60.1.70425",
+        "acquisition_kind": "craft",
+        "origin_en": "Beta crafting · Blacksmithing (55)"
+      },
+      {
+        "id": 277020,
+        "name_en": "Azure Skyforged Legguards",
+        "item_level": 12,
+        "required_level": 7,
+        "tooltip_lines": 7,
+        "evidence_url": "https://www.60.tools/items/277020-azure-skyforged-legguards",
+        "observed_build": "1.60.1.70425",
+        "acquisition_kind": "craft",
+        "origin_en": "Beta crafting · Blacksmithing (65)"
+      },
+      {
+        "id": 277023,
+        "name_en": "Azure Gustwoven Bracers",
+        "item_level": 10,
+        "required_level": 5,
+        "tooltip_lines": 7,
+        "evidence_url": "https://www.60.tools/items/277023-azure-gustwoven-bracers",
+        "observed_build": "1.60.1.70425",
+        "acquisition_kind": "craft",
+        "origin_en": "Beta crafting · Leatherworking (55)"
+      },
+      {
+        "id": 277024,
+        "name_en": "Azure Gustwoven Gloves",
+        "item_level": 11,
+        "required_level": 6,
+        "tooltip_lines": 7,
+        "evidence_url": "https://www.60.tools/items/277024-azure-gustwoven-gloves",
+        "observed_build": "1.60.1.70425",
+        "acquisition_kind": "craft",
+        "origin_en": "Beta crafting · Leatherworking (60)"
+      },
+      {
+        "id": 277029,
+        "name_en": "Azure Windraveled Armguards",
+        "item_level": 10,
+        "required_level": 5,
+        "tooltip_lines": 7,
+        "evidence_url": "https://www.60.tools/items/277029-azure-windraveled-armguards",
+        "observed_build": "1.60.1.70425",
+        "acquisition_kind": "craft",
+        "origin_en": "Beta crafting · Leatherworking (55)"
+      },
+      {
+        "id": 277032,
+        "name_en": "Azure Windraveled Pants",
+        "item_level": 12,
+        "required_level": 7,
+        "tooltip_lines": 7,
+        "evidence_url": "https://www.60.tools/items/277032-azure-windraveled-pants",
+        "observed_build": "1.60.1.70425",
+        "acquisition_kind": "craft",
+        "origin_en": "Beta crafting · Leatherworking (65)"
+      },
+      {
+        "id": 277035,
+        "name_en": "Azure Stormsewn Cuffs",
+        "item_level": 10,
+        "required_level": 5,
+        "tooltip_lines": 7,
+        "evidence_url": "https://www.60.tools/items/277035-azure-stormsewn-cuffs",
+        "observed_build": "1.60.1.70425",
+        "acquisition_kind": "craft",
+        "origin_en": "Beta crafting · Tailoring (55)"
+      },
+      {
+        "id": 277204,
+        "name_en": "Erudite's Amulet",
+        "item_level": 23,
+        "required_level": null,
+        "tooltip_lines": 6,
+        "evidence_url": "https://www.60.tools/items/277204-erudites-amulet",
+        "observed_build": "1.60.1.70425",
+        "acquisition_kind": "quest",
+        "origin_en": "Documented quest · Friend of the Library"
+      },
+      {
+        "id": 271096,
+        "name_en": "Aetherwisp Bracers",
+        "item_level": 18,
+        "required_level": 13,
+        "tooltip_lines": 8,
+        "evidence_url": "https://www.60.tools/items/271096-aetherwisp-bracers",
+        "observed_build": "1.60.1.70425",
+        "acquisition_kind": "boss",
+        "origin_en": "Reported beta loot · Faldrim Anvilmar"
+      },
+      {
+        "id": 273293,
+        "name_en": "Bandsaw Wristbands",
+        "item_level": 21,
+        "required_level": 16,
+        "tooltip_lines": 8,
+        "evidence_url": "https://www.60.tools/items/273293-bandsaw-wristbands",
+        "observed_build": "1.60.1.70425",
+        "acquisition_kind": "boss",
+        "origin_en": "Reported beta loot · Sneed"
+      },
+      {
+        "id": 276631,
+        "name_en": "Coldflame Saber",
+        "item_level": 29,
+        "required_level": 21,
+        "tooltip_lines": 10,
+        "evidence_url": "https://www.60.tools/items/276631-coldflame-saber",
+        "observed_build": "1.60.1.70425",
+        "acquisition_kind": "unknown",
+        "origin_en": "Acquisition unknown"
+      },
+      {
+        "id": 279876,
+        "name_en": "Plaguefang",
+        "item_level": 24,
+        "required_level": 1,
+        "tooltip_lines": 8,
+        "evidence_url": "https://www.60.tools/items/279876-plaguefang",
+        "observed_build": "1.60.1.70425",
+        "acquisition_kind": "quest",
+        "origin_en": "Documented quest · The New Plague"
+      },
+      {
+        "id": 284715,
+        "name_en": "First Mate Band",
+        "item_level": 22,
+        "required_level": 17,
+        "tooltip_lines": 13,
+        "evidence_url": "https://www.60.tools/items/284715-first-mate-band",
+        "observed_build": "1.60.1.70425",
+        "acquisition_kind": "boss",
+        "origin_en": "Reported beta loot · Mr. Smite"
+      },
+      {
+        "id": 271209,
+        "name_en": "Bonerust Leggings",
+        "item_level": 21,
+        "required_level": 16,
+        "tooltip_lines": 8,
+        "evidence_url": "https://www.60.tools/items/271209-bonerust-leggings",
+        "observed_build": "1.60.1.70425",
+        "acquisition_kind": "boss",
+        "origin_en": "Reported beta loot · Bjork"
+      },
+      {
+        "id": 273637,
+        "name_en": "Blade of Silverlaine",
+        "item_level": 26,
+        "required_level": 21,
+        "tooltip_lines": 8,
+        "evidence_url": "https://www.60.tools/items/273637-blade-of-silverlaine",
+        "observed_build": "1.60.1.70425",
+        "acquisition_kind": "boss",
+        "origin_en": "Reported beta loot · Baron Silverlaine"
+      },
+      {
+        "id": 273805,
+        "name_en": "Blackrock Harness",
+        "item_level": 26,
+        "required_level": 21,
+        "tooltip_lines": 9,
+        "evidence_url": "https://www.60.tools/items/273805-blackrock-harness",
+        "observed_build": "1.60.1.70425",
+        "acquisition_kind": "boss",
+        "origin_en": "Reported beta loot · Targorr the Dread"
+      },
+      {
+        "id": 273808,
+        "name_en": "Bridgebreaker Bindings",
+        "item_level": 29,
+        "required_level": 24,
+        "tooltip_lines": 9,
+        "evidence_url": "https://www.60.tools/items/273808-bridgebreaker-bindings",
+        "observed_build": "1.60.1.70425",
+        "acquisition_kind": "boss",
+        "origin_en": "Reported beta loot · Kam Deepfury"
+      },
+      {
+        "id": 273840,
+        "name_en": "Cursed Murloc Eye",
+        "item_level": 29,
+        "required_level": 24,
+        "tooltip_lines": 7,
+        "evidence_url": "https://www.60.tools/items/273840-cursed-murloc-eye",
+        "observed_build": "1.60.1.70425",
+        "acquisition_kind": "boss",
+        "origin_en": "Reported beta loot · Gelihast"
+      }
+    ]
+  }
 }

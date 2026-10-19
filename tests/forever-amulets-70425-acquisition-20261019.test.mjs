@@ -86,10 +86,10 @@ test("bilingual source panel links proof of tooltip, not purported loot, and ref
  assert.match(js,/Beta item data/);
  assert.match(js,/!localSources\.length&&!unknownAcquisition/);
  assert.match(js,/localSources\.length\|\|unknownAcquisition/);
- assert.match(gear,/items-forever\.json\?v=20261019-all22-70425/);
+ assert.match(gear,/items-forever\.json\?v=20261019-lowlevel19-70425/);
  for(const path of ["equipements/index.html","en/equipements/index.html"]){
   const html=read(path);
-  assert.ok(html.includes("gear-data.js?v=20261019-all22-70425"),path);
+  assert.ok(html.includes("gear-data.js?v=20261019-lowlevel19-70425"),path);
   assert.ok(html.includes("items-v3.js?v=20261019-rare-patrol"),path);
  }
 });
