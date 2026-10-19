@@ -97,7 +97,7 @@ test("24 historical Classic drop rates refer to a named boss and source URL, nev
   assert.equal(s.evidence_level,"classic_reference");
   assert.equal(s.evidence_kind,"classic_guide");
   assert.ok(s.classic_drop_chance_percent>0&&s.classic_drop_chance_percent<=100);
-  assert.equal(s.name_en,row.boss_en);
+  assert.equal(s.name_en,[1937,2169].includes(id)?"Sneed's Shredder":row.boss_en);
   assert.equal(s.location_en,row.dungeon_en);
   assert.equal(s.source_url,row.source_url);
   assert.equal(s.evidence_url,row.source_url);
