@@ -35,12 +35,12 @@ test("22 sourced Forever rare equipment entries add unique and accurately copied
 });
 test("equipment search renders reported rare names in FR/EN and excludes non-equipment",()=>{
  assert.match(read("assets/items-v3.js"),/en&&i\.origin_en\?i\.origin_en:displayOrigin\(i\.origin\)/);
- assert.match(read("assets/gear-data.js"),/items-forever\.json\?v=20261019-all22-70425/);
+ assert.match(read("assets/gear-data.js"),/items-forever\.json\?v=20261019-lowlevel19-70425/);
  for(const id of [18610,1965,282716,286750,286755])assert.ok(ids.includes(id),String(id));
  for(const id of [5179,248004,247862,284666,284165,255007,284400])assert.ok(!ids.includes(id),String(id));
  for(const path of ["equipements/index.html","en/equipements/index.html"]){
   const html=read(path);
-  assert.match(html,/gear-data\.js\?v=20261019-all22-70425/);
+  assert.match(html,/gear-data\.js\?v=20261019-lowlevel19-70425/);
   assert.match(html,/items-v3\.js\?v=20261019-rare-patrol/);
  }
  assert.equal(rares.rares.flatMap(r=>r.loot).length,114);
