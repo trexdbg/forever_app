@@ -42,6 +42,35 @@ function loadAcquisitionIndex(){
   }).catch(e=>{sourcePromise=null;throw e});
  return sourcePromise;
 }
+// An item page / Classic loot table is not proof of its Forever drop rate.
+const sourceTypeName=en?{boss:"Boss",event:"Event",chest:"Chest",quest:"Quest"}:{boss:"Boss",event:"Événement",chest:"Coffre",quest:"Quête"};
+const classicRate=source=>Number.isFinite(source.classic_drop_chance_percent)&&source.kind!=="quest"
+ ?String(source.classic_drop_chance_percent).replace(".",en?".":",")+" % Classic"+(source.conditional?(en?" · conditional":" · conditionnel"):""):"";
+function curatedSources(item){
+ return Array.isArray(item.acquisition_sources)?item.acquisition_sources.filter(x=>
+  x&&x.evidence_level==="classic_reference"&&["boss","event","chest","quest"].includes(x.kind)&&
+  typeof x.name_en==="string"&&x.name_en.length>0&&
+  typeof x.source_url==="string"&&x.source_url.startsWith("https://")
+ ):[];
+}
+const sourceName=s=>en?s.name_en:(s.name_fr||s.name_en);
+const sourcePlace=s=>en?s.location_en:(s.location_fr||s.location_en);
+function appendCuratedSources(region,records){
+ if(!records.length)return;
+ const list=document.createElement("ul");list.className="item-acquisition-links";
+ for(const rec of records){
+  const line=document.createElement("li"),name=document.createElement("span");
+  name.textContent=[sourceTypeName[rec.kind]+" · "+sourceName(rec),sourcePlace(rec),rec.faction,classicRate(rec)].filter(Boolean).join(" · ");
+  const link=document.createElement("a");link.className="item-acquisition-reference";link.href=rec.source_url;
+  link.target="_blank";link.rel="noopener noreferrer";link.textContent=acquisitionLabels.reference;
+  line.append(name,link);list.append(line);
+ }
+ region.append(list);
+ const note=document.createElement("p");note.className="source-note item-acquisition-footnote";
+ note.textContent=en?"Classic 1.12 estimates only; not verified Forever loot. Quest rewards have no drop rate.":"Taux indicatifs Classic 1.12, non vérifiés sur Forever. Les récompenses de quête n'ont pas de taux de butin.";
+ region.append(note);
+}
+
 function clearAcquisitionRow(){
  if(expandedRow){expandedRow.remove();expandedRow=null}
  if(expandedButton){expandedButton.setAttribute("aria-expanded","false");expandedButton=null}
@@ -53,6 +82,7 @@ async function toggleAcquisition(item,row,button){
  detailRow.id="item-acquisition-"+item.id;
  const cell=document.createElement("td");cell.colSpan=5;detailRow.append(cell);
  const region=document.createElement("div");region.className="item-acquisition-panel";cell.append(region);
+ const localSources=curatedSources(item);appendCuratedSources(region,localSources);
  const statusNode=document.createElement("p");statusNode.textContent=acquisitionLabels.loading;statusNode.setAttribute("role","status");region.append(statusNode);
  row.after(detailRow);expandedRow=detailRow;expandedButton=button;
  button.setAttribute("aria-expanded","true");
@@ -61,9 +91,9 @@ async function toggleAcquisition(item,row,button){
   const lookup=await loadAcquisitionIndex();
   if(!detailRow.isConnected||expandedRow!==detailRow)return;
   const matches=(lookup.get(item.id)||[]).filter(s=>s.evidence_level!=="unverified");
-  region.replaceChildren();
+  statusNode.remove();
   if(!matches.length){
-   const empty=document.createElement("p");empty.textContent=acquisitionLabels.empty;region.append(empty);
+   if(!localSources.length){const empty=document.createElement("p");empty.textContent=acquisitionLabels.empty;region.append(empty)}
    return;
   }
   const list=document.createElement("ul");list.className="item-acquisition-links";
@@ -82,7 +112,10 @@ async function toggleAcquisition(item,row,button){
   }
   region.append(list);
  }catch{
-  if(detailRow.isConnected&&expandedRow===detailRow)statusNode.textContent=acquisitionLabels.failure;
+  if(detailRow.isConnected&&expandedRow===detailRow){
+   if(localSources.length)statusNode.remove();
+   else statusNode.textContent=acquisitionLabels.failure;
+  }
  }
 }
 
@@ -146,7 +179,8 @@ function matchesBase(item){
  if(slot.value!=="all"&&!service.compatible(item.slot,slot.value))return false;
  if(armor.value!=="all"&&window.ForeverEquipmentRules?.armorType(item)!==armor.value)return false;
  const q=search.value.trim().toLocaleLowerCase();
- return !q||String(item.id)===q||((window.ForeverItemLocale?.aliases(item)||item.name)+" "+(item.origin||"")+" "+displayOrigin(item.origin||"")).toLocaleLowerCase().includes(q);
+ const references=curatedSources(item).map(x=>x.name_en+" "+(x.name_fr||"")+" "+(x.location_en||"")+" "+(x.location_fr||"")).join(" ");
+ return !q||String(item.id)===q||((window.ForeverItemLocale?.aliases(item)||item.name)+" "+(item.origin||"")+" "+displayOrigin(item.origin||"")+" "+references).toLocaleLowerCase().includes(q);
 }
 function matches(item){return matchesBase(item)&&(!selection.size||selection.has(item.quality))}
 function drawQuality(){
@@ -218,7 +252,14 @@ function render(){
  rowText(row,slotLabels[i.slot]||i.slot);
  rowText(row,numericLevel(i,"itemLevel")??"—").className="item-catalogue-numeric";
  rowText(row,numericLevel(i,"requiredLevel")??"—").className="item-catalogue-numeric";
- rowText(row,(en&&i.origin_en?i.origin_en:displayOrigin(i.origin))|| (sourceType(i)==="forever"?tr.badgeForever:tr.badgeClassic));
+ const originCell=rowText(row,(en&&i.origin_en?i.origin_en:displayOrigin(i.origin))|| (sourceType(i)==="forever"?tr.badgeForever:tr.badgeClassic));
+ const details=curatedSources(i);
+ if(details.length){
+  const first=details[0],inline=document.createElement("span");
+  inline.className="item-acquisition-inline";
+  inline.textContent=sourceTypeName[first.kind]+" · "+sourceName(first)+(classicRate(first)?" · "+classicRate(first):"")+(details.length>1?" · +"+(details.length-1):"");
+  originCell.append(inline);
+ }
  table.append(row);
  window.ForeverItemTooltip?.bind(row,i);
  }
