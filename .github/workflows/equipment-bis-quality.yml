@@ -10,6 +10,8 @@ on:
       - 'data/bis*.json'
       - 'data/items*.json'
       - 'data/dungeon-gear-audit-20261019.json'
+      - 'data/forever-equipment-acquisition-gaps-20261019.json'
+      - 'tests/forever-amulets-70425-acquisition-20261019.test.mjs'
       - 'tests/equipment-acquisition-details-20261019.test.mjs'
       - 'tests/equipment-acquisition-wave2-20261019.test.mjs'
       - 'tests/equipment-indexed-sources-20261019.test.mjs'
@@ -56,4 +58,5 @@ jobs:
           node --test tests/equipment-indexed-sources-20261019.test.mjs
           node --test tests/dungeon-gear-audit-20261019.test.mjs
           node --test tests/dungeon-gear-final-42-20261019.test.mjs
+          node --test tests/forever-amulets-70425-acquisition-20261019.test.mjs
           node --test tests/t0-set-bonuses.test.mjs
