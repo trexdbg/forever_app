@@ -43,12 +43,12 @@ function loadAcquisitionIndex(){
  return sourcePromise;
 }
 // An item page / Classic loot table is not proof of its Forever drop rate.
-const sourceTypeName=en?{boss:"Boss",event:"Event",chest:"Chest",quest:"Quest"}:{boss:"Boss",event:"Événement",chest:"Coffre",quest:"Quête"};
+const sourceTypeName=en?{boss:"Boss",event:"Event",chest:"Chest",quest:"Quest",craft:"Craft",world_drop:"World drop",legendary:"Legendary"}:{boss:"Boss",event:"Événement",chest:"Coffre",quest:"Quête",craft:"Fabrication",world_drop:"Butin mondial",legendary:"Légendaire"};
 const classicRate=source=>Number.isFinite(source.classic_drop_chance_percent)&&source.kind!=="quest"
  ?String(source.classic_drop_chance_percent).replace(".",en?".":",")+" % Classic"+(source.conditional?(en?" · conditional":" · conditionnel"):""):"";
 function curatedSources(item){
  return Array.isArray(item.acquisition_sources)?item.acquisition_sources.filter(x=>
-  x&&x.evidence_level==="classic_reference"&&["boss","event","chest","quest"].includes(x.kind)&&
+  x&&["classic_reference","documented_forever"].includes(x.evidence_level)&&["boss","event","chest","quest","craft","world_drop","legendary"].includes(x.kind)&&
   typeof x.name_en==="string"&&x.name_en.length>0&&
   typeof x.source_url==="string"&&x.source_url.startsWith("https://")
  ):[];
@@ -60,14 +60,21 @@ function appendCuratedSources(region,records){
  const list=document.createElement("ul");list.className="item-acquisition-links";
  for(const rec of records){
   const line=document.createElement("li"),name=document.createElement("span");
-  name.textContent=[sourceTypeName[rec.kind]+" · "+sourceName(rec),sourcePlace(rec),rec.faction,classicRate(rec)].filter(Boolean).join(" · ");
+  const evidenceType=rec.evidence_level==="documented_forever"?(en?"Forever · client documented":"Forever · client documenté"):"Classic";
+  name.textContent=[sourceTypeName[rec.kind]+" · "+sourceName(rec),sourcePlace(rec),rec.faction,classicRate(rec),evidenceType].filter(Boolean).join(" · ");
+  const recipe=en?rec.recipe_source_en:(rec.recipe_source_fr||rec.recipe_source_en);
+  const details=en?rec.detail_en:(rec.detail_fr||rec.detail_en);
+  if(recipe){const extra=document.createElement("small");extra.className="item-acquisition-extra";extra.textContent=recipe;name.append(extra)}
+  if(details){const extra=document.createElement("small");extra.className="item-acquisition-extra";extra.textContent=details;name.append(extra)}
   const link=document.createElement("a");link.className="item-acquisition-reference";link.href=rec.source_url;
   link.target="_blank";link.rel="noopener noreferrer";link.textContent=acquisitionLabels.reference;
   line.append(name,link);list.append(line);
  }
  region.append(list);
  const note=document.createElement("p");note.className="source-note item-acquisition-footnote";
- note.textContent=en?"Classic 1.12 estimates only; not verified Forever loot. Quest rewards have no drop rate.":"Taux indicatifs Classic 1.12, non vérifiés sur Forever. Les récompenses de quête n'ont pas de taux de butin.";
+ note.textContent=en
+  ?"Rates are Classic references for each listed boss, not Forever probabilities. Crafting pages describe Forever client recipes, not guaranteed live availability. Quests, world drops and completed legendaries have no invented rate."
+  :"Les taux sont des références Classic par boss, pas des probabilités Forever. Les recettes proviennent du client Forever sans garantir leur disponibilité en jeu. Aucun taux inventé pour les quêtes, butins mondiaux ou légendaires.";
  region.append(note);
 }
 
@@ -179,7 +186,7 @@ function matchesBase(item){
  if(slot.value!=="all"&&!service.compatible(item.slot,slot.value))return false;
  if(armor.value!=="all"&&window.ForeverEquipmentRules?.armorType(item)!==armor.value)return false;
  const q=search.value.trim().toLocaleLowerCase();
- const references=curatedSources(item).map(x=>x.name_en+" "+(x.name_fr||"")+" "+(x.location_en||"")+" "+(x.location_fr||"")).join(" ");
+ const references=curatedSources(item).map(x=>[x.name_en,x.name_fr,x.location_en,x.location_fr,x.recipe_source_en,x.recipe_source_fr].filter(Boolean).join(" ")).join(" ");
  return !q||String(item.id)===q||((window.ForeverItemLocale?.aliases(item)||item.name)+" "+(item.origin||"")+" "+displayOrigin(item.origin||"")+" "+references).toLocaleLowerCase().includes(q);
 }
 function matches(item){return matchesBase(item)&&(!selection.size||selection.has(item.quality))}
