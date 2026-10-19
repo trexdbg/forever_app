@@ -32,12 +32,12 @@ test("all 83 dungeon loot rows account for exactly 82 new item IDs and one dupli
  for(const x of audit.items)assert.ok(!baseline.has(x.id),"Never shadow a previously catalogued item: "+x.id);
 });
 
-test("only 31 independently sourced beta-server item metadata records are public; 51 remain quarantined",()=>{
- assert.equal(ready.length,31);
- assert.equal(missing.length,51);
- assert.equal(audit.counts.metadata_vetted,31);
- assert.equal(audit.counts.metadata_pending,51);
- assert.equal(audit.counts.classic_1_12_odds_documented,24);
+test("only 40 independently sourced beta-server item metadata records are public; 42 remain quarantined",()=>{
+ assert.equal(ready.length,40);
+ assert.equal(missing.length,42);
+ assert.equal(audit.counts.metadata_vetted,40);
+ assert.equal(audit.counts.metadata_pending,42);
+ assert.equal(audit.counts.classic_1_12_odds_documented,33);
  for(const row of ready){
   assert.equal(row.audit_status,"ready_for_catalogue");
   assert.ok(Number.isSafeInteger(row.id)&&row.id>0);
@@ -89,9 +89,9 @@ test("beta 70058 differs materially from Classic for key pre-30 items; no Classi
  }
 });
 
-test("24 historical Classic drop rates refer to a named boss and source URL, never to Forever",()=>{
+test("33 historical Classic drop rates refer to a named boss and source URL, never to Forever",()=>{
  const drops=ready.flatMap(x=>(x.acquisition_sources||[]).map(s=>({id:x.id,row:x,s})));
- assert.equal(drops.length,24);
+ assert.equal(drops.length,33);
  for(const {id,row,s} of drops){
   assert.equal(s.kind,"boss");
   assert.equal(s.evidence_level,"classic_reference");
