@@ -101,6 +101,6 @@ test("FR/EN interface distinguishes Classic, indicative community sources and un
  assert.match(code,/i\.source_status==="forever_beta_server_reported"/);
  assert.match(code,/\["common","uncommon","rare"\]/);
  for(const path of ["equipements/index.html","en/equipements/index.html"]){
-  assert.ok(read(path).includes("items-v3.js?v=20261019-acquisition-unknown"),path);
+  assert.ok(read(path).includes("items-v3.js?v=20261019-rare-patrol"),path);
  }
 });
