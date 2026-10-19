@@ -143,6 +143,19 @@ async function toggleAcquisition(item,row,button){
  const cell=document.createElement("td");cell.colSpan=5;detailRow.append(cell);
  const region=document.createElement("div");region.className="item-acquisition-panel";cell.append(region);
  const localSources=curatedSources(item);appendCuratedSources(region,localSources);
+ // An item may be documented in the beta client without a proven means of
+ // obtaining it. The evidence link verifies its tooltip, NOT a drop source.
+ const unknownAcquisition=item.acquisition_status==="unknown"
+  ?(en?item.acquisition_note_en:item.acquisition_note_fr):null;
+ if(typeof unknownAcquisition==="string"&&unknownAcquisition.trim()){
+  const notice=document.createElement("p");notice.className="source-note item-acquisition-footnote";
+  notice.textContent=unknownAcquisition;region.append(notice);
+  if(typeof item.evidence_url==="string"&&/^https:\/\/[^\s/]+\//.test(item.evidence_url)){
+   const evidence=document.createElement("a");evidence.className="item-acquisition-reference";
+   evidence.href=item.evidence_url;evidence.target="_blank";evidence.rel="noopener noreferrer";
+   evidence.textContent=en?"Beta item data ↗":"Fiche de l’objet bêta ↗";region.append(evidence);
+  }
+ }
  const disputedRate=item.rate_conflict&&(en?item.rate_conflict.note_en:item.rate_conflict.note_fr);
  const disputedSource=en?item.source_discrepancy_en:item.source_discrepancy_fr;
  if(disputedRate||disputedSource){
@@ -159,7 +172,7 @@ async function toggleAcquisition(item,row,button){
   const matches=item.suppress_indexed_source?[]:(lookup.get(item.id)||[]).filter(s=>s.evidence_level!=="unverified");
   statusNode.remove();
   if(!matches.length){
-   if(!localSources.length){const empty=document.createElement("p");empty.textContent=acquisitionLabels.empty;region.append(empty)}
+   if(!localSources.length&&!unknownAcquisition){const empty=document.createElement("p");empty.textContent=acquisitionLabels.empty;region.append(empty)}
    return;
   }
   const list=document.createElement("ul");list.className="item-acquisition-links";
@@ -179,7 +192,7 @@ async function toggleAcquisition(item,row,button){
   region.append(list);
  }catch{
   if(detailRow.isConnected&&expandedRow===detailRow){
-   if(localSources.length)statusNode.remove();
+   if(localSources.length||unknownAcquisition)statusNode.remove();
    else statusNode.textContent=acquisitionLabels.failure;
   }
  }
