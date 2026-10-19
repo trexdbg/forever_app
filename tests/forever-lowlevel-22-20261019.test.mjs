@@ -64,7 +64,7 @@ test("leveling upgrades reproduce class-specific effects and avoid mixing bindin
  assert.equal(byId.get(281251).requiredLevel,null);
  assert.equal(byId.get(270097).requiredLevel,null);
  assert.equal(byId.get(276340).requiredLevel,null);
- assert.equal(audit.metrics.records_with_fewer_than_five_tooltip_lines,57);
+ assert.equal(audit.metrics.records_with_fewer_than_five_tooltip_lines,38);
 });
 
 test("only two quests are item-page documented; unknown remains unknown",()=>{
@@ -113,14 +113,14 @@ test("Alliance Outrunner rod cites the patrol and retains the Aean/Hannah confli
 
 test("FR/EN pages use the refreshed data and display the rare-patrol attribution discreetly",()=>{
  const gear=read("assets/gear-data.js"),itemsJs=read("assets/items-v3.js");
- assert.match(gear,/items-forever\.json\?v=20261019-all22-70425/);
+ assert.match(gear,/items-forever\.json\?v=20261019-lowlevel19-70425/);
  assert.match(itemsJs,/rare:"Rare patrol"/);
  assert.match(itemsJs,/rare:"Patrouille rare"/);
  assert.match(itemsJs,/disputedPatrol/);
  assert.match(itemsJs,/\["boss","rare","event"/);
  for(const path of ["equipements/index.html","en/equipements/index.html"]){
   const html=read(path);
-  assert.ok(html.includes("gear-data.js?v=20261019-all22-70425"),path);
+  assert.ok(html.includes("gear-data.js?v=20261019-lowlevel19-70425"),path);
   assert.ok(html.includes("items-v3.js?v=20261019-rare-patrol"),path);
  }
 });
