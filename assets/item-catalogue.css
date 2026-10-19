@@ -166,3 +166,6 @@ body[data-page="items"] .item-acquisition-footnote{margin:8px 0 0;font-size:11px
 body[data-page="items"] .item-acquisition-links li>span{overflow-wrap:anywhere;min-width:0}
 
 body[data-page="items"] .item-acquisition-extra{display:block;margin:3px 0 0;font-size:11px;line-height:1.45;color:#b4cbb9}
+
+/* An evidence-labelled boss/rare hint may wrap but must not enlarge the row excessively. */
+body[data-page="items"] .item-catalogue-origin .item-acquisition-inline{font-size:11px;line-height:1.35;overflow-wrap:anywhere}

@@ -19,7 +19,8 @@ const rowText=(row,value)=>{const cell=document.createElement("td");cell.textCon
 
 /* On-demand item acquisition links: documentary Forever first, Classic fallback.
    An indexed relation is not proof of in-game sale, drop, or craft. */
-let sourcePromise=null,expandedRow=null,expandedButton=null;
+let sourcePromise=null,sourceIndex=null,expandedRow=null,expandedButton=null;
+let renderedItems=new Map();
 const acquisitionLabels=en?{
  button:"Where to find",loading:"Loading acquisition references…",
  empty:"No indexed seller, boss, rare or recipe for this item. ",
@@ -38,7 +39,8 @@ function loadAcquisitionIndex(){
   .then(r=>{if(!r.ok)throw Error("Acquisition HTTP "+r.status);return r.json()})
   .then(db=>{
    if(db.schema_version!==1||!Array.isArray(db.items))throw Error("Invalid acquisition index");
-   return new Map(db.items.map(x=>[x.id,Array.isArray(x.sources)?x.sources:[]]));
+   sourceIndex=new Map(db.items.map(x=>[x.id,Array.isArray(x.sources)?x.sources:[]]));
+   return sourceIndex;
   }).catch(e=>{sourcePromise=null;throw e});
  return sourcePromise;
 }
@@ -76,6 +78,53 @@ function appendCuratedSources(region,records){
   ?"Rates are Classic references for each listed boss, not Forever probabilities. Crafting pages describe Forever client recipes, not guaranteed live availability. Quests, world drops and completed legendaries have no invented rate."
   :"Les taux sont des références Classic par boss, pas des probabilités Forever. Les recettes proviennent du client Forever sans garantir leur disponibilité en jeu. Aucun taux inventé pour les quêtes, butins mondiaux ou légendaires.";
  region.append(note);
+}
+
+// The common source index covers curated, archived and beta items by numeric ID.
+// It supplies navigation and evidence status only; it never supplies drop odds.
+const evidenceRank={confirmed_in_game:0,documented_forever:1,datamined:2,classic_reference:3};
+const sourceRank={boss:0,rare:1,recipe:2,merchant:3};
+function indexedSources(item){
+ return (sourceIndex?.get(item.id)||[]).filter(source=>
+  source&&Object.hasOwn(evidenceRank,source.evidence_level)&&
+  Object.hasOwn(sourceRank,source.kind)&&
+  typeof source.name_en==="string"&&source.name_en.trim()&&
+  typeof source.href==="string"&&/^\/(marchands|rare|donjons|metiers)\/\?/.test(source.href)
+ ).sort((a,b)=>evidenceRank[a.evidence_level]-evidenceRank[b.evidence_level]
+  ||sourceRank[a.kind]-sourceRank[b.kind]);
+}
+function firstSource(item){
+ const curated=curatedSources(item);
+ if(curated.length)return {record:curated[0],more:curated.length-1,indexed:false};
+ const indexed=indexedSources(item);
+ return indexed.length?{record:indexed[0],more:indexed.length-1,indexed:true}:null;
+}
+function sourceHintText(item){
+ const choice=firstSource(item);
+ if(!choice)return "";
+ const s=choice.record;
+ if(!choice.indexed)
+  return [sourceTypeName[s.kind]+" · "+sourceName(s),classicRate(s),
+   s.evidence_level==="documented_forever"?(en?"Forever · client":"Forever · client"):"Classic",
+   choice.more>0?"+"+choice.more:null].filter(Boolean).join(" · ");
+ const status=s.evidence_level==="classic_reference"?"Classic"
+  :s.evidence_level==="confirmed_in_game"?(en?"Forever · in-game":"Forever · en jeu")
+  :s.evidence_level==="documented_forever"?(en?"Forever · documented":"Forever · documenté")
+  :(en?"Forever · client":"Forever · client");
+ return [(acquisitionLabels.kind[s.kind]||s.kind)+" · "+(en?s.name_en:(s.name_fr||s.name_en)),
+  status,choice.more>0?"+"+choice.more:null].filter(Boolean).join(" · ");
+}
+function updateOriginHint(cell,item){
+ cell.querySelector(".item-acquisition-inline")?.remove();
+ const text=sourceHintText(item);
+ if(!text)return;
+ const hint=document.createElement("span");hint.className="item-acquisition-inline";hint.textContent=text;
+ cell.append(hint);
+}
+function refreshOriginHints(){
+ for(const [id,entry] of renderedItems){
+  if(entry.cell.isConnected)updateOriginHint(entry.cell,entry.item);
+ }
 }
 
 function clearAcquisitionRow(){
@@ -186,7 +235,8 @@ function matchesBase(item){
  if(slot.value!=="all"&&!service.compatible(item.slot,slot.value))return false;
  if(armor.value!=="all"&&window.ForeverEquipmentRules?.armorType(item)!==armor.value)return false;
  const q=search.value.trim().toLocaleLowerCase();
- const references=curatedSources(item).map(x=>[x.name_en,x.name_fr,x.location_en,x.location_fr,x.recipe_source_en,x.recipe_source_fr].filter(Boolean).join(" ")).join(" ");
+ const references=curatedSources(item).map(x=>[x.name_en,x.name_fr,x.location_en,x.location_fr,x.recipe_source_en,x.recipe_source_fr].filter(Boolean).join(" ")).join(" ")
+  +" "+indexedSources(item).map(x=>[x.name_en,x.name_fr,x.context_en,x.context_fr].filter(Boolean).join(" ")).join(" ");
  return !q||String(item.id)===q||((window.ForeverItemLocale?.aliases(item)||item.name)+" "+(item.origin||"")+" "+displayOrigin(item.origin||"")+" "+references).toLocaleLowerCase().includes(q);
 }
 function matches(item){return matchesBase(item)&&(!selection.size||selection.has(item.quality))}
@@ -241,7 +291,7 @@ function render(){
  drawQuality();
  const rows=items.filter(matches).sort(compareItems);
  updateSortHeaders();
- table.replaceChildren();
+ table.replaceChildren();renderedItems=new Map();
  count.textContent=rows.length+" "+(rows.length===1?tr.item:tr.items)+(total!==null&&(status==="all"||status==="classic")?" · "+total.toLocaleString(en?"en":"fr")+" Classic ("+tr.loaded+" : "+classic.length+")":"");
  if(!rows.length){const line=document.createElement("tr");rowText(line,loading?tr.loading:tr.noresult).colSpan=5;table.append(line)}
  for(const i of rows.slice(0,visibleLimit)){const row=document.createElement("tr"),name=rowText(row,"");name.className="item-v2-name";const imgSrc=imageUrl(i);
@@ -260,13 +310,9 @@ function render(){
  rowText(row,numericLevel(i,"itemLevel")??"—").className="item-catalogue-numeric";
  rowText(row,numericLevel(i,"requiredLevel")??"—").className="item-catalogue-numeric";
  const originCell=rowText(row,(en&&i.origin_en?i.origin_en:displayOrigin(i.origin))|| (sourceType(i)==="forever"?tr.badgeForever:tr.badgeClassic));
- const details=curatedSources(i);
- if(details.length){
-  const first=details[0],inline=document.createElement("span");
-  inline.className="item-acquisition-inline";
-  inline.textContent=sourceTypeName[first.kind]+" · "+sourceName(first)+(classicRate(first)?" · "+classicRate(first):"")+(details.length>1?" · +"+(details.length-1):"");
-  originCell.append(inline);
- }
+ originCell.className="item-catalogue-origin";
+ updateOriginHint(originCell,i);
+ renderedItems.set(i.id,{item:i,cell:originCell});
  table.append(row);
  window.ForeverItemTooltip?.bind(row,i);
  }
@@ -377,13 +423,16 @@ const options=[...slot.options];slot.replaceChildren(options[0]);
 for(const [id,label] of Object.entries(slotLabels)){const o=document.createElement("option");o.value=id;o.textContent=label;slot.append(o)}
 (async()=>{
  try{
- const [catalog,archive,observations,seed]=await Promise.all([
+ const [catalog,archive,observations,seed,leveling]=await Promise.all([
  fetch("/data/items.json",{credentials:"omit"}).then(r=>r.ok?r.json():{items:[]}).catch(()=>({items:[]})),
  fetch("/data/items-classic-cache.json?v=20261010-1",{credentials:"omit"}).then(r=>r.ok?r.json():{items:[]}).catch(()=>({items:[]})),
  fetch("/data/bis-niveaux-forever-observed.json?v=20261010-1",{credentials:"omit"}).then(r=>r.ok?r.json():{items:[]}).catch(()=>({items:[]})),
- service.loadForever()
+ service.loadForever(),
+ fetch("/data/bis-niveaux-classic.json?v=20261019-source-index",{credentials:"omit"}).then(r=>r.ok?r.json():{items:[]}).catch(()=>({items:[]}))
  ]);
- local=[...(Array.isArray(catalog.items)?catalog.items.filter(i=>i.verified===true&&Number.isInteger(i.id)):[]),...(Array.isArray(archive.items)?archive.items.filter(i=>i.verified===true&&Number.isInteger(i.id)):[])].map(normalizeLocal);
+ local=[...(Array.isArray(catalog.items)?catalog.items.filter(i=>i.verified===true&&Number.isInteger(i.id)):[]),
+  ...(Array.isArray(leveling.items)?leveling.items.filter(i=>Number.isInteger(i.id)&&i.id>0&&i.source_status==="classic_curated_leveling"):[]),
+  ...(Array.isArray(archive.items)?archive.items.filter(i=>i.verified===true&&Number.isInteger(i.id)):[])].map(normalizeLocal);
  forever=seed;observed=(Array.isArray(observations.items)?observations.items:[]).filter(i=>Number.isInteger(i.id)&&i.id>0&&typeof i.name==="string"&&i.source_status==="forever_beta_observed").map(normalizeLocal);source.replaceChildren();source.append(document.createTextNode(en?"Sources: ":"Sources : "));
 const aForever=document.createElement("a");aForever.href="https://www.wowhead.com/forever/items";aForever.target="_blank";aForever.rel="noopener noreferrer";aForever.textContent="Wowhead Forever";
 const aClassic=document.createElement("a");aClassic.href="https://wowdb.assemblee-defias.fr/";aClassic.target="_blank";aClassic.rel="noopener noreferrer";aClassic.textContent="WoWDB des Défias";
@@ -391,5 +440,11 @@ const aObserved=document.createElement("a");aObserved.href="https://foreverchang
 source.append(aForever,document.createTextNode(" · "),aObserved,document.createTextNode(" · "),aClassic);
  }catch(e){error=tr.unavailable}
  queue();render();
+ // Load once for direct boss / rare / merchant clues in archive rows.
+ // Preserve any open source panel when the asynchronous lookup completes.
+ loadAcquisitionIndex().then(()=>{
+  if(search.value.trim()&&!expandedRow)render();
+  else refreshOriginHints();
+ }).catch(()=>{}); // unavailable index must never blank the equipment catalogue
 })();
 })();
