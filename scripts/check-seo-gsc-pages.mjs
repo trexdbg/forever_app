@@ -15,6 +15,8 @@ const pairs=[
   ["guides/boss-forever-city-of-dalaran-atrexis-the-grave-knight/","en/guides/forever-boss-city-of-dalaran-atrexis-the-grave-knight/"],
   ["guides/boss-forever-city-of-dalaran-archmage-s-shade/","en/guides/forever-boss-city-of-dalaran-archmage-s-shade/"],
   ["guides/tube-en-bronze/","en/guides/bronze-tube/"],
+  ["guides/maitres-armes/","en/guides/weapon-masters/"],
+  ["guides/boss-forever-city-of-dalaran-archmage-s-shade/","en/guides/forever-boss-city-of-dalaran-archmage-s-shade/"],
   ["guides/bis-forever-niveau-30/","en/guides/forever-level-30-bis-gear/"]
 ];
 const capture=(s,re,label,path)=>{
@@ -77,4 +79,27 @@ for(const [frPath,enPath] of pairs){
     checked++;
   }
 }
-console.log("GSC-priority SEO guides:",checked,"bilingual pages OK.");
+// Protect crawlable equipment landing-page snippets and links to the high-performing level-30 guide.
+for(const [lang,path,guidePath] of [
+  ["fr","equipements/index.html","/guides/bis-forever-niveau-30/"],
+  ["en","en/equipements/index.html","/en/guides/forever-level-30-bis-gear/"]
+]){
+  const html=readFileSync(join(root,path),"utf8");
+  const title=decode(capture(html,/<title>([^<]+)<\/title>/,"equipment title",path));
+  const desc=decode(capture(html,/<meta name="description" content="([^"]+)">/,"equipment description",path));
+  assert.ok(title.length>=35&&title.length<=85,path+": equipment title length");
+  assert.ok(desc.length>=90&&desc.length<=185,path+": equipment description length");
+  assert.match(title,/Forever/i,path+": missing Forever search intent");
+  assert.equal(decode(capture(html,/<meta property="og:title" content="([^"]+)">/,"og:title",path)),title);
+  assert.equal(decode(capture(html,/<meta property="og:description" content="([^"]+)">/,"og:description",path)),desc);
+  const schema=JSON.parse(capture(html,/<script type="application\/ld\+json">([\s\S]*?)<\/script>/,"equipment JSON-LD",path));
+  const graph=schema["@graph"]||[schema];
+  const page=graph.find(x=>x["@type"]==="WebPage"),app=graph.find(x=>x["@type"]==="WebApplication");
+  assert.ok(page&&app,path+": missing WebPage or WebApplication");
+  assert.equal(decode(page.name),title,path+": title and WebPage name differ");
+  assert.equal(decode(page.description),desc,path+": WebPage description differs");
+  assert.equal(decode(app.description),desc,path+": WebApplication description differs");
+  assert.equal(page.inLanguage,lang,path+": JSON-LD language mismatch");
+  assert.ok(html.includes('href="'+guidePath+'"'),path+": missing level-30 guide");
+}
+console.log("GSC-priority SEO guides:",checked,"bilingual pages and equipment snippets OK.");
