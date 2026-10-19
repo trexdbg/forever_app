@@ -85,7 +85,7 @@ test("FR/EN equipment pages link T0 pieces without injecting unverified loot det
  for(const path of ["equipements/index.html","en/equipements/index.html"]){
   const html=read(path);
   for(const asset of ["item-catalogue.css","item-tooltips.js","items-v3.js"]){
-   const version=asset==="item-tooltips.js"?"20261018-t0-piece-links":asset==="items-v3.js"?"20261019-acquisition-unknown":"20261019-source-hints";
+   const version=asset==="item-tooltips.js"?"20261018-t0-piece-links":asset==="items-v3.js"?"20261019-rare-patrol":"20261019-source-hints";
    assert.ok(html.includes(asset+"?v="+version),path+" "+asset);
   }
  }
