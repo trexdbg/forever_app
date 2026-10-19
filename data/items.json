@@ -416,7 +416,27 @@
       "verified_meaning": "classic_reference_only",
       "level": null,
       "source_status": "classic_reference",
-      "armorType": "plate"
+      "armorType": "plate",
+      "acquisition_sources": [
+        {
+          "kind": "craft",
+          "name_en": "Blacksmithing (300)",
+          "name_fr": "Forge (300)",
+          "location_en": "Blacksmithing",
+          "location_fr": "Forge",
+          "detail_en": "Profession craft (client recipe, not a direct boss drop)",
+          "detail_fr": "Objet fabriqué (recette du client, pas un butin direct)",
+          "recipe_source_en": "Plans: Lionheart Helm — multiple dungeons",
+          "recipe_source_fr": "Plans: Lionheart Helm — plusieurs donjons",
+          "evidence_level": "documented_forever",
+          "source_url": "https://foreverchanges.pro/item/12640",
+          "evidence_url": "https://foreverchanges.pro/item/12640",
+          "observed_at": "2026-10-19",
+          "observed_build": "1.60.1.70425",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Lionheart Helm (item 12640): recipe / craft by Blacksmithing (300) in Blacksmithing. A Forever-specific community item page documents the profession recipe in client data; this does not prove the player can craft or acquire it on the live Forever server. No loot chance is established for the crafted item."
+        }
+      ]
     },
     {
       "id": 12651,
@@ -470,7 +490,27 @@
       "verified": true,
       "verified_meaning": "listed_in_forever_database",
       "icon": "inv_axe_09",
-      "source_status": "wowhead_forever_reference"
+      "source_status": "wowhead_forever_reference",
+      "acquisition_sources": [
+        {
+          "kind": "craft",
+          "name_en": "Blacksmithing (300)",
+          "name_fr": "Forge (300)",
+          "location_en": "Blacksmithing",
+          "location_fr": "Forge",
+          "detail_en": "Profession craft (client recipe, not a direct boss drop)",
+          "detail_fr": "Objet fabriqué (recette du client, pas un butin direct)",
+          "recipe_source_en": "Plans: Arcanite Reaper — Bannok Grimaxe (Lower Blackrock Spire)",
+          "recipe_source_fr": "Plans: Arcanite Reaper — Bannok Grimaxe (Pic de Blackrock inférieur)",
+          "evidence_level": "documented_forever",
+          "source_url": "https://foreverchanges.pro/item/12784",
+          "evidence_url": "https://foreverchanges.pro/item/12784",
+          "observed_at": "2026-10-19",
+          "observed_build": "1.60.1.70425",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Arcanite Reaper (item 12784): recipe / craft by Blacksmithing (300) in Blacksmithing. A Forever-specific community item page documents the profession recipe in client data; this does not prove the player can craft or acquire it on the live Forever server. No loot chance is established for the crafted item."
+        }
+      ]
     },
     {
       "id": 12927,
@@ -657,7 +697,25 @@
       "verified_meaning": "classic_reference_only",
       "level": null,
       "source_status": "classic_reference",
-      "armorType": "cloth"
+      "armorType": "cloth",
+      "acquisition_sources": [
+        {
+          "kind": "world_drop",
+          "name_en": "World drop / multiple eligible creatures",
+          "name_fr": "Butin mondial · créatures multiples",
+          "location_en": "World (Classic)",
+          "location_fr": "Monde (Classic)",
+          "detail_en": "No single boss; no reliable individual-creature rate established",
+          "detail_fr": "Pas de boss unique ni de taux fiable par créature",
+          "evidence_level": "classic_reference",
+          "source_url": "https://wowclassicdatabase.com/item/cassandras-grace",
+          "evidence_url": "https://wowclassicdatabase.com/item/cassandras-grace",
+          "observed_at": "2026-10-19",
+          "observed_build": "Classic Era 1.12",
+          "evidence_kind": "classic_guide",
+          "evidence_note": "Cassandra's Grace (item 13102): non-specific world drop World drop / multiple eligible creatures in World (Classic). The source is Classic-only, not a verified Forever drop, reward or rate; a client item listing alone is not proof of availability."
+        }
+      ]
     },
     {
       "id": 13142,
@@ -1068,7 +1126,27 @@
       "verified_meaning": "classic_reference_only",
       "level": null,
       "source_status": "classic_reference",
-      "armorType": "cloth"
+      "armorType": "cloth",
+      "acquisition_sources": [
+        {
+          "kind": "craft",
+          "name_en": "Tailoring (295)",
+          "name_fr": "Couture (295)",
+          "location_en": "Tailoring",
+          "location_fr": "Couture",
+          "detail_en": "Profession craft (client recipe, not a direct boss drop)",
+          "detail_fr": "Objet fabriqué (recette du client, pas un butin direct)",
+          "recipe_source_en": "Pattern: Robe of the Archmage — Firebrand Pyromancer (Blackrock Spire)",
+          "recipe_source_fr": "Patron : Robe de l'archimage — Pyromancien de Brandefeu (Pic Blackrock)",
+          "evidence_level": "documented_forever",
+          "source_url": "https://foreverchanges.pro/item/14152",
+          "evidence_url": "https://foreverchanges.pro/item/14152",
+          "observed_at": "2026-10-19",
+          "observed_build": "1.60.1.70425",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Robe of the Archmage (item 14152): recipe / craft by Tailoring (295) in Tailoring. A Forever-specific community item page documents the profession recipe in client data; this does not prove the player can craft or acquire it on the live Forever server. No loot chance is established for the crafted item."
+        }
+      ]
     },
     {
       "id": 14154,
@@ -1084,7 +1162,27 @@
       "verified_meaning": "classic_reference_only",
       "level": null,
       "source_status": "classic_reference",
-      "armorType": "cloth"
+      "armorType": "cloth",
+      "acquisition_sources": [
+        {
+          "kind": "craft",
+          "name_en": "Tailoring (295)",
+          "name_fr": "Couture (295)",
+          "location_en": "Tailoring",
+          "location_fr": "Couture",
+          "detail_en": "Profession craft (client recipe, not a direct boss drop)",
+          "detail_fr": "Objet fabriqué (recette du client, pas un butin direct)",
+          "recipe_source_en": "Pattern: Truefaith Vestments — Stratholme drops",
+          "recipe_source_fr": "Patron : Habits de vraie foi — butin de Stratholme",
+          "evidence_level": "documented_forever",
+          "source_url": "https://foreverchanges.pro/item/14154",
+          "evidence_url": "https://foreverchanges.pro/item/14154",
+          "observed_at": "2026-10-19",
+          "observed_build": "1.60.1.70425",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Truefaith Vestments (item 14154): recipe / craft by Tailoring (295) in Tailoring. A Forever-specific community item page documents the profession recipe in client data; this does not prove the player can craft or acquire it on the live Forever server. No loot chance is established for the crafted item."
+        }
+      ]
     },
     {
       "id": 14551,
@@ -1111,7 +1209,25 @@
       "verified": true,
       "verified_meaning": "classic_reference_only",
       "level": null,
-      "armorType": "mail"
+      "armorType": "mail",
+      "acquisition_sources": [
+        {
+          "kind": "world_drop",
+          "name_en": "World drop / multiple eligible creatures",
+          "name_fr": "Butin mondial · créatures multiples",
+          "location_en": "World (Classic)",
+          "location_fr": "Monde (Classic)",
+          "detail_en": "No single boss; no reliable individual-creature rate established",
+          "detail_fr": "Pas de boss unique ni de taux fiable par créature",
+          "evidence_level": "classic_reference",
+          "source_url": "https://wowclassicdatabase.com/item/edgemasters-handguards",
+          "evidence_url": "https://wowclassicdatabase.com/item/edgemasters-handguards",
+          "observed_at": "2026-10-19",
+          "observed_build": "Classic Era 1.12",
+          "evidence_kind": "classic_guide",
+          "evidence_note": "Edgemaster's Handguards (item 14551): non-specific world drop World drop / multiple eligible creatures in World (Classic). The source is Classic-only, not a verified Forever drop, reward or rate; a client item listing alone is not proof of availability."
+        }
+      ]
     },
     {
       "id": 14552,
@@ -1127,7 +1243,25 @@
       "verified_meaning": "classic_reference_only",
       "level": null,
       "source_status": "classic_reference",
-      "armorType": "plate"
+      "armorType": "plate",
+      "acquisition_sources": [
+        {
+          "kind": "world_drop",
+          "name_en": "World drop / multiple eligible creatures",
+          "name_fr": "Butin mondial · créatures multiples",
+          "location_en": "World (Classic)",
+          "location_fr": "Monde (Classic)",
+          "detail_en": "No single boss; no reliable individual-creature rate established",
+          "detail_fr": "Pas de boss unique ni de taux fiable par créature",
+          "evidence_level": "classic_reference",
+          "source_url": "https://wowclassicdatabase.com/item/stockade-pauldrons",
+          "evidence_url": "https://wowclassicdatabase.com/item/stockade-pauldrons",
+          "observed_at": "2026-10-19",
+          "observed_build": "Classic Era 1.12",
+          "evidence_kind": "classic_guide",
+          "evidence_note": "Stockade Pauldrons (item 14552): non-specific world drop World drop / multiple eligible creatures in World (Classic). The source is Classic-only, not a verified Forever drop, reward or rate; a client item listing alone is not proof of availability."
+        }
+      ]
     },
     {
       "id": 14624,
@@ -1143,7 +1277,111 @@
       "verified_meaning": "classic_reference_only",
       "level": null,
       "source_status": "classic_reference",
-      "armorType": "plate"
+      "armorType": "plate",
+      "acquisition_sources": [
+        {
+          "kind": "boss",
+          "name_en": "Lord Alexei Barov",
+          "name_fr": "Lord Alexei Barov",
+          "location_en": "Scholomance",
+          "location_fr": "Scholomance",
+          "classic_drop_chance_percent": 9,
+          "detail_en": "Classic dungeon loot table",
+          "detail_fr": "Table de butin Classic",
+          "evidence_level": "classic_reference",
+          "source_url": "https://foreverchanges.pro/item/14624",
+          "evidence_url": "https://foreverchanges.pro/item/14624",
+          "observed_at": "2026-10-19",
+          "observed_build": "Classic Era 1.12",
+          "evidence_kind": "classic_guide",
+          "evidence_note": "Deathbone Chestplate (item 14624): boss loot Lord Alexei Barov in Scholomance. The source is Classic-only, not a verified Forever drop, reward or rate; a client item listing alone is not proof of availability."
+        },
+        {
+          "kind": "boss",
+          "name_en": "Lady Illucia Barov",
+          "name_fr": "Lady Illucia Barov",
+          "location_en": "Scholomance",
+          "location_fr": "Scholomance",
+          "classic_drop_chance_percent": 1.5,
+          "detail_en": "Classic dungeon loot table",
+          "detail_fr": "Table de butin Classic",
+          "evidence_level": "classic_reference",
+          "source_url": "https://foreverchanges.pro/item/14624",
+          "evidence_url": "https://foreverchanges.pro/item/14624",
+          "observed_at": "2026-10-19",
+          "observed_build": "Classic Era 1.12",
+          "evidence_kind": "classic_guide",
+          "evidence_note": "Deathbone Chestplate (item 14624): boss loot Lady Illucia Barov in Scholomance. The source is Classic-only, not a verified Forever drop, reward or rate; a client item listing alone is not proof of availability."
+        },
+        {
+          "kind": "boss",
+          "name_en": "Doctor Theolen Krastinov",
+          "name_fr": "Doctor Theolen Krastinov",
+          "location_en": "Scholomance",
+          "location_fr": "Scholomance",
+          "classic_drop_chance_percent": 1.5,
+          "detail_en": "Classic dungeon loot table",
+          "detail_fr": "Table de butin Classic",
+          "evidence_level": "classic_reference",
+          "source_url": "https://foreverchanges.pro/item/14624",
+          "evidence_url": "https://foreverchanges.pro/item/14624",
+          "observed_at": "2026-10-19",
+          "observed_build": "Classic Era 1.12",
+          "evidence_kind": "classic_guide",
+          "evidence_note": "Deathbone Chestplate (item 14624): boss loot Doctor Theolen Krastinov in Scholomance. The source is Classic-only, not a verified Forever drop, reward or rate; a client item listing alone is not proof of availability."
+        },
+        {
+          "kind": "boss",
+          "name_en": "Lorekeeper Polkelt",
+          "name_fr": "Lorekeeper Polkelt",
+          "location_en": "Scholomance",
+          "location_fr": "Scholomance",
+          "classic_drop_chance_percent": 1.5,
+          "detail_en": "Classic dungeon loot table",
+          "detail_fr": "Table de butin Classic",
+          "evidence_level": "classic_reference",
+          "source_url": "https://foreverchanges.pro/item/14624",
+          "evidence_url": "https://foreverchanges.pro/item/14624",
+          "observed_at": "2026-10-19",
+          "observed_build": "Classic Era 1.12",
+          "evidence_kind": "classic_guide",
+          "evidence_note": "Deathbone Chestplate (item 14624): boss loot Lorekeeper Polkelt in Scholomance. The source is Classic-only, not a verified Forever drop, reward or rate; a client item listing alone is not proof of availability."
+        },
+        {
+          "kind": "boss",
+          "name_en": "Instructor Malicia",
+          "name_fr": "Instructor Malicia",
+          "location_en": "Scholomance",
+          "location_fr": "Scholomance",
+          "classic_drop_chance_percent": 1.4,
+          "detail_en": "Classic dungeon loot table",
+          "detail_fr": "Table de butin Classic",
+          "evidence_level": "classic_reference",
+          "source_url": "https://foreverchanges.pro/item/14624",
+          "evidence_url": "https://foreverchanges.pro/item/14624",
+          "observed_at": "2026-10-19",
+          "observed_build": "Classic Era 1.12",
+          "evidence_kind": "classic_guide",
+          "evidence_note": "Deathbone Chestplate (item 14624): boss loot Instructor Malicia in Scholomance. The source is Classic-only, not a verified Forever drop, reward or rate; a client item listing alone is not proof of availability."
+        },
+        {
+          "kind": "boss",
+          "name_en": "The Ravenian",
+          "name_fr": "The Ravenian",
+          "location_en": "Scholomance",
+          "location_fr": "Scholomance",
+          "classic_drop_chance_percent": 1.4,
+          "detail_en": "Classic dungeon loot table",
+          "detail_fr": "Table de butin Classic",
+          "evidence_level": "classic_reference",
+          "source_url": "https://foreverchanges.pro/item/14624",
+          "evidence_url": "https://foreverchanges.pro/item/14624",
+          "observed_at": "2026-10-19",
+          "observed_build": "Classic Era 1.12",
+          "evidence_kind": "classic_guide",
+          "evidence_note": "Deathbone Chestplate (item 14624): boss loot The Ravenian in Scholomance. The source is Classic-only, not a verified Forever drop, reward or rate; a client item listing alone is not proof of availability."
+        }
+      ]
     },
     {
       "id": 14637,
@@ -1169,7 +1407,111 @@
       "verified": true,
       "verified_meaning": "classic_reference_only",
       "level": null,
-      "armorType": "leather"
+      "armorType": "leather",
+      "acquisition_sources": [
+        {
+          "kind": "boss",
+          "name_en": "Lord Alexei Barov",
+          "name_fr": "Lord Alexei Barov",
+          "location_en": "Scholomance",
+          "location_fr": "Scholomance",
+          "classic_drop_chance_percent": 9.3,
+          "detail_en": "Classic dungeon loot table",
+          "detail_fr": "Table de butin Classic",
+          "evidence_level": "classic_reference",
+          "source_url": "https://foreverchanges.pro/item/14637",
+          "evidence_url": "https://foreverchanges.pro/item/14637",
+          "observed_at": "2026-10-19",
+          "observed_build": "Classic Era 1.12",
+          "evidence_kind": "classic_guide",
+          "evidence_note": "Cadaverous Armor (item 14637): boss loot Lord Alexei Barov in Scholomance. The source is Classic-only, not a verified Forever drop, reward or rate; a client item listing alone is not proof of availability."
+        },
+        {
+          "kind": "boss",
+          "name_en": "Instructor Malicia",
+          "name_fr": "Instructor Malicia",
+          "location_en": "Scholomance",
+          "location_fr": "Scholomance",
+          "classic_drop_chance_percent": 1.5,
+          "detail_en": "Classic dungeon loot table",
+          "detail_fr": "Table de butin Classic",
+          "evidence_level": "classic_reference",
+          "source_url": "https://foreverchanges.pro/item/14637",
+          "evidence_url": "https://foreverchanges.pro/item/14637",
+          "observed_at": "2026-10-19",
+          "observed_build": "Classic Era 1.12",
+          "evidence_kind": "classic_guide",
+          "evidence_note": "Cadaverous Armor (item 14637): boss loot Instructor Malicia in Scholomance. The source is Classic-only, not a verified Forever drop, reward or rate; a client item listing alone is not proof of availability."
+        },
+        {
+          "kind": "boss",
+          "name_en": "Doctor Theolen Krastinov",
+          "name_fr": "Doctor Theolen Krastinov",
+          "location_en": "Scholomance",
+          "location_fr": "Scholomance",
+          "classic_drop_chance_percent": 1.4,
+          "detail_en": "Classic dungeon loot table",
+          "detail_fr": "Table de butin Classic",
+          "evidence_level": "classic_reference",
+          "source_url": "https://foreverchanges.pro/item/14637",
+          "evidence_url": "https://foreverchanges.pro/item/14637",
+          "observed_at": "2026-10-19",
+          "observed_build": "Classic Era 1.12",
+          "evidence_kind": "classic_guide",
+          "evidence_note": "Cadaverous Armor (item 14637): boss loot Doctor Theolen Krastinov in Scholomance. The source is Classic-only, not a verified Forever drop, reward or rate; a client item listing alone is not proof of availability."
+        },
+        {
+          "kind": "boss",
+          "name_en": "Lorekeeper Polkelt",
+          "name_fr": "Lorekeeper Polkelt",
+          "location_en": "Scholomance",
+          "location_fr": "Scholomance",
+          "classic_drop_chance_percent": 1.4,
+          "detail_en": "Classic dungeon loot table",
+          "detail_fr": "Table de butin Classic",
+          "evidence_level": "classic_reference",
+          "source_url": "https://foreverchanges.pro/item/14637",
+          "evidence_url": "https://foreverchanges.pro/item/14637",
+          "observed_at": "2026-10-19",
+          "observed_build": "Classic Era 1.12",
+          "evidence_kind": "classic_guide",
+          "evidence_note": "Cadaverous Armor (item 14637): boss loot Lorekeeper Polkelt in Scholomance. The source is Classic-only, not a verified Forever drop, reward or rate; a client item listing alone is not proof of availability."
+        },
+        {
+          "kind": "boss",
+          "name_en": "Lady Illucia Barov",
+          "name_fr": "Lady Illucia Barov",
+          "location_en": "Scholomance",
+          "location_fr": "Scholomance",
+          "classic_drop_chance_percent": 1.4,
+          "detail_en": "Classic dungeon loot table",
+          "detail_fr": "Table de butin Classic",
+          "evidence_level": "classic_reference",
+          "source_url": "https://foreverchanges.pro/item/14637",
+          "evidence_url": "https://foreverchanges.pro/item/14637",
+          "observed_at": "2026-10-19",
+          "observed_build": "Classic Era 1.12",
+          "evidence_kind": "classic_guide",
+          "evidence_note": "Cadaverous Armor (item 14637): boss loot Lady Illucia Barov in Scholomance. The source is Classic-only, not a verified Forever drop, reward or rate; a client item listing alone is not proof of availability."
+        },
+        {
+          "kind": "boss",
+          "name_en": "The Ravenian",
+          "name_fr": "The Ravenian",
+          "location_en": "Scholomance",
+          "location_fr": "Scholomance",
+          "classic_drop_chance_percent": 1.3,
+          "detail_en": "Classic dungeon loot table",
+          "detail_fr": "Table de butin Classic",
+          "evidence_level": "classic_reference",
+          "source_url": "https://foreverchanges.pro/item/14637",
+          "evidence_url": "https://foreverchanges.pro/item/14637",
+          "observed_at": "2026-10-19",
+          "observed_build": "Classic Era 1.12",
+          "evidence_kind": "classic_guide",
+          "evidence_note": "Cadaverous Armor (item 14637): boss loot The Ravenian in Scholomance. The source is Classic-only, not a verified Forever drop, reward or rate; a client item listing alone is not proof of availability."
+        }
+      ]
     },
     {
       "id": 15062,
@@ -1185,7 +1527,27 @@
       "verified_meaning": "classic_reference_only",
       "level": null,
       "source_status": "classic_reference",
-      "armorType": "leather"
+      "armorType": "leather",
+      "acquisition_sources": [
+        {
+          "kind": "craft",
+          "name_en": "Leatherworking (290)",
+          "name_fr": "Travail du cuir (290)",
+          "location_en": "Leatherworking",
+          "location_fr": "Travail du cuir",
+          "detail_en": "Profession craft (client recipe, not a direct boss drop)",
+          "detail_fr": "Objet fabriqué (recette du client, pas un butin direct)",
+          "recipe_source_en": "Pattern: Devilsaur Leggings — Glutinous/Primal Ooze (Un'Goro Crater)",
+          "recipe_source_fr": "Patron : Jambières diablosaures — limons (Cratère d'Un'Goro)",
+          "evidence_level": "documented_forever",
+          "source_url": "https://foreverchanges.pro/item/15062",
+          "evidence_url": "https://foreverchanges.pro/item/15062",
+          "observed_at": "2026-10-19",
+          "observed_build": "1.60.1.70425",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Devilsaur Leggings (item 15062): recipe / craft by Leatherworking (290) in Leatherworking. A Forever-specific community item page documents the profession recipe in client data; this does not prove the player can craft or acquire it on the live Forever server. No loot chance is established for the crafted item."
+        }
+      ]
     },
     {
       "id": 15063,
@@ -1201,7 +1563,27 @@
       "verified_meaning": "classic_reference_only",
       "level": null,
       "source_status": "classic_reference",
-      "armorType": "leather"
+      "armorType": "leather",
+      "acquisition_sources": [
+        {
+          "kind": "craft",
+          "name_en": "Leatherworking (265)",
+          "name_fr": "Travail du cuir (265)",
+          "location_en": "Leatherworking",
+          "location_fr": "Travail du cuir",
+          "detail_en": "Profession craft (client recipe, not a direct boss drop)",
+          "detail_fr": "Objet fabriqué (recette du client, pas un butin direct)",
+          "recipe_source_en": "Pattern: Devilsaur Gauntlets — Nergal (limited-stock vendor, Un'Goro)",
+          "recipe_source_fr": "Patron : Gantelets diablosaures — Nergal (stock limité, Un'Goro)",
+          "evidence_level": "documented_forever",
+          "source_url": "https://foreverchanges.pro/item/15063",
+          "evidence_url": "https://foreverchanges.pro/item/15063",
+          "observed_at": "2026-10-19",
+          "observed_build": "1.60.1.70425",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Devilsaur Gauntlets (item 15063): recipe / craft by Leatherworking (265) in Leatherworking. A Forever-specific community item page documents the profession recipe in client data; this does not prove the player can craft or acquire it on the live Forever server. No loot chance is established for the crafted item."
+        }
+      ]
     },
     {
       "id": 15411,
@@ -1285,7 +1667,25 @@
       "verified": true,
       "verified_meaning": "listed_in_forever_database",
       "icon": "inv_hammer_unique_sulfuras",
-      "source_status": "wowhead_forever_reference"
+      "source_status": "wowhead_forever_reference",
+      "acquisition_sources": [
+        {
+          "kind": "legendary",
+          "name_en": "Eye of Sulfuras + Sulfuron Hammer",
+          "name_fr": "Œil de Sulfuras + Marteau en sulfuron",
+          "location_en": "Molten Core / Blackrock Depths",
+          "location_fr": "Cœur du Magma / Profondeurs de Blackrock",
+          "detail_en": "Ragnaros drops the Eye (guide estimates 3–4% for that COMPONENT); combine with a crafted Sulfuron Hammer. Sulfuras itself does not drop.",
+          "detail_fr": "Ragnaros donne l'Œil (guide : environ 3–4 % pour ce COMPOSANT). Combiner avec un Marteau en sulfuron fabriqué ; Sulfuras ne tombe pas directement.",
+          "evidence_level": "classic_reference",
+          "source_url": "https://www.wowhead.com/classic/guide/sulfuras-hand-of-ragnaros",
+          "evidence_url": "https://www.wowhead.com/classic/guide/sulfuras-hand-of-ragnaros",
+          "observed_at": "2026-10-19",
+          "observed_build": "Classic Era 1.12",
+          "evidence_kind": "classic_guide",
+          "evidence_note": "Sulfuras, Hand of Ragnaros (item 17182): multi-step legendary acquisition Eye of Sulfuras + Sulfuron Hammer in Molten Core / Blackrock Depths. The source is Classic-only, not a verified Forever drop, reward or rate; a client item listing alone is not proof of availability."
+        }
+      ]
     },
     {
       "id": 17713,
@@ -1601,7 +2001,27 @@
       "verified": true,
       "verified_meaning": "classic_reference_only",
       "level": null,
-      "source_status": "classic_reference"
+      "source_status": "classic_reference",
+      "acquisition_sources": [
+        {
+          "kind": "craft",
+          "name_en": "Leatherworking (300)",
+          "name_fr": "Travail du cuir (300)",
+          "location_en": "Blacksmithing",
+          "location_fr": "Forge",
+          "detail_en": "Profession craft (client recipe, not a direct boss drop)",
+          "detail_fr": "Objet fabriqué (recette du client, pas un butin direct)",
+          "recipe_source_en": "Pattern: Hide of the Wild — Dire Maul drops",
+          "recipe_source_fr": "Patron : Peau du Fauve — butin de Hache-tripes",
+          "evidence_level": "documented_forever",
+          "source_url": "https://foreverchanges.pro/item/18510",
+          "evidence_url": "https://foreverchanges.pro/item/18510",
+          "observed_at": "2026-10-19",
+          "observed_build": "1.60.1.70425",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Hide of the Wild (item 18510): recipe / craft by Leatherworking (300) in Blacksmithing. A Forever-specific community item page documents the profession recipe in client data; this does not prove the player can craft or acquire it on the live Forever server. No loot chance is established for the crafted item."
+        }
+      ]
     },
     {
       "id": 18681,
@@ -1617,7 +2037,111 @@
       "verified_meaning": "classic_reference_only",
       "level": null,
       "source_status": "classic_reference",
-      "armorType": "cloth"
+      "armorType": "cloth",
+      "acquisition_sources": [
+        {
+          "kind": "boss",
+          "name_en": "Lord Alexei Barov",
+          "name_fr": "Lord Alexei Barov",
+          "location_en": "Scholomance",
+          "location_fr": "Scholomance",
+          "classic_drop_chance_percent": 9.12,
+          "detail_en": "Classic dungeon loot table",
+          "detail_fr": "Table de butin Classic",
+          "evidence_level": "classic_reference",
+          "source_url": "https://foreverchanges.pro/item/18681",
+          "evidence_url": "https://foreverchanges.pro/item/18681",
+          "observed_at": "2026-10-19",
+          "observed_build": "Classic Era 1.12",
+          "evidence_kind": "classic_guide",
+          "evidence_note": "Burial Shawl (item 18681): boss loot Lord Alexei Barov in Scholomance. The source is Classic-only, not a verified Forever drop, reward or rate; a client item listing alone is not proof of availability."
+        },
+        {
+          "kind": "boss",
+          "name_en": "Lady Illucia Barov",
+          "name_fr": "Lady Illucia Barov",
+          "location_en": "Scholomance",
+          "location_fr": "Scholomance",
+          "classic_drop_chance_percent": 1.69,
+          "detail_en": "Classic dungeon loot table",
+          "detail_fr": "Table de butin Classic",
+          "evidence_level": "classic_reference",
+          "source_url": "https://foreverchanges.pro/item/18681",
+          "evidence_url": "https://foreverchanges.pro/item/18681",
+          "observed_at": "2026-10-19",
+          "observed_build": "Classic Era 1.12",
+          "evidence_kind": "classic_guide",
+          "evidence_note": "Burial Shawl (item 18681): boss loot Lady Illucia Barov in Scholomance. The source is Classic-only, not a verified Forever drop, reward or rate; a client item listing alone is not proof of availability."
+        },
+        {
+          "kind": "boss",
+          "name_en": "Doctor Theolen Krastinov",
+          "name_fr": "Doctor Theolen Krastinov",
+          "location_en": "Scholomance",
+          "location_fr": "Scholomance",
+          "classic_drop_chance_percent": 1.62,
+          "detail_en": "Classic dungeon loot table",
+          "detail_fr": "Table de butin Classic",
+          "evidence_level": "classic_reference",
+          "source_url": "https://foreverchanges.pro/item/18681",
+          "evidence_url": "https://foreverchanges.pro/item/18681",
+          "observed_at": "2026-10-19",
+          "observed_build": "Classic Era 1.12",
+          "evidence_kind": "classic_guide",
+          "evidence_note": "Burial Shawl (item 18681): boss loot Doctor Theolen Krastinov in Scholomance. The source is Classic-only, not a verified Forever drop, reward or rate; a client item listing alone is not proof of availability."
+        },
+        {
+          "kind": "boss",
+          "name_en": "Instructor Malicia",
+          "name_fr": "Instructor Malicia",
+          "location_en": "Scholomance",
+          "location_fr": "Scholomance",
+          "classic_drop_chance_percent": 1.46,
+          "detail_en": "Classic dungeon loot table",
+          "detail_fr": "Table de butin Classic",
+          "evidence_level": "classic_reference",
+          "source_url": "https://foreverchanges.pro/item/18681",
+          "evidence_url": "https://foreverchanges.pro/item/18681",
+          "observed_at": "2026-10-19",
+          "observed_build": "Classic Era 1.12",
+          "evidence_kind": "classic_guide",
+          "evidence_note": "Burial Shawl (item 18681): boss loot Instructor Malicia in Scholomance. The source is Classic-only, not a verified Forever drop, reward or rate; a client item listing alone is not proof of availability."
+        },
+        {
+          "kind": "boss",
+          "name_en": "Lorekeeper Polkelt",
+          "name_fr": "Lorekeeper Polkelt",
+          "location_en": "Scholomance",
+          "location_fr": "Scholomance",
+          "classic_drop_chance_percent": 1.46,
+          "detail_en": "Classic dungeon loot table",
+          "detail_fr": "Table de butin Classic",
+          "evidence_level": "classic_reference",
+          "source_url": "https://foreverchanges.pro/item/18681",
+          "evidence_url": "https://foreverchanges.pro/item/18681",
+          "observed_at": "2026-10-19",
+          "observed_build": "Classic Era 1.12",
+          "evidence_kind": "classic_guide",
+          "evidence_note": "Burial Shawl (item 18681): boss loot Lorekeeper Polkelt in Scholomance. The source is Classic-only, not a verified Forever drop, reward or rate; a client item listing alone is not proof of availability."
+        },
+        {
+          "kind": "boss",
+          "name_en": "The Ravenian",
+          "name_fr": "The Ravenian",
+          "location_en": "Scholomance",
+          "location_fr": "Scholomance",
+          "classic_drop_chance_percent": 1.42,
+          "detail_en": "Classic dungeon loot table",
+          "detail_fr": "Table de butin Classic",
+          "evidence_level": "classic_reference",
+          "source_url": "https://foreverchanges.pro/item/18681",
+          "evidence_url": "https://foreverchanges.pro/item/18681",
+          "observed_at": "2026-10-19",
+          "observed_build": "Classic Era 1.12",
+          "evidence_kind": "classic_guide",
+          "evidence_note": "Burial Shawl (item 18681): boss loot The Ravenian in Scholomance. The source is Classic-only, not a verified Forever drop, reward or rate; a client item listing alone is not proof of availability."
+        }
+      ]
     },
     {
       "id": 18723,
@@ -1662,7 +2186,25 @@
       "verified": true,
       "verified_meaning": "listed_in_forever_database",
       "icon": "inv_sword_39",
-      "source_status": "wowhead_forever_reference"
+      "source_status": "wowhead_forever_reference",
+      "acquisition_sources": [
+        {
+          "kind": "quest",
+          "name_en": "Rise, Thunderfury! — Highlord Demitrian",
+          "name_fr": "L'essor de Thunderfury — Haut-seigneur Demitrian",
+          "location_en": "Silithus / Molten Core",
+          "location_fr": "Silithus / Cœur du Magma",
+          "detail_en": "Requires Bindings from Garr and Baron Geddon, other materials and the quest chain. The finished blade is a quest reward, not a boss drop.",
+          "detail_fr": "Nécessite les liens de Garr et du Baron Geddon, des matériaux et une chaîne de quêtes. L'arme finale est une récompense, pas un butin direct.",
+          "evidence_level": "classic_reference",
+          "source_url": "https://warcraft.wiki.gg/wiki/Thunderfury%2C_Blessed_Blade_of_the_Windseeker",
+          "evidence_url": "https://warcraft.wiki.gg/wiki/Thunderfury%2C_Blessed_Blade_of_the_Windseeker",
+          "observed_at": "2026-10-19",
+          "observed_build": "Classic Era 1.12",
+          "evidence_kind": "classic_guide",
+          "evidence_note": "Thunderfury, Blessed Blade of the Windseeker (item 19019): quest chain Rise, Thunderfury! — Highlord Demitrian in Silithus / Molten Core. The source is Classic-only, not a verified Forever drop, reward or rate; a client item listing alone is not proof of availability."
+        }
+      ]
     },
     {
       "id": 20130,
@@ -1772,7 +2314,25 @@
       "level": null,
       "verified": true,
       "verified_meaning": "classic_reference_only",
-      "armorType": "plate"
+      "armorType": "plate",
+      "acquisition_sources": [
+        {
+          "kind": "world_drop",
+          "name_en": "World drop / multiple eligible creatures",
+          "name_fr": "Butin mondial · créatures multiples",
+          "location_en": "World (Classic)",
+          "location_fr": "Monde (Classic)",
+          "detail_en": "No single boss; no reliable individual-creature rate established",
+          "detail_fr": "Pas de boss unique ni de taux fiable par créature",
+          "evidence_level": "classic_reference",
+          "source_url": "https://wowclassicdatabase.com/item/cloudkeeper-legplates",
+          "evidence_url": "https://wowclassicdatabase.com/item/cloudkeeper-legplates",
+          "observed_at": "2026-10-19",
+          "observed_build": "Classic Era 1.12",
+          "evidence_kind": "classic_guide",
+          "evidence_note": "Cloudkeeper Legplates (item 14554): non-specific world drop World drop / multiple eligible creatures in World (Classic). The source is Classic-only, not a verified Forever drop, reward or rate; a client item listing alone is not proof of availability."
+        }
+      ]
     },
     {
       "id": 12555,
@@ -1904,7 +2464,111 @@
       "level": null,
       "verified": true,
       "verified_meaning": "classic_reference_only",
-      "armorType": "mail"
+      "armorType": "mail",
+      "acquisition_sources": [
+        {
+          "kind": "boss",
+          "name_en": "The Ravenian",
+          "name_fr": "The Ravenian",
+          "location_en": "Scholomance",
+          "location_fr": "Scholomance",
+          "classic_drop_chance_percent": 4.7,
+          "detail_en": "Classic dungeon loot table",
+          "detail_fr": "Table de butin Classic",
+          "evidence_level": "classic_reference",
+          "source_url": "https://foreverchanges.pro/item/14616",
+          "evidence_url": "https://foreverchanges.pro/item/14616",
+          "observed_at": "2026-10-19",
+          "observed_build": "Classic Era 1.12",
+          "evidence_kind": "classic_guide",
+          "evidence_note": "Bloodmail Boots (item 14616): boss loot The Ravenian in Scholomance. The source is Classic-only, not a verified Forever drop, reward or rate; a client item listing alone is not proof of availability."
+        },
+        {
+          "kind": "boss",
+          "name_en": "Lorekeeper Polkelt",
+          "name_fr": "Lorekeeper Polkelt",
+          "location_en": "Scholomance",
+          "location_fr": "Scholomance",
+          "classic_drop_chance_percent": 4.5,
+          "detail_en": "Classic dungeon loot table",
+          "detail_fr": "Table de butin Classic",
+          "evidence_level": "classic_reference",
+          "source_url": "https://foreverchanges.pro/item/14616",
+          "evidence_url": "https://foreverchanges.pro/item/14616",
+          "observed_at": "2026-10-19",
+          "observed_build": "Classic Era 1.12",
+          "evidence_kind": "classic_guide",
+          "evidence_note": "Bloodmail Boots (item 14616): boss loot Lorekeeper Polkelt in Scholomance. The source is Classic-only, not a verified Forever drop, reward or rate; a client item listing alone is not proof of availability."
+        },
+        {
+          "kind": "boss",
+          "name_en": "Lady Illucia Barov",
+          "name_fr": "Lady Illucia Barov",
+          "location_en": "Scholomance",
+          "location_fr": "Scholomance",
+          "classic_drop_chance_percent": 4.5,
+          "detail_en": "Classic dungeon loot table",
+          "detail_fr": "Table de butin Classic",
+          "evidence_level": "classic_reference",
+          "source_url": "https://foreverchanges.pro/item/14616",
+          "evidence_url": "https://foreverchanges.pro/item/14616",
+          "observed_at": "2026-10-19",
+          "observed_build": "Classic Era 1.12",
+          "evidence_kind": "classic_guide",
+          "evidence_note": "Bloodmail Boots (item 14616): boss loot Lady Illucia Barov in Scholomance. The source is Classic-only, not a verified Forever drop, reward or rate; a client item listing alone is not proof of availability."
+        },
+        {
+          "kind": "boss",
+          "name_en": "Instructor Malicia",
+          "name_fr": "Instructor Malicia",
+          "location_en": "Scholomance",
+          "location_fr": "Scholomance",
+          "classic_drop_chance_percent": 4.3,
+          "detail_en": "Classic dungeon loot table",
+          "detail_fr": "Table de butin Classic",
+          "evidence_level": "classic_reference",
+          "source_url": "https://foreverchanges.pro/item/14616",
+          "evidence_url": "https://foreverchanges.pro/item/14616",
+          "observed_at": "2026-10-19",
+          "observed_build": "Classic Era 1.12",
+          "evidence_kind": "classic_guide",
+          "evidence_note": "Bloodmail Boots (item 14616): boss loot Instructor Malicia in Scholomance. The source is Classic-only, not a verified Forever drop, reward or rate; a client item listing alone is not proof of availability."
+        },
+        {
+          "kind": "boss",
+          "name_en": "Doctor Theolen Krastinov",
+          "name_fr": "Doctor Theolen Krastinov",
+          "location_en": "Scholomance",
+          "location_fr": "Scholomance",
+          "classic_drop_chance_percent": 4.3,
+          "detail_en": "Classic dungeon loot table",
+          "detail_fr": "Table de butin Classic",
+          "evidence_level": "classic_reference",
+          "source_url": "https://foreverchanges.pro/item/14616",
+          "evidence_url": "https://foreverchanges.pro/item/14616",
+          "observed_at": "2026-10-19",
+          "observed_build": "Classic Era 1.12",
+          "evidence_kind": "classic_guide",
+          "evidence_note": "Bloodmail Boots (item 14616): boss loot Doctor Theolen Krastinov in Scholomance. The source is Classic-only, not a verified Forever drop, reward or rate; a client item listing alone is not proof of availability."
+        },
+        {
+          "kind": "boss",
+          "name_en": "Lord Alexei Barov",
+          "name_fr": "Lord Alexei Barov",
+          "location_en": "Scholomance",
+          "location_fr": "Scholomance",
+          "classic_drop_chance_percent": 0.13,
+          "detail_en": "Classic dungeon loot table",
+          "detail_fr": "Table de butin Classic",
+          "evidence_level": "classic_reference",
+          "source_url": "https://foreverchanges.pro/item/14616",
+          "evidence_url": "https://foreverchanges.pro/item/14616",
+          "observed_at": "2026-10-19",
+          "observed_build": "Classic Era 1.12",
+          "evidence_kind": "classic_guide",
+          "evidence_note": "Bloodmail Boots (item 14616): boss loot Lord Alexei Barov in Scholomance. The source is Classic-only, not a verified Forever drop, reward or rate; a client item listing alone is not proof of availability."
+        }
+      ]
     },
     {
       "id": 13252,
@@ -1974,7 +2638,24 @@
       "level": null,
       "verified": true,
       "verified_meaning": "classic_reference_only",
-      "armorType": "leather"
+      "armorType": "leather",
+      "acquisition_sources": [
+        {
+          "kind": "boss",
+          "name_en": "Princess Moira Bronzebeard",
+          "name_fr": "Princesse Moira Barbe-de-bronze",
+          "location_en": "Blackrock Depths",
+          "location_fr": "Profondeurs de Blackrock",
+          "classic_drop_chance_percent": 23,
+          "evidence_level": "classic_reference",
+          "source_url": "https://foreverchanges.pro/item/12553",
+          "evidence_url": "https://foreverchanges.pro/item/12553",
+          "observed_at": "2026-10-19",
+          "observed_build": "Classic Era 1.12",
+          "evidence_kind": "classic_guide",
+          "evidence_note": "Swiftwalker Boots (item 12553): boss loot Princess Moira Bronzebeard in Blackrock Depths. The source is Classic-only, not a verified Forever drop, reward or rate; a client item listing alone is not proof of availability."
+        }
+      ]
     },
     {
       "id": 16710,
@@ -2000,7 +2681,26 @@
       "level": null,
       "verified": true,
       "verified_meaning": "classic_reference_only",
-      "armorType": "leather"
+      "armorType": "leather",
+      "acquisition_sources": [
+        {
+          "kind": "boss",
+          "name_en": "Instructor Malicia",
+          "name_fr": "Instructor Malicia",
+          "location_en": "Scholomance",
+          "location_fr": "Scholomance",
+          "classic_drop_chance_percent": 4.5,
+          "detail_en": "Classic dungeon loot table",
+          "detail_fr": "Table de butin Classic",
+          "evidence_level": "classic_reference",
+          "source_url": "https://foreverchanges.pro/item/16710",
+          "evidence_url": "https://foreverchanges.pro/item/16710",
+          "observed_at": "2026-10-19",
+          "observed_build": "Classic Era 1.12",
+          "evidence_kind": "classic_guide",
+          "evidence_note": "Shadowcraft Bracers (item 16710): boss loot Instructor Malicia in Scholomance. The source is Classic-only, not a verified Forever drop, reward or rate; a client item listing alone is not proof of availability."
+        }
+      ]
     },
     {
       "id": 12783,
@@ -2025,9 +2725,29 @@
       "verified_forever": false,
       "level": null,
       "verified": true,
-      "verified_meaning": "classic_reference_only"
+      "verified_meaning": "classic_reference_only",
+      "acquisition_sources": [
+        {
+          "kind": "craft",
+          "name_en": "Blacksmithing (300)",
+          "name_fr": "Forge (300)",
+          "location_en": "Blacksmithing",
+          "location_fr": "Forge",
+          "detail_en": "Profession craft (client recipe, not a direct boss drop)",
+          "detail_fr": "Objet fabriqué (recette du client, pas un butin direct)",
+          "recipe_source_en": "Plans: Heartseeker — Cannon Master Willey (Stratholme)",
+          "recipe_source_fr": "Plans : Crève-cœur — Maître canonnier Willey (Stratholme)",
+          "evidence_level": "documented_forever",
+          "source_url": "https://foreverchanges.pro/item/12783",
+          "evidence_url": "https://foreverchanges.pro/item/12783",
+          "observed_at": "2026-10-19",
+          "observed_build": "1.60.1.70425",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "Heartseeker (item 12783): recipe / craft by Blacksmithing (300) in Blacksmithing. A Forever-specific community item page documents the profession recipe in client data; this does not prove the player can craft or acquire it on the live Forever server. No loot chance is established for the crafted item."
+        }
+      ]
     }
   ],
   "icon_metadata_source": "Napalmsteak WoW Classic Item Caches / Classic Era and Forever",
-  "acquisition_notes": "Detailed boss, shared event, tribute chest and quest-reward sources are Classic-only references. Classic 1.12 percent values are CMaNGOS Classic-DB table rates, not verified Forever rates; conditionals matter. Records without reliable attribution retain their old generic origins."
+  "acquisition_notes": "Curated source links now include named Classic boss drops, Classic quest rewards, documented Forever beta-client profession recipes, undifferentiated Classic world drops and multi-step legendary acquisitions. Forever item existence does not prove in-game availability. Percentages apply only to the explicitly listed Classic boss item, never to recipes, finished legendaries or Forever."
 }
