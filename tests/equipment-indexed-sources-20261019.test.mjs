@@ -46,7 +46,7 @@ test("inline source hints render only evidence-labelled local links with no fabr
  assert.match(js,/if\(search\.value\.trim\(\)&&!expandedRow\)render\(\)/);
  assert.match(js,/if\(curated\.length\)return/);
  assert.match(js,/sourceRank=\{boss:0,rare:1,recipe:2,merchant:3\}/);
- assert.ok(js.includes("classicRate(s)"));
+ assert.ok(js.includes("sourceRate(s)"),"Sourced Classic and community estimates must share a labelled formatter");
  const segment=js.split("const status=s.evidence_level===")[1].split("function updateOriginHint")[0];
  assert.ok(!segment.includes("classic_drop_chance_percent"),"Indexed hints must not add invented loot percentages");
 });
