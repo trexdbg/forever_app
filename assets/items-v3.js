@@ -89,7 +89,7 @@ function indexedSources(item){
   source&&Object.hasOwn(evidenceRank,source.evidence_level)&&
   Object.hasOwn(sourceRank,source.kind)&&
   typeof source.name_en==="string"&&source.name_en.trim()&&
-  typeof source.href==="string"&&/^\\/(marchands|rare|donjons|metiers)\\/\\?/.test(source.href)
+  typeof source.href==="string"&&/^\/(marchands|rare|donjons|metiers)\/\?/.test(source.href)
  ).sort((a,b)=>evidenceRank[a.evidence_level]-evidenceRank[b.evidence_level]
   ||sourceRank[a.kind]-sourceRank[b.kind]);
 }
