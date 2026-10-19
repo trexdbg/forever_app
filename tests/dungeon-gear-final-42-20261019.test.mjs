@@ -95,7 +95,7 @@ test("FR/EN interface distinguishes Classic, indicative community sources and un
  assert.match(code,/item\.suppress_indexed_source\?\[\]/);
  assert.match(code,/community_reported_chance_percent/);
  assert.match(code,/const sourceRate=source=>classicRate\(source\)\|\|communityRate\(source\)/);
- assert.match(code,/if\(disputedRate\|\|disputedSource\)/);
+ assert.match(code,/if\(disputedRate\|\|disputedSource\|\|disputedPatrol\)/);
  assert.match(code,/20261019-all82/);
  assert.match(code,/i\.source_status==="forever_beta_community_item_page"/);
  assert.match(code,/i\.source_status==="forever_beta_server_reported"/);
