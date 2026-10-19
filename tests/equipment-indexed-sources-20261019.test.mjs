@@ -59,7 +59,7 @@ test("the new Classic batch is loaded after editorial data and before archive, n
  assert.ok(js.indexOf("Array.isArray(leveling.items)")<js.indexOf("Array.isArray(archive.items)"));
  for(const path of ["equipements/index.html","en/equipements/index.html"]){
   const html=read(path);
-  assert.ok(html.includes("items-v3.js?v=20261019-dungeon-audit31"));
+  assert.ok(html.includes("items-v3.js?v=20261019-dungeon-audit40"));
   assert.ok(html.includes("item-catalogue.css?v=20261019-source-hints"));
  }
  assert.match(read("assets/item-catalogue.css"),/item-catalogue-origin .item-acquisition-inline/);
