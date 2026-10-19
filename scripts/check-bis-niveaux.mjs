@@ -68,8 +68,17 @@ assert.deepEqual(hall.name,{fr:"La salle des Thanes",en:"Hall of Thanes"});
 const hallItems=observed.items.filter(x=>x.origin_fr?.includes("Hall of Thanes"));
 assert.equal(hallItems.length,12,"Expected scope of affected Forever items changed");
 assert.ok(js.includes('"Hall of Thanes":"La salle des Thanes"'),"BiS French origin must use the same dungeon name as Donjons");
-assert.ok(fr.includes("/assets/bis-niveaux.js?v=20261017-clean-1"));
-assert.ok(en.includes("/assets/bis-niveaux.js?v=20261017-clean-1"));
+// Allow routine asset cache-busting while ensuring FR/EN use the same bundle.
+const assetVersion=(html,extension)=>{
+ const marker="/assets/bis-niveaux."+extension+"?v=";
+ const start=html.indexOf(marker);
+ return start<0?null:html.slice(start+marker.length).split('"',1)[0];
+};
+for(const extension of ["js","css"]){
+ const frVersion=assetVersion(fr,extension),enVersion=assetVersion(en,extension);
+ assert.ok(frVersion&&enVersion,"Missing BiS "+extension+" version");
+ assert.equal(frVersion,enVersion,"FR/EN BiS "+extension+" versions differ");
+}
 
 
 /* Agent 02 (levels 1–30): reviewed Forever source assertions and unknown requirements. */
