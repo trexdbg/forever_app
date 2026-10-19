@@ -423,17 +423,28 @@ const options=[...slot.options];slot.replaceChildren(options[0]);
 for(const [id,label] of Object.entries(slotLabels)){const o=document.createElement("option");o.value=id;o.textContent=label;slot.append(o)}
 (async()=>{
  try{
- const [catalog,archive,observations,seed,leveling]=await Promise.all([
+ const [catalog,archive,observations,seed,leveling,dungeonAudit]=await Promise.all([
  fetch("/data/items.json",{credentials:"omit"}).then(r=>r.ok?r.json():{items:[]}).catch(()=>({items:[]})),
  fetch("/data/items-classic-cache.json?v=20261010-1",{credentials:"omit"}).then(r=>r.ok?r.json():{items:[]}).catch(()=>({items:[]})),
  fetch("/data/bis-niveaux-forever-observed.json?v=20261010-1",{credentials:"omit"}).then(r=>r.ok?r.json():{items:[]}).catch(()=>({items:[]})),
  service.loadForever(),
- fetch("/data/bis-niveaux-classic.json?v=20261019-source-index",{credentials:"omit"}).then(r=>r.ok?r.json():{items:[]}).catch(()=>({items:[]}))
+ fetch("/data/bis-niveaux-classic.json?v=20261019-source-index",{credentials:"omit"}).then(r=>r.ok?r.json():{items:[]}).catch(()=>({items:[]})),
+ fetch("/data/dungeon-gear-audit-20261019.json?v=20261019-beta-70058",{credentials:"omit"}).then(r=>r.ok?r.json():{items:[]}).catch(()=>({items:[]}))
  ]);
  local=[...(Array.isArray(catalog.items)?catalog.items.filter(i=>i.verified===true&&Number.isInteger(i.id)):[]),
   ...(Array.isArray(leveling.items)?leveling.items.filter(i=>Number.isInteger(i.id)&&i.id>0&&i.source_status==="classic_curated_leveling"):[]),
   ...(Array.isArray(archive.items)?archive.items.filter(i=>i.verified===true&&Number.isInteger(i.id)):[])].map(normalizeLocal);
- forever=seed;observed=(Array.isArray(observations.items)?observations.items:[]).filter(i=>Number.isInteger(i.id)&&i.id>0&&typeof i.name==="string"&&i.source_status==="forever_beta_observed").map(normalizeLocal);source.replaceChildren();source.append(document.createTextNode(en?"Sources: ":"Sources : "));
+ // The dungeon audit explicitly quarantines records missing independently reviewed
+ // Forever beta-server metadata: do not infer qualities, stats or drop percentages.
+ const dungeonVetted=Array.isArray(dungeonAudit.items)?dungeonAudit.items.filter(i=>
+  i.audit_status==="ready_for_catalogue"&&i.source_status==="forever_beta_server_reported"&&
+  i.evidence_level==="documented_forever"&&i.observed_build==="70058"&&
+  Number.isSafeInteger(i.id)&&i.id>0&&typeof i.name==="string"&&i.quality==="rare"&&
+  Number.isSafeInteger(i.itemLevel)&&i.itemLevel>0&&Number.isSafeInteger(i.requiredLevel)&&i.requiredLevel>0
+ ): [];
+ forever=[...seed,...dungeonVetted.map(normalizeLocal)];
+ observed=(Array.isArray(observations.items)?observations.items:[]).filter(i=>Number.isInteger(i.id)&&i.id>0&&typeof i.name==="string"&&i.source_status==="forever_beta_observed").map(normalizeLocal);
+ source.replaceChildren();source.append(document.createTextNode(en?"Sources: ":"Sources : "));
 const aForever=document.createElement("a");aForever.href="https://www.wowhead.com/forever/items";aForever.target="_blank";aForever.rel="noopener noreferrer";aForever.textContent="Wowhead Forever";
 const aClassic=document.createElement("a");aClassic.href="https://wowdb.assemblee-defias.fr/";aClassic.target="_blank";aClassic.rel="noopener noreferrer";aClassic.textContent="WoWDB des Défias";
 const aObserved=document.createElement("a");aObserved.href="https://foreverchanges.pro/dungeons";aObserved.target="_blank";aObserved.rel="noopener noreferrer";aObserved.textContent="ForeverChanges";
