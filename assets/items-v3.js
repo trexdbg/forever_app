@@ -45,7 +45,7 @@ function loadAcquisitionIndex(){
  return sourcePromise;
 }
 // An item page / Classic loot table is not proof of its Forever drop rate.
-const sourceTypeName=en?{boss:"Boss",event:"Event",chest:"Chest",quest:"Quest",craft:"Craft",world_drop:"World drop",legendary:"Legendary"}:{boss:"Boss",event:"Événement",chest:"Coffre",quest:"Quête",craft:"Fabrication",world_drop:"Butin mondial",legendary:"Légendaire"};
+const sourceTypeName=en?{boss:"Boss",rare:"Rare patrol",event:"Event",chest:"Chest",quest:"Quest",craft:"Craft",world_drop:"World drop",legendary:"Legendary"}:{boss:"Boss",rare:"Patrouille rare",event:"Événement",chest:"Coffre",quest:"Quête",craft:"Fabrication",world_drop:"Butin mondial",legendary:"Légendaire"};
 const classicRate=source=>Number.isFinite(source.classic_drop_chance_percent)&&source.kind!=="quest"
  ?String(source.classic_drop_chance_percent).replace(".",en?".":",")+" % Classic"+(source.conditional?(en?" · conditional":" · conditionnel"):""):"";
 const communityRate=source=>Number.isFinite(source.community_reported_chance_percent)&&source.kind!=="quest"
@@ -53,7 +53,7 @@ const communityRate=source=>Number.isFinite(source.community_reported_chance_per
 const sourceRate=source=>classicRate(source)||communityRate(source);
 function curatedSources(item){
  return Array.isArray(item.acquisition_sources)?item.acquisition_sources.filter(x=>
-  x&&["classic_reference","documented_forever"].includes(x.evidence_level)&&["boss","event","chest","quest","craft","world_drop","legendary"].includes(x.kind)&&
+  x&&["classic_reference","documented_forever"].includes(x.evidence_level)&&["boss","rare","event","chest","quest","craft","world_drop","legendary"].includes(x.kind)&&
   typeof x.name_en==="string"&&x.name_en.length>0&&
   typeof x.source_url==="string"&&x.source_url.startsWith("https://")
  ):[];
@@ -158,9 +158,10 @@ async function toggleAcquisition(item,row,button){
  }
  const disputedRate=item.rate_conflict&&(en?item.rate_conflict.note_en:item.rate_conflict.note_fr);
  const disputedSource=en?item.source_discrepancy_en:item.source_discrepancy_fr;
- if(disputedRate||disputedSource){
+ const disputedPatrol=en?item.acquisition_conflict_note_en:item.acquisition_conflict_note_fr;
+ if(disputedRate||disputedSource||disputedPatrol){
   const warning=document.createElement("p");warning.className="source-note item-acquisition-footnote";
-  warning.textContent=disputedRate||disputedSource;region.append(warning);
+  warning.textContent=disputedRate||disputedSource||disputedPatrol;region.append(warning);
  }
  const statusNode=document.createElement("p");statusNode.textContent=acquisitionLabels.loading;statusNode.setAttribute("role","status");region.append(statusNode);
  row.after(detailRow);expandedRow=detailRow;expandedButton=button;
