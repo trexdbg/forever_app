@@ -31,7 +31,7 @@ if(redirect){
 // Experimental quest labs must remain noindex/nofollow and absent from public sitemap.
 // This covers the Classic lab and the unreleased Forever lab, without exposing either.
 if(["lab/quetes/index.html","lab/quetes-forever/index.html"].includes(path)){
-  const robots=first(s,/<meta\\b[^>]*name=["']robots["'][^>]*content=["']([^"']+)/i).toLowerCase().split(",").map(x=>x.trim());
+  const robots=first(s,/<meta\b[^>]*name=["']robots["'][^>]*content=["']([^"']+)/i).toLowerCase().split(",").map(x=>x.trim());
   if(!robots.includes("noindex")||!robots.includes("nofollow"))
     issue("error","INDEXABLE_EXPERIMENTAL_LAB",path,"Experimental lab must remain noindex,nofollow");
   if(locSet.has(url))issue("error","NOINDEX_IN_SITEMAP",path,url);
