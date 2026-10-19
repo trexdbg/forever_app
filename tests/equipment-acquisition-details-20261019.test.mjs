@@ -85,7 +85,7 @@ test("FR/EN catalogue shows source near origin and expandable individually refer
  for(const path of ["equipements/index.html","en/equipements/index.html"]){
   const html=read(path);
   for(const asset of ["items-v3.js","item-catalogue.css"]){
-   assert.ok(html.includes(asset+"?v="+(asset==="items-v3.js"?"20261019-dungeon-audit31":"20261019-source-hints")),path+" "+asset);
+   assert.ok(html.includes(asset+"?v="+(asset==="items-v3.js"?"20261019-dungeon-audit40":"20261019-source-hints")),path+" "+asset);
   }
  }
 });
