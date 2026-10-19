@@ -143,6 +143,12 @@ async function toggleAcquisition(item,row,button){
  const cell=document.createElement("td");cell.colSpan=5;detailRow.append(cell);
  const region=document.createElement("div");region.className="item-acquisition-panel";cell.append(region);
  const localSources=curatedSources(item);appendCuratedSources(region,localSources);
+ const disputedRate=item.rate_conflict&&(en?item.rate_conflict.note_en:item.rate_conflict.note_fr);
+ const disputedSource=en?item.source_discrepancy_en:item.source_discrepancy_fr;
+ if(disputedRate||disputedSource){
+  const warning=document.createElement("p");warning.className="source-note item-acquisition-footnote";
+  warning.textContent=disputedRate||disputedSource;region.append(warning);
+ }
  const statusNode=document.createElement("p");statusNode.textContent=acquisitionLabels.loading;statusNode.setAttribute("role","status");region.append(statusNode);
  row.after(detailRow);expandedRow=detailRow;expandedButton=button;
  button.setAttribute("aria-expanded","true");
