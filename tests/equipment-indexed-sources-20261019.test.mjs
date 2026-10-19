@@ -46,7 +46,7 @@ test("inline source hints render only evidence-labelled local links with no fabr
  assert.match(js,/if\(search\.value\.trim\(\)&&!expandedRow\)render\(\)/);
  assert.match(js,/if\(curated\.length\)return/);
  assert.match(js,/sourceRank=\{boss:0,rare:1,recipe:2,merchant:3\}/);
- assert.ok(js.includes("classicRate(s)"));
+ assert.ok(js.includes("sourceRate(s)"),"Sourced Classic and community estimates must share a labelled formatter");
  const segment=js.split("const status=s.evidence_level===")[1].split("function updateOriginHint")[0];
  assert.ok(!segment.includes("classic_drop_chance_percent"),"Indexed hints must not add invented loot percentages");
 });
@@ -59,7 +59,7 @@ test("the new Classic batch is loaded after editorial data and before archive, n
  assert.ok(js.indexOf("Array.isArray(leveling.items)")<js.indexOf("Array.isArray(archive.items)"));
  for(const path of ["equipements/index.html","en/equipements/index.html"]){
   const html=read(path);
-  assert.ok(html.includes("items-v3.js?v=20261019-dungeon-audit40"));
+  assert.ok(html.includes("items-v3.js?v=20261019-all82"));
   assert.ok(html.includes("item-catalogue.css?v=20261019-source-hints"));
  }
  assert.match(read("assets/item-catalogue.css"),/item-catalogue-origin .item-acquisition-inline/);

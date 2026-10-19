@@ -14,6 +14,7 @@ on:
       - 'tests/equipment-acquisition-wave2-20261019.test.mjs'
       - 'tests/equipment-indexed-sources-20261019.test.mjs'
       - 'tests/dungeon-gear-audit-20261019.test.mjs'
+      - 'tests/dungeon-gear-final-42-20261019.test.mjs'
       - 'data/item-acquisition-index.json'
       - 'data/npcs.json'
       - 'data/rares.json'
@@ -54,4 +55,5 @@ jobs:
           node --test tests/equipment-acquisition-wave2-20261019.test.mjs
           node --test tests/equipment-indexed-sources-20261019.test.mjs
           node --test tests/dungeon-gear-audit-20261019.test.mjs
+          node --test tests/dungeon-gear-final-42-20261019.test.mjs
           node --test tests/t0-set-bonuses.test.mjs

@@ -7,6 +7,7 @@ const audit=json("data/dungeon-gear-audit-20261019.json");
 const byID=new Map(audit.items.map(x=>[x.id,x]));
 const ready=audit.items.filter(x=>x.audit_status==="ready_for_catalogue");
 const missing=audit.items.filter(x=>x.audit_status==="metadata_missing");
+const legacy=ready.filter(x=>x.source_status==="forever_beta_server_reported");
 const databases=[
  "items.json","items-classic-cache.json","items-forever.json",
  "items-forever-cache.json","bis-niveaux-classic.json","bis-niveaux-forever-observed.json"
@@ -32,13 +33,14 @@ test("all 83 dungeon loot rows account for exactly 82 new item IDs and one dupli
  for(const x of audit.items)assert.ok(!baseline.has(x.id),"Never shadow a previously catalogued item: "+x.id);
 });
 
-test("only 40 independently sourced beta-server item metadata records are public; 42 remain quarantined",()=>{
- assert.equal(ready.length,40);
- assert.equal(missing.length,42);
- assert.equal(audit.counts.metadata_vetted,40);
- assert.equal(audit.counts.metadata_pending,42);
- assert.equal(audit.counts.classic_1_12_odds_documented,33);
- for(const row of ready){
+test("40 original beta-server 70058 item profiles retain their provenance beside 42 new community files",()=>{
+ assert.equal(ready.length,82);
+ assert.equal(legacy.length,40);
+ assert.equal(missing.length,0);
+ assert.equal(audit.counts.metadata_vetted,82);
+ assert.equal(audit.counts.metadata_pending,0);
+ assert.equal(audit.counts.classic_1_12_odds_documented,43);
+ for(const row of legacy){
   assert.equal(row.audit_status,"ready_for_catalogue");
   assert.ok(Number.isSafeInteger(row.id)&&row.id>0);
   assert.equal(row.quality,"rare");
@@ -90,7 +92,7 @@ test("beta 70058 differs materially from Classic for key pre-30 items; no Classi
 });
 
 test("33 historical Classic drop rates refer to a named boss and source URL, never to Forever",()=>{
- const drops=ready.flatMap(x=>(x.acquisition_sources||[]).map(s=>({id:x.id,row:x,s})));
+ const drops=legacy.flatMap(x=>(x.acquisition_sources||[]).map(s=>({id:x.id,row:x,s})));
  assert.equal(drops.length,33);
  for(const {id,row,s} of drops){
   assert.equal(s.kind,"boss");
@@ -116,7 +118,7 @@ test("33 historical Classic drop rates refer to a named boss and source URL, nev
 
 test("FR/EN equipment list loads only ready, source-labelled records from the local audit",()=>{
  const script=read("assets/items-v3.js");
- assert.match(script,/data\/dungeon-gear-audit-20261019\.json\?v=20261019-beta-70058/);
+ assert.match(script,/data\/dungeon-gear-audit-20261019\.json\?v=20261019-all82/);
  assert.match(script,/i\.audit_status==="ready_for_catalogue"/);
  assert.match(script,/i\.evidence_level==="documented_forever"/);
  assert.match(script,/i\.observed_build==="70058"/);
@@ -125,6 +127,6 @@ test("FR/EN equipment list loads only ready, source-labelled records from the lo
  assert.match(script,/sourceIndex=new Map/);
  assert.match(script,/function indexedSources\(item\)/);
  for(const path of ["equipements/index.html","en/equipements/index.html"]){
-  assert.ok(read(path).includes("items-v3.js?v=20261019-dungeon-audit40"));
+  assert.ok(read(path).includes("items-v3.js?v=20261019-all82"));
  }
 });
