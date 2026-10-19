@@ -16,8 +16,10 @@ const instrumented = source.slice(0, insertion) + "\n" + [
  'classId="mage"; specId="dps"; band=2;',
  'origin="forever"; sourceKind="all";',
  'globalThis.__bisAudit={',
- '  eligible,plan,uncertainReferences,uncertainCatalogueLink,',
+ '  eligible,plan,uncertainReferences,uncertainCatalogueLink,emptySlotReason,',
  '  setBand(v){band=v;},',
+ '  setClass(id,role){classId=id;specId=role;},',
+ '  computePlan(){currentPlan=plan();return currentPlan;},',
  '  setRows(v){all=v;},',
  '  setOrigin(v){origin=v;},',
  '  setSource(v){sourceKind=v;}',
@@ -71,6 +73,22 @@ for(const lang of ["fr","en"]){
  bis.setSource("dungeon");
  assert.equal(db.slots.flatMap(s=>bis.uncertainReferences(s.id)).length,0,
   lang+": quest references must respect acquisition filters");
+ // One available unique item may target only one of the two trinket slots.
+ // The second slot must explain reuse instead of pretending no references exist.
+ const testTrinket={id:990001,name:"Test trinket",slot:"trinket1",
+  requiredLevel:18,itemLevel:23,quality:"rare",source_status:"forever_beta_observed",
+  tooltip:["Requires Level 18"]};
+ bis.setClass("voleur","swords");bis.setBand(1);bis.setOrigin("forever");bis.setSource("all");
+ bis.setRows([testTrinket]);
+ const trinketPlan=bis.computePlan();
+ assert.equal(trinketPlan.selected.get("trinket1")?.id,990001,lang+": trinket 1 eligible");
+ assert.equal(trinketPlan.selected.get("trinket2"),null,lang+": same reference cannot be reused");
+ assert.match(bis.emptySlotReason("trinket2",false),
+  lang==="en"?/already suggested/:/déjà proposées/,
+  lang+": second trinket explains that existing candidate is used elsewhere");
+ assert.match(bis.emptySlotReason("head",false),
+  lang==="en"?/No compatible reference/:/Aucune référence compatible/,
+  lang+": empty head slot explains why no suggestion is displayed");
  bis.setSource("all");bis.setOrigin("classic");
  assert.equal(db.slots.flatMap(s=>bis.uncertainReferences(s.id)).length,0,
   lang+": Classic-only filter must not show uncertain Forever rewards");
