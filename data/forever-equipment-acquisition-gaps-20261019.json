@@ -1,0 +1,388 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-19",
+  "scope": "Editorial 174-item Forever list only, not all client items or the full site's catalogues.",
+  "policy": "This is a work queue, not a claim that the 22 listed items cannot be acquired. A generic origin is not evidence of a specific quest, creature, vendor or loot chance. Prefer exact item-ID pages and current build; preserve unknowns until proved.",
+  "metrics": {
+    "editorial_forever_items": 174,
+    "original_generic_origin": 24,
+    "amulets_updated": 2,
+    "remaining_generic_origin": 22,
+    "records_with_fewer_than_five_tooltip_lines": 73,
+    "records_without_real_icon": 134
+  },
+  "updated_item_ids": [
+    272184,
+    272185
+  ],
+  "review_queue": [
+    {
+      "id": 277057,
+      "name_en": "Al'Aketh Wristguards",
+      "slot": "wrist",
+      "item_level": 9,
+      "required_level": 4,
+      "quality": "uncommon",
+      "reference_url": "https://www.60.tools/items/277057-alaketh-wristguards",
+      "reference_build": "1.60.1.70245",
+      "tooltip_lines": 4,
+      "needs_review": [
+        "acquisition_source",
+        "beta_build_freshness",
+        "complete_item_stats",
+        "authentic_icon"
+      ]
+    },
+    {
+      "id": 277063,
+      "name_en": "Al'Aketh Bracers",
+      "slot": "wrist",
+      "item_level": 9,
+      "required_level": 4,
+      "quality": "uncommon",
+      "reference_url": "https://www.60.tools/items/277063-alaketh-bracers",
+      "reference_build": "1.60.1.70245",
+      "tooltip_lines": 4,
+      "needs_review": [
+        "acquisition_source",
+        "beta_build_freshness",
+        "complete_item_stats",
+        "authentic_icon"
+      ]
+    },
+    {
+      "id": 277075,
+      "name_en": "Al'Aketh Cuffs",
+      "slot": "wrist",
+      "item_level": 9,
+      "required_level": 4,
+      "quality": "uncommon",
+      "reference_url": "https://www.60.tools/items/277075-alaketh-cuffs",
+      "reference_build": "1.60.1.70245",
+      "tooltip_lines": 4,
+      "needs_review": [
+        "acquisition_source",
+        "beta_build_freshness",
+        "complete_item_stats",
+        "authentic_icon"
+      ]
+    },
+    {
+      "id": 277058,
+      "name_en": "Al'Aketh Gauntlets",
+      "slot": "hands",
+      "item_level": 10,
+      "required_level": 5,
+      "quality": "uncommon",
+      "reference_url": "https://www.60.tools/items/277058-alaketh-gauntlets",
+      "reference_build": "1.60.1.70245",
+      "tooltip_lines": 4,
+      "needs_review": [
+        "acquisition_source",
+        "beta_build_freshness",
+        "complete_item_stats",
+        "authentic_icon"
+      ]
+    },
+    {
+      "id": 277064,
+      "name_en": "Al'Aketh Gloves",
+      "slot": "hands",
+      "item_level": 10,
+      "required_level": 5,
+      "quality": "uncommon",
+      "reference_url": "https://www.60.tools/items/277064-alaketh-gloves",
+      "reference_build": "1.60.1.70245",
+      "tooltip_lines": 4,
+      "needs_review": [
+        "acquisition_source",
+        "beta_build_freshness",
+        "complete_item_stats",
+        "authentic_icon"
+      ]
+    },
+    {
+      "id": 283473,
+      "name_en": "Batwing Bindings",
+      "slot": "wrist",
+      "item_level": 13,
+      "required_level": 8,
+      "quality": "uncommon",
+      "reference_url": "https://www.60.tools/items/283473-batwing-bindings",
+      "reference_build": "1.60.1.70245",
+      "tooltip_lines": 4,
+      "needs_review": [
+        "acquisition_source",
+        "beta_build_freshness",
+        "complete_item_stats",
+        "authentic_icon"
+      ]
+    },
+    {
+      "id": 283259,
+      "name_en": "Bearhide Vicegrips",
+      "slot": "hands",
+      "item_level": 16,
+      "required_level": 11,
+      "quality": "uncommon",
+      "reference_url": "https://www.60.tools/items/283259-bearhide-vicegrips",
+      "reference_build": "1.60.1.70245",
+      "tooltip_lines": 4,
+      "needs_review": [
+        "acquisition_source",
+        "beta_build_freshness",
+        "complete_item_stats",
+        "authentic_icon"
+      ]
+    },
+    {
+      "id": 281926,
+      "name_en": "Bound Bracers",
+      "slot": "wrist",
+      "item_level": 23,
+      "required_level": 18,
+      "quality": "uncommon",
+      "reference_url": "https://www.60.tools/items/281926-bound-bracers",
+      "reference_build": "1.60.1.70245",
+      "tooltip_lines": 4,
+      "needs_review": [
+        "acquisition_source",
+        "beta_build_freshness",
+        "complete_item_stats",
+        "authentic_icon"
+      ]
+    },
+    {
+      "id": 285348,
+      "name_en": "Alliance Outrunner Healing Rod",
+      "slot": "offhand",
+      "item_level": 26,
+      "required_level": 21,
+      "quality": "rare",
+      "reference_url": "https://www.60.tools/items/285348-alliance-outrunner-healing-rod",
+      "reference_build": "1.60.1.70245",
+      "tooltip_lines": 7,
+      "needs_review": [
+        "acquisition_source",
+        "beta_build_freshness",
+        "authentic_icon"
+      ]
+    },
+    {
+      "id": 285192,
+      "name_en": "Kobold Firestarter",
+      "slot": "offhand",
+      "item_level": 30,
+      "required_level": 25,
+      "quality": "uncommon",
+      "reference_url": "https://www.60.tools/items/285192-kobold-firestarter",
+      "reference_build": "1.60.1.70245",
+      "tooltip_lines": 4,
+      "needs_review": [
+        "acquisition_source",
+        "beta_build_freshness",
+        "complete_item_stats",
+        "authentic_icon"
+      ]
+    },
+    {
+      "id": 282653,
+      "name_en": "Dissolved Locket",
+      "slot": "neck",
+      "item_level": 32,
+      "required_level": 27,
+      "quality": "uncommon",
+      "reference_url": "https://www.60.tools/items/282653-dissolved-locket",
+      "reference_build": "1.60.1.70245",
+      "tooltip_lines": 6,
+      "needs_review": [
+        "acquisition_source",
+        "beta_build_freshness",
+        "authentic_icon"
+      ]
+    },
+    {
+      "id": 278019,
+      "name_en": "Apology Ring",
+      "slot": "finger1",
+      "item_level": 35,
+      "required_level": 1,
+      "quality": "uncommon",
+      "reference_url": "https://www.60.tools/items/278019-apology-ring",
+      "reference_build": "1.60.1.70245",
+      "tooltip_lines": 6,
+      "needs_review": [
+        "acquisition_source",
+        "beta_build_freshness",
+        "authentic_icon"
+      ]
+    },
+    {
+      "id": 279838,
+      "name_en": "Arcane Infused Rod",
+      "slot": "offhand",
+      "item_level": 36,
+      "required_level": 1,
+      "quality": "rare",
+      "reference_url": "https://www.60.tools/items/279838-arcane-infused-rod",
+      "reference_build": "1.60.1.70245",
+      "tooltip_lines": 4,
+      "needs_review": [
+        "acquisition_source",
+        "beta_build_freshness",
+        "complete_item_stats",
+        "authentic_icon"
+      ]
+    },
+    {
+      "id": 281251,
+      "name_en": "Courier's Wristguards",
+      "slot": "wrist",
+      "item_level": 24,
+      "required_level": null,
+      "quality": "uncommon",
+      "reference_url": "https://www.60.tools/items/281251-couriers-wristguards",
+      "reference_build": "1.60.1.70245",
+      "tooltip_lines": 3,
+      "needs_review": [
+        "acquisition_source",
+        "beta_build_freshness",
+        "complete_item_stats",
+        "authentic_icon"
+      ]
+    },
+    {
+      "id": 270031,
+      "name_en": "Dark Ritual Leggings",
+      "slot": "legs",
+      "item_level": 29,
+      "required_level": null,
+      "quality": "rare",
+      "reference_url": "https://www.60.tools/items/270031-dark-ritual-leggings",
+      "reference_build": "1.60.1.70245",
+      "tooltip_lines": 3,
+      "needs_review": [
+        "acquisition_source",
+        "beta_build_freshness",
+        "complete_item_stats",
+        "authentic_icon"
+      ]
+    },
+    {
+      "id": 283254,
+      "name_en": "Heart of Alterac",
+      "slot": "offhand",
+      "item_level": 39,
+      "required_level": 34,
+      "quality": "uncommon",
+      "reference_url": "https://www.60.tools/items/283254-heart-of-alterac",
+      "reference_build": "1.60.1.70245",
+      "tooltip_lines": 4,
+      "needs_review": [
+        "acquisition_source",
+        "beta_build_freshness",
+        "complete_item_stats",
+        "authentic_icon"
+      ]
+    },
+    {
+      "id": 277239,
+      "name_en": "Bejeweled Punchers",
+      "slot": "hands",
+      "item_level": 45,
+      "required_level": 40,
+      "quality": "uncommon",
+      "reference_url": "https://www.60.tools/items/277239-bejeweled-punchers",
+      "reference_build": "1.60.1.70245",
+      "tooltip_lines": 7,
+      "needs_review": [
+        "acquisition_source",
+        "beta_build_freshness",
+        "authentic_icon"
+      ]
+    },
+    {
+      "id": 270097,
+      "name_en": "Archer's Leggings",
+      "slot": "legs",
+      "item_level": 46,
+      "required_level": null,
+      "quality": "uncommon",
+      "reference_url": "https://www.60.tools/items/270097-archers-leggings",
+      "reference_build": "1.60.1.70245",
+      "tooltip_lines": 3,
+      "needs_review": [
+        "acquisition_source",
+        "beta_build_freshness",
+        "complete_item_stats",
+        "authentic_icon"
+      ]
+    },
+    {
+      "id": 284272,
+      "name_en": "Chimaera Hide Legs",
+      "slot": "legs",
+      "item_level": 50,
+      "required_level": 45,
+      "quality": "uncommon",
+      "reference_url": "https://www.60.tools/items/284272-chimaera-hide-legs",
+      "reference_build": "1.60.1.70245",
+      "tooltip_lines": 7,
+      "needs_review": [
+        "acquisition_source",
+        "beta_build_freshness",
+        "authentic_icon"
+      ]
+    },
+    {
+      "id": 260208,
+      "name_en": "Prelate's Orb",
+      "slot": "offhand",
+      "item_level": 55,
+      "required_level": null,
+      "quality": "uncommon",
+      "reference_url": "https://www.60.tools/items/260208-prelates-orb",
+      "reference_build": "1.60.1.70245",
+      "tooltip_lines": 3,
+      "needs_review": [
+        "acquisition_source",
+        "beta_build_freshness",
+        "complete_item_stats",
+        "authentic_icon"
+      ]
+    },
+    {
+      "id": 276340,
+      "name_en": "Blademaster Hakama",
+      "slot": "legs",
+      "item_level": 60,
+      "required_level": null,
+      "quality": "uncommon",
+      "reference_url": "https://www.60.tools/items/276340-blademaster-hakama",
+      "reference_build": "1.60.1.70245",
+      "tooltip_lines": 3,
+      "needs_review": [
+        "acquisition_source",
+        "beta_build_freshness",
+        "complete_item_stats",
+        "authentic_icon"
+      ]
+    },
+    {
+      "id": 272407,
+      "name_en": "Blessed Band of Light",
+      "slot": "finger1",
+      "item_level": 65,
+      "required_level": 60,
+      "quality": "rare",
+      "reference_url": "https://www.60.tools/items/272407-blessed-band-of-light",
+      "reference_build": "1.60.1.70245",
+      "tooltip_lines": 9,
+      "needs_review": [
+        "acquisition_source",
+        "beta_build_freshness",
+        "authentic_icon"
+      ]
+    }
+  ]
+}
