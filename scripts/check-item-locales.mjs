@@ -14,6 +14,26 @@ function load(lang){
  return ctx.window.ForeverItemLocale;
 }
 const fr=load("fr"),en=load("en");
+// Official frFR Classic item headings verified on 2026-10-19:
+ // https://www.wowhead.com/classic/fr/item=12590/trucidante
+ // https://www.wowhead.com/classic/fr/item=13965/plaque-de-blackhand
+// Correct by numeric ID (not by English string): preserve Classic EN and separate Forever source labels.
+for (const [id, english, french] of [
+  [12590, "Felstriker", "Trucidante"],
+  [13965, "Blackhand's Breadth", "Plaque de Blackhand"]
+]) {
+  const item={id,name:english,name_fr:"Traduction française obsolète",source_status:"classic_reference"};
+  assert.equal(fr.name(item),french,"Official Classic frFR item heading mismatch for ID "+id);
+  assert.equal(en.name(item),english,"Classic English name changed for ID "+id);
+  assert.equal(fr.record(item).name_fr,french,"Equipment and BiS must use the shared localized name "+id);
+  assert.equal(fr.resolved(item).verified,true,"Official Classic translation should be verified for "+id);
+  assert.equal(fr.resolved(item).indicative,false,"Official Classic translation cannot be indicative for "+id);
+  assert.ok(fr.aliases(item).includes(english),"English item search alias missing for "+id);
+  const forever={...item,source_status:"forever_beta_observed",name_fr:"Nom propre au client Forever"};
+  assert.equal(fr.name(forever),"Nom propre au client Forever","Do not overwrite a distinct Forever localization for "+id);
+  assert.equal(fr.resolved(forever).verified,false,"Classic FR is not proof of an official Forever name for "+id);
+  assert.equal(en.name(forever),english);
+}
 const sample={id:13404,name:"Mask of the Unforgiven",name_fr:"Masque du non-pardonné",source_status:"classic_reference",origin:"Stratholme · The Unforgiven",url:"https://www.wowhead.com/classic/item=13404"};
 assert.equal(fr.name(sample),"Masque du Condamné","French name must come from ID 13404");
 assert.equal(en.name(sample),"Mask of the Unforgiven");
