@@ -9,6 +9,7 @@ on:
       - 'assets/items-v3.js'
       - 'data/bis*.json'
       - 'data/items*.json'
+      - 'tests/equipment-acquisition-details-20261019.test.mjs'
       - 'data/item-acquisition-index.json'
       - 'data/npcs.json'
       - 'data/rares.json'
@@ -45,3 +46,5 @@ jobs:
           node scripts/build-item-acquisition-index.mjs --check
           node --test tests/item-acquisition-index.test.mjs
           node --test tests/rare-gear-catalogue-20261018.test.mjs
+          node --test tests/equipment-acquisition-details-20261019.test.mjs
+          node --test tests/t0-set-bonuses.test.mjs
