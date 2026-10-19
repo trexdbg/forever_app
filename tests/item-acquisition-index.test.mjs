@@ -87,7 +87,7 @@ test("the equipment catalogue exposes expandable source panels in French and Eng
  assert.match(js,/classic_reference/);
  for(const path of ["equipements/index.html","en/equipements/index.html"]){
   const html=readFileSync(new URL("../"+path,import.meta.url),"utf8");
-  assert.match(html,/items-v3\.js\?v=20261019-acquisition-wave2/);
+  assert.match(html,/items-v3\.js\?v=20261019-source-hints/);
  }
  assert.ok(material().length>10000);
 });
