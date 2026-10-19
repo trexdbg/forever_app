@@ -8,7 +8,8 @@
     "duplicate_item_rows": 1,
     "metadata_vetted": 31,
     "metadata_pending": 51,
-    "classic_1_12_odds_documented": 24
+    "classic_1_12_odds_documented": 24,
+    "conflicting_boss_attributions": 1
   },
   "trust_policy": "Metadata for ready rows reflects a Forever beta-server 70058 community snapshot; not an observed player drop, a proven live-game item or a promise of accessibility. Original boss reference remains Classic-only unless its source explicitly documents the boss-item pair for Forever. Rates, when provided, are clearly marked Classic 1.12. Missing fields remain null; pending rows are excluded from the public equipment catalogue.",
   "items": [
@@ -660,6 +661,15 @@
           "observed_build": "Classic 1.12 / historical table reported by The Forever Era",
           "evidence_kind": "classic_guide",
           "evidence_note": "The Forever Era item 5202 (Corsair's Overshirt) attributes a historical Classic 1.12 30% chance to Edwin VanCleef in The Deadmines. This is NOT a verified Forever drop, live availability or Forever loot percentage."
+        }
+      ],
+      "conflicting_dungeon_leads": [
+        {
+          "boss_en": "Captain Greenskin",
+          "dungeon_en": "The Deadmines",
+          "provenance": "pre-existing dungeon boss catalogue",
+          "audit_status": "requires_review",
+          "evidence_note": "The original dungeon dataset also assigns Corsair's Overshirt (5202) to Captain Greenskin. The cited Classic item reference supports Edwin VanCleef; do not promote Captain Greenskin as a second proven drop or assign it a percentage."
         }
       ]
     },
