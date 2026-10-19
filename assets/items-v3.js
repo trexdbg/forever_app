@@ -48,6 +48,9 @@ function loadAcquisitionIndex(){
 const sourceTypeName=en?{boss:"Boss",event:"Event",chest:"Chest",quest:"Quest",craft:"Craft",world_drop:"World drop",legendary:"Legendary"}:{boss:"Boss",event:"Événement",chest:"Coffre",quest:"Quête",craft:"Fabrication",world_drop:"Butin mondial",legendary:"Légendaire"};
 const classicRate=source=>Number.isFinite(source.classic_drop_chance_percent)&&source.kind!=="quest"
  ?String(source.classic_drop_chance_percent).replace(".",en?".":",")+" % Classic"+(source.conditional?(en?" · conditional":" · conditionnel"):""):"";
+const communityRate=source=>Number.isFinite(source.community_reported_chance_percent)&&source.kind!=="quest"
+ ?String(source.community_reported_chance_percent).replace(".",en?".":",")+" % "+(en?"community source":"source tierce indicative"):"";
+const sourceRate=source=>classicRate(source)||communityRate(source);
 function curatedSources(item){
  return Array.isArray(item.acquisition_sources)?item.acquisition_sources.filter(x=>
   x&&["classic_reference","documented_forever"].includes(x.evidence_level)&&["boss","event","chest","quest","craft","world_drop","legendary"].includes(x.kind)&&
@@ -63,7 +66,7 @@ function appendCuratedSources(region,records){
  for(const rec of records){
   const line=document.createElement("li"),name=document.createElement("span");
   const evidenceType=rec.evidence_level==="documented_forever"?(en?"Forever · client documented":"Forever · client documenté"):"Classic";
-  name.textContent=[sourceTypeName[rec.kind]+" · "+sourceName(rec),sourcePlace(rec),rec.faction,classicRate(rec),evidenceType].filter(Boolean).join(" · ");
+  name.textContent=[sourceTypeName[rec.kind]+" · "+sourceName(rec),sourcePlace(rec),rec.faction,sourceRate(rec),evidenceType].filter(Boolean).join(" · ");
   const recipe=en?rec.recipe_source_en:(rec.recipe_source_fr||rec.recipe_source_en);
   const details=en?rec.detail_en:(rec.detail_fr||rec.detail_en);
   if(recipe){const extra=document.createElement("small");extra.className="item-acquisition-extra";extra.textContent=recipe;name.append(extra)}
@@ -75,8 +78,8 @@ function appendCuratedSources(region,records){
  region.append(list);
  const note=document.createElement("p");note.className="source-note item-acquisition-footnote";
  note.textContent=en
-  ?"Rates are Classic references for each listed boss, not Forever probabilities. Crafting pages describe Forever client recipes, not guaranteed live availability. Quests, world drops and completed legendaries have no invented rate."
-  :"Les taux sont des références Classic par boss, pas des probabilités Forever. Les recettes proviennent du client Forever sans garantir leur disponibilité en jeu. Aucun taux inventé pour les quêtes, butins mondiaux ou légendaires.";
+  ?"Classic rates are historical references. Community estimates are not validated Forever drop probabilities. Crafting recipes do not guarantee live availability."
+  :"Les taux Classic sont historiques ; les estimations de sources tierces ne sont pas des probabilités de butin Forever vérifiées. Les recettes du client ne garantissent pas leur disponibilité en jeu.";
  region.append(note);
 }
 
@@ -85,6 +88,7 @@ function appendCuratedSources(region,records){
 const evidenceRank={confirmed_in_game:0,documented_forever:1,datamined:2,classic_reference:3};
 const sourceRank={boss:0,rare:1,recipe:2,merchant:3};
 function indexedSources(item){
+ if(item.suppress_indexed_source)return [];
  return (sourceIndex?.get(item.id)||[]).filter(source=>
   source&&Object.hasOwn(evidenceRank,source.evidence_level)&&
   Object.hasOwn(sourceRank,source.kind)&&
@@ -104,7 +108,7 @@ function sourceHintText(item){
  if(!choice)return "";
  const s=choice.record;
  if(!choice.indexed)
-  return [sourceTypeName[s.kind]+" · "+sourceName(s),classicRate(s),
+  return [sourceTypeName[s.kind]+" · "+sourceName(s),sourceRate(s),
    s.evidence_level==="documented_forever"?(en?"Forever · client":"Forever · client"):"Classic",
    choice.more>0?"+"+choice.more:null].filter(Boolean).join(" · ");
  const status=s.evidence_level==="classic_reference"?"Classic"
@@ -146,7 +150,7 @@ async function toggleAcquisition(item,row,button){
  try{
   const lookup=await loadAcquisitionIndex();
   if(!detailRow.isConnected||expandedRow!==detailRow)return;
-  const matches=(lookup.get(item.id)||[]).filter(s=>s.evidence_level!=="unverified");
+  const matches=item.suppress_indexed_source?[]:(lookup.get(item.id)||[]).filter(s=>s.evidence_level!=="unverified");
   statusNode.remove();
   if(!matches.length){
    if(!localSources.length){const empty=document.createElement("p");empty.textContent=acquisitionLabels.empty;region.append(empty)}
@@ -429,7 +433,7 @@ for(const [id,label] of Object.entries(slotLabels)){const o=document.createEleme
  fetch("/data/bis-niveaux-forever-observed.json?v=20261010-1",{credentials:"omit"}).then(r=>r.ok?r.json():{items:[]}).catch(()=>({items:[]})),
  service.loadForever(),
  fetch("/data/bis-niveaux-classic.json?v=20261019-source-index",{credentials:"omit"}).then(r=>r.ok?r.json():{items:[]}).catch(()=>({items:[]})),
- fetch("/data/dungeon-gear-audit-20261019.json?v=20261019-beta-70058",{credentials:"omit"}).then(r=>r.ok?r.json():{items:[]}).catch(()=>({items:[]}))
+ fetch("/data/dungeon-gear-audit-20261019.json?v=20261019-all82",{credentials:"omit"}).then(r=>r.ok?r.json():{items:[]}).catch(()=>({items:[]}))
  ]);
  local=[...(Array.isArray(catalog.items)?catalog.items.filter(i=>i.verified===true&&Number.isInteger(i.id)):[]),
   ...(Array.isArray(leveling.items)?leveling.items.filter(i=>Number.isInteger(i.id)&&i.id>0&&i.source_status==="classic_curated_leveling"):[]),
@@ -437,10 +441,13 @@ for(const [id,label] of Object.entries(slotLabels)){const o=document.createEleme
  // The dungeon audit explicitly quarantines records missing independently reviewed
  // Forever beta-server metadata: do not infer qualities, stats or drop percentages.
  const dungeonVetted=Array.isArray(dungeonAudit.items)?dungeonAudit.items.filter(i=>
-  i.audit_status==="ready_for_catalogue"&&i.source_status==="forever_beta_server_reported"&&
-  i.evidence_level==="documented_forever"&&i.observed_build==="70058"&&
-  Number.isSafeInteger(i.id)&&i.id>0&&typeof i.name==="string"&&i.quality==="rare"&&
-  Number.isSafeInteger(i.itemLevel)&&i.itemLevel>0&&Number.isSafeInteger(i.requiredLevel)&&i.requiredLevel>0
+  i.audit_status==="ready_for_catalogue"&&
+  ((i.source_status==="forever_beta_server_reported"&&i.observed_build==="70058")
+   ||(i.source_status==="forever_beta_community_item_page"&&/^1[.]60[.]1[.]70[0-9]+$/.test(i.observed_build||"")))&&
+  i.evidence_level==="documented_forever"&&Number.isSafeInteger(i.id)&&i.id>0&&
+  typeof i.name==="string"&&["common","uncommon","rare"].includes(i.quality)&&
+  Number.isSafeInteger(i.itemLevel)&&i.itemLevel>0&&
+  Number.isSafeInteger(i.requiredLevel)&&i.requiredLevel>0
  ): [];
  forever=[...seed,...dungeonVetted.map(normalizeLocal)];
  observed=(Array.isArray(observations.items)?observations.items:[]).filter(i=>Number.isInteger(i.id)&&i.id>0&&typeof i.name==="string"&&i.source_status==="forever_beta_observed").map(normalizeLocal);
