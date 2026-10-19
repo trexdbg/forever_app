@@ -127,6 +127,6 @@ test("FR/EN equipment list loads only ready, source-labelled records from the lo
  assert.match(script,/sourceIndex=new Map/);
  assert.match(script,/function indexedSources\(item\)/);
  for(const path of ["equipements/index.html","en/equipements/index.html"]){
-  assert.ok(read(path).includes("items-v3.js?v=20261019-acquisition-unknown"));
+  assert.ok(read(path).includes("items-v3.js?v=20261019-rare-patrol"));
  }
 });

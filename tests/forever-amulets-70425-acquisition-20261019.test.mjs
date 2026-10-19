@@ -59,10 +59,12 @@ test("sparse record audit prioritizes the remaining 22 unknown origins instead o
  assert.equal(audit.metrics.editorial_forever_items,174);
  assert.equal(audit.metrics.original_generic_origin,24);
  assert.equal(audit.metrics.amulets_updated,2);
- assert.equal(audit.metrics.remaining_generic_origin,22);
- assert.equal(audit.review_queue.length,22);
+ assert.equal(audit.metrics.remaining_generic_origin,0);
+ assert.equal(audit.review_queue.length,20);
+ assert.equal(audit.completed_metadata_audit.length,22);
  const generic=manual.items.filter(x=>x.origin==="60.tools · source précise non documentée");
- assert.deepEqual(new Set(generic.map(x=>x.id)),new Set(audit.review_queue.map(x=>x.id)));
+ assert.equal(generic.length,0);
+ assert.equal(audit.metrics.acquisition_still_unknown,19);
  assert.equal(manual.items.filter(x=>!Array.isArray(x.tooltip)||x.tooltip.length<5).length,audit.metrics.records_with_fewer_than_five_tooltip_lines);
  assert.equal(manual.items.filter(x=>!x.icon).length,audit.metrics.records_without_real_icon);
  assert.ok(!audit.review_queue.some(x=>x.id===272184||x.id===272185));
@@ -70,8 +72,8 @@ test("sparse record audit prioritizes the remaining 22 unknown origins instead o
  for(const row of audit.review_queue){
   assert.ok(Number.isInteger(row.id));
   assert.ok(row.reference_url.startsWith("https://"));
-  assert.ok(row.needs_review.includes("acquisition_source"));
-  assert.ok(row.needs_review.includes("beta_build_freshness"));
+  assert.ok(row.needs_review.includes("acquisition_source")||row.needs_review.includes("precise_drop_npc"));
+  assert.ok(row.observed_build==="1.60.1.70425");
  }
 });
 
@@ -84,10 +86,10 @@ test("bilingual source panel links proof of tooltip, not purported loot, and ref
  assert.match(js,/Beta item data/);
  assert.match(js,/!localSources\.length&&!unknownAcquisition/);
  assert.match(js,/localSources\.length\|\|unknownAcquisition/);
- assert.match(gear,/items-forever\.json\?v=20261019-amulets-70425/);
+ assert.match(gear,/items-forever\.json\?v=20261019-all22-70425/);
  for(const path of ["equipements/index.html","en/equipements/index.html"]){
   const html=read(path);
-  assert.ok(html.includes("gear-data.js?v=20261019-amulets-70425"),path);
-  assert.ok(html.includes("items-v3.js?v=20261019-acquisition-unknown"),path);
+  assert.ok(html.includes("gear-data.js?v=20261019-all22-70425"),path);
+  assert.ok(html.includes("items-v3.js?v=20261019-rare-patrol"),path);
  }
 });
