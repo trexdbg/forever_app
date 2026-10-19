@@ -2511,7 +2511,9 @@
         "sources": [
           "https://foreverchanges.pro/item/6907",
           "https://theforeverera.com/en/items/6907/"
-        ]
+        ],
+        "note_fr": "Sources divergentes pour Ghamoo-ra : ForeverChanges indique 37 %, The Forever Era indique 40 % Classic. Aucun taux unique n'est affiché tant que l'écart n'est pas résolu.",
+        "note_en": "Conflicting Ghamoo-ra sources: ForeverChanges reports 37%, while The Forever Era reports 40% Classic. No single rate is displayed until resolved."
       }
     },
     {
@@ -3822,7 +3824,9 @@
       "origin_fr": "Butin non attribué à un boss confirmé · référence Classic",
       "origin_en": "Boss attribution unconfirmed · Classic reference only",
       "suppress_indexed_source": true,
-      "source_discrepancy": "Viridian Band is an uncommon randomly-suffixed ring. The individually reviewed ForeverChanges item page provides no Cookie drop attribution. The old Classic dungeon catalogue identifies Cookie; suppress that unsupported boss hint until a boss-specific evidence page is supplied."
+      "source_discrepancy": "Viridian Band is an uncommon randomly-suffixed ring. The individually reviewed ForeverChanges item page provides no Cookie drop attribution. The old Classic dungeon catalogue identifies Cookie; suppress that unsupported boss hint until a boss-specific evidence page is supplied.",
+      "source_discrepancy_fr": "La fiche de Viridian Band ne confirme pas un butin de Cookie ; cette association Classic est masquée dans Équipement en attendant une preuve précise.",
+      "source_discrepancy_en": "The Viridian Band item page does not confirm a Cookie drop. This Classic association is hidden from Equipment until an exact source verifies it."
     },
     {
       "id": 13245,
