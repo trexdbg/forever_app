@@ -124,8 +124,8 @@
       "acquisition_sources": [
         {
           "kind": "boss",
-          "name_fr": "Sneed",
-          "name_en": "Sneed",
+          "name_fr": "Sneed's Shredder",
+          "name_en": "Sneed's Shredder",
           "location_fr": "Mortemines",
           "location_en": "The Deadmines",
           "classic_drop_chance_percent": 10,
@@ -135,9 +135,12 @@
           "observed_at": "2026-10-19",
           "observed_build": "Classic 1.12 / historical table reported by The Forever Era",
           "evidence_kind": "classic_guide",
-          "evidence_note": "The Forever Era item 1937 (Buzz Saw) attributes a historical Classic 1.12 10% chance to Sneed in The Deadmines. This is NOT a verified Forever drop, live availability or Forever loot percentage."
+          "evidence_note": "The Forever Era item 1937 (Buzz Saw) attributes a historical Classic 1.12 10% chance to Sneed's Shredder in The Deadmines. This is NOT a verified Forever drop, live availability or Forever loot percentage."
         }
-      ]
+      ],
+      "loot_boss_en": "Sneed's Shredder",
+      "loot_boss_fr": "Sneed's Shredder",
+      "boss_precision_note": "The Classic loot table names Sneed's Shredder specifically; the existing dungeon index groups the encounter under Sneed."
     },
     {
       "id": 2169,
@@ -177,8 +180,8 @@
       "acquisition_sources": [
         {
           "kind": "boss",
-          "name_fr": "Sneed",
-          "name_en": "Sneed",
+          "name_fr": "Sneed's Shredder",
+          "name_en": "Sneed's Shredder",
           "location_fr": "Mortemines",
           "location_en": "The Deadmines",
           "classic_drop_chance_percent": 90,
@@ -188,9 +191,12 @@
           "observed_at": "2026-10-19",
           "observed_build": "Classic 1.12 / historical table reported by The Forever Era",
           "evidence_kind": "classic_guide",
-          "evidence_note": "The Forever Era item 2169 (Buzzer Blade) attributes a historical Classic 1.12 90% chance to Sneed in The Deadmines. This is NOT a verified Forever drop, live availability or Forever loot percentage."
+          "evidence_note": "The Forever Era item 2169 (Buzzer Blade) attributes a historical Classic 1.12 90% chance to Sneed's Shredder in The Deadmines. This is NOT a verified Forever drop, live availability or Forever loot percentage."
         }
-      ]
+      ],
+      "loot_boss_en": "Sneed's Shredder",
+      "loot_boss_fr": "Sneed's Shredder",
+      "boss_precision_note": "The Classic loot table names Sneed's Shredder specifically; the existing dungeon index groups the encounter under Sneed."
     },
     {
       "id": 2280,
