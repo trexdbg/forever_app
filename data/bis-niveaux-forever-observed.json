@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-10",
+  "updated_at": "2026-10-20",
   "source_status": "forever_beta_observed",
   "meaning": "Community-observed drops in the WoW Forever beta. Item levels, requirements and bosses sourced individually; game stats and availability may change. Not a guarantee of best-in-slot.",
   "sources": [
@@ -122,7 +122,8 @@
       "observed_at": "2026-10-13",
       "observed_build": "unknown",
       "evidence_kind": "forever_community_page",
-      "evidence_note": "Fiche communautaire Forever : 17 points d'armure, +3 agilité et +4 esprit ; niveau requis 13. Ne prouve pas indépendamment l'obtention ni un taux de butin."
+      "evidence_note": "Fiche communautaire Forever : 17 points d'armure, +3 agilité et +4 esprit ; niveau requis 13. Ne prouve pas indépendamment l'obtention ni un taux de butin.",
+      "icon": "inv_misc_cape_12"
     },
     {
       "id": 270230,
@@ -617,7 +618,8 @@
         "Equip: +8 Spell Power",
         "Requires Level 26"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "spell_nature_crystalball"
     },
     {
       "id": 273028,
@@ -685,7 +687,8 @@
         "Equip: +3 Mana Regeneration",
         "Requires Level 28"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_jewelry_ring_28"
     },
     {
       "id": 273029,
@@ -718,7 +721,8 @@
         "+6 Agility",
         "Requires Level 28"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_musket_02"
     },
     {
       "id": 273036,
@@ -857,7 +861,8 @@
         "Equip: +12 Attack Power",
         "Requires Level 27"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_misc_cape_18"
     },
     {
       "id": 273043,
@@ -1485,7 +1490,8 @@
         "Held in off hand",
         "Requires Level 30"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_misc_orb_04"
     },
     {
       "id": 273049,
@@ -1687,7 +1693,8 @@
         "Equip: +5 Spell Power",
         "Requires Level 15"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_bracer_07"
     },
     {
       "id": 271203,
@@ -1865,7 +1872,8 @@
         "Equip: +5 Block Rating",
         "Requires Level 19"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_shield_02"
     },
     {
       "id": 271215,
@@ -2428,7 +2436,8 @@
       "observed_at": "2026-10-13",
       "observed_build": "1.60.1.70338",
       "evidence_kind": "forever_community_page",
-      "evidence_note": "Fiche communautaire Forever de la bêta 1.60.1.70338 : 18 points d'armure, +3 endurance et +3 force ; récompense de quête, sans niveau requis d'équipement spécifié. Disponibilité en jeu non vérifiée indépendamment."
+      "evidence_note": "Fiche communautaire Forever de la bêta 1.60.1.70338 : 18 points d'armure, +3 endurance et +3 force ; récompense de quête, sans niveau requis d'équipement spécifié. Disponibilité en jeu non vérifiée indépendamment.",
+      "icon": "inv_misc_cape_10"
     },
     {
       "id": 279867,
@@ -2468,7 +2477,8 @@
         "Quest Level 21",
         "Quest available from Level 16"
       ],
-      "reference": "Forever beta · quest reward observed in-game; no minimum EQUIP level recorded"
+      "reference": "Forever beta · quest reward observed in-game; no minimum EQUIP level recorded",
+      "icon": "inv_jewelry_ring_19"
     },
     {
       "id": 279868,
@@ -2590,7 +2600,8 @@
         "Quest Level 22",
         "Quest available from Level 15"
       ],
-      "reference": "Forever beta · quest reward observed in-game; no minimum EQUIP level recorded"
+      "reference": "Forever beta · quest reward observed in-game; no minimum EQUIP level recorded",
+      "icon": "inv_axe_18"
     },
     {
       "id": 251534,
@@ -2630,7 +2641,8 @@
         "Quest Level 22",
         "Quest available from Level 15"
       ],
-      "reference": "Forever beta · quest reward observed in-game; no minimum EQUIP level recorded"
+      "reference": "Forever beta · quest reward observed in-game; no minimum EQUIP level recorded",
+      "icon": "inv_staff_16"
     },
     {
       "id": 279874,
@@ -2671,7 +2683,8 @@
         "Quest Level 22",
         "Quest available from Level 15"
       ],
-      "reference": "Forever beta · quest reward observed in-game; no minimum EQUIP level recorded"
+      "reference": "Forever beta · quest reward observed in-game; no minimum EQUIP level recorded",
+      "icon": "inv_mace_08"
     },
     {
       "id": 279875,
@@ -2711,7 +2724,8 @@
         "Quest Level 22",
         "Quest available from Level 15"
       ],
-      "reference": "Forever beta · quest reward observed in-game; no minimum EQUIP level recorded"
+      "reference": "Forever beta · quest reward observed in-game; no minimum EQUIP level recorded",
+      "icon": "inv_bracer_07"
     },
     {
       "id": 251485,
@@ -2751,7 +2765,8 @@
         "Quest Level 22",
         "Quest available from Level 15"
       ],
-      "reference": "Forever beta · quest reward observed in-game; no minimum EQUIP level recorded"
+      "reference": "Forever beta · quest reward observed in-game; no minimum EQUIP level recorded",
+      "icon": "inv_weapon_shortblade_14"
     },
     {
       "id": 251486,
@@ -2791,7 +2806,9 @@
         "Quest Level 22",
         "Quest available from Level 15"
       ],
-      "reference": "Forever beta · quest reward observed in-game; no minimum EQUIP level recorded"
+      "reference": "Forever beta · quest reward observed in-game; no minimum EQUIP level recorded",
+      "icon": "inv_bracer_10"
     }
-  ]
+  ],
+  "icon_metadata_source": "data/items-forever-cache.json; identical item ID and English name. Forever beta metadata only; not evidence of live availability or loot."
 }
