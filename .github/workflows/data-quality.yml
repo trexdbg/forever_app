@@ -26,6 +26,7 @@ on:
       - 'tests/rare-classic-fr-localization-20261016.test.mjs'
       - 'tests/rare-forever-gear-wave5-20261016.test.mjs'
       - 'tests/rare-classic-fallback-forever-item-stats-20261016.test.mjs'
+      - 'tests/rare-classic-brokespear-20261017.test.mjs'
       - 'tests/rare-forever-new-wave2.test.mjs'
       - 'scripts/check-forever-evidence.mjs'
   workflow_dispatch:
@@ -67,6 +68,8 @@ jobs:
         run: node --test tests/rare-forever-gear-wave5-20261016.test.mjs
       - name: Three Classic rare loot fallbacks with two separate Forever item stat snapshots
         run: node --test tests/rare-classic-fallback-forever-item-stats-20261016.test.mjs
+      - name: Brokespear Classic localization, loot ID and source index fallback
+        run: node --test tests/rare-classic-brokespear-20261017.test.mjs
       - name: Rare and dungeon module JavaScript syntax
         run: |
           node --check assets/rares.js

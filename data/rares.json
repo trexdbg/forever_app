@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-16",
+  "updated_at": "2026-10-17",
   "scope": "Classic/Vanilla references for WoW Forever. No alternative private-server datasets.",
   "coordinate_system": "zone_percent_0_100_not_gps",
   "data_status": "classic_reference_not_forever_verified",
@@ -1371,7 +1371,7 @@
     {
       "id": "barrens-brokespear",
       "name": {
-        "fr": "Lance-brisée",
+        "fr": "Brise-épieu",
         "en": "Brokespear"
       },
       "zone": "barrens",
@@ -1386,7 +1386,61 @@
           41.2
         ]
       ],
-      "loot": [],
+      "loot": [
+        {
+          "name": {
+            "fr": "Canne runique",
+            "en": "Runic Cane"
+          },
+          "name_fr_status": "classic_reference",
+          "name_fr_source_url": "https://www.wowhead.com/classic/fr/items/armor/off-hand-frills/min-req-level:1/max-req-level:20",
+          "name_fr_evidence_note": "Wowhead Classic frFR off-hand catalogue lists Canne runique, item #7559; not a validated Forever translation.",
+          "item_id": 7559,
+          "icon": "inv_staff_02",
+          "source_version": "classic_reference",
+          "source_url": "https://www.wowhead.com/classic/item=7559/runic-cane",
+          "evidence_level": "classic_reference",
+          "evidence_url": "https://www.wowhead.com/classic/item=7559/runic-cane",
+          "observed_at": "2026-10-17",
+          "observed_build": "Classic Era / Classic 1.12 reference only",
+          "evidence_kind": "classic_database",
+          "evidence_note": "Wowhead Classic item #7559 names Brokespear as its only listed drop source, and the Classic French NPC page identifies Brokespear as Brise-épieu #5838. The item level, required level and stats are Classic references only. No Forever spawn, loot, drop percentage or current item stats are claimed.",
+          "chance_classic_percent": null,
+          "drop_evidence": "classic_database_item_to_rare_reference_not_forever_verified",
+          "item_level": 17,
+          "required_level": 12,
+          "slot": {
+            "fr": "Main gauche",
+            "en": "Held In Off-hand"
+          },
+          "stats": {
+            "fr": "+3 Endurance",
+            "en": "+3 Stamina"
+          },
+          "stats_version": "classic_reference",
+          "item_source_url": "https://www.wowhead.com/classic/item=7559/runic-cane",
+          "forever_item_snapshot": {
+            "item_level": 19,
+            "required_level": 14,
+            "slot": {
+              "en": "Held In Off-hand",
+              "fr": "Main gauche"
+            },
+            "stats": {
+              "en": "+3 Stamina",
+              "fr": "+3 Endurance"
+            },
+            "source_url": "https://forever-codex.com/items/?id=7559",
+            "evidence_url": "https://forever-codex.com/items/?id=7559",
+            "corroboration_source_url": "https://theforeverera.com/en/items/7559/",
+            "evidence_level": "documented_forever",
+            "observed_at": "2026-10-17",
+            "observed_build": "1.60.1.70245",
+            "evidence_kind": "forever_community_page",
+            "evidence_note": "Forever Codex compares item #7559 against Classic and reports ilvl 19, required level 14, +3 Stamina; its changelog attributes this record to server-sent beta data at build 1.60.1.70245 (6 October 2026). The Forever Era separately reports a server-sent beta row at build 70058 (30 September 2026) with the same stats. Both sites explicitly use a Classic loot-table fallback for Brokespear, NOT an observed Forever creature drop, verified spawn or drop rate. Current playable-game availability and later builds remain unverified."
+          }
+        }
+      ],
       "source": "https://foreverdb.net/rares",
       "reference": "classic_cmangos_not_forever_verified",
       "seen_forever": false,
@@ -1394,15 +1448,15 @@
         "fr": "",
         "en": ""
       },
-      "name_fr_status": "community_translation_check_needed",
+      "name_fr_status": "classic_reference",
       "beta_level30_in_scope": true,
-      "loot_coverage": "not_documented",
+      "loot_coverage": "notable_only_not_complete",
       "coordinate_status": "classic_reference",
       "location_review": {
         "reviewed_at": "2026-10-14",
         "initially_without_point": false,
         "scope_reason": "Legacy Classic rare catalogue level within 1–30; beta level eligibility only, not evidence of Forever availability",
-        "identity_status": "numeric_id_unresolved",
+        "identity_status": "classic_numeric_id_reference_only",
         "zone": "barrens",
         "uiMapID": 1413,
         "coordinate_system": "zone_percent_0_100_not_gps",
@@ -1411,7 +1465,9 @@
         "forever_presence": "not_established_by_location_audit",
         "location_status": "classic_reference",
         "evidence_note": "Classic-only references; all points are indicative, with no first-hand Forever location proof.",
-        "faction_status": "unverified"
+        "faction_status": "unverified",
+        "classic_numeric_id_reference": 5838,
+        "identity_reference_url": "https://www.wowhead.com/classic/fr/npc=5838/brise-%C3%A9pieu"
       },
       "point_evidence": [
         {
@@ -1426,7 +1482,10 @@
           "evidence_level": "unverified",
           "evidence_note": "Historical coordinate in the pre-audit Classic/CMaNGOS catalogue. Source for this individual coordinate was not independently traceable; this is only an indicative Classic point, never verified on Forever."
         }
-      ]
+      ],
+      "name_fr_source_url": "https://www.wowhead.com/classic/fr/npc=5838/brise-%C3%A9pieu",
+      "name_fr_evidence_note": "French NPC identity Brokespear #5838 sourced from Wowhead Classic (not established for Forever).",
+      "loot_reviewed_at": "2026-10-17"
     },
     {
       "id": "5807",
