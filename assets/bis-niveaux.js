@@ -3,8 +3,8 @@
 const en=document.documentElement.lang==="en",$=id=>document.getElementById(id),host=$("level-bis");
 if(!host)return;
 const T=en?{
- classes:"Classes",level:"Level",required:"Requires level",itemLevel:"Item level",from:"Source",forever:"Forever beta",classic:"Classic",all:"All references",none:"No item for this slot.",unverified:"Other items",other:"Other candidates",hide:"Hide candidates",more:"Show other candidates",detail:"Item details",levelCap:"Beta level cap: 30. Higher brackets are preparatory references only.",empty:"No suitable item.",total:"eligible references",slots:"covered slots",missing:"Not documented",notice:"Suggestions are ranked using item level and available stats, not game testing. Item acquisition, optimization and drop sources have not been verified in Forever.",loading:"Loading item references…",error:"Unable to load equipment references.",source:"Source filter",sourceforever:"Forever beta",sourceclassic:"Classic",classLabel:"Choose class",specLabel:"Role / build",bandLabel:"Level bracket",tooltip:"View details",compare:"Explore the catalogue",confirmed:"Required level",tip:"Click or hover an item to inspect its properties.",reference:"Reference",notverified:"",name:"Name"}:{
- classes:"Classes",level:"Niveau",required:"Niveau requis",itemLevel:"Niveau d’objet",from:"Origine",forever:"Forever bêta",classic:"Classic",all:"Toutes les références",none:"Aucun objet pour cet emplacement.",unverified:"Autres objets",other:"Autres candidats",hide:"Masquer les candidats",more:"Voir les autres candidats",detail:"Fiche de l’objet",levelCap:"Bêta limitée au niveau 30. Les tranches supérieures sont des repères préparatoires.",empty:"Aucun objet adapté.",total:"références éligibles",slots:"emplacements couverts",missing:"Non documenté",notice:"Classement indicatif par niveau d’objet et caractéristiques connues, sans tests en jeu. Obtention, optimisation et butins ne sont pas vérifiés sur Forever.",loading:"Chargement des références…",error:"Impossible de charger les références.",source:"Filtre de provenance",sourceforever:"Forever bêta",sourceclassic:"Classic",classLabel:"Choisir une classe",specLabel:"Rôle / profil",bandLabel:"Tranche de niveau",tooltip:"Voir les détails",compare:"Explorer le catalogue",confirmed:"Niveau requis",tip:"Survolez ou cliquez pour afficher les propriétés.",reference:"Référence",notverified:"",name:"Nom"};
+ classes:"Classes",level:"Level",required:"Requires level",itemLevel:"Item level",from:"Source",forever:"Forever beta",classic:"Classic",all:"All references",none:"No item for this slot.",unverified:"Other items",other:"Other candidates",hide:"Hide candidates",more:"Show other candidates",detail:"Item details",levelCap:"Beta level cap: 30. Higher brackets are preparatory references only.",empty:"No suitable item.",total:"eligible references",slots:"slots with suggestions",missing:"Not documented",notice:"Suggestions are ranked using item level and available stats, not game testing. Item acquisition, optimization and drop sources have not been verified in Forever.",loading:"Loading item references…",error:"Unable to load equipment references.",source:"Source filter",sourceforever:"Forever beta",sourceclassic:"Classic",classLabel:"Choose class",specLabel:"Role / build",bandLabel:"Level bracket",tooltip:"View details",compare:"Explore the catalogue",confirmed:"Required level",tip:"Click or hover an item to inspect its properties.",reference:"Reference",notverified:"",name:"Name"}:{
+ classes:"Classes",level:"Niveau",required:"Niveau requis",itemLevel:"Niveau d’objet",from:"Origine",forever:"Forever bêta",classic:"Classic",all:"Toutes les références",none:"Aucun objet pour cet emplacement.",unverified:"Autres objets",other:"Autres candidats",hide:"Masquer les candidats",more:"Voir les autres candidats",detail:"Fiche de l’objet",levelCap:"Bêta limitée au niveau 30. Les tranches supérieures sont des repères préparatoires.",empty:"Aucun objet adapté.",total:"références éligibles",slots:"emplacements avec suggestion",missing:"Non documenté",notice:"Classement indicatif par niveau d’objet et caractéristiques connues, sans tests en jeu. Obtention, optimisation et butins ne sont pas vérifiés sur Forever.",loading:"Chargement des références…",error:"Impossible de charger les références.",source:"Filtre de provenance",sourceforever:"Forever bêta",sourceclassic:"Classic",classLabel:"Choisir une classe",specLabel:"Rôle / profil",bandLabel:"Tranche de niveau",tooltip:"Voir les détails",compare:"Explorer le catalogue",confirmed:"Niveau requis",tip:"Survolez ou cliquez pour afficher les propriétés.",reference:"Référence",notverified:"",name:"Nom"};
 const classesEN={guerrier:"Warrior",paladin:"Paladin",chasseur:"Hunter",voleur:"Rogue",pretre:"Priest",chaman:"Shaman",mage:"Mage",demoniste:"Warlock",druide:"Druid"};
 const specsEN={"Fury":"Fury","Tank":"Tank","Soins":"Healer","DPS distance":"Ranged DPS","DPS magique":"Spell DPS","Combat épées":"Combat swords","Combat dagues":"Combat daggers","Ombre":"Shadow","Amélioration":"Enhancement","Farouche":"Feral"};
 const slotsEN={head:"Head",neck:"Neck",shoulders:"Shoulders",back:"Back",chest:"Chest",wrist:"Wrist",hands:"Hands",waist:"Waist",legs:"Legs",feet:"Feet",finger1:"Ring 1",finger2:"Ring 2",trinket1:"Trinket 1",trinket2:"Trinket 2",mainhand:"Main hand",offhand:"Off hand",ranged:"Ranged / relic"};
@@ -354,7 +354,7 @@ function itemRow(i,secondary=false){
 
 const leftSlots=["head","neck","shoulders","back","chest","wrist","hands"],rightSlots=["waist","legs","feet","finger1","finger2","trinket1","trinket2"],weaponSlots=["mainhand","offhand","ranged"];
 const qualities={common:["#efeee9","Commun","Common"],uncommon:["#43bf66","Inhabituel","Uncommon"],rare:["#4c9df1","Rare","Rare"],epic:["#b67cff","Épique","Epic"],legendary:["#ffac46","Légendaire","Legendary"]};
-const u=en?{missing:"No target",twohand:"Two-handed weapon equipped",chosen:"Your selection",suggestion:"Suggested item",reset:"Use suggestion",details:"Details",more:"Show more",none:"No items match these filters",all:"All qualities",select:"Set as target",candidates:"references"}:{missing:"Aucun objectif",twohand:"Arme à deux mains équipée",chosen:"Votre sélection",suggestion:"Objet suggéré",reset:"Revenir à la suggestion",details:"Détails",more:"Afficher plus",none:"Aucun objet avec ces filtres",all:"Toutes qualités",select:"Définir comme objectif",candidates:"références"};
+const u=en?{missing:"No suggestion",noCompatible:"No compatible reference for this level bracket and these filters.",alreadyUsed:"All compatible references are already suggested in another slot.",twohand:"Two-handed weapon equipped",chosen:"Your selection",suggestion:"Suggested item",reset:"Use suggestion",details:"Details",more:"Show more",none:"No items match these filters",all:"All qualities",select:"Set as target",candidates:"references"}:{missing:"Sans suggestion",noCompatible:"Aucune référence compatible avec cette tranche de niveau et ces filtres.",alreadyUsed:"Les références compatibles sont déjà proposées dans un autre emplacement.",twohand:"Arme à deux mains équipée",chosen:"Votre sélection",suggestion:"Objet suggéré",reset:"Revenir à la suggestion",details:"Détails",more:"Afficher plus",none:"Aucun objet avec ces filtres",all:"Toutes qualités",select:"Définir comme objectif",candidates:"références"};
 let activeSlot="head",pickerQuery="",selectedQualities=new Set(),visibleLimit=8,currentPlan=null;
 function clearPickerSearch(){pickerQuery="";selectedQualities.clear();visibleLimit=8;const input=$("level-search");if(input)input.value=""}
 function selectLevelSlot(id){window.ForeverItemTooltip?.hide?.();activeSlot=id;clearPickerSearch();renderSlots();if(window.matchMedia?.("(max-width: 980px)")?.matches)$("level-picker")?.scrollIntoView?.({behavior:"smooth",block:"start"})}
@@ -410,6 +410,14 @@ function plan(){
   if(choice){used.add(choice.id);if(choice===target)manual.add(s.id)}
  }
  return {pool,available,selected,manual,blocked};
+}
+function emptySlotReason(id,blocked){
+ if(blocked)return u.twohand;
+ const options=currentPlan.available.get(id)||[];
+ if(!options.length)return u.noCompatible;
+ const occupied=[...currentPlan.selected.entries()].filter(([other,item])=>other!==id&&item).map(([,item])=>item.id);
+ if(options.every(candidate=>occupied.includes(candidate.id)))return u.alreadyUsed;
+ return u.missing;
 }
 function sheetButton(id){
  const slot=db.slots.find(s=>s.id===id),i=currentPlan.selected.get(id),manual=currentPlan.manual.has(id),blocked=currentPlan.blocked.has(id);
@@ -469,10 +477,13 @@ function renderSheet(){
 function renderPicker(){
  const slot=db.slots.find(s=>s.id===activeSlot),id=slot.id,i=currentPlan.selected.get(id);
  const blocked=currentPlan.blocked.has(id),manual=currentPlan.manual.has(id);
+ const list=currentPlan.available.get(id)||[],pending=uncertainReferences(id);
+ const emptySlot=!list.length&&!pending.length;
+ $("level-picker")?.classList.toggle("is-empty-slot",emptySlot);
  $("level-picker-slot").textContent=labelSlot(slot);
 
  const selected=$("level-picked");selected.replaceChildren();
- if(!i)selected.append(mk("p","bis-v2-blank",blocked?u.twohand:u.missing));
+ if(!i)selected.append(mk("p","bis-v2-blank",emptySlotReason(id,blocked)));
  else{
   const item=mk("div","bis-v2-selected bis-v2-selected-compact"+(manual?" is-custom":""));
   item.dataset.quality=i.quality||"common";
@@ -498,7 +509,7 @@ function renderPicker(){
   }
   item.append(controls);selected.append(item);
  }
- const list=currentPlan.available.get(id)||[],root=$("level-quality");root.replaceChildren();
+ const root=$("level-quality");root.replaceChildren();
  function quality(q,label,n){
   const isAll=q==="all",on=isAll?!selectedQualities.size:selectedQualities.has(q);
   const button=mk("button","bis-v2-quality"+(on?" active":""),label+(isAll?"":" "+n));
@@ -514,7 +525,7 @@ function renderPicker(){
  const matches=(blocked?[]:list).filter(it=>(!selectedQualities.size||selectedQualities.has(it.quality))&&(!term||((window.ForeverItemLocale?.aliases(it)||localizedName(it))+" "+localizedOrigin(it)+" "+it.id).toLocaleLowerCase().includes(term))).sort((a,b)=>Number(b.id===i?.id)-Number(a.id===i?.id));
  $("level-picker-count").textContent=matches.length+" "+u.candidates;
  const results=$("level-candidates");results.replaceChildren();
- if(!matches.length)results.append(mk("p","bis-v2-empty",blocked?u.twohand:u.none));
+ if(!matches.length&&!pending.length&&!emptySlot)results.append(mk("p","bis-v2-empty",blocked?u.twohand:u.none));
  for(const candidate of matches.slice(0,visibleLimit)){
   const wrap=mk("div","bis-v2-candidate-wrap"),b=mk("button","bis-v2-candidate"+(i?.id===candidate.id?" selected":""));
   b.type="button";b.dataset.quality=candidate.quality||"common";
@@ -532,7 +543,6 @@ function renderPicker(){
  }
  if(matches.length>visibleLimit){const more=mk("button","bis-v2-more",u.more+" ("+(matches.length-visibleLimit)+")");more.type="button";more.addEventListener("click",()=>{visibleLimit+=8;renderPicker()});results.append(more)}
 
- const pending=uncertainReferences(id);
  if(pending.length){
   const refs=mk("details","bis-v2-source-details");
   const summary=mk("summary","",(en?"Other quest references · equip level unknown":"Autres objets de quête · niveau d’équipement inconnu")+" ("+pending.length+")");

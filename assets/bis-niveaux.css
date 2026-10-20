@@ -154,3 +154,12 @@
 .level-bis-board .level-bis-class .level-bis-icon{width:39px;height:39px}
 .level-bis-board .bis-class-grid.level-bis-classes{margin-bottom:10px}
 .level-bis-board .bis-spec-row.level-bis-row{padding-bottom:10px}
+
+/* Keep empty equipment slots visually distinct from recommended items. */
+.bis-v2-slot.no-item .bis-v2-icon{opacity:.48;filter:grayscale(1)}
+#level-picker.is-empty-slot .bis-v2-search,
+#level-picker.is-empty-slot .bis-v2-extra-filters,
+#level-picker.is-empty-slot .bis-v2-result-head,
+#level-picker.is-empty-slot #level-candidates,
+#level-picker.is-empty-slot > .bis-v2-source-details{display:none}
+#level-picker.is-empty-slot .bis-v2-blank{line-height:1.55;color:#b6c5b4}
