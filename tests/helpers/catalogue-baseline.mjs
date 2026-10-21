@@ -21,6 +21,7 @@ export const BASELINE = Object.freeze({
     uniqueItems: 744,
     relations: 1270,
     itemIdsWithEvidenceInEquipment: 136,
+    classicLevelingIdsWithoutOtherCatalogueEntry: 50,
     byKind: Object.freeze({merchant: 923, boss: 205, rare: 128, recipe: 14}),
     byEvidence: Object.freeze({documented_forever: 474, classic_reference: 772, unverified: 24})
   })
