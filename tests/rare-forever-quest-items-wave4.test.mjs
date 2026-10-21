@@ -1,4 +1,5 @@
 import test from "node:test";
+import {BASELINE as current} from "./helpers/catalogue-baseline.mjs";
 import assert from "node:assert/strict";
 import {readFileSync} from "node:fs";
 import {buildFromFiles} from "../scripts/build-item-acquisition-index.mjs";
@@ -62,10 +63,10 @@ test("quest item documentation does not turn the Classic quest module into Forev
 });
 test("three source links are discoverable and the derived index stays reproducible",()=>{
   assert.deepEqual(idx,buildFromFiles());
-  assert.equal(idx.totals.unique_items,739);
-  assert.equal(idx.totals.relations,1265);
-  assert.equal(idx.totals.by_kind.rare,123);
-  assert.equal(idx.totals.by_evidence.documented_forever,470);
+  assert.equal(idx.totals.unique_items,current.index.uniqueItems);
+  assert.equal(idx.totals.relations,current.index.relations);
+  assert.equal(idx.totals.by_kind.rare,current.index.byKind.rare);
+  assert.equal(idx.totals.by_evidence.documented_forever,current.index.byEvidence.documented_forever);
   for(const c of cases){
     const rare=db.rares.find(r=>r.id===c.rare);
     const source=idx.items.find(i=>i.id===c.id)?.sources.find(s=>s.kind==="rare");
@@ -80,10 +81,10 @@ test("three source links are discoverable and the derived index stays reproducib
 test("no unrelated rare records were erased by the evidence-only change",()=>{
  const scoped=db.rares.filter(r=>r.beta_level30_in_scope);
  const old=scoped.filter(r=>r.reference!=="new_forever_community_documented_not_gameplay_confirmed");
- assert.equal(db.rares.length,378);
- assert.equal(old.length,150);
- assert.equal(old.filter(r=>r.loot.length).length,75);
- assert.equal(scoped.length,161);
- assert.equal(scoped.filter(r=>r.loot.length).length,83);
- assert.equal(scoped.filter(r=>!r.loot.length).length,78);
+ assert.equal(db.rares.length,current.rares.records);
+ assert.equal(old.length,current.rares.legacyScope);
+ assert.equal(old.filter(r=>r.loot.length).length,current.rares.legacyWithLoot);
+ assert.equal(scoped.length,current.rares.betaScope);
+ assert.equal(scoped.filter(r=>r.loot.length).length,current.rares.betaWithLoot);
+ assert.equal(scoped.filter(r=>!r.loot.length).length,current.rares.betaWithoutLoot);
 });
