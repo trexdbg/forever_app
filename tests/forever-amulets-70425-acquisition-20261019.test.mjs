@@ -5,14 +5,17 @@ const read=path=>readFileSync(new URL("../"+path,import.meta.url),"utf8");
 const manual=JSON.parse(read("data/items-forever.json"));
 const audit=JSON.parse(read("data/forever-equipment-acquisition-gaps-20261019.json"));
 const byID=new Map(manual.items.map(x=>[x.id,x]));
+// Snapshot 2026-10-19 is historical; later sourced additions are excluded from its metrics.
+const addedLater=new Set([285228,285272,285273,285274,286536]);
+const historical=manual.items.filter(x=>!addedLater.has(x.id));
 const targets=[
  {id:272185,name:"Amulet of Forgiveness",icon:"inv_jewelry_necklace_06",stats:["+7 Spirit","Equip: +13 Healing.","Equip: +4 Spell Damage."],old:["+10 Spirit","+8 Intellect"]},
  {id:272184,name:"Amulet of Vengeance",icon:"inv_jewelry_necklace_05",stats:["+7 Stamina","+6 Strength"],old:["+10 Stamina","+8 Strength"]}
 ];
 
 test("both updated Forever amulets retain their ID, quality, patch and exact 70425 stats",()=>{
- assert.equal(manual.items.length,174);
- assert.equal(new Set(manual.items.map(x=>x.id)).size,174);
+ assert.equal(manual.items.length,179);
+ assert.equal(new Set(manual.items.map(x=>x.id)).size,179);
  for(const target of targets){
   const item=byID.get(target.id);
   assert.equal(item.name,target.name);
@@ -57,6 +60,7 @@ test("no boss, quest or drop chance is invented for the two amulets",()=>{
 test("sparse record audit prioritizes the remaining 22 unknown origins instead of asserting completion of all Forever equipment",()=>{
  assert.equal(audit.schema_version,1);
  assert.equal(audit.metrics.editorial_forever_items,174);
+ assert.equal(historical.length,174);
  assert.equal(audit.metrics.original_generic_origin,24);
  assert.equal(audit.metrics.amulets_updated,2);
  assert.equal(audit.metrics.remaining_generic_origin,0);
@@ -65,8 +69,8 @@ test("sparse record audit prioritizes the remaining 22 unknown origins instead o
  const generic=manual.items.filter(x=>x.origin==="60.tools · source précise non documentée");
  assert.equal(generic.length,0);
  assert.equal(audit.metrics.acquisition_still_unknown,19);
- assert.equal(manual.items.filter(x=>!Array.isArray(x.tooltip)||x.tooltip.length<5).length,audit.metrics.records_with_fewer_than_five_tooltip_lines);
- assert.equal(manual.items.filter(x=>!x.icon).length,audit.metrics.records_without_real_icon);
+ assert.equal(historical.filter(x=>!Array.isArray(x.tooltip)||x.tooltip.length<5).length,audit.metrics.records_with_fewer_than_five_tooltip_lines);
+ assert.equal(historical.filter(x=>!x.icon).length,audit.metrics.records_without_real_icon);
  assert.ok(!audit.review_queue.some(x=>x.id===272184||x.id===272185));
  assert.equal(audit.review_queue[0].required_level,4);
  for(const row of audit.review_queue){
