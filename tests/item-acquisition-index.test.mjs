@@ -1,4 +1,5 @@
 import test from "node:test";
+import {BASELINE as current} from "./helpers/catalogue-baseline.mjs";
 import assert from "node:assert/strict";
 import {readFileSync} from "node:fs";
 import {buildFromFiles,buildAcquisitionIndex} from "../scripts/build-item-acquisition-index.mjs";
@@ -16,9 +17,9 @@ test("public acquisition index matches its reproducible input-catalogue build",(
  assert.equal(published.totals.relations,all.length);
  assert.ok(published.items.length>=500,"Insufficient useful linked item coverage");
  assert.ok(all.length>=950,"Unexpected loss of existing catalogue relations");
- assert.equal(published.totals.relations,1265);
- assert.equal(published.totals.unique_items,739);
- assert.equal(published.totals.by_evidence.documented_forever,470);
+ assert.equal(published.totals.relations,current.index.relations);
+ assert.equal(published.totals.unique_items,current.index.uniqueItems);
+ assert.equal(published.totals.by_evidence.documented_forever,current.index.byEvidence.documented_forever);
 });
 test("IDs, source paths, categories and evidence statuses are valid",()=>{
  const ids=new Set();
@@ -45,10 +46,10 @@ test("Forever documentary links are never promoted to confirmed gameplay",()=>{
  assert.ok(all.some(s=>s.evidence_level==="classic_reference"));
  assert.ok(!all.some(s=>s.evidence_level==="confirmed_in_game"),
   "No live game proof was established by this navigational cross-index");
- assert.equal(all.filter(s=>s.kind==="merchant").length,923);
- assert.equal(all.filter(s=>s.kind==="boss").length,205);
- assert.equal(all.filter(s=>s.kind==="rare").length,123);
- assert.equal(all.filter(s=>s.kind==="recipe").length,14);
+ assert.equal(all.filter(s=>s.kind==="merchant").length,current.index.byKind.merchant);
+ assert.equal(all.filter(s=>s.kind==="boss").length,current.index.byKind.boss);
+ assert.equal(all.filter(s=>s.kind==="rare").length,current.index.byKind.rare);
+ assert.equal(all.filter(s=>s.kind==="recipe").length,current.index.byKind.recipe);
 });
 test("all twenty-four documented Forever rare additions appear in the cross-catalogue lookup",()=>{
  const mustInclude=[285347,285346,285348,285350,284386,284400,286533,286534,286537,284287,285328,284174,285269,263015,247862,277213,255007,286746,286749,286750,286755,285345,282716,284666];
