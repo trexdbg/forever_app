@@ -1,4 +1,5 @@
 import test from "node:test";
+import {BASELINE as current} from "./helpers/catalogue-baseline.mjs";
 import assert from "node:assert/strict";
 import {readFileSync} from "node:fs";
 const read=p=>readFileSync(new URL("../"+p,import.meta.url),"utf8");
@@ -25,9 +26,9 @@ test("classic curated leveling equipment makes 53 additional item IDs searchable
  }
 });
 test("common ID index links existing catalogues to 132 sourced results; not by translated or approximate name",()=>{
- assert.equal(index.totals.unique_items,739);
- assert.equal(index.totals.relations,1265);
- assert.equal(indexWithProof.length,132);
+ assert.equal(index.totals.unique_items,current.index.uniqueItems);
+ assert.equal(index.totals.relations,current.index.relations);
+ assert.equal(indexWithProof.length,current.index.itemIdsWithEvidenceInEquipment);
  const example=indexed.get(270227);
  assert.ok(example.some(s=>s.kind==="boss"&&s.name_en==="Faldrim Anvilmar"&&s.evidence_level==="documented_forever"));
  assert.ok(indexed.get(5198).some(s=>s.kind==="boss"&&s.name_en==="Cookie"&&s.evidence_level==="classic_reference"));
