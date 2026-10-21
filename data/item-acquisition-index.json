@@ -4,17 +4,17 @@
   "scope": "Read-only relations inherited from ForEveroth merchant, rare, dungeon and opt-in beta recipe catalogues. Source links may identify only an item or guide, not prove sale, drop, availability, rates or live crafting.",
   "provenance_policy": "Forever documented relations are labelled documentary only; all Classic relations stay Classic. Each relationship preserves its originating status. The links are navigation aids, not new source audits.",
   "totals": {
-    "unique_items": 736,
-    "relations": 1262,
+    "unique_items": 739,
+    "relations": 1265,
     "by_kind": {
       "merchant": 923,
       "boss": 205,
-      "rare": 120,
+      "rare": 123,
       "recipe": 14
     },
     "by_evidence": {
       "documented_forever": 470,
-      "classic_reference": 768,
+      "classic_reference": 771,
       "unverified": 24
     }
   },
@@ -264,6 +264,20 @@
           "evidence_level": "classic_reference",
           "source_status": "classic_rare_loot_reference",
           "reference_url": "https://www.wowhead.com/classic/item=1913/studded-blackjack"
+        }
+      ]
+    },
+    {
+      "id": 1917,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Morgaine la rusée",
+          "name_en": "Morgaine the Sly",
+          "href": "/rare/?zone=elwynn&q=Morgaine%20the%20Sly&level=all",
+          "evidence_level": "classic_reference",
+          "source_status": "classic_rare_loot_reference",
+          "reference_url": "https://www.wowhead.com/classic/item=1917/jeweled-dagger"
         }
       ]
     },
@@ -975,6 +989,20 @@
           "evidence_level": "classic_reference",
           "source_status": "classic_rare_loot_reference",
           "reference_url": "https://foreverdb.net/rare/596"
+        }
+      ]
+    },
+    {
+      "id": 4261,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Fermier de Solliden",
+          "name_en": "Farmer Solliden",
+          "href": "/rare/?zone=tirisfal&q=Farmer%20Solliden&level=all",
+          "evidence_level": "classic_reference",
+          "source_status": "classic_rare_loot_reference",
+          "reference_url": "https://www.wowhead.com/classic/item=4261/sollidens-trousers"
         }
       ]
     },
@@ -3910,6 +3938,20 @@
           "evidence_level": "classic_reference",
           "source_status": "classic_rare_loot_reference",
           "reference_url": "https://foreverdb.net/rare/2476"
+        }
+      ]
+    },
+    {
+      "id": 6201,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Morgaine la rusée",
+          "name_en": "Morgaine the Sly",
+          "href": "/rare/?zone=elwynn&q=Morgaine%20the%20Sly&level=all",
+          "evidence_level": "classic_reference",
+          "source_status": "classic_rare_loot_reference",
+          "reference_url": "https://www.wowhead.com/classic/item=6201/lithe-boots"
         }
       ]
     },
