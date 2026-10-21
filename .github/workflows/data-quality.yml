@@ -29,6 +29,7 @@ on:
       - 'tests/rare-classic-brokespear-20261017.test.mjs'
       - 'tests/items-forever-crosslinked-acquisition-20261020.test.mjs'
       - 'tests/rare-forever-new-wave2.test.mjs'
+      - 'tests/rare-forever-zephras-snort-20261021.test.mjs'
       - 'scripts/check-forever-evidence.mjs'
   workflow_dispatch:
 permissions:
@@ -85,6 +86,8 @@ jobs:
         run: node scripts/build-item-acquisition-index.mjs --check
       - name: Forever new starter-zone rare discovery regression
         run: node --test tests/rare-forever-new-wave2.test.mjs
+      - name: Five new sourced Forever rare drops with contradiction and ID guards
+        run: node --test tests/rare-forever-zephras-snort-20261021.test.mjs
       - name: Cross-catalogue Forever source audit
         run: node scripts/check-forever-evidence.mjs
       - name: Rare location provenance gate
