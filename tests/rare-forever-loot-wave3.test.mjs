@@ -53,10 +53,10 @@ test("Sister Rathtalon's map conflict is still unresolved: loot source does not 
 });
 
 test("four Forever rare relations are traversable through the item acquisition index",()=>{
- assert.equal(index.totals.unique_items,731);
- assert.equal(index.totals.relations,1257);
- assert.equal(index.totals.by_kind.rare,115);
- assert.equal(index.totals.by_evidence.documented_forever,465);
+ assert.equal(index.totals.unique_items,736);
+ assert.equal(index.totals.relations,1262);
+ assert.equal(index.totals.by_kind.rare,120);
+ assert.equal(index.totals.by_evidence.documented_forever,470);
  for(const e of expected){
   const row=index.items.find(i=>i.id===e.itemId);
   assert.ok(row,"Unindexed item "+e.itemId);
@@ -75,9 +75,9 @@ test("count cumulative additions without rewriting the historic 150 rare baselin
  const legacy=scoped.filter(r=>r.reference!=="new_forever_community_documented_not_gameplay_confirmed");
  assert.equal(scoped.length,161);
  assert.equal(legacy.length,150);
- assert.equal(legacy.filter(r=>r.loot.length).length,72);
- assert.equal(scoped.filter(r=>r.loot.length).length,78);
- assert.equal(scoped.filter(r=>!r.loot.length).length,83);
+ assert.equal(legacy.filter(r=>r.loot.length).length,73);
+ assert.equal(scoped.filter(r=>r.loot.length).length,81);
+ assert.equal(scoped.filter(r=>!r.loot.length).length,80);
 });
 
 test("four preexisting Forever rare-set and Duskstalker drops now have individualized evidence",()=>{
