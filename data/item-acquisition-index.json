@@ -4,16 +4,16 @@
   "scope": "Read-only relations inherited from ForEveroth merchant, rare, dungeon and opt-in beta recipe catalogues. Source links may identify only an item or guide, not prove sale, drop, availability, rates or live crafting.",
   "provenance_policy": "Forever documented relations are labelled documentary only; all Classic relations stay Classic. Each relationship preserves its originating status. The links are navigation aids, not new source audits.",
   "totals": {
-    "unique_items": 741,
-    "relations": 1267,
+    "unique_items": 744,
+    "relations": 1270,
     "by_kind": {
       "merchant": 923,
       "boss": 205,
-      "rare": 125,
+      "rare": 128,
       "recipe": 14
     },
     "by_evidence": {
-      "documented_forever": 471,
+      "documented_forever": 474,
       "classic_reference": 772,
       "unverified": 24
     }
@@ -3501,6 +3501,20 @@
       ]
     },
     {
+      "id": 5744,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Fedfennel",
+          "name_en": "Fedfennel",
+          "href": "/rare/?zone=elwynn&q=Fedfennel&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://www.wowhead.com/forever/items/weapons/one-handed-swords/quality:2"
+        }
+      ]
+    },
+    {
       "id": 5771,
       "sources": [
         {
@@ -3980,6 +3994,34 @@
           "evidence_level": "classic_reference",
           "source_status": "classic_rare_loot_reference",
           "reference_url": "https://www.wowhead.com/classic/item=6201/lithe-boots"
+        }
+      ]
+    },
+    {
+      "id": 6202,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Thuros Doigts-agiles",
+          "name_en": "Thuros Lightfingers",
+          "href": "/rare/?zone=elwynn&q=Thuros%20Lightfingers&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://www.wowhead.com/forever/npc=61/thuros-lightfingers"
+        }
+      ]
+    },
+    {
+      "id": 6203,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Thuros Doigts-agiles",
+          "name_en": "Thuros Lightfingers",
+          "href": "/rare/?zone=elwynn&q=Thuros%20Lightfingers&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://www.wowhead.com/forever/npc=61/thuros-lightfingers"
         }
       ]
     },
