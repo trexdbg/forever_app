@@ -1,4 +1,5 @@
 import test from "node:test";
+import {BASELINE as current} from "./helpers/catalogue-baseline.mjs";
 import assert from "node:assert/strict";
 import {readFileSync} from "node:fs";
 import {buildFromFiles} from "../scripts/build-item-acquisition-index.mjs";
@@ -70,9 +71,9 @@ test("the UI does not mistake all Forever-referenced drops for new items or offi
 });
 test("Classic quests stay online, new Forever quest module stays inactive and all 161 scoped rares remain",()=>{
  const inScope=rares.rares.filter(x=>x.beta_level30_in_scope);
- assert.equal(inScope.length,161);
- assert.equal(inScope.filter(r=>r.loot.length).length,83);
- assert.equal(inScope.filter(r=>!r.loot.length).length,78);
- assert.equal(idx.totals.relations,1265);
+ assert.equal(inScope.length,current.rares.betaScope);
+ assert.equal(inScope.filter(r=>r.loot.length).length,current.rares.betaWithLoot);
+ assert.equal(inScope.filter(r=>!r.loot.length).length,current.rares.betaWithoutLoot);
+ assert.equal(idx.totals.relations,current.index.relations);
  for(const path of ["quetes/index.html","en/quetes/index.html"])assert.ok(read(path).length>1000);
 });
