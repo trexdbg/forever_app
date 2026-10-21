@@ -12,9 +12,9 @@ const indexed=new Map(index.items.map(x=>[x.id,x.sources]));
 const allIDs=new Set([...knownIDs,...leveling.map(x=>x.id)]);
 const indexWithProof=[...allIDs].filter(id=>indexed.get(id)?.some(s=>s.evidence_level!=="unverified"));
 
-test("classic curated leveling equipment makes 53 additional item IDs searchable without relabeling them Forever",()=>{
+test("classic curated leveling equipment preserves count of Classic-only leveling item IDs without relabeling them Forever",()=>{
  assert.equal(leveling.length,75);
- assert.equal(leveling.filter(x=>!knownIDs.has(x.id)).length,53);
+ assert.equal(leveling.filter(x=>!knownIDs.has(x.id)).length,current.index.classicLevelingIdsWithoutOtherCatalogueEntry);
  assert.equal(new Set(leveling.map(x=>x.id)).size,75);
  for(const item of leveling){
   assert.equal(item.source_status,"classic_curated_leveling");
