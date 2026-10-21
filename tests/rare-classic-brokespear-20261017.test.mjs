@@ -57,7 +57,7 @@ test("Classic Brokespear reference is searchable but never classified as documen
  assert.equal(entry.sources[0].evidence_level,"classic_reference");
  assert.equal(entry.sources[0].source_status,"classic_rare_loot_reference");
  assert.equal(entry.sources[0].href,"/rare/?zone=barrens&q=Brokespear&level=all");
- assert.equal(idx.totals.unique_items,731);
- assert.equal(idx.totals.by_kind.rare,115);
+ assert.equal(idx.totals.unique_items,736);
+ assert.equal(idx.totals.by_kind.rare,120);
  assert.equal(idx.totals.by_evidence.classic_reference,768);
 });
