@@ -81,11 +81,11 @@ test("French names have individual Classic attribution without asserting Forever
 
 test("index navigation remains reproducible with three Classic fallback links only",()=>{
  assert.deepEqual(idx,buildFromFiles());
- assert.equal(idx.totals.unique_items,736);
- assert.equal(idx.totals.relations,1262);
- assert.equal(idx.totals.by_kind.rare,120);
+ assert.equal(idx.totals.unique_items,739);
+ assert.equal(idx.totals.relations,1265);
+ assert.equal(idx.totals.by_kind.rare,123);
  assert.equal(idx.totals.by_evidence.documented_forever,470);
- assert.equal(idx.totals.by_evidence.classic_reference,768);
+ assert.equal(idx.totals.by_evidence.classic_reference,771);
  for(const c of expected){
   const rare=db.rares.find(r=>r.id===c.rare);
   const links=idx.items.find(i=>i.id===c.id)?.sources;
@@ -112,8 +112,8 @@ test("rare interface makes Forever item metadata visible but does not falsely ve
  }
  const scope=db.rares.filter(r=>r.beta_level30_in_scope);
  assert.equal(scope.length,161);
- assert.equal(scope.filter(r=>r.loot.length).length,81);
- assert.equal(scope.filter(r=>!r.loot.length).length,80);
+ assert.equal(scope.filter(r=>r.loot.length).length,83);
+ assert.equal(scope.filter(r=>!r.loot.length).length,78);
  for(const path of ["quetes/index.html","en/quetes/index.html"])
   assert.ok(read(path).length>1000,"Classic quests remain available");
 });
