@@ -1,4 +1,5 @@
 import test from "node:test";
+import {BASELINE as current} from "./helpers/catalogue-baseline.mjs";
 import assert from "node:assert/strict";
 import {readFileSync} from "node:fs";
 import {buildFromFiles} from "../scripts/build-item-acquisition-index.mjs";
@@ -58,11 +59,11 @@ test("actual documented Forever stats are separate from Classic item localizatio
 });
 test("new items reach source lookup, with deterministic cross-index and unchanged historical links",()=>{
  assert.deepEqual(idx,buildFromFiles());
- assert.equal(idx.totals.unique_items,739);
- assert.equal(idx.totals.relations,1265);
- assert.equal(idx.totals.by_kind.rare,123);
- assert.equal(idx.totals.by_evidence.documented_forever,470);
- assert.equal(idx.totals.by_evidence.classic_reference,771);
+ assert.equal(idx.totals.unique_items,current.index.uniqueItems);
+ assert.equal(idx.totals.relations,current.index.relations);
+ assert.equal(idx.totals.by_kind.rare,current.index.byKind.rare);
+ assert.equal(idx.totals.by_evidence.documented_forever,current.index.byEvidence.documented_forever);
+ assert.equal(idx.totals.by_evidence.classic_reference,current.index.byEvidence.classic_reference);
  for(const c of cases){
   const r=db.rares.find(x=>x.id===c.rare);
   const item=idx.items.find(x=>x.id===c.id);
@@ -81,12 +82,12 @@ test("new items reach source lookup, with deterministic cross-index and unchange
 test("rare coverage rises without removing Classic-only entries or enabling Forever quests",()=>{
  const all=db.rares.filter(r=>r.beta_level30_in_scope);
  const legacy=all.filter(r=>r.reference!=="new_forever_community_documented_not_gameplay_confirmed");
- assert.equal(db.rares.length,378);
- assert.equal(all.length,161);
- assert.equal(legacy.length,150);
- assert.equal(legacy.filter(r=>r.loot.length).length,75);
- assert.equal(all.filter(r=>r.loot.length).length,83);
- assert.equal(all.filter(r=>!r.loot.length).length,78);
+ assert.equal(db.rares.length,current.rares.records);
+ assert.equal(all.length,current.rares.betaScope);
+ assert.equal(legacy.length,current.rares.legacyScope);
+ assert.equal(legacy.filter(r=>r.loot.length).length,current.rares.legacyWithLoot);
+ assert.equal(all.filter(r=>r.loot.length).length,current.rares.betaWithLoot);
+ assert.equal(all.filter(r=>!r.loot.length).length,current.rares.betaWithoutLoot);
  for(const path of ["quetes/index.html","en/quetes/index.html"]){
   const html=readFileSync(new URL("../"+path,import.meta.url),"utf8");
   assert.ok(html.length>1000,"Classic quest module stays publicly available");
