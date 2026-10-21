@@ -1,4 +1,5 @@
 import test from "node:test";
+import {BASELINE as current} from "./helpers/catalogue-baseline.mjs";
 import assert from "node:assert/strict";
 import {readFileSync} from "node:fs";
 import {buildFromFiles,buildAcquisitionIndex} from "../scripts/build-item-acquisition-index.mjs";
@@ -76,12 +77,12 @@ test("inconsistent boss names and blueprint-only item sheets remain unresolved, 
 test("published acquisition index agrees with inputs and labels only individually documented boss links",()=>{
  assert.deepEqual(index,buildFromFiles(),"The published index must be rebuilt by the deterministic generator");
  assert.equal(index.updated_at,"2026-10-17");
- assert.equal(index.totals.unique_items,739);
- assert.equal(index.totals.relations,1265);
- assert.equal(index.totals.by_kind.boss,205);
- assert.equal(index.totals.by_evidence.documented_forever,470);
- assert.equal(index.totals.by_evidence.classic_reference,771);
- assert.equal(index.totals.by_evidence.unverified,24);
+ assert.equal(index.totals.unique_items,current.index.uniqueItems);
+ assert.equal(index.totals.relations,current.index.relations);
+ assert.equal(index.totals.by_kind.boss,current.index.byKind.boss);
+ assert.equal(index.totals.by_evidence.documented_forever,current.index.byEvidence.documented_forever);
+ assert.equal(index.totals.by_evidence.classic_reference,current.index.byEvidence.classic_reference);
+ assert.equal(index.totals.by_evidence.unverified,current.index.byEvidence.unverified);
  const links=index.items.flatMap(row=>row.sources.filter(s=>s.kind==="boss").map(s=>({id:row.id,...s})));
  assert.equal(links.filter(s=>s.evidence_level==="documented_forever").length,71);
  assert.equal(links.filter(s=>s.evidence_level==="unverified").length,24);
