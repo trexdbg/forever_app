@@ -56,8 +56,8 @@ test("2 new documented Classic fallbacks increase catalogue navigation without p
  assert.equal(index.totals.by_evidence.documented_forever,current.index.byEvidence.documented_forever);
  const scoped=db.rares.filter(x=>x.beta_level30_in_scope);
  assert.equal(scoped.length,current.rares.betaScope);
- assert.equal(scoped.filter(x=>x.loot.length).length,83);
- assert.equal(scoped.filter(x=>!x.loot.length).length,78);
+ assert.equal(scoped.filter(x=>x.loot.length).length,current.rares.betaWithLoot);
+ assert.equal(scoped.filter(x=>!x.loot.length).length,current.rares.betaWithoutLoot);
  for(const r of db.rares.filter(x=>records.some(p=>p.rare===x.id))){
   assert.ok(r.points.length>0);
   assert.ok(r.point_evidence.every(e=>e.origin==="classic_reference"));

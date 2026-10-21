@@ -6,22 +6,22 @@
  * Historical per-item regression expectations stay local to their tests.
  */
 export const BASELINE = Object.freeze({
-  editorialItems: 179,
+  editorialItems: 180,
   rares: Object.freeze({
     records: 378,
     betaScope: 161,
-    betaWithLoot: 83,
-    betaWithoutLoot: 78,
+    betaWithLoot: 84,
+    betaWithoutLoot: 77,
     legacyScope: 150,
-    legacyWithLoot: 75,
-    legacyWithoutLoot: 75,
-    allLootRows: 123
+    legacyWithLoot: 76,
+    legacyWithoutLoot: 74,
+    allLootRows: 125
   }),
   index: Object.freeze({
-    uniqueItems: 739,
-    relations: 1265,
-    itemIdsWithEvidenceInEquipment: 132,
-    byKind: Object.freeze({merchant: 923, boss: 205, rare: 123, recipe: 14}),
-    byEvidence: Object.freeze({documented_forever: 470, classic_reference: 771, unverified: 24})
+    uniqueItems: 741,
+    relations: 1267,
+    itemIdsWithEvidenceInEquipment: 133,
+    byKind: Object.freeze({merchant: 923, boss: 205, rare: 125, recipe: 14}),
+    byEvidence: Object.freeze({documented_forever: 471, classic_reference: 772, unverified: 24})
   })
 });
