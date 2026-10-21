@@ -34,6 +34,7 @@ on:
       - 'tests/rare-forever-zephras-snort-20261021.test.mjs'
       - 'tests/rare-classic-fallback-solliden-morgaine-20261021.test.mjs'
       - 'tests/rare-edan-mixed-evidence-20261021.test.mjs'
+      - 'tests/rare-thuros-fedfennel-20261021.test.mjs'
       - 'scripts/check-forever-evidence.mjs'
   workflow_dispatch:
 permissions:
@@ -98,6 +99,8 @@ jobs:
         run: node --test tests/rare-classic-fallback-solliden-morgaine-20261021.test.mjs
       - name: Edan mixed Forever and Classic item provenance
         run: node --test tests/rare-edan-mixed-evidence-20261021.test.mjs
+      - name: Thuros and Fedfennel Forever item evidence and Classic fallback safeguards
+        run: node --test tests/rare-thuros-fedfennel-20261021.test.mjs
       - name: Cross-catalogue Forever source audit
         run: node scripts/check-forever-evidence.mjs
       - name: Rare location provenance gate
