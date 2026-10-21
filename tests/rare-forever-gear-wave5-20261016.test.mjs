@@ -58,11 +58,11 @@ test("actual documented Forever stats are separate from Classic item localizatio
 });
 test("new items reach source lookup, with deterministic cross-index and unchanged historical links",()=>{
  assert.deepEqual(idx,buildFromFiles());
- assert.equal(idx.totals.unique_items,736);
- assert.equal(idx.totals.relations,1262);
- assert.equal(idx.totals.by_kind.rare,120);
+ assert.equal(idx.totals.unique_items,739);
+ assert.equal(idx.totals.relations,1265);
+ assert.equal(idx.totals.by_kind.rare,123);
  assert.equal(idx.totals.by_evidence.documented_forever,470);
- assert.equal(idx.totals.by_evidence.classic_reference,768);
+ assert.equal(idx.totals.by_evidence.classic_reference,771);
  for(const c of cases){
   const r=db.rares.find(x=>x.id===c.rare);
   const item=idx.items.find(x=>x.id===c.id);
@@ -84,9 +84,9 @@ test("rare coverage rises without removing Classic-only entries or enabling Fore
  assert.equal(db.rares.length,378);
  assert.equal(all.length,161);
  assert.equal(legacy.length,150);
- assert.equal(legacy.filter(r=>r.loot.length).length,73);
- assert.equal(all.filter(r=>r.loot.length).length,81);
- assert.equal(all.filter(r=>!r.loot.length).length,80);
+ assert.equal(legacy.filter(r=>r.loot.length).length,75);
+ assert.equal(all.filter(r=>r.loot.length).length,83);
+ assert.equal(all.filter(r=>!r.loot.length).length,78);
  for(const path of ["quetes/index.html","en/quetes/index.html"]){
   const html=readFileSync(new URL("../"+path,import.meta.url),"utf8");
   assert.ok(html.length>1000,"Classic quest module stays publicly available");
