@@ -47,7 +47,7 @@ test("Forever documentary links are never promoted to confirmed gameplay",()=>{
   "No live game proof was established by this navigational cross-index");
  assert.equal(all.filter(s=>s.kind==="merchant").length,923);
  assert.equal(all.filter(s=>s.kind==="boss").length,205);
- assert.equal(all.filter(s=>s.kind==="rare").length,115);
+ assert.equal(all.filter(s=>s.kind==="rare").length,120);
  assert.equal(all.filter(s=>s.kind==="recipe").length,14);
 });
 test("all twenty-four documented Forever rare additions appear in the cross-catalogue lookup",()=>{
