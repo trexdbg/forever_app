@@ -1,4 +1,5 @@
 import test from "node:test";
+import {BASELINE as current} from "./helpers/catalogue-baseline.mjs";
 import assert from "node:assert/strict";
 import {readFileSync} from "node:fs";
 import {buildFromFiles} from "../scripts/build-item-acquisition-index.mjs";
@@ -81,11 +82,11 @@ test("French names have individual Classic attribution without asserting Forever
 
 test("index navigation remains reproducible with three Classic fallback links only",()=>{
  assert.deepEqual(idx,buildFromFiles());
- assert.equal(idx.totals.unique_items,739);
- assert.equal(idx.totals.relations,1265);
- assert.equal(idx.totals.by_kind.rare,123);
- assert.equal(idx.totals.by_evidence.documented_forever,470);
- assert.equal(idx.totals.by_evidence.classic_reference,771);
+ assert.equal(idx.totals.unique_items,current.index.uniqueItems);
+ assert.equal(idx.totals.relations,current.index.relations);
+ assert.equal(idx.totals.by_kind.rare,current.index.byKind.rare);
+ assert.equal(idx.totals.by_evidence.documented_forever,current.index.byEvidence.documented_forever);
+ assert.equal(idx.totals.by_evidence.classic_reference,current.index.byEvidence.classic_reference);
  for(const c of expected){
   const rare=db.rares.find(r=>r.id===c.rare);
   const links=idx.items.find(i=>i.id===c.id)?.sources;
@@ -111,9 +112,9 @@ test("rare interface makes Forever item metadata visible but does not falsely ve
   assert.ok(read(path).includes("/assets/item-locale.js?v=20261016-rare-fallback"),path);
  }
  const scope=db.rares.filter(r=>r.beta_level30_in_scope);
- assert.equal(scope.length,161);
- assert.equal(scope.filter(r=>r.loot.length).length,83);
- assert.equal(scope.filter(r=>!r.loot.length).length,78);
+ assert.equal(scope.length,current.rares.betaScope);
+ assert.equal(scope.filter(r=>r.loot.length).length,current.rares.betaWithLoot);
+ assert.equal(scope.filter(r=>!r.loot.length).length,current.rares.betaWithoutLoot);
  for(const path of ["quetes/index.html","en/quetes/index.html"])
   assert.ok(read(path).length>1000,"Classic quests remain available");
 });
