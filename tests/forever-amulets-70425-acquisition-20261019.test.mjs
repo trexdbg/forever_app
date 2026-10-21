@@ -7,7 +7,7 @@ const manual=JSON.parse(read("data/items-forever.json"));
 const audit=JSON.parse(read("data/forever-equipment-acquisition-gaps-20261019.json"));
 const byID=new Map(manual.items.map(x=>[x.id,x]));
 // Snapshot 2026-10-19 is historical; later sourced additions are excluded from its metrics.
-const addedLater=new Set([285228,285272,285273,285274,286536]);
+const addedLater=new Set([285228,285272,285273,285274,286536,3008]);
 const historical=manual.items.filter(x=>!addedLater.has(x.id));
 const targets=[
  {id:272185,name:"Amulet of Forgiveness",icon:"inv_jewelry_necklace_06",stats:["+7 Spirit","Equip: +13 Healing.","Equip: +4 Spell Damage."],old:["+10 Spirit","+8 Intellect"]},
