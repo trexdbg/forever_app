@@ -1,4 +1,5 @@
 import test from "node:test";
+import {BASELINE as current} from "./helpers/catalogue-baseline.mjs";
 import assert from "node:assert/strict";
 import {readFileSync} from "node:fs";
 import {buildFromFiles} from "../scripts/build-item-acquisition-index.mjs";
@@ -48,13 +49,13 @@ test("three sourced Classic-only fallback items are linked by exact NPC and item
 });
 test("2 new documented Classic fallbacks increase catalogue navigation without promoting Forever evidence",()=>{
  assert.deepEqual(index,buildFromFiles());
- assert.equal(index.totals.unique_items,739);
- assert.equal(index.totals.relations,1265);
- assert.equal(index.totals.by_kind.rare,123);
- assert.equal(index.totals.by_evidence.classic_reference,771);
- assert.equal(index.totals.by_evidence.documented_forever,470);
+ assert.equal(index.totals.unique_items,current.index.uniqueItems);
+ assert.equal(index.totals.relations,current.index.relations);
+ assert.equal(index.totals.by_kind.rare,current.index.byKind.rare);
+ assert.equal(index.totals.by_evidence.classic_reference,current.index.byEvidence.classic_reference);
+ assert.equal(index.totals.by_evidence.documented_forever,current.index.byEvidence.documented_forever);
  const scoped=db.rares.filter(x=>x.beta_level30_in_scope);
- assert.equal(scoped.length,161);
+ assert.equal(scoped.length,current.rares.betaScope);
  assert.equal(scoped.filter(x=>x.loot.length).length,83);
  assert.equal(scoped.filter(x=>!x.loot.length).length,78);
  for(const r of db.rares.filter(x=>records.some(p=>p.rare===x.id))){

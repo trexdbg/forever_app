@@ -1,4 +1,5 @@
 import test from "node:test";
+import {BASELINE as current} from "./helpers/catalogue-baseline.mjs";
 import assert from "node:assert/strict";
 import {readFileSync} from "node:fs";
 const read=path=>readFileSync(new URL("../"+path,import.meta.url),"utf8");
@@ -14,8 +15,8 @@ const targets=[
 ];
 
 test("both updated Forever amulets retain their ID, quality, patch and exact 70425 stats",()=>{
- assert.equal(manual.items.length,179);
- assert.equal(new Set(manual.items.map(x=>x.id)).size,179);
+ assert.equal(manual.items.length,current.editorialItems);
+ assert.equal(new Set(manual.items.map(x=>x.id)).size,current.editorialItems);
  for(const target of targets){
   const item=byID.get(target.id);
   assert.equal(item.name,target.name);

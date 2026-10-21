@@ -1,4 +1,5 @@
 import test from "node:test";
+import {BASELINE as current} from "./helpers/catalogue-baseline.mjs";
 import assert from "node:assert/strict";
 import {readFileSync} from "node:fs";
 import {buildFromFiles} from "../scripts/build-item-acquisition-index.mjs";
@@ -57,7 +58,7 @@ test("Classic Brokespear reference is searchable but never classified as documen
  assert.equal(entry.sources[0].evidence_level,"classic_reference");
  assert.equal(entry.sources[0].source_status,"classic_rare_loot_reference");
  assert.equal(entry.sources[0].href,"/rare/?zone=barrens&q=Brokespear&level=all");
- assert.equal(idx.totals.unique_items,739);
- assert.equal(idx.totals.by_kind.rare,123);
- assert.equal(idx.totals.by_evidence.classic_reference,771);
+ assert.equal(idx.totals.unique_items,current.index.uniqueItems);
+ assert.equal(idx.totals.by_kind.rare,current.index.byKind.rare);
+ assert.equal(idx.totals.by_evidence.classic_reference,current.index.byEvidence.classic_reference);
 });

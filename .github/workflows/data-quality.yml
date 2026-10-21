@@ -6,6 +6,8 @@ on:
       - 'docs/data-quality.md'
       - 'scripts/check-data-quality.mjs'
       - 'tests/data-quality.test.mjs'
+      - 'tests/catalogue-baseline.test.mjs'
+      - 'tests/helpers/catalogue-baseline.mjs'
       - '.github/workflows/data-quality.yml'
       - 'data/**'
       - 'assets/rares.js'
@@ -46,6 +48,8 @@ jobs:
           node-version: '22'
       - name: Regression fixtures (no network)
         run: node --test tests/data-quality.test.mjs
+      - name: Pinned catalogue coverage baseline and reproducible index
+        run: node --test tests/catalogue-baseline.test.mjs
       - name: Full JSON reliability scan (errors block; warnings reviewed)
         run: node scripts/check-data-quality.mjs
       - name: T0 Forever set piece IDs and equipment catalogue FR/EN regression

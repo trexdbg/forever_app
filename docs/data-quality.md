@@ -93,3 +93,11 @@ Exécution du contrôle hors ligne sur la PR fondatrice, sans édition des sourc
 Les avertissements sont des **lacunes de provenance ou de complétude**, pas 721 erreurs factuelles démontrées. Les corrections nécessitent une source précise et parfois une observation en jeu. Prioriser d'abord les ambiguïtés sur l'identité Classic/Forever et les attributions de butin. Ne pas supprimer les références de quêtes Classic.
 
 Risque producteur externe à ce contrôle : `trexdbg/forever_agent/scripts/sync_forever_items.py` contient sur `main` un `\\n` littéral causant un `SyntaxError` et bloquant la suite de tests complète du dépôt agent ; sa correction est hors du périmètre de cette PR documentation/validation. Les scripts de publication directe sur `forever_app/main` doivent aussi être revus dans une mission distincte.
+
+## Baseline des catalogues publiés (octobre 2026)
+
+Les totaux *courants* des rares, du catalogue d'équipements et de l'index des sources se déclarent une seule fois dans `tests/helpers/catalogue-baseline.mjs`. Le test `tests/catalogue-baseline.test.mjs` les compare aux JSON publiés et vérifie que l'index demeure reproductible.
+
+Quand un lot sourcé modifie les données, **modifier les données, l'index construit et ce fichier de référence dans la même PR**. Exécuter `node --test tests/catalogue-baseline.test.mjs`, `node scripts/build-item-acquisition-index.mjs --check` et les tests de données/équipements avant fusion. Cette référence est figée volontairement : ne jamais la générer automatiquement à partir des données sous test, sinon une régression silencieuse serait acceptée.
+
+Les tests de fiches historiques gardent leurs IDs, sources, dates, caractéristiques et incertitudes individuels. Les valeurs du baseline mesurent uniquement la couverture documentaire, pas des drops ni des positions confirmés en jeu Forever.

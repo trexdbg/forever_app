@@ -1,4 +1,5 @@
 import test from "node:test";
+import {BASELINE as current} from "./helpers/catalogue-baseline.mjs";
 import assert from "node:assert/strict";
 import {readFileSync} from "node:fs";
 import {auditRareLocations} from "../scripts/validate-rare-locations.mjs";
@@ -19,13 +20,13 @@ const expectedLoot=new Map([
 const verifiedSource=value=>typeof value==="string"&&/^https:\/\/[^\s/]+\//.test(value);
 test("new Forever rare discoveries are additive, deduplicated and do not rewrite the legacy 150",()=>{
  assert.equal(changed.length,24);
- assert.equal(db.rares.length,378);
+ assert.equal(db.rares.length,current.rares.records);
  assert.equal(new Set(db.rares.map(r=>String(r.id))).size,db.rares.length);
  assert.equal(zephras.length,8);
  assert.equal(db.zones["zephras-isle"].uiMapID,2521);
  assert.ok(verifiedSource(db.zones["zephras-isle"].map_source_url));
  const scope=db.rares.filter(r=>r.beta_level30_in_scope);
- assert.equal(scope.length,161);
+ assert.equal(scope.length,current.rares.betaScope);
  assert.equal(changed.filter(r=>r.beta_level30_in_scope).length,11);
  assert.equal(changed.filter(r=>r.level===null).length,13);
  assert.equal(changed.reduce((n,r)=>n+r.points.length,0),44);
