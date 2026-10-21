@@ -4,16 +4,16 @@
   "scope": "Read-only relations inherited from ForEveroth merchant, rare, dungeon and opt-in beta recipe catalogues. Source links may identify only an item or guide, not prove sale, drop, availability, rates or live crafting.",
   "provenance_policy": "Forever documented relations are labelled documentary only; all Classic relations stay Classic. Each relationship preserves its originating status. The links are navigation aids, not new source audits.",
   "totals": {
-    "unique_items": 731,
-    "relations": 1257,
+    "unique_items": 736,
+    "relations": 1262,
     "by_kind": {
       "merchant": 923,
       "boss": 205,
-      "rare": 115,
+      "rare": 120,
       "recipe": 14
     },
     "by_evidence": {
-      "documented_forever": 465,
+      "documented_forever": 470,
       "classic_reference": 768,
       "unverified": 24
     }
@@ -15137,6 +15137,20 @@
       ]
     },
     {
+      "id": 285228,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Mystmane",
+          "name_en": "Mystmane",
+          "href": "/rare/?zone=zephras-isle&q=Mystmane&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://warcraft.wiki.gg/wiki/Mystmane%27s_Pelt"
+        }
+      ]
+    },
+    {
       "id": 285269,
       "sources": [
         {
@@ -15147,6 +15161,48 @@
           "evidence_level": "documented_forever",
           "source_status": "forever_beta_rare_loot",
           "reference_url": "https://www.wowhead.com/forever/item=285269/thendal-watchers-boots"
+        }
+      ]
+    },
+    {
+      "id": 285272,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Fernfeather",
+          "name_en": "Fernfeather",
+          "href": "/rare/?zone=zephras-isle&q=Fernfeather&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://www.wowhead.com/forever/npc=256492/fernfeather"
+        }
+      ]
+    },
+    {
+      "id": 285273,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Fernfeather",
+          "name_en": "Fernfeather",
+          "href": "/rare/?zone=zephras-isle&q=Fernfeather&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://www.wowhead.com/forever/npc=256492/fernfeather"
+        }
+      ]
+    },
+    {
+      "id": 285274,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Fernfeather",
+          "name_en": "Fernfeather",
+          "href": "/rare/?zone=zephras-isle&q=Fernfeather&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://www.wowhead.com/forever/npc=256492/fernfeather"
         }
       ]
     },
@@ -15324,6 +15380,20 @@
           "evidence_level": "documented_forever",
           "source_status": "forever_beta_rare_loot",
           "reference_url": "https://www.wowhead.com/forever/item=286534"
+        }
+      ]
+    },
+    {
+      "id": 286536,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Snort la Moqueuse",
+          "name_en": "Snort the Heckler",
+          "href": "/rare/?zone=barrens&q=Snort%20the%20Heckler&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://wowforever.ninja/npcs/5829-snort-the-heckler/"
         }
       ]
     },
