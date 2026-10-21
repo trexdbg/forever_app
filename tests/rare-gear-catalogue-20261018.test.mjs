@@ -1,4 +1,5 @@
 import test from "node:test";
+import {BASELINE as current} from "./helpers/catalogue-baseline.mjs";
 import assert from "node:assert/strict";
 import {readFileSync} from "node:fs";
 import {runInNewContext} from "node:vm";
@@ -9,8 +10,8 @@ const items=new Map(db.items.map(i=>[i.id,i]));
 const drops=new Map(rares.rares.flatMap(r=>(r.loot||[]).filter(l=>l.source_version==="forever_beta").map(l=>[l.item_id,{r,l}])));
 
 test("22 sourced Forever rare equipment entries add unique and accurately copied item facts",()=>{
- assert.equal(db.items.length,179);
- assert.equal(new Set(db.items.map(i=>i.id)).size,179);
+ assert.equal(db.items.length,current.editorialItems);
+ assert.equal(new Set(db.items.map(i=>i.id)).size,current.editorialItems);
  assert.equal(ids.length,22);
  for(const id of ids){
   const i=items.get(id),record=drops.get(id);
@@ -43,7 +44,7 @@ test("equipment search renders reported rare names in FR/EN and excludes non-equ
   assert.match(html,/gear-data\.js\?v=20261019-lowlevel19-70425/);
   assert.match(html,/items-v3\.js\?v=20261019-rare-patrol/);
  }
- assert.equal(rares.rares.flatMap(r=>r.loot).length,123, "Includes Classic-only Brokespear fallback from PR #82");
+ assert.equal(rares.rares.flatMap(r=>r.loot).length,current.rares.allLootRows, "Includes Classic-only Brokespear fallback from PR #82");
 });
 test("localized English rare origin is preserved and typed armor is filterable",()=>{
  const english={};
