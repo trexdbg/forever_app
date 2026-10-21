@@ -1,4 +1,5 @@
 import test from "node:test";
+import {BASELINE as current} from "./helpers/catalogue-baseline.mjs";
 import assert from "node:assert/strict";
 import {readFileSync} from "node:fs";
 
@@ -53,10 +54,10 @@ test("Sister Rathtalon's map conflict is still unresolved: loot source does not 
 });
 
 test("four Forever rare relations are traversable through the item acquisition index",()=>{
- assert.equal(index.totals.unique_items,739);
- assert.equal(index.totals.relations,1265);
- assert.equal(index.totals.by_kind.rare,123);
- assert.equal(index.totals.by_evidence.documented_forever,470);
+ assert.equal(index.totals.unique_items,current.index.uniqueItems);
+ assert.equal(index.totals.relations,current.index.relations);
+ assert.equal(index.totals.by_kind.rare,current.index.byKind.rare);
+ assert.equal(index.totals.by_evidence.documented_forever,current.index.byEvidence.documented_forever);
  for(const e of expected){
   const row=index.items.find(i=>i.id===e.itemId);
   assert.ok(row,"Unindexed item "+e.itemId);
@@ -73,11 +74,11 @@ test("four Forever rare relations are traversable through the item acquisition i
 test("count cumulative additions without rewriting the historic 150 rare baseline",()=>{
  const scoped=db.rares.filter(r=>r.beta_level30_in_scope);
  const legacy=scoped.filter(r=>r.reference!=="new_forever_community_documented_not_gameplay_confirmed");
- assert.equal(scoped.length,161);
- assert.equal(legacy.length,150);
- assert.equal(legacy.filter(r=>r.loot.length).length,75);
- assert.equal(scoped.filter(r=>r.loot.length).length,83);
- assert.equal(scoped.filter(r=>!r.loot.length).length,78);
+ assert.equal(scoped.length,current.rares.betaScope);
+ assert.equal(legacy.length,current.rares.legacyScope);
+ assert.equal(legacy.filter(r=>r.loot.length).length,current.rares.legacyWithLoot);
+ assert.equal(scoped.filter(r=>r.loot.length).length,current.rares.betaWithLoot);
+ assert.equal(scoped.filter(r=>!r.loot.length).length,current.rares.betaWithoutLoot);
 });
 
 test("four preexisting Forever rare-set and Duskstalker drops now have individualized evidence",()=>{
