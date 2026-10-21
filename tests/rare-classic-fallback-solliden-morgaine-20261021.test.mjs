@@ -29,7 +29,7 @@ test("three sourced Classic-only fallback items are linked by exact NPC and item
    assert.equal(loot.stats_version,"classic_reference");
    assert.equal(loot.name_fr_status,"classic_reference");
    assert.equal(loot.chance_classic_percent,null);
-   assert.equal(loot.chance_forever_observed_percent,null);
+   assert.equal(loot.chance_forever_observed_percent,undefined,"Classic cannot carry a Forever drop rate field");
    assert.match(loot.source_url,/^https:\/\/www\.wowhead\.com\/classic\/item=/);
    assert.match(loot.evidence_url,new RegExp("/npc="+info.npcId+"(?:/|$)"));
    assert.match(loot.item_source_url,new RegExp("/item="+loot.item_id+"(?:/|$)"));
