@@ -16,7 +16,7 @@ const cases = [
   ["259388", [285228]]
 ];
 test("five Forever item IDs are linked to exactly three 1-30 rare records with independently cited source pages",()=>{
- assert.equal(equipment.length,179);
+ assert.equal(equipment.length,current.editorialItems);
  assert.equal(new Set(equipment.map(x=>x.id)).size,equipment.length);
  for(const [rareId,ids] of cases){
    const rare=rares.find(x=>x.id===rareId);
