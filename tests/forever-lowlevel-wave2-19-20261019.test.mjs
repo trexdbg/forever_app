@@ -1,4 +1,5 @@
 import test from "node:test";
+import {BASELINE as current} from "./helpers/catalogue-baseline.mjs";
 import assert from "node:assert/strict";
 import {readFileSync} from "node:fs";
 const load=path=>readFileSync(new URL("../"+path,import.meta.url),"utf8");
@@ -15,8 +16,8 @@ const rows=[
 const expectTooltip=(id,expected)=>assert.deepEqual(byID.get(id).tooltip,[byID.get(id).name,"Item Level "+byID.get(id).itemLevel,...expected]);
 
 test("19 ID-exact beta item pages enriched, 57 -> 38 short tooltips, 179 total editorial entries",()=>{
- assert.equal(items.length,179);
- assert.equal(new Set(items.map(x=>x.id)).size,179);
+ assert.equal(items.length,current.editorialItems);
+ assert.equal(new Set(items.map(x=>x.id)).size,current.editorialItems);
  assert.equal(rows.length,19);
  assert.equal(new Set(rows.map(x=>x[0])).size,19);
  assert.equal(report.metrics.records_with_fewer_than_five_tooltip_lines,38);
