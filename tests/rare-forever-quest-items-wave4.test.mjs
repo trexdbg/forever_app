@@ -62,9 +62,9 @@ test("quest item documentation does not turn the Classic quest module into Forev
 });
 test("three source links are discoverable and the derived index stays reproducible",()=>{
   assert.deepEqual(idx,buildFromFiles());
-  assert.equal(idx.totals.unique_items,736);
-  assert.equal(idx.totals.relations,1262);
-  assert.equal(idx.totals.by_kind.rare,120);
+  assert.equal(idx.totals.unique_items,739);
+  assert.equal(idx.totals.relations,1265);
+  assert.equal(idx.totals.by_kind.rare,123);
   assert.equal(idx.totals.by_evidence.documented_forever,470);
   for(const c of cases){
     const rare=db.rares.find(r=>r.id===c.rare);
@@ -82,8 +82,8 @@ test("no unrelated rare records were erased by the evidence-only change",()=>{
  const old=scoped.filter(r=>r.reference!=="new_forever_community_documented_not_gameplay_confirmed");
  assert.equal(db.rares.length,378);
  assert.equal(old.length,150);
- assert.equal(old.filter(r=>r.loot.length).length,73);
+ assert.equal(old.filter(r=>r.loot.length).length,75);
  assert.equal(scoped.length,161);
- assert.equal(scoped.filter(r=>r.loot.length).length,81);
- assert.equal(scoped.filter(r=>!r.loot.length).length,80);
+ assert.equal(scoped.filter(r=>r.loot.length).length,83);
+ assert.equal(scoped.filter(r=>!r.loot.length).length,78);
 });

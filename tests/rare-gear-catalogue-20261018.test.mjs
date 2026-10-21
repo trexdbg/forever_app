@@ -43,7 +43,7 @@ test("equipment search renders reported rare names in FR/EN and excludes non-equ
   assert.match(html,/gear-data\.js\?v=20261019-lowlevel19-70425/);
   assert.match(html,/items-v3\.js\?v=20261019-rare-patrol/);
  }
- assert.equal(rares.rares.flatMap(r=>r.loot).length,120, "Includes Classic-only Brokespear fallback from PR #82");
+ assert.equal(rares.rares.flatMap(r=>r.loot).length,123, "Includes Classic-only Brokespear fallback from PR #82");
 });
 test("localized English rare origin is preserved and typed armor is filterable",()=>{
  const english={};

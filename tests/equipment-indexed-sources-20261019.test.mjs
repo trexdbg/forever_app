@@ -25,8 +25,8 @@ test("classic curated leveling equipment makes 53 additional item IDs searchable
  }
 });
 test("common ID index links existing catalogues to 132 sourced results; not by translated or approximate name",()=>{
- assert.equal(index.totals.unique_items,736);
- assert.equal(index.totals.relations,1262);
+ assert.equal(index.totals.unique_items,739);
+ assert.equal(index.totals.relations,1265);
  assert.equal(indexWithProof.length,132);
  const example=indexed.get(270227);
  assert.ok(example.some(s=>s.kind==="boss"&&s.name_en==="Faldrim Anvilmar"&&s.evidence_level==="documented_forever"));

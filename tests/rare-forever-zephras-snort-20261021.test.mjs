@@ -70,10 +70,10 @@ test("beta loot hints retain Classic points, no invented spawn times or loot per
 });
 test("reproducible acquisition index includes 5 new documented rare links with no certainty promotion",()=>{
  assert.deepEqual(index,buildFromFiles());
- assert.equal(index.totals.unique_items,736);
- assert.equal(index.totals.relations,1262);
- assert.equal(index.totals.by_kind.rare,120);
+ assert.equal(index.totals.unique_items,739);
+ assert.equal(index.totals.relations,1265);
+ assert.equal(index.totals.by_kind.rare,123);
  assert.equal(index.totals.by_evidence.documented_forever,470);
- assert.equal(index.totals.by_evidence.classic_reference,768);
+ assert.equal(index.totals.by_evidence.classic_reference,771);
  assert.ok(!index.items.some(x=>x.sources.some(s=>s.evidence_level==="confirmed_in_game")));
 });
