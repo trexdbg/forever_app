@@ -33,6 +33,7 @@ on:
       - 'tests/rare-forever-new-wave2.test.mjs'
       - 'tests/rare-forever-zephras-snort-20261021.test.mjs'
       - 'tests/rare-classic-fallback-solliden-morgaine-20261021.test.mjs'
+      - 'tests/rare-edan-mixed-evidence-20261021.test.mjs'
       - 'scripts/check-forever-evidence.mjs'
   workflow_dispatch:
 permissions:
@@ -95,6 +96,8 @@ jobs:
         run: node --test tests/rare-forever-zephras-snort-20261021.test.mjs
       - name: Source-checked classic rare fallbacks kept separate from Forever
         run: node --test tests/rare-classic-fallback-solliden-morgaine-20261021.test.mjs
+      - name: Edan mixed Forever and Classic item provenance
+        run: node --test tests/rare-edan-mixed-evidence-20261021.test.mjs
       - name: Cross-catalogue Forever source audit
         run: node scripts/check-forever-evidence.mjs
       - name: Rare location provenance gate
