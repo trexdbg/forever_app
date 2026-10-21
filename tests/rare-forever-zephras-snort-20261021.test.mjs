@@ -1,4 +1,5 @@
 import test from "node:test";
+import {BASELINE as current} from "./helpers/catalogue-baseline.mjs";
 import assert from "node:assert/strict";
 import {readFileSync} from "node:fs";
 import {buildFromFiles} from "../scripts/build-item-acquisition-index.mjs";
@@ -70,10 +71,10 @@ test("beta loot hints retain Classic points, no invented spawn times or loot per
 });
 test("reproducible acquisition index includes 5 new documented rare links with no certainty promotion",()=>{
  assert.deepEqual(index,buildFromFiles());
- assert.equal(index.totals.unique_items,739);
- assert.equal(index.totals.relations,1265);
- assert.equal(index.totals.by_kind.rare,123);
- assert.equal(index.totals.by_evidence.documented_forever,470);
- assert.equal(index.totals.by_evidence.classic_reference,771);
+ assert.equal(index.totals.unique_items,current.index.uniqueItems);
+ assert.equal(index.totals.relations,current.index.relations);
+ assert.equal(index.totals.by_kind.rare,current.index.byKind.rare);
+ assert.equal(index.totals.by_evidence.documented_forever,current.index.byEvidence.documented_forever);
+ assert.equal(index.totals.by_evidence.classic_reference,current.index.byEvidence.classic_reference);
  assert.ok(!index.items.some(x=>x.sources.some(s=>s.evidence_level==="confirmed_in_game")));
 });
