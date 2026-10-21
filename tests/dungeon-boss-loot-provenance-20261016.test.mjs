@@ -76,10 +76,10 @@ test("inconsistent boss names and blueprint-only item sheets remain unresolved, 
 test("published acquisition index agrees with inputs and labels only individually documented boss links",()=>{
  assert.deepEqual(index,buildFromFiles(),"The published index must be rebuilt by the deterministic generator");
  assert.equal(index.updated_at,"2026-10-17");
- assert.equal(index.totals.unique_items,731);
- assert.equal(index.totals.relations,1257);
+ assert.equal(index.totals.unique_items,736);
+ assert.equal(index.totals.relations,1262);
  assert.equal(index.totals.by_kind.boss,205);
- assert.equal(index.totals.by_evidence.documented_forever,465);
+ assert.equal(index.totals.by_evidence.documented_forever,470);
  assert.equal(index.totals.by_evidence.classic_reference,768);
  assert.equal(index.totals.by_evidence.unverified,24);
  const links=index.items.flatMap(row=>row.sources.filter(s=>s.kind==="boss").map(s=>({id:row.id,...s})));

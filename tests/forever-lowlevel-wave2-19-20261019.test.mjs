@@ -14,9 +14,9 @@ const rows=[
 ];
 const expectTooltip=(id,expected)=>assert.deepEqual(byID.get(id).tooltip,[byID.get(id).name,"Item Level "+byID.get(id).itemLevel,...expected]);
 
-test("19 ID-exact beta item pages enriched, 57 -> 38 short tooltips, 174 entries preserved",()=>{
- assert.equal(items.length,174);
- assert.equal(new Set(items.map(x=>x.id)).size,174);
+test("19 ID-exact beta item pages enriched, 57 -> 38 short tooltips, 179 total editorial entries",()=>{
+ assert.equal(items.length,179);
+ assert.equal(new Set(items.map(x=>x.id)).size,179);
  assert.equal(rows.length,19);
  assert.equal(new Set(rows.map(x=>x[0])).size,19);
  assert.equal(report.metrics.records_with_fewer_than_five_tooltip_lines,38);

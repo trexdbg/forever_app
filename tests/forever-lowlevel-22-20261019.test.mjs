@@ -8,8 +8,8 @@ const byId=new Map(catalog.items.map(item=>[item.id,item]));
 const ids=[277057,277063,277075,277058,277064,283473,283259,281926,285348,285192,282653,278019,279838,281251,270031,283254,277239,270097,284272,260208,276340,272407];
 
 test("the full 22-item backlog now has ID-specific evidence pinned to build 70425",()=>{
- assert.equal(catalog.items.length,174);
- assert.equal(new Set(catalog.items.map(x=>x.id)).size,174);
+ assert.equal(catalog.items.length,179);
+ assert.equal(new Set(catalog.items.map(x=>x.id)).size,179);
  assert.equal(ids.length,22);
  assert.equal(new Set(ids).size,22);
  assert.equal(audit.completed_metadata_audit.length,22);
