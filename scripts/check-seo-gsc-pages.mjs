@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /*
- * Offline check for the eight GSC-priority bilingual guides.
+ * Offline check for the five GSC-priority bilingual guides.
  * Validates structured SEO metadata, reciprocal translations, related links and
  * explicit source uncertainty; it does not attest live WoW Forever availability.
  */
@@ -13,7 +13,6 @@ const root=resolve(dirname(fileURLToPath(import.meta.url)),"..");
 const origin="https://foreveroth.com";
 const pairs=[
   ["guides/boss-forever-city-of-dalaran-atrexis-the-grave-knight/","en/guides/forever-boss-city-of-dalaran-atrexis-the-grave-knight/"],
-  ["guides/boss-forever-city-of-dalaran-archmage-s-shade/","en/guides/forever-boss-city-of-dalaran-archmage-s-shade/"],
   ["guides/tube-en-bronze/","en/guides/bronze-tube/"],
   ["guides/maitres-armes/","en/guides/weapon-masters/"],
   ["guides/boss-forever-city-of-dalaran-archmage-s-shade/","en/guides/forever-boss-city-of-dalaran-archmage-s-shade/"],
@@ -71,6 +70,17 @@ for(const [frPath,enPath] of pairs){
       const switcher=capture(html,/(<div class="lang-switch"[\s\S]*?<\/div>)/,"language switch",path);
       assert.ok(switcher.includes("/guides/tube-en-bronze/")&&switcher.includes("/en/guides/bronze-tube/"),path+": broken language switch");
       assert.ok(!switcher.includes("/minage/"),path+": legacy mining link in language switch");
+    }
+    if(path.includes("bronze-tube")||path.includes("tube-en-bronze")){
+      assert.match(html,/4371/,path+": item ID missing");
+      assert.match(html,/105/,path+": recipe yellow threshold missing");
+      assert.match(html,/wowforevertalents\.com\/professions\/engineering\/parts/,path+": missing recipe source");
+      assert.ok(html.includes('href="'+(lang==="en"?"/en/metiers/?craft=4371":"/metiers/?craft=4371")+'"'),path+": missing interactive recipe link");
+    }
+    if(path.includes("weapon-masters")||path.includes("maitres-armes")){
+      assert.ok(/Woo Ping/.test(html)&&/Archibald/.test(html),path+": polearm masters absent");
+      assert.match(html,/20/,path+": polearm level reference absent");
+      assert.ok(!html.includes('aria-current="page" href="/minage/"')&&!html.includes('aria-current="page" href="/en/minage/"'),path+": unrelated navigation selected");
     }
     if(path.includes("bis-forever")||path.includes("bis-gear")){
       assert.ok(html.includes('archmage-s-shade/')&&html.includes('atrexis-the-grave-knight/'),path+": missing related boss links");
