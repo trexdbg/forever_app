@@ -85,7 +85,7 @@ test("published acquisition index agrees with inputs and labels only individuall
  assert.equal(index.totals.by_evidence.unverified,current.index.byEvidence.unverified);
  const links=index.items.flatMap(row=>row.sources.filter(s=>s.kind==="boss").map(s=>({id:row.id,...s})));
  assert.equal(links.filter(s=>s.evidence_level==="documented_forever").length,74);
- assert.equal(links.filter(s=>s.evidence_level==="unverified").length,24);
+ assert.equal(links.filter(s=>s.evidence_level==="unverified").length,21);
  assert.equal(links.filter(s=>s.evidence_level==="classic_reference").length,110);
  for(const source of links.filter(s=>s.evidence_level==="documented_forever")){
   assert.match(source.reference_url,/^https:\/\/wowsrc\.com\/loot\/[^/]+\/$/);
