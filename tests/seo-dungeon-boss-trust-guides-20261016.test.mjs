@@ -12,7 +12,7 @@ const site="https://foreveroth.com";
 const esc=s=>String(s).replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;").replaceAll("'","&#39;");
 const decode=s=>s.replaceAll("&amp;","&").replaceAll("&quot;",'"').replaceAll("&#39;","'");
 const tables=[
- {id:"city-of-dalaran",fr:"guides/cite-dalaran-boss-loot/",en:"en/guides/city-of-dalaran-boss-loot/",doc:15,unverified:11},
+ {id:"city-of-dalaran",fr:"guides/cite-dalaran-boss-loot/",en:"en/guides/city-of-dalaran-boss-loot/",doc:18,unverified:8},
  {id:"ruins-of-lordaeron",fr:"guides/ruines-lordaeron-boss-loot/",en:"en/guides/ruins-of-lordaeron-boss-loot/",doc:15,unverified:7},
  {id:"hall-of-thanes",fr:"guides/salle-des-thanes-boss-loot/",en:"en/guides/hall-of-thanes-boss-loot/",doc:12,unverified:0},
  {id:"excavation-site-wetlands",fr:"guides/excavations-paluns-boss-loot/",en:"en/guides/wetlands-excavation-boss-loot/",doc:9,unverified:2}
@@ -37,11 +37,13 @@ function checkSeo(html,{lang,path,fr,en}){
  const article=graph.find(x=>x["@type"]==="Article");
  assert.ok(article,path+" article structured data");
  assert.equal(decode(article.description),desc,path+" JSON-LD description mismatch");
- assert.equal(article.dateModified,"2026-10-16",path+" editorial recency");
+ const updated=path.includes("archmage-s-shade")||path.includes("city-of-dalaran-boss-loot")||path.includes("cite-dalaran-boss-loot");
+ const expectedDate=updated?"2026-10-22":"2026-10-16";
+ assert.equal(article.dateModified,expectedDate,path+" editorial recency");
  assert.equal(article.inLanguage,lang,path+" schema language");
  const web=graph.find(x=>x["@type"]==="WebPage");
  if(web)assert.equal(decode(web.description),desc,path+" WebPage description mismatch");
- assert.ok(html.includes(lang==="fr"?"16 octobre 2026":"16 October 2026"),path+" review date");
+ assert.ok(html.includes(lang==="fr"?(updated?"22 octobre 2026":"16 octobre 2026"):(updated?"22 October 2026":"16 October 2026")),path+" review date");
  return desc;
 }
 
