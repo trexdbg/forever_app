@@ -13,9 +13,9 @@
       "recipe": 14
     },
     "by_evidence": {
-      "documented_forever": 474,
+      "documented_forever": 477,
       "classic_reference": 772,
-      "unverified": 24
+      "unverified": 21
     }
   },
   "items": [
@@ -14021,9 +14021,9 @@
           "context_fr": "Cité de Dalaran",
           "context_en": "City of Dalaran",
           "href": "/donjons/?donjon=city-of-dalaran&boss=8",
-          "evidence_level": "unverified",
-          "source_status": "forever_boss_loot_without_direct_source",
-          "reference_url": "https://foreverchanges.pro/item/273049"
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/city-of-dalaran/"
         }
       ]
     },
@@ -14037,9 +14037,9 @@
           "context_fr": "Cité de Dalaran",
           "context_en": "City of Dalaran",
           "href": "/donjons/?donjon=city-of-dalaran&boss=8",
-          "evidence_level": "unverified",
-          "source_status": "forever_boss_loot_without_direct_source",
-          "reference_url": "https://foreverchanges.pro/item/273051"
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/city-of-dalaran/"
         }
       ]
     },
@@ -14053,9 +14053,9 @@
           "context_fr": "Cité de Dalaran",
           "context_en": "City of Dalaran",
           "href": "/donjons/?donjon=city-of-dalaran&boss=8",
-          "evidence_level": "unverified",
-          "source_status": "forever_boss_loot_without_direct_source",
-          "reference_url": "https://foreverchanges.pro/item/273052"
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://wowsrc.com/loot/city-of-dalaran/"
         }
       ]
     },
