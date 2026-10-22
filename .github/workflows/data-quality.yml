@@ -10,6 +10,8 @@ on:
       - 'tests/helpers/catalogue-baseline.mjs'
       - '.github/workflows/data-quality.yml'
       - 'data/**'
+      - 'assets/quest-locale.js'
+      - 'tests/night-elf-forever-transit.test.mjs'
       - 'assets/rares.js'
       - 'tests/rare-loot-icon-rendering-20261017.test.mjs'
       - 'assets/rares.css'
@@ -48,6 +50,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Night elf Forever boat, tram and bilingual waypoint regression
+        run: |
+          node --test tests/night-elf-forever-transit.test.mjs
+          node --check assets/quest-locale.js
       - name: Regression fixtures (no network)
         run: node --test tests/data-quality.test.mjs
       - name: Pinned catalogue coverage baseline and reproducible index
