@@ -36,7 +36,7 @@ test("current vendor and profession datasets remain structurally valid",()=>{
  assert.deepEqual(codes(r),[]);
  assert.equal(r.summary.npcs,359);
  assert.equal(r.summary.knownNpcIds,30);
- assert.equal(r.summary.positionedNpcs,352); // previous 350 mapped points + documentary Vayn Moongaze point
+ assert.equal(r.summary.positionedNpcs,353); // +1 sourced Fizzlefuse point; unchanged NPC identities and merchant offers
  assert.equal(r.summary.merchantOffers,923);
  assert.equal(r.summary.foreverDocumentedOffers,346);
  assert.equal(r.summary.classicOrUnverifiedOffers,577);
