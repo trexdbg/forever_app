@@ -17,10 +17,10 @@ test("legacy 150 rares retain provenance; 11 newly evidenced exact-level Forever
   const report=auditRareLocations(db);
   assert.deepEqual(report.issues,[]);
   assert.equal(report.counts.scoped,161);
-  assert.equal(report.counts.points,345);
+  assert.equal(report.counts.points,349);
   assert.equal(report.counts.classic_indicative,309);
   assert.equal(report.counts.classic_sourced,17);
-  assert.equal(report.counts.forever_documented,36);
+  assert.equal(report.counts.forever_documented,40);
   assert.equal(report.counts.forever_confirmed,0);
   assert.equal(report.counts.without_points,6);
   assert.equal(report.counts.instance_without_points,4);
@@ -99,4 +99,23 @@ test("UI still guards /way button behind existing points and labels confidence",
   assert.match(js,/if\(r\.points\.length\).*rare-copy/);
   assert.match(js,/documented_forever/);
   assert.match(js,/Classic/);
+});
+
+
+test("Barrens rare waypoints retain independent Classic and Forever community evidence",()=>{
+  for(const [id,expected] of [["5831",[[60.4,33],[61.2,29.6],[61.8,36.2]]],["5828",[[61,35]]]]){
+    const r=db.rares.find(x=>x.id===id);
+    assert.ok(r);assert.equal(r.coordinate_status,"mixed_sources");
+    assert.equal(r.seen_forever,false);
+    assert.equal(r.point_evidence[0].evidence_level,"unverified");
+    assert.deepEqual(r.points.slice(1),expected);
+    for(const evidence of r.point_evidence.slice(1)){
+      assert.equal(evidence.evidence_level,"documented_forever");
+      assert.equal(evidence.origin,"forever_community_report");
+      assert.equal(evidence.observed_build,"unknown");
+      assert.equal(evidence.evidence_url,"https://www.60.tools/guides/rares");
+      assert.match(evidence.evidence_note,/not a player-verified spawn/);
+    }
+  }
+  assert.deepEqual(auditRareLocations(db).issues,[]);
 });

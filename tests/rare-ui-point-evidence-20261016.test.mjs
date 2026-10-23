@@ -49,7 +49,7 @@ test("community-documented new Forever rares do not get a false Classic-only or 
  assert.equal(french.hasForeverLocation(classic),false);
 });
 
-test("all 345 scoped coordinates are labeled only from their matching individual evidence",()=>{
+test("all 349 scoped coordinates are labeled only from their matching individual evidence",()=>{
  const scoped=data.rares.filter(r=>r.beta_level30_in_scope);
  let documented=0,indicative=0;
  for(const rare of scoped){
@@ -65,7 +65,7 @@ test("all 345 scoped coordinates are labeled only from their matching individual
    }
   }
  }
- assert.equal(documented,36);
+ assert.equal(documented,40);
  assert.equal(indicative,309);
 });
 
@@ -82,4 +82,17 @@ test("selected coordinate drives /way and source; both languages load the same e
   assert.ok(html.includes("/assets/rares.js?v=20261018-loot-icons-2"),path);
   assert.ok(html.includes("/assets/rares.css?v=20261017-loot-icons-1"),path);
  }
+});
+
+
+test("mixed-source Barrens waypoints keep Classic and Forever labels separate",()=>{
+  for(const id of ["5831","5828"]){
+    const rare=data.rares.find(r=>r.id===id);
+    assert.equal(english.pointLabel(rare,0),"Classic");
+    for(let i=1;i<rare.points.length;i++){
+      assert.equal(english.pointLabel(rare,i),"Forever");
+      assert.equal(english.pointLevel(rare,i),"documented_forever");
+    }
+    assert.equal(rare.seen_forever,false);
+  }
 });
