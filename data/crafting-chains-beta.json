@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-13",
+  "updated_at": "2026-10-23",
   "scope": {
     "game": "WoW Forever beta",
     "level_focus": [
@@ -319,7 +319,38 @@
       "observed_at": "2026-10-13",
       "observed_build": "1.60.1.70291",
       "evidence_kind": "client_db2",
-      "evidence_note": "Client comparison claims item ID and tooltip match Forever beta 1.60.1.70291, not in-game accessibility; French name not asserted as an official localized string."
+      "evidence_note": "Client comparison claims item ID and tooltip match Forever beta 1.60.1.70291, not in-game accessibility; French name not asserted as an official localized string.",
+      "quest_uses": [
+        {
+          "quest_id": 174,
+          "quest_name": {
+            "en": "Look to the Stars",
+            "fr": "Les yeux dans les étoiles"
+          },
+          "zone": {
+            "id": "duskwood",
+            "en": "Duskwood",
+            "fr": "Bois de la Pénombre"
+          },
+          "faction": "alliance",
+          "quest_level": 25,
+          "minimum_character_level": 20,
+          "item_quantity": 1,
+          "questgiver": "Viktori Prism'Antras",
+          "questgiver_waypoint": {
+            "x": 79.8,
+            "y": 48
+          },
+          "status": "forever_client_quest_objective_documented_not_gameplay_verified",
+          "evidence_level": "documented_forever",
+          "source_url": "https://www.60.tools/quests/174-look-to-the-stars",
+          "evidence_url": "https://www.wowhead.com/forever/quest=174/look-to-the-stars",
+          "observed_at": "2026-10-23",
+          "observed_build": "1.60.1.70245",
+          "evidence_kind": "forever_community_page",
+          "evidence_note": "A Forever-labelled quest reference lists a required Bronze Tube (item 4371) x1 for quest 174, Alliance level 25 / minimum level 20, in client build 1.60.1.70245. This records a client quest objective only; it does not prove the quest, its reward, vendor stock or the item can be completed/obtained on a live Forever server."
+        }
+      ]
     },
     "4375": {
       "id": 4375,
