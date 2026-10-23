@@ -24,6 +24,7 @@ on:
       - 'tests/dungeon-boss-loot-provenance-20261016.test.mjs'
       - 'scripts/validate-rare-locations.mjs'
       - 'tests/rare-locations.test.mjs'
+      - 'tests/seo-ghostfang-source-review-20261023.test.mjs'
       - 'tests/rare-forever-loot-wave1.test.mjs'
       - 'tests/rare-forever-loot-wave3.test.mjs'
       - 'tests/rare-forever-quest-items-wave4.test.mjs'
@@ -109,5 +110,7 @@ jobs:
         run: node --test tests/rare-thuros-fedfennel-20261021.test.mjs
       - name: Cross-catalogue Forever source audit
         run: node scripts/check-forever-evidence.mjs
+      - name: Ghostfang coordinate and disputed item source safeguards
+        run: node --test tests/seo-ghostfang-source-review-20261023.test.mjs
       - name: Rare location provenance gate
         run: node scripts/validate-rare-locations.mjs
