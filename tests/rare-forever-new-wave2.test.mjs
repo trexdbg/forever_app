@@ -55,7 +55,7 @@ test("all new waypoints have their own community Forever evidence without invent
    assert.equal(e.origin,"forever_community_report");
    assert.equal(e.evidence_kind,"forever_community_page");
    assert.equal(e.observed_build,"unknown");
-   assert.equal(e.observed_at,"2026-10-15");
+   assert.equal(e.observed_at,r.id==="forever-dun-morogh-ghostfang"&&i===2?"2026-10-23":"2026-10-15");
    assert.ok(verifiedSource(e.source_url)&&verifiedSource(e.evidence_url));
    assert.match(e.evidence_note,/not a guaranteed live spawn/);
   }
