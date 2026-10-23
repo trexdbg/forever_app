@@ -2,6 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import {readFileSync} from "node:fs";
 import {buildFromFiles} from "../scripts/build-item-acquisition-index.mjs";
+import {BASELINE as pinned} from "./helpers/catalogue-baseline.mjs";
 const read=p=>JSON.parse(readFileSync(new URL("../data/"+p,import.meta.url),"utf8"));
 const db=read("npcs.json"), index=read("item-acquisition-index.json");
 const v=db.npcs.find(n=>n.id===254151), url="https://www.wow-professions.com/forever/npc/vayn-moongaze";
@@ -98,11 +99,11 @@ test("resolved pattern #276964 is linked, original Vayn wave history and Classic
  assert.equal(db.audit.forever_documented_items,200);
  assert.equal(Object.keys(db.items).length,409);
  assert.deepEqual(index,buildFromFiles(),"Object-to-vendor lookup must remain reproducible");
- assert.equal(index.totals.unique_items,730);
- assert.equal(index.totals.relations,1256);
- assert.equal(index.totals.by_kind.merchant,923);
- assert.equal(index.totals.by_evidence.documented_forever,465);
- assert.equal(index.totals.by_evidence.classic_reference,767);
+ assert.equal(index.totals.unique_items,pinned.index.uniqueItems);
+ assert.equal(index.totals.relations,pinned.index.relations);
+ assert.equal(index.totals.by_kind.merchant,pinned.index.byKind.merchant);
+ assert.equal(index.totals.by_evidence.documented_forever,pinned.index.byEvidence.documented_forever);
+ assert.equal(index.totals.by_evidence.classic_reference,pinned.index.byEvidence.classic_reference);
 });
 test("mixed-profession vendor label is bilingual without fabricating recipe translations",()=>{
  const js=readFileSync(new URL("../assets/npcs.js",import.meta.url),"utf8");

@@ -2,6 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import {readFileSync} from "node:fs";
 import {buildFromFiles} from "../scripts/build-item-acquisition-index.mjs";
+import {BASELINE as pinned} from "./helpers/catalogue-baseline.mjs";
 const read=path=>JSON.parse(readFileSync(new URL("../data/"+path,import.meta.url),"utf8"));
 const db=read("npcs.json"),index=read("item-acquisition-index.json");
 const cases=[
@@ -83,9 +84,9 @@ test("provenance follows each relation, preserves historic wave sizes and Classi
  assert.equal(db.verification_audit.blacksmith_lowlevel_camps_wave.unknown_item,null);
  assert.equal(db.verification_audit.vayn_zephras_wave.unresolved_item,null);
  assert.deepEqual(index,buildFromFiles(),"Published index must be reproducible without source promotion");
- assert.equal(index.totals.unique_items,730);
- assert.equal(index.totals.relations,1256);
- assert.equal(index.totals.by_kind.merchant,923);
- assert.equal(index.totals.by_evidence.documented_forever,465);
- assert.equal(index.totals.by_evidence.classic_reference,767);
+ assert.equal(index.totals.unique_items,pinned.index.uniqueItems);
+ assert.equal(index.totals.relations,pinned.index.relations);
+ assert.equal(index.totals.by_kind.merchant,pinned.index.byKind.merchant);
+ assert.equal(index.totals.by_evidence.documented_forever,pinned.index.byEvidence.documented_forever);
+ assert.equal(index.totals.by_evidence.classic_reference,pinned.index.byEvidence.classic_reference);
 });

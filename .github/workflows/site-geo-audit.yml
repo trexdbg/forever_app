@@ -8,6 +8,9 @@ on:
       - 'tests/seo-rare-intent-20261023.test.mjs'
       - 'tests/seo-ghostfang-source-review-20261023.test.mjs'
       - 'tests/seo-favor-vendor-factions-20261023.test.mjs'
+      - 'tests/fizzlefuse-catalogue-geo-20261023.test.mjs'
+      - 'guides/marchand-fizzlefuse/index.html'
+      - 'en/guides/vendor-fizzlefuse/index.html'
       - 'guides/objet-forever-264203/index.html'
       - 'en/guides/forever-item-264203/index.html'
       - 'guides/marchands-recettes-forever/index.html'
@@ -57,7 +60,8 @@ jobs:
           node scripts/check-seo-gsc-pages.mjs
           node --test tests/seo-rare-intent-20261023.test.mjs
           node --test tests/seo-ghostfang-source-review-20261023.test.mjs
-          node --test tests/seo-favor-vendor-factions-20261023.test.mjs
+
+          node --test tests/fizzlefuse-catalogue-geo-20261023.test.mjs          node --test tests/seo-favor-vendor-factions-20261023.test.mjs
           node --test tests/seo-dungeon-boss-trust-guides-20261016.test.mjs
       - name: Retain report for five days
         uses: actions/upload-artifact@v4

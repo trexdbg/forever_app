@@ -25,6 +25,7 @@ on:
       - 'scripts/validate-rare-locations.mjs'
       - 'tests/rare-locations.test.mjs'
       - 'tests/seo-ghostfang-source-review-20261023.test.mjs'
+      - 'tests/fizzlefuse-catalogue-geo-20261023.test.mjs'
       - 'tests/rare-forever-loot-wave1.test.mjs'
       - 'tests/rare-forever-loot-wave3.test.mjs'
       - 'tests/rare-forever-quest-items-wave4.test.mjs'
@@ -108,6 +109,8 @@ jobs:
         run: node --test tests/rare-edan-mixed-evidence-20261021.test.mjs
       - name: Thuros and Fedfennel Forever item evidence and Classic fallback safeguards
         run: node --test tests/rare-thuros-fedfennel-20261021.test.mjs
+      - name: Fizzlefuse named vendor coordinates and bilingual source regression
+        run: node --test tests/fizzlefuse-catalogue-geo-20261023.test.mjs
       - name: Cross-catalogue Forever source audit
         run: node scripts/check-forever-evidence.mjs
       - name: Ghostfang coordinate and disputed item source safeguards

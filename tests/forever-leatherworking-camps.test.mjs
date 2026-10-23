@@ -2,6 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import {readFileSync} from "node:fs";
 import {buildFromFiles} from "../scripts/build-item-acquisition-index.mjs";
+import {BASELINE as pinned} from "./helpers/catalogue-baseline.mjs";
 const read=path=>JSON.parse(readFileSync(new URL("../data/"+path,import.meta.url),"utf8"));
 const db=read("npcs.json"),index=read("item-acquisition-index.json");
 const rows=[
@@ -89,9 +90,9 @@ test("72 named Forever sales are new; legacy Classic source count is unchanged a
  assert.equal(db.verification_audit.leatherworking_early_faction_camps_20261015.new_seller_item_links,72);
  assert.equal(db.verification_audit.leatherworking_early_faction_camps_20261015.confirmed_in_game,0);
  assert.deepEqual(index,buildFromFiles(),"Published index must equal an offline rebuild");
- assert.equal(index.totals.unique_items,730);
- assert.equal(index.totals.relations,1256);
- assert.equal(index.totals.by_kind.merchant,923);
- assert.equal(index.totals.by_evidence.documented_forever,465);
- assert.equal(index.totals.by_evidence.classic_reference,767);
+ assert.equal(index.totals.unique_items,pinned.index.uniqueItems);
+ assert.equal(index.totals.relations,pinned.index.relations);
+ assert.equal(index.totals.by_kind.merchant,pinned.index.byKind.merchant);
+ assert.equal(index.totals.by_evidence.documented_forever,pinned.index.byEvidence.documented_forever);
+ assert.equal(index.totals.by_evidence.classic_reference,pinned.index.byEvidence.classic_reference);
 });
