@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-15",
+  "updated_at": "2026-10-23",
   "status": "classic_reference_not_forever_verified",
   "coordinate_system": "zone_percent_0_100_classic_reference",
   "stock_status": "classic_reference_not_live",
@@ -18855,8 +18855,11 @@
         "fr": "Les Tarides",
         "en": "The Barrens"
       },
-      "coordinates": null,
-      "coordinate_status": "forever_zone_only",
+      "coordinates": {
+        "x": 49.8,
+        "y": 29.6
+      },
+      "coordinate_status": "forever_guide_waypoint",
       "faction": "horde",
       "offers": [
         "280323",
@@ -19020,7 +19023,19 @@
       },
       "source": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
       "note": "Camp de Ravitaillement et logistique de Durotar",
-      "note_en": "Durotar Supply and Logistics camp"
+      "note_en": "Durotar Supply and Logistics camp",
+      "location_provenance": {
+        "source_url": "https://www.60.tools/guides/merchants-favor",
+        "evidence_url": "https://www.wow-professions.com/forever/npc/fizzlefuse",
+        "observed_at": "2026-10-23",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_level": "documented_forever",
+        "coordinate_system": "zone_percent_0_100_not_gps",
+        "zone": "barrens",
+        "uiMapID": 1413,
+        "evidence_note": "Two independent Forever-labelled merchant guides place Fizzlefuse, the Horde engineering vendor, at 49.8 / 29.6 west of the Crossroads in The Barrens. This documents an indicative waypoint, not a timestamped gameplay capture, NPC numeric ID, live stock state or guaranteed sale."
+      }
     },
     {
       "name": "Alynsia",
@@ -26069,7 +26084,8 @@
       "Shandrina",
       "Tharynn Bouden",
       "Sewa Mistrunner",
-      "Tansy Puddlefizz"
+      "Tansy Puddlefizz",
+      "Fizzlefuse"
     ],
     "additions_2026_10_15": {
       "scope": "Seven existing vendor tables; low-tier profession recipes with item IDs and Forever-specific source",
@@ -26233,6 +26249,20 @@
       "forever_documented_offers": 54,
       "classic_unverified_offers": 577,
       "forever_documented_items": 27
+    },
+    "fizzlefuse_20261023": {
+      "coordinate_source_url": "https://www.60.tools/guides/merchants-favor",
+      "crosscheck": "https://www.wow-professions.com/forever/npc/fizzlefuse",
+      "coordinate_status": "documented_forever_community_not_gameplay_confirmed",
+      "new_merchants": 0,
+      "new_offers": 0,
+      "existing_offers": 8,
+      "npc_id": "unknown",
+      "position": {
+        "x": 49.8,
+        "y": 29.6
+      },
+      "note": "Existing Horde vendor was already present in the catalogue (including Schematic 264203). Only its previously missing documented waypoint and review metadata have been added. No sale, NPC ID or server presence is newly inferred."
     }
   },
   "weapon_master_position_audit": {
