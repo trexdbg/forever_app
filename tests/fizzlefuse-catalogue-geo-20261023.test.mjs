@@ -48,7 +48,7 @@ test("existing Horde vendor is now mapped, never duplicated or assigned an inven
 test("both faction source links were present before the mapping change; item acquisition index is not inflated",()=>{
  const row=acquisition.items.find(x=>x.id===264203);
  const sellers=row.sources.filter(s=>s.kind==="merchant");
- assert.deepEqual(sellers.map(s=>s.name_en).sort(),["Fritz Fizzle","Fizzlefuse"]);
+ assert.deepEqual(sellers.map(s=>s.name_en).sort(),["Fizzlefuse","Fritz Fizzle"]);
  assert.ok(sellers.every(s=>s.evidence_level==="documented_forever"));
  assert.deepEqual(acquisition,buildFromFiles());
  assert.equal(acquisition.totals.by_kind.merchant,923);
