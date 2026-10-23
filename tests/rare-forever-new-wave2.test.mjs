@@ -101,7 +101,7 @@ test("all scoped points pass the original strict map validator",()=>{
  assert.deepEqual(report.issues,[]);
  assert.equal(report.counts.forever_confirmed,0);
  assert.equal(report.counts.scoped,161);
- assert.equal(report.counts.forever_documented,36);
+ assert.equal(report.counts.forever_documented,40);
  assert.equal(report.counts.classic_indicative,309);
 });
 test("FR/EN browser code does not present unknown levels as zero and loads the Zephras map",()=>{
