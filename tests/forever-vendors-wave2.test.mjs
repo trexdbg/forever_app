@@ -2,6 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import {readFileSync} from "node:fs";
 import {buildFromFiles} from "../scripts/build-item-acquisition-index.mjs";
+import {BASELINE as pinned} from "./helpers/catalogue-baseline.mjs";
 const load=p=>JSON.parse(readFileSync(new URL("../data/"+p,import.meta.url),"utf8"));
 const db=load("npcs.json"),index=load("item-acquisition-index.json");
 const groups=[
@@ -18,10 +19,10 @@ test("41 new Forever-source vendor relationships retained alongside the 631 hist
  assert.equal(db.npcs.filter(n=>n.role==="merchant").reduce((sum,n)=>sum+n.offers.length,0),923);
  assert.deepEqual(index,buildFromFiles(),"The object acquisition index must remain derivable from the authoritative catalogues");
  // Rolling index totals include later rare/dungeon work; seller offers in this test are unchanged.
- assert.equal(index.totals.unique_items,730);
- assert.equal(index.totals.relations,1256);
- assert.equal(index.totals.by_kind.merchant,923);
- assert.equal(index.totals.by_evidence.documented_forever,465);
+ assert.equal(index.totals.unique_items,pinned.index.uniqueItems);
+ assert.equal(index.totals.relations,pinned.index.relations);
+ assert.equal(index.totals.by_kind.merchant,pinned.index.byKind.merchant);
+ assert.equal(index.totals.by_evidence.documented_forever,pinned.index.byEvidence.documented_forever);
 });
 test("each target camp merchant has the exact catalogued recipe IDs and proof of each seller-item relationship",()=>{
  let sales=0;
