@@ -102,7 +102,8 @@ test("four preexisting Forever rare-set and Duskstalker drops now have individua
   assert.match(item.historical_drop_sample.source_url,/^https:\/\/www\.wowhead\.com\/forever\//);
   assert.equal(rare.seen_forever,false,
     "Loot documentation must not certify the creature's location or gameplay presence");
-  assert.equal(rare.location_review.location_status,"classic_reference");
+  assert.equal(rare.location_review.location_status,["5828","5831"].includes(id)?"mixed_sources":"classic_reference");
+  if(["5828","5831"].includes(id))assert.equal(rare.point_evidence[0].evidence_level,"unverified","Historic Classic waypoint cannot inherit the new community evidence");
  }
 });
 
