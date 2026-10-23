@@ -33,14 +33,14 @@ test("faction Favor guides give documented Alliance and Horde leads without sile
   }
  }
 });
-test("local seller count is not rewritten as two verified or directly indexed vendors",()=>{
+test("indexed faction sellers and current 25-vendor coverage are reflected without live-stock claims",()=>{
  for(const p of ["guides/objet-forever-264203/","en/guides/forever-item-264203/"]){
   const html=read(p+"index.html");
-  assert.ok(/(?:1 linked sellers|1 marchand|un marchand|un vendeur|1 vendeur)/i.test(html),p+" existing single catalog seller kept");
-  assert.ok(/(?:not yet indexed|encore absente)/i.test(html),p+" external lead marked distinct");
+  assert.ok(/(?:2 documented merchants|2 marchands documentés)/i.test(html),p+" two already-indexed faction sellers");
+  assert.ok(/(?:already indexed|déjà indexé)/i.test(html),p+" previously indexed Horde vendor now located");
  }
  for(const p of ["guides/marchands-recettes-forever/","en/guides/forever-recipe-vendors/"]){
   const html=read(p+"index.html");
-  assert.ok(html.includes("23"),p+" local catalogue count unchanged");
+  assert.ok(html.includes("25"),p+" corrected local catalogue count");
  }
 });
