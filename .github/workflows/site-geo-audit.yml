@@ -6,6 +6,9 @@ on:
       - 'scripts/audit-site.mjs'
       - 'scripts/check-seo-gsc-pages.mjs'
       - 'tests/seo-rare-intent-20261023.test.mjs'
+      - 'tests/seo-ghostfang-source-review-20261023.test.mjs'
+      - 'guides/rares-dun-morogh/index.html'
+      - 'en/guides/dun-morogh-rares/index.html'
       - 'guides/rare-5831/index.html'
       - 'en/guides/rare-5831/index.html'
       - 'guides/rare-5828/index.html'
@@ -48,6 +51,7 @@ jobs:
           node scripts/audit-site.mjs --strict
           node scripts/check-seo-gsc-pages.mjs
           node --test tests/seo-rare-intent-20261023.test.mjs
+          node --test tests/seo-ghostfang-source-review-20261023.test.mjs
           node --test tests/seo-dungeon-boss-trust-guides-20261016.test.mjs
       - name: Retain report for five days
         uses: actions/upload-artifact@v4
