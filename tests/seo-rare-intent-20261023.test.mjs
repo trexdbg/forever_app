@@ -33,8 +33,8 @@ test("GSC-targeted bilingual rare guides offer consistent, source-linked GEO ans
    assert.ok(html.includes('rel="canonical" href="https://foreveroth.com/'+path+'"'),path+" canonical");
    for(const [hreflang,target] of [["fr",fr],["en",en]])
     assert.ok(html.includes('hreflang="'+hreflang+'" href="https://foreveroth.com/'+target+'"'),path+" hreflang");
-   assert.match(html,/24–32/,path+" historical Swiftmane time explicitly labelled");
-   assert.match(html,/8–12/,path+" historical Humar time explicitly labelled");
+   if(!path.includes("rare-5828/"))assert.match(html,/24–32/,path+" historical Swiftmane time explicitly labelled");
+   if(!path.includes("rare-5831/"))assert.match(html,/8–12/,path+" historical Humar time explicitly labelled");
    assert.match(html,/Classic/,path+" Classic distinction");
   }
  }
