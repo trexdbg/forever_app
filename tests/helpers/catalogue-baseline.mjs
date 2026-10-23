@@ -20,9 +20,9 @@ export const BASELINE = Object.freeze({
   index: Object.freeze({
     uniqueItems: 744,
     relations: 1270,
-    itemIdsWithEvidenceInEquipment: 136,
+    itemIdsWithEvidenceInEquipment: 139,
     classicLevelingIdsWithoutOtherCatalogueEntry: 50,
     byKind: Object.freeze({merchant: 923, boss: 205, rare: 128, recipe: 14}),
-    byEvidence: Object.freeze({documented_forever: 474, classic_reference: 772, unverified: 24})
+    byEvidence: Object.freeze({documented_forever: 477, classic_reference: 772, unverified: 21})
   })
 });

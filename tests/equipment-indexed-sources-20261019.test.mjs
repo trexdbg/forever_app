@@ -25,7 +25,7 @@ test("classic curated leveling equipment preserves count of Classic-only levelin
   assert.ok(typeof item.slot==="string"&&item.slot);
  }
 });
-test("common ID index links existing catalogues to 132 sourced results; not by translated or approximate name",()=>{
+test("common ID index links existing catalogues to 139 sourced results; not by translated or approximate name",()=>{
  assert.equal(index.totals.unique_items,current.index.uniqueItems);
  assert.equal(index.totals.relations,current.index.relations);
  assert.equal(indexWithProof.length,current.index.itemIdsWithEvidenceInEquipment);

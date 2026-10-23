@@ -2062,9 +2062,14 @@
               "requiredLevel": 30,
               "quality": "rare",
               "statsSource": "https://foreverchanges.pro/item/273052",
-              "evidence_level": "unverified",
-              "evidence_note": "The exact Archmage's Shade → Ponderous Orb boss-to-item relation is not independently established by the reviewed WoW Source Forever boss lists on 2026-10-16. The existing item sheet, cache or secondary guide does not by itself establish this boss drop; retain for follow-up, not as Forever-documented acquisition.",
-              "loot_attribution_status": "boss_item_pair_needs_independent_evidence"
+              "evidence_level": "documented_forever",
+              "evidence_note": "WoW Source's WoW Forever loot table explicitly lists Ponderous Orb (item 273052) under Shade of the Archmage, an alternative name for Archmage's Shade, in City of Dalaran. This independent community table documents the boss-to-item association, not a verified personal drop capture, live-server assurance or drop chance.",
+              "loot_attribution_status": "boss_item_pair_documented_forever",
+              "source_url": "https://wowsrc.com/loot/city-of-dalaran/",
+              "evidence_url": "https://wowsrc.com/loot/city-of-dalaran/",
+              "observed_at": "2026-10-22",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page"
             },
             {
               "fr": "Mantelet de sorcier pourpre",
@@ -2082,9 +2087,14 @@
               "requiredLevel": 30,
               "quality": "rare",
               "statsSource": "https://foreverchanges.pro/item/273051",
-              "evidence_level": "unverified",
-              "evidence_note": "The exact Archmage's Shade → Violet Sorcerer's Mantle boss-to-item relation is not independently established by the reviewed WoW Source Forever boss lists on 2026-10-16. The existing item sheet, cache or secondary guide does not by itself establish this boss drop; retain for follow-up, not as Forever-documented acquisition.",
-              "loot_attribution_status": "boss_item_pair_needs_independent_evidence"
+              "evidence_level": "documented_forever",
+              "evidence_note": "WoW Source's WoW Forever loot table explicitly lists Violet Sorcerer's Mantle (item 273051) under Shade of the Archmage, an alternative name for Archmage's Shade, in City of Dalaran. This independent community table documents the boss-to-item association, not a verified personal drop capture, live-server assurance or drop chance.",
+              "loot_attribution_status": "boss_item_pair_documented_forever",
+              "source_url": "https://wowsrc.com/loot/city-of-dalaran/",
+              "evidence_url": "https://wowsrc.com/loot/city-of-dalaran/",
+              "observed_at": "2026-10-22",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page"
             },
             {
               "fr": "Pendentif à facettes d’archimagistère",
@@ -2099,9 +2109,14 @@
               "requiredLevel": 30,
               "itemUrl": "https://www.wowhead.com/forever/item=273049",
               "statsSource": "https://foreverchanges.pro/item/273049",
-              "evidence_level": "unverified",
-              "evidence_note": "The exact Archmage's Shade → Archmagister's Faceted Pendant boss-to-item relation is not independently established by the reviewed WoW Source Forever boss lists on 2026-10-16. The existing item sheet, cache or secondary guide does not by itself establish this boss drop; retain for follow-up, not as Forever-documented acquisition.",
-              "loot_attribution_status": "boss_item_pair_needs_independent_evidence"
+              "evidence_level": "documented_forever",
+              "evidence_note": "WoW Source's WoW Forever loot table explicitly lists Archmagister's Faceted Pendant (item 273049) under Shade of the Archmage, an alternative name for Archmage's Shade, in City of Dalaran. This independent community table documents the boss-to-item association, not a verified personal drop capture, live-server assurance or drop chance.",
+              "loot_attribution_status": "boss_item_pair_documented_forever",
+              "source_url": "https://wowsrc.com/loot/city-of-dalaran/",
+              "evidence_url": "https://wowsrc.com/loot/city-of-dalaran/",
+              "observed_at": "2026-10-22",
+              "observed_build": "unknown",
+              "evidence_kind": "forever_community_page"
             },
             {
               "fr": "Plan : récupérateur arcanique",
