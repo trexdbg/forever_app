@@ -25,6 +25,7 @@ on:
       - 'scripts/validate-rare-locations.mjs'
       - 'tests/rare-locations.test.mjs'
       - 'tests/seo-ghostfang-source-review-20261023.test.mjs'
+      - 'tests/seo-bronze-tube-quest-20261023.test.mjs'
       - 'tests/fizzlefuse-catalogue-geo-20261023.test.mjs'
       - 'tests/rare-forever-loot-wave1.test.mjs'
       - 'tests/rare-forever-loot-wave3.test.mjs'
@@ -111,6 +112,8 @@ jobs:
         run: node --test tests/rare-thuros-fedfennel-20261021.test.mjs
       - name: Fizzlefuse named vendor coordinates and bilingual source regression
         run: node --test tests/fizzlefuse-catalogue-geo-20261023.test.mjs
+      - name: Bronze Tube quest objective, Forever recipe and Classic sellers regression
+        run: node --test tests/seo-bronze-tube-quest-20261023.test.mjs
       - name: Cross-catalogue Forever source audit
         run: node scripts/check-forever-evidence.mjs
       - name: Ghostfang coordinate and disputed item source safeguards
