@@ -4,16 +4,16 @@
   "scope": "Read-only relations inherited from ForEveroth merchant, rare, dungeon and opt-in beta recipe catalogues. Source links may identify only an item or guide, not prove sale, drop, availability, rates or live crafting.",
   "provenance_policy": "Forever documented relations are labelled documentary only; all Classic relations stay Classic. Each relationship preserves its originating status. The links are navigation aids, not new source audits.",
   "totals": {
-    "unique_items": 744,
-    "relations": 1270,
+    "unique_items": 753,
+    "relations": 1279,
     "by_kind": {
       "merchant": 923,
       "boss": 205,
-      "rare": 128,
+      "rare": 137,
       "recipe": 14
     },
     "by_evidence": {
-      "documented_forever": 477,
+      "documented_forever": 486,
       "classic_reference": 772,
       "unverified": 21
     }
@@ -15165,6 +15165,34 @@
       ]
     },
     {
+      "id": 282720,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Rampante",
+          "name_en": "Creepthess",
+          "href": "/rare/?zone=hillsbrad&q=Creepthess&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://foreverchanges.pro/item/282720/spider-swarm"
+        }
+      ]
+    },
+    {
+      "id": 283462,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Bayne",
+          "name_en": "Bayne",
+          "href": "/rare/?zone=tirisfal&q=Bayne&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://www.wowhead.com/forever/item=283462/baynes-bite"
+        }
+      ]
+    },
+    {
       "id": 284165,
       "sources": [
         {
@@ -15175,6 +15203,20 @@
           "evidence_level": "documented_forever",
           "source_status": "forever_beta_rare_loot",
           "reference_url": "https://www.wowhead.com/forever/npc=14430"
+        }
+      ]
+    },
+    {
+      "id": 284166,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Grimmaw",
+          "name_en": "Grimmaw",
+          "href": "/rare/?zone=teldrassil&q=Grimmaw&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://www.60.tools/guides/rares"
         }
       ]
     },
@@ -15524,6 +15566,20 @@
       ]
     },
     {
+      "id": 286745,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Dustwind Eggtender",
+          "name_en": "Dustwind Eggtender",
+          "href": "/rare/?zone=durotar&q=Dustwind%20Eggtender&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://www.60.tools/guides/rares"
+        }
+      ]
+    },
+    {
       "id": 286746,
       "sources": [
         {
@@ -15534,6 +15590,20 @@
           "evidence_level": "documented_forever",
           "source_status": "forever_beta_rare_loot",
           "reference_url": "https://www.wowhead.com/forever/item=286746/shalmas-shawl"
+        }
+      ]
+    },
+    {
+      "id": 286748,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Matriarch Bristlefur",
+          "name_en": "Matriarch Bristlefur",
+          "href": "/rare/?zone=elwynn&q=Matriarch%20Bristlefur&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://www.wowhead.com/forever/fr/item=286748/bristlebark-bow"
         }
       ]
     },
@@ -15562,6 +15632,62 @@
           "evidence_level": "documented_forever",
           "source_status": "forever_beta_rare_loot",
           "reference_url": "https://www.wowhead.com/forever/item=286750/wisesight-wand"
+        }
+      ]
+    },
+    {
+      "id": 286751,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Ghostfang",
+          "name_en": "Ghostfang",
+          "href": "/rare/?zone=dun-morogh&q=Ghostfang&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://www.wowhead.com/forever/npc=276111/ghostfang"
+        }
+      ]
+    },
+    {
+      "id": 286752,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Thornstarter Igleg",
+          "name_en": "Thornstarter Igleg",
+          "href": "/rare/?zone=mulgore&q=Thornstarter%20Igleg&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://foreverchanges.pro/es/item/286752/igleggings"
+        }
+      ]
+    },
+    {
+      "id": 286753,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Snarlsnout",
+          "name_en": "Snarlsnout",
+          "href": "/rare/?zone=mulgore&q=Snarlsnout&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://www.wowhead.com/forever/item=286753/snarlsnout-shooter"
+        }
+      ]
+    },
+    {
+      "id": 286754,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Stormherald Ukta",
+          "name_en": "Stormherald Ukta",
+          "href": "/rare/?zone=mulgore&q=Stormherald%20Ukta&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://www.wowhead.com/forever/npc=276105/stormherald-ukta"
         }
       ]
     },
