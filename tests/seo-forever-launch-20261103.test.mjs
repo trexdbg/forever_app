@@ -10,7 +10,7 @@ for (const page of pages) test('launch page '+page.lang+' states sourced time, v
   assert.match(html, new RegExp('<html lang="'+page.lang+'"'));
   assert.ok(html.includes('rel="canonical" href="'+page.url+'"'));
   assert.match(html,page.expected);
-  assert.match(html, /<strong>WoW Classic<\/strong>/);
+  assert.match(html, /<strong>WoW Classic(?: routes)?<\/strong>/);
   assert.match(html, /<a href="\/[^"]*quetes\//);
   assert.match(html, /<a href="\/[^"]*sources\//);
   assert.match(html, /<script type="application\/ld\+json">/);
