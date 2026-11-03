@@ -4,16 +4,16 @@
   "scope": "Read-only relations inherited from ForEveroth merchant, rare, dungeon and opt-in beta recipe catalogues. Source links may identify only an item or guide, not prove sale, drop, availability, rates or live crafting.",
   "provenance_policy": "Forever documented relations are labelled documentary only; all Classic relations stay Classic. Each relationship preserves its originating status. The links are navigation aids, not new source audits.",
   "totals": {
-    "unique_items": 753,
-    "relations": 1279,
+    "unique_items": 752,
+    "relations": 1278,
     "by_kind": {
       "merchant": 923,
       "boss": 205,
-      "rare": 137,
+      "rare": 136,
       "recipe": 14
     },
     "by_evidence": {
-      "documented_forever": 486,
+      "documented_forever": 485,
       "classic_reference": 772,
       "unverified": 21
     }
@@ -15632,20 +15632,6 @@
           "evidence_level": "documented_forever",
           "source_status": "forever_beta_rare_loot",
           "reference_url": "https://www.wowhead.com/forever/item=286750/wisesight-wand"
-        }
-      ]
-    },
-    {
-      "id": 286751,
-      "sources": [
-        {
-          "kind": "rare",
-          "name_fr": "Ghostfang",
-          "name_en": "Ghostfang",
-          "href": "/rare/?zone=dun-morogh&q=Ghostfang&level=all",
-          "evidence_level": "documented_forever",
-          "source_status": "forever_beta_rare_loot",
-          "reference_url": "https://www.wowhead.com/forever/npc=276111/ghostfang"
         }
       ]
     },
