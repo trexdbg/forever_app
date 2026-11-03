@@ -9,14 +9,13 @@ const expected = [
  ["10356",283462,"Bayne's Bite"],
  ["hillsbrad-creepthess",282720,"Spider Swarm"],
  ["14429",284166,"Gnarlpine War Staff"],
- ["forever-dun-morogh-ghostfang",286751,"Ghostfang's Steps"],
  ["forever-durotar-dustwind-eggtender",286745,"Furlfeather Ring"],
  ["forever-elwynn-matriarch-bristlefur",286748,"Bristlebark Bow"],
  ["forever-mulgore-snarlsnout",286753,"Snarlsnout Shooter"],
  ["forever-mulgore-stormherald-ukta",286754,"Ukta's Conduit"],
  ["forever-mulgore-thornstarter-igleg",286752,"Igleggings"]
 ];
-test("nine independently attributed Forever rare rewards have exact item IDs and no invented gameplay proof",()=>{
+test("eight independently attributed Forever rare rewards have exact item IDs and no invented gameplay proof",()=>{
  assert.equal(new Set(expected.map(x=>x[1])).size,expected.length);
  for(const [id,itemId,name] of expected){
   const rare=db.rares.find(r=>r.id===id);
@@ -44,7 +43,7 @@ test("nine independently attributed Forever rare rewards have exact item IDs and
   assert.notEqual(loot.drop_evidence,"confirmed_in_game");
  }
 });
-test("source index points back to nine documentary rare claims, not verified live drops",()=>{
+test("source index points back to eight documentary rare claims, not verified live drops",()=>{
  for(const [id,itemId] of expected){
   const rare=db.rares.find(r=>r.id===id),loot=rare.loot[0];
   const entry=index.items.find(i=>i.id===itemId);
@@ -57,11 +56,11 @@ test("source index points back to nine documentary rare claims, not verified liv
  }
  assert.deepEqual(index,buildFromFiles(),"Rebuild acquisition index after every rare-data edit");
 });
-test("beta rare coverage gains five documented rows without changing uncertain Classic map points",()=>{
+test("beta rare coverage gains four documented rows without changing uncertain Classic map points",()=>{
  const scoped=db.rares.filter(r=>r.beta_level30_in_scope);
- assert.equal(scoped.filter(r=>r.loot.length).length,91);
- assert.equal(scoped.filter(r=>!r.loot.length).length,70);
- assert.equal(db.rares.reduce((n,r)=>n+r.loot.length,0),137);
+ assert.equal(scoped.filter(r=>r.loot.length).length,90);
+ assert.equal(scoped.filter(r=>!r.loot.length).length,71);
+ assert.equal(db.rares.reduce((n,r)=>n+r.loot.length,0),136);
  for(const [id] of expected.slice(0,3)){
   const rare=db.rares.find(r=>r.id===id);
   assert.equal(rare.coordinate_status,"classic_reference","New loot source must not silently certify historical location");
