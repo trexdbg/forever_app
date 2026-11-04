@@ -4,16 +4,16 @@
   "scope": "Read-only relations inherited from ForEveroth merchant, rare, dungeon and opt-in beta recipe catalogues. Source links may identify only an item or guide, not prove sale, drop, availability, rates or live crafting.",
   "provenance_policy": "Forever documented relations are labelled documentary only; all Classic relations stay Classic. Each relationship preserves its originating status. The links are navigation aids, not new source audits.",
   "totals": {
-    "unique_items": 753,
-    "relations": 1279,
+    "unique_items": 754,
+    "relations": 1280,
     "by_kind": {
       "merchant": 923,
       "boss": 205,
-      "rare": 137,
+      "rare": 138,
       "recipe": 14
     },
     "by_evidence": {
-      "documented_forever": 486,
+      "documented_forever": 487,
       "classic_reference": 772,
       "unverified": 21
     }
@@ -15548,6 +15548,20 @@
           "evidence_level": "documented_forever",
           "source_status": "forever_beta_rare_loot",
           "reference_url": "https://www.wowhead.com/forever/item=286534"
+        }
+      ]
+    },
+    {
+      "id": 286535,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Bête de vase",
+          "name_en": "Sludge Beast",
+          "href": "/rare/?zone=barrens&q=Sludge%20Beast&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://1mw.io/en/world/rares"
         }
       ]
     },
