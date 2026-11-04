@@ -49,6 +49,6 @@ test("the Sludge Beast item is navigable without promoting Classic coordinates o
  assert.equal(sludge.loot_coverage,"notable_only_not_complete");
  assert.deepEqual(index,buildFromFiles());
  const scoped=rares.rares.filter(r=>r.beta_level30_in_scope);
- assert.equal(scoped.filter(r=>r.loot.length).length,92);
- assert.equal(scoped.filter(r=>!r.loot.length).length,69);
+ assert.equal(scoped.filter(r=>r.loot.length).length,96);
+ assert.equal(scoped.filter(r=>!r.loot.length).length,65);
 });
