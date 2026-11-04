@@ -30,6 +30,7 @@ on:
       - 'tests/rare-forever-loot-wave1.test.mjs'
       - 'tests/rare-forever-loot-wave3.test.mjs'
       - 'tests/rare-sourced-rewards-20261103.test.mjs'
+      - 'tests/rare-whirleygig-beta-20261104.test.mjs'
       - 'tests/rare-forever-quest-items-wave4.test.mjs'
       - 'tests/rare-classic-fr-localization-20261016.test.mjs'
       - 'tests/rare-forever-gear-wave5-20261016.test.mjs'
@@ -79,6 +80,8 @@ jobs:
         run: node --test tests/rare-forever-loot-wave1.test.mjs
       - name: Three new Forever rare loot links and item acquisition regression
         run: node --test tests/rare-forever-loot-wave3.test.mjs
+      - name: Whirleygig sourced beta loot and waypoint evidence regression
+        run: node --test tests/rare-whirleygig-beta-20261104.test.mjs
       - name: Eight sourced beta rare rewards and published acquisition provenance
         run: node --test tests/rare-sourced-rewards-20261103.test.mjs
       - name: Three Forever quest-linked rare items, evidence and acquisition safeguards
