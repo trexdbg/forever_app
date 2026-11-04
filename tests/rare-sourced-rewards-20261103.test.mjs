@@ -58,9 +58,9 @@ test("source index points back to eight documentary rare claims, not verified li
 });
 test("the original eight rare additions persist alongside the additional Whirleygig claim",()=>{
  const scoped=db.rares.filter(r=>r.beta_level30_in_scope);
- assert.equal(scoped.filter(r=>r.loot.length).length,91);
- assert.equal(scoped.filter(r=>!r.loot.length).length,70);
- assert.equal(db.rares.reduce((n,r)=>n+r.loot.length,0),137);
+ assert.equal(scoped.filter(r=>r.loot.length).length,92);
+ assert.equal(scoped.filter(r=>!r.loot.length).length,69);
+ assert.equal(db.rares.reduce((n,r)=>n+r.loot.length,0),138);
  for(const [id] of expected.slice(0,3)){
   const rare=db.rares.find(r=>r.id===id);
   assert.equal(rare.coordinate_status,"classic_reference","New loot source must not silently certify historical location");
