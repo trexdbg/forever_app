@@ -4,16 +4,16 @@
   "scope": "Read-only relations inherited from ForEveroth merchant, rare, dungeon and opt-in beta recipe catalogues. Source links may identify only an item or guide, not prove sale, drop, availability, rates or live crafting.",
   "provenance_policy": "Forever documented relations are labelled documentary only; all Classic relations stay Classic. Each relationship preserves its originating status. The links are navigation aids, not new source audits.",
   "totals": {
-    "unique_items": 754,
-    "relations": 1280,
+    "unique_items": 758,
+    "relations": 1284,
     "by_kind": {
       "merchant": 923,
       "boss": 205,
-      "rare": 138,
+      "rare": 142,
       "recipe": 14
     },
     "by_evidence": {
-      "documented_forever": 487,
+      "documented_forever": 491,
       "classic_reference": 772,
       "unverified": 21
     }
@@ -15151,6 +15151,20 @@
       ]
     },
     {
+      "id": 282637,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Seigneur Condar",
+          "name_en": "Lord Condar",
+          "href": "/rare/?zone=loch-modan&q=Lord%20Condar&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://www.wowhead.com/forever/guide/collections/pets-locations-sources"
+        }
+      ]
+    },
+    {
       "id": 282716,
       "sources": [
         {
@@ -15221,6 +15235,20 @@
       ]
     },
     {
+      "id": 284173,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Licillin",
+          "name_en": "Licillin",
+          "href": "/rare/?zone=darkshore&q=Licillin&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://www.wowhead.com/forever/item=284173/impcasters-staff"
+        }
+      ]
+    },
+    {
       "id": 284174,
       "sources": [
         {
@@ -15231,6 +15259,34 @@
           "evidence_level": "documented_forever",
           "source_status": "forever_beta_rare_loot",
           "reference_url": "https://www.wowhead.com/forever/item=284174"
+        }
+      ]
+    },
+    {
+      "id": 284176,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Matriarche trotteuse",
+          "name_en": "Strider Clutchmother",
+          "href": "/rare/?zone=darkshore&q=Strider%20Clutchmother&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://www.wowhead.com/forever/guide/collections/pets-locations-sources"
+        }
+      ]
+    },
+    {
+      "id": 284177,
+      "sources": [
+        {
+          "kind": "rare",
+          "name_fr": "Seigneur Tue-péchés",
+          "name_en": "Lord Sinslayer",
+          "href": "/rare/?zone=darkshore&q=Lord%20Sinslayer&level=all",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_beta_rare_loot",
+          "reference_url": "https://warcraft.wiki.gg/wiki/Sinslayer%27s_Smasher"
         }
       ]
     },
