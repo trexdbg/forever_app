@@ -10,19 +10,19 @@ export const BASELINE = Object.freeze({
   rares: Object.freeze({
     records: 378,
     betaScope: 161,
-    betaWithLoot: 92,
-    betaWithoutLoot: 69,
+    betaWithLoot: 96,
+    betaWithoutLoot: 65,
     legacyScope: 150,
-    legacyWithLoot: 83,
-    legacyWithoutLoot: 67,
-    allLootRows: 138
+    legacyWithLoot: 87,
+    legacyWithoutLoot: 63,
+    allLootRows: 142
   }),
   index: Object.freeze({
-    uniqueItems: 754,
-    relations: 1280,
+    uniqueItems: 758,
+    relations: 1284,
     itemIdsWithEvidenceInEquipment: 140,
     classicLevelingIdsWithoutOtherCatalogueEntry: 50,
-    byKind: Object.freeze({merchant: 923, boss: 205, rare: 138, recipe: 14}),
-    byEvidence: Object.freeze({documented_forever: 487, classic_reference: 772, unverified: 21})
+    byKind: Object.freeze({merchant: 923, boss: 205, rare: 142, recipe: 14}),
+    byEvidence: Object.freeze({documented_forever: 491, classic_reference: 772, unverified: 21})
   })
 });
