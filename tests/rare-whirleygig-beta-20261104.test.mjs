@@ -39,6 +39,7 @@ test("Forever beta 56.2/8.4 replaces old Classic 56.2/8.8 without losing origina
  assert.equal(rare.location_review.zone_evidence_level,"documented_forever");
  assert.equal(rare.location_review.forever_presence,"community_report_not_firsthand_gameplay_confirmed");
  assert.deepEqual(rare.location_review.historical_classic_waypoint.coordinates,[56.2,8.8]);
+ assert.deepEqual(rare.location_review.historical_classic_waypoint.respawn_hours_classic_reference,{min:2,max:3,source_url:"https://foreverdb.net/rare/5836",note:"Legacy 2–3 hour interval was inherited from a Classic reference; not evidence of the WoW Forever beta or live respawn timer."});
  assert.equal(rare.location_review.historical_classic_waypoint.point_evidence.evidence_level,"unverified");
  const p=rare.point_evidence[0];
  assert.deepEqual(p.coordinates,rare.points[0]);
@@ -53,8 +54,8 @@ test("Forever beta 56.2/8.4 replaces old Classic 56.2/8.8 without losing origina
  assert.equal(p.source_url,"https://www.60.tools/guides/rares");
  assert.equal(p.evidence_url,"https://foreverchanges.pro/rares");
  assert.equal(auditRareLocations(db).errorCount,0);
- assert.equal(rare.respawn_min_hours,2);
- assert.equal(rare.respawn_max_hours,3);
+ assert.equal(rare.respawn_min_hours,null);
+ assert.equal(rare.respawn_max_hours,null);
 });
 test("Whirleygig acquisition is exactly one documentary rare link, preserving Ghostfang uncertainty",()=>{
  const linked=index.items.find(x=>x.id===285366);
