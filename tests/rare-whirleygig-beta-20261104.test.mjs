@@ -69,6 +69,6 @@ test("Whirleygig acquisition is exactly one documentary rare link, preserving Gh
  assert.deepEqual(index,buildFromFiles());
  assert.ok(!index.items.some(x=>x.id===286751),"Ghostfang #286751 remains a disputed candidate, not a confirmed linked drop");
  const scoped=db.rares.filter(x=>x.beta_level30_in_scope);
- assert.equal(scoped.filter(x=>x.loot.length>0).length,91);
- assert.equal(scoped.filter(x=>!x.loot.length).length,70);
+ assert.equal(scoped.filter(x=>x.loot.length>0).length,92);
+ assert.equal(scoped.filter(x=>!x.loot.length).length,69);
 });
