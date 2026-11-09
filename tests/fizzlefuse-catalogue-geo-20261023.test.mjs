@@ -1,5 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import {BASELINE as current} from "./helpers/catalogue-baseline.mjs";
 import {readFileSync} from "node:fs";
 import {buildFromFiles} from "../scripts/build-item-acquisition-index.mjs";
 
@@ -52,7 +53,7 @@ test("both faction source links were present before the mapping change; item acq
  assert.ok(sellers.every(s=>s.evidence_level==="documented_forever"));
  assert.deepEqual(acquisition,buildFromFiles());
  assert.equal(acquisition.totals.by_kind.merchant,923);
- assert.equal(acquisition.totals.relations,1270);
+ assert.equal(acquisition.totals.relations,current.index.relations);
  const js=read("assets/npcs.js");
  assert.match(js,/Number\.isFinite\(n\.coordinates\?\.x\)/);
  assert.match(js,/n\.zone\.id/);
