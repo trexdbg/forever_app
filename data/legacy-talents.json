@@ -1,0 +1,495 @@
+{
+  "schema_version": 1,
+  "game": "World of Warcraft: Forever",
+  "system": "legacy",
+  "published": "2026-11-09",
+  "status": "documentary_launch_reference_not_live_verified",
+  "client_build_reference": "1.60.1.70755",
+  "seasonal_cap": 16,
+  "account_shared_points": true,
+  "allocation_per_character": true,
+  "trees": [
+    {
+      "id": "professions",
+      "name": {
+        "fr": "Métiers",
+        "en": "Professions"
+      },
+      "symbol": "⚒"
+    },
+    {
+      "id": "adventure",
+      "name": {
+        "fr": "Aventure",
+        "en": "Adventure"
+      },
+      "symbol": "✦"
+    },
+    {
+      "id": "resourcefulness",
+      "name": {
+        "fr": "Ingéniosité",
+        "en": "Resourcefulness"
+      },
+      "symbol": "◆"
+    }
+  ],
+  "source_url": "https://news.blizzard.com/fr-fr/article/24307383/decouvrez-le-systeme-dheritage-de-world-of-warcraft-forever",
+  "effects_reference_url": "https://wowforever.gg/en/talents/legacy/",
+  "notes": {
+    "fr": "Les rangs et conditions proviennent de relevés communautaires du client. Les descriptions sont des résumés ; vérifiez les effets affichés en jeu avant de dépenser vos points.",
+    "en": "Ranks and requirements are community client observations. Effects are paraphrased; check in-game tooltips before spending."
+  },
+  "perks": [
+    {
+      "id": "working-overtime",
+      "tree": "professions",
+      "name": {
+        "fr": "Heures supplémentaires",
+        "en": "Working Overtime"
+      },
+      "max": 5,
+      "gate": 0,
+      "values": [
+        4,
+        8,
+        12,
+        16,
+        20
+      ],
+      "effect": {
+        "fr": "Chance de gagner un point de compétence de métier augmentée de {v} %.",
+        "en": "Tradeskill skill-up chance increased by {v}%."
+      },
+      "evidence": "documented_client"
+    },
+    {
+      "id": "bountiful-harvest",
+      "tree": "professions",
+      "name": {
+        "fr": "Récolte généreuse",
+        "en": "Bountiful Harvest"
+      },
+      "max": 5,
+      "gate": 0,
+      "values": [
+        20,
+        40,
+        60,
+        80,
+        100
+      ],
+      "effect": {
+        "fr": "Découverte de matériaux rares en récolte augmentée de {v} %.",
+        "en": "Find {v}% more scarce gathering materials."
+      },
+      "evidence": "documented_client"
+    },
+    {
+      "id": "master-chef",
+      "tree": "professions",
+      "name": {
+        "fr": "Cordon bleu",
+        "en": "Master Chef"
+      },
+      "max": 5,
+      "gate": 5,
+      "values": [
+        10,
+        20,
+        30,
+        40,
+        50
+      ],
+      "effect": {
+        "fr": "{v} % de chances de produire un plat supplémentaire.",
+        "en": "{v}% chance to produce an extra cooked item."
+      },
+      "evidence": "documented_client"
+    },
+    {
+      "id": "bartering",
+      "tree": "professions",
+      "name": {
+        "fr": "Marchandage",
+        "en": "Bartering"
+      },
+      "max": 2,
+      "gate": 5,
+      "values": [
+        5,
+        10
+      ],
+      "effect": {
+        "fr": "Prix en or des marchands réduits de {v} %.",
+        "en": "Vendor gold prices reduced by {v}%."
+      },
+      "evidence": "documented_client"
+    },
+    {
+      "id": "performance-bonus",
+      "tree": "professions",
+      "name": {
+        "fr": "Charismatique",
+        "en": "Performance Bonus"
+      },
+      "max": 3,
+      "gate": 5,
+      "values": [
+        5,
+        10,
+        15
+      ],
+      "effect": {
+        "fr": "{v} % de chances de doubler la faveur marchande à la remise d'une caisse.",
+        "en": "{v}% chance to double Merchant's Favor on crate turn-in."
+      },
+      "requires": {
+        "id": "bountiful-harvest",
+        "rank": 5
+      },
+      "evidence": "documented_client"
+    },
+    {
+      "id": "luremaster",
+      "tree": "professions",
+      "name": {
+        "fr": "Maître des appâts",
+        "en": "Luremaster"
+      },
+      "max": 2,
+      "gate": 5,
+      "values": [
+        25,
+        50
+      ],
+      "effect": {
+        "fr": "{v} % de chances de pêcher un poisson supplémentaire avec un appât.",
+        "en": "{v}% chance of an extra fish while using a lure."
+      },
+      "evidence": "documented_client"
+    },
+    {
+      "id": "dedicated-study",
+      "tree": "professions",
+      "name": {
+        "fr": "Étude assidue",
+        "en": "Dedicated Study"
+      },
+      "max": 1,
+      "gate": 10,
+      "values": [
+        1
+      ],
+      "effect": {
+        "fr": "Effet quotidien : améliore de 1 le métier le moins avancé, ou fournit des essences si tous les métiers concernés sont à 300.",
+        "en": "Daily effect: +1 to the lowest tradeskill, or elemental essences if the eligible skills are all 300."
+      },
+      "requires": {
+        "id": "bartering",
+        "rank": 2
+      },
+      "evidence": "documented_client"
+    },
+    {
+      "id": "well-rested",
+      "tree": "adventure",
+      "name": {
+        "fr": "Bien reposé",
+        "en": "Well Rested"
+      },
+      "max": 5,
+      "gate": 0,
+      "values": [
+        4,
+        8,
+        12,
+        16,
+        20
+      ],
+      "effect": {
+        "fr": "Expérience de repos accumulée {v} % plus vite et plafond augmenté de {v} %.",
+        "en": "Rested XP accumulates {v}% faster and its cap rises by {v}%."
+      },
+      "evidence": "documented_client"
+    },
+    {
+      "id": "thrill-of-adventure",
+      "tree": "adventure",
+      "name": {
+        "fr": "Frisson de l’aventure",
+        "en": "Thrill of Adventure"
+      },
+      "max": 5,
+      "gate": 0,
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "effect": {
+        "fr": "Restaure {v} % de vie et de mana en 10 s après un coup fatal admissible, hors instances et champs de bataille.",
+        "en": "Restores {v}% health and mana over 10 sec after an eligible killing blow, outside instances and battlegrounds."
+      },
+      "evidence": "documented_client"
+    },
+    {
+      "id": "high-alert",
+      "tree": "adventure",
+      "name": {
+        "fr": "Alerte avancée",
+        "en": "High Alert"
+      },
+      "max": 2,
+      "gate": 5,
+      "values": [
+        1,
+        2
+      ],
+      "effect": {
+        "fr": "Détection du camouflage comme avec {v} niveau(x) supplémentaire(s), hors champs de bataille.",
+        "en": "Stealth detection as if {v} level(s) higher, outside battlegrounds."
+      },
+      "evidence": "documented_client"
+    },
+    {
+      "id": "talented",
+      "tree": "adventure",
+      "name": {
+        "fr": "Talent",
+        "en": "Talented"
+      },
+      "max": 5,
+      "gate": 5,
+      "values": [
+        9,
+        8,
+        7,
+        6,
+        5
+      ],
+      "effect": {
+        "fr": "Premier point de talent de classe dès le niveau {v} ; maximum toujours de 51 points.",
+        "en": "First class talent point at level {v}; the cap remains 51."
+      },
+      "requires": {
+        "id": "well-rested",
+        "rank": 5
+      },
+      "evidence": "documented_client"
+    },
+    {
+      "id": "field-guide",
+      "tree": "adventure",
+      "name": {
+        "fr": "Guide de terrain",
+        "en": "Field Guide"
+      },
+      "max": 3,
+      "gate": 5,
+      "values": [
+        8,
+        17,
+        25
+      ],
+      "effect": {
+        "fr": "Temps de recharge d'ajout d'un élément au campement réduit de {v} %.",
+        "en": "Cooldown for adding campsite features reduced by {v}%."
+      },
+      "evidence": "documented_client"
+    },
+    {
+      "id": "field-medicine",
+      "tree": "adventure",
+      "name": {
+        "fr": "Médecine de terrain",
+        "en": "Field Medicine"
+      },
+      "max": 2,
+      "gate": 5,
+      "values": [
+        5,
+        10
+      ],
+      "effect": {
+        "fr": "Durée de « Bandage récent » réduite de {v} s, hors donjons, raids et champs de bataille.",
+        "en": "Recently Bandaged duration reduced by {v} sec, outside dungeons, raids and battlegrounds."
+      },
+      "evidence": "documented_client"
+    },
+    {
+      "id": "frequent-flier",
+      "tree": "adventure",
+      "name": {
+        "fr": "Vols fréquents",
+        "en": "Frequent Flier"
+      },
+      "max": 1,
+      "gate": 10,
+      "values": [
+        1
+      ],
+      "effect": {
+        "fr": "Trajets aériens 50 % moins chers et 20 % plus rapides.",
+        "en": "Flight paths cost 50% less and travel is 20% faster."
+      },
+      "requires": {
+        "id": "field-guide",
+        "rank": 3
+      },
+      "evidence": "documented_client"
+    },
+    {
+      "id": "gourmand",
+      "tree": "resourcefulness",
+      "name": {
+        "fr": "Gourmand",
+        "en": "Gourmand"
+      },
+      "max": 3,
+      "gate": 0,
+      "values": [
+        33,
+        67,
+        100
+      ],
+      "effect": {
+        "fr": "Durée des bonus de nourriture augmentée de {v} %.",
+        "en": "Food buffs last {v}% longer."
+      },
+      "evidence": "documented_client"
+    },
+    {
+      "id": "quick-and-dead",
+      "tree": "resourcefulness",
+      "name": {
+        "fr": "Mort et vif",
+        "en": "The Quick and the Dead"
+      },
+      "max": 2,
+      "gate": 0,
+      "values": [
+        1,
+        2
+      ],
+      "effect": {
+        "fr": "Déplacement en fantôme accéléré de {v5} % ; sorts bénéfiques gratuits pendant {v} min après résurrection, jusqu'au combat.",
+        "en": "Ghost movement +{v5}%; beneficial spells free for {v} min after resurrection, until combat."
+      },
+      "evidence": "documented_client"
+    },
+    {
+      "id": "reinforce",
+      "tree": "resourcefulness",
+      "name": {
+        "fr": "Renforcer",
+        "en": "Reinforce"
+      },
+      "max": 5,
+      "gate": 0,
+      "values": [
+        8,
+        16,
+        24,
+        32,
+        40
+      ],
+      "effect": {
+        "fr": "Perte de durabilité à la mort réduite de {v} %.",
+        "en": "Durability loss on death reduced by {v}%."
+      },
+      "evidence": "documented_client"
+    },
+    {
+      "id": "for-great-honor",
+      "tree": "resourcefulness",
+      "name": {
+        "fr": "Pour un grand honneur",
+        "en": "For Great Honor"
+      },
+      "max": 5,
+      "gate": 5,
+      "values": [
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "effect": {
+        "fr": "Honneur gagné augmenté de {v} %.",
+        "en": "Honor gains increased by {v}%."
+      },
+      "evidence": "documented_client"
+    },
+    {
+      "id": "permanence",
+      "tree": "resourcefulness",
+      "name": {
+        "fr": "Permanence",
+        "en": "Permanence"
+      },
+      "max": 2,
+      "gate": 5,
+      "values": [
+        50,
+        100
+      ],
+      "effect": {
+        "fr": "Durée des améliorations de groupe, raid et repos au camp augmentée de {v} %.",
+        "en": "Group, raid and camp-rest buffs last {v}% longer."
+      },
+      "requires": {
+        "id": "gourmand",
+        "rank": 3
+      },
+      "evidence": "documented_client"
+    },
+    {
+      "id": "diplomat",
+      "tree": "resourcefulness",
+      "name": {
+        "fr": "Diplomatie",
+        "en": "Diplomat"
+      },
+      "max": 5,
+      "gate": 5,
+      "values": [
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "effect": {
+        "fr": "Réputation gagnée augmentée de {v} %.",
+        "en": "Reputation gains increased by {v}%."
+      },
+      "evidence": "documented_client"
+    },
+    {
+      "id": "reagent-economy",
+      "tree": "resourcefulness",
+      "name": {
+        "fr": "Économie des composants",
+        "en": "Reagent Economy"
+      },
+      "max": 1,
+      "gate": 10,
+      "values": [
+        1
+      ],
+      "effect": {
+        "fr": "Les techniques de classe ne consomment plus de composants achetés aux marchands.",
+        "en": "Class abilities no longer consume vendor-purchased reagents."
+      },
+      "requires": {
+        "id": "quick-and-dead",
+        "rank": 2
+      },
+      "evidence": "documented_client"
+    }
+  ]
+}
