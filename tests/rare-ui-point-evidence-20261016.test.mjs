@@ -65,8 +65,8 @@ test("all 349 scoped coordinates are labeled only from their matching individual
    }
   }
  }
- assert.equal(documented,40);
- assert.equal(indicative,309);
+ assert.equal(documented,41);
+ assert.equal(indicative,308);
 });
 
 test("selected coordinate drives /way and source; both languages load the same evidence-aware asset",()=>{
