@@ -10,6 +10,12 @@ on:
       - 'tests/helpers/catalogue-baseline.mjs'
       - '.github/workflows/data-quality.yml'
       - 'data/**'
+      - 'assets/legacy.js'
+      - 'assets/legacy-core.mjs'
+      - 'assets/legacy.css'
+      - 'talents/heritage/index.html'
+      - 'en/talents/heritage/index.html'
+      - 'tests/test_legacy_talents.mjs'
       - 'assets/quest-locale.js'
       - 'tests/night-elf-forever-transit.test.mjs'
       - 'assets/rares.js'
@@ -118,5 +124,7 @@ jobs:
         run: node scripts/check-forever-evidence.mjs
       - name: Ghostfang coordinate and disputed item source safeguards
         run: node --test tests/seo-ghostfang-source-review-20261023.test.mjs
+      - name: Legacy talent trees, 16-point cap and share-link regression
+        run: node --test tests/test_legacy_talents.mjs
       - name: Rare location provenance gate
         run: node scripts/validate-rare-locations.mjs
