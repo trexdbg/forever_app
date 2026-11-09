@@ -18,9 +18,9 @@ test("legacy 150 rares retain provenance; 11 newly evidenced exact-level Forever
   assert.deepEqual(report.issues,[]);
   assert.equal(report.counts.scoped,161);
   assert.equal(report.counts.points,349);
-  assert.equal(report.counts.classic_indicative,309);
+  assert.equal(report.counts.classic_indicative,308);
   assert.equal(report.counts.classic_sourced,17);
-  assert.equal(report.counts.forever_documented,40);
+  assert.equal(report.counts.forever_documented,41);
   assert.equal(report.counts.forever_confirmed,0);
   assert.equal(report.counts.without_points,6);
   assert.equal(report.counts.instance_without_points,4);
