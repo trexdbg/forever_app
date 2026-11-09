@@ -36,6 +36,9 @@ on:
       - 'en/guides/hall-of-thanes-boss-loot/index.html'
       - 'guides/excavations-paluns-boss-loot/index.html'
       - 'en/guides/wetlands-excavation-boss-loot/index.html'
+      - 'guides/lancement-wow-forever/index.html'
+      - 'en/guides/wow-forever-launch/index.html'
+      - 'tests/seo-forever-launch-20261103.test.mjs'
       - '.github/workflows/site-geo-audit.yml'
       - 'guides/boss-forever-city-of-dalaran-*/index.html'
       - 'en/guides/forever-boss-city-of-dalaran-*/index.html'
@@ -66,6 +69,7 @@ jobs:
           node --test tests/fizzlefuse-catalogue-geo-20261023.test.mjs
           node --test tests/seo-favor-vendor-factions-20261023.test.mjs
           node --test tests/seo-bronze-tube-quest-20261023.test.mjs
+          node --test tests/seo-forever-launch-20261103.test.mjs
           node --test tests/seo-dungeon-boss-trust-guides-20261016.test.mjs
       - name: Retain report for five days
         uses: actions/upload-artifact@v4
