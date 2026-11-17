@@ -20,7 +20,7 @@ const liveSample=item=>{
   &&v.kill_count>0&&v.drop_count>=0&&v.drop_count<=v.kill_count
   &&Number.isFinite(v.observed_percent_rounded)&&v.observed_percent_rounded>=0
   &&v.observed_percent_rounded<=100
-  &&typeof v.source_url==="string"&&/^https:\/\//.test(v.source_url)?v:null;
+  &&typeof v.source_url==="string"&&v.source_url.startsWith("https://")?v:null;
 };
 
 const itemName=item=>window.ForeverItemLocale?.name({
@@ -132,7 +132,7 @@ function makeLootCard(item,boss){const card=m("div",null,"dg-drop");card.tabInde
   const p=String(observed.observed_percent_rounded).replace(".",",");
   text.append(m("small",t("Rapports joueurs : ","Player reports: ")+p+" % ("+observed.drop_count+"/"+observed.kill_count+" "+t("relevés","reports")+")"));
  }else if(Number.isFinite(item.chanceReported)){
-  text.append(m("small",t("Estimation bêta : ","Beta estimate: ")+String(item.chanceReported).replace(".",",")+" %");
+  text.append(m("small",t("Estimation bêta : ","Beta estimate: ")+String(item.chanceReported).replace(".",",")+" %"));
  }
  if(item.isNew)text.append(m("small","Forever"));if(item.itemLevel)text.append(m("small",t("Niveau d’objet ","Item level ")+item.itemLevel+(item.requiredLevel?" · "+t("Niveau requis ","Required level ")+item.requiredLevel:"")));
  const proof=dropProof(item);
