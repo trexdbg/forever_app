@@ -176,7 +176,7 @@
       const dest = new URL(anchor.href, location.href);
       if (dest.origin === location.origin) {
         const slug = dest.pathname.replace(/^\/en\//, "/").split("/")[1];
-        const moduleName = /^\\/(?:en\\/)?talents\\/heritage\\/?$/.test(dest.pathname) ? "legacy" : slug;
+        const moduleName = dest.pathname === "/talents/heritage/" || dest.pathname === "/en/talents/heritage/" ? "legacy" : slug;
         if (moduleNames.has(moduleName) && (anchor.closest(".nav, .atlas-grid, .class-list, .atlas-live-actions, .npc-crosslinks"))) {
           track("module_open", { module_name: moduleName });
         }
