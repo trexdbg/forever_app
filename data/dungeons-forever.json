@@ -2161,7 +2161,7 @@
               "itemLevel": 25,
               "statsSource": "https://foreverchanges.pro/item/273103",
               "evidence_level": "documented_forever",
-              "evidence_note": "Wowhead Forever's Shade of the Archmage NPC page lists Blueprint: Arcane Salvager (item 273103), 234 reported drops from 3,425 kill records reviewed 2026-11-17. Community-reported boss/item link, not our firsthand drop confirmation or a guaranteed drop rate.",
+              "evidence_note": "Archmage's Shade (Shade of the Archmage) → Blueprint: Arcane Salvager is explicitly linked in the Wowhead Forever NPC loot table as of 2026-11-17. Wowhead reports 234 item occurrences across 3425 boss records; this is community-observed evidence of the boss-to-item link, not a guaranteed chance, independently repeated gameplay, or universal quest eligibility.",
               "loot_attribution_status": "boss_item_pair_documented_forever",
               "live_observation": {
                 "source_url": "https://www.wowhead.com/forever/npc=246020/shade-of-the-archmage",
@@ -2174,7 +2174,7 @@
               },
               "source_url": "https://www.wowhead.com/forever/npc=246020/shade-of-the-archmage",
               "evidence_url": "https://www.wowhead.com/forever/npc=246020/shade-of-the-archmage",
-              "evidence_kind": "forever_community_loot_reports",
+              "evidence_kind": "forever_community_page",
               "observed_at": "2026-11-17",
               "observed_build": "unknown"
             },
@@ -2191,11 +2191,11 @@
               "evidence_level": "documented_forever",
               "source_url": "https://www.wowhead.com/forever/npc=246020/shade-of-the-archmage",
               "evidence_url": "https://www.wowhead.com/forever/npc=246020/shade-of-the-archmage",
-              "evidence_kind": "forever_community_loot_reports",
+              "evidence_kind": "forever_community_page",
               "observed_at": "2026-11-17",
               "observed_build": "unknown",
               "loot_attribution_status": "boss_item_pair_documented_forever",
-              "evidence_note": "Wowhead Forever NPC table lists Arcane Mote (item 251961) under Shade of the Archmage, 1,399 recorded drops from 3,425 kill reports on 2026-11-17. The Icy Veins Forever item database confirms item 251961 and NPC 246020. Quest item may require active objectives, not a guaranteed general drop.",
+              "evidence_note": "Archmage's Shade (Shade of the Archmage) → Arcane Mote is explicitly linked in the Wowhead Forever NPC loot table as of 2026-11-17. Wowhead reports 1399 item occurrences across 3425 boss records; this is community-observed evidence of the boss-to-item link, not a guaranteed chance, independently repeated gameplay, or universal quest eligibility.",
               "statsSource": "https://db.icy-veins.com/wow-forever/items/251961",
               "live_observation": {
                 "source_url": "https://www.wowhead.com/forever/npc=246020/shade-of-the-archmage",
