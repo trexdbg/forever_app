@@ -33,6 +33,6 @@ test("no favorite ID, coordinates or search text are sent to analytics",()=>{
  const script=read("assets/npcs.js");
  const start=script.indexOf('window.ForEverothAnalytics?.track("tool_interaction"');
  assert.ok(start>0);
- const payload=script.slice(start).match(/^window\\.ForEverothAnalytics\\?\\.track\\("tool_interaction",\\{[^}]+\\}\\);/)?.[0];
+ const payload=script.slice(start).split("\n")[0];
  assert.equal(payload,'window.ForEverothAnalytics?.track("tool_interaction",{module_name:"metiers",control_name:"npc-favorite-open"});');
 });
