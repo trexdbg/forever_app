@@ -32,5 +32,5 @@ test("trainer and weapon guides have genuine actionable deep links in both langu
   assert.match(guide,/(?:not directly verified|ne sont pas confirmés)/i);
   assert.ok(hub.includes("trainer-quick.css"));
   assert.match(guide,/<link rel="canonical"/);
- });
+ }
 });
