@@ -35,6 +35,7 @@ on:
       - 'tests/fizzlefuse-catalogue-geo-20261023.test.mjs'
       - 'tests/rare-forever-loot-wave1.test.mjs'
       - 'tests/rare-forever-loot-wave3.test.mjs'
+      - 'tests/rare-classic-evidence-20261117.test.mjs'
       - 'tests/rare-sourced-rewards-20261103.test.mjs'
       - 'tests/rare-whirleygig-beta-20261104.test.mjs'
       - 'tests/rare-sludge-beast-band-20261104.test.mjs'
@@ -86,6 +87,8 @@ jobs:
         run: node --test tests/rare-ui-point-evidence-20261016.test.mjs
       - name: Forever 1-30 notable rare loot regression
         run: node --test tests/rare-forever-loot-wave1.test.mjs
+      - name: Classic rare drop provenance remains distinct from Forever
+        run: node --test tests/rare-classic-evidence-20261117.test.mjs
       - name: Three new Forever rare loot links and item acquisition regression
         run: node --test tests/rare-forever-loot-wave3.test.mjs
       - name: Four Forever rare weapons and companion pets, bilingual item ID and source fixtures
