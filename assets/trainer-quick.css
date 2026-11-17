@@ -7,3 +7,15 @@
 .geo-quick-links a{border:1px solid #5c664d;border-radius:8px;background:#1b2b22;color:#ead5a5;padding:8px 12px;font-size:13px;text-decoration:none}
 .geo-quick-links a:hover,.geo-quick-links a:focus-visible{background:#304531;border-color:#dec083}
 @media(max-width:600px){.npc-quick-links a{min-height:40px}.geo-quick-links a{min-height:42px;align-items:center;display:inline-flex}}
+
+/* Player-opted local favorites; hidden until at least one saved record exists. */
+.npc-favorites[hidden]{display:none!important}
+.npc-favorites{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin:0 0 13px;padding:9px 11px;border:1px solid #56674f;background:#1a2921;border-radius:10px}
+.npc-favorites>strong{font-size:12px;color:#e4c88e}
+.npc-favorites small{font-weight:400;color:#abc0aa;margin-left:4px}
+.npc-favorites-links{display:flex;flex-wrap:wrap;gap:7px}
+.npc-favorites-links button{cursor:pointer;background:#26372a;border:1px solid #657450;border-radius:7px;padding:7px 10px;color:#ebdfc3;font-size:12px;min-height:34px}
+.npc-favorites-links button:hover,.npc-favorites-links button:focus-visible{border-color:#e4c88e;background:#374b35}
+.npc-favorite-toggle{font-size:12px;min-height:36px;border:1px solid #947b4a;border-radius:8px;background:#25372b;color:#ead1a2;padding:6px 11px;cursor:pointer}
+.npc-favorite-toggle[aria-pressed="true"]{background:#584629;color:#ffe8aa}
+.npc-favorite-toggle:focus-visible{outline:2px solid #e1c78c;outline-offset:2px}

@@ -7,6 +7,7 @@ on:
       - 'scripts/check-seo-gsc-pages.mjs'
       - 'tests/seo-rare-intent-20261023.test.mjs'
       - 'tests/analytics-legacy-20261117.test.mjs'
+      - 'tests/trainer-favorites-20261117.test.mjs'
       - 'assets/analytics.js'
       - 'assets/legacy.js'
       - 'tests/seo-post-launch-quest-20261117.test.mjs'
@@ -75,6 +76,8 @@ jobs:
           node scripts/check-seo-gsc-pages.mjs
           node --test tests/seo-rare-intent-20261023.test.mjs
           node --test tests/analytics-legacy-20261117.test.mjs
+          node --test tests/trainer-favorites-20261117.test.mjs
+          node --check assets/npcs.js
           node --check assets/legacy.js
           node --test tests/seo-post-launch-quest-20261117.test.mjs
           node --test tests/seo-trainer-intent-20261117.test.mjs
