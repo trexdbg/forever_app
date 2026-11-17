@@ -627,9 +627,19 @@ if(type&&["all","profession","weapon"].includes(params.get("type")))type.value=p
 fetch(root+"data/npcs.json").then(r=>{if(!r.ok)throw Error(r.status);return r.json()}).then(db=>{
  if(db.schema_version!==1||!Array.isArray(db.npcs)||!db.items||!Array.isArray(db.evidence))throw Error("Invalid NPC data");
  store.db=db;makeRecords();filters();setupTrainerIconFilters();
- // Atlas deep links select the complete zone, not just a text search result.
- const requestedZone=params.get("zone");
- if(requestedZone&&Array.from(zone.options).some(option=>option.value===requestedZone))zone.value=requestedZone;
+ // Apply query parameters after the dataset has populated native select options.
+ // Every value is constrained to a known option; links cannot inject arbitrary HTML.
+ const choice=(control,key)=>{
+  const wanted=params.get(key);
+  if(control&&wanted&&wanted.length<=80&&[...control.options].some(o=>o.value===wanted))control.value=wanted;
+ };
+ if(store.mode==="trainer"){
+  choice(type,"type");choice(aff,"faction");choice(trade,"profession");choice(weapon,"weapon");choice(rank,"rank");
+  // A deep link to a weapon always opens weapon mode, independent of old defaults.
+  if(weapon&&weapon.value!=="all"){type.value="weapon";trade.value="all";if(rank)rank.value="all"}
+  else if(trade&&trade.value!=="all"){type.value="profession"}
+ }
+ choice(zone,"zone");
  updateFilterVisibility();
  refresh();$("npc-load-status").textContent=store.mode==="trainer"?db.npcs.filter(n=>n.role==="trainer").length+" "+S("maîtres recensés","trainers listed"):Object.keys(db.items).length+" "+S("objets · "+new Set(store.records.filter(r=>foreverOffer(r.npc,r.item)).map(r=>r.item.id)).size+" sourcés Forever","items · "+new Set(store.records.filter(r=>foreverOffer(r.npc,r.item)).map(r=>r.item.id)).size+" Forever sourced");
 }).catch(e=>{$("npc-load-status").textContent=S("Données indisponibles","Data unavailable");append(list,"p",S("Impossible de charger l'annuaire. Réessayez plus tard.","Unable to load the directory."),"npc-empty");console.warn("NPC dataset:",e.message)});
