@@ -13,6 +13,16 @@ const m=(tag,txt,cls)=>{const n=document.createElement(tag);if(txt!==undefined&&
 const str=v=>typeof v==="string"?v:"";
 const name=obj=>str(obj?.[en?"en":"fr"]||obj?.en||obj?.fr);
 const dropProof=item=>item.source_status==="classic_loot_reference"?"classic":item.evidence_level==="documented_forever"?"documented":"unverified";
+/* Player reports are a dated, non-guaranteed sample; never mix with beta guide percentages. */
+const liveSample=item=>{
+ const v=item?.live_observation;
+ return v&&Number.isInteger(v.drop_count)&&Number.isInteger(v.kill_count)
+  &&v.kill_count>0&&v.drop_count>=0&&v.drop_count<=v.kill_count
+  &&Number.isFinite(v.observed_percent_rounded)&&v.observed_percent_rounded>=0
+  &&v.observed_percent_rounded<=100
+  &&typeof v.source_url==="string"&&/^https:\/\//.test(v.source_url)?v:null;
+};
+
 const itemName=item=>window.ForeverItemLocale?.name({
  id:item.id||0,name:item.en,
  name_fr:item.fr&&item.fr!==item.en?item.fr:undefined,
@@ -117,17 +127,24 @@ function makeLootCard(item,boss){const card=m("div",null,"dg-drop");card.tabInde
  }else if(item.previewStats?.length){
   text.append(m("small",item.previewStats.map(s=>window.ForeverItemTooltip?.translateLine?.(s)||s).join(" · "),"dg-stat-preview"));
  }
- if(Number.isFinite(item.chanceReported))text.append(m("small",t("Taux : ","Chance: ")+String(item.chanceReported).replace(".",",")+" %"));
+ const observed=liveSample(item);
+ if(observed){
+  const p=String(observed.observed_percent_rounded).replace(".",",");
+  text.append(m("small",t("Rapports joueurs : ","Player reports: ")+p+" % ("+observed.drop_count+"/"+observed.kill_count+" "+t("relevés","reports")+")"));
+ }else if(Number.isFinite(item.chanceReported)){
+  text.append(m("small",t("Estimation bêta : ","Beta estimate: ")+String(item.chanceReported).replace(".",",")+" %");
+ }
  if(item.isNew)text.append(m("small","Forever"));if(item.itemLevel)text.append(m("small",t("Niveau d’objet ","Item level ")+item.itemLevel+(item.requiredLevel?" · "+t("Niveau requis ","Required level ")+item.requiredLevel:"")));
  const proof=dropProof(item);
 
  card.append(text);
- if(proof==="documented"&&item.evidence_url){const evidence=m("a","Source ↗","dg-item-page");evidence.href=item.evidence_url;evidence.target="_blank";evidence.rel="noopener noreferrer";evidence.title=t("Table de butin Forever par boss","Forever boss-specific loot table");card.append(evidence)}
+ if(proof==="documented"&&item.evidence_url){const evidence=m("a",observed?t("Relevé ↗","Sample ↗"):"Source ↗","dg-item-page");evidence.href=observed?observed.source_url:item.evidence_url;evidence.target="_blank";evidence.rel="noopener noreferrer";evidence.title=observed?t("Rapports joueurs : non garanti","Player reports: not guaranteed"):t("Table de butin Forever par boss","Forever boss-specific loot table");card.append(evidence)}
  if(item.itemUrl){const link=m("a","↗","dg-item-page");link.href=item.itemUrl;link.target="_blank";link.rel="noopener noreferrer";link.title=t("Ouvrir la fiche de l’objet","Open item details");link.setAttribute("aria-label",t("Fiche d’objet : ","Item page: ")+itemName(item));card.append(link)}
 
  const show=e=>{tooltip.replaceChildren();tooltip.append(m("strong",itemName(item)),m("span",(item.source_status==="classic_loot_reference"?t("Boss : ","Boss: "):t("Boss : ","Boss: "))+name(boss.name)),m("span",item.slot));
  if(item.tooltip?.length)item.tooltip.forEach(line=>tooltip.append(m("span",line)));
- if(Number.isFinite(item.chanceReported))tooltip.append(m("span",t("Taux mentionné par le guide : ","Guide-reported chance: ")+item.chanceReported+" %"));
+ if(observed)tooltip.append(m("span",t("Rapports communautaires consultés le ","Community-reported sample reviewed ")+(observed.observed_at||"—")+" : "+observed.drop_count+"/"+observed.kill_count+" · "+t("ce taux n'est pas garanti","not a guaranteed drop chance")));
+ else if(Number.isFinite(item.chanceReported))tooltip.append(m("span",t("Estimation historique mentionnée en bêta : ","Historical beta guide estimate: ")+item.chanceReported+" %"));
  tooltip.dataset.quality=qualityOf(item);tooltip.hidden=false;const x=Math.max(8,Math.min(window.innerWidth-355,Math.max(8,(e.clientX||card.getBoundingClientRect().left)+12)));const y=Math.max(8,Math.min(window.innerHeight-185,Math.max(8,(e.clientY||card.getBoundingClientRect().top)+12)));tooltip.style.left=x+"px";tooltip.style.top=y+"px"};
  if(window.ForeverItemTooltip){
  const tipItem={id:item.id,name:itemName(item),name_en:item.en,name_fr:item.fr,quality:qualityOf(item)==="unknown"?"common":qualityOf(item),source_status:item.source_status==="classic_loot_reference"?"classic_reference":item.source_status||"forever_beta_community",slot:item.slot,slotLabel:item.slot,itemLevel:item.itemLevel,requiredLevel:item.requiredLevel,tooltip:item.tooltip||[],icon:item.icon,origin:name(selected?.name||{})+" · "+name(boss.name),source_url:item.statsSource||item.itemUrl,url:item.itemUrl||selected?.source,details_status:item.detailsStatus||"missing",fetch_classic_details:item.source_status==="classic_loot_reference"};
