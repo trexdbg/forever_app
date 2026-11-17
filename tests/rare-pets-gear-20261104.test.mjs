@@ -1,6 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import {readFileSync} from "node:fs";
+import {BASELINE} from "./helpers/catalogue-baseline.mjs";
 import {buildFromFiles} from "../scripts/build-item-acquisition-index.mjs";
 
 const read=file=>JSON.parse(readFileSync(new URL("../data/"+file,import.meta.url),"utf8"));
@@ -73,8 +74,8 @@ test("equipment and collectible rare sources are linked by ID and the whole inde
  assert.equal(scoped.filter(r=>r.loot.length>0).length,96);
  assert.equal(scoped.filter(r=>!r.loot.length).length,65);
  assert.equal(catalog.rares.reduce((n,r)=>n+r.loot.length,0),142);
- assert.equal(acquisition.totals.unique_items,758);
- assert.equal(acquisition.totals.relations,1284);
+ assert.equal(acquisition.totals.unique_items,BASELINE.index.uniqueItems);
+ assert.equal(acquisition.totals.relations,BASELINE.index.relations);
  const ghost=catalog.rares.find(r=>r.id==="forever-dun-morogh-ghostfang");
  assert.deepEqual(ghost.loot,[],"Conflicting Ghostfang source stays unverified");
 });
