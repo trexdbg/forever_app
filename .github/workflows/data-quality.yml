@@ -28,6 +28,7 @@ on:
       - 'scripts/build-item-acquisition-index.mjs'
       - 'tests/item-acquisition-index.test.mjs'
       - 'tests/dungeon-boss-loot-provenance-20261016.test.mjs'
+      - 'tests/dalaran-shade-community-loot-20261117.test.mjs'
       - 'scripts/validate-rare-locations.mjs'
       - 'tests/rare-locations.test.mjs'
       - 'tests/seo-ghostfang-source-review-20261023.test.mjs'
@@ -119,6 +120,8 @@ jobs:
         run: node --test tests/dungeon-boss-loot-provenance-20261016.test.mjs
       - name: Deterministic acquisition index source and link tests
         run: node --test tests/item-acquisition-index.test.mjs
+      - name: Shade of Archmage post-launch community drop evidence
+        run: node --test tests/dalaran-shade-community-loot-20261117.test.mjs
       - name: Cross-catalogue acquisition index is fully reproducible
         run: node scripts/build-item-acquisition-index.mjs --check
       - name: Forever new starter-zone rare discovery regression
