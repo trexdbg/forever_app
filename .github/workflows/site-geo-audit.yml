@@ -6,6 +6,13 @@ on:
       - 'scripts/audit-site.mjs'
       - 'scripts/check-seo-gsc-pages.mjs'
       - 'tests/seo-rare-intent-20261023.test.mjs'
+      - 'tests/seo-trainer-intent-20261117.test.mjs'
+      - 'assets/npcs.js'
+      - 'assets/trainer-quick.css'
+      - 'metiers/index.html'
+      - 'en/metiers/index.html'
+      - 'guides/maitres-armes/index.html'
+      - 'en/guides/weapon-masters/index.html'
       - 'tests/seo-ghostfang-source-review-20261023.test.mjs'
       - 'tests/seo-favor-vendor-factions-20261023.test.mjs'
       - 'tests/seo-bronze-tube-quest-20261023.test.mjs'
@@ -61,6 +68,7 @@ jobs:
           node scripts/audit-site.mjs --strict
           node scripts/check-seo-gsc-pages.mjs
           node --test tests/seo-rare-intent-20261023.test.mjs
+          node --test tests/seo-trainer-intent-20261117.test.mjs
           node --test tests/seo-ghostfang-source-review-20261023.test.mjs
 
           node --test tests/fizzlefuse-catalogue-geo-20261023.test.mjs
