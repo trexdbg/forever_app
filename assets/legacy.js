@@ -55,7 +55,11 @@ function tree(tree){
  return '<section class="legacy-tree" aria-label="'+escape(tree.name[lang])+'"><div class="legacy-head"><span class="legacy-emblem" aria-hidden="true">'+escape(tree.symbol)+'</span><h2>'+escape(tree.name[lang])+'</h2><span class="legacy-tree-points">'+current+' '+t("pts","pts")+'</span></div>'+tiers+'</section>';
 }
 function render(){counter.textContent=spent(build);remaining.textContent=data.seasonal_cap-spent(build);root.innerHTML=data.trees.map(tree).join("");}
-function edit(id,action){const next=action==="add"?add(data,build,id):remove(data,build,id);if(!next){inform(t("Action bloquée par le plafond ou les prérequis.","Blocked by the cap or prerequisites."));return;}build=next;persist();render();inform("");}
+function edit(id,action){const next=action==="add"?add(data,build,id):remove(data,build,id);if(!next){inform(t("Action bloquée par le plafond ou les prérequis.","Blocked by the cap or prerequisites."));return;}build=next;persist();render();inform("");
+ // Only fixed event labels, never the selected talent ID, ranks or URL.
+ window.ForEverothAnalytics?.track("tool_interaction",{
+  module_name:"legacy",control_name:action==="add"?"legacy-point-add":"legacy-point-remove"
+ });}
 root.addEventListener("click",event=>{const btn=event.target.closest("button[data-action]");if(btn)edit(btn.dataset.id,btn.dataset.action);});
 document.getElementById("legacy-reset").addEventListener("click",()=>{build=emptyBuild(data);persist();render();inform(t("Répartition réinitialisée.","Allocation reset."));});
 document.getElementById("legacy-share").addEventListener("click",async()=>{
