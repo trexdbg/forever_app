@@ -9,7 +9,7 @@ const catalogue=JSON.parse(read("data/dungeons-forever.json"));
 const index=JSON.parse(read("data/item-acquisition-index.json"));
 const counts={
  "hall-of-thanes":[12,0],"ruins-of-lordaeron":[15,7],
- "excavation-site-wetlands":[9,2],"city-of-dalaran":[18,8],
+ "excavation-site-wetlands":[9,2],"city-of-dalaran":[20,7],
  "ragefire-chasm":[6,0],"wailing-caverns":[1,0],
  "the-stockade":[4,0],"gnomeregan":[2,2],
  "razorfen-kraul":[5,1],"scarlet-monastery-graveyard":[2,2]
@@ -17,14 +17,14 @@ const counts={
 const rows=catalogue.dungeons.flatMap(d=>d.bosses.flatMap(b=>
  (b.loot||[]).map(item=>({dungeon:d,boss:b,item}))));
 
-test("all 96 Forever-catalogued boss drops have claim-level classification; Classic records remain untouched",()=>{
+test("all 97 Forever-catalogued boss drops have claim-level classification; Classic remains untouched",()=>{
  const classic=rows.filter(r=>r.item.source_status==="classic_loot_reference");
  const forever=rows.filter(r=>r.item.source_status!=="classic_loot_reference");
  assert.equal(classic.length,110);
- assert.equal(forever.length,96);
- assert.equal(forever.filter(r=>r.item.evidence_level==="documented_forever").length,74);
- assert.equal(forever.filter(r=>r.item.evidence_level==="unverified").length,22);
- assert.equal(rows.length,206);
+ assert.equal(forever.length,97);
+ assert.equal(forever.filter(r=>r.item.evidence_level==="documented_forever").length,76);
+ assert.equal(forever.filter(r=>r.item.evidence_level==="unverified").length,21);
+ assert.equal(rows.length,207);
  const actual={};
  for(const {dungeon,boss,item} of forever){
   const id=dungeon.id;
@@ -34,14 +34,17 @@ test("all 96 Forever-catalogued boss drops have claim-level classification; Clas
    "Evidence note must identify the precise boss-item relationship: "+boss.name.en+" / "+item.en);
   if(item.evidence_level==="documented_forever"){
    actual[id][0]++;
-   const source="https://wowsrc.com/loot/"+id+"/";
+   const isNewShade=[273103,251961].includes(item.id)&&boss.name.en==="Archmage's Shade";
+   const source=isNewShade
+     ?"https://www.wowhead.com/forever/npc=246020/shade-of-the-archmage"
+     :"https://wowsrc.com/loot/"+id+"/";
    assert.equal(item.source_url,source);
    assert.equal(item.evidence_url,source);
    assert.equal(item.evidence_kind,"forever_community_page");
-   assert.equal(item.observed_at,([273052,273051,273049].includes(item.id)?"2026-10-22":"2026-10-16"));
+   assert.equal(item.observed_at,isNewShade?"2026-11-17":([273052,273051,273049].includes(item.id)?"2026-10-22":"2026-10-16"));
    assert.equal(item.observed_build,"unknown");
    assert.equal(item.loot_attribution_status,"boss_item_pair_documented_forever");
-   assert.match(item.evidence_note,/not a verified personal drop capture/);
+   assert.match(item.evidence_note,isNewShade?/not a guaranteed chance|not guaranteed/i:/not a verified personal drop capture/);
    assert.ok(!source.includes("/item="));
   }else{
    actual[id][1]++;
@@ -60,7 +63,6 @@ test("inconsistent boss names and blueprint-only item sheets remain unresolved, 
   ["ruins-of-lordaeron","Rath'mael",273085],
   ["city-of-dalaran","Lyn the Unheeded",273053],
   ["city-of-dalaran","Fel-Touched Ancient",273037],
-  ["city-of-dalaran","Archmage's Shade",273103],
   ["city-of-dalaran","Unstable Sentinel",273099],
   ["gnomeregan","Grubbis",274042],
   ["scarlet-monastery-graveyard","Interrogator Vishas",252455]
@@ -84,11 +86,13 @@ test("published acquisition index agrees with inputs and labels only individuall
  assert.equal(index.totals.by_evidence.classic_reference,current.index.byEvidence.classic_reference);
  assert.equal(index.totals.by_evidence.unverified,current.index.byEvidence.unverified);
  const links=index.items.flatMap(row=>row.sources.filter(s=>s.kind==="boss").map(s=>({id:row.id,...s})));
- assert.equal(links.filter(s=>s.evidence_level==="documented_forever").length,74);
- assert.equal(links.filter(s=>s.evidence_level==="unverified").length,21);
+ assert.equal(links.filter(s=>s.evidence_level==="documented_forever").length,76);
+ assert.equal(links.filter(s=>s.evidence_level==="unverified").length,20);
  assert.equal(links.filter(s=>s.evidence_level==="classic_reference").length,110);
  for(const source of links.filter(s=>s.evidence_level==="documented_forever")){
-  assert.match(source.reference_url,/^https:\/\/wowsrc\.com\/loot\/[^/]+\/$/);
+  if([273103,251961].includes(source.id)&&source.name_en==="Archmage's Shade")
+   assert.equal(source.reference_url,"https://www.wowhead.com/forever/npc=246020/shade-of-the-archmage");
+  else assert.match(source.reference_url,/^https:\/\/wowsrc\.com\/loot\/[^/]+\/$/);
   assert.equal(source.source_status,"forever_documented_boss_loot");
  }
  for(const source of links.filter(s=>s.evidence_level==="unverified"))
@@ -140,20 +144,28 @@ test("bilingual dungeon pages show explicit trust labels, sources, and current d
 });
 
 
-test("Archmage's Shade three source-listed items are documentary only; blueprint remains unverified",()=>{
+test("Shade of Archmage five item/boss associations are documented but player samples are not guarantees",()=>{
  const shade=catalogue.dungeons.find(d=>d.id==="city-of-dalaran").bosses.find(b=>b.name.en==="Archmage's Shade");
+ const source="https://www.wowhead.com/forever/npc=246020/shade-of-the-archmage";
  const proven=shade.loot.filter(item=>item.evidence_level==="documented_forever");
- assert.deepEqual(proven.map(item=>item.id).sort((a,b)=>a-b),[273049,273051,273052]);
+ assert.deepEqual(proven.map(item=>item.id).sort((a,b)=>a-b),[251961,273049,273051,273052,273103]);
  for(const item of proven){
-  assert.equal(item.evidence_url,"https://wowsrc.com/loot/city-of-dalaran/");
-  assert.match(item.evidence_note,/alternative name/);
-  assert.match(item.evidence_note,/not a verified personal drop capture/);
   assert.equal(item.observed_build,"unknown");
+  assert.equal(item.live_observation.source_url,source);
+  assert.equal(item.live_observation.kill_count,3425);
+  assert.equal(item.live_observation.observed_at,"2026-11-17");
+  assert.match(item.live_observation.note,/not a guaranteed|not guaranteed|Not a guarantee/i);
   const link=index.items.find(row=>row.id===item.id).sources.find(s=>s.kind==="boss"&&s.name_en==="Archmage's Shade");
   assert.equal(link.evidence_level,"documented_forever");
-  assert.equal(link.reference_url,item.evidence_url);
+  assert.equal(link.reference_url,[273103,251961].includes(item.id)?source:item.evidence_url);
+  if([273103,251961].includes(item.id)){
+   assert.equal(item.evidence_url,source);
+   assert.match(item.evidence_note,/not a guaranteed chance/i);
+  }else{
+   assert.equal(item.evidence_url,"https://wowsrc.com/loot/city-of-dalaran/");
+   assert.match(item.evidence_note,/alternative name/);
+   assert.match(item.evidence_note,/not a verified personal drop capture/);
+  }
  }
- const blueprint=shade.loot.find(item=>item.id===273103);
- assert.equal(blueprint.evidence_level,"unverified");
- assert.equal(blueprint.evidence_url,undefined);
+ assert.equal(shade.loot.filter(x=>x.evidence_level==="unverified").length,0);
 });
