@@ -237,6 +237,40 @@ function makeRecords(){
  for(const itemId of n.offers){const item=store.db.items[itemId];if(item)rec.push({npc:n,item,key:n.name+":"+itemId})}
  }store.records=rec;
 }
+/* Opt-in favorites only: local browser IDs, never synced or sent to GA4. */
+const FAVORITES_KEY="foreveroth.trainer.favorites.v1";
+const favoriteKey=n=>[trainerType(n),n.name,n.zone?.id||"",n.faction||"",n.profession||""].join("|");
+function readFavorites(){
+ try{
+  const values=JSON.parse(localStorage.getItem(FAVORITES_KEY)||"[]");
+  return Array.isArray(values)?[...new Set(values.filter(v=>typeof v==="string"&&v.length>0&&v.length<=220))].slice(0,12):[];
+ }catch(_){return []}
+}
+let favorites=readFavorites();
+function saveFavorites(){
+ try{localStorage.setItem(FAVORITES_KEY,JSON.stringify(favorites));return true}
+ catch(_){return false}
+}
+function renderFavorites(){
+ const host=$("npc-favorites"),list=$("npc-favorites-links");
+ if(!host||!list||!store.db||store.mode!=="trainer")return;
+ const byKey=new Map(store.records.filter(r=>r.npc.role==="trainer").map(r=>[favoriteKey(r.npc),r]));
+ const valid=favorites.map(id=>byKey.get(id)).filter(Boolean);
+ host.hidden=!valid.length;list.replaceChildren();
+ for(const record of valid){
+  const n=record.npc;
+  const b=append(list,"button",trainerTitle(n)+" · "+side(n),"npc-favorite-open");
+  b.type="button";b.addEventListener("click",()=>{
+   q.value=n.name;if(type)type.value=trainerType(n);
+   if(weapon)weapon.value="all";if(trade)trade.value="all";
+   if(rank)rank.value="all";if(zone)zone.value="all";if(aff)aff.value="all";
+   updateFilterVisibility();refresh();
+   const exact=store.filtered.find(r=>favoriteKey(r.npc)===favoriteKey(n));
+   if(exact)selectRecord(exact);
+   window.ForEverothAnalytics?.track("tool_interaction",{module_name:"metiers",control_name:"npc-favorite-open"});
+  });
+ }
+}
 function selectRecord(r){store.active=r;renderList();renderDetail()}
 function filteredRecords(ignoreZone=false){
  const needle=val(q.value);
@@ -412,6 +446,20 @@ function renderTrainerDetail(n){
   }
  }
  const actions=append(detail,"div",null,"npc-actions");
+ const favId=favoriteKey(n);
+ const fav=append(actions,"button",null,"npc-favorite-toggle");
+ fav.type="button";fav.id="npc-favorite-toggle";
+ const syncFavorite=()=>{const picked=favorites.includes(favId);
+  fav.textContent=picked?S("★ Retirer des favoris","★ Remove favorite"):S("☆ Garder ce maître","☆ Save trainer");
+  fav.setAttribute("aria-pressed",String(picked));
+ };
+ syncFavorite();
+ fav.addEventListener("click",()=>{
+  favorites=favorites.includes(favId)?favorites.filter(v=>v!==favId):[favId,...favorites].slice(0,12);
+  const persisted=saveFavorites();
+  syncFavorite();renderFavorites();
+  if(!persisted)fav.title=S("Stockage local bloqué : favori conservé pour cette visite seulement","Local storage blocked: favorite kept for this visit only");
+ });
  const mapId=store.db.zone_maps?.[n.zone.id]?.uiMapID;
  if(hasCoords(n)&&mapId){
   const command="/mappin "+mapId+" "+n.coordinates.x+" "+n.coordinates.y;
@@ -641,6 +689,6 @@ fetch(root+"data/npcs.json").then(r=>{if(!r.ok)throw Error(r.status);return r.js
  }
  choice(zone,"zone");
  updateFilterVisibility();
- refresh();$("npc-load-status").textContent=store.mode==="trainer"?db.npcs.filter(n=>n.role==="trainer").length+" "+S("maîtres recensés","trainers listed"):Object.keys(db.items).length+" "+S("objets · "+new Set(store.records.filter(r=>foreverOffer(r.npc,r.item)).map(r=>r.item.id)).size+" sourcés Forever","items · "+new Set(store.records.filter(r=>foreverOffer(r.npc,r.item)).map(r=>r.item.id)).size+" Forever sourced");
+ refresh();renderFavorites();$("npc-load-status").textContent=store.mode==="trainer"?db.npcs.filter(n=>n.role==="trainer").length+" "+S("maîtres recensés","trainers listed"):Object.keys(db.items).length+" "+S("objets · "+new Set(store.records.filter(r=>foreverOffer(r.npc,r.item)).map(r=>r.item.id)).size+" sourcés Forever","items · "+new Set(store.records.filter(r=>foreverOffer(r.npc,r.item)).map(r=>r.item.id)).size+" Forever sourced");
 }).catch(e=>{$("npc-load-status").textContent=S("Données indisponibles","Data unavailable");append(list,"p",S("Impossible de charger l'annuaire. Réessayez plus tard.","Unable to load the directory."),"npc-empty");console.warn("NPC dataset:",e.message)});
 })();
