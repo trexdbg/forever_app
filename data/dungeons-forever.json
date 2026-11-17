@@ -2069,7 +2069,16 @@
               "evidence_url": "https://wowsrc.com/loot/city-of-dalaran/",
               "observed_at": "2026-10-22",
               "observed_build": "unknown",
-              "evidence_kind": "forever_community_page"
+              "evidence_kind": "forever_community_page",
+              "live_observation": {
+                "source_url": "https://www.wowhead.com/forever/npc=246020/shade-of-the-archmage",
+                "source_kind": "wowhead_forever_player_reported_loot",
+                "observed_at": "2026-11-17",
+                "kill_count": 3425,
+                "drop_count": 1078,
+                "observed_percent_rounded": 31,
+                "note": "Wowhead Forever community kill/loot sample reviewed 2026-11-17. Rounded observational percentage, not a guaranteed personal drop chance."
+              }
             },
             {
               "fr": "Mantelet de sorcier pourpre",
@@ -2094,7 +2103,16 @@
               "evidence_url": "https://wowsrc.com/loot/city-of-dalaran/",
               "observed_at": "2026-10-22",
               "observed_build": "unknown",
-              "evidence_kind": "forever_community_page"
+              "evidence_kind": "forever_community_page",
+              "live_observation": {
+                "source_url": "https://www.wowhead.com/forever/npc=246020/shade-of-the-archmage",
+                "source_kind": "wowhead_forever_player_reported_loot",
+                "observed_at": "2026-11-17",
+                "kill_count": 3425,
+                "drop_count": 1025,
+                "observed_percent_rounded": 30,
+                "note": "Wowhead Forever community kill/loot sample reviewed 2026-11-17. Rounded observational percentage, not a guaranteed personal drop chance."
+              }
             },
             {
               "fr": "Pendentif à facettes d’archimagistère",
@@ -2116,7 +2134,16 @@
               "evidence_url": "https://wowsrc.com/loot/city-of-dalaran/",
               "observed_at": "2026-10-22",
               "observed_build": "unknown",
-              "evidence_kind": "forever_community_page"
+              "evidence_kind": "forever_community_page",
+              "live_observation": {
+                "source_url": "https://www.wowhead.com/forever/npc=246020/shade-of-the-archmage",
+                "source_kind": "wowhead_forever_player_reported_loot",
+                "observed_at": "2026-11-17",
+                "kill_count": 3425,
+                "drop_count": 1193,
+                "observed_percent_rounded": 35,
+                "note": "Wowhead Forever community kill/loot sample reviewed 2026-11-17. Rounded observational percentage, not a guaranteed personal drop chance."
+              }
             },
             {
               "fr": "Plan : récupérateur arcanique",
@@ -2129,13 +2156,56 @@
               "itemUrl": "https://www.wowhead.com/forever/item=273103",
               "identification_source": "https://www.wowhead.com/forever/item=273103",
               "name_fr_status": "community_translation_unverified",
-              "boss_association_status": "guide_only_unconfirmed",
+              "boss_association_status": "forever_community_reported",
               "wiki_catalog_source": "https://wowfwiki.com/wiki/City_of_Dalaran",
               "itemLevel": 25,
               "statsSource": "https://foreverchanges.pro/item/273103",
-              "evidence_level": "unverified",
-              "evidence_note": "The exact Archmage's Shade → Blueprint: Arcane Salvager boss-to-item relation is not independently established by the reviewed WoW Source Forever boss lists on 2026-10-16. The existing item sheet, cache or secondary guide does not by itself establish this boss drop; retain for follow-up, not as Forever-documented acquisition.",
-              "loot_attribution_status": "boss_item_pair_needs_independent_evidence"
+              "evidence_level": "documented_forever",
+              "evidence_note": "Archmage's Shade (Shade of the Archmage) → Blueprint: Arcane Salvager is explicitly linked in the Wowhead Forever NPC loot table as of 2026-11-17. Wowhead reports 234 item occurrences across 3425 boss records; this is community-observed evidence of the boss-to-item link, not a guaranteed chance, independently repeated gameplay, or universal quest eligibility.",
+              "loot_attribution_status": "boss_item_pair_documented_forever",
+              "live_observation": {
+                "source_url": "https://www.wowhead.com/forever/npc=246020/shade-of-the-archmage",
+                "source_kind": "wowhead_forever_player_reported_loot",
+                "observed_at": "2026-11-17",
+                "kill_count": 3425,
+                "drop_count": 234,
+                "observed_percent_rounded": 7,
+                "note": "Wowhead Forever community kill/loot sample reviewed 2026-11-17. Rounded observational percentage, not a guaranteed personal drop chance."
+              },
+              "source_url": "https://www.wowhead.com/forever/npc=246020/shade-of-the-archmage",
+              "evidence_url": "https://www.wowhead.com/forever/npc=246020/shade-of-the-archmage",
+              "evidence_kind": "forever_community_page",
+              "observed_at": "2026-11-17",
+              "observed_build": "unknown"
+            },
+            {
+              "fr": "Arcane Mote",
+              "en": "Arcane Mote",
+              "name_fr_status": "official_fr_translation_not_checked_keep_en",
+              "slot": "Objet de quête / Quest item",
+              "source_status": "forever_beta_community",
+              "id": 251961,
+              "itemUrl": "https://www.wowhead.com/forever/item=251961",
+              "itemLevel": 1,
+              "quality": "common",
+              "evidence_level": "documented_forever",
+              "source_url": "https://www.wowhead.com/forever/npc=246020/shade-of-the-archmage",
+              "evidence_url": "https://www.wowhead.com/forever/npc=246020/shade-of-the-archmage",
+              "evidence_kind": "forever_community_page",
+              "observed_at": "2026-11-17",
+              "observed_build": "unknown",
+              "loot_attribution_status": "boss_item_pair_documented_forever",
+              "evidence_note": "Archmage's Shade (Shade of the Archmage) → Arcane Mote is explicitly linked in the Wowhead Forever NPC loot table as of 2026-11-17. Wowhead reports 1399 item occurrences across 3425 boss records; this is community-observed evidence of the boss-to-item link, not a guaranteed chance, independently repeated gameplay, or universal quest eligibility. The source_status uses the repository's established forever_beta_ prefix for all postlaunch and beta Forever-only item records; the observed_at date carries the actual evidence date.",
+              "statsSource": "https://db.icy-veins.com/wow-forever/items/251961",
+              "live_observation": {
+                "source_url": "https://www.wowhead.com/forever/npc=246020/shade-of-the-archmage",
+                "source_kind": "wowhead_forever_player_reported_loot",
+                "observed_at": "2026-11-17",
+                "kill_count": 3425,
+                "drop_count": 1399,
+                "observed_percent_rounded": 41,
+                "note": "Wowhead Forever community kill/loot sample reviewed 2026-11-17. Rounded observational percentage, not a guaranteed personal drop chance."
+              }
             }
           ],
           "note": {

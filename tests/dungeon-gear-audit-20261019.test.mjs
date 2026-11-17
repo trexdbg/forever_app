@@ -15,11 +15,11 @@ const databases=[
 const baseline=new Set(databases.map(item=>item.id));
 const dungeon=json("data/dungeons-forever.json");
 const expected=dungeon.dungeons.flatMap(d=>d.bosses.flatMap(b=>(b.loot||[]).filter(l=>
- Number.isSafeInteger(l.id)&&l.id>0&&!baseline.has(l.id)&&
+ Number.isSafeInteger(l.id)&&l.id>0&&!baseline.has(l.id)&&byID.has(l.id)&&
  (l.source_status==="classic_loot_reference"||l.evidence_level==="documented_forever")
 ).map(l=>({id:l.id,name:l.en,boss:b.name.en}))));
 
-test("all 83 dungeon loot rows account for exactly 82 new item IDs and one duplicate reference",()=>{
+test("October 19 audited 83 loot rows remain intact; new quest and recipes stay outside gear audit",()=>{
  assert.equal(audit.schema_version,1);
  assert.equal(audit.items.length,82);
  assert.equal(expected.length,83);
@@ -29,6 +29,14 @@ test("all 83 dungeon loot rows account for exactly 82 new item IDs and one dupli
  assert.equal(audit.counts.unique_item_ids,82);
  assert.equal(audit.counts.duplicate_item_rows,1);
  assert.deepEqual([...byID.keys()].sort((a,b)=>a-b),[...new Set(expected.map(x=>x.id))].sort((a,b)=>a-b));
+ // The audit was frozen on 19 October; post-launch additions are not
+ // automatically reclassified as 2026-10-19 gear evidence.
+ const fresh=dungeon.dungeons.flatMap(d=>d.bosses.flatMap(b=>(b.loot||[])
+   .filter(i=>i.evidence_level==="documented_forever"&&!byID.has(i.id)&&!baseline.has(i.id))
+   .map(i=>i.id)));
+ assert.deepEqual(fresh.filter(id=>id===251961||id===273103).sort(),[251961,273103]);
+ assert.ok(!byID.has(251961)&&!byID.has(273103));
+
  for(const x of expected)assert.equal(byID.get(x.id).name,x.name,"ID/name mismatch for "+x.id);
  for(const x of audit.items)assert.ok(!baseline.has(x.id),"Never shadow a previously catalogued item: "+x.id);
 });

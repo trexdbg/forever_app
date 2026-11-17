@@ -12,7 +12,7 @@ const site="https://foreveroth.com";
 const esc=s=>String(s).replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;").replaceAll("'","&#39;");
 const decode=s=>s.replaceAll("&amp;","&").replaceAll("&quot;",'"').replaceAll("&#39;","'");
 const tables=[
- {id:"city-of-dalaran",fr:"guides/cite-dalaran-boss-loot/",en:"en/guides/city-of-dalaran-boss-loot/",doc:18,unverified:8},
+ {id:"city-of-dalaran",fr:"guides/cite-dalaran-boss-loot/",en:"en/guides/city-of-dalaran-boss-loot/",doc:20,unverified:7},
  {id:"ruins-of-lordaeron",fr:"guides/ruines-lordaeron-boss-loot/",en:"en/guides/ruins-of-lordaeron-boss-loot/",doc:15,unverified:7},
  {id:"hall-of-thanes",fr:"guides/salle-des-thanes-boss-loot/",en:"en/guides/hall-of-thanes-boss-loot/",doc:12,unverified:0},
  {id:"excavation-site-wetlands",fr:"guides/excavations-paluns-boss-loot/",en:"en/guides/wetlands-excavation-boss-loot/",doc:9,unverified:2}
@@ -38,12 +38,12 @@ function checkSeo(html,{lang,path,fr,en}){
  assert.ok(article,path+" article structured data");
  assert.equal(decode(article.description),desc,path+" JSON-LD description mismatch");
  const updated=path.includes("archmage-s-shade")||path.includes("city-of-dalaran-boss-loot")||path.includes("cite-dalaran-boss-loot");
- const expectedDate=updated?"2026-10-22":"2026-10-16";
+ const expectedDate=updated?"2026-11-17":"2026-10-16";
  assert.equal(article.dateModified,expectedDate,path+" editorial recency");
  assert.equal(article.inLanguage,lang,path+" schema language");
  const web=graph.find(x=>x["@type"]==="WebPage");
  if(web)assert.equal(decode(web.description),desc,path+" WebPage description mismatch");
- assert.ok(html.includes(lang==="fr"?(updated?"22 octobre 2026":"16 octobre 2026"):(updated?"22 October 2026":"16 October 2026")),path+" review date");
+ assert.ok(html.includes(lang==="fr"?(updated?"17 novembre 2026":"16 octobre 2026"):(updated?"17 November 2026":"16 October 2026")),path+" review date");
  return desc;
 }
 
@@ -95,10 +95,19 @@ test("four indexed Dalaran boss topics are consistent with the repaired source a
   for(const lang of ["fr","en"]){
    const path=spec[lang],html=read(path+"index.html");
    const meta=checkSeo(html,{lang,path,fr:spec.fr,en:spec.en});
-   assert.ok(meta.includes(doc+" "),path+" documentary count in search snippet");
-   assert.ok(meta.includes(pending.length+" "),path+" uncertain count in search snippet");
+   if(spec.n===7){
+    // New 17-November boss report: five direct links, zero pending, plus dated
+    // community kill reports. Zero-unverified is not search-snippet bait.
+    assert.ok(meta.includes("5 "),path+" updated documented loot count");
+    assert.ok(html.includes("https://www.wowhead.com/forever/npc=246020/shade-of-the-archmage"),path+" sourced player sample");
+    assert.ok(html.includes("3,425")||html.includes("3 425"),path+" dated sample size");
+    assert.ok(html.includes(lang==="fr"?"Quels butins sont réellement documentés":"what actually has a source"),path+" explicit documentary section");
+   }else{
+    assert.ok(meta.includes(doc+" "),path+" documentary count in search snippet");
+    assert.ok(meta.includes(pending.length+" "),path+" uncertain count in search snippet");
+    assert.ok(html.includes(lang==="fr"?"État de vérification des butins":"Boss-loot evidence checked"),path+" visible provenance section");
+   }
    assert.ok(html.includes("https://wowsrc.com/loot/city-of-dalaran/"),path+" direct reference");
-   assert.ok(html.includes(lang==="fr"?"État de vérification des butins":"Boss-loot evidence checked"),path+" visible provenance section");
    assert.ok(html.includes(doc+" / "+boss.loot.length),path+" precise source coverage");
    assert.ok(html.includes("/"+(lang==="en"?"en/":"")+"donjons/?donjon=city-of-dalaran&amp;boss="+(spec.n+1)),path+" evidence deep link");
    assert.ok(html.includes(lang==="fr"?"/guides/cite-dalaran-boss-loot/":"/en/guides/city-of-dalaran-boss-loot/"),path+" hub navigation");

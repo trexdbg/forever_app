@@ -4,18 +4,18 @@
   "scope": "Read-only relations inherited from ForEveroth merchant, rare, dungeon and opt-in beta recipe catalogues. Source links may identify only an item or guide, not prove sale, drop, availability, rates or live crafting.",
   "provenance_policy": "Forever documented relations are labelled documentary only; all Classic relations stay Classic. Each relationship preserves its originating status. The links are navigation aids, not new source audits.",
   "totals": {
-    "unique_items": 758,
-    "relations": 1284,
+    "unique_items": 759,
+    "relations": 1285,
     "by_kind": {
       "merchant": 923,
-      "boss": 205,
+      "boss": 206,
       "rare": 142,
       "recipe": 14
     },
     "by_evidence": {
-      "documented_forever": 491,
+      "documented_forever": 493,
       "classic_reference": 772,
-      "unverified": 21
+      "unverified": 20
     }
   },
   "items": [
@@ -11003,6 +11003,22 @@
       ]
     },
     {
+      "id": 251961,
+      "sources": [
+        {
+          "kind": "boss",
+          "name_fr": "Ombre de l’archimage",
+          "name_en": "Archmage's Shade",
+          "context_fr": "Cité de Dalaran",
+          "context_en": "City of Dalaran",
+          "href": "/donjons/?donjon=city-of-dalaran&boss=8",
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://www.wowhead.com/forever/npc=246020/shade-of-the-archmage"
+        }
+      ]
+    },
+    {
       "id": 252455,
       "sources": [
         {
@@ -14165,9 +14181,9 @@
           "context_fr": "Cité de Dalaran",
           "context_en": "City of Dalaran",
           "href": "/donjons/?donjon=city-of-dalaran&boss=8",
-          "evidence_level": "unverified",
-          "source_status": "forever_boss_loot_without_direct_source",
-          "reference_url": "https://foreverchanges.pro/item/273103"
+          "evidence_level": "documented_forever",
+          "source_status": "forever_documented_boss_loot",
+          "reference_url": "https://www.wowhead.com/forever/npc=246020/shade-of-the-archmage"
         }
       ]
     },
