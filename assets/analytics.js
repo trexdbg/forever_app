@@ -156,14 +156,16 @@
   // character builds, coordinates, query strings, or user-entered content.
   const allowedControls = new Set([
     "quest-next", "quest-prev", "quest-zoom-reset",
-    "talent-share", "talent-reset", "mine-select-all", "mine-select-none",
+    "talent-share", "talent-reset", "legacy-reset", "legacy-share",
+    "npc-favorite-toggle", "npc-favorite-open", "mine-select-all", "mine-select-none",
     "npc-map-copy-way", "npc-map-zoom-in", "npc-map-zoom-out",
     "npc-map-zoom-reset", "npc-faction", "npc-zone", "npc-profession",
     "npc-type", "npc-weapon", "npc-kind", "npc-rank",
     "quest-search", "npc-search", "quest-range"
   ]);
   const moduleNames = new Set([
-    "quetes", "talents", "minage", "equipements", "marchands", "metiers", "population"
+    "quetes", "talents", "legacy", "minage", "equipements", "marchands", "metiers",
+    "rare", "donjons", "bis", "bis-niveaux", "population"
   ]);
   const pageCategory = document.body.dataset.page || "home";
   document.addEventListener("click", event => {
@@ -174,8 +176,9 @@
       const dest = new URL(anchor.href, location.href);
       if (dest.origin === location.origin) {
         const slug = dest.pathname.replace(/^\/en\//, "/").split("/")[1];
-        if (moduleNames.has(slug) && (anchor.closest(".nav, .atlas-grid, .class-list, .atlas-live-actions, .npc-crosslinks"))) {
-          track("module_open", { module_name: slug });
+        const moduleName = /^\\/(?:en\\/)?talents\\/heritage\\/?$/.test(dest.pathname) ? "legacy" : slug;
+        if (moduleNames.has(moduleName) && (anchor.closest(".nav, .atlas-grid, .class-list, .atlas-live-actions, .npc-crosslinks"))) {
+          track("module_open", { module_name: moduleName });
         }
       }
     }
