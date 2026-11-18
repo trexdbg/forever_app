@@ -40,7 +40,17 @@
         "+5 Spirit",
         "Requires Level 13"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_misc_necklacea8",
+      "icon_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/item=270227/ephemeral-choker",
+        "evidence_url": "https://www.wowhead.com/forever/item=270227/ephemeral-choker",
+        "observed_at": "2026-11-18",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Exact Forever item ID and English name; Quick Facts icon only. Does not establish live availability, acquisition or drop rate."
+      }
     },
     {
       "id": 271096,
@@ -81,7 +91,17 @@
       "observed_at": "2026-10-13",
       "observed_build": "unknown",
       "evidence_kind": "forever_community_page",
-      "evidence_note": "Fiche communautaire Forever : 15 points d'armure de base, bonus +30 armure, +3 puissance des sorts ; niveau requis 13. Aucun journal/capture attribuable vérifié par ForEveroth, disponibilité et taux de butin non confirmés directement."
+      "evidence_note": "Fiche communautaire Forever : 15 points d'armure de base, bonus +30 armure, +3 puissance des sorts ; niveau requis 13. Aucun journal/capture attribuable vérifié par ForEveroth, disponibilité et taux de butin non confirmés directement.",
+      "icon": "inv_bracer_11",
+      "icon_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/item=271096/aetherwisp-bracers",
+        "evidence_url": "https://www.wowhead.com/forever/item=271096/aetherwisp-bracers",
+        "observed_at": "2026-11-18",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Exact Forever item ID and English name; Quick Facts icon only. Does not establish live availability, acquisition or drop rate."
+      }
     },
     {
       "id": 271097,
