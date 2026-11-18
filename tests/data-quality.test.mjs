@@ -1,5 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import {readFileSync} from "node:fs";
 import {auditDatasets, classifyRecord, LEVELS, DATA_FILES} from "../scripts/check-data-quality.mjs";
 
 const item = (patch={}) => ({id:123,name:"Documented item",itemLevel:20,requiredLevel:10,source_status:"forever_beta_community",
@@ -103,4 +104,39 @@ test("Classic quest manifest guard and indirect loot sources",()=>{
   assert.ok(issues(data).some(i=>i.code==="LOOT_SOURCE_INDIRECT"));
   assert.ok(issues({"data/quests/manifest.json":{source_repo:"https://example.org/forever",coordinate_system:"zone_percent_0_100"}})
     .some(i=>i.code==="CLASSIC_QUEST_MANIFEST_CHANGED"));
+});
+
+// Icon evidence records are deliberately independent of item acquisition evidence.
+test("reviewed Forever icons match exact item ID, name and dated source in both catalogues",()=>{
+  const expected = new Map([
+    [249394, ["Orb of Mystic Insight", "inv_misc_orb_blue"]],
+    [252512, ["Brawler\'s Leather Helm", "inv_helmet_15"]],
+    [270031, ["Dark Ritual Leggings", "inv_pants_02"]],
+    [270072, ["Alterac Assassin\'s Gloves", "inv_gauntlets_15"]],
+    [270227, ["Ephemeral Choker", "inv_misc_necklacea8"]],
+    [271096, ["Aetherwisp Bracers", "inv_bracer_11"]],
+    [271670, ["Curl of Life", "inv_jewelry_ring_12"]],
+    [271920, ["Seal of the Expedition", "inv_jewelry_necklace_08"]],
+  ]);
+  for (const [file, ids] of [
+    ["items-forever.json", [...expected.keys()]],
+    ["bis-niveaux-forever-observed.json", [270227,271096]],
+  ]) {
+    const {items} = JSON.parse(readFileSync(new URL(`../data/${file}`, import.meta.url), "utf8"));
+    for (const id of ids) {
+      const record = items.find(i=>i.id===id);
+      assert.ok(record, `${file}: missing ${id}`);
+      assert.deepEqual([record.name,record.icon],expected.get(id));
+      const proof = record.icon_evidence;
+      assert.equal(proof.evidence_level,"documented_forever");
+      assert.equal(proof.evidence_kind,"forever_community_page");
+      const url = new URL(proof.evidence_url);
+      assert.equal(url.origin,"https://www.wowhead.com");
+      assert.ok(url.pathname.startsWith(`/forever/item=${id}/`));
+      assert.equal(proof.source_url,proof.evidence_url);
+      assert.match(proof.observed_at,/^\d{4}-\d{2}-\d{2}$/);
+      assert.ok(proof.observed_build);
+      assert.match(proof.evidence_note,/availability, acquisition or drop rate/);
+    }
+  }
 });
