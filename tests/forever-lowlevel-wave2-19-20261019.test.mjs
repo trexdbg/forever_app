@@ -37,7 +37,13 @@ test("19 ID-exact beta item pages enriched, 57 -> 38 short tooltips, 179 total e
   assert.equal(x.observed_at,"2026-10-19");
   assert.equal(x.observed_build,"1.60.1.70425");
   assert.equal(x.verified_forever,false);
-  assert.equal(x.icon,null);
+  const restoredIcons=new Map([[271096,"inv_bracer_11"],[271209,"inv_pants_mail_01"]]);
+  if(restoredIcons.has(id)){
+   assert.equal(x.icon,restoredIcons.get(id));
+   assert.equal(x.icon_catalogue_reference.item_id,id);
+   assert.equal(x.icon_catalogue_reference.item_name,x.name);
+   assert.equal(x.icon_catalogue_reference.file,"data/dungeons-forever.json");
+  }else assert.equal(x.icon,null);
   assert.ok(x.source_url.startsWith("https://www.60.tools/items/"+id+"-"));
   assert.ok(x.evidence_note.includes("does not alone prove live availability"));
   if(kind==="unknown"){
