@@ -1,5 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import {readFileSync} from "node:fs";
 import {auditDatasets, classifyRecord, LEVELS, DATA_FILES} from "../scripts/check-data-quality.mjs";
 
 const item = (patch={}) => ({id:123,name:"Documented item",itemLevel:20,requiredLevel:10,source_status:"forever_beta_community",
@@ -103,4 +104,35 @@ test("Classic quest manifest guard and indirect loot sources",()=>{
   assert.ok(issues(data).some(i=>i.code==="LOOT_SOURCE_INDIRECT"));
   assert.ok(issues({"data/quests/manifest.json":{source_repo:"https://example.org/forever",coordinate_system:"zone_percent_0_100"}})
     .some(i=>i.code==="CLASSIC_QUEST_MANIFEST_CHANGED"));
+});
+
+test("Forever icon backfill uses exact item identity and preserves source metadata",()=>{
+ const read=(name)=>JSON.parse(readFileSync(new URL("../data/"+name,import.meta.url),"utf8"));
+ const rows=read("dungeons-forever.json").dungeons.flatMap(d=>(d.bosses??[]).flatMap(b=>(b.loot??[]).map(x=>({...x,boss:b.name?.en,dungeon:d.name?.en??d.id}))));
+ const sets=[
+  ["items-forever.json",[270227,271096,271209]],
+  ["bis-niveaux-forever-observed.json",[270227,271096,270230,270231,271095,270228,270229,271098,270256,270260,270261,273023,273028,271204,271205,271206,271201,271203,271207,271208,271216,271215,271209,271210,271217,271211,271212,271218,6641,6642,271214]]
+ ];
+ for(const [name,ids] of sets){
+  const items=read(name).items;
+  for(const id of ids){
+   const item=items.find(x=>x.id===id);
+   assert.ok(item);
+   const proof=item.icon_catalogue_reference;
+   assert.equal(proof.item_id,id);
+   assert.equal(proof.item_name,item.name);
+   assert.equal(proof.file,"data/dungeons-forever.json");
+   assert.match(proof.source_commit,/^[0-9a-f]{40}$/);
+   assert.match(proof.reviewed_on,/^\d{4}-\d{2}-\d{2}$/);
+   const matching=rows.filter(x=>x.id===id&&x.en===item.name&&x.icon&&x.icon_source);
+   assert.equal(new Set(matching.map(x=>x.icon)).size,1);
+   assert.ok(matching.some(x=>x.icon===item.icon&&x.icon_source===proof.icon_source&&x.dungeon===proof.dungeon&&x.boss===proof.boss));
+  }
+ }
+ const orb=read("items-forever.json").items.find(x=>x.id===249394);
+ assert.equal(orb.name,"Orb of Mystic Insight");
+ assert.equal(orb.icon,"inv_misc_orb_blue");
+ assert.equal(orb.icon_evidence.evidence_url,"https://www.wowhead.com/forever/item=249394/orb-of-mystic-insight");
+ assert.equal(orb.icon_evidence.evidence_level,"documented_forever");
+ assert.match(orb.icon_evidence.evidence_note,/availability, acquisition or drop rate/);
 });

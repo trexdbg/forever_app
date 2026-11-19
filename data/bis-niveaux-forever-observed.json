@@ -40,7 +40,19 @@
         "+5 Spirit",
         "Requires Level 13"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_misc_necklacea8",
+      "icon_catalogue_reference": {
+        "file": "data/dungeons-forever.json",
+        "source_commit": "980490c493d38f25da2e9515da4f12cbb3cb3437",
+        "item_id": 270227,
+        "item_name": "Ephemeral Choker",
+        "icon_source": "woweternity_forever_hall_of_thanes",
+        "dungeon": "Hall of Thanes",
+        "boss": "Faldrim Anvilmar",
+        "reviewed_on": "2026-11-19",
+        "note": "Exact item ID and English name; existing Forever dungeon icon metadata reused, not independent live acquisition verification."
+      }
     },
     {
       "id": 271096,
@@ -81,7 +93,19 @@
       "observed_at": "2026-10-13",
       "observed_build": "unknown",
       "evidence_kind": "forever_community_page",
-      "evidence_note": "Fiche communautaire Forever : 15 points d'armure de base, bonus +30 armure, +3 puissance des sorts ; niveau requis 13. Aucun journal/capture attribuable vérifié par ForEveroth, disponibilité et taux de butin non confirmés directement."
+      "evidence_note": "Fiche communautaire Forever : 15 points d'armure de base, bonus +30 armure, +3 puissance des sorts ; niveau requis 13. Aucun journal/capture attribuable vérifié par ForEveroth, disponibilité et taux de butin non confirmés directement.",
+      "icon": "inv_bracer_11",
+      "icon_catalogue_reference": {
+        "file": "data/dungeons-forever.json",
+        "source_commit": "980490c493d38f25da2e9515da4f12cbb3cb3437",
+        "item_id": 271096,
+        "item_name": "Aetherwisp Bracers",
+        "icon_source": "woweternity_forever_hall_of_thanes",
+        "dungeon": "Hall of Thanes",
+        "boss": "Faldrim Anvilmar",
+        "reviewed_on": "2026-11-19",
+        "note": "Exact item ID and English name; existing Forever dungeon icon metadata reused, not independent live acquisition verification."
+      }
     },
     {
       "id": 271097,
@@ -156,7 +180,19 @@
         "+7 Stamina",
         "Requires Level 13"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_belt_20",
+      "icon_catalogue_reference": {
+        "file": "data/dungeons-forever.json",
+        "source_commit": "980490c493d38f25da2e9515da4f12cbb3cb3437",
+        "item_id": 270230,
+        "item_name": "Kindlegem Girdle",
+        "icon_source": "woweternity_forever_hall_of_thanes",
+        "dungeon": "Hall of Thanes",
+        "boss": "Magmatus",
+        "reviewed_on": "2026-11-19",
+        "note": "Exact item ID and English name; existing Forever dungeon icon metadata reused, not independent live acquisition verification."
+      }
     },
     {
       "id": 270231,
@@ -190,7 +226,19 @@
         "+5 Spirit",
         "Requires Level 13"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_gauntlets_25",
+      "icon_catalogue_reference": {
+        "file": "data/dungeons-forever.json",
+        "source_commit": "980490c493d38f25da2e9515da4f12cbb3cb3437",
+        "item_id": 270231,
+        "item_name": "Flamefist Grips",
+        "icon_source": "woweternity_forever_hall_of_thanes",
+        "dungeon": "Hall of Thanes",
+        "boss": "Magmatus",
+        "reviewed_on": "2026-11-19",
+        "note": "Exact item ID and English name; existing Forever dungeon icon metadata reused, not independent live acquisition verification."
+      }
     },
     {
       "id": 271095,
@@ -224,7 +272,19 @@
         "Equip: +18 Spell Power",
         "Requires Level 13"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_misc_bone_06",
+      "icon_catalogue_reference": {
+        "file": "data/dungeons-forever.json",
+        "source_commit": "980490c493d38f25da2e9515da4f12cbb3cb3437",
+        "item_id": 271095,
+        "item_name": "Fang of Magmatus",
+        "icon_source": "woweternity_forever_hall_of_thanes",
+        "dungeon": "Hall of Thanes",
+        "boss": "Magmatus",
+        "reviewed_on": "2026-11-19",
+        "note": "Exact item ID and English name; existing Forever dungeon icon metadata reused, not independent live acquisition verification."
+      }
     },
     {
       "id": 270228,
@@ -256,7 +316,19 @@
         "Two-Hand Staff",
         "Requires Level 13"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_wand_11",
+      "icon_catalogue_reference": {
+        "file": "data/dungeons-forever.json",
+        "source_commit": "980490c493d38f25da2e9515da4f12cbb3cb3437",
+        "item_id": 270228,
+        "item_name": "Golemheart Stave",
+        "icon_source": "woweternity_forever_hall_of_thanes",
+        "dungeon": "Hall of Thanes",
+        "boss": "Plunder",
+        "reviewed_on": "2026-11-19",
+        "note": "Exact item ID and English name; existing Forever dungeon icon metadata reused, not independent live acquisition verification."
+      }
     },
     {
       "id": 270229,
@@ -288,7 +360,19 @@
         "Feet Mail",
         "Requires Level 13"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_boots_01",
+      "icon_catalogue_reference": {
+        "file": "data/dungeons-forever.json",
+        "source_commit": "980490c493d38f25da2e9515da4f12cbb3cb3437",
+        "item_id": 270229,
+        "item_name": "Treads of the Protector Golem",
+        "icon_source": "woweternity_forever_hall_of_thanes",
+        "dungeon": "Hall of Thanes",
+        "boss": "Plunder",
+        "reviewed_on": "2026-11-19",
+        "note": "Exact item ID and English name; existing Forever dungeon icon metadata reused, not independent live acquisition verification."
+      }
     },
     {
       "id": 271098,
@@ -320,7 +404,19 @@
         "Chest Mail",
         "Requires Level 13"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_chest_chain",
+      "icon_catalogue_reference": {
+        "file": "data/dungeons-forever.json",
+        "source_commit": "980490c493d38f25da2e9515da4f12cbb3cb3437",
+        "item_id": 271098,
+        "item_name": "Golemguard Chest",
+        "icon_source": "woweternity_forever_hall_of_thanes",
+        "dungeon": "Hall of Thanes",
+        "boss": "Plunder",
+        "reviewed_on": "2026-11-19",
+        "note": "Exact item ID and English name; existing Forever dungeon icon metadata reused, not independent live acquisition verification."
+      }
     },
     {
       "id": 270256,
@@ -352,7 +448,19 @@
         "Main Hand Axe",
         "Requires Level 13"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_axe_18",
+      "icon_catalogue_reference": {
+        "file": "data/dungeons-forever.json",
+        "source_commit": "980490c493d38f25da2e9515da4f12cbb3cb3437",
+        "item_id": 270256,
+        "item_name": "Durgen's Crescent Axe",
+        "icon_source": "woweternity_forever_hall_of_thanes",
+        "dungeon": "Hall of Thanes",
+        "boss": "Durgen Dirgehammer",
+        "reviewed_on": "2026-11-19",
+        "note": "Exact item ID and English name; existing Forever dungeon icon metadata reused, not independent live acquisition verification."
+      }
     },
     {
       "id": 270260,
@@ -384,7 +492,19 @@
         "Legs Leather",
         "Requires Level 13"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_pants_06",
+      "icon_catalogue_reference": {
+        "file": "data/dungeons-forever.json",
+        "source_commit": "980490c493d38f25da2e9515da4f12cbb3cb3437",
+        "item_id": 270260,
+        "item_name": "Direhammer Leggings",
+        "icon_source": "woweternity_forever_hall_of_thanes",
+        "dungeon": "Hall of Thanes",
+        "boss": "Durgen Dirgehammer",
+        "reviewed_on": "2026-11-19",
+        "note": "Exact item ID and English name; existing Forever dungeon icon metadata reused, not independent live acquisition verification."
+      }
     },
     {
       "id": 270261,
@@ -416,7 +536,19 @@
         "Chest Cloth",
         "Requires Level 13"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_chest_cloth_09",
+      "icon_catalogue_reference": {
+        "file": "data/dungeons-forever.json",
+        "source_commit": "980490c493d38f25da2e9515da4f12cbb3cb3437",
+        "item_id": 270261,
+        "item_name": "Robes of the Disgraced Thane",
+        "icon_source": "woweternity_forever_hall_of_thanes",
+        "dungeon": "Hall of Thanes",
+        "boss": "Durgen Dirgehammer",
+        "reviewed_on": "2026-11-19",
+        "note": "Exact item ID and English name; existing Forever dungeon icon metadata reused, not independent live acquisition verification."
+      }
     },
     {
       "id": 273022,
@@ -482,7 +614,19 @@
         "Waist Mail",
         "Requires Level 26"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_belt_21",
+      "icon_catalogue_reference": {
+        "file": "data/dungeons-forever.json",
+        "source_commit": "980490c493d38f25da2e9515da4f12cbb3cb3437",
+        "item_id": 273023,
+        "item_name": "Saltscale Girdle",
+        "icon_source": "https://www.icy-veins.com/wow-forever/excavation-site-wetlands-guide",
+        "dungeon": "Excavation Site: Wetlands",
+        "boss": "Saltspine",
+        "reviewed_on": "2026-11-19",
+        "note": "Exact item ID and English name; existing Forever dungeon icon metadata reused, not independent live acquisition verification."
+      }
     },
     {
       "id": 273024,
@@ -653,7 +797,19 @@
         "Equip: +4 Hit Rating",
         "Requires Level 28"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_shoulder_27",
+      "icon_catalogue_reference": {
+        "file": "data/dungeons-forever.json",
+        "source_commit": "980490c493d38f25da2e9515da4f12cbb3cb3437",
+        "item_id": 273028,
+        "item_name": "Reliquary Mantle",
+        "icon_source": "https://www.icy-veins.com/wow-forever/excavation-site-wetlands-guide",
+        "dungeon": "Excavation Site: Wetlands",
+        "boss": "Relic Guardian",
+        "reviewed_on": "2026-11-19",
+        "note": "Exact item ID and English name; existing Forever dungeon icon metadata reused, not independent live acquisition verification."
+      }
     },
     {
       "id": 273030,
@@ -1557,7 +1713,19 @@
         "+5 Stamina",
         "Requires Level 15"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_misc_monsterfang_01",
+      "icon_catalogue_reference": {
+        "file": "data/dungeons-forever.json",
+        "source_commit": "980490c493d38f25da2e9515da4f12cbb3cb3437",
+        "item_id": 271204,
+        "item_name": "Meathook Slicer",
+        "icon_source": "woweternity_forever_ruins_of_lordaeron",
+        "dungeon": "Ruins of Lordaeron",
+        "boss": "The Baron",
+        "reviewed_on": "2026-11-19",
+        "note": "Exact item ID and English name; existing Forever dungeon icon metadata reused, not independent live acquisition verification."
+      }
     },
     {
       "id": 271205,
@@ -1591,7 +1759,19 @@
         "+5 Shadow Resistance",
         "Requires Level 15"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_chest_chain_15",
+      "icon_catalogue_reference": {
+        "file": "data/dungeons-forever.json",
+        "source_commit": "980490c493d38f25da2e9515da4f12cbb3cb3437",
+        "item_id": 271205,
+        "item_name": "Abomination Bones",
+        "icon_source": "woweternity_forever_ruins_of_lordaeron",
+        "dungeon": "Ruins of Lordaeron",
+        "boss": "The Baron",
+        "reviewed_on": "2026-11-19",
+        "note": "Exact item ID and English name; existing Forever dungeon icon metadata reused, not independent live acquisition verification."
+      }
     },
     {
       "id": 271206,
@@ -1625,7 +1805,19 @@
         "Equip: +7 Shadow Spell Damage",
         "Requires Level 15"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_chest_cloth_46",
+      "icon_catalogue_reference": {
+        "file": "data/dungeons-forever.json",
+        "source_commit": "980490c493d38f25da2e9515da4f12cbb3cb3437",
+        "item_id": 271206,
+        "item_name": "Leftover Abomination Skin",
+        "icon_source": "woweternity_forever_ruins_of_lordaeron",
+        "dungeon": "Ruins of Lordaeron",
+        "boss": "The Baron",
+        "reviewed_on": "2026-11-19",
+        "note": "Exact item ID and English name; existing Forever dungeon icon metadata reused, not independent live acquisition verification."
+      }
     },
     {
       "id": 271201,
@@ -1659,7 +1851,19 @@
         "+7 Stamina",
         "Requires Level 15"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_belt_21",
+      "icon_catalogue_reference": {
+        "file": "data/dungeons-forever.json",
+        "source_commit": "980490c493d38f25da2e9515da4f12cbb3cb3437",
+        "item_id": 271201,
+        "item_name": "Atrophic Girdle",
+        "icon_source": "woweternity_forever_ruins_of_lordaeron",
+        "dungeon": "Ruins of Lordaeron",
+        "boss": "Witherfang",
+        "reviewed_on": "2026-11-19",
+        "note": "Exact item ID and English name; existing Forever dungeon icon metadata reused, not independent live acquisition verification."
+      }
     },
     {
       "id": 271202,
@@ -1728,7 +1932,19 @@
         "+5 Spirit",
         "Requires Level 15"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_staff_09",
+      "icon_catalogue_reference": {
+        "file": "data/dungeons-forever.json",
+        "source_commit": "980490c493d38f25da2e9515da4f12cbb3cb3437",
+        "item_id": 271203,
+        "item_name": "Segmented Spider Leg",
+        "icon_source": "woweternity_forever_ruins_of_lordaeron",
+        "dungeon": "Ruins of Lordaeron",
+        "boss": "Witherfang",
+        "reviewed_on": "2026-11-19",
+        "note": "Exact item ID and English name; existing Forever dungeon icon metadata reused, not independent live acquisition verification."
+      }
     },
     {
       "id": 271207,
@@ -1770,7 +1986,19 @@
         "(3) +10 Intellect",
         "(4) Restore mana when mana falls below 15% (5 min cooldown)",
         "(5) Healing spells can trigger additional healing"
-      ]
+      ],
+      "icon": "inv_pants_cloth_05",
+      "icon_catalogue_reference": {
+        "file": "data/dungeons-forever.json",
+        "source_commit": "980490c493d38f25da2e9515da4f12cbb3cb3437",
+        "item_id": 271207,
+        "item_name": "Rotmender's Leggings",
+        "icon_source": "woweternity_forever_ruins_of_lordaeron",
+        "dungeon": "Ruins of Lordaeron",
+        "boss": "The Forsaken",
+        "reviewed_on": "2026-11-19",
+        "note": "Exact item ID and English name; existing Forever dungeon icon metadata reused, not independent live acquisition verification."
+      }
     },
     {
       "id": 271208,
@@ -1804,7 +2032,19 @@
         "+6 Intellect",
         "Requires Level 17"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_gauntlets_04",
+      "icon_catalogue_reference": {
+        "file": "data/dungeons-forever.json",
+        "source_commit": "980490c493d38f25da2e9515da4f12cbb3cb3437",
+        "item_id": 271208,
+        "item_name": "Grip of Fear",
+        "icon_source": "woweternity_forever_ruins_of_lordaeron",
+        "dungeon": "Ruins of Lordaeron",
+        "boss": "The Forsaken",
+        "reviewed_on": "2026-11-19",
+        "note": "Exact item ID and English name; existing Forever dungeon icon metadata reused, not independent live acquisition verification."
+      }
     },
     {
       "id": 271216,
@@ -1838,7 +2078,19 @@
         "Equip: +24 Spell Power",
         "Requires Level 17"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_misc_bone_dwarfskull_01",
+      "icon_catalogue_reference": {
+        "file": "data/dungeons-forever.json",
+        "source_commit": "980490c493d38f25da2e9515da4f12cbb3cb3437",
+        "item_id": 271216,
+        "item_name": "Scepter of the Abandoned",
+        "icon_source": "woweternity_forever_ruins_of_lordaeron",
+        "dungeon": "Ruins of Lordaeron",
+        "boss": "The Forsaken",
+        "reviewed_on": "2026-11-19",
+        "note": "Exact item ID and English name; existing Forever dungeon icon metadata reused, not independent live acquisition verification."
+      }
     },
     {
       "id": 271213,
@@ -1907,7 +2159,19 @@
         "Equip: +32 Frost Spell Damage",
         "Requires Level 19"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_staff_07",
+      "icon_catalogue_reference": {
+        "file": "data/dungeons-forever.json",
+        "source_commit": "980490c493d38f25da2e9515da4f12cbb3cb3437",
+        "item_id": 271215,
+        "item_name": "Coldspire Staff",
+        "icon_source": "woweternity_forever_ruins_of_lordaeron",
+        "dungeon": "Ruins of Lordaeron",
+        "boss": "Rath'mael",
+        "reviewed_on": "2026-11-19",
+        "note": "Exact item ID and English name; existing Forever dungeon icon metadata reused, not independent live acquisition verification."
+      }
     },
     {
       "id": 271209,
@@ -1941,7 +2205,19 @@
         "+9 Agility",
         "Requires Level 16"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_pants_mail_01",
+      "icon_catalogue_reference": {
+        "file": "data/dungeons-forever.json",
+        "source_commit": "980490c493d38f25da2e9515da4f12cbb3cb3437",
+        "item_id": 271209,
+        "item_name": "Bonerust Leggings",
+        "icon_source": "woweternity_forever_ruins_of_lordaeron",
+        "dungeon": "Ruins of Lordaeron",
+        "boss": "Bjork",
+        "reviewed_on": "2026-11-19",
+        "note": "Exact item ID and English name; existing Forever dungeon icon metadata reused, not independent live acquisition verification."
+      }
     },
     {
       "id": 271210,
@@ -1975,7 +2251,19 @@
         "Equip: +6 Spell Power",
         "Requires Level 16"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_belt_26",
+      "icon_catalogue_reference": {
+        "file": "data/dungeons-forever.json",
+        "source_commit": "980490c493d38f25da2e9515da4f12cbb3cb3437",
+        "item_id": 271210,
+        "item_name": "Tuskwrap Belt",
+        "icon_source": "woweternity_forever_ruins_of_lordaeron",
+        "dungeon": "Ruins of Lordaeron",
+        "boss": "Bjork",
+        "reviewed_on": "2026-11-19",
+        "note": "Exact item ID and English name; existing Forever dungeon icon metadata reused, not independent live acquisition verification."
+      }
     },
     {
       "id": 271217,
@@ -2008,7 +2296,19 @@
         "Use: Chop a nearby Humanoid or Undead corpse, restoring Health, Mana and Rage.",
         "Requires Level 16"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_axe_09",
+      "icon_catalogue_reference": {
+        "file": "data/dungeons-forever.json",
+        "source_commit": "980490c493d38f25da2e9515da4f12cbb3cb3437",
+        "item_id": 271217,
+        "item_name": "Corpse Chopper",
+        "icon_source": "woweternity_forever_ruins_of_lordaeron",
+        "dungeon": "Ruins of Lordaeron",
+        "boss": "Bjork",
+        "reviewed_on": "2026-11-19",
+        "note": "Exact item ID and English name; existing Forever dungeon icon metadata reused, not independent live acquisition verification."
+      }
     },
     {
       "id": 271211,
@@ -2042,7 +2342,19 @@
         "+5 Stamina",
         "Requires Level 17"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_boots_chain_08",
+      "icon_catalogue_reference": {
+        "file": "data/dungeons-forever.json",
+        "source_commit": "980490c493d38f25da2e9515da4f12cbb3cb3437",
+        "item_id": 271211,
+        "item_name": "Vilewalkers",
+        "icon_source": "woweternity_forever_ruins_of_lordaeron",
+        "dungeon": "Ruins of Lordaeron",
+        "boss": "Viktor the Vile",
+        "reviewed_on": "2026-11-19",
+        "note": "Exact item ID and English name; existing Forever dungeon icon metadata reused, not independent live acquisition verification."
+      }
     },
     {
       "id": 271212,
@@ -2076,7 +2388,19 @@
         "+9 Spirit",
         "Requires Level 17"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_misc_bandage_14",
+      "icon_catalogue_reference": {
+        "file": "data/dungeons-forever.json",
+        "source_commit": "980490c493d38f25da2e9515da4f12cbb3cb3437",
+        "item_id": 271212,
+        "item_name": "Bloodied Chestwraps",
+        "icon_source": "woweternity_forever_ruins_of_lordaeron",
+        "dungeon": "Ruins of Lordaeron",
+        "boss": "Viktor the Vile",
+        "reviewed_on": "2026-11-19",
+        "note": "Exact item ID and English name; existing Forever dungeon icon metadata reused, not independent live acquisition verification."
+      }
     },
     {
       "id": 271218,
@@ -2109,7 +2433,19 @@
         "+5 Spirit",
         "Requires Level 17"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_sword_16",
+      "icon_catalogue_reference": {
+        "file": "data/dungeons-forever.json",
+        "source_commit": "980490c493d38f25da2e9515da4f12cbb3cb3437",
+        "item_id": 271218,
+        "item_name": "Vileblood Scimitar",
+        "icon_source": "woweternity_forever_ruins_of_lordaeron",
+        "dungeon": "Ruins of Lordaeron",
+        "boss": "Viktor the Vile",
+        "reviewed_on": "2026-11-19",
+        "note": "Exact item ID and English name; existing Forever dungeon icon metadata reused, not independent live acquisition verification."
+      }
     },
     {
       "id": 6641,
@@ -2143,7 +2479,19 @@
         "Equip: +11 Spell Damage",
         "Requires Level 22"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_sword_17",
+      "icon_catalogue_reference": {
+        "file": "data/dungeons-forever.json",
+        "source_commit": "980490c493d38f25da2e9515da4f12cbb3cb3437",
+        "item_id": 6641,
+        "item_name": "Haunting Blade",
+        "icon_source": "woweternity_forever_ruins_of_lordaeron",
+        "dungeon": "Ruins of Lordaeron",
+        "boss": "Lordaeron Captain",
+        "reviewed_on": "2026-11-19",
+        "note": "Exact item ID and English name; existing Forever dungeon icon metadata reused, not independent live acquisition verification."
+      }
     },
     {
       "id": 6642,
@@ -2178,7 +2526,19 @@
         "+3 Strength",
         "Requires Level 22"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_chest_chain_05",
+      "icon_catalogue_reference": {
+        "file": "data/dungeons-forever.json",
+        "source_commit": "980490c493d38f25da2e9515da4f12cbb3cb3437",
+        "item_id": 6642,
+        "item_name": "Phantom Armor",
+        "icon_source": "woweternity_forever_ruins_of_lordaeron",
+        "dungeon": "Ruins of Lordaeron",
+        "boss": "Lordaeron Captain",
+        "reviewed_on": "2026-11-19",
+        "note": "Exact item ID and English name; existing Forever dungeon icon metadata reused, not independent live acquisition verification."
+      }
     },
     {
       "id": 286980,
@@ -2348,7 +2708,19 @@
         "(3) +10 Intellect",
         "(4) Restore mana when mana falls below 15% (5 min cooldown)",
         "(5) Healing spells can trigger additional healing"
-      ]
+      ],
+      "icon": "inv_boots_05",
+      "icon_catalogue_reference": {
+        "file": "data/dungeons-forever.json",
+        "source_commit": "980490c493d38f25da2e9515da4f12cbb3cb3437",
+        "item_id": 271214,
+        "item_name": "Rotmender's Treads",
+        "icon_source": "woweternity_forever_ruins_of_lordaeron",
+        "dungeon": "Ruins of Lordaeron",
+        "boss": "Rath'mael",
+        "reviewed_on": "2026-11-19",
+        "note": "Exact item ID and English name; existing Forever dungeon icon metadata reused, not independent live acquisition verification."
+      }
     },
     {
       "id": 279864,
