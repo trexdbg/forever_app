@@ -136,3 +136,32 @@ test("Forever icon backfill uses exact item identity and preserves source metada
  assert.equal(orb.icon_evidence.evidence_level,"documented_forever");
  assert.match(orb.icon_evidence.evidence_note,/availability, acquisition or drop rate/);
 });
+
+test("six reviewed Forever recipes retain exact item identity and separate crafting from plan acquisition",()=>{
+ const rows=JSON.parse(readFileSync(new URL("../data/items-forever.json",import.meta.url),"utf8")).items;
+ const expected=[
+ [249394,"Orb of Mystic Insight","Enchanting","5 Strange Dust, 2 Small Glimmering Shard, 2 Greater Astral Essence"],
+ [250486,"Sterling Silver Shoulders","Blacksmithing","2 Copper Bar, 6 Silver Bar, 2 Coarse Grinding Stone"],
+ [250500,"Protector's Chain Helm","Blacksmithing","6 Tigerseye, 8 Bronze Bar, 2 Coarse Grinding Stone"],
+ [249234,"Dreambough Wand","Enchanting","1 Vision Dust, 2 Lesser Nether Essence, 1 Star Wood"],
+ [249237,"Greater Eternal Wand","Enchanting","1 Star Wood, 2 Greater Eternal Essence, 1 Illusion Dust"],
+ [249385,"Brilliant Wand","Enchanting","1 Star Wood, 2 Large Brilliant Shard, 1 Greater Eternal Essence, 3 Illusion Dust"]
+ ];
+ for(const [id,name,profession,reagents] of expected){
+  const row=rows.find(x=>x.id===id);
+  assert.equal(row.name,name);
+  assert.equal(row.verified_forever,false);
+  assert.equal(row.acquisition_status,"documented_forever");
+  assert.equal(row.acquisition_sources.length,1);
+  const src=row.acquisition_sources[0];
+  assert.equal(src.kind,"craft");
+  assert.equal(src.recipe_source_en,profession+" · "+reagents);
+  assert.equal(src.source_url,"https://db.icy-veins.com/wow-forever/items/"+id);
+  assert.equal(src.evidence_url,src.source_url);
+  assert.equal(src.evidence_level,"documented_forever");
+  assert.equal(src.observed_build,"unknown");
+  assert.match(src.detail_en,/Plan\/formula acquisition not established/);
+  assert.ok(!Object.keys(src).some(k=>/chance|drop_rate/.test(k)));
+  assert.ok(src.recipe_source_fr);
+ }
+});
