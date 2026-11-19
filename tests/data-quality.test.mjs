@@ -165,3 +165,41 @@ test("six reviewed Forever recipes retain exact item identity and separate craft
   assert.ok(src.recipe_source_fr);
  }
 });
+
+test("Blessed Plate and Frozen Heart recipes distinguish learning skill and teaching-item drops",()=>{
+ const items=JSON.parse(readFileSync(new URL("../data/items-forever.json",import.meta.url),"utf8")).items;
+ const expected=[
+ [250587,1252336,251439,240,[[8566,1.12]],"24 Thorium Bar, 1 Blue Sapphire, 6 Rugged Leather"],
+ [250588,1252337,251440,245,[[7155,0.891]],"20 Thorium Bar, 2 Blue Sapphire"],
+ [250590,1252339,251442,255,[[7108,2.09]],"16 Thorium Bar, 1 Blue Sapphire"],
+ [250592,1252341,251444,270,[[8600,3.33]],"18 Thorium Bar, 1 Blue Sapphire, 1 Iron Buckle, 6 Rugged Leather"],
+ [250593,1252342,251445,null,[],"30 Thorium Bar, 2 Blue Sapphire"],
+ [250594,1252343,251446,280,[[249221,2.16],[249222,2.08],[249220,0.901]],"36 Thorium Bar, 2 Blue Sapphire"],
+ [249469,1249107,249519,265,[],"1 Blood of the Mountain, 1 Essence of Undeath, 3 Small Brilliant Shard"]
+ ];
+ for(const [id,spell,plan,skill,drops,reagents] of expected){
+  const row=items.find(x=>x.id===id);
+  const src=row.acquisition_sources[0];
+  assert.equal(row.acquisition_status,"documented_forever");
+  assert.equal(row.verified_forever,false);
+  assert.equal(src.kind,"craft");
+  assert.equal(src.recipe_spell_id,spell);
+  assert.equal(src.teaching_item_id,plan);
+  assert.ok(src.recipe_source_en.endsWith(reagents));
+  assert.equal(src.evidence_level,"documented_forever");
+  assert.equal(src.location_en,id===249469?"Black Forge":"Anvil");
+  assert.ok(!("reported_chance_percent" in src));
+  if(skill===null){
+   assert.ok(!src.teaching_item_evidence);
+   assert.ok(!row.origin_en.includes("("));
+  }else{
+   const evidence=src.teaching_item_evidence;
+   assert.equal(evidence.required_skill,skill);
+   assert.equal(evidence.id,plan);
+   assert.equal(evidence.evidence_url,"https://db.icy-veins.com/wow-forever/items/"+plan);
+   assert.ok(row.origin_en.endsWith("("+skill+")"));
+   assert.deepEqual((evidence.reported_drops||[]).map(d=>[d.npc_id,d.reported_chance_percent]),drops);
+   assert.match(evidence.evidence_note,/sample size/);
+  }
+ }
+});
