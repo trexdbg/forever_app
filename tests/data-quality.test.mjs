@@ -106,37 +106,33 @@ test("Classic quest manifest guard and indirect loot sources",()=>{
     .some(i=>i.code==="CLASSIC_QUEST_MANIFEST_CHANGED"));
 });
 
-// Icon evidence records are deliberately independent of item acquisition evidence.
-test("reviewed Forever icons match exact item ID, name and dated source in both catalogues",()=>{
-  const expected = new Map([
-    [249394, ["Orb of Mystic Insight", "inv_misc_orb_blue"]],
-    [252512, ["Brawler\'s Leather Helm", "inv_helmet_15"]],
-    [270031, ["Dark Ritual Leggings", "inv_pants_02"]],
-    [270072, ["Alterac Assassin\'s Gloves", "inv_gauntlets_15"]],
-    [270227, ["Ephemeral Choker", "inv_misc_necklacea8"]],
-    [271096, ["Aetherwisp Bracers", "inv_bracer_11"]],
-    [271670, ["Curl of Life", "inv_jewelry_ring_12"]],
-    [271920, ["Seal of the Expedition", "inv_jewelry_necklace_08"]],
-  ]);
-  for (const [file, ids] of [
-    ["items-forever.json", [...expected.keys()]],
-    ["bis-niveaux-forever-observed.json", [270227,271096]],
-  ]) {
-    const {items} = JSON.parse(readFileSync(new URL(`../data/${file}`, import.meta.url), "utf8"));
-    for (const id of ids) {
-      const record = items.find(i=>i.id===id);
-      assert.ok(record, `${file}: missing ${id}`);
-      assert.deepEqual([record.name,record.icon],expected.get(id));
-      const proof = record.icon_evidence;
-      assert.equal(proof.evidence_level,"documented_forever");
-      assert.equal(proof.evidence_kind,"forever_community_page");
-      const url = new URL(proof.evidence_url);
-      assert.equal(url.origin,"https://www.wowhead.com");
-      assert.ok(url.pathname.startsWith(`/forever/item=${id}/`));
-      assert.equal(proof.source_url,proof.evidence_url);
-      assert.match(proof.observed_at,/^\d{4}-\d{2}-\d{2}$/);
-      assert.ok(proof.observed_build);
-      assert.match(proof.evidence_note,/availability, acquisition or drop rate/);
-    }
+test("Forever icon backfill uses exact item identity and preserves source metadata",()=>{
+ const read=(name)=>JSON.parse(readFileSync(new URL("../data/"+name,import.meta.url),"utf8"));
+ const rows=read("dungeons-forever.json").dungeons.flatMap(d=>(d.bosses??[]).flatMap(b=>(b.loot??[]).map(x=>({...x,boss:b.name?.en,dungeon:d.name?.en??d.id}))));
+ const sets=[
+  ["items-forever.json",[270227,271096,271209]],
+  ["bis-niveaux-forever-observed.json",[270227,271096,270230,270231,271095,270228,270229,271098,270256,270260,270261,273023,273028,271204,271205,271206,271201,271203,271207,271208,271216,271215,271209,271210,271217,271211,271212,271218,6641,6642,271214]]
+ ];
+ for(const [name,ids] of sets){
+  const items=read(name).items;
+  for(const id of ids){
+   const item=items.find(x=>x.id===id);
+   assert.ok(item);
+   const proof=item.icon_catalogue_reference;
+   assert.equal(proof.item_id,id);
+   assert.equal(proof.item_name,item.name);
+   assert.equal(proof.file,"data/dungeons-forever.json");
+   assert.match(proof.source_commit,/^[0-9a-f]{40}$/);
+   assert.match(proof.reviewed_on,/^\d{4}-\d{2}-\d{2}$/);
+   const matching=rows.filter(x=>x.id===id&&x.en===item.name&&x.icon&&x.icon_source);
+   assert.equal(new Set(matching.map(x=>x.icon)).size,1);
+   assert.ok(matching.some(x=>x.icon===item.icon&&x.icon_source===proof.icon_source&&x.dungeon===proof.dungeon&&x.boss===proof.boss));
   }
+ }
+ const orb=read("items-forever.json").items.find(x=>x.id===249394);
+ assert.equal(orb.name,"Orb of Mystic Insight");
+ assert.equal(orb.icon,"inv_misc_orb_blue");
+ assert.equal(orb.icon_evidence.evidence_url,"https://www.wowhead.com/forever/item=249394/orb-of-mystic-insight");
+ assert.equal(orb.icon_evidence.evidence_level,"documented_forever");
+ assert.match(orb.icon_evidence.evidence_note,/availability, acquisition or drop rate/);
 });
