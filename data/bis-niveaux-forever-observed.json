@@ -147,7 +147,17 @@
       "observed_build": "unknown",
       "evidence_kind": "forever_community_page",
       "evidence_note": "Fiche communautaire Forever : 17 points d'armure, +3 agilité et +4 esprit ; niveau requis 13. Ne prouve pas indépendamment l'obtention ni un taux de butin.",
-      "icon": "inv_misc_cape_12"
+      "icon": "inv_misc_cape_12",
+      "icon_catalogue_reference": {
+        "file": "data/items-forever-cache.json",
+        "source_commit": "88daf9f77a2ffc1f56d8e062e96a13b89470ebdb",
+        "item_id": 271097,
+        "item_name": "Spiritwraith Drape",
+        "icon": "inv_misc_cape_12",
+        "icon_source": "existing_forever_beta_cache",
+        "reviewed_on": "2026-11-24",
+        "note": "Exact item ID, English name and icon slug already in existing Forever beta metadata cache. Internal catalogue provenance only, not an independent Forever gameplay observation or item acquisition, quest reward, loot or drop-rate verification."
+      }
     },
     {
       "id": 270230,
@@ -807,7 +817,17 @@
         "Requires Level 26"
       ],
       "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
-      "icon": "spell_nature_crystalball"
+      "icon": "spell_nature_crystalball",
+      "icon_catalogue_reference": {
+        "file": "data/items-forever-cache.json",
+        "source_commit": "88daf9f77a2ffc1f56d8e062e96a13b89470ebdb",
+        "item_id": 273027,
+        "item_name": "Raptor's Gaze",
+        "icon": "spell_nature_crystalball",
+        "icon_source": "existing_forever_beta_cache",
+        "reviewed_on": "2026-11-24",
+        "note": "Exact item ID, English name and icon slug already in existing Forever beta metadata cache. Internal catalogue provenance only, not an independent Forever gameplay observation or item acquisition, quest reward, loot or drop-rate verification."
+      }
     },
     {
       "id": 273028,
@@ -888,7 +908,17 @@
         "Requires Level 28"
       ],
       "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
-      "icon": "inv_jewelry_ring_28"
+      "icon": "inv_jewelry_ring_28",
+      "icon_catalogue_reference": {
+        "file": "data/items-forever-cache.json",
+        "source_commit": "88daf9f77a2ffc1f56d8e062e96a13b89470ebdb",
+        "item_id": 273030,
+        "item_name": "Ring of Power Regulation",
+        "icon": "inv_jewelry_ring_28",
+        "icon_source": "existing_forever_beta_cache",
+        "reviewed_on": "2026-11-24",
+        "note": "Exact item ID, English name and icon slug already in existing Forever beta metadata cache. Internal catalogue provenance only, not an independent Forever gameplay observation or item acquisition, quest reward, loot or drop-rate verification."
+      }
     },
     {
       "id": 273029,
@@ -922,7 +952,17 @@
         "Requires Level 28"
       ],
       "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
-      "icon": "inv_musket_02"
+      "icon": "inv_musket_02",
+      "icon_catalogue_reference": {
+        "file": "data/items-forever-cache.json",
+        "source_commit": "88daf9f77a2ffc1f56d8e062e96a13b89470ebdb",
+        "item_id": 273029,
+        "item_name": "Golemsight Long Gun",
+        "icon": "inv_musket_02",
+        "icon_source": "existing_forever_beta_cache",
+        "reviewed_on": "2026-11-24",
+        "note": "Exact item ID, English name and icon slug already in existing Forever beta metadata cache. Internal catalogue provenance only, not an independent Forever gameplay observation or item acquisition, quest reward, loot or drop-rate verification."
+      }
     },
     {
       "id": 273036,
@@ -1095,7 +1135,17 @@
         "Requires Level 27"
       ],
       "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
-      "icon": "inv_misc_cape_18"
+      "icon": "inv_misc_cape_18",
+      "icon_catalogue_reference": {
+        "file": "data/items-forever-cache.json",
+        "source_commit": "88daf9f77a2ffc1f56d8e062e96a13b89470ebdb",
+        "item_id": 273045,
+        "item_name": "Drape of Shifting Energy",
+        "icon": "inv_misc_cape_18",
+        "icon_source": "existing_forever_beta_cache",
+        "reviewed_on": "2026-11-24",
+        "note": "Exact item ID, English name and icon slug already in existing Forever beta metadata cache. Internal catalogue provenance only, not an independent Forever gameplay observation or item acquisition, quest reward, loot or drop-rate verification."
+      }
     },
     {
       "id": 273043,
@@ -1936,7 +1986,17 @@
         "Requires Level 30"
       ],
       "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
-      "icon": "inv_misc_orb_04"
+      "icon": "inv_misc_orb_04",
+      "icon_catalogue_reference": {
+        "file": "data/items-forever-cache.json",
+        "source_commit": "88daf9f77a2ffc1f56d8e062e96a13b89470ebdb",
+        "item_id": 273052,
+        "item_name": "Ponderous Orb",
+        "icon": "inv_misc_orb_04",
+        "icon_source": "existing_forever_beta_cache",
+        "reviewed_on": "2026-11-24",
+        "note": "Exact item ID, English name and icon slug already in existing Forever beta metadata cache. Internal catalogue provenance only, not an independent Forever gameplay observation or item acquisition, quest reward, loot or drop-rate verification."
+      }
     },
     {
       "id": 273049,
@@ -2198,7 +2258,17 @@
         "Requires Level 15"
       ],
       "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
-      "icon": "inv_bracer_07"
+      "icon": "inv_bracer_07",
+      "icon_catalogue_reference": {
+        "file": "data/items-forever-cache.json",
+        "source_commit": "88daf9f77a2ffc1f56d8e062e96a13b89470ebdb",
+        "item_id": 271202,
+        "item_name": "Witherbite Bracers",
+        "icon": "inv_bracer_07",
+        "icon_source": "existing_forever_beta_cache",
+        "reviewed_on": "2026-11-24",
+        "note": "Exact item ID, English name and icon slug already in existing Forever beta metadata cache. Internal catalogue provenance only, not an independent Forever gameplay observation or item acquisition, quest reward, loot or drop-rate verification."
+      }
     },
     {
       "id": 271203,
@@ -2425,7 +2495,17 @@
         "Requires Level 19"
       ],
       "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
-      "icon": "inv_shield_02"
+      "icon": "inv_shield_02",
+      "icon_catalogue_reference": {
+        "file": "data/items-forever-cache.json",
+        "source_commit": "88daf9f77a2ffc1f56d8e062e96a13b89470ebdb",
+        "item_id": 271213,
+        "item_name": "Mirror of Rath'mael",
+        "icon": "inv_shield_02",
+        "icon_source": "existing_forever_beta_cache",
+        "reviewed_on": "2026-11-24",
+        "note": "Exact item ID, English name and icon slug already in existing Forever beta metadata cache. Internal catalogue provenance only, not an independent Forever gameplay observation or item acquisition, quest reward, loot or drop-rate verification."
+      }
     },
     {
       "id": 271215,
@@ -3154,7 +3234,17 @@
       "observed_build": "1.60.1.70338",
       "evidence_kind": "forever_community_page",
       "evidence_note": "Fiche communautaire Forever de la bêta 1.60.1.70338 : 18 points d'armure, +3 endurance et +3 force ; récompense de quête, sans niveau requis d'équipement spécifié. Disponibilité en jeu non vérifiée indépendamment.",
-      "icon": "inv_misc_cape_10"
+      "icon": "inv_misc_cape_10",
+      "icon_catalogue_reference": {
+        "file": "data/items-forever-cache.json",
+        "source_commit": "88daf9f77a2ffc1f56d8e062e96a13b89470ebdb",
+        "item_id": 279865,
+        "item_name": "Grave Shroud",
+        "icon": "inv_misc_cape_10",
+        "icon_source": "existing_forever_beta_cache",
+        "reviewed_on": "2026-11-24",
+        "note": "Exact item ID, English name and icon slug already in existing Forever beta metadata cache. Internal catalogue provenance only, not an independent Forever gameplay observation or item acquisition, quest reward, loot or drop-rate verification."
+      }
     },
     {
       "id": 279867,
@@ -3195,7 +3285,17 @@
         "Quest available from Level 16"
       ],
       "reference": "Forever beta · quest reward observed in-game; no minimum EQUIP level recorded",
-      "icon": "inv_jewelry_ring_19"
+      "icon": "inv_jewelry_ring_19",
+      "icon_catalogue_reference": {
+        "file": "data/items-forever-cache.json",
+        "source_commit": "88daf9f77a2ffc1f56d8e062e96a13b89470ebdb",
+        "item_id": 279867,
+        "item_name": "Slain Baron's Signet",
+        "icon": "inv_jewelry_ring_19",
+        "icon_source": "existing_forever_beta_cache",
+        "reviewed_on": "2026-11-24",
+        "note": "Exact item ID, English name and icon slug already in existing Forever beta metadata cache. Internal catalogue provenance only, not an independent Forever gameplay observation or item acquisition, quest reward, loot or drop-rate verification."
+      }
     },
     {
       "id": 279868,
@@ -3340,7 +3440,17 @@
         "Quest available from Level 15"
       ],
       "reference": "Forever beta · quest reward observed in-game; no minimum EQUIP level recorded",
-      "icon": "inv_axe_18"
+      "icon": "inv_axe_18",
+      "icon_catalogue_reference": {
+        "file": "data/items-forever-cache.json",
+        "source_commit": "88daf9f77a2ffc1f56d8e062e96a13b89470ebdb",
+        "item_id": 251533,
+        "item_name": "Forsaken Greataxe",
+        "icon": "inv_axe_18",
+        "icon_source": "existing_forever_beta_cache",
+        "reviewed_on": "2026-11-24",
+        "note": "Exact item ID, English name and icon slug already in existing Forever beta metadata cache. Internal catalogue provenance only, not an independent Forever gameplay observation or item acquisition, quest reward, loot or drop-rate verification."
+      }
     },
     {
       "id": 251534,
@@ -3381,7 +3491,17 @@
         "Quest available from Level 15"
       ],
       "reference": "Forever beta · quest reward observed in-game; no minimum EQUIP level recorded",
-      "icon": "inv_staff_16"
+      "icon": "inv_staff_16",
+      "icon_catalogue_reference": {
+        "file": "data/items-forever-cache.json",
+        "source_commit": "88daf9f77a2ffc1f56d8e062e96a13b89470ebdb",
+        "item_id": 251534,
+        "item_name": "Gnarled Necromancer's Staff",
+        "icon": "inv_staff_16",
+        "icon_source": "existing_forever_beta_cache",
+        "reviewed_on": "2026-11-24",
+        "note": "Exact item ID, English name and icon slug already in existing Forever beta metadata cache. Internal catalogue provenance only, not an independent Forever gameplay observation or item acquisition, quest reward, loot or drop-rate verification."
+      }
     },
     {
       "id": 279874,
@@ -3423,7 +3543,17 @@
         "Quest available from Level 15"
       ],
       "reference": "Forever beta · quest reward observed in-game; no minimum EQUIP level recorded",
-      "icon": "inv_mace_08"
+      "icon": "inv_mace_08",
+      "icon_catalogue_reference": {
+        "file": "data/items-forever-cache.json",
+        "source_commit": "88daf9f77a2ffc1f56d8e062e96a13b89470ebdb",
+        "item_id": 279874,
+        "item_name": "The Stitcher",
+        "icon": "inv_mace_08",
+        "icon_source": "existing_forever_beta_cache",
+        "reviewed_on": "2026-11-24",
+        "note": "Exact item ID, English name and icon slug already in existing Forever beta metadata cache. Internal catalogue provenance only, not an independent Forever gameplay observation or item acquisition, quest reward, loot or drop-rate verification."
+      }
     },
     {
       "id": 279875,
@@ -3464,7 +3594,17 @@
         "Quest available from Level 15"
       ],
       "reference": "Forever beta · quest reward observed in-game; no minimum EQUIP level recorded",
-      "icon": "inv_bracer_07"
+      "icon": "inv_bracer_07",
+      "icon_catalogue_reference": {
+        "file": "data/items-forever-cache.json",
+        "source_commit": "88daf9f77a2ffc1f56d8e062e96a13b89470ebdb",
+        "item_id": 279875,
+        "item_name": "Spare Part Bindings",
+        "icon": "inv_bracer_07",
+        "icon_source": "existing_forever_beta_cache",
+        "reviewed_on": "2026-11-24",
+        "note": "Exact item ID, English name and icon slug already in existing Forever beta metadata cache. Internal catalogue provenance only, not an independent Forever gameplay observation or item acquisition, quest reward, loot or drop-rate verification."
+      }
     },
     {
       "id": 251485,
@@ -3505,7 +3645,17 @@
         "Quest available from Level 15"
       ],
       "reference": "Forever beta · quest reward observed in-game; no minimum EQUIP level recorded",
-      "icon": "inv_weapon_shortblade_14"
+      "icon": "inv_weapon_shortblade_14",
+      "icon_catalogue_reference": {
+        "file": "data/items-forever-cache.json",
+        "source_commit": "88daf9f77a2ffc1f56d8e062e96a13b89470ebdb",
+        "item_id": 251485,
+        "item_name": "Edward's Knife",
+        "icon": "inv_weapon_shortblade_14",
+        "icon_source": "existing_forever_beta_cache",
+        "reviewed_on": "2026-11-24",
+        "note": "Exact item ID, English name and icon slug already in existing Forever beta metadata cache. Internal catalogue provenance only, not an independent Forever gameplay observation or item acquisition, quest reward, loot or drop-rate verification."
+      }
     },
     {
       "id": 251486,
@@ -3546,7 +3696,17 @@
         "Quest available from Level 15"
       ],
       "reference": "Forever beta · quest reward observed in-game; no minimum EQUIP level recorded",
-      "icon": "inv_bracer_10"
+      "icon": "inv_bracer_10",
+      "icon_catalogue_reference": {
+        "file": "data/items-forever-cache.json",
+        "source_commit": "88daf9f77a2ffc1f56d8e062e96a13b89470ebdb",
+        "item_id": 251486,
+        "item_name": "Tabitha's Cuffs",
+        "icon": "inv_bracer_10",
+        "icon_source": "existing_forever_beta_cache",
+        "reviewed_on": "2026-11-24",
+        "note": "Exact item ID, English name and icon slug already in existing Forever beta metadata cache. Internal catalogue provenance only, not an independent Forever gameplay observation or item acquisition, quest reward, loot or drop-rate verification."
+      }
     }
   ],
   "icon_metadata_source": "data/items-forever-cache.json; identical item ID and English name. Forever beta metadata only; not evidence of live availability or loot."
