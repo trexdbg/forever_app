@@ -3,6 +3,12 @@ on:
   pull_request:
     paths:
       - 'assets/bis-niveaux.js'
+      - 'assets/bis-v2.js'
+      - 'bis/index.html'
+      - 'en/bis/index.html'
+      - 'bis-niveaux/index.html'
+      - 'en/bis-niveaux/index.html'
+      - 'tests/bis-cross-navigation-20261124.test.mjs'
       - 'assets/item-locale.js'
       - 'assets/equipment-rules.js'
       - 'assets/gear-data.js'
@@ -46,6 +52,8 @@ jobs:
         run: |
           node --version
           node --check assets/bis-niveaux.js
+          node --check assets/bis-v2.js
+          node --test tests/bis-cross-navigation-20261124.test.mjs
           node --check assets/item-locale.js
           node --check assets/items-v3.js
           node --check scripts/build-item-acquisition-index.mjs
