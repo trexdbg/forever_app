@@ -8,6 +8,12 @@ const audit=JSON.parse(read("data/forever-equipment-acquisition-gaps-20261019.js
 const byId=new Map(catalog.items.map(item=>[item.id,item]));
 const ids=[277057,277063,277075,277058,277064,283473,283259,281926,285348,285192,282653,278019,279838,281251,270031,283254,277239,270097,284272,260208,276340,272407];
 
+// These four items received independent icon-only source checks on 24 Nov.
+// Their original 70425 tooltip/acquisition snapshot remains unchanged.
+const laterVerifiedIcons=new Map([
+ [285348,"inv_wand_04"]
+]);
+
 test("the full 22-item backlog now has ID-specific evidence pinned to build 70425",()=>{
  assert.equal(catalog.items.length,current.editorialItems);
  assert.equal(new Set(catalog.items.map(x=>x.id)).size,current.editorialItems);
@@ -34,7 +40,16 @@ test("the full 22-item backlog now has ID-specific evidence pinned to build 7042
   assert.ok(!row.origin.includes("source précise non documentée"));
   if(row.requiredLevel!==null)assert.ok(row.tooltip.includes("Requires Level "+row.requiredLevel));
   else assert.ok(!row.tooltip.some(s=>s.startsWith("Requires Level ")),"No invented restriction for "+id);
-  assert.equal(row.icon,null,"No synthetic exact portrait for "+id);
+  if(laterVerifiedIcons.has(id)){
+   assert.equal(row.icon,laterVerifiedIcons.get(id),"Exact later icon for "+id);
+   assert.equal(row.icon_evidence.source_url,
+    "https://zephras.com/forever/enUS/item/"+id+"/");
+   assert.equal(row.icon_evidence.evidence_level,"documented_forever");
+   assert.equal(row.icon_evidence.observed_at,"2026-11-24");
+   assert.match(row.icon_evidence.evidence_note,/icon identity only, not gameplay acquisition/);
+  }else{
+   assert.equal(row.icon,null,"No synthetic exact portrait for "+id);
+  }
  }
 });
 
