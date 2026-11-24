@@ -134,7 +134,18 @@ if(mode==="all"){
  if(apiState.hasMore&&!apiState.loading){const b=elem("button","bis-v2-more",en?"Load 100 more Classic items":"Charger 100 objets Classic supplémentaires");b.type="button";b.addEventListener("click",()=>{b.disabled=true;loadClassicPage(apiState.signature,true)});result.append(b)}
 }
 }
-function renderAll(){window.ForeverItemTooltip?.hide();renderClasses();renderSpecs();renderSheet();renderPicker()}
+function syncLevelingGearLinks(){
+ // Both BiS tools share the same validated class/spec identifiers from bis.json.
+ // Transfer context, never player-owned items or private local progress.
+ for(const link of document.querySelectorAll("[data-bis-level-link]")){
+  const url=new URL(link.getAttribute("href"),location.origin);
+  url.searchParams.set("classe",chosenClass);
+  url.searchParams.set("spe",chosenSpec);
+  url.searchParams.set("niveau","30");
+  link.href=url.pathname+url.search;
+ }
+}
+function renderAll(){window.ForeverItemTooltip?.hide();renderClasses();renderSpecs();renderSheet();renderPicker();syncLevelingGearLinks()}
 function importShared(){const params=new URLSearchParams(location.search);const cls=params.get("classe"),s=params.get("spe");if(db.classes.some(c=>c.id===cls))chosenClass=cls;const aliases={guerrier:{"0":"fury","1":"fury","2":"tank"},paladin:{"0":"heal","1":"tank","2":"heal"},chasseur:{"0":"dps","1":"dps","2":"dps"},voleur:{"0":"swords","1":"swords","2":"daggers"},pretre:{"0":"heal","1":"heal","2":"shadow"},chaman:{"0":"heal","1":"enhance","2":"heal"},mage:{"0":"dps","1":"dps","2":"dps"},demoniste:{"0":"dps","1":"dps","2":"dps"},druide:{"0":"heal","1":"feral","2":"heal"}};const legacy=aliases[chosenClass]?.[s],candidate=classInfo().specs.find(sp=>sp.id===s||sp.id===legacy);chosenSpec=candidate?candidate.id:classInfo().specs[0].id;loadProfile();
 const shared=params.get("equip");if(shared&&shared.length<850){for(const pair of shared.split(",")){const match=/^([a-z0-9]+)-([0-9]+)$/.exec(pair);if(!match||!slotInfo(match[1]))continue;const id=Number(match[2]);if(id===0||db.items.some(i=>i.id===id&&compatible(i.slot,match[1])&&wearable(i)))choices[match[1]]=id}persist()}
 mode=recSlot(activeSlot).length?"recommended":"all"}

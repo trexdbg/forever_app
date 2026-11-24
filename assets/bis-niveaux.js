@@ -603,7 +603,16 @@ function renderFarm(){
   node.append(a);
  }
 }
-function renderAll(){renderFilters();renderSlots();renderFarm();renderRemoteStatus();selectionLink();ensureRemote()}
+function syncPreRaidGearLinks(){
+ // Validated selections only; hand off class and spec, not level-specific gear.
+ for(const link of document.querySelectorAll("[data-bis-preraid-link]")){
+  const url=new URL(link.getAttribute("href"),location.origin);
+  url.searchParams.set("classe",classId);
+  url.searchParams.set("spe",specId);
+  link.href=url.pathname+url.search;
+ }
+}
+function renderAll(){renderFilters();renderSlots();renderFarm();renderRemoteStatus();selectionLink();syncPreRaidGearLinks();ensureRemote()}
 (async()=>{
  try{
   const [core,forever,local,curated,observed,sources]=await Promise.all([
