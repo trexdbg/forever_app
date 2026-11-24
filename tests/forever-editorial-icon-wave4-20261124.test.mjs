@@ -135,7 +135,7 @@ test("21 newly sourced Forever icons are exact-ID and name matches, with no inve
 });
 test("the 183-record editorial count, 164 icon coverage and unknown restrictions stay exact",()=>{
  assert.equal(records.length,183);
- assert.equal(records.filter(x=>x.icon).length,111);
+ assert.equal(records.filter(x=>x.icon).length,164);
  assert.equal(records.filter(x=>!x.icon).length,19);
  const unresolved=records.filter(x=>[271807,277029,277008,277020].includes(x.id));
  assert.equal(unresolved.length,4);
