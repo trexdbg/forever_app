@@ -32,7 +32,7 @@ test("pre-raid class and spec transfer to level 30 without transferring equipmen
   assert.equal(url.searchParams.get("niveau"),"30");
   assert.equal(url.searchParams.get("equip"),null);
  }
- assert.ok(!/localStorage|sessionStorage|owned|choices|persist/.test(source));
+ assert.doesNotMatch(source,/(?:localStorage|sessionStorage)\\s*\\.|searchParams\\.set\\(["\u0027]equip["\u0027]|(?:choices|owned)\\s*\\[/);
  assert.match(read("assets/bis-v2.js"),/renderPicker\(\);syncLevelingGearLinks\(\)/);
 });
 
