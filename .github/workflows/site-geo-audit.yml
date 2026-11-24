@@ -15,6 +15,7 @@ on:
       - 'sitemap.xml'
       - 'tests/analytics-legacy-20261117.test.mjs'
       - 'tests/trainer-favorites-20261117.test.mjs'
+      - 'tests/trainer-reset-share-20261124.test.mjs'
       - 'assets/analytics.js'
       - 'assets/legacy.js'
       - 'tests/seo-post-launch-quest-20261117.test.mjs'
@@ -91,6 +92,7 @@ jobs:
           node --test tests/seo-forever-postlaunch-20261117.test.mjs
           node --test tests/analytics-legacy-20261117.test.mjs
           node --test tests/trainer-favorites-20261117.test.mjs
+          node --test tests/trainer-reset-share-20261124.test.mjs
           node --check assets/npcs.js
           node --check assets/legacy.js
           node --test tests/seo-post-launch-quest-20261117.test.mjs
