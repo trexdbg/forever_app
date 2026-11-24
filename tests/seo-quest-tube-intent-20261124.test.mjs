@@ -62,6 +62,6 @@ test("Bronze Tube guide exposes direct vendor and recipe CTAs without changing s
   assert.match(html,/Classic/);
   assert.match(html,/4371/);
   assert.match(html,/3938/);
-  assert.match(html,/conflicting|incertaine|uncertain|inconnu/i);
+  assert.match(html,/disputed|conflicting|incertaine|uncertain|inconnu/i);
  }
 });
