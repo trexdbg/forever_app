@@ -21,6 +21,7 @@ on:
       - 'tests/forever-lowlevel-22-20261019.test.mjs'
       - 'tests/forever-lowlevel-wave2-19-20261019.test.mjs'
       - 'tests/forever-273047-item-source-20261124.test.mjs'
+      - 'tests/forever-273023-273028-stats-20261124.test.mjs'
       - 'tests/forever-bis-icon-client-evidence-20261124.test.mjs'
       - 'tests/forever-bis-cache-icon-provenance-20261124.test.mjs'
       - 'tests/forever-editorial-icon-lowlevel-20261124.test.mjs'
@@ -79,6 +80,7 @@ jobs:
           node --test tests/forever-lowlevel-22-20261019.test.mjs
           node --test tests/forever-lowlevel-wave2-19-20261019.test.mjs
           node --test tests/forever-273047-item-source-20261124.test.mjs
+          node --test tests/forever-273023-273028-stats-20261124.test.mjs
           node --test tests/forever-bis-icon-client-evidence-20261124.test.mjs
           node --test tests/forever-bis-cache-icon-provenance-20261124.test.mjs
           node --test tests/forever-editorial-icon-lowlevel-20261124.test.mjs
