@@ -27,3 +27,18 @@ test("Legacy events use only fixed non-sensitive categories",()=>{
  assert.doesNotMatch(event,/build|talent\.id|encode|searchParams|rank/);
  assert.match(analytics,/if \(eventName !== "module_open" && eventName !== "tool_interaction"\) return/);
 });
+
+test("consent-gated module link tracking includes direct map and gear navigation without tracking search text",()=>{
+ const analytics=read("assets/analytics.js");
+ const common=read("assets/common.js");
+ for(const cls of [".module-links",".npc-quick-links",".geo-quick-links"]){
+  assert.ok(analytics.includes(cls),cls);
+ }
+ assert.match(analytics,/anchor\.closest\("/);
+ assert.match(analytics,/moduleNames\.has\(moduleName\)/);
+ assert.match(analytics,/track\("module_open", \{ module_name: moduleName \}\)/);
+ assert.match(analytics,/const dest = new URL\(anchor\.href, location\.href\)/);
+ assert.ok(!analytics.includes("query_string:"));
+ assert.ok(!analytics.includes("search_term:"));
+ assert.match(common,/assets\/analytics\.js\?v=20261124-navigation1/);
+});
