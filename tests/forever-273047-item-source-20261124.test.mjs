@@ -57,10 +57,11 @@ test("BiS icon mirrors exactly matching Forever editorial icon and preserves sou
  assert.match(drop.evidence_note,/not a verified personal drop capture/);
 });
 
-test("missing BiS icon total decreases by one; editorial catalogue count unchanged",()=>{
+test("Forever item 273047 stays covered after the subsequent exact-ID icon backfill",()=>{
  const missing=(rows)=>rows.filter(x=>!x.icon||!String(x.icon).trim()).length;
  assert.equal(observed.items.length,79);
- assert.equal(missing(observed.items),31);
+ // Follow-up exact-ID/English-name Forever icon matches are tested separately.
+ assert.equal(missing(observed.items),1);
  assert.equal(editorial.items.length,183);
  assert.equal(missing(editorial.items),138);
 });
