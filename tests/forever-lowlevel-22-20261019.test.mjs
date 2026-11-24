@@ -27,7 +27,10 @@ const laterVerifiedIcons=new Map([
  [281251,"inv_bracer_02"],
  [270097,"inv_pants_03"],
  [260208,"inv_misc_orb_yellow"],
- [276340,"inv_pants_02"]
+ [276340,"inv_pants_02"],
+ [283254,"inv_misc_orb_05"],
+ [284272,"inv_pants_06"],
+ [272407,"inv_jewelry_ring_60"]
 ]);
 
 test("the full 22-item backlog now has ID-specific evidence pinned to build 70425",()=>{
