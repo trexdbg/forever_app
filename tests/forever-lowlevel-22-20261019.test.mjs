@@ -17,7 +17,17 @@ const laterVerifiedIcons=new Map([
  [277064,"inv_glove_leather_skybornec60_b_01"],
  [283259,"inv_gauntlets_05"],
  [281926,"inv_bracer_12"],
- [285192,"inv_torch_lit"]
+ [285192,"inv_torch_lit"],
+ [277057,"inv_bracer_mail_skybornec60_b_01"],
+ [277063,"inv_bracer_leather_skybornec60_b_01"],
+ [283473,"inv_bracer_02"],
+ [282653,"inv_jewelry_necklace_01"],
+ [278019,"inv_jewelry_ring_02"],
+ [279838,"inv_wand_04"],
+ [281251,"inv_bracer_02"],
+ [270097,"inv_pants_03"],
+ [260208,"inv_misc_orb_yellow"],
+ [276340,"inv_pants_02"]
 ]);
 
 test("the full 22-item backlog now has ID-specific evidence pinned to build 70425",()=>{
