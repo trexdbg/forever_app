@@ -212,16 +212,22 @@ test("30 newly documented Forever BiS icons exactly match verified item identity
   assert.ok(!("drop_chance_percent" in item.icon_evidence));
  }
 });
-test("the single unresolved icon remains explicitly unknown, not guessed from weapon type",()=>{
+test("all 79 observed Forever BiS entries have icon provenance or a documented original icon",()=>{
  assert.equal(bis.items.length,79);
- assert.equal(bis.items.filter(x=>!x.icon).length,1);
- const missing=bis.items.filter(x=>!x.icon);
- assert.deepEqual(missing.map(x=>x.id),[279864]);
- assert.equal(missing[0].name,"Monstrous Cleaver");
- assert.equal(missing[0].icon,undefined);
- assert.equal(missing[0].icon_evidence,undefined);
- // Historical Classic and client references must not be converted to proven drops.
- assert.equal(missing[0].source_status,"forever_beta_observed");
+ assert.equal(bis.items.filter(x=>!x.icon).length,0);
+ const final=bis.items.find(x=>x.id===279864);
+ assert.equal(final.name,"Monstrous Cleaver");
+ assert.equal(final.icon,"inv_sword_23");
+ assert.equal(final.icon_evidence.source_url,"https://db.icy-veins.com/wow-forever/items/279864");
+ assert.equal(final.icon_evidence.evidence_url,"https://thewowdb.com/icons/inv_sword_23/");
+ assert.equal(final.icon_evidence.icon_file_id,135324);
+ assert.equal(final.icon_evidence.observed_build,"unknown");
+ assert.match(final.icon_evidence.evidence_note,/FileDataID 135324/);
+ assert.match(final.icon_evidence.evidence_note,/not inferred from weapon type/);
+ assert.match(final.icon_evidence.evidence_note,/does not establish live item availability/);
+ assert.equal(final.source_status,"forever_beta_observed");
+ assert.equal(final.acquisition.kind,"quest");
+ assert.equal(final.requiredLevel,null);
  assert.equal(editorial.items.length,183);
  assert.equal(editorial.items.filter(x=>!x.icon).length,138);
 });
