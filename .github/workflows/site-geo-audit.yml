@@ -54,6 +54,10 @@ on:
       - 'en/guides/city-of-dalaran-boss-loot/index.html'
       - 'guides/ruines-lordaeron-boss-loot/index.html'
       - 'en/guides/ruins-of-lordaeron-boss-loot/index.html'
+      - 'donjons/index.html'
+      - 'en/donjons/index.html'
+      - 'assets/dungeons.css'
+      - 'tests/dungeon-quick-maps-20261124.test.mjs'
       - 'guides/salle-des-thanes-boss-loot/index.html'
       - 'en/guides/hall-of-thanes-boss-loot/index.html'
       - 'guides/excavations-paluns-boss-loot/index.html'
@@ -98,6 +102,7 @@ jobs:
           node --test tests/seo-favor-vendor-factions-20261023.test.mjs
           node --test tests/seo-bronze-tube-quest-20261023.test.mjs
           node --test tests/seo-dungeon-boss-trust-guides-20261016.test.mjs
+          node --test tests/dungeon-quick-maps-20261124.test.mjs
       - name: Retain report for five days
         uses: actions/upload-artifact@v4
         with:

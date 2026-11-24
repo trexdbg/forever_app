@@ -430,3 +430,12 @@
 .dg-stat-pending{display:block;margin-top:4px;color:#91a496!important;font-size:10px!important;font-style:italic}
 .dg-drop{align-items:center}
 .dg-drop>span{flex:1;min-width:0}
+
+
+/* Direct entrances to the four documented Forever dungeon maps. */
+.dg-shortcuts{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin:0 0 12px}
+.dg-shortcuts>strong{font-size:11px;color:#c1c9b8;margin-right:5px;white-space:nowrap}
+.dg-shortcuts>a{display:inline-flex;align-items:baseline;gap:5px;padding:6px 9px;border:1px solid #435846;background:#122018;color:#e8ddc0;text-decoration:none;font-size:12px;line-height:1.4}
+.dg-shortcuts>a small{font-size:10px;color:#abb6a4}
+.dg-shortcuts>a:hover,.dg-shortcuts>a:focus-visible{border-color:#c9b27d;background:#263121;color:#fff1cd}
+@media(max-width:650px){.dg-shortcuts>strong{width:100%}.dg-shortcuts>a{font-size:11px;padding:7px 8px}}
