@@ -36,6 +36,15 @@ const detailsOf=ref=>{
 };
 const waypointTitle=w=>Q.header(w.header);
 const syncUrl=()=>{const u=new URL(location.href);u.searchParams.set("faction",s.faction);u.searchParams.set("race",s.profile);u.searchParams.set("peuple",s.race);u.searchParams.set("step",String(s.index+1));history.replaceState(null,"",u.pathname+u.search+u.hash)};
+function questStepLink(){
+ // Only the validated route state, never search input or tracking parameters.
+ const url=new URL(document.documentElement.lang==="en"?"/en/quetes/":"/quetes/",location.origin);
+ url.searchParams.set("faction",s.faction);
+ url.searchParams.set("race",s.profile);
+ url.searchParams.set("peuple",s.race);
+ url.searchParams.set("step",String(s.index+1));
+ return url.href;
+}
 const project=(x,y)=>({x:(50+(x-s.center.x)*s.zoom)*W/100,y:(50+(y-s.center.y)*s.zoom)*H/100});
 const clientPoint=e=>{const r=canvas.getBoundingClientRect();return{x:(e.clientX-r.left)*W/r.width,y:(e.clientY-r.top)*H/r.height}};
 const format=n=>Number(n).toFixed(1).replace(".",document.documentElement.lang==="en"?".":",");
@@ -227,6 +236,9 @@ function render(){
  $("quest-map-source").textContent=QT("Molette : zoom · X/Y : 0 à 100","Scroll to zoom · X/Y: 0–100");
  const first=s.index===0,last=s.index===s.steps.length-1;
  $("quest-prev").disabled=first;$("quest-next").disabled=last;
+ $("quest-share").disabled=false;
+ $("quest-share-notice").textContent="";
+ $("quest-share-fallback").hidden=true;
  updateMilestones();renderWaypoints();renderSelection();setImage(st.zone);draw();syncUrl();
 }
 function go(n){if(scrubTimer!==null){clearTimeout(scrubTimer);scrubTimer=null}if(!s.steps.length)return;s.index=clamp(n,0,s.steps.length-1);s.selected=0;s.center={x:50,y:50};s.zoom=1;$("quest-zoom-reset").textContent="100 %";render();}
@@ -325,6 +337,21 @@ canvas.addEventListener("keydown",e=>{
  const count=s.steps[s.index]?.waypoints.length||0;if(!count)return;
  if(e.key==="ArrowRight"){e.preventDefault();selectWaypoint((s.selected+1)%count)}
  if(e.key==="ArrowLeft"){e.preventDefault();selectWaypoint((s.selected+count-1)%count)}
+});
+$("quest-share").addEventListener("click",async()=>{
+ if(!s.steps.length)return;
+ const url=questStepLink();
+ const fallback=$("quest-share-fallback"),notice=$("quest-share-notice");
+ try{
+  if(!navigator.clipboard?.writeText)throw Error("Clipboard unavailable");
+  await navigator.clipboard.writeText(url);
+  fallback.hidden=true;fallback.value="";
+  notice.textContent=QT("Lien copié ✓","Link copied ✓");
+ }catch(_){
+  fallback.value=url;fallback.hidden=false;fallback.focus();fallback.select();
+  notice.textContent=QT("Sélectionnez le lien ci-dessous","Select and copy the link below");
+ }
+ window.ForEverothAnalytics?.track("tool_interaction",{module_name:"quetes",control_name:"quest-share"});
 });
 $("quest-prev").addEventListener("click",()=>go(s.index-1));$("quest-next").addEventListener("click",()=>go(s.index+1));
 $("quest-range").addEventListener("input",e=>{
