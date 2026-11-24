@@ -20,6 +20,7 @@ on:
       - 'tests/forever-amulets-70425-acquisition-20261019.test.mjs'
       - 'tests/forever-lowlevel-22-20261019.test.mjs'
       - 'tests/forever-lowlevel-wave2-19-20261019.test.mjs'
+      - 'tests/forever-273047-item-source-20261124.test.mjs'
       - 'tests/equipment-acquisition-details-20261019.test.mjs'
       - 'tests/equipment-acquisition-wave2-20261019.test.mjs'
       - 'tests/equipment-indexed-sources-20261019.test.mjs'
@@ -71,4 +72,5 @@ jobs:
           node --test tests/forever-amulets-70425-acquisition-20261019.test.mjs
           node --test tests/forever-lowlevel-22-20261019.test.mjs
           node --test tests/forever-lowlevel-wave2-19-20261019.test.mjs
+          node --test tests/forever-273047-item-source-20261124.test.mjs
           node --test tests/t0-set-bonuses.test.mjs

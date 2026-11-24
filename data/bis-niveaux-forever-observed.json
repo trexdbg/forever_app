@@ -1418,9 +1418,34 @@
         "Unstable Crystalline Shoulderpads",
         "Item Level 33",
         "Shoulder Leather",
+        "81 Armor",
+        "+9 Agility",
+        "+6 Stamina",
+        "Restores +2 mana per 5 sec.",
         "Requires Level 28"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_shoulder_07",
+      "icon_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://db.icy-veins.com/wow-forever/items/273047",
+        "evidence_url": "https://www.wowhead.com/forever/item=273047/unstable-crystalline-shoulderpads",
+        "observed_at": "2026-11-24",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Icon FileDataID 135038 (Icy Veins Forever) cross-checked to existing editorial item 273047's inv_shoulder_07 by exact ID/name. Item icon documented, not independent gameplay or loot verification.",
+        "icon_file_id": 135038,
+        "catalogue_reference": "data/items-forever.json"
+      },
+      "stats_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/item=273047/unstable-crystalline-shoulderpads",
+        "evidence_url": "https://db.icy-veins.com/wow-forever/items/273047",
+        "observed_at": "2026-11-24",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Exact Forever item 273047: client-derived Forever pages agree on +9 Agility, +6 Stamina and restores 2 mana per 5 sec, replacing an incorrect +5 Stamina/+8 health per 5 sec editorial tooltip. This evidence covers item stats only, not current boss drop, live availability or drop chance."
+      }
     },
     {
       "id": 273040,
