@@ -26,7 +26,8 @@ test('main FR/EN pages have no repeated evidence panels and keep functional cont
   for(const route of ['metiers','marchands','rare','donjons']){
    const html=read(prefix+route+'/index.html');
    assert.doesNotMatch(html,/<(?:p|details)[^>]*class="(?:craft-beta-disclaimer|early-recipe-hint|atlas-detail|dg-sources)"/);
-   assert.match(html,/20261017-clean-1/);
+   if(route==='metiers')assert.match(html,/npcs\.js\?v=20261124-trainer-reset-share1/);
+   else assert.match(html,/20261017-clean-1/);
   }
   assert.match(read(prefix+'metiers/index.html'),/id="prof-trainers"/);
   assert.doesNotMatch(read(prefix+'metiers/index.html'),/id="early-recipes"|id="craft-beta"|id="alchemy-beta"/);

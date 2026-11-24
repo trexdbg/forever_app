@@ -416,6 +416,17 @@ function trainerWaypointCaveat(n){
  const e=n.location_evidence;
  return e?.evidence_level==="documented_forever"&&e.source_url===n.coordinate_source&&typeof e.evidence_url==="string"&&e.evidence_url.startsWith("https://")?"Forever":"Classic";
 }
+function trainerLink(n){
+ // Build only known catalogue identity in a canonical language-specific URL.
+ // Never copy free-text searches, tracking parameters or local favorites.
+ const url=new URL(en?"/en/metiers/":"/metiers/",location.origin);
+ url.searchParams.set("type",trainerType(n));
+ url.searchParams.set("q",n.name.slice(0,120));
+ if(["alliance","horde"].includes(n.faction))url.searchParams.set("faction",n.faction);
+ if(n.zone?.id&&store.db.zone_maps?.[n.zone.id])url.searchParams.set("zone",n.zone.id);
+ url.hash="prof-trainers";
+ return url.href;
+}
 function renderTrainerDetail(n){
  detail.replaceChildren();
  const heading=append(detail,"div",null,"npc-trainer-detail-heading");
@@ -459,6 +470,14 @@ function renderTrainerDetail(n){
   const persisted=saveFavorites();
   syncFavorite();renderFavorites();
   if(!persisted)fav.title=S("Stockage local bloqué : favori conservé pour cette visite seulement","Local storage blocked: favorite kept for this visit only");
+ });
+ const share=append(actions,"button",S("↗ Copier le lien","↗ Copy link"),"npc-share-trainer");
+ share.type="button";share.id="npc-share-trainer";
+ share.setAttribute("aria-label",S("Copier le lien vers "+n.name,"Copy link to "+n.name));
+ share.addEventListener("click",async()=>{
+  const url=trainerLink(n);
+  try{await navigator.clipboard.writeText(url);share.textContent=S("Lien copié ✓","Link copied ✓")}
+  catch(_){share.textContent=url;share.title=S("Sélectionnez et copiez ce lien","Select and copy this link")}
  });
  const mapId=store.db.zone_maps?.[n.zone.id]?.uiMapID;
  if(hasCoords(n)&&mapId){
@@ -660,7 +679,26 @@ function renderDetail(){
   selectRecord(matched);syncMerchantUX();
  },{type:type?.value||"all",profession:trade.value,weaponSkill:weapon?.value||"all",itemId:i?.id});
 }
-function refresh(){updateTrainerZones();syncTrainerFilters();store.filtered=filteredRecords();if(!store.filtered.some(r=>r.key===store.active?.key))store.active=store.filtered[0]||null;renderList();renderDetail();syncMerchantUX()}
+function syncTrainerReset(){
+ if(store.mode!=="trainer")return;
+ const button=$("npc-trainer-reset");
+ if(!button)return;
+ button.hidden=!(q.value.trim()||type.value!=="profession"||trade.value!=="all"
+  ||weapon.value!=="all"||aff.value!=="all"||zone.value!=="all"||rank?.value!=="all");
+}
+function resetTrainerFilters(){
+ if(store.mode!=="trainer")return;
+ q.value="";type.value="profession";trade.value="all";weapon.value="all";
+ aff.value="all";zone.value="all";if(rank)rank.value="all";
+ // A reset must survive a refresh of an old deep link; preserve unrelated
+ // parameters, including users' analytics opt-out choices.
+ const url=new URL(location.href);
+ for(const key of ["q","type","profession","weapon","rank","faction","zone"])url.searchParams.delete(key);
+ history.replaceState(null,"",url.pathname+url.search+url.hash);
+ updateFilterVisibility();refresh();q.focus();
+}
+function refresh(){updateTrainerZones();syncTrainerFilters();store.filtered=filteredRecords();if(!store.filtered.some(r=>r.key===store.active?.key))store.active=store.filtered[0]||null;renderList();renderDetail();syncMerchantUX();syncTrainerReset()}
+if(store.mode==="trainer")$("npc-trainer-reset")?.addEventListener("click",resetTrainerFilters);
 for(const e of [q,zone,trade,aff,kind,verification,rank,type,weapon].filter(Boolean))e.addEventListener(e===q?"input":"change",()=>{if(e===type){if(type.value==="weapon"){trade.value="all";if(rank)rank.value="all"}if(weapon)weapon.value="all"}if(e===trade&&trade.value!=="all"&&type){type.value="profession";if(weapon)weapon.value="all"}if(e===weapon&&weapon.value!=="all"&&type){type.value="weapon";trade.value="all";if(rank)rank.value="all"}updateFilterVisibility();refresh()});
 if(reports)reports.addEventListener("change",e=>{store.showReportsOnly=e.target.checked;refresh()});
 if(store.mode==="merchant"){
