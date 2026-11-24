@@ -277,3 +277,14 @@ body[data-page="quests"] .quest-sidebar .quest-no-action{
   body[data-page="quests"] .quest-sidebar .quest-waypoint,
   body[data-page="quests"] .quest-sidebar .quest-waypoint-pin{transition:none}
 }
+
+
+/* Share only the selected Classic route step. Keep the timeline uncluttered. */
+body[data-page="quests"] .quest-share-controls{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:6px;max-width:48%}
+body[data-page="quests"] #quest-share{min-height:34px;padding:7px 11px;border-radius:7px;border:1px solid #7d815e;background:#283e31;color:#f3ddac;cursor:pointer;font-size:12px;font-weight:600}
+body[data-page="quests"] #quest-share:hover,body[data-page="quests"] #quest-share:focus-visible{border-color:#edcf92;background:#324b37}
+body[data-page="quests"] #quest-share:disabled{opacity:.5;cursor:not-allowed}
+body[data-page="quests"] #quest-share-notice{color:#b8d7b4;font-size:11px;line-height:1.4}
+body[data-page="quests"] #quest-share-fallback{width:100%;min-width:0;border:1px solid #8eab8c;border-radius:4px;background:#15261f;color:#f4e6c8;padding:6px;font-size:11px}
+body[data-page="quests"] #quest-share-fallback[hidden]{display:none!important}
+@media(max-width:640px){body[data-page="quests"] .quest-timeline-heading{flex-wrap:wrap;gap:8px}body[data-page="quests"] .quest-share-controls{max-width:100%;justify-content:flex-start}}
