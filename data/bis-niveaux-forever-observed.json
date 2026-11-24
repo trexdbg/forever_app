@@ -582,7 +582,18 @@
         "+6 Strength",
         "Requires Level 26"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_pants_11",
+      "icon_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/item=273022",
+        "evidence_url": "https://www.wowhead.com/forever/item=273022",
+        "observed_at": "2026-11-24",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Exact Forever item ID 273022 and English name \"Supple Bellyskin Leggings\": Wowhead Forever item Quick Facts icon identifies inv_pants_11. Icon identification only; does not establish live availability, boss drop, quest reward, item stats, or drop chance.",
+        "provider": "Wowhead Forever item page"
+      }
     },
     {
       "id": 273023,
@@ -658,7 +669,18 @@
         "Feet Cloth",
         "Requires Level 26"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_boots_05",
+      "icon_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://zephras.com/forever/enUS/item/273024/",
+        "evidence_url": "https://zephras.com/forever/enUS/item/273024/",
+        "observed_at": "2026-11-24",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Exact Forever item ID 273024 and English name \"Glinteye Slippers\": game-file-derived Zephras item Icon field identifies inv_boots_05. Icon identification only; does not establish live availability, boss drop, quest reward, item stats, or drop chance.",
+        "provider": "Zephras game-file item page"
+      }
     },
     {
       "id": 273025,
@@ -693,7 +715,18 @@
         "+6 Intellect",
         "Requires Level 26"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_boots_chain_08",
+      "icon_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://zephras.com/forever/enUS/item/273025/",
+        "evidence_url": "https://zephras.com/forever/enUS/item/273025/",
+        "observed_at": "2026-11-24",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Exact Forever item ID 273025 and English name \"Raptorclaw Greaves\": game-file-derived Zephras item Icon field identifies inv_boots_chain_08. Icon identification only; does not establish live availability, boss drop, quest reward, item stats, or drop chance.",
+        "provider": "Zephras game-file item page"
+      }
     },
     {
       "id": 273026,
@@ -727,7 +760,18 @@
         "+15 Intellect",
         "Requires Level 26"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_misc_bandage_14",
+      "icon_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://zephras.com/forever/enUS/item/273026/",
+        "evidence_url": "https://zephras.com/forever/enUS/item/273026/",
+        "observed_at": "2026-11-24",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Exact Forever item ID 273026 and English name \"Garb of Florid Feathers\": game-file-derived Zephras item Icon field identifies inv_misc_bandage_14. Icon identification only; does not establish live availability, boss drop, quest reward, item stats, or drop chance.",
+        "provider": "Zephras game-file item page"
+      }
     },
     {
       "id": 273027,
@@ -913,7 +957,18 @@
         "Equip: +2 Mana Regeneration",
         "Requires Level 26"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_bracer_10",
+      "icon_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://zephras.com/forever/enUS/item/273036/",
+        "evidence_url": "https://zephras.com/forever/enUS/item/273036/",
+        "observed_at": "2026-11-24",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Exact Forever item ID 273036 and English name \"Graveweave Bindings\": game-file-derived Zephras item Icon field identifies inv_bracer_10. Icon identification only; does not establish live availability, boss drop, quest reward, item stats, or drop chance.",
+        "provider": "Zephras game-file item page"
+      }
     },
     {
       "id": 273054,
@@ -947,7 +1002,18 @@
         "+8 Spirit",
         "Requires Level 28"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_gauntlets_18",
+      "icon_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://zephras.com/forever/enUS/item/273054/",
+        "evidence_url": "https://zephras.com/forever/enUS/item/273054/",
+        "observed_at": "2026-11-24",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Exact Forever item ID 273054 and English name \"Cartilage Shapers\": game-file-derived Zephras item Icon field identifies inv_gauntlets_18. Icon identification only; does not establish live availability, boss drop, quest reward, item stats, or drop chance.",
+        "provider": "Zephras game-file item page"
+      }
     },
     {
       "id": 273031,
@@ -983,7 +1049,18 @@
         "Equip: +3 Spell Damage",
         "Requires Level 27"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_jewelry_ring_28",
+      "icon_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/item=273031",
+        "evidence_url": "https://www.wowhead.com/forever/item=273031",
+        "observed_at": "2026-11-24",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Exact Forever item ID 273031 and English name \"Runemender's Seal\": Wowhead Forever item Quick Facts icon identifies inv_jewelry_ring_28. Icon identification only; does not establish live availability, boss drop, quest reward, item stats, or drop chance.",
+        "provider": "Wowhead Forever item page"
+      }
     },
     {
       "id": 273045,
@@ -1052,7 +1129,18 @@
         "Equip: +2 Mana Regeneration",
         "Requires Level 27"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_wand_06",
+      "icon_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/item=273043",
+        "evidence_url": "https://www.wowhead.com/forever/item=273043",
+        "observed_at": "2026-11-24",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Exact Forever item ID 273043 and English name \"Wand of Mana Concentration\": Wowhead Forever item Quick Facts icon identifies inv_wand_06. Icon identification only; does not establish live availability, boss drop, quest reward, item stats, or drop chance.",
+        "provider": "Wowhead Forever item page"
+      }
     },
     {
       "id": 273044,
@@ -1086,7 +1174,18 @@
         "Equip: +9 Spell Power",
         "Requires Level 27"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_chest_cloth_17",
+      "icon_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/item=273044",
+        "evidence_url": "https://www.wowhead.com/forever/item=273044",
+        "observed_at": "2026-11-24",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Exact Forever item ID 273044 and English name \"Violet Sorcerer's Robes\": Wowhead Forever item Quick Facts icon identifies inv_chest_cloth_17. Icon identification only; does not establish live availability, boss drop, quest reward, item stats, or drop chance.",
+        "provider": "Wowhead Forever item page"
+      }
     },
     {
       "id": 273051,
@@ -1120,7 +1219,18 @@
         "Equip: +4 Spell Penetration",
         "Requires Level 30"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_shoulder_02",
+      "icon_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/item=273051",
+        "evidence_url": "https://www.wowhead.com/forever/item=273051",
+        "observed_at": "2026-11-24",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Exact Forever item ID 273051 and English name \"Violet Sorcerer's Mantle\": Wowhead Forever item Quick Facts icon identifies inv_shoulder_02. Icon identification only; does not establish live availability, boss drop, quest reward, item stats, or drop chance.",
+        "provider": "Wowhead Forever item page"
+      }
     },
     {
       "id": 273032,
@@ -1157,7 +1267,18 @@
         "+40 Bonus Armor",
         "Requires Level 25"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_jewelry_ring_28",
+      "icon_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/item=273032",
+        "evidence_url": "https://www.wowhead.com/forever/item=273032",
+        "observed_at": "2026-11-24",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Exact Forever item ID 273032 and English name \"Bonebinder's Signet\": Wowhead Forever item Quick Facts icon identifies inv_jewelry_ring_28. Icon identification only; does not establish live availability, boss drop, quest reward, item stats, or drop chance.",
+        "provider": "Wowhead Forever item page"
+      }
     },
     {
       "id": 273033,
@@ -1189,7 +1310,18 @@
         "Ranged Crossbow",
         "Requires Level 26"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_weapon_crossbow_06",
+      "icon_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/item=273033",
+        "evidence_url": "https://www.wowhead.com/forever/item=273033",
+        "observed_at": "2026-11-24",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Exact Forever item ID 273033 and English name \"Gravespike Repeater\": Wowhead Forever item Quick Facts icon identifies inv_weapon_crossbow_06. Icon identification only; does not establish live availability, boss drop, quest reward, item stats, or drop chance.",
+        "provider": "Wowhead Forever item page"
+      }
     },
     {
       "id": 273053,
@@ -1224,7 +1356,18 @@
         "Equip: +36 Spell Power",
         "Requires Level 28"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_misc_bone_06",
+      "icon_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://zephras.com/forever/enUS/item/273053/",
+        "evidence_url": "https://zephras.com/forever/enUS/item/273053/",
+        "observed_at": "2026-11-24",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Exact Forever item ID 273053 and English name \"Tendonscraper Dagger\": game-file-derived Zephras item Icon field identifies inv_misc_bone_06. Icon identification only; does not establish live availability, boss drop, quest reward, item stats, or drop chance.",
+        "provider": "Zephras game-file item page"
+      }
     },
     {
       "id": 273055,
@@ -1256,7 +1399,18 @@
         "Off Hand Shield",
         "Requires Level 28"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_shield_02",
+      "icon_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/item=273055",
+        "evidence_url": "https://www.wowhead.com/forever/item=273055",
+        "observed_at": "2026-11-24",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Exact Forever item ID 273055 and English name \"Bonepile Gaze\": Wowhead Forever item Quick Facts icon identifies inv_shield_02. Icon identification only; does not establish live availability, boss drop, quest reward, item stats, or drop chance.",
+        "provider": "Wowhead Forever item page"
+      }
     },
     {
       "id": 273034,
@@ -1288,7 +1442,18 @@
         "Hands Cloth",
         "Requires Level 27"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_gauntlets_24",
+      "icon_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://www.wowhead.com/forever/item=273034",
+        "evidence_url": "https://www.wowhead.com/forever/item=273034",
+        "observed_at": "2026-11-24",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Exact Forever item ID 273034 and English name \"Ephemeral Grips\": Wowhead Forever item Quick Facts icon identifies inv_gauntlets_24. Icon identification only; does not establish live availability, boss drop, quest reward, item stats, or drop chance.",
+        "provider": "Wowhead Forever item page"
+      }
     },
     {
       "id": 273035,
@@ -1320,7 +1485,18 @@
         "Chest Mail",
         "Requires Level 27"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_chest_chain_04",
+      "icon_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://zephras.com/forever/enUS/item/273035/",
+        "evidence_url": "https://zephras.com/forever/enUS/item/273035/",
+        "observed_at": "2026-11-24",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Exact Forever item ID 273035 and English name \"Mana-Warped Chain Shirt\": game-file-derived Zephras item Icon field identifies inv_chest_chain_04. Icon identification only; does not establish live availability, boss drop, quest reward, item stats, or drop chance.",
+        "provider": "Zephras game-file item page"
+      }
     },
     {
       "id": 273046,
@@ -1353,7 +1529,18 @@
         "Equip: When damaged, has a chance to grant 1080 armor for 12 sec.",
         "Requires Level 28"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_throwingaxe_05",
+      "icon_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://zephras.com/forever/enUS/item/273046/",
+        "evidence_url": "https://zephras.com/forever/enUS/item/273046/",
+        "observed_at": "2026-11-24",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Exact Forever item ID 273046 and English name \"Guardian's Dualblade\": game-file-derived Zephras item Icon field identifies inv_throwingaxe_05. Icon identification only; does not establish live availability, boss drop, quest reward, item stats, or drop chance.",
+        "provider": "Zephras game-file item page"
+      }
     },
     {
       "id": 273048,
@@ -1388,7 +1575,18 @@
         "+100 Armor",
         "Requires Level 28"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_pants_mail_12",
+      "icon_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://zephras.com/forever/enUS/item/273048/",
+        "evidence_url": "https://zephras.com/forever/enUS/item/273048/",
+        "observed_at": "2026-11-24",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Exact Forever item ID 273048 and English name \"Refractory Scaleguards\": game-file-derived Zephras item Icon field identifies inv_pants_mail_12. Icon identification only; does not establish live availability, boss drop, quest reward, item stats, or drop chance.",
+        "provider": "Zephras game-file item page"
+      }
     },
     {
       "id": 273047,
@@ -1477,7 +1675,18 @@
         "Two-Hand Staff",
         "Requires Level 28"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_staff_07",
+      "icon_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://zephras.com/forever/enUS/item/273040/",
+        "evidence_url": "https://zephras.com/forever/enUS/item/273040/",
+        "observed_at": "2026-11-24",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Exact Forever item ID 273040 and English name \"Spine of the Devourer\": game-file-derived Zephras item Icon field identifies inv_staff_07. Icon identification only; does not establish live availability, boss drop, quest reward, item stats, or drop chance.",
+        "provider": "Zephras game-file item page"
+      }
     },
     {
       "id": 273042,
@@ -1509,7 +1718,18 @@
         "Feet Mail",
         "Requires Level 28"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_boots_chain_08",
+      "icon_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://zephras.com/forever/enUS/item/273042/",
+        "evidence_url": "https://zephras.com/forever/enUS/item/273042/",
+        "observed_at": "2026-11-24",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Exact Forever item ID 273042 and English name \"Manascale Treads\": game-file-derived Zephras item Icon field identifies inv_boots_chain_08. Icon identification only; does not establish live availability, boss drop, quest reward, item stats, or drop chance.",
+        "provider": "Zephras game-file item page"
+      }
     },
     {
       "id": 273041,
@@ -1543,7 +1763,18 @@
         "+6 Stamina",
         "Requires Level 28"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_belt_15",
+      "icon_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://zephras.com/forever/enUS/item/273041/",
+        "evidence_url": "https://zephras.com/forever/enUS/item/273041/",
+        "observed_at": "2026-11-24",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Exact Forever item ID 273041 and English name \"Slitherwrap Girdle\": game-file-derived Zephras item Icon field identifies inv_belt_15. Icon identification only; does not establish live availability, boss drop, quest reward, item stats, or drop chance.",
+        "provider": "Zephras game-file item page"
+      }
     },
     {
       "id": 273039,
@@ -1575,7 +1806,18 @@
         "Waist Cloth",
         "Requires Level 29"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_belt_10",
+      "icon_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://zephras.com/forever/enUS/item/273039/",
+        "evidence_url": "https://zephras.com/forever/enUS/item/273039/",
+        "observed_at": "2026-11-24",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Exact Forever item ID 273039 and English name \"Blightleaf Rope\": game-file-derived Zephras item Icon field identifies inv_belt_10. Icon identification only; does not establish live availability, boss drop, quest reward, item stats, or drop chance.",
+        "provider": "Zephras game-file item page"
+      }
     },
     {
       "id": 273038,
@@ -1607,7 +1849,18 @@
         "Chest Leather",
         "Requires Level 29"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_shirt_09",
+      "icon_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://zephras.com/forever/enUS/item/273038/",
+        "evidence_url": "https://zephras.com/forever/enUS/item/273038/",
+        "observed_at": "2026-11-24",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Exact Forever item ID 273038 and English name \"Garb of Fallen Felbark\": game-file-derived Zephras item Icon field identifies inv_shirt_09. Icon identification only; does not establish live availability, boss drop, quest reward, item stats, or drop chance.",
+        "provider": "Zephras game-file item page"
+      }
     },
     {
       "id": 273037,
@@ -1639,7 +1892,18 @@
         "Two-Hand Polearm",
         "Requires Level 29"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_spear_08",
+      "icon_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://zephras.com/forever/enUS/item/273037/",
+        "evidence_url": "https://zephras.com/forever/enUS/item/273037/",
+        "observed_at": "2026-11-24",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Exact Forever item ID 273037 and English name \"Felbough Arm\": game-file-derived Zephras item Icon field identifies inv_spear_08. Icon identification only; does not establish live availability, boss drop, quest reward, item stats, or drop chance.",
+        "provider": "Zephras game-file item page"
+      }
     },
     {
       "id": 273052,
@@ -1705,7 +1969,18 @@
         "Equip: +12 Attack Power",
         "Requires Level 30"
       ],
-      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)"
+      "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
+      "icon": "inv_misc_necklacea8",
+      "icon_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://zephras.com/forever/enUS/item/273049/",
+        "evidence_url": "https://zephras.com/forever/enUS/item/273049/",
+        "observed_at": "2026-11-24",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Exact Forever item ID 273049 and English name \"Archmagister's Faceted Pendant\": game-file-derived Zephras item Icon field identifies inv_misc_necklacea8. Icon identification only; does not establish live availability, boss drop, quest reward, item stats, or drop chance.",
+        "provider": "Zephras game-file item page"
+      }
     },
     {
       "id": 271204,
@@ -2605,7 +2880,18 @@
         "(3) +10 Intellect",
         "(4) Restore mana when mana falls below 15% (5 min cooldown)",
         "(5) Healing spells can trigger additional healing"
-      ]
+      ],
+      "icon": "inv_belt_11",
+      "icon_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://zephras.com/forever/enUS/item/286980/",
+        "evidence_url": "https://zephras.com/forever/enUS/item/286980/",
+        "observed_at": "2026-11-24",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Exact Forever item ID 286980 and English name \"Rotmender's Sash\": game-file-derived Zephras item Icon field identifies inv_belt_11. Icon identification only; does not establish live availability, boss drop, quest reward, item stats, or drop chance.",
+        "provider": "Zephras game-file item page"
+      }
     },
     {
       "id": 286979,
@@ -2647,7 +2933,18 @@
         "(3) +10 Intellect",
         "(4) Restore mana when mana falls below 15% (5 min cooldown)",
         "(5) Healing spells can trigger additional healing"
-      ]
+      ],
+      "icon": "inv_gauntlets_22",
+      "icon_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://zephras.com/forever/enUS/item/286979/",
+        "evidence_url": "https://zephras.com/forever/enUS/item/286979/",
+        "observed_at": "2026-11-24",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Exact Forever item ID 286979 and English name \"Rotmender's Gloves\": game-file-derived Zephras item Icon field identifies inv_gauntlets_22. Icon identification only; does not establish live availability, boss drop, quest reward, item stats, or drop chance.",
+        "provider": "Zephras game-file item page"
+      }
     },
     {
       "id": 286978,
@@ -2690,7 +2987,18 @@
         "(3) +10 Intellect",
         "(4) Restore mana when mana falls below 15% (5 min cooldown)",
         "(5) Healing spells can trigger additional healing"
-      ]
+      ],
+      "icon": "inv_shirt_04",
+      "icon_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://zephras.com/forever/enUS/item/286978/",
+        "evidence_url": "https://zephras.com/forever/enUS/item/286978/",
+        "observed_at": "2026-11-24",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Exact Forever item ID 286978 and English name \"Rotmender's Garb\": game-file-derived Zephras item Icon field identifies inv_shirt_04. Icon identification only; does not establish live availability, boss drop, quest reward, item stats, or drop chance.",
+        "provider": "Zephras game-file item page"
+      }
     },
     {
       "id": 271214,
@@ -2915,7 +3223,18 @@
         "Quest Level 22",
         "Quest available from Level 16"
       ],
-      "reference": "Forever beta · quest reward observed in-game; no minimum EQUIP level recorded"
+      "reference": "Forever beta · quest reward observed in-game; no minimum EQUIP level recorded",
+      "icon": "inv_pants_06",
+      "icon_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://zephras.com/forever/enUS/item/279868/",
+        "evidence_url": "https://zephras.com/forever/enUS/item/279868/",
+        "observed_at": "2026-11-24",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Exact Forever item ID 279868 and English name \"Duty Bound Leggings\": game-file-derived Zephras item Icon field identifies inv_pants_06. Icon identification only; does not establish live availability, boss drop, quest reward, item stats, or drop chance.",
+        "provider": "Zephras game-file item page"
+      }
     },
     {
       "id": 279869,
@@ -2956,7 +3275,18 @@
         "Quest Level 22",
         "Quest available from Level 16"
       ],
-      "reference": "Forever beta · quest reward observed in-game; no minimum EQUIP level recorded"
+      "reference": "Forever beta · quest reward observed in-game; no minimum EQUIP level recorded",
+      "icon": "inv_chest_chain",
+      "icon_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://zephras.com/forever/enUS/item/279869/",
+        "evidence_url": "https://zephras.com/forever/enUS/item/279869/",
+        "observed_at": "2026-11-24",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Exact Forever item ID 279869 and English name \"Remembrance Armor\": game-file-derived Zephras item Icon field identifies inv_chest_chain. Icon identification only; does not establish live availability, boss drop, quest reward, item stats, or drop chance.",
+        "provider": "Zephras game-file item page"
+      }
     },
     {
       "id": 251533,
