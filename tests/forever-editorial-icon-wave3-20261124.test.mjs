@@ -147,7 +147,7 @@ test("23 exact-ID lowlevel icon identities are individually documented in Foreve
 });
 test("remaining editorial unknowns are preserved and no acquisition is invented",()=>{
  assert.equal(records.length,183);
- assert.equal(records.filter(x=>!x.icon).length,72);
+ assert.equal(records.filter(x=>!x.icon).length,19);
  for(const id of [271807,277029,277008,277020]){
   const x=records.find(x=>x.id===id);
   assert.ok(x);
