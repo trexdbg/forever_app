@@ -633,6 +633,9 @@
         "Saltscale Girdle",
         "Item Level 31",
         "Waist Mail",
+        "124 Armor",
+        "+9 Strength",
+        "+9 Intellect",
         "Requires Level 26"
       ],
       "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
@@ -647,6 +650,15 @@
         "boss": "Saltspine",
         "reviewed_on": "2026-11-19",
         "note": "Exact item ID and English name; existing Forever dungeon icon metadata reused, not independent live acquisition verification."
+      },
+      "stats_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://db.icy-veins.com/wow-forever/items/273023",
+        "evidence_url": "https://foreverchanges.pro/item/273023/saltscale-girdle",
+        "observed_at": "2026-11-24",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Exact Forever item ID 273023: client-derived tooltip confirms 124 Armor, +9 Strength and +9 Intellect. ForeverChanges documents the October 8 shift from +9 Stamina to +9 Intellect. Replaces obsolete October editorial Stamina and fills formerly incomplete level-BiS display. This stat source is not independent proof of live loot, acquisition, drop rates or accessible server build."
       }
     },
     {
@@ -857,8 +869,9 @@
         "Reliquary Mantle",
         "Item Level 33",
         "Shoulder Mail",
+        "171 Armor",
         "+12 Stamina",
-        "Equip: +4 Hit Rating",
+        "Equip: Improves your chance to hit by 0.4%.",
         "Requires Level 28"
       ],
       "reference": "Forever beta · observed dungeon loot (community reports, 2026-10)",
@@ -873,6 +886,15 @@
         "boss": "Relic Guardian",
         "reviewed_on": "2026-11-19",
         "note": "Exact item ID and English name; existing Forever dungeon icon metadata reused, not independent live acquisition verification."
+      },
+      "stats_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://db.icy-veins.com/wow-forever/items/273028",
+        "evidence_url": "https://www.foreverdb.app/en/forever/items/273028/reliquary-mantle",
+        "observed_at": "2026-11-24",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Exact Forever item ID 273028: two independently indexed Forever tooltips agree on 171 Armor, +12 Stamina, Equip: improves chance to hit by 0.4%. Replaces outdated +4 Spirit and makes both editorial/BiS texts consistent; no conversion to or claim about 4 raw hit rating. This stat source is not direct proof of live drop, drop percentage or server build."
       }
     },
     {
