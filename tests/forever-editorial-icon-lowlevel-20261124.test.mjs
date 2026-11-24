@@ -148,7 +148,7 @@ test("no unrelated editorial item is auto-enriched or promoted to proven gamepla
  for(const id of [271807,276273,278019]){
    const item=items.find(x=>x.id===id);
    assert.ok(item);
-   assert.equal(item.icon,undefined);
+   assert.equal(item.icon,null);
    assert.equal(item.icon_evidence,undefined);
    assert.ok(item.source_status.startsWith("forever_beta_"));
  }
