@@ -37,12 +37,19 @@ test("19 ID-exact beta item pages enriched, 57 -> 38 short tooltips, 179 total e
   assert.equal(x.observed_at,"2026-10-19");
   assert.equal(x.observed_build,"1.60.1.70425");
   assert.equal(x.verified_forever,false);
-  const restoredIcons=new Map([[271096,"inv_bracer_11"],[271209,"inv_pants_mail_01"]]);
-  if(restoredIcons.has(id)){
-   assert.equal(x.icon,restoredIcons.get(id));
+  const dungeonIcons=new Map([[271096,"inv_bracer_11"],[271209,"inv_pants_mail_01"]]);
+  const editorialIcons=new Map([[273637,"inv_sword_05"],[273805,"inv_chest_leather_04"]]);
+  if(dungeonIcons.has(id)){
+   assert.equal(x.icon,dungeonIcons.get(id));
    assert.equal(x.icon_catalogue_reference.item_id,id);
    assert.equal(x.icon_catalogue_reference.item_name,x.name);
    assert.equal(x.icon_catalogue_reference.file,"data/dungeons-forever.json");
+  }else if(editorialIcons.has(id)){
+   assert.equal(x.icon,editorialIcons.get(id));
+   assert.equal(x.icon_evidence.source_url,"https://zephras.com/forever/enUS/item/"+id+"/");
+   assert.equal(x.icon_evidence.evidence_level,"documented_forever");
+   assert.equal(x.icon_evidence.observed_at,"2026-11-24");
+   assert.match(x.icon_evidence.evidence_note,/icon identity only, not gameplay acquisition/);
   }else assert.equal(x.icon,null);
   assert.ok(x.source_url.startsWith("https://www.60.tools/items/"+id+"-"));
   assert.ok(x.evidence_note.includes("does not alone prove live availability"));
