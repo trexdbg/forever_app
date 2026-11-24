@@ -63,5 +63,5 @@ test("Forever item 273047 stays covered after the subsequent exact-ID icon backf
  // Follow-up exact-ID/English-name Forever icon matches are tested separately.
  assert.equal(missing(observed.items),0);
  assert.equal(editorial.items.length,183);
- assert.equal(missing(editorial.items),116);
+ assert.equal(missing(editorial.items),93);
 });
