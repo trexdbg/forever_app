@@ -81,10 +81,13 @@ test("sparse record audit prioritizes the remaining 22 unknown origins instead o
   285331,273637,273805,285348,
   277017,277023,277035,277058,277064,277069,277075,277024,277032,
   277094,263015,283259,273293,284715,281926,281927,252512,282716,
-  271920,274068,284697,273654,285192
+  271920,274068,284697,273654,285192,
+  276273,276895,278019,279838,279870,279876,277057,277063,
+  283473,276631,273808,273840,282653,260208,270072,270097,
+  271670,275711,276340,277204,281251
  ]);
  const restoredHistorical=historical.filter(x=>restored.has(x.id));
- assert.equal(restoredHistorical.length,41);
+ assert.equal(restoredHistorical.length,62);
  assert.ok(restoredHistorical.every(x=>x.icon&&(x.icon_evidence||x.icon_catalogue_reference)),
   "Every later restored icon counted against October is individually documented");
  assert.equal(historical.filter(x=>!x.icon||restored.has(x.id)).length,
