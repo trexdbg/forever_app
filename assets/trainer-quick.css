@@ -19,3 +19,11 @@
 .npc-favorite-toggle{font-size:12px;min-height:36px;border:1px solid #947b4a;border-radius:8px;background:#25372b;color:#ead1a2;padding:6px 11px;cursor:pointer}
 .npc-favorite-toggle[aria-pressed="true"]{background:#584629;color:#ffe8aa}
 .npc-favorite-toggle:focus-visible{outline:2px solid #e1c78c;outline-offset:2px}
+
+
+/* Extra high-intent routes remain collapsed until requested, keeping the map clear. */
+.npc-quick-more{margin:-5px 0 13px}
+.npc-quick-more>summary{display:inline-block;cursor:pointer;color:#e1c991;font-size:12px;font-weight:600;padding:4px 0}
+.npc-quick-more>summary:hover,.npc-quick-more>summary:focus-visible{color:#fff0bc;text-decoration:underline}
+.npc-quick-more[open]>.npc-quick-links{margin:8px 0 0}
+@media(max-width:600px){.npc-quick-more>summary{min-height:36px;display:inline-flex;align-items:center}}
