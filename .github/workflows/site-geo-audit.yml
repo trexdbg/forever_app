@@ -21,6 +21,11 @@ on:
       - 'assets/analytics.js'
       - 'assets/legacy.js'
       - 'tests/seo-post-launch-quest-20261117.test.mjs'
+      - 'quetes/index.html'
+      - 'en/quetes/index.html'
+      - 'assets/quests.js'
+      - 'assets/quest-sidebar.css'
+      - 'tests/classic-quest-step-share-20261124.test.mjs'
       - 'tests/seo-quest-tube-intent-20261124.test.mjs'
       - 'en/guides/quest-rewards-the-wrath-of-rath-mael/index.html'
       - 'guides/recompenses-quete-the-wrath-of-rath-mael/index.html'
@@ -99,6 +104,8 @@ jobs:
           node --check assets/npcs.js
           node --check assets/legacy.js
           node --test tests/seo-post-launch-quest-20261117.test.mjs
+          node --check assets/quests.js
+          node --test tests/classic-quest-step-share-20261124.test.mjs
           node --test tests/seo-quest-tube-intent-20261124.test.mjs
           node --test tests/seo-trainer-intent-20261117.test.mjs
           node --test tests/seo-ghostfang-source-review-20261023.test.mjs
