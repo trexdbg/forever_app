@@ -51,7 +51,8 @@ test("19 ID-exact beta item pages enriched, 57 -> 38 short tooltips, 179 total e
     [276631,"inv_sword_05"],
     [279876,"inv_weapon_shortblade_54"],
     [273808,"inv_bracer_07"],
-    [273840,"spell_shadow_evileye"]
+    [273840,"spell_shadow_evileye"],
+    [277204,"inv_jewelry_necklace_01"]
   ]);
   if(dungeonIcons.has(id)){
    assert.equal(x.icon,dungeonIcons.get(id));
