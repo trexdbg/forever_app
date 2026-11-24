@@ -3094,7 +3094,19 @@
         "Quest Level 21",
         "Quest available from Level 16"
       ],
-      "reference": "Forever beta · quest reward observed in-game; no minimum EQUIP level recorded"
+      "reference": "Forever beta · quest reward observed in-game; no minimum EQUIP level recorded",
+      "icon": "inv_sword_23",
+      "icon_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://db.icy-veins.com/wow-forever/items/279864",
+        "evidence_url": "https://thewowdb.com/icons/inv_sword_23/",
+        "observed_at": "2026-11-24",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "icon_file_id": 135324,
+        "provider": "Icy Veins Forever item and TheWoWDB icon filename cross-reference",
+        "evidence_note": "Exact item ID 279864 Monstrous Cleaver in Icy Veins Forever specifies Icon FileDataID 135324. Independent game-icon index TheWoWDB maps FileDataID 135324 to inv_sword_23. Icon identity verified through the numeric file ID, not inferred from weapon type or shared appearance. This does not establish live item availability, quest acquisition, stat verification or loot/drop chance."
+      }
     },
     {
       "id": 279865,
