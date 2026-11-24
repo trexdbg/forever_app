@@ -61,14 +61,14 @@ test("BiS tracking uses the existing consent-gated event and does not transmit c
 test("the measured controls exist on both BiS pages but are not confused with search terms",()=>{
  for(const path of ["bis/index.html","en/bis/index.html"]){
   const html=read(path);
-  assert.match(html,/class="bis-board"/);
+  assert.match(html,/class="[^"]*\bbis-board\b[^"]*"/);
   assert.match(html,/id="bis-classes"/);
   assert.match(html,/id="bis-specs"/);
   assert.match(html,/id="bis-paperdoll"/);
  }
  for(const path of ["bis-niveaux/index.html","en/bis-niveaux/index.html"]){
   const html=read(path);
-  assert.match(html,/class="level-bis-board"/);
+  assert.match(html,/class="[^"]*\blevel-bis-board\b[^"]*"/);
   assert.match(html,/id="level-classes"/);
   assert.match(html,/id="level-specs"/);
   assert.match(html,/id="level-bands"/);
