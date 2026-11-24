@@ -14,6 +14,8 @@ on:
       - 'en/guides/index.html'
       - 'sitemap.xml'
       - 'tests/analytics-legacy-20261117.test.mjs'
+      - 'assets/common.js'
+      - 'tests/analytics-bis-interactions-20261124.test.mjs'
       - 'tests/trainer-favorites-20261117.test.mjs'
       - 'tests/trainer-reset-share-20261124.test.mjs'
       - 'assets/analytics.js'
@@ -91,6 +93,7 @@ jobs:
           node --test tests/dalaran-shade-community-loot-20261117.test.mjs
           node --test tests/seo-forever-postlaunch-20261117.test.mjs
           node --test tests/analytics-legacy-20261117.test.mjs
+          node --test tests/analytics-bis-interactions-20261124.test.mjs
           node --test tests/trainer-favorites-20261117.test.mjs
           node --test tests/trainer-reset-share-20261124.test.mjs
           node --check assets/npcs.js

@@ -33,4 +33,4 @@ const footer=document.querySelector(".footer-grid");
 if(footer){const fnav=footer.children[1];if(fnav&&!fnav.querySelector('a[href="/quetes/"],a[href="/en/quetes/"]'))fnav.prepend(link("quetes",tr.quests))}
 })();
 /* Optional audience measurement. Disabled until configured and consented. */
-(()=>{const s=document.createElement("script");s.src="/assets/analytics.js?v=20261124-trainer-reset-share1";document.head.append(s)})();
+(()=>{const s=document.createElement("script");s.src="/assets/analytics.js?v=20261124-bis-interactions1";document.head.append(s)})();

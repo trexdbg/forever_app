@@ -168,6 +168,27 @@
     "rare", "donjons", "bis", "bis-niveaux", "population"
   ]);
   const pageCategory = document.body.dataset.page || "home";
+  // BiS builds are private. Count only coarse button categories on exact gear routes.
+  // Never include selected class, spec, level, slot, item ID or search text.
+  function classifyBisControl(pathname, target) {
+    const moduleName = pathname === "/bis/" || pathname === "/en/bis/" ? "bis" :
+      pathname === "/bis-niveaux/" || pathname === "/en/bis-niveaux/" ? "bis-niveaux" : null;
+    if (!moduleName) return null;
+    const button = target.closest("button");
+    if (!button || !button.closest(".bis-board, .level-bis-board")) return null;
+    const categories = [
+      [".bis-class", "bis-class"], [".bis-spec", "bis-spec"],
+      [".level-bis-band", "bis-level-band"], [".level-bis-kind", "bis-source-filter"],
+      [".bis-v2-slot", "bis-equipment-slot"], [".bis-v2-candidate", "bis-candidate"],
+      [".bis-v2-owned", "bis-owned-toggle"], [".bis-v2-clear", "bis-clear-slot"],
+      [".bis-v2-quality", "bis-quality-filter"], [".bis-v2-more", "bis-load-more"],
+      [".bis-v2-info-button", "bis-item-details"]
+    ];
+    for (const [selector, controlName] of categories) {
+      if (button.matches(selector)) return {module_name: moduleName, control_name: controlName};
+    }
+    return null;
+  }
   document.addEventListener("click", event => {
     const target = event.target instanceof Element ? event.target : null;
     if (!target) return;
@@ -186,6 +207,8 @@
     if (control && allowedControls.has(control.id)) {
       track("tool_interaction", { module_name: pageCategory, control_name: control.id });
     }
+    const bisControl = classifyBisControl(location.pathname, target);
+    if (bisControl) track("tool_interaction", bisControl);
   });
   document.addEventListener("change", event => {
     const el = event.target;
