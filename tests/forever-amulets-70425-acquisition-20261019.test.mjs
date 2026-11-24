@@ -71,10 +71,21 @@ test("sparse record audit prioritizes the remaining 22 unknown origins instead o
  assert.equal(generic.length,0);
  assert.equal(audit.metrics.acquisition_still_unknown,19);
  assert.equal(historical.filter(x=>!Array.isArray(x.tooltip)||x.tooltip.length<5).length,audit.metrics.records_with_fewer_than_five_tooltip_lines);
- // The October snapshot must not reject explicitly documented later icon enrichments.
- const restored=new Set([249394,270227,271096,271209]);
- assert.equal(historical.filter(x=>restored.has(x.id)&&x.icon&&(x.icon_evidence||x.icon_catalogue_reference)).length,restored.size);
- assert.equal(historical.filter(x=>!x.icon||restored.has(x.id)).length,audit.metrics.records_without_real_icon);
+ // Preserve the October baseline while allowing independently cited later icon recoveries.
+ // A subset of the 22 restored icons belongs to items added AFTER this historical
+ // 174-item audit; those IDs must not be counted as October snapshot rows.
+ const restored=new Set([
+  249394,270227,271096,271209,
+  285269,285272,285273,285274,3008,284287,6202,6203,5744,284174,
+  286533,286536,285345,284386,285350,285346,285328,277213,
+  285331,273637,273805,285348
+ ]);
+ const restoredHistorical=historical.filter(x=>restored.has(x.id));
+ assert.equal(restoredHistorical.length,18);
+ assert.ok(restoredHistorical.every(x=>x.icon&&(x.icon_evidence||x.icon_catalogue_reference)),
+  "Every later restored icon counted against October is individually documented");
+ assert.equal(historical.filter(x=>!x.icon||restored.has(x.id)).length,
+  audit.metrics.records_without_real_icon);
  assert.ok(!audit.review_queue.some(x=>x.id===272184||x.id===272185));
  assert.equal(audit.review_queue[0].required_level,4);
  for(const row of audit.review_queue){
