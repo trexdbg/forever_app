@@ -38,7 +38,17 @@ test("19 ID-exact beta item pages enriched, 57 -> 38 short tooltips, 179 total e
   assert.equal(x.observed_build,"1.60.1.70425");
   assert.equal(x.verified_forever,false);
   const dungeonIcons=new Map([[271096,"inv_bracer_11"],[271209,"inv_pants_mail_01"]]);
-  const editorialIcons=new Map([[273637,"inv_sword_05"],[273805,"inv_chest_leather_04"]]);
+  const editorialIcons=new Map([
+    [273637,"inv_sword_05"],[273805,"inv_chest_leather_04"],
+    [277069,"inv_bracer_leather_skybornec60_b_02"],
+    [277017,"inv_bracer_mail_skybornec60_b_01"],
+    [277023,"inv_bracer_leather_skybornec60_b_01"],
+    [277024,"inv_glove_leather_skybornec60_b_01"],
+    [277032,"inv_pant_leather_skybornec60_b_02"],
+    [277035,"inv_bracer_cloth_skybornec60_b_01"],
+    [273293,"inv_bracer_03"],
+    [284715,"inv_jewelry_ring_01"]
+  ]);
   if(dungeonIcons.has(id)){
    assert.equal(x.icon,dungeonIcons.get(id));
    assert.equal(x.icon_catalogue_reference.item_id,id);

@@ -229,7 +229,7 @@ test("all 79 observed Forever BiS entries have icon provenance or a documented o
  assert.equal(final.acquisition.kind,"quest");
  assert.equal(final.requiredLevel,null);
  assert.equal(editorial.items.length,183);
- assert.equal(editorial.items.filter(x=>!x.icon).length,116);
+ assert.equal(editorial.items.filter(x=>!x.icon).length,93);
 });
 test("preexisting 2026 icon sources and verified 273047 tooltip are unchanged",()=>{
  for(const id of [270227,271096,271209]){

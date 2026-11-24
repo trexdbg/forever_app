@@ -144,7 +144,7 @@ test("22 low-level Forever catalogue icons are exact-ID and English-name documen
 });
 test("no unrelated editorial item is auto-enriched or promoted to proven gameplay",()=>{
  assert.equal(items.length,183);
- assert.equal(items.filter(x=>!x.icon).length,116);
+ assert.equal(items.filter(x=>!x.icon).length,93);
  for(const id of [271807,276273,278019]){
    const item=items.find(x=>x.id===id);
    assert.ok(item);
