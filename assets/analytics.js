@@ -177,7 +177,7 @@
       if (dest.origin === location.origin) {
         const slug = dest.pathname.replace(/^\/en\//, "/").split("/")[1];
         const moduleName = dest.pathname === "/talents/heritage/" || dest.pathname === "/en/talents/heritage/" ? "legacy" : slug;
-        if (moduleNames.has(moduleName) && (anchor.closest(".nav, .atlas-grid, .class-list, .atlas-live-actions, .npc-crosslinks"))) {
+        if (moduleNames.has(moduleName) && (anchor.closest(".nav, .atlas-grid, .class-list, .atlas-live-actions, .npc-crosslinks, .module-links, .npc-quick-links, .geo-quick-links"))) {
           track("module_open", { module_name: moduleName });
         }
       }
