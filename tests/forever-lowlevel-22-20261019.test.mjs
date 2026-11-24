@@ -11,9 +11,6 @@ const ids=[277057,277063,277075,277058,277064,283473,283259,281926,285348,285192
 // These four items received independent icon-only source checks on 24 Nov.
 // Their original 70425 tooltip/acquisition snapshot remains unchanged.
 const laterVerifiedIcons=new Map([
- [277075,"inv_bracer_cloth_skybornec60_b_01"],
- [277058,"inv_glove_mail_skybornec60_b_01"],
- [277064,"inv_glove_leather_skybornec60_b_01"],
  [285348,"inv_wand_04"]
 ]);
 
