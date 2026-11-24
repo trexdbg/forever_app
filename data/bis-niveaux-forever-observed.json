@@ -37,6 +37,8 @@
       "tooltip": [
         "Ephemeral Choker",
         "Item Level 18",
+        "Binds when picked up",
+        "Neck",
         "+5 Spirit",
         "Requires Level 13"
       ],
@@ -52,6 +54,15 @@
         "boss": "Faldrim Anvilmar",
         "reviewed_on": "2026-11-19",
         "note": "Exact item ID and English name; existing Forever dungeon icon metadata reused, not independent live acquisition verification."
+      },
+      "stats_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://db.icy-veins.com/wow-forever/items/270227",
+        "evidence_url": "https://foreverdb.net/item/270227",
+        "observed_at": "2026-11-24",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "WoW Forever item 270227 is a bind-on-pickup neck item with +5 Spirit, item level 18 and requires level 13. Reconciles a missing equip-slot line and bind-on-pickup in the two local catalogue tooltips. Item stats only; not a direct gameplay capture, live drop source, loot rate or current server build."
       }
     },
     {
@@ -81,10 +92,11 @@
       "tooltip": [
         "Aetherwisp Bracers",
         "Item Level 18",
+        "Binds when picked up",
         "Wrist Cloth",
         "15 Armor",
         "+30 Armor",
-        "Equip: +3 Spell Power",
+        "Equip: Increases damage and healing done by magical spells and effects by up to 3.",
         "Requires Level 13"
       ],
       "reference": "Forever beta · community-reported dungeon loot (gameplay not independently verified, 2026-10)",
@@ -105,6 +117,15 @@
         "boss": "Faldrim Anvilmar",
         "reviewed_on": "2026-11-19",
         "note": "Exact item ID and English name; existing Forever dungeon icon metadata reused, not independent live acquisition verification."
+      },
+      "stats_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://db.icy-veins.com/wow-forever/items/271096",
+        "evidence_url": "https://db.icy-veins.com/wow-forever/items/271096",
+        "observed_at": "2026-11-24",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "WoW Forever item 271096 is bind-on-pickup cloth wrist gear, 15 base armor and +30 additional armor, with equip effect up to 3 spell damage/healing. Preserve literal reported effect text rather than collapsing to an ambiguous +3 generic spell-power stat. No direct gameplay or current loot-rate verification."
       }
     },
     {
@@ -2602,7 +2623,9 @@
       "tooltip": [
         "Bonerust Leggings",
         "Item Level 21",
+        "Binds when picked up",
         "Legs Mail",
+        "164 Armor",
         "+4 Strength",
         "+9 Agility",
         "Requires Level 16"
@@ -2619,6 +2642,15 @@
         "boss": "Bjork",
         "reviewed_on": "2026-11-19",
         "note": "Exact item ID and English name; existing Forever dungeon icon metadata reused, not independent live acquisition verification."
+      },
+      "stats_evidence": {
+        "evidence_level": "documented_forever",
+        "source_url": "https://db.icy-veins.com/wow-forever/items/271209",
+        "evidence_url": "https://foreverdb.net/fr/item/271209",
+        "observed_at": "2026-11-24",
+        "observed_build": "unknown",
+        "evidence_kind": "forever_community_page",
+        "evidence_note": "Exact Forever item 271209 has 164 Armor, +4 Strength, +9 Agility, bind-on-pickup mail legs, level 16 required. Bring the level-BiS tooltip up to the documented editorial detail; item source text does not independently establish live boss-drop rate or gameplay build."
       }
     },
     {
