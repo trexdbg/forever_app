@@ -157,7 +157,7 @@
   const allowedControls = new Set([
     "quest-next", "quest-prev", "quest-zoom-reset",
     "talent-share", "talent-reset", "legacy-reset", "legacy-share",
-    "npc-favorite-toggle", "npc-favorite-open", "mine-select-all", "mine-select-none",
+    "npc-favorite-toggle", "npc-favorite-open", "npc-trainer-reset", "npc-share-trainer", "mine-select-all", "mine-select-none",
     "npc-map-copy-way", "npc-map-zoom-in", "npc-map-zoom-out",
     "npc-map-zoom-reset", "npc-faction", "npc-zone", "npc-profession",
     "npc-type", "npc-weapon", "npc-kind", "npc-rank",
