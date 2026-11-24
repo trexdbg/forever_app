@@ -27,3 +27,11 @@
 .npc-quick-more>summary:hover,.npc-quick-more>summary:focus-visible{color:#fff0bc;text-decoration:underline}
 .npc-quick-more[open]>.npc-quick-links{margin:8px 0 0}
 @media(max-width:600px){.npc-quick-more>summary{min-height:36px;display:inline-flex;align-items:center}}
+
+
+/* Recover from intersecting profession, faction, zone and rank filters. */
+.npc-trainer-reset-row{display:flex;justify-content:flex-end;margin:-2px 0 10px}
+.npc-trainer-reset-row button{border:1px solid #53634e;border-radius:8px;background:#1a2820;color:#ead3a2;cursor:pointer;font-size:12px;padding:7px 12px;min-height:34px}
+.npc-trainer-reset-row button[hidden]{display:none!important}
+.npc-trainer-reset-row button:hover,.npc-trainer-reset-row button:focus-visible{background:#2d3c2b;border-color:#e1c78c}
+.npc-share-trainer{overflow-wrap:anywhere;max-width:100%}
