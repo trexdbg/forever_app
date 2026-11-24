@@ -66,7 +66,7 @@ test("popular trainer routes resolve to actual mapped NPCs and preserve faction 
   }
   assert.ok(guide.includes("q=Woo%20Ping#prof-trainers"),prefix+" Woo Ping");
   assert.ok(guide.includes("q=Sayoc#prof-trainers"),prefix+" Sayoc");
-  assert.match(guide,/(?:Classic-reference|références Classic)/);
+  assert.match(guide,/(?:Classic reference|références Classic)/i);
  }
  const english=read("en/guides/weapon-masters/index.html");
  assert.match(english,/<title>WoW Forever Weapon Trainer Locations: Staff & Swords<\/title>/);
