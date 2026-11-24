@@ -67,7 +67,10 @@ test("clipboard copy emits only fixed consent-managed analytics and shows succes
  assert.equal(x.elements["quest-share-notice"].textContent,"Link copied ✓");
  assert.equal(x.elements["quest-share-fallback"].hidden,true);
  assert.equal(x.events.length,1);
- assert.deepEqual([...x.events[0]],[ "tool_interaction",{module_name:"quetes",control_name:"quest-share"}]);
+ assert.equal(x.events[0][0],"tool_interaction");
+ assert.equal(x.events[0][1].module_name,"quetes");
+ assert.equal(x.events[0][1].control_name,"quest-share");
+ assert.deepEqual(Object.keys(x.events[0][1]).sort(),["control_name","module_name"]);
  assert.doesNotMatch(handler,/item_id|searchParams|\$\("quest-search"\)|location\.search/);
 });
 test("clipboard failure offers a selectable URL instead of showing false success",async()=>{
