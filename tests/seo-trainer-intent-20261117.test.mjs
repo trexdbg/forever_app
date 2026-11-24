@@ -34,3 +34,43 @@ test("trainer and weapon guides have genuine actionable deep links in both langu
   assert.match(guide,/<link rel="canonical"/);
  }
 });
+
+test("popular trainer routes resolve to actual mapped NPCs and preserve faction context",()=>{
+ const db=JSON.parse(read("data/npcs.json"));
+ const npc=db.npcs.filter(n=>n.role==="trainer");
+ const weapons=["Staves","Two-Handed Swords","Bows","Crossbows","Guns"];
+ for(const skill of weapons){
+  assert.ok(npc.some(n=>n.trainer_kind==="weapon"&&(n.weapon_skills||[]).includes(skill)),skill+" must exist");
+ }
+ for(const faction of ["alliance","horde"]){
+  assert.ok(npc.some(n=>n.trainer_kind==="weapon"&&n.faction===faction&&(n.weapon_skills||[]).includes("Staves")),faction+" staves");
+  assert.ok(npc.some(n=>n.trainer_kind==="weapon"&&n.faction===faction&&(n.weapon_skills||[]).includes("Two-Handed Swords")),faction+" two-handed swords");
+ }
+ for(const profession of ["Forge","Couture","Secourisme"]){
+  assert.ok(npc.some(n=>n.trainer_kind!=="weapon"&&n.profession===profession),profession+" trainer");
+ }
+ for(const prefix of ["","en/"]){
+  const hub=read(prefix+"metiers/index.html");
+  const guide=read(prefix+(prefix?"guides/weapon-masters/index.html":"guides/maitres-armes/index.html"));
+  assert.match(hub,/<details class="npc-quick-more"><summary>/);
+  assert.match(hub,/<nav class="npc-quick-links" aria-label=/);
+  for(const skill of ["Two-Handed%20Swords","Bows","Crossbows","Guns"]){
+   assert.ok(hub.includes("weapon="+skill+"#prof-trainers"),prefix+skill);
+  }
+  for(const skill of ["Forge","Couture","Secourisme"]){
+   assert.ok(hub.includes("profession="+skill+"#prof-trainers"),prefix+skill);
+  }
+  for(const faction of ["alliance","horde"]){
+   assert.ok(hub.includes("weapon=Staves&amp;faction="+faction+"#prof-trainers"),prefix+faction+" staves");
+   assert.ok(guide.includes("weapon=Two-Handed%20Swords&amp;faction="+faction+"#prof-trainers"),prefix+faction+" swords");
+  }
+  assert.ok(guide.includes("q=Woo%20Ping#prof-trainers"),prefix+" Woo Ping");
+  assert.ok(guide.includes("q=Sayoc#prof-trainers"),prefix+" Sayoc");
+  assert.match(guide,/(?:Classic reference|références Classic)/i);
+ }
+ const english=read("en/guides/weapon-masters/index.html");
+ assert.match(english,/<title>WoW Forever Weapon Trainer Locations: Staff & Swords<\/title>/);
+ assert.match(english,/"dateModified":"2026-11-24"/);
+ const css=read("assets/trainer-quick.css");
+ assert.match(css,/\.npc-quick-more\[open\]/);
+});
