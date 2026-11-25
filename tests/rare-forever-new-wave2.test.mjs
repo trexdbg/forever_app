@@ -116,6 +116,6 @@ test("FR/EN browser code does not present unknown levels as zero and loads the Z
  for(const path of ["rare/index.html","en/rare/index.html"]){
   const html=load(path);
   assert.match(html,/<option value="elite">/);
-  assert.match(html,/rares\.js\?v=20261018-loot-icons-2/);
+  assert.match(html,/rares\.js\?v=20261125-exact-rare-link1/);
  }
 });

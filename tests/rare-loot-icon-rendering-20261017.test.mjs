@@ -68,7 +68,7 @@ test("failed icon requests retain the neutral icon slot",()=>{
 test("FR/EN pages use matching cache-busted versions",()=>{
  for(const path of ["rare/index.html","en/rare/index.html"]){
   const html=read(path);
-  assert.ok(html.includes("/assets/rares.js?v=20261018-loot-icons-2"),path);
-  assert.ok(html.includes("/assets/rares.css?v=20261017-loot-icons-1"),path);
+  assert.ok(html.includes("/assets/rares.js?v=20261125-exact-rare-link1"),path);
+  assert.ok(html.includes("/assets/rares.css?v=20261125-exact-rare-link1"),path);
  }
 });

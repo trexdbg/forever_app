@@ -48,7 +48,9 @@ test("Swiftmane and Humar guides expose four distinct documented community waypo
    for(const c of coords)assert.ok(html.includes(c),prefix+name+": "+c);
    assert.ok(html.includes("https://www.60.tools/guides/rares"),prefix+name+" source");
    assert.ok(html.includes("https://forevercompanion.io/rares"),prefix+name+" cross-check");
-   assert.ok(html.includes("/rare/?zone=barrens"),prefix+name+" atlas link");
+   const rareId=name.startsWith("rare-5831")?"5831":"5828";
+   const rareHref=(prefix.startsWith("en/")?"/en/rare/":"/rare/")+"?rare="+rareId+"&amp;level=all";
+   assert.ok(html.includes(rareHref),prefix+name+" exact atlas link");
   }
  }
  const db=JSON.parse(read("data/rares.json"));
