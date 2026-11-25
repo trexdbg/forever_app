@@ -103,7 +103,7 @@ test("both locales load new assets, reset only trainer filters and retain quest 
  }
  const analytics=read("assets/analytics.js");
  assert.ok(analytics.includes('"npc-trainer-reset", "npc-share-trainer"'));
- assert.match(read("assets/common.js"),/analytics\.js\?v=20261124-bis-interactions1/);
+ assert.match(read("assets/common.js"),/analytics\.js\?v=20261125-atlas-interactions1/);
  assert.match(src,/if\(store\.mode==="trainer"\)\$\("npc-trainer-reset"\)\?\.addEventListener\("click",resetTrainerFilters\)/);
  assert.match(src,/syncMerchantUX\(\);syncTrainerReset\(\)/);
  assert.match(read("assets/trainer-quick.css"),/\.npc-trainer-reset-row button\[hidden\]/);
