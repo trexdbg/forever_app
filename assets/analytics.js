@@ -218,6 +218,17 @@
     }
     return null;
   }
+  function classifyAtlasFilter(pathname, element) {
+    const rare = pathname === "/rare/" || pathname === "/en/rare/";
+    const dungeon = pathname === "/donjons/" || pathname === "/en/donjons/";
+    if (!rare && !dungeon) return null;
+    const allowed = rare ?
+      new Set(["rare-zone", "rare-rank", "rare-level", "rare-verification", "rare-loot", "rare-tame", "rare-mapped"]) :
+      new Set(["dg-level", "dg-status"]);
+    if (!allowed.has(element.id) || !element.closest(rare ? ".rare-app" : ".dg-shell")) return null;
+    // Never read element.value or element.checked; only report fixed control ID.
+    return {module_name: rare ? "rare" : "donjons", control_name: element.id};
+  }
   document.addEventListener("click", event => {
     const target = event.target instanceof Element ? event.target : null;
     if (!target) return;
@@ -245,6 +256,10 @@
     const el = event.target;
     if (el instanceof HTMLElement && allowedControls.has(el.id)) {
       track("tool_interaction", { module_name: pageCategory, control_name: el.id });
+    }
+    if (el instanceof HTMLElement) {
+      const atlasFilter = classifyAtlasFilter(location.pathname, el);
+      if (atlasFilter) track("tool_interaction", atlasFilter);
     }
   });
 })();
