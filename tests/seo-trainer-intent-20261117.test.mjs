@@ -69,8 +69,8 @@ test("popular trainer routes resolve to actual mapped NPCs and preserve faction 
   assert.match(guide,/(?:Classic reference|références Classic)/i);
  }
  const english=read("en/guides/weapon-masters/index.html");
- assert.match(english,/<title>WoW Forever Weapon Trainer Locations: Staff & Swords<\/title>/);
- assert.match(english,/"dateModified":"2026-11-24"/);
+ assert.match(english,/<title>WoW Forever Weapon Trainers &amp; Masters: Locations, Skills<\/title>/);
+ assert.match(english,/"dateModified":"2026-11-25"/);
  const css=read("assets/trainer-quick.css");
  assert.match(css,/\.npc-quick-more\[open\]/);
 });
