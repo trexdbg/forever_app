@@ -6,6 +6,11 @@ on:
       - 'scripts/audit-site.mjs'
       - 'scripts/check-seo-gsc-pages.mjs'
       - 'tests/seo-rare-intent-20261023.test.mjs'
+      - 'assets/rares.js'
+      - 'assets/rares.css'
+      - 'rare/index.html'
+      - 'en/rare/index.html'
+      - 'tests/rare-exact-permalinks-20261125.test.mjs'
       - 'tests/dalaran-shade-community-loot-20261117.test.mjs'
       - 'tests/seo-forever-postlaunch-20261117.test.mjs'
       - 'guides/lancement-wow-forever/index.html'
@@ -96,6 +101,8 @@ jobs:
           node scripts/audit-site.mjs --strict
           node scripts/check-seo-gsc-pages.mjs
           node --test tests/seo-rare-intent-20261023.test.mjs
+          node --check assets/rares.js
+          node --test tests/rare-exact-permalinks-20261125.test.mjs
           node --test tests/dalaran-shade-community-loot-20261117.test.mjs
           node --test tests/seo-forever-postlaunch-20261117.test.mjs
           node --test tests/analytics-legacy-20261117.test.mjs
