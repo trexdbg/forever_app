@@ -55,7 +55,7 @@ test("Dun Morogh bilingual answers and JSON-LD state exactly what was and was no
    assert.ok(html.includes("https://www.60.tools/guides/rares"));
    assert.ok(html.includes("https://forevercompanion.io/rares"));
    assert.ok(article.citation.includes("https://www.60.tools/items/286751-ghostfangs-steps"));
-   assert.ok(html.includes("q=Ghostfang"));
+   assert.ok(html.includes("rare=forever-dun-morogh-ghostfang"));
    assert.ok(html.includes("Classic"));
    assert.ok(!html.includes("100% drop"));
   }
