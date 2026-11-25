@@ -189,6 +189,46 @@
     }
     return null;
   }
+  // The rare and dungeon maps are highly interactive. Record only fixed
+  // categories, not which mob, boss, item or point the visitor selected.
+  function classifyAtlasControl(pathname, target) {
+    const moduleName = pathname === "/rare/" || pathname === "/en/rare/" ? "rare" :
+      pathname === "/donjons/" || pathname === "/en/donjons/" ? "donjons" : null;
+    if (!moduleName) return null;
+    const button = target.closest("button");
+    if (!button || !button.closest(moduleName === "rare" ? ".rare-app" : ".dg-shell")) return null;
+    const categories = moduleName === "rare" ? [
+      [".rare-share", "rare-share"], [".rare-row", "rare-select"],
+      [".rare-coord", "rare-select-pin"], [".rare-legend-entry", "rare-map-legend"],
+      [".rare-set-piece", "rare-set-piece"], [".rare-copy", "rare-copy-way"],
+      ["#rare-zoom-in", "rare-zoom-in"], ["#rare-zoom-out", "rare-zoom-out"],
+      ["#rare-zoom-reset", "rare-zoom-reset"]
+    ] : [
+      [".dg-entry", "dungeon-select"], [".dg-boss-navitem", "dungeon-select-boss"],
+      [".dg-pager", "dungeon-boss-pager"], [".dg-way-button", "dungeon-copy-way"],
+      ["#dg-route", "dungeon-map-route"], ["#dg-world", "dungeon-map-world"],
+      ["#dg-zoom-in", "dungeon-zoom-in"], ["#dg-zoom-out", "dungeon-zoom-out"],
+      ["#dg-zoom-reset", "dungeon-zoom-reset"]
+    ];
+    // The boss share button sends its own single fixed consented event. Do not
+    // count it again as a pager; it is styled with the same dg-pager class.
+    if (moduleName === "donjons" && button.matches(".dg-boss-share")) return null;
+    for (const [selector, controlName] of categories) {
+      if (button.matches(selector)) return {module_name: moduleName, control_name: controlName};
+    }
+    return null;
+  }
+  function classifyAtlasFilter(pathname, element) {
+    const rare = pathname === "/rare/" || pathname === "/en/rare/";
+    const dungeon = pathname === "/donjons/" || pathname === "/en/donjons/";
+    if (!rare && !dungeon) return null;
+    const allowed = rare ?
+      new Set(["rare-zone", "rare-rank", "rare-level", "rare-verification", "rare-loot", "rare-tame", "rare-mapped"]) :
+      new Set(["dg-level", "dg-status"]);
+    if (!allowed.has(element.id) || !element.closest(rare ? ".rare-app" : ".dg-shell")) return null;
+    // Never read element.value or element.checked; only report fixed control ID.
+    return {module_name: rare ? "rare" : "donjons", control_name: element.id};
+  }
   document.addEventListener("click", event => {
     const target = event.target instanceof Element ? event.target : null;
     if (!target) return;
@@ -209,11 +249,17 @@
     }
     const bisControl = classifyBisControl(location.pathname, target);
     if (bisControl) track("tool_interaction", bisControl);
+    const atlasControl = classifyAtlasControl(location.pathname, target);
+    if (atlasControl) track("tool_interaction", atlasControl);
   });
   document.addEventListener("change", event => {
     const el = event.target;
     if (el instanceof HTMLElement && allowedControls.has(el.id)) {
       track("tool_interaction", { module_name: pageCategory, control_name: el.id });
+    }
+    if (el instanceof HTMLElement) {
+      const atlasFilter = classifyAtlasFilter(location.pathname, el);
+      if (atlasFilter) track("tool_interaction", atlasFilter);
     }
   });
 })();

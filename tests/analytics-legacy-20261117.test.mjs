@@ -40,5 +40,5 @@ test("consent-gated module link tracking includes direct map and gear navigation
  assert.match(analytics,/const dest = new URL\(anchor\.href, location\.href\)/);
  assert.ok(!analytics.includes("query_string:"));
  assert.ok(!analytics.includes("search_term:"));
- assert.match(common,/assets\/analytics\.js\?v=20261124-bis-interactions1/);
+ assert.match(common,/assets\/analytics\.js\?v=20261125-atlas-interactions1/);
 });

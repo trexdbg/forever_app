@@ -55,7 +55,7 @@ test("BiS tracking uses the existing consent-gated event and does not transmit c
  assert.match(analytics,/if \(eventName !== "module_open" && eventName !== "tool_interaction"\) return/);
  assert.doesNotMatch(helper,/searchParams|item\.id|querySelector|localStorage|sessionStorage|\.dataset|selectedClass|chosenClass|classId|specId/);
  assert.doesNotMatch(helper,/location\.search|user_id|gear_id/);
- assert.match(read("assets/common.js"),/analytics\.js\?v=20261124-bis-interactions1/);
+ assert.match(read("assets/common.js"),/analytics\.js\?v=20261125-atlas-interactions1/);
 });
 
 test("the measured controls exist on both BiS pages but are not confused with search terms",()=>{
