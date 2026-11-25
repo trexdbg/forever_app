@@ -33,6 +33,14 @@ const statusText=d=>d.type==="classic"?"Classic":d.beta==="observed"?"Forever":t
 function count(d){return d.bosses.reduce((n,b)=>n+(b.loot?.length||0),0)}
 function elbtn(text,cls,fn){const b=m("button",text,cls);b.type="button";b.addEventListener("click",fn);return b}
 function smallchip(s,cls=""){return m("span",s,"dg-chip "+cls)}
+function bossPermalink(d,index){
+ // Share a known dungeon and its displayed encounter only; never include
+ // typed search, private position values, analytics flags or player preferences.
+ const url=new URL(en?"/en/donjons/":"/donjons/",location.origin);
+ url.searchParams.set("donjon",d.id);
+ if(d.bosses?.[index])url.searchParams.set("boss",String(index+1));
+ return url.href;
+}
 function updateUrl(){const u=new URL(location.href);u.searchParams.set("donjon",selected.id);if(selected.bosses.length)u.searchParams.set("boss",String(selectedBoss+1));else u.searchParams.delete("boss");history.replaceState(null,"",u.pathname+u.search+u.hash);
  for(const l of document.querySelectorAll(".lang-switch a")){const target=new URL(l.href,location.origin);target.searchParams.set("donjon",selected.id);if(selected.bosses.length)target.searchParams.set("boss",String(selectedBoss+1));l.href=target.pathname+target.search}
 }
@@ -210,7 +218,24 @@ function renderBosses(){
  const drops=m("div",null,"dg-drops");if(!visibleLoot.length)drops.append(m("p",t("Aucun butin renseigné.","No loot listed."),"dg-empty"));else visibleLoot.forEach(it=>drops.append(makeLootCard(it,b)));panel.append(drops);
  const actions=m("div",null,"dg-boss-actions");
  const prev=elbtn(t("← Précédent","← Previous"),"dg-pager",()=>chooseBoss((selectedBoss+d.bosses.length-1)%d.bosses.length));const next=elbtn(t("Suivant →","Next →"),"dg-pager",()=>chooseBoss((selectedBoss+1)%d.bosses.length));
- actions.append(prev,next);panel.append(actions);bossRoot.append(panel);
+ const share=elbtn(t("↗ Copier le lien","↗ Copy boss link"),"dg-pager dg-boss-share",async()=>{
+  const url=bossPermalink(d,selectedBoss);
+  try{
+   if(!navigator.clipboard?.writeText)throw Error("Clipboard unavailable");
+   await navigator.clipboard.writeText(url);
+   share.textContent=t("Lien copié ✓","Link copied ✓");
+   fallback.hidden=true;fallback.value="";
+  }catch(_){
+   fallback.value=url;fallback.hidden=false;fallback.focus();fallback.select();
+   share.textContent=t("Sélectionnez le lien","Select and copy link");
+  }
+  window.ForEverothAnalytics?.track("tool_interaction",{module_name:"donjons",control_name:"dg-boss-share"});
+ });
+ share.id="dg-boss-share";share.setAttribute("aria-label",t("Copier le lien vers "+name(b.name),"Copy link to "+name(b.name)));
+ const fallback=m("input",null,"dg-boss-share-fallback");
+ fallback.type="text";fallback.readOnly=true;fallback.hidden=true;
+ fallback.setAttribute("aria-label",t("Lien du boss à copier","Boss link to copy"));
+ actions.append(prev,share,next,fallback);panel.append(actions);bossRoot.append(panel);
  if(d.trashLoot?.length||d.questLoot?.length){const extra=m("details",null,"dg-extra-loot");extra.append(m("summary",t("Autres butins : ennemis et quêtes","Other drops: trash and quests")));
  for(const [k,title,bossName] of [["trashLoot",t("Butin des ennemis","Trash mob drops"),{name:{fr:"Ennemis du donjon",en:"Dungeon enemies"}}],["questLoot",t("Objets de quête","Quest items"),{name:{fr:"Quête",en:"Quest"}}]])if(d[k]?.length){extra.append(m("h4",title));const cards=m("div",null,"dg-drops");d[k].forEach(it=>cards.append(makeLootCard(it,bossName)));extra.append(cards)}
  bossRoot.append(extra);}

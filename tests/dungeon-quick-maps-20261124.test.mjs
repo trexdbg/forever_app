@@ -36,7 +36,7 @@ test("bilingual map shortcuts land in the existing module without inventing loot
    assert.ok(links[i][1].startsWith(root+"?donjon="));
    assert.equal(links[i][3],target[i][1]+"–"+target[i][2]);
   }
-  assert.match(html,/dungeons\.css\?v=20261124-dungeon-routes1/);
+  assert.match(html,/dungeons\.css\?v=20261125-boss-share1/);
   assert.ok(html.indexOf('class="dg-shortcuts"')<html.indexOf('class="dg-controls"'),"shortcuts above filters");
   assert.ok(!/Boss loot confirmed|Butin confirmé/.test(nav));
  }

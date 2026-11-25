@@ -439,3 +439,11 @@
 .dg-shortcuts>a small{font-size:10px;color:#abb6a4}
 .dg-shortcuts>a:hover,.dg-shortcuts>a:focus-visible{border-color:#c9b27d;background:#263121;color:#fff1cd}
 @media(max-width:650px){.dg-shortcuts>strong{width:100%}.dg-shortcuts>a{font-size:11px;padding:7px 8px}}
+
+
+/* Share the exact selected dungeon boss, without duplicating the source/loot UI. */
+.dg-boss-actions{flex-wrap:wrap;align-items:center}
+.dg-boss-share{border-color:#a58a59;color:#f5ddb0;min-height:34px;cursor:pointer}
+.dg-boss-share:focus-visible,.dg-boss-share-fallback:focus-visible{outline:2px solid #e4c887;outline-offset:2px}
+.dg-boss-share-fallback{box-sizing:border-box;width:100%;min-width:0;flex:1 1 100%;border:1px solid #617c69;border-radius:4px;background:#13261c;color:#f2dfb9;padding:7px;font:12px system-ui,sans-serif}
+.dg-boss-share-fallback[hidden]{display:none!important}

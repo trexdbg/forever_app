@@ -137,7 +137,7 @@ test("bilingual dungeon pages show explicit trust labels, sources, and current d
  assert.ok(js.includes('/data/dungeons-forever.json?v=20261016-loot-provenance'));
  for(const path of ["donjons/index.html","en/donjons/index.html"]){
   const html=read(path);
-  assert.ok(html.includes('/assets/dungeons.js?v=20261017-clean-1'),path);
+  assert.ok(html.includes('/assets/dungeons.js?v=20261125-boss-share1'),path);
  }
  for(const path of ["quetes/index.html","en/quetes/index.html"])
   assert.ok(read(path).length>1000,"Classic quests remain available");
