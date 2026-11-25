@@ -11,6 +11,29 @@ let db,rows=[],filtered=[],selected=null,zoneId="",img=null,token=0,zoom=1,cente
 const search=$("rare-search"),zone=$("rare-zone"),type=$("rare-rank"),level=$("rare-level"),verification=$("rare-verification"),loot=$("rare-loot"),tame=$("rare-tame"),mapped=$("rare-mapped");
 const zname=id=>db?.zones?.[id]?.[en?"en":"fr"]||id;
 const npcName=r=>r.name[en?"en":"fr"]||r.name.en;
+
+/* Share by catalogue identity only. Never copy typed search, personal filters,
+ * or an unverified coordinate into a public link. */
+function rarePermalink(r,index=0){
+ const url=new URL(en?"/en/rare/":"/rare/",location.origin);
+ url.searchParams.set("rare",String(r.id));
+ url.searchParams.set("level","all");
+ if(Array.isArray(r.points)&&r.points.length>1&&Number.isInteger(index)&&index>=0&&index<r.points.length){
+  url.searchParams.set("point",String(index+1));
+ }
+ return url.href;
+}
+function requestedRareFromUrl(params,records){
+ const id=params.get("rare");
+ if(!id||id.length>100)return null;
+ const rare=records.find(r=>r.id===id);
+ if(!rare)return null;
+ const raw=params.get("point");
+ const n=typeof raw==="string"&&/^[1-9][0-9]*$/.test(raw)?Number(raw):1;
+ const pointIndex=Number.isSafeInteger(n)&&n<=rare.points.length?n-1:0;
+ return {rare,pointIndex};
+}
+
 /* Evidence belongs to an exact coordinate. Never promote the other pins of a rare. */
 const pointEvidence=(r,i)=>{
  const point=r.points?.[i],evidence=r.point_evidence?.[i];
@@ -171,6 +194,26 @@ const chosenEvidence=pointEvidence(r,pointIndex);
 const locationSource=chosenEvidence?.evidence_url||chosenEvidence?.source_url||(!hasForeverLocation(r)?r.coordinate_source:null);
 if(typeof locationSource==="string"&&/^https:\/\//.test(locationSource)){const p=m("a",T("Source du point sélectionné ↗","Selected pin source ↗"));p.href=locationSource;p.target="_blank";p.rel="noopener noreferrer";foot.append(p)}
 if(r.points.length){const b=button(T("Copier /way","Copy /way"),"rare-copy");b.addEventListener("click",async()=>{const p=r.points[pointIndex],str="/way "+p[0]+" "+p[1];try{await navigator.clipboard.writeText(str);b.textContent=T("Copié ✓","Copied ✓")}catch{b.textContent=str}});foot.append(b)}
+
+const share=button(T("↗ Copier le lien","↗ Copy rare link"),"rare-copy rare-share");
+share.id="rare-share";
+share.setAttribute("aria-label",T("Copier le lien vers "+npcName(r),"Copy link to "+npcName(r)));
+const fallback=m("input",null,"rare-share-fallback");
+fallback.type="text";fallback.readOnly=true;fallback.hidden=true;
+fallback.setAttribute("aria-label",T("Lien du rare à copier","Rare link to copy"));
+share.addEventListener("click",async()=>{
+ const link=rarePermalink(r,pointIndex);
+ try{
+  if(!navigator.clipboard?.writeText)throw Error("No clipboard");
+  await navigator.clipboard.writeText(link);
+  share.textContent=T("Lien copié ✓","Link copied ✓");
+  fallback.hidden=true;fallback.value="";
+ }catch(_){
+  fallback.value=link;fallback.hidden=false;fallback.focus();fallback.select();
+  share.textContent=T("Sélectionnez le lien ci-dessous","Select and copy the link below");
+ }
+});
+foot.append(share);foot.append(fallback);
 out.append(foot);
 }
 function choose(r,index=0){pointIndex=Number.isInteger(index)&&index>=0&&index<r.points.length?index:0;selected=r;const change=r.zone!==zoneId;zoneId=r.zone;$("rare-map-title").textContent=zname(zoneId);if(change){zoom=1;center=[50,50];image()}showList();detail();draw()}
@@ -224,7 +267,17 @@ fetch("/data/rares.json?v=20261016-point-evidence",{cache:"no-cache"}).then(r=>{
 if(!Array.isArray(data.rares)||!data.zones)throw Error("Invalid JSON");db=data;rows=data.rares.filter(r=>r.zone&&db.zones[r.zone]&&Array.isArray(r.points)&&Array.isArray(r.loot));
 for(const key of [...new Set(rows.map(r=>r.zone))].sort((a,b)=>zname(a).localeCompare(zname(b),en?"en":"fr"))){const opt=m("option",zname(key));opt.value=key;zone.append(opt)}
 const qs=new URLSearchParams(location.search);if(db.zones[qs.get("zone")])zone.value=qs.get("zone");if(qs.get("q"))search.value=qs.get("q");level.value=qs.get("level")==="all"?"all":qs.get("level")==="high"?"high":"low";verification.value=["forever","classic"].includes(qs.get("verification"))?qs.get("verification"):"all";
-filtered=results();buildColors();selected=filtered.find(r=>r.id==="2779")||filtered[0]||null;zoneId=selected?.zone||"";
+// An explicit rare permalink wins over previous browsing filters. Unknown IDs
+// leave all existing Classic/Forever search behavior intact.
+const requested=requestedRareFromUrl(qs,rows);
+if(requested){
+ search.value="";zone.value="all";type.value="all";level.value="all";verification.value="all";
+ loot.checked=false;tame.checked=false;mapped.checked=false;
+}
+filtered=results();buildColors();
+selected=requested?.rare||filtered.find(r=>r.id==="2779")||filtered[0]||null;
+pointIndex=requested?.pointIndex??0;
+zoneId=selected?.zone||"";
 $("rare-status").textContent=rows.filter(r=>exactLevel(r)&&r.level<=30).length+" "+T("rencontres niv. 1–30","level 1–30 encounters")+" · "+rows.filter(starterLevelUnknown).length+" "+T("niveaux encore inconnus","levels still unknown");
 $("rare-map-title").textContent=zname(zoneId);
 showList();detail();image()
