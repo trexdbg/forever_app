@@ -35,7 +35,7 @@ function elbtn(text,cls,fn){const b=m("button",text,cls);b.type="button";b.addEv
 function smallchip(s,cls=""){return m("span",s,"dg-chip "+cls)}
 function bossPermalink(d,index){
  // Share a known dungeon and its displayed encounter only; never include
- // typed search, coordinates, item names, analytics flags or player preferences.
+ // typed search, private position values, analytics flags or player preferences.
  const url=new URL(en?"/en/donjons/":"/donjons/",location.origin);
  url.searchParams.set("donjon",d.id);
  if(d.bosses?.[index])url.searchParams.set("boss",String(index+1));
