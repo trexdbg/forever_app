@@ -82,7 +82,8 @@ test("both classifiers call the existing consent-gated tracker without private p
  assert.match(code,/if \(choice !== "accepted" \|\| !window\.__foreverothGa4Started\) return/);
  assert.match(code,/if \(eventName !== "module_open" && eventName !== "tool_interaction"\) return/);
  assert.doesNotMatch(clickSource,/location\.search|searchParams|localStorage|sessionStorage|querySelector|selectedBoss|pointIndex|r\.name/);
- assert.doesNotMatch(changeSource,/\.value\s*[;,=]|\.checked\s*[;,=]|searchParams|localStorage|sessionStorage/);
+ const executableChange=changeSource.split("\n").filter(line=>!line.trim().startsWith("//")).join("\n");
+ assert.doesNotMatch(executableChange,/\.value\b|\.checked\b|searchParams|localStorage|sessionStorage/);
  assert.ok(read("assets/common.js").includes("analytics.js?v=20261125-atlas-interactions1"));
 });
 
