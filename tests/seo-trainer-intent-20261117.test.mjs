@@ -74,3 +74,29 @@ test("popular trainer routes resolve to actual mapped NPCs and preserve faction 
  const css=read("assets/trainer-quick.css");
  assert.match(css,/\.npc-quick-more\[open\]/);
 });
+
+test("profession discovery shortcuts resolve to real trainers and bilingual metadata stays consistent",()=>{
+ const npcs=JSON.parse(read("data/npcs.json")).npcs.filter(n=>n.role==="trainer"&&n.trainer_kind!=="weapon");
+ const professions=["Enchantement","Travail du cuir","Herboristerie","Minage","Dépeçage","Cuisine","Pêche"];
+ const decode=s=>s.replaceAll("&amp;","&");
+ for(const prefix of ["","en/"]){
+  const path=prefix+"metiers/index.html",html=read(path);
+  for(const profession of professions){
+   assert.ok(npcs.some(n=>n.profession===profession),profession+" trainer exists");
+   assert.ok(html.includes("/"+prefix+"metiers/?type=profession&amp;profession="+encodeURIComponent(profession)+"#prof-trainers"),path+" "+profession);
+  }
+  const guide=prefix?"en/guides/where-to-find-profession-trainers/":"guides/ou-trouver-maitres-metiers/";
+  assert.ok(html.includes('href="/'+guide+'"'));
+  assert.ok(read(guide+"index.html").includes('href="/'+prefix+'metiers/"'));
+  const title=decode(html.match(/<title>([^<]+)<\/title>/)[1]);
+  const description=decode(html.match(/<meta name="description" content="([^"]+)"/)[1]);
+  const schema=JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1])["@graph"];
+  assert.equal(schema.find(x=>x["@type"]==="WebPage").name,title);
+  assert.equal(schema.find(x=>x["@type"]==="WebPage").description,description);
+  assert.equal(schema.find(x=>x["@type"]==="WebApplication").description,description);
+  assert.equal(decode(html.match(/<meta property="og:title" content="([^"]+)"/)[1]),title);
+  assert.equal(decode(html.match(/<meta property="og:description" content="([^"]+)"/)[1]),description);
+  assert.match(title,/WoW Forever/);
+  assert.match(html,/<link rel="canonical" href="https:\/\/foreveroth\.com\//);
+ }
+});
